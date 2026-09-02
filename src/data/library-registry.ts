@@ -1,0 +1,10 @@
+import {listeningLibrary as listening1,readingLibrary as reading1} from "./library-batch1";
+import {listeningLibraryBatch2 as listening2,readingLibraryBatch2 as reading2} from "./library-batch2";
+import {listeningLibraryBatch3 as listening3,readingLibraryBatch3 as reading3} from "./library-batch3";
+import {listeningLibraryBatch4 as listening4,readingLibraryBatch4 as reading4} from "./library-batch4";
+import {listeningLibraryBatch5 as listening5,readingLibraryBatch5 as reading5} from "./library-batch5";
+import {listeningLibraryBatch6 as listening6,readingLibraryBatch6 as reading6} from "./library-batch6";
+import {listeningLibraryBatch7 as listening7,readingLibraryBatch7 as reading7} from "./library-batch7";
+import {listeningLibraryBatch8 as listening8,readingLibraryBatch8 as reading8} from "./library-batch8";
+export const readingLibrary=[...reading1,...reading2,...reading3,...reading4,...reading5,...reading6,...reading7,...reading8];
+export const listeningLibrary=[...listening1,...listening2,...listening3,...listening4,...listening5,...listening6,...listening7,...listening8];

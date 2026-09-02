@@ -1,0 +1,15 @@
+import { describe, expect, it } from "vitest";
+import { buildWeeklyPlan } from "@/core/coach/weekly-plan";
+import { defaultState } from "@/core/portability/db";
+import type { LearningState } from "@/types/learning";
+
+const baseState:LearningState={...defaultState,profile:{name:"Nadia",targetExam:"goethe-b2",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",createdAt:"2026-08-01T00:00:00Z"},diagnosticResult:{estimatedLevel:"A1",score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},completedAt:"2026-08-01T00:10:00Z"},completedLessonIds:["a1-01"]};
+
+describe("P0 deterministic weekly plan",()=>{
+  it("builds Monday through Sunday with a deliberate rest day",()=>{const plan=buildWeeklyPlan(baseState,new Date(2026,7,31,9));expect(plan.weekStart).toBe("2026-08-31");expect(plan.weekEnd).toBe("2026-09-06");expect(plan.days.map(day=>day.weekdayAr)).toEqual(["الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"]);expect(plan.days[6]).toMatchObject({status:"rest",budgetMinutes:0,slots:[]})});
+  it("keeps every study day inside its budget and totals six configured days",()=>{const plan=buildWeeklyPlan(baseState,new Date(2026,7,31,9));expect(plan.plannedMinutes).toBe(270);for(const day of plan.days)expect(day.slots.reduce((sum,slot)=>sum+slot.minutes,0)).toBe(day.budgetMinutes)});
+  it("reserves fixed writing, speaking, exam, review, and rest positions",()=>{const plan=buildWeeklyPlan(baseState,new Date(2026,7,31,9));expect(plan.days[0].slots.some(slot=>slot.kind==="review")).toBe(true);expect(plan.days[2].slots.some(slot=>slot.kind==="writing")).toBe(true);expect(plan.days[3].slots.some(slot=>slot.kind==="speaking")).toBe(true);expect(plan.days[4].slots.some(slot=>slot.kind==="review")).toBe(true);expect(plan.days[5].slots.some(slot=>slot.kind==="exam")).toBe(true);expect(plan.days[6].status).toBe("rest")});
+  it("uses the real low-energy check-in budget for today",()=>{const state={...baseState,dailySessions:{"2026-08-31":{date:"2026-08-31",availableMinutes:60 as const,energyBefore:1 as const,checkedInAt:"2026-08-31T08:00:00Z"}}};const plan=buildWeeklyPlan(state,new Date(2026,7,31,9));expect(plan.days[0].budgetMinutes).toBe(20);expect(plan.plannedMinutes).toBe(245)});
+  it("moves only one missed day into the next available budget without doubling it",()=>{const now=new Date(2026,8,2,9);const plan=buildWeeklyPlan(baseState,now);expect(plan.missedStudyDays).toBe(2);expect(plan.deferredCount).toBe(1);const today=plan.days.find(day=>day.status==="today")!;expect(today.recoverySourceDate).toBe("2026-08-31");expect(today.slots.filter(slot=>slot.kind==="recovery")).toHaveLength(1);expect(today.slots.reduce((sum,slot)=>sum+slot.minutes,0)).toBe(45)});
+  it("does not classify a past day with real study evidence as missed",()=>{const state={...baseState,studyHistory:[{date:"2026-08-31",minutes:30,evidenceCount:2}]};const plan=buildWeeklyPlan(state,new Date(2026,8,1,9));expect(plan.days[0].status).toBe("complete");expect(plan.missedStudyDays).toBe(0)});
+});

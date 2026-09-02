@@ -7,4 +7,4 @@ import {listeningLibraryBatch6 as listening6,readingLibraryBatch6 as reading6} f
 import {listeningLibraryBatch7 as listening7,readingLibraryBatch7 as reading7} from "./library-batch7";
 import {listeningLibraryBatch8 as listening8,readingLibraryBatch8 as reading8} from "./library-batch8";
 export const readingLibrary=[...reading1,...reading2,...reading3,...reading4,...reading5,...reading6,...reading7,...reading8];
-export const listeningLibrary=[...listening1,...listening2,...listening3,...listening4,...listening5,...listening6,...listening7,...listening8];
+export const listeningLibrary=[...listening1,...listening2,...listening3,...listening4,...listening5,...listening6,...listening7,...listening8].map((item)=>({...item,audioStatus:"generated-file-with-browser-tts-fallback" as const}));

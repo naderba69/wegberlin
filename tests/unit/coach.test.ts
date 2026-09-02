@@ -7,9 +7,11 @@ import { defaultState } from "@/core/portability/db";
 const diagnosticResult = { estimatedLevel:"A1" as const, score:3, maxScore:12, levelScores:{A1:3,A2:0,B1:0,B2:0}, completedAt:"2026-08-26T00:00:00.000Z" };
 
 describe("coach session composer", () => {
-  it("prioritizes diagnosis before ordinary lessons", () => {
+  it("prioritizes diagnosis before ordinary lessons when prior experience is unknown", () => {
     expect(composeTodayMission(defaultState)[0].kind).toBe("diagnostic");
   });
+  it("routes a declared absolute beginner directly to A1-01 without diagnosis or production pressure",()=>{const state={...defaultState,profile:{name:"Beginner",targetExam:"goethe-b2" as const,dailyMinutes:45 as const,arabicSupport:"modern-standard-arabic" as const,currentLevel:"A1" as const,priorExperience:"none" as const,createdAt:"2026-09-02T00:00:00Z"}};expect(getCoachTarget(state)).toMatchObject({kind:"lesson",href:"/lernen/a1-01"});const mission=composeTodayMission(state);expect(mission.map((item)=>item.kind)).toEqual(["check-in","lesson","reflection"]);expect(mission.reduce((sum,item)=>sum+item.minutes,0)).toBe(30);expect(mission.some((item)=>item.kind==="diagnostic"||item.kind==="production")).toBe(false)});
+  it("keeps the adaptive diagnostic for learners with some or uncertain prior knowledge",()=>{for(const priorExperience of ["some","unsure"] as const){const state={...defaultState,profile:{name:"Learner",targetExam:"goethe-b2" as const,dailyMinutes:30 as const,arabicSupport:"modern-standard-arabic" as const,currentLevel:"A1" as const,priorExperience,createdAt:"2026-09-02T00:00:00Z"}};expect(getCoachTarget(state).kind).toBe("diagnostic")}});
   it("builds a bounded 10-minute rescue session", () => {
     const state = { ...defaultState, diagnosticResult, profile: { name:"Test",targetExam:"goethe-b2" as const,dailyMinutes:10 as const,arabicSupport:"modern-standard-arabic" as const,currentLevel:"A1" as const,createdAt:"2026-08-26T00:00:00.000Z" } };
     const mission=composeTodayMission(state);

@@ -75,11 +75,14 @@ test("P0 exam readiness stays provider-scoped and exposes weak modules instead o
 test("P0 onboarding captures goals and an explicit device-check skip locally", async ({ page }) => {
   await page.goto("/today");
   await waitForLearningReady(page);
+  await expect(page.locator(".resilient-audio")).toHaveAttribute("data-audio-status", "ready", { timeout: 15_000 });
+  expect(await page.getByLabel("عينة فحص الصوت الألماني").evaluate((audio: HTMLAudioElement) => audio.duration)).toBeGreaterThan(1);
   await page.getByLabel("كيف نناديك؟").fill("Nadia");
+  await page.getByRole("button", { name: /أعرف بعض الأساسيات/ }).click();
   await page.getByRole("button", { name: /العمل.*مراسلات واجتماعات/ }).click();
   await page.getByRole("button", { name: /تخطَّ الفحص/ }).click();
   await expect(page.getByText(/تم تخطي فحص الجهاز/)).toBeVisible();
-  await page.getByRole("button", { name: /أنشئ خطتي الأولى/ }).click();
+  await page.getByRole("button", { name: /أنشئ خطتي ثم شخّص مستواي/ }).click();
   await expect(page.getByRole("heading", { name: /لن نخمن مستواك/ })).toBeVisible();
 
   await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
@@ -88,9 +91,30 @@ test("P0 onboarding captures goals and an explicit device-check skip locally", a
     open.onsuccess = () => {
       const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve({ goals: request.result?.profile?.goals, deviceReadiness: request.result?.profile?.deviceReadiness });
+      request.onsuccess = () => resolve({ goals: request.result?.profile?.goals, priorExperience: request.result?.profile?.priorExperience, deviceReadiness: request.result?.profile?.deviceReadiness });
     };
-  }))).toEqual({ goals: ["exam", "work"], deviceReadiness: { audio: "skipped", microphone: "skipped", checkedAt: expect.any(String) } });
+  }))).toEqual({ goals: ["exam", "work"], priorExperience: "some", deviceReadiness: { audio: "skipped", microphone: "skipped", checkedAt: expect.any(String) } });
+});
+
+test("an absolute beginner starts A1 step by step and never receives an isolated writing demand", async ({ page }) => {
+  await page.goto("/today");
+  await waitForLearningReady(page);
+  await page.getByLabel("كيف نناديك؟").fill("مبتدئ");
+  await expect(page.getByRole("button", { name: /أبدأ من الصفر/ })).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: /تخطَّ الفحص/ }).click();
+  await page.getByRole("button", { name: /ابدأ معي من الصفر/ }).click();
+  await expect(page.getByText(/لن نختبرك أو نطلب منك كتابة ألمانية الآن/)).toBeVisible();
+  await expect(page.locator(".hero-button")).toHaveAttribute("href", "/lernen/a1-01");
+  await expect(page.locator(".mission-list")).not.toContainText("اختبار نقطة البداية");
+  await page.locator(".hero-button").click();
+  await expect(page).toHaveURL(/\/lernen\/a1-01$/);
+  await expect(page.locator(".lesson-workspace h1")).toContainText("أهداف اليوم");
+
+  await page.goto("/writing");
+  await waitForLearningReady(page);
+  await expect(page.getByRole("heading", { name: /لن نطلب منك الكتابة/ })).toBeVisible();
+  await expect(page.locator(".beginner-lab-gate")).not.toContainText("Schreiben Sie");
+  await expect(page.getByRole("link", { name: /ابدأ الدرس خطوة خطوة/ })).toHaveAttribute("href", "/lernen/a1-01");
 });
 
 test("P0 adaptive diagnostic stops at a clear boundary and stores four skill scores", async ({ page }) => {
@@ -101,6 +125,10 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
   await page.getByRole("button", { name: /السؤال التالي/ }).click();
   await page.getByText("Montag und Mittwoch", { exact: true }).click();
   await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  const diagnosticAudio = page.locator(".diagnostic-listening .resilient-audio");
+  await expect(diagnosticAudio).toHaveAttribute("data-audio-status", "ready", { timeout: 15_000 });
+  expect(await page.getByLabel("مقطع التشخيص مواعيد الفتح").evaluate((audio: HTMLAudioElement) => audio.duration)).toBeGreaterThan(10);
+  await expect(page.getByRole("button", { name: /تشغيل صوت المتصفح البديل/ })).toBeVisible();
   await page.getByText("Um acht", { exact: true }).click();
   await page.getByRole("button", { name: /قيّم هذا المستوى/ }).click();
 
@@ -299,7 +327,11 @@ test("P0 clustered error clinic opens at three occurrences and stores a transfer
 });
 
 test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revision", async ({ page }) => {
-  await page.goto("/writing?lesson=a1-01");
+  await page.goto("/lernen/a1-01");
+  await waitForLearningReady(page);
+  for(let stage=0;stage<9;stage+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
+  await page.getByRole("link",{name:/افتح مختبر الكتابة/}).click();
+  await expect(page).toHaveURL(/\/writing\?lesson=a1-01$/);
   await waitForLearningReady(page);
   await expect(page.locator(".writing-workflow > span")).toHaveCount(5);
   await page.getByLabel("لمن أكتب؟").fill("إدارة دورة اللغة");
@@ -879,7 +911,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v46");
+    const cache = await caches.open("dwnb-full-pack-v48");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -964,7 +996,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v46");
+    const cache = await caches.open("dwnb-full-pack-v48");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");

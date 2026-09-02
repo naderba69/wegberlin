@@ -96,16 +96,65 @@ export async function loadLearningState(): Promise<LearningState> {
   });
 }
 
-export async function saveLearningState(state: LearningState): Promise<void> {
+export type PersistenceFaultPoint = "after-primary-state" | "after-restore-point" | "after-media";
+
+function transactionFailure(transaction: IDBTransaction, fallback: string) {
+  return transaction.error ?? new Error(fallback);
+}
+
+export async function saveLearningState(state: LearningState, options: { faultAt?: "after-primary-state" } = {}): Promise<void> {
   if (typeof indexedDB === "undefined") return;
   const db = await openDatabase();
   await new Promise<void>((resolve, reject) => {
     const tx = db.transaction([STORE,"profiles","metadata"], "readwrite");
     tx.objectStore(STORE).put(state, KEY);
-    const request=tx.objectStore("metadata").get("active-profile");
-    request.onsuccess=()=>{const id=typeof request.result==="string"?request.result:"primary";tx.objectStore("profiles").put(state,id);tx.objectStore("metadata").put(id,"active-profile");};
+    if (options.faultAt === "after-primary-state") {
+      tx.abort();
+    } else {
+      const request=tx.objectStore("metadata").get("active-profile");
+      request.onsuccess=()=>{const id=typeof request.result==="string"?request.result:"primary";tx.objectStore("profiles").put(state,id);tx.objectStore("metadata").put(id,"active-profile");};
+    }
     tx.oncomplete = () => resolve();
-    tx.onerror = () => reject(tx.error);
+    tx.onerror = () => reject(transactionFailure(tx, "فشل حفظ حالة التعلم."));
+    tx.onabort = () => reject(transactionFailure(tx, "أُلغيت معاملة حفظ حالة التعلم."));
+  });
+}
+
+export async function commitImportedStateAtomic(options: {
+  state: LearningState;
+  targetProfileId: string;
+  media: Array<{ id: string; blob: Blob }>;
+  restorePoint: Blob;
+  currentState?: LearningState;
+  faultAt?: PersistenceFaultPoint;
+}): Promise<void> {
+  if (typeof indexedDB === "undefined") throw new Error("IndexedDB غير متاح لإتمام الاستيراد الذري.");
+  const db = await openDatabase();
+  await new Promise<void>((resolve, reject) => {
+    const tx = db.transaction([STORE,"profiles","metadata","media","restore-points"], "readwrite");
+    const metadataStore = tx.objectStore("metadata");
+    const activeRequest = metadataStore.get("active-profile");
+    activeRequest.onsuccess = () => {
+      const currentProfileId = typeof activeRequest.result === "string" ? activeRequest.result : "primary";
+      if (options.currentState && currentProfileId !== options.targetProfileId) tx.objectStore("profiles").put(options.currentState, currentProfileId);
+      tx.objectStore(STORE).put(options.state, KEY);
+      tx.objectStore("profiles").put(options.state, options.targetProfileId);
+      metadataStore.put(options.targetProfileId, "active-profile");
+      if (options.faultAt === "after-primary-state") {
+        tx.abort();
+        return;
+      }
+      tx.objectStore("restore-points").put(options.restorePoint, "pre-import-latest");
+      if (options.faultAt === "after-restore-point") {
+        tx.abort();
+        return;
+      }
+      for (const item of options.media) tx.objectStore("media").put(item.blob, item.id);
+      if (options.faultAt === "after-media") tx.abort();
+    };
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(transactionFailure(tx, "فشل الاستيراد الذري."));
+    tx.onabort = () => reject(transactionFailure(tx, "أُلغيت معاملة الاستيراد الذرية؛ لم تُطبّق كتابة جزئية."));
   });
 }
 

@@ -5,6 +5,7 @@ export type LessonStatus = "published" | "planned";
 export type AIProvider = "disabled" | "gemini" | "openrouter" | "local";
 export type LearnerGoal = "exam" | "work" | "study" | "daily-life" | "settlement";
 export type DeviceCapabilityStatus = "unchecked" | "ready" | "unavailable" | "permission-denied" | "skipped";
+export type PriorGermanExperience = "none" | "some" | "unsure";
 export type DiagnosticSkill = "grammar" | "vocabulary" | "reading" | "listening";
 
 export interface DeviceReadiness {
@@ -22,6 +23,7 @@ export interface LearnerProfile {
   currentLevel: CEFRLevel;
   goals?: LearnerGoal[];
   deviceReadiness?: DeviceReadiness;
+  priorExperience?: PriorGermanExperience;
   createdAt: string;
 }
 

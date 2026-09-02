@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "offline:manifest": "node scripts/generate-offline-manifest.mjs",
+    "handoff:check": "node scripts/verify-continuation-handoff.mjs",
     "prebuild": "npm run offline:manifest",
     "build": "next build",
     "start": "next start",
@@ -13,7 +14,7 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:desktop": "playwright test --project=chromium",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run handoff:check && npm run build",
     "dev:turbo": "next dev --turbopack"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "@vitejs/plugin-react": "^6.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
+    "fake-indexeddb": "^6.2.5",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
     "typescript": "^5",

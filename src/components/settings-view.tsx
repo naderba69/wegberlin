@@ -6,7 +6,7 @@ import { useLearning } from "./learning-provider";
 import { exportArchive, importArchive, type ImportedArchive } from "@/core/portability/backup";
 import { applyImportMode, namespaceImportedProfile, previewImport, type ImportMode } from "@/core/portability/merge";
 import { testAIConnection } from "@/core/ai/client";
-import { deleteMedia, loadRestorePoint, saveMedia, saveRestorePoint } from "@/core/portability/db";
+import { commitImportedStateAtomic, deleteMedia, loadRestorePoint } from "@/core/portability/db";
 import type { AIProvider } from "@/types/learning";
 import { OfflinePackControl } from "./offline-pack-control";
 import { AccessibleDialog } from "./accessible-dialog";
@@ -14,7 +14,7 @@ import { AccessibleDialog } from "./accessible-dialog";
 type PrivacyAction = "recordings" | "tutor-history";
 
 export function SettingsView() {
-  const { state, replace, update, profiles, activeProfileId, switchProfile, addProfile, renameProfile, deleteProfile } = useLearning();
+  const { state, update, adoptCommittedState, profiles, activeProfileId, switchProfile, renameProfile, deleteProfile } = useLearning();
   const fileRef = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
@@ -59,22 +59,23 @@ export function SettingsView() {
     if (!pendingImport) return;
     setBusy(true);
     try {
+      const restorePoint = await exportArchive(state, { includeMedia: true });
       if (importMode === "new-profile") {
         const id = `profile-${crypto.randomUUID()}`;
         const isolated = namespaceImportedProfile(pendingImport.state, pendingImport.media, id);
-        await addProfile(isolated.state, id);
-        for (const item of isolated.media) await saveMedia(item.id, item.blob);
-        await switchProfile(id);
-        setMessage(`تم إنشاء ملف شخصي مستقل واستعادة ${pendingImport.media.length} تسجيلات مع عزل معرّفاتها.`);
+        const nextState = { ...isolated.state, updatedAt: new Date().toISOString() };
+        await commitImportedStateAtomic({ state: nextState, targetProfileId: id, media: isolated.media, restorePoint, currentState: state });
+        await adoptCommittedState(nextState, id);
+        setMessage(`تم إنشاء ملف شخصي مستقل واستعادة ${isolated.media.length} تسجيلات داخل معاملة واحدة. حُفظت نقطة استعادة، ولا يمكن أن تظهر حالة نصف مستوردة.`);
       } else {
-        await saveRestorePoint(await exportArchive(state, { includeMedia: true }));
-        for (const item of pendingImport.media) await saveMedia(item.id, item.blob);
-        replace(applyImportMode(state, pendingImport.state, importMode));
-        setMessage(`تم ${importMode === "merge" ? "دمج" : "استبدال"} البيانات واستعادة ${pendingImport.media.length} تسجيلات. حُفظت نقطة استعادة قبل التنفيذ.`);
+        const nextState = { ...applyImportMode(state, pendingImport.state, importMode), updatedAt: new Date().toISOString() };
+        await commitImportedStateAtomic({ state: nextState, targetProfileId: activeProfileId, media: pendingImport.media, restorePoint });
+        await adoptCommittedState(nextState, activeProfileId);
+        setMessage(`تم ${importMode === "merge" ? "دمج" : "استبدال"} الحالة و${pendingImport.media.length} تسجيلات ذريًا. حُفظت نقطة الاستعادة داخل المعاملة نفسها.`);
       }
       setPendingImport(null);
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : "فشل تنفيذ الاستيراد.");
+      setMessage(error instanceof Error ? error.message : "فشل تنفيذ الاستيراد الذري؛ لم تُعتمد حالة جزئية.");
     } finally {
       setBusy(false);
     }
@@ -87,13 +88,13 @@ export function SettingsView() {
       if (!point) { setMessage("لا توجد نقطة استعادة محفوظة قبل استيراد سابق."); return; }
       const imported = await importArchive(point);
       const currentSnapshot = await exportArchive(state, { includeMedia: true });
-      await saveRestorePoint(currentSnapshot);
-      for (const item of imported.media) await saveMedia(item.id, item.blob);
-      replace(imported.state);
+      const nextState = { ...imported.state, updatedAt: new Date().toISOString() };
+      await commitImportedStateAtomic({ state: nextState, targetProfileId: activeProfileId, media: imported.media, restorePoint: currentSnapshot });
+      await adoptCommittedState(nextState, activeProfileId);
       setPendingImport(null);
-      setMessage(`تمت استعادة الحالة السابقة و${imported.media.length} تسجيلات. حُفظت الحالة التي استبدلتها كنقطة رجوع جديدة.`);
+      setMessage(`تم تبديل الحالة ونقطة الرجوع و${imported.media.length} تسجيلات ذريًا؛ أصبحت الحالة المستبدلة نقطة الرجوع الجديدة.`);
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : "فشلت استعادة النقطة المحلية.");
+      setMessage(error instanceof Error ? error.message : "فشلت الاستعادة الذرية؛ لم تتغير الحالة الحالية.");
     } finally {
       setBusy(false);
     }

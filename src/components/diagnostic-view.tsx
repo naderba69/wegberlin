@@ -10,6 +10,7 @@ import { alternateDiagnosticForm, nextDiagnosticLevel, questionsForDiagnosticLev
 import { evaluateDiagnostic } from "@/core/diagnostic/evaluate";
 import type { DiagnosticResult, DiagnosticSkill } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { ResilientAudioPlayer } from "./resilient-audio-player";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
   grammar: "القواعد والاستعمال",
@@ -100,7 +101,7 @@ export function DiagnosticView() {
     <section className="question-card">
       <small>{skillLabels[question.skill]}</small>
       {question.contextDe && <article className="diagnostic-reading" lang="de" dir="ltr"><BookOpenCheck size={17}/><p>{question.contextDe}</p></article>}
-      {audioItem && audioAsset && <div className="diagnostic-listening"><header><Headphones size={17}/><span><strong lang="de" dir="ltr">{audioItem.titleDe}</strong><small>استمع دون فتح نص المكتبة؛ الصوت اصطناعي وغير امتحاني.</small></span></header><audio controls preload="metadata" src={audioAsset.path} aria-label={`مقطع التشخيص ${audioItem.titleAr}`}/></div>}
+      {audioItem && audioAsset && <div className="diagnostic-listening"><header><Headphones size={17}/><span><strong lang="de" dir="ltr">{audioItem.titleDe}</strong><small>استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني.</small></span></header><ResilientAudioPlayer src={audioAsset.path} transcriptDe={audioItem.transcriptDe} expectedDurationMs={audioAsset.durationMs} label={`مقطع التشخيص ${audioItem.titleAr}`}/></div>}
       <h2>{question.prompt}</h2>
       <div className="option-list" dir="ltr">{question.options.map((option, optionIndex) => <button key={option} onClick={() => select(optionIndex)} className={selected === optionIndex ? "selected" : ""}><span>{String.fromCharCode(65 + optionIndex)}</span><b>{option}</b>{selected === optionIndex && <Check size={17}/>}</button>)}</div>
     </section>

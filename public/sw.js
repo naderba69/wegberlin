@@ -1,6 +1,6 @@
-const SHELL_CACHE = "dwnb-shell-v3";
-const PACK_CACHE = "dwnb-full-pack-v46";
-const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v46";
+const SHELL_CACHE = "dwnb-shell-v4";
+const PACK_CACHE = "dwnb-full-pack-v48";
+const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v48";
 const PACK_META_PATH = "/__dwnb_offline_pack_meta__";
 const OFFLINE_MANIFEST_PATH = "/offline-routes.json";
 const AUDIO_MANIFEST_PATHS = ["/audio/library/manifest.json", "/audio/lessons/manifest.json", "/audio/exams/manifest.json"];
@@ -275,7 +275,8 @@ self.addEventListener("fetch", (event) => {
   event.respondWith((async () => {
     try {
       const response = await fetch(event.request);
-      if (response.ok && new URL(event.request.url).origin === self.location.origin) {
+      const isFullResponse = response.status === 200 && !event.request.headers.has("range");
+      if (isFullResponse && new URL(event.request.url).origin === self.location.origin) {
         const cache = await caches.open(SHELL_CACHE);
         await cache.put(event.request, response.clone());
       }

@@ -93,4 +93,32 @@ describe("generated exam-practice audio", () => {
       expect(asset.rightsStatus).toBe("generated-for-project-review-required");
     }
   });
+
+  it("rejects suspiciously short speech duration for every complete transcript, including the reported Full 02 clips", () => {
+    const tasks = allPublishedExamTasks.filter((task) => task.kind === "listening");
+    for (const task of tasks) {
+      for (const clip of task.clips) {
+        const durationSeconds = examAudioManifest.assets.filter((asset) => asset.clipId === clip.id).reduce((sum, asset) => sum + asset.durationMs, 0) / 1000;
+        const charactersPerSecond = clip.transcriptDe.replace(/\s+/g, " ").trim().length / durationSeconds;
+        const wordsPerMinute = clip.transcriptDe.trim().split(/\s+/).length / durationSeconds * 60;
+        expect(charactersPerSecond, clip.id).toBeGreaterThan(7);
+        expect(charactersPerSecond, clip.id).toBeLessThan(23);
+        expect(wordsPerMinute, clip.id).toBeGreaterThan(70);
+        expect(wordsPerMinute, clip.id).toBeLessThan(190);
+      }
+    }
+    const reportedEndings: Record<string,string> = {
+      "g2-h1-4": "eine Erstattung beantragen.",
+      "g2-h2": "warum etwas übrig bleibt.",
+      "g2-h3": "die Jugendlichen selbst.",
+      "g2-h4": "Leistung nach einem Abstand.",
+      "t2-h1": "bis Montag möglich.",
+      "t2-h2": "Nutzung ohne Onlinekonto.",
+    };
+    for (const [clipId, ending] of Object.entries(reportedEndings)) {
+      const clip = tasks.flatMap((task) => task.clips).find((item) => item.id === clipId)!;
+      expect(clip.transcriptDe.endsWith(ending), clipId).toBe(true);
+      expect(examAudioManifest.assets.filter((asset) => asset.clipId === clipId).reduce((sum, asset) => sum + asset.durationMs, 0), clipId).toBeGreaterThan(10_000);
+    }
+  });
 });

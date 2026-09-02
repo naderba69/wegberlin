@@ -1,121 +1,163 @@
-# رفع wegberlin إلى GitHub من Termux
+# تحديث GitHub من Termux — naderba69/wegberlin
 
-المالك: `naderba69`  
-المستودع: `wegberlin`  
-البريد المستخدم في Git commits: `balinader@gmail.com`
-
-> لا تضع GitHub Token داخل المشروع أو داخل رابط Remote. استخدم `gh auth login` فقط.
-
-## 1. تثبيت أدوات Termux
-
-```bash
-pkg update -y
-pkg install -y git gh unzip
-termux-setup-storage
-```
-
-وافق على إذن الملفات عند ظهوره، ثم ضع الملف `wegberlin.zip` في مجلد Downloads في الهاتف.
-
-## 2. فحص ZIP وفكّه في مجلد نظيف
-
-```bash
-cd ~/storage/downloads
-unzip -t wegberlin.zip
-
-rm -rf ~/wegberlin
-mkdir -p ~/wegberlin
-unzip wegberlin.zip -d ~/wegberlin
-cd ~/wegberlin
-```
-
-## 3. إعداد Git بالاسم والبريد المطلوبين
-
-```bash
-git init
-git branch -M main
-git config user.name "naderba69"
-git config user.email "balinader@gmail.com"
-
-git add .
-git status
-git commit -m "Initial release: Der Weg nach Berlin A1-B2"
-```
-
-## 4. تسجيل الدخول الآمن إلى GitHub
-
-```bash
-gh auth login --hostname github.com --git-protocol https --web
-```
-
-سيعرض Termux رمزًا ورابطًا. افتح الرابط في المتصفح، أدخل الرمز، ووافق. لا تكتب كلمة مرور GitHub في `git remote`.
-
-تحقق:
-
-```bash
-gh auth status
-```
-
-## 5. إنشاء المستودع أو استعمال الموجود ثم الرفع
-
-انسخ الكتلة كاملة:
-
-```bash
-if gh repo view naderba69/wegberlin >/dev/null 2>&1; then
-  if git remote get-url origin >/dev/null 2>&1; then
-    git remote set-url origin https://github.com/naderba69/wegberlin.git
-  else
-    git remote add origin https://github.com/naderba69/wegberlin.git
-  fi
-  git push -u origin main
-else
-  gh repo create naderba69/wegberlin \
-    --public \
-    --description "Guidance-first German learning platform for Arabic speakers, A1 to B2" \
-    --source=. \
-    --remote=origin \
-    --push
-fi
-```
-
-الرابط المتوقع بعد النجاح:
+المستودع العام موجود بالفعل:
 
 ```text
 https://github.com/naderba69/wegberlin
 ```
 
-افتحه:
+لا تستخدم `git init` في مجلد جديد ولا تستخدم `--force`. الطريقة الآمنة هي Clone للمستودع الموجود، الحفاظ على `.git`، وحذف **كل ملفات شجرة المشروع القديمة** ثم فك ZIP المدقق ورفع الاستبدال كـCommit واحد. هذا يمنع خلط النسخ مع الحفاظ على تاريخ المستودع وإعداداته.
+
+## الاستبدال الكامل باستخدام GitHub Key/PAT
+
+يحتاج المفتاح إلى أحد الخيارين:
+
+- Fine-grained PAT مخصص للمستودع `naderba69/wegberlin` مع `Contents: Read and write`.
+- Classic PAT بصلاحية `repo`.
+
+لا ترسل المفتاح داخل المحادثة ولا تكتبه داخل URL.
+
+ضع `wegberlin.zip` و`wegberlin.zip.sha256` في Downloads، ثم:
 
 ```bash
-gh repo view naderba69/wegberlin --web
+pkg update -y
+pkg install -y git gh unzip
+termux-setup-storage
+
+cd ~/storage/downloads
+sha256sum -c wegberlin.zip.sha256
+unzip -t wegberlin.zip
+
+rm -rf ~/wegberlin-upload-tools
+mkdir -p ~/wegberlin-upload-tools
+unzip -j wegberlin.zip TERMUX_REPLACE_REPO.sh -d ~/wegberlin-upload-tools
+chmod +x ~/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh
+
+~/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh \
+  ~/storage/downloads/wegberlin.zip \
+  "Clean replacement with audited WegBerlin project"
 ```
 
-## إذا ظهر رفض non-fast-forward
+سيطلب السكربت GitHub PAT بإدخال مخفي، ويتحقق أن الحساب هو `naderba69` عبر `GH_TOKEN`. لا يستعمل `gh auth login`، ولذلك لا يحتاج `read:org` ولا يخزن المفتاح. ثم يحذف كل ملفات المشروع القديمة محليًا مع إبقاء `.git` فقط، يفك ZIP، ينفذ `git add -A`، ثم Commit وPush إلى `main` عبر AskPass مؤقت يُحذف فورًا.
 
-هذا يعني أن المستودع الموجود يحتوي Commit سابقًا (مثل README أنشأه GitHub). لا تستخدم `--force` مباشرة. نفّذ:
+## الطريقة السريعة الموصى بها دون إدخال PAT يدوي كل مرة
+
+ضع الملفين التاليين في Downloads:
+
+```text
+wegberlin.zip
+wegberlin.zip.sha256
+```
+
+ثم في Termux:
 
 ```bash
-git fetch origin main
-git pull --rebase origin main --allow-unrelated-histories
-# إذا ظهر تعارض: عدّل الملف، ثم git add FILE && git rebase --continue
-git push -u origin main
+pkg update -y
+pkg install -y git gh unzip
+termux-setup-storage
+
+gh auth login --hostname github.com --git-protocol https --web
 ```
 
-إذا كان المستودع التجريبي لا يحتوي شيئًا مهمًا وتريد استبداله بالكامل، راجع محتواه على GitHub أولًا قبل التفكير في `--force-with-lease`.
+بعد نجاح تسجيل الدخول، فك ZIP مؤقتًا للحصول على سكربت التحديث ثم شغله:
 
-## الرفع بعد التطوير لاحقًا
+```bash
+cd ~/storage/downloads
+sha256sum -c wegberlin.zip.sha256
+unzip -t wegberlin.zip
+
+rm -rf ~/wegberlin-upload-tools
+mkdir -p ~/wegberlin-upload-tools
+unzip -j wegberlin.zip TERMUX_UPDATE_GITHUB.sh -d ~/wegberlin-upload-tools
+chmod +x ~/wegberlin-upload-tools/TERMUX_UPDATE_GITHUB.sh
+
+~/wegberlin-upload-tools/TERMUX_UPDATE_GITHUB.sh \
+  ~/storage/downloads/wegberlin.zip \
+  "Fix beginner onboarding, writing gate, and resilient audio"
+```
+
+السكربت يقوم آليًا بـ:
+
+1. فحص ZIP والـSHA-256 إن وجد.
+2. التحقق من `gh auth`.
+3. Clone أو Pull للمستودع الحالي.
+4. رفض الكتابة إذا كان مجلد Git المحلي يحتوي تغييرات غير محفوظة.
+5. الحفاظ على `.git` وحذف ملفات النسخة القديمة فقط.
+6. فك ZIP الجديد.
+7. ضبط:
+
+```text
+user.name  = naderba69
+user.email = balinader@gmail.com
+```
+
+8. تنفيذ `git add -A` حتى تُسجل الملفات المحذوفة أيضًا.
+9. Commit ثم Push إلى `main` دون Force.
+
+## الطريقة اليدوية المكافئة
+
+```bash
+pkg update -y
+pkg install -y git gh unzip
+termux-setup-storage
+
+gh auth login --hostname github.com --git-protocol https --web
+gh auth setup-git
+
+cd ~/storage/downloads
+sha256sum -c wegberlin.zip.sha256
+unzip -t wegberlin.zip
+
+rm -rf ~/wegberlin
+git clone https://github.com/naderba69/wegberlin.git ~/wegberlin
+cd ~/wegberlin
+
+find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+unzip -q ~/storage/downloads/wegberlin.zip -d .
+
+git config user.name "naderba69"
+git config user.email "balinader@gmail.com"
+git remote set-url origin https://github.com/naderba69/wegberlin.git
+
+git add -A
+git status
+git commit -m "Fix beginner onboarding, writing gate, and resilient audio"
+git push origin main
+```
+
+## التحقق بعد الرفع
 
 ```bash
 cd ~/wegberlin
 git status
-git add .
-git commit -m "Describe the completed change"
-git push
+git log -1 --oneline
+gh repo view naderba69/wegberlin --web
 ```
 
-## ملاحظات مهمة
+يجب أن تكون نتيجة `git status`:
 
-- لا ترفع `.dwnb` أو `.env` أو API keys أو تسجيلاتك الشخصية.
-- `.gitignore` يمنع `node_modules` و`.next` ونتائج الاختبار وملفات ZIP وDWNB ولقطات Debug.
-- ملفات MP3 المولدة جزء من المشروع وحجم المستودع الحالي مناسب لـGitHub، ولا يحتاج Git LFS حاليًا.
-- GitHub Actions سيشغّل فحوص Ubuntu بعد الرفع. تشغيل Next.js وPlaywright مباشرة على Android/Termux قد يواجه قيود binary/browser، لذلك فشل تشغيل محلي على الهاتف لا يعني أن CI على Ubuntu سيفشل.
-- لا تحذف `package-lock.json`؛ فهو يثبت نسخ الحزم في CI وVercel.
+```text
+nothing to commit, working tree clean
+```
+
+## تحديثات لاحقة
+
+نزّل ZIP الأحدث إلى Downloads، ثم شغّل السكربت نفسه:
+
+```bash
+~/wegberlin-upload-tools/TERMUX_UPDATE_GITHUB.sh \
+  ~/storage/downloads/wegberlin.zip \
+  "Describe the audited update"
+```
+
+## ملاحظات أمنية
+
+- لا تضع GitHub Token في رابط Remote أو داخل ملف.
+- لا ترفع `.env` أو `.dwnb` أو التسجيلات الشخصية.
+- ZIP يستبعد `node_modules` و`.next` ونتائج الاختبارات.
+- المستودع عام؛ لا تضع فيه أي بيانات شخصية للمتعلمين.
+- الوكيل الجديد يستطيع قراءة GitHub مباشرة بعد Push، دون رفع ملفات في المحادثة:
+
+```bash
+git clone https://github.com/naderba69/wegberlin.git
+```

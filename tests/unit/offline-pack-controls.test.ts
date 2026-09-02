@@ -28,6 +28,12 @@ describe("selective Offline pack controls", () => {
     expect(workerSource).toContain('DWNB_OFFLINE_PACK_REMOVE_AUDIO');
     expect(workerSource).toContain('url.pathname.startsWith("/audio/")');
     expect(workerSource).toContain('includesAudio: false');
-    expect(workerSource).toContain('dwnb-full-pack-v46');
+    expect(workerSource).toContain('dwnb-full-pack-v48');
+  });
+
+  it("never stores partial Range audio responses in the runtime shell cache", () => {
+    expect(workerSource).toContain('response.status === 200');
+    expect(workerSource).toContain('!event.request.headers.has("range")');
+    expect(workerSource).toContain('dwnb-shell-v4');
   });
 });

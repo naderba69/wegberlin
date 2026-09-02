@@ -13,6 +13,7 @@ const profileSchema = z.object({
     microphone: z.enum(["unchecked", "ready", "unavailable", "permission-denied", "skipped"]),
     checkedAt: z.string().optional(),
   }).optional(),
+  priorExperience: z.enum(["none", "some", "unsure"]).optional(),
   createdAt: z.string(),
 });
 

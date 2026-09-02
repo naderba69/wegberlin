@@ -19,6 +19,7 @@ describe("P0 onboarding profile", () => {
       profile: {
         ...baseProfile,
         goals: ["exam", "work"],
+        priorExperience: "none",
         deviceReadiness: {
           audio: "ready",
           microphone: "permission-denied",
@@ -27,6 +28,7 @@ describe("P0 onboarding profile", () => {
       },
     });
     expect(parsed.profile?.goals).toEqual(["exam", "work"]);
+    expect(parsed.profile?.priorExperience).toBe("none");
     expect(parsed.profile?.deviceReadiness?.microphone).toBe("permission-denied");
   });
 

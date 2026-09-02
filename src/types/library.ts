@@ -32,5 +32,5 @@ export interface ListeningLibraryItem extends LibraryBase {
   transcriptDe: string;
   summaryAr: string;
   strategyAr: string;
-  audioStatus: "browser-tts-only";
+  audioStatus: "browser-tts-only" | "generated-file-with-browser-tts-fallback";
 }

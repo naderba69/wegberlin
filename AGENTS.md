@@ -10,6 +10,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # Der Weg nach Berlin product rules
 
-Read `docs/MASTER_SPEC.md`, `PROJECT_STATUS.md`, and `DECISIONS.md` before changing product behavior.
+Read `PROFESSIONAL_CONTINUATION_PROMPT_AR.md`, `docs/MASTER_SPEC.md`, `PROJECT_STATUS.md`, `P0_AUDIT.md`, and `DECISIONS.md` before changing product behavior.
 The primary UX is Coach/Today, not a lesson catalog. Durable learner data is local-first.
 Never claim incomplete curriculum or media is complete. Run `npm run check` before reporting success.

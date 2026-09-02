@@ -1,22 +1,26 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowLeft, Check, FilePenLine, Lightbulb, RotateCcw, Save, Sparkles } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, BookOpenCheck, Check, FilePenLine, Lightbulb, RotateCcw, Save, Sparkles } from "lucide-react";
 import { analyzeWriting, type WritingAnalysis } from "@/core/writing/analyze";
 import { academicLessons } from "@/data/academic-lessons";
 import type { WritingPlan, WritingSubmission } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 
-const fallback={level:"A1",titleAr:"بطاقة تعارف",promptDe:"Schreiben Sie eine kurze Nachricht. Stellen Sie sich vor und stellen Sie am Ende eine Frage.",promptAr:"اكتب رسالة قصيرة: قدم نفسك واسأل سؤالًا في النهاية.",checklistAr:["تحية مناسبة","ثلاث جمل واضحة","سؤال في النهاية"],modelDe:"Hallo! Ich heiße Ali und komme aus Tunesien. Ich lerne Deutsch. Wie heißt du? Viele Grüße"};
 type WritingPhase="plan"|"draft"|"self-check"|"feedback"|"revision";
 const phaseLabels:Array<{id:WritingPhase;label:string}>=[{id:"plan",label:"التخطيط"},{id:"draft",label:"المسودة"},{id:"self-check",label:"التحقق الذاتي"},{id:"feedback",label:"الملاحظات"},{id:"revision",label:"إعادة الكتابة"}];
 
 export function WritingLab({lessonId}:{lessonId?:string}){
   const{state,update}=useLearning();
-  const lesson=lessonId?academicLessons[lessonId]:undefined;
-  const task=lesson?.writing??fallback;
-  const taskId=lesson?.id??"a1-introduction";
-  const level=lesson?.level??"A1";
+  const requestedLesson=lessonId?academicLessons[lessonId]:undefined;
+  const latestCompletedLesson=[...state.completedLessonIds].reverse().map((id)=>academicLessons[id]).find(Boolean);
+  const currentLesson=academicLessons[state.currentLessonId]??academicLessons["a1-01"];
+  const lesson=requestedLesson??latestCompletedLesson??currentLesson;
+  const lessonReady=Boolean(state.completedLessonIds.includes(lesson.id)||(state.lessonProgress[lesson.id]??0)>=9);
+  const task=lesson.writing;
+  const taskId=lesson.id;
+  const level=lesson.level;
   const rangeMatch=task.promptDe.match(/(\d{2,3})[–-](\d{2,3})\s+Wörter/i);
   const singleMatch=task.promptDe.match(/(\d{2,3})\s+Wörter/i);
   const fallbackMinimum=level==="A1"?30:level==="A2"?70:level==="B1"?100:140;
@@ -45,6 +49,8 @@ export function WritingLab({lessonId}:{lessonId?:string}){
   }
   function toggleCheck(item:string){setSelfChecklist((current)=>current.includes(item)?current.filter((value)=>value!==item):[...current,item])}
   const activeIndex=phaseLabels.findIndex((item)=>item.id===phase);
+
+  if(!lessonReady)return <div className="wide-page beginner-lab-gate"><span><BookOpenCheck size={30}/></span><small>حماية المتعلم المبتدئ</small><h1>لن نطلب منك الكتابة قبل أن تتعلم أولى العبارات.</h1><p>{state.profile?.priorExperience==="none"?"اخترت البدء من الصفر. ابدأ بالتحية والاسم داخل الدرس، واستمع وكرر ثم افتح مختبر الكتابة عندما تصل إلى مرحلته.":"مختبر الكتابة يحتاج سياق درس وصلت إلى مرحلته أو أنهيته، حتى لا يعرض مهمة ألمانية معزولة ومحيرة."}</p><div><Link className="primary-button" href={state.profile?`/lernen/${lesson.id}`:"/today"}>{state.profile?"ابدأ الدرس خطوة خطوة":"عرّفني بمستواك أولًا"}<ArrowLeft size={16}/></Link><Link className="secondary-button" href="/today">العودة إلى مهمتي اليوم</Link></div><em>لن يظهر نص المهمة الألماني هنا قبل الجاهزية.</em></div>;
 
   return <div className="lab-page">
     <header className="page-heading"><div><span className="eyebrow"><FilePenLine size={15}/> مختبر الكتابة · {level}</span><h1>خطّط، اكتب، <em>ثم أثبت المراجعة.</em></h1><p>{lesson?`المهمة مرتبطة بالدرس ${lesson.id}: ${lesson.titleAr}.`:"اختر درسًا من المسار للحصول على مهمة مرتبطة بهدفه."}</p></div><div className="lab-counter"><strong>{submissions.length}</strong><span>نسخ المهمة<br/>محفوظة محليًا</span></div></header>

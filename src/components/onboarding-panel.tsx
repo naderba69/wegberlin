@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { ArrowLeft, BriefcaseBusiness, CalendarDays, Check, Clock3, GraduationCap, Headphones, Home, Mic2, Plane, Route, ShieldCheck, SkipForward } from "lucide-react";
 import { useLearning } from "./learning-provider";
-import type { ArabicSupportMode, DeviceCapabilityStatus, DeviceReadiness, ExamProvider, LearnerGoal, LearnerProfile } from "@/types/learning";
+import type { ArabicSupportMode, DeviceCapabilityStatus, DeviceReadiness, ExamProvider, LearnerGoal, LearnerProfile, PriorGermanExperience } from "@/types/learning";
+import { listeningLibrary } from "@/data/library-registry";
+import { libraryAudioAssetByItemId } from "@/data/library-audio-assets";
+import { ResilientAudioPlayer } from "./resilient-audio-player";
 
 const goalOptions: Array<{ id: LearnerGoal; label: string; detail: string; icon: typeof GraduationCap }> = [
   { id: "exam", label: "النجاح في B2", detail: "أولوية لصيغة الامتحان وإدارة الوقت", icon: GraduationCap },
@@ -12,6 +15,9 @@ const goalOptions: Array<{ id: LearnerGoal; label: string; detail: string; icon:
   { id: "daily-life", label: "الحياة اليومية", detail: "السكن والخدمات والمواعيد والتواصل", icon: Home },
   { id: "settlement", label: "الاستقرار والسفر", detail: "إدارة وتنقل واندماج دون استشارة قانونية", icon: Plane },
 ];
+
+const sampleAudioItem = listeningLibrary.find((item) => item.id === "lib-l-a1-01")!;
+const sampleAudioAsset = libraryAudioAssetByItemId["lib-l-a1-01"];
 
 const readinessLabels: Record<DeviceCapabilityStatus, string> = {
   unchecked: "لم يُفحص",
@@ -25,6 +31,7 @@ export function OnboardingPanel() {
   const { update } = useLearning();
   const [name, setName] = useState("");
   const [exam, setExam] = useState<ExamProvider>("goethe-b2");
+  const [priorExperience, setPriorExperience] = useState<PriorGermanExperience>("none");
   const [minutes, setMinutes] = useState<LearnerProfile["dailyMinutes"]>(45);
   const [targetDate, setTargetDate] = useState("");
   const [arabicSupport, setArabicSupport] = useState<ArabicSupportMode>("modern-standard-arabic");
@@ -67,7 +74,7 @@ export function OnboardingPanel() {
     if (!name.trim() || goals.length === 0) return;
     update((state) => ({ ...state, profile: {
       name: name.trim(), targetExam: exam, targetDate: targetDate || undefined,
-      dailyMinutes: minutes, arabicSupport, currentLevel: "A1", goals, deviceReadiness,
+      dailyMinutes: minutes, arabicSupport, currentLevel: "A1", goals, deviceReadiness, priorExperience,
       createdAt: new Date().toISOString(),
     }}));
   }
@@ -82,6 +89,15 @@ export function OnboardingPanel() {
       </div>
       <div className="onboarding-form">
         <label>كيف نناديك؟<input value={name} onChange={(event) => setName(event.target.value)} placeholder="اكتب اسمك" autoFocus /></label>
+        <fieldset className="onboarding-experience">
+          <legend>ما خبرتك بالألمانية الآن؟</legend>
+          <div>
+            <button type="button" aria-pressed={priorExperience==="none"} className={priorExperience==="none"?"selected":""} onClick={()=>setPriorExperience("none")}><strong>أبدأ من الصفر</strong><small>لا أعرف الألمانية بعد — ابدأ بالحروف والتحية دون اختبار أو كتابة.</small></button>
+            <button type="button" aria-pressed={priorExperience==="some"} className={priorExperience==="some"?"selected":""} onClick={()=>setPriorExperience("some")}><strong>أعرف بعض الأساسيات</strong><small>أفهم كلمات أو درست سابقًا — اقترح تشخيصًا قصيرًا.</small></button>
+            <button type="button" aria-pressed={priorExperience==="unsure"} className={priorExperience==="unsure"?"selected":""} onClick={()=>setPriorExperience("unsure")}><strong>لست متأكدًا</strong><small>دع التشخيص يختار نقطة بداية محافظة.</small></button>
+          </div>
+          <p>{priorExperience==="none"?"سنفتح الدرس A1-01 من البداية. لن نطلب كتابة ألمانية أو اختبار فهم قبل أن تتعلم أولى العبارات.":"بعد إنشاء الخطة يظهر تشخيص متكيف من أربعة أسئلة في كل مستوى ويتوقف مبكرًا عند الحد."}</p>
+        </fieldset>
         <label>الامتحان المستهدف<select value={exam} onChange={(event) => setExam(event.target.value as ExamProvider)}><option value="goethe-b2">Goethe-Zertifikat B2</option><option value="telc-deutsch-b2">telc Deutsch B2</option></select></label>
         <div className="form-row">
           <label>وقت الدراسة<select value={minutes} onChange={(event) => setMinutes(Number(event.target.value) as LearnerProfile["dailyMinutes"])}>{[10,20,30,45,60,90].map((value) => <option key={value} value={value}>{value} دقيقة</option>)}</select></label>
@@ -101,12 +117,12 @@ export function OnboardingPanel() {
 
         <section className="device-readiness" aria-label="فحص الصوت والميكروفون">
           <header><div><Headphones size={17}/><span><strong>جاهزية الصوت والتسجيل</strong><small>فحص اختياري قبل بدء الطريق</small></span></div><div><b>الصوت: {readinessLabels[deviceReadiness.audio]}</b><b>الميكروفون: {readinessLabels[deviceReadiness.microphone]}</b></div></header>
-          <audio controls preload="metadata" src="/audio/library/lib-l-a1-01.mp3" aria-label="عينة فحص الصوت الألماني" />
+          {sampleAudioAsset && <ResilientAudioPlayer src={sampleAudioAsset.path} transcriptDe={sampleAudioItem.transcriptDe} expectedDurationMs={sampleAudioAsset.durationMs} label="عينة فحص الصوت الألماني"/>}
           <div className="device-check-actions"><button type="button" onClick={() => void checkDevices()} disabled={checkingDevices}><Mic2 size={15}/>{checkingDevices ? "جارٍ الفحص…" : "افحص الجهاز"}</button><button type="button" onClick={skipDeviceCheck}><SkipForward size={15}/> تخطَّ الفحص</button></div>
           <p>{deviceMessage}</p>
         </section>
 
-        <button className="primary-button" onClick={start} disabled={!name.trim() || goals.length === 0}>أنشئ خطتي الأولى <ArrowLeft size={18}/></button>
+        <button className="primary-button" onClick={start} disabled={!name.trim() || goals.length === 0}>{priorExperience==="none"?"ابدأ معي من الصفر":"أنشئ خطتي ثم شخّص مستواي"} <ArrowLeft size={18}/></button>
         <small>لا نحتاج حسابًا. تُحفظ أهدافك ونتيجة فحص الجهاز محليًا، ويمكنك تصديرها أو حذفها متى شئت.</small>
       </div>
     </section>

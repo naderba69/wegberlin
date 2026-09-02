@@ -37,7 +37,8 @@ function productionObjective(state:LearningState){const goals:LearnerGoal[]=stat
 export type CoachTarget={kind:"diagnostic"|"review"|"errors"|"lesson"|"assessment"|"exam"|"progress";href:string;titleAr:string;titleDe:string;reasonAr:string};
 
 export function getCoachTarget(state:LearningState,now=new Date()):CoachTarget{
-  if(!state.diagnosticResult)return{kind:"diagnostic",href:"/diagnostic",titleAr:"تشخيص نقطة البداية",titleDe:"Einstufung",reasonAr:"نحتاج قياسًا أوليًا قبل اختيار المسار."};
+  if(!state.diagnosticResult&&state.profile?.priorExperience==="none"){const first=curriculum.find((lesson)=>lesson.level==="A1"&&lesson.status==="published");if(first)return{kind:"lesson",href:`/lernen/${first.id}`,titleAr:"ابدأ من الصفر: أول تحية",titleDe:first.titleDe,reasonAr:"اخترت أنك لا تعرف الألمانية بعد؛ لذلك نتجاوز التشخيص والكتابة ونبدأ بأول عبارات مفهومة خطوة خطوة."}}
+  if(!state.diagnosticResult)return{kind:"diagnostic",href:"/diagnostic",titleAr:"تشخيص نقطة البداية",titleDe:"Einstufung",reasonAr:"لديك خبرة سابقة أو غير مؤكدة؛ نستخدم عينة قصيرة حتى لا نضعك في درس سهل أو صعب بالتخمين."};
   const dueReviews=state.dueReviews;
   if(dueReviews>=20)return{kind:"review",href:"/review",titleAr:"أوقف تراكم النسيان",titleDe:"Fällige Wiederholung",reasonAr:`لديك ${dueReviews} بطاقة مستحقة، والمراجعة الآن أهم من إضافة قاعدة جديدة.`};
   const activeErrors=state.errors.filter((error)=>!error.resolved);
@@ -68,6 +69,10 @@ export function getCoachTarget(state:LearningState,now=new Date()):CoachTarget{
 }
 
 export function composeTodayMission(state:LearningState,now=new Date()):MissionBlock[]{
+  if(!state.diagnosticResult&&state.profile?.priorExperience==="none"){
+    const budget=Math.min(30,effectiveSessionMinutes(state,now));const checkMinutes=budget<=10?1:2;const reflectionMinutes=budget<=10?2:budget<=20?3:4;const lessonMinutes=budget-checkMinutes-reflectionMinutes;const target=getCoachTarget(state,now);
+    return baseBlocks.filter((block)=>["check-in","lesson","reflection"].includes(block.id)).map((block)=>block.id==="check-in"?{...block,minutes:checkMinutes,objective:"أخبرنا بطاقتك ووقتك؛ لا يوجد اختبار في جلسة الصفر."}:block.id==="lesson"?{...block,titleAr:"أول خطوة من الصفر",titleDe:target.titleDe,minutes:lessonMinutes,objective:target.reasonAr}:{...block,minutes:reflectionMinutes,objective:"اختم بما فهمته دون علامة أو مهمة كتابة."});
+  }
   if(!state.diagnosticResult)return baseBlocks.filter((block)=>["diagnostic","reflection"].includes(block.id));
   const target=getCoachTarget(state,now);
   const minutes=effectiveSessionMinutes(state,now);
@@ -79,6 +84,7 @@ export function composeTodayMission(state:LearningState,now=new Date()):MissionB
 
 export function missionRationale(state:LearningState):string{
   const target=getCoachTarget(state);
-  if(target.kind==="diagnostic")return"نبدأ بتشخيص قصير حتى لا نضعك في مستوى سهل أو صعب اعتمادًا على التخمين. الأخطاء هنا ستتحول مباشرة إلى خطة علاجية.";
+  if(!state.diagnosticResult&&state.profile?.priorExperience==="none")return"قلت إنك تبدأ من الصفر. لن نختبرك أو نطلب منك كتابة ألمانية الآن؛ مهمتك الأولى هي فهم التحية والاسم ثم تكرارهما بأمان.";
+  if(target.kind==="diagnostic")return"لديك معرفة سابقة أو غير مؤكدة، لذلك نبدأ بتشخيص قصير حتى لا نضعك في مستوى سهل أو صعب اعتمادًا على التخمين.";
   return target.reasonAr;
 }

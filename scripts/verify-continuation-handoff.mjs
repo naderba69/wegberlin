@@ -64,7 +64,7 @@ if (examAudio.assets.length !== 96 || examAudio.coveredClipCount !== 90 || examA
 const cacheMatch = worker.match(/const PACK_CACHE = "([^"]+)"/);
 if (!cacheMatch) fail("PACK_CACHE constant is missing");
 const cacheName = cacheMatch[1];
-if (cacheName !== "dwnb-full-pack-v52") fail(`unexpected current cache ${cacheName}`);
+if (cacheName !== "dwnb-full-pack-v53") fail(`unexpected current cache ${cacheName}`);
 requireText(e2e, `caches.open("${cacheName}")`, "Playwright cache contract");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
 

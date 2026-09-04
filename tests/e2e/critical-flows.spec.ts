@@ -927,7 +927,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v52");
+    const cache = await caches.open("dwnb-full-pack-v53");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1012,7 +1012,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v52");
+    const cache = await caches.open("dwnb-full-pack-v53");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");

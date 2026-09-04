@@ -118,7 +118,7 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
 - A1 + A2 lexical grammar layer: 192 noun anchors (96 A1 + 96 A2) + 72 verb/preposition/case frames (24 A1 + 48 A2) across 48/48 A1–A2 lessons; B1–B2 remain 0/36 lessons in this layer.
 - Unified answer audit: 2,584 closed-answer rows + 348 productive-task contracts; 0 unapproved leaks, 3 explicit type-aware exemptions.
 - Objective coverage report: 336/336 lesson objectives with teaching, practice, and assessment references; 0 structural gaps.
-- Full Offline manifest: 298/298 user-facing routes, including search, mediation, Shadowing, and 150/150 exam tasks; current full-pack cache `dwnb-full-pack-v52`.
+- Full Offline manifest: 298/298 user-facing routes, including search, mediation, Shadowing, and 150/150 exam tasks; current full-pack cache `dwnb-full-pack-v53`.
 - Automated checks: 271/271 unit/integrity tests and 50/50 production browser tests across desktop/mobile, including atomic import/restore rollback and interrupted export rejection, keyboard skip/focus/modal/status flows, errors-per-100 evidence, consented structured AI, immediate tutor/key deletion, closed-assistance focus/exit/abandonment, draft persistence without correction leakage, P0 onboarding, adaptive diagnostic, daily/weekly coaching, error clinics, strict productive labs, provider-scoped readiness-to-coach routing, Offline access, WCAG contrast, and representative widths from 320 to 1920 px.
 
 ## Honest limitations

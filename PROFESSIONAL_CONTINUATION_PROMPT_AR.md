@@ -278,7 +278,7 @@ Static/SSG pages: 301
 Offline routes: 298/298
 Search entries: 3,080
 Official source records: 12/12
-Offline cache: dwnb-full-pack-v52
+Offline cache: dwnb-full-pack-v53
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```

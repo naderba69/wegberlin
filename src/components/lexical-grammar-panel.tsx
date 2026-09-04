@@ -10,6 +10,7 @@ const caseLabels = {
   nominative: "Nominativ · الفاعل",
   accusative: "Akkusativ · المفعول المباشر",
   dative: "Dativ · بعد أفعال/حروف محددة",
+  genitive: "Genitiv · المضاف إليه",
 };
 const governedCaseLabels = {
   accusative: "Akkusativ",
@@ -27,7 +28,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
     <header>
       <span><BookKey size={19} /></span>
       <div>
-        <small lang="de" dir="ltr">Nomen mit Artikel, Plural und Kasus</small>
+        <small lang="de" dir="ltr">Nomen mit Artikel, Plural, Genitiv und Dativ Plural</small>
         <h3>مراسي الاسم في هذا الدرس</h3>
         <p>احفظ الاسم مع أداته وجمعه. افتح الحالات عندما تحتاج شكلًا داخل الجملة، لا تحفظ النهاية وحدها.</p>
       </div>
@@ -38,6 +39,8 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
         <p>{noun.meaningAr}</p>
         <b lang="de" dir="ltr">{noun.plural.form ? `die ${noun.plural.form}` : "meist ohne Plural"}</b>
         <small>{noun.plural.noteAr}</small>
+        <b lang="de" dir="ltr">{noun.dativePlural.form ?? "kein Dativ Plural"}</b>
+        <small>{noun.dativePlural.noteAr}</small>
         <details>
           <summary lang="de" dir="ltr">Kasusformen ansehen <span lang="ar" dir="rtl">· عرض الحالات</span></summary>
           <dl>{Object.entries(noun.caseForms).map(([caseName, form]) => <div key={caseName}><dt>{caseLabels[caseName as keyof typeof caseLabels]}</dt><dd lang="de" dir="ltr">{form}</dd></div>)}</dl>
@@ -59,8 +62,8 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
     </div> : null}
     <p className="lexical-coverage-note">
       {level === "A1"
-        ? "تغطي هذه الطبقة أربع مراسي اسمية وإطار فعل واحدًا مع حرف الجر في كل درس من 24/24 درس A1. المراسي مختارة من نظرية الدرس ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد."
-        : `تغطي هذه الطبقة أربع مراسي اسمية وإطارين للفعل مع حرف الجر في هذا الدرس ${level}، مأخوذة من نظرية الدرس ومفرداته. المراسي مختارة ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد.`}
+        ? "تغطي هذه الطبقة أربع مراسي اسمية وإطار فعل واحدًا مع حرف الجر في كل درس من 24/24 درس A1، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. المراسي مختارة من نظرية الدرس ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد."
+        : `تغطي هذه الطبقة أربع مراسي اسمية وإطارين للفعل مع حرف الجر في هذا الدرس ${level}، مأخوذة من نظرية الدرس ومفرداته، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. المراسي مختارة ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد.`}
     </p>
   </section>;
 }

@@ -1,8 +1,8 @@
 import type { LessonStageKey } from "./lesson-content";
 
 export type GermanGender = "masculine" | "feminine" | "neuter";
-export type GermanCase = "nominative" | "accusative" | "dative";
-/** الحالة التي يفرضها الفعل أو حرف الجر. Genitiv مضاف لحروف الجر الرسمية في B2، ولا يعني أن سجل الاسم يحفظ صيغة Genitiv. */
+export type GermanCase = "nominative" | "accusative" | "dative" | "genitive";
+/** الحالة التي يفرضها الفعل أو حرف الجر. Genitiv مضاف لحروف الجر الرسمية في B2؛ صيغة Genitiv الاسمية نفسها محفوظة في caseForms.genitive. */
 export type GovernedCase = Exclude<GermanCase, "nominative"> | "genitive";
 
 export type LexicalSourceVersion =
@@ -23,6 +23,11 @@ export type NounGrammarEntry = {
     noteAr: string;
   };
   caseForms: Record<GermanCase, string>;
+  /** جمع المجرور بعد den: الشكل الذي يحتاجه المتعلم فعليًا مع حروف الجر وأفعال الجر في الجمع. */
+  dativePlural: {
+    form: string | null;
+    noteAr: string;
+  };
   firstStructuredStage: Extract<LessonStageKey, "vocabulary">;
   sourceVersion: LexicalSourceVersion;
 };

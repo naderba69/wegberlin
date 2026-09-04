@@ -1496,8 +1496,11 @@ test("A2 vocabulary stage renders four noun anchors and two verb-preposition fra
   await expect(lexicalPanel).toContainText("sich für die Hilfe bedanken");
   await expect(lexicalPanel).toContainText("um Hilfe bitten");
   await expect(lexicalPanel).toContainText("لم تُراجَع ألمانيًا بشريًا بعد");
+  await expect(lexicalPanel).toContainText("des Nachbarn");
+  await expect(lexicalPanel).toContainText("den Nachbarn");
   await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
   await expect(lexicalPanel.locator("details").first()).toContainText("dem Nachbarn");
+  await expect(lexicalPanel.locator("details").first()).toContainText("des Nachbarn");
 });
 
 test("B2 vocabulary stage renders four noun anchors and the Genitiv preposition frames", async ({ page }) => {
@@ -1512,6 +1515,9 @@ test("B2 vocabulary stage renders four noun anchors and the Genitiv preposition 
   await expect(lexicalPanel).toContainText("angesichts der Frist entscheiden");
   await expect(lexicalPanel).toContainText("angesichts + Genitiv");
   await expect(lexicalPanel).toContainText("hinsichtlich + Genitiv");
+  // الاسم بلا جمع يصرّح بعدم وجود جمع مجرور بدل اختلاق صيغة.
+  await expect(lexicalPanel).toContainText("des Leistungsumfangs");
+  await expect(lexicalPanel).toContainText("kein Dativ Plural");
 });
 
 test("every published lesson vocabulary stage keeps the authored anchor count", async ({ page }) => {
@@ -1522,5 +1528,7 @@ test("every published lesson vocabulary stage keeps the authored anchor count", 
     const lexicalPanel = page.locator(".lexical-grammar-panel");
     await expect(lexicalPanel.locator(".noun-grammar-grid > article"), lessonId).toHaveCount(4);
     await expect(lexicalPanel.locator(".verb-frame-card"), lessonId).toHaveCount(lessonId.startsWith("a1-") ? 1 : 2);
+    const article = lexicalPanel.locator(".noun-grammar-grid > article").first();
+    await expect(article.locator("b").nth(1), lessonId).toHaveText(/^(den |kein Dativ Plural)/);
   }
 });

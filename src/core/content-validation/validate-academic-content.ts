@@ -111,6 +111,23 @@ export function validateAcademicContent() {
     if (!noun.caseForms.nominative.startsWith(`${noun.article} `)) issues.push(`nounGrammarEntries.${noun.id}: invalid nominative form`);
     if (!noun.caseForms.accusative.trim() || !noun.caseForms.dative.trim()) issues.push(`nounGrammarEntries.${noun.id}: oblique case form missing`);
     if (!noun.plural.noteAr.trim()) issues.push(`nounGrammarEntries.${noun.id}: plural note missing`);
+    const genitiveArticle = noun.gender === "feminine" ? "der" : "des";
+    if (!noun.caseForms.genitive.startsWith(`${genitiveArticle} `) || noun.caseForms.genitive.trim() === genitiveArticle) {
+      issues.push(`nounGrammarEntries.${noun.id}: invalid genitive form ${noun.caseForms.genitive}`);
+    }
+    const weakOblique = noun.caseForms.dative.split(" ").slice(1).join(" ");
+    if (noun.gender !== "feminine" && weakOblique !== noun.lemma && !noun.caseForms.genitive.endsWith(weakOblique) && !noun.caseForms.genitive.endsWith(`${weakOblique}s`)) {
+      issues.push(`nounGrammarEntries.${noun.id}: genitive ${noun.caseForms.genitive} ignores the weak oblique stem ${weakOblique}`);
+    }
+    if (noun.plural.form === null ? noun.dativePlural.form !== null : noun.dativePlural.form === null) {
+      issues.push(`nounGrammarEntries.${noun.id}: dative plural policy does not match the plural policy`);
+    }
+    if (noun.dativePlural.form !== null) {
+      const stem = noun.dativePlural.form.replace(/^den /, "");
+      if (!stem.endsWith("n") && !stem.endsWith("s")) issues.push(`nounGrammarEntries.${noun.id}: dative plural ${noun.dativePlural.form} does not end in n or s`);
+      if (!stem.startsWith(noun.plural.form ?? "")) issues.push(`nounGrammarEntries.${noun.id}: dative plural ${noun.dativePlural.form} does not start from the plural ${noun.plural.form}`);
+    }
+    if (!noun.dativePlural.noteAr.trim()) issues.push(`nounGrammarEntries.${noun.id}: dative plural note missing`);
   }
   for (const frame of verbPrepositionFrames) {
     const level = lexicalLevelOf(frame.lessonId);

@@ -368,7 +368,14 @@ export const nounGrammarEntrySchema = z.object({
   gender: z.enum(["masculine", "feminine", "neuter"]),
   meaningAr: text,
   plural: z.object({ form: text.nullable(), noteAr: text }).strict(),
-  caseForms: z.object({ nominative: text, accusative: text, dative: text }).strict(),
+  caseForms: z
+    .object({ nominative: text, accusative: text, dative: text, genitive: text })
+    .strict()
+    .refine((forms) => /^(des|der) \S/.test(forms.genitive), "genitive form must carry des/der"),
+  dativePlural: z
+    .object({ form: text.nullable(), noteAr: text })
+    .strict()
+    .refine((entry) => entry.form === null || /^den \S+(n|s)$/.test(entry.form), "dative plural must be den + plural ending in n or s"),
   firstStructuredStage: z.literal("vocabulary"),
   sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();

@@ -33,6 +33,7 @@ const lexicalRegistry = read("src/data/lexical-grammar-registry.ts");
 const lexicalGrammarB1 = read("src/data/lexical-grammar-b1.ts");
 const lexicalGrammarB2 = read("src/data/lexical-grammar-b2.ts");
 const lexicalPanel = read("src/components/lexical-grammar-panel.tsx");
+const lexicalBuild = read("src/data/lexical-grammar-build.ts");
 const termuxReplace = read("TERMUX_REPLACE_REPO.sh");
 const termuxGuide = read("TERMUX_GITHUB_UPLOAD.md");
 const termuxOneCommand = read("TERMUX_ONE_COMMAND.txt");
@@ -56,9 +57,9 @@ if (partialIds.length !== 17) fail(`P0 partial table has ${partialIds.length} ro
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
 for (const text of ["Implemented: 104", "Partial: 17", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["104 implemented, 17 partial, 2 not implemented", "294/294", "29/29", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+for (const text of ["104 implemented, 17 partial, 2 not implemented", "297/297", "29/29", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
   requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["294/294", "29/29"]) requireText(readme, text, "README.md");
+for (const text of ["297/297", "29/29"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
@@ -135,8 +136,14 @@ for (const text of ["a2-lexical-grammar-v1", "\"a2-01\"", "\"a2-24\"", "lexical-
 for (const text of ["b1-lexical-grammar-v1", "\"b1-01\"", "\"b1-24\""]) requireText(lexicalGrammarB1, text, "B1 lexical grammar registry");
 for (const text of ["b2-lexical-grammar-v1", "\"b2-01\"", "\"b2-12\"", "genitive"]) requireText(lexicalGrammarB2, text, "B2 lexical grammar registry");
 for (const text of ["nounsByLesson", "framesByLesson", "lexicalLevelOf", "pendingLevels", "B1:", "B2:"]) requireText(lexicalRegistry, text, "unified lexical grammar registry");
-for (const text of ["Nomen mit Artikel, Plural und Kasus", "Verb + Präposition + Kasus", "Genitiv"]) requireText(lexicalPanel, text, "A1-B2 lexical grammar panel");
+for (const text of ["Nomen mit Artikel, Plural, Genitiv und Dativ Plural", "Verb + Präposition + Kasus", "Genitiv"]) requireText(lexicalPanel, text, "A1-B2 lexical grammar panel");
+for (const text of ["deriveGenitiveStem", "deriveDativePlural", "GENITIVE_OVERRIDES", "NS_GENITIVE_LEMMAS", "dativePlural"]) requireText(lexicalBuild, text, "lexical grammar builder Genitiv/Dativ Plural morphology");
+requireText(lexicalPanel, "Genitiv · المضاف إليه", "lexical grammar panel Genitiv label");
+requireText(lexicalPanel, "noun.dativePlural.form", "lexical grammar panel dative plural rendering");
+for (const text of ["genitive", "dativePlural"]) requireText(read("src/core/content-validation/schemas.ts"), text, "Zod lexical grammar fields");
+for (const text of ["invalid genitive form", "dative plural policy", "weak oblique stem"]) requireText(read("src/core/content-validation/validate-academic-content.ts"), text, "academic validator Genitiv/Dativ Plural rules");
 for (const text of ["336 سجل اسم", "144 إطار فعل/حرف جر", "24/24 درس A1", "24/24 درس A2", "24/24 درس B1", "12/12 درس B2"]) requireText(prompt, text, "continuation prompt A1-B2 lexical grammar contract");
+for (const text of ["336/336 صيغة Genitiv", "جمع مجرور مؤلف"]) requireText(prompt, text, "continuation prompt Genitiv/Dativ Plural contract");
 for (const text of ["2026-09-04 — Africa/Tunis", "wegberlin-full.zip.sha256", "TERMUX_REPLACE_REPO.sh", "sha256sum -c wegberlin-full.zip.sha256", "دون Force"]) requireText(prompt, text, "continuation prompt Termux handoff");
 for (const text of ["storage/downloads/wegberlin-full.zip", "gh api user --jq .login", "git push origin main", "GIT_ASKPASS"] ) requireText(termuxReplace, text, "Termux clean-replacement script");
 for (const forbidden of ["git push -f", "gh auth login", "@github.com/${GITHUB_PAT}"]) if (termuxReplace.includes(forbidden)) fail(`Termux replacement script contains forbidden pattern ${forbidden}`);
@@ -155,6 +162,6 @@ console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 e
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 294 unit/integrity and 29+29 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 297 unit/integrity and 29+29 browser tests documented`);
 console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
 console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

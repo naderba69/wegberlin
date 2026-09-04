@@ -30,6 +30,13 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 - The frame case contract was widened from Akkusativ/Dativ to include Genitiv so the layer can carry formal B2 prepositions such as `angesichts`, `hinsichtlich`, and `trotz` instead of dodging them.
 - Recurring Dativ exceptions stay explicit and teachable next to their Akkusativ twins: `beruhen auf` (Dativ) beside `sich verlassen auf` (Akkusativ), `leiden unter` beside `umsteigen auf`.
 
+## Genitiv and Dativ Plural amendment (2026-09-04)
+
+- `caseForms` grew from three cases to four: every noun anchor now carries a singular **Genitiv** next to Nominativ/Akkusativ/Dativ, and a separate `dativePlural` record holds the `den …` form that learners actually need after `in/mit/bei/von/zu` in the plural.
+- Forms are derived by two declared helpers, `deriveGenitiveStem` and `deriveDativePlural`, with 14 hand-authored exceptions (`des Landes`, `des Buches`, `des Busses`, `des Erlebnisses`, `des Zyklus`, `des Namens` beside `des Kollegen`, …). No form is guessed silently: where the rule would be wrong, the override is written down in `GENITIVE_OVERRIDES` with the reason.
+- No-plural nouns keep `dativePlural.form === null` with an explicit Arabic note instead of a fabricated plural.
+- The prebuild Zod gate rejects a genitive without `des/der`, a weak noun whose genitive ignores its oblique stem, a dative plural that is not `den` + plural ending in n/s, and any mismatch between the plural policy and the dative-plural policy.
+
 ## Consequences
 
 - A1–B2 now have 336 noun anchors and 144 frames across 84/84 published lessons.

@@ -23,7 +23,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
     }
   });
 
-  it("stores article, gender, plural policy, and three case forms for every noun", () => {
+  it("stores article, gender, plural policy, and four case forms for every noun", () => {
     const articles = { masculine: "der", feminine: "die", neuter: "das" } as const;
     for (const noun of a1NounGrammarEntries) {
       expect(nounGrammarEntrySchema.safeParse(noun).success, noun.id).toBe(true);
@@ -32,14 +32,15 @@ describe("A1 structured noun and verb-preposition anchors", () => {
       expect(noun.caseForms.accusative.trim(), noun.id).not.toBe("");
       expect(noun.caseForms.dative.trim(), noun.id).not.toBe("");
       expect(noun.plural.noteAr.trim(), noun.id).not.toBe("");
+      expect(noun.caseForms.genitive.startsWith(noun.gender === "feminine" ? "der " : "des "), noun.id).toBe(true);
     }
   });
 
   it("keeps weak masculine oblique forms explicit instead of deriving the wrong case", () => {
     const name = a1NounGrammarEntries.find((noun) => noun.lessonId === "a1-01" && noun.lemma === "Name")!;
     const colleague = a1NounGrammarEntries.find((noun) => noun.lemma === "Kollege")!;
-    expect(name.caseForms).toEqual({ nominative: "der Name", accusative: "den Namen", dative: "dem Namen" });
-    expect(colleague.caseForms).toEqual({ nominative: "der Kollege", accusative: "den Kollegen", dative: "dem Kollegen" });
+    expect(name.caseForms).toEqual({ nominative: "der Name", accusative: "den Namen", dative: "dem Namen", genitive: "des Namens" });
+    expect(colleague.caseForms).toEqual({ nominative: "der Kollege", accusative: "den Kollegen", dative: "dem Kollegen", genitive: "des Kollegen" });
   });
 
   it("stores a usable chunk, governed case, example, and Arabic contrast for every frame", () => {
@@ -62,7 +63,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
 
   it("renders German-first A1 anchors and stays absent outside the authored batch", () => {
     const { unmount } = render(createElement(LexicalGrammarPanel, { lessonId: "a1-01" }));
-    expect(screen.getByText("Nomen mit Artikel, Plural und Kasus")).toBeTruthy();
+    expect(screen.getByText("Nomen mit Artikel, Plural, Genitiv und Dativ Plural")).toBeTruthy();
     expect(screen.getAllByText("der Name").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("die Namen").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("nach dem Namen fragen")).toBeTruthy();
@@ -103,7 +104,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
 
   it("keeps weak masculine and no-plural A2 nouns explicit instead of guessing", () => {
     const neighbour = a2NounGrammarEntries.find((noun) => noun.lemma === "Nachbar")!;
-    expect(neighbour.caseForms).toEqual({ nominative: "der Nachbar", accusative: "den Nachbarn", dative: "dem Nachbarn" });
+    expect(neighbour.caseForms).toEqual({ nominative: "der Nachbar", accusative: "den Nachbarn", dative: "dem Nachbarn", genitive: "des Nachbarn" });
     const noPlural = a2NounGrammarEntries.filter((noun) => noun.plural.form === null).map((noun) => noun.lemma);
     expect(noPlural).toEqual(["Stolz", "Müll", "Gepäck", "Schlaf", "Ernährung", "Privatsphäre"]);
     for (const lemma of noPlural) {
@@ -268,5 +269,69 @@ describe("whole-course lexical coverage boundary", () => {
       expect(nounsByLesson[lesson.id], lesson.id).toHaveLength(4);
       expect(framesByLesson[lesson.id]?.length ?? 0, lesson.id).toBeGreaterThanOrEqual(1);
     }
+  });
+});
+
+describe("nominal Genitiv and Dativ Plural across A1-B2", () => {
+  it("gives all 336 noun anchors an authored genitive form that matches its gender article", () => {
+    expect(nounGrammarEntries).toHaveLength(336);
+    for (const noun of nounGrammarEntries) {
+      expect(nounGrammarEntrySchema.safeParse(noun).success, noun.id).toBe(true);
+      const article = noun.gender === "feminine" ? "der" : "des";
+      expect(noun.caseForms.genitive.startsWith(`${article} `), `${noun.id}: ${noun.caseForms.genitive}`).toBe(true);
+      expect(noun.caseForms.genitive.length, noun.id).toBeGreaterThan(article.length + 2);
+    }
+    // صيغ بعينها كانت ستخطئها القاعدة العامة لو لم تُؤلَّف صراحةً.
+    const byLemma = (lemma: string) => nounGrammarEntries.find((noun) => noun.lemma === lemma)!;
+    expect(byLemma("Land").caseForms.genitive).toBe("des Landes");
+    expect(byLemma("Kind").caseForms.genitive).toBe("des Kindes");
+    expect(byLemma("Buch").caseForms.genitive).toBe("des Buches");
+    expect(byLemma("Bus").caseForms.genitive).toBe("des Busses");
+    expect(byLemma("Zyklus").caseForms.genitive).toBe("des Zyklus");
+    expect(byLemma("Erlebnis").caseForms.genitive).toBe("des Erlebnisses");
+    expect(byLemma("Name").caseForms.genitive).toBe("des Namens");
+    expect(byLemma("Kollege").caseForms.genitive).toBe("des Kollegen");
+    expect(byLemma("Nachbar").caseForms.genitive).toBe("des Nachbarn");
+    expect(byLemma("Stadt").caseForms.genitive).toBe("der Stadt");
+    expect(byLemma("Müll").caseForms.genitive).toBe("des Mülls");
+  });
+
+  it("authors a dative plural for every countable anchor and declares none for no-plural nouns", () => {
+    const countable = nounGrammarEntries.filter((noun) => noun.plural.form !== null);
+    const noPlural = nounGrammarEntries.filter((noun) => noun.plural.form === null);
+    expect(countable.length + noPlural.length).toBe(336);
+    for (const noun of countable) {
+      expect(noun.dativePlural.form, noun.id).toMatch(/^den \S+(n|s)$/);
+      expect(noun.dativePlural.form, noun.id).toBe(`den ${noun.plural.form}${/(n|s)$/.test(noun.plural.form!) ? "" : "n"}`);
+      expect(noun.dativePlural.noteAr.trim(), noun.id).not.toBe("");
+    }
+    for (const noun of noPlural) expect(noun.dativePlural.form, noun.id).toBeNull();
+    expect(noPlural.map((noun) => noun.lemma).sort()).toEqual([
+      "Alltag", "Alter", "Barrierefreiheit", "Bildschirmzeit", "Ernährung", "Erreichbarkeit", "Freizeit",
+      "Gemüse", "Gepäck", "Lebensdauer", "Lebensqualität", "Leistungsumfang", "Müll", "Privatsphäre", "Reichweite", "Schlaf",
+      "Sport", "Stolz", "Teilhabe", "Umfang", "Wetter", "Zeitdruck", "Zuverlässigkeit",
+    ]);
+    const dative = (lemma: string) => nounGrammarEntries.find((noun) => noun.lemma === lemma)!.dativePlural.form;
+    expect(dative("Kind")).toBe("den Kindern");
+    expect(dative("Stadt")).toBe("den Städten");
+    expect(dative("Nachbar")).toBe("den Nachbarn");
+    expect(dative("Hobby")).toBe("den Hobbys");
+    expect(dative("Firma")).toBe("den Firmen");
+  });
+
+  it("passes the shared prebuild validator and rejects a broken genitive or dative plural at the same gate", () => {
+    const result = validateAcademicContent();
+    expect(result.ok, result.issues.join("\n")).toBe(true);
+    expect(result.counts.nounGrammarEntries).toBe(336);
+
+    const sample = nounGrammarEntries[0];
+    expect(nounGrammarEntrySchema.safeParse({ ...sample, caseForms: { ...sample.caseForms, genitive: sample.lemma } }).success).toBe(false);
+    expect(nounGrammarEntrySchema.safeParse({
+      ...sample,
+      dativePlural: { form: sample.dativePlural.form?.replace(/n$/, "") ?? null, noteAr: sample.dativePlural.noteAr },
+    }).success).toBe(false);
+    const tampered = structuredClone(sample) as Partial<(typeof nounGrammarEntries)[number]>;
+    delete tampered.dativePlural;
+    expect(nounGrammarEntrySchema.safeParse(tampered).success).toBe(false);
   });
 });

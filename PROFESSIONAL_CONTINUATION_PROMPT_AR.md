@@ -1,5 +1,7 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
+آخر تدقيق للتسليم: **2026-09-04 — Africa/Tunis**
+
 > **طريقة الاستخدام:** في جلسة Agent جديدة، أرفق مستودع المشروع أو `wegberlin.zip`، ثم الصق هذا الملف كاملًا كأول رسالة. هذا الملف برومبت تشغيل وتسليم، بينما تبقى ملفات الحقيقة التفصيلية: `docs/MASTER_SPEC.md` و`PROJECT_STATUS.md` و`P0_AUDIT.md` و`IDEA_BACKLOG.md` و`DECISIONS.md`.
 
 ---
@@ -35,7 +37,7 @@ git clone https://github.com/naderba69/wegberlin.git
 cd wegberlin
 ```
 
-القراءة العامة متاحة، لكن لا تدّع أن Push أو نشرًا جديدًا تم ما لم تتوفر صلاحية كتابة ونتيجة Push/Deployment فعلية.
+القراءة العامة متاحة. آخر `main` متحقق في 2026-09-04 هو `7c2849b00cacf8ecdd0d031e3db8f453fbf3a776` ويتضمن الدفعة السابقة. التحقق من Raw أعاد 404 لملفي `src/config/source-verification-registry.json` و`src/data/lexical-grammar-a1.ts`، لذلك دفعات حوكمة المصادر، Zod والتقارير الأكاديمية، وزن النقل، SM-2 بالتوقيت المحلي، وطبقة مفردات A1 الحالية **ليست مدفوعة إلى GitHub بعد**. لا تدّع Push أو نشرًا جديدًا ما لم تتوفر نتيجة فعلية.
 
 ---
 
@@ -51,7 +53,11 @@ PROJECT_STATUS.md
 P0_AUDIT.md
 IDEA_BACKLOG.md
 DECISIONS.md
+ZERO_COST.md
 docs/MASTER_SPEC.md
+docs/CONTENT_COMPLETENESS_AUDIT.md
+docs/AUDIO_PRODUCTION_BACKLOG.md
+docs/SOURCE_FRESHNESS.md
 ```
 
 3. افحص الشجرة والحالة بدل التخمين:
@@ -266,12 +272,13 @@ React: 19.2.8
 TypeScript: 5
 IndexedDB DB version: 4
 LearningState schemaVersion: 3
-Unit/Integrity tests: 226/226
+Unit/Integrity tests: 264/264
 Playwright desktop + mobile: 50/50
 Static/SSG pages: 301
 Offline routes: 298/298
 Search entries: 3,080
-Offline cache: dwnb-full-pack-v48
+Official source records: 12/12
+Offline cache: dwnb-full-pack-v52
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```
@@ -298,13 +305,21 @@ axe serious/critical on tested pages: 0
 - 84 درسًا كاملًا بالمراحل الـ14.
 - Evidence gate بأربعة شروط.
 - خمس فئات تمارين.
+- واجهة تمرين German-first مع دعم عربي، لا تعرض IDs داخلية: أسماء أنواع مفهومة، German stem ظاهر، وخانة مرئية للفراغ بدل `___` غير الواضحة.
+- `docs/CONTENT_COMPLETENESS_AUDIT.md`: صفر نصوص runtime مؤلفة فارغة، 588 سطح تمرين، 924 سؤال درس ألماني، 320 سؤال مكتبة ألماني، و150 مهمة امتحان مدققة بنيويًا.
+- 12 عائلة Zod صارمة تتحقق عند `prebuild` من 2,665 كائنًا أكاديميًا علويًا وبنيته المتداخلة، ومنها 96 سجل اسم و24 إطار فعل/حرف جر لـA1؛ تغيير المحتوى دون إعادة توليد التقارير يفشل Build.
+- تقرير إجابة موحد: 2,584 عنصرًا مغلقًا مرتبطًا بالجواب والدليل + 348 مهمة إنتاجية بلا جواب وحيد، صفر تسريب غير معتمد وثلاثة إعفاءات تواصلية/تحريرية موثقة.
+- تقرير هدف بنيوي قابل للقراءة: 336/336 هدفًا يملك مواضع تدريس وتدريب وMini-Test، مع حد صريح أنه لا يساوي تدقيقًا دلاليًا بشريًا لكل عنصر.
+- دفعة `a1-lexical-grammar-v1`: في 24/24 درس A1 تظهر 4 مراسي أسماء German-first بالأداة والجنس والجمع والحالات الثلاث، وإطار فعل/حرف جر واحد مع الحالة وChunk ومثال. الجداول التفصيلية مطوية للمبتدئ؛ A2–B2 لم تؤلف بعد.
 - Hint ladder.
 - Seeded shuffle مع حفظ الفهرس الأصلي.
 - قاموس/ترجمة مؤجلة في القراءة.
 - اقتباس دليل نصي بعد الالتزام.
 - بطاقات SRS مشتقة من الدروس المكتملة فقط.
 - أول كشف للبطاقة لا يرفع الإتقان.
+- `novelty-weighting-v1`: سؤال النقل الجديد 1.5، التدريب الجديد 1، وأحدث إعادة للسؤال نفسه 0.25 فقط؛ عدد الإعادات لا يضخم إتقان الدرس.
 - ReviewEvents أولية/مؤجلة قابلة للتدقيق؛ الزيادة فقط بعد نجاح مؤجل.
+- `sm2-v2-calendar` يحسب يوم المراجعة حسب منطقة IANA محقونة ويحفظ `review-calendar-v1` والمنطقة، مع توافق `sm2-v1` القديم واختبارات DST متعددة المناطق.
 - أربع بطاقات مؤجلة ناجحة قبل إظهار عينة احتفاظ للدرس، دون ادعاء إتقان دائم.
 
 ### الأخطاء والإنتاج
@@ -337,6 +352,15 @@ axe serious/critical on tested pages: 0
 - عقد JSON صارم للمرشد.
 - تخزين provider/model/promptVersion/consent دون المفتاح.
 - حذف التسجيلات أو سجل المرشد أو المفتاح فورًا.
+- حارس 0 USD يفحص الموديل وحداثة مصادر السعر قبل أي `fetch`: Gemini محصور في قائمة متحققة، وOpenRouter في `openrouter/free` أو `:free`. عند التقادم يبقى Disabled/Ollama والمنهج كاملًا.
+
+### حوكمة المصادر والتكلفة
+
+- سجل مركزي من 12/12 مصدرًا رسميًا للامتحان وGemini/OpenRouter وVercel Hobby وGitHub Actions.
+- كل سجل يملك `lastVerifiedAt` ونسخة/حالة ملحوظة ومدة 30 يومًا وإجراء تقادم.
+- Exam Hub يعرض صلاحية مصدر الملف وموعد المراجعة التالي بدل وصف ثابت.
+- `npm run source:audit -- --strict` داخل بوابة Build، وWorkflow شهري يفتح/يحدّث Issue عند الاستحقاق أو فشل الوصول.
+- HTTP 200/206 لا يعد مراجعة دلالية؛ تحديث التاريخ يتطلب مقارنة بشرية للمضمون.
 
 ### الصوت المتين
 
@@ -375,25 +399,23 @@ axe serious/critical on tested pages: 0
 
 ```text
 Total P0: 124
-Implemented: 95
-Partial: 25
-Not implemented: 3
+Implemented: 102
+Partial: 19
+Not implemented: 2
 Blocked by user credentials: 1
 ```
 
-### P0 الجزئي — 25
+### P0 الجزئي — 19
 
 ```text
 26  إنتاج قصير داخل التشخيص
 38  استرجاع افتتاحي قبل وجود بطاقات
-63  وزن صريح للنقل الجديد
 98  جنس/جمع/حالة الاسم كبيانات بنيوية
 99  الفعل + حرف الجر + الحالة كبيانات بنيوية
 112 تدقيق تعليم الحالات بالمعنى أولًا
 124 مراجعة بشرية لدلالة اقتباسات القراءة
 135 سرعات تعليمية في كل مشغلات الاستماع
 159 معلومات ناقصة ثنائية حقيقية
-194 تنبيه تقادم مصادر الامتحان
 242 حزم Offline مستقلة لكل مستوى
 243 حجم صفحات Next قبل التنزيل
 254 تدقيق lang/Bidi لكل fragment
@@ -401,22 +423,17 @@ Blocked by user credentials: 1
 256 تعميم Status announcements دون إزعاج
 266 يوم سماح ظاهر
 267 قاموس مدح سلوكي موحد
-289 Zod لكل كائن محتوى أكاديمي
-292 تقرير موحد لمنع تسريب الجواب
 302 تشغيل Mobile E2E كاملًا داخل CI
 304 Secret scan على Git history حقيقي
-325 مصفوفة Timezone/DST لـSM-2
 373 شروح تونسية فعلية
 376 فروق فصحى/تونسية المؤثرة
-387 تقرير هدف → تدريس → تدريب → تقييم
 ```
 
-### P0 غير المنجز — 3
+### P0 غير المنجز — 2
 
 ```text
 160 أسئلة متابعة مبنية على مضمون تسجيل المحادثة
 219 نموذج داخل المتصفح عبر WebGPU
-364 مراجعة شهرية آلية للمصادر الرسمية والحدود المجانية
 ```
 
 ### P0 المتوقف على المستخدم — 1
@@ -548,28 +565,25 @@ Blocked by user credentials: 1
 ابدأ بالدفعة التالية ما لم يحدد المستخدم غيرها:
 
 ```text
-P0 194 + P0 364
+P0 98 + 99 — دفعة A2
 ```
 
 أي:
 
-- سجل versioned للمصادر الرسمية وحدود المزودات.
-- `lastVerifiedAt` ومدة صلاحية لكل مصدر.
-- تقرير تقادم محلي عند Build.
-- Script يفشل أو يحذر حسب مستوى التقادم.
-- لا يعتمد على خدمة مدفوعة.
-- لا يدعي أن مجرد HTTP 200 يعني أن صيغة الامتحان لم تتغير.
+- توسيع `a1-lexical-grammar-v1` إلى 24/24 درس A2 بأسماء مؤلفة وأشكال حالة صحيحة.
+- إضافة إطار فعل + حرف جر + حالة + Chunk لكل درس A2 ثم إدخاله في Zod والواجهة.
+- لا تغلق 98/99 حتى تشمل A1–B2 والمفردات الهدف المطلوبة، ولا تغلق 124 قبل مراجعة بشرية فعلية لاقتباسات القراءة.
 
 بعدها:
 
 ```text
-P0 289 + 292 + 387
+P0 242 + 243
 ```
 
 ثم:
 
 ```text
-P0 98 + 99 + 124
+P0 254 + 255 + 256
 ```
 
 ---
@@ -714,4 +728,68 @@ Offline cache: vX
 
 ## 16. أمر البدء للوكيل الجديد
 
-بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». نفّذ أول دفعة غير محجوبة من P0، والأولوية الحالية هي مراقبة تقادم المصادر والحدود المجانية. حافظ على كل الثوابت أعلاه، ولا تخفض الجودة أو تحذف اختبارات ناجحة لتسريع الإنجاز.
+بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». نفّذ أول دفعة غير محجوبة من P0، والأولوية الحالية هي توسيع بيانات الاسم/الفعل البنيوية من A1 المكتمل في هذه الطبقة إلى A2. لا تدّع إغلاق دليل القراءة البشري دون مراجع فعلي. حافظ على كل الثوابت أعلاه، ولا تخفض الجودة أو تحذف اختبارات ناجحة لتسريع الإنجاز.
+
+---
+
+## 17. ZIP والتسليم والرفع الآمن من Termux
+
+اسم الحزمة القياسي الذي يجب إنشاؤه وتسليمه بعد كل دفعة:
+
+```text
+/home/user/wegberlin-full.zip
+/home/user/wegberlin-full.zip.sha256
+/home/user/der-weg-nach-berlin/TERMUX_ONE_COMMAND.txt
+```
+
+يجب أن يكون المشروع في **جذر ZIP** وأن يستبعد:
+
+```text
+node_modules
+.next
+.git
+test-results
+playwright-report
+coverage
+*.tsbuildinfo
+.env*
+*.dwnb
+```
+
+بعد تنزيل الملفين إلى مجلد Downloads في الهاتف، هذا هو أمر Termux الواحد الموصى به:
+
+```bash
+pkg update -y && pkg install -y git gh unzip coreutils && termux-setup-storage && cd "$HOME/storage/downloads" && sha256sum -c wegberlin-full.zip.sha256 && rm -rf "$HOME/wegberlin-upload-tools" && mkdir -p "$HOME/wegberlin-upload-tools" && unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh -d "$HOME/wegberlin-upload-tools" && chmod +x "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" && "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" "$HOME/storage/downloads/wegberlin-full.zip" "Update audited WegBerlin handoff and A1 lexical grammar"
+```
+
+السلوك الأمني الإلزامي للسكربت:
+
+- يطلب Fine-grained أو Classic PAT بإدخال مخفي.
+- Fine-grained PAT للمستودع يحتاج `Contents: Read and write`؛ Classic يحتاج `repo`.
+- يتحقق أن الحساب `naderba69` بواسطة `GH_TOKEN` و`gh api user` دون `gh auth login`.
+- لا يضع PAT في Remote URL أو shell history أو ملف دائم.
+- يستخدم AskPass مؤقتًا ثم يحذفه.
+- يحافظ على `.git` وتاريخ المستودع، ويستبدل شجرة المشروع كاملة.
+- ينفذ `git add -A` وCommit و`git push origin main` **دون Force**.
+- يرفض ZIP يحوي `.git` ويفحص `package.json` حتى لو كان المشروع داخل مجلد متداخل.
+
+بعد الرفع تحقّق من Termux:
+
+```bash
+cd "$HOME/wegberlin-clean-upload" && git status --short && git log -1 --oneline && git ls-remote origin refs/heads/main
+```
+
+ثم تحقّق أن GitHub يحتوي على الأقل:
+
+```text
+PROFESSIONAL_CONTINUATION_PROMPT_AR.md
+src/config/source-verification-registry.json
+src/core/content-validation/schemas.ts
+reports/academic-content-audit.json
+src/core/evidence/mastery-weighting.ts
+src/core/srs/sm2.ts
+src/data/lexical-grammar-a1.ts
+src/components/lexical-grammar-panel.tsx
+```
+
+لا تعتبر P0-301 منجزًا قبل ظهور Commit الجديد علنًا والتحقق من Vercel Production وPR Preview URL فعليين.

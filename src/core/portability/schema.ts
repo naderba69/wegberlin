@@ -74,11 +74,13 @@ export const learningStateSchema = z.object({
   })).default([]),
   reviewItems: z.array(z.object({
     id: z.string(), cardId: z.string(), repetitions: z.number().int().nonnegative(), interval: z.number().int().nonnegative(),
-    easeFactor: z.number().min(1.3), nextReviewDate: z.string(), lastGrade: z.number().int().min(0).max(5).optional(), algorithmVersion: z.literal("sm2-v1"),
+    easeFactor: z.number().min(1.3), nextReviewDate: z.string(), lastGrade: z.number().int().min(0).max(5).optional(), algorithmVersion: z.enum(["sm2-v1", "sm2-v2-calendar"]),
+    calendarPolicyVersion: z.literal("review-calendar-v1").optional(), calendarTimeZone: z.string().optional(), reviewHourLocal: z.number().int().min(0).max(23).optional(),
   })),
   reviewEvents: z.array(z.object({
     id: z.string(), cardId: z.string(), lessonId: z.string(), grade: z.number().int().min(0).max(5),
     evidenceKind: z.enum(["initial", "delayed"]), scheduledFor: z.string(), reviewedAt: z.string(), masteryDelta: z.number().int().nonnegative(),
+    calendarPolicyVersion: z.literal("review-calendar-v1").optional(), calendarTimeZone: z.string().optional(),
   })).default([]),
   writingSubmissions: z.array(z.object({
     id: z.string(), taskId: z.string(), text: z.string(), wordCount: z.number().int().nonnegative(), version: z.number().int().positive(),

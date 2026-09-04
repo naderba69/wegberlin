@@ -96,7 +96,7 @@ export function DiagnosticView() {
   }
 
   return <div className="diagnostic-page">
-    <header><div><span className="eyebrow"><ClipboardCheck size={15}/> تشخيص متكيف · الصيغة {formId}</span><h1>نبحث عن نقطة البداية،<br/><em>لا عن علامة جميلة.</em></h1><p>أجب دون قاموس. كل مستوى يفحص القواعد والمفردات والقراءة والاستماع، ويتوقف البنك عندما يظهر الحد بدل فرض الأسئلة الأعلى عليك.</p></div><div className="diagnostic-meta"><ShieldCheck size={18}/><span>محلي بالكامل<br/><small>4–16 سؤالًا · نحو 3–12 دقيقة</small></span></div></header>
+    <header><div><span className="eyebrow"><ClipboardCheck size={15}/> تشخيص متكيف · الصيغة {formId}</span><h1>نبحث عن نقطة البداية،<br/><em>لا عن علامة جميلة.</em></h1><p>أجب دون قاموس. كل مستوى يفحص القواعد والمفردات والقراءة والاستماع، ويتوقف البنك عندما يظهر الحد بدل فرض الأسئلة الأعلى عليك.</p></div><div className="diagnostic-meta"><ShieldCheck size={18}/><span>محلي بالكامل<br/><small><bdi dir="ltr">4–16</bdi> سؤالًا · نحو <bdi dir="ltr">3–12</bdi> دقيقة</small></span></div></header>
     <div className="diagnostic-progress"><span>السؤال {index + 1} · العنصر {levelPosition + 1} من 4 في {question.level}</span><i><b style={{ width: `${percent}%` }}/></i><strong>{question.level}</strong></div>
     <section className="question-card">
       <small>{skillLabels[question.skill]}</small>

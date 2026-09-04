@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { assertAIZeroCost } from "@/config/cost-registry";
 import type { AIProvider, TutorAnswerEvidence } from "@/types/learning";
 
 export const TUTOR_PROMPT_VERSION = "tutor-v2" as const;
@@ -17,7 +18,7 @@ export type TutorAnswer = TutorAnswerEvidence & {
   promptVersion: typeof TUTOR_PROMPT_VERSION;
 };
 
-type TutorRequestOptions = { context: TutorContext; consentGranted?: boolean };
+type TutorRequestOptions = { context: TutorContext; consentGranted?: boolean; now?: Date };
 
 const tutorPayloadSchema = z.object({
   hintAr: z.string().trim().min(3).max(600),
@@ -111,6 +112,8 @@ async function responseJsonText(response: Response, provider: AIProvider) {
 
 export async function testAIConnection(config: AIConfig): Promise<string> {
   if (config.provider === "disabled") throw new Error("اختر مزودًا أولًا.");
+  const model = modelFor(config);
+  assertAIZeroCost(config.provider, model);
   if (config.provider === "local") {
     const response = await fetch(`${endpointFrom(config)}/api/tags`);
     if (!response.ok) throw new Error("تعذر الوصول إلى Ollama المحلي.");
@@ -131,6 +134,7 @@ export async function askTutor(config: AIConfig, question: string, options: Tuto
   const cleanQuestion = question.trim();
   if (!cleanQuestion) throw new Error("اكتب سؤالًا أولًا.");
   const model = modelFor(config);
+  assertAIZeroCost(config.provider, model, options.now);
   if (config.provider === "disabled") {
     const answer = localAnswers.find(([pattern]) => pattern.test(cleanQuestion))?.[1] ?? {
       hintAr: "ارجع إلى هدف الدرس وحدد الكلمة أو البنية التي أربكتك.",

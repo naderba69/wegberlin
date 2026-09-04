@@ -1,6 +1,6 @@
 const SHELL_CACHE = "dwnb-shell-v4";
-const PACK_CACHE = "dwnb-full-pack-v48";
-const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v48";
+const PACK_CACHE = "dwnb-full-pack-v52";
+const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v52";
 const PACK_META_PATH = "/__dwnb_offline_pack_meta__";
 const OFFLINE_MANIFEST_PATH = "/offline-routes.json";
 const AUDIO_MANIFEST_PATHS = ["/audio/library/manifest.json", "/audio/lessons/manifest.json", "/audio/exams/manifest.json"];

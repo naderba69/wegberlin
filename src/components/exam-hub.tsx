@@ -21,6 +21,7 @@ import { publishedTargetedExamSimulations } from "@/data/exam-simulation-registr
 import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { examAudioManifest, examAudioTaskCoverageById } from "@/data/exam-audio-assets";
 import { buildExamReadiness } from "@/core/exams/readiness";
+import { summarizeSourceFreshness } from "@/core/governance/source-freshness";
 import type { ExamProvider } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 
@@ -42,6 +43,7 @@ export function ExamHub() {
   const providerFullAudioCoverage = examAudioManifest.taskCoverage.filter((coverage) => coverage.provider === exam && coverage.scope === "full-simulation");
   const providerFullAudioComplete = providerFullAudioCoverage.filter((coverage) => coverage.status === "complete").length;
   const readiness = buildExamReadiness(state, exam);
+  const sourceFreshness = summarizeSourceFreshness(profile.sourceRefs);
   const readinessByModule = Object.fromEntries(readiness.modules.map((module) => [module.moduleId, module]));
   const b2Ready = (state.mastery["level-b2-ready"] ?? 0) >= 100;
 
@@ -72,9 +74,9 @@ export function ExamHub() {
         </button>
       </div>
 
-      <section className="exam-profile-banner">
-        <div><FileCheck2 size={20} /><span><strong>ملف الصيغة موثّق</strong><small>آخر تحقق: {profile.verifiedAt} · {profile.specificationVersion}</small></span></div>
-        <p>{profile.structureAr} {profile.passingRuleAr}</p>
+      <section className="exam-profile-banner" role="status">
+        <div><FileCheck2 size={20} /><span><strong>{sourceFreshness.status === "fresh" ? "ملف الصيغة موثّق وحديث" : sourceFreshness.status === "due-soon" ? "اقترب موعد إعادة التحقق" : "ملف الصيغة يحتاج إعادة تحقق"}</strong><small>آخر تحقق بشري: {sourceFreshness.oldestVerifiedAt} · إعادة التحقق قبل {sourceFreshness.dueAt} · {profile.specificationVersion}</small></span></div>
+        <p>{sourceFreshness.status === "stale" || sourceFreshness.status === "clock-error" ? "لا يعني بقاء الروابط متاحة أن الصيغة لم تتغير؛ أوقف إصدار تغييرات امتحانية جديدة حتى المراجعة البشرية. " : "تنبيه النزاهة: نجاح فحص الرابط لا يثبت وحده بقاء الصيغة دون تغيير. "}{profile.structureAr} {profile.passingRuleAr}</p>
       </section>
 
       <div className="exam-module-grid">

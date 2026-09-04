@@ -1,6 +1,6 @@
 # B2 Exam Alignment Registry
 
-Last verified: 2026-08-28
+Last verified: 2026-09-03
 
 This registry documents only structure and scoring facts used by the application. All practice texts and answer keys in Der Weg nach Berlin are original. The project is not affiliated with, endorsed by, or an official product of Goethe-Institut or telc gGmbH.
 
@@ -21,7 +21,7 @@ The four modules can be taken individually or together. The app must not apply t
 
 Official sources:
 
-1. Exam overview: https://goethe.de/ins/us/en/sta/sfr/prf/gzb2/wi9.html
+1. Exam overview: https://www.goethe.de/ins/us/en/spr/prf/gzb2.cfm
 2. Terms and Conditions for Exam Administration, updated 2025-09-01: https://www.goethe.de/pro/relaunch/prf/en/Durchfuehrungsbestimmungen_B2.pdf
 3. Adult model set, 2025 edition: https://www.goethe.de/pro/relaunch/prf/materialien/B2/b2_modellsatz_erwachsene.pdf
 
@@ -102,6 +102,9 @@ Before publishing a full simulation or changing scoring logic:
 
 1. re-open the current official overview;
 2. compare the current terms/model document with the stored version;
-3. update `verifiedAt` and `specificationVersion`;
-4. keep both provider test fixtures passing;
-5. do not publish when an unresolved contradiction affects timing, task type, or scoring.
+3. update the matching records in `src/config/source-verification-registry.json` only after semantic review;
+4. update `verifiedAt` and `specificationVersion`;
+5. run `npm run source:audit -- --strict` and keep both provider test fixtures passing;
+6. do not publish when an unresolved contradiction affects timing, task type, or scoring.
+
+The 30-day policy and monthly Issue workflow are documented in `docs/SOURCE_FRESHNESS.md`. A successful HTTP response is reachability evidence only and never proves that the format is unchanged.

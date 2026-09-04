@@ -6,7 +6,10 @@
     "dev": "next dev --webpack",
     "offline:manifest": "node scripts/generate-offline-manifest.mjs",
     "handoff:check": "node scripts/verify-continuation-handoff.mjs",
-    "prebuild": "npm run offline:manifest",
+    "source:audit": "node scripts/audit-source-freshness.mjs",
+    "content:audit": "tsx scripts/generate-academic-audit.ts --check",
+    "content:audit:write": "tsx scripts/generate-academic-audit.ts --write",
+    "prebuild": "npm run offline:manifest && npm run content:audit",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -14,7 +17,7 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:desktop": "playwright test --project=chromium",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run handoff:check && npm run build",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run source:audit -- --strict && npm run handoff:check && npm run build",
     "dev:turbo": "next dev --turbopack"
   },
   "dependencies": {
@@ -40,6 +43,7 @@
     "fake-indexeddb": "^6.2.5",
     "jsdom": "^29.1.1",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5",
     "vitest": "^4.1.11"
   },

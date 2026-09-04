@@ -13,6 +13,7 @@ export default function ReviewPage() {
   const [flipped, setFlipped] = useState(false);
   const [lastInterval, setLastInterval] = useState<number | null>(null);
   const [reviewedThisSession, setReviewedThisSession] = useState(0);
+  const reviewTimeZone = useMemo(() => Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC", []);
   const queue = useMemo(() => buildDueReviewQueue(state, new Date()), [state]);
   const nextScheduled = useMemo(() => nextScheduledReviewDate(state, new Date()), [state]);
   const queued = queue[0];
@@ -23,7 +24,7 @@ export default function ReviewPage() {
   function grade(value: number) {
     if (!card || !reviewState || !queued) return;
     const now = new Date();
-    const outcome = applyReviewGrade(state, { ...queued, review: reviewState }, value, now);
+    const outcome = applyReviewGrade(state, { ...queued, review: reviewState }, value, now, { timeZone: reviewTimeZone });
     update(() => outcome.state);
     setLastInterval(outcome.nextReview.interval);
     setFlipped(false);

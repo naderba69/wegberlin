@@ -3,7 +3,7 @@ set -euo pipefail
 
 REPO="https://github.com/naderba69/wegberlin.git"
 WORKDIR="${HOME}/wegberlin"
-ARCHIVE="${1:-${HOME}/storage/downloads/wegberlin.zip}"
+ARCHIVE="${1:-${HOME}/storage/downloads/wegberlin-full.zip}"
 CHECKSUM="${ARCHIVE}.sha256"
 COMMIT_MESSAGE="${2:-Update WegBerlin audited development state}"
 

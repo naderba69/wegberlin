@@ -38,6 +38,7 @@ describe("published academic lesson integrity",()=>{
     const questions=academicLessonList.flatMap((lesson)=>[...lesson.reading.questions,...lesson.listening.questions,...lesson.miniTest]);
     for(const question of questions){expect(question.options).toHaveLength(4);expect(new Set(question.options).size).toBe(4);expect(question.correctIndex).toBeGreaterThanOrEqual(0);expect(question.correctIndex).toBeLessThan(4);}
   });
+  it("guarantees a visible task surface for every controlled exercise",()=>{for(const lesson of academicLessonList){for(const exercise of lesson.exercises){expect(exercise.promptAr.trim().length,exercise.id).toBeGreaterThanOrEqual(4);if(exercise.type==="multiple-choice"){expect(exercise.options.every((option)=>option.trim().length>0),exercise.id).toBe(true)}else if(exercise.type==="fill-blank"){expect(exercise.template,exercise.id).toContain("___");expect(exercise.acceptedAnswers.every((answer)=>answer.trim().length>0),exercise.id).toBe(true)}else if(exercise.type==="word-ordering"){expect(exercise.words.length,exercise.id).toBeGreaterThanOrEqual(2)}else if(exercise.type==="error-correction"){expect(exercise.sentence.trim().length,exercise.id).toBeGreaterThanOrEqual(4)}else{expect(exercise.pairs.length,exercise.id).toBeGreaterThanOrEqual(2)}}}});
   it("builds a balanced 48-item A1 level bank",()=>{
     const a1=academicLessonList.filter((lesson)=>lesson.level==="A1");
     const bank=a1.flatMap((lesson)=>lesson.miniTest.slice(0,2));

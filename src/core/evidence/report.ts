@@ -4,6 +4,7 @@ import { buildDueReviewQueue, eligibleReviewCards } from "@/core/srs/review-queu
 import { errorRepairState } from "@/core/errors/remediation";
 import { buildErrorClinics } from "@/core/errors/clinic";
 import { retentionEvidence } from "@/core/srs/review-session";
+import { buildNoveltyWeightedEvidence, MASTERY_WEIGHTING_VERSION } from "./mastery-weighting";
 
 export type EvidenceSkillKey = "reading" | "listening" | "grammar" | "writing" | "speaking";
 export type EvidenceConfidence = "none" | "low" | "medium" | "high";
@@ -17,6 +18,13 @@ export type SkillEvidenceMetric = {
   correctCount?: number;
   coverageCount: number;
   latestAt?: string;
+  noveltyWeighting?: {
+    version: typeof MASTERY_WEIGHTING_VERSION;
+    novelItems: number;
+    novelTransfers: number;
+    retryAttempts: number;
+    weightedAccuracyPercent: number | null;
+  };
   detailAr: string;
   boundaryAr: string;
 };
@@ -36,12 +44,12 @@ export type EvidenceAction = {
   href: string;
 };
 
-const attemptSkill = new Map<string, { skill: "reading" | "listening" | "grammar"; lessonId: string }>();
+const attemptSkill = new Map<string, { skill: "reading" | "listening" | "grammar"; lessonId: string; novelty: "practice" | "transfer" }>();
 for (const lesson of academicLessonList) {
-  for (const exercise of lesson.exercises) attemptSkill.set(exercise.id, { skill: "grammar", lessonId: lesson.id });
-  for (const question of lesson.reading.questions) attemptSkill.set(question.id, { skill: "reading", lessonId: lesson.id });
-  for (const question of lesson.listening.questions) attemptSkill.set(question.id, { skill: "listening", lessonId: lesson.id });
-  for (const question of lesson.miniTest) attemptSkill.set(question.id, { skill: "grammar", lessonId: lesson.id });
+  for (const exercise of lesson.exercises) attemptSkill.set(exercise.id, { skill: "grammar", lessonId: lesson.id, novelty: "practice" });
+  for (const question of lesson.reading.questions) attemptSkill.set(question.id, { skill: "reading", lessonId: lesson.id, novelty: "transfer" });
+  for (const question of lesson.listening.questions) attemptSkill.set(question.id, { skill: "listening", lessonId: lesson.id, novelty: "transfer" });
+  for (const question of lesson.miniTest) attemptSkill.set(question.id, { skill: "grammar", lessonId: lesson.id, novelty: "transfer" });
 }
 
 function confidence(evidenceCount: number, coverageCount: number): EvidenceConfidence {
@@ -68,7 +76,10 @@ function latestLessonAttempts(state: LearningState) {
 }
 
 function receptiveMetric(state: LearningState, key: "reading" | "listening" | "grammar", labelAr: string): SkillEvidenceMetric {
+  const rawAttempts = state.exerciseAttempts.filter((attempt) => attemptSkill.get(attempt.exerciseId)?.skill === key);
   const attempts = latestLessonAttempts(state).filter((attempt) => attemptSkill.get(attempt.exerciseId)?.skill === key);
+  const transferIds = new Set(rawAttempts.filter((attempt) => attemptSkill.get(attempt.exerciseId)?.novelty === "transfer").map((attempt) => attempt.exerciseId));
+  const novelty = buildNoveltyWeightedEvidence(rawAttempts, transferIds);
   const correctCount = attempts.filter((attempt) => attempt.correct).length;
   const coverageCount = new Set(attempts.map((attempt) => attempt.lessonId)).size;
   const accuracy = attempts.length ? correctCount / attempts.length : 0;
@@ -82,9 +93,16 @@ function receptiveMetric(state: LearningState, key: "reading" | "listening" | "g
     evidenceCount: attempts.length,
     correctCount,
     coverageCount,
-    latestAt: latestIso(attempts.map((attempt) => attempt.createdAt)),
-    detailAr: attempts.length ? `${correctCount}/${attempts.length} صحيح · ${coverageCount} دروس` : "لا توجد إجابات محفوظة بعد",
-    boundaryAr: "درجة دليل تدريبية؛ لا تعادل مستوى CEFR أو نقاط امتحان رسمية.",
+    latestAt: latestIso(rawAttempts.map((attempt) => attempt.createdAt)),
+    noveltyWeighting: {
+      version: novelty.version,
+      novelItems: novelty.novelItemCount,
+      novelTransfers: novelty.novelTransferCount,
+      retryAttempts: novelty.retryAttemptCount,
+      weightedAccuracyPercent: novelty.weightedAccuracyPercent,
+    },
+    detailAr: attempts.length ? `${correctCount}/${attempts.length} صحيح · ${coverageCount} دروس · ${novelty.novelItemCount} عناصر جديدة مقابل ${novelty.retryAttemptCount} إعادات بوزن منخفض` : "لا توجد إجابات محفوظة بعد",
+    boundaryAr: "درجة دليل تدريبية؛ السؤال الجديد/النقل أعلى وزنًا من إعادة السؤال نفسه، ولا تعادل النتيجة مستوى CEFR أو نقاط امتحان رسمية.",
   };
 }
 

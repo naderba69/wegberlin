@@ -114,7 +114,10 @@ export interface ReviewItem {
   easeFactor: number;
   nextReviewDate: string;
   lastGrade?: number;
-  algorithmVersion: "sm2-v1";
+  algorithmVersion: "sm2-v1" | "sm2-v2-calendar";
+  calendarPolicyVersion?: "review-calendar-v1";
+  calendarTimeZone?: string;
+  reviewHourLocal?: number;
 }
 
 export interface ReviewEvent {
@@ -126,6 +129,8 @@ export interface ReviewEvent {
   scheduledFor: string;
   reviewedAt: string;
   masteryDelta: number;
+  calendarPolicyVersion?: "review-calendar-v1";
+  calendarTimeZone?: string;
 }
 
 export type WritingDimensionKey = "task-achievement" | "coherence" | "vocabulary" | "grammar" | "register";

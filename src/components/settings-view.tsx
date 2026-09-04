@@ -6,6 +6,7 @@ import { useLearning } from "./learning-provider";
 import { exportArchive, importArchive, type ImportedArchive } from "@/core/portability/backup";
 import { applyImportMode, namespaceImportedProfile, previewImport, type ImportMode } from "@/core/portability/merge";
 import { testAIConnection } from "@/core/ai/client";
+import { getAICostDecision } from "@/config/cost-registry";
 import { commitImportedStateAtomic, deleteMedia, loadRestorePoint } from "@/core/portability/db";
 import type { AIProvider } from "@/types/learning";
 import { OfflinePackControl } from "./offline-pack-control";
@@ -26,6 +27,7 @@ export function SettingsView() {
   const [key, setKey] = useState(() => typeof window !== "undefined" ? (sessionStorage.getItem("dwnb-ai-key") ?? "") : "");
   const provider = state.aiSettings.provider;
   const model = state.aiSettings.model;
+  const aiCostDecision = getAICostDecision(provider, model || (provider === "disabled" ? "local-rules-v2" : ""));
   const importPreview = pendingImport ? previewImport(state, pendingImport.state, pendingImport.media.length) : null;
   const linkedMediaIds = [...new Set([
     ...state.speakingAttempts.flatMap((attempt) => attempt.mediaId ? [attempt.mediaId] : []),
@@ -173,8 +175,9 @@ export function SettingsView() {
         <div className="settings-title"><span><Bot size={20} /></span><div><h2>المعلم الذكي الاختياري</h2><p>المعلم المحلي والمنهج يعملان من دونه.</p></div></div>
         <label>المزوّد<select value={provider} onChange={(event) => setProvider(event.target.value as AIProvider)}><option value="disabled">معطّل — الوضع المحلي المدمج</option><option value="gemini">Gemini BYOK</option><option value="openrouter">OpenRouter Free-only</option><option value="local">Local / Ollama</option></select></label>
         {provider !== "disabled" && <>{provider === "local" ? <><label>عنوان Ollama المحلي<input dir="ltr" value={key} onChange={(event) => setSecret(event.target.value)} placeholder="http://localhost:11434" /></label><label>اسم النموذج المحلي<input dir="ltr" value={model} onChange={(event) => setModel(event.target.value)} placeholder="qwen2.5:3b" /></label></> : <><label>النموذج<input dir="ltr" value={model} onChange={(event) => setModel(event.target.value)} placeholder="Model ID" /></label><label>مفتاح API<div className="secret-input"><KeyRound size={17} /><input dir="ltr" type="password" value={key} onChange={(event) => setSecret(event.target.value)} placeholder="المفتاح يبقى في هذه الجلسة" /></div></label></>}</>}
-        <button className="secondary-button" onClick={() => void test()} disabled={provider === "disabled" || busy}>{busy ? "جاري الاختبار…" : "اختبار اتصال دون إرسال محتوى"}</button>
-        <div className="privacy-note"><ShieldCheck size={17} /><p>يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. OpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback.</p></div>
+        <button className="secondary-button" onClick={() => void test()} disabled={provider === "disabled" || busy || !aiCostDecision.allowed}>{busy ? "جاري الاختبار…" : "اختبار اتصال دون إرسال محتوى"}</button>
+        <div className="privacy-note" role="status"><ShieldCheck size={17} /><p><strong>حارس التكلفة: {aiCostDecision.allowed ? "0 USD مسموح" : "الإرسال محظور"}</strong><br />{aiCostDecision.reasonAr}{aiCostDecision.verifiedAt ? ` آخر تحقق: ${aiCostDecision.verifiedAt}.` : ""}</p></div>
+        <div className="privacy-note"><ShieldCheck size={17} /><p>يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback.</p></div>
       </section>
 
       <section className="settings-card privacy-control-card">

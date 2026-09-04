@@ -5,9 +5,9 @@ GITHUB_USER="naderba69"
 GITHUB_EMAIL="balinader@gmail.com"
 REPOSITORY="wegberlin"
 REPO_URL="https://github.com/${GITHUB_USER}/${REPOSITORY}.git"
-ARCHIVE="${1:-${HOME}/storage/downloads/wegberlin.zip}"
+ARCHIVE="${1:-${HOME}/storage/downloads/wegberlin-full.zip}"
 WORKDIR="${HOME}/wegberlin-clean-upload"
-COMMIT_MESSAGE="${2:-Clean replacement with audited WegBerlin project}"
+COMMIT_MESSAGE="${2:-Update audited WegBerlin handoff and A1 lexical grammar}"
 
 for command in git gh unzip sha256sum; do
   command -v "$command" >/dev/null 2>&1 || { echo "Missing command: $command"; exit 1; }

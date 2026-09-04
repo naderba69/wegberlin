@@ -1,7 +1,7 @@
 import type { LearningState, ReviewEvent } from "@/types/learning";
 import type { QueuedReviewCard } from "./review-queue";
 import { buildDueReviewQueue } from "./review-queue";
-import { calculateSM2, newReviewItem } from "./sm2";
+import { calculateSM2, DEFAULT_REVIEW_CALENDAR_POLICY, newReviewItem, type ReviewCalendarPolicy } from "./sm2";
 
 export const DELAYED_RETENTION_CARD_THRESHOLD = 4;
 
@@ -9,9 +9,18 @@ function lessonIdOf(queueItem: QueuedReviewCard) {
   return queueItem.card.tags.find((tag) => /^[ab][12]-\d{2}$/i.test(tag)) ?? queueItem.card.tags[1] ?? "unknown";
 }
 
-export function applyReviewGrade(state: LearningState, queued: QueuedReviewCard, grade: number, now = new Date(), eventId = `review-event-${crypto.randomUUID()}`) {
+export function applyReviewGrade(
+  state: LearningState,
+  queued: QueuedReviewCard,
+  grade: number,
+  now = new Date(),
+  eventIdOrPolicy: string | ReviewCalendarPolicy = `review-event-${crypto.randomUUID()}`,
+  explicitPolicy: ReviewCalendarPolicy = DEFAULT_REVIEW_CALENDAR_POLICY,
+) {
+  const eventId = typeof eventIdOrPolicy === "string" ? eventIdOrPolicy : `review-event-${crypto.randomUUID()}`;
+  const calendarPolicy = typeof eventIdOrPolicy === "string" ? explicitPolicy : eventIdOrPolicy;
   const previous = queued.review ?? newReviewItem(queued.card.id, now);
-  const nextReview = calculateSM2(previous, grade, now);
+  const nextReview = calculateSM2(previous, grade, now, calendarPolicy);
   const delayed = !queued.isNew && Date.parse(queued.dueAt) <= now.getTime();
   const masteryDelta = delayed && grade >= 3 ? 4 : 0;
   const lessonId = lessonIdOf(queued);
@@ -24,6 +33,8 @@ export function applyReviewGrade(state: LearningState, queued: QueuedReviewCard,
     scheduledFor: queued.dueAt,
     reviewedAt: now.toISOString(),
     masteryDelta,
+    calendarPolicyVersion: nextReview.calendarPolicyVersion,
+    calendarTimeZone: nextReview.calendarTimeZone,
   };
   const withReview: LearningState = {
     ...state,

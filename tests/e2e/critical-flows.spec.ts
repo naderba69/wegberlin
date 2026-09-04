@@ -30,6 +30,8 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(page.getByRole("heading", { name: /تدرّب على امتحانك/ })).toBeVisible();
   await expect(page.getByText(/Goethe-Zertifikat B2/).first()).toBeVisible();
   await expect(page.getByText(/telc Deutsch B2/).first()).toBeVisible();
+  await expect(page.locator(".exam-profile-banner")).toContainText("ملف الصيغة موثّق وحديث");
+  await expect(page.locator(".exam-profile-banner")).toContainText("إعادة التحقق قبل 2026-10-03");
 });
 
 test("P0 exam readiness stays provider-scoped and exposes weak modules instead of one average", async ({ page }) => {
@@ -659,11 +661,24 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await firstRecall.getByRole("button", { name: "تذكرت" }).click();
       await page.getByText("خريطة تريكات الحفظ في هذا الدرس").click();
       await expect(page.locator(".lesson-memory-map article").first()).toBeVisible();
+      const lexicalPanel = page.locator(".lexical-grammar-panel");
+      await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+      await expect(lexicalPanel).toContainText("der Name");
+      await expect(lexicalPanel).toContainText("die Namen");
+      await expect(lexicalPanel).toContainText("nach dem Namen fragen");
+      await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
+      await expect(lexicalPanel.locator("details").first()).toContainText("den Namen");
     }
     if (index === 5) {
       const multipleChoice = lesson.exercises.find((exercise) => exercise.type === "multiple-choice")!;
       const wrongIndex = multipleChoice.correctIndex === 0 ? 1 : 0;
-      const card = page.locator(".exercise-card").filter({ hasText: multipleChoice.id });
+      const card = page.locator(`.exercise-card[data-exercise-id="${multipleChoice.id}"]`);
+      await expect(card.locator(".exercise-german-stem")).toContainText("heiße Mariam");
+      await expect(card).not.toContainText(multipleChoice.id);
+      const finalBlank=page.locator('.exercise-card[data-exercise-id="a1-01-e7"]');
+      await expect(finalBlank.locator(".fill-sentence")).toContainText("Danke,");
+      await expect(finalBlank.locator(".blank-slot")).toHaveText("?");
+      await expect(finalBlank.getByLabel(/جواب تمرين: أكمل الرد/)).toBeVisible();
       await card.getByRole("button", { name: "تلميح", exact: true }).click();
       await expect(card.locator(".hint-panel")).toContainText("تلميح 1/2");
       await expect(card.locator(".exercise-feedback")).toHaveCount(0);
@@ -815,16 +830,16 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   await page.getByRole("button", { name: /سهل/ }).click();
   await expect(page.locator(".review-count strong")).toHaveText(String(dueBefore - 1));
   await expect(page.locator(".review-card-meta")).toContainText("a1-01");
-  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number}>((resolve, reject) => {
+  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string}>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
     open.onsuccess = () => {
       const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0}); };
+      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); const review=state.reviewItems.find((item:{cardId:string})=>item.cardId===event.cardId); resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0,algorithmVersion:review.algorithmVersion,calendarPolicyVersion:event.calendarPolicyVersion,calendarTimeZone:event.calendarTimeZone}); };
     };
   }));
-  expect(firstReview).toMatchObject({ kind:"initial",delta:0,mastery:masteryBeforeFirstReview });
+  expect(firstReview).toMatchObject({ kind:"initial",delta:0,mastery:masteryBeforeFirstReview,algorithmVersion:"sm2-v2-calendar",calendarPolicyVersion:"review-calendar-v1",calendarTimeZone:expect.any(String) });
 
   await page.evaluate((cardId) => new Promise<void>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
@@ -850,6 +865,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await waitForLearningReady(page);
   await expect(page.getByRole("heading", { name: /الإعدادات/ })).toBeVisible();
   await expect(page.getByText("تضمين التسجيلات الصوتية في ملف النسخة")).toBeVisible();
+  await expect(page.getByText(/حارس التكلفة: 0 USD مسموح/)).toBeVisible();
   await expect(page.getByRole("button", { name: /استعادة ما قبل آخر استيراد/ })).toBeVisible();
 
   const passphrase = page.getByPlaceholder("8 أحرف على الأقل — لا تُحفظ");
@@ -911,7 +927,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v48");
+    const cache = await caches.open("dwnb-full-pack-v52");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -996,7 +1012,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v48");
+    const cache = await caches.open("dwnb-full-pack-v52");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");

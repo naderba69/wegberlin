@@ -14,6 +14,7 @@ const worker = read("public/sw.js");
 const e2e = read("tests/e2e/critical-flows.spec.ts");
 const packageJson = json("package.json");
 const offline = json("public/offline-routes.json");
+const offlineSizes = json("public/offline-size-manifest.json");
 const libraryAudio = json("public/audio/library/manifest.json");
 const lessonAudio = json("public/audio/lessons/manifest.json");
 const examAudio = json("public/audio/exams/manifest.json");
@@ -51,14 +52,44 @@ const auditSectionIds = (start, end) => {
 const partialIds = auditSectionIds("## P0 المنجز جزئيًا", "## P0 غير المنجز");
 const missingIds = auditSectionIds("## P0 غير المنجز", "## P0 المتوقف");
 const blockedIds = auditSectionIds("## P0 المتوقف", "## عناصر P0");
-if (partialIds.length !== 19) fail(`P0 partial table has ${partialIds.length} rows`);
+if (partialIds.length !== 17) fail(`P0 partial table has ${partialIds.length} rows`);
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
-for (const text of ["Implemented: 102", "Partial: 19", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["102 implemented, 19 partial, 2 not implemented", "280/280", "50/50", "301 generated static/SSG pages", "298/298"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["280/280", "50/50"]) requireText(readme, text, "README.md");
+for (const text of ["Implemented: 104", "Partial: 17", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
+for (const text of ["104 implemented, 17 partial, 2 not implemented", "293/293", "50/50", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+  requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["293/293", "50/50"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
+if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
+const fullRouteSet = new Set(offline.routes);
+const expectedLevelCounts = { A1: 51, A2: 51, B1: 51, B2: 199 };
+if (offline.levelPacks.full.routeCount !== 298) fail("full level pack must still cover every route");
+for (const [level, count] of Object.entries(expectedLevelCounts)) {
+  const pack = offline.levelPacks[level];
+  if (!pack || pack.routeCount !== count) fail(`${level} pack routeCount is ${pack?.routeCount}, expected ${count}`);
+  if (pack.routes.length !== count || new Set(pack.routes).size !== count) fail(`${level} pack routes are not ${count} unique routes`);
+  for (const route of pack.routes) if (!fullRouteSet.has(route)) fail(`${level} pack contains a route outside the full manifest: ${route}`);
+}
+for (const route of offline.coreRoutes ?? []) for (const level of Object.keys(expectedLevelCounts)) if (!offline.levelPacks[level].routes.includes(route)) fail(`${level} pack is missing core route ${route}`);
+for (const route of offline.routes) if (route.startsWith("/exams/") && !offline.levelPacks.B2.routes.includes(route)) fail(`exam route ${route} must belong to the B2 pack`);
+if (offlineSizes.format !== "dwnb-offline-size" || offlineSizes.version !== 1) fail("offline size manifest format/version drifted");
+if (offlineSizes.audio?.assetCount !== 260) fail(`offline size audio assetCount is ${offlineSizes.audio?.assetCount}, expected 260`);
+for (const scope of ["full", "A1", "A2", "B1", "B2"]) {
+  const pack = offlineSizes.packs?.[scope];
+  if (!pack) fail(`offline size manifest is missing the ${scope} pack`);
+  if (pack.missingRoutes !== 0 || pack.missingAssets !== 0) fail(`${scope} size pack still has unmeasured routes/assets`);
+  if (!(pack.pageBytes > 0) || !(pack.pageTransferBytes > 0)) fail(`${scope} size pack has no measured bytes`);
+  if (pack.measuredRouteCount !== pack.routeCount - 1) fail(`${scope} size pack measured ${pack.measuredRouteCount} of ${pack.routeCount} routes`);
+  if (pack.unmeasuredAssets?.length !== 1 || pack.unmeasuredAssets[0] !== "/manifest.webmanifest") fail(`${scope} size pack unmeasured assets drifted`);
+  if (pack.routeCount !== (scope === "full" ? 298 : expectedLevelCounts[scope])) fail(`${scope} size pack routeCount drifted`);
+}
+// كل حزمة مستوى تحمل الأصول المشتركة كاملة، لذا مجموع المستويات أكبر من الحزمة الكاملة؛ الفحص الصحيح هو الاحتواء والترتيب.
+for (const level of Object.keys(expectedLevelCounts)) if (!(offlineSizes.packs.full.pageBytes >= offlineSizes.packs[level].pageBytes)) fail(`full pack must stay at least as large as the ${level} pack`);
+if (!(offlineSizes.packs.B2.pageBytes > offlineSizes.packs.A1.pageBytes)) fail("B2 pack must stay larger than A1 because it carries the exam routes");
+if (!(offlineSizes.packs.A2.pageBytes > 0 && offlineSizes.packs.B1.pageBytes >= offlineSizes.packs.A2.pageBytes)) fail("level pack size ordering drifted");
+if (!(offlineSizes.packs.full.pageWithAudioBytes > offlineSizes.packs.full.pageBytes + offlineSizes.audio.byteSize - 1)) fail("audio must be added on top of the page-only size");
+if (!packageJson.scripts["offline:size"] || !packageJson.scripts.postbuild?.includes("offline:size")) fail("post-build offline size manifest generation is missing");
 if (libraryAudio.assets.length !== 80 || libraryAudio.generatedAssetCount !== 80) fail("library audio count drifted");
 if (lessonAudio.assets.length !== 84 || lessonAudio.generatedAssetCount !== 84) fail("lesson audio count drifted");
 if (examAudio.assets.length !== 96 || examAudio.coveredClipCount !== 90 || examAudio.fullyCoveredTaskCount !== 42) fail("exam audio counters drifted");
@@ -66,9 +97,19 @@ if (examAudio.assets.length !== 96 || examAudio.coveredClipCount !== 90 || examA
 const cacheMatch = worker.match(/const PACK_CACHE = "([^"]+)"/);
 if (!cacheMatch) fail("PACK_CACHE constant is missing");
 const cacheName = cacheMatch[1];
-if (cacheName !== "dwnb-full-pack-v54") fail(`unexpected current cache ${cacheName}`);
+if (cacheName !== "dwnb-full-pack-v55") fail(`unexpected current cache ${cacheName}`);
 requireText(e2e, `caches.open("${cacheName}")`, "Playwright cache contract");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
+requireText(worker, 'const levelPackCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-${PACK_VERSION}`;', "service worker level pack cache factory");
+requireText(worker, 'const levelStagingCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-staging-${PACK_VERSION}`;', "service worker level staging cache factory");
+requireText(worker, 'const PACK_SCOPES = ["full", ...LEVEL_SCOPES];', "service worker pack scope list");
+requireText(worker, 'const packCacheFor = (scope) => (scope === "full" ? PACK_CACHE : levelPackCache(scope));', "service worker pack cache resolver");
+requireText(e2e, 'caches.open("dwnb-level-pack-a1-v55")', "Playwright level pack cache contract");
+requireText(worker, 'const OFFLINE_SIZE_PATH = "/offline-size-manifest.json";', "service worker size manifest path");
+requireText(worker, 'const normalizeScope = (value) => (LEVEL_SCOPES.includes(value) ? value : "full");', "service worker scope normalizer");
+requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
+requireText(prompt, "298/51/51/51/199", "continuation prompt per-level pack sizes");
+requireText(status, "298/51/51/51/199", "PROJECT_STATUS.md per-level pack sizes");
 
 if (sourceRegistry.schemaVersion !== 1 || sourceRegistry.policyVersion !== "source-freshness-v1" || sourceRegistry.records?.length !== 12) fail("official-source registry contract drifted");
 if (new Set(sourceRegistry.records.map((record) => record.id)).size !== 12) fail("official-source registry IDs are not unique");
@@ -107,9 +148,11 @@ if (!packageJson.scripts.prebuild.includes("content:audit")) fail("academic cont
 
 console.log("Continuation handoff verified:");
 console.log(`- backlog: P0 ${expectedPriorities.P0}, P1 ${expectedPriorities.P1}, P2 ${expectedPriorities.P2}`);
-console.log(`- P0 state: 102 implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
+console.log(`- P0 state: 104 implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
 console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 exam files / 90 clips`);
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 280 unit/integrity and 50 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 293 unit/integrity and 50 browser tests documented`);
+console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
+console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

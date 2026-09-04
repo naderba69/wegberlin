@@ -3,8 +3,21 @@
 import { useCallback, useEffect, useState } from "react";
 import { CheckCircle2, Database, Download, RefreshCcw, Trash2, WifiOff } from "lucide-react";
 
+type PackScope = "full" | "A1" | "A2" | "B1" | "B2";
+
+const PACK_SCOPES: PackScope[] = ["full", "A1", "A2", "B1", "B2"];
+
+const scopeLabels: Record<PackScope, { title: string; hint: string }> = {
+  full: { title: "الحزمة الكاملة", hint: "كل الدروس والوحدات والبوابات ومسارات الامتحان في تنزيل واحد." },
+  A1: { title: "مستوى A1", hint: "24 درسًا و8 وحدات وبوابة A1، مع الصفحات المشتركة للتطبيق." },
+  A2: { title: "مستوى A2", hint: "24 درسًا و8 وحدات وبوابة A2، مع الصفحات المشتركة للتطبيق." },
+  B1: { title: "مستوى B1", hint: "24 درسًا و8 وحدات وبوابة B1، مع الصفحات المشتركة للتطبيق." },
+  B2: { title: "مستوى B2", hint: "12 درسًا و6 وحدات وبوابة B2، ومسارات التدريب والمحاكاة لأنها B2 حصرًا." },
+};
+
 type PackMetadata = {
   installed: boolean;
+  scope?: PackScope;
   completedAt?: string;
   routeCount?: number;
   assetCount?: number;
@@ -14,10 +27,25 @@ type PackMetadata = {
   byteSize?: number;
 };
 
+type SizePack = {
+  routeCount: number;
+  pageBytes: number;
+  pageTransferBytes: number;
+  pageWithAudioBytes: number;
+  pageWithAudioTransferBytes: number;
+  assetCount: number;
+};
+
 type PackEstimate = {
   audioByteSize: number;
   audioAssetCount: number;
   routeCount: number;
+  sizeManifest?: {
+    generatedAt: string;
+    buildId: string;
+    packs: Record<string, SizePack>;
+    audio: { assetCount: number; byteSize: number };
+  } | null;
 };
 
 type PackProgress = {
@@ -31,6 +59,7 @@ type WorkerReply = PackMetadata & Partial<PackProgress> & Partial<PackEstimate> 
   type: string;
   message?: string;
   removedAudioCount?: number;
+  scopes?: Record<string, PackMetadata>;
 };
 
 const phaseLabels: Record<PackProgress["phase"], string> = {
@@ -42,6 +71,7 @@ const phaseLabels: Record<PackProgress["phase"], string> = {
 
 function byteLabel(bytes?: number | null) {
   if (typeof bytes !== "number") return "غير معروف بعد";
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 }
 
@@ -77,8 +107,11 @@ async function sendWorkerCommand(type: string, onProgress?: (progress: PackProgr
   });
 }
 
+const emptyScope = (scope: PackScope): PackMetadata => ({ installed: false, scope });
+
 export function OfflinePackControl() {
-  const [metadata, setMetadata] = useState<PackMetadata>({ installed: false });
+  const [scope, setScope] = useState<PackScope>("full");
+  const [scopes, setScopes] = useState<Record<string, PackMetadata>>(() => Object.fromEntries(PACK_SCOPES.map((item) => [item, emptyScope(item)])));
   const [progress, setProgress] = useState<PackProgress | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("جاري التحقق من الحزمة المحلية…");
@@ -87,41 +120,49 @@ export function OfflinePackControl() {
   const [includeAudio, setIncludeAudio] = useState(false);
   const [available, setAvailable] = useState(true);
 
+  const metadata = scopes[scope] ?? emptyScope(scope);
+  const sizes = estimate?.sizeManifest?.packs ?? null;
+  const scopeSize = sizes?.[scope] ?? null;
+
   const refreshStorage = useCallback(async () => {
     if (!navigator.storage?.estimate) return;
-    const estimate = await navigator.storage.estimate();
-    setStorageUsage(typeof estimate.usage === "number" ? estimate.usage : null);
+    const storageEstimate = await navigator.storage.estimate();
+    setStorageUsage(typeof storageEstimate.usage === "number" ? storageEstimate.usage : null);
   }, []);
 
   const refreshStatus = useCallback(async () => {
     try {
       const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_STATUS");
-      const next = {
-        installed: Boolean(reply.installed),
-        completedAt: reply.completedAt,
-        routeCount: reply.routeCount,
-        assetCount: reply.assetCount,
-        entryCount: reply.entryCount,
-        includesAudio: reply.includesAudio,
-        audioEntryCount: reply.audioEntryCount,
-        byteSize: reply.byteSize,
-      };
-      setMetadata(next);
-      if (next.installed) setIncludeAudio(Boolean(next.includesAudio));
+      const next = Object.fromEntries(PACK_SCOPES.map((item) => {
+        const raw = reply.scopes?.[item];
+        return [item, {
+          installed: Boolean(raw?.installed),
+          scope: item,
+          completedAt: raw?.completedAt,
+          routeCount: raw?.routeCount,
+          assetCount: raw?.assetCount,
+          entryCount: raw?.entryCount,
+          includesAudio: raw?.includesAudio,
+          audioEntryCount: raw?.audioEntryCount,
+          byteSize: raw?.byteSize,
+        } satisfies PackMetadata];
+      }));
+      setScopes(next);
+      if (next[scope]?.installed) setIncludeAudio(Boolean(next[scope]?.includesAudio));
       setAvailable(true);
-      setMessage(next.installed ? next.includesAudio ? "حزمة الصفحات والصوت مثبتة على هذا المتصفح." : "حزمة الصفحات مثبتة دون الصوت الاختياري." : "لم تُنزّل حزمة الدراسة بعد.");
+      setMessage(next.full.installed ? "حزمة الصفحات الكاملة مثبتة على هذا المتصفح." : "لم تُنزّل حزمة الدراسة بعد.");
       await refreshStorage();
     } catch (error) {
       setAvailable(false);
       setMessage(process.env.NODE_ENV === "development" ? "يظهر تنزيل الحزمة بعد Production build أو النشر." : error instanceof Error ? error.message : "تعذر قراءة حالة الحزمة.");
     }
-  }, [refreshStorage]);
+  }, [refreshStorage, scope]);
 
   const refreshEstimate = useCallback(async () => {
     try {
       const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_ESTIMATE");
       if (typeof reply.audioByteSize === "number" && typeof reply.audioAssetCount === "number" && typeof reply.routeCount === "number") {
-        setEstimate({ audioByteSize: reply.audioByteSize, audioAssetCount: reply.audioAssetCount, routeCount: reply.routeCount });
+        setEstimate({ audioByteSize: reply.audioByteSize, audioAssetCount: reply.audioAssetCount, routeCount: reply.routeCount, sizeManifest: reply.sizeManifest ?? null });
       }
     } catch {
       setEstimate(null);
@@ -136,39 +177,43 @@ export function OfflinePackControl() {
   async function downloadPack() {
     setBusy(true);
     setProgress({ phase: "manifest", percent: 1, completed: 0, total: 0 });
-    setMessage("بدأ تنزيل الحزمة. اترك هذه الصفحة مفتوحة لرؤية التقدم.");
+    setMessage(`بدأ تنزيل ${scopeLabels[scope].title}. اترك هذه الصفحة مفتوحة لرؤية التقدم.`);
     try {
       if (navigator.storage?.persist) await navigator.storage.persist().catch(() => false);
-      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_DOWNLOAD", setProgress, { includeAudio });
-      setMetadata({
-        installed: true,
-        completedAt: reply.completedAt,
-        routeCount: reply.routeCount,
-        assetCount: reply.assetCount,
-        entryCount: reply.entryCount,
-        includesAudio: reply.includesAudio,
-        audioEntryCount: reply.audioEntryCount,
-        byteSize: reply.byteSize,
-      });
+      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_DOWNLOAD", setProgress, { includeAudio, scope });
+      setScopes((current) => ({
+        ...current,
+        [scope]: {
+          installed: true,
+          scope,
+          completedAt: reply.completedAt,
+          routeCount: reply.routeCount,
+          assetCount: reply.assetCount,
+          entryCount: reply.entryCount,
+          includesAudio: reply.includesAudio,
+          audioEntryCount: reply.audioEntryCount,
+          byteSize: reply.byteSize,
+        },
+      }));
       setProgress(null);
       setMessage(includeAudio ? "اكتمل تثبيت الصفحات والصوت الاختياري." : "اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري.");
       await refreshStorage();
     } catch (error) {
       setProgress(null);
-      setMessage(error instanceof Error ? error.message : "فشل تنزيل الحزمة الكاملة.");
+      setMessage(error instanceof Error ? error.message : "فشل تنزيل الحزمة.");
     } finally {
       setBusy(false);
     }
   }
 
   async function removePack() {
-    if (!window.confirm("حذف حزمة المحتوى دون حذف تقدمك أو تسجيلاتك؟")) return;
+    if (!window.confirm(`حذف ${scopeLabels[scope].title} دون حذف تقدمك أو تسجيلاتك؟`)) return;
     setBusy(true);
     try {
-      await sendWorkerCommand("DWNB_OFFLINE_PACK_REMOVE");
-      setMetadata({ installed: false });
+      await sendWorkerCommand("DWNB_OFFLINE_PACK_REMOVE", undefined, { scope });
+      setScopes((current) => ({ ...current, [scope]: emptyScope(scope) }));
       setProgress(null);
-      setMessage("حُذفت حزمة المحتوى. لم يُحذف التقدم أو ملفات DWNB.");
+      setMessage(`حُذفت ${scopeLabels[scope].title}. لم يُحذف التقدم أو ملفات DWNB.`);
       await refreshStorage();
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "تعذر حذف الحزمة.");
@@ -181,8 +226,8 @@ export function OfflinePackControl() {
     if (!window.confirm("حذف الصوت المولّد من حزمة Offline مع إبقاء الصفحات والتقدم والتسجيلات الشخصية؟")) return;
     setBusy(true);
     try {
-      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_REMOVE_AUDIO");
-      setMetadata((current) => ({ ...current, installed: true, includesAudio: false, audioEntryCount: 0, byteSize: reply.byteSize }));
+      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_REMOVE_AUDIO", undefined, { scope });
+      setScopes((current) => ({ ...current, [scope]: { ...current[scope], installed: true, includesAudio: false, audioEntryCount: 0, byteSize: reply.byteSize } }));
       setIncludeAudio(false);
       setMessage(`حُذف ${reply.removedAudioCount ?? 0} موردًا صوتيًا من الحزمة. بقيت الصفحات والتقدم والتسجيلات الشخصية.`);
       await refreshStorage();
@@ -202,9 +247,28 @@ export function OfflinePackControl() {
       <span>{metadata.installed ? <CheckCircle2 size={20} /> : <WifiOff size={20} />}</span>
       <div>
         <h2>حزمة الدراسة دون إنترنت</h2>
-        <p>تنزيل اختياري كامل؛ لا يفرض استهلاك الشبكة على المتعلم.</p>
+        <p>تنزيل اختياري؛ يمكنك الاكتفاء بمستوى واحد بدل كل المستويات.</p>
       </div>
     </div>
+
+    <div className="pack-scope-row" role="group" aria-label="نطاق حزمة Offline">
+      {PACK_SCOPES.map((item) => <button
+        key={item}
+        type="button"
+        className={item === scope ? "pack-scope active" : "pack-scope"}
+        aria-pressed={item === scope}
+        disabled={busy}
+        onClick={() => {
+          setScope(item);
+          setIncludeAudio(Boolean(scopes[item]?.includesAudio));
+          setProgress(null);
+        }}
+      >
+        <strong>{scopeLabels[item].title}</strong>
+        <small>{scopes[item]?.installed ? "مثبتة" : sizes?.[item] ? `${sizes[item].routeCount} مسارًا` : "—"}</small>
+      </button>)}
+    </div>
+    <p className="pack-scope-hint">{scopeLabels[scope].hint}</p>
 
     <div className={metadata.installed ? "offline-pack-status installed" : "offline-pack-status"} aria-live="polite">
       <Database size={18} />
@@ -219,11 +283,17 @@ export function OfflinePackControl() {
     </div>
 
     <p className="offline-pack-copy">
-      تشمل الحزمة 84 درسًا، 30 وحدة، أربع بوابات، المكتبة، و150 مهمة امتحان مع لوحات المحاكاة. لا تشمل مفتاح AI ولا التسجيلات الشخصية، ولا تدّعي وجود صوت امتحاني حقيقي.
+      تشمل الحزمة 84 درسًا، 30 وحدة، أربع بوابات، المكتبة، و150 مهمة امتحان مع لوحات المحاكاة عند اختيار الحزمة الكاملة. حزمة المستوى تقتصر على دروسه ووحداته وبوابته مع الصفحات المشتركة. لا تشمل أي حزمة مفتاح AI ولا التسجيلات الشخصية، ولا تدّعي وجود صوت امتحاني حقيقي.
     </p>
 
     <div className="pack-size-preview">
-      <div><small>قبل التنزيل</small><strong>{estimate?.routeCount ?? 298} مسارًا أساسيًا</strong><span>يقيس المتصفح حجم الصفحات وملفات التشغيل بدقة بعد تثبيتها.</span></div>
+      <div>
+        <small>قبل التنزيل</small>
+        <strong>{scopeSize ? byteLabel(scopeSize.pageBytes) : `${estimate?.routeCount ?? 298} مسارًا أساسيًا`}</strong>
+        <span>{scopeSize
+          ? `${scopeSize.routeCount} مسارًا · ${byteLabel(scopeSize.pageTransferBytes)} مضغوطًا على الشبكة · ${byteLabel(scopeSize.pageBytes)} في التخزين`
+          : "يقيس المتصفح حجم الصفحات وملفات التشغيل بدقة بعد تثبيتها."}</span>
+      </div>
       <label><input type="checkbox" checked={includeAudio} disabled={busy} onChange={(event) => setIncludeAudio(event.target.checked)} /><span><b>تضمين الصوت المولّد اختياريًا</b><small>{estimate ? `${estimate.audioAssetCount} ملفًا · ${byteLabel(estimate.audioByteSize)} معروفة من البيانات` : "جاري حساب حجم الصوت من البيانات…"}</small></span></label>
       {metadata.installed && <div><small>الحجم المثبت الفعلي</small><strong>{byteLabel(metadata.byteSize)}</strong><span>{metadata.includesAudio ? `${metadata.audioEntryCount ?? 0} موردًا صوتيًا مثبتًا` : "الصفحات مثبتة دون الصوت"}</span></div>}
     </div>
@@ -246,6 +316,7 @@ export function OfflinePackControl() {
     <small className="offline-storage-note">
       {storageUsage === null ? "المساحة الدقيقة يحددها المتصفح." : `استخدام هذا الموقع حاليًا: ${(storageUsage / 1024 / 1024).toFixed(1)} MB.`}
       {" "}تقدمك محفوظ منفصلًا في IndexedDB.
+      {estimate?.sizeManifest ? ` قياسات الحجم من Build ${estimate.sizeManifest.buildId} بتاريخ ${estimate.sizeManifest.generatedAt}.` : ""}
     </small>
   </section>;
 }

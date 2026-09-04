@@ -927,7 +927,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v54");
+    const cache = await caches.open("dwnb-full-pack-v55");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1012,7 +1012,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v54");
+    const cache = await caches.open("dwnb-full-pack-v55");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1021,6 +1021,82 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   expect(afterAudioRemoval.audio).toBe(false);
   expect(afterAudioRemoval.lessonRoute).toBe(true);
   expect(afterAudioRemoval.metadata).toMatchObject({ includesAudio: false, audioEntryCount: 0 });
+});
+
+test("one level pack installs its own scope without downloading the whole course", async ({ page, context }) => {
+  await page.goto("/settings");
+  await waitForLearningReady(page);
+  const packCard = page.locator(".offline-pack-card");
+  await expect(packCard.getByText(/ملفًا · .* MB معروفة من البيانات/)).toBeVisible({ timeout: 30_000 });
+
+  const sizePreview = packCard.locator(".pack-size-preview > div").first();
+  await expect(sizePreview).toContainText("298 مسارًا");
+
+  await packCard.locator(".pack-scope", { hasText: "مستوى A1" }).click();
+  await expect(packCard.locator(".pack-scope.active")).toContainText("مستوى A1");
+  await expect(packCard.locator(".pack-scope-hint")).toContainText("24 درسًا");
+  await expect(sizePreview).toContainText("51 مسارًا");
+  await expect(sizePreview).toContainText("مضغوطًا على الشبكة");
+
+  const a1Download = packCard.getByRole("button", { name: /تنزيل حزمة الصفحات/ });
+  await expect(a1Download).toBeEnabled({ timeout: 30_000 });
+  await a1Download.click();
+  await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
+
+  const levelEvidence = await page.evaluate(async () => {
+    const levelCache = await caches.open("dwnb-level-pack-a1-v55");
+    const fullCache = await caches.open("dwnb-full-pack-v55");
+    const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
+    const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
+    const a1Lesson = await levelCache.match("/lernen/a1-01");
+    const a1Module = await levelCache.match("/module/a1-modul-1");
+    const b2Lesson = await levelCache.match("/lernen/b2-12");
+    const examTask = await levelCache.match("/exams/goethe-b2/goethe-b2-full-06-reading-01");
+    const fullPackMetadata = await fullCache.match("/__dwnb_offline_pack_meta__");
+    return {
+      metadata,
+      a1Lesson: Boolean(a1Lesson),
+      a1Module: Boolean(a1Module),
+      b2Lesson: Boolean(b2Lesson),
+      examTask: Boolean(examTask),
+      fullPackUntouched: fullPackMetadata === undefined,
+    };
+  });
+  expect(levelEvidence.metadata?.scope).toBe("A1");
+  expect(levelEvidence.metadata?.routeCount).toBe(51);
+  expect(levelEvidence.metadata?.includesAudio).toBe(false);
+  expect(levelEvidence.metadata?.byteSize).toBeGreaterThan(1_000_000);
+  expect(levelEvidence.a1Lesson).toBe(true);
+  expect(levelEvidence.a1Module).toBe(true);
+  expect(levelEvidence.b2Lesson).toBe(false);
+  expect(levelEvidence.examTask).toBe(false);
+  expect(levelEvidence.fullPackUntouched).toBe(true);
+
+  try {
+    await context.setOffline(true);
+    await page.goto("/lernen/a1-01", { waitUntil: "domcontentloaded" });
+    await waitForLearningReady(page);
+    await expect(page.locator(".lesson-workspace h1")).toContainText("أهداف اليوم");
+    await page.goto("/lernen/b2-12", { waitUntil: "domcontentloaded" });
+    await expect(page.getByText(/لا تعمل دون إنترنت|غير متاح|offline/i).first()).toBeVisible();
+  } finally {
+    await context.setOffline(false);
+  }
+
+  await page.goto("/settings");
+  await waitForLearningReady(page);
+  const installedLevelPack = page.locator(".offline-pack-card");
+  await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("مثبتة");
+  page.once("dialog", (dialog) => void dialog.accept());
+  await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
+  await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
+  const afterLevelRemoval = await page.evaluate(async () => {
+    const levelCache = await caches.open("dwnb-level-pack-a1-v55");
+    const keys = await levelCache.keys();
+    const names = await caches.keys();
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v55") };
+  });
+  expect(afterLevelRemoval.keys).toBe(0);
 });
 
 test("continuous full-exam mode persists one central clock and blocks task skipping", async ({ page }) => {

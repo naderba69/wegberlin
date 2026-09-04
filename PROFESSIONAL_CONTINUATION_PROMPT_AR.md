@@ -272,13 +272,15 @@ React: 19.2.8
 TypeScript: 5
 IndexedDB DB version: 4
 LearningState schemaVersion: 3
-Unit/Integrity tests: 280/280
+Unit/Integrity tests: 293/293
 Playwright desktop + mobile: 50/50
 Static/SSG pages: 301
 Offline routes: 298/298
+Offline level packs: 298/51/51/51/199
 Search entries: 3,080
 Official source records: 12/12
-Offline cache: dwnb-full-pack-v54
+Offline cache: dwnb-full-pack-v55
+Offline level caches: dwnb-level-pack-a1-v55, dwnb-level-pack-a2-v55, dwnb-level-pack-b1-v55, dwnb-level-pack-b2-v55
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```
@@ -379,7 +381,8 @@ axe serious/critical on tested pages: 0
 - معاملات استيراد/استعادة IndexedDB ذرية عبر state/profiles/metadata/media/restore point.
 - Fault injection بعد state/restore/media يثبت Rollback كاملًا.
 - رفض archive مبتور وZip bomb وPath traversal.
-- Offline pack ذري من 298 مسارًا.
+- Offline pack ذري من 298 مسارًا، أو حزمة مستوى واحدة: 51 مسارًا لـA1 وA2 وB1، و199 مسارًا لـB2 (تشمل مسارات الامتحان).
+- قياس حجم الصفحات وملفات Next بعد Build: تخزين ونقل مضغوط لكل نطاق.
 - الصوت Opt-in بحجم معروف من Manifests.
 - حذف صوت الحزمة مع بقاء الصفحات والتقدم.
 
@@ -401,8 +404,8 @@ axe serious/critical on tested pages: 0
 
 ```text
 Total P0: 124
-Implemented: 102
-Partial: 19
+Implemented: 104
+Partial: 17
 Not implemented: 2
 Blocked by user credentials: 1
 ```
@@ -418,8 +421,6 @@ Blocked by user credentials: 1
 124 مراجعة بشرية لدلالة اقتباسات القراءة
 135 سرعات تعليمية في كل مشغلات الاستماع
 159 معلومات ناقصة ثنائية حقيقية
-242 حزم Offline مستقلة لكل مستوى
-243 حجم صفحات Next قبل التنزيل
 254 تدقيق lang/Bidi لكل fragment
 255 جولة وصول يدوية وتقنيات مساعدة
 256 تعميم Status announcements دون إزعاج
@@ -577,16 +578,19 @@ P0 98 + 99 — دفعة A2
 - التالي في 98/99: تدقيق كل اسم هدف وكل فعل ذي متمم جرّي في A1–B2 لا المراسي الأربعة فقط، ثم تأليف صيغة Genitiv الاسمية وجمع المجرور، ثم مراجعة ألمانية بشرية مستقلة.
 - لا تغلق 98/99 حتى تشمل A1–B2 والمفردات الهدف المطلوبة، ولا تغلق 124 قبل مراجعة بشرية فعلية لاقتباسات القراءة.
 
+- ~~`P0 242`: حزم Offline مستقلة لكل مستوى.~~ **أُنجز في 2026-09-04**: فهرس المسارات بالإصدار 2 يعلن `levelPacks` (الكامل 298، A1 51، A2 51، B1 51، B2 199؛ مسارات الامتحان الـ162 حصرًا لـB2)، ولكل نطاق ذاكرة Cache مؤقتة ومستقرة خاصة، وأمر `scope` في التنزيل والحذف وحذف الصوت مع رفض أي مسار خارج الفهرس الكامل، وواجهة اختيار نطاق في الإعدادات، واختبار متصفح يثبت أن حزمة A1 وحدها تُثبَّت بينما يبقى `/lernen/b2-12` ومسارات الامتحان غير محفوظة وغير قابلة للفتح دون إنترنت.
+- ~~`P0 243`: حجم صفحات Next قبل التنزيل.~~ **أُنجز في 2026-09-04**: سكربت `postbuild` يقيس صفحات `.next/server/app` وقطع `_next/static` المستخرجة من HTML فعليًا، فينشر `public/offline-size-manifest.json` لكل نطاق (التخزين وgzip نقلًا)، وتعرضه الإعدادات قبل التنزيل مع معرّف Build. الحد المعلن: `/manifest.webmanifest` يُولَّد عند الطلب فلا يقاس حرفيًا، والقياس من مخرجات Build لا من جهاز المستخدم.
+
 بعدها:
 
 ```text
-P0 242 + 243
+P0 254 + 255 + 256
 ```
 
 ثم:
 
 ```text
-P0 254 + 255 + 256
+P0 373 + 376
 ```
 
 ---
@@ -714,7 +718,9 @@ Unit/Integrity: N/N
 Playwright Desktop + Mobile: M/M
 Generated pages: P
 Offline routes: R/R
+Offline level packs: R/R
 Offline cache: vX
+Offline level caches: vX
 
 ### Preview
 /path 200

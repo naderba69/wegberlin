@@ -272,7 +272,7 @@ React: 19.2.8
 TypeScript: 5
 IndexedDB DB version: 4
 LearningState schemaVersion: 3
-Unit/Integrity tests: 293/293
+Unit/Integrity tests: 294/294
 Playwright desktop + mobile: 50/50
 Static/SSG pages: 301
 Offline routes: 298/298

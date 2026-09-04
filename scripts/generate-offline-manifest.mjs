@@ -117,6 +117,7 @@ const manifest = {
     B2: { routeCount: packRoutes(levelRoutes.b2).length, routes: packRoutes(levelRoutes.b2) },
   },
   coreRouteCount: coreRoutes.size,
+  coreRoutes: [...coreRoutes].sort(),
 };
 
 await writeFile(resolve(root, "public/offline-routes.json"), `${JSON.stringify(manifest, null, 2)}\n`);

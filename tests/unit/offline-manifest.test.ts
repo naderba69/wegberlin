@@ -108,6 +108,18 @@ describe("per-level Offline packs", () => {
     expect(levelPacks.B2.routeCount).toBe(199);
   });
 
+  it("publishes the shared core route set that every level pack reuses", () => {
+    expect(offlineManifest.coreRouteCount).toBe(18);
+    expect(offlineManifest.coreRoutes).toHaveLength(18);
+    for (const route of offlineManifest.coreRoutes) expect(offlineManifest.routes, route).toContain(route);
+    for (const level of ["A1", "A2", "B1", "B2"]) {
+      for (const route of offlineManifest.coreRoutes) expect(levelPacks[level].routes, `${level}: ${route}`).toContain(route);
+    }
+    const union = new Set(["A1", "A2", "B1", "B2"].flatMap((level) => levelPacks[level].routes));
+    expect(union.size).toBe(298);
+    for (const route of offlineManifest.routes) expect(union.has(route), route).toBe(true);
+  });
+
   it("never leaks C1/C2 routes into any pack scope", () => {
     for (const scope of Object.values(levelPacks)) {
       for (const route of scope.routes) expect(route).not.toMatch(/\/c[12](?:-|\/)/i);

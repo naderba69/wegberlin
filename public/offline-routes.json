@@ -979,5 +979,25 @@
       ]
     }
   },
-  "coreRouteCount": 18
+  "coreRouteCount": 18,
+  "coreRoutes": [
+    "/",
+    "/diagnostic",
+    "/errors",
+    "/exams",
+    "/library",
+    "/manifest.webmanifest",
+    "/mediation",
+    "/path",
+    "/practice",
+    "/progress",
+    "/review",
+    "/search",
+    "/settings",
+    "/shadowing",
+    "/speaking",
+    "/today",
+    "/tutor",
+    "/writing"
+  ]
 }

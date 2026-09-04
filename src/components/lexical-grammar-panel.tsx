@@ -11,6 +11,11 @@ const caseLabels = {
   accusative: "Akkusativ · المفعول المباشر",
   dative: "Dativ · بعد أفعال/حروف محددة",
 };
+const governedCaseLabels = {
+  accusative: "Akkusativ",
+  dative: "Dativ",
+  genitive: "Genitiv",
+};
 
 export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
   const nouns = nounsByLesson[lessonId] ?? [];
@@ -48,14 +53,14 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
           <h3 lang="de" dir="ltr">{frame.chunkDe}</h3>
           <p>{frame.meaningAr}</p>
           <blockquote lang="de" dir="ltr">{frame.exampleDe}</blockquote>
-          <footer><b lang="de" dir="ltr">{frame.preposition} + {frame.governedCase === "dative" ? "Dativ" : "Akkusativ"}</b><span>{frame.contrastAr}</span></footer>
+          <footer><b lang="de" dir="ltr">{frame.preposition} + {governedCaseLabels[frame.governedCase]}</b><span>{frame.contrastAr}</span></footer>
         </div>
       </article>)}
     </div> : null}
     <p className="lexical-coverage-note">
-      {level === "A2"
-        ? "تغطي هذه الدفعة أربع كلمات اسمية مرساة وإطارين للفعل مع حرف الجر في كل درس من 24/24 درس A2، مأخوذة من نظرية الدرس نفسه. لا تدّعي تغطية كل أسماء وأفعال A2، وB1–B2 لم تؤلف بعد."
-        : "تغطي هذه الدفعة أربع كلمات اسمية مرساة وإطار فعل واحدًا في كل درس من 24/24 درس A1. لا تدّعي تغطية كل أسماء وأفعال A1، وB1–B2 لم تؤلف بعد."}
+      {level === "A1"
+        ? "تغطي هذه الطبقة أربع مراسي اسمية وإطار فعل واحدًا مع حرف الجر في كل درس من 24/24 درس A1. المراسي مختارة من نظرية الدرس ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد."
+        : `تغطي هذه الطبقة أربع مراسي اسمية وإطارين للفعل مع حرف الجر في هذا الدرس ${level}، مأخوذة من نظرية الدرس ومفرداته. المراسي مختارة ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد.`}
     </p>
   </section>;
 }

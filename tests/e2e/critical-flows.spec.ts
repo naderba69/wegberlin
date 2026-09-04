@@ -927,7 +927,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v53");
+    const cache = await caches.open("dwnb-full-pack-v54");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1012,7 +1012,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v53");
+    const cache = await caches.open("dwnb-full-pack-v54");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1393,7 +1393,32 @@ test("A2 vocabulary stage renders four noun anchors and two verb-preposition fra
   await expect(lexicalPanel).toContainText("der Nachbar");
   await expect(lexicalPanel).toContainText("sich für die Hilfe bedanken");
   await expect(lexicalPanel).toContainText("um Hilfe bitten");
-  await expect(lexicalPanel).toContainText("B1–B2");
+  await expect(lexicalPanel).toContainText("لم تُراجَع ألمانيًا بشريًا بعد");
   await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
   await expect(lexicalPanel.locator("details").first()).toContainText("dem Nachbarn");
+});
+
+test("B2 vocabulary stage renders four noun anchors and the Genitiv preposition frames", async ({ page }) => {
+  await page.goto("/lernen/b2-04");
+  await waitForLearningReady(page);
+  await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
+  const lexicalPanel = page.locator(".lexical-grammar-panel");
+  await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+  await expect(lexicalPanel.locator(".verb-frame-card")).toHaveCount(2);
+  await expect(lexicalPanel).toContainText("der Leistungsumfang");
+  await expect(lexicalPanel).toContainText("angesichts der Frist entscheiden");
+  await expect(lexicalPanel).toContainText("angesichts + Genitiv");
+  await expect(lexicalPanel).toContainText("hinsichtlich + Genitiv");
+});
+
+test("every published lesson vocabulary stage keeps the authored anchor count", async ({ page }) => {
+  for (const lessonId of ["a1-12", "a2-17", "b1-19", "b2-09"]) {
+    await page.goto(`/lernen/${lessonId}`);
+    await waitForLearningReady(page);
+    await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+    const lexicalPanel = page.locator(".lexical-grammar-panel");
+    await expect(lexicalPanel.locator(".noun-grammar-grid > article"), lessonId).toHaveCount(4);
+    await expect(lexicalPanel.locator(".verb-frame-card"), lessonId).toHaveCount(lessonId.startsWith("a1-") ? 1 : 2);
+  }
 });

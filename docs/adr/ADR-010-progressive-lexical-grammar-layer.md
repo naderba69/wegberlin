@@ -1,7 +1,7 @@
 # ADR-010 — Progressive structured lexical grammar layer
 
-Date: 2026-09-03  
-Status: accepted for the A1 and A2 batches; B1–B2 coverage and human linguistic review pending
+Date: 2026-09-03 (amended 2026-09-04 for A2, B1, and B2)  
+Status: accepted for the A1, A2, B1, and B2 batches; exhaustive vocabulary audit, nominal Genitiv/dative plural, and human linguistic review pending
 
 ## Context
 
@@ -9,8 +9,8 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 
 ## Decision
 
-- Add versioned `a1-lexical-grammar-v1` and `a2-lexical-grammar-v1` registries rather than inferring grammar at render time.
-- Author four high-priority noun anchors per lesson, plus one verb-preposition frame for each of the 24 A1 lessons and two for each of the 24 A2 lessons.
+- Add versioned per-level registries (`a1-`, `a2-`, `b1-`, `b2-lexical-grammar-v1`) rather than inferring grammar at render time.
+- Author four high-priority noun anchors per lesson, plus one verb-preposition frame for each of the 24 A1 lessons and two for each of the 24 A2, 24 B1, and 12 B2 lessons.
 - Store noun article, gender, plural or explicit no-usual-plural policy, Arabic meaning, and Nominativ/Akkusativ/Dativ forms.
 - Allow explicit oblique singular forms for weak masculine nouns such as `der Name → den Namen` and `der Kollege → den Kollegen`.
 - Store verb infinitive, preposition, governed case, reusable chunk, German example, and Arabic contrast.
@@ -24,9 +24,15 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 - Two frames per A2 lesson let the layer carry real contrasts, for example `auf einer Erstattung bestehen` (the Dativ exception after `auf`) next to `sich auf die Prüfung vorbereiten` (Akkusativ).
 - Weak-masculine obliques (`der Nachbar → den/dem Nachbarn`) and no-usual-plural nouns (`Müll`, `Schlaf`, `Gepäck`, `Privatsphäre`, `Ernährung`, `Stolz`) are authored explicitly instead of derived.
 
+## B1/B2 amendment (2026-09-04)
+
+- `b1-lexical-grammar-v1` and `b2-lexical-grammar-v1` add 144 noun anchors and 72 frames across 36 more lessons, again drawn from each lesson's own theory and glossary.
+- The frame case contract was widened from Akkusativ/Dativ to include Genitiv so the layer can carry formal B2 prepositions such as `angesichts`, `hinsichtlich`, and `trotz` instead of dodging them.
+- Recurring Dativ exceptions stay explicit and teachable next to their Akkusativ twins: `beruhen auf` (Dativ) beside `sich verlassen auf` (Akkusativ), `leiden unter` beside `umsteigen auf`.
+
 ## Consequences
 
-- A1 + A2 now have 192 noun anchors and 72 frames across 48/48 lessons.
+- A1–B2 now have 336 noun anchors and 144 frames across 84/84 published lessons.
 - The layer is visible and teachable, not documentation-only metadata.
-- P0-98 and P0-99 remain partial: four anchors plus one or two frames per lesson are not every target noun/frame, B1–B2 still need authored batches, and no human German review has happened.
+- P0-98 and P0-99 remain partial: four anchors plus one or two frames per lesson are not every target noun/frame, the nominal Genitiv form and dative plural are still absent from the noun record, and no human German review has happened.
 - Independent German review is still required before calling the registry final linguistic validation.

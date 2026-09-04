@@ -2,8 +2,14 @@ import type { LessonStageKey } from "./lesson-content";
 
 export type GermanGender = "masculine" | "feminine" | "neuter";
 export type GermanCase = "nominative" | "accusative" | "dative";
+/** الحالة التي يفرضها الفعل أو حرف الجر. Genitiv مضاف لحروف الجر الرسمية في B2، ولا يعني أن سجل الاسم يحفظ صيغة Genitiv. */
+export type GovernedCase = Exclude<GermanCase, "nominative"> | "genitive";
 
-export type LexicalSourceVersion = "a1-lexical-grammar-v1" | "a2-lexical-grammar-v1";
+export type LexicalSourceVersion =
+  | "a1-lexical-grammar-v1"
+  | "a2-lexical-grammar-v1"
+  | "b1-lexical-grammar-v1"
+  | "b2-lexical-grammar-v1";
 
 export type NounGrammarEntry = {
   id: string;
@@ -26,7 +32,7 @@ export type VerbPrepositionFrame = {
   lessonId: string;
   infinitive: string;
   preposition: string;
-  governedCase: Exclude<GermanCase, "nominative">;
+  governedCase: GovernedCase;
   chunkDe: string;
   meaningAr: string;
   exampleDe: string;

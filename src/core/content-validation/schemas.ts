@@ -370,7 +370,7 @@ export const nounGrammarEntrySchema = z.object({
   plural: z.object({ form: text.nullable(), noteAr: text }).strict(),
   caseForms: z.object({ nominative: text, accusative: text, dative: text }).strict(),
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1"]),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();
 
 export const verbPrepositionFrameSchema = z.object({
@@ -378,11 +378,11 @@ export const verbPrepositionFrameSchema = z.object({
   lessonId: id,
   infinitive: text,
   preposition: text,
-  governedCase: z.enum(["accusative", "dative"]),
+  governedCase: z.enum(["accusative", "dative", "genitive"]),
   chunkDe: text,
   meaningAr: text,
   exampleDe: text,
   contrastAr: text,
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1"]),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();

@@ -106,7 +106,7 @@ export function validateAcademicContent() {
   for (const noun of nounGrammarEntries) {
     const level = lexicalLevelOf(noun.lessonId);
     if (!level || !(lessonsByLevel[level] ?? []).includes(noun.lessonId)) issues.push(`nounGrammarEntries.${noun.id}: lesson is not a published ${level ?? "authored"} lesson`);
-    if (level && noun.sourceVersion !== `a${level.charAt(1).toLowerCase()}-lexical-grammar-v1`) issues.push(`nounGrammarEntries.${noun.id}: source version does not match ${level}`);
+    if (level && noun.sourceVersion !== `${level.toLowerCase()}-lexical-grammar-v1`) issues.push(`nounGrammarEntries.${noun.id}: source version does not match ${level}`);
     if (noun.article !== genderArticle[noun.gender]) issues.push(`nounGrammarEntries.${noun.id}: article/gender mismatch`);
     if (!noun.caseForms.nominative.startsWith(`${noun.article} `)) issues.push(`nounGrammarEntries.${noun.id}: invalid nominative form`);
     if (!noun.caseForms.accusative.trim() || !noun.caseForms.dative.trim()) issues.push(`nounGrammarEntries.${noun.id}: oblique case form missing`);
@@ -115,7 +115,7 @@ export function validateAcademicContent() {
   for (const frame of verbPrepositionFrames) {
     const level = lexicalLevelOf(frame.lessonId);
     if (!level || !(lessonsByLevel[level] ?? []).includes(frame.lessonId)) issues.push(`verbPrepositionFrames.${frame.id}: lesson is not a published ${level ?? "authored"} lesson`);
-    if (level && frame.sourceVersion !== `a${level.charAt(1).toLowerCase()}-lexical-grammar-v1`) issues.push(`verbPrepositionFrames.${frame.id}: source version does not match ${level}`);
+    if (level && frame.sourceVersion !== `${level.toLowerCase()}-lexical-grammar-v1`) issues.push(`verbPrepositionFrames.${frame.id}: source version does not match ${level}`);
     if (!lower(frame.chunkDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
     if (!lower(frame.exampleDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
     for (const token of infinitiveTokens(frame.infinitive)) {

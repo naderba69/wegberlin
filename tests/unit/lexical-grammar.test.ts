@@ -5,6 +5,8 @@ import { LexicalGrammarPanel } from "@/components/lexical-grammar-panel";
 import { academicLessonList } from "@/data/academic-lessons";
 import { a1NounGrammarEntries, a1NounsByLesson, a1VerbFramesByLesson, a1VerbPrepositionFrames } from "@/data/lexical-grammar-a1";
 import { a2NounGrammarEntries, a2NounsByLesson, a2VerbFramesByLesson, a2VerbPrepositionFrames } from "@/data/lexical-grammar-a2";
+import { b1NounGrammarEntries, b1NounsByLesson, b1VerbFramesByLesson, b1VerbPrepositionFrames } from "@/data/lexical-grammar-b1";
+import { b2NounGrammarEntries, b2NounsByLesson, b2VerbFramesByLesson, b2VerbPrepositionFrames } from "@/data/lexical-grammar-b2";
 import { framesByLesson, lexicalLevelOf, nounsByLesson, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { nounGrammarEntrySchema, verbPrepositionFrameSchema } from "@/core/content-validation/schemas";
 import { validateAcademicContent } from "@/core/content-validation/validate-academic-content";
@@ -65,7 +67,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
     expect(screen.getAllByText("die Namen").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("nach dem Namen fragen")).toBeTruthy();
     unmount();
-    const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "b1-01" }));
+    const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "c1-01" }));
     expect(container.childElementCount).toBe(0);
   });
 });
@@ -81,8 +83,8 @@ describe("A2 structured noun and verb-preposition anchors", () => {
       expect(a2NounsByLesson[lessonId], lessonId).toHaveLength(4);
       expect(a2VerbFramesByLesson[lessonId], lessonId).toHaveLength(2);
     }
-    expect(nounGrammarEntries).toHaveLength(192);
-    expect(verbPrepositionFrames).toHaveLength(72);
+    expect(nounGrammarEntries).toHaveLength(336);
+    expect(verbPrepositionFrames).toHaveLength(144);
   });
 
   it("stores article, gender, plural policy, and three case forms for every A2 noun", () => {
@@ -139,17 +141,17 @@ describe("A2 structured noun and verb-preposition anchors", () => {
     expect(screen.getByText("sich für die Hilfe bedanken")).toBeTruthy();
     expect(screen.getByText("um Hilfe bitten")).toBeTruthy();
     expect(screen.getByText(/إطارين للفعل مع حرف الجر/)).toBeTruthy();
-    expect(screen.getByText(/B1–B2 لم تؤلف بعد/)).toBeTruthy();
+    expect(screen.getByText(/لم تُراجَع ألمانيًا بشريًا بعد/)).toBeTruthy();
     unmount();
-    const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "b2-01" }));
+    const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "c1-01" }));
     expect(container.childElementCount).toBe(0);
   });
 
   it("passes the shared prebuild validator and rejects broken A2 records at the same gate", () => {
     const result = validateAcademicContent();
     expect(result.ok, result.issues.join("\n")).toBe(true);
-    expect(result.counts.nounGrammarEntries).toBe(192);
-    expect(result.counts.verbPrepositionFrames).toBe(72);
+    expect(result.counts.nounGrammarEntries).toBe(336);
+    expect(result.counts.verbPrepositionFrames).toBe(144);
 
     const noun = structuredClone(a2NounGrammarEntries[0]) as Partial<(typeof a2NounGrammarEntries)[number]>;
     delete noun.plural;
@@ -160,5 +162,111 @@ describe("A2 structured noun and verb-preposition anchors", () => {
     expect(verbPrepositionFrameSchema.safeParse({ ...a2VerbPrepositionFrames[0], chunkDe: "ohne Präposition" }).success).toBe(true);
     expect(nounsByLesson["a2-24"]).toHaveLength(4);
     expect(framesByLesson["a2-24"]).toHaveLength(2);
+  });
+});
+
+describe("B1 structured noun and verb-preposition anchors", () => {
+  const b1LessonIds = academicLessonList.filter((lesson) => lesson.level === "B1").map((lesson) => lesson.id);
+
+  it("covers all 24 B1 lessons with four noun anchors and two verb frames", () => {
+    expect(b1LessonIds).toHaveLength(24);
+    expect(b1NounGrammarEntries).toHaveLength(96);
+    expect(b1VerbPrepositionFrames).toHaveLength(48);
+    for (const lessonId of b1LessonIds) {
+      expect(b1NounsByLesson[lessonId], lessonId).toHaveLength(4);
+      expect(b1VerbFramesByLesson[lessonId], lessonId).toHaveLength(2);
+    }
+  });
+
+  it("keeps every B1 noun schema-valid, level-tagged, and case-complete", () => {
+    const articles = { masculine: "der", feminine: "die", neuter: "das" } as const;
+    for (const noun of b1NounGrammarEntries) {
+      expect(nounGrammarEntrySchema.safeParse(noun).success, noun.id).toBe(true);
+      expect(noun.article, noun.id).toBe(articles[noun.gender]);
+      expect(noun.caseForms.nominative, noun.id).toBe(`${noun.article} ${noun.lemma}`);
+      expect(noun.caseForms.accusative.trim() && noun.caseForms.dative.trim(), noun.id).toBeTruthy();
+      expect(noun.sourceVersion).toBe("b1-lexical-grammar-v1");
+    }
+  });
+
+  it("uses every B1 frame combination once and keeps the known Dativ exceptions explicit", () => {
+    const keys = b1VerbPrepositionFrames.map((frame) => `${frame.infinitive}|${frame.preposition}`.toLocaleLowerCase("de-DE"));
+    expect(new Set(keys).size).toBe(keys.length);
+    for (const frame of b1VerbPrepositionFrames) {
+      expect(verbPrepositionFrameSchema.safeParse(frame).success, frame.id).toBe(true);
+      const chunk = frame.chunkDe.toLocaleLowerCase("de-DE");
+      expect(chunk, frame.id).toContain(frame.preposition.toLocaleLowerCase("de-DE"));
+      expect(frame.exampleDe.toLocaleLowerCase("de-DE"), frame.id).toContain(frame.preposition.toLocaleLowerCase("de-DE"));
+      expect(frame.contrastAr.length, frame.id).toBeGreaterThan(12);
+    }
+    const dativAfterAuf = b1VerbPrepositionFrames.filter((frame) => frame.preposition === "auf" && frame.governedCase === "dative");
+    expect(dativAfterAuf.map((frame) => frame.infinitive)).toContain("beruhen");
+  });
+
+  it("renders German-first B1 anchors", () => {
+    render(createElement(LexicalGrammarPanel, { lessonId: "b1-04" }));
+    expect(screen.getAllByText("das Ergebnis").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText("sich mit dem Team abstimmen")).toBeTruthy();
+    expect(screen.getByText("für ein Ergebnis verantwortlich sein")).toBeTruthy();
+    expect(screen.getByText(/إطارين للفعل مع حرف الجر/)).toBeTruthy();
+  });
+});
+
+describe("B2 structured noun and verb-preposition anchors", () => {
+  const b2LessonIds = academicLessonList.filter((lesson) => lesson.level === "B2").map((lesson) => lesson.id);
+
+  it("covers all 12 B2 lessons with four noun anchors and two verb frames", () => {
+    expect(b2LessonIds).toHaveLength(12);
+    expect(b2NounGrammarEntries).toHaveLength(48);
+    expect(b2VerbPrepositionFrames).toHaveLength(24);
+    for (const lessonId of b2LessonIds) {
+      expect(b2NounsByLesson[lessonId], lessonId).toHaveLength(4);
+      expect(b2VerbFramesByLesson[lessonId], lessonId).toHaveLength(2);
+    }
+  });
+
+  it("models the formal B2 Genitiv prepositions that A1-B1 never needed", () => {
+    const genitive = b2VerbPrepositionFrames.filter((frame) => frame.governedCase === "genitive");
+    expect(genitive.map((frame) => frame.preposition)).toEqual(["angesichts", "hinsichtlich", "trotz"]);
+    for (const frame of genitive) {
+      expect(verbPrepositionFrameSchema.safeParse(frame).success, frame.id).toBe(true);
+      expect(frame.exampleDe.toLocaleLowerCase("de-DE"), frame.id).toContain(frame.preposition.toLocaleLowerCase("de-DE"));
+    }
+    const angesichts = genitive.find((frame) => frame.preposition === "angesichts")!;
+    expect(angesichts.chunkDe).toBe("angesichts der Frist entscheiden");
+  });
+
+  it("keeps every B2 record schema-valid and level-tagged", () => {
+    for (const noun of b2NounGrammarEntries) {
+      expect(nounGrammarEntrySchema.safeParse(noun).success, noun.id).toBe(true);
+      expect(noun.sourceVersion, noun.id).toBe("b2-lexical-grammar-v1");
+    }
+    for (const frame of b2VerbPrepositionFrames) {
+      expect(verbPrepositionFrameSchema.safeParse(frame).success, frame.id).toBe(true);
+      expect(frame.sourceVersion, frame.id).toBe("b2-lexical-grammar-v1");
+      expect(["accusative", "dative", "genitive"]).toContain(frame.governedCase);
+    }
+  });
+
+  it("renders German-first B2 anchors with the Genitiv label", () => {
+    render(createElement(LexicalGrammarPanel, { lessonId: "b2-04" }));
+    expect(screen.getAllByText("der Leistungsumfang").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByText("angesichts der Frist entscheiden")).toBeTruthy();
+    expect(screen.getByText("angesichts + Genitiv")).toBeTruthy();
+    expect(screen.getByText("hinsichtlich des Umfangs priorisieren")).toBeTruthy();
+    expect(screen.getByText("hinsichtlich + Genitiv")).toBeTruthy();
+  });
+});
+
+describe("whole-course lexical coverage boundary", () => {
+  it("reaches every published lesson without claiming exhaustive vocabulary coverage", () => {
+    expect(nounGrammarEntries).toHaveLength(336);
+    expect(verbPrepositionFrames).toHaveLength(144);
+    expect(new Set(nounGrammarEntries.map((entry) => entry.lessonId)).size).toBe(84);
+    expect(academicLessonList).toHaveLength(84);
+    for (const lesson of academicLessonList) {
+      expect(nounsByLesson[lesson.id], lesson.id).toHaveLength(4);
+      expect(framesByLesson[lesson.id]?.length ?? 0, lesson.id).toBeGreaterThanOrEqual(1);
+    }
   });
 });

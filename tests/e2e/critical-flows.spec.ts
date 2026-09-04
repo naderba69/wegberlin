@@ -9,6 +9,20 @@ async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true");
 }
 
+/** الشريط الجانبي للمراحل مخفي على المقاسات الصغيرة، فيُفتح مرحلة المفردات من تذييل المرحلة هناك. */
+async function openVocabularyStage(page: Page) {
+  const sidebarStage = page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" });
+  if (await sidebarStage.isVisible()) {
+    await sidebarStage.click();
+  } else {
+    for (let step = 0; step < 2; step += 1) {
+      await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
+      await expect(page.locator(".lesson-workspace h1")).toBeVisible();
+    }
+  }
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
+}
+
 async function readActiveProfileId(page: Page) {
   return page.evaluate(() => new Promise<string | undefined>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
@@ -1049,9 +1063,9 @@ test("one level pack installs its own scope without downloading the whole course
     const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
     const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
     const a1Lesson = await levelCache.match("/lernen/a1-01");
-    const a1Module = await levelCache.match("/module/a1-modul-1");
+    const a1Module = await levelCache.match("/module/a1-1");
     const b2Lesson = await levelCache.match("/lernen/b2-12");
-    const examTask = await levelCache.match("/exams/goethe-b2/goethe-b2-full-06-reading-01");
+    const examTask = await levelCache.match("/exams/goethe-b2/full/goethe-b2-full-06");
     const fullPackMetadata = await fullCache.match("/__dwnb_offline_pack_meta__");
     return {
       metadata,
@@ -1077,8 +1091,17 @@ test("one level pack installs its own scope without downloading the whole course
     await page.goto("/lernen/a1-01", { waitUntil: "domcontentloaded" });
     await waitForLearningReady(page);
     await expect(page.locator(".lesson-workspace h1")).toContainText("أهداف اليوم");
+    // مسار B2 ليس داخل حزمة A1: العامل يرجّع 503 لأي مورد غير محفوظ، ويُسقط التنقل على /today.
+    const offlineProbe = await page.evaluate(async () => ({
+      a1: await fetch("/lernen/a1-01").then((response) => response.status).catch(() => 0),
+      b2: await fetch("/lernen/b2-12").then((response) => response.status).catch(() => 0),
+      exam: await fetch("/exams/goethe-b2/full/goethe-b2-full-06").then((response) => response.status).catch(() => 0),
+    }));
+    expect(offlineProbe.a1).toBe(200);
+    expect(offlineProbe.b2).toBe(503);
+    expect(offlineProbe.exam).toBe(503);
     await page.goto("/lernen/b2-12", { waitUntil: "domcontentloaded" });
-    await expect(page.getByText(/لا تعمل دون إنترنت|غير متاح|offline/i).first()).toBeVisible();
+    await expect(page.locator(".lesson-workspace")).toHaveCount(0);
   } finally {
     await context.setOffline(false);
   }
@@ -1087,6 +1110,9 @@ test("one level pack installs its own scope without downloading the whole course
   await waitForLearningReady(page);
   const installedLevelPack = page.locator(".offline-pack-card");
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("مثبتة");
+  await installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" }).click();
+  await expect(installedLevelPack.locator(".pack-scope.active")).toContainText("مستوى A1");
+  await expect(installedLevelPack).toContainText("51 مسارًا");
   page.once("dialog", (dialog) => void dialog.accept());
   await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
@@ -1461,7 +1487,7 @@ test("critical pages have no automatically detectable serious WCAG violations", 
 test("A2 vocabulary stage renders four noun anchors and two verb-preposition frames", async ({ page }) => {
   await page.goto("/lernen/a2-04");
   await waitForLearningReady(page);
-  await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+  await openVocabularyStage(page);
   await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
   const lexicalPanel = page.locator(".lexical-grammar-panel");
   await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
@@ -1477,7 +1503,7 @@ test("A2 vocabulary stage renders four noun anchors and two verb-preposition fra
 test("B2 vocabulary stage renders four noun anchors and the Genitiv preposition frames", async ({ page }) => {
   await page.goto("/lernen/b2-04");
   await waitForLearningReady(page);
-  await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+  await openVocabularyStage(page);
   await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
   const lexicalPanel = page.locator(".lexical-grammar-panel");
   await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
@@ -1492,7 +1518,7 @@ test("every published lesson vocabulary stage keeps the authored anchor count", 
   for (const lessonId of ["a1-12", "a2-17", "b1-19", "b2-09"]) {
     await page.goto(`/lernen/${lessonId}`);
     await waitForLearningReady(page);
-    await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+    await openVocabularyStage(page);
     const lexicalPanel = page.locator(".lexical-grammar-panel");
     await expect(lexicalPanel.locator(".noun-grammar-grid > article"), lessonId).toHaveCount(4);
     await expect(lexicalPanel.locator(".verb-frame-card"), lessonId).toHaveCount(lessonId.startsWith("a1-") ? 1 : 2);

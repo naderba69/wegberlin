@@ -273,7 +273,7 @@ TypeScript: 5
 IndexedDB DB version: 4
 LearningState schemaVersion: 3
 Unit/Integrity tests: 294/294
-Playwright desktop + mobile: 50/50
+Playwright desktop + mobile: 29/29 + 29/29
 Static/SSG pages: 301
 Offline routes: 298/298
 Offline level packs: 298/51/51/51/199
@@ -602,7 +602,7 @@ P0 373 + 376
 3. عرّف معيار قبول قابلًا للاختبار.
 4. نفّذ داخل المشروع، لا في تقرير فقط.
 5. أضف Unit/Integrity tests.
-6. عدّل E2E Desktop/Mobile عندما يتغير UX أو IndexedDB أو Offline.
+6. عدّل E2E Desktop/Mobile عندما يتغير UX أو IndexedDB أو Offline، ثم **شغّل المصفوفة فعليًا** (`npx playwright test`) قبل أي ادعاء؛ إن تعذّر تنزيل Chromium فاستخدم حزمة npm تحمل Binary واذكر ذلك صراحة.
 7. إذا تغير app/offline assets:
 
 ```text

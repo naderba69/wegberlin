@@ -1,7 +1,7 @@
 {
   "format": "dwnb-academic-audit",
   "version": "academic-governance-v1",
-  "generatedAt": "2026-09-03",
+  "generatedAt": "2026-09-04",
   "schema": {
     "counts": {
       "lessons": 84,
@@ -14,9 +14,9 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2016,
-      "nounGrammarEntries": 96,
-      "verbPrepositionFrames": 24,
-      "totalRootObjects": 2665
+      "nounGrammarEntries": 192,
+      "verbPrepositionFrames": 72,
+      "totalRootObjects": 2809
     },
     "schemaFamilies": 12,
     "issues": []
@@ -45640,5 +45640,5 @@
       }
     ]
   },
-  "contentSha256": "5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3"
+  "contentSha256": "b72117cac5f3aa97e2013ec9fb81d7a292f8f20786d06d9ca1beabc6e256cb4d"
 }

@@ -370,7 +370,7 @@ export const nounGrammarEntrySchema = z.object({
   plural: z.object({ form: text.nullable(), noteAr: text }).strict(),
   caseForms: z.object({ nominative: text, accusative: text, dative: text }).strict(),
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1"]),
 }).strict();
 
 export const verbPrepositionFrameSchema = z.object({
@@ -384,5 +384,5 @@ export const verbPrepositionFrameSchema = z.object({
   exampleDe: text,
   contrastAr: text,
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1"]),
 }).strict();

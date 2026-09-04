@@ -1,12 +1,12 @@
 # Academic Content Zod Validation Report
 
-Generated: 2026-09-03  
+Generated: 2026-09-04  
 Version: `academic-governance-v1`  
-Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3`
+Content SHA-256: `b72117cac5f3aa97e2013ec9fb81d7a292f8f20786d06d9ca1beabc6e256cb4d`
 
 ## Result
 
-`PASS` — 2665 top-level runtime academic objects passed 12 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, and derived review card.
+`PASS` — 2809 top-level runtime academic objects passed 12 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, and derived review card.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -20,9 +20,9 @@ Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22
 | examProfiles | 2 | Zod strict + nested objects |
 | examSources | 5 | Zod strict + nested objects |
 | reviewCards | 2016 | Zod strict + nested objects |
-| nounGrammarEntries | 96 | Zod strict + nested objects |
-| verbPrepositionFrames | 24 | Zod strict + nested objects |
-| **Total top-level objects** | **2665** | **0 schema failures** |
+| nounGrammarEntries | 192 | Zod strict + nested objects |
+| verbPrepositionFrames | 72 | Zod strict + nested objects |
+| **Total top-level objects** | **2809** | **0 schema failures** |
 
 ## Cross-reference gates
 

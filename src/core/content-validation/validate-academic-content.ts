@@ -6,7 +6,7 @@ import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 import { examProfiles, examSources } from "@/data/exam-profiles";
 import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
-import { a1NounGrammarEntries, a1VerbPrepositionFrames } from "@/data/lexical-grammar-a1";
+import { LEXICAL_GRAMMAR_LEVELS, lexicalLevelOf, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
 import {
   diagnosticQuestionSchema,
@@ -68,8 +68,8 @@ export function validateAcademicContent() {
   validateCollection("examProfiles", examProfileSchema, Object.values(examProfiles), issues);
   validateCollection("examSources", examSourceSchema, examSources, issues);
   validateCollection("reviewCards", reviewCardSchema, reviewCards, issues);
-  validateCollection("nounGrammarEntries", nounGrammarEntrySchema, a1NounGrammarEntries, issues);
-  validateCollection("verbPrepositionFrames", verbPrepositionFrameSchema, a1VerbPrepositionFrames, issues);
+  validateCollection("nounGrammarEntries", nounGrammarEntrySchema, nounGrammarEntries, issues);
+  validateCollection("verbPrepositionFrames", verbPrepositionFrameSchema, verbPrepositionFrames, issues);
 
   const sourceIds = new Set(examSources.map((source) => source.id));
   const taskIds = new Set(allPublishedExamTasks.map((task) => task.id));
@@ -83,27 +83,54 @@ export function validateAcademicContent() {
   checkUnique("exam tasks", [...taskIds], issues);
   checkUnique("full exam dashboards", fullExamSimulations.map((simulation) => simulation.id), issues);
   checkUnique("review cards", reviewCards.map((card) => card.id), issues);
-  checkUnique("noun grammar entries", a1NounGrammarEntries.map((entry) => entry.id), issues);
-  checkUnique("verb-preposition frames", a1VerbPrepositionFrames.map((entry) => entry.id), issues);
+  checkUnique("noun grammar entries", nounGrammarEntries.map((entry) => entry.id), issues);
+  checkUnique("verb-preposition frames", verbPrepositionFrames.map((entry) => entry.id), issues);
 
-  const a1LessonIds = academicLessonList.filter((lesson) => lesson.level === "A1").map((lesson) => lesson.id);
+  const lessonsByLevel = Object.fromEntries(
+    (["A1", "A2", "B1", "B2"] as const).map((level) => [level, academicLessonList.filter((lesson) => lesson.level === level).map((lesson) => lesson.id)]),
+  );
   const genderArticle = { masculine: "der", feminine: "die", neuter: "das" } as const;
-  for (const lessonId of a1LessonIds) {
-    const nouns = a1NounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
-    const frames = a1VerbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
-    if (nouns.length !== 4) issues.push(`nounGrammarEntries.${lessonId}: expected 4 A1 anchor nouns, received ${nouns.length}`);
-    if (frames.length !== 1) issues.push(`verbPrepositionFrames.${lessonId}: expected 1 A1 frame, received ${frames.length}`);
+  const lower = (value: string) => value.toLocaleLowerCase("de-DE");
+  /** يتجاهل ضمير الانعكاس «sich» لأنه يظهر في أول الجملة لا داخل الفعل في الاستعمال الحقيقي. */
+  const infinitiveTokens = (infinitive: string) => infinitive.split(/\s+/).filter((token) => token !== "sich");
+
+  for (const [level, rule] of Object.entries(LEXICAL_GRAMMAR_LEVELS)) {
+    const levelLessonIds = lessonsByLevel[level as keyof typeof lessonsByLevel] ?? [];
+    for (const lessonId of levelLessonIds) {
+      const nouns = nounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
+      const frames = verbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
+      if (nouns.length !== rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: expected ${rule.nounsPerLesson} ${level} anchor nouns, received ${nouns.length}`);
+      if (frames.length !== rule.framesPerLesson) issues.push(`verbPrepositionFrames.${lessonId}: expected ${rule.framesPerLesson} ${level} frames, received ${frames.length}`);
+    }
   }
-  for (const noun of a1NounGrammarEntries) {
-    if (!a1LessonIds.includes(noun.lessonId)) issues.push(`nounGrammarEntries.${noun.id}: lesson is not published A1`);
+  for (const noun of nounGrammarEntries) {
+    const level = lexicalLevelOf(noun.lessonId);
+    if (!level || !(lessonsByLevel[level] ?? []).includes(noun.lessonId)) issues.push(`nounGrammarEntries.${noun.id}: lesson is not a published ${level ?? "authored"} lesson`);
+    if (level && noun.sourceVersion !== `a${level.charAt(1).toLowerCase()}-lexical-grammar-v1`) issues.push(`nounGrammarEntries.${noun.id}: source version does not match ${level}`);
     if (noun.article !== genderArticle[noun.gender]) issues.push(`nounGrammarEntries.${noun.id}: article/gender mismatch`);
     if (!noun.caseForms.nominative.startsWith(`${noun.article} `)) issues.push(`nounGrammarEntries.${noun.id}: invalid nominative form`);
+    if (!noun.caseForms.accusative.trim() || !noun.caseForms.dative.trim()) issues.push(`nounGrammarEntries.${noun.id}: oblique case form missing`);
     if (!noun.plural.noteAr.trim()) issues.push(`nounGrammarEntries.${noun.id}: plural note missing`);
   }
-  for (const frame of a1VerbPrepositionFrames) {
-    if (!a1LessonIds.includes(frame.lessonId)) issues.push(`verbPrepositionFrames.${frame.id}: lesson is not published A1`);
-    if (!frame.chunkDe.toLocaleLowerCase("de-DE").includes(frame.preposition.toLocaleLowerCase("de-DE"))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
-    if (!frame.exampleDe.toLocaleLowerCase("de-DE").includes(frame.preposition.toLocaleLowerCase("de-DE"))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
+  for (const frame of verbPrepositionFrames) {
+    const level = lexicalLevelOf(frame.lessonId);
+    if (!level || !(lessonsByLevel[level] ?? []).includes(frame.lessonId)) issues.push(`verbPrepositionFrames.${frame.id}: lesson is not a published ${level ?? "authored"} lesson`);
+    if (level && frame.sourceVersion !== `a${level.charAt(1).toLowerCase()}-lexical-grammar-v1`) issues.push(`verbPrepositionFrames.${frame.id}: source version does not match ${level}`);
+    if (!lower(frame.chunkDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
+    if (!lower(frame.exampleDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
+    for (const token of infinitiveTokens(frame.infinitive)) {
+      if (!lower(frame.chunkDe).includes(lower(token))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits the framed infinitive token ${token}`);
+    }
+    if (frame.contrastAr.trim().length < 12) issues.push(`verbPrepositionFrames.${frame.id}: Arabic contrast note is too thin`);
+  }
+  // يمنع نسخ الإطار نفسه داخل المستوى. تكرار الفعل مع حرف الجر نفسه مسموح فقط بـchunk مختلف،
+  // كما في مراسي A1 حيث يتكرر fragen + nach بأسماء مختلفة داخل دروس مختلفة.
+  const levelChunkKeys = new Set<string>();
+  for (const frame of verbPrepositionFrames) {
+    const level = lexicalLevelOf(frame.lessonId);
+    const key = `${level}|${lower(frame.chunkDe)}`;
+    if (levelChunkKeys.has(key)) issues.push(`verbPrepositionFrames.${frame.id}: ${level} repeats the chunk "${frame.chunkDe}"`);
+    levelChunkKeys.add(key);
   }
 
   for (const meta of curriculum) {
@@ -149,8 +176,8 @@ export function validateAcademicContent() {
     examProfiles: Object.keys(examProfiles).length,
     examSources: examSources.length,
     reviewCards: reviewCards.length,
-    nounGrammarEntries: a1NounGrammarEntries.length,
-    verbPrepositionFrames: a1VerbPrepositionFrames.length,
+    nounGrammarEntries: nounGrammarEntries.length,
+    verbPrepositionFrames: verbPrepositionFrames.length,
   };
   const counts: AcademicSchemaCounts = {
     ...countsWithoutTotal,

@@ -1,37 +1,8 @@
-import type { GermanGender, NounGrammarEntry, VerbPrepositionFrame } from "@/types/lexical-grammar";
+import { buildNounEntries, buildVerbFrames, groupByLesson } from "./lexical-grammar-build";
+import type { NounSeed, FrameSeed } from "./lexical-grammar-build";
+import type { LexicalSourceVersion } from "@/types/lexical-grammar";
 
-type NounSeed = readonly [lemma: string, gender: GermanGender, plural: string | null, meaningAr: string, obliqueSingular?: string];
-type FrameSeed = Omit<VerbPrepositionFrame, "id" | "lessonId" | "firstStructuredStage" | "sourceVersion">;
-
-const articleByGender = { masculine: "der", feminine: "die", neuter: "das" } as const;
-const accusativeArticleByGender = { masculine: "den", feminine: "die", neuter: "das" } as const;
-const dativeArticleByGender = { masculine: "dem", feminine: "der", neuter: "dem" } as const;
-
-function nounEntries(lessonId: string, seeds: readonly NounSeed[]): NounGrammarEntry[] {
-  return seeds.map(([lemma, gender, plural, meaningAr, obliqueSingular], index) => {
-    const article = articleByGender[gender];
-    const oblique = obliqueSingular ?? lemma;
-    return {
-      id: `${lessonId}-noun-${index + 1}`,
-      lessonId,
-      lemma,
-      article,
-      gender,
-      meaningAr,
-      plural: {
-        form: plural,
-        noteAr: plural ? `الجمع: die ${plural}` : "لا يُستعمل له جمع عادي في هذا المعنى داخل A1.",
-      },
-      caseForms: {
-        nominative: `${article} ${lemma}`,
-        accusative: `${accusativeArticleByGender[gender]} ${oblique}`,
-        dative: `${dativeArticleByGender[gender]} ${oblique}`,
-      },
-      firstStructuredStage: "vocabulary",
-      sourceVersion: "a1-lexical-grammar-v1",
-    };
-  });
-}
+const sourceVersion: LexicalSourceVersion = "a1-lexical-grammar-v1";
 
 const nounSeeds: Record<string, readonly NounSeed[]> = {
   "a1-01": [["Name", "masculine", "Namen", "الاسم", "Namen"], ["Kurs", "masculine", "Kurse", "الدورة"], ["Lehrerin", "feminine", "Lehrerinnen", "المعلّمة"], ["Frage", "feminine", "Fragen", "السؤال"]],
@@ -87,21 +58,8 @@ const frameSeeds: Record<string, FrameSeed> = {
   "a1-24": { infinitive: "helfen", preposition: "bei", governedCase: "dative", chunkDe: "bei einem Formular helfen", meaningAr: "يساعد في استمارة", exampleDe: "Sie hilft bei einem Formular.", contrastAr: "helfen bei يربط المساعدة بالمهمة، وbei يطلب Dativ." },
 };
 
-export const a1NounGrammarEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, seeds));
-export const a1VerbPrepositionFrames: VerbPrepositionFrame[] = Object.entries(frameSeeds).map(([lessonId, frame]) => ({
-  id: `${lessonId}-verb-frame-1`,
-  lessonId,
-  ...frame,
-  firstStructuredStage: "vocabulary",
-  sourceVersion: "a1-lexical-grammar-v1",
-}));
-
-function groupByLesson<T extends { lessonId: string }>(items: T[]) {
-  return items.reduce<Record<string, T[]>>((groups, item) => {
-    groups[item.lessonId] = [...(groups[item.lessonId] ?? []), item];
-    return groups;
-  }, {});
-}
+export const a1NounGrammarEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => buildNounEntries(lessonId, seeds, sourceVersion, "A1"));
+export const a1VerbPrepositionFrames = Object.entries(frameSeeds).flatMap(([lessonId, frame]) => buildVerbFrames(lessonId, [frame], sourceVersion));
 
 export const a1NounsByLesson = groupByLesson(a1NounGrammarEntries);
 export const a1VerbFramesByLesson = groupByLesson(a1VerbPrepositionFrames);

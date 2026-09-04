@@ -3,6 +3,8 @@ import type { LessonStageKey } from "./lesson-content";
 export type GermanGender = "masculine" | "feminine" | "neuter";
 export type GermanCase = "nominative" | "accusative" | "dative";
 
+export type LexicalSourceVersion = "a1-lexical-grammar-v1" | "a2-lexical-grammar-v1";
+
 export type NounGrammarEntry = {
   id: string;
   lessonId: string;
@@ -16,7 +18,7 @@ export type NounGrammarEntry = {
   };
   caseForms: Record<GermanCase, string>;
   firstStructuredStage: Extract<LessonStageKey, "vocabulary">;
-  sourceVersion: "a1-lexical-grammar-v1";
+  sourceVersion: LexicalSourceVersion;
 };
 
 export type VerbPrepositionFrame = {
@@ -30,5 +32,5 @@ export type VerbPrepositionFrame = {
   exampleDe: string;
   contrastAr: string;
   firstStructuredStage: Extract<LessonStageKey, "vocabulary">;
-  sourceVersion: "a1-lexical-grammar-v1";
+  sourceVersion: LexicalSourceVersion;
 };

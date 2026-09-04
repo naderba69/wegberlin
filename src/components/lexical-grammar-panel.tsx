@@ -1,5 +1,5 @@
 import { BookKey, GitBranch } from "lucide-react";
-import { a1NounsByLesson, a1VerbFramesByLesson } from "@/data/lexical-grammar-a1";
+import { framesByLesson, lexicalLevelOf, nounsByLesson } from "@/data/lexical-grammar-registry";
 
 const genderLabels = {
   masculine: "Maskulin",
@@ -13,8 +13,9 @@ const caseLabels = {
 };
 
 export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
-  const nouns = a1NounsByLesson[lessonId] ?? [];
-  const frames = a1VerbFramesByLesson[lessonId] ?? [];
+  const nouns = nounsByLesson[lessonId] ?? [];
+  const frames = framesByLesson[lessonId] ?? [];
+  const level = lexicalLevelOf(lessonId);
   if (!nouns.length && !frames.length) return null;
 
   return <section className="lexical-grammar-panel" aria-label="بيانات الاسم والفعل البنيوية">
@@ -39,16 +40,22 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
       </article>)}
     </div>
 
-    {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id}>
-      <span><GitBranch size={18} /></span>
-      <div>
-        <small lang="de" dir="ltr">Verb + Präposition + Kasus</small>
-        <h3 lang="de" dir="ltr">{frame.chunkDe}</h3>
-        <p>{frame.meaningAr}</p>
-        <blockquote lang="de" dir="ltr">{frame.exampleDe}</blockquote>
-        <footer><b lang="de" dir="ltr">{frame.preposition} + {frame.governedCase === "dative" ? "Dativ" : "Akkusativ"}</b><span>{frame.contrastAr}</span></footer>
-      </div>
-    </article>)}
-    <p className="lexical-coverage-note">تغطي هذه الدفعة أربع كلمات اسمية مرساة وإطار فعل واحدًا في كل درس A1. لا تدّعي بعد تغطية كل أسماء وأفعال A2–B2.</p>
+    {frames.length ? <div className="verb-frame-grid">
+      {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id}>
+        <span><GitBranch size={18} /></span>
+        <div>
+          <small lang="de" dir="ltr">Verb + Präposition + Kasus</small>
+          <h3 lang="de" dir="ltr">{frame.chunkDe}</h3>
+          <p>{frame.meaningAr}</p>
+          <blockquote lang="de" dir="ltr">{frame.exampleDe}</blockquote>
+          <footer><b lang="de" dir="ltr">{frame.preposition} + {frame.governedCase === "dative" ? "Dativ" : "Akkusativ"}</b><span>{frame.contrastAr}</span></footer>
+        </div>
+      </article>)}
+    </div> : null}
+    <p className="lexical-coverage-note">
+      {level === "A2"
+        ? "تغطي هذه الدفعة أربع كلمات اسمية مرساة وإطارين للفعل مع حرف الجر في كل درس من 24/24 درس A2، مأخوذة من نظرية الدرس نفسه. لا تدّعي تغطية كل أسماء وأفعال A2، وB1–B2 لم تؤلف بعد."
+        : "تغطي هذه الدفعة أربع كلمات اسمية مرساة وإطار فعل واحدًا في كل درس من 24/24 درس A1. لا تدّعي تغطية كل أسماء وأفعال A1، وB1–B2 لم تؤلف بعد."}
+    </p>
   </section>;
 }

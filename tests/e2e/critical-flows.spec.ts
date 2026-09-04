@@ -1381,3 +1381,19 @@ test("critical pages have no automatically detectable serious WCAG violations", 
     expect(serious, `${route}: ${serious.map((item) => item.id).join(", ")}`).toEqual([]);
   }
 });
+
+test("A2 vocabulary stage renders four noun anchors and two verb-preposition frames", async ({ page }) => {
+  await page.goto("/lernen/a2-04");
+  await waitForLearningReady(page);
+  await page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" }).click();
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
+  const lexicalPanel = page.locator(".lexical-grammar-panel");
+  await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+  await expect(lexicalPanel.locator(".verb-frame-card")).toHaveCount(2);
+  await expect(lexicalPanel).toContainText("der Nachbar");
+  await expect(lexicalPanel).toContainText("sich für die Hilfe bedanken");
+  await expect(lexicalPanel).toContainText("um Hilfe bitten");
+  await expect(lexicalPanel).toContainText("B1–B2");
+  await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
+  await expect(lexicalPanel.locator("details").first()).toContainText("dem Nachbarn");
+});

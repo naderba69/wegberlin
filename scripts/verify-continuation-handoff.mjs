@@ -27,6 +27,8 @@ const objectiveCoverageReport = read("docs/generated/OBJECTIVE_COVERAGE_REPORT.m
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
 const lexicalGrammar = read("src/data/lexical-grammar-a1.ts");
+const lexicalGrammarA2 = read("src/data/lexical-grammar-a2.ts");
+const lexicalRegistry = read("src/data/lexical-grammar-registry.ts");
 const lexicalPanel = read("src/components/lexical-grammar-panel.tsx");
 const termuxReplace = read("TERMUX_REPLACE_REPO.sh");
 const termuxGuide = read("TERMUX_GITHUB_UPLOAD.md");
@@ -51,8 +53,8 @@ if (partialIds.length !== 19) fail(`P0 partial table has ${partialIds.length} ro
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
 for (const text of ["Implemented: 102", "Partial: 19", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["102 implemented, 19 partial, 2 not implemented", "264/264", "50/50", "301 generated static/SSG pages", "298/298"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["264/264", "50/50"]) requireText(readme, text, "README.md");
+for (const text of ["102 implemented, 19 partial, 2 not implemented", "271/271", "50/50", "301 generated static/SSG pages", "298/298"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["271/271", "50/50"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (libraryAudio.assets.length !== 80 || libraryAudio.generatedAssetCount !== 80) fail("library audio count drifted");
@@ -74,18 +76,20 @@ requireText(zeroCost, "Hard mandatory budget: **0 USD**", "ZERO_COST.md");
 requireText(sourceWorkflow, "node scripts/audit-source-freshness.mjs --fail-on=due --probe", "monthly source workflow");
 
 if (academicAudit.version !== "academic-governance-v1") fail("academic audit version drifted");
-if (academicAudit.schema?.counts?.totalRootObjects !== 2665 || academicAudit.schema?.schemaFamilies !== 12) fail("academic Zod counters drifted");
-if (academicAudit.schema?.counts?.nounGrammarEntries !== 96 || academicAudit.schema?.counts?.verbPrepositionFrames !== 24) fail("A1 lexical grammar counters drifted");
+if (academicAudit.schema?.counts?.totalRootObjects !== 2809 || academicAudit.schema?.schemaFamilies !== 12) fail("academic Zod counters drifted");
+if (academicAudit.schema?.counts?.nounGrammarEntries !== 192 || academicAudit.schema?.counts?.verbPrepositionFrames !== 72) fail("A1+A2 lexical grammar counters drifted");
 if (academicAudit.answerIntegrity?.closedAnswerItems !== 2584 || academicAudit.answerIntegrity?.productiveTasks !== 348 || academicAudit.answerIntegrity?.failures !== 0 || academicAudit.answerIntegrity?.exemptions !== 3) fail("answer integrity counters drifted");
 if (academicAudit.objectiveCoverage?.objectives !== 336 || academicAudit.objectiveCoverage?.gaps !== 0) fail("objective coverage counters drifted");
 for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCoverageReport]) requireText(report, academicAudit.contentSha256, "generated academic report hash");
-for (const text of ["2,665", "2,584", "348", "336/336"]) requireText(prompt, text, "continuation prompt academic audit");
+for (const text of ["2,809", "2,584", "348", "336/336"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["NOVEL_TRANSFER_WEIGHT = 1.5", "NOVEL_PRACTICE_WEIGHT = 1", "SAME_ITEM_RETRY_WEIGHT = 0.25"]) requireText(masteryWeighting, text, "mastery novelty weights");
 for (const text of ["sm2-v2-calendar", "review-calendar-v1", "calendarPartsAt"]) requireText(sm2, text, "zoned SM-2 contract");
 for (const text of ["novelty-weighting-v1", "sm2-v2-calendar", "review-calendar-v1"]) requireText(prompt, text, "continuation prompt mastery/calendar contract");
 for (const text of ["a1-lexical-grammar-v1", "\"a1-01\"", "\"a1-24\""]) requireText(lexicalGrammar, text, "A1 lexical grammar registry");
-for (const text of ["Nomen mit Artikel, Plural und Kasus", "Verb + Präposition + Kasus", "A2–B2"]) requireText(lexicalPanel, text, "A1 lexical grammar panel");
-for (const text of ["96 سجل اسم", "24 إطار فعل/حرف جر", "24/24 درس A1"]) requireText(prompt, text, "continuation prompt A1 lexical grammar contract");
+for (const text of ["a2-lexical-grammar-v1", "\"a2-01\"", "\"a2-24\"", "lexical-grammar-build"]) requireText(lexicalGrammarA2, text, "A2 lexical grammar registry");
+for (const text of ["nounsByLesson", "framesByLesson", "lexicalLevelOf", "pendingLevels"]) requireText(lexicalRegistry, text, "unified lexical grammar registry");
+for (const text of ["Nomen mit Artikel, Plural und Kasus", "Verb + Präposition + Kasus", "B1–B2"]) requireText(lexicalPanel, text, "A1/A2 lexical grammar panel");
+for (const text of ["192 سجل اسم", "72 إطار فعل/حرف جر", "24/24 درس A1", "24/24 درس A2"]) requireText(prompt, text, "continuation prompt A1/A2 lexical grammar contract");
 for (const text of ["2026-09-04 — Africa/Tunis", "wegberlin-full.zip.sha256", "TERMUX_REPLACE_REPO.sh", "sha256sum -c wegberlin-full.zip.sha256", "دون Force"]) requireText(prompt, text, "continuation prompt Termux handoff");
 for (const text of ["storage/downloads/wegberlin-full.zip", "gh api user --jq .login", "git push origin main", "GIT_ASKPASS"] ) requireText(termuxReplace, text, "Termux clean-replacement script");
 for (const forbidden of ["git push -f", "gh auth login", "@github.com/${GITHUB_PAT}"]) if (termuxReplace.includes(forbidden)) fail(`Termux replacement script contains forbidden pattern ${forbidden}`);
@@ -102,6 +106,6 @@ console.log(`- backlog: P0 ${expectedPriorities.P0}, P1 ${expectedPriorities.P1}
 console.log(`- P0 state: 102 implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
 console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 exam files / 90 clips`);
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
-console.log(`- A1 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 24 lessons`);
+console.log(`- A1+A2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 48 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 264 unit/integrity and 50 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 271 unit/integrity and 50 browser tests documented`);

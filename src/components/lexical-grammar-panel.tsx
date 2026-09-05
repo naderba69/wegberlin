@@ -1,5 +1,7 @@
 import { BookKey, GitBranch } from "lucide-react";
-import { framesByLesson, lexicalLevelOf, nounsByLesson } from "@/data/lexical-grammar-registry";
+import { framesByLesson, nounsByLesson } from "@/data/lexical-grammar-registry";
+import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
+import { valencyEntries } from "@/data/verb-preposition-dictionary";
 
 const genderLabels = {
   masculine: "Maskulin",
@@ -21,7 +23,6 @@ const governedCaseLabels = {
 export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
   const nouns = nounsByLesson[lessonId] ?? [];
   const frames = framesByLesson[lessonId] ?? [];
-  const level = lexicalLevelOf(lessonId);
   if (!nouns.length && !frames.length) return null;
 
   return <section className="lexical-grammar-panel" aria-label="بيانات الاسم والفعل البنيوية">
@@ -49,10 +50,10 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
     </div>
 
     {frames.length ? <div className="verb-frame-grid">
-      {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id}>
+      {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id} data-origin={frame.origin}>
         <span><GitBranch size={18} /></span>
         <div>
-          <small lang="de" dir="ltr">Verb + Präposition + Kasus</small>
+          <small lang="de" dir="ltr">{frame.origin === "derived" ? "Verb + Präposition + Kasus · مقيس في نص هذا الدرس" : "Verb + Präposition + Kasus"}</small>
           <h3 lang="de" dir="ltr">{frame.chunkDe}</h3>
           <p>{frame.meaningAr}</p>
           <blockquote lang="de" dir="ltr">{frame.exampleDe}</blockquote>
@@ -61,9 +62,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
       </article>)}
     </div> : null}
     <p className="lexical-coverage-note">
-      {level === "A1"
-        ? "تغطي هذه الطبقة أربع مراسي اسمية وإطار فعل واحدًا مع حرف الجر في كل درس من 24/24 درس A1، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. المراسي مختارة من نظرية الدرس ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد."
-        : `تغطي هذه الطبقة أربع مراسي اسمية وإطارين للفعل مع حرف الجر في هذا الدرس ${level}، مأخوذة من نظرية الدرس ومفرداته، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. المراسي مختارة ولا تغطي كل أسماء وأفعال المستوى، ولم تُراجَع ألمانيًا بشريًا بعد.`}
+      {`تغطي هذه الطبقة ${nouns.length} مراسي اسمية في هذا الدرس، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. أما إطارات الفعل مع حرف الجر (${frames.length}) فمقيسة آليًا من نص هذا الدرس نفسه مقابل قاموس تكافؤ مؤلف من ${valencyEntries.length} مدخلًا، فهي تغطي كل فعل ذي متمم جرّي ظهر في النص (الأهداف المقيسة في هذا الدرس: ${measuredTargetsByLesson[lessonId]?.length ?? 0}) لا إطارًا أو إطارين ثابتين. حدّ الجرد: لا يستخدم مُعلّمًا صرفيًا، ولا يرى أفعالًا غير مدرجة في القاموس، ولا يقيس المتممات الظرفية والزمنية. كل هذه الصيغ لم تُراجَع ألمانيًا بشريًا بعد.`}
     </p>
   </section>;
 }

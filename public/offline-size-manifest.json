@@ -1,8 +1,8 @@
 {
   "format": "dwnb-offline-size",
   "version": 1,
-  "generatedAt": "2026-09-04",
-  "buildId": "xlRXqI-IKp32bDEaFDvqv",
+  "generatedAt": "2026-09-05",
+  "buildId": "UTbGMWwcc0oXXlXn1I6yW",
   "compression": "gzip-level-9",
   "units": "bytes",
   "measurementNoteAr": "pageBytes يقيس ما سيشغله Cache Storage بعد التثبيت، وtransferBytes يقيس ما يعبر الشبكة مضغوطًا بـgzip. القيم مبنية من مخرجات Build الحقيقية، وهي تقدير دقيق للمسارات والأصول لا وعد بحجم جهاز المستخدم بعد استبدال قطع Next. الأصول المدرجة في unmeasuredAssets تُولَّد عند الطلب ولا يتجاوز مجموعها بضعة كيلوبايتات.",
@@ -21,14 +21,14 @@
       "unmeasuredAssets": [
         "/manifest.webmanifest"
       ],
-      "htmlBytes": 11716298,
-      "htmlTransferBytes": 2907539,
-      "assetBytes": 4321054,
-      "assetTransferBytes": 1184602,
-      "pageBytes": 16037352,
-      "pageTransferBytes": 4092141,
-      "pageWithAudioBytes": 42715548,
-      "pageWithAudioTransferBytes": 30770337
+      "htmlBytes": 11737382,
+      "htmlTransferBytes": 2909844,
+      "assetBytes": 4363980,
+      "assetTransferBytes": 1196461,
+      "pageBytes": 16101362,
+      "pageTransferBytes": 4106305,
+      "pageWithAudioBytes": 42779558,
+      "pageWithAudioTransferBytes": 30784501
     },
     "A1": {
       "routeCount": 51,
@@ -39,14 +39,14 @@
       "unmeasuredAssets": [
         "/manifest.webmanifest"
       ],
-      "htmlBytes": 2495252,
-      "htmlTransferBytes": 575140,
-      "assetBytes": 4213493,
-      "assetTransferBytes": 1151034,
-      "pageBytes": 6708745,
-      "pageTransferBytes": 1726174,
-      "pageWithAudioBytes": 33386941,
-      "pageWithAudioTransferBytes": 28404370
+      "htmlBytes": 2501276,
+      "htmlTransferBytes": 575773,
+      "assetBytes": 4256419,
+      "assetTransferBytes": 1162893,
+      "pageBytes": 6757695,
+      "pageTransferBytes": 1738666,
+      "pageWithAudioBytes": 33435891,
+      "pageWithAudioTransferBytes": 28416862
     },
     "A2": {
       "routeCount": 51,
@@ -57,14 +57,14 @@
       "unmeasuredAssets": [
         "/manifest.webmanifest"
       ],
-      "htmlBytes": 2687867,
-      "htmlTransferBytes": 640226,
-      "assetBytes": 4213531,
-      "assetTransferBytes": 1151100,
-      "pageBytes": 6901398,
-      "pageTransferBytes": 1791326,
-      "pageWithAudioBytes": 33579594,
-      "pageWithAudioTransferBytes": 28469522
+      "htmlBytes": 2693891,
+      "htmlTransferBytes": 640865,
+      "assetBytes": 4256457,
+      "assetTransferBytes": 1162959,
+      "pageBytes": 6950348,
+      "pageTransferBytes": 1803824,
+      "pageWithAudioBytes": 33628544,
+      "pageWithAudioTransferBytes": 28482020
     },
     "B1": {
       "routeCount": 51,
@@ -75,14 +75,14 @@
       "unmeasuredAssets": [
         "/manifest.webmanifest"
       ],
-      "htmlBytes": 2766535,
-      "htmlTransferBytes": 673010,
-      "assetBytes": 4213561,
-      "assetTransferBytes": 1151100,
-      "pageBytes": 6980096,
-      "pageTransferBytes": 1824110,
-      "pageWithAudioBytes": 33658292,
-      "pageWithAudioTransferBytes": 28502306
+      "htmlBytes": 2772559,
+      "htmlTransferBytes": 673640,
+      "assetBytes": 4256487,
+      "assetTransferBytes": 1162959,
+      "pageBytes": 7029046,
+      "pageTransferBytes": 1836599,
+      "pageWithAudioBytes": 33707242,
+      "pageWithAudioTransferBytes": 28514795
     },
     "B2": {
       "routeCount": 199,
@@ -93,14 +93,14 @@
       "unmeasuredAssets": [
         "/manifest.webmanifest"
       ],
-      "htmlBytes": 5965758,
-      "htmlTransferBytes": 1422849,
-      "assetBytes": 4299108,
-      "assetTransferBytes": 1175458,
-      "pageBytes": 10264866,
-      "pageTransferBytes": 2598307,
-      "pageWithAudioBytes": 36943062,
-      "pageWithAudioTransferBytes": 29276503
+      "htmlBytes": 5968770,
+      "htmlTransferBytes": 1423267,
+      "assetBytes": 4342034,
+      "assetTransferBytes": 1187317,
+      "pageBytes": 10310804,
+      "pageTransferBytes": 2610584,
+      "pageWithAudioBytes": 36989000,
+      "pageWithAudioTransferBytes": 29288780
     }
   }
 }

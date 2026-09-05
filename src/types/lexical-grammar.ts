@@ -32,9 +32,13 @@ export type NounGrammarEntry = {
   sourceVersion: LexicalSourceVersion;
 };
 
+/** authored: إطار مؤلف خصيصًا للدرس. derived: إطار مشتق من قاموس التكافؤ بعد أن قاس الجرد وقوعه في نص الدرس. */
+export type FrameOrigin = "authored" | "derived";
+
 export type VerbPrepositionFrame = {
   id: string;
   lessonId: string;
+  origin: FrameOrigin;
   infinitive: string;
   preposition: string;
   governedCase: GovernedCase;

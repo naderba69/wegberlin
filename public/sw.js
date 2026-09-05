@@ -1,7 +1,7 @@
 const SHELL_CACHE = "dwnb-shell-v4";
-const PACK_VERSION = "v55";
-const PACK_CACHE = "dwnb-full-pack-v55";
-const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v55";
+const PACK_VERSION = "v56";
+const PACK_CACHE = "dwnb-full-pack-v56";
+const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v56";
 const LEVEL_SCOPES = ["A1", "A2", "B1", "B2"];
 const PACK_SCOPES = ["full", ...LEVEL_SCOPES];
 const levelPackCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-${PACK_VERSION}`;

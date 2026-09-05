@@ -39,7 +39,24 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 
 ## Consequences
 
-- A1–B2 now have 336 noun anchors and 144 frames across 84/84 published lessons.
+- A1–B2 now have 336 noun anchors and 262 frames across 84/84 published lessons: 144 authored (one per A1 lesson, two per A2/B1/B2 lesson) and 118 derived from a measured valency inventory.
 - The layer is visible and teachable, not documentation-only metadata.
-- P0-98 and P0-99 remain partial: four anchors plus one or two frames per lesson are not every target noun/frame, the nominal Genitiv form and dative plural are still absent from the noun record, and no human German review has happened.
+- P0-98 and P0-99 remain partial: four anchors per lesson are not every target noun, no independent human German review has happened, and the valency inventory is a rule-based measurer rather than a morphosyntactic parser.
+
+## Decision (2026-09-04): measure verb-preposition coverage from the lesson text instead of declaring a frame count
+
+A fixed "one or two frames per lesson" rule cannot answer "is every verb with a prepositional complement covered?" So the layer now carries two new pieces:
+
+1. `src/data/verb-preposition-dictionary.ts` — 214 declared valency entries (147 authored seeds + 67 imported from the already-authored frames so the inventory is not blind to them). 206 are measured; 8 adverbial/temporal patterns (`wohnen in`, `stehen auf`, `ankommen in`, `beginnen um`, `liegen an`, `hängen an`, `entscheiden angesichts`, `erklären trotz`) are declared but deliberately not measured, because measuring them would count every locative or temporal sentence as a gap.
+2. `src/data/verb-preposition-coverage.ts` — reads every German string in a lesson, splits it into sentences, and marks an entry as a **target** of that lesson when the verb form and the preposition opening a real nominal complement (determiner, fused form, or a capitalized noun after `nach`) co-occur inside one sentence. Reflexive verbs require a reflexive pronoun in the same sentence; generic copula patterns require their adjective (`zuständig`, `verantwortlich`); `sich krankmelden bei` requires `krank`. Letters are matched case-insensitively but a capitalized match only counts sentence-initially, so the noun `Stelle` is not counted as the verb `stelle`.
+
+Measured result: **141 targets across 66/84 lessons** (A1 29, A2 40, B1 45, B2 27), 23 already covered by authored frames, **118 gaps**. `src/data/lexical-grammar-derived.ts` derives a frame for each gap from the dictionary entry (`origin: "derived"`), so every measured target now has a frame in its lesson, and every derived frame is justified by a sentence the inventory can quote.
+
+Consequences:
+
+- The validator no longer enforces "unique chunk per level" — it enforces "unique chunk per lesson", because the same valency is legitimately a target in several lessons.
+- The validator enforces three new gates: every measured target has a frame in its lesson, every derived frame has a measured target behind it, and every frame maps to a declared dictionary entry.
+- Frame counts are now measured, not fixed: the prebuild counters report `verbPrepositionFrames: 262`, `derivedVerbFrames: 118`, `measuredValencyTargets: 141`, and `unjustifiedDerivedFrames: 0`.
+
+Known limits: the inventory is a list of authored inflection forms, not a POS tagger, so a verb appearing in an unlisted form or an unlisted valency is invisible to it; adverbial readings are excluded by declaration, not by parsing; and none of this content has been reviewed by a human German teacher.
 - Independent German review is still required before calling the registry final linguistic validation.

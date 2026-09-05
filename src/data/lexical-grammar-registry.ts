@@ -2,12 +2,15 @@ import { a1NounGrammarEntries, a1VerbPrepositionFrames } from "./lexical-grammar
 import { a2NounGrammarEntries, a2VerbPrepositionFrames } from "./lexical-grammar-a2";
 import { b1NounGrammarEntries, b1VerbPrepositionFrames } from "./lexical-grammar-b1";
 import { b2NounGrammarEntries, b2VerbPrepositionFrames } from "./lexical-grammar-b2";
+import { derivedFrames } from "./lexical-grammar-derived";
 import { groupByLesson } from "./lexical-grammar-build";
 import type { NounGrammarEntry, VerbPrepositionFrame } from "@/types/lexical-grammar";
 
 /**
  * السجل الموحّد لبيانات الاسم والفعل البنيوية عبر كل المستويات المنشورة.
- * A1: 96 اسمًا و24 إطارًا · A2: 96 و48 · B1: 96 و48 · B2: 48 و24.
+ * الأسماء: A1 96 · A2 96 · B1 96 · B2 48 (المجموع 336).
+ * الإطارات = مؤلفة + مشتقة من جرد التكافؤ المقاس:
+ * A1 24+24=48 · A2 48+32=80 · B1 48+34=82 · B2 24+24=48 (المجموع 258).
  */
 export const nounGrammarEntries: NounGrammarEntry[] = [
   ...a1NounGrammarEntries,
@@ -20,11 +23,13 @@ export const verbPrepositionFrames: VerbPrepositionFrame[] = [
   ...a2VerbPrepositionFrames,
   ...b1VerbPrepositionFrames,
   ...b2VerbPrepositionFrames,
+  ...derivedFrames,
 ];
 
 export const nounsByLesson = groupByLesson(nounGrammarEntries);
 export const framesByLesson = groupByLesson(verbPrepositionFrames);
 
+/** framesPerLesson هو الحد الأدنى المؤلف لكل درس؛ التغطية الكاملة يقيسها جرد التكافؤ. */
 export const LEXICAL_GRAMMAR_LEVELS = {
   A1: { nounsPerLesson: 4, framesPerLesson: 1, lessons: 24 },
   A2: { nounsPerLesson: 4, framesPerLesson: 2, lessons: 24 },
@@ -56,10 +61,9 @@ export const lexicalGrammarCoverage = {
   pendingLevels: [] as string[],
   pendingWork: [
     "تدقيق كل اسم هدف في A1–B2 لا المراسي الأربعة فقط",
-    "تغطية كل فعل ذي متمم جرّي مستهدف، لا إطارًا أو إطارين في الدرس",
-    "تأليف صيغة Genitiv الاسمية وجمع المجرور داخل سجل الاسم",
-    "مراجعة ألمانية بشرية مستقلة",
+    "توسيع قاموس التكافؤ ليشمل أفعالًا جرّية أخرى قد يفوتها الجرد الحالي",
+    "مراجعة ألمانية بشرية مستقلة لكل صيغة Genitiv وجمع مجرور وإطار فعل",
   ],
   boundaryAr:
-    "كل الدروس الـ84 المنشورة تملك الآن مراسي اسمية وإطارات فعل مؤلفة ومدققة بنيويًا، لكن هذه مراسي مختارة من نظرية كل درس: لا تغطي كل أسماء المنهج ولا كل فعل ذي متمم جرّي، ولا تساوي مراجعة أكاديمية بشرية مستقلة.",
+    "كل الدروس الـ84 المنشورة تملك الآن مراسي اسمية مؤلفة بصيغ Genitiv والمجرور، وإطارات فعل تغطي كل فعل ذي متمم جرّي قاسه الجرد داخل نص الدرس نفسه. حدّ الجرد معلن: يقيس الأشكال التصريفية المدرجة في القاموس ولا يستخدم مُعلّمًا صرفيًا، فلا يساوي مراجعة أكاديمية بشرية مستقلة، ولا يغطي أفعالًا جرّية غير مدرجة في القاموس.",
 } as const;

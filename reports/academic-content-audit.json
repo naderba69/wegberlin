@@ -15,8 +15,11 @@
       "examSources": 5,
       "reviewCards": 2016,
       "nounGrammarEntries": 336,
-      "verbPrepositionFrames": 144,
-      "totalRootObjects": 3025
+      "verbPrepositionFrames": 262,
+      "derivedVerbFrames": 118,
+      "measuredValencyTargets": 141,
+      "unjustifiedDerivedFrames": 0,
+      "totalRootObjects": 3402
     },
     "schemaFamilies": 12,
     "issues": []
@@ -45640,5 +45643,5 @@
       }
     ]
   },
-  "contentSha256": "a2b98895940b6e9a3404e9522fcd3aba72dec4c3b7486485cd847d7d3bbe4e7f"
+  "contentSha256": "88f83853ad44e1f903e2340e222f95a8bff1cbfd1643bbd6c26c50b40e6638f9"
 }

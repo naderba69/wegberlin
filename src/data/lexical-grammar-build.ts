@@ -3,7 +3,7 @@ import type { GermanGender, LexicalSourceVersion, NounGrammarEntry, VerbPreposit
 /** [lemma, gender, plural (null = لا جمع مستعمل), meaningAr, obliqueSingular (للأسماء الضعيفة)] */
 export type NounSeed = readonly [lemma: string, gender: GermanGender, plural: string | null, meaningAr: string, obliqueSingular?: string];
 
-export type FrameSeed = Omit<VerbPrepositionFrame, "id" | "lessonId" | "firstStructuredStage" | "sourceVersion">;
+export type FrameSeed = Omit<VerbPrepositionFrame, "id" | "lessonId" | "firstStructuredStage" | "sourceVersion" | "origin">;
 
 const articleByGender = { masculine: "der", feminine: "die", neuter: "das" } as const;
 const accusativeArticleByGender = { masculine: "den", feminine: "die", neuter: "das" } as const;
@@ -100,10 +100,34 @@ export function buildVerbFrames(lessonId: string, seeds: readonly FrameSeed[], s
   return seeds.map((frame, index) => ({
     id: `${lessonId}-verb-frame-${index + 1}`,
     lessonId,
+    origin: "authored",
     ...frame,
     firstStructuredStage: "vocabulary",
     sourceVersion,
   } satisfies VerbPrepositionFrame));
+}
+
+/** يبني إطارًا مشتقًا من مدخل قاموس التكافؤ: نفس المحتوى التعليمي، ومؤشّر المصدر مختلف. */
+export function buildDerivedFrame(
+  lessonId: string,
+  entry: { infinitive: string; preposition: string; governedCase: FrameSeed["governedCase"]; chunkDe: string; meaningAr: string; exampleDe: string; contrastAr: string },
+  index: number,
+  sourceVersion: LexicalSourceVersion,
+): VerbPrepositionFrame {
+  return {
+    id: `${lessonId}-verb-frame-${index + 1}`,
+    lessonId,
+    origin: "derived",
+    infinitive: entry.infinitive,
+    preposition: entry.preposition,
+    governedCase: entry.governedCase,
+    chunkDe: entry.chunkDe,
+    meaningAr: entry.meaningAr,
+    exampleDe: entry.exampleDe,
+    contrastAr: entry.contrastAr,
+    firstStructuredStage: "vocabulary",
+    sourceVersion,
+  } satisfies VerbPrepositionFrame;
 }
 
 export function groupByLesson<T extends { lessonId: string }>(items: readonly T[]) {

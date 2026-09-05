@@ -2,7 +2,7 @@
 
 Generated: 2026-09-04  
 Version: `academic-governance-v1`  
-Content SHA-256: `a2b98895940b6e9a3404e9522fcd3aba72dec4c3b7486485cd847d7d3bbe4e7f`
+Content SHA-256: `88f83853ad44e1f903e2340e222f95a8bff1cbfd1643bbd6c26c50b40e6638f9`
 
 ## Result
 

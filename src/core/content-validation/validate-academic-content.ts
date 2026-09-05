@@ -6,8 +6,10 @@ import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 import { examProfiles, examSources } from "@/data/exam-profiles";
 import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
-import { LEXICAL_GRAMMAR_LEVELS, lexicalLevelOf, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
+import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
+import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import {
   diagnosticQuestionSchema,
   examProfileSchema,
@@ -99,8 +101,9 @@ export function validateAcademicContent() {
     for (const lessonId of levelLessonIds) {
       const nouns = nounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
       const frames = verbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
+      const authored = frames.filter((frame) => frame.origin === "authored");
       if (nouns.length !== rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: expected ${rule.nounsPerLesson} ${level} anchor nouns, received ${nouns.length}`);
-      if (frames.length !== rule.framesPerLesson) issues.push(`verbPrepositionFrames.${lessonId}: expected ${rule.framesPerLesson} ${level} frames, received ${frames.length}`);
+      if (authored.length < rule.framesPerLesson) issues.push(`verbPrepositionFrames.${lessonId}: expected at least ${rule.framesPerLesson} authored ${level} frames, received ${authored.length}`);
     }
   }
   for (const noun of nounGrammarEntries) {
@@ -135,19 +138,46 @@ export function validateAcademicContent() {
     if (level && frame.sourceVersion !== `${level.toLowerCase()}-lexical-grammar-v1`) issues.push(`verbPrepositionFrames.${frame.id}: source version does not match ${level}`);
     if (!lower(frame.chunkDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
     if (!lower(frame.exampleDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
+    // يجب أن يحمل الـchunk الفعل: بالمصدر، أو بأحد الأشكال التصريفية المصرَّحة في القاموس
+    // (بعض التراكيب ثابتة على صيغة واحدة مثل «es geht um die Frist»).
+    const entry = valencyEntriesById[frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase)];
     for (const token of infinitiveTokens(frame.infinitive)) {
-      if (!lower(frame.chunkDe).includes(lower(token))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits the framed infinitive token ${token}`);
+      const inInfinitive = lower(frame.chunkDe).includes(lower(token));
+      const inflected = entry?.searchForms.some((form) => lower(frame.chunkDe).includes(lower(form))) ?? false;
+      if (!inInfinitive && !inflected) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits the framed infinitive token ${token}`);
     }
     if (frame.contrastAr.trim().length < 12) issues.push(`verbPrepositionFrames.${frame.id}: Arabic contrast note is too thin`);
   }
-  // يمنع نسخ الإطار نفسه داخل المستوى. تكرار الفعل مع حرف الجر نفسه مسموح فقط بـchunk مختلف،
-  // كما في مراسي A1 حيث يتكرر fragen + nach بأسماء مختلفة داخل دروس مختلفة.
-  const levelChunkKeys = new Set<string>();
+  // يمنع تكرار الإطار داخل الدرس نفسه. أما تكرار الفعل مع حرف الجر نفسه عبر دروس مختلفة
+  // فمسموح ومقصود: الفعل هدف في أكثر من درس، ولكل درس إطاره الخاص.
+  const lessonChunkKeys = new Set<string>();
   for (const frame of verbPrepositionFrames) {
-    const level = lexicalLevelOf(frame.lessonId);
-    const key = `${level}|${lower(frame.chunkDe)}`;
-    if (levelChunkKeys.has(key)) issues.push(`verbPrepositionFrames.${frame.id}: ${level} repeats the chunk "${frame.chunkDe}"`);
-    levelChunkKeys.add(key);
+    const key = `${frame.lessonId}|${lower(frame.chunkDe)}`;
+    if (lessonChunkKeys.has(key)) issues.push(`verbPrepositionFrames.${frame.id}: lesson ${frame.lessonId} repeats the chunk "${frame.chunkDe}"`);
+    lessonChunkKeys.add(key);
+    const frameKey = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+    if (!valencyEntriesById[frameKey]) issues.push(`verbPrepositionFrames.${frame.id}: ${frameKey} is not a declared valency entry`);
+  }
+
+  // P0-99: كل فعل ذي متمم جرّي قاسه الجرد داخل نص الدرس يجب أن يكون له إطار في ذلك الدرس،
+  // وكل إطار مشتق يجب أن يكون مسوَّغًا بوقوع مدخله المقاس في نص الدرس نفسه.
+  let measuredTargets = 0;
+  let unmeasuredDerived = 0;
+  for (const [lessonId, targets] of Object.entries(measuredTargetsByLesson)) {
+    const keys = new Set(
+      (framesByLesson[lessonId] ?? []).map((frame) => frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase)),
+    );
+    measuredTargets += targets.length;
+    for (const entryId of targets) {
+      if (!keys.has(entryId)) issues.push(`verbCoverage.${lessonId}: measured valency target ${entryId} has no frame in the lesson`);
+    }
+  }
+  for (const frame of verbPrepositionFrames.filter((item) => item.origin === "derived")) {
+    const key = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+    if (!(measuredTargetsByLesson[frame.lessonId] ?? []).includes(key)) {
+      unmeasuredDerived += 1;
+      issues.push(`verbPrepositionFrames.${frame.id}: derived frame ${key} is not a measured target of ${frame.lessonId}`);
+    }
   }
 
   for (const meta of curriculum) {
@@ -195,6 +225,9 @@ export function validateAcademicContent() {
     reviewCards: reviewCards.length,
     nounGrammarEntries: nounGrammarEntries.length,
     verbPrepositionFrames: verbPrepositionFrames.length,
+    derivedVerbFrames: verbPrepositionFrames.filter((frame) => frame.origin === "derived").length,
+    measuredValencyTargets: measuredTargets,
+    unjustifiedDerivedFrames: unmeasuredDerived,
   };
   const counts: AcademicSchemaCounts = {
     ...countsWithoutTotal,

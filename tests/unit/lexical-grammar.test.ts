@@ -7,7 +7,10 @@ import { a1NounGrammarEntries, a1NounsByLesson, a1VerbFramesByLesson, a1VerbPrep
 import { a2NounGrammarEntries, a2NounsByLesson, a2VerbFramesByLesson, a2VerbPrepositionFrames } from "@/data/lexical-grammar-a2";
 import { b1NounGrammarEntries, b1NounsByLesson, b1VerbFramesByLesson, b1VerbPrepositionFrames } from "@/data/lexical-grammar-b1";
 import { b2NounGrammarEntries, b2NounsByLesson, b2VerbFramesByLesson, b2VerbPrepositionFrames } from "@/data/lexical-grammar-b2";
+import { derivedFramesByLesson, verbCoverageSummary } from "@/data/lexical-grammar-derived";
 import { framesByLesson, lexicalLevelOf, nounsByLesson, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { frameKeyOf, measuredValencyEntries, valencyEntries, valencyEntriesById } from "@/data/verb-preposition-dictionary";
+import { measuredTargetsByLesson, targetEvidence } from "@/data/verb-preposition-coverage";
 import { nounGrammarEntrySchema, verbPrepositionFrameSchema } from "@/core/content-validation/schemas";
 import { validateAcademicContent } from "@/core/content-validation/validate-academic-content";
 
@@ -85,7 +88,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
       expect(a2VerbFramesByLesson[lessonId], lessonId).toHaveLength(2);
     }
     expect(nounGrammarEntries).toHaveLength(336);
-    expect(verbPrepositionFrames).toHaveLength(144);
+    expect(verbPrepositionFrames).toHaveLength(262);
   });
 
   it("stores article, gender, plural policy, and three case forms for every A2 noun", () => {
@@ -141,7 +144,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
     expect(screen.getAllByText("die Nachbarn").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("sich für die Hilfe bedanken")).toBeTruthy();
     expect(screen.getByText("um Hilfe bitten")).toBeTruthy();
-    expect(screen.getByText(/إطارين للفعل مع حرف الجر/)).toBeTruthy();
+    expect(screen.getByText(/إطارات الفعل مع حرف الجر/)).toBeTruthy();
     expect(screen.getByText(/لم تُراجَع ألمانيًا بشريًا بعد/)).toBeTruthy();
     unmount();
     const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "c1-01" }));
@@ -152,7 +155,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
     const result = validateAcademicContent();
     expect(result.ok, result.issues.join("\n")).toBe(true);
     expect(result.counts.nounGrammarEntries).toBe(336);
-    expect(result.counts.verbPrepositionFrames).toBe(144);
+    expect(result.counts.verbPrepositionFrames).toBe(262);
 
     const noun = structuredClone(a2NounGrammarEntries[0]) as Partial<(typeof a2NounGrammarEntries)[number]>;
     delete noun.plural;
@@ -162,7 +165,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
     expect(verbPrepositionFrameSchema.safeParse({ ...a2VerbPrepositionFrames[0], governedCase: "nominative" }).success).toBe(false);
     expect(verbPrepositionFrameSchema.safeParse({ ...a2VerbPrepositionFrames[0], chunkDe: "ohne Präposition" }).success).toBe(true);
     expect(nounsByLesson["a2-24"]).toHaveLength(4);
-    expect(framesByLesson["a2-24"]).toHaveLength(2);
+    expect(framesByLesson["a2-24"]?.length ?? 0).toBeGreaterThanOrEqual(2);
   });
 });
 
@@ -209,7 +212,7 @@ describe("B1 structured noun and verb-preposition anchors", () => {
     expect(screen.getAllByText("das Ergebnis").length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText("sich mit dem Team abstimmen")).toBeTruthy();
     expect(screen.getByText("für ein Ergebnis verantwortlich sein")).toBeTruthy();
-    expect(screen.getByText(/إطارين للفعل مع حرف الجر/)).toBeTruthy();
+    expect(screen.getByText(/إطارات الفعل مع حرف الجر/)).toBeTruthy();
   });
 });
 
@@ -262,7 +265,7 @@ describe("B2 structured noun and verb-preposition anchors", () => {
 describe("whole-course lexical coverage boundary", () => {
   it("reaches every published lesson without claiming exhaustive vocabulary coverage", () => {
     expect(nounGrammarEntries).toHaveLength(336);
-    expect(verbPrepositionFrames).toHaveLength(144);
+    expect(verbPrepositionFrames).toHaveLength(262);
     expect(new Set(nounGrammarEntries.map((entry) => entry.lessonId)).size).toBe(84);
     expect(academicLessonList).toHaveLength(84);
     for (const lesson of academicLessonList) {
@@ -333,5 +336,68 @@ describe("nominal Genitiv and Dativ Plural across A1-B2", () => {
     const tampered = structuredClone(sample) as Partial<(typeof nounGrammarEntries)[number]>;
     delete tampered.dativePlural;
     expect(nounGrammarEntrySchema.safeParse(tampered).success).toBe(false);
+  });
+});
+
+describe("P0-99: valency dictionary and measured verb-preposition coverage", () => {
+  it("declares one entry per verb + preposition + case and keeps every frame tied to a declared entry", () => {
+    expect(valencyEntries.length).toBe(214);
+    expect(new Set(valencyEntries.map((entry) => entry.id)).size).toBe(214);
+    expect(measuredValencyEntries.length).toBe(206);
+    expect(valencyEntries.filter((entry) => !entry.measured).length).toBe(8);
+    for (const frame of verbPrepositionFrames) {
+      const key = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+      expect(valencyEntriesById[key], `${frame.id} -> ${key}`).toBeTruthy();
+    }
+  });
+
+  it("measures the gap from the lesson text itself and closes every measured target", () => {
+    // الأرقام مقيسة من محتوى الدروس نفسه، لا مفروضة: 141 هدفًا، 23 منها كان مؤلفًا من قبل.
+    expect(verbCoverageSummary.totalTargets).toBe(141);
+    expect(verbCoverageSummary.totalCovered).toBe(23);
+    expect(verbCoverageSummary.lessonCount).toBe(84);
+    expect(verbCoverageSummary.byLevel).toEqual({
+      A1: { lessons: 24, targets: 29, covered: 8, gaps: 21 },
+      A2: { lessons: 24, targets: 40, covered: 7, gaps: 33 },
+      B1: { lessons: 24, targets: 45, covered: 6, gaps: 39 },
+      B2: { lessons: 12, targets: 27, covered: 2, gaps: 25 },
+    });
+    for (const [lessonId, targets] of Object.entries(measuredTargetsByLesson)) {
+      const keys = new Set(
+        (framesByLesson[lessonId] ?? []).map((frame) => frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase)),
+      );
+      for (const entryId of targets) expect(keys.has(entryId), `${lessonId}: ${entryId}`).toBe(true);
+    }
+  });
+
+  it("derives exactly the missing frames and quotes the sentence that justified each target", () => {
+    const derived = verbPrepositionFrames.filter((frame) => frame.origin === "derived");
+    expect(derived).toHaveLength(118);
+    for (const frame of derived) {
+      const key = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+      expect(measuredTargetsByLesson[frame.lessonId], `${frame.id} -> ${key}`).toContain(key);
+    }
+    // كل درس يحمل إطاراته المشتقة فقط، ولا إطارًا عن هدف لم يقع في نصه.
+    expect(Object.values(derivedFramesByLesson).flat()).toHaveLength(118);
+    let quoted = 0;
+    for (const lessonId of Object.keys(measuredTargetsByLesson)) {
+      const evidence = targetEvidence(lessonId);
+      expect(evidence.length, lessonId).toBe((measuredTargetsByLesson[lessonId] ?? []).length);
+      for (const item of evidence) {
+        quoted += 1;
+        const entry = valencyEntriesById[item.entryId];
+        expect(item.sentence.length, item.entryId).toBeGreaterThan(10);
+        expect(item.sentence.toLowerCase(), item.entryId).toContain(entry.preposition.toLowerCase());
+      }
+    }
+    expect(quoted).toBe(141);
+  });
+
+  it("declares the adverbial patterns it refuses to measure instead of inflating the gap", () => {
+    for (const key of ["liegen", "haengen"]) expect(measuredValencyEntries.some((entry) => entry.id.startsWith(`${key}-an-`))).toBe(false);
+    for (const pair of ["wohnen in", "stehen auf", "ankommen in", "beginnen um"]) {
+      const [infinitive, preposition] = pair.split(" ");
+      expect(measuredValencyEntries.some((entry) => entry.infinitive === infinitive && entry.preposition === preposition)).toBe(false);
+    }
   });
 });

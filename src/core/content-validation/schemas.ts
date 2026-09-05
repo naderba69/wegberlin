@@ -383,6 +383,7 @@ export const nounGrammarEntrySchema = z.object({
 export const verbPrepositionFrameSchema = z.object({
   id,
   lessonId: id,
+  origin: z.enum(["authored", "derived"]),
   infinitive: text,
   preposition: text,
   governedCase: z.enum(["accusative", "dative", "genitive"]),

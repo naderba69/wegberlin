@@ -4,7 +4,7 @@ import { academicLessons } from "../../src/data/academic-lessons";
 import { allPublishedExamTasks } from "../../src/data/exam-simulation-registry";
 import { curriculum } from "../../src/data/curriculum";
 import { defaultState } from "../../src/core/portability/db";
-import { framesByLesson } from "../../src/data/lexical-grammar-registry";
+import { framesByLesson, nounsByLesson } from "../../src/data/lexical-grammar-registry";
 
 async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true");
@@ -1492,6 +1492,14 @@ test("A2 vocabulary stage renders four noun anchors and two verb-preposition fra
   await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
   const lexicalPanel = page.locator(".lexical-grammar-panel");
   await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+  // أسماء مسرد القراءة تُعرض داخل details حتى لا تزاحم المراسي الأربع.
+  const inventoryCount = nounsByLesson["a2-04"].filter((noun) => noun.origin === "inventory").length;
+  // البطاقات موجودة في DOM لكنها مخفية حتى يفتح المتعلم القسم.
+  await expect(lexicalPanel.locator(".inventory-noun-card")).toHaveCount(inventoryCount);
+  await expect(lexicalPanel.locator(".inventory-noun-card").first()).toBeHidden();
+  await lexicalPanel.locator(".inventory-noun-block > summary").click();
+  await expect(lexicalPanel.locator(".inventory-noun-card").first()).toBeVisible();
+  await expect(lexicalPanel).toContainText("die Mülltonne");
   await expect(lexicalPanel.locator(".verb-frame-card")).toHaveCount(framesByLesson["a2-04"].length);
   await expect(lexicalPanel).toContainText("der Nachbar");
   await expect(lexicalPanel).toContainText("sich für die Hilfe bedanken");
@@ -1532,6 +1540,13 @@ test("every published lesson vocabulary stage keeps the authored anchor count", 
     const lexicalPanel = page.locator(".lexical-grammar-panel");
     await expect(lexicalPanel.locator(".noun-grammar-grid > article"), lessonId).toHaveCount(4);
     await expect(lexicalPanel.locator(".verb-frame-card"), lessonId).toHaveCount(framesByLesson[lessonId].length);
+    const inventoryCount = nounsByLesson[lessonId].filter((noun) => noun.origin === "inventory").length;
+    if (inventoryCount > 0) {
+      await expect(lexicalPanel.locator(".inventory-noun-card"), lessonId).toHaveCount(inventoryCount);
+      await expect(lexicalPanel.locator(".inventory-noun-card").first(), lessonId).toBeHidden();
+      await lexicalPanel.locator(".inventory-noun-block > summary").click();
+      await expect(lexicalPanel.locator(".inventory-noun-card").first(), lessonId).toBeVisible();
+    }
     const article = lexicalPanel.locator(".noun-grammar-grid > article").first();
     await expect(article.locator("b").nth(1), lessonId).toHaveText(/^(den |kein Dativ Plural)/);
   }

@@ -39,9 +39,22 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 
 ## Consequences
 
-- A1–B2 now have 336 noun anchors and 262 frames across 84/84 published lessons: 144 authored (one per A1 lesson, two per A2/B1/B2 lesson) and 118 derived from a measured valency inventory.
+- A1–B2 now have 558 noun records and 262 frames across 84/84 published lessons: 336 authored noun anchors (four per lesson) plus 222 glossary-inventory nouns, and 144 authored frames (one per A1 lesson, two per A2/B1/B2 lesson) plus 118 derived from a measured valency inventory.
 - The layer is visible and teachable, not documentation-only metadata.
-- P0-98 and P0-99 remain partial: four anchors per lesson are not every target noun, no independent human German review has happened, and the valency inventory is a rule-based measurer rather than a morphosyntactic parser.
+- P0-98 and P0-99 remain partial: the reading glossaries are not the whole curriculum vocabulary, no independent human German review has happened, and both inventories are rule-based measurers rather than morphosyntactic parsers.
+
+## Decision (2026-09-05): extend the noun layer from four anchors to every glossary noun
+
+The same question that P0-99 answered for verbs applied to nouns: "four anchors per lesson" cannot answer "does every target noun have a record?" The layer now measures it.
+
+1. `src/data/noun-inventory.ts` defines a **target noun** as every noun listed in a lesson's `reading.glossary` — a curated lemma list inside the lesson itself (lemma + the surface form that appears in the reading text + an Arabic meaning), not a guess extracted from prose. Measured: **280 target nouns across 81/84 lessons** (A1 85, A2 71, B1 79, B2 45); 58 were already authored anchors in their own lesson, leaving **222 gaps**.
+2. `src/data/noun-inventory-seeds.ts` authors the gender and plural of the 181 nouns the layer had never seen, and declares `plural: null` for the ones that take no ordinary plural (21 lemmas). Genitive and dative plural still come from the declared morphology helpers, with one new override (`Lebenszyklus` → `des Lebenszyklus`).
+3. When a target noun is already an anchor in another lesson, the inventory record **borrows that anchor's morphology** instead of authoring the word a second time (`Weg` → `des Weges`, `Zyklus` → `des Zyklus`). One morphology, many lessons. The Arabic meaning still comes from the lesson's own glossary, so the record stays tied to its context.
+4. `origin: "anchor" | "inventory"` distinguishes the two kinds of record, and the vocabulary stage keeps the four anchors open in the main grid while the inventory nouns sit in a collapsed *Lesetext-Glossar* block so the beginner surface stays calm.
+
+Validator consequences: every glossary target noun must have a record in its own lesson, no inventory record may duplicate an anchor of the same lesson, no inventory record may exist without a glossary target behind it, and no target noun may remain without morphology anywhere in the course (currently 0). The per-lesson anchor contract still requires exactly four **anchors**; the total per lesson is now measured, not fixed.
+
+Known limits: the glossary is not the whole curriculum vocabulary; gender and plural for 181 nouns are authored from knowledge and not reviewed by a human German teacher; and borrowing an anchor's morphology propagates any error in that anchor to every lesson that reuses the word.
 
 ## Decision (2026-09-04): measure verb-preposition coverage from the lesson text instead of declaring a frame count
 

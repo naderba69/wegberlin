@@ -3,12 +3,14 @@ import { a2NounGrammarEntries, a2VerbPrepositionFrames } from "./lexical-grammar
 import { b1NounGrammarEntries, b1VerbPrepositionFrames } from "./lexical-grammar-b1";
 import { b2NounGrammarEntries, b2VerbPrepositionFrames } from "./lexical-grammar-b2";
 import { derivedFrames } from "./lexical-grammar-derived";
+import { inventoryNouns } from "./noun-inventory";
 import { groupByLesson } from "./lexical-grammar-build";
 import type { NounGrammarEntry, VerbPrepositionFrame } from "@/types/lexical-grammar";
 
 /**
  * السجل الموحّد لبيانات الاسم والفعل البنيوية عبر كل المستويات المنشورة.
- * الأسماء: A1 96 · A2 96 · B1 96 · B2 48 (المجموع 336).
+ * الأسماء = 336 مرسى مؤلفًا (A1 96 · A2 96 · B1 96 · B2 48) + 222 سجلًا مشتقًا من
+ * جرد أسماء مسرد القراءة (المجموع 558).
  * الإطارات = مؤلفة + مشتقة من جرد التكافؤ المقاس:
  * A1 24+24=48 · A2 48+32=80 · B1 48+34=82 · B2 24+24=48 (المجموع 258).
  */
@@ -17,6 +19,7 @@ export const nounGrammarEntries: NounGrammarEntry[] = [
   ...a2NounGrammarEntries,
   ...b1NounGrammarEntries,
   ...b2NounGrammarEntries,
+  ...inventoryNouns,
 ];
 export const verbPrepositionFrames: VerbPrepositionFrame[] = [
   ...a1VerbPrepositionFrames,

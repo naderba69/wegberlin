@@ -1,5 +1,6 @@
 import { BookKey, GitBranch } from "lucide-react";
 import { framesByLesson, nounsByLesson } from "@/data/lexical-grammar-registry";
+import { lessonNounTargets } from "@/data/noun-inventory";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import { valencyEntries } from "@/data/verb-preposition-dictionary";
 
@@ -22,6 +23,8 @@ const governedCaseLabels = {
 
 export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
   const nouns = nounsByLesson[lessonId] ?? [];
+  const anchors = nouns.filter((noun) => noun.origin === "anchor");
+  const inventory = nouns.filter((noun) => noun.origin === "inventory");
   const frames = framesByLesson[lessonId] ?? [];
   if (!nouns.length && !frames.length) return null;
 
@@ -35,7 +38,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
       </div>
     </header>
     <div className="noun-grammar-grid">
-      {nouns.map((noun) => <article key={noun.id} data-lexical-id={noun.id}>
+      {anchors.map((noun) => <article key={noun.id} data-lexical-id={noun.id} data-origin={noun.origin}>
         <div><strong lang="de" dir="ltr">{noun.article} {noun.lemma}</strong><span>{genderLabels[noun.gender]}</span></div>
         <p>{noun.meaningAr}</p>
         <b lang="de" dir="ltr">{noun.plural.form ? `die ${noun.plural.form}` : "meist ohne Plural"}</b>
@@ -48,6 +51,22 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
         </details>
       </article>)}
     </div>
+
+    {inventory.length ? <details className="inventory-noun-block">
+      <summary lang="ar" dir="rtl">أسماء مسرد القراءة في هذا الدرس · {inventory.length} <span lang="de" dir="ltr">Lesetext-Glossar</span></summary>
+      <div className="inventory-noun-grid">
+        {inventory.map((noun) => <article className="inventory-noun-card" key={noun.id} data-lexical-id={noun.id} data-origin={noun.origin}>
+          <div><strong lang="de" dir="ltr">{noun.article} {noun.lemma}</strong><span>{genderLabels[noun.gender]}</span></div>
+          <p>{noun.meaningAr}</p>
+          <b lang="de" dir="ltr">{noun.plural.form ? `die ${noun.plural.form}` : "meist ohne Plural"}</b>
+          <b lang="de" dir="ltr">{noun.dativePlural.form ?? "kein Dativ Plural"}</b>
+          <details>
+            <summary lang="de" dir="ltr">Kasusformen ansehen <span lang="ar" dir="rtl">· عرض الحالات</span></summary>
+            <dl>{Object.entries(noun.caseForms).map(([caseName, form]) => <div key={caseName}><dt>{caseLabels[caseName as keyof typeof caseLabels]}</dt><dd lang="de" dir="ltr">{form}</dd></div>)}</dl>
+          </details>
+        </article>)}
+      </div>
+    </details> : null}
 
     {frames.length ? <div className="verb-frame-grid">
       {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id} data-origin={frame.origin}>
@@ -62,7 +81,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
       </article>)}
     </div> : null}
     <p className="lexical-coverage-note">
-      {`تغطي هذه الطبقة ${nouns.length} مراسي اسمية في هذا الدرس، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den. أما إطارات الفعل مع حرف الجر (${frames.length}) فمقيسة آليًا من نص هذا الدرس نفسه مقابل قاموس تكافؤ مؤلف من ${valencyEntries.length} مدخلًا، فهي تغطي كل فعل ذي متمم جرّي ظهر في النص (الأهداف المقيسة في هذا الدرس: ${measuredTargetsByLesson[lessonId]?.length ?? 0}) لا إطارًا أو إطارين ثابتين. حدّ الجرد: لا يستخدم مُعلّمًا صرفيًا، ولا يرى أفعالًا غير مدرجة في القاموس، ولا يقيس المتممات الظرفية والزمنية. كل هذه الصيغ لم تُراجَع ألمانيًا بشريًا بعد.`}
+      {`تغطي هذه الطبقة ${anchors.length} مراسي اسمية مؤلفة في هذا الدرس، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den، وتُضاف إليها ${inventory.length} اسمًا من مسرد قراءة الدرس (${(lessonNounTargets[lessonId] ?? []).length} اسمًا هدفًا مقيسًا في هذا الدرس). أما إطارات الفعل مع حرف الجر (${frames.length}) فمقيسة آليًا من نص هذا الدرس نفسه مقابل قاموس تكافؤ مؤلف من ${valencyEntries.length} مدخلًا، فهي تغطي كل فعل ذي متمم جرّي ظهر في النص (الأهداف المقيسة في هذا الدرس: ${measuredTargetsByLesson[lessonId]?.length ?? 0}) لا إطارًا أو إطارين ثابتين. حدّ الجرد: لا يستخدم مُعلّمًا صرفيًا، ولا يرى أفعالًا غير مدرجة في القاموس، ولا يقيس المتممات الظرفية والزمنية. كل هذه الصيغ لم تُراجَع ألمانيًا بشريًا بعد.`}
     </p>
   </section>;
 }

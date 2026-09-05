@@ -6,8 +6,9 @@ import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 import { examProfiles, examSources } from "@/data/exam-profiles";
 import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
-import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, nounsByLesson, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
+import { inventoryNouns, lessonNounTargets, targetNounsWithoutSeed } from "@/data/noun-inventory";
 import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import {
@@ -58,6 +59,13 @@ function checkUnique(name: string, ids: string[], issues: string[]) {
   }
 }
 
+const anchoredByLessonId: Record<string, Set<string>> = {};
+for (const noun of nounGrammarEntries) {
+  if (noun.origin !== "anchor") continue;
+  anchoredByLessonId[noun.lessonId] ??= new Set<string>();
+  anchoredByLessonId[noun.lessonId].add(noun.lemma);
+}
+
 export function validateAcademicContent() {
   const issues: string[] = [];
   validateCollection("lessons", fullLessonSchema, academicLessonList, issues);
@@ -100,9 +108,11 @@ export function validateAcademicContent() {
     const levelLessonIds = lessonsByLevel[level as keyof typeof lessonsByLevel] ?? [];
     for (const lessonId of levelLessonIds) {
       const nouns = nounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
+      const anchors = nouns.filter((entry) => entry.origin === "anchor");
       const frames = verbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
       const authored = frames.filter((frame) => frame.origin === "authored");
-      if (nouns.length !== rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: expected ${rule.nounsPerLesson} ${level} anchor nouns, received ${nouns.length}`);
+      if (anchors.length !== rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: expected ${rule.nounsPerLesson} ${level} anchor nouns, received ${anchors.length}`);
+      if (nouns.length < rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: lesson has fewer than ${rule.nounsPerLesson} ${level} noun records`);
       if (authored.length < rule.framesPerLesson) issues.push(`verbPrepositionFrames.${lessonId}: expected at least ${rule.framesPerLesson} authored ${level} frames, received ${authored.length}`);
     }
   }
@@ -180,6 +190,29 @@ export function validateAcademicContent() {
     }
   }
 
+  // P0-98: كل اسم هدف في مسرد قراءة الدرس يجب أن يملك سجلًا في درسه نفسه،
+  // وكل سجل جرد يجب أن يكون مسوَّغًا باسم في مسرد درسه، ولا اسم هدف بلا صرف في المشروع.
+  let measuredNounTargets = 0;
+  let unjustifiedInventoryNouns = 0;
+  for (const [lessonId, targets] of Object.entries(lessonNounTargets)) {
+    const owned = new Set((nounsByLesson[lessonId] ?? []).map((noun) => noun.lemma));
+    measuredNounTargets += targets.length;
+    for (const target of targets) {
+      if (!owned.has(target.lemma)) issues.push(`nounInventory.${lessonId}: glossary target noun ${target.lemma} has no record in this lesson`);
+    }
+  }
+  for (const noun of inventoryNouns) {
+    const targets = lessonNounTargets[noun.lessonId] ?? [];
+    if (!targets.some((target) => target.lemma === noun.lemma)) {
+      unjustifiedInventoryNouns += 1;
+      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} is not a glossary target of ${noun.lessonId}`);
+    }
+    if ((anchoredByLessonId[noun.lessonId] ?? new Set<string>()).has(noun.lemma)) {
+      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} duplicates an anchor of ${noun.lessonId}`);
+    }
+  }
+  for (const lemma of targetNounsWithoutSeed) issues.push(`nounInventory: target noun ${lemma} has neither an authored seed nor an anchor in the course`);
+
   for (const meta of curriculum) {
     if (meta.status === "published" && !lessonIds.has(meta.id)) issues.push(`lessonMetadata.${meta.id}: published lesson has no academic object`);
   }
@@ -224,6 +257,11 @@ export function validateAcademicContent() {
     examSources: examSources.length,
     reviewCards: reviewCards.length,
     nounGrammarEntries: nounGrammarEntries.length,
+    anchorNouns: nounGrammarEntries.filter((entry) => entry.origin === "anchor").length,
+    inventoryNouns: nounGrammarEntries.filter((entry) => entry.origin === "inventory").length,
+    measuredNounTargets,
+    unjustifiedInventoryNouns,
+    nounTargetsWithoutMorphology: targetNounsWithoutSeed.length,
     verbPrepositionFrames: verbPrepositionFrames.length,
     derivedVerbFrames: verbPrepositionFrames.filter((frame) => frame.origin === "derived").length,
     measuredValencyTargets: measuredTargets,

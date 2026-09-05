@@ -10,6 +10,7 @@ import { b2NounGrammarEntries, b2NounsByLesson, b2VerbFramesByLesson, b2VerbPrep
 import { derivedFramesByLesson, verbCoverageSummary } from "@/data/lexical-grammar-derived";
 import { framesByLesson, lexicalLevelOf, nounsByLesson, nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { frameKeyOf, measuredValencyEntries, valencyEntries, valencyEntriesById } from "@/data/verb-preposition-dictionary";
+import { lessonNounInventory, lessonNounTargets, nounInventorySummary, targetNounsWithoutSeed } from "@/data/noun-inventory";
 import { measuredTargetsByLesson, targetEvidence } from "@/data/verb-preposition-coverage";
 import { nounGrammarEntrySchema, verbPrepositionFrameSchema } from "@/core/content-validation/schemas";
 import { validateAcademicContent } from "@/core/content-validation/validate-academic-content";
@@ -87,7 +88,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
       expect(a2NounsByLesson[lessonId], lessonId).toHaveLength(4);
       expect(a2VerbFramesByLesson[lessonId], lessonId).toHaveLength(2);
     }
-    expect(nounGrammarEntries).toHaveLength(336);
+    expect(nounGrammarEntries).toHaveLength(558);
     expect(verbPrepositionFrames).toHaveLength(262);
   });
 
@@ -154,7 +155,7 @@ describe("A2 structured noun and verb-preposition anchors", () => {
   it("passes the shared prebuild validator and rejects broken A2 records at the same gate", () => {
     const result = validateAcademicContent();
     expect(result.ok, result.issues.join("\n")).toBe(true);
-    expect(result.counts.nounGrammarEntries).toBe(336);
+    expect(result.counts.nounGrammarEntries).toBe(558);
     expect(result.counts.verbPrepositionFrames).toBe(262);
 
     const noun = structuredClone(a2NounGrammarEntries[0]) as Partial<(typeof a2NounGrammarEntries)[number]>;
@@ -264,12 +265,14 @@ describe("B2 structured noun and verb-preposition anchors", () => {
 
 describe("whole-course lexical coverage boundary", () => {
   it("reaches every published lesson without claiming exhaustive vocabulary coverage", () => {
-    expect(nounGrammarEntries).toHaveLength(336);
+    expect(nounGrammarEntries).toHaveLength(558);
     expect(verbPrepositionFrames).toHaveLength(262);
     expect(new Set(nounGrammarEntries.map((entry) => entry.lessonId)).size).toBe(84);
     expect(academicLessonList).toHaveLength(84);
     for (const lesson of academicLessonList) {
-      expect(nounsByLesson[lesson.id], lesson.id).toHaveLength(4);
+      const lessonAnchors = (nounsByLesson[lesson.id] ?? []).filter((noun) => noun.origin === "anchor");
+      expect(lessonAnchors, lesson.id).toHaveLength(4);
+      expect((nounsByLesson[lesson.id] ?? []).length, lesson.id).toBeGreaterThanOrEqual(4);
       expect(framesByLesson[lesson.id]?.length ?? 0, lesson.id).toBeGreaterThanOrEqual(1);
     }
   });
@@ -277,7 +280,7 @@ describe("whole-course lexical coverage boundary", () => {
 
 describe("nominal Genitiv and Dativ Plural across A1-B2", () => {
   it("gives all 336 noun anchors an authored genitive form that matches its gender article", () => {
-    expect(nounGrammarEntries).toHaveLength(336);
+    expect(nounGrammarEntries).toHaveLength(558);
     for (const noun of nounGrammarEntries) {
       expect(nounGrammarEntrySchema.safeParse(noun).success, noun.id).toBe(true);
       const article = noun.gender === "feminine" ? "der" : "des";
@@ -296,23 +299,34 @@ describe("nominal Genitiv and Dativ Plural across A1-B2", () => {
     expect(byLemma("Kollege").caseForms.genitive).toBe("des Kollegen");
     expect(byLemma("Nachbar").caseForms.genitive).toBe("des Nachbarn");
     expect(byLemma("Stadt").caseForms.genitive).toBe("der Stadt");
+    // شذوذ Genitiv تفرضها القاعدة العامة خطأً فتُؤلَّف صراحةً لأسماء الجرد الجديدة.
+    const inventoryByLemma = (lemma: string) => nounGrammarEntries.find((noun) => noun.lemma === lemma && noun.origin === "inventory")!;
+    expect(inventoryByLemma("Markt").caseForms.genitive).toBe("des Marktes");
+    expect(inventoryByLemma("Schritt").caseForms.genitive).toBe("des Schrittes");
+    expect(inventoryByLemma("Zwischentest").caseForms.genitive).toBe("des Zwischentests");
+    expect(inventoryByLemma("Praxistest").caseForms.genitive).toBe("des Praxistests");
+    expect(inventoryByLemma("Lebenszyklus").caseForms.genitive).toBe("des Lebenszyklus");
+    expect(inventoryByLemma("Bedürfnis").caseForms.genitive).toBe("des Bedürfnisses");
     expect(byLemma("Müll").caseForms.genitive).toBe("des Mülls");
   });
 
   it("authors a dative plural for every countable anchor and declares none for no-plural nouns", () => {
     const countable = nounGrammarEntries.filter((noun) => noun.plural.form !== null);
     const noPlural = nounGrammarEntries.filter((noun) => noun.plural.form === null);
-    expect(countable.length + noPlural.length).toBe(336);
+    expect(countable.length + noPlural.length).toBe(558);
     for (const noun of countable) {
       expect(noun.dativePlural.form, noun.id).toMatch(/^den \S+(n|s)$/);
       expect(noun.dativePlural.form, noun.id).toBe(`den ${noun.plural.form}${/(n|s)$/.test(noun.plural.form!) ? "" : "n"}`);
       expect(noun.dativePlural.noteAr.trim(), noun.id).not.toBe("");
     }
     for (const noun of noPlural) expect(noun.dativePlural.form, noun.id).toBeNull();
-    expect(noPlural.map((noun) => noun.lemma).sort()).toEqual([
-      "Alltag", "Alter", "Barrierefreiheit", "Bildschirmzeit", "Ernährung", "Erreichbarkeit", "Freizeit",
-      "Gemüse", "Gepäck", "Lebensdauer", "Lebensqualität", "Leistungsumfang", "Müll", "Privatsphäre", "Reichweite", "Schlaf",
-      "Sport", "Stolz", "Teilhabe", "Umfang", "Wetter", "Zeitdruck", "Zuverlässigkeit",
+    expect([...new Set(noPlural.map((noun) => noun.lemma))].sort()).toEqual([
+      "Alltag", "Alter", "Arbeitsbeginn", "Atemnot", "Aufgabenerfüllung", "Aussagekraft", "Autonutzung",
+      "Barrierefreiheit", "Bildschirmzeit", "Dauer", "Ernährung", "Erreichbarkeit", "Fernerkundung", "Freizeit",
+      "Gemüse", "Gepäck", "Geräteunterstützung", "Lebensdauer", "Lebensqualität", "Leistungsumfang", "Lernbegleitung",
+      "Lärm", "Mindestbesetzung", "Mitte", "Müll", "Nähe", "Personalabdeckung", "Pflege", "Privatsphäre", "Reichweite",
+      "Schlaf", "Sensorik", "Sport", "Stolz", "Suche", "Tausch", "Teilhabe", "Umfang", "Umgang", "Wetter",
+      "Zeitdruck", "Zuverlässigkeit", "Übertragbarkeit",
     ]);
     const dative = (lemma: string) => nounGrammarEntries.find((noun) => noun.lemma === lemma)!.dativePlural.form;
     expect(dative("Kind")).toBe("den Kindern");
@@ -325,7 +339,7 @@ describe("nominal Genitiv and Dativ Plural across A1-B2", () => {
   it("passes the shared prebuild validator and rejects a broken genitive or dative plural at the same gate", () => {
     const result = validateAcademicContent();
     expect(result.ok, result.issues.join("\n")).toBe(true);
-    expect(result.counts.nounGrammarEntries).toBe(336);
+    expect(result.counts.nounGrammarEntries).toBe(558);
 
     const sample = nounGrammarEntries[0];
     expect(nounGrammarEntrySchema.safeParse({ ...sample, caseForms: { ...sample.caseForms, genitive: sample.lemma } }).success).toBe(false);
@@ -399,5 +413,69 @@ describe("P0-99: valency dictionary and measured verb-preposition coverage", () 
       const [infinitive, preposition] = pair.split(" ");
       expect(measuredValencyEntries.some((entry) => entry.infinitive === infinitive && entry.preposition === preposition)).toBe(false);
     }
+  });
+});
+
+describe("P0-98: glossary noun inventory across A1-B2", () => {
+  it("measures every glossary noun and gives each one a record in its own lesson", () => {
+    // 280 هدفًا مقيسًا من مسارد القراءة نفسها: 58 كان مرسى مؤلفًا، و222 سدّها الجرد.
+    expect(nounInventorySummary.totalTargets).toBe(280);
+    expect(nounInventorySummary.totalCoveredByAnchors).toBe(58);
+    expect(nounInventorySummary.totalGaps).toBe(222);
+    expect(nounInventorySummary.inventoryRecords).toBe(222);
+    expect(nounInventorySummary.lessonCount).toBe(84);
+    expect(nounInventorySummary.byLevel).toEqual({
+      A1: { lessons: 24, targets: 85, covered: 5, gaps: 80 },
+      A2: { lessons: 24, targets: 71, covered: 14, gaps: 57 },
+      B1: { lessons: 24, targets: 79, covered: 27, gaps: 52 },
+      B2: { lessons: 12, targets: 45, covered: 12, gaps: 33 },
+    });
+    expect(targetNounsWithoutSeed).toEqual([]);
+    for (const [lessonId, targets] of Object.entries(lessonNounTargets)) {
+      const owned = new Set((nounsByLesson[lessonId] ?? []).map((noun) => noun.lemma));
+      for (const target of targets) expect(owned.has(target.lemma), `${lessonId}: ${target.lemma}`).toBe(true);
+    }
+  });
+
+  it("keeps the four authored anchors untouched and marks every inventory record", () => {
+    const anchors = nounGrammarEntries.filter((noun) => noun.origin === "anchor");
+    const inventory = nounGrammarEntries.filter((noun) => noun.origin === "inventory");
+    expect(anchors).toHaveLength(336);
+    expect(inventory).toHaveLength(222);
+    for (const lesson of academicLessonList) {
+      const lessonAnchors = (nounsByLesson[lesson.id] ?? []).filter((noun) => noun.origin === "anchor");
+      expect(lessonAnchors, lesson.id).toHaveLength(4);
+      // لا سجل جرد يكرّر مرسى مؤلفًا في الدرس نفسه.
+      const lessonInventory = (nounsByLesson[lesson.id] ?? []).filter((noun) => noun.origin === "inventory");
+      const anchorLemmas = new Set(lessonAnchors.map((noun) => noun.lemma));
+      for (const noun of lessonInventory) expect(anchorLemmas.has(noun.lemma), `${lesson.id}: ${noun.lemma}`).toBe(false);
+    }
+  });
+
+  it("borrows morphology from an existing anchor instead of authoring the same word twice", () => {
+    // Weg مرسى في درس آخر: سجل الجرد يرث صرفه بما فيه شذوذ Genitiv، ولا يؤلف صرفًا ثانيًا قد يخالفه.
+    const borrowed = nounGrammarEntries.filter((noun) => noun.origin === "inventory" && noun.lemma === "Weg");
+    expect(borrowed.length).toBeGreaterThan(0);
+    for (const noun of borrowed) {
+      expect(noun.article).toBe("der");
+      expect(noun.caseForms.genitive).toBe("des Weges");
+      expect(noun.plural.form).toBe("Wege");
+      expect(noun.dativePlural.form).toBe("den Wegen");
+    }
+    for (const noun of nounGrammarEntries.filter((entry) => entry.lemma === "Weg")) {
+      expect(noun.caseForms.genitive).toBe("des Weges");
+    }
+  });
+
+  it("refuses to measure nouns it cannot inflect and keeps the no-plural declaration honest", () => {
+    expect(nounInventorySummary.targetsWithoutSeed).toBe(0);
+    const noPlural = nounGrammarEntries.filter((noun) => noun.plural.form === null);
+    for (const noun of noPlural) {
+      expect(noun.dativePlural.form, noun.id).toBeNull();
+      expect(noun.dativePlural.noteAr.trim(), noun.id).not.toBe("");
+    }
+    // الاسم الهدف يُقاس من مسرد درسه فقط، لا من كل نص المشروع.
+    const rows = Object.values(lessonNounInventory);
+    expect(rows.every((row) => row.targets.length === row.covered.length + row.gaps.length)).toBe(true);
   });
 });

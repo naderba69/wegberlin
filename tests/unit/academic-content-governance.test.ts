@@ -27,12 +27,17 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
       examProfiles: 2,
       examSources: 5,
       reviewCards: 2016,
-      nounGrammarEntries: 336,
+      nounGrammarEntries: 558,
+      anchorNouns: 336,
+      inventoryNouns: 222,
+      measuredNounTargets: 280,
+      unjustifiedInventoryNouns: 0,
+      nounTargetsWithoutMorphology: 0,
       verbPrepositionFrames: 262,
       derivedVerbFrames: 118,
       measuredValencyTargets: 141,
       unjustifiedDerivedFrames: 0,
-      totalRootObjects: 3402,
+      totalRootObjects: 4462,
     });
   });
 

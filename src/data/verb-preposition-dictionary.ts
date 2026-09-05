@@ -367,8 +367,8 @@ for (const frame of [
   const seedKey = `${slug(frame.infinitive)}-${slug(frame.preposition)}-${frame.governedCase}`;
   if (authoredSeedKeys.has(seedKey)) continue;
   authoredSeedKeys.add(seedKey);
-  const reflexive = /^sich/.test(frame.infinitive);
-  const prefix = reflexive ? "sich" : /^(ab|an|auf|aus|bei|ein|mit|nach|vor|zu|zurück|hin|her|um)/.test(frame.infinitive) ? frame.infinitive.split(" ")[0] : null;
+
+
   authoredFrameSeeds.push([
     frame.infinitive,
     frame.preposition,

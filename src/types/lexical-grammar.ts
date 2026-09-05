@@ -11,9 +11,13 @@ export type LexicalSourceVersion =
   | "b1-lexical-grammar-v1"
   | "b2-lexical-grammar-v1";
 
+/** anchor: مرسى مؤلف من نظرية الدرس. inventory: سجل مشتق من جرد أسماء مسرد القراءة. */
+export type NounOrigin = "anchor" | "inventory";
+
 export type NounGrammarEntry = {
   id: string;
   lessonId: string;
+  origin: NounOrigin;
   lemma: string;
   article: "der" | "die" | "das";
   gender: GermanGender;

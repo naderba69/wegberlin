@@ -33,6 +33,14 @@ const GENITIVE_OVERRIDES: Record<string, string> = {
   Fernbus: "Fernbusses",
   Zyklus: "Zyklus",
   Einstufungstest: "Einstufungstests",
+  // Lebenszyklus من أصل لاتيني مثل Zyklus: لا لاحقة -es في Genitiv.
+  Lebenszyklus: "Lebenszyklus",
+  // المركّبات الطويلة المنتهية بـ -test تأخذ -s فقط مثل Einstufungstest.
+  Zwischentest: "Zwischentests",
+  Praxistest: "Praxistests",
+  // الأسماء الأحادية المقطع Markt وSchritt: الصيغة الفصحى -es لا -s.
+  Markt: "Marktes",
+  Schritt: "Schrittes",
 };
 
 /** أسماء مذكرة تنتهي بـ -e وتأخذ Genitiv بـ -ns (des Namens) بدل -n فقط (des Kollegen). */
@@ -61,13 +69,21 @@ export function deriveDativePlural(plural: string | null): string | null {
   return `den ${plural}${suffix}`;
 }
 
-export function buildNounEntries(lessonId: string, seeds: readonly NounSeed[], sourceVersion: LexicalSourceVersion, levelLabel: string): NounGrammarEntry[] {
+export function buildNounEntries(
+  lessonId: string,
+  seeds: readonly NounSeed[],
+  sourceVersion: LexicalSourceVersion,
+  levelLabel: string,
+  origin: "anchor" | "inventory" = "anchor",
+  idOffset = 0,
+): NounGrammarEntry[] {
   return seeds.map(([lemma, gender, plural, meaningAr, obliqueSingular], index) => {
     const article = articleByGender[gender];
     const oblique = obliqueSingular ?? lemma;
     return {
-      id: `${lessonId}-noun-${index + 1}`,
+      id: `${lessonId}-noun-${idOffset + index + 1}`,
       lessonId,
+      origin,
       lemma,
       article,
       gender,

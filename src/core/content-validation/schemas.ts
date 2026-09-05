@@ -363,6 +363,7 @@ export const reviewCardSchema = z.object({
 export const nounGrammarEntrySchema = z.object({
   id,
   lessonId: id,
+  origin: z.enum(["anchor", "inventory"]),
   lemma: text,
   article: z.enum(["der", "die", "das"]),
   gender: z.enum(["masculine", "feminine", "neuter"]),

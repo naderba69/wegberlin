@@ -20,24 +20,8 @@
  * الفجوة تصبح رقمًا مقيسًا لا انطباعًا، وأن كل فجوة مقاسة تُغلَق قبل إغلاق البند.
  */
 import { academicLessonList } from "./academic-lessons";
+import { germanStrings } from "./lexical-corpus";
 import { measuredValencyEntries, valencyEntriesById, type ValencyEntry } from "./verb-preposition-dictionary";
-
-/** يجمع كل النصوص الألمانية (التي تحمل حروفًا لاتينية ولا تحمل عربية) من أي بنية متداخلة. */
-function germanStrings(value: unknown, out: string[] = []): string[] {
-  if (typeof value === "string") {
-    if (/[A-Za-zÄÖÜäöüß]/.test(value) && !/[؀-ۿ]/.test(value)) out.push(value);
-    return out;
-  }
-  if (Array.isArray(value)) {
-    for (const item of value) germanStrings(item, out);
-    return out;
-  }
-  if (value && typeof value === "object") {
-    for (const nested of Object.values(value)) germanStrings(nested, out);
-    return out;
-  }
-  return out;
-}
 
 const escape = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 

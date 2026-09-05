@@ -14,12 +14,17 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2016,
-      "nounGrammarEntries": 336,
+      "nounGrammarEntries": 558,
+      "anchorNouns": 336,
+      "inventoryNouns": 222,
+      "measuredNounTargets": 280,
+      "unjustifiedInventoryNouns": 0,
+      "nounTargetsWithoutMorphology": 0,
       "verbPrepositionFrames": 262,
       "derivedVerbFrames": 118,
       "measuredValencyTargets": 141,
       "unjustifiedDerivedFrames": 0,
-      "totalRootObjects": 3402
+      "totalRootObjects": 4462
     },
     "schemaFamilies": 12,
     "issues": []
@@ -45643,5 +45648,5 @@
       }
     ]
   },
-  "contentSha256": "88f83853ad44e1f903e2340e222f95a8bff1cbfd1643bbd6c26c50b40e6638f9"
+  "contentSha256": "a96d975c85c3ac11f312f515edd8e5ed0eebf4d9fda1e0a4a9b341d0c6344b4d"
 }

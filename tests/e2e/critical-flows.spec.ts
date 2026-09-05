@@ -164,6 +164,64 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
   }))).toMatchObject({ formId: "A", questionsAnswered: 4, stoppedEarly: true, confidence: "low", levelAttempted: { A1: 4, A2: 0, B1: 0, B2: 0 } });
 });
 
+test("P0-266: one missed day becomes an explicit grace day with no deferred task", async ({ page }) => {
+  // ساعة ثابتة: الخميس 2026-09-03 داخل أسبوع يبدأ 2026-08-31، حتى لا يتغير الاختبار بتاريخ التشغيل.
+  await page.clock.setFixedTime(new Date("2026-09-03T09:00:00"));
+  await page.goto("/today");
+  await waitForLearningReady(page);
+
+  const seed = (studiedDates: string[]) => page.evaluate(({ baseState, studiedDates }) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const transaction = open.result.transaction("learning-state", "readwrite");
+      const store = transaction.objectStore("learning-state");
+      const request = store.get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? structuredClone(baseState);
+        state.profile = { name: "Test", targetExam: "goethe-b2", dailyMinutes: 45, arabicSupport: "modern-standard-arabic", currentLevel: "A1", createdAt: new Date().toISOString() };
+        state.diagnosticResult = { estimatedLevel: "A1", score: 3, maxScore: 12, levelScores: { A1: 3, A2: 0, B1: 0, B2: 0 }, completedAt: new Date().toISOString() };
+        state.studyHistory = studiedDates.map((date) => ({ date, minutes: 30, evidenceCount: 2 }));
+        store.put(state, "primary");
+      };
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    };
+  }), { baseState: structuredClone(defaultState), studiedDates });
+
+  // يوم واحد فائت (2026-09-02) داخل سقف السماح: لا مهمة مؤجلة ولا استعادة.
+  await seed(["2026-08-31", "2026-09-01"]);
+  await page.reload();
+  await waitForLearningReady(page);
+  const graceDay = page.locator(".weekly-plan-day.grace");
+  await expect(graceDay).toHaveCount(1);
+  await expect(graceDay).toContainText("يوم سماح");
+  await expect(graceDay).toContainText("09-02");
+  await expect(graceDay).toContainText("السلسلة تتوقف عنده فعلًا");
+  const note = page.locator(".weekly-recovery-note");
+  await expect(note).toContainText("بلا مهمة مؤجلة ولا مضاعفة");
+  await expect(note).toContainText("لا يجمّد السلسلة ولا يمدّدها");
+  await expect(page.locator(".weekly-plan-day .recovery")).toHaveCount(0);
+  await expect(page.locator(".grace-counter")).toContainText("0/1");
+
+  // يومان فائتان: الأول سماح، والثاني دين يُنقل منه مهمة واحدة داخل ميزانية اليوم (45 دقيقة).
+  await seed(["2026-08-31"]);
+  await page.reload();
+  await waitForLearningReady(page);
+  await expect(page.locator(".weekly-plan-day.grace")).toHaveCount(1);
+  await expect(page.locator(".weekly-plan-day.missed")).toHaveCount(1);
+  await expect(page.locator(".weekly-recovery-note")).toContainText("يوم دين");
+  const recovery = page.locator(".weekly-plan-day .recovery");
+  await expect(recovery).toHaveCount(1);
+  await expect(page.locator(".weekly-plan-day.today")).toContainText("استعادة محدودة من 2026-09-02");
+
+  const todayCard = page.locator(".weekly-plan-day.today");
+  const budget = Number(((await todayCard.locator("header > b").textContent()) ?? "0").replace(/[^0-9]/gu, ""));
+  const slotMinutes = await todayCard.locator("a").evaluateAll((nodes) => nodes.reduce((sum, node) => sum + Number((node.textContent ?? "").replace(/[^0-9]/gu, "")), 0));
+  expect(slotMinutes).toBe(budget);
+});
+
 test("P0-38: a session keeps a short retrieval warm-up before any SM-2 card exists", async ({ page }) => {
   const readScheduling = () => page.evaluate(() => new Promise<{ reviewItems: number; reviewEvents: number; masteryKeys: number; attempts: number }>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);

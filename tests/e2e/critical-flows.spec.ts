@@ -942,7 +942,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v56");
+    const cache = await caches.open("dwnb-full-pack-v57");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1027,7 +1027,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v56");
+    const cache = await caches.open("dwnb-full-pack-v57");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1059,8 +1059,8 @@ test("one level pack installs its own scope without downloading the whole course
   await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
 
   const levelEvidence = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v56");
-    const fullCache = await caches.open("dwnb-full-pack-v56");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v57");
+    const fullCache = await caches.open("dwnb-full-pack-v57");
     const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
     const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
     const a1Lesson = await levelCache.match("/lernen/a1-01");
@@ -1118,10 +1118,10 @@ test("one level pack installs its own scope without downloading the whole course
   await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
   const afterLevelRemoval = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v56");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v57");
     const keys = await levelCache.keys();
     const names = await caches.keys();
-    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v56") };
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v57") };
   });
   expect(afterLevelRemoval.keys).toBe(0);
 });

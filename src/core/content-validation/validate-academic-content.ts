@@ -8,7 +8,7 @@ import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, nounsByLesson, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
-import { inventoryNouns, lessonNounTargets, targetNounsWithoutSeed } from "@/data/noun-inventory";
+import { inventoryNouns, lessonAllNounTargets, targetNounsWithoutSeed } from "@/data/noun-inventory";
 import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import {
@@ -190,22 +190,25 @@ export function validateAcademicContent() {
     }
   }
 
-  // P0-98: كل اسم هدف في مسرد قراءة الدرس يجب أن يملك سجلًا في درسه نفسه،
-  // وكل سجل جرد يجب أن يكون مسوَّغًا باسم في مسرد درسه، ولا اسم هدف بلا صرف في المشروع.
+  // P0-98: كل اسم هدف في الدرس — من مسرد قراءته أو من عبارة اسمية مؤلفة في بطاقاته —
+  // يجب أن يملك سجلًا في درسه نفسه، وكل سجل جرد يجب أن يكون مسوَّغًا باسم هدف في درسه،
+  // ولا اسم هدف بلا صرف مؤلف في المشروع.
   let measuredNounTargets = 0;
   let unjustifiedInventoryNouns = 0;
-  for (const [lessonId, targets] of Object.entries(lessonNounTargets)) {
+  for (const [lessonId, targets] of Object.entries(lessonAllNounTargets)) {
     const owned = new Set((nounsByLesson[lessonId] ?? []).map((noun) => noun.lemma));
     measuredNounTargets += targets.length;
     for (const target of targets) {
-      if (!owned.has(target.lemma)) issues.push(`nounInventory.${lessonId}: glossary target noun ${target.lemma} has no record in this lesson`);
+      if (owned.has(target.lemma)) continue;
+      const label = target.source === "glossary" ? "glossary target noun" : "phrase target noun";
+      issues.push(`nounInventory.${lessonId}: ${label} ${target.lemma} has no record in this lesson`);
     }
   }
   for (const noun of inventoryNouns) {
-    const targets = lessonNounTargets[noun.lessonId] ?? [];
+    const targets = lessonAllNounTargets[noun.lessonId] ?? [];
     if (!targets.some((target) => target.lemma === noun.lemma)) {
       unjustifiedInventoryNouns += 1;
-      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} is not a glossary target of ${noun.lessonId}`);
+      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} is not a measured target of ${noun.lessonId}`);
     }
     if ((anchoredByLessonId[noun.lessonId] ?? new Set<string>()).has(noun.lemma)) {
       issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} duplicates an anchor of ${noun.lessonId}`);

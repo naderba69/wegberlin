@@ -204,3 +204,108 @@ export const nounInventorySeeds: readonly NounInventorySeed[] = [
 ];
 
 export const nounInventorySeedsByLemma = new Map(nounInventorySeeds.map((seed) => [seed[0], seed]));
+
+/**
+ * المصدر الثاني: الأسماء التي تظهر كعبارات اسمية مستقلة في بطاقات الدرس وعباراته
+ * (`die Speisekarte`، `das Wohnzimmer`) — أي أن الأداة هنا مرفوعة لا مجرورة،
+ * والمعنى العربي مأخوذ من ترجمة العبارة نفسها. الجنس يؤخذ من الأداة الظاهرة،
+ * والجمع مؤلف هنا مع تصريح عدم الجمع لأسماء الكتلة والمعاني المجردة.
+ *
+ * أسماء لا مفرد لها في الاستعمال (`die Eltern`، `die Kosten`، `die Kenntnisse`…)
+ * لا تدخل الجرد أصلًا: سجل الطبقة مبني على المفرد المرفوع، فإدخالها كان سيختلق مفردًا.
+ */
+export const PLURALIA_TANTUM = new Set([
+  "Eltern", "Kontaktdaten", "Anforderungen", "Kenntnisse", "Unterrichtsstunden",
+  "Teilnahmebedingungen", "Wohnkosten", "Reparaturkosten", "Voraussetzungen",
+  "Nebenkosten",
+]);
+
+export const phraseNounSeeds: readonly NounInventorySeed[] = [
+  // التصريف الضعيف: dem/den Vornamen — des Vornamens.
+  ["Vorname", m, "Vornamen", "Vornamen"],
+  ["Nachname", m, "Nachnamen", "Nachnamen"],
+  ["Adresse", f, "Adressen"],
+  ["Bruder", m, "Brüder"],
+  ["Schwester", f, "Schwestern"],
+  ["Sohn", m, "Söhne"],
+  ["Tochter", f, "Töchter"],
+  ["Lehrer", m, "Lehrer"],
+  ["Verkäuferin", f, "Verkäuferinnen"],
+  ["Brot", n, "Brote"],
+  ["Käse", m, null],
+  ["Milch", f, null],
+  ["Kaffee", m, null],
+  ["Apfel", m, "Äpfel"],
+  ["Banane", f, "Bananen"],
+  ["Ei", n, "Eier"],
+  ["Wasser", n, null],
+  ["Tee", m, null],
+  ["Obst", n, null],
+  ["Fleisch", n, null],
+  ["Wohnzimmer", n, "Wohnzimmer"],
+  ["Schlafzimmer", n, "Schlafzimmer"],
+  ["Balkon", m, "Balkone"],
+  ["Aufzug", m, "Aufzüge"],
+  ["Flur", m, "Flure"],
+  ["Sofa", n, "Sofas"],
+  ["Bett", n, "Betten"],
+  ["Wohnungsanzeige", f, "Wohnungsanzeigen"],
+  ["Kaltmiete", f, "Kaltmieten"],
+  ["Warmmiete", f, "Warmmieten"],
+  ["Regenschirm", m, "Regenschirme"],
+  ["Straßenbahn", f, "Straßenbahnen"],
+  ["Auto", n, "Autos"],
+  ["Bauch", m, "Bäuche"],
+  ["Auge", n, "Augen"],
+  ["Fuß", m, "Füße"],
+  ["Ohr", n, "Ohren"],
+  ["Hals", m, "Hälse"],
+  ["Arm", m, "Arme"],
+  ["Hand", f, "Hände"],
+  ["Bein", n, "Beine"],
+  ["Geburtsort", m, "Geburtsorte"],
+  ["Anschrift", f, "Anschriften"],
+  ["Staatsangehörigkeit", f, null],
+  ["Stelle", f, "Stellen"],
+  ["Reisedauer", f, null],
+  ["Abfahrtszeit", f, "Abfahrtszeiten"],
+  ["Gesamtpreis", m, "Gesamtpreise"],
+  ["Buchungsbestätigung", f, "Buchungsbestätigungen"],
+  ["Ferienwohnung", f, "Ferienwohnungen"],
+  ["Jugendherberge", f, "Jugendherbergen"],
+  ["Anzahlung", f, "Anzahlungen"],
+  ["Arbeitsunfähigkeitsbescheinigung", f, "Arbeitsunfähigkeitsbescheinigungen"],
+  ["Saft", m, "Säfte"],
+  ["Tatsache", f, "Tatsachen"],
+  ["Zustimmung", f, "Zustimmungen"],
+  ["Intensivkurs", m, "Intensivkurse"],
+  ["Kursdauer", f, null],
+  ["Abschlusstest", m, "Abschlusstests"],
+  ["Onlinekurs", m, "Onlinekurse"],
+  ["Plusquamperfekt", n, null],
+  ["Stadtleben", n, null],
+  ["Landleben", n, null],
+  ["Verkehrsanbindung", f, "Verkehrsanbindungen"],
+  ["Stadtentwicklung", f, null],
+  ["Verkehrssicherheit", f, null],
+  ["Einzelhandel", m, null],
+  ["Jobticket", n, "Jobtickets"],
+  ["Anerkennung", f, null],
+  ["Praxisanteil", m, "Praxisanteile"],
+  ["Gesamtaufwand", m, null],
+  ["Mediennutzung", f, null],
+  ["Nebenfigur", f, "Nebenfiguren"],
+  ["Tempo", n, null],
+  ["Darstellung", f, "Darstellungen"],
+  ["Sekundärquelle", f, "Sekundärquellen"],
+  ["Datenfluss", m, null],
+  ["Exportfunktion", f, "Exportfunktionen"],
+  ["Arbeitsverdichtung", f, null],
+  ["Prozentpunkt", m, "Prozentpunkte"],
+  ["Offline-Funktion", f, "Offline-Funktionen"],
+  ["S-Bahn", f, "S-Bahnen"],
+  ["U-Bahn", f, "U-Bahnen"],
+  ["Zwei-Faktor-Anmeldung", f, "Zwei-Faktor-Anmeldungen"],
+];
+
+export const phraseNounSeedsByLemma = new Map(phraseNounSeeds.map((seed) => [seed[0], seed]));

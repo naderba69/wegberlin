@@ -9,6 +9,12 @@
  *
  * القياس: كل اسم هدف يجب أن يملك سجلًا في **درسه نفسه** — مرساة مؤلفة أو سجلًا مشتقًا
  * من الجرد. الفارق بين الاثنين يُعرض رقمًا، ولا يُغلق إلا بتأليف السجل الناقص.
+ *
+ * المصدر الثاني: الأسماء التي تظهر **كعبارة اسمية مستقلة** في بطاقات الدرس أو عباراته
+ * (`die Speisekarte`، `das Wohnzimmer`، `der Vorname`): الأداة هنا مرفوعة لا مجرورة،
+ * والكلمة معرّفة بمعناها العربي في البطاقة نفسها، فهي جرد مؤلف ثانٍ من داخل المادة.
+ * المستبعد منه معلن: الأسماء التي لا مفرد لها في الاستعمال (`PLURALIA_TANTUM`)،
+ * وصيغ الجمع المعروفة (`Kinder`، `Augen`) لأن سجل الطبقة مبني على المفرد المرفوع.
  */
 import { academicLessonList } from "./academic-lessons";
 import { a1NounGrammarEntries } from "./lexical-grammar-a1";
@@ -16,7 +22,11 @@ import { a2NounGrammarEntries } from "./lexical-grammar-a2";
 import { b1NounGrammarEntries } from "./lexical-grammar-b1";
 import { b2NounGrammarEntries } from "./lexical-grammar-b2";
 import { buildNounEntries } from "./lexical-grammar-build";
-import { nounInventorySeedsByLemma } from "./noun-inventory-seeds";
+import {
+  nounInventorySeedsByLemma,
+  phraseNounSeedsByLemma,
+  PLURALIA_TANTUM,
+} from "./noun-inventory-seeds";
 import type { LexicalSourceVersion, NounGrammarEntry } from "@/types/lexical-grammar";
 
 /** أسماء تظهر كبيرة في المسرد ولا يحتاج المتعلّم إلى قاعدة للتحقق منها. */
@@ -73,6 +83,69 @@ for (const noun of anchoredNouns) {
   }
 }
 
+export type PhraseNounTarget = {
+  lemma: string;
+  /** الأداة كما ظهرت في العبارة: هنا مرفوعة، فهي مصدر الجنس. */
+  article: string;
+  meaningAr: string;
+};
+
+/** عبارة اسمية ألمانية مستقلة: أداة مرفوعة + اسم، ولا شيء بعدها. */
+const NOUN_PHRASE = /^(der|die|das)\s+([A-Z\u00c4\u00d6\u00dc][A-Za-z\u00c4\u00d6\u00dc\u00e4\u00f6\u00fc\u00df-]{2,})$/;
+
+/** صيغ الجمع المعروفة في المادة كلها: المفرد هو وحدة السجل، لا صيغة الجمع. */
+const knownPluralForms = new Set<string>();
+
+/** صيغ الجمع من المراسى المؤلفة ومن جداول البذور: تُستبعد من أهداف العبارات الاسمية. */
+for (const noun of anchoredNouns) if (noun.plural.form) knownPluralForms.add(noun.plural.form);
+for (const seed of nounInventorySeedsByLemma.values()) if (seed[2]) knownPluralForms.add(seed[2]);
+for (const seed of phraseNounSeedsByLemma.values()) if (seed[2]) knownPluralForms.add(seed[2]);
+
+/**
+ * الأسماء الهدف من بطاقات الدرس وعباراته: عبارة اسمية كاملة بمعنى عربي.
+ * تُستبعد الأسماء التي لا مفرد لها، وصيغ الجمع، وما هو مرسى مؤلف في الدرس نفسه.
+ */
+export const lessonPhraseNounTargets: Record<string, PhraseNounTarget[]> = Object.fromEntries(
+  academicLessonList.map((lesson) => {
+    const flashcards = (lesson as { flashcards?: Array<{ frontDe?: string; backAr?: string }> }).flashcards ?? [];
+    const phrases = (lesson as { phrases?: Array<{ de?: string; ar?: string }> }).phrases ?? [];
+    const seen = new Set<string>();
+    const targets: PhraseNounTarget[] = [];
+    const add = (de: string | undefined, ar: string | undefined) => {
+      const match = NOUN_PHRASE.exec((de ?? "").trim());
+      if (!match) return;
+      const lemma = match[2];
+      if (seen.has(lemma) || PLURALIA_TANTUM.has(lemma) || knownPluralForms.has(lemma)) return;
+      seen.add(lemma);
+      targets.push({ lemma, article: match[1], meaningAr: (ar ?? "").trim() });
+    };
+    for (const card of flashcards) add(card.frontDe, card.backAr);
+    for (const phrase of phrases) add(phrase.de, phrase.ar);
+    return [lesson.id, targets];
+  }),
+);
+
+/** هدف واحد لكل اسم: مسرد القراءة أولًا، ثم عبارة البطاقة. */
+export type NounTarget = { lemma: string; meaningAr: string; source: "glossary" | "phrase" };
+
+export const lessonAllNounTargets: Record<string, NounTarget[]> = Object.fromEntries(
+  academicLessonList.map((lesson) => {
+    const seen = new Set<string>();
+    const targets: NounTarget[] = [];
+    for (const target of lessonNounTargets[lesson.id] ?? []) {
+      seen.add(target.lemma);
+      targets.push({ lemma: target.lemma, meaningAr: target.meaningAr, source: "glossary" });
+    }
+    for (const target of lessonPhraseNounTargets[lesson.id] ?? []) {
+      if (seen.has(target.lemma)) continue;
+      seen.add(target.lemma);
+      targets.push({ lemma: target.lemma, meaningAr: target.meaningAr, source: "phrase" });
+    }
+    return [lesson.id, targets];
+  }),
+);
+
+
 const sourceVersionFor = (lessonId: string): LexicalSourceVersion =>
   `${lessonId.slice(0, 2).toLowerCase()}-lexical-grammar-v1` as LexicalSourceVersion;
 
@@ -86,13 +159,13 @@ const levelLabelOf = (lessonId: string) => lessonId.slice(0, 2).toUpperCase();
 export const inventoryNounsByLesson: Record<string, NounGrammarEntry[]> = Object.fromEntries(
   academicLessonList.map((lesson) => {
     const anchored = anchoredByLesson.get(lesson.id) ?? new Set<string>();
-    const seeds = (lessonNounTargets[lesson.id] ?? [])
+    const seeds = (lessonAllNounTargets[lesson.id] ?? [])
       .filter((target) => !anchored.has(target.lemma))
       .map((target) => {
-        const seed = nounInventorySeedsByLemma.get(target.lemma);
+        const seed = nounInventorySeedsByLemma.get(target.lemma) ?? phraseNounSeedsByLemma.get(target.lemma);
         if (seed) return [seed[0], seed[1], seed[2], target.meaningAr, seed[3]] as const;
-        const anchored = anchoredMorphology.get(target.lemma);
-        if (anchored) return [target.lemma, anchored.gender, anchored.plural, target.meaningAr, anchored.oblique] as const;
+        const borrowed = anchoredMorphology.get(target.lemma);
+        if (borrowed) return [target.lemma, borrowed.gender, borrowed.plural, target.meaningAr, borrowed.oblique] as const;
         return null;
       })
       .filter((seed): seed is readonly [string, "masculine" | "feminine" | "neuter", string | null, string, string | undefined] => seed !== null);
@@ -108,9 +181,14 @@ export const inventoryNouns: NounGrammarEntry[] = Object.values(inventoryNounsBy
 /** أسماء هدف لا يملك لها المشروع صرفًا: لا بذرة مؤلفة ولا مرسى في درس آخر. يجب أن تبقى فارغة. */
 export const targetNounsWithoutSeed: string[] = [
   ...new Set(
-    Object.values(lessonNounTargets)
+    Object.values(lessonAllNounTargets)
       .flat()
-      .filter((target) => !nounInventorySeedsByLemma.has(target.lemma) && !anchoredMorphology.has(target.lemma))
+      .filter(
+        (target) =>
+          !nounInventorySeedsByLemma.has(target.lemma) &&
+          !phraseNounSeedsByLemma.has(target.lemma) &&
+          !anchoredMorphology.has(target.lemma),
+      )
       .map((target) => target.lemma),
   ),
 ].sort();
@@ -126,7 +204,11 @@ export type NounInventoryRow = {
 function buildRows(): Record<string, NounInventoryRow> {
   const rows: Record<string, NounInventoryRow> = {};
   for (const lesson of academicLessonList) {
-    const targets = (lessonNounTargets[lesson.id] ?? []).map((target) => target.lemma);
+    const glossary = (lessonNounTargets[lesson.id] ?? []).map((target) => target.lemma);
+    const phrases = (lessonPhraseNounTargets[lesson.id] ?? [])
+      .map((target) => target.lemma)
+      .filter((lemma) => !glossary.includes(lemma));
+    const targets = [...glossary, ...phrases];
     const anchored = anchoredByLesson.get(lesson.id) ?? new Set<string>();
     const covered = targets.filter((lemma) => anchored.has(lemma));
     const gaps = targets.filter((lemma) => !anchored.has(lemma));
@@ -146,6 +228,11 @@ export type NounInventorySummary = {
   totalGaps: number;
   inventoryRecords: number;
   seedTableSize: number;
+  phraseSeedTableSize: number;
+  /** أهداف من عبارات البطاقات (المصدر الثاني) بعد استبعاد المكرر مع المسرد. */
+  totalPhraseTargets: number;
+  /** أسماء مستبعدة بلا مفرد في الاستعمال (`PLURALIA_TANTUM`). */
+  uniquePluraliaTantum: number;
   targetsWithoutSeed: number;
   uniqueNoPlural: number;
   byLevel: Record<string, { lessons: number; targets: number; covered: number; gaps: number }>;
@@ -170,6 +257,16 @@ export function buildNounInventorySummary(): NounInventorySummary {
     totalGaps: rows.reduce((sum, row) => sum + row.gaps.length, 0),
     inventoryRecords: inventoryNouns.length,
     seedTableSize: nounInventorySeedsByLemma.size,
+    phraseSeedTableSize: phraseNounSeedsByLemma.size,
+    totalPhraseTargets: rows.reduce(
+      (sum, row) =>
+        sum +
+        (lessonPhraseNounTargets[row.lessonId] ?? []).filter(
+          (target) => !(lessonNounTargets[row.lessonId] ?? []).some((glossary) => glossary.lemma === target.lemma),
+        ).length,
+      0,
+    ),
+    uniquePluraliaTantum: PLURALIA_TANTUM.size,
     targetsWithoutSeed: targetNounsWithoutSeed.length,
     uniqueNoPlural: new Set(inventoryNouns.filter((noun) => noun.plural.form === null).map((noun) => noun.lemma)).size,
     byLevel,

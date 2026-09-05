@@ -1,6 +1,6 @@
 import { BookKey, GitBranch } from "lucide-react";
 import { framesByLesson, nounsByLesson } from "@/data/lexical-grammar-registry";
-import { lessonNounTargets } from "@/data/noun-inventory";
+import { lessonAllNounTargets } from "@/data/noun-inventory";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import { valencyEntries } from "@/data/verb-preposition-dictionary";
 
@@ -53,7 +53,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
     </div>
 
     {inventory.length ? <details className="inventory-noun-block">
-      <summary lang="ar" dir="rtl">أسماء مسرد القراءة في هذا الدرس · {inventory.length} <span lang="de" dir="ltr">Lesetext-Glossar</span></summary>
+      <summary lang="ar" dir="rtl">بقية أسماء هذا الدرس · {inventory.length} <span lang="de" dir="ltr">Lesetext-Glossar + Vokabelkarten</span></summary>
       <div className="inventory-noun-grid">
         {inventory.map((noun) => <article className="inventory-noun-card" key={noun.id} data-lexical-id={noun.id} data-origin={noun.origin}>
           <div><strong lang="de" dir="ltr">{noun.article} {noun.lemma}</strong><span>{genderLabels[noun.gender]}</span></div>
@@ -81,7 +81,7 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
       </article>)}
     </div> : null}
     <p className="lexical-coverage-note">
-      {`تغطي هذه الطبقة ${anchors.length} مراسي اسمية مؤلفة في هذا الدرس، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den، وتُضاف إليها ${inventory.length} اسمًا من مسرد قراءة الدرس (${(lessonNounTargets[lessonId] ?? []).length} اسمًا هدفًا مقيسًا في هذا الدرس). أما إطارات الفعل مع حرف الجر (${frames.length}) فمقيسة آليًا من نص هذا الدرس نفسه مقابل قاموس تكافؤ مؤلف من ${valencyEntries.length} مدخلًا، فهي تغطي كل فعل ذي متمم جرّي ظهر في النص (الأهداف المقيسة في هذا الدرس: ${measuredTargetsByLesson[lessonId]?.length ?? 0}) لا إطارًا أو إطارين ثابتين. حدّ الجرد: لا يستخدم مُعلّمًا صرفيًا، ولا يرى أفعالًا غير مدرجة في القاموس، ولا يقيس المتممات الظرفية والزمنية. كل هذه الصيغ لم تُراجَع ألمانيًا بشريًا بعد.`}
+      {`تغطي هذه الطبقة ${anchors.length} مراسي اسمية مؤلفة في هذا الدرس، ولكل مرسى صيغة Genitiv مفرد وجمع مجرور بعد den، وتُضاف إليها ${inventory.length} اسمًا مكمّلًا من مفردات هذا الدرس نفسه (مسرد القراءة + بطاقاته وعباراته)، وهي تسدّ الفارق إلى ${(lessonAllNounTargets[lessonId] ?? []).length} اسمًا هدفًا مقيسًا في هذا الدرس. أما إطارات الفعل مع حرف الجر (${frames.length}) فمقيسة آليًا من نص هذا الدرس نفسه مقابل قاموس تكافؤ مؤلف من ${valencyEntries.length} مدخلًا، فهي تغطي كل فعل ذي متمم جرّي ظهر في النص (الأهداف المقيسة في هذا الدرس: ${measuredTargetsByLesson[lessonId]?.length ?? 0}) لا إطارًا أو إطارين ثابتين. حدّ الجرد: لا يستخدم مُعلّمًا صرفيًا، ولا يرى أفعالًا غير مدرجة في القاموس، ولا يقيس المتممات الظرفية والزمنية. كل هذه الصيغ لم تُراجَع ألمانيًا بشريًا بعد.`}
     </p>
   </section>;
 }

@@ -43,6 +43,17 @@ The course teaches vocabulary in chunks, but noun gender/plural/case and verb-pr
 - The layer is visible and teachable, not documentation-only metadata.
 - P0-98 and P0-99 remain partial: the reading glossaries are not the whole curriculum vocabulary, no independent human German review has happened, and both inventories are rule-based measurers rather than morphosyntactic parsers.
 
+## Decision (2026-09-05, second amendment): add the lesson's own noun phrases as a second inventory source
+
+The glossary covers the reading text, but a lesson's flashcards and phrase list carry vocabulary that never appears in the reading. Those cards are authored content too, and a large part of them are **standalone noun phrases** (`die Speisekarte`, `der Vorname`, `das Wohnzimmer`) — which means the article in them is nominative, so gender is observed, not guessed, and the Arabic meaning comes from the card's own gloss.
+
+1. `src/data/noun-inventory.ts` adds a second measured target set: a `flashcards.frontDe` or `phrases.de` string that is **exactly** `der|die|das + Noun` with a non-empty Arabic gloss. Measured: **185 slots / 180 unique nouns** (A1 79, A2 47, B1 46, B2 14). Combined with the glossary: **460 target nouns across 83/84 lessons**, 132 already authored anchors, **328 gaps** closed by inventory records → **664 noun records** (336 anchors + 328 inventory).
+2. Two exclusion classes are declared, not silently skipped: **pluralia tantum** (`PLURALIA_TANTUM`: `die Eltern`, `die Kosten`, `die Kenntnisse`, …) because the record is built on the nominative singular and a plural-only noun would force an invented singular; and **known plural forms** (`Kinder`, `Augen`) collected from every anchor and seed, because the singular is the unit of the layer.
+3. `src/data/noun-inventory-seeds.ts` authors the morphology of the 84 new nouns (gender from the observed article, plural or an explicit no-plural declaration), reusing the borrowing rule when the word is anchored elsewhere. New genitive overrides follow the same declared policy: `-es` for monosyllables and short compounds (`des Brotes`, `des Sohnes`, `des Beines`, `des Geburtsortes`, `des Armes`, `des Bauches`, `des Ohres`, `des Saftes`, `des Bettes`), `-s` only for long `-test` compounds (`des Abschlusstests`, alongside `des Zwischentests`), and `-ns` for weak masculines in `-e` (`des Vornamens`, `des Nachnamens`, `dem Vornamen`).
+4. The validator now measures the union of both sources: every target noun (glossary or phrase) must have a record in its own lesson, no inventory record may exist without a measured target behind it, and no target may remain without morphology (currently 0). The panel shows them together in the collapsed block, now labelled *Lesetext-Glossar + Vokabelkarten*.
+
+Known limits: a noun is only visible to this inventory when it is a glossary entry **or** a standalone card phrase — vocabulary that only ever appears inside a running sentence is still outside the measurement, because the layer has no POS tagger; the 84 authored morphologies and the 10 pluralia-tantum exclusions are knowledge-based decisions that no German teacher has reviewed; and a mistake in a borrowed anchor still propagates to every lesson that reuses the word.
+
 ## Decision (2026-09-05): extend the noun layer from four anchors to every glossary noun
 
 The same question that P0-99 answered for verbs applied to nouns: "four anchors per lesson" cannot answer "does every target noun have a record?" The layer now measures it.

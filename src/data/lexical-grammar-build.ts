@@ -41,10 +41,24 @@ const GENITIVE_OVERRIDES: Record<string, string> = {
   // الأسماء الأحادية المقطع Markt وSchritt: الصيغة الفصحى -es لا -s.
   Markt: "Marktes",
   Schritt: "Schrittes",
+  // أسماء أحادية المقطع ومركّباتها المباشرة: -es هي الصيغة الفصحى لا -s.
+  Brot: "Brotes",
+  Bett: "Bettes",
+  Arm: "Armes",
+  Bauch: "Bauches",
+  Ohr: "Ohres",
+  Saft: "Saftes",
+  Sohn: "Sohnes",
+  Bein: "Beines",
+  Geburtsort: "Geburtsortes",
+  // المركّبات الطويلة المنتهية بـ -test تأخذ -s فقط (مثل Einstufungstest).
+  Abschlusstest: "Abschlusstests",
 };
 
 /** أسماء مذكرة تنتهي بـ -e وتأخذ Genitiv بـ -ns (des Namens) بدل -n فقط (des Kollegen). */
-const NS_GENITIVE_LEMMAS = new Set(["Name", "Buchstabe", "Gedanke", "Glaube", "Wille", "Friede"]);
+const NS_GENITIVE_LEMMAS = new Set([
+  "Name", "Vorname", "Nachname", "Buchstabe", "Gedanke", "Glaube", "Wille", "Friede",
+]);
 
 const SIBILANT_ENDINGS = ["ß", "x", "z", "sch", "st", "tz", "s"] as const;
 

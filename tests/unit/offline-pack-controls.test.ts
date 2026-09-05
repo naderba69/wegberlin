@@ -28,7 +28,7 @@ describe("selective Offline pack controls", () => {
     expect(workerSource).toContain('DWNB_OFFLINE_PACK_REMOVE_AUDIO');
     expect(workerSource).toContain('url.pathname.startsWith("/audio/")');
     expect(workerSource).toContain('includesAudio: false');
-    expect(workerSource).toContain('dwnb-full-pack-v56');
+    expect(workerSource).toContain('dwnb-full-pack-v57');
   });
 
   it("never stores partial Range audio responses in the runtime shell cache", () => {
@@ -40,8 +40,8 @@ describe("selective Offline pack controls", () => {
 
 describe("per-level Offline pack scopes", () => {
   it("derives one cache per level from a single shared pack version", () => {
-    expect(workerSource).toContain("const PACK_VERSION = \"v56\";");
-    expect(workerSource).toContain("const PACK_CACHE = \"dwnb-full-pack-v56\";");
+    expect(workerSource).toContain("const PACK_VERSION = \"v57\";");
+    expect(workerSource).toContain("const PACK_CACHE = \"dwnb-full-pack-v57\";");
     expect(workerSource).toContain("const levelPackCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-${PACK_VERSION}`;");
     expect(workerSource).toContain("const LEVEL_SCOPES = [\"A1\", \"A2\", \"B1\", \"B2\"];");
     expect(workerSource).toContain("const normalizeScope = (value) => (LEVEL_SCOPES.includes(value) ? value : \"full\");");

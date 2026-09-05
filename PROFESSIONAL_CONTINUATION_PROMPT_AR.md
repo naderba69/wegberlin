@@ -279,8 +279,8 @@ Offline routes: 298/298
 Offline level packs: 298/51/51/51/199
 Search entries: 3,080
 Official source records: 12/12
-Offline cache: dwnb-full-pack-v59
-Offline level caches: dwnb-level-pack-a1-v59, dwnb-level-pack-a2-v59, dwnb-level-pack-b1-v59, dwnb-level-pack-b2-v59
+Offline cache: dwnb-full-pack-v60
+Offline level caches: dwnb-level-pack-a1-v60, dwnb-level-pack-a2-v60, dwnb-level-pack-b1-v60, dwnb-level-pack-b2-v60
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```
@@ -298,7 +298,7 @@ axe serious/critical on tested pages: 0
 - `/writing` لا يعرض fallback ألمانيًا معزولًا؛ قبل بلوغ مرحلة كتابة درس فعلي يعرض بوابة عربية تعيد المتعلم للدرس.
 - تشخيص متكيف A/B من 4–16 سؤالًا، وبعد شاشة النتيجة عينة إنتاج قصيرة اختيارية (مهمة كتابية + مهمة شفهية لكل مستوى) بلا أي تقييم آلي: الحفظ بحد أدنى اكتمال لا جودة، ومخطط Zod صارم يرفض أي حقل درجة، ولا أثر لها على المستوى المقدّر.
 - Check-in للطاقة والوقت.
-- جلسات 10/20/30/45/60/90 دقيقة.
+- جلسات 10/20/30/45/60/90 دقيقة، وكل جلسة تحجز استرجاعًا: بطاقات SM-2 المستحقة عند وجودها، وإلا «إحماء استرجاع» قصير (2–4 دقائق) من مراحل شاهدها المتعلّم فعلًا، مع استبعاد كل ما يقابل بطاقة مجدولة حتى لا تصبح مراجعة مبكرة؛ بلا درجة ولا كتابة في الجدولة أو الإتقان.
 - خطة أسبوعية وحدود Recovery دون مضاعفة اليوم التالي.
 - ترتيب المدرب: تشخيص، SRS متراكم، أخطاء مؤجلة، عيادة أخطاء، دروس/بوابات، أضعف وحدة امتحان، ثم التقدم.
 
@@ -404,8 +404,8 @@ axe serious/critical on tested pages: 0
 
 ```text
 Total P0: 124
-Implemented: 105
-Partial: 16
+Implemented: 106
+Partial: 15
 Not implemented: 2
 Blocked by user credentials: 1
 ```

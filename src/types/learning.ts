@@ -42,6 +42,8 @@ export interface LessonMeta {
 export interface MissionBlock {
   id: string;
   kind: "diagnostic" | "check-in" | "review" | "lesson" | "practice" | "production" | "reflection";
+  /** P0-38: كتلة الاسترجاع تصبح إحماءً عندما لا توجد بطاقة SM-2 مستحقة الآن. */
+  mode?: "scheduled" | "warmup";
   titleAr: string;
   titleDe: string;
   minutes: number;

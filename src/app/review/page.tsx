@@ -7,6 +7,9 @@ import { useLearning } from "@/components/learning-provider";
 import { newReviewItem } from "@/core/srs/sm2";
 import { buildDueReviewQueue, nextScheduledReviewDate } from "@/core/srs/review-queue";
 import { applyReviewGrade, retentionEvidence } from "@/core/srs/review-session";
+import { buildRetrievalWarmup } from "@/core/srs/warmup";
+import { composeTodayMission } from "@/core/coach/coach";
+import { RetrievalWarmup } from "@/components/retrieval-warmup";
 
 export default function ReviewPage() {
   const { state, update } = useLearning();
@@ -20,6 +23,9 @@ export default function ReviewPage() {
   const card = queued?.card;
   const reviewState = card ? queued.review ?? newReviewItem(card.id) : null;
   const retention = useMemo(() => retentionEvidence(state), [state]);
+  // نفس عدد العناصر الذي وعدت به خطة اليوم، لا رقمًا منفصلًا في هذه الصفحة.
+  const warmupMinutes = useMemo(() => composeTodayMission(state, new Date()).find((block) => block.mode === "warmup")?.minutes ?? 4, [state]);
+  const warmup = useMemo(() => buildRetrievalWarmup(state, new Date(), warmupMinutes), [state, warmupMinutes]);
 
   function grade(value: number) {
     if (!card || !reviewState || !queued) return;
@@ -46,10 +52,11 @@ export default function ReviewPage() {
       </button>
       {flipped && <div className="grade-grid"><button onClick={() => grade(1)}><span>1</span>نسيت</button><button onClick={() => grade(3)}><span>3</span>بصعوبة</button><button onClick={() => grade(4)} className="good"><span>4</span>جيد</button><button onClick={() => grade(5)} className="easy"><Check size={15}/>سهل</button></div>}
       <div className="review-tip"><Sparkles size={18}/><p><b>التريك الخاص بهذه البطاقة:</b> {card.hint}</p></div>
-    </div> : <section className="review-empty-state">
+    </div> : warmup.items.length > 0 ? <RetrievalWarmup plan={warmup}/> : <section className="review-empty-state">
       <span><CalendarCheck size={28}/></span>
       <h2>{state.completedLessonIds.length === 0 ? "لا توجد بطاقات منجزة بعد" : "أنهيت مراجعات اليوم"}</h2>
-      <p>{state.completedLessonIds.length === 0 ? "أكمل أول درس بأدلته الأربعة حتى تدخل بطاقاته إلى الطابور." : nextScheduled ? `الموعد القادم: ${new Date(nextScheduled).toLocaleDateString("ar-TN")}. لا حاجة لمراجعة عشوائية الآن.` : "ستظهر البطاقات هنا عندما يحين موعدها وفق SM-2."}</p>
+      <p>{warmup.reasonAr}</p>
+      {nextScheduled && <p>الموعد القادم لبطاقة مجدولة: {new Date(nextScheduled).toLocaleDateString("ar-TN")}. لا حاجة لمراجعة مبكرة الآن.</p>}
       <Link href="/today" className="primary-button">العودة إلى مهمة اليوم</Link>
     </section>}
   </div>;

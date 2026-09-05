@@ -89,6 +89,10 @@ export function CoachDashboard() {
               <label className="session-reflection-note"><span>ملاحظة قصيرة اختيارية</span><textarea maxLength={1000} value={reflection} onChange={(event)=>setReflection(event.target.value)} placeholder="ما الذي نجح؟ وما الفجوة التي يجب ألا ينساها المدرب؟"/></label>
               <footer><small>{todaySession?.reflectedAt?nextFocusLabel(todaySession.nextFocus??"continue"):"لا توجد درجة آلية هنا؛ هذه إشارة تخطيط منك."}</small><button type="button" onClick={saveReflection}>{isDone?"حدّث الإغلاق":"احفظ قرار الغد"}</button></footer>
             </section>;
+            if(block.mode==="warmup")return <section key={block.id} className={isDone?"session-signal-card warmup done":"session-signal-card warmup"}>
+              <header><span className="mission-check">{isDone?<Check size={16}/>:index+1}</span><span className="mission-icon"><Icon size={19}/></span><div><strong>{block.titleAr}</strong><small lang="de" dir="ltr">{block.titleDe}</small><p>{block.objective}</p></div><b>{block.minutes} د</b></header>
+              <footer><small>إحماء بلا درجة: لا يغيّر مواعيد SM-2 ولا الإتقان، ويستمدّ من مراحل أنهيتها فعلًا.</small><span className="warmup-block-actions"><Link href="/review" className="primary-button">افتح الإحماء <ArrowLeft size={16}/></Link><button type="button" onClick={() => toggle(block.id)}>{isDone?"أنهِيت الإحماء":"علّم الإنهاء"}</button></span></footer>
+            </section>;
             return <button key={block.id} className={isDone ? "mission-row done" : "mission-row"} onClick={() => toggle(block.id)}>
               <span className="mission-check">{isDone ? <Check size={16}/> : index + 1}</span>
               <span className="mission-icon"><Icon size={19}/></span>

@@ -164,6 +164,95 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
   }))).toMatchObject({ formId: "A", questionsAnswered: 4, stoppedEarly: true, confidence: "low", levelAttempted: { A1: 4, A2: 0, B1: 0, B2: 0 } });
 });
 
+test("P0-38: a session keeps a short retrieval warm-up before any SM-2 card exists", async ({ page }) => {
+  const readScheduling = () => page.evaluate(() => new Promise<{ reviewItems: number; reviewEvents: number; masteryKeys: number; attempts: number }>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? {};
+        resolve({
+          reviewItems: (state.reviewItems ?? []).length,
+          reviewEvents: (state.reviewEvents ?? []).length,
+          masteryKeys: Object.keys(state.mastery ?? {}).length,
+          attempts: (state.exerciseAttempts ?? []).length,
+        });
+      };
+    };
+  }));
+
+  await page.goto("/today");
+  await waitForLearningReady(page);
+  // متعلّم أنهى التشخيص ووصل إلى المرحلة 3 من أول درس: لا بطاقة SM-2 واحدة موجودة بعد.
+  await page.evaluate((baseState) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const transaction = open.result.transaction("learning-state", "readwrite");
+      const store = transaction.objectStore("learning-state");
+      const request = store.get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? structuredClone(baseState);
+        state.profile = { name: "Test", targetExam: "goethe-b2", dailyMinutes: 45, arabicSupport: "modern-standard-arabic", currentLevel: "A1", createdAt: new Date().toISOString() };
+        state.diagnosticResult = { estimatedLevel: "A1", score: 3, maxScore: 12, levelScores: { A1: 3, A2: 0, B1: 0, B2: 0 }, completedAt: new Date().toISOString() };
+        state.completedLessonIds = [];
+        state.reviewItems = [];
+        state.reviewEvents = [];
+        state.mastery = {};
+        state.exerciseAttempts = [];
+        state.currentLessonId = "a1-01";
+        state.lessonProgress = { "a1-01": 2 };
+        store.put(state, "primary");
+      };
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    };
+  }), structuredClone(defaultState));
+
+  await page.reload();
+  await waitForLearningReady(page);
+  const warmupBlock = page.locator(".session-signal-card.warmup");
+  await expect(warmupBlock).toBeVisible();
+  await expect(warmupBlock).toContainText("إحماء استرجاع");
+  await expect(warmupBlock).toContainText("بلا درجة");
+
+  const before = await readScheduling();
+  expect(before.reviewItems).toBe(0);
+
+  await warmupBlock.getByRole("link", { name: /افتح الإحماء/ }).click();
+  await expect(page).toHaveURL(/\/review$/);
+  const zone = page.locator(".warmup-zone");
+  await expect(zone).toBeVisible();
+
+  // كل عنصر من مرحلة شاهدها المتعلّم فعلًا (المرحلة 3 كحد أقصى): لا قراءة ولا نطق.
+  const seenStages: string[] = [];
+  for (let step = 0; step < 6; step += 1) {
+    if (!(await page.locator(".warmup-item").isVisible())) break;
+    seenStages.push((await page.locator(".warmup-meta").textContent()) ?? "");
+    await expect(page.locator(".warmup-answer")).toHaveCount(0);
+    await page.getByRole("button", { name: /اكشف بعد المحاولة/ }).click();
+    const answer = page.locator(".warmup-answer strong");
+    await expect(answer).toBeVisible();
+    expect(((await answer.textContent()) ?? "").trim().length).toBeGreaterThan(0);
+    await page.getByRole("button", { name: /التالي|أنهِ الجولة/ }).click();
+  }
+  expect(seenStages.length).toBeGreaterThanOrEqual(3);
+  for (const meta of seenStages) {
+    expect(meta).toContain("مرحلة");
+    expect(meta).not.toContain("القراءة");
+    expect(meta).not.toContain("النطق");
+  }
+  await expect(zone).toContainText("أنهيت الجولة");
+  await expect(zone).toContainText("لم تُسجَّل نتيجة");
+
+  // الإحماء لا يلمس الجدولة ولا الإتقان ولا سجل المحاولات.
+  const after = await readScheduling();
+  expect(after).toEqual(before);
+});
+
 test("P0-26: an optional productive sample survives reload without any automatic score", async ({ page }) => {
   const readDiagnostic = () => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
@@ -1013,7 +1102,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v59");
+    const cache = await caches.open("dwnb-full-pack-v60");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1098,7 +1187,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v59");
+    const cache = await caches.open("dwnb-full-pack-v60");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1130,8 +1219,8 @@ test("one level pack installs its own scope without downloading the whole course
   await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
 
   const levelEvidence = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v59");
-    const fullCache = await caches.open("dwnb-full-pack-v59");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
+    const fullCache = await caches.open("dwnb-full-pack-v60");
     const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
     const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
     const a1Lesson = await levelCache.match("/lernen/a1-01");
@@ -1189,10 +1278,10 @@ test("one level pack installs its own scope without downloading the whole course
   await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
   const afterLevelRemoval = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v59");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
     const keys = await levelCache.keys();
     const names = await caches.keys();
-    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v59") };
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v60") };
   });
   expect(afterLevelRemoval.keys).toBe(0);
 });

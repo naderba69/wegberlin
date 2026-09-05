@@ -53,13 +53,13 @@ const auditSectionIds = (start, end) => {
 const partialIds = auditSectionIds("## P0 المنجز جزئيًا", "## P0 غير المنجز");
 const missingIds = auditSectionIds("## P0 غير المنجز", "## P0 المتوقف");
 const blockedIds = auditSectionIds("## P0 المتوقف", "## عناصر P0");
-if (partialIds.length !== 16) fail(`P0 partial table has ${partialIds.length} rows`);
+if (partialIds.length !== 15) fail(`P0 partial table has ${partialIds.length} rows`);
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
-for (const text of ["Implemented: 105", "Partial: 16", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["105 implemented, 16 partial, 2 not implemented", "321/321", "30/30", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+for (const text of ["Implemented: 106", "Partial: 15", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
+for (const text of ["106 implemented, 15 partial, 2 not implemented", "328/328", "31/31", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
   requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["321/321", "30/30"]) requireText(readme, text, "README.md");
+for (const text of ["328/328", "31/31"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
@@ -100,14 +100,14 @@ if (examAudio.assets.length !== 96 || examAudio.coveredClipCount !== 90 || examA
 const cacheMatch = worker.match(/const PACK_CACHE = "([^"]+)"/);
 if (!cacheMatch) fail("PACK_CACHE constant is missing");
 const cacheName = cacheMatch[1];
-if (cacheName !== "dwnb-full-pack-v59") fail(`unexpected current cache ${cacheName}`);
+if (cacheName !== "dwnb-full-pack-v60") fail(`unexpected current cache ${cacheName}`);
 requireText(e2e, `caches.open("${cacheName}")`, "Playwright cache contract");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
 requireText(worker, 'const levelPackCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-${PACK_VERSION}`;', "service worker level pack cache factory");
 requireText(worker, 'const levelStagingCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-staging-${PACK_VERSION}`;', "service worker level staging cache factory");
 requireText(worker, 'const PACK_SCOPES = ["full", ...LEVEL_SCOPES];', "service worker pack scope list");
 requireText(worker, 'const packCacheFor = (scope) => (scope === "full" ? PACK_CACHE : levelPackCache(scope));', "service worker pack cache resolver");
-requireText(e2e, 'caches.open("dwnb-level-pack-a1-v59")', "Playwright level pack cache contract");
+requireText(e2e, 'caches.open("dwnb-level-pack-a1-v60")', "Playwright level pack cache contract");
 requireText(worker, 'const OFFLINE_SIZE_PATH = "/offline-size-manifest.json";', "service worker size manifest path");
 requireText(worker, 'const normalizeScope = (value) => (LEVEL_SCOPES.includes(value) ? value : "full");', "service worker scope normalizer");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
@@ -167,6 +167,10 @@ requireText(read("src/data/listening-evidence-index.ts"), "listeningEvidenceByQu
 requireText(read("src/data/diagnostic.ts"), "diagnosticSampleTasks", "P0-26 diagnostic sample tasks");
 requireText(read("src/core/diagnostic/samples.ts"), "canSaveWritingSample", "P0-26 diagnostic sample workflow");
 requireText(read("src/components/diagnostic-sample-card.tsx"), "diagnostic-sample-card", "P0-26 sample card CSS class");
+requireText(read("src/core/srs/warmup.ts"), "buildRetrievalWarmup", "P0-38 retrieval warm-up builder");
+requireText(read("src/core/srs/warmup.ts"), "fronts.has(normalize(item.answerDe))", "P0-38 scheduled-card exclusion guard");
+requireText(read("src/components/retrieval-warmup.tsx"), "warmup-zone", "P0-38 warm-up surface");
+requireText(read("src/core/coach/coach.ts"), "mode:\"warmup\"", "P0-38 warm-up mission block");
 for (const text of ["glossary target noun", "phrase target noun", "inventory noun", "target noun", "reading question has no authored evidence position", "authored quote is not a verbatim sentence", "authored quote shares no content word"])
   requireText(read("src/core/content-validation/validate-academic-content.ts"), text, "academic validator noun inventory rules");
 for (const text of ["measured valency target", "derived frame", "not a declared valency entry"])
@@ -191,6 +195,6 @@ console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 e
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 321 unit/integrity and 30+30 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 328 unit/integrity and 31+31 browser tests documented`);
 console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
 console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

@@ -57,9 +57,9 @@ if (partialIds.length !== 17) fail(`P0 partial table has ${partialIds.length} ro
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
 for (const text of ["Implemented: 104", "Partial: 17", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["104 implemented, 17 partial, 2 not implemented", "307/307", "29/29", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+for (const text of ["104 implemented, 17 partial, 2 not implemented", "312/312", "29/29", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
   requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["307/307", "29/29"]) requireText(readme, text, "README.md");
+for (const text of ["312/312", "29/29"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
@@ -100,14 +100,14 @@ if (examAudio.assets.length !== 96 || examAudio.coveredClipCount !== 90 || examA
 const cacheMatch = worker.match(/const PACK_CACHE = "([^"]+)"/);
 if (!cacheMatch) fail("PACK_CACHE constant is missing");
 const cacheName = cacheMatch[1];
-if (cacheName !== "dwnb-full-pack-v57") fail(`unexpected current cache ${cacheName}`);
+if (cacheName !== "dwnb-full-pack-v58") fail(`unexpected current cache ${cacheName}`);
 requireText(e2e, `caches.open("${cacheName}")`, "Playwright cache contract");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
 requireText(worker, 'const levelPackCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-${PACK_VERSION}`;', "service worker level pack cache factory");
 requireText(worker, 'const levelStagingCache = (level) => `dwnb-level-pack-${level.toLowerCase()}-staging-${PACK_VERSION}`;', "service worker level staging cache factory");
 requireText(worker, 'const PACK_SCOPES = ["full", ...LEVEL_SCOPES];', "service worker pack scope list");
 requireText(worker, 'const packCacheFor = (scope) => (scope === "full" ? PACK_CACHE : levelPackCache(scope));', "service worker pack cache resolver");
-requireText(e2e, 'caches.open("dwnb-level-pack-a1-v57")', "Playwright level pack cache contract");
+requireText(e2e, 'caches.open("dwnb-level-pack-a1-v58")', "Playwright level pack cache contract");
 requireText(worker, 'const OFFLINE_SIZE_PATH = "/offline-size-manifest.json";', "service worker size manifest path");
 requireText(worker, 'const normalizeScope = (value) => (LEVEL_SCOPES.includes(value) ? value : "full");', "service worker scope normalizer");
 requireText(prompt, `Offline cache: ${cacheName}`, "continuation prompt cache contract");
@@ -122,9 +122,11 @@ requireText(zeroCost, "Hard mandatory budget: **0 USD**", "ZERO_COST.md");
 requireText(sourceWorkflow, "node scripts/audit-source-freshness.mjs --fail-on=due --probe", "monthly source workflow");
 
 if (academicAudit.version !== "academic-governance-v1") fail("academic audit version drifted");
-if (academicAudit.schema?.counts?.totalRootObjects !== 4854 || academicAudit.schema?.schemaFamilies !== 12) fail("academic Zod counters drifted");
+if (academicAudit.schema?.counts?.totalRootObjects !== 5381 || academicAudit.schema?.schemaFamilies !== 12) fail("academic Zod counters drifted");
 if (academicAudit.schema?.counts?.nounGrammarEntries !== 664 || academicAudit.schema?.counts?.verbPrepositionFrames !== 262) fail("A1-B2 lexical grammar counters drifted");
 if (academicAudit.schema?.counts?.anchorNouns !== 336 || academicAudit.schema?.counts?.inventoryNouns !== 328 || academicAudit.schema?.counts?.measuredNounTargets !== 460) fail("glossary noun inventory counters drifted");
+if (academicAudit.schema?.counts?.readingQuestions !== 252 || academicAudit.schema?.counts?.authoredReadingEvidence !== 252 || academicAudit.schema?.counts?.inferenceReadingEvidence !== 23) fail("P0-124 reading evidence counters drifted");
+if (academicAudit.schema?.counts?.readingQuestionsWithoutEvidence !== 0 || academicAudit.schema?.counts?.unverifiedReadingEvidence !== 0) fail("P0-124 reading evidence has uncovered questions");
 if (academicAudit.schema?.counts?.unjustifiedInventoryNouns !== 0 || academicAudit.schema?.counts?.nounTargetsWithoutMorphology !== 0) fail("noun inventory justification counters drifted");
 if (academicAudit.schema?.counts?.derivedVerbFrames !== 118 || academicAudit.schema?.counts?.measuredValencyTargets !== 141 || academicAudit.schema?.counts?.unjustifiedDerivedFrames !== 0) fail("measured valency coverage counters drifted");
 if (academicAudit.answerIntegrity?.closedAnswerItems !== 2584 || academicAudit.answerIntegrity?.productiveTasks !== 348 || academicAudit.answerIntegrity?.failures !== 0 || academicAudit.answerIntegrity?.exemptions !== 3) fail("answer integrity counters drifted");
@@ -152,7 +154,10 @@ requireText(read("src/data/verb-preposition-dictionary.ts"), "measuredValencyEnt
 requireText(read("src/data/lexical-grammar-derived.ts"), "derivedFramesByLesson", "derived valency frames");
 requireText(read("src/data/noun-inventory.ts"), "lessonNounTargets", "glossary noun inventory");
 requireText(read("src/data/noun-inventory-seeds.ts"), "nounInventorySeeds", "glossary noun morphology seed table");
-for (const text of ["glossary target noun", "phrase target noun", "inventory noun", "target noun"])
+// P0-124: مواضع الدليل المؤلفة لأسئلة القراءة يجب أن تبقى جزءًا من عقد التسليم.
+requireText(read("src/data/reading-evidence.ts"), "readingEvidenceSeeds", "authored reading evidence table");
+requireText(read("src/data/reading-evidence-index.ts"), "readingEvidenceByQuestionId", "authored reading evidence index");
+for (const text of ["glossary target noun", "phrase target noun", "inventory noun", "target noun", "reading question has no authored evidence position", "authored quote is not a verbatim sentence", "authored quote shares no content word"])
   requireText(read("src/core/content-validation/validate-academic-content.ts"), text, "academic validator noun inventory rules");
 for (const text of ["measured valency target", "derived frame", "not a declared valency entry"])
   requireText(read("src/core/content-validation/validate-academic-content.ts"), text, "academic validator valency coverage rules");
@@ -175,6 +180,6 @@ console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 e
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 307 unit/integrity and 29+29 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 312 unit/integrity and 29+29 browser tests documented`);
 console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
 console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

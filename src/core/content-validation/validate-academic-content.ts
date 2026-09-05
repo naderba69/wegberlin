@@ -9,6 +9,14 @@ import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, nounsByLesson, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
 import { inventoryNouns, lessonAllNounTargets, targetNounsWithoutSeed } from "@/data/noun-inventory";
+import {
+  authoredReadingEvidence,
+  readingQuestionTargets,
+  readingQuestionsWithoutEvidence,
+  orphanReadingEvidence,
+  unresolvedReadingEvidence,
+} from "@/data/reading-evidence-index";
+import { words as germanContentWords } from "@/core/lesson/support";
 import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import {
@@ -85,6 +93,7 @@ export function validateAcademicContent() {
   const taskIds = new Set(allPublishedExamTasks.map((task) => task.id));
   const listeningLibraryIds = new Set(listeningLibrary.map((item) => item.id));
   const lessonIds = new Set(academicLessonList.map((lesson) => lesson.id));
+  const lessonById = new Map(academicLessonList.map((lesson) => [lesson.id, lesson]));
 
   checkUnique("lessons", [...lessonIds], issues);
   checkUnique("lesson metadata", curriculum.map((lesson) => lesson.id), issues);
@@ -216,6 +225,46 @@ export function validateAcademicContent() {
   }
   for (const lemma of targetNounsWithoutSeed) issues.push(`nounInventory: target noun ${lemma} has neither an authored seed nor an anchor in the course`);
 
+  // P0-124: كل سؤال قراءة منشور يجب أن يملك موضع دليل مؤلفًا، والموضع يجب أن يكون
+  // جملة حرفية من نص درسه، ويشترك لفظيًا مع السؤال أو خياره الصحيح إلا بتصريح استنتاج.
+  let unverifiedReadingEvidence = 0;
+  for (const questionId of readingQuestionsWithoutEvidence) {
+    issues.push(`readingEvidence.${questionId}: reading question has no authored evidence position`);
+  }
+  for (const questionId of orphanReadingEvidence) {
+    issues.push(`readingEvidence.${questionId}: authored evidence has no published reading question`);
+  }
+  for (const questionId of unresolvedReadingEvidence) {
+    issues.push(`readingEvidence.${questionId}: authored evidence does not resolve to a sentence of its lesson`);
+  }
+  for (const evidence of authoredReadingEvidence) {
+    const lesson = lessonById.get(evidence.lessonId);
+    if (!lesson) {
+      issues.push(`readingEvidence.${evidence.questionId}: authored evidence belongs to unknown lesson ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.quote || !lesson.reading.textDe.includes(evidence.quote)) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote is not a verbatim sentence of ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.whyAr.trim()) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote has no Arabic justification`);
+    }
+    if (evidence.relation === "inference") continue;
+    const question = lesson.reading.questions.find((item: { id: string }) => item.id === evidence.questionId);
+    const expected = new Set([
+      ...germanContentWords(question?.promptDe ?? ""),
+      ...germanContentWords(question?.options[question.correctIndex] ?? ""),
+    ]);
+    const quoteWords = new Set(germanContentWords(evidence.quote));
+    if (![...expected].some((word) => quoteWords.has(word))) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote shares no content word with the question or its correct option`);
+    }
+  }
+
   for (const meta of curriculum) {
     if (meta.status === "published" && !lessonIds.has(meta.id)) issues.push(`lessonMetadata.${meta.id}: published lesson has no academic object`);
   }
@@ -265,6 +314,11 @@ export function validateAcademicContent() {
     measuredNounTargets,
     unjustifiedInventoryNouns,
     nounTargetsWithoutMorphology: targetNounsWithoutSeed.length,
+    readingQuestions: readingQuestionTargets.length,
+    authoredReadingEvidence: authoredReadingEvidence.length,
+    inferenceReadingEvidence: authoredReadingEvidence.filter((evidence) => evidence.relation === "inference").length,
+    readingQuestionsWithoutEvidence: readingQuestionsWithoutEvidence.length,
+    unverifiedReadingEvidence,
     verbPrepositionFrames: verbPrepositionFrames.length,
     derivedVerbFrames: verbPrepositionFrames.filter((frame) => frame.origin === "derived").length,
     measuredValencyTargets: measuredTargets,

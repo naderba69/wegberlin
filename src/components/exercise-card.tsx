@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { ReadingEvidenceView } from "@/core/lesson/support";
 import { Check, Lightbulb, RotateCcw, X } from "lucide-react";
 import type { PracticeExercise, Question } from "@/types/lesson-content";
 import { evaluateExercise } from "@/core/lesson/evaluate";
@@ -85,7 +86,7 @@ export function ExerciseCard({ exercise, onAttempt }: { exercise: PracticeExerci
 export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, shuffleSeed = "lesson-quiz" }: {
   questions: Question[];
   onAttempt: (id: string, answer: string, correct: boolean, metadata?: LessonAttemptMetadata) => void;
-  evidenceByQuestionId?: Record<string, string>;
+  evidenceByQuestionId?: Record<string, ReadingEvidenceView>;
   shuffleSeed?: string;
 }) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -109,7 +110,7 @@ export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, shuff
 
       {!isChecked && hintLevel > 0 && <p className="hint-panel" role="status" aria-live="polite"><Lightbulb size={14} /><span><b>تلميح {hintLevel}/2</b>{hints[hintLevel - 1]}</span></p>}
 
-      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span>{question.explanationAr}</span></div>{evidence && <blockquote className="question-evidence"><small>موضع الدليل من النص بعد الالتزام</small><q lang="de" dir="ltr">{evidence}</q></blockquote>}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => setHintLevels((current) => ({ ...current, [question.id]: Math.min(2, hintLevel + 1) }))} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION }); }}>Prüfen</button></div>}
+      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span>{question.explanationAr}</span></div>{evidence && <blockquote className="question-evidence"><small>{evidence.origin === "authored" ? "موضع الدليل من النص بعد الالتزام" : "أقرب جملة بالنص (مطابقة آلية غير مراجَعة)"}</small><q lang="de" dir="ltr">{evidence.quote}</q>{evidence.whyAr ? <span lang="ar" dir="rtl">{evidence.whyAr}</span> : null}</blockquote>}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => setHintLevels((current) => ({ ...current, [question.id]: Math.min(2, hintLevel + 1) }))} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION }); }}>Prüfen</button></div>}
     </article>;
   })}</div>;
 }

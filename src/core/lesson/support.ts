@@ -2,6 +2,8 @@ import type { PracticeExercise, Question } from "@/types/lesson-content";
 import { normalizeGermanText } from "./evaluate";
 import { splitGermanSentences } from "./sentences";
 import { readingEvidenceByQuestionId } from "@/data/reading-evidence-index";
+import { listeningEvidenceByQuestionId } from "@/data/listening-evidence-index";
+import { splitListeningUnits } from "./sentences";
 
 export type ReadingEvidenceView = {
   quote: string;
@@ -95,6 +97,45 @@ export function readingEvidenceMap(textDe: string, questions: Question[]): Recor
         return [question.id, { quote: authored.quote, whyAr: authored.whyAr, relation: authored.relation, origin: authored.origin }];
       }
       return [question.id, { quote: selectReadingEvidence(textDe, question), whyAr: "", relation: "direct" as const, origin: "auto" as const }];
+    }),
+  );
+}
+
+/** نفس منطق المطابقة الاحتياطية ولكن على مقاطع نص الاستماع لا جمل القراءة. */
+export function selectListeningEvidence(transcriptDe: string, question: Question) {
+  const units = splitListeningUnits(transcriptDe);
+  if (!units.length) return transcriptDe.trim();
+
+  const answerTokens = new Set(words(question.options[question.correctIndex]));
+  const promptTokens = new Set(words(question.promptDe));
+  let bestUnit = units[0];
+  let bestScore = -1;
+
+  for (const unit of units) {
+    const unitTokens = new Set(words(unit));
+    let score = 0;
+    for (const token of answerTokens) if (unitTokens.has(token)) score += 3;
+    for (const token of promptTokens) if (unitTokens.has(token)) score += 1;
+    if (score > bestScore) {
+      bestScore = score;
+      bestUnit = unit;
+    }
+  }
+  return bestUnit;
+}
+
+/**
+ * موضع الدليل لكل سؤال استماع: الموضع المؤلف أولًا (P0-124)،
+ * والمطابقة اللفظية احتياطًا لدرس بلا موضع مؤلف — المدقق يمنع ذلك في الدروس المنشورة.
+ */
+export function listeningEvidenceMap(transcriptDe: string, questions: Question[]): Record<string, ReadingEvidenceView> {
+  return Object.fromEntries(
+    questions.map((question) => {
+      const authored = listeningEvidenceByQuestionId[question.id];
+      if (authored && authored.quote) {
+        return [question.id, { quote: authored.quote, whyAr: authored.whyAr, relation: authored.relation, origin: authored.origin }];
+      }
+      return [question.id, { quote: selectListeningEvidence(transcriptDe, question), whyAr: "", relation: "direct" as const, origin: "auto" as const }];
     }),
   );
 }

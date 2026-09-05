@@ -16,6 +16,13 @@ import {
   orphanReadingEvidence,
   unresolvedReadingEvidence,
 } from "@/data/reading-evidence-index";
+import {
+  authoredListeningEvidence,
+  listeningQuestionTargets,
+  listeningQuestionsWithoutEvidence,
+  orphanListeningEvidence,
+  unresolvedListeningEvidence,
+} from "@/data/listening-evidence-index";
 import { words as germanContentWords } from "@/core/lesson/support";
 import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
 import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
@@ -265,6 +272,47 @@ export function validateAcademicContent() {
     }
   }
 
+  // P0-124 (امتداد الاستماع): كل سؤال استماع منشور يجب أن يملك موضع دليل مؤلفًا،
+  // والموضع يجب أن يكون مقطعًا حرفيًا من نص استماع درسه، ويشترك لفظيًا مع السؤال
+  // أو خياره الصحيح إلا بتصريح استنتاج (الأرقام والساعات تُنطق بالحروف).
+  let unverifiedListeningEvidence = 0;
+  for (const questionId of listeningQuestionsWithoutEvidence) {
+    issues.push(`listeningEvidence.${questionId}: listening question has no authored evidence position`);
+  }
+  for (const questionId of orphanListeningEvidence) {
+    issues.push(`listeningEvidence.${questionId}: authored evidence has no published listening question`);
+  }
+  for (const questionId of unresolvedListeningEvidence) {
+    issues.push(`listeningEvidence.${questionId}: authored evidence does not resolve to a unit of its lesson transcript`);
+  }
+  for (const evidence of authoredListeningEvidence) {
+    const lesson = lessonById.get(evidence.lessonId);
+    if (!lesson?.listening) {
+      issues.push(`listeningEvidence.${evidence.questionId}: authored evidence belongs to unknown lesson or a lesson without listening ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.quote || !lesson.listening.transcriptDe.includes(evidence.quote)) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote is not a verbatim unit of ${evidence.lessonId} transcript`);
+      continue;
+    }
+    if (!evidence.whyAr.trim()) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote has no Arabic justification`);
+    }
+    if (evidence.relation === "inference") continue;
+    const question = lesson.listening.questions.find((item: { id: string }) => item.id === evidence.questionId);
+    const expected = new Set([
+      ...germanContentWords(question?.promptDe ?? ""),
+      ...germanContentWords(question?.options[question.correctIndex] ?? ""),
+    ]);
+    const quoteWords = new Set(germanContentWords(evidence.quote));
+    if (![...expected].some((word) => quoteWords.has(word))) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote shares no content word with the question or its correct option`);
+    }
+  }
+
   for (const meta of curriculum) {
     if (meta.status === "published" && !lessonIds.has(meta.id)) issues.push(`lessonMetadata.${meta.id}: published lesson has no academic object`);
   }
@@ -319,6 +367,11 @@ export function validateAcademicContent() {
     inferenceReadingEvidence: authoredReadingEvidence.filter((evidence) => evidence.relation === "inference").length,
     readingQuestionsWithoutEvidence: readingQuestionsWithoutEvidence.length,
     unverifiedReadingEvidence,
+    listeningQuestions: listeningQuestionTargets.length,
+    authoredListeningEvidence: authoredListeningEvidence.length,
+    inferenceListeningEvidence: authoredListeningEvidence.filter((evidence) => evidence.relation === "inference").length,
+    listeningQuestionsWithoutEvidence: listeningQuestionsWithoutEvidence.length,
+    unverifiedListeningEvidence,
     verbPrepositionFrames: verbPrepositionFrames.length,
     derivedVerbFrames: verbPrepositionFrames.filter((frame) => frame.origin === "derived").length,
     measuredValencyTargets: measuredTargets,

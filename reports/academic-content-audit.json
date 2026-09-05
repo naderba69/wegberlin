@@ -25,11 +25,16 @@
       "inferenceReadingEvidence": 23,
       "readingQuestionsWithoutEvidence": 0,
       "unverifiedReadingEvidence": 0,
+      "listeningQuestions": 252,
+      "authoredListeningEvidence": 252,
+      "inferenceListeningEvidence": 27,
+      "listeningQuestionsWithoutEvidence": 0,
+      "unverifiedListeningEvidence": 0,
       "verbPrepositionFrames": 262,
       "derivedVerbFrames": 118,
       "measuredValencyTargets": 141,
       "unjustifiedDerivedFrames": 0,
-      "totalRootObjects": 5381
+      "totalRootObjects": 5912
     },
     "schemaFamilies": 12,
     "issues": []
@@ -45653,5 +45658,5 @@
       }
     ]
   },
-  "contentSha256": "90737e43fe7f7d9ed2dc099b461587468185a3733d025fcb4ca3e69d8a2d454c"
+  "contentSha256": "429a49cc3e1e5a7a93a1d3f7dea2075f83715d9bcbaab735d846b8e744e7571a"
 }

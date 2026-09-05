@@ -1704,7 +1704,8 @@ test("Arabic shell and German content keep explicit direction", async ({ page })
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   await expect(page.locator("html")).toHaveAttribute("lang", "ar");
   await page.getByText("Das kleine Café", { exact: true }).click();
-  await expect(page.locator('[lang="de"][dir="ltr"]').first()).toBeVisible();
+  // الألماني المرئي هو المقصود: شريط التنقل الجانبي (وفيه شارة العلامة الألمانية) مخفي على الهاتف.
+  await expect(page.locator('[lang="de"][dir="ltr"]:visible').first()).toBeVisible();
 });
 
 test("representative 320–1920 px viewports avoid document-level horizontal overflow", async ({ page }) => {

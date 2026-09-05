@@ -164,6 +164,30 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
   }))).toMatchObject({ formId: "A", questionsAnswered: 4, stoppedEarly: true, confidence: "low", levelAttempted: { A1: 4, A2: 0, B1: 0, B2: 0 } });
 });
 
+test("P0-256: exam and lab results announce one short summary instead of the whole panel", async ({ page }) => {
+  await page.goto("/exams/goethe-b2/goethe-b2-reading-01");
+  await waitForLearningReady(page);
+  await page.getByRole("button", { name: /ابدأ المؤقت والتدريب/ }).click();
+  const selects = page.locator(".targeted-items select");
+  for (let index = 0; index < await selects.count(); index += 1) {
+    const select = selects.nth(index);
+    if (await select.inputValue()) continue;
+    const available = await select.locator("option").evaluateAll((options) => options.find((option) => (option as HTMLOptionElement).value && !(option as HTMLOptionElement).disabled)?.getAttribute("value"));
+    if (available) await select.selectOption(available);
+  }
+  await page.getByRole("button", { name: /التزم بالإجابات وصحح/ }).click();
+  const result = page.locator(".targeted-result");
+  await expect(result).toBeVisible();
+  const announcer = result.locator(".result-announcer");
+  await expect(announcer).toHaveAttribute("role", "status");
+  await expect(announcer).toHaveAttribute("aria-live", "polite");
+  await expect(announcer).toHaveAttribute("aria-atomic", "true");
+  await expect(announcer).toHaveText(/نتيجة (التدريب الجزئي|تدريب القراءة التفصيلية|تدريب العناصر اللغوية): \d+ من \d+ إجابة صحيحة\. النتيجة تدريبية داخلية وليست نقاطًا رسمية/);
+  // لا تكرار: منطقة حيّة واحدة فقط في شاشة النتيجة، ولوحة النتائج نفسها ليست منطقة حيّة.
+  await expect(result.locator('[role="status"]')).toHaveCount(1);
+  await expect(result).not.toHaveAttribute("role", "status");
+});
+
 test("P0-266: one missed day becomes an explicit grace day with no deferred task", async ({ page }) => {
   // ساعة ثابتة: الخميس 2026-09-03 داخل أسبوع يبدأ 2026-08-31، حتى لا يتغير الاختبار بتاريخ التشغيل.
   await page.clock.setFixedTime(new Date("2026-09-03T09:00:00"));
@@ -578,6 +602,13 @@ test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revis
   await selfCheck.getByRole("button", { name:/شغّل الفحص المرتبط بنصي/ }).click();
   await expect(page.locator(".writing-dimensions article")).toHaveCount(5);
   await expect(page.locator(".feedback-box")).toContainText("«");
+  // P0-256: ملخّص موجز يُقال مرة واحدة، لا اللوحة كاملة.
+  const writingAnnouncer = page.locator(".writing-feedback .result-announcer");
+  await expect(writingAnnouncer).toHaveAttribute("role", "status");
+  await expect(writingAnnouncer).toHaveAttribute("aria-live", "polite");
+  await expect(writingAnnouncer).toHaveAttribute("aria-atomic", "true");
+  await expect(writingAnnouncer).toHaveText(/نتيجة فحص الكتابة: \d من 5 محاور مستوفاة/);
+  await expect(page.locator(".writing-feedback [role=\"status\"]")).toHaveCount(1);
   await page.getByRole("button", { name:/ابدأ إعادة الكتابة/ }).click();
   await page.getByLabel("النسخة المنقحة").fill(`${firstDraft} Bis bald.`);
   await page.getByRole("button", { name:/حفظ النسخة المنقحة/ }).click();
@@ -625,6 +656,10 @@ test("P0 speaking lab hides prompts during recording and requires playback befor
   await page.getByPlaceholder(/توقفت قبل السؤال/).fill("سأحسن ترتيب السؤال في المحاولة التالية.");
   await page.getByRole("button", { name:/حفظ الدليل بعد الاستماع/ }).click();
   await expect(page.getByText(/حُفظت المحاولة والمراجعة الذاتية محليًا/)).toBeVisible();
+  // P0-256: إعلان موجز بالمدة والمعايير المؤكَّدة ذاتيًا، مع حدّ «لا تقييم آلي للنطق».
+  const speakingAnnouncer = page.locator(".lab-page .result-announcer");
+  await expect(speakingAnnouncer).toHaveAttribute("aria-live", "polite");
+  await expect(speakingAnnouncer).toHaveText(/حُفظ التسجيل: \d+ ثانية، وأكدت \d+ من \d+ معايير بنفسك\. لا تقييم آلي للنطق أو الطلاقة\./);
   await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
     const open=indexedDB.open("der-weg-nach-berlin",4);
     open.onerror=()=>reject(open.error);
@@ -1421,6 +1456,10 @@ test("continuous full-exam mode persists one central clock and blocks task skipp
   await page.getByRole("button", { name: "ثبّت الإجابات وانتقل" }).click();
   await expect(page.locator(".continuous-task-submitted")).toBeVisible();
   await expect(page.getByText("ثُبّت التسليم دون كشف التصحيح")).toBeVisible();
+  // P0-256: اللوحة نفسها لم تعد منطقة حيّة (لا تُقرأ العناوين والروابط كلها)، بل ملخّص واحد.
+  await expect(page.locator(".continuous-task-submitted")).not.toHaveAttribute("role", "status");
+  await expect(page.locator(".continuous-task-submitted .result-announcer")).toHaveText(/ثُبّت التسليم: \d+ من \d+ مهام مسلّمة/);
+  await expect(page.locator(".continuous-task-submitted [role=\"status\"]")).toHaveCount(1);
   await expect(page.locator(".targeted-review-list")).toHaveCount(0);
   await expect(page.getByText(/الصحيح:/)).toHaveCount(0);
 

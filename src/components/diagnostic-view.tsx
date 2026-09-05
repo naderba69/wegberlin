@@ -12,6 +12,8 @@ import type { DiagnosticResult, DiagnosticSkill } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { ResilientAudioPlayer } from "./resilient-audio-player";
 import { DiagnosticSampleCard } from "./diagnostic-sample-card";
+import { ResultAnnouncer } from "./result-announcer";
+import { diagnosticResultMessage } from "@/core/a11y/result-announcements";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
   grammar: "القواعد والاستعمال",
@@ -79,6 +81,7 @@ export function DiagnosticView() {
     const result = finalResult;
     const confidence = result.confidence ?? "low";
     return <div className="diagnostic-result">
+      <ResultAnnouncer message={diagnosticResultMessage({ level: result.estimatedLevel, score: result.score, maxScore: result.maxScore })}/>
       <span className="result-orb"><Gauge size={29}/></span>
       <small>تقدير أولي متكيف · الصيغة {result.formId} · ليس شهادة رسمية</small>
       <h1>نقطة البداية المقترحة: <em>{result.estimatedLevel}</em></h1>

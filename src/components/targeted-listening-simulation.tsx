@@ -9,6 +9,8 @@ import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { examAudioAssetsByClipId, examAudioManifest, type ExamAudioAsset } from "@/data/exam-audio-assets";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { examResultMessage } from "@/core/a11y/result-announcements";
 
 function completeClipAssets(clipId:string){const assets=examAudioAssetsByClipId[clipId]??[];return assets.length>0&&assets.every((asset,index)=>asset.segmentIndex===index+1&&asset.segmentCount===assets.length)?assets:[]}
 
@@ -127,6 +129,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
   if (finished) {
     return (
       <div className="wide-page targeted-result">
+        <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: "نتيجة تدريب الاستماع" })}/>
         <header>
           <span><ShieldCheck size={28} /></span>
           <small>{profile.displayName} · {allClipsGenerated?"استماع بملفات MP3 مولّدة":"استماع جزئي بصوت المتصفح"}</small>

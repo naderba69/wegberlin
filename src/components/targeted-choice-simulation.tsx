@@ -8,6 +8,8 @@ import { examProfiles } from "@/data/exam-profiles";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { examResultMessage } from "@/core/a11y/result-announcements";
 
 export function TargetedChoiceSimulationView({ simulation }: { simulation: TargetedChoiceSimulation }) {
   const { state, update } = useLearning();
@@ -83,6 +85,7 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
   if (finished) {
     return (
       <div className="wide-page targeted-result">
+        <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: isReading ? "نتيجة تدريب القراءة التفصيلية" : "نتيجة تدريب العناصر اللغوية" })}/>
         <header><span><ShieldCheck size={28} /></span><small>{profile.displayName} · {isReading ? "تدريب قراءة تفصيلية" : "تدريب عناصر لغوية"}</small><h1>{score}<i>/{simulation.items.length}</i></h1><h2>{score >= 8 ? "تحكم جيد — اختبره لاحقًا بنص جديد" : "حدد الروابط والصيغ التي تكررت فيها الفجوة"}</h2><p>نسبة تدريب داخلية وليست نقاطًا رسمية.</p></header>
         <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b lang="de" dir="ltr">{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b lang="de" dir="ltr">{item.options[item.correctIndex]}</b></small>}<p>{item.explanationAr}</p></div></article>; })}</div>
         <footer><button className="secondary-button" onClick={reset}><RotateCcw size={16} /> إعادة التدريب</button><Link href="/exams" className="primary-button">مركز الامتحان <ArrowRight size={16} /></Link></footer>

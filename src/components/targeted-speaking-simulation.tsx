@@ -9,6 +9,8 @@ import { deleteMedia, loadMedia, saveMedia } from "@/core/portability/db";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { selfScoreSavedMessage } from "@/core/a11y/result-announcements";
 
 type Phase = "setup" | "preparing" | "ready" | "recording" | "recorded" | "saved";
 type SpeakingDraft = { choiceId?: string; phase?: Phase; mediaId?: string; duration?: number; selfScore?: number; reflection?: string };
@@ -225,6 +227,7 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
 
   return (
     <div className="wide-page targeted-speaking">
+      <ResultAnnouncer message={phase === "saved" ? selfScoreSavedMessage({ score: selfScore, max: 5, labelAr: "التقييم الذاتي للمحادثة" }) : ""}/>
       <header className="targeted-exam-header"><div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{choice.titleDe}</em></h1></div>{!continuousSession && <div className="lab-counter"><strong>{attempts}</strong><span>محاولات سابقة<br />محفوظة محليًا</span></div>}</header>
       <div className="targeted-speaking-layout">
         <section className="speaking-exam-task">

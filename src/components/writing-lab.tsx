@@ -7,6 +7,8 @@ import { analyzeWriting, type WritingAnalysis } from "@/core/writing/analyze";
 import { academicLessons } from "@/data/academic-lessons";
 import type { WritingPlan, WritingSubmission } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { ResultAnnouncer } from "./result-announcer";
+import { labDimensionMessage } from "@/core/a11y/result-announcements";
 
 type WritingPhase="plan"|"draft"|"self-check"|"feedback"|"revision";
 const phaseLabels:Array<{id:WritingPhase;label:string}>=[{id:"plan",label:"التخطيط"},{id:"draft",label:"المسودة"},{id:"self-check",label:"التحقق الذاتي"},{id:"feedback",label:"الملاحظات"},{id:"revision",label:"إعادة الكتابة"}];
@@ -69,6 +71,7 @@ export function WritingLab({lessonId}:{lessonId?:string}){
       </section>
 
       <aside className="writing-feedback">
+        <ResultAnnouncer message={reviewedAnalysis ? labDimensionMessage({ passed: reviewedAnalysis.dimensions.filter((dimension) => dimension.passed).length, total: reviewedAnalysis.dimensions.length, labelAr: "نتيجة فحص الكتابة" }) : ""}/>
         <div className="card-title"><span>خمسة محاور منفصلة</span><small>مؤشرات حتمية، ليست درجة امتحان</small></div>
         {reviewedAnalysis?<><div className="writing-dimensions">{reviewedAnalysis.dimensions.map((dimension)=><article key={dimension.key} className={dimension.passed?"passed":""}><header><span>{dimension.passed?<Check size={13}/>:"—"}</span><strong>{dimension.labelAr}</strong></header><p>{dimension.detailAr}</p>{dimension.evidenceQuote&&<blockquote lang="de" dir="ltr">{dimension.evidenceQuote}</blockquote>}</article>)}</div><div className="feedback-box"><strong>ملاحظات مرتبطة بجملتك</strong>{reviewedAnalysis.feedback.map((item)=><p key={item}>{item}</p>)}</div><details className="translation-panel"><summary>النموذج بعد فحص المسودة</summary><p lang="de" dir="ltr">{task.modelDe}</p></details></>:<div className="feedback-placeholder"><FilePenLine size={26}/><p>أكمل التخطيط والمسودة والتحقق الذاتي. لن نستبدل نصك بإجابة مثالية صامتة.</p></div>}
       </aside>

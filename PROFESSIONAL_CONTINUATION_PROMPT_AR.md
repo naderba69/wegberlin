@@ -404,8 +404,8 @@ axe serious/critical on tested pages: 0
 
 ```text
 Total P0: 124
-Implemented: 107
-Partial: 14
+Implemented: 108
+Partial: 13
 Not implemented: 2
 Blocked by user credentials: 1
 ```

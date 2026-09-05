@@ -106,6 +106,31 @@ export interface DiagnosticResult {
   completedAt: string;
 }
 
+/**
+ * P0-26: عينة إنتاج قصيرة ومستقلة يتركها المتعلّم بعد التشخيص.
+ *
+ * حدود مُعلنة في النوع نفسه: لا درجة، ولا مستوى، ولا تصحيح آلي. العينة مرجع
+ * للمتعلّم يعود إليه لاحقًا، ولا تُحتسب في مؤشر الأدلة ولا في الإتقان.
+ */
+export type DiagnosticSampleKind = "writing" | "speaking";
+
+export interface DiagnosticSample {
+  id: string;
+  kind: DiagnosticSampleKind;
+  level: CEFRLevel;
+  /** نص المهمة كما عُرض على المتعلّم، حتى تفهم العينة لاحقًا في سياقها. */
+  promptDe: string;
+  promptAr: string;
+  /** نص العينة الكتابية. */
+  text?: string;
+  wordCount?: number;
+  /** معرّف التسجيل في مخزن الوسائط (IndexedDB) للعينة الشفهية. */
+  mediaId?: string;
+  durationSeconds?: number;
+  formId?: "A" | "B";
+  createdAt: string;
+}
+
 export interface ReviewItem {
   id: string;
   cardId: string;
@@ -295,6 +320,7 @@ export interface LearningState {
   writingSubmissions: WritingSubmission[];
   mediationSubmissions: MediationSubmission[];
   speakingAttempts: SpeakingAttempt[];
+  diagnosticSamples: DiagnosticSample[];
   examSessions: Record<string, FullExamSession>;
   aiSettings: AISettings;
   tutorInteractions: TutorInteraction[];

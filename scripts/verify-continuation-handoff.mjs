@@ -53,13 +53,13 @@ const auditSectionIds = (start, end) => {
 const partialIds = auditSectionIds("## P0 المنجز جزئيًا", "## P0 غير المنجز");
 const missingIds = auditSectionIds("## P0 غير المنجز", "## P0 المتوقف");
 const blockedIds = auditSectionIds("## P0 المتوقف", "## عناصر P0");
-if (partialIds.length !== 17) fail(`P0 partial table has ${partialIds.length} rows`);
+if (partialIds.length !== 16) fail(`P0 partial table has ${partialIds.length} rows`);
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
-for (const text of ["Implemented: 104", "Partial: 17", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["104 implemented, 17 partial, 2 not implemented", "317/317", "29/29", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+for (const text of ["Implemented: 105", "Partial: 16", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
+for (const text of ["105 implemented, 16 partial, 2 not implemented", "321/321", "30/30", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
   requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["317/317", "29/29"]) requireText(readme, text, "README.md");
+for (const text of ["321/321", "30/30"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
@@ -164,6 +164,9 @@ requireText(read("src/data/reading-evidence.ts"), "readingEvidenceSeeds", "autho
 requireText(read("src/data/reading-evidence-index.ts"), "readingEvidenceByQuestionId", "authored reading evidence index");
 requireText(read("src/data/listening-evidence.ts"), "listeningEvidenceSeeds", "authored listening evidence table");
 requireText(read("src/data/listening-evidence-index.ts"), "listeningEvidenceByQuestionId", "authored listening evidence index");
+requireText(read("src/data/diagnostic.ts"), "diagnosticSampleTasks", "P0-26 diagnostic sample tasks");
+requireText(read("src/core/diagnostic/samples.ts"), "canSaveWritingSample", "P0-26 diagnostic sample workflow");
+requireText(read("src/components/diagnostic-sample-card.tsx"), "diagnostic-sample-card", "P0-26 sample card CSS class");
 for (const text of ["glossary target noun", "phrase target noun", "inventory noun", "target noun", "reading question has no authored evidence position", "authored quote is not a verbatim sentence", "authored quote shares no content word"])
   requireText(read("src/core/content-validation/validate-academic-content.ts"), text, "academic validator noun inventory rules");
 for (const text of ["measured valency target", "derived frame", "not a declared valency entry"])
@@ -182,11 +185,12 @@ if (!packageJson.scripts.prebuild.includes("content:audit")) fail("academic cont
 
 console.log("Continuation handoff verified:");
 console.log(`- backlog: P0 ${expectedPriorities.P0}, P1 ${expectedPriorities.P1}, P2 ${expectedPriorities.P2}`);
-console.log(`- P0 state: 104 implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
+const implementedCount = 124 - partialIds.length - missingIds.length - blockedIds.length;
+console.log(`- P0 state: ${implementedCount} implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
 console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 exam files / 90 clips`);
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 317 unit/integrity and 29+29 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 321 unit/integrity and 30+30 browser tests documented`);
 console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
 console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

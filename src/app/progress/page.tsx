@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Activity, ArrowLeft, BookCheck, CircleAlert, Gauge, Goal, Mic2, PenLine, RotateCcw, ShieldCheck, TrendingUp } from "lucide-react";
 import { useLearning } from "@/components/learning-provider";
 import { buildEvidenceReport } from "@/core/evidence/report";
+import { DiagnosticSampleCard, DiagnosticSampleSummary } from "@/components/diagnostic-sample-card";
 
 const confidenceAr = { none: "لا دليل", low: "عينة أولية", medium: "عينة متوسطة", high: "عينة قوية" };
 
@@ -49,6 +50,13 @@ export default function ProgressPage() {
         <div className="evidence-next-action"><small>المهمة العلاجية التالية</small><strong>{report.nextAction.titleAr}</strong><p>{report.nextAction.reasonAr}</p><Link href={report.nextAction.href}>ابدأ الآن <ArrowLeft size={14}/></Link></div>
       </section>
     </div>
+
+    {state.diagnosticResult && <section className="diagnostic-samples-section">
+      <div className="section-heading"><div><span>P0-26 · عينة الإنتاج</span><h2>أثرك الإنتاجي بعد التشخيص</h2></div><strong><ShieldCheck size={14}/> بلا تقييم آلي</strong></div>
+      <p className="error-rate-boundary">العينة مرجع لك تعود إليه لتقارن كتابتك وكلامك اليوم بما سيصبح بعد أسابيع. لا يصحّحها البرنامج ولا يقيّمها ولا تُحتسب في مؤشر الأدلة أعلاه.</p>
+      <DiagnosticSampleSummary/>
+      <DiagnosticSampleCard level={state.diagnosticResult.estimatedLevel} formId={state.diagnosticResult.formId}/>
+    </section>}
 
     <section className="evidence-risks">
       <div className="section-heading"><div><span>مخاطر قابلة للعلاج</span><h2>ما الذي يحد الجاهزية الآن؟</h2></div><strong><ShieldCheck size={14}/> لا توجد درجة رسمية مصطنعة</strong></div>

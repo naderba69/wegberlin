@@ -11,6 +11,7 @@ import { evaluateDiagnostic } from "@/core/diagnostic/evaluate";
 import type { DiagnosticResult, DiagnosticSkill } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { ResilientAudioPlayer } from "./resilient-audio-player";
+import { DiagnosticSampleCard } from "./diagnostic-sample-card";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
   grammar: "القواعد والاستعمال",
@@ -91,6 +92,7 @@ export function DiagnosticView() {
         const evidence = result.skillScores![skill];
         return <article key={skill}><span>{skillLabels[skill]}</span><strong>{evidence.correct}/{evidence.attempted}</strong></article>;
       })}</div><p>لا توجد مهمة إملاء كتابية هنا، لذلك لا يساوي التشخيص بين خطأ الإملاء وضعف الفهم.</p></section>}
+      <DiagnosticSampleCard level={result.estimatedLevel} formId={result.formId}/>
       <div className="result-actions"><Link className="primary-button" href="/today">ابنِ مهمتي التالية <ArrowLeft size={17}/></Link><Link className="secondary-button" href="/errors">شاهد الفجوات المكتشفة</Link></div>
     </div>;
   }

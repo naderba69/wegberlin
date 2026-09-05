@@ -164,6 +164,72 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
   }))).toMatchObject({ formId: "A", questionsAnswered: 4, stoppedEarly: true, confidence: "low", levelAttempted: { A1: 4, A2: 0, B1: 0, B2: 0 } });
 });
 
+test("P0-26: an optional productive sample survives reload without any automatic score", async ({ page }) => {
+  const readDiagnostic = () => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? {};
+        resolve({
+          samples: state.diagnosticSamples ?? [],
+          level: state.diagnosticResult?.estimatedLevel ?? null,
+          score: state.diagnosticResult?.score ?? null,
+          answered: state.diagnosticResult?.questionsAnswered ?? null,
+        });
+      };
+    };
+  })) as Promise<{ samples: Array<Record<string, unknown>>; level: string | null; score: number | null; answered: number | null }>;
+
+  await page.goto("/diagnostic");
+  await page.getByText("Ich heiße Ali.", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Gute Nacht!", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Montag und Mittwoch", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Um acht", { exact: true }).click();
+  await page.getByRole("button", { name: /قيّم هذا المستوى/ }).click();
+  await expect(page.getByRole("heading", { name: /نقطة البداية المقترحة/ })).toBeVisible();
+
+  // نتيجة التشخيص قبل إضافة أي عينة: المرجع الذي يجب ألا يتغيّر.
+  const before = await expect.poll(readDiagnostic).toMatchObject({ samples: [] }).then(() => readDiagnostic());
+  expect(before.level).not.toBeNull();
+  expect(before.score).not.toBeNull();
+
+  const sampleCard = page.locator(".diagnostic-sample-card");
+  await expect(sampleCard).toBeVisible();
+  await expect(sampleCard.getByText(/لا يصحّحها البرنامج/)).toBeVisible();
+  // الحد الأدنى شرط اكتمال: زر الحفظ معطّل قبل بلوغه.
+  const saveButton = sampleCard.getByRole("button", { name: "احفظ العينة الكتابية" });
+  await expect(saveButton).toBeDisabled();
+  const sampleText = "Ich heiße Mila und ich wohne in Tunis. Ich lese gern und ich lerne Deutsch.";
+  await sampleCard.locator("#diagnostic-sample-text").fill(sampleText);
+  await expect(saveButton).toBeEnabled();
+  await saveButton.click();
+  await expect(sampleCard.getByText(/حُفظت العينة الكتابية/)).toBeVisible();
+
+  // العينة تبقى بعد إعادة التحميل، ولا تضيف درجة ولا تغيّر نتيجة التشخيص.
+  await page.reload();
+  await page.goto("/progress");
+  await expect(page.locator(".diagnostic-samples-section")).toBeVisible();
+  await expect(page.locator(".sample-summary-list li")).toHaveCount(1);
+  await expect(page.getByText(sampleText)).toBeVisible();
+
+  const after = await expect.poll(readDiagnostic).toMatchObject({ samples: [{ kind: "writing", text: sampleText }] }).then(() => readDiagnostic());
+  expect(after.score).toBe(before.score);
+  expect(after.level).toBe(before.level);
+  expect(after.answered).toBe(before.answered);
+  expect(after.samples).toHaveLength(1);
+  // لا حقل تقييم في العينة المحفوظة: لا درجة ولا تصحيح ولا مستوى مشتقًا.
+  expect(Object.keys(after.samples[0])).not.toContain("score");
+  expect(Object.keys(after.samples[0])).not.toContain("feedback");
+  expect(Object.keys(after.samples[0])).not.toContain("estimatedLevel");
+  expect(after.samples[0].wordCount).toBe(sampleText.trim().split(/\s+/u).length);
+});
+
 test("P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace", async ({ page }) => {
   let networkRequests = 0;
   await page.route("**/v1beta/models/**", async (route) => {

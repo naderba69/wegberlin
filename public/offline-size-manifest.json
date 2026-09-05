@@ -2,7 +2,7 @@
   "format": "dwnb-offline-size",
   "version": 1,
   "generatedAt": "2026-09-05",
-  "buildId": "SQTfUa_R745BjYOuldibd",
+  "buildId": "Q4f6FLiq5vrbYWXsu2ZaU",
   "compression": "gzip-level-9",
   "units": "bytes",
   "measurementNoteAr": "pageBytes يقيس ما سيشغله Cache Storage بعد التثبيت، وtransferBytes يقيس ما يعبر الشبكة مضغوطًا بـgzip. القيم مبنية من مخرجات Build الحقيقية، وهي تقدير دقيق للمسارات والأصول لا وعد بحجم جهاز المستخدم بعد استبدال قطع Next. الأصول المدرجة في unmeasuredAssets تُولَّد عند الطلب ولا يتجاوز مجموعها بضعة كيلوبايتات.",
@@ -22,13 +22,13 @@
         "/manifest.webmanifest"
       ],
       "htmlBytes": 11737382,
-      "htmlTransferBytes": 2909285,
-      "assetBytes": 4431466,
-      "assetTransferBytes": 1217363,
-      "pageBytes": 16168848,
-      "pageTransferBytes": 4126648,
-      "pageWithAudioBytes": 42847044,
-      "pageWithAudioTransferBytes": 30804844
+      "htmlTransferBytes": 2910034,
+      "assetBytes": 4472903,
+      "assetTransferBytes": 1230357,
+      "pageBytes": 16210285,
+      "pageTransferBytes": 4140391,
+      "pageWithAudioBytes": 42888481,
+      "pageWithAudioTransferBytes": 30818587
     },
     "A1": {
       "routeCount": 51,
@@ -40,13 +40,13 @@
         "/manifest.webmanifest"
       ],
       "htmlBytes": 2501276,
-      "htmlTransferBytes": 575683,
-      "assetBytes": 4323905,
-      "assetTransferBytes": 1183795,
-      "pageBytes": 6825181,
-      "pageTransferBytes": 1759478,
-      "pageWithAudioBytes": 33503377,
-      "pageWithAudioTransferBytes": 28437674
+      "htmlTransferBytes": 575815,
+      "assetBytes": 4365342,
+      "assetTransferBytes": 1196789,
+      "pageBytes": 6866618,
+      "pageTransferBytes": 1772604,
+      "pageWithAudioBytes": 33544814,
+      "pageWithAudioTransferBytes": 28450800
     },
     "A2": {
       "routeCount": 51,
@@ -58,13 +58,13 @@
         "/manifest.webmanifest"
       ],
       "htmlBytes": 2693891,
-      "htmlTransferBytes": 640780,
-      "assetBytes": 4323943,
-      "assetTransferBytes": 1183861,
-      "pageBytes": 7017834,
-      "pageTransferBytes": 1824641,
-      "pageWithAudioBytes": 33696030,
-      "pageWithAudioTransferBytes": 28502837
+      "htmlTransferBytes": 640906,
+      "assetBytes": 4365380,
+      "assetTransferBytes": 1196855,
+      "pageBytes": 7059271,
+      "pageTransferBytes": 1837761,
+      "pageWithAudioBytes": 33737467,
+      "pageWithAudioTransferBytes": 28515957
     },
     "B1": {
       "routeCount": 51,
@@ -76,13 +76,13 @@
         "/manifest.webmanifest"
       ],
       "htmlBytes": 2772559,
-      "htmlTransferBytes": 673554,
-      "assetBytes": 4323973,
-      "assetTransferBytes": 1183861,
-      "pageBytes": 7096532,
-      "pageTransferBytes": 1857415,
-      "pageWithAudioBytes": 33774728,
-      "pageWithAudioTransferBytes": 28535611
+      "htmlTransferBytes": 673674,
+      "assetBytes": 4365410,
+      "assetTransferBytes": 1196855,
+      "pageBytes": 7137969,
+      "pageTransferBytes": 1870529,
+      "pageWithAudioBytes": 33816165,
+      "pageWithAudioTransferBytes": 28548725
     },
     "B2": {
       "routeCount": 199,
@@ -94,13 +94,13 @@
         "/manifest.webmanifest"
       ],
       "htmlBytes": 5968770,
-      "htmlTransferBytes": 1422900,
-      "assetBytes": 4409520,
-      "assetTransferBytes": 1208219,
-      "pageBytes": 10378290,
-      "pageTransferBytes": 2631119,
-      "pageWithAudioBytes": 37056486,
-      "pageWithAudioTransferBytes": 29309315
+      "htmlTransferBytes": 1423367,
+      "assetBytes": 4450957,
+      "assetTransferBytes": 1221213,
+      "pageBytes": 10419727,
+      "pageTransferBytes": 2644580,
+      "pageWithAudioBytes": 37097923,
+      "pageWithAudioTransferBytes": 29322776
     }
   }
 }

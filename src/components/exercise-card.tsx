@@ -7,6 +7,7 @@ import type { PracticeExercise, Question } from "@/types/lesson-content";
 import { evaluateExercise } from "@/core/lesson/evaluate";
 import { exerciseHintSteps, questionHintSteps } from "@/core/lesson/support";
 import { LESSON_SHUFFLE_VERSION, shuffledExerciseOptions, shuffledQuestionOptions } from "@/core/lesson/shuffle";
+import { BidiText } from "./bidi-text";
 
 export type LessonAttemptMetadata = { answerIndex?: number; shuffleSeed?: string; shuffleVersion?: typeof LESSON_SHUFFLE_VERSION };
 
@@ -61,7 +62,7 @@ export function ExerciseCard({ exercise, onAttempt }: { exercise: PracticeExerci
   return <article data-exercise-id={exercise.id} className={result === null ? "exercise-card" : result ? "exercise-card correct" : "exercise-card wrong"} aria-labelledby={`${exercise.id}-prompt`}>
     <div className="exercise-label"><span>{exerciseTypeLabels[exercise.type]}</span><small lang="de" dir="ltr">Direkte Übung</small></div>
     <h3 id={`${exercise.id}-prompt`} lang="de" dir="ltr">{exerciseInstructionsDe[exercise.type]}</h3>
-    <p className="exercise-prompt-ar">{exercise.promptAr}</p>
+    <p className="exercise-prompt-ar"><BidiText text={exercise.promptAr}/></p>
     {exercise.type === "multiple-choice" && exercise.promptDe && <p className="exercise-german-stem" lang="de" dir="ltr">{exercise.promptDe.replace("___", "□")}</p>}
 
     {exercise.type === "multiple-choice" && shuffledMcq && <div className="exercise-options" dir="ltr">{shuffledMcq.options.map((option, position) => <button key={option.label} data-original-index={option.originalIndex} aria-pressed={choice === option.originalIndex} onClick={() => { setChoice(option.originalIndex); setResult(null); }} className={choice === option.originalIndex ? "selected" : ""}><span>{String.fromCharCode(65 + position)}</span>{option.label}</button>)}</div>}
@@ -73,7 +74,7 @@ export function ExerciseCard({ exercise, onAttempt }: { exercise: PracticeExerci
     {result === null && hintLevel > 0 && <p className="hint-panel" role="status" aria-live="polite"><Lightbulb size={14} /><span><b>تلميح {hintLevel}/2</b>{hints[hintLevel - 1]}</span></p>}
 
     <footer>
-      {result !== null ? <div className="exercise-feedback" role="status" aria-live="polite" aria-atomic="true"><span>{result ? <Check size={16} /> : <X size={16} />}</span><p><b>{result ? "إجابة صحيحة" : "تحتاج مراجعة"}</b>{exercise.explanationAr}</p></div> : <span />}
+      {result !== null ? <div className="exercise-feedback" role="status" aria-live="polite" aria-atomic="true"><span>{result ? <Check size={16} /> : <X size={16} />}</span><p><b>{result ? "إجابة صحيحة" : "تحتاج مراجعة"}</b><BidiText text={exercise.explanationAr}/></p></div> : <span />}
       <div className="exercise-actions">
         {result === null && <button aria-label="تلميح" className="tiny-hint" onClick={() => setHintLevel((level) => Math.min(2, level + 1))} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button>}
         {result !== null && <button aria-label="أعد" className="tiny-reset" onClick={reset}><RotateCcw size={14} /> Wiederholen</button>}
@@ -112,13 +113,13 @@ export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, evide
 
     return <article key={question.id} className={isChecked ? (correct ? "quiz-item correct" : "quiz-item wrong") : "quiz-item"} aria-labelledby={`${question.id}-prompt`}>
       <small>سؤال {index + 1}</small>
-      <h3 id={`${question.id}-prompt`}>{question.promptAr}</h3>
+      <h3 id={`${question.id}-prompt`}><BidiText text={question.promptAr}/></h3>
       <p lang="de" dir="ltr">{question.promptDe}</p>
       <div className="quiz-options">{shuffled.options.map((option, position) => <button key={option.label} data-original-index={option.originalIndex} aria-pressed={answer === option.originalIndex} className={answer === option.originalIndex ? "selected" : ""} disabled={isChecked} onClick={() => setAnswers((current) => ({ ...current, [question.id]: option.originalIndex }))}><span>{String.fromCharCode(65 + position)}</span>{option.label}</button>)}</div>
 
       {!isChecked && hintLevel > 0 && <p className="hint-panel" role="status" aria-live="polite"><Lightbulb size={14} /><span><b>تلميح {hintLevel}/2</b>{hints[hintLevel - 1]}</span></p>}
 
-      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span>{question.explanationAr}</span></div>{evidence && <blockquote className="question-evidence"><small>{evidence.origin === "authored" ? labels.authored : labels.auto}</small><q lang="de" dir="ltr">{evidence.quote}</q>{evidence.whyAr ? <span lang="ar" dir="rtl">{evidence.whyAr}</span> : null}</blockquote>}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => setHintLevels((current) => ({ ...current, [question.id]: Math.min(2, hintLevel + 1) }))} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION }); }}>Prüfen</button></div>}
+      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span><BidiText text={question.explanationAr}/></span></div>{evidence && <blockquote className="question-evidence"><small>{evidence.origin === "authored" ? labels.authored : labels.auto}</small><q lang="de" dir="ltr">{evidence.quote}</q>{evidence.whyAr ? <span lang="ar" dir="rtl">{evidence.whyAr}</span> : null}</blockquote>}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => setHintLevels((current) => ({ ...current, [question.id]: Math.min(2, hintLevel + 1) }))} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION }); }}>Prüfen</button></div>}
     </article>;
   })}</div>;
 }

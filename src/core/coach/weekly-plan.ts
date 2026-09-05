@@ -3,10 +3,18 @@ import { getCoachTarget } from "./coach";
 import { effectiveSessionMinutes, localSessionDate } from "./session-signals";
 
 export type WeeklySlotKind = "review" | "lesson" | "listening" | "writing" | "speaking" | "exam" | "reflection" | "recovery";
-export type WeeklyDayStatus = "complete" | "missed" | "today" | "upcoming" | "rest";
+/** P0-266: «يوم سماح» = يوم دراسة فائت بلا دين، ضمن سقف أسبوعي معلن. */
+export const GRACE_DAYS_PER_WEEK = 1;
+export type WeeklyDayStatus = "complete" | "grace" | "missed" | "today" | "upcoming" | "rest";
 export type WeeklyPlanSlot = { id:string;kind:WeeklySlotKind;titleAr:string;minutes:number;href:string };
 export type WeeklyPlanDay = { date:string;weekdayAr:string;status:WeeklyDayStatus;budgetMinutes:number;slots:WeeklyPlanSlot[];recoverySourceDate?:string };
-export type WeeklyPlan = { weekStart:string;weekEnd:string;plannedMinutes:number;completedStudyDays:number;missedStudyDays:number;deferredCount:number;days:WeeklyPlanDay[] };
+export type WeeklyPlan = { weekStart:string;weekEnd:string;plannedMinutes:number;completedStudyDays:number;
+  /** كل أيام الدراسة الماضية بلا دراسة، بما فيها أيام السماح. */
+  missedStudyDays:number;
+  /** أيام السماح المستخدمة هذا الأسبوع: بلا مهمة مؤجلة ولا مضاعفة. */
+  graceDaysUsed:number;graceAllowance:number;graceDaysRemaining:number;graceDates:string[];
+  /** أيام الفوات التي تجاوزت سقف السماح: هي وحدها التي تُنقل منها مهمة استعادة. */
+  debtDays:number;deferredCount:number;days:WeeklyPlanDay[] };
 
 type SlotDefinition = Omit<WeeklyPlanSlot,"minutes"> & { weight:number };
 const dayNames=["الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"];
@@ -60,11 +68,17 @@ export function buildWeeklyPlan(state:LearningState,now=new Date()):WeeklyPlan{
     return{date,weekdayAr:dayNames[index],status,budgetMinutes:budget,slots:allocateMinutes(budget,definitionsForDay(index,lessonHref))};
   });
   const missed=baseDays.filter((day)=>day.status==="missed");
+  // يوم السماح أولًا: أول GRACE_DAYS_PER_WEEK أيام فائتة تُغفر بلا دين ولا استعادة،
+  // وما بعدها فقط هو الذي يُنقل منه مهمة واحدة داخل ميزانية اليوم (لا مضاعفة).
+  const graceDates=missed.slice(0,GRACE_DAYS_PER_WEEK).map((day)=>day.date);
+  const graceSet=new Set(graceDates);
+  const debt=missed.slice(GRACE_DAYS_PER_WEEK);
   const recoveryDay=baseDays.find((day)=>day.status==="today"||day.status==="upcoming");
   const days=baseDays.map((day)=>{
-    if(!missed.length||day!==recoveryDay||day.status==="rest")return day;
-    const definitions:SlotDefinition[]=[{id:`recovery-${missed[0].date}`,kind:"recovery",titleAr:"استعادة مهمة فائتة واحدة",href:lessonHref,weight:1},...definitionsForDay(baseDays.indexOf(day),lessonHref).map((item)=>({...item,weight:item.weight*3}))];
-    return{...day,recoverySourceDate:missed[0].date,slots:allocateMinutes(day.budgetMinutes,definitions)};
+    const forgiven=graceSet.has(day.date);
+    if(!debt.length||day!==recoveryDay||day.status==="rest")return forgiven?{...day,status:"grace" as WeeklyDayStatus}:day;
+    const definitions:SlotDefinition[]=[{id:`recovery-${debt[0].date}`,kind:"recovery",titleAr:"استعادة مهمة فائتة واحدة",href:lessonHref,weight:1},...definitionsForDay(baseDays.indexOf(day),lessonHref).map((item)=>({...item,weight:item.weight*3}))];
+    return{...day,recoverySourceDate:debt[0].date,slots:allocateMinutes(day.budgetMinutes,definitions)};
   });
   return{
     weekStart:days[0].date,
@@ -72,7 +86,12 @@ export function buildWeeklyPlan(state:LearningState,now=new Date()):WeeklyPlan{
     plannedMinutes:days.reduce((sum,day)=>sum+day.budgetMinutes,0),
     completedStudyDays:days.filter((day)=>day.status==="complete").length,
     missedStudyDays:missed.length,
-    deferredCount:Math.max(0,missed.length-(recoveryDay?1:0)),
+    graceAllowance:GRACE_DAYS_PER_WEEK,
+    graceDaysUsed:graceDates.length,
+    graceDaysRemaining:Math.max(0,GRACE_DAYS_PER_WEEK-graceDates.length),
+    graceDates,
+    debtDays:debt.length,
+    deferredCount:Math.max(0,debt.length-(recoveryDay?1:0)),
     days,
   };
 }

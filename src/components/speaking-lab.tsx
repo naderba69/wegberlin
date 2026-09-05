@@ -7,6 +7,8 @@ import { saveMedia } from "@/core/portability/db";
 import { canSaveSpeakingReview, speakingDurationBand, speakingPreparationSeconds, speakingTargetSeconds } from "@/core/speaking/workflow";
 import type { SpeakingSelfReview } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { ResultAnnouncer } from "./result-announcer";
+import { speakingSavedMessage } from "@/core/a11y/result-announcements";
 
 const fallback={level:"A1",titleAr:"قدم نفسك",promptDe:"Stellen Sie sich 30 Sekunden lang vor und stellen Sie eine Frage.",promptAr:"قدم نفسك ثم اطرح سؤالًا.",usefulPhrases:["Ich heiße …","Ich komme aus …","Wie heißt du?"],successCriteriaAr:["تحدثت دون قراءة النص كاملًا.","طرحت سؤالًا."]};
 type SpeakingPhase="prepare"|"ready"|"recording"|"review"|"saved";
@@ -70,6 +72,7 @@ export function SpeakingLab({lessonId}:{lessonId?:string}){
 
   return <div className="lab-page">
     <header className="page-heading"><div><span className="eyebrow"><Mic2 size={15}/> مختبر المحادثة · {level}</span><h1>حضّر، سجّل، <em>استمع ثم أعد.</em></h1><p>{lesson?`المهمة مرتبطة بالدرس ${lesson.id}: ${lesson.titleAr}.`:"اختر درسًا للحصول على مهمة مرتبطة بهدفه."}</p></div><div className="lab-counter"><strong>{attempts.length}</strong><span>محاولات المهمة<br/>محفوظة</span></div></header>
+    <ResultAnnouncer message={phase === "saved" ? speakingSavedMessage({ seconds: duration, criteriaChecked: achievedCriteria.length, criteriaTotal: task.successCriteriaAr.length }) : ""}/>
     <nav className="speaking-workflow" aria-label="مراحل دورة المحادثة">{["تحضير محدود","تسجيل بلا نموذج","استماع ذاتي","تقييم وإصلاح","إعادة المحاولة"].map((label,index)=>{const active=phase==="prepare"?0:phase==="ready"||phase==="recording"?1:phase==="review"?index===2||index===3:phase==="saved"?4:false;return <span key={label} className={active?"active":""}><i>{index+1}</i>{label}</span>})}</nav>
     <div className="speaking-layout">
       <section className="speaking-task">

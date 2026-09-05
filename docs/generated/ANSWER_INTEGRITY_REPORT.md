@@ -1,8 +1,8 @@
 # Unified Answer Integrity and Leakage Report
 
-Generated: 2026-09-03  
+Generated: 2026-09-04  
 Version: `academic-governance-v1`  
-Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3`
+Content SHA-256: `429a49cc3e1e5a7a93a1d3f7dea2075f83715d9bcbaab735d846b8e744e7571a`
 
 ## Result
 

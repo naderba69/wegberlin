@@ -6,8 +6,26 @@ import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 import { examProfiles, examSources } from "@/data/exam-profiles";
 import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
-import { a1NounGrammarEntries, a1VerbPrepositionFrames } from "@/data/lexical-grammar-a1";
+import { LEXICAL_GRAMMAR_LEVELS, framesByLesson, lexicalLevelOf, nounGrammarEntries, nounsByLesson, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { reviewCards } from "@/data/review-cards";
+import { inventoryNouns, lessonAllNounTargets, targetNounsWithoutSeed } from "@/data/noun-inventory";
+import {
+  authoredReadingEvidence,
+  readingQuestionTargets,
+  readingQuestionsWithoutEvidence,
+  orphanReadingEvidence,
+  unresolvedReadingEvidence,
+} from "@/data/reading-evidence-index";
+import {
+  authoredListeningEvidence,
+  listeningQuestionTargets,
+  listeningQuestionsWithoutEvidence,
+  orphanListeningEvidence,
+  unresolvedListeningEvidence,
+} from "@/data/listening-evidence-index";
+import { words as germanContentWords } from "@/core/lesson/support";
+import { frameKeyOf, valencyEntriesById } from "@/data/verb-preposition-dictionary";
+import { measuredTargetsByLesson } from "@/data/verb-preposition-coverage";
 import {
   diagnosticQuestionSchema,
   examProfileSchema,
@@ -56,6 +74,13 @@ function checkUnique(name: string, ids: string[], issues: string[]) {
   }
 }
 
+const anchoredByLessonId: Record<string, Set<string>> = {};
+for (const noun of nounGrammarEntries) {
+  if (noun.origin !== "anchor") continue;
+  anchoredByLessonId[noun.lessonId] ??= new Set<string>();
+  anchoredByLessonId[noun.lessonId].add(noun.lemma);
+}
+
 export function validateAcademicContent() {
   const issues: string[] = [];
   validateCollection("lessons", fullLessonSchema, academicLessonList, issues);
@@ -68,13 +93,14 @@ export function validateAcademicContent() {
   validateCollection("examProfiles", examProfileSchema, Object.values(examProfiles), issues);
   validateCollection("examSources", examSourceSchema, examSources, issues);
   validateCollection("reviewCards", reviewCardSchema, reviewCards, issues);
-  validateCollection("nounGrammarEntries", nounGrammarEntrySchema, a1NounGrammarEntries, issues);
-  validateCollection("verbPrepositionFrames", verbPrepositionFrameSchema, a1VerbPrepositionFrames, issues);
+  validateCollection("nounGrammarEntries", nounGrammarEntrySchema, nounGrammarEntries, issues);
+  validateCollection("verbPrepositionFrames", verbPrepositionFrameSchema, verbPrepositionFrames, issues);
 
   const sourceIds = new Set(examSources.map((source) => source.id));
   const taskIds = new Set(allPublishedExamTasks.map((task) => task.id));
   const listeningLibraryIds = new Set(listeningLibrary.map((item) => item.id));
   const lessonIds = new Set(academicLessonList.map((lesson) => lesson.id));
+  const lessonById = new Map(academicLessonList.map((lesson) => [lesson.id, lesson]));
 
   checkUnique("lessons", [...lessonIds], issues);
   checkUnique("lesson metadata", curriculum.map((lesson) => lesson.id), issues);
@@ -83,27 +109,208 @@ export function validateAcademicContent() {
   checkUnique("exam tasks", [...taskIds], issues);
   checkUnique("full exam dashboards", fullExamSimulations.map((simulation) => simulation.id), issues);
   checkUnique("review cards", reviewCards.map((card) => card.id), issues);
-  checkUnique("noun grammar entries", a1NounGrammarEntries.map((entry) => entry.id), issues);
-  checkUnique("verb-preposition frames", a1VerbPrepositionFrames.map((entry) => entry.id), issues);
+  checkUnique("noun grammar entries", nounGrammarEntries.map((entry) => entry.id), issues);
+  checkUnique("verb-preposition frames", verbPrepositionFrames.map((entry) => entry.id), issues);
 
-  const a1LessonIds = academicLessonList.filter((lesson) => lesson.level === "A1").map((lesson) => lesson.id);
+  const lessonsByLevel = Object.fromEntries(
+    (["A1", "A2", "B1", "B2"] as const).map((level) => [level, academicLessonList.filter((lesson) => lesson.level === level).map((lesson) => lesson.id)]),
+  );
   const genderArticle = { masculine: "der", feminine: "die", neuter: "das" } as const;
-  for (const lessonId of a1LessonIds) {
-    const nouns = a1NounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
-    const frames = a1VerbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
-    if (nouns.length !== 4) issues.push(`nounGrammarEntries.${lessonId}: expected 4 A1 anchor nouns, received ${nouns.length}`);
-    if (frames.length !== 1) issues.push(`verbPrepositionFrames.${lessonId}: expected 1 A1 frame, received ${frames.length}`);
+  const lower = (value: string) => value.toLocaleLowerCase("de-DE");
+  /** يتجاهل ضمير الانعكاس «sich» لأنه يظهر في أول الجملة لا داخل الفعل في الاستعمال الحقيقي. */
+  const infinitiveTokens = (infinitive: string) => infinitive.split(/\s+/).filter((token) => token !== "sich");
+
+  for (const [level, rule] of Object.entries(LEXICAL_GRAMMAR_LEVELS)) {
+    const levelLessonIds = lessonsByLevel[level as keyof typeof lessonsByLevel] ?? [];
+    for (const lessonId of levelLessonIds) {
+      const nouns = nounGrammarEntries.filter((entry) => entry.lessonId === lessonId);
+      const anchors = nouns.filter((entry) => entry.origin === "anchor");
+      const frames = verbPrepositionFrames.filter((entry) => entry.lessonId === lessonId);
+      const authored = frames.filter((frame) => frame.origin === "authored");
+      if (anchors.length !== rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: expected ${rule.nounsPerLesson} ${level} anchor nouns, received ${anchors.length}`);
+      if (nouns.length < rule.nounsPerLesson) issues.push(`nounGrammarEntries.${lessonId}: lesson has fewer than ${rule.nounsPerLesson} ${level} noun records`);
+      if (authored.length < rule.framesPerLesson) issues.push(`verbPrepositionFrames.${lessonId}: expected at least ${rule.framesPerLesson} authored ${level} frames, received ${authored.length}`);
+    }
   }
-  for (const noun of a1NounGrammarEntries) {
-    if (!a1LessonIds.includes(noun.lessonId)) issues.push(`nounGrammarEntries.${noun.id}: lesson is not published A1`);
+  for (const noun of nounGrammarEntries) {
+    const level = lexicalLevelOf(noun.lessonId);
+    if (!level || !(lessonsByLevel[level] ?? []).includes(noun.lessonId)) issues.push(`nounGrammarEntries.${noun.id}: lesson is not a published ${level ?? "authored"} lesson`);
+    if (level && noun.sourceVersion !== `${level.toLowerCase()}-lexical-grammar-v1`) issues.push(`nounGrammarEntries.${noun.id}: source version does not match ${level}`);
     if (noun.article !== genderArticle[noun.gender]) issues.push(`nounGrammarEntries.${noun.id}: article/gender mismatch`);
     if (!noun.caseForms.nominative.startsWith(`${noun.article} `)) issues.push(`nounGrammarEntries.${noun.id}: invalid nominative form`);
+    if (!noun.caseForms.accusative.trim() || !noun.caseForms.dative.trim()) issues.push(`nounGrammarEntries.${noun.id}: oblique case form missing`);
     if (!noun.plural.noteAr.trim()) issues.push(`nounGrammarEntries.${noun.id}: plural note missing`);
+    const genitiveArticle = noun.gender === "feminine" ? "der" : "des";
+    if (!noun.caseForms.genitive.startsWith(`${genitiveArticle} `) || noun.caseForms.genitive.trim() === genitiveArticle) {
+      issues.push(`nounGrammarEntries.${noun.id}: invalid genitive form ${noun.caseForms.genitive}`);
+    }
+    const weakOblique = noun.caseForms.dative.split(" ").slice(1).join(" ");
+    if (noun.gender !== "feminine" && weakOblique !== noun.lemma && !noun.caseForms.genitive.endsWith(weakOblique) && !noun.caseForms.genitive.endsWith(`${weakOblique}s`)) {
+      issues.push(`nounGrammarEntries.${noun.id}: genitive ${noun.caseForms.genitive} ignores the weak oblique stem ${weakOblique}`);
+    }
+    if (noun.plural.form === null ? noun.dativePlural.form !== null : noun.dativePlural.form === null) {
+      issues.push(`nounGrammarEntries.${noun.id}: dative plural policy does not match the plural policy`);
+    }
+    if (noun.dativePlural.form !== null) {
+      const stem = noun.dativePlural.form.replace(/^den /, "");
+      if (!stem.endsWith("n") && !stem.endsWith("s")) issues.push(`nounGrammarEntries.${noun.id}: dative plural ${noun.dativePlural.form} does not end in n or s`);
+      if (!stem.startsWith(noun.plural.form ?? "")) issues.push(`nounGrammarEntries.${noun.id}: dative plural ${noun.dativePlural.form} does not start from the plural ${noun.plural.form}`);
+    }
+    if (!noun.dativePlural.noteAr.trim()) issues.push(`nounGrammarEntries.${noun.id}: dative plural note missing`);
   }
-  for (const frame of a1VerbPrepositionFrames) {
-    if (!a1LessonIds.includes(frame.lessonId)) issues.push(`verbPrepositionFrames.${frame.id}: lesson is not published A1`);
-    if (!frame.chunkDe.toLocaleLowerCase("de-DE").includes(frame.preposition.toLocaleLowerCase("de-DE"))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
-    if (!frame.exampleDe.toLocaleLowerCase("de-DE").includes(frame.preposition.toLocaleLowerCase("de-DE"))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
+  for (const frame of verbPrepositionFrames) {
+    const level = lexicalLevelOf(frame.lessonId);
+    if (!level || !(lessonsByLevel[level] ?? []).includes(frame.lessonId)) issues.push(`verbPrepositionFrames.${frame.id}: lesson is not a published ${level ?? "authored"} lesson`);
+    if (level && frame.sourceVersion !== `${level.toLowerCase()}-lexical-grammar-v1`) issues.push(`verbPrepositionFrames.${frame.id}: source version does not match ${level}`);
+    if (!lower(frame.chunkDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits preposition`);
+    if (!lower(frame.exampleDe).includes(lower(frame.preposition))) issues.push(`verbPrepositionFrames.${frame.id}: example omits preposition`);
+    // يجب أن يحمل الـchunk الفعل: بالمصدر، أو بأحد الأشكال التصريفية المصرَّحة في القاموس
+    // (بعض التراكيب ثابتة على صيغة واحدة مثل «es geht um die Frist»).
+    const entry = valencyEntriesById[frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase)];
+    for (const token of infinitiveTokens(frame.infinitive)) {
+      const inInfinitive = lower(frame.chunkDe).includes(lower(token));
+      const inflected = entry?.searchForms.some((form) => lower(frame.chunkDe).includes(lower(form))) ?? false;
+      if (!inInfinitive && !inflected) issues.push(`verbPrepositionFrames.${frame.id}: chunk omits the framed infinitive token ${token}`);
+    }
+    if (frame.contrastAr.trim().length < 12) issues.push(`verbPrepositionFrames.${frame.id}: Arabic contrast note is too thin`);
+  }
+  // يمنع تكرار الإطار داخل الدرس نفسه. أما تكرار الفعل مع حرف الجر نفسه عبر دروس مختلفة
+  // فمسموح ومقصود: الفعل هدف في أكثر من درس، ولكل درس إطاره الخاص.
+  const lessonChunkKeys = new Set<string>();
+  for (const frame of verbPrepositionFrames) {
+    const key = `${frame.lessonId}|${lower(frame.chunkDe)}`;
+    if (lessonChunkKeys.has(key)) issues.push(`verbPrepositionFrames.${frame.id}: lesson ${frame.lessonId} repeats the chunk "${frame.chunkDe}"`);
+    lessonChunkKeys.add(key);
+    const frameKey = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+    if (!valencyEntriesById[frameKey]) issues.push(`verbPrepositionFrames.${frame.id}: ${frameKey} is not a declared valency entry`);
+  }
+
+  // P0-99: كل فعل ذي متمم جرّي قاسه الجرد داخل نص الدرس يجب أن يكون له إطار في ذلك الدرس،
+  // وكل إطار مشتق يجب أن يكون مسوَّغًا بوقوع مدخله المقاس في نص الدرس نفسه.
+  let measuredTargets = 0;
+  let unmeasuredDerived = 0;
+  for (const [lessonId, targets] of Object.entries(measuredTargetsByLesson)) {
+    const keys = new Set(
+      (framesByLesson[lessonId] ?? []).map((frame) => frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase)),
+    );
+    measuredTargets += targets.length;
+    for (const entryId of targets) {
+      if (!keys.has(entryId)) issues.push(`verbCoverage.${lessonId}: measured valency target ${entryId} has no frame in the lesson`);
+    }
+  }
+  for (const frame of verbPrepositionFrames.filter((item) => item.origin === "derived")) {
+    const key = frameKeyOf(frame.infinitive, frame.preposition, frame.governedCase);
+    if (!(measuredTargetsByLesson[frame.lessonId] ?? []).includes(key)) {
+      unmeasuredDerived += 1;
+      issues.push(`verbPrepositionFrames.${frame.id}: derived frame ${key} is not a measured target of ${frame.lessonId}`);
+    }
+  }
+
+  // P0-98: كل اسم هدف في الدرس — من مسرد قراءته أو من عبارة اسمية مؤلفة في بطاقاته —
+  // يجب أن يملك سجلًا في درسه نفسه، وكل سجل جرد يجب أن يكون مسوَّغًا باسم هدف في درسه،
+  // ولا اسم هدف بلا صرف مؤلف في المشروع.
+  let measuredNounTargets = 0;
+  let unjustifiedInventoryNouns = 0;
+  for (const [lessonId, targets] of Object.entries(lessonAllNounTargets)) {
+    const owned = new Set((nounsByLesson[lessonId] ?? []).map((noun) => noun.lemma));
+    measuredNounTargets += targets.length;
+    for (const target of targets) {
+      if (owned.has(target.lemma)) continue;
+      const label = target.source === "glossary" ? "glossary target noun" : "phrase target noun";
+      issues.push(`nounInventory.${lessonId}: ${label} ${target.lemma} has no record in this lesson`);
+    }
+  }
+  for (const noun of inventoryNouns) {
+    const targets = lessonAllNounTargets[noun.lessonId] ?? [];
+    if (!targets.some((target) => target.lemma === noun.lemma)) {
+      unjustifiedInventoryNouns += 1;
+      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} is not a measured target of ${noun.lessonId}`);
+    }
+    if ((anchoredByLessonId[noun.lessonId] ?? new Set<string>()).has(noun.lemma)) {
+      issues.push(`nounGrammarEntries.${noun.id}: inventory noun ${noun.lemma} duplicates an anchor of ${noun.lessonId}`);
+    }
+  }
+  for (const lemma of targetNounsWithoutSeed) issues.push(`nounInventory: target noun ${lemma} has neither an authored seed nor an anchor in the course`);
+
+  // P0-124: كل سؤال قراءة منشور يجب أن يملك موضع دليل مؤلفًا، والموضع يجب أن يكون
+  // جملة حرفية من نص درسه، ويشترك لفظيًا مع السؤال أو خياره الصحيح إلا بتصريح استنتاج.
+  let unverifiedReadingEvidence = 0;
+  for (const questionId of readingQuestionsWithoutEvidence) {
+    issues.push(`readingEvidence.${questionId}: reading question has no authored evidence position`);
+  }
+  for (const questionId of orphanReadingEvidence) {
+    issues.push(`readingEvidence.${questionId}: authored evidence has no published reading question`);
+  }
+  for (const questionId of unresolvedReadingEvidence) {
+    issues.push(`readingEvidence.${questionId}: authored evidence does not resolve to a sentence of its lesson`);
+  }
+  for (const evidence of authoredReadingEvidence) {
+    const lesson = lessonById.get(evidence.lessonId);
+    if (!lesson) {
+      issues.push(`readingEvidence.${evidence.questionId}: authored evidence belongs to unknown lesson ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.quote || !lesson.reading.textDe.includes(evidence.quote)) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote is not a verbatim sentence of ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.whyAr.trim()) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote has no Arabic justification`);
+    }
+    if (evidence.relation === "inference") continue;
+    const question = lesson.reading.questions.find((item: { id: string }) => item.id === evidence.questionId);
+    const expected = new Set([
+      ...germanContentWords(question?.promptDe ?? ""),
+      ...germanContentWords(question?.options[question.correctIndex] ?? ""),
+    ]);
+    const quoteWords = new Set(germanContentWords(evidence.quote));
+    if (![...expected].some((word) => quoteWords.has(word))) {
+      unverifiedReadingEvidence += 1;
+      issues.push(`readingEvidence.${evidence.questionId}: authored quote shares no content word with the question or its correct option`);
+    }
+  }
+
+  // P0-124 (امتداد الاستماع): كل سؤال استماع منشور يجب أن يملك موضع دليل مؤلفًا،
+  // والموضع يجب أن يكون مقطعًا حرفيًا من نص استماع درسه، ويشترك لفظيًا مع السؤال
+  // أو خياره الصحيح إلا بتصريح استنتاج (الأرقام والساعات تُنطق بالحروف).
+  let unverifiedListeningEvidence = 0;
+  for (const questionId of listeningQuestionsWithoutEvidence) {
+    issues.push(`listeningEvidence.${questionId}: listening question has no authored evidence position`);
+  }
+  for (const questionId of orphanListeningEvidence) {
+    issues.push(`listeningEvidence.${questionId}: authored evidence has no published listening question`);
+  }
+  for (const questionId of unresolvedListeningEvidence) {
+    issues.push(`listeningEvidence.${questionId}: authored evidence does not resolve to a unit of its lesson transcript`);
+  }
+  for (const evidence of authoredListeningEvidence) {
+    const lesson = lessonById.get(evidence.lessonId);
+    if (!lesson?.listening) {
+      issues.push(`listeningEvidence.${evidence.questionId}: authored evidence belongs to unknown lesson or a lesson without listening ${evidence.lessonId}`);
+      continue;
+    }
+    if (!evidence.quote || !lesson.listening.transcriptDe.includes(evidence.quote)) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote is not a verbatim unit of ${evidence.lessonId} transcript`);
+      continue;
+    }
+    if (!evidence.whyAr.trim()) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote has no Arabic justification`);
+    }
+    if (evidence.relation === "inference") continue;
+    const question = lesson.listening.questions.find((item: { id: string }) => item.id === evidence.questionId);
+    const expected = new Set([
+      ...germanContentWords(question?.promptDe ?? ""),
+      ...germanContentWords(question?.options[question.correctIndex] ?? ""),
+    ]);
+    const quoteWords = new Set(germanContentWords(evidence.quote));
+    if (![...expected].some((word) => quoteWords.has(word))) {
+      unverifiedListeningEvidence += 1;
+      issues.push(`listeningEvidence.${evidence.questionId}: authored quote shares no content word with the question or its correct option`);
+    }
   }
 
   for (const meta of curriculum) {
@@ -149,8 +356,26 @@ export function validateAcademicContent() {
     examProfiles: Object.keys(examProfiles).length,
     examSources: examSources.length,
     reviewCards: reviewCards.length,
-    nounGrammarEntries: a1NounGrammarEntries.length,
-    verbPrepositionFrames: a1VerbPrepositionFrames.length,
+    nounGrammarEntries: nounGrammarEntries.length,
+    anchorNouns: nounGrammarEntries.filter((entry) => entry.origin === "anchor").length,
+    inventoryNouns: nounGrammarEntries.filter((entry) => entry.origin === "inventory").length,
+    measuredNounTargets,
+    unjustifiedInventoryNouns,
+    nounTargetsWithoutMorphology: targetNounsWithoutSeed.length,
+    readingQuestions: readingQuestionTargets.length,
+    authoredReadingEvidence: authoredReadingEvidence.length,
+    inferenceReadingEvidence: authoredReadingEvidence.filter((evidence) => evidence.relation === "inference").length,
+    readingQuestionsWithoutEvidence: readingQuestionsWithoutEvidence.length,
+    unverifiedReadingEvidence,
+    listeningQuestions: listeningQuestionTargets.length,
+    authoredListeningEvidence: authoredListeningEvidence.length,
+    inferenceListeningEvidence: authoredListeningEvidence.filter((evidence) => evidence.relation === "inference").length,
+    listeningQuestionsWithoutEvidence: listeningQuestionsWithoutEvidence.length,
+    unverifiedListeningEvidence,
+    verbPrepositionFrames: verbPrepositionFrames.length,
+    derivedVerbFrames: verbPrepositionFrames.filter((frame) => frame.origin === "derived").length,
+    measuredValencyTargets: measuredTargets,
+    unjustifiedDerivedFrames: unmeasuredDerived,
   };
   const counts: AcademicSchemaCounts = {
     ...countsWithoutTotal,

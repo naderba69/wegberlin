@@ -1,7 +1,7 @@
 {
   "format": "dwnb-academic-audit",
   "version": "academic-governance-v1",
-  "generatedAt": "2026-09-03",
+  "generatedAt": "2026-09-04",
   "schema": {
     "counts": {
       "lessons": 84,
@@ -14,9 +14,27 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2016,
-      "nounGrammarEntries": 96,
-      "verbPrepositionFrames": 24,
-      "totalRootObjects": 2665
+      "nounGrammarEntries": 664,
+      "anchorNouns": 336,
+      "inventoryNouns": 328,
+      "measuredNounTargets": 460,
+      "unjustifiedInventoryNouns": 0,
+      "nounTargetsWithoutMorphology": 0,
+      "readingQuestions": 252,
+      "authoredReadingEvidence": 252,
+      "inferenceReadingEvidence": 23,
+      "readingQuestionsWithoutEvidence": 0,
+      "unverifiedReadingEvidence": 0,
+      "listeningQuestions": 252,
+      "authoredListeningEvidence": 252,
+      "inferenceListeningEvidence": 27,
+      "listeningQuestionsWithoutEvidence": 0,
+      "unverifiedListeningEvidence": 0,
+      "verbPrepositionFrames": 262,
+      "derivedVerbFrames": 118,
+      "measuredValencyTargets": 141,
+      "unjustifiedDerivedFrames": 0,
+      "totalRootObjects": 5912
     },
     "schemaFamilies": 12,
     "issues": []
@@ -45640,5 +45658,5 @@
       }
     ]
   },
-  "contentSha256": "5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3"
+  "contentSha256": "429a49cc3e1e5a7a93a1d3f7dea2075f83715d9bcbaab735d846b8e744e7571a"
 }

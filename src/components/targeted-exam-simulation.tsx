@@ -8,6 +8,8 @@ import { examProfiles, examSourceById } from "@/data/exam-profiles";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { examResultMessage } from "@/core/a11y/result-announcements";
 
 export function TargetedExamSimulationView({ simulation }: { simulation: TargetedExamSimulation }) {
   const { state, update } = useLearning();
@@ -97,6 +99,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
   if (finished) {
     return (
       <div className="wide-page targeted-result">
+        <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: "نتيجة التدريب الجزئي" })}/>
         <header>
           <span><ShieldCheck size={28} /></span>
           <small>{profile.displayName} · تدريب جزئي غير رسمي</small>

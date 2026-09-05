@@ -1,11 +1,23 @@
 import type { LessonStageKey } from "./lesson-content";
 
 export type GermanGender = "masculine" | "feminine" | "neuter";
-export type GermanCase = "nominative" | "accusative" | "dative";
+export type GermanCase = "nominative" | "accusative" | "dative" | "genitive";
+/** الحالة التي يفرضها الفعل أو حرف الجر. Genitiv مضاف لحروف الجر الرسمية في B2؛ صيغة Genitiv الاسمية نفسها محفوظة في caseForms.genitive. */
+export type GovernedCase = Exclude<GermanCase, "nominative"> | "genitive";
+
+export type LexicalSourceVersion =
+  | "a1-lexical-grammar-v1"
+  | "a2-lexical-grammar-v1"
+  | "b1-lexical-grammar-v1"
+  | "b2-lexical-grammar-v1";
+
+/** anchor: مرسى مؤلف من نظرية الدرس. inventory: سجل مشتق من جرد أسماء مسرد القراءة. */
+export type NounOrigin = "anchor" | "inventory";
 
 export type NounGrammarEntry = {
   id: string;
   lessonId: string;
+  origin: NounOrigin;
   lemma: string;
   article: "der" | "die" | "das";
   gender: GermanGender;
@@ -15,20 +27,29 @@ export type NounGrammarEntry = {
     noteAr: string;
   };
   caseForms: Record<GermanCase, string>;
+  /** جمع المجرور بعد den: الشكل الذي يحتاجه المتعلم فعليًا مع حروف الجر وأفعال الجر في الجمع. */
+  dativePlural: {
+    form: string | null;
+    noteAr: string;
+  };
   firstStructuredStage: Extract<LessonStageKey, "vocabulary">;
-  sourceVersion: "a1-lexical-grammar-v1";
+  sourceVersion: LexicalSourceVersion;
 };
+
+/** authored: إطار مؤلف خصيصًا للدرس. derived: إطار مشتق من قاموس التكافؤ بعد أن قاس الجرد وقوعه في نص الدرس. */
+export type FrameOrigin = "authored" | "derived";
 
 export type VerbPrepositionFrame = {
   id: string;
   lessonId: string;
+  origin: FrameOrigin;
   infinitive: string;
   preposition: string;
-  governedCase: Exclude<GermanCase, "nominative">;
+  governedCase: GovernedCase;
   chunkDe: string;
   meaningAr: string;
   exampleDe: string;
   contrastAr: string;
   firstStructuredStage: Extract<LessonStageKey, "vocabulary">;
-  sourceVersion: "a1-lexical-grammar-v1";
+  sourceVersion: LexicalSourceVersion;
 };

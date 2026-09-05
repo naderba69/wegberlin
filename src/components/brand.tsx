@@ -10,7 +10,7 @@ export function Brand({ compact = false }: { compact?: boolean }) {
           <path d="M7 29h5v7H7z" fill="currentColor" />
         </svg>
       </span>
-      {!compact && <span><strong>الطريق إلى برلين</strong><small>DER WEG NACH BERLIN</small></span>}
+      {!compact && <span><strong>الطريق إلى برلين</strong><small lang="de" dir="ltr">DER WEG NACH BERLIN</small></span>}
     </Link>
   );
 }

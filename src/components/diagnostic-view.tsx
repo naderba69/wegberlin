@@ -11,6 +11,9 @@ import { evaluateDiagnostic } from "@/core/diagnostic/evaluate";
 import type { DiagnosticResult, DiagnosticSkill } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { ResilientAudioPlayer } from "./resilient-audio-player";
+import { DiagnosticSampleCard } from "./diagnostic-sample-card";
+import { ResultAnnouncer } from "./result-announcer";
+import { diagnosticResultMessage } from "@/core/a11y/result-announcements";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
   grammar: "القواعد والاستعمال",
@@ -78,6 +81,7 @@ export function DiagnosticView() {
     const result = finalResult;
     const confidence = result.confidence ?? "low";
     return <div className="diagnostic-result">
+      <ResultAnnouncer message={diagnosticResultMessage({ level: result.estimatedLevel, score: result.score, maxScore: result.maxScore })}/>
       <span className="result-orb"><Gauge size={29}/></span>
       <small>تقدير أولي متكيف · الصيغة {result.formId} · ليس شهادة رسمية</small>
       <h1>نقطة البداية المقترحة: <em>{result.estimatedLevel}</em></h1>
@@ -91,6 +95,7 @@ export function DiagnosticView() {
         const evidence = result.skillScores![skill];
         return <article key={skill}><span>{skillLabels[skill]}</span><strong>{evidence.correct}/{evidence.attempted}</strong></article>;
       })}</div><p>لا توجد مهمة إملاء كتابية هنا، لذلك لا يساوي التشخيص بين خطأ الإملاء وضعف الفهم.</p></section>}
+      <DiagnosticSampleCard level={result.estimatedLevel} formId={result.formId}/>
       <div className="result-actions"><Link className="primary-button" href="/today">ابنِ مهمتي التالية <ArrowLeft size={17}/></Link><Link className="secondary-button" href="/errors">شاهد الفجوات المكتشفة</Link></div>
     </div>;
   }
@@ -103,7 +108,7 @@ export function DiagnosticView() {
       {question.contextDe && <article className="diagnostic-reading" lang="de" dir="ltr"><BookOpenCheck size={17}/><p>{question.contextDe}</p></article>}
       {audioItem && audioAsset && <div className="diagnostic-listening"><header><Headphones size={17}/><span><strong lang="de" dir="ltr">{audioItem.titleDe}</strong><small>استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني.</small></span></header><ResilientAudioPlayer src={audioAsset.path} transcriptDe={audioItem.transcriptDe} expectedDurationMs={audioAsset.durationMs} label={`مقطع التشخيص ${audioItem.titleAr}`}/></div>}
       <h2>{question.prompt}</h2>
-      <div className="option-list" dir="ltr">{question.options.map((option, optionIndex) => <button key={option} onClick={() => select(optionIndex)} className={selected === optionIndex ? "selected" : ""}><span>{String.fromCharCode(65 + optionIndex)}</span><b>{option}</b>{selected === optionIndex && <Check size={17}/>}</button>)}</div>
+      <div className="option-list" dir="ltr">{question.options.map((option, optionIndex) => <button key={option} lang="de" onClick={() => select(optionIndex)} className={selected === optionIndex ? "selected" : ""}><span>{String.fromCharCode(65 + optionIndex)}</span><b>{option}</b>{selected === optionIndex && <Check size={17}/>}</button>)}</div>
     </section>
     <footer className="diagnostic-controls"><button className="secondary-button" onClick={() => setIndex((current) => Math.max(currentLevelStart, current - 1))} disabled={index === currentLevelStart}><ArrowRight size={17}/> السابق داخل المستوى</button><button className="primary-button" onClick={next} disabled={selected === undefined}>{index === questions.length - 1 ? (question.level === "B2" ? "إنهاء التشخيص" : "قيّم هذا المستوى") : "السؤال التالي"}<ArrowLeft size={17}/></button></footer>
   </div>;

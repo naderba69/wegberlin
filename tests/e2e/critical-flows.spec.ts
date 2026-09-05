@@ -1,12 +1,28 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test, type Page } from "@playwright/test";
+import { readingEvidenceByQuestionId } from "@/data/reading-evidence-index";
 import { academicLessons } from "../../src/data/academic-lessons";
 import { allPublishedExamTasks } from "../../src/data/exam-simulation-registry";
 import { curriculum } from "../../src/data/curriculum";
 import { defaultState } from "../../src/core/portability/db";
+import { framesByLesson, nounsByLesson } from "../../src/data/lexical-grammar-registry";
 
 async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true");
+}
+
+/** الشريط الجانبي للمراحل مخفي على المقاسات الصغيرة، فيُفتح مرحلة المفردات من تذييل المرحلة هناك. */
+async function openVocabularyStage(page: Page) {
+  const sidebarStage = page.locator(".lesson-steps nav button").filter({ hasText: "العبارات" });
+  if (await sidebarStage.isVisible()) {
+    await sidebarStage.click();
+  } else {
+    for (let step = 0; step < 2; step += 1) {
+      await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
+      await expect(page.locator(".lesson-workspace h1")).toBeVisible();
+    }
+  }
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
 }
 
 async function readActiveProfileId(page: Page) {
@@ -146,6 +162,243 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
       request.onsuccess = () => resolve(request.result?.diagnosticResult);
     };
   }))).toMatchObject({ formId: "A", questionsAnswered: 4, stoppedEarly: true, confidence: "low", levelAttempted: { A1: 4, A2: 0, B1: 0, B2: 0 } });
+});
+
+test("P0-256: exam and lab results announce one short summary instead of the whole panel", async ({ page }) => {
+  await page.goto("/exams/goethe-b2/goethe-b2-reading-01");
+  await waitForLearningReady(page);
+  await page.getByRole("button", { name: /ابدأ المؤقت والتدريب/ }).click();
+  const selects = page.locator(".targeted-items select");
+  for (let index = 0; index < await selects.count(); index += 1) {
+    const select = selects.nth(index);
+    if (await select.inputValue()) continue;
+    const available = await select.locator("option").evaluateAll((options) => options.find((option) => (option as HTMLOptionElement).value && !(option as HTMLOptionElement).disabled)?.getAttribute("value"));
+    if (available) await select.selectOption(available);
+  }
+  await page.getByRole("button", { name: /التزم بالإجابات وصحح/ }).click();
+  const result = page.locator(".targeted-result");
+  await expect(result).toBeVisible();
+  const announcer = result.locator(".result-announcer");
+  await expect(announcer).toHaveAttribute("role", "status");
+  await expect(announcer).toHaveAttribute("aria-live", "polite");
+  await expect(announcer).toHaveAttribute("aria-atomic", "true");
+  await expect(announcer).toHaveText(/نتيجة (التدريب الجزئي|تدريب القراءة التفصيلية|تدريب العناصر اللغوية): \d+ من \d+ إجابة صحيحة\. النتيجة تدريبية داخلية وليست نقاطًا رسمية/);
+  // لا تكرار: منطقة حيّة واحدة فقط في شاشة النتيجة، ولوحة النتائج نفسها ليست منطقة حيّة.
+  await expect(result.locator('[role="status"]')).toHaveCount(1);
+  await expect(result).not.toHaveAttribute("role", "status");
+});
+
+test("P0-266: one missed day becomes an explicit grace day with no deferred task", async ({ page }) => {
+  // ساعة ثابتة: الخميس 2026-09-03 داخل أسبوع يبدأ 2026-08-31، حتى لا يتغير الاختبار بتاريخ التشغيل.
+  await page.clock.setFixedTime(new Date("2026-09-03T09:00:00"));
+  await page.goto("/today");
+  await waitForLearningReady(page);
+
+  const seed = (studiedDates: string[]) => page.evaluate(({ baseState, studiedDates }) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const transaction = open.result.transaction("learning-state", "readwrite");
+      const store = transaction.objectStore("learning-state");
+      const request = store.get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? structuredClone(baseState);
+        state.profile = { name: "Test", targetExam: "goethe-b2", dailyMinutes: 45, arabicSupport: "modern-standard-arabic", currentLevel: "A1", createdAt: new Date().toISOString() };
+        state.diagnosticResult = { estimatedLevel: "A1", score: 3, maxScore: 12, levelScores: { A1: 3, A2: 0, B1: 0, B2: 0 }, completedAt: new Date().toISOString() };
+        state.studyHistory = studiedDates.map((date) => ({ date, minutes: 30, evidenceCount: 2 }));
+        store.put(state, "primary");
+      };
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    };
+  }), { baseState: structuredClone(defaultState), studiedDates });
+
+  // يوم واحد فائت (2026-09-02) داخل سقف السماح: لا مهمة مؤجلة ولا استعادة.
+  await seed(["2026-08-31", "2026-09-01"]);
+  await page.reload();
+  await waitForLearningReady(page);
+  const graceDay = page.locator(".weekly-plan-day.grace");
+  await expect(graceDay).toHaveCount(1);
+  await expect(graceDay).toContainText("يوم سماح");
+  await expect(graceDay).toContainText("09-02");
+  await expect(graceDay).toContainText("السلسلة تتوقف عنده فعلًا");
+  const note = page.locator(".weekly-recovery-note");
+  await expect(note).toContainText("بلا مهمة مؤجلة ولا مضاعفة");
+  await expect(note).toContainText("لا يجمّد السلسلة ولا يمدّدها");
+  await expect(page.locator(".weekly-plan-day .recovery")).toHaveCount(0);
+  await expect(page.locator(".grace-counter")).toContainText("0/1");
+
+  // يومان فائتان: الأول سماح، والثاني دين يُنقل منه مهمة واحدة داخل ميزانية اليوم (45 دقيقة).
+  await seed(["2026-08-31"]);
+  await page.reload();
+  await waitForLearningReady(page);
+  await expect(page.locator(".weekly-plan-day.grace")).toHaveCount(1);
+  await expect(page.locator(".weekly-plan-day.missed")).toHaveCount(1);
+  await expect(page.locator(".weekly-recovery-note")).toContainText("يوم دين");
+  const recovery = page.locator(".weekly-plan-day .recovery");
+  await expect(recovery).toHaveCount(1);
+  await expect(page.locator(".weekly-plan-day.today")).toContainText("استعادة محدودة من 2026-09-02");
+
+  const todayCard = page.locator(".weekly-plan-day.today");
+  const budget = Number(((await todayCard.locator("header > b").textContent()) ?? "0").replace(/[^0-9]/gu, ""));
+  const slotMinutes = await todayCard.locator("a").evaluateAll((nodes) => nodes.reduce((sum, node) => sum + Number((node.textContent ?? "").replace(/[^0-9]/gu, "")), 0));
+  expect(slotMinutes).toBe(budget);
+});
+
+test("P0-38: a session keeps a short retrieval warm-up before any SM-2 card exists", async ({ page }) => {
+  const readScheduling = () => page.evaluate(() => new Promise<{ reviewItems: number; reviewEvents: number; masteryKeys: number; attempts: number }>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? {};
+        resolve({
+          reviewItems: (state.reviewItems ?? []).length,
+          reviewEvents: (state.reviewEvents ?? []).length,
+          masteryKeys: Object.keys(state.mastery ?? {}).length,
+          attempts: (state.exerciseAttempts ?? []).length,
+        });
+      };
+    };
+  }));
+
+  await page.goto("/today");
+  await waitForLearningReady(page);
+  // متعلّم أنهى التشخيص ووصل إلى المرحلة 3 من أول درس: لا بطاقة SM-2 واحدة موجودة بعد.
+  await page.evaluate((baseState) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const transaction = open.result.transaction("learning-state", "readwrite");
+      const store = transaction.objectStore("learning-state");
+      const request = store.get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? structuredClone(baseState);
+        state.profile = { name: "Test", targetExam: "goethe-b2", dailyMinutes: 45, arabicSupport: "modern-standard-arabic", currentLevel: "A1", createdAt: new Date().toISOString() };
+        state.diagnosticResult = { estimatedLevel: "A1", score: 3, maxScore: 12, levelScores: { A1: 3, A2: 0, B1: 0, B2: 0 }, completedAt: new Date().toISOString() };
+        state.completedLessonIds = [];
+        state.reviewItems = [];
+        state.reviewEvents = [];
+        state.mastery = {};
+        state.exerciseAttempts = [];
+        state.currentLessonId = "a1-01";
+        state.lessonProgress = { "a1-01": 2 };
+        store.put(state, "primary");
+      };
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    };
+  }), structuredClone(defaultState));
+
+  await page.reload();
+  await waitForLearningReady(page);
+  const warmupBlock = page.locator(".session-signal-card.warmup");
+  await expect(warmupBlock).toBeVisible();
+  await expect(warmupBlock).toContainText("إحماء استرجاع");
+  await expect(warmupBlock).toContainText("بلا درجة");
+
+  const before = await readScheduling();
+  expect(before.reviewItems).toBe(0);
+
+  await warmupBlock.getByRole("link", { name: /افتح الإحماء/ }).click();
+  await expect(page).toHaveURL(/\/review$/);
+  const zone = page.locator(".warmup-zone");
+  await expect(zone).toBeVisible();
+
+  // كل عنصر من مرحلة شاهدها المتعلّم فعلًا (المرحلة 3 كحد أقصى): لا قراءة ولا نطق.
+  const seenStages: string[] = [];
+  for (let step = 0; step < 6; step += 1) {
+    if (!(await page.locator(".warmup-item").isVisible())) break;
+    seenStages.push((await page.locator(".warmup-meta").textContent()) ?? "");
+    await expect(page.locator(".warmup-answer")).toHaveCount(0);
+    await page.getByRole("button", { name: /اكشف بعد المحاولة/ }).click();
+    const answer = page.locator(".warmup-answer strong");
+    await expect(answer).toBeVisible();
+    expect(((await answer.textContent()) ?? "").trim().length).toBeGreaterThan(0);
+    await page.getByRole("button", { name: /التالي|أنهِ الجولة/ }).click();
+  }
+  expect(seenStages.length).toBeGreaterThanOrEqual(3);
+  for (const meta of seenStages) {
+    expect(meta).toContain("مرحلة");
+    expect(meta).not.toContain("القراءة");
+    expect(meta).not.toContain("النطق");
+  }
+  await expect(zone).toContainText("أنهيت الجولة");
+  await expect(zone).toContainText("لم تُسجَّل نتيجة");
+
+  // الإحماء لا يلمس الجدولة ولا الإتقان ولا سجل المحاولات.
+  const after = await readScheduling();
+  expect(after).toEqual(before);
+});
+
+test("P0-26: an optional productive sample survives reload without any automatic score", async ({ page }) => {
+  const readDiagnostic = () => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result ?? {};
+        resolve({
+          samples: state.diagnosticSamples ?? [],
+          level: state.diagnosticResult?.estimatedLevel ?? null,
+          score: state.diagnosticResult?.score ?? null,
+          answered: state.diagnosticResult?.questionsAnswered ?? null,
+        });
+      };
+    };
+  })) as Promise<{ samples: Array<Record<string, unknown>>; level: string | null; score: number | null; answered: number | null }>;
+
+  await page.goto("/diagnostic");
+  await page.getByText("Ich heiße Ali.", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Gute Nacht!", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Montag und Mittwoch", { exact: true }).click();
+  await page.getByRole("button", { name: /السؤال التالي/ }).click();
+  await page.getByText("Um acht", { exact: true }).click();
+  await page.getByRole("button", { name: /قيّم هذا المستوى/ }).click();
+  await expect(page.getByRole("heading", { name: /نقطة البداية المقترحة/ })).toBeVisible();
+
+  // نتيجة التشخيص قبل إضافة أي عينة: المرجع الذي يجب ألا يتغيّر.
+  const before = await expect.poll(readDiagnostic).toMatchObject({ samples: [] }).then(() => readDiagnostic());
+  expect(before.level).not.toBeNull();
+  expect(before.score).not.toBeNull();
+
+  const sampleCard = page.locator(".diagnostic-sample-card");
+  await expect(sampleCard).toBeVisible();
+  await expect(sampleCard.getByText(/لا يصحّحها البرنامج/)).toBeVisible();
+  // الحد الأدنى شرط اكتمال: زر الحفظ معطّل قبل بلوغه.
+  const saveButton = sampleCard.getByRole("button", { name: "احفظ العينة الكتابية" });
+  await expect(saveButton).toBeDisabled();
+  const sampleText = "Ich heiße Mila und ich wohne in Tunis. Ich lese gern und ich lerne Deutsch.";
+  await sampleCard.locator("#diagnostic-sample-text").fill(sampleText);
+  await expect(saveButton).toBeEnabled();
+  await saveButton.click();
+  await expect(sampleCard.getByText(/حُفظت العينة الكتابية/)).toBeVisible();
+
+  // العينة تبقى بعد إعادة التحميل، ولا تضيف درجة ولا تغيّر نتيجة التشخيص.
+  await page.reload();
+  await page.goto("/progress");
+  await expect(page.locator(".diagnostic-samples-section")).toBeVisible();
+  await expect(page.locator(".sample-summary-list li")).toHaveCount(1);
+  await expect(page.getByText(sampleText)).toBeVisible();
+
+  const after = await expect.poll(readDiagnostic).toMatchObject({ samples: [{ kind: "writing", text: sampleText }] }).then(() => readDiagnostic());
+  expect(after.score).toBe(before.score);
+  expect(after.level).toBe(before.level);
+  expect(after.answered).toBe(before.answered);
+  expect(after.samples).toHaveLength(1);
+  // لا حقل تقييم في العينة المحفوظة: لا درجة ولا تصحيح ولا مستوى مشتقًا.
+  expect(Object.keys(after.samples[0])).not.toContain("score");
+  expect(Object.keys(after.samples[0])).not.toContain("feedback");
+  expect(Object.keys(after.samples[0])).not.toContain("estimatedLevel");
+  expect(after.samples[0].wordCount).toBe(sampleText.trim().split(/\s+/u).length);
 });
 
 test("P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace", async ({ page }) => {
@@ -349,6 +602,13 @@ test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revis
   await selfCheck.getByRole("button", { name:/شغّل الفحص المرتبط بنصي/ }).click();
   await expect(page.locator(".writing-dimensions article")).toHaveCount(5);
   await expect(page.locator(".feedback-box")).toContainText("«");
+  // P0-256: ملخّص موجز يُقال مرة واحدة، لا اللوحة كاملة.
+  const writingAnnouncer = page.locator(".writing-feedback .result-announcer");
+  await expect(writingAnnouncer).toHaveAttribute("role", "status");
+  await expect(writingAnnouncer).toHaveAttribute("aria-live", "polite");
+  await expect(writingAnnouncer).toHaveAttribute("aria-atomic", "true");
+  await expect(writingAnnouncer).toHaveText(/نتيجة فحص الكتابة: \d من 5 محاور مستوفاة/);
+  await expect(page.locator(".writing-feedback [role=\"status\"]")).toHaveCount(1);
   await page.getByRole("button", { name:/ابدأ إعادة الكتابة/ }).click();
   await page.getByLabel("النسخة المنقحة").fill(`${firstDraft} Bis bald.`);
   await page.getByRole("button", { name:/حفظ النسخة المنقحة/ }).click();
@@ -396,6 +656,10 @@ test("P0 speaking lab hides prompts during recording and requires playback befor
   await page.getByPlaceholder(/توقفت قبل السؤال/).fill("سأحسن ترتيب السؤال في المحاولة التالية.");
   await page.getByRole("button", { name:/حفظ الدليل بعد الاستماع/ }).click();
   await expect(page.getByText(/حُفظت المحاولة والمراجعة الذاتية محليًا/)).toBeVisible();
+  // P0-256: إعلان موجز بالمدة والمعايير المؤكَّدة ذاتيًا، مع حدّ «لا تقييم آلي للنطق».
+  const speakingAnnouncer = page.locator(".lab-page .result-announcer");
+  await expect(speakingAnnouncer).toHaveAttribute("aria-live", "polite");
+  await expect(speakingAnnouncer).toHaveText(/حُفظ التسجيل: \d+ ثانية، وأكدت \d+ من \d+ معايير بنفسك\. لا تقييم آلي للنطق أو الطلاقة\./);
   await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
     const open=indexedDB.open("der-weg-nach-berlin",4);
     open.onerror=()=>reject(open.error);
@@ -697,7 +961,11 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await expect(readingQuestion.locator(".hint-panel")).toContainText("فكرة عامة أم تفصيلًا أم سببًا");
       await readingQuestion.locator(".quiz-options button").filter({ hasText: lesson.reading.questions[0].options[lesson.reading.questions[0].correctIndex] }).click();
       await readingQuestion.getByRole("button", { name: "تحقق" }).click();
-      await expect(readingQuestion.locator(".question-evidence q")).toBeVisible();
+      // P0-124: موضع الدليل معروض من جدول مؤلف، لا من مطابقة لفظية آلية.
+      const authoredEvidence = readingEvidenceByQuestionId[lesson.reading.questions[0].id];
+      await expect(readingQuestion.locator(".question-evidence q")).toHaveText(authoredEvidence.quote);
+      await expect(readingQuestion.locator(".question-evidence")).toContainText(authoredEvidence.whyAr);
+      await expect(readingQuestion.locator(".question-evidence small")).toContainText("موضع الدليل من النص");
       await expect(page.locator(".glossary-strip")).toBeVisible();
       await expect(page.locator(".reading-support-lock")).toHaveCount(0);
     }
@@ -927,7 +1195,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v52");
+    const cache = await caches.open("dwnb-full-pack-v60");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1012,7 +1280,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v52");
+    const cache = await caches.open("dwnb-full-pack-v60");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1021,6 +1289,94 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   expect(afterAudioRemoval.audio).toBe(false);
   expect(afterAudioRemoval.lessonRoute).toBe(true);
   expect(afterAudioRemoval.metadata).toMatchObject({ includesAudio: false, audioEntryCount: 0 });
+});
+
+test("one level pack installs its own scope without downloading the whole course", async ({ page, context }) => {
+  await page.goto("/settings");
+  await waitForLearningReady(page);
+  const packCard = page.locator(".offline-pack-card");
+  await expect(packCard.getByText(/ملفًا · .* MB معروفة من البيانات/)).toBeVisible({ timeout: 30_000 });
+
+  const sizePreview = packCard.locator(".pack-size-preview > div").first();
+  await expect(sizePreview).toContainText("298 مسارًا");
+
+  await packCard.locator(".pack-scope", { hasText: "مستوى A1" }).click();
+  await expect(packCard.locator(".pack-scope.active")).toContainText("مستوى A1");
+  await expect(packCard.locator(".pack-scope-hint")).toContainText("24 درسًا");
+  await expect(sizePreview).toContainText("51 مسارًا");
+  await expect(sizePreview).toContainText("مضغوطًا على الشبكة");
+
+  const a1Download = packCard.getByRole("button", { name: /تنزيل حزمة الصفحات/ });
+  await expect(a1Download).toBeEnabled({ timeout: 30_000 });
+  await a1Download.click();
+  await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
+
+  const levelEvidence = await page.evaluate(async () => {
+    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
+    const fullCache = await caches.open("dwnb-full-pack-v60");
+    const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
+    const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
+    const a1Lesson = await levelCache.match("/lernen/a1-01");
+    const a1Module = await levelCache.match("/module/a1-1");
+    const b2Lesson = await levelCache.match("/lernen/b2-12");
+    const examTask = await levelCache.match("/exams/goethe-b2/full/goethe-b2-full-06");
+    const fullPackMetadata = await fullCache.match("/__dwnb_offline_pack_meta__");
+    return {
+      metadata,
+      a1Lesson: Boolean(a1Lesson),
+      a1Module: Boolean(a1Module),
+      b2Lesson: Boolean(b2Lesson),
+      examTask: Boolean(examTask),
+      fullPackUntouched: fullPackMetadata === undefined,
+    };
+  });
+  expect(levelEvidence.metadata?.scope).toBe("A1");
+  expect(levelEvidence.metadata?.routeCount).toBe(51);
+  expect(levelEvidence.metadata?.includesAudio).toBe(false);
+  expect(levelEvidence.metadata?.byteSize).toBeGreaterThan(1_000_000);
+  expect(levelEvidence.a1Lesson).toBe(true);
+  expect(levelEvidence.a1Module).toBe(true);
+  expect(levelEvidence.b2Lesson).toBe(false);
+  expect(levelEvidence.examTask).toBe(false);
+  expect(levelEvidence.fullPackUntouched).toBe(true);
+
+  try {
+    await context.setOffline(true);
+    await page.goto("/lernen/a1-01", { waitUntil: "domcontentloaded" });
+    await waitForLearningReady(page);
+    await expect(page.locator(".lesson-workspace h1")).toContainText("أهداف اليوم");
+    // مسار B2 ليس داخل حزمة A1: العامل يرجّع 503 لأي مورد غير محفوظ، ويُسقط التنقل على /today.
+    const offlineProbe = await page.evaluate(async () => ({
+      a1: await fetch("/lernen/a1-01").then((response) => response.status).catch(() => 0),
+      b2: await fetch("/lernen/b2-12").then((response) => response.status).catch(() => 0),
+      exam: await fetch("/exams/goethe-b2/full/goethe-b2-full-06").then((response) => response.status).catch(() => 0),
+    }));
+    expect(offlineProbe.a1).toBe(200);
+    expect(offlineProbe.b2).toBe(503);
+    expect(offlineProbe.exam).toBe(503);
+    await page.goto("/lernen/b2-12", { waitUntil: "domcontentloaded" });
+    await expect(page.locator(".lesson-workspace")).toHaveCount(0);
+  } finally {
+    await context.setOffline(false);
+  }
+
+  await page.goto("/settings");
+  await waitForLearningReady(page);
+  const installedLevelPack = page.locator(".offline-pack-card");
+  await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("مثبتة");
+  await installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" }).click();
+  await expect(installedLevelPack.locator(".pack-scope.active")).toContainText("مستوى A1");
+  await expect(installedLevelPack).toContainText("51 مسارًا");
+  page.once("dialog", (dialog) => void dialog.accept());
+  await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
+  await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
+  const afterLevelRemoval = await page.evaluate(async () => {
+    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
+    const keys = await levelCache.keys();
+    const names = await caches.keys();
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v60") };
+  });
+  expect(afterLevelRemoval.keys).toBe(0);
 });
 
 test("continuous full-exam mode persists one central clock and blocks task skipping", async ({ page }) => {
@@ -1100,6 +1456,10 @@ test("continuous full-exam mode persists one central clock and blocks task skipp
   await page.getByRole("button", { name: "ثبّت الإجابات وانتقل" }).click();
   await expect(page.locator(".continuous-task-submitted")).toBeVisible();
   await expect(page.getByText("ثُبّت التسليم دون كشف التصحيح")).toBeVisible();
+  // P0-256: اللوحة نفسها لم تعد منطقة حيّة (لا تُقرأ العناوين والروابط كلها)، بل ملخّص واحد.
+  await expect(page.locator(".continuous-task-submitted")).not.toHaveAttribute("role", "status");
+  await expect(page.locator(".continuous-task-submitted .result-announcer")).toHaveText(/ثُبّت التسليم: \d+ من \d+ مهام مسلّمة/);
+  await expect(page.locator(".continuous-task-submitted [role=\"status\"]")).toHaveCount(1);
   await expect(page.locator(".targeted-review-list")).toHaveCount(0);
   await expect(page.getByText(/الصحيح:/)).toHaveCount(0);
 
@@ -1344,7 +1704,8 @@ test("Arabic shell and German content keep explicit direction", async ({ page })
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   await expect(page.locator("html")).toHaveAttribute("lang", "ar");
   await page.getByText("Das kleine Café", { exact: true }).click();
-  await expect(page.locator('[lang="de"][dir="ltr"]').first()).toBeVisible();
+  // الألماني المرئي هو المقصود: شريط التنقل الجانبي (وفيه شارة العلامة الألمانية) مخفي على الهاتف.
+  await expect(page.locator('[lang="de"][dir="ltr"]:visible').first()).toBeVisible();
 });
 
 test("representative 320–1920 px viewports avoid document-level horizontal overflow", async ({ page }) => {
@@ -1379,5 +1740,72 @@ test("critical pages have no automatically detectable serious WCAG violations", 
     const result = await new AxeBuilder({ page }).include("main").withTags(["wcag2a", "wcag2aa"]).analyze();
     const serious = result.violations.filter((item) => item.impact === "serious" || item.impact === "critical");
     expect(serious, `${route}: ${serious.map((item) => item.id).join(", ")}`).toEqual([]);
+  }
+});
+
+test("A2 vocabulary stage renders four noun anchors and two verb-preposition frames", async ({ page }) => {
+  await page.goto("/lernen/a2-04");
+  await waitForLearningReady(page);
+  await openVocabularyStage(page);
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
+  const lexicalPanel = page.locator(".lexical-grammar-panel");
+  await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+  // أسماء مسرد القراءة تُعرض داخل details حتى لا تزاحم المراسي الأربع.
+  const inventoryCount = nounsByLesson["a2-04"].filter((noun) => noun.origin === "inventory").length;
+  // البطاقات موجودة في DOM لكنها مخفية حتى يفتح المتعلم القسم.
+  await expect(lexicalPanel.locator(".inventory-noun-card")).toHaveCount(inventoryCount);
+  await expect(lexicalPanel.locator(".inventory-noun-card").first()).toBeHidden();
+  await lexicalPanel.locator(".inventory-noun-block > summary").click();
+  await expect(lexicalPanel.locator(".inventory-noun-card").first()).toBeVisible();
+  await expect(lexicalPanel).toContainText("die Mülltonne");
+  await expect(lexicalPanel.locator(".verb-frame-card")).toHaveCount(framesByLesson["a2-04"].length);
+  await expect(lexicalPanel).toContainText("der Nachbar");
+  await expect(lexicalPanel).toContainText("sich für die Hilfe bedanken");
+  await expect(lexicalPanel).toContainText("um Hilfe bitten");
+  await expect(lexicalPanel).toContainText("لم تُراجَع ألمانيًا بشريًا بعد");
+  await expect(lexicalPanel).toContainText("des Nachbarn");
+  await expect(lexicalPanel).toContainText("den Nachbarn");
+  await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
+  await expect(lexicalPanel.locator("details").first()).toContainText("dem Nachbarn");
+  await expect(lexicalPanel.locator("details").first()).toContainText("des Nachbarn");
+});
+
+test("B2 vocabulary stage renders four noun anchors and the Genitiv preposition frames", async ({ page }) => {
+  await page.goto("/lernen/b2-04");
+  await waitForLearningReady(page);
+  await openVocabularyStage(page);
+  await expect(page.locator(".lesson-workspace h1")).toContainText("العبارات");
+  const lexicalPanel = page.locator(".lexical-grammar-panel");
+  await expect(lexicalPanel.locator(".noun-grammar-grid > article")).toHaveCount(4);
+  // الإطارات مقيسة من نص الدرس: b2-04 يملك إطارين مؤلفين وإطارًا مشتقًا من جرد التكافؤ.
+  await expect(lexicalPanel.locator(".verb-frame-card")).toHaveCount(framesByLesson["b2-04"].length);
+  await expect(lexicalPanel.locator('.verb-frame-card[data-origin="derived"]')).toHaveCount(1);
+  await expect(lexicalPanel).toContainText("um Wiederholung bitten");
+  await expect(lexicalPanel).toContainText("der Leistungsumfang");
+  await expect(lexicalPanel).toContainText("angesichts der Frist entscheiden");
+  await expect(lexicalPanel).toContainText("angesichts + Genitiv");
+  await expect(lexicalPanel).toContainText("hinsichtlich + Genitiv");
+  // الاسم بلا جمع يصرّح بعدم وجود جمع مجرور بدل اختلاق صيغة.
+  await expect(lexicalPanel).toContainText("des Leistungsumfangs");
+  await expect(lexicalPanel).toContainText("kein Dativ Plural");
+});
+
+test("every published lesson vocabulary stage keeps the authored anchor count", async ({ page }) => {
+  for (const lessonId of ["a1-12", "a2-17", "b1-19", "b2-09"]) {
+    await page.goto(`/lernen/${lessonId}`);
+    await waitForLearningReady(page);
+    await openVocabularyStage(page);
+    const lexicalPanel = page.locator(".lexical-grammar-panel");
+    await expect(lexicalPanel.locator(".noun-grammar-grid > article"), lessonId).toHaveCount(4);
+    await expect(lexicalPanel.locator(".verb-frame-card"), lessonId).toHaveCount(framesByLesson[lessonId].length);
+    const inventoryCount = nounsByLesson[lessonId].filter((noun) => noun.origin === "inventory").length;
+    if (inventoryCount > 0) {
+      await expect(lexicalPanel.locator(".inventory-noun-card"), lessonId).toHaveCount(inventoryCount);
+      await expect(lexicalPanel.locator(".inventory-noun-card").first(), lessonId).toBeHidden();
+      await lexicalPanel.locator(".inventory-noun-block > summary").click();
+      await expect(lexicalPanel.locator(".inventory-noun-card").first(), lessonId).toBeVisible();
+    }
+    const article = lexicalPanel.locator(".noun-grammar-grid > article").first();
+    await expect(article.locator("b").nth(1), lessonId).toHaveText(/^(den |kein Dativ Plural)/);
   }
 });

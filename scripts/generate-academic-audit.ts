@@ -6,7 +6,7 @@ import { buildObjectiveCoverageReport } from "../src/core/content-validation/obj
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
 
 const AUDIT_VERSION = "academic-governance-v1";
-const AUDIT_DATE = "2026-09-03";
+const AUDIT_DATE = "2026-09-04";
 const writeMode = process.argv.includes("--write");
 const checkMode = process.argv.includes("--check") || !writeMode;
 

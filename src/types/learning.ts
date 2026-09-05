@@ -42,6 +42,8 @@ export interface LessonMeta {
 export interface MissionBlock {
   id: string;
   kind: "diagnostic" | "check-in" | "review" | "lesson" | "practice" | "production" | "reflection";
+  /** P0-38: كتلة الاسترجاع تصبح إحماءً عندما لا توجد بطاقة SM-2 مستحقة الآن. */
+  mode?: "scheduled" | "warmup";
   titleAr: string;
   titleDe: string;
   minutes: number;
@@ -104,6 +106,31 @@ export interface DiagnosticResult {
   stoppedEarly?: boolean;
   confidence?: "low" | "medium" | "high";
   completedAt: string;
+}
+
+/**
+ * P0-26: عينة إنتاج قصيرة ومستقلة يتركها المتعلّم بعد التشخيص.
+ *
+ * حدود مُعلنة في النوع نفسه: لا درجة، ولا مستوى، ولا تصحيح آلي. العينة مرجع
+ * للمتعلّم يعود إليه لاحقًا، ولا تُحتسب في مؤشر الأدلة ولا في الإتقان.
+ */
+export type DiagnosticSampleKind = "writing" | "speaking";
+
+export interface DiagnosticSample {
+  id: string;
+  kind: DiagnosticSampleKind;
+  level: CEFRLevel;
+  /** نص المهمة كما عُرض على المتعلّم، حتى تفهم العينة لاحقًا في سياقها. */
+  promptDe: string;
+  promptAr: string;
+  /** نص العينة الكتابية. */
+  text?: string;
+  wordCount?: number;
+  /** معرّف التسجيل في مخزن الوسائط (IndexedDB) للعينة الشفهية. */
+  mediaId?: string;
+  durationSeconds?: number;
+  formId?: "A" | "B";
+  createdAt: string;
 }
 
 export interface ReviewItem {
@@ -295,6 +322,7 @@ export interface LearningState {
   writingSubmissions: WritingSubmission[];
   mediationSubmissions: MediationSubmission[];
   speakingAttempts: SpeakingAttempt[];
+  diagnosticSamples: DiagnosticSample[];
   examSessions: Record<string, FullExamSession>;
   aiSettings: AISettings;
   tutorInteractions: TutorInteraction[];

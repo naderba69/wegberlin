@@ -363,26 +363,35 @@ export const reviewCardSchema = z.object({
 export const nounGrammarEntrySchema = z.object({
   id,
   lessonId: id,
+  origin: z.enum(["anchor", "inventory"]),
   lemma: text,
   article: z.enum(["der", "die", "das"]),
   gender: z.enum(["masculine", "feminine", "neuter"]),
   meaningAr: text,
   plural: z.object({ form: text.nullable(), noteAr: text }).strict(),
-  caseForms: z.object({ nominative: text, accusative: text, dative: text }).strict(),
+  caseForms: z
+    .object({ nominative: text, accusative: text, dative: text, genitive: text })
+    .strict()
+    .refine((forms) => /^(des|der) \S/.test(forms.genitive), "genitive form must carry des/der"),
+  dativePlural: z
+    .object({ form: text.nullable(), noteAr: text })
+    .strict()
+    .refine((entry) => entry.form === null || /^den \S+(n|s)$/.test(entry.form), "dative plural must be den + plural ending in n or s"),
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();
 
 export const verbPrepositionFrameSchema = z.object({
   id,
   lessonId: id,
+  origin: z.enum(["authored", "derived"]),
   infinitive: text,
   preposition: text,
-  governedCase: z.enum(["accusative", "dative"]),
+  governedCase: z.enum(["accusative", "dative", "genitive"]),
   chunkDe: text,
   meaningAr: text,
   exampleDe: text,
   contrastAr: text,
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();

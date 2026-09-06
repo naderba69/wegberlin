@@ -57,9 +57,9 @@ if (partialIds.length !== 11) fail(`P0 partial table has ${partialIds.length} ro
 if (missingIds.length !== 2) fail(`P0 missing table has ${missingIds.length} rows`);
 if (blockedIds.length !== 1) fail(`P0 blocked table has ${blockedIds.length} rows`);
 for (const text of ["Implemented: 110", "Partial: 11", "Not implemented: 2", "Blocked by user credentials: 1"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["110 implemented, 11 partial, 2 not implemented", "353/353", "36/36", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
+for (const text of ["110 implemented, 11 partial, 2 not implemented", "360/360", "36/36", "301 generated static/SSG pages", "298/298", "298/51/51/51/199"])
   requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["353/353", "36/36"]) requireText(readme, text, "README.md");
+for (const text of ["360/360", "36/36"]) requireText(readme, text, "README.md");
 
 if (offline.routeCount !== 298 || offline.routes.length !== 298 || new Set(offline.routes).size !== 298) fail("offline route manifest is not exactly 298 unique routes");
 if (offline.format !== "dwnb-offline-routes" || offline.version !== 2) fail("offline route manifest format/version drifted");
@@ -120,6 +120,18 @@ requireText(prompt, "Official source records: 12/12", "continuation prompt sourc
 requireText(status, "12/12 official source records", "PROJECT_STATUS.md source registry");
 requireText(zeroCost, "Hard mandatory budget: **0 USD**", "ZERO_COST.md");
 requireText(sourceWorkflow, "node scripts/audit-source-freshness.mjs --fail-on=due --probe", "monthly source workflow");
+
+// P0-304: عقد فحص الأسرار (القواعد، الخطاف، والبوابة).
+const secretScan = read("scripts/secret-scan.mjs");
+const secretHook = read(".githooks/pre-commit");
+const secretAllowlist = json("scripts/secret-scan-allowlist.json");
+requireText(secretScan, "sk-or-v1-", "secret scan OpenRouter rule");
+requireText(secretScan, '"rev-list", "--all"', "secret scan history mode");
+requireText(secretHook, "scripts/secret-scan.mjs --staged", "pre-commit secret hook");
+if (!packageJson.scripts["secret:scan"]) fail("package.json is missing the secret:scan script");
+if (!packageJson.scripts.check.includes("secret:scan")) fail("npm run check does not run the secret scan");
+if (!packageJson.scripts.prepare.includes("core.hooksPath")) fail("prepare script does not install the git hooks path");
+if (!Array.isArray(secretAllowlist.entries)) fail("secret scan allowlist is not a documented entries list");
 
 if (academicAudit.version !== "academic-governance-v1") fail("academic audit version drifted");
 if (academicAudit.schema?.counts?.totalRootObjects !== 5912 || academicAudit.schema?.schemaFamilies !== 12) fail("academic Zod counters drifted");
@@ -202,6 +214,6 @@ console.log(`- curriculum/audio: 84 lessons, 80 library MP3, 84 lesson MP3, 96 e
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1-B2 lexical grammar: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames across 84 lessons`);
 console.log(`- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1`);
-console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 353 unit/integrity and 36+36 browser tests documented`);
+console.log(`- delivery: ${offline.routeCount} Offline routes, ${cacheName}, 360 unit/integrity and 36+36 browser tests documented`);
 console.log(`- Offline packs: full ${offline.levelPacks.full.routeCount}, A1 ${offline.levelPacks.A1.routeCount}, A2 ${offline.levelPacks.A2.routeCount}, B1 ${offline.levelPacks.B1.routeCount}, B2 ${offline.levelPacks.B2.routeCount} routes`);
 console.log(`- measured sizes: ${Object.entries(offlineSizes.packs).map(([scope, pack]) => `${scope} ${(pack.pageBytes / 1048576).toFixed(2)}MiB/${(pack.pageTransferBytes / 1048576).toFixed(2)}MiB`).join(", ")}`);

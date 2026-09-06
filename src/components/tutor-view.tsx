@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BidiText } from "./bidi-text";
 import Link from "next/link";
 import { Bot, CheckCircle2, Lightbulb, Send, Settings, ShieldAlert, Sparkles, UserRound } from "lucide-react";
 import { askTutor, isTutorConsentRequired, type TutorAnswer, type TutorContext } from "@/core/ai/client";
@@ -86,7 +87,7 @@ export function TutorView() {
     </section>
 
     <div className="chat-shell"><div className="chat-stream" aria-live="polite" aria-relevant="additions">{messages.map((message, index) => <article key={index} className={message.role}><span>{message.role === "assistant" ? <Sparkles size={17} /> : <UserRound size={17} />}</span>{message.role === "assistant" && message.answer ? <div className="structured-tutor-answer"><section><small><Lightbulb size={13} /> التلميح أولًا</small><p>{message.answer.hintAr}</p></section><section><small><CheckCircle2 size={13} /> الشرح</small><p>{message.answer.explanationAr}</p></section><section><small>أمثلة ألمانية</small>{message.answer.examplesDe.map((example) => <code key={example} lang="de" dir="ltr">{example}</code>)}</section><section className="tutor-micro-exercise"><small>جرّب الآن</small><p>{message.answer.microExerciseAr}</p></section><footer>{providerLabel[message.answer.provider]} · {message.answer.model} · {message.answer.promptVersion}</footer></div> : <p>{message.text}</p>}</article>)}{busy && <article className="assistant"><span><Sparkles size={17} /></span><p>أتحقق من الجواب المنظم ضمن هدف الدرس…</p></article>}</div>
-      <div className="suggestion-chips"><button onClick={() => setInput("ما الفرق بين Ich heiße و Ich bin؟")}>Ich heiße أم Ich bin؟</button><button onClick={() => setInput("لماذا يأتي الفعل في النهاية بعد weil؟")}>مكان الفعل بعد weil</button><button onClick={() => setInput("اشرح Dativ مع mit")}>Dativ مع mit</button></div>
+      <div className="suggestion-chips"><button onClick={() => setInput("ما الفرق بين Ich heiße و Ich bin؟")}><BidiText text="Ich heiße أم Ich bin؟"/></button><button onClick={() => setInput("لماذا يأتي الفعل في النهاية بعد weil؟")}><BidiText text="مكان الفعل بعد weil"/></button><button onClick={() => setInput("اشرح Dativ مع mit")}><BidiText text="Dativ مع mit"/></button></div>
       <div className="chat-input"><textarea aria-label="سؤال المرشد" maxLength={2000} value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); send(); } }} placeholder="اكتب سؤالك بالعربية أو الألمانية…" /><button aria-label="إرسال السؤال" onClick={send} disabled={!input.trim() || busy}><Send size={18} /></button></div>
       <footer><ShieldAlert size={15} /><span>{provider === "disabled" ? "لا يغادر السؤال جهازك، ولا تحتاج إلى مفتاح أو اتصال." : "قبل كل إرسال ستشاهد السؤال والوجهة وتوافق عليهما. لا ترسل بيانات شخصية."}</span><Link href="/settings"><Settings size={14} /> الإعدادات</Link></footer>
     </div>

@@ -279,8 +279,8 @@ Offline routes: 298/298
 Offline level packs: 298/51/51/51/199
 Search entries: 3,080
 Official source records: 12/12
-Offline cache: dwnb-full-pack-v60
-Offline level caches: dwnb-level-pack-a1-v60, dwnb-level-pack-a2-v60, dwnb-level-pack-b1-v60, dwnb-level-pack-b2-v60
+Offline cache: dwnb-full-pack-v62
+Offline level caches: dwnb-level-pack-a1-v62, dwnb-level-pack-a2-v62, dwnb-level-pack-b1-v62, dwnb-level-pack-b2-v62
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```
@@ -404,8 +404,8 @@ axe serious/critical on tested pages: 0
 
 ```text
 Total P0: 124
-Implemented: 108
-Partial: 13
+Implemented: 110
+Partial: 11
 Not implemented: 2
 Blocked by user credentials: 1
 ```
@@ -420,11 +420,9 @@ Blocked by user credentials: 1
 124 مراجعة بشرية لدلالة اقتباسات القراءة
 135 سرعات تعليمية في كل مشغلات الاستماع
 159 معلومات ناقصة ثنائية حقيقية
-254 تدقيق lang/Bidi لكل fragment
 255 جولة وصول يدوية وتقنيات مساعدة
 256 تعميم Status announcements دون إزعاج
 266 يوم سماح ظاهر
-267 قاموس مدح سلوكي موحد
 302 تشغيل Mobile E2E كاملًا داخل CI
 304 Secret scan على Git history حقيقي
 373 شروح تونسية فعلية
@@ -584,7 +582,7 @@ P0 98 + 99 — دفعة A2
 بعدها:
 
 ```text
-P0 254 + 255 + 256
+P0 255
 ```
 
 ثم:

@@ -7,6 +7,7 @@ import { saveMedia } from "@/core/portability/db";
 import { canSaveSpeakingReview, speakingDurationBand, speakingPreparationSeconds, speakingTargetSeconds } from "@/core/speaking/workflow";
 import type { SpeakingSelfReview } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { speakingPraise } from "@/core/coaching/behavior-praise";
 import { ResultAnnouncer } from "./result-announcer";
 import { speakingSavedMessage } from "@/core/a11y/result-announcements";
 
@@ -24,6 +25,8 @@ export function SpeakingLab({lessonId}:{lessonId?:string}){
   const preparationTotal=speakingPreparationSeconds(level);
   const attempts=state.speakingAttempts.filter((attempt)=>attempt.taskId===taskId);
   const latestAttempt=attempts.at(-1);
+  // P0-267: المدح لفعل مقيس = إعادة التسجيل بعد الاستماع الذاتي، لا لكثرة التسجيل.
+  const rePraise=speakingPraise({ attempts: attempts.length });
   const recorderRef=useRef<MediaRecorder|null>(null);
   const chunksRef=useRef<Blob[]>([]);
   const startedAtRef=useRef(0);
@@ -77,7 +80,7 @@ export function SpeakingLab({lessonId}:{lessonId?:string}){
     <div className="speaking-layout">
       <section className="speaking-task">
         <span className="task-label">{level} · {task.titleAr}</span><h2 lang="de" dir="ltr">{task.promptDe}</h2><p>{task.promptAr}</p>
-        {(phase==="prepare"||phase==="ready")&&<><div className="prompt-chips" dir="ltr">{task.usefulPhrases.map((phrase)=><span key={phrase}>{phrase}</span>)}</div><div className="speaking-preparation"><header><Clock3 size={18}/><div><strong>تحضير بكلمات مفتاحية فقط</strong><small>تختفي العبارات والملاحظات أثناء التسجيل.</small></div><b>{prepLabel}</b></header><div>{preparationNotes.map((note,index)=><input key={index} value={note} onChange={(event)=>setPreparationNotes((current)=>current.map((value,itemIndex)=>itemIndex===index?event.target.value:value))} placeholder={`كلمة مفتاحية ${index+1}`}/>)}</div>{phase==="prepare"?<button onClick={()=>setPhase("ready")}>أنهِ التحضير الآن</button>:<button onClick={()=>void startRecording()}><Mic2 size={16}/> ابدأ التسجيل</button>}</div></>}
+        {(phase==="prepare"||phase==="ready")&&<><div className="prompt-chips" dir="ltr">{task.usefulPhrases.map((phrase)=><span key={phrase} lang="de" dir="ltr">{phrase}</span>)}</div><div className="speaking-preparation"><header><Clock3 size={18}/><div><strong>تحضير بكلمات مفتاحية فقط</strong><small>تختفي العبارات والملاحظات أثناء التسجيل.</small></div><b>{prepLabel}</b></header><div>{preparationNotes.map((note,index)=><input key={index} value={note} onChange={(event)=>setPreparationNotes((current)=>current.map((value,itemIndex)=>itemIndex===index?event.target.value:value))} placeholder={`كلمة مفتاحية ${index+1}`}/>)}</div>{phase==="prepare"?<button onClick={()=>setPhase("ready")}>أنهِ التحضير الآن</button>:<button onClick={()=>void startRecording()}><Mic2 size={16}/> ابدأ التسجيل</button>}</div></>}
         {phase==="recording"&&<div className="speaking-live"><span className="record-dot"/><div><strong>التسجيل يعمل دون نموذج أو ملاحظات</strong><small>الهدف الزمني الداخلي {targetSeconds} ثانية</small></div><b>{responseLabel}</b><button onClick={stopRecording}><CircleStop size={17}/> إيقاف</button></div>}
         {(phase==="review"||phase==="saved")&&<div className="speaking-playback"><header><Headphones size={18}/><div><strong>استمع إلى محاولتك كاملةً</strong><small>لا يُفتح الحفظ قبل وصول المشغل إلى النهاية.</small></div></header><audio controls src={audioUrl} onEnded={()=>setListenedBack(true)} aria-label="تشغيل محاولة المحادثة"/><div><span>المدة الفعلية <b>{duration} ث</b></span><span>الهدف الداخلي <b>{targetSeconds} ث</b></span><span>مقارنة المدة <b>{band==="short"?"أقصر من 60%":band==="long"?"أطول من 130%":"ضمن النطاق الداخلي"}</b></span></div>{listenedBack&&<p><Check size={14}/> اكتمل الاستماع الذاتي.</p>}</div>}
         {message&&<div className="success-banner"><ShieldCheck size={17}/>{message}</div>}
@@ -85,7 +88,7 @@ export function SpeakingLab({lessonId}:{lessonId?:string}){
       </section>
 
       <aside className="self-rubric">
-        <div className="card-title"><span>تقييم ذاتي صادق</span><small>ليس تقييم نطق آلي</small></div>
+        {rePraise&&<p className="behavior-praise" data-praise-id={rePraise.id}>{rePraise.ar}</p>}<div className="card-title"><span>تقييم ذاتي صادق</span><small>ليس تقييم نطق آلي</small></div>
         {phase==="review"||phase==="saved"?<><div className="speaking-criteria">{task.successCriteriaAr.map((item)=><label key={item} className={achievedCriteria.includes(item)?"checked":""}><input type="checkbox" checked={achievedCriteria.includes(item)} onChange={()=>toggleCriterion(item)}/><span>{item}</span></label>)}</div><label>وضوح المهمة من 5<div className="score-buttons">{ratingValues.map((score)=><button key={score} onClick={()=>setClarityScore(score)} className={clarityScore===score?"active":""}>{score}</button>)}</div></label><label className="speaking-review-check"><input type="checkbox" checked={turnTaking} onChange={(event)=>setTurnTaking(event.target.checked)}/><span>أخذت الدور أو طرحت/أجبت عن سؤال مناسب.</span></label><label className="speaking-review-check"><input type="checkbox" checked={repairUsed} onChange={(event)=>setRepairUsed(event.target.checked)}/><span>أصلحت فكرة أو أعدت صياغتها عند التعثر.</span></label><label>الفجوة المحددة وخطة الإعادة<textarea value={reflection} onChange={(event)=>setReflection(event.target.value)} placeholder="مثال: توقفت قبل السؤال؛ في الإعادة سأحفظ ترتيب السؤال لا النص كاملًا."/></label><button className="primary-button" onClick={()=>void save()} disabled={!saveReady||phase==="saved"}><Save size={16}/> {phase==="saved"?"تم حفظ المحاولة":"حفظ الدليل بعد الاستماع"}</button>{phase==="saved"&&<button className="secondary-button" onClick={retry}><RotateCcw size={15}/> ابدأ محاولة محسنة</button>}<div className="privacy-note"><Volume2 size={17}/><p>المحفوظ هو التسجيل والمدة وتقييمك الذاتي فقط. لا يوجد تحليل فونيمي أو درجة طلاقة أو نطق آلية.</p></div></>:<div className="feedback-placeholder"><Mic2 size={26}/><p>أكمل التحضير والتسجيل أولًا. العبارات والملاحظات تختفي أثناء الأداء حتى يبقى الدليل مستقلًا.</p></div>}
       </aside>
     </div>

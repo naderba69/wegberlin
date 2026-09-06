@@ -5,6 +5,8 @@ import { academicLessons } from "../../src/data/academic-lessons";
 import { allPublishedExamTasks } from "../../src/data/exam-simulation-registry";
 import { curriculum } from "../../src/data/curriculum";
 import { defaultState } from "../../src/core/portability/db";
+import { bidiAuditInPage, bidiAuditPatterns } from "./bidi-audit";
+import { isGenericPraise } from "../../src/core/coaching/behavior-praise";
 import { framesByLesson, nounsByLesson } from "../../src/data/lexical-grammar-registry";
 
 async function waitForLearningReady(page: Page) {
@@ -244,6 +246,70 @@ test("P0-266: one missed day becomes an explicit grace day with no deferred task
   const budget = Number(((await todayCard.locator("header > b").textContent()) ?? "0").replace(/[^0-9]/gu, ""));
   const slotMinutes = await todayCard.locator("a").evaluateAll((nodes) => nodes.reduce((sum, node) => sum + Number((node.textContent ?? "").replace(/[^0-9]/gu, "")), 0));
   expect(slotMinutes).toBe(budget);
+});
+
+test("P0-254: every mixed fragment on the audited routes is tagged and bidi-isolated", async ({ page }) => {
+  // تدقيق منهجي لا عينات: نفس قاعدة src/core/a11y/bidi.ts مطبَّقة على DOM الفعلي.
+  // كل سطح مؤلَّف في المشروع، لا العيّنات: الواجهة اليومية، المكتبة، البحث،
+  // الإعدادات، مركز الامتحان، تدريب موجّه، وأربعة دروس (A1→B2).
+  const routes = ["/", "/today", "/progress", "/review", "/errors", "/diagnostic", "/library", "/search",
+    "/settings", "/tutor", "/exams", "/exams/goethe-b2/goethe-b2-reading-01",
+    "/exams/goethe-b2/full/goethe-b2-full-01", "/exams/telc-deutsch-b2/telc-b2-reading-01",
+    "/practice", "/speaking", "/writing", "/mediation", "/module/a1-1", "/module/b2-6",
+    "/lernen/a1-01", "/lernen/a2-01", "/lernen/b1-01", "/lernen/b2-01"];
+  const violations: string[] = [];
+  let scanned = 0;
+  for (const route of routes) {
+    await page.goto(route);
+    await waitForLearningReady(page).catch(() => undefined);
+    await page.waitForTimeout(200);
+    const report = await page.evaluate(bidiAuditInPage, bidiAuditPatterns);
+    scanned += report.scanned;
+    for (const violation of report.violations) violations.push(`${route} ${violation.kind} <${violation.tag}> ${violation.text}`);
+  }
+  // إن لم يمسح المدقق أكثر من ألف Runs لاتيني فهذا يعني أن المدقق لا يرى الصفحة فعلًا.
+  expect(scanned).toBeGreaterThan(1000);
+  expect(violations).toEqual([]);
+});
+
+test("P0-267: review praise names the measured behavior, never a generic adjective", async ({ page }) => {
+  await page.goto("/review");
+  await waitForLearningReady(page);
+  await page.evaluate((baseState) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const state = structuredClone(baseState);
+      state.profile = {
+        name: "Nadia",
+        targetExam: "goethe-b2",
+        dailyMinutes: 45,
+        arabicSupport: "modern-standard-arabic",
+        currentLevel: "A1",
+        createdAt: new Date().toISOString(),
+      };
+      // درس منجز واحد يكفي لإنشاء بطاقات مستحقة؛ بلا سجل مراجعة فهي جديدة مستحقة الآن.
+      state.completedLessonIds = ["a1-01"];
+      state.reviewItems = [];
+      const tx = open.result.transaction("learning-state", "readwrite");
+      tx.objectStore("learning-state").put(state, "primary");
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    };
+  }), structuredClone(defaultState));
+  await page.reload();
+  await waitForLearningReady(page);
+
+  await page.locator(".flashcard").click();
+  await page.getByRole("button", { name: /نسيت/ }).click();
+
+  const praise = page.locator(".behavior-praise");
+  await expect(praise).toBeVisible();
+  await expect(praise).toHaveAttribute("data-praise-id", "review-graded-honestly");
+  const text = (await praise.textContent()) ?? "";
+  // لا مدح عام، والمدح يقيس: يذكر الفاصل الجديد بالأيام.
+  expect(isGenericPraise(text), text).toBe(false);
+  expect(text).toMatch(/\d/);
 });
 
 test("P0-38: a session keeps a short retrieval warm-up before any SM-2 card exists", async ({ page }) => {
@@ -498,6 +564,9 @@ test("P0 tutor requires per-send consent, validates structured JSON, and deletes
 });
 
 test("P0 daily check-in rebalances load and reflection stores tomorrow's decision", async ({ page }) => {
+  // الساعة مثبّتة على يوم دراسة (الخميس): الأحد يوم راحة في الخطة الأسبوعية،
+  // فلا يوجد عنصر `.today` فيه — ثبات التاريخ هنا يمنع اختبارًا يفشل يومًا كل أسبوع.
+  await page.clock.setFixedTime(new Date("2026-09-03T09:00:00"));
   await page.goto("/today");
   await waitForLearningReady(page);
   await page.evaluate((baseState) => new Promise<void>((resolve, reject) => {
@@ -1195,7 +1264,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v60");
+    const cache = await caches.open("dwnb-full-pack-v62");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1280,7 +1349,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v60");
+    const cache = await caches.open("dwnb-full-pack-v62");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1312,8 +1381,8 @@ test("one level pack installs its own scope without downloading the whole course
   await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
 
   const levelEvidence = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
-    const fullCache = await caches.open("dwnb-full-pack-v60");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v62");
+    const fullCache = await caches.open("dwnb-full-pack-v62");
     const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
     const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
     const a1Lesson = await levelCache.match("/lernen/a1-01");
@@ -1371,10 +1440,10 @@ test("one level pack installs its own scope without downloading the whole course
   await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
   const afterLevelRemoval = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v60");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v62");
     const keys = await levelCache.keys();
     const names = await caches.keys();
-    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v60") };
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v62") };
   });
   expect(afterLevelRemoval.keys).toBe(0);
 });

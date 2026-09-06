@@ -1,4 +1,4 @@
-import { GERMAN_STOPWORD_RE, LATIN_WORD_RE, TECHNICAL_TERMS, UMLAUT_RE } from "@/core/a11y/bidi";
+import { GERMAN_STOPWORD_RE, ENGLISH_MARKER_RE, LATIN_WORD_RE, OPAQUE_TOKEN_RE, TECHNICAL_TERMS, UMLAUT_RE } from "@/core/a11y/bidi";
 
 /**
  * P0-254: مدقق DOM لكل جزء مختلط لغويًا.
@@ -16,6 +16,9 @@ export const bidiAuditPatterns = {
   latinSource: LATIN_WORD_RE.source,
   umlautSource: UMLAUT_RE.source,
   stopSource: GERMAN_STOPWORD_RE.source,
+  opaqueSource: OPAQUE_TOKEN_RE.source,
+  englishSource: ENGLISH_MARKER_RE.source,
+  englishFlags: "iu",
   flags: "u",
   technical: [...TECHNICAL_TERMS],
 };
@@ -37,18 +40,24 @@ export const bidiAuditInPage = (patterns: typeof bidiAuditPatterns) => {
   const latinRe = new RegExp(patterns.latinSource, patterns.flags + "g");
   const umlautRe = new RegExp(patterns.umlautSource, patterns.flags);
   const stopRe = new RegExp(patterns.stopSource, patterns.flags);
+  const opaqueRe = new RegExp(patterns.opaqueSource, patterns.flags);
+  const englishRe = new RegExp(patterns.englishSource, patterns.englishFlags);
   const technical = new Set(patterns.technical);
   const violations: Array<{ tag: string; text: string; kind: "missing-lang" | "wrong-direction" }> = [];
   let scanned = 0;
 
-  const isGerman = (text: string) => {
+  /** نفس ترتيب `classifyLatinRun` في `src/core/a11y/bidi.ts`: مصدر واحد. */
+  const classify = (text: string): "de" | "en" | "other" => {
     const tokens = text.split(/\s+/u).map((token) => token.replace(/[^\p{L}\d-]/gu, "")).filter(Boolean);
-    if (tokens.length === 0) return false;
-    if (tokens.every((token) => technical.has(token))) return false;
-    if (tokens.length >= 3) return true;
-    if (umlautRe.test(text)) return true;
-    if (stopRe.test(text)) return true;
-    return /^\p{Lu}/u.test(text);
+    if (tokens.length === 0) return "other";
+    if (tokens.every((token) => technical.has(token))) return "other";
+    if (opaqueRe.test(text.trim())) return "other";
+    if (tokens.some((token) => opaqueRe.test(token))) return "other";
+    const germanSignal = umlautRe.test(text) || stopRe.test(text);
+    if (!germanSignal && englishRe.test(text)) return "en";
+    if (tokens.length >= 3) return "de";
+    if (germanSignal) return "de";
+    return /^\p{Lu}/u.test(text) ? "de" : "other";
   };
 
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -64,12 +73,16 @@ export const bidiAuditInPage = (patterns: typeof bidiAuditPatterns) => {
     if (getComputedStyle(parent).display === "none" || getComputedStyle(parent).visibility === "hidden") continue;
 
     for (const run of runs) {
-      if (!isGerman(run)) continue;
+      // الحروف اللاتينية وحدها (لا الحروف الألمانية) هي ما يحدد "Run" ذا معنى:
+      // حرف واحد مثل `A` في شارة المستوى، أو رقم، ليس نصًا ألمانيًا يجب وسمه.
+      if (run.replace(/[^\p{L}]/gu, "").length < 2) continue;
+      const language = classify(run);
+      if (language === "other") continue;
       scanned += 1;
       const marked = parent.closest("[lang]");
       const lang = marked?.getAttribute("lang") ?? null;
-      if (lang !== "de") {
-        violations.push({ tag: parent.tagName, text: run.slice(0, 80), kind: "missing-lang" });
+      if (lang !== language) {
+        violations.push({ tag: parent.tagName, text: `${language}·${run.slice(0, 70)}`, kind: "missing-lang" });
       } else if (getComputedStyle(parent).direction !== "ltr") {
         violations.push({ tag: parent.tagName, text: run.slice(0, 80), kind: "wrong-direction" });
       }

@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "@/components/bidi-text";
 
 import { useState } from "react";
 import { AlertTriangle, BookOpenCheck, CalendarCheck, Check, Eye, Filter, NotebookTabs, RotateCcw, Sparkles, X } from "lucide-react";
@@ -64,9 +65,9 @@ export function ErrorNotebook() {
       const waiting = repairState === "waiting";
       const due = repairState === "due";
       return <article key={error.id} className={error.resolved ? "resolved" : ""}>
-        <span className="error-type"><AlertTriangle size={16}/>{error.type}</span>
-        <div className="error-lines" dir="ltr"><del>{error.wrong}</del>{error.resolved || waiting || isRevealed ? <strong>{error.correct}</strong> : <span className="hidden-correction">التصحيح مخفي حتى المحاولة</span>}</div>
-        <p>{error.explanationAr}</p>
+        <span className="error-type" dir="ltr"><AlertTriangle size={16}/>{error.type}</span>
+        <div className="error-lines" dir="ltr"><del lang="de">{error.wrong}</del>{error.resolved || waiting || isRevealed ? <strong lang="de">{error.correct}</strong> : <span className="hidden-correction">التصحيح مخفي حتى المحاولة</span>}</div>
+        <p><BidiText text={error.explanationAr}/></p>
         {waiting && <div className="repair-pending"><CalendarCheck size={17}/><div><strong>علاج أولي ناجح — ينتظر اختبارًا مؤجلًا</strong><p>سيُخفى التصحيح من جديد في {new Date(error.nextReviewAt!).toLocaleDateString("ar-TN")}؛ لا يُعتبر الخطأ مستقرًا قبل نجاح الاسترجاع الثاني.</p></div></div>}
         {!error.resolved && !waiting && <form className="error-remediation" onSubmit={(event) => { event.preventDefault(); checkCorrection(error); }}>
           <label><span>{due?"اختبار مؤجل: اكتب التصحيح من الذاكرة":"العلاج الأول: اكتب التصحيح من الذاكرة"}</span><input dir="ltr" value={answers[error.id] ?? ""} onChange={(event) => { setAnswers((current) => ({ ...current, [error.id]: event.target.value })); setFeedback((current) => { const next = { ...current }; delete next[error.id]; return next; }); }} aria-label={`تصحيح ${error.wrong}`} placeholder="اكتب الجواب الصحيح…" /></label>
@@ -76,6 +77,6 @@ export function ErrorNotebook() {
         <footer><small>تكرر {error.occurrences} مرة · آخر ظهور {new Date(error.lastSeenAt).toLocaleDateString("ar-TN")}</small>{error.resolved && <button onClick={() => reopen(error.id)}><RotateCcw size={14}/> إعادة فتح للتدريب</button>}</footer>
       </article>;
     })}</div> : <div className="empty-errors"><Check size={25}/><h3>لا توجد أخطاء شخصية مسجلة بعد</h3><p>أكمل اختبار تحديد المستوى أو التدريبات حتى يستطيع المدرب اكتشاف أنماطك.</p></div>}
-    <section className="common-traps"><div className="section-heading"><div><span>قاعدة معرفة</span><h2>مصائد شائعة للناطق بالعربية</h2></div><strong><Sparkles size={14}/> للاستباق لا للحكم عليك</strong></div><div className="trap-grid">{commonTraps.map((trap)=><article key={trap.title}><small>{trap.type}</small><h3>{trap.title}</h3><strong dir="ltr" lang="de">{trap.de}</strong><p>{trap.ar}</p></article>)}</div></section>
+    <section className="common-traps"><div className="section-heading"><div><span>قاعدة معرفة</span><h2>مصائد شائعة للناطق بالعربية</h2></div><strong><Sparkles size={14}/> للاستباق لا للحكم عليك</strong></div><div className="trap-grid">{commonTraps.map((trap)=><article key={trap.title}><small dir="ltr">{trap.type}</small><h3>{trap.title}</h3><strong dir="ltr" lang="de">{trap.de}</strong><p><BidiText text={trap.ar}/></p></article>)}</div></section>
   </div>;
 }

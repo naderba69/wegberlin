@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "@/components/bidi-text";
 
 import { useDeferredValue, useMemo, useState } from "react";
 import Link from "next/link";
@@ -71,8 +72,8 @@ export function BilingualSearchView() {
     {!searching ? <section className="search-empty">
       <ShieldCheck size={28} />
       <h2>ابدأ من كلمة أو مقصد</h2>
-      <p>يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة.</p>
-      <div>{["Termin verschieben", "التدفئة", "obwohl", "العمل الجماعي"].map((suggestion) => <button key={suggestion} dir="auto" onClick={() => setQuery(suggestion)}>{suggestion}</button>)}</div>
+      <p><BidiText text="يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة."/></p>
+      <div>{["Termin verschieben", "التدفئة", "obwohl", "العمل الجماعي"].map((suggestion) => <button key={suggestion} dir="auto" onClick={() => setQuery(suggestion)}><BidiText text={suggestion}/></button>)}</div>
     </section> : <>
       <div className="search-result-heading"><strong>{results.length} نتيجة مرتبة</strong><span>{results.length === 80 ? "نعرض أفضل 80 نتيجة؛ أضف كلمة لتضييق البحث." : "الترتيب يفضّل التطابق في العنوان والعبارة."}</span></div>
       {results.length === 0 ? <section className="search-empty"><Search size={27} /><h2>لا توجد نتيجة بهذه المرشحات</h2><p>جرّب جزءًا من الكلمة، غيّر المستوى، أو اختر «الكل».</p></section> : <div className="search-results">
@@ -82,11 +83,11 @@ export function BilingualSearchView() {
           return <Link href={entry.href} className="search-result-card" key={entry.id}>
             <span className="search-result-icon"><Icon size={18} /></span>
             <div>
-              <header><span>{subtypeAr[entry.subtype]} · {entry.level}</span>{entry.provider && <small>{entry.provider === "goethe-b2" ? "Goethe B2" : "telc Deutsch B2"}</small>}</header>
+              <header><span>{subtypeAr[entry.subtype]} · {entry.level}</span>{entry.provider && <small lang="de" dir="ltr">{entry.provider === "goethe-b2" ? "Goethe B2" : "telc Deutsch B2"}</small>}</header>
               <h2 lang="de" dir="ltr">{entry.titleDe}</h2>
-              <h3>{entry.titleAr}</h3>
+              <h3><BidiText text={entry.titleAr}/></h3>
               <p lang="de" dir="ltr">{entry.contextDe}</p>
-              <small>{entry.contextAr}</small>
+              <small><BidiText text={entry.contextAr}/></small>
             </div>
             <ArrowLeft size={17} />
           </Link>;

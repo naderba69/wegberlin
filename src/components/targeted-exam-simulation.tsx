@@ -1,10 +1,12 @@
 "use client";
+import { BidiText } from "./bidi-text";
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, Clock3, ExternalLink, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedExamSimulation } from "@/types/exam";
 import { examProfiles, examSourceById } from "@/data/exam-profiles";
+import { examPraise } from "@/core/coaching/behavior-praise";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
@@ -29,7 +31,11 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
   }, [started, finished, remainingSeconds]);
 
   const score = simulation.items.filter((item) => answers[item.id] === item.correctOptionId).length;
+
+  // P0-267: المدح يسمي الفعل المقيس (إكمال كل العناصر) لا صفة عامة.
+
   const answered = Object.keys(answers).length;
+  const examBehaviorPraise=examPraise({ answered: Object.keys(answers).length, total: simulation.items.length });
   const selectedOptionIds = useMemo(() => Object.values(answers), [answers]);
   const minutes = String(Math.floor(remainingSeconds / 60)).padStart(2, "0");
   const seconds = String(remainingSeconds % 60).padStart(2, "0");
@@ -78,16 +84,16 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
       <div className="wide-page exam-runner-start">
         <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>
         <section>
-          <span className="eyebrow"><ShieldCheck size={15} /> {profile.displayName}</span>
+          <span className="eyebrow"><ShieldCheck size={15} /> <BidiText text={profile.displayName}/></span>
           <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
           <h1 lang="de" dir="ltr">{simulation.titleDe}</h1>
           <h2>{simulation.titleAr}</h2>
-          <p>{simulation.descriptionAr}</p>
+          <p><BidiText text={simulation.descriptionAr}/></p>
           <div className="exam-start-meta">
-            <span><Clock3 size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small>{simulation.timingNoteAr}</small></span>
+            <span><Clock3 size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small><BidiText text={simulation.timingNoteAr}/></small></span>
             <span><Check size={17} /><b>{simulation.items.length} عناصر</b><small>{continuous ? "يبقى التصحيح مخفيًا حتى تنتهي البروفة المتصلة." : "تظهر الحلول والتفسيرات بعد الالتزام بالإجابة."}</small></span>
           </div>
-          <div className="exam-integrity-note"><CircleAlert size={18} /><p>محتوى أصلي غير رسمي. يحاكي هذا التدريب نوع الجزء المحدد فقط، ولا يمثل محاكاة كاملة أو نتيجة صادرة عن {profile.displayName}.</p></div>
+          <div className="exam-integrity-note"><CircleAlert size={18} /><p>محتوى أصلي غير رسمي. يحاكي هذا التدريب نوع الجزء المحدد فقط، ولا يمثل محاكاة كاملة أو نتيجة صادرة عن <BidiText text={profile.displayName}/>.</p></div>
           <button className="primary-button" onClick={begin}><Timer size={17} /> ابدأ المؤقت والتدريب</button>
         </section>
       </div>
@@ -102,10 +108,11 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
         <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: "نتيجة التدريب الجزئي" })}/>
         <header>
           <span><ShieldCheck size={28} /></span>
-          <small>{profile.displayName} · تدريب جزئي غير رسمي</small>
+          <small><BidiText text={profile.displayName}/> · تدريب جزئي غير رسمي</small>
           <h1>{score}<i>/{simulation.items.length}</i></h1>
           <h2>{score / simulation.items.length >= 0.8 ? "فهم جيد لهذا النوع — أعده لاحقًا بنص جديد" : "راجع مواضع الخلط ثم أعد نوعًا مماثلًا"}</h2>
           <p>هذه نسبة تدريب داخل التطبيق ولا تُحوّل إلى نقاط رسمية أو حكم نجاح في الوحدة الكاملة.</p>
+          {examBehaviorPraise&&<p className="behavior-praise" data-praise-id={examBehaviorPraise.id}>{examBehaviorPraise.ar}</p>}
         </header>
         <div className="targeted-review-list">
           {simulation.items.map((item, index) => {
@@ -137,7 +144,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
     <div className="wide-page targeted-exam">
       <header className="targeted-exam-header">
         <div>
-          <span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span>
+          <span className="eyebrow"><BidiText text={profile.displayName}/> · <span lang="de" dir="ltr">{simulation.officialPartLabel}</span></span>
           <h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1>
         </div>
         <div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف التدريبي" : "وقت متبقٍ"}</small></div>
@@ -185,7 +192,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
         <div>
           {simulation.sourceRefs.map((sourceId) => {
             const source = examSourceById[sourceId];
-            return <a key={sourceId} href={source.url} target="_blank" rel="noreferrer">{source.organization}<ExternalLink size={12} /></a>;
+            return <a key={sourceId} href={source.url} target="_blank" rel="noreferrer" dir="ltr"><span lang="de" dir="ltr">{source.organization}</span><ExternalLink size={12} /></a>;
           })}
         </div>
       </section>}

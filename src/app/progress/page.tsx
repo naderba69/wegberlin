@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "@/components/bidi-text";
 
 import Link from "next/link";
 import { Activity, ArrowLeft, BookCheck, CircleAlert, Gauge, Goal, Mic2, PenLine, RotateCcw, ShieldCheck, TrendingUp } from "lucide-react";
@@ -17,7 +18,7 @@ export default function ProgressPage() {
   const speaking = report.skills.find((skill) => skill.key === "speaking")!;
 
   return <div className="wide-page progress-evidence-page">
-    <header className="page-heading"><div><span className="eyebrow"><TrendingUp size={15}/> أدلة لا نقرات</span><h1>ما تستطيع فعله <em>فعليًا</em></h1><p>كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مستوى CEFR رسمي.</p></div></header>
+    <header className="page-heading"><div><span className="eyebrow"><TrendingUp size={15}/> أدلة لا نقرات</span><h1>ما تستطيع فعله <em>فعليًا</em></h1><p><BidiText text={"كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مستوى CEFR رسمي."}/></p></div></header>
 
     <div className="metrics-grid">
       <article><span><BookCheck size={20}/></span><small>الدروس المكتملة</small><strong>{state.completedLessonIds.length}<i>/84</i></strong></article>
@@ -34,7 +35,7 @@ export default function ProgressPage() {
 
     <div className="progress-grid evidence-progress-grid">
       <section className="chart-card">
-        <div className="card-title"><span>توازن المهارات من الأدلة</span><small>ليس حكم CEFR</small></div>
+        <div className="card-title"><span>توازن المهارات من الأدلة</span><small><BidiText text="ليس حكم CEFR"/></small></div>
         {report.skills.map((skill) => <div className="evidence-skill" key={skill.key}>
           <div className="skill-row"><span>{skill.labelAr}</span><i><b style={{width:`${skill.score ?? 0}%`}}/></i><strong>{skill.score === null ? "—" : `${skill.score}%`}</strong></div>
           <div className="evidence-skill-detail"><span>{skill.detailAr}</span><small>{confidenceAr[skill.confidence]}</small></div>

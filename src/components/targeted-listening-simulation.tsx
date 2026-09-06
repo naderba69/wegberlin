@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { BidiText } from "./bidi-text";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, Headphones, Play, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedListeningSimulation } from "@/types/exam";
 import { examProfiles } from "@/data/exam-profiles";
+import { examPraise } from "@/core/coaching/behavior-praise";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { examAudioAssetsByClipId, examAudioManifest, type ExamAudioAsset } from "@/data/exam-audio-assets";
@@ -40,7 +42,11 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
   useEffect(() => () => { window.speechSynthesis?.cancel(); audioRef.current?.pause(); }, []);
 
   const score = simulation.items.filter((item) => answers[item.id] === item.correctIndex).length;
+
+  // P0-267: المدح يسمي الفعل المقيس (إكمال كل العناصر) لا صفة عامة.
+
   const answered = Object.keys(answers).length;
+  const examBehaviorPraise=examPraise({ answered: Object.keys(answers).length, total: simulation.items.length });
   const minutes = String(Math.floor(remainingSeconds / 60)).padStart(2, "0");
   const seconds = String(remainingSeconds % 60).padStart(2, "0");
 
@@ -108,13 +114,13 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
       <div className="wide-page exam-runner-start">
         <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>
         <section>
-          <span className="eyebrow"><Headphones size={15} /> {profile.displayName}</span>
+          <span className="eyebrow"><Headphones size={15} /> <BidiText text={profile.displayName}/></span>
           <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
           <h1 lang="de" dir="ltr">{simulation.titleDe}</h1>
           <h2>{simulation.titleAr}</h2>
           <p>{simulation.descriptionAr}</p>
           <div className="exam-start-meta">
-            <span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small>{simulation.timingNoteAr}</small></span>
+            <span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small><BidiText text={simulation.timingNoteAr}/></small></span>
             <span><Play size={17} /><b>{simulation.clips.length} مقاطع · تشغيل محدود</b><small>اقرأ الأسئلة قبل الضغط؛ لا يظهر النص قبل التصحيح.</small></span>
           </div>
           <div className="exam-integrity-note"><CircleAlert size={18} /><p>{allClipsGenerated?`تتوفر ${generatedClipCount} ملفات MP3 اصطناعية مولّدة من نص التدريب الأصلي. هي أحادية المتحدث وغير امتحانية، وBrowser TTS بديل فقط.`:"بعض المقاطع ما زالت تعتمد على Browser TTS. كلا المصدرين تدريبيان وغير رسميين ولا يمثلان تنوع الصوت البشري في الامتحان."}</p></div>
@@ -132,10 +138,11 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
         <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: "نتيجة تدريب الاستماع" })}/>
         <header>
           <span><ShieldCheck size={28} /></span>
-          <small>{profile.displayName} · {allClipsGenerated?"استماع بملفات MP3 مولّدة":"استماع جزئي بصوت المتصفح"}</small>
+          <small><BidiText text={profile.displayName}/> · {allClipsGenerated?"استماع بملفات MP3 مولّدة":"استماع جزئي بصوت المتصفح"}</small>
           <h1>{score}<i>/{simulation.items.length}</i></h1>
           <h2>{score / simulation.items.length >= 0.8 ? "التقاط جيد للمعلومات — اختبره لاحقًا بصوت جديد" : "راجع الفرق بين الفكرة العامة والتفصيل"}</h2>
           <p>النتيجة داخلية ولا تُحوّل إلى نقاط رسمية. أُظهر النص الآن للمقارنة بعد الالتزام.</p>
+          {examBehaviorPraise&&<p className="behavior-praise" data-praise-id={examBehaviorPraise.id}>{examBehaviorPraise.ar}</p>}
         </header>
         <div className="listening-transcript-review">
           {simulation.clips.map((clip) => <details key={clip.id}><summary lang="de" dir="ltr">{clip.labelDe} · Transkript</summary><p lang="de" dir="ltr">{clip.transcriptDe}</p></details>)}
@@ -164,7 +171,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
   return (
     <div className="wide-page targeted-exam">
       <header className="targeted-exam-header">
-        <div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div>
+        <div><span className="eyebrow"><BidiText text={profile.displayName}/> · <span lang="de" dir="ltr">{simulation.officialPartLabel}</span></span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div>
         <div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف التدريبي" : "وقت متبقٍ"}</small></div>
       </header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>

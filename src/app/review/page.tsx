@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "@/components/bidi-text";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import { newReviewItem } from "@/core/srs/sm2";
 import { buildDueReviewQueue, nextScheduledReviewDate } from "@/core/srs/review-queue";
 import { applyReviewGrade, retentionEvidence } from "@/core/srs/review-session";
 import { buildRetrievalWarmup } from "@/core/srs/warmup";
+import { reviewPraise, type BehaviorPraise } from "@/core/coaching/behavior-praise";
 import { composeTodayMission } from "@/core/coach/coach";
 import { RetrievalWarmup } from "@/components/retrieval-warmup";
 
@@ -16,6 +18,8 @@ export default function ReviewPage() {
   const [flipped, setFlipped] = useState(false);
   const [lastInterval, setLastInterval] = useState<number | null>(null);
   const [reviewedThisSession, setReviewedThisSession] = useState(0);
+  // P0-267: مدح السلوك المقيس (استرجاع عند الموعد، أو صدق التقييم) لا صفة عامة.
+  const [praise, setPraise] = useState<BehaviorPraise | null>(null);
   const reviewTimeZone = useMemo(() => Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC", []);
   const queue = useMemo(() => buildDueReviewQueue(state, new Date()), [state]);
   const nextScheduled = useMemo(() => nextScheduledReviewDate(state, new Date()), [state]);
@@ -35,12 +39,15 @@ export default function ReviewPage() {
     setLastInterval(outcome.nextReview.interval);
     setFlipped(false);
     setReviewedThisSession((count) => count + 1);
+    setPraise(reviewPraise({ grade: value, intervalDays: outcome.nextReview.interval }));
   }
 
   return <div className="focus-page">
-    <header className="page-heading"><div><span className="eyebrow"><RotateCcw size={15}/> مراجعة SM-2</span><h1>استرجع أولًا، <em>ثم اكشف.</em></h1><p>تظهر هنا بطاقات الدروس المكتملة فقط، مرتبة حسب موعد SM-2. لا تدخل مفردات من مستوى أو درس لم تنجزه.</p></div><div className="review-count"><strong>{queue.length}</strong><span>مراجعة مستحقة<br/>{reviewedThisSession ? `أنجزت الآن: ${reviewedThisSession}` : lastInterval !== null ? `الفاصل الأخير: ${lastInterval} يوم` : "حسب الدروس المكتملة"}</span></div></header>
+    <header className="page-heading"><div><span className="eyebrow"><RotateCcw size={15}/> مراجعة SM-2</span><h1>استرجع أولًا، <em>ثم اكشف.</em></h1><p><BidiText text={"تظهر هنا بطاقات الدروس المكتملة فقط، مرتبة حسب موعد SM-2. لا تدخل مفردات من مستوى أو درس لم تنجزه."}/></p></div><div className="review-count"><strong>{queue.length}</strong><span>مراجعة مستحقة<br/>{reviewedThisSession ? `أنجزت الآن: ${reviewedThisSession}` : lastInterval !== null ? `الفاصل الأخير: ${lastInterval} يوم` : "حسب الدروس المكتملة"}</span></div></header>
 
     <section className="retention-evidence-strip" aria-label="دليل الاحتفاظ المؤجل"><div><small>مراجعات أولى</small><strong>{retention.initialReviewEvents}</strong></div><div><small>بطاقات نجحت بعد موعد مؤجل</small><strong>{retention.successfulDelayedCards}</strong></div><div><small>دروس بعينة احتفاظ مؤجلة</small><strong>{retention.confirmedLessonIds.length}</strong></div><p>كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح البطاقة بعد أن يحين موعدها، ولا تسمى إتقانًا دائمًا.</p></section>
+
+    {praise && <p className="behavior-praise" data-praise-id={praise.id}><Sparkles size={16}/>{praise.ar}</p>}
 
     {card && reviewState ? <div className="flashcard-zone">
       <div className="review-card-meta"><span>{card.tags[0]}</span><strong>{card.tags[1]}</strong><small>{queued.isNew ? "بطاقة جديدة" : `كانت مستحقة: ${new Date(queued.dueAt).toLocaleDateString("ar-TN")}`}</small></div>

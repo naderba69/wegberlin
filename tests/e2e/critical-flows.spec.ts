@@ -312,6 +312,54 @@ test("P0-267: review praise names the measured behavior, never a generic adjecti
   expect(text).toMatch(/\d/);
 });
 
+test("P0-373: the Tunisian support option changes lesson content, not only the stored profile", async ({ page }) => {
+  // مرحلة «القاعدة» تُفتح من تقدّم الدرس نفسه (الفهرس 4 في ترتيب المراحل).
+  const seed = (arabicSupport: string) => page.evaluate(({ baseState, support }) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const state = structuredClone(baseState);
+      state.profile = {
+        name: "Nadia",
+        targetExam: "goethe-b2",
+        dailyMinutes: 45,
+        arabicSupport: support as "modern-standard-arabic" | "tunisian-supported",
+        currentLevel: "B1",
+        createdAt: new Date().toISOString(),
+      };
+      state.diagnosticResult = { estimatedLevel: "B1", score: 12, maxScore: 16, levelScores: { A1: 4, A2: 4, B1: 4, B2: 0 }, completedAt: new Date().toISOString() };
+      state.lessonProgress = { "b1-01": 4 };
+      const transaction = open.result.transaction("learning-state", "readwrite");
+      transaction.objectStore("learning-state").put(state, "primary");
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    };
+  }), { baseState: structuredClone(defaultState), support: arabicSupport });
+
+  await page.goto("/lernen/b1-01");
+  await waitForLearningReady(page);
+  await seed("modern-standard-arabic");
+  await page.reload();
+  await waitForLearningReady(page);
+  await expect(page.locator(".theory-card").first()).toBeVisible();
+  await expect(page.locator(".tunisian-support")).toHaveCount(0);
+
+  await seed("tunisian-supported");
+  await page.reload();
+  await waitForLearningReady(page);
+  const support = page.locator(".tunisian-support");
+  await expect(support.first()).toBeVisible();
+  await expect(support.first()).toContainText("باللهجة التونسية");
+  await expect(support.first()).toContainText("الفصحى:");
+  await expect(support.first()).toContainText("التونسي:");
+  // الشرح مرتبط بالبنية المعروضة فعلًا في هذا الدرس، لا ملحق عام بكل الدروس.
+  const perPanel = await page.locator(".tunisian-support").evaluateAll((panels) => panels.map((panel) => [...panel.querySelectorAll("[data-note-id]")].map((node) => node.getAttribute("data-note-id"))));
+  // الشرح قد يتكرر عبر بطاقات القاعدة في الدرس نفسه، لكن لا يتكرر داخل البطاقة الواحدة.
+  expect(perPanel.length).toBeGreaterThan(0);
+  for (const ids of perPanel) expect(new Set(ids).size).toBe(ids.length);
+  expect(perPanel.flat()).toContain("spoken-past");
+});
+
 test("P0-38: a session keeps a short retrieval warm-up before any SM-2 card exists", async ({ page }) => {
   const readScheduling = () => page.evaluate(() => new Promise<{ reviewItems: number; reviewEvents: number; masteryKeys: number; attempts: number }>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
@@ -1264,7 +1312,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard).toContainText("298 مسارًا");
 
   const packEvidence = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v62");
+    const cache = await caches.open("dwnb-full-pack-v63");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
     const metadata = response ? await response.json() as { routeCount: number; assetCount: number; entryCount: number; includesAudio: boolean; audioEntryCount: number; byteSize: number } : null;
     const firstAudio = await cache.match("/audio/library/lib-l-a1-01.mp3");
@@ -1349,7 +1397,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await installedPack.getByRole("button", { name: "حذف صوت الحزمة فقط" }).click();
   await expect(installedPack).toContainText(/بقيت الصفحات والتقدم والتسجيلات الشخصية/);
   const afterAudioRemoval = await page.evaluate(async () => {
-    const cache = await caches.open("dwnb-full-pack-v62");
+    const cache = await caches.open("dwnb-full-pack-v63");
     const audio = await cache.match("/audio/library/lib-l-a1-01.mp3");
     const lessonRoute = await cache.match("/lernen/b2-12");
     const response = await cache.match("/__dwnb_offline_pack_meta__");
@@ -1381,8 +1429,8 @@ test("one level pack installs its own scope without downloading the whole course
   await expect(packCard.getByText(/اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري/)).toBeVisible({ timeout: 180_000 });
 
   const levelEvidence = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v62");
-    const fullCache = await caches.open("dwnb-full-pack-v62");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v63");
+    const fullCache = await caches.open("dwnb-full-pack-v63");
     const metadataResponse = await levelCache.match("/__dwnb_offline_pack_meta__");
     const metadata = metadataResponse ? await metadataResponse.json() as { scope: string; routeCount: number; includesAudio: boolean; byteSize: number } : null;
     const a1Lesson = await levelCache.match("/lernen/a1-01");
@@ -1440,10 +1488,10 @@ test("one level pack installs its own scope without downloading the whole course
   await installedLevelPack.getByRole("button", { name: "حذف الحزمة" }).click();
   await expect(installedLevelPack.locator(".pack-scope", { hasText: "مستوى A1" })).toContainText("51 مسارًا");
   const afterLevelRemoval = await page.evaluate(async () => {
-    const levelCache = await caches.open("dwnb-level-pack-a1-v62");
+    const levelCache = await caches.open("dwnb-level-pack-a1-v63");
     const keys = await levelCache.keys();
     const names = await caches.keys();
-    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v62") };
+    return { keys: keys.length, hasLevelCache: names.includes("dwnb-level-pack-a1-v63") };
   });
   expect(afterLevelRemoval.keys).toBe(0);
 });

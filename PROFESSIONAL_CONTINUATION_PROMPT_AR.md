@@ -279,8 +279,8 @@ Offline routes: 298/298
 Offline level packs: 298/51/51/51/199
 Search entries: 3,080
 Official source records: 12/12
-Offline cache: dwnb-full-pack-v62
-Offline level caches: dwnb-level-pack-a1-v62, dwnb-level-pack-a2-v62, dwnb-level-pack-b1-v62, dwnb-level-pack-b2-v62
+Offline cache: dwnb-full-pack-v63
+Offline level caches: dwnb-level-pack-a1-v63, dwnb-level-pack-a2-v63, dwnb-level-pack-b1-v63, dwnb-level-pack-b2-v63
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0
 ```

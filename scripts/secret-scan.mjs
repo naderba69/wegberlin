@@ -179,6 +179,10 @@ export function scanHistory(root, allowlist, { maxFiles = 40000, allowFetch = tr
     }
   }
   if (shallow) {
+    // تعليق مرئي في واجهة GitHub: لا يُسكت البوابة عن تاريخ لم يُفحص.
+    if (process.env.GITHUB_ACTIONS === "true") {
+      console.warn("::warning title=Secret scan::مستودع ضحل (fetch-depth: 1) ولم ينجح git fetch --unshallow؛ فُحصت الشجرة وحدها ولم يُفحص التاريخ");
+    }
     return {
       findings: [],
       scanned: 0,

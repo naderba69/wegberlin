@@ -19,6 +19,7 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:desktop": "playwright test --project=chromium",
+    "test:e2e:mobile": "playwright test --project=mobile-chromium",
     "check": "npm run lint && npm run typecheck && npm run test && npm run source:audit -- --strict && npm run handoff:check && npm run build",
     "dev:turbo": "next dev --turbopack"
   },

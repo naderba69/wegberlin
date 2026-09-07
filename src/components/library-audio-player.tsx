@@ -3,16 +3,20 @@
 import { Headphones, Play, ShieldCheck, Volume2 } from "lucide-react";
 import type { ListeningLibraryItem } from "@/types/library";
 import { audioDurationLabel, libraryAudioAssetByItemId, libraryAudioManifest } from "@/data/library-audio-assets";
+import { StudyAudio, useStudySpeed } from "./study-audio";
+import { ttsRateFor } from "@/core/audio/study-speed";
 
 export function LibraryAudioPlayer({ item }: { item: ListeningLibraryItem }) {
   const asset = libraryAudioAssetByItemId[item.id];
+  // P0-135: نفس السرعة المختارة في أي مشغّل آخر، ويطبَّق على بديل المتصفح أيضًا.
+  const studySpeed = useStudySpeed();
 
   function browserSpeech() {
     if (!("speechSynthesis" in window)) return;
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(item.transcriptDe);
     utterance.lang = "de-DE";
-    utterance.rate = 0.94;
+    utterance.rate = ttsRateFor(0.94, studySpeed);
     window.speechSynthesis.speak(utterance);
   }
 
@@ -29,7 +33,7 @@ export function LibraryAudioPlayer({ item }: { item: ListeningLibraryItem }) {
       <div><strong>ملف صوت اصطناعي مولّد للمشروع</strong><small>{audioDurationLabel(asset.durationMs)} · متحدث واحد · {asset.language}</small></div>
       <i>ليس صوت امتحان</i>
     </header>
-    <audio controls preload="metadata" src={asset.path} aria-label={`تشغيل ${item.titleAr}`} />
+    <StudyAudio src={asset.path} label={`تشغيل ${item.titleAr}`} idPrefix={`library-${item.id}`}/>
     <p>{item.strategyAr}</p>
     <footer>
       <button onClick={browserSpeech}><Volume2 size={14} /> بديل Browser TTS</button>

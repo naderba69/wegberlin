@@ -4,6 +4,7 @@ import { Headphones, Play, ShieldCheck, Volume2 } from "lucide-react";
 import type { FullLesson } from "@/types/lesson-content";
 import { lessonAudioAssetByLessonId, lessonAudioManifest } from "@/data/lesson-audio-assets";
 import { audioDurationLabel } from "@/data/library-audio-assets";
+import { StudyAudio } from "./study-audio";
 
 export function LessonListeningPlayer({ lesson, speechStatus, onBrowserTts }: { lesson: FullLesson; speechStatus: string; onBrowserTts: () => void }) {
   const asset = lessonAudioAssetByLessonId[lesson.id];
@@ -14,7 +15,7 @@ export function LessonListeningPlayer({ lesson, speechStatus, onBrowserTts }: { 
     <p>{lesson.listening.strategyAr}</p>
     {asset ? <>
       <div className="lesson-audio-status"><ShieldCheck size={14}/><span>ملف MP3 مولّد للمشروع · {audioDurationLabel(asset.durationMs)} · متحدث واحد · غير امتحاني</span></div>
-      <audio controls preload="metadata" src={asset.path} aria-label={`استماع درس ${lesson.titleAr}`}/>
+      <StudyAudio src={asset.path} label={`استماع درس ${lesson.titleAr}`} idPrefix={`lesson-${lesson.id}`}/>
       <div className="lesson-audio-actions"><button onClick={onBrowserTts}><Volume2 size={15}/> بديل Browser TTS</button><details><summary>المصدر وSHA-256</summary><p>{lessonAudioManifest.usageNoteAr}</p><code dir="ltr">{asset.sha256}</code></details></div>
     </> : <button onClick={onBrowserTts}><Play size={18}/> تشغيل بصوت المتصفح</button>}
     {speechStatus&&<i>{speechStatus}</i>}

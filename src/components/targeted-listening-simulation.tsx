@@ -10,6 +10,7 @@ import { examPraise } from "@/core/coaching/behavior-praise";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { examAudioAssetsByClipId, examAudioManifest, type ExamAudioAsset } from "@/data/exam-audio-assets";
+import { applyStudySpeed, getStudySpeed, ttsRateFor } from "@/core/audio/study-speed";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
 import { ResultAnnouncer } from "./result-announcer";
 import { examResultMessage } from "@/core/a11y/result-announcements";
@@ -61,7 +62,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
     if (continuous) update((current) => saveContinuousTaskDraft(current, simulation, { started: true, answers: next, listens }));
   }
 
-  function playAssetSequence(assets:ExamAudioAsset[],index=0){const audio=new Audio(assets[index].path);audioRef.current=audio;audio.onended=()=>{if(index+1<assets.length)playAssetSequence(assets,index+1)};void audio.play().catch(()=>undefined)}
+  function playAssetSequence(assets:ExamAudioAsset[],index=0){const audio=new Audio(assets[index].path);audioRef.current=audio;/* P0-135: الملفات تُنشأ ديناميكيًا، فتُطبَّق سرعة الدراسة المختارة عند الإنشاء. */applyStudySpeed(audio,getStudySpeed());audio.onended=()=>{if(index+1<assets.length)playAssetSequence(assets,index+1)};void audio.play().catch(()=>undefined)}
 
   function playClip(clipId: string, forceBrowserTts = false) {
     const clip = simulation.clips.find((item) => item.id === clipId);
@@ -74,7 +75,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
     } else if (speechAvailable) {
       const utterance = new SpeechSynthesisUtterance(clip.transcriptDe);
       utterance.lang = "de-DE";
-      utterance.rate = 0.94;
+      utterance.rate = ttsRateFor(0.94, getStudySpeed());
       window.speechSynthesis.speak(utterance);
     }
     const next = { ...listens, [clipId]: (listens[clipId] ?? 0) + 1 };

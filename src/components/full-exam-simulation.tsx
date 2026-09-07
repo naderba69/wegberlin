@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "./bidi-text";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -105,10 +106,10 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
       {continuousStatus !== "active" && <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>}
       <header className="full-exam-hero">
         <div>
-          <span className="eyebrow"><Flag size={15} /> {profile.displayName} · محاكاة أصلية غير رسمية</span>
+          <span className="eyebrow"><Flag size={15} /> <BidiText text={profile.displayName}/> · محاكاة أصلية غير رسمية</span>
           <h1 lang="de" dir="ltr">{simulation.titleDe}</h1>
           <h2>{simulation.titleAr}</h2>
-          <p>{simulation.descriptionAr}</p>
+          <p><BidiText text={simulation.descriptionAr}/></p>
         </div>
         <div className="full-exam-progress"><strong>{completedIds.length}/{taskIds.length}</strong><span>مهام مكتملة</span><i><b style={{ width: `${(completedIds.length / taskIds.length) * 100}%` }} /></i><small>{finalized ? "منتهية داخليًا" : abandoned ? "أُنهيت البروفة ولم تعد قابلة للاستئناف" : continuousStatus === "expired" ? "انتهى وقت البروفة المتصلة" : connected ? "بروفة متصلة — الساعة لا تتوقف" : startedAt ? "جلسة موجهة قابلة للاستئناف" : "لم تبدأ"}</small></div>
       </header>
@@ -136,7 +137,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
           const moduleDone = module.taskIds.filter((id) => isTaskComplete(tasksById[id])).length;
           return (
             <section key={module.id}>
-              <header><div><span>{moduleDone === module.taskIds.length ? <Check size={17} /> : moduleDone + 1}</span><div><small lang="de">{module.titleDe}</small><h2>{module.titleAr}</h2></div></div><div><Clock3 size={14} /><strong>{module.officialMinutes} دقيقة</strong><small>{moduleDone}/{module.taskIds.length}</small></div></header>
+              <header><div><span>{moduleDone === module.taskIds.length ? <Check size={17} /> : moduleDone + 1}</span><div><small lang="de" dir="ltr">{module.titleDe}</small><h2>{module.titleAr}</h2></div></div><div><Clock3 size={14} /><strong>{module.officialMinutes} دقيقة</strong><small>{moduleDone}/{module.taskIds.length}</small></div></header>
               <p>{module.resultRuleAr}</p>
               <div>
                 {module.taskIds.map((taskId, index) => {
@@ -159,7 +160,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
       </div>
 
       <section className="full-exam-limitations"><h2>حدود الدليل الحالية</h2>{simulation.limitationsAr.map((limitation) => <p key={limitation}><CircleAlert size={14} />{limitation}</p>)}</section>
-      <section className="exam-source-strip"><strong>مصادر توثيق الصيغة</strong><div>{simulation.sourceRefs.map((sourceId) => { const source = examSourceById[sourceId]; return <a key={source.id} href={source.url} target="_blank" rel="noreferrer">{source.organization}<ExternalLink size={12} /></a>; })}</div></section>
+      <section className="exam-source-strip"><strong>مصادر توثيق الصيغة</strong><div>{simulation.sourceRefs.map((sourceId) => { const source = examSourceById[sourceId]; return <a key={source.id} href={source.url} target="_blank" rel="noreferrer" dir="ltr"><span lang="de" dir="ltr">{source.organization}</span><ExternalLink size={12} /></a>; })}</div></section>
       {startedAt && !abandoned && <button className="full-exam-reset" onClick={() => setConfirmAction(continuousStatus === "active" ? "abandon" : "reset")}><RotateCcw size={14} /> {continuousStatus === "active" ? "إنهاء هذه البروفة المتصلة" : "إعادة علامة الجلسة"}</button>}
 
       {confirmAction && <AccessibleDialog labelledBy="rehearsal-confirm-title" describedBy="rehearsal-confirm-description" onClose={() => setConfirmAction(null)}>

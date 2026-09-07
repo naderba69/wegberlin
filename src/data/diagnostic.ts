@@ -215,6 +215,95 @@ const formB: DiagnosticQuestion[] = [
   }),
 ];
 
+/**
+ * P0-26: مهام «عينة الإنتاج» القصيرة بعد التشخيص (مهمة واحدة كتابية ومهمة شفهية لكل مستوى).
+ *
+ * قواعد التأليف هنا: المهمة قصيرة وقابلة للإتمام في دقيقة أو أقل، ولا تقيس الإملاء
+ * ولا تعاقب على الخطأ، ولا تُنتج درجة. الهدف أن يترك المتعلّم أثرًا إنتاجيًا واحدًا
+ * يقارن به نفسه لاحقًا، بدل أن يبقى التشخيص كله أسئلة اختيار من متعدد.
+ */
+export type DiagnosticSampleTask = {
+  promptDe: string;
+  promptAr: string;
+  /** تلميح واحد قبل الكتابة/التسجيل: يوجّه الشكل لا المضمون. */
+  hintAr: string;
+  /** الحد الأدنى المقبول لحفظ العينة: كلمات في الكتابة، ثوانٍ في المحادثة. */
+  minimum: number;
+  /** الهدف المعلن: كلمات/ثوانٍ. */
+  target: number;
+};
+
+export type DiagnosticSampleTasks = Record<"writing" | "speaking", DiagnosticSampleTask>;
+
+export const diagnosticSampleTasks: Record<CEFRLevel, DiagnosticSampleTasks> = {
+  A1: {
+    writing: {
+      promptDe: "Schreiben Sie drei Sätze: Wie heißen Sie? Wo wohnen Sie? Was machen Sie gern?",
+      promptAr: "اكتب ثلاث جمل قصيرة: ما اسمك؟ أين تسكن؟ وماذا تحب أن تفعل؟",
+      hintAr: "جملة واحدة تكفي لكل سؤال. لا تتوقف عند تصريف أو أداة ناقصة؛ المهم أن تكتب ما تريد قوله.",
+      minimum: 10,
+      target: 20,
+    },
+    speaking: {
+      promptDe: "Sagen Sie 30 Sekunden lang: Wie heißen Sie, woher kommen Sie und was machen Sie gern?",
+      promptAr: "تكلّم نحو ثلاثين ثانية: عرّف بنفسك، ومن أين أنت، وماذا تحب أن تفعل.",
+      hintAr: "تكلّم كما تتكلّم مع شخص يسمعك أول مرة. لا تقرأ نصًا مكتوبًا، ولا تهتم بالسرعة.",
+      minimum: 15,
+      target: 30,
+    },
+  },
+  A2: {
+    writing: {
+      promptDe: "Schreiben Sie vier bis fünf Sätze über Ihren gestrigen Tag: Was haben Sie gemacht?",
+      promptAr: "اكتب أربع إلى خمس جمل عن يوم أمس: ماذا فعلت؟",
+      hintAr: "ابدأ بزمن الماضي (Ich habe … / Ich bin …) واكتب حدثين أو ثلاثة بالترتيب.",
+      minimum: 20,
+      target: 35,
+    },
+    speaking: {
+      promptDe: "Erzählen Sie 40 Sekunden lang von Ihrem letzten Wochenende.",
+      promptAr: "احكِ نحو أربعين ثانية عن عطلة نهاية الأسبوع الماضية.",
+      hintAr: "اذكر متى وأين وماذا فعلت. توقف قليلًا للتفكير أفضل من الصمت الطويل.",
+      minimum: 20,
+      target: 40,
+    },
+  },
+  B1: {
+    writing: {
+      promptDe: "Schreiben Sie fünf bis sechs Sätze: Was möchten Sie in sechs Monaten können, und was tun Sie dafür?",
+      promptAr: "اكتب خمس إلى ست جمل: ماذا تريد أن تستطيع بعد ستة أشهر، وماذا تفعل لتصل إليه؟",
+      hintAr: "سمّ هدفًا واحدًا محددًا وخطوتين فعليتين. عموميات مثل «أريد أن أتحسن» لا تكفي هنا.",
+      minimum: 30,
+      target: 55,
+    },
+    speaking: {
+      promptDe: "Erklären Sie 45 Sekunden lang, warum Sie Deutsch lernen, und nennen Sie ein konkretes Ziel.",
+      promptAr: "اشرح نحو خمس وأربعين ثانية: لماذا تتعلم الألمانية؟ واذكر هدفًا محددًا واحدًا.",
+      hintAr: "ابدأ بالسبب ثم الهدف ثم ما فعلته هذا الأسبوع. لا تحتاج مقدمة طويلة.",
+      minimum: 25,
+      target: 45,
+    },
+  },
+  B2: {
+    writing: {
+      promptDe: "Schreiben Sie sechs bis acht Sätze: Nennen Sie ein Problem beim Deutschlernen, zwei Ursachen und einen Schritt, den Sie diese Woche ausprobieren.",
+      promptAr: "اكتب ست إلى ثماني جمل: سمّ مشكلة واحدة في تعلمك الألمانية، وسببين لها، وخطوة ستجربها هذا الأسبوع.",
+      hintAr: "اجعل السببين مختلفين (مثل الوقت والمنهج) حتى تكون الخطوة موجهة لا عامة.",
+      minimum: 40,
+      target: 80,
+    },
+    speaking: {
+      promptDe: "Nehmen Sie 60 Sekunden Stellung: Sollte man täglich Deutsch hören, auch ohne alles zu verstehen? Nennen Sie zwei Gründe.",
+      promptAr: "أبدِ رأيك في ستين ثانية: هل ينبغي الاستماع للألمانية يوميًا حتى دون فهم كل شيء؟ اذكر سببين.",
+      hintAr: "قل رأيك بوضوح في الجملة الأولى، ثم ادعمه بسببين، ثم قل ما يحدّ هذا الرأي.",
+      minimum: 30,
+      target: 60,
+    },
+  },
+};
+
+export const diagnosticSampleKinds = ["writing", "speaking"] as const;
+
 export const diagnosticForms: Record<DiagnosticFormId, DiagnosticQuestion[]> = { A: formA, B: formB };
 export const allDiagnosticQuestions = [...formA, ...formB];
 export const diagnosticLevels: CEFRLevel[] = ["A1", "A2", "B1", "B2"];

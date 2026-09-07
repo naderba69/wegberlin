@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { BidiText } from "./bidi-text";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, CircleStop, LockKeyhole, Mic2, RotateCcw, Save, Timer, Trash2 } from "lucide-react";
 import type { TargetedSpeakingSimulation } from "@/types/exam";
@@ -9,6 +10,8 @@ import { deleteMedia, loadMedia, saveMedia } from "@/core/portability/db";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { selfScoreSavedMessage } from "@/core/a11y/result-announcements";
 
 type Phase = "setup" | "preparing" | "ready" | "recording" | "recorded" | "saved";
 type SpeakingDraft = { choiceId?: string; phase?: Phase; mediaId?: string; duration?: number; selfScore?: number; reflection?: string };
@@ -209,11 +212,11 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
       <div className="wide-page exam-runner-start speaking-exam-start">
         <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>
         <section>
-          <span className="eyebrow"><Mic2 size={15} /> {profile.displayName}</span>
+          <span className="eyebrow"><Mic2 size={15} /> <BidiText text={profile.displayName}/></span>
           <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
           <h1 lang="de" dir="ltr">{simulation.titleDe}</h1><h2>{simulation.titleAr}</h2><p>{simulation.descriptionAr}</p>
           <div className="speaking-choice-list">{simulation.choices.map((item) => <button key={item.id} className={choiceId === item.id ? "active" : ""} onClick={() => setChoiceId(item.id)}><strong lang="de" dir="ltr">{item.titleDe}</strong><small lang="de" dir="ltr">{item.situationDe}</small></button>)}</div>
-          <div className="exam-start-meta"><span><Timer size={17} /><b>{simulation.preparationMinutes > 0 ? `${simulation.preparationMinutes} دقيقة تحضير` : "تحضير مسبق"}</b><small>{simulation.timingNoteAr}</small></span><span><Mic2 size={17} /><b>{Math.round(simulation.responseSeconds / 30) / 2} دقيقة كلام</b><small>تسجيل فردي محلي؛ لا يحاكي تفاعل شريك حي.</small></span></div>
+          <div className="exam-start-meta"><span><Timer size={17} /><b>{simulation.preparationMinutes > 0 ? `${simulation.preparationMinutes} دقيقة تحضير` : "تحضير مسبق"}</b><small><BidiText text={simulation.timingNoteAr}/></small></span><span><Mic2 size={17} /><b>{Math.round(simulation.responseSeconds / 30) / 2} دقيقة كلام</b><small>تسجيل فردي محلي؛ لا يحاكي تفاعل شريك حي.</small></span></div>
           <button className="primary-button" disabled={!choiceId} onClick={begin}><Timer size={17} /> ثبّت الموضوع وابدأ</button>
         </section>
       </div>
@@ -225,7 +228,8 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
 
   return (
     <div className="wide-page targeted-speaking">
-      <header className="targeted-exam-header"><div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{choice.titleDe}</em></h1></div>{!continuousSession && <div className="lab-counter"><strong>{attempts}</strong><span>محاولات سابقة<br />محفوظة محليًا</span></div>}</header>
+      <ResultAnnouncer message={phase === "saved" ? selfScoreSavedMessage({ score: selfScore, max: 5, labelAr: "التقييم الذاتي للمحادثة" }) : ""}/>
+      <header className="targeted-exam-header"><div><span className="eyebrow"><BidiText text={profile.displayName}/> · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{choice.titleDe}</em></h1></div>{!continuousSession && <div className="lab-counter"><strong>{attempts}</strong><span>محاولات سابقة<br />محفوظة محليًا</span></div>}</header>
       <div className="targeted-speaking-layout">
         <section className="speaking-exam-task">
           <small lang="de" dir="ltr">{choice.situationDe}</small>

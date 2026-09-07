@@ -96,11 +96,24 @@ export const learningStateSchema = z.object({
     dimensions:z.array(z.object({key:z.enum(["intent","completeness","audience","constraints","response"]),labelAr:z.string(),passed:z.boolean(),detailAr:z.string(),evidenceQuote:z.string().optional()})).optional(),
     feedback:z.array(z.string()),sourceVersion:z.number().int().positive().optional(),createdAt:z.string(),updatedAt:z.string(),
   })).default([]),
-  speakingAttempts: z.array(z.object({
-    id: z.string(), taskId: z.string(), mediaId: z.string().optional(), durationSeconds: z.number().nonnegative(), selfScore: z.number().min(0).max(5), reflection: z.string(),
+  speakingAttempts: z.array(z.object({    id: z.string(), taskId: z.string(), mediaId: z.string().optional(), durationSeconds: z.number().nonnegative(), selfScore: z.number().min(0).max(5), reflection: z.string(),
     selfReview: z.object({ listenedBack:z.boolean(),achievedCriteria:z.array(z.string()),clarityScore:z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5)]),turnTaking:z.boolean(),repairUsed:z.boolean(),preparationNotes:z.array(z.string()) }).optional(),
     targetSeconds: z.number().int().positive().optional(), preparationSeconds: z.number().int().nonnegative().optional(), retryOf: z.string().optional(), createdAt: z.string(),
   })),
+  diagnosticSamples: z.array(z.object({
+    id: z.string(),
+    kind: z.enum(["writing", "speaking"]),
+    level: z.enum(["A1", "A2", "B1", "B2"]),
+    promptDe: z.string(),
+    promptAr: z.string(),
+    text: z.string().optional(),
+    wordCount: z.number().int().nonnegative().optional(),
+    mediaId: z.string().optional(),
+    durationSeconds: z.number().int().nonnegative().optional(),
+    formId: z.enum(["A", "B"]).optional(),
+    createdAt: z.string(),
+    // صارم: أي حقل تقييم (درجة/مستوى/تصحيح) يُرفض بدل أن يُتجاهل بصمت.
+  }).strict()).default([]),
   examSessions: z.record(z.string(), z.object({
     simulationId: z.string(),
     provider: z.enum(["goethe-b2", "telc-deutsch-b2"]),

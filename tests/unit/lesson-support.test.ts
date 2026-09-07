@@ -22,8 +22,10 @@ describe("delayed lesson support", () => {
     for (const lesson of academicLessonList) {
       const evidence = readingEvidenceMap(lesson.reading.textDe, lesson.reading.questions);
       for (const questionItem of lesson.reading.questions) {
-        expect(evidence[questionItem.id].trim().length).toBeGreaterThan(0);
-        expect(lesson.reading.textDe).toContain(evidence[questionItem.id]);
+        expect(evidence[questionItem.id].quote.trim().length).toBeGreaterThan(0);
+        expect(lesson.reading.textDe).toContain(evidence[questionItem.id].quote);
+        // كل سؤال قراءة منشور يعرض موضعًا مؤلفًا لا مطابقة آلية.
+        expect(evidence[questionItem.id].origin, questionItem.id).toBe("authored");
       }
     }
   });

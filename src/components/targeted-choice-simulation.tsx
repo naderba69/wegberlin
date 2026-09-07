@@ -1,13 +1,17 @@
 "use client";
+import { BidiText } from "./bidi-text";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, Check, CircleAlert, Languages, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedChoiceSimulation } from "@/types/exam";
 import { examProfiles } from "@/data/exam-profiles";
+import { examPraise } from "@/core/coaching/behavior-praise";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { ResultAnnouncer } from "./result-announcer";
+import { examResultMessage } from "@/core/a11y/result-announcements";
 
 export function TargetedChoiceSimulationView({ simulation }: { simulation: TargetedChoiceSimulation }) {
   const { state, update } = useLearning();
@@ -29,7 +33,11 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
   }, [started, finished, remainingSeconds]);
 
   const score = simulation.items.filter((item) => answers[item.id] === item.correctIndex).length;
+
+  // P0-267: المدح يسمي الفعل المقيس (إكمال كل العناصر) لا صفة عامة.
+
   const answered = Object.keys(answers).length;
+  const examBehaviorPraise=examPraise({ answered: Object.keys(answers).length, total: simulation.items.length });
   const minutes = String(Math.floor(remainingSeconds / 60)).padStart(2, "0");
   const seconds = String(remainingSeconds % 60).padStart(2, "0");
 
@@ -67,10 +75,10 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
       <div className="wide-page exam-runner-start">
         <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>
         <section>
-          <span className="eyebrow"><SkillIcon size={15} /> {profile.displayName}</span>
+          <span className="eyebrow"><SkillIcon size={15} /> <BidiText text={profile.displayName}/></span>
           <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
-          <h1 lang="de" dir="ltr">{simulation.titleDe}</h1><h2>{simulation.titleAr}</h2><p>{simulation.descriptionAr}</p>
-          <div className="exam-start-meta"><span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small>{simulation.timingNoteAr}</small></span><span><Check size={17} /><b>{simulation.items.length} فجوات</b><small>اختيار واحد من ثلاثة لكل فجوة.</small></span></div>
+          <h1 lang="de" dir="ltr">{simulation.titleDe}</h1><h2><BidiText text={simulation.titleAr}/></h2><p><BidiText text={simulation.descriptionAr}/></p>
+          <div className="exam-start-meta"><span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small><BidiText text={simulation.timingNoteAr}/></small></span><span><Check size={17} /><b>{simulation.items.length} فجوات</b><small>اختيار واحد من ثلاثة لكل فجوة.</small></span></div>
           <div className="exam-integrity-note"><CircleAlert size={18} /><p>هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe.</p></div>
           <button className="primary-button" onClick={begin}><Timer size={17} /> ابدأ التدريب</button>
         </section>
@@ -83,7 +91,9 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
   if (finished) {
     return (
       <div className="wide-page targeted-result">
-        <header><span><ShieldCheck size={28} /></span><small>{profile.displayName} · {isReading ? "تدريب قراءة تفصيلية" : "تدريب عناصر لغوية"}</small><h1>{score}<i>/{simulation.items.length}</i></h1><h2>{score >= 8 ? "تحكم جيد — اختبره لاحقًا بنص جديد" : "حدد الروابط والصيغ التي تكررت فيها الفجوة"}</h2><p>نسبة تدريب داخلية وليست نقاطًا رسمية.</p></header>
+        <ResultAnnouncer message={examResultMessage({ score, total: simulation.items.length, kindAr: isReading ? "نتيجة تدريب القراءة التفصيلية" : "نتيجة تدريب العناصر اللغوية" })}/>
+        <header><span><ShieldCheck size={28} /></span><small><BidiText text={profile.displayName}/> · {isReading ? "تدريب قراءة تفصيلية" : "تدريب عناصر لغوية"}</small><h1>{score}<i>/{simulation.items.length}</i></h1><h2>{score >= 8 ? "تحكم جيد — اختبره لاحقًا بنص جديد" : "حدد الروابط والصيغ التي تكررت فيها الفجوة"}</h2><p>نسبة تدريب داخلية وليست نقاطًا رسمية.</p>
+          {examBehaviorPraise&&<p className="behavior-praise" data-praise-id={examBehaviorPraise.id}>{examBehaviorPraise.ar}</p>}</header>
         <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b lang="de" dir="ltr">{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b lang="de" dir="ltr">{item.options[item.correctIndex]}</b></small>}<p>{item.explanationAr}</p></div></article>; })}</div>
         <footer><button className="secondary-button" onClick={reset}><RotateCcw size={16} /> إعادة التدريب</button><Link href="/exams" className="primary-button">مركز الامتحان <ArrowRight size={16} /></Link></footer>
       </div>
@@ -92,7 +102,7 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
 
   return (
     <div className="wide-page targeted-exam">
-      <header className="targeted-exam-header"><div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div><div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف التدريبي" : "وقت متبقٍ"}</small></div></header>
+      <header className="targeted-exam-header"><div><span className="eyebrow"><BidiText text={profile.displayName}/> · <span lang="de" dir="ltr">{simulation.officialPartLabel}</span></span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div><div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف التدريبي" : "وقت متبقٍ"}</small></div></header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>
       <article className="language-cloze-text" lang="de" dir="ltr">{simulation.textDe}</article>
       <section className="choice-item-grid">{simulation.items.map((item) => <article key={item.id}><header><strong>{item.promptDe}</strong><small>{item.promptAr}</small></header><div>{item.options.map((option, optionIndex) => <button key={option} className={answers[item.id] === optionIndex ? "selected" : ""} onClick={() => chooseAnswer(item.id, optionIndex)}><span>{String.fromCharCode(97 + optionIndex)}</span>{option}</button>)}</div></article>)}</section>

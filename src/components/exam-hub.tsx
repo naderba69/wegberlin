@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "./bidi-text";
 
 import Link from "next/link";
 import {
@@ -60,17 +61,17 @@ export function ExamHub() {
         <div>
           <span className="eyebrow"><GraduationCap size={15} /> مركز الاستعداد</span>
           <h1>تدرّب على امتحانك، <em>لا على امتحان هجين.</em></h1>
-          <p>ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق.</p>
+          <p><BidiText text={"ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق."}/></p>
         </div>
         <div className="path-summary"><strong>{simulations.length}</strong><span>تدريب موجّه منشور<br />لهذه الجهة</span></div>
       </header>
 
       <div className="exam-switch">
         <button className={exam === "goethe-b2" ? "active" : ""} onClick={() => choose("goethe-b2")}>
-          <strong>Goethe-Zertifikat B2</strong><span>أربع وحدات مستقلة · قاعدة نقاط منفصلة</span>
+          <strong lang="de" dir="ltr">Goethe-Zertifikat B2</strong><span>أربع وحدات مستقلة · قاعدة نقاط منفصلة</span>
         </button>
         <button className={exam === "telc-deutsch-b2" ? "active" : ""} onClick={() => choose("telc-deutsch-b2")}>
-          <strong>telc Deutsch B2</strong><span>قسم كتابي وقسم شفهي · نقاط مستقلة</span>
+          <strong lang="de" dir="ltr">telc Deutsch B2</strong><span>قسم كتابي وقسم شفهي · نقاط مستقلة</span>
         </button>
       </div>
 
@@ -86,7 +87,7 @@ export function ExamHub() {
           return (
             <article key={module.id}>
               <span><Icon size={21} /></span>
-              <small lang="de">{module.titleDe}</small>
+              <small lang="de" dir="ltr">{module.titleDe}</small>
               <h3>{module.titleAr}</h3>
               <div className="exam-spec-line"><b>{module.parts}</b><small>أجزاء</small><b>{module.minutes}</b><small>دقيقة</small>{module.maxPoints && <><b>{module.maxPoints}</b><small>نقطة قصوى</small></>}</div>
               <div className="readiness-line"><i><b style={{width:`${moduleReadiness.coveragePercent}%`}}/></i><strong>{moduleReadiness.statusAr}</strong></div>
@@ -107,12 +108,12 @@ export function ExamHub() {
         <ShieldAlert size={19} />
         <div>
           <strong>المحاكاة الكاملة: {fullSimulations.length}/6 · صوت MP3 الإضافي: {providerFullAudioComplete}/{providerFullAudioCoverage.length}</strong>
-          <p>بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة مراقبة أو نتيجة رسمية.</p>
+          <p><BidiText text={"بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة مراقبة أو نتيجة رسمية."}/></p>
         </div>
       </div>
 
       <section className="full-exam-catalog">
-        <header><div><span className="eyebrow">محاكاة كاملة أصلية</span><h2>{profile.displayName}</h2></div><strong>{fullSimulations.length}/6</strong></header>
+        <header><div><span className="eyebrow">محاكاة كاملة أصلية</span><h2><BidiText text={profile.displayName}/></h2></div><strong>{fullSimulations.length}/6</strong></header>
         {fullSimulations.map((simulation) => {
           const taskCount = simulation.modules.reduce((sum, module) => sum + module.taskIds.length, 0);
           const listeningCoverage = simulation.modules
@@ -121,12 +122,12 @@ export function ExamHub() {
             .filter((coverage) => coverage !== undefined);
           const listeningAudioComplete = listeningCoverage.filter((coverage) => coverage.status === "complete").length;
           const completed = (state.mastery[`full-exam-${simulation.id}-completed`] ?? 0) >= 100;
-          return <article key={simulation.id}><span><GraduationCap size={24} /></span><div><small lang="de" dir="ltr">{simulation.titleDe}</small><h3>{simulation.titleAr}</h3><p>{simulation.descriptionAr}</p><footer><b>{simulation.modules.length} وحدات</b><b>{taskCount} مهمة</b><b>MP3: {listeningAudioComplete}/{listeningCoverage.length} استماع</b><b>{completed ? "منجزة داخليًا" : "قابلة للاستئناف"}</b></footer></div><Link aria-label={`افتح ${simulation.titleAr}`} href={`/exams/${simulation.provider}/full/${simulation.id}`}><Play size={18} /></Link></article>;
+          return <article key={simulation.id}><span><GraduationCap size={24} /></span><div><small lang="de" dir="ltr">{simulation.titleDe}</small><h3>{simulation.titleAr}</h3><p><BidiText text={simulation.descriptionAr}/></p><footer><b>{simulation.modules.length} وحدات</b><b>{taskCount} مهمة</b><b>MP3: {listeningAudioComplete}/{listeningCoverage.length} استماع</b><b>{completed ? "منجزة داخليًا" : "قابلة للاستئناف"}</b></footer></div><Link aria-label={`افتح ${simulation.titleAr}`} href={`/exams/${simulation.provider}/full/${simulation.id}`}><Play size={18} /></Link></article>;
         })}
       </section>
 
       <section className="targeted-catalog">
-        <header><div><span className="eyebrow">تدريبات المهارة المنشورة</span><h2>{profile.displayName}</h2></div><strong>{simulations.length}/12</strong></header>
+        <header><div><span className="eyebrow">تدريبات المهارة المنشورة</span><h2><BidiText text={profile.displayName}/></h2></div><strong>{simulations.length}/12</strong></header>
         <div>
           {simulations.map((simulation) => {
             const result = state.mastery[`exam-target-${simulation.id}`];
@@ -139,8 +140,8 @@ export function ExamHub() {
                 <span><Icon size={20} /></span>
                 <div>
                   <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
-                  <h3>{simulation.titleAr}</h3>
-                  <p>{simulation.descriptionAr}</p>
+                  <h3><BidiText text={simulation.titleAr}/></h3>
+                  <p><BidiText text={simulation.descriptionAr}/></p>
                   <footer><span><Clock3 size={13} /> {simulation.practiceMinutes} دقيقة</span>{audioCoverage && <b>{audioCoverage.status === "complete" ? "MP3 مولّد" : audioCoverage.status === "partial" ? "MP3 جزئي + TTS" : "Browser TTS"}</b>}{typeof result === "number" && <b>آخر نتيجة: {result}%</b>}{writingDone && <b>نسخة كتابية مسلّمة</b>}{speakingDone && <b>تسجيل محفوظ محليًا</b>}</footer>
                 </div>
                 <Link href={`/exams/${simulation.provider}/${simulation.id}`} aria-label={`ابدأ ${simulation.titleAr}`}><Play size={17} /></Link>
@@ -160,7 +161,7 @@ export function ExamHub() {
         <div>
           {profile.sourceRefs.map((sourceId) => {
             const source = examSourceById[sourceId];
-            return <a key={source.id} href={source.url} target="_blank" rel="noreferrer">{source.organization} · {source.title}<ExternalLink size={12} /></a>;
+            return <a key={source.id} href={source.url} target="_blank" rel="noreferrer" dir="ltr"><span lang="de" dir="ltr">{source.organization}</span> · <BidiText text={source.title}/><ExternalLink size={12} /></a>;
           })}
         </div>
       </section>

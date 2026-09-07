@@ -48,10 +48,17 @@ Release placeholder markers in published data: 0
 `npm run content:audit` now runs during every `prebuild` and validates:
 
 ```text
-Strict Zod schema families: 10
-Top-level academic objects: 2,665/2,665
-A1 structured noun anchors: 96/96 across 24/24 lessons
-A1 verb-preposition-case frames: 24/24 across 24/24 lessons
+Strict Zod schema families: 12
+Top-level academic objects: 3,025/3,025
+A1 structured noun anchors: 96/96 across 24/24 A1 lessons
+A2 structured noun anchors: 96/96 across 24/24 A2 lessons
+B1 structured noun anchors: 96/96 across 24/24 B1 lessons
+B2 structured noun anchors: 48/48 across 12/12 B2 lessons
+A1 verb-preposition-case frames: 24/24 across 24/24 A1 lessons (one per lesson)
+A2 verb-preposition-case frames: 48/48 across 24/24 A2 lessons (two per lesson)
+B1 verb-preposition-case frames: 48/48 across 24/24 B1 lessons (two per lesson)
+B2 verb-preposition-case frames: 24/24 across 12/12 B2 lessons (two per lesson, including Genitiv)
+Nominal Genitiv and dative-plural forms: 0 — not authored yet
 Closed-answer records linked to answer and evidence: 2,584/2,584
 Productive no-single-answer/model-after-commit contracts: 348/348
 Unapproved direct prompt leaks: 0
@@ -72,7 +79,7 @@ reports/academic-content-audit.json
 All four share content SHA-256:
 
 ```text
-5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3
+a2b98895940b6e9a3404e9522fcd3aba72dec4c3b7486485cd847d7d3bbe4e7f
 ```
 
 The answer audit is type-aware: visible options, ordering tokens, and matching columns are authorized banks, while keyed targets and delayed models remain hidden until commitment. Three reviewed exemptions cover two authentic repeated-greeting responses and one editing task that intentionally retains a neutral clause while removing an unsupported opinion.

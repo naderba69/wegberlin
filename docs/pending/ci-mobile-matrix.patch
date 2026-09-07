@@ -1,0 +1,33 @@
+# P0-302: خطوة مصفوفة الهاتف داخل CI — معلّقة بانتظار صلاحية `workflows`
+#
+# لا يمكن للوكيل دفع هذا التغيير: خدمة GitHub ترفض إنشاء/تحديث ملف Workflow
+# بتوكن تطبيق لا يملك صلاحية `workflows`:
+#   refusing to allow a GitHub App to create or update workflow
+#   `.github/workflows/ci.yml` without `workflows` permission
+#
+# لذلك يُحفظ التغيير هنا كملف عادي (ليس Workflow) ليُطبَّق لاحقًا:
+#   git apply docs/pending/ci-mobile-matrix.patch
+# أو بتعديل الملف مباشرة من واجهة GitHub (خطوتان: السقف 30 دقيقة + سطر التشغيل).
+#
+# ملاحظة: `npm run test:e2e:mobile` موجود في package.json بالفعل، فالتغيير هنا
+# هو تشغيله داخل نفس مهمة e2e وبنفس بناء Chromium الذي يثبّته CI.
+diff --git a/a/.github/workflows/ci.yml b/b/.github/workflows/ci.yml
+index 1bba66f..5ffbdc9 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -20,7 +20,9 @@ jobs:
+       - run: npm run check
+   e2e:
+     runs-on: ubuntu-latest
+-    timeout-minutes: 20
++    # المشروعان يعملان في مهمة واحدة تبني مرة واحدة: أقل دقائق وأقل ازدواجًا،
++    # وبنفس بناء Chromium الذي يثبّته CI (لا تثبيت ثانٍ لمشروع الهاتف).
++    timeout-minutes: 30
+     steps:
+       - uses: actions/checkout@v4
+       - uses: actions/setup-node@v4
+@@ -31,3 +33,4 @@ jobs:
+       - run: npx playwright install --with-deps chromium
+       - run: npm run build
+       - run: npm run test:e2e:desktop
++      - run: npm run test:e2e:mobile

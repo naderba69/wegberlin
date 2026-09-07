@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { BidiText } from "./bidi-text";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, FilePenLine, RotateCcw, Save, Send, Timer } from "lucide-react";
 import type { TargetedWritingSimulation } from "@/types/exam";
@@ -90,13 +91,13 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
       <div className="wide-page exam-runner-start">
         <Link href="/exams" className="back-link"><ArrowRight size={14} /> العودة إلى مركز الامتحان</Link>
         <section>
-          <span className="eyebrow"><FilePenLine size={15} /> {profile.displayName}</span>
+          <span className="eyebrow"><FilePenLine size={15} /> <BidiText text={profile.displayName}/></span>
           <small lang="de" dir="ltr">{simulation.officialPartLabel}</small>
           <h1 lang="de" dir="ltr">{simulation.titleDe}</h1>
           <h2>{simulation.titleAr}</h2>
           <p>{simulation.descriptionAr}</p>
           <div className="exam-start-meta">
-            <span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small>{simulation.timingNoteAr}</small></span>
+            <span><Timer size={17} /><b>{simulation.practiceMinutes} دقيقة</b><small><BidiText text={simulation.timingNoteAr}/></small></span>
             <span><FilePenLine size={17} /><b>{simulation.choices.length === 1 ? "مهمة واحدة" : `اختيار من ${simulation.choices.length} مهمتين`}</b><small>{simulation.wordTargetNoteAr}</small></span>
           </div>
           <div className="exam-integrity-note"><CircleAlert size={18} /><p>الفحص حتمي ومحدود بالبنية والطول وبعض المؤشرات. لا يمنح نقاطًا رسمية ولا يدعي تقييم جودة الحجة مثل مصحح بشري معتمد.</p></div>
@@ -111,7 +112,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
   if (finished && choice) {
     return (
       <div className="wide-page targeted-writing-result">
-        <header><span><Check size={27} /></span><small>{profile.displayName} · تدريب كتابي غير رسمي</small><h1>حُفظت النسخة محليًا</h1><p>{analysis.wordCount} كلمة · المهمة: <b lang="de" dir="ltr">{choice.titleDe}</b></p></header>
+        <header><span><Check size={27} /></span><small><BidiText text={profile.displayName}/> · تدريب كتابي غير رسمي</small><h1>حُفظت النسخة محليًا</h1><p>{analysis.wordCount} كلمة · المهمة: <b lang="de" dir="ltr">{choice.titleDe}</b></p></header>
         <div className="writing-result-grid">
           <section><h2>فحوص حتمية</h2>{analysis.checks.map((check) => <article key={check.label} className={check.passed ? "passed" : ""}><span>{check.passed ? <Check size={13} /> : "—"}</span><p>{check.label}</p></article>)}</section>
           <section><h2>تدقيق ذاتي خاص بالمهمة</h2>{choice.checklistAr.map((item) => <article key={item}><span>□</span><p>{item}</p></article>)}</section>
@@ -125,7 +126,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
   return (
     <div className="wide-page targeted-exam targeted-writing">
       <header className="targeted-exam-header">
-        <div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div>
+        <div><span className="eyebrow"><BidiText text={profile.displayName}/> · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div>
         <div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف الزمني" : "وقت متبقٍ"}</small></div>
       </header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>

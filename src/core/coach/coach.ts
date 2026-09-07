@@ -4,6 +4,8 @@ import { effectiveSessionMinutes } from "./session-signals";
 import { errorRepairState } from "@/core/errors/remediation";
 import { buildErrorClinics } from "@/core/errors/clinic";
 import { buildExamReadiness } from "@/core/exams/readiness";
+import { buildDueReviewQueue } from "@/core/srs/review-queue";
+import { buildRetrievalWarmup } from "@/core/srs/warmup";
 
 const baseBlocks: MissionBlock[] = [
   { id:"diagnostic",kind:"diagnostic",titleAr:"اختبار نقطة البداية",titleDe:"Einstufung",minutes:12,objective:"حدّد نقطة البداية من أدلة بدل التخمين." },
@@ -78,7 +80,32 @@ export function composeTodayMission(state:LearningState,now=new Date()):MissionB
   const minutes=effectiveSessionMinutes(state,now);
   const template=sessionTemplates[minutes]??sessionTemplates[45];
   let selected=template.map(([id,blockMinutes])=>{const block=baseBlocks.find((item)=>item.id===id);if(!block)throw new Error(`Unknown mission block: ${id}`);return{...block,minutes:blockMinutes}});
-  if(state.completedLessonIds.length===0){const removed=selected.find((block)=>block.id==="review")?.minutes??0;selected=selected.filter((block)=>block.id!=="review");const recipientId=selected.some((block)=>block.id==="lesson")?"lesson":"production";selected=selected.map((block)=>block.id===recipientId?{...block,minutes:block.minutes+removed}:block)}
+  /**
+   * P0-38: كتلة الاسترجاع لا تُحذف.
+   *
+   * عندما لا توجد بطاقة SM-2 مستحقة الآن — وأهم حالة أن المتعلّم لم يكمل أول درس
+   * بعد، فلا بطاقات لديه أصلًا — تتحول الكتلة إلى «إحماء استرجاع» قصير يستمدّ
+   * من مراحل شاهدها فعلًا، بدل تحويل وقتها كله إلى درس جديد. الدقائق المتبقية
+   * تذهب إلى هدف اليوم، ولا تُحذف من الخطة.
+   */
+  {
+    const reviewBlock=selected.find((block)=>block.id==="review");
+    if(reviewBlock&&buildDueReviewQueue(state,now).length===0){
+      // عدد العناصر يتبع دقائق الكتلة النهائية (إحماء قصير: 2–4 دقائق)، لا دقائق القالب،
+      // حتى يرى المتعلّم في /review الجولة نفسها التي وعدته بها الخطة.
+      const warmupMinutes=Math.max(2,Math.min(4,reviewBlock.minutes));
+      const warmup=buildRetrievalWarmup(state,now,warmupMinutes);
+      const recipientId=selected.some((block)=>block.id==="lesson")?"lesson":"production";
+      if(warmup.items.length>0){
+        const freed=reviewBlock.minutes-warmupMinutes;
+        selected=selected.map((block)=>block.id==="review"?{...block,minutes:warmupMinutes,titleAr:"إحماء استرجاع",titleDe:"Abruf-Warm-up",mode:"warmup" as const,objective:warmup.reasonAr}:block.id===recipientId?{...block,minutes:block.minutes+freed}:block);
+      }else{
+        // لا شيء قابل للاسترجاع بعد: لم يفتح المتعلّم أي مرحلة ولا يملك بطاقات.
+        const removed=reviewBlock.minutes;
+        selected=selected.filter((block)=>block.id!=="review").map((block)=>block.id===recipientId?{...block,minutes:block.minutes+removed}:block);
+      }
+    }
+  }
   return selected.map((block)=>block.id==="lesson"?{...block,titleDe:target.titleDe,objective:target.reasonAr}:block.id==="production"?{...block,objective:productionObjective(state)}:block);
 }
 

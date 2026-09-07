@@ -1,4 +1,5 @@
 "use client";
+import { BidiText } from "@/components/bidi-text";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -9,6 +10,7 @@ import { buildWeeklyPlan, weeklyBudgetLabel } from "@/core/coach/weekly-plan";
 import type { DailySessionRecord, LearnerProfile, SessionNextFocus } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { buildEvidenceReport } from "@/core/evidence/report";
+import { todayPraise } from "@/core/coaching/behavior-praise";
 
 const kindIcons = { diagnostic: ClipboardCheck, "check-in": Sparkles, review: RotateCcw, lesson: BrainCircuit, practice: Target, production: Mic2, reflection: CalendarCheck2 };
 const ratingValues = [1, 2, 3, 4, 5] as const;
@@ -32,6 +34,9 @@ export function CoachDashboard() {
   const doneMinutes = mission.filter((block) => completed.has(missionKey(block.id))).reduce((sum, block) => sum + block.minutes, 0);
   const totalMinutes = mission.reduce((sum, b) => sum + b.minutes, 0);
   const percent = Math.round((doneMinutes / Math.max(totalMinutes, 1)) * 100);
+  // P0-267: مدح السلوك المقيس لا صفة عامة. لا مدح قبل إكمال كل كتل اليوم.
+  const completedBlockCount = mission.filter((block) => completed.has(missionKey(block.id))).length;
+  const missionPraise = todayPraise({ completedBlocks: completedBlockCount, plannedBlocks: mission.length, minutes: doneMinutes });
   const target = getCoachTarget(state);
   const needsDiagnostic = target.kind === "diagnostic";
   const primaryHref = target.href;
@@ -89,6 +94,10 @@ export function CoachDashboard() {
               <label className="session-reflection-note"><span>ملاحظة قصيرة اختيارية</span><textarea maxLength={1000} value={reflection} onChange={(event)=>setReflection(event.target.value)} placeholder="ما الذي نجح؟ وما الفجوة التي يجب ألا ينساها المدرب؟"/></label>
               <footer><small>{todaySession?.reflectedAt?nextFocusLabel(todaySession.nextFocus??"continue"):"لا توجد درجة آلية هنا؛ هذه إشارة تخطيط منك."}</small><button type="button" onClick={saveReflection}>{isDone?"حدّث الإغلاق":"احفظ قرار الغد"}</button></footer>
             </section>;
+            if(block.mode==="warmup")return <section key={block.id} className={isDone?"session-signal-card warmup done":"session-signal-card warmup"}>
+              <header><span className="mission-check">{isDone?<Check size={16}/>:index+1}</span><span className="mission-icon"><Icon size={19}/></span><div><strong>{block.titleAr}</strong><small lang="de" dir="ltr">{block.titleDe}</small><p>{block.objective}</p></div><b>{block.minutes} د</b></header>
+              <footer><small><BidiText text={"إحماء بلا درجة: لا يغيّر مواعيد SM-2 ولا الإتقان، ويستمدّ من مراحل أنهيتها فعلًا."}/></small><span className="warmup-block-actions"><Link href="/review" className="primary-button">افتح الإحماء <ArrowLeft size={16}/></Link><button type="button" onClick={() => toggle(block.id)}>{isDone?"أنهِيت الإحماء":"علّم الإنهاء"}</button></span></footer>
+            </section>;
             return <button key={block.id} className={isDone ? "mission-row done" : "mission-row"} onClick={() => toggle(block.id)}>
               <span className="mission-check">{isDone ? <Check size={16}/> : index + 1}</span>
               <span className="mission-icon"><Icon size={19}/></span>
@@ -100,9 +109,11 @@ export function CoachDashboard() {
         </div>
 
         <section className="weekly-plan-card">
-          <header><div><span className="eyebrow"><CalendarCheck2 size={14}/> خطة الأسبوع</span><h2>وقت موزع، لا ديون تتضاعف.</h2><p>ستة أيام دراسة ويوم راحة. الكتابة والمحادثة والامتحان لها أماكن ثابتة، وأي فائت ينقل كمهمة واحدة فقط داخل ميزانية اليوم.</p></div><div><strong>{weeklyBudgetLabel(weeklyPlan.plannedMinutes)}</strong><small>{weeklyPlan.weekStart} → {weeklyPlan.weekEnd}</small></div></header>
-          {(weeklyPlan.missedStudyDays>0||weeklyPlan.deferredCount>0)&&<div className="weekly-recovery-note"><RotateCcw size={15}/><p>فاتك {weeklyPlan.missedStudyDays} يوم. نُقلت مهمة واحدة فقط إلى أقرب يوم متاح، وبقي {weeklyPlan.deferredCount} في طابور التعافي دون مضاعفة حمل اليوم.</p></div>}
-          <div className="weekly-plan-days">{weeklyPlan.days.map((day)=><article key={day.date} className={`weekly-plan-day ${day.status}`}><header><div><strong>{day.weekdayAr}</strong><small>{day.date.slice(5)}</small></div><span>{day.status==="rest"?"راحة":day.status==="complete"?"مكتمل":day.status==="missed"?"فائت":day.status==="today"?"اليوم":"قادم"}</span><b>{day.budgetMinutes?`${day.budgetMinutes} د`:"—"}</b></header>{day.status==="rest"?<p>راحة مقصودة أو استماع خفيف اختياري؛ لا يوجد دين دراسة.</p>:<div>{day.slots.map((slot)=><Link key={slot.id} href={slot.href} className={slot.kind==="recovery"?"recovery":""}><span>{slot.titleAr}</span><b>{slot.minutes} د</b></Link>)}</div>}{day.recoverySourceDate&&<small>استعادة محدودة من {day.recoverySourceDate}</small>}</article>)}</div>
+          <header><div><span className="eyebrow"><CalendarCheck2 size={14}/> خطة الأسبوع</span><h2>وقت موزع، لا ديون تتضاعف.</h2><p>ستة أيام دراسة ويوم راحة. الكتابة والمحادثة والامتحان لها أماكن ثابتة. أول يوم تفوته في الأسبوع «يوم سماح» بلا دين، وما بعده يُنقل كمهمة واحدة فقط داخل ميزانية اليوم.</p></div><div><strong>{weeklyBudgetLabel(weeklyPlan.plannedMinutes)}</strong><small>{weeklyPlan.weekStart} → {weeklyPlan.weekEnd}</small><small className="grace-counter">أيام السماح: {weeklyPlan.graceDaysRemaining}/{weeklyPlan.graceAllowance} متبقٍ</small></div></header>
+          {weeklyPlan.missedStudyDays>0&&<div className={weeklyPlan.debtDays===0?"weekly-recovery-note grace":"weekly-recovery-note"}><RotateCcw size={15}/><p>{weeklyPlan.debtDays===0
+            ? `فاتك ${weeklyPlan.missedStudyDays === 1 ? "يوم واحد" : `${weeklyPlan.missedStudyDays} يوم`}، ${weeklyPlan.graceDaysUsed === 1 ? "وهو" : "كلها"} داخل سقف السماح: بلا مهمة مؤجلة ولا مضاعفة. يوم السماح لا يجمّد السلسلة ولا يمدّدها؛ تتوقف عنده فعلًا.`
+            : `فاتك ${weeklyPlan.missedStudyDays} يوم: ${weeklyPlan.graceDaysUsed} ${weeklyPlan.graceDaysUsed === 1 ? "يوم سماح بلا دين" : "أيام سماح بلا دين"}، و${weeklyPlan.debtDays} ${weeklyPlan.debtDays === 1 ? "يوم دين" : "أيام دين"} نُقلت منه مهمة واحدة فقط إلى أقرب يوم متاح، وبقي ${weeklyPlan.deferredCount} في طابور التعافي دون مضاعفة حمل اليوم.`}</p></div>}
+          <div className="weekly-plan-days">{weeklyPlan.days.map((day)=><article key={day.date} className={`weekly-plan-day ${day.status}`}><header><div><strong>{day.weekdayAr}</strong><small>{day.date.slice(5)}</small></div><span>{day.status==="rest"?"راحة":day.status==="complete"?"مكتمل":day.status==="grace"?"يوم سماح":day.status==="missed"?"فائت":day.status==="today"?"اليوم":"قادم"}</span><b>{day.budgetMinutes?`${day.budgetMinutes} د`:"—"}</b></header>{day.status==="rest"?<p>راحة مقصودة أو استماع خفيف اختياري؛ لا يوجد دين دراسة.</p>:day.status==="grace"?<p>يوم سماح: لم تدرس فيه، ولا دين عليه ولا مهمة مؤجلة. السلسلة تتوقف عنده فعلًا.</p>:<div>{day.slots.map((slot)=><Link key={slot.id} href={slot.href} className={slot.kind==="recovery"?"recovery":""}><span>{slot.titleAr}</span><b>{slot.minutes} د</b></Link>)}</div>}{day.recoverySourceDate&&<small>استعادة محدودة من {day.recoverySourceDate}</small>}</article>)}</div>
         </section>
       </section>
 
@@ -110,7 +121,7 @@ export function CoachDashboard() {
         <div className="progress-card">
           <div className="progress-card-head"><div><small>إنجاز جلسة اليوم</small><strong>{percent}%</strong></div><div className="ring" style={{ "--progress": `${percent * 3.6}deg` } as React.CSSProperties}><span>{mission.filter((block)=>!completed.has(missionKey(block.id))).length}</span></div></div>
           <div className="progress-track"><i style={{ width: `${percent}%` }}/></div>
-          <p>{percent === 100 ? "أحسنت. سنستخدم أداءك لبناء مهمة الغد." : "لا نحتاج جلسة مثالية؛ نحتاج دليلًا صادقًا على ما تستطيع فعله."}</p>
+          <p>{missionPraise ? <span className="behavior-praise" data-praise-id={missionPraise.id}>{missionPraise.ar}</span> : "لا نحتاج جلسة مثالية؛ نحتاج دليلًا صادقًا على ما تستطيع فعله."}</p>
         </div>
         <div className="coach-note">
           <span className="coach-face">DW</span>

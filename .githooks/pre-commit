@@ -1,0 +1,11 @@
+#!/bin/sh
+# P0-304: منع انزلاق مفتاح حقيقي إلى الفهرس قبل الالتزام.
+# يُفحص **محتوى الفهرس** لا نسخة القرص: ما سيُلتزم فعلًا.
+#
+# تثبيته: `npm install` يضبط core.hooksPath عبر سكربت `prepare`
+# (أو يدويًا: git config core.hooksPath .githooks).
+#
+# تجاوزٌ مقصود لبلاغ كاذب: أضف استثناءً موثّقًا بسببه في
+# scripts/secret-scan-allowlist.json — لا تستخدم --no-verify إلا لسبب مسجّل.
+set -e
+node scripts/secret-scan.mjs --staged

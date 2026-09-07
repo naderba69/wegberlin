@@ -1,11 +1,24 @@
 import type { PracticeExercise, Question } from "@/types/lesson-content";
 import { normalizeGermanText } from "./evaluate";
+import { splitGermanSentences } from "./sentences";
+import { readingEvidenceByQuestionId } from "@/data/reading-evidence-index";
+import { listeningEvidenceByQuestionId } from "@/data/listening-evidence-index";
+import { splitListeningUnits } from "./sentences";
+
+export type ReadingEvidenceView = {
+  quote: string;
+  whyAr: string;
+  relation: "direct" | "inference";
+  /** authored: موضع مؤلف. auto: مطابقة لفظية احتياطية غير مراجَعة. */
+  origin: "authored" | "auto";
+};
 
 const germanStopwords = new Set([
   "aber", "als", "am", "an", "auf", "aus", "bei", "das", "dass", "dem", "den", "der", "des", "die", "ein", "eine", "einer", "eines", "er", "es", "für", "hat", "im", "in", "ist", "mit", "nicht", "oder", "sie", "sind", "und", "von", "war", "was", "welche", "welcher", "welches", "wer", "wie", "wird", "wo", "zu",
 ]);
 
-function words(value: string) {
+/** كلمات المحتوى الألمانية: تُستعمل في مطابقة الدليل وفي تحقّق المدقق. */
+export function words(value: string) {
   return normalizeGermanText(value)
     .split(/\s+/u)
     .map((word) => word.replace(/[^\p{L}\p{N}ßäöü-]/gu, ""))
@@ -51,10 +64,7 @@ export function questionHintSteps(question: Question): [string, string] {
 }
 
 export function selectReadingEvidence(textDe: string, question: Question) {
-  const sentences = textDe
-    .split(/(?<=[.!?])\s+|\n+/u)
-    .map((sentence) => sentence.trim())
-    .filter(Boolean);
+  const sentences = splitGermanSentences(textDe);
   if (!sentences.length) return textDe.trim();
 
   const answerTokens = new Set(words(question.options[question.correctIndex]));
@@ -75,6 +85,57 @@ export function selectReadingEvidence(textDe: string, question: Question) {
   return bestSentence;
 }
 
-export function readingEvidenceMap(textDe: string, questions: Question[]) {
-  return Object.fromEntries(questions.map((question) => [question.id, selectReadingEvidence(textDe, question)]));
+/**
+ * موضع الدليل لكل سؤال قراءة: الموضع المؤلف أولًا (P0-124)،
+ * والمطابقة اللفظية احتياطًا لدرس بلا موضع مؤلف — المدقق يمنع ذلك في الدروس المنشورة.
+ */
+export function readingEvidenceMap(textDe: string, questions: Question[]): Record<string, ReadingEvidenceView> {
+  return Object.fromEntries(
+    questions.map((question) => {
+      const authored = readingEvidenceByQuestionId[question.id];
+      if (authored && authored.quote) {
+        return [question.id, { quote: authored.quote, whyAr: authored.whyAr, relation: authored.relation, origin: authored.origin }];
+      }
+      return [question.id, { quote: selectReadingEvidence(textDe, question), whyAr: "", relation: "direct" as const, origin: "auto" as const }];
+    }),
+  );
+}
+
+/** نفس منطق المطابقة الاحتياطية ولكن على مقاطع نص الاستماع لا جمل القراءة. */
+export function selectListeningEvidence(transcriptDe: string, question: Question) {
+  const units = splitListeningUnits(transcriptDe);
+  if (!units.length) return transcriptDe.trim();
+
+  const answerTokens = new Set(words(question.options[question.correctIndex]));
+  const promptTokens = new Set(words(question.promptDe));
+  let bestUnit = units[0];
+  let bestScore = -1;
+
+  for (const unit of units) {
+    const unitTokens = new Set(words(unit));
+    let score = 0;
+    for (const token of answerTokens) if (unitTokens.has(token)) score += 3;
+    for (const token of promptTokens) if (unitTokens.has(token)) score += 1;
+    if (score > bestScore) {
+      bestScore = score;
+      bestUnit = unit;
+    }
+  }
+  return bestUnit;
+}
+
+/**
+ * موضع الدليل لكل سؤال استماع: الموضع المؤلف أولًا (P0-124)،
+ * والمطابقة اللفظية احتياطًا لدرس بلا موضع مؤلف — المدقق يمنع ذلك في الدروس المنشورة.
+ */
+export function listeningEvidenceMap(transcriptDe: string, questions: Question[]): Record<string, ReadingEvidenceView> {
+  return Object.fromEntries(
+    questions.map((question) => {
+      const authored = listeningEvidenceByQuestionId[question.id];
+      if (authored && authored.quote) {
+        return [question.id, { quote: authored.quote, whyAr: authored.whyAr, relation: authored.relation, origin: authored.origin }];
+      }
+      return [question.id, { quote: selectListeningEvidence(transcriptDe, question), whyAr: "", relation: "direct" as const, origin: "auto" as const }];
+    }),
+  );
 }

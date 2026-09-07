@@ -1,12 +1,12 @@
 # Academic Content Zod Validation Report
 
-Generated: 2026-09-03  
+Generated: 2026-09-04  
 Version: `academic-governance-v1`  
-Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3`
+Content SHA-256: `429a49cc3e1e5a7a93a1d3f7dea2075f83715d9bcbaab735d846b8e744e7571a`
 
 ## Result
 
-`PASS` — 2665 top-level runtime academic objects passed 12 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, and derived review card.
+`PASS` — 5912 top-level runtime academic objects passed 12 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, and derived review card.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -20,9 +20,27 @@ Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22
 | examProfiles | 2 | Zod strict + nested objects |
 | examSources | 5 | Zod strict + nested objects |
 | reviewCards | 2016 | Zod strict + nested objects |
-| nounGrammarEntries | 96 | Zod strict + nested objects |
-| verbPrepositionFrames | 24 | Zod strict + nested objects |
-| **Total top-level objects** | **2665** | **0 schema failures** |
+| nounGrammarEntries | 664 | Zod strict + nested objects |
+| anchorNouns | 336 | Zod strict + nested objects |
+| inventoryNouns | 328 | Zod strict + nested objects |
+| measuredNounTargets | 460 | Zod strict + nested objects |
+| unjustifiedInventoryNouns | 0 | Zod strict + nested objects |
+| nounTargetsWithoutMorphology | 0 | Zod strict + nested objects |
+| readingQuestions | 252 | Zod strict + nested objects |
+| authoredReadingEvidence | 252 | Zod strict + nested objects |
+| inferenceReadingEvidence | 23 | Zod strict + nested objects |
+| readingQuestionsWithoutEvidence | 0 | Zod strict + nested objects |
+| unverifiedReadingEvidence | 0 | Zod strict + nested objects |
+| listeningQuestions | 252 | Zod strict + nested objects |
+| authoredListeningEvidence | 252 | Zod strict + nested objects |
+| inferenceListeningEvidence | 27 | Zod strict + nested objects |
+| listeningQuestionsWithoutEvidence | 0 | Zod strict + nested objects |
+| unverifiedListeningEvidence | 0 | Zod strict + nested objects |
+| verbPrepositionFrames | 262 | Zod strict + nested objects |
+| derivedVerbFrames | 118 | Zod strict + nested objects |
+| measuredValencyTargets | 141 | Zod strict + nested objects |
+| unjustifiedDerivedFrames | 0 | Zod strict + nested objects |
+| **Total top-level objects** | **5912** | **0 schema failures** |
 
 ## Cross-reference gates
 

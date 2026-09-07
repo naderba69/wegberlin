@@ -7,6 +7,8 @@ import type { PublishedTargetedExamSimulation } from "@/types/exam";
 import type { FullExamSession } from "@/types/learning";
 import { continuousSessionEffectiveStatus, continuousSessionRemainingSeconds, expireContinuousSession, findContinuousSessionForTask } from "@/core/exams/continuous-session";
 import { useLearning } from "./learning-provider";
+import { ResultAnnouncer } from "./result-announcer";
+import { continuousTaskMessage } from "@/core/a11y/result-announcements";
 
 function timeLabel(seconds: number) {
   const hours = Math.floor(seconds / 3600);
@@ -49,7 +51,8 @@ export function ContinuousExamClock({ simulationId }: { simulationId: string }) 
 export function ContinuousTaskSubmitted({ session }: { session: FullExamSession }) {
   const dashboardHref = `/exams/${session.provider}/full/${session.simulationId}`;
   const nextHref = session.currentTaskId ? `/exams/${session.provider}/${session.currentTaskId}` : dashboardHref;
-  return <div className="wide-page continuous-task-submitted" role="status" aria-live="polite" aria-atomic="true">
+  return <div className="wide-page continuous-task-submitted">
+    <ResultAnnouncer message={continuousTaskMessage({ completed: session.completedTaskIds.length, total: session.taskIds.length })}/>
     <span><CheckCircle2 size={32} /></span>
     <small>بروفة متصلة · تسليم مغلق المساعدة</small>
     <h1>ثُبّت التسليم دون كشف التصحيح</h1>

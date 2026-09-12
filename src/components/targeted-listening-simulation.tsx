@@ -9,6 +9,12 @@ import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { examAudioAssetsByClipId, examAudioManifest, type ExamAudioAsset } from "@/data/exam-audio-assets";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { StatusAnnouncement } from "./status-announcement";
+import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
+import { AudioSpeedControl } from "./audio-speed-control";
+import { applyLearningPlaybackRate, effectiveExamPlaybackRate, ttsRateForPlayback, type LearningPlaybackRate } from "@/core/audio/playback-speed";
+import { emitListeningUsage } from "@/core/listening/usage-evidence";
+import { applySpeechPreferences } from "@/core/audio/speech-preferences";
 
 function completeClipAssets(clipId:string){const assets=examAudioAssetsByClipId[clipId]??[];return assets.length>0&&assets.every((asset,index)=>asset.segmentIndex===index+1&&asset.segmentCount===assets.length)?assets:[]}
 
@@ -16,6 +22,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
   const { state, update } = useLearning();
   const profile = examProfiles[simulation.provider];
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const rateRef = useRef<LearningPlaybackRate>(1);
   const generatedClipCount = simulation.clips.filter((clip) => completeClipAssets(clip.id).length>0).length;
   const allClipsGenerated = generatedClipCount === simulation.clips.length;
   const savedDraft = continuousTaskDraft<{ started?: boolean; answers?: Record<string, number>; listens?: Record<string, number> }>(state, simulation);
@@ -25,6 +32,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
   const [finished, setFinished] = useState(false);
   const [answers, setAnswers] = useState<Record<string, number>>(savedDraft?.answers ?? {});
   const [listens, setListens] = useState<Record<string, number>>(savedDraft?.listens ?? {});
+  const [rate, setRate] = useState<LearningPlaybackRate>(1);
   const [remainingSeconds, setRemainingSeconds] = useState(simulation.practiceMinutes * 60);
   const speechAvailable = typeof window !== "undefined" && "speechSynthesis" in window;
   const playbackAvailable = allClipsGenerated || speechAvailable;
@@ -53,7 +61,20 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
     if (continuous) update((current) => saveContinuousTaskDraft(current, simulation, { started: true, answers: next, listens }));
   }
 
-  function playAssetSequence(assets:ExamAudioAsset[],index=0){const audio=new Audio(assets[index].path);audioRef.current=audio;audio.onended=()=>{if(index+1<assets.length)playAssetSequence(assets,index+1)};void audio.play().catch(()=>undefined)}
+  function changeRate(next: LearningPlaybackRate) {
+    if (continuous) return;
+    rateRef.current = next;
+    setRate(next);
+    if (audioRef.current) applyLearningPlaybackRate(audioRef.current, next);
+  }
+
+  function playAssetSequence(assets:ExamAudioAsset[], index=0) {
+    const audio = new Audio(assets[index].path);
+    applyLearningPlaybackRate(audio, effectiveExamPlaybackRate(rateRef.current, continuous));
+    audioRef.current = audio;
+    audio.onended = () => { if (index + 1 < assets.length) playAssetSequence(assets, index + 1); };
+    void audio.play().catch(() => undefined);
+  }
 
   function playClip(clipId: string, forceBrowserTts = false) {
     const clip = simulation.clips.find((item) => item.id === clipId);
@@ -61,12 +82,13 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
     if (!clip || (listens[clipId] ?? 0) >= clip.playLimit || (!assets.length && !speechAvailable) || (forceBrowserTts && !speechAvailable)) return;
     window.speechSynthesis?.cancel();
     audioRef.current?.pause();
+    emitListeningUsage({surface:continuous?"exam-continuous":"exam-guided",contentId:`${simulation.id}:${clipId}`,event:"playback",playbackSource:assets.length&&!forceBrowserTts?"mp3":"browser-tts"});
     if (assets.length && !forceBrowserTts) {
       playAssetSequence(assets);
     } else if (speechAvailable) {
-      const utterance = new SpeechSynthesisUtterance(clip.transcriptDe);
+      const utterance = applySpeechPreferences(new SpeechSynthesisUtterance(clip.transcriptDe),state.speechPreferences,window.speechSynthesis.getVoices());
       utterance.lang = "de-DE";
-      utterance.rate = 0.94;
+      utterance.rate = ttsRateForPlayback(effectiveExamPlaybackRate(rate, continuous));
       window.speechSynthesis.speak(utterance);
     }
     const next = { ...listens, [clipId]: (listens[clipId] ?? 0) + 1 };
@@ -78,6 +100,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
     if (answered < simulation.items.length) return;
     window.speechSynthesis?.cancel();
     setFinished(true);
+    emitListeningUsage({surface:continuous?"exam-continuous":"exam-guided",contentId:simulation.id,event:"transcript-revealed",revealAfterAnswerCommit:true});
     update((current) => markContinuousTaskComplete({
       ...current,
       mastery: {
@@ -134,6 +157,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
           <h2>{score / simulation.items.length >= 0.8 ? "التقاط جيد للمعلومات — اختبره لاحقًا بصوت جديد" : "راجع الفرق بين الفكرة العامة والتفصيل"}</h2>
           <p>النتيجة داخلية ولا تُحوّل إلى نقاط رسمية. أُظهر النص الآن للمقارنة بعد الالتزام.</p>
         </header>
+        <StatusAnnouncement message={`ثُبّتت ${simulation.items.length} إجابات استماع. ظهر النص الآن للمراجعة، والنتيجة ليست نقاطًا رسمية.`} channel="targeted-listening-result" className="compact"/>
         <div className="listening-transcript-review">
           {simulation.clips.map((clip) => <details key={clip.id}><summary lang="de" dir="ltr">{clip.labelDe} · Transkript</summary><p lang="de" dir="ltr">{clip.transcriptDe}</p></details>)}
         </div>
@@ -145,8 +169,8 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
                 <span>{correct ? <Check size={15} /> : index + 1}</span>
                 <div>
                   <strong lang="de" dir="ltr">{item.promptDe}</strong>
-                  <small>إجابتك: <b lang="de" dir="ltr">{item.options[answers[item.id]]}</b></small>
-                  {!correct && <small>الصحيح: <b lang="de" dir="ltr">{item.options[item.correctIndex]}</b></small>}
+                  <small>إجابتك: <b {...fragmentLanguageAttributes(item.options[answers[item.id]])}>{item.options[answers[item.id]]}</b></small>
+                  {!correct && <small>الصحيح: <b {...fragmentLanguageAttributes(item.options[item.correctIndex])}>{item.options[item.correctIndex]}</b></small>}
                   <p>{item.explanationAr}</p>
                 </div>
               </article>
@@ -166,6 +190,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
       </header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>
       <div className="exam-integrity-note"><CircleAlert size={18} /><p>{allClipsGenerated?"MP3 اصطناعي مولّد للمشروع: لا تفتح النص قبل التسليم، ولا تعتبر النتيجة بديلًا عن صوت بشري متنوع أو امتحاني.":"Browser-TTS لبعض المقاطع: لا تفتح النص قبل التسليم، ولا تعتبر النتيجة بديلًا عن تدريب صوتي بشري متنوع."}</p></div>
+      <AudioSpeedControl rate={effectiveExamPlaybackRate(rate, continuous)} onChange={changeRate} locked={continuous} label="سرعة تدريب الاستماع الامتحاني"/>
       <div className="listening-clip-stack">
         {simulation.clips.map((clip) => {
           const clipItems = simulation.items.filter((item) => item.clipId === clip.id);
@@ -180,7 +205,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
                     <span>{itemIndex + 1}</span>
                     <div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>{item.promptAr}</small></div>
                     <div className="listening-answer-options">
-                      {item.options.map((option, optionIndex) => <button key={option} className={answers[item.id] === optionIndex ? "selected" : ""} onClick={() => chooseAnswer(item.id, optionIndex)}><i>{String.fromCharCode(97 + optionIndex)}</i>{option}</button>)}
+                      {item.options.map((option, optionIndex) => <button key={option} className={answers[item.id] === optionIndex ? "selected" : ""} onClick={() => chooseAnswer(item.id, optionIndex)}><i>{String.fromCharCode(97 + optionIndex)}</i><bdi {...fragmentLanguageAttributes(option)}>{option}</bdi></button>)}
                     </div>
                   </article>
                 ))}

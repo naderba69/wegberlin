@@ -1,6 +1,7 @@
 import { reviewCards } from "@/data/review-cards";
 import type { LearningState, ReviewItem } from "@/types/learning";
 import type { LessonSrsCard } from "./lesson-cards";
+import { confirmedErrorSrsCards } from "./error-cards";
 
 export type QueuedReviewCard = {
   card: LessonSrsCard;
@@ -15,10 +16,11 @@ function lessonIdOf(card: LessonSrsCard) {
 
 export function eligibleReviewCards(state: LearningState) {
   const completed = new Set(state.completedLessonIds);
-  return reviewCards.filter((card) => {
+  const authored = reviewCards.filter((card) => {
     const lessonId = lessonIdOf(card);
     return Boolean(lessonId && completed.has(lessonId));
   });
+  return [...authored, ...confirmedErrorSrsCards(state.errors)];
 }
 
 export function buildDueReviewQueue(state: LearningState, now = new Date()): QueuedReviewCard[] {

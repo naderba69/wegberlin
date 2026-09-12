@@ -1,0 +1,14 @@
+{
+  "format": "dwnb-packed-vendor-runtime",
+  "version": 1,
+  "algorithm": "xor-0xa5-then-gzip",
+  "sourcePath": "public/vendor/webgpu/transformers.web.min.js",
+  "packedPath": "vendor-assets/webgpu/transformers.web.min.js.xor-gzip.packed",
+  "sourceBytes": 431652,
+  "packedBytes": 120686,
+  "sourceSha256": "0a96dcf4c48981b7d05f53827e6975ec239132606ad0d526bbc2db0fcdbc4ded",
+  "packedSha256": "29eb4707c7605fe1291ad9b0db192c90fd88465db5ccbfc97f02e3d891ac1019",
+  "package": "@huggingface/transformers browser bundle",
+  "license": "Apache-2.0",
+  "boundary": "Build-time materialization avoids committing a GitHub false-positive plaintext token; it is not encryption or secret storage."
+}

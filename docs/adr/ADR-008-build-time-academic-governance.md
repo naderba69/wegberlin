@@ -9,7 +9,7 @@ TypeScript declarations and recursive non-empty tests cannot prove that runtime-
 
 ## Decision
 
-- Validate every published academic root and nested object through 12 strict Zod schema families during `prebuild`.
+- Validate every published academic root and nested object through 13 strict Zod schema families during `prebuild`, including the conditional Tunisian-support notes.
 - Reject unknown keys, missing nested fields, invalid indexes, and broken task/clip/option/source references.
 - Generate one item-level registry for every closed answer and productive task.
 - Apply type-aware visibility policies and require explicit stable-ID exemptions for intentional repeated answer surfaces.

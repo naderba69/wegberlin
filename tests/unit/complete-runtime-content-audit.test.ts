@@ -6,6 +6,7 @@ import { fullExamSimulations } from "@/data/full-exam-simulations";
 import { diagnosticForms } from "@/data/diagnostic";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 import { reviewCards } from "@/data/review-cards";
+import { tunisianSupportNotes } from "@/data/tunisian-support-registry";
 import { exerciseInstructionsDe } from "@/components/exercise-card";
 
 function deepIssues(value: unknown, path: string, issues: string[]) {
@@ -36,6 +37,7 @@ const roots = {
   examSources,
   diagnosticForms,
   reviewCards,
+  tunisianSupportNotes,
 };
 
 describe("complete runtime content audit", () => {

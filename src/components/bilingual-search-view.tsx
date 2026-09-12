@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowLeft, BookOpenText, GraduationCap, Languages, LibraryBig, Search, ShieldCheck } from "lucide-react";
 import { bilingualSearchEntries, searchBilingual, type SearchSource } from "@/core/search/bilingual-search";
 import type { CEFRLevel } from "@/types/learning";
+import { LexicalStrategyExplorer } from "./lexical-strategy-explorer";
+import { PracticalContextExplorer } from "./practical-context-explorer";
+import { GrammarGlossary } from "./grammar-glossary";
 
 const sourceMeta: Record<SearchSource, { label: string; icon: typeof BookOpenText }> = {
   lesson: { label: "المنهج", icon: BookOpenText },
@@ -68,12 +71,12 @@ export function BilingualSearchView() {
       </div>
     </section>
 
-    {!searching ? <section className="search-empty">
+    {!searching ? <><section className="search-empty compact-search-empty">
       <ShieldCheck size={28} />
       <h2>ابدأ من كلمة أو مقصد</h2>
       <p>يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة.</p>
       <div>{["Termin verschieben", "التدفئة", "obwohl", "العمل الجماعي"].map((suggestion) => <button key={suggestion} dir="auto" onClick={() => setQuery(suggestion)}>{suggestion}</button>)}</div>
-    </section> : <>
+    </section><GrammarGlossary/><LexicalStrategyExplorer/><PracticalContextExplorer/></> : <>
       <div className="search-result-heading"><strong>{results.length} نتيجة مرتبة</strong><span>{results.length === 80 ? "نعرض أفضل 80 نتيجة؛ أضف كلمة لتضييق البحث." : "الترتيب يفضّل التطابق في العنوان والعبارة."}</span></div>
       {results.length === 0 ? <section className="search-empty"><Search size={27} /><h2>لا توجد نتيجة بهذه المرشحات</h2><p>جرّب جزءًا من الكلمة، غيّر المستوى، أو اختر «الكل».</p></section> : <div className="search-results">
         {results.map(({ entry }) => {

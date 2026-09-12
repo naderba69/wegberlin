@@ -7,6 +7,8 @@ import type { PublishedTargetedExamSimulation } from "@/types/exam";
 import type { FullExamSession } from "@/types/learning";
 import { continuousSessionEffectiveStatus, continuousSessionRemainingSeconds, expireContinuousSession, findContinuousSessionForTask } from "@/core/exams/continuous-session";
 import { useLearning } from "./learning-provider";
+import { behavioralPraise } from "@/core/coach/behavioral-praise";
+import { StatusAnnouncement } from "./status-announcement";
 
 function timeLabel(seconds: number) {
   const hours = Math.floor(seconds / 3600);
@@ -35,7 +37,7 @@ function SessionClock({ session }: { session: FullExamSession }) {
 
   return <div className={status === "expired" ? "continuous-clock expired" : "continuous-clock"}>
     <Clock3 size={18} />
-    <div><small>{status === "expired" ? "انتهت البروفة المتصلة" : "الوقت المركزي المتبقي"}</small><strong dir="ltr">{timeLabel(remaining)}</strong></div>
+    <div><small>{status === "expired" ? "انتهت البروفة المتصلة" : "الوقت المركزي المتبقي"}</small><strong dir="ltr" data-bidi-scope="numeric">{timeLabel(remaining)}</strong></div>
   </div>;
 }
 
@@ -47,13 +49,14 @@ export function ContinuousExamClock({ simulationId }: { simulationId: string }) 
 }
 
 export function ContinuousTaskSubmitted({ session }: { session: FullExamSession }) {
+  const {state}=useLearning();
   const dashboardHref = `/exams/${session.provider}/full/${session.simulationId}`;
   const nextHref = session.currentTaskId ? `/exams/${session.provider}/${session.currentTaskId}` : dashboardHref;
-  return <div className="wide-page continuous-task-submitted" role="status" aria-live="polite" aria-atomic="true">
+  return <div className="wide-page continuous-task-submitted">
     <span><CheckCircle2 size={32} /></span>
     <small>بروفة متصلة · تسليم مغلق المساعدة</small>
     <h1>ثُبّت التسليم دون كشف التصحيح</h1>
-    <p>حُفظ الدليل وانتقلت الجلسة إلى الخطوة التالية. لن تظهر الحلول أو التفسيرات أو نصوص الاستماع ما دامت هذه البروفة نشطة.</p>
+    <StatusAnnouncement message={`${state.motivationPreferences.gamificationVisible?`${behavioralPraise("exam-submission")} `:"ثُبّت التسليم. "}لن تظهر الحلول أو التفسيرات أو نصوص الاستماع ما دامت هذه البروفة نشطة.`} channel="continuous-exam-submit" className="compact"/>
     <div><strong>{session.completedTaskIds.length}/{session.taskIds.length}</strong><span>مهام مسلّمة في هذه المحاولة</span></div>
     <Link className="primary-button" href={nextHref}>{session.currentTaskId ? "انتقل إلى المهمة التالية" : "ارجع إلى لوحة الإنهاء"}<ArrowRight size={16} /></Link>
   </div>;

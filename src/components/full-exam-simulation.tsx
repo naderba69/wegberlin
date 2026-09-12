@@ -136,7 +136,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
           const moduleDone = module.taskIds.filter((id) => isTaskComplete(tasksById[id])).length;
           return (
             <section key={module.id}>
-              <header><div><span>{moduleDone === module.taskIds.length ? <Check size={17} /> : moduleDone + 1}</span><div><small lang="de">{module.titleDe}</small><h2>{module.titleAr}</h2></div></div><div><Clock3 size={14} /><strong>{module.officialMinutes} دقيقة</strong><small>{moduleDone}/{module.taskIds.length}</small></div></header>
+              <header><div><span>{moduleDone === module.taskIds.length ? <Check size={17} /> : moduleDone + 1}</span><div><small lang="de" dir="ltr">{module.titleDe}</small><h2>{module.titleAr}</h2></div></div><div><Clock3 size={14} /><strong>{module.officialMinutes} دقيقة</strong><small>{moduleDone}/{module.taskIds.length}</small></div></header>
               <p>{module.resultRuleAr}</p>
               <div>
                 {module.taskIds.map((taskId, index) => {

@@ -1,23 +1,42 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
-import { CheckCircle2, Database, Download, RefreshCcw, Trash2, WifiOff } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { CheckCircle2, Database, Download, RefreshCcw, RotateCcw, Trash2, WifiOff } from "lucide-react";
+import { useLearning } from "./learning-provider";
+import { compareCurriculumPacks } from "@/core/offline/curriculum-pack-diff";
+import { CURRENT_CURRICULUM_VERSION } from "@/config/curriculum-version";
+
+type PackId = "a1" | "a2" | "b1" | "b2" | "full";
 
 type PackMetadata = {
   installed: boolean;
   completedAt?: string;
+  curriculumVersion?: string;
+  packId?: PackId;
+  packLabel?: string;
   routeCount?: number;
   assetCount?: number;
   entryCount?: number;
   includesAudio?: boolean;
   audioEntryCount?: number;
   byteSize?: number;
+  compressedPageByteSize?: number;
+  sizeManifestFingerprint?: string;
+  rollbackAvailable?: boolean;
+  rolledBackAt?: string;
 };
 
 type PackEstimate = {
+  packId: PackId;
+  packLabel: string;
   audioByteSize: number;
   audioAssetCount: number;
   routeCount: number;
+  compressedPageByteSize: number;
+  rawPageByteSize: number;
+  nextAssetCount: number;
+  sizeManifestFingerprint: string;
+  compressionPolicy: string;
 };
 
 type PackProgress = {
@@ -32,6 +51,14 @@ type WorkerReply = PackMetadata & Partial<PackProgress> & Partial<PackEstimate> 
   message?: string;
   removedAudioCount?: number;
 };
+
+const packOptions: Array<{ id: PackId; label: string; detail: string }> = [
+  { id: "a1", label: "A1", detail: "دروس ووحدات وبوابة A1" },
+  { id: "a2", label: "A2", detail: "دروس ووحدات وبوابة A2" },
+  { id: "b1", label: "B1", detail: "دروس ووحدات وبوابة B1" },
+  { id: "b2", label: "B2 + Prüfung", detail: "B2 وكل تدريبات Goethe وtelc" },
+  { id: "full", label: "A1–B2 komplett", detail: "كل المستويات والامتحانات" },
+];
 
 const phaseLabels: Record<PackProgress["phase"], string> = {
   manifest: "التحقق من فهرس المسارات",
@@ -57,7 +84,7 @@ async function sendWorkerCommand(type: string, onProgress?: (progress: PackProgr
   const worker = await offlineWorker();
   return new Promise((resolve, reject) => {
     const channel = new MessageChannel();
-    const longOperation = type === "DWNB_OFFLINE_PACK_DOWNLOAD" || type === "DWNB_OFFLINE_PACK_REMOVE_AUDIO";
+    const longOperation = type === "DWNB_OFFLINE_PACK_DOWNLOAD" || type === "DWNB_OFFLINE_PACK_REMOVE_AUDIO" || type === "DWNB_OFFLINE_PACK_ROLLBACK";
     const timeout = window.setTimeout(() => reject(new Error("انتهت مهلة اتصال الحزمة المحلية.")), longOperation ? 15 * 60_000 : 15_000);
     channel.port1.onmessage = (event: MessageEvent<WorkerReply>) => {
       const reply = event.data;
@@ -78,6 +105,8 @@ async function sendWorkerCommand(type: string, onProgress?: (progress: PackProgr
 }
 
 export function OfflinePackControl() {
+  const {state}=useLearning();
+  const lowDataMode=state.dataUsagePreferences.lowDataMode;
   const [metadata, setMetadata] = useState<PackMetadata>({ installed: false });
   const [progress, setProgress] = useState<PackProgress | null>(null);
   const [busy, setBusy] = useState(false);
@@ -85,6 +114,11 @@ export function OfflinePackControl() {
   const [storageUsage, setStorageUsage] = useState<number | null>(null);
   const [estimate, setEstimate] = useState<PackEstimate | null>(null);
   const [includeAudio, setIncludeAudio] = useState(false);
+  const [audioFormat,setAudioFormat]=useState<"mp3"|"opus">("mp3");
+  const effectiveIncludeAudio=includeAudio&&!lowDataMode;
+  const [selectedPackId, setSelectedPackId] = useState<PackId>("full");
+  const selectionTouched = useRef(false);
+  const estimateRequestId = useRef(0);
   const [available, setAvailable] = useState(true);
 
   const refreshStorage = useCallback(async () => {
@@ -99,17 +133,26 @@ export function OfflinePackControl() {
       const next = {
         installed: Boolean(reply.installed),
         completedAt: reply.completedAt,
+        packId: reply.packId,
+        packLabel: reply.packLabel,
         routeCount: reply.routeCount,
         assetCount: reply.assetCount,
         entryCount: reply.entryCount,
         includesAudio: reply.includesAudio,
         audioEntryCount: reply.audioEntryCount,
         byteSize: reply.byteSize,
+        compressedPageByteSize: reply.compressedPageByteSize,
+        sizeManifestFingerprint: reply.sizeManifestFingerprint,
+        rollbackAvailable: reply.rollbackAvailable,
+        rolledBackAt: reply.rolledBackAt,
       };
       setMetadata(next);
-      if (next.installed) setIncludeAudio(Boolean(next.includesAudio));
+      if (next.installed) {
+        setIncludeAudio(Boolean(next.includesAudio));
+        if (next.packId && !selectionTouched.current) setSelectedPackId(next.packId);
+      }
       setAvailable(true);
-      setMessage(next.installed ? next.includesAudio ? "حزمة الصفحات والصوت مثبتة على هذا المتصفح." : "حزمة الصفحات مثبتة دون الصوت الاختياري." : "لم تُنزّل حزمة الدراسة بعد.");
+      setMessage(next.installed ? `${next.packLabel ?? "الحزمة المختارة"} مثبتة ${next.includesAudio ? "مع الصوت المولّد" : "دون الصوت الاختياري"}.` : "لم تُنزّل حزمة دراسة بعد.");
       await refreshStorage();
     } catch (error) {
       setAvailable(false);
@@ -118,15 +161,20 @@ export function OfflinePackControl() {
   }, [refreshStorage]);
 
   const refreshEstimate = useCallback(async () => {
+    const requestedPackId=selectedPackId;
+    const requestId=++estimateRequestId.current;
     try {
-      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_ESTIMATE");
-      if (typeof reply.audioByteSize === "number" && typeof reply.audioAssetCount === "number" && typeof reply.routeCount === "number") {
-        setEstimate({ audioByteSize: reply.audioByteSize, audioAssetCount: reply.audioAssetCount, routeCount: reply.routeCount });
+      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_ESTIMATE", undefined, { packId: requestedPackId,audioFormat });
+      if(requestId!==estimateRequestId.current||reply.packId!==requestedPackId)return;
+      if (reply.packId && typeof reply.audioByteSize === "number" && typeof reply.audioAssetCount === "number" && typeof reply.routeCount === "number" && typeof reply.compressedPageByteSize === "number" && typeof reply.rawPageByteSize === "number" && typeof reply.nextAssetCount === "number" && typeof reply.sizeManifestFingerprint === "string" && typeof reply.compressionPolicy === "string") {
+        setEstimate({ packId: reply.packId, packLabel: reply.packLabel ?? reply.packId, audioByteSize: reply.audioByteSize, audioAssetCount: reply.audioAssetCount, routeCount: reply.routeCount, compressedPageByteSize: reply.compressedPageByteSize, rawPageByteSize: reply.rawPageByteSize, nextAssetCount: reply.nextAssetCount, sizeManifestFingerprint: reply.sizeManifestFingerprint, compressionPolicy: reply.compressionPolicy });
       }
     } catch {
-      setEstimate(null);
+      if(requestId===estimateRequestId.current)setEstimate(null);
     }
-  }, []);
+  }, [selectedPackId,audioFormat]);
+
+  useEffect(()=>{const timeout=window.setTimeout(()=>{const probe=document.createElement("audio");setAudioFormat(probe.canPlayType('audio/ogg; codecs="opus"')?"opus":"mp3")},0);return()=>window.clearTimeout(timeout)},[]);
 
   useEffect(() => {
     const timeout = window.setTimeout(() => { void refreshStatus(); void refreshEstimate(); }, 0);
@@ -139,19 +187,24 @@ export function OfflinePackControl() {
     setMessage("بدأ تنزيل الحزمة. اترك هذه الصفحة مفتوحة لرؤية التقدم.");
     try {
       if (navigator.storage?.persist) await navigator.storage.persist().catch(() => false);
-      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_DOWNLOAD", setProgress, { includeAudio });
+      const reply = await sendWorkerCommand("DWNB_OFFLINE_PACK_DOWNLOAD", setProgress, { includeAudio:effectiveIncludeAudio, packId: selectedPackId,audioFormat });
       setMetadata({
         installed: true,
         completedAt: reply.completedAt,
+        packId: reply.packId,
+        packLabel: reply.packLabel,
         routeCount: reply.routeCount,
         assetCount: reply.assetCount,
         entryCount: reply.entryCount,
         includesAudio: reply.includesAudio,
         audioEntryCount: reply.audioEntryCount,
         byteSize: reply.byteSize,
+        compressedPageByteSize: reply.compressedPageByteSize,
+        sizeManifestFingerprint: reply.sizeManifestFingerprint,
+        rollbackAvailable: metadata.installed || metadata.rollbackAvailable,
       });
       setProgress(null);
-      setMessage(includeAudio ? "اكتمل تثبيت الصفحات والصوت الاختياري." : "اكتملت حزمة الصفحات دون تنزيل الصوت الاختياري.");
+      setMessage(`اكتمل تثبيت ${reply.packLabel ?? selectedPackId}${effectiveIncludeAudio ? " مع الصوت الاختياري" : " دون الصوت الاختياري"}.`);
       await refreshStorage();
     } catch (error) {
       setProgress(null);
@@ -160,6 +213,8 @@ export function OfflinePackControl() {
       setBusy(false);
     }
   }
+
+  async function rollbackPack(){if(!window.confirm("استبدال الحزمة الحالية بآخر حزمة مكتملة محفوظة؟ سيبقى تقدمك وتسجيلاتك كما هي."))return;setBusy(true);try{const reply=await sendWorkerCommand("DWNB_OFFLINE_PACK_ROLLBACK");setMetadata((current)=>({...current,installed:true,completedAt:reply.completedAt,packId:reply.packId,packLabel:reply.packLabel,routeCount:reply.routeCount,assetCount:reply.assetCount,entryCount:reply.entryCount,includesAudio:reply.includesAudio,audioEntryCount:reply.audioEntryCount,byteSize:reply.byteSize,compressedPageByteSize:reply.compressedPageByteSize,sizeManifestFingerprint:reply.sizeManifestFingerprint,rollbackAvailable:true,rolledBackAt:reply.rolledBackAt}));setMessage(`تم الرجوع ذريًا إلى ${reply.packLabel??"الحزمة السابقة"}. بقيت الحزمة المستبدلة متاحة للرجوع العكسي.`);await refreshStorage()}catch(error){setMessage(error instanceof Error?error.message:"تعذر الرجوع إلى الحزمة السابقة.")}finally{setBusy(false)}}
 
   async function removePack() {
     if (!window.confirm("حذف حزمة المحتوى دون حذف تقدمك أو تسجيلاتك؟")) return;
@@ -196,6 +251,7 @@ export function OfflinePackControl() {
   const installedDate = metadata.completedAt
     ? new Intl.DateTimeFormat("ar-TN", { dateStyle: "medium", timeStyle: "short" }).format(new Date(metadata.completedAt))
     : null;
+  const packDiff=estimate?compareCurriculumPacks(metadata.installed?{curriculumVersion:metadata.curriculumVersion,buildFingerprint:metadata.sizeManifestFingerprint,packId:metadata.packId,routeCount:metadata.routeCount,includesAudio:metadata.includesAudio}:null,{curriculumVersion:CURRENT_CURRICULUM_VERSION,buildFingerprint:estimate.sizeManifestFingerprint,packId:estimate.packId,routeCount:estimate.routeCount,includesAudio:effectiveIncludeAudio}):null;
 
   return <section className="settings-card offline-pack-card">
     <div className="settings-title">
@@ -218,15 +274,21 @@ export function OfflinePackControl() {
       </div>
     </div>
 
+    <div className="offline-pack-picker" role="group" aria-label="اختر حزمة Offline مستقلة">
+      {packOptions.map((pack)=><button type="button" key={pack.id} aria-pressed={selectedPackId===pack.id} className={selectedPackId===pack.id?"active":""} disabled={busy} onClick={()=>{selectionTouched.current=true;setEstimate(null);setSelectedPackId(pack.id)}}><strong lang="de" dir="ltr">{pack.label}</strong><small>{pack.detail}</small></button>)}
+    </div>
+
     <p className="offline-pack-copy">
-      تشمل الحزمة 84 درسًا، 30 وحدة، أربع بوابات، المكتبة، و150 مهمة امتحان مع لوحات المحاكاة. لا تشمل مفتاح AI ولا التسجيلات الشخصية، ولا تدّعي وجود صوت امتحاني حقيقي.
+      كل مستوى حزمة مستقلة مع صفحات المنصة المشتركة. حزمة B2 تشمل تدريبات Goethe وtelc المنفصلة، بينما الحزمة الكاملة تضم 84 درسًا و303 مسارات. لا تشمل أي حزمة مفتاح AI أو التسجيلات الشخصية.
     </p>
 
     <div className="pack-size-preview">
-      <div><small>قبل التنزيل</small><strong>{estimate?.routeCount ?? 298} مسارًا أساسيًا</strong><span>يقيس المتصفح حجم الصفحات وملفات التشغيل بدقة بعد تثبيتها.</span></div>
-      <label><input type="checkbox" checked={includeAudio} disabled={busy} onChange={(event) => setIncludeAudio(event.target.checked)} /><span><b>تضمين الصوت المولّد اختياريًا</b><small>{estimate ? `${estimate.audioAssetCount} ملفًا · ${byteLabel(estimate.audioByteSize)} معروفة من البيانات` : "جاري حساب حجم الصوت من البيانات…"}</small></span></label>
+      <div><small>قبل التنزيل · {estimate?.packLabel ?? selectedPackId}</small><strong>{estimate?.routeCount ?? "—"} مسارًا · {byteLabel(estimate?.compressedPageByteSize)}</strong><span>{estimate ? `${estimate.nextAssetCount} ملف Next فريد · Gzip مبني مسبقًا · ${estimate.sizeManifestFingerprint.slice(0,12)}` : "جاري قراءة بيان الحجم المبني…"}</span></div>
+      <label><input type="checkbox" checked={effectiveIncludeAudio} disabled={busy||lowDataMode} onChange={(event) => setIncludeAudio(event.target.checked)} /><span><b>تضمين صوت {estimate?.packLabel ?? selectedPackId} اختياريًا</b><small>{lowDataMode?"محظور لأن وضع البيانات المنخفضة مفعّل.":estimate ? `${estimate.audioAssetCount} ملفًا · ${byteLabel(estimate.audioByteSize)} · ${audioFormat==="opus"?"Ogg Opus مضغوط":"MP3 fallback"}` : "جاري حساب حجم الصوت من البيانات…"}</small></span></label>
+      {estimate&&<div><small>إجمالي التنزيل المتوقع</small><strong>{byteLabel(estimate.compressedPageByteSize+(effectiveIncludeAudio?estimate.audioByteSize:0))}</strong><span>Gzip للصفحات وNext + {effectiveIncludeAudio?"بايتات الصوت المحدد الدقيقة":"دون الصوت"}. قد يختلف نقل CDN حسب Brotli والرؤوس.</span></div>}
       {metadata.installed && <div><small>الحجم المثبت الفعلي</small><strong>{byteLabel(metadata.byteSize)}</strong><span>{metadata.includesAudio ? `${metadata.audioEntryCount ?? 0} موردًا صوتيًا مثبتًا` : "الصفحات مثبتة دون الصوت"}</span></div>}
     </div>
+    {packDiff&&<aside className="curriculum-pack-diff" data-pack-diff-policy={packDiff.policyVersion}><small lang="de" dir="ltr">Vor dem Update vergleichen</small><strong>مقارنة الحزمة قبل التحديث</strong><p>{packDiff.summaryAr}</p><div><span>المنهج <b dir="ltr" data-bidi-scope="technical">{metadata.curriculumVersion??"غير مسجل"} → {CURRENT_CURRICULUM_VERSION}</b></span><span>المسارات <b>{metadata.routeCount??0} → {estimate?.routeCount??0} ({packDiff.routeDelta>=0?"+":""}{packDiff.routeDelta})</b></span></div><footer>مقارنة Metadata فقط؛ ليست Diff دلالية للمحتوى ولا تثبت الحزمة تلقائيًا.</footer></aside>}
 
     {progress && <div className="offline-pack-progress">
       <div><span>{phaseLabels[progress.phase]}</span><strong>{progress.percent}%</strong></div>
@@ -237,9 +299,10 @@ export function OfflinePackControl() {
     <div className="settings-actions">
       <button className="primary-button" disabled={!available || busy} onClick={() => void downloadPack()}>
         {metadata.installed ? <RefreshCcw size={17} /> : <Download size={17} />}
-        {busy ? "جاري العمل…" : metadata.installed ? (includeAudio ? "تحديث وإضافة الصوت" : "تحديث حزمة الصفحات") : (includeAudio ? "تنزيل الصفحات والصوت" : "تنزيل حزمة الصفحات")}
+        {busy ? "جاري العمل…" : metadata.installed ? (effectiveIncludeAudio ? `تحديث ${estimate?.packLabel ?? selectedPackId} وإضافة الصوت` : `تحديث ${estimate?.packLabel ?? selectedPackId}`) : (effectiveIncludeAudio ? `تنزيل ${estimate?.packLabel ?? selectedPackId} والصوت` : `تنزيل ${estimate?.packLabel ?? selectedPackId}`)}
       </button>
       {metadata.installed && metadata.includesAudio && <button className="secondary-button" disabled={busy} onClick={() => void removeAudioOnly()}><Trash2 size={17} /> حذف صوت الحزمة فقط</button>}
+      {metadata.installed && metadata.rollbackAvailable && <button className="secondary-button" disabled={busy} onClick={() => void rollbackPack()}><RotateCcw size={17} /> ارجع لآخر حزمة سليمة</button>}
       {metadata.installed && <button className="secondary-button" disabled={busy} onClick={() => void removePack()}><Trash2 size={17} /> حذف الحزمة</button>}
     </div>
 

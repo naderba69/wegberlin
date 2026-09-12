@@ -1,12 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Check, CircleAlert, Eye, EyeOff, Gauge, Headphones, Mic2, Save, Square, Trash2 } from "lucide-react";
+import { Check, CircleAlert, Eye, EyeOff, Headphones, Mic2, Save, Square, Trash2 } from "lucide-react";
 import { libraryAudioAssetByItemId, libraryAudioManifest, audioDurationLabel } from "@/data/library-audio-assets";
 import { listeningLibrary } from "@/data/library-registry";
 import type { CEFRLevel } from "@/types/learning";
 import { saveMedia } from "@/core/portability/db";
+import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
 import { useLearning } from "./learning-provider";
+import { AudioSpeedControl } from "./audio-speed-control";
+import { applyLearningPlaybackRate, type LearningPlaybackRate } from "@/core/audio/playback-speed";
+import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
+import { emitListeningUsage } from "@/core/listening/usage-evidence";
+import { ProsodyProgressionPanel } from "./prosody-progression-panel";
 
 type RecordingPhase = "idle" | "recording" | "recorded" | "saved";
 const levels: Array<CEFRLevel | "all"> = ["all", "A1", "A2", "B1", "B2"];
@@ -23,7 +29,7 @@ export function ShadowingStudio() {
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const startedAtRef = useRef(0);
-  const [rate, setRate] = useState(1);
+  const [rate, setRate] = useState<LearningPlaybackRate>(1);
   const [showTranscript, setShowTranscript] = useState(false);
   const [phase, setPhase] = useState<RecordingPhase>("idle");
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
@@ -57,16 +63,16 @@ export function ShadowingStudio() {
     setMessage("");
   }
 
-  function changeRate(next: number) {
+  function changeRate(next: LearningPlaybackRate) {
     setRate(next);
-    if (modelAudioRef.current) modelAudioRef.current.playbackRate = next;
+    if (modelAudioRef.current) applyLearningPlaybackRate(modelAudioRef.current, next);
   }
 
   async function startRecording() {
     if (!selected) return;
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const recorder = new MediaRecorder(stream);
+      const { recorder } = createRecordingMediaRecorder(stream);
       chunksRef.current = [];
       startedAtRef.current = Date.now();
       recorder.ondataavailable = (event) => { if (event.data.size) chunksRef.current.push(event.data); };
@@ -116,6 +122,15 @@ export function ShadowingStudio() {
     setMessage("حُفظت محاولة التقليد الصوتي محليًا. لا توجد درجة نطق آلية.");
   }
 
+  function toggleTranscript() {
+    if (!showTranscript && selected) {
+      const event = createSupportUsageEvent({ kind:"shadowing-transcript", surface:"shadowing", contentId:selected.id, afterCommit:phase === "recorded" || phase === "saved" });
+      update((current) => ({ ...current, supportUsageEvents:appendSupportUsageEvent(current.supportUsageEvents, event) }));
+      emitListeningUsage({surface:"shadowing",contentId:selected.id,event:"transcript-revealed",revealAfterAnswerCommit:phase === "recorded" || phase === "saved"});
+    }
+    setShowTranscript((value) => !value);
+  }
+
   function discard() {
     if (recordedUrl) URL.revokeObjectURL(recordedUrl);
     setRecordedBlob(null);
@@ -143,11 +158,12 @@ export function ShadowingStudio() {
       </aside>
 
       <section className="shadowing-workspace">
+        <ProsodyProgressionPanel level={selected.level}/>
         <div className="shadowing-model">
-          <header><div><Headphones size={18} /><span><strong>النموذج الاصطناعي</strong><small>متحدث واحد · غير امتحاني</small></span></div><code dir="ltr">{audioDurationLabel(asset.durationMs)}</code></header>
-          <audio ref={modelAudioRef} controls preload="metadata" src={asset.path} aria-label={`نموذج ${selected.titleAr}`} />
-          <div className="shadowing-rates"><Gauge size={15} /><span>السرعة</span>{[0.75, 1, 1.15].map((value) => <button key={value} className={rate === value ? "active" : ""} onClick={() => changeRate(value)}>{value}×</button>)}</div>
-          <button className="transcript-toggle" onClick={() => setShowTranscript((value) => !value)}>{showTranscript ? <EyeOff size={15} /> : <Eye size={15} />}{showTranscript ? "إخفاء النص" : "إظهار النص بعد المحاولة"}</button>
+          <header><div><Headphones size={18} /><span><strong>النموذج الاصطناعي</strong><small>متحدث واحد · غير امتحاني</small></span></div><code dir="ltr" data-bidi-scope="numeric">{audioDurationLabel(asset.durationMs)}</code></header>
+          <audio ref={modelAudioRef} controls preload="metadata" src={asset.path} aria-label={`نموذج ${selected.titleAr}`} data-listening-surface="shadowing" data-listening-content-id={selected.id} onLoadedMetadata={() => modelAudioRef.current && applyLearningPlaybackRate(modelAudioRef.current, rate)}/>
+          <AudioSpeedControl rate={rate} onChange={changeRate} label={`سرعة تقليد ${selected.titleAr}`}/>
+          <button className="transcript-toggle" onClick={toggleTranscript}>{showTranscript ? <EyeOff size={15} /> : <Eye size={15} />}{showTranscript ? "إخفاء النص" : "إظهار النص بعد المحاولة"}</button>
           {showTranscript && <article className="shadowing-transcript" lang="de" dir="ltr">{selected.transcriptDe}</article>}
         </div>
 

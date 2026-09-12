@@ -1,0 +1,3288 @@
+{
+  "format": "dwnb-lexical-strategy-audit",
+  "version": "lexical-strategy-audit-v1",
+  "generatedAt": "2026-09-08",
+  "ok": true,
+  "policyVersions": {
+    "registry": "lexical-strategy-registry-v1",
+    "recycling": "module-recycling-ratio-v1"
+  },
+  "registryRows": {
+    "wordFamilies": [
+      {
+        "id": "family-wohnen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-02",
+          "a1-13",
+          "a1-15"
+        ],
+        "anchorDe": "wohnen",
+        "titleAr": "السكن ومكانه",
+        "relationNoteAr": "Wohnung وWohnort مشتقان أو مركبان حول مجال wohnen.",
+        "cautionAr": "Wohnung اسم مؤنث، ولا يعني كل مركب أنه اشتقاق مباشر من الفعل.",
+        "members": [
+          {
+            "formDe": "wohnen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يسكن",
+            "exampleDe": "Ich wohne in Tunis."
+          },
+          {
+            "formDe": "die Wohnung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الشقة",
+            "exampleDe": "Die Wohnung ist hell."
+          },
+          {
+            "formDe": "der Wohnort",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مكان السكن",
+            "exampleDe": "Berlin ist mein Wohnort."
+          },
+          {
+            "formDe": "die Wohnungssuche",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "البحث عن سكن",
+            "exampleDe": "Die Wohnungssuche dauert lange."
+          }
+        ]
+      },
+      {
+        "id": "family-arbeiten",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-06"
+        ],
+        "anchorDe": "arbeiten",
+        "titleAr": "العمل ومكانه",
+        "relationNoteAr": "تجمع العائلة الفعل والاسم ومركبات مهنية شائعة.",
+        "cautionAr": "Arbeit مؤنث، بينما Arbeitsplatz مذكر.",
+        "members": [
+          {
+            "formDe": "arbeiten",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يعمل",
+            "exampleDe": "Ich arbeite heute."
+          },
+          {
+            "formDe": "die Arbeit",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "العمل",
+            "exampleDe": "Die Arbeit beginnt um acht."
+          },
+          {
+            "formDe": "der Arbeitsplatz",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مكان العمل",
+            "exampleDe": "Mein Arbeitsplatz ist ruhig."
+          },
+          {
+            "formDe": "arbeitslos",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "عاطل عن العمل",
+            "exampleDe": "Er ist zurzeit arbeitslos."
+          }
+        ]
+      },
+      {
+        "id": "family-lernen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-01"
+        ],
+        "anchorDe": "lernen",
+        "titleAr": "التعلم وأهدافه",
+        "relationNoteAr": "تربط الفعل بمركبات التخطيط للتعلم.",
+        "cautionAr": "das Lernen اسم مصدر؛ ليس كل مركب بديلًا عن الفعل.",
+        "members": [
+          {
+            "formDe": "lernen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتعلم",
+            "exampleDe": "Wir lernen Deutsch."
+          },
+          {
+            "formDe": "das Lernen",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التعلم",
+            "exampleDe": "Das Lernen braucht Zeit."
+          },
+          {
+            "formDe": "das Lernziel",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "هدف التعلم",
+            "exampleDe": "Mein Lernziel ist klar."
+          },
+          {
+            "formDe": "die Lerngruppe",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مجموعة تعلم",
+            "exampleDe": "Die Lerngruppe trifft sich montags."
+          }
+        ]
+      },
+      {
+        "id": "family-reisen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-21"
+        ],
+        "anchorDe": "reisen",
+        "titleAr": "السفر والتخطيط له",
+        "relationNoteAr": "تجمع الفعل والاسم ومركبات الرحلة.",
+        "cautionAr": "Reise مؤنث؛ Reiseplan مركب لا صيغة فعل.",
+        "members": [
+          {
+            "formDe": "reisen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يسافر",
+            "exampleDe": "Wir reisen nach Berlin."
+          },
+          {
+            "formDe": "die Reise",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الرحلة",
+            "exampleDe": "Die Reise dauert drei Tage."
+          },
+          {
+            "formDe": "der Reiseplan",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "خطة السفر",
+            "exampleDe": "Der Reiseplan hat zwei Optionen."
+          },
+          {
+            "formDe": "reisebereit",
+            "wordClass": "adjective",
+            "relation": "compound",
+            "meaningAr": "جاهز للسفر",
+            "exampleDe": "Um sieben sind alle reisebereit."
+          }
+        ]
+      },
+      {
+        "id": "family-kaufen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-11"
+        ],
+        "anchorDe": "kaufen",
+        "titleAr": "الشراء والاستهلاك",
+        "relationNoteAr": "Einkauf وKäufer يرتبطان بالفعل، والمركب يحدد المكان.",
+        "cautionAr": "Einkauf لا يعني دائمًا الشيء المشترى؛ قد يعني عملية التسوق.",
+        "members": [
+          {
+            "formDe": "kaufen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يشتري",
+            "exampleDe": "Ich kaufe Brot."
+          },
+          {
+            "formDe": "der Einkauf",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التسوق / المشتريات",
+            "exampleDe": "Der Einkauf kostet zwanzig Euro."
+          },
+          {
+            "formDe": "der Käufer",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المشتري",
+            "exampleDe": "Der Käufer prüft die Rechnung."
+          },
+          {
+            "formDe": "das Einkaufszentrum",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مركز التسوق",
+            "exampleDe": "Das Einkaufszentrum schließt um acht."
+          }
+        ]
+      },
+      {
+        "id": "family-fahren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-19",
+          "a1-21"
+        ],
+        "anchorDe": "fahren",
+        "titleAr": "التنقل والرحلة",
+        "relationNoteAr": "توضح تغير المعنى بين الفعل وأسماء الرحلة والمركبات.",
+        "cautionAr": "Fahrrad مركب تاريخيًا، لكنه يُحفظ اليوم كوحدة مع das.",
+        "members": [
+          {
+            "formDe": "fahren",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتنقل بمركبة",
+            "exampleDe": "Ich fahre mit dem Bus."
+          },
+          {
+            "formDe": "die Fahrt",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الرحلة بالمركبة",
+            "exampleDe": "Die Fahrt dauert eine Stunde."
+          },
+          {
+            "formDe": "das Fahrrad",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "الدراجة",
+            "exampleDe": "Das Fahrrad steht im Keller."
+          },
+          {
+            "formDe": "die Fahrkarte",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "تذكرة السفر",
+            "exampleDe": "Ich kaufe eine Fahrkarte."
+          }
+        ]
+      },
+      {
+        "id": "family-sprechen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-02"
+        ],
+        "anchorDe": "sprechen",
+        "titleAr": "الكلام واللغة والمحادثة",
+        "relationNoteAr": "تجمع جذر sprechen مع Sprache وGespräch ضمن شبكة استعمال.",
+        "cautionAr": "Gespräch قريب دلاليًا وصرفيًا، لكن لا تستبدله بالفعل في الجملة.",
+        "members": [
+          {
+            "formDe": "sprechen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتحدث",
+            "exampleDe": "Sie spricht Deutsch."
+          },
+          {
+            "formDe": "die Sprache",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "اللغة",
+            "exampleDe": "Deutsch ist eine Sprache."
+          },
+          {
+            "formDe": "das Gespräch",
+            "wordClass": "noun",
+            "relation": "semantic-relative",
+            "meaningAr": "المحادثة",
+            "exampleDe": "Das Gespräch war kurz."
+          },
+          {
+            "formDe": "mehrsprachig",
+            "wordClass": "adjective",
+            "relation": "compound",
+            "meaningAr": "متعدد اللغات",
+            "exampleDe": "Das Team ist mehrsprachig."
+          }
+        ]
+      },
+      {
+        "id": "family-gesund",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonIds": [
+          "a1-22"
+        ],
+        "anchorDe": "gesund",
+        "titleAr": "الصحة والمرض",
+        "relationNoteAr": "تجمع الصفة وأسماء الحالة ومركبات الصحة.",
+        "cautionAr": "gesund وkrank متضادان دلاليًا، وليسا اشتقاقين من الجذر نفسه.",
+        "members": [
+          {
+            "formDe": "gesund",
+            "wordClass": "adjective",
+            "relation": "base",
+            "meaningAr": "سليم / صحي",
+            "exampleDe": "Heute fühle ich mich gesund."
+          },
+          {
+            "formDe": "die Gesundheit",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الصحة",
+            "exampleDe": "Gesundheit ist wichtig."
+          },
+          {
+            "formDe": "krank",
+            "wordClass": "adjective",
+            "relation": "semantic-relative",
+            "meaningAr": "مريض",
+            "exampleDe": "Ich bin heute krank."
+          },
+          {
+            "formDe": "die Krankmeldung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "بلاغ المرض",
+            "exampleDe": "Die Krankmeldung geht an die Firma."
+          }
+        ]
+      },
+      {
+        "id": "family-entscheiden",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-12",
+          "a2-24"
+        ],
+        "anchorDe": "entscheiden",
+        "titleAr": "القرار ومعاييره",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب مساعدة القرار.",
+        "cautionAr": "entscheidend تعني حاسمًا، لا مجرد متعلق بالقرار.",
+        "members": [
+          {
+            "formDe": "entscheiden",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يقرر",
+            "exampleDe": "Wir entscheiden morgen."
+          },
+          {
+            "formDe": "die Entscheidung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "القرار",
+            "exampleDe": "Die Entscheidung braucht Kriterien."
+          },
+          {
+            "formDe": "entscheidend",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "حاسم",
+            "exampleDe": "Der Preis ist entscheidend."
+          },
+          {
+            "formDe": "die Entscheidungshilfe",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "أداة مساعدة القرار",
+            "exampleDe": "Die Tabelle ist eine Entscheidungshilfe."
+          }
+        ]
+      },
+      {
+        "id": "family-bewerben",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-08"
+        ],
+        "anchorDe": "sich bewerben",
+        "titleAr": "التقديم للعمل",
+        "relationNoteAr": "تجمع الفعل الانعكاسي وأسماء الطلب والمتقدم.",
+        "cautionAr": "Bewerbung اسم الطلب، وBewerber هو الشخص؛ لا تحذف sich من الفعل.",
+        "members": [
+          {
+            "formDe": "sich bewerben",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتقدم لوظيفة",
+            "exampleDe": "Ich bewerbe mich um die Stelle."
+          },
+          {
+            "formDe": "die Bewerbung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "طلب التوظيف",
+            "exampleDe": "Die Bewerbung ist vollständig."
+          },
+          {
+            "formDe": "der Bewerber",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المتقدم",
+            "exampleDe": "Der Bewerber nennt ein Beispiel."
+          },
+          {
+            "formDe": "das Bewerbungsgespräch",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مقابلة التوظيف",
+            "exampleDe": "Das Bewerbungsgespräch beginnt um zehn."
+          }
+        ]
+      },
+      {
+        "id": "family-planen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-10",
+          "a2-21"
+        ],
+        "anchorDe": "planen",
+        "titleAr": "الخطة وإمكان تنفيذها",
+        "relationNoteAr": "تجمع الفعل والاسم والصفة ومركب السفر.",
+        "cautionAr": "planbar يصف الإمكان، ولا يعني أن الخطة جيدة تلقائيًا.",
+        "members": [
+          {
+            "formDe": "planen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يخطط",
+            "exampleDe": "Wir planen die Reise."
+          },
+          {
+            "formDe": "der Plan",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الخطة",
+            "exampleDe": "Der Plan hat zwei Schritte."
+          },
+          {
+            "formDe": "planbar",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل للتخطيط",
+            "exampleDe": "Der Termin ist gut planbar."
+          },
+          {
+            "formDe": "die Reiseplanung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "تخطيط السفر",
+            "exampleDe": "Die Reiseplanung beginnt früh."
+          }
+        ]
+      },
+      {
+        "id": "family-informieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-04",
+          "a2-16"
+        ],
+        "anchorDe": "informieren",
+        "titleAr": "المعلومة والإبلاغ",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومصدر المعلومة.",
+        "cautionAr": "informativ يصف محتوى مفيدًا، ولا يثبت صحة المصدر.",
+        "members": [
+          {
+            "formDe": "informieren",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يبلغ / يستعلم",
+            "exampleDe": "Ich informiere die Nachbarn."
+          },
+          {
+            "formDe": "die Information",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المعلومة",
+            "exampleDe": "Die Information steht im Brief."
+          },
+          {
+            "formDe": "informativ",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "غني بالمعلومات",
+            "exampleDe": "Der Text ist kurz und informativ."
+          },
+          {
+            "formDe": "die Informationsquelle",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مصدر المعلومات",
+            "exampleDe": "Prüfen Sie die Informationsquelle."
+          }
+        ]
+      },
+      {
+        "id": "family-helfen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-04",
+          "a2-22"
+        ],
+        "anchorDe": "helfen",
+        "titleAr": "المساعدة وأثرها",
+        "relationNoteAr": "تجمع الفعل والاسم والصفة ومركب مساعدة الحي.",
+        "cautionAr": "helfen يأخذ Dativ مع الشخص: Ich helfe dem Nachbarn.",
+        "members": [
+          {
+            "formDe": "helfen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يساعد",
+            "exampleDe": "Ich helfe meinem Nachbarn."
+          },
+          {
+            "formDe": "die Hilfe",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المساعدة",
+            "exampleDe": "Danke für Ihre Hilfe."
+          },
+          {
+            "formDe": "hilfreich",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "مفيد",
+            "exampleDe": "Die Erklärung ist hilfreich."
+          },
+          {
+            "formDe": "die Nachbarschaftshilfe",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مساعدة الجيران",
+            "exampleDe": "Die Nachbarschaftshilfe organisiert Termine."
+          }
+        ]
+      },
+      {
+        "id": "family-pruefen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-20"
+        ],
+        "anchorDe": "prüfen",
+        "titleAr": "الفحص والاختبار",
+        "relationNoteAr": "تربط الفعل بالامتحان والصفة ومهمة الفحص.",
+        "cautionAr": "Prüfung قد تعني امتحانًا أو فحصًا حسب السياق.",
+        "members": [
+          {
+            "formDe": "prüfen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يفحص",
+            "exampleDe": "Wir prüfen die Angaben."
+          },
+          {
+            "formDe": "die Prüfung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الامتحان / الفحص",
+            "exampleDe": "Die Prüfung beginnt im Mai."
+          },
+          {
+            "formDe": "prüfbar",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل للتحقق",
+            "exampleDe": "Die Zahl ist prüfbar."
+          },
+          {
+            "formDe": "die Prüfungsaufgabe",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مهمة امتحان",
+            "exampleDe": "Lesen Sie die Prüfungsaufgabe genau."
+          }
+        ]
+      },
+      {
+        "id": "family-erleben",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-01",
+          "a2-03"
+        ],
+        "anchorDe": "erleben",
+        "titleAr": "التجربة والحدث",
+        "relationNoteAr": "تجمع الفعل والاسم والصفة الوصفية.",
+        "cautionAr": "erlebt قد تكون Partizip II أو صفة؛ يحدد الموقع النحوي وظيفتها.",
+        "members": [
+          {
+            "formDe": "erleben",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يعيش تجربة",
+            "exampleDe": "Wir erleben etwas Neues."
+          },
+          {
+            "formDe": "das Erlebnis",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التجربة / الحدث",
+            "exampleDe": "Die Reise war ein besonderes Erlebnis."
+          },
+          {
+            "formDe": "erlebnisreich",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "غني بالتجارب",
+            "exampleDe": "Die Reise war erlebnisreich."
+          },
+          {
+            "formDe": "der Erlebnisbericht",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "تقرير تجربة",
+            "exampleDe": "Der Erlebnisbericht folgt einer Zeitlinie."
+          }
+        ]
+      },
+      {
+        "id": "family-regeln",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonIds": [
+          "a2-05",
+          "a2-06"
+        ],
+        "anchorDe": "regeln",
+        "titleAr": "القواعد وتنظيمها",
+        "relationNoteAr": "تفرق بين Regel الاسم وregeln الفعل ومركبات السكن.",
+        "cautionAr": "die Regel والقانون الرسمي ليسا مترادفين دائمًا.",
+        "members": [
+          {
+            "formDe": "regeln",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "ينظم / يسوي",
+            "exampleDe": "Wir regeln das gemeinsam."
+          },
+          {
+            "formDe": "die Regel",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "القاعدة",
+            "exampleDe": "Die Regel gilt im Haus."
+          },
+          {
+            "formDe": "regelmäßig",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "منتظم",
+            "exampleDe": "Wir treffen uns regelmäßig."
+          },
+          {
+            "formDe": "die Hausordnung",
+            "wordClass": "compound",
+            "relation": "semantic-relative",
+            "meaningAr": "نظام المبنى",
+            "exampleDe": "Die Hausordnung erklärt die Ruhezeiten."
+          }
+        ]
+      },
+      {
+        "id": "family-entwickeln",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-09",
+          "b1-24"
+        ],
+        "anchorDe": "entwickeln",
+        "titleAr": "التطوير ومساره",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب المدينة.",
+        "cautionAr": "entwicklungsfähig حكم على قابلية التطور، لا ضمان للنتيجة.",
+        "members": [
+          {
+            "formDe": "entwickeln",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يطور",
+            "exampleDe": "Die Stadt entwickelt einen Plan."
+          },
+          {
+            "formDe": "die Entwicklung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التطور / التطوير",
+            "exampleDe": "Die Entwicklung wird gemessen."
+          },
+          {
+            "formDe": "entwicklungsfähig",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل للتطور",
+            "exampleDe": "Das Konzept ist entwicklungsfähig."
+          },
+          {
+            "formDe": "die Stadtentwicklung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "تطوير المدينة",
+            "exampleDe": "Die Stadtentwicklung braucht Beteiligung."
+          }
+        ]
+      },
+      {
+        "id": "family-verantworten",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-04",
+          "b1-23"
+        ],
+        "anchorDe": "verantworten",
+        "titleAr": "المسؤولية ونطاقها",
+        "relationNoteAr": "تربط الفعل والاسم والصفة بمركب نطاق المسؤولية.",
+        "cautionAr": "verantwortlich für يحدد المجال؛ لا يعني Schuld تلقائيًا.",
+        "members": [
+          {
+            "formDe": "verantworten",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتحمل مسؤولية",
+            "exampleDe": "Sie verantwortet das Budget."
+          },
+          {
+            "formDe": "die Verantwortung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المسؤولية",
+            "exampleDe": "Die Verantwortung ist klar verteilt."
+          },
+          {
+            "formDe": "verantwortlich",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "مسؤول",
+            "exampleDe": "Er ist für den Termin verantwortlich."
+          },
+          {
+            "formDe": "der Verantwortungsbereich",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "نطاق المسؤولية",
+            "exampleDe": "Der Verantwortungsbereich steht im Plan."
+          }
+        ]
+      },
+      {
+        "id": "family-bilden",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-13",
+          "b1-14"
+        ],
+        "anchorDe": "bilden",
+        "titleAr": "التعليم والتكوين",
+        "relationNoteAr": "تجمع جذر bilden مع Bildung ومركبات المسار.",
+        "cautionAr": "Bildung أوسع من دورة واحدة، وAusbildung غالبًا تكوين مهني.",
+        "members": [
+          {
+            "formDe": "bilden",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يكوّن",
+            "exampleDe": "Die Gruppen bilden ein Netzwerk."
+          },
+          {
+            "formDe": "die Bildung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التعليم / التكوين",
+            "exampleDe": "Bildung eröffnet Möglichkeiten."
+          },
+          {
+            "formDe": "bildungsbezogen",
+            "wordClass": "adjective",
+            "relation": "compound",
+            "meaningAr": "متعلق بالتعليم",
+            "exampleDe": "Die Studie untersucht bildungsbezogene Daten."
+          },
+          {
+            "formDe": "der Bildungsweg",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "المسار التعليمي",
+            "exampleDe": "Jeder Bildungsweg ist anders."
+          }
+        ]
+      },
+      {
+        "id": "family-nutzen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-16",
+          "b1-17"
+        ],
+        "anchorDe": "nutzen",
+        "titleAr": "الاستخدام والفائدة",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب الإعلام.",
+        "cautionAr": "Nutzen هو الفائدة، Nutzung هي عملية الاستخدام؛ لا تخلطهما.",
+        "members": [
+          {
+            "formDe": "nutzen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يستخدم",
+            "exampleDe": "Viele Menschen nutzen die App."
+          },
+          {
+            "formDe": "die Nutzung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الاستخدام",
+            "exampleDe": "Die Nutzung steigt am Abend."
+          },
+          {
+            "formDe": "nützlich",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "مفيد",
+            "exampleDe": "Die Funktion ist nützlich."
+          },
+          {
+            "formDe": "die Mediennutzung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "استخدام الإعلام",
+            "exampleDe": "Die Mediennutzung wird eine Woche protokolliert."
+          }
+        ]
+      },
+      {
+        "id": "family-umwelt",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-10",
+          "b1-12"
+        ],
+        "anchorDe": "die Umwelt",
+        "titleAr": "البيئة وحمايتها",
+        "relationNoteAr": "هذه شبكة دلالية ومركبات، لا اشتقاق مباشر واحد.",
+        "cautionAr": "umweltfreundlich ادعاء يحتاج معيارًا، وليس مدحًا مطلقًا.",
+        "members": [
+          {
+            "formDe": "die Umwelt",
+            "wordClass": "noun",
+            "relation": "base",
+            "meaningAr": "البيئة",
+            "exampleDe": "Die Umwelt betrifft alle."
+          },
+          {
+            "formDe": "umweltfreundlich",
+            "wordClass": "adjective",
+            "relation": "compound",
+            "meaningAr": "صديق للبيئة",
+            "exampleDe": "Der Bus ist hier umweltfreundlicher als das Auto."
+          },
+          {
+            "formDe": "der Umweltschutz",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "حماية البيئة",
+            "exampleDe": "Der Umweltschutz braucht messbare Ziele."
+          },
+          {
+            "formDe": "schützen",
+            "wordClass": "verb",
+            "relation": "semantic-relative",
+            "meaningAr": "يحمي",
+            "exampleDe": "Die Maßnahme schützt Ressourcen."
+          }
+        ]
+      },
+      {
+        "id": "family-verstehen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-19",
+          "b1-21"
+        ],
+        "anchorDe": "verstehen",
+        "titleAr": "الفهم وسوء الفهم",
+        "relationNoteAr": "تجمع الفعل وأسماء الفهم مع الصفة.",
+        "cautionAr": "Missverständnis ليس مجرد خطأ لغوي؛ قد يتعلق بالمقصد والسياق.",
+        "members": [
+          {
+            "formDe": "verstehen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يفهم",
+            "exampleDe": "Ich verstehe Ihren Punkt."
+          },
+          {
+            "formDe": "das Verständnis",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الفهم",
+            "exampleDe": "Danke für Ihr Verständnis."
+          },
+          {
+            "formDe": "missverständlich",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل لسوء الفهم",
+            "exampleDe": "Die Formulierung ist missverständlich."
+          },
+          {
+            "formDe": "das Missverständnis",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "سوء الفهم",
+            "exampleDe": "Wir klären das Missverständnis."
+          }
+        ]
+      },
+      {
+        "id": "family-beraten",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-14",
+          "b1-20"
+        ],
+        "anchorDe": "beraten",
+        "titleAr": "النصيحة والاستشارة",
+        "relationNoteAr": "تفرق بين Rat العام وBeratung المنظمة.",
+        "cautionAr": "Beratung لا تضمن قرارًا صحيحًا، وقد تحتاج مختصًا.",
+        "members": [
+          {
+            "formDe": "beraten",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "ينصح / يستشير",
+            "exampleDe": "Die Stelle berät Lernende."
+          },
+          {
+            "formDe": "die Beratung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الاستشارة",
+            "exampleDe": "Die Beratung ist kostenlos."
+          },
+          {
+            "formDe": "beratend",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "استشاري",
+            "exampleDe": "Sie arbeitet beratend."
+          },
+          {
+            "formDe": "die Beratungsstelle",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "مركز استشارة",
+            "exampleDe": "Die Beratungsstelle vergibt Termine."
+          }
+        ]
+      },
+      {
+        "id": "family-verhandeln",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonIds": [
+          "b1-21"
+        ],
+        "anchorDe": "verhandeln",
+        "titleAr": "التفاوض ونتيجته",
+        "relationNoteAr": "تربط الفعل بالعملية والصفة ومركب النتيجة.",
+        "cautionAr": "verhandelbar يعني قابلًا للتفاوض، لا مقبولًا تلقائيًا.",
+        "members": [
+          {
+            "formDe": "verhandeln",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يتفاوض",
+            "exampleDe": "Das Team verhandelt über die Frist."
+          },
+          {
+            "formDe": "die Verhandlung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التفاوض",
+            "exampleDe": "Die Verhandlung endet mit zwei Optionen."
+          },
+          {
+            "formDe": "verhandelbar",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل للتفاوض",
+            "exampleDe": "Der Umfang ist verhandelbar."
+          },
+          {
+            "formDe": "das Verhandlungsergebnis",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "نتيجة التفاوض",
+            "exampleDe": "Das Verhandlungsergebnis wird dokumentiert."
+          }
+        ]
+      },
+      {
+        "id": "family-argumentieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-01",
+          "b2-02"
+        ],
+        "anchorDe": "argumentieren",
+        "titleAr": "الحجة وبناؤها",
+        "relationNoteAr": "تجمع الفعل والحجة والعملية والرد المقابل.",
+        "cautionAr": "Argument يعني سببًا داعمًا، وليس Streit بالضرورة.",
+        "members": [
+          {
+            "formDe": "argumentieren",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يحاجج",
+            "exampleDe": "Sie argumentiert mit zwei Belegen."
+          },
+          {
+            "formDe": "das Argument",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الحجة",
+            "exampleDe": "Das Argument braucht einen Beleg."
+          },
+          {
+            "formDe": "argumentativ",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "حجاجي",
+            "exampleDe": "Der Text ist klar argumentativ aufgebaut."
+          },
+          {
+            "formDe": "das Gegenargument",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "الحجة المضادة",
+            "exampleDe": "Fassen Sie das Gegenargument fair zusammen."
+          }
+        ]
+      },
+      {
+        "id": "family-forschen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-05",
+          "b2-06"
+        ],
+        "anchorDe": "forschen",
+        "titleAr": "البحث وسؤاله",
+        "relationNoteAr": "تربط الفعل بالبحث والباحث ومركب السؤال.",
+        "cautionAr": "Forschung تصف عملية منظمة؛ ليست كل Suche بحثًا علميًا.",
+        "members": [
+          {
+            "formDe": "forschen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يبحث علميًا",
+            "exampleDe": "Das Team forscht zu Luftqualität."
+          },
+          {
+            "formDe": "die Forschung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "البحث العلمي",
+            "exampleDe": "Die Forschung nennt ihre Grenzen."
+          },
+          {
+            "formDe": "der Forscher",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الباحث",
+            "exampleDe": "Der Forscher erklärt die Methode."
+          },
+          {
+            "formDe": "die Forschungsfrage",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "سؤال البحث",
+            "exampleDe": "Die Forschungsfrage bestimmt die Daten."
+          }
+        ]
+      },
+      {
+        "id": "family-vermitteln",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-06",
+          "b2-10"
+        ],
+        "anchorDe": "vermitteln",
+        "titleAr": "نقل المعرفة والوساطة",
+        "relationNoteAr": "تجمع الفعل بالاسم ومركبات العلم.",
+        "cautionAr": "vermitteln قد يعني شرح المعرفة أو الوساطة؛ يحدد المفعول المعنى.",
+        "members": [
+          {
+            "formDe": "vermitteln",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "ينقل / يوسّط",
+            "exampleDe": "Sie vermittelt komplexes Wissen."
+          },
+          {
+            "formDe": "die Vermittlung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "النقل / الوساطة",
+            "exampleDe": "Die Vermittlung richtet sich an das Publikum."
+          },
+          {
+            "formDe": "vermittelnd",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "وسيط / ناقل",
+            "exampleDe": "Er übernimmt eine vermittelnde Rolle."
+          },
+          {
+            "formDe": "die Wissenschaftsvermittlung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "تبسيط العلم للجمهور",
+            "exampleDe": "Wissenschaftsvermittlung braucht klare Grenzen."
+          }
+        ]
+      },
+      {
+        "id": "family-teilnehmen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-07",
+          "b2-08"
+        ],
+        "anchorDe": "teilnehmen",
+        "titleAr": "المشاركة وشروطها",
+        "relationNoteAr": "تربط الفعل والاسم والشخص ومركب الشرط.",
+        "cautionAr": "teilnehmen an يأخذ Dativ؛ Beteiligung قد تدل على تأثير أوسع.",
+        "members": [
+          {
+            "formDe": "teilnehmen",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يشارك",
+            "exampleDe": "Viele Gruppen nehmen an der Befragung teil."
+          },
+          {
+            "formDe": "die Teilnahme",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المشاركة",
+            "exampleDe": "Die Teilnahme ist freiwillig."
+          },
+          {
+            "formDe": "die Teilnehmenden",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "المشاركون",
+            "exampleDe": "Die Teilnehmenden gewichten Kriterien."
+          },
+          {
+            "formDe": "die Teilnahmebedingung",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "شرط المشاركة",
+            "exampleDe": "Die Teilnahmebedingungen sind zugänglich."
+          }
+        ]
+      },
+      {
+        "id": "family-repraesentieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-07"
+        ],
+        "anchorDe": "repräsentieren",
+        "titleAr": "التمثيل وحدوده",
+        "relationNoteAr": "تجمع الفعل والاسم والصفة والمفهوم المجرد.",
+        "cautionAr": "repräsentativ لا يعني كاملًا؛ يحتاج وصف العينة والفجوات.",
+        "members": [
+          {
+            "formDe": "repräsentieren",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يمثل",
+            "exampleDe": "Die Stichprobe repräsentiert nicht alle Gruppen."
+          },
+          {
+            "formDe": "die Repräsentation",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التمثيل",
+            "exampleDe": "Die Repräsentation bleibt ungleich."
+          },
+          {
+            "formDe": "repräsentativ",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "تمثيلي / ممثل للعينة",
+            "exampleDe": "Das Treffen war nicht vollständig repräsentativ."
+          },
+          {
+            "formDe": "die Repräsentativität",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "درجة التمثيل",
+            "exampleDe": "Die Repräsentativität wird begrenzt behauptet."
+          }
+        ]
+      },
+      {
+        "id": "family-kritisieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-08",
+          "b2-09"
+        ],
+        "anchorDe": "kritisieren",
+        "titleAr": "النقد ومعاييره",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب نقد الإعلام.",
+        "cautionAr": "kritisch قد يعني ناقدًا أو خطيرًا حسب السياق.",
+        "members": [
+          {
+            "formDe": "kritisieren",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "ينتقد",
+            "exampleDe": "Der Beitrag kritisiert die Auswahl."
+          },
+          {
+            "formDe": "die Kritik",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "النقد",
+            "exampleDe": "Die Kritik nennt ein Kriterium."
+          },
+          {
+            "formDe": "kritisch",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "نقدي / حرج",
+            "exampleDe": "Wir prüfen die Quelle kritisch."
+          },
+          {
+            "formDe": "die Medienkritik",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "نقد الإعلام",
+            "exampleDe": "Medienkritik trennt Quelle und Behauptung."
+          }
+        ]
+      },
+      {
+        "id": "family-abhaengen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-03",
+          "b2-04"
+        ],
+        "anchorDe": "abhängen",
+        "titleAr": "الاعتماد والتبعية",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب المشروع.",
+        "cautionAr": "abhängen von يأخذ Dativ، ولا يعني دائمًا اعتمادًا شخصيًا.",
+        "members": [
+          {
+            "formDe": "abhängen von",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يعتمد على",
+            "exampleDe": "Der Termin hängt von den Daten ab."
+          },
+          {
+            "formDe": "die Abhängigkeit",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "الاعتمادية / التبعية",
+            "exampleDe": "Die Abhängigkeit ist dokumentiert."
+          },
+          {
+            "formDe": "abhängig",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "معتمد على",
+            "exampleDe": "Die Option ist von der Freigabe abhängig."
+          },
+          {
+            "formDe": "die Aufgabenabhängigkeit",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "اعتمادية المهام",
+            "exampleDe": "Die Aufgabenabhängigkeit beeinflusst die Frist."
+          }
+        ]
+      },
+      {
+        "id": "family-bewerten",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonIds": [
+          "b2-05",
+          "b2-08"
+        ],
+        "anchorDe": "bewerten",
+        "titleAr": "التقييم ومعياره",
+        "relationNoteAr": "تربط الفعل بالاسم والصفة ومركب المعيار.",
+        "cautionAr": "bewertbar يعني أن معيارًا يمكن تطبيقه، لا أن الحكم موضوعي تلقائيًا.",
+        "members": [
+          {
+            "formDe": "bewerten",
+            "wordClass": "verb",
+            "relation": "base",
+            "meaningAr": "يقيّم",
+            "exampleDe": "Wir bewerten die Quelle nach vier Kriterien."
+          },
+          {
+            "formDe": "die Bewertung",
+            "wordClass": "noun",
+            "relation": "derivation",
+            "meaningAr": "التقييم",
+            "exampleDe": "Die Bewertung nennt Unsicherheit."
+          },
+          {
+            "formDe": "bewertbar",
+            "wordClass": "adjective",
+            "relation": "derivation",
+            "meaningAr": "قابل للتقييم",
+            "exampleDe": "Das Ziel ist messbar und bewertbar."
+          },
+          {
+            "formDe": "das Bewertungskriterium",
+            "wordClass": "compound",
+            "relation": "compound",
+            "meaningAr": "معيار التقييم",
+            "exampleDe": "Jedes Bewertungskriterium braucht einen Beleg."
+          }
+        ]
+      }
+    ],
+    "registerExamples": [
+      {
+        "id": "reg-a1-formal-greeting",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-01",
+        "register": "formal",
+        "function": "greeting",
+        "expressionDe": "Guten Tag, Frau Keller.",
+        "meaningAr": "تحية رسمية مع اللقب",
+        "contextAr": "لقاء أول مع معلمة أو موظفة.",
+        "avoidAr": "لا تنتقل إلى du قبل أن يتضح ذلك.",
+        "transferPromptDe": "Begrüßen Sie eine Kursleiterin formell.",
+        "transferPromptAr": "حيِّ مسؤولة دورة رسميًا."
+      },
+      {
+        "id": "reg-a1-formal-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-24",
+        "register": "formal",
+        "function": "request",
+        "expressionDe": "Können Sie mir bitte helfen?",
+        "meaningAr": "طلب مساعدة مهذب",
+        "contextAr": "خدمة أو استمارة مع شخص غير مقرّب.",
+        "avoidAr": "الأمر المباشر قد يبدو جافًا.",
+        "transferPromptDe": "Bitten Sie im Service um Hilfe.",
+        "transferPromptAr": "اطلب مساعدة في خدمة."
+      },
+      {
+        "id": "reg-a1-neutral-plan",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-09",
+        "register": "neutral",
+        "function": "planning",
+        "expressionDe": "Passt dir Dienstag um zehn?",
+        "meaningAr": "اقتراح موعد محايد",
+        "contextAr": "بين زملاء يعرف بعضهم بعضًا ويستعملون du.",
+        "avoidAr": "لا تستعمل dir مع مخاطبة Sie.",
+        "transferPromptDe": "Schlagen Sie einem Lernpartner einen Termin vor.",
+        "transferPromptAr": "اقترح موعدًا لشريك تعلم."
+      },
+      {
+        "id": "reg-a1-neutral-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-12",
+        "register": "neutral",
+        "function": "request",
+        "expressionDe": "Ich hätte gern die Suppe.",
+        "meaningAr": "طلب محايد في مطعم",
+        "contextAr": "طلب يومي مهذب دون رسمية ثقيلة.",
+        "avoidAr": "Ich will قد يكون مباشرًا أكثر من اللازم هنا.",
+        "transferPromptDe": "Bestellen Sie ein Gericht.",
+        "transferPromptAr": "اطلب طبقًا."
+      },
+      {
+        "id": "reg-a1-colloquial-greeting",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-01",
+        "register": "colloquial",
+        "function": "greeting",
+        "expressionDe": "Hi, wie geht's?",
+        "meaningAr": "تحية محادثية مختصرة",
+        "contextAr": "بين أصدقاء أو زملاء قريبين.",
+        "avoidAr": "لا تستخدمها تلقائيًا في رسالة رسمية.",
+        "transferPromptDe": "Begrüßen Sie einen guten Freund.",
+        "transferPromptAr": "حيِّ صديقًا مقرّبًا.",
+        "regionalBoundaryAr": "صيغة واسعة الانتشار، لكن درجة ملاءمتها تعتمد العمر والعلاقة والمنطقة."
+      },
+      {
+        "id": "reg-a1-colloquial-plan",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-17",
+        "register": "colloquial",
+        "function": "planning",
+        "expressionDe": "Kommst du mit?",
+        "meaningAr": "دعوة قصيرة محادثية",
+        "contextAr": "حديث سريع بين أصدقاء.",
+        "avoidAr": "لا تحذف السياق إذا كان الموعد غير واضح.",
+        "transferPromptDe": "Laden Sie einen Freund spontan ein.",
+        "transferPromptAr": "ادعُ صديقًا تلقائيًا.",
+        "regionalBoundaryAr": "محادثية عامة وليست معيارًا إلزاميًا لكل الناطقين."
+      },
+      {
+        "id": "reg-a1-professional-work",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-06",
+        "register": "professional",
+        "function": "workplace",
+        "expressionDe": "Ich arbeite als Koch in einem Hotel.",
+        "meaningAr": "تعريف مهني محدد",
+        "contextAr": "تعارف في دورة أو مكان عمل.",
+        "avoidAr": "لا تذكر صفة عامة بلا معلومة قابلة للفهم.",
+        "transferPromptDe": "Stellen Sie Ihren Beruf kurz vor.",
+        "transferPromptAr": "عرّف مهنتك باختصار."
+      },
+      {
+        "id": "reg-a1-professional-plan",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-07",
+        "register": "professional",
+        "function": "planning",
+        "expressionDe": "Der Termin beginnt um zehn Uhr.",
+        "meaningAr": "تثبيت موعد واضح",
+        "contextAr": "تقويم أو مكالمة عمل بسيطة.",
+        "avoidAr": "تجنب الوقت الغامض من دون يوم أو سياق.",
+        "transferPromptDe": "Bestätigen Sie einen Arbeitstermin.",
+        "transferPromptAr": "ثبّت موعد عمل."
+      },
+      {
+        "id": "reg-a2-formal-closing",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-08",
+        "register": "formal",
+        "function": "closing",
+        "expressionDe": "Mit freundlichen Grüßen",
+        "meaningAr": "خاتمة رسمية",
+        "contextAr": "طلب وظيفة أو رسالة إلى جهة.",
+        "avoidAr": "Tschüs لا يناسب هذه الرسالة.",
+        "transferPromptDe": "Beenden Sie eine Bewerbung formell.",
+        "transferPromptAr": "اختم طلب عمل رسميًا."
+      },
+      {
+        "id": "reg-a2-formal-problem",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-14",
+        "register": "formal",
+        "function": "problem",
+        "expressionDe": "Leider kann ich heute nicht zur Arbeit kommen.",
+        "meaningAr": "بلاغ غياب رسمي واضح",
+        "contextAr": "إبلاغ مسؤول العمل دون تفاصيل طبية زائدة.",
+        "avoidAr": "لا تشارك تشخيصًا خاصًا لا يلزم للمقصد.",
+        "transferPromptDe": "Melden Sie sich bei der Arbeit krank.",
+        "transferPromptAr": "أبلغ العمل بالمرض."
+      },
+      {
+        "id": "reg-a2-neutral-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-18",
+        "register": "neutral",
+        "function": "opinion",
+        "expressionDe": "Meiner Meinung nach ist die Lösung praktisch.",
+        "meaningAr": "رأي محايد مع تقييم",
+        "contextAr": "نقاش دورة أو مجموعة.",
+        "avoidAr": "لا تعرض الرأي كحقيقة بلا مؤشر رأي.",
+        "transferPromptDe": "Äußern Sie eine Meinung mit einem Grund.",
+        "transferPromptAr": "عبّر عن رأي مع سبب."
+      },
+      {
+        "id": "reg-a2-neutral-problem",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-12",
+        "register": "neutral",
+        "function": "problem",
+        "expressionDe": "Das Zimmer ist leider nicht sauber.",
+        "meaningAr": "شرح مشكلة مباشرة ومهذبة",
+        "contextAr": "حديث مع استقبال مكان إقامة.",
+        "avoidAr": "لا تبدأ بإهانة الشخص بدل وصف المشكلة.",
+        "transferPromptDe": "Beschreiben Sie ein Problem im Hotel.",
+        "transferPromptAr": "اشرح مشكلة في الفندق."
+      },
+      {
+        "id": "reg-a2-colloquial-greeting",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-04",
+        "register": "colloquial",
+        "function": "greeting",
+        "expressionDe": "Alles klar bei dir?",
+        "meaningAr": "سؤال محادثي عن الحال",
+        "contextAr": "بين جيران أو أصدقاء مع du.",
+        "avoidAr": "لا تستعمله مع كل جهة رسمية.",
+        "transferPromptDe": "Fragen Sie einen Nachbarn informell nach seinem Befinden.",
+        "transferPromptAr": "اسأل جارًا عن حاله بشكل غير رسمي.",
+        "regionalBoundaryAr": "الانتشار والنبرة يختلفان حسب المنطقة والعلاقة."
+      },
+      {
+        "id": "reg-a2-colloquial-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-17",
+        "register": "colloquial",
+        "function": "opinion",
+        "expressionDe": "Das ist echt praktisch.",
+        "meaningAr": "تقييم محادثي",
+        "contextAr": "حديث يومي عن تطبيق أو خدمة.",
+        "avoidAr": "echt هنا مقوٍ محادثي، لا دليلًا موضوعيًا.",
+        "transferPromptDe": "Kommentieren Sie eine App im Freundeskreis.",
+        "transferPromptAr": "علّق على تطبيق بين الأصدقاء.",
+        "regionalBoundaryAr": "echt بهذه الوظيفة محادثي، وقد يختلف تكراره إقليميًا وشخصيًا."
+      },
+      {
+        "id": "reg-a2-professional-work",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-07",
+        "register": "professional",
+        "function": "workplace",
+        "expressionDe": "Ich übernehme heute die Kundenanfragen.",
+        "meaningAr": "تحديد مسؤولية عمل",
+        "contextAr": "توزيع مهام داخل فريق.",
+        "avoidAr": "لا تقل نحن إذا كانت المسؤولية لشخص محدد.",
+        "transferPromptDe": "Übernehmen Sie eine konkrete Aufgabe.",
+        "transferPromptAr": "تولَّ مهمة محددة."
+      },
+      {
+        "id": "reg-a2-professional-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-09",
+        "register": "professional",
+        "function": "request",
+        "expressionDe": "Einen Moment bitte, ich verbinde Sie.",
+        "meaningAr": "إدارة مكالمة مهنية",
+        "contextAr": "هاتف عمل بسيط.",
+        "avoidAr": "لا تعد بالتحويل قبل معرفة الجهة المطلوبة.",
+        "transferPromptDe": "Leiten Sie einen Anruf weiter.",
+        "transferPromptAr": "حوّل مكالمة."
+      },
+      {
+        "id": "reg-b1-formal-problem",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-08",
+        "register": "formal",
+        "function": "problem",
+        "expressionDe": "Hiermit möchte ich einen Mangel in der Wohnung melden.",
+        "meaningAr": "افتتاح شكوى رسمية",
+        "contextAr": "رسالة موثقة إلى إدارة أو مالك دون ادعاء قانوني.",
+        "avoidAr": "لا تختلق حقًا أو مهلة رسمية.",
+        "transferPromptDe": "Eröffnen Sie eine sachliche Mängelmeldung.",
+        "transferPromptAr": "ابدأ بلاغ عيب موضوعيًا."
+      },
+      {
+        "id": "reg-b1-formal-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-14",
+        "register": "formal",
+        "function": "request",
+        "expressionDe": "Ich bitte Sie um nähere Informationen zu den Teilnahmebedingungen.",
+        "meaningAr": "طلب معلومات مفصلة",
+        "contextAr": "رسالة إلى مؤسسة تعليمية.",
+        "avoidAr": "لا تفترض الاعتراف بالدورة قبل التحقق.",
+        "transferPromptDe": "Bitten Sie einen Kursanbieter um Details.",
+        "transferPromptAr": "اطلب تفاصيل من مزود دورة."
+      },
+      {
+        "id": "reg-b1-neutral-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-07",
+        "register": "neutral",
+        "function": "opinion",
+        "expressionDe": "Aus meiner Sicht überwiegen die Vorteile.",
+        "meaningAr": "موقف محايد موزون",
+        "contextAr": "نقاش مقارنة مع سبب لاحق.",
+        "avoidAr": "لا تكتفِ بالموقف دون معيار.",
+        "transferPromptDe": "Bewerten Sie Stadt- und Landleben.",
+        "transferPromptAr": "قيّم العيش في المدينة والريف."
+      },
+      {
+        "id": "reg-b1-neutral-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-20",
+        "register": "neutral",
+        "function": "request",
+        "expressionDe": "An deiner Stelle würde ich zuerst nachfragen.",
+        "meaningAr": "نصيحة محايدة مشروطة",
+        "contextAr": "نصيحة لشخص معروف دون أمر قطعي.",
+        "avoidAr": "لا تقدمها كحل مضمون.",
+        "transferPromptDe": "Geben Sie einen vorsichtigen Rat.",
+        "transferPromptAr": "قدم نصيحة حذرة."
+      },
+      {
+        "id": "reg-b1-colloquial-planning",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-04",
+        "register": "colloquial",
+        "function": "planning",
+        "expressionDe": "Das kriegen wir hin.",
+        "meaningAr": "تطمين محادثي",
+        "contextAr": "بين زملاء قريبين بعد تحديد الخطة.",
+        "avoidAr": "kriegen محادثي؛ schaffen أنسب في سجل محايد.",
+        "transferPromptDe": "Reagieren Sie locker auf ein lösbares Teamproblem.",
+        "transferPromptAr": "استجب بخفة لمشكلة فريق قابلة للحل.",
+        "regionalBoundaryAr": "kriegen بهذا المعنى شائع محادثيًا، وتختلف ملاءمته حسب الفريق والمنطقة."
+      },
+      {
+        "id": "reg-b1-colloquial-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-18",
+        "register": "colloquial",
+        "function": "opinion",
+        "expressionDe": "Ganz ehrlich: Das überzeugt mich nicht.",
+        "meaningAr": "اعتراض محادثي صريح",
+        "contextAr": "نقاش غير رسمي مع علاقة تسمح بالصراحة.",
+        "avoidAr": "قد تبدو العبارة حادة دون سبب أو تلطيف.",
+        "transferPromptDe": "Widersprechen Sie in einer vertrauten Gruppe.",
+        "transferPromptAr": "اعترض داخل مجموعة مقرّبة.",
+        "regionalBoundaryAr": "درجة الصراحة المقبولة ليست ثابتة بين كل المناطق أو المجموعات."
+      },
+      {
+        "id": "reg-b1-professional-work",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-04",
+        "register": "professional",
+        "function": "workplace",
+        "expressionDe": "Wer übernimmt die Freigabe bis Freitag?",
+        "meaningAr": "سؤال مسؤولية وموعد",
+        "contextAr": "اجتماع فريق يحدد مالك المهمة.",
+        "avoidAr": "تجنب المبني للمجهول إذا كان المطلوب تعيين مسؤول.",
+        "transferPromptDe": "Klären Sie Verantwortung und Frist.",
+        "transferPromptAr": "حدد المسؤولية والمهلة."
+      },
+      {
+        "id": "reg-b1-professional-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-06",
+        "register": "professional",
+        "function": "opinion",
+        "expressionDe": "Ein konkretes Beispiel dafür ist das Projekt vom Mai.",
+        "meaningAr": "ربط ادعاء بدليل مهني",
+        "contextAr": "مقابلة أو عرض خبرة.",
+        "avoidAr": "لا تكدس صفات مثل teamfähig بلا شاهد.",
+        "transferPromptDe": "Belegen Sie eine berufliche Stärke.",
+        "transferPromptAr": "أثبت نقطة قوة مهنية."
+      },
+      {
+        "id": "reg-b2-formal-request",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-04",
+        "register": "formal",
+        "function": "request",
+        "expressionDe": "Bitte teilen Sie uns bis Dienstag mit, welche Option Sie bevorzugen.",
+        "meaningAr": "طلب قرار رسمي مع موعد",
+        "contextAr": "تفاوض كتابي موثق.",
+        "avoidAr": "لا تسم الموعد مهلة قانونية ما لم يوجد مصدر مختص.",
+        "transferPromptDe": "Fordern Sie eine Entscheidung sachlich an.",
+        "transferPromptAr": "اطلب قرارًا بموضوعية."
+      },
+      {
+        "id": "reg-b2-formal-disagreement",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-01",
+        "register": "formal",
+        "function": "disagreement",
+        "expressionDe": "Dieser Schluss lässt sich aus den vorliegenden Daten nicht ableiten.",
+        "meaningAr": "اعتراض رسمي قائم على الدليل",
+        "contextAr": "نص حجاجي أو مراجعة تقرير.",
+        "avoidAr": "لا تهاجم الكاتب؛ ناقش الاستنتاج.",
+        "transferPromptDe": "Widersprechen Sie einer unbelegten Schlussfolgerung.",
+        "transferPromptAr": "اعترض على استنتاج بلا دليل."
+      },
+      {
+        "id": "reg-b2-neutral-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-01",
+        "register": "neutral",
+        "function": "opinion",
+        "expressionDe": "Zwar ist der Ansatz sinnvoll, allerdings bleibt die Finanzierung offen.",
+        "meaningAr": "تنازل ثم قيد",
+        "contextAr": "نقاش متوازن.",
+        "avoidAr": "لا تجعل zwar بلا allerdings أو مقابل واضح.",
+        "transferPromptDe": "Formulieren Sie eine abgewogene Position.",
+        "transferPromptAr": "صغ موقفًا متوازنًا."
+      },
+      {
+        "id": "reg-b2-neutral-disagreement",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-02",
+        "register": "neutral",
+        "function": "disagreement",
+        "expressionDe": "Ich sehe den Punkt, gewichte das Risiko jedoch anders.",
+        "meaningAr": "اختلاف يحفظ أقوى نقطة مقابلة",
+        "contextAr": "مناظرة أو اجتماع.",
+        "avoidAr": "لا تدّع الاتفاق الكامل ثم ترفض دون تفسير.",
+        "transferPromptDe": "Reagieren Sie auf ein starkes Gegenargument.",
+        "transferPromptAr": "رد على حجة مقابلة قوية."
+      },
+      {
+        "id": "reg-b2-colloquial-disagreement",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-02",
+        "register": "colloquial",
+        "function": "disagreement",
+        "expressionDe": "Ganz so einfach ist es nicht.",
+        "meaningAr": "اعتراض محادثي مختصر",
+        "contextAr": "نقاش شفهي غير رسمي نسبيًا.",
+        "avoidAr": "يحتاج بعده إلى سبب حتى لا يبقى رفضًا فارغًا.",
+        "transferPromptDe": "Bremsen Sie eine vorschnelle Behauptung im Gespräch.",
+        "transferPromptAr": "أوقف ادعاء متسرعًا في الحديث.",
+        "regionalBoundaryAr": "النبرة والسياق يحددان إن بدت مهذبة أو متعالية؛ ليست صيغة عامة لكل المواقف."
+      },
+      {
+        "id": "reg-b2-colloquial-opinion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-09",
+        "register": "colloquial",
+        "function": "opinion",
+        "expressionDe": "Da wäre ich vorsichtig.",
+        "meaningAr": "تحفظ محادثي",
+        "contextAr": "حديث فريق قريب عند ظهور تعميم ثقافي.",
+        "avoidAr": "لا تترك التحذير غامضًا؛ سمِّ سبب الحذر.",
+        "transferPromptDe": "Reagieren Sie spontan auf eine Verallgemeinerung.",
+        "transferPromptAr": "استجب تلقائيًا لتعميم.",
+        "regionalBoundaryAr": "صيغة محادثية واسعة، لكن قوة التحفظ تختلف بالنبرة والعلاقة."
+      },
+      {
+        "id": "reg-b2-professional-planning",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-03",
+        "register": "professional",
+        "function": "planning",
+        "expressionDe": "Wir schlagen eine Pilotphase mit drei messbaren Kriterien vor.",
+        "meaningAr": "اقتراح تنفيذ مهني قابل للقياس",
+        "contextAr": "مشروع أو تغيير تنظيمي.",
+        "avoidAr": "لا تقدم Pilot بلا مدة أو معيار قرار.",
+        "transferPromptDe": "Schlagen Sie einen überprüfbaren Pilotversuch vor.",
+        "transferPromptAr": "اقترح تجربة أولية قابلة للتحقق."
+      },
+      {
+        "id": "reg-b2-professional-problem",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-04",
+        "register": "professional",
+        "function": "problem",
+        "expressionDe": "Unter Berücksichtigung der Kapazität können wir zwei realistische Optionen anbieten.",
+        "meaningAr": "صياغة حد السعة مع بدائل",
+        "contextAr": "تفاوض مهني مع عميل.",
+        "avoidAr": "لا تحول القيد إلى تهديد أو وعد غير ممكن.",
+        "transferPromptDe": "Formulieren Sie eine Kapazitätsgrenze mit Alternativen.",
+        "transferPromptAr": "صغ حد السعة مع بدائل."
+      }
+    ],
+    "arabicLearnerConfusions": [
+      {
+        "id": "conf-a1-bekommen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-11",
+        "targetDe": "bekommen",
+        "falseAssociationAr": "قد يُربط بـ become الإنجليزية: يصبح.",
+        "correctMeaningAr": "يحصل على / يتلقى",
+        "contrastDe": "Ich bekomme eine Rechnung. — Ich werde müde.",
+        "contrastAr": "أتلقى فاتورة — أصبح متعبًا.",
+        "source": "english-mediation",
+        "riskAr": "الخلط يغيّر الحدث كله.",
+        "strategyAr": "احفظ bekommen مع شيئًا يصل إليك، وwerden مع تغير الحالة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a1-chef",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-06",
+        "targetDe": "der Chef / die Chefin",
+        "falseAssociationAr": "قد يُفهم من الفرنسية أو الإنجليزية بأنه الطاهي.",
+        "correctMeaningAr": "المدير / المديرة؛ الطاهي هو Koch.",
+        "contrastDe": "Mein Chef arbeitet im Büro. Der Koch arbeitet in der Küche.",
+        "contrastAr": "مديري في المكتب، والطاهي في المطبخ.",
+        "source": "french-mediation",
+        "riskAr": "الفرنسية والإنجليزية قد تقودان إلى مهنة خاطئة.",
+        "strategyAr": "اربط Chef بالمسؤولية وKoch بالمطبخ.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a1-gift",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-17",
+        "targetDe": "das Gift",
+        "falseAssociationAr": "قد يُربط بـ gift الإنجليزية: هدية.",
+        "correctMeaningAr": "السُّم؛ الهدية هي Geschenk.",
+        "contrastDe": "Das Gift ist gefährlich. Das Geschenk ist für Lina.",
+        "contrastAr": "السُّم خطير، والهدية للينا.",
+        "source": "english-mediation",
+        "riskAr": "الخطأ قد يكون خطيرًا في سياق صحي.",
+        "strategyAr": "احفظ Gift مع Gefahr، وGeschenk مع Geburtstag.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a1-uhr-stunde",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-07",
+        "targetDe": "die Uhr / die Stunde",
+        "falseAssociationAr": "كلمة «ساعة» العربية قد تغطي الوقت والمدة والأداة.",
+        "correctMeaningAr": "Uhr للوقت/الساعة، Stunde لمدة ستين دقيقة.",
+        "contrastDe": "Der Kurs beginnt um zehn Uhr und dauert eine Stunde.",
+        "contrastAr": "تبدأ الدورة في العاشرة وتدوم ساعة.",
+        "source": "arabic-transfer",
+        "riskAr": "استعمال كلمة واحدة عربيًا قد يخفي الفرق الوظيفي.",
+        "strategyAr": "اسأل: متى؟ Uhr. كم المدة؟ Stunde.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a1-lernen-studieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-01",
+        "targetDe": "lernen / studieren",
+        "falseAssociationAr": "الفعل «درس» بالعربية قد يغطي التعلم والدراسة الجامعية.",
+        "correctMeaningAr": "lernen يتعلم؛ studieren يدرس في جامعة/تخصصًا.",
+        "contrastDe": "Ich lerne Deutsch. Meine Schwester studiert Medizin.",
+        "contrastAr": "أتعلم الألمانية، وأختي تدرس الطب في الجامعة.",
+        "source": "arabic-transfer",
+        "riskAr": "studieren ليس بديلًا عامًا لكل تعلم.",
+        "strategyAr": "اربط studieren بجامعة أو تخصص، وlernen بمهارة أو مادة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a1-fahren-gehen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A1",
+        "sourceLessonId": "a1-19",
+        "targetDe": "fahren / gehen",
+        "falseAssociationAr": "«ذهب» العربية قد لا تذكر وسيلة الحركة.",
+        "correctMeaningAr": "fahren بمركبة؛ gehen مشيًا أو ذهابًا عامًا حسب السياق.",
+        "contrastDe": "Ich fahre mit dem Bus, aber ich gehe zu Fuß nach Hause.",
+        "contrastAr": "أذهب بالحافلة، لكنني أمشي إلى البيت.",
+        "source": "arabic-transfer",
+        "riskAr": "اختيار الفعل يكشف وسيلة التنقل.",
+        "strategyAr": "ابحث عن mit + وسيلة أو zu Fuß قبل اختيار الفعل.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-aktuell",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-16",
+        "targetDe": "aktuell",
+        "falseAssociationAr": "قد يُربط بـ actually الإنجليزية: في الواقع.",
+        "correctMeaningAr": "حالي / راهن؛ في الواقع = tatsächlich.",
+        "contrastDe": "Die aktuellen Zahlen sind niedrig. Tatsächlich fehlen noch Daten.",
+        "contrastAr": "الأرقام الحالية منخفضة؛ في الواقع ما زالت بيانات ناقصة.",
+        "source": "english-mediation",
+        "riskAr": "الخلط يحول الزمن إلى تصحيح حقيقة.",
+        "strategyAr": "aktuell = الآن؛ tatsächlich = تصحيح أو تأكيد الواقع.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-eventuell",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-12",
+        "targetDe": "eventuell",
+        "falseAssociationAr": "قد يُربط بـ eventually الإنجليزية: في النهاية.",
+        "correctMeaningAr": "ربما / من المحتمل؛ في النهاية = schließlich.",
+        "contrastDe": "Eventuell kommt der Zug später. Schließlich kam er um zehn.",
+        "contrastAr": "ربما يأتي القطار متأخرًا؛ وفي النهاية جاء في العاشرة.",
+        "source": "english-mediation",
+        "riskAr": "الاحتمال يصبح نتيجة نهائية خطأً.",
+        "strategyAr": "eventuell قبل قرار غير مؤكد؛ schließlich عند النتيجة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-kontrollieren",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-17",
+        "targetDe": "kontrollieren",
+        "falseAssociationAr": "قد يُفهم دائمًا بمعنى يسيطر على.",
+        "correctMeaningAr": "يفحص / يراجع غالبًا؛ يسيطر على = beherrschen أو unter Kontrolle haben.",
+        "contrastDe": "Ich kontrolliere die Rechnung. Sie hat die Situation unter Kontrolle.",
+        "contrastAr": "أراجع الفاتورة؛ وهي تسيطر على الوضع.",
+        "source": "english-mediation",
+        "riskAr": "المعنى الإنجليزي الواسع قد يغيّر مقصد مهمة يومية.",
+        "strategyAr": "مع وثيقة أو تذكرة فكّر في الفحص أولًا.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-note",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-20",
+        "targetDe": "die Note / die Notiz",
+        "falseAssociationAr": "قد تُفهم Note كالملاحظة الإنجليزية.",
+        "correctMeaningAr": "Note غالبًا علامة/درجة أو نغمة؛ الملاحظة المكتوبة Notiz.",
+        "contrastDe": "Ich habe eine gute Note. Ich schreibe eine Notiz.",
+        "contrastAr": "حصلت على درجة جيدة؛ أكتب ملاحظة.",
+        "source": "english-mediation",
+        "riskAr": "الخلط شائع في سياق الدراسة.",
+        "strategyAr": "المدرس يعطي Note، وأنت تكتب Notiz.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-kennen-wissen",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-16",
+        "targetDe": "kennen / wissen",
+        "falseAssociationAr": "«يعرف» العربية قد تغطي معرفة شخص ومعرفة حقيقة.",
+        "correctMeaningAr": "kennen يعرف شخصًا/مكانًا؛ wissen يعرف معلومة.",
+        "contrastDe": "Ich kenne Berlin. Ich weiß, wann der Zug fährt.",
+        "contrastAr": "أعرف برلين؛ أعرف متى ينطلق القطار.",
+        "source": "arabic-transfer",
+        "riskAr": "اختيار المفعول يحدد الفعل الألماني.",
+        "strategyAr": "شخص/مكان/شيء مألوف = kennen؛ جملة معلومة = wissen.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-a2-leihen-mieten",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "A2",
+        "sourceLessonId": "a2-11",
+        "targetDe": "leihen / mieten",
+        "falseAssociationAr": "الاستعارة والاستئجار قد يختلطان عند التركيز على الاستعمال المؤقت.",
+        "correctMeaningAr": "leihen يستعير/يعير؛ mieten يستأجر مقابل مال.",
+        "contrastDe": "Ich leihe mir ein Buch. Wir mieten ein Zimmer.",
+        "contrastAr": "أستعير كتابًا؛ نستأجر غرفة.",
+        "source": "arabic-transfer",
+        "riskAr": "إهمال المقابل المالي يغيّر العقد العملي.",
+        "strategyAr": "اسأل: هل يوجد ثمن دوري؟ غالبًا mieten.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-fabrik",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-10",
+        "targetDe": "die Fabrik",
+        "falseAssociationAr": "قد تُربط بـ fabric الإنجليزية: قماش.",
+        "correctMeaningAr": "المصنع؛ القماش = Stoff.",
+        "contrastDe": "Die Fabrik produziert Stoff.",
+        "contrastAr": "المصنع ينتج القماش.",
+        "source": "english-mediation",
+        "riskAr": "الكلمتان قد تظهران في جملة استهلاك واحدة.",
+        "strategyAr": "Fabrik مكان، Stoff مادة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-mappe",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-15",
+        "targetDe": "die Mappe",
+        "falseAssociationAr": "قد تُربط بـ map الإنجليزية: خريطة.",
+        "correctMeaningAr": "ملف/حافظة؛ الخريطة = Karte.",
+        "contrastDe": "Die Unterlagen liegen in der Mappe. Die Karte zeigt den Weg.",
+        "contrastAr": "الوثائق في الحافظة؛ والخريطة تبين الطريق.",
+        "source": "english-mediation",
+        "riskAr": "الخلط يربك تعليمات العرض أو المكتب.",
+        "strategyAr": "Mappe تحمل أوراقًا، Karte تعرض مكانًا.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-brav",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-01",
+        "targetDe": "brav",
+        "falseAssociationAr": "قد تُربط بـ brave الإنجليزية: شجاع.",
+        "correctMeaningAr": "مطيع / حسن السلوك؛ شجاع = mutig.",
+        "contrastDe": "Das Kind ist brav. Die Entscheidung war mutig.",
+        "contrastAr": "الطفل حسن السلوك؛ وكان القرار شجاعًا.",
+        "source": "english-mediation",
+        "riskAr": "المدح يتحول إلى صفة مختلفة.",
+        "strategyAr": "brav للسلوك الهادئ، mutig لمواجهة الخوف.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-rat",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-20",
+        "targetDe": "der Rat / die Ratte",
+        "falseAssociationAr": "قد يُربط Rat بالحيوان الإنجليزي.",
+        "correctMeaningAr": "Rat نصيحة أو مجلس؛ الحيوان Ratte.",
+        "contrastDe": "Danke für den Rat. Im Keller wurde eine Ratte gesehen.",
+        "contrastAr": "شكرًا على النصيحة؛ شوهد جرذ في القبو.",
+        "source": "english-mediation",
+        "riskAr": "اختلاف الجنس والنهاية يغير المعنى تمامًا.",
+        "strategyAr": "نصيحة قصيرة: der Rat؛ الحيوان: die Ratte.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-gymnasium",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-13",
+        "targetDe": "das Gymnasium",
+        "falseAssociationAr": "قد يُربط بـ gym الإنجليزية: نادٍ رياضي.",
+        "correctMeaningAr": "نوع مدرسة ثانوية؛ النادي الرياضي = Fitnessstudio.",
+        "contrastDe": "Sie besucht ein Gymnasium und trainiert im Fitnessstudio.",
+        "contrastAr": "تدرس في ثانوية وتتدرب في نادٍ رياضي.",
+        "source": "english-mediation",
+        "riskAr": "قد يفسد وصف المسار التعليمي.",
+        "strategyAr": "Gymnasium في Bildungsweg، Fitnessstudio في Freizeit.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b1-billion",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B1",
+        "sourceLessonId": "b1-12",
+        "targetDe": "die Billion / die Milliarde",
+        "falseAssociationAr": "قد تُنقل billion الإنجليزية مباشرة إلى Billion الألمانية.",
+        "correctMeaningAr": "Milliarde = ألف مليون؛ Billion الألمانية = مليون مليون.",
+        "contrastDe": "Das Projekt kostet eine Milliarde, nicht eine Billion Euro.",
+        "contrastAr": "يكلف المشروع مليارًا لا تريليون يورو.",
+        "source": "english-mediation",
+        "riskAr": "الخطأ يضخم الرقم ألف مرة.",
+        "strategyAr": "عند نقل أرقام إنجليزية: billion → Milliarde.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-sensibel",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-09",
+        "targetDe": "sensibel",
+        "falseAssociationAr": "قد يُربط بـ sensible الإنجليزية: عاقل/منطقي.",
+        "correctMeaningAr": "حساس؛ العاقل/المنطقي = vernünftig.",
+        "contrastDe": "Das Thema ist sensibel. Der Vorschlag ist vernünftig.",
+        "contrastAr": "الموضوع حساس، والاقتراح منطقي.",
+        "source": "english-mediation",
+        "riskAr": "تقييم شخص أو قرار ينتقل إلى معنى الحساسية.",
+        "strategyAr": "sensibel مع مشاعر/موضوع؛ vernünftig مع قرار.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-konsequent",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-01",
+        "targetDe": "konsequent",
+        "falseAssociationAr": "قد يُربط بـ consequent الإنجليزية: ناتج عن.",
+        "correctMeaningAr": "ثابت في التطبيق / حازم؛ ناتج عن = daraus folgend.",
+        "contrastDe": "Die Regel wird konsequent angewendet. Daraus folgt ein höherer Aufwand.",
+        "contrastAr": "تُطبق القاعدة بثبات؛ وينتج عن ذلك جهد أكبر.",
+        "source": "english-mediation",
+        "riskAr": "صفة السلوك تتحول إلى علاقة نتيجة.",
+        "strategyAr": "konsequent يصف التطبيق؛ folglich/daraus folgt يربط النتيجة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-praegnant",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-06",
+        "targetDe": "prägnant",
+        "falseAssociationAr": "قد يُربط بـ pregnant الإنجليزية: حامل.",
+        "correctMeaningAr": "موجز وواضح؛ حامل = schwanger.",
+        "contrastDe": "Die Zusammenfassung ist prägnant. Die Figur im Beispiel ist schwanger.",
+        "contrastAr": "الملخص موجز؛ والشخصية في المثال حامل.",
+        "source": "english-mediation",
+        "riskAr": "الخطأ شديد الوضوح في كتابة أكاديمية.",
+        "strategyAr": "prägnant للنص؛ schwanger للشخص.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-engagiert",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-07",
+        "targetDe": "engagiert",
+        "falseAssociationAr": "قد يُربط بـ engaged الإنجليزية: مخطوب.",
+        "correctMeaningAr": "ملتزم/ناشط؛ مخطوب = verlobt.",
+        "contrastDe": "Sie ist sozial engagiert und seit Mai verlobt.",
+        "contrastAr": "هي ناشطة اجتماعيًا ومخطوبة منذ مايو.",
+        "source": "english-mediation",
+        "riskAr": "الوضع الشخصي يختلط بالمشاركة المجتمعية.",
+        "strategyAr": "engagiert مع نشاط، verlobt مع علاقة.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-argument",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-01",
+        "targetDe": "das Argument",
+        "falseAssociationAr": "قد يُفهم من argument الإنجليزية بوصفه شجارًا فقط.",
+        "correctMeaningAr": "حجة أو سبب؛ الشجار = Streit.",
+        "contrastDe": "Sein Argument ist klar, aber der Streit war unnötig.",
+        "contrastAr": "حجته واضحة، لكن الشجار كان غير ضروري.",
+        "source": "english-mediation",
+        "riskAr": "قد يمنع المتعلم من استعمال كلمة أساسية في الحجاج.",
+        "strategyAr": "Argument يدعم موقفًا؛ Streit يصف نزاعًا.",
+        "notUniversal": true
+      },
+      {
+        "id": "conf-b2-akademisch",
+        "policyVersion": "lexical-strategy-registry-v1",
+        "level": "B2",
+        "sourceLessonId": "b2-06",
+        "targetDe": "akademisch",
+        "falseAssociationAr": "قد تُستعمل «أكاديمي» العربية بمعنى ممتاز أو مهني عمومًا.",
+        "correctMeaningAr": "مرتبط بالجامعة أو المجال العلمي حسب السياق.",
+        "contrastDe": "Der akademische Bericht folgt wissenschaftlichen Standards; die praktische Schulung ist nicht automatisch akademisch.",
+        "contrastAr": "التقرير الجامعي/العلمي يتبع معايير علمية؛ والتدريب العملي ليس أكاديميًا تلقائيًا.",
+        "source": "arabic-transfer",
+        "riskAr": "الصفة قد تصبح مدحًا عامًا بلا وصف حقيقي للمؤسسة أو المنهج.",
+        "strategyAr": "اسأل: هل المقصود جامعة/بحث فعلًا أم جودة مهنية فقط؟",
+        "notUniversal": true
+      }
+    ]
+  },
+  "counts": {
+    "wordFamilies": 32,
+    "wordFamilyMembers": 128,
+    "registerExamples": 32,
+    "arabicLearnerConfusions": 24,
+    "moduleRecyclingPlans": 30
+  },
+  "byLevel": {
+    "wordFamilies": {
+      "A1": 8,
+      "A2": 8,
+      "B1": 8,
+      "B2": 8
+    },
+    "registerExamples": {
+      "A1": 8,
+      "A2": 8,
+      "B1": 8,
+      "B2": 8
+    },
+    "arabicLearnerConfusions": {
+      "A1": 6,
+      "A2": 6,
+      "B1": 6,
+      "B2": 6
+    }
+  },
+  "registerCounts": {
+    "formal": 8,
+    "neutral": 8,
+    "colloquial": 8,
+    "professional": 8
+  },
+  "confusionSourceCounts": {
+    "arabic-transfer": 6,
+    "english-mediation": 17,
+    "french-mediation": 1,
+    "near-german-form": 0
+  },
+  "recyclingBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+  "registryBoundary": "authored-navigation-support-no-automatic-derivation-register-rule-or-arabic-speaker-diagnosis",
+  "issues": [],
+  "recyclingRows": [
+    {
+      "moduleId": "A1.1",
+      "level": "A1",
+      "module": 1,
+      "titleDe": "Erste Kontakte",
+      "totalQuestions": 10,
+      "currentCount": 10,
+      "recycledCount": 0,
+      "currentPercent": 100,
+      "recycledPercent": 0,
+      "expectedRecycledPercent": 0,
+      "sourceLessonIds": [],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-01-m1",
+        "a1-02-m1",
+        "a1-03-m1",
+        "a1-01-m2",
+        "a1-02-m2",
+        "a1-03-m2",
+        "a1-01-m3",
+        "a1-02-m3",
+        "a1-03-m3",
+        "a1-01-m4"
+      ],
+      "recycledKinds": []
+    },
+    {
+      "moduleId": "A1.2",
+      "level": "A1",
+      "module": 2,
+      "titleDe": "Menschen",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-02",
+        "a1-01"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-04-m1",
+        "a1-05-m1",
+        "a1-06-m1",
+        "a1-04-m2",
+        "recycling-a1-2-v1",
+        "a1-05-m2",
+        "a1-06-m2",
+        "a1-04-m3",
+        "a1-05-m3",
+        "recycling-a1-2-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.3",
+      "level": "A1",
+      "module": 3,
+      "titleDe": "Alltag",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-04",
+        "a1-06"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-07-m1",
+        "a1-08-m1",
+        "a1-09-m1",
+        "a1-07-m2",
+        "recycling-a1-3-v1",
+        "a1-08-m2",
+        "a1-09-m2",
+        "a1-07-m3",
+        "a1-08-m3",
+        "recycling-a1-3-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.4",
+      "level": "A1",
+      "module": 4,
+      "titleDe": "Essen und Trinken",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-06",
+        "a1-08"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-10-m1",
+        "a1-11-m1",
+        "a1-12-m1",
+        "a1-10-m2",
+        "recycling-a1-4-v1",
+        "a1-11-m2",
+        "a1-12-m2",
+        "a1-10-m3",
+        "a1-11-m3",
+        "recycling-a1-4-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.5",
+      "level": "A1",
+      "module": 5,
+      "titleDe": "Wohnen",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-07",
+        "a1-10"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-13-m1",
+        "a1-14-m1",
+        "a1-15-m1",
+        "a1-13-m2",
+        "recycling-a1-5-v1",
+        "a1-14-m2",
+        "a1-15-m2",
+        "a1-13-m3",
+        "a1-14-m3",
+        "recycling-a1-5-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.6",
+      "level": "A1",
+      "module": 6,
+      "titleDe": "Freizeit",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-09",
+        "a1-12"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-16-m1",
+        "a1-17-m1",
+        "a1-18-m1",
+        "a1-16-m2",
+        "recycling-a1-6-v1",
+        "a1-17-m2",
+        "a1-18-m2",
+        "a1-16-m3",
+        "a1-17-m3",
+        "recycling-a1-6-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.7",
+      "level": "A1",
+      "module": 7,
+      "titleDe": "Unterwegs",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-10",
+        "a1-14"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-19-m1",
+        "a1-20-m1",
+        "a1-21-m1",
+        "a1-19-m2",
+        "recycling-a1-7-v1",
+        "a1-20-m2",
+        "a1-21-m2",
+        "a1-19-m3",
+        "a1-20-m3",
+        "recycling-a1-7-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A1.8",
+      "level": "A1",
+      "module": 8,
+      "titleDe": "Gesund und organisiert",
+      "totalQuestions": 10,
+      "currentCount": 8,
+      "recycledCount": 2,
+      "currentPercent": 80,
+      "recycledPercent": 20,
+      "expectedRecycledPercent": 20,
+      "sourceLessonIds": [
+        "a1-12",
+        "a1-16"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a1-22-m1",
+        "a1-23-m1",
+        "a1-24-m1",
+        "a1-22-m2",
+        "recycling-a1-8-v1",
+        "a1-23-m2",
+        "a1-24-m2",
+        "a1-22-m3",
+        "a1-23-m3",
+        "recycling-a1-8-g1"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.1",
+      "level": "A2",
+      "module": 1,
+      "titleDe": "Erlebnisse",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-08",
+        "a1-19",
+        "a1-18"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-01-m1",
+        "a2-02-m1",
+        "recycling-a2-1-v1",
+        "a2-03-m1",
+        "a2-01-m2",
+        "recycling-a2-1-v2",
+        "a2-02-m2",
+        "a2-03-m2",
+        "recycling-a2-1-g1",
+        "a2-01-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.2",
+      "level": "A2",
+      "module": 2,
+      "titleDe": "Nachbarschaft",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-09",
+        "a1-22",
+        "a1-20"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-04-m1",
+        "a2-05-m1",
+        "recycling-a2-2-v1",
+        "a2-06-m1",
+        "a2-04-m2",
+        "recycling-a2-2-v2",
+        "a2-05-m2",
+        "a2-06-m2",
+        "recycling-a2-2-g1",
+        "a2-04-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.3",
+      "level": "A2",
+      "module": 3,
+      "titleDe": "Arbeit",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-09",
+        "a1-24",
+        "a1-22"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-07-m1",
+        "a2-08-m1",
+        "recycling-a2-3-v1",
+        "a2-09-m1",
+        "a2-07-m2",
+        "recycling-a2-3-v2",
+        "a2-08-m2",
+        "a2-09-m2",
+        "recycling-a2-3-g1",
+        "a2-07-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.4",
+      "level": "A2",
+      "module": 4,
+      "titleDe": "Reisen",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-10",
+        "a2-03",
+        "a1-24"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-10-m1",
+        "a2-11-m1",
+        "recycling-a2-4-v1",
+        "a2-12-m1",
+        "a2-10-m2",
+        "recycling-a2-4-v2",
+        "a2-11-m2",
+        "a2-12-m2",
+        "recycling-a2-4-g1",
+        "a2-10-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.5",
+      "level": "A2",
+      "module": 5,
+      "titleDe": "Gesundheit",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-11",
+        "a2-05",
+        "a2-02"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-13-m1",
+        "a2-14-m1",
+        "recycling-a2-5-v1",
+        "a2-15-m1",
+        "a2-13-m2",
+        "recycling-a2-5-v2",
+        "a2-14-m2",
+        "a2-15-m2",
+        "recycling-a2-5-g1",
+        "a2-13-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.6",
+      "level": "A2",
+      "module": 6,
+      "titleDe": "Medien",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-12",
+        "a2-07",
+        "a2-04"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-16-m1",
+        "a2-17-m1",
+        "recycling-a2-6-v1",
+        "a2-18-m1",
+        "a2-16-m2",
+        "recycling-a2-6-v2",
+        "a2-17-m2",
+        "a2-18-m2",
+        "recycling-a2-6-g1",
+        "a2-16-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.7",
+      "level": "A2",
+      "module": 7,
+      "titleDe": "Lernen",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-13",
+        "a2-10",
+        "a2-06"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-19-m1",
+        "a2-20-m1",
+        "recycling-a2-7-v1",
+        "a2-21-m1",
+        "a2-19-m2",
+        "recycling-a2-7-v2",
+        "a2-20-m2",
+        "a2-21-m2",
+        "recycling-a2-7-g1",
+        "a2-19-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "A2.8",
+      "level": "A2",
+      "module": 8,
+      "titleDe": "Gesellschaft",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-14",
+        "a2-12",
+        "a2-08"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "a2-22-m1",
+        "a2-23-m1",
+        "recycling-a2-8-v1",
+        "a2-24-m1",
+        "a2-22-m2",
+        "recycling-a2-8-v2",
+        "a2-23-m2",
+        "a2-24-m2",
+        "recycling-a2-8-g1",
+        "a2-22-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.1",
+      "level": "B1",
+      "module": 1,
+      "titleDe": "Biografien",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-15",
+        "a2-14",
+        "a2-10"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-01-m1",
+        "b1-02-m1",
+        "recycling-b1-1-v1",
+        "b1-03-m1",
+        "b1-01-m2",
+        "recycling-b1-1-v2",
+        "b1-02-m2",
+        "b1-03-m2",
+        "recycling-b1-1-g1",
+        "b1-01-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.2",
+      "level": "B1",
+      "module": 2,
+      "titleDe": "Arbeitswelt",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-16",
+        "a2-17",
+        "a2-12"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-04-m1",
+        "b1-05-m1",
+        "recycling-b1-2-v1",
+        "b1-06-m1",
+        "b1-04-m2",
+        "recycling-b1-2-v2",
+        "b1-05-m2",
+        "b1-06-m2",
+        "recycling-b1-2-g1",
+        "b1-04-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.3",
+      "level": "B1",
+      "module": 3,
+      "titleDe": "Wohnen und Stadt",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-16",
+        "a2-19",
+        "a2-14"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-07-m1",
+        "b1-08-m1",
+        "recycling-b1-3-v1",
+        "b1-09-m1",
+        "b1-07-m2",
+        "recycling-b1-3-v2",
+        "b1-08-m2",
+        "b1-09-m2",
+        "recycling-b1-3-g1",
+        "b1-07-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.4",
+      "level": "B1",
+      "module": 4,
+      "titleDe": "Umwelt",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-17",
+        "a2-21",
+        "a2-16"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-10-m1",
+        "b1-11-m1",
+        "recycling-b1-4-v1",
+        "b1-12-m1",
+        "b1-10-m2",
+        "recycling-b1-4-v2",
+        "b1-11-m2",
+        "b1-12-m2",
+        "recycling-b1-4-g1",
+        "b1-10-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.5",
+      "level": "B1",
+      "module": 5,
+      "titleDe": "Bildung",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-18",
+        "a2-23",
+        "a2-18"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-13-m1",
+        "b1-14-m1",
+        "recycling-b1-5-v1",
+        "b1-15-m1",
+        "b1-13-m2",
+        "recycling-b1-5-v2",
+        "b1-14-m2",
+        "b1-15-m2",
+        "recycling-b1-5-g1",
+        "b1-13-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.6",
+      "level": "B1",
+      "module": 6,
+      "titleDe": "Medien und Kultur",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-19",
+        "b1-01",
+        "a2-20"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-16-m1",
+        "b1-17-m1",
+        "recycling-b1-6-v1",
+        "b1-18-m1",
+        "b1-16-m2",
+        "recycling-b1-6-v2",
+        "b1-17-m2",
+        "b1-18-m2",
+        "recycling-b1-6-g1",
+        "b1-16-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.7",
+      "level": "B1",
+      "module": 7,
+      "titleDe": "Beziehungen",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-20",
+        "b1-04",
+        "a2-22"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-19-m1",
+        "b1-20-m1",
+        "recycling-b1-7-v1",
+        "b1-21-m1",
+        "b1-19-m2",
+        "recycling-b1-7-v2",
+        "b1-20-m2",
+        "b1-21-m2",
+        "recycling-b1-7-g1",
+        "b1-19-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B1.8",
+      "level": "B1",
+      "module": 8,
+      "titleDe": "Zukunft",
+      "totalQuestions": 10,
+      "currentCount": 7,
+      "recycledCount": 3,
+      "currentPercent": 70,
+      "recycledPercent": 30,
+      "expectedRecycledPercent": 30,
+      "sourceLessonIds": [
+        "a1-21",
+        "b1-06",
+        "a2-24"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b1-22-m1",
+        "b1-23-m1",
+        "recycling-b1-8-v1",
+        "b1-24-m1",
+        "b1-22-m2",
+        "recycling-b1-8-v2",
+        "b1-23-m2",
+        "b1-24-m2",
+        "recycling-b1-8-g1",
+        "b1-22-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.1",
+      "level": "B2",
+      "module": 1,
+      "titleDe": "Argumentieren",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a1-22",
+        "b1-09",
+        "a2-08",
+        "b1-20"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-01-m1",
+        "recycling-b2-1-v1",
+        "b2-02-m1",
+        "recycling-b2-1-v2",
+        "b2-01-m2",
+        "recycling-b2-1-g1",
+        "b2-02-m2",
+        "recycling-b2-1-g2",
+        "b2-01-m3",
+        "b2-02-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.2",
+      "level": "B2",
+      "module": 2,
+      "titleDe": "Beruf und Wandel",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a1-22",
+        "b1-10",
+        "a2-09",
+        "b1-22"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-03-m1",
+        "recycling-b2-2-v1",
+        "b2-04-m1",
+        "recycling-b2-2-v2",
+        "b2-03-m2",
+        "recycling-b2-2-g1",
+        "b2-04-m2",
+        "recycling-b2-2-g2",
+        "b2-03-m3",
+        "b2-04-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.3",
+      "level": "B2",
+      "module": 3,
+      "titleDe": "Wissen und Forschung",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a1-23",
+        "b1-12",
+        "a2-10",
+        "b1-24"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-05-m1",
+        "recycling-b2-3-v1",
+        "b2-06-m1",
+        "recycling-b2-3-v2",
+        "b2-05-m2",
+        "recycling-b2-3-g1",
+        "b2-06-m2",
+        "recycling-b2-3-g2",
+        "b2-05-m3",
+        "b2-06-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.4",
+      "level": "B2",
+      "module": 4,
+      "titleDe": "Gesellschaft im Diskurs",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a1-23",
+        "b1-13",
+        "a2-11",
+        "b2-02"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-07-m1",
+        "recycling-b2-4-v1",
+        "b2-08-m1",
+        "recycling-b2-4-v2",
+        "b2-07-m2",
+        "recycling-b2-4-g1",
+        "b2-08-m2",
+        "recycling-b2-4-g2",
+        "b2-07-m3",
+        "b2-08-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.5",
+      "level": "B2",
+      "module": 5,
+      "titleDe": "Kultur und Identität",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a1-24",
+        "b1-15",
+        "a2-12",
+        "b2-04"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-09-m1",
+        "recycling-b2-5-v1",
+        "b2-10-m1",
+        "recycling-b2-5-v2",
+        "b2-09-m2",
+        "recycling-b2-5-g1",
+        "b2-10-m2",
+        "recycling-b2-5-g2",
+        "b2-09-m3",
+        "b2-10-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    },
+    {
+      "moduleId": "B2.6",
+      "level": "B2",
+      "module": 6,
+      "titleDe": "B2-Prüfungsreife",
+      "totalQuestions": 10,
+      "currentCount": 6,
+      "recycledCount": 4,
+      "currentPercent": 60,
+      "recycledPercent": 40,
+      "expectedRecycledPercent": 40,
+      "sourceLessonIds": [
+        "a2-01",
+        "b1-16",
+        "a2-13",
+        "b2-06"
+      ],
+      "policyVersion": "module-recycling-ratio-v1",
+      "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
+      "questionIds": [
+        "b2-11-m1",
+        "recycling-b2-6-v1",
+        "b2-12-m1",
+        "recycling-b2-6-v2",
+        "b2-11-m2",
+        "recycling-b2-6-g1",
+        "b2-12-m2",
+        "recycling-b2-6-g2",
+        "b2-11-m3",
+        "b2-12-m3"
+      ],
+      "recycledKinds": [
+        "vocabulary-retrieval",
+        "grammar-retrieval"
+      ]
+    }
+  ],
+  "contentSha256": "b2914929be2c03852ade73a29cad90b872dd350fe97f76881d87aeeaa12e28e8"
+}

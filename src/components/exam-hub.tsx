@@ -24,6 +24,7 @@ import { buildExamReadiness } from "@/core/exams/readiness";
 import { summarizeSourceFreshness } from "@/core/governance/source-freshness";
 import type { ExamProvider } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { SeparatedRubrics } from "./separated-rubrics";
 
 const moduleIcons = {
   lesen: BookOpenCheck,
@@ -74,6 +75,8 @@ export function ExamHub() {
         </button>
       </div>
 
+      <SeparatedRubrics />
+
       <section className="exam-profile-banner" role="status">
         <div><FileCheck2 size={20} /><span><strong>{sourceFreshness.status === "fresh" ? "ملف الصيغة موثّق وحديث" : sourceFreshness.status === "due-soon" ? "اقترب موعد إعادة التحقق" : "ملف الصيغة يحتاج إعادة تحقق"}</strong><small>آخر تحقق بشري: {sourceFreshness.oldestVerifiedAt} · إعادة التحقق قبل {sourceFreshness.dueAt} · {profile.specificationVersion}</small></span></div>
         <p>{sourceFreshness.status === "stale" || sourceFreshness.status === "clock-error" ? "لا يعني بقاء الروابط متاحة أن الصيغة لم تتغير؛ أوقف إصدار تغييرات امتحانية جديدة حتى المراجعة البشرية. " : "تنبيه النزاهة: نجاح فحص الرابط لا يثبت وحده بقاء الصيغة دون تغيير. "}{profile.structureAr} {profile.passingRuleAr}</p>
@@ -86,7 +89,7 @@ export function ExamHub() {
           return (
             <article key={module.id}>
               <span><Icon size={21} /></span>
-              <small lang="de">{module.titleDe}</small>
+              <small lang="de" dir="ltr">{module.titleDe}</small>
               <h3>{module.titleAr}</h3>
               <div className="exam-spec-line"><b>{module.parts}</b><small>أجزاء</small><b>{module.minutes}</b><small>دقيقة</small>{module.maxPoints && <><b>{module.maxPoints}</b><small>نقطة قصوى</small></>}</div>
               <div className="readiness-line"><i><b style={{width:`${moduleReadiness.coveragePercent}%`}}/></i><strong>{moduleReadiness.statusAr}</strong></div>
@@ -99,6 +102,12 @@ export function ExamHub() {
 
       <section className="exam-readiness-board">
         <header><div><span className="eyebrow">جاهزية الأدلة حسب الوحدة</span><h2>لا يوجد متوسط يخفي فجوة مهارة.</h2></div><strong>{readiness.readyModuleCount}/{readiness.totalModules} وحدات بدليل قوي</strong></header>
+        <section className={`readiness-forecast ${readiness.forecast.status}`} data-readiness-forecast-policy={readiness.forecast.policyVersion}>
+          <header><div><small>نطاق زمني تخطيطي</small><strong>{readiness.forecast.status==="range"?`${readiness.forecast.minimumWeeks}–${readiness.forecast.maximumWeeks} أسابيع`:readiness.forecast.status==="evidence-threshold-met"?"عتبات الدليل مكتملة":"بيانات الوتيرة غير كافية"}</strong></div><span>{readiness.forecast.remainingEvidenceUnits} وحدات فجوة</span></header>
+          <p>{readiness.forecast.messageAr}</p>
+          <details><summary>كيف بُني النطاق؟</summary><ul>{readiness.forecast.assumptionsAr.map((assumption)=><li key={assumption}>{assumption}</li>)}</ul></details>
+          <footer>لا تاريخ نجاح قطعي · لا نتيجة رسمية · لا خلط بين {exam==="goethe-b2"?"Goethe":"telc"} والجهة الأخرى</footer>
+        </section>
         <div>{readiness.modules.map((module)=><article key={module.moduleId} className={module.status}><header><div><small lang="de" dir="ltr">{module.titleDe}</small><h3>{module.titleAr}</h3></div><span>{module.statusAr}</span></header><div className="readiness-metrics"><span><b>{module.attemptedTasks}</b> مهام بدليل</span><span><b>{module.coveragePercent}%</b> تغطية البنك</span><span><b>{module.accuracyPercent===null?"—":`${module.accuracyPercent}%`}</b> {module.accuracyPercent===null?"لا درجة للإنتاج":"أحدث متوسط داخلي"}</span></div><p>{module.detailAr}</p><footer><small>العينة الدنيا قبل قوة الدليل: {module.requiredSamples}</small><Link href={module.nextHref}>{module.nextTaskId?"ابدأ مهمة غير مجرّبة":"راجع الوحدة"}<ArrowLeft size={13}/></Link></footer></article>)}</div>
         <p className="exam-readiness-boundary"><ShieldAlert size={15}/>{readiness.boundaryAr}</p>
       </section>

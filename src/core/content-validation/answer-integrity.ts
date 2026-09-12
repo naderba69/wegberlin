@@ -280,7 +280,7 @@ export function buildAnswerIntegrityAudit() {
       for (const choice of task.choices) productiveTasks.push({
         id: `${task.id}:${choice.id}`,
         scope: "exam-writing",
-        prompt: `${task.instructionsDe} ${choice.situationDe} ${choice.guidingPointsDe.join(" ")}`,
+        prompt: `${task.instructionsDe} ${choice.titleDe} ${choice.situationDe} ${choice.guidingPointsDe.join(" ")}`,
         reviewEvidence: choice.checklistAr.join(" · "),
         answerPolicy: "no-single-answer",
       });
@@ -288,7 +288,7 @@ export function buildAnswerIntegrityAudit() {
       for (const choice of task.choices) productiveTasks.push({
         id: `${task.id}:${choice.id}`,
         scope: "exam-speaking",
-        prompt: `${task.instructionsDe} ${choice.situationDe} ${choice.bulletPointsDe.join(" ")}`,
+        prompt: `${task.instructionsDe} ${choice.titleDe} ${choice.situationDe} ${choice.bulletPointsDe.join(" ")}`,
         reviewEvidence: task.selfCriteriaAr.join(" · "),
         answerPolicy: "no-single-answer",
       });

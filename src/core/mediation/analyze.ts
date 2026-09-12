@@ -1,11 +1,11 @@
 import type { MediationDimensionEvidence } from "@/types/learning";
 
 export const MEDIATION_SELF_CHECKS=[
-  "نقلت المقصد بدل ترتيب الكلمات.",
-  "نقلت المعلومات الأساسية التي سجلتها.",
-  "حافظت على القيود والشرط وعدم اليقين.",
-  "صغت الكلام بما يناسب المتلقي.",
-  "لم أضف معلومة أو ضمانًا غير موجود في المصدر.",
+  "شرحت ما تريده الرسالة، ولم أترجم الكلمات واحدة واحدة.",
+  "ذكرت المعلومات المهمة التي يحتاجها الشخص.",
+  "حافظت على أي نفي أو شرط أو موعد موجود في الرسالة.",
+  "استعملت كلامًا واضحًا يناسب الشخص الذي أساعده.",
+  "لم أضف معلومة أو وعدًا غير موجود في الرسالة.",
 ] as const;
 
 export type MediationAnalysis={dimensions:MediationDimensionEvidence[];feedback:string[];requiresGermanResponse:boolean};

@@ -15,6 +15,10 @@ export type LessonAudioAsset = {
   sourceContent: "original-lesson-listening-transcript";
   rightsStatus: "generated-for-project-review-required";
   examGrade: false;
+  opusPath:string;
+  opusFormat:"audio/ogg; codecs=opus";
+  opusBytes:number;
+  opusSha256:string;
 };
 
 type LessonAudioManifest = {
@@ -23,6 +27,8 @@ type LessonAudioManifest = {
   generatedAssetCount: number;
   totalLessonCount: number;
   humanRecordedAssetCount: number;
+  opusAssetCount:number;
+  opusPolicyVersion:"optional-opus-with-mp3-fallback-v1";
   usageNoteAr: string;
   assets: LessonAudioAsset[];
 };

@@ -4,7 +4,7 @@ import rawRegistry from "@/config/source-verification-registry.json";
 const dateOnlySchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const sourceRecordSchema = z.object({
   id: z.string().min(3),
-  category: z.enum(["exam-format", "ai-free-tier", "hosting-free-tier", "ci-free-tier"]),
+  category: z.enum(["exam-format", "ai-free-tier", "browser-model", "hosting-free-tier", "ci-free-tier"]),
   service: z.string().min(2),
   organization: z.string().min(2),
   title: z.string().min(4),
@@ -16,7 +16,9 @@ const sourceRecordSchema = z.object({
   observedState: z.string().min(12),
   claimAr: z.string().min(12),
   staleAction: z.enum(["block-release-and-warn-runtime", "block-remote-ai", "block-release"]),
-}).strict();
+  ownerId: z.string().min(3),
+  reviewerId: z.string().min(3),
+}).strict().superRefine((record,context)=>{if(record.ownerId===record.reviewerId)context.addIssue({code:"custom",message:"Source owner and reviewer roles must differ."});});
 
 const sourceRegistrySchema = z.object({
   schemaVersion: z.literal(1),

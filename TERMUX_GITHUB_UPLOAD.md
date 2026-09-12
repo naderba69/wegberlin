@@ -1,6 +1,6 @@
 # رفع WegBerlin الكامل من Termux إلى GitHub
 
-آخر تدقيق: 2026-09-04
+آخر تدقيق: 2026-09-05
 
 المستودع العام:
 
@@ -25,7 +25,7 @@ wegberlin-full.zip.sha256
 انسخ الأمر كاملًا إلى Termux:
 
 ```bash
-pkg update -y && pkg install -y git gh unzip coreutils && termux-setup-storage && cd "$HOME/storage/downloads" && sha256sum -c wegberlin-full.zip.sha256 && rm -rf "$HOME/wegberlin-upload-tools" && mkdir -p "$HOME/wegberlin-upload-tools" && unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh -d "$HOME/wegberlin-upload-tools" && chmod +x "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" && "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" "$HOME/storage/downloads/wegberlin-full.zip" "Update audited WegBerlin handoff and A1 lexical grammar"
+pkg update -y && pkg install -y git gh unzip coreutils nodejs-lts && termux-setup-storage && cd "$HOME/storage/downloads" && sha256sum -c wegberlin-full.zip.sha256 && rm -rf "$HOME/wegberlin-upload-tools" && mkdir -p "$HOME/wegberlin-upload-tools" && unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh -d "$HOME/wegberlin-upload-tools" && chmod +x "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" && "$HOME/wegberlin-upload-tools/TERMUX_REPLACE_REPO.sh" "$HOME/storage/downloads/wegberlin-full.zip" "Update audited WegBerlin learning platform"
 ```
 
 إذا ظهر طلب صلاحية الوصول إلى الملفات بعد `termux-setup-storage`، وافق عليه ثم أعد الأمر.
@@ -61,8 +61,9 @@ GH_TOKEN="$GITHUB_PAT" gh api user --jq .login
 6. يعمل Clone للمستودع ويحافظ على `.git` والتاريخ.
 7. يحذف شجرة المشروع القديمة فقط ثم ينسخ الحزمة الجديدة.
 8. يحذف `node_modules` و`.next` وملفات البيئة والنسخ الشخصية إن وجدت.
-9. ينفذ `git add -A` وCommit وPush إلى `main` دون Force.
-10. لا يخزن PAT في Remote URL أو shell history أو إعدادات `gh`.
+9. يفعّل `.githooks/pre-commit` ويفحص النص الحالي وكل Git history قبل Staging.
+10. ينفذ `git add -A` وCommit وPush إلى `main` دون Force.
+11. لا يخزن PAT في Remote URL أو shell history أو إعدادات `gh`.
 
 ## التحقق بعد الرفع
 
@@ -91,6 +92,10 @@ reports/academic-content-audit.json
 src/core/evidence/mastery-weighting.ts
 src/core/srs/sm2.ts
 src/data/lexical-grammar-a1.ts
+src/data/lexical-grammar-a2.ts
+src/data/lexical-grammar-b1.ts
+src/data/lexical-grammar-b2.ts
+src/data/lexical-grammar-registry.ts
 src/components/lexical-grammar-panel.tsx
 ```
 

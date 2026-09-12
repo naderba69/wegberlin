@@ -1,12 +1,12 @@
 # Academic Content Zod Validation Report
 
-Generated: 2026-09-03  
+Generated: 2026-09-05  
 Version: `academic-governance-v1`  
-Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22f3`
+Content SHA-256: `c00ad4c752f6345384cb5f84f8060f14e8475cdc370cbba553f9274b5df6c927`
 
 ## Result
 
-`PASS` — 2665 top-level runtime academic objects passed 12 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, and derived review card.
+`PASS` — 3710 top-level runtime academic objects passed 13 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, and conditional Tunisian-support note.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -20,9 +20,10 @@ Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22
 | examProfiles | 2 | Zod strict + nested objects |
 | examSources | 5 | Zod strict + nested objects |
 | reviewCards | 2016 | Zod strict + nested objects |
-| nounGrammarEntries | 96 | Zod strict + nested objects |
-| verbPrepositionFrames | 24 | Zod strict + nested objects |
-| **Total top-level objects** | **2665** | **0 schema failures** |
+| nounGrammarEntries | 1044 | Zod strict + nested objects |
+| verbPrepositionFrames | 104 | Zod strict + nested objects |
+| tunisianSupportNotes | 17 | Zod strict + nested objects |
+| **Total top-level objects** | **3710** | **0 schema failures** |
 
 ## Cross-reference gates
 
@@ -33,6 +34,7 @@ Content SHA-256: `5fd1831ecdbee5c0f2f6d4f0ca8196d9c39de23aa5106a09c218ad888bdd22
 - listening item → clip ID;
 - choice/listening correct index → available option;
 - full dashboard → published provider-owned task ID;
+- Tunisian-support note → published lesson and theory block;
 - unique IDs within every root collection.
 
 The committed report is checked during `prebuild`; content drift without regenerated reports fails the build.

@@ -1,0 +1,123 @@
+{
+  "format": "dwnb-js-budget-report",
+  "version": "js-budget-v1",
+  "generatedAt": "2026-09-10",
+  "safetyMarginPercent": 15,
+  "budgets": {
+    "totalChunkGzipBytes": 2500000,
+    "maxSingleChunkGzipBytes": 750000
+  },
+  "safetyCeilings": {
+    "totalChunkGzipBytes": 2125000,
+    "maxSingleChunkGzipBytes": 637500
+  },
+  "actual": {
+    "chunkCount": 103,
+    "totalChunkGzipBytes": 1473214,
+    "maxSingleChunkGzipBytes": 476929
+  },
+  "issues": [],
+  "largest": [
+    {
+      "path": ".next/static/chunks/6405-abbcc4af5eb1ba96.js",
+      "rawBytes": 1733750,
+      "gzipBytes": 476929
+    },
+    {
+      "path": ".next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+      "rawBytes": 341546,
+      "gzipBytes": 100809
+    },
+    {
+      "path": ".next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+      "rawBytes": 241388,
+      "gzipBytes": 65550
+    },
+    {
+      "path": ".next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+      "rawBytes": 201060,
+      "gzipBytes": 63160
+    },
+    {
+      "path": ".next/static/chunks/app/lernen/[lessonId]/page-6f84b45a0cce0961.js",
+      "rawBytes": 230963,
+      "gzipBytes": 60812
+    },
+    {
+      "path": ".next/static/chunks/framework-666c53740fc261c8.js",
+      "rawBytes": 189686,
+      "gzipBytes": 59766
+    },
+    {
+      "path": ".next/static/chunks/3348-1bb6a99ce17f420f.js",
+      "rawBytes": 175974,
+      "gzipBytes": 53515
+    },
+    {
+      "path": ".next/static/chunks/app/settings/page-5200aace843bba83.js",
+      "rawBytes": 158277,
+      "gzipBytes": 44412
+    },
+    {
+      "path": ".next/static/chunks/main-fab3f8bd001f625d.js",
+      "rawBytes": 139341,
+      "gzipBytes": 40577
+    },
+    {
+      "path": ".next/static/chunks/polyfills-42372ed130431b0a.js",
+      "rawBytes": 112594,
+      "gzipBytes": 39520
+    },
+    {
+      "path": ".next/static/chunks/app/today/page-db358e31f7234b4a.js",
+      "rawBytes": 98082,
+      "gzipBytes": 29620
+    },
+    {
+      "path": ".next/static/chunks/1068-a5930a2bf4d802d0.js",
+      "rawBytes": 68840,
+      "gzipBytes": 18590
+    },
+    {
+      "path": ".next/static/chunks/6850-98650b64c4e52c0b.js",
+      "rawBytes": 63283,
+      "gzipBytes": 17961
+    },
+    {
+      "path": ".next/static/chunks/app/writing/page-0fb53b939448ef8e.js",
+      "rawBytes": 49510,
+      "gzipBytes": 17206
+    },
+    {
+      "path": ".next/static/chunks/app/search/page-fcb8e7f18a20d8a7.js",
+      "rawBytes": 47011,
+      "gzipBytes": 16660
+    },
+    {
+      "path": ".next/static/chunks/3274-f4f2977251a825d0.js",
+      "rawBytes": 52512,
+      "gzipBytes": 16551
+    },
+    {
+      "path": ".next/static/chunks/app/speaking/page-50f3d01b6e1e1864.js",
+      "rawBytes": 51327,
+      "gzipBytes": 16361
+    },
+    {
+      "path": ".next/static/chunks/app/practice/conversation-paths/page-21c0168d869c88f4.js",
+      "rawBytes": 51218,
+      "gzipBytes": 16069
+    },
+    {
+      "path": ".next/static/chunks/app/exams/[provider]/[simulationId]/page-90565458a34713c3.js",
+      "rawBytes": 57492,
+      "gzipBytes": 15936
+    },
+    {
+      "path": ".next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+      "rawBytes": 45120,
+      "gzipBytes": 15262
+    }
+  ],
+  "boundary": "Built Next static chunk gzip envelope with a mandatory 15% reserve below hard limits; not network waterfall or device performance."
+}

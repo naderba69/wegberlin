@@ -15,7 +15,7 @@ const objectives = buildObjectiveCoverageReport();
 describe("P0 academic schemas, answer integrity, and objective coverage", () => {
   it("validates every runtime academic root through strict nested Zod schemas", () => {
     expect(schema.ok, schema.issues.join("\n")).toBe(true);
-    expect(schema.schemaFamilies).toBe(12);
+    expect(schema.schemaFamilies).toBe(13);
     expect(schema.counts).toEqual({
       lessons: 84,
       lessonMetadata: 84,
@@ -27,9 +27,10 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
       examProfiles: 2,
       examSources: 5,
       reviewCards: 2016,
-      nounGrammarEntries: 96,
-      verbPrepositionFrames: 24,
-      totalRootObjects: 2665,
+      nounGrammarEntries: 1044,
+      verbPrepositionFrames: 104,
+      tunisianSupportNotes: 17,
+      totalRootObjects: 3710,
     });
   });
 
@@ -99,11 +100,19 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     const schemaReport = readFileSync("docs/generated/ACADEMIC_SCHEMA_REPORT.md", "utf8");
     const answerReport = readFileSync("docs/generated/ANSWER_INTEGRITY_REPORT.md", "utf8");
     const coverageReport = readFileSync("docs/generated/OBJECTIVE_COVERAGE_REPORT.md", "utf8");
+    const lexicalReport = readFileSync("docs/generated/LEXICAL_TARGET_GAP_REPORT.md", "utf8");
     const machine = JSON.parse(readFileSync("reports/academic-content-audit.json", "utf8"));
     expect(schemaReport).toContain(machine.contentSha256);
     expect(answerReport).toContain(machine.contentSha256);
     expect(coverageReport).toContain(machine.contentSha256);
+    expect(lexicalReport).toContain(machine.contentSha256);
     expect(machine.answerIntegrity.rows).toHaveLength(2584);
     expect(machine.objectiveCoverage.rows).toHaveLength(336);
+    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1106);
+    expect(machine.lexicalTargetGaps.nounSummary.pendingHuman).toBe(0);
+    expect(machine.lexicalTargetGaps.verbFrameSummary.covered).toBe(104);
+    expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).toBe(0);
+    expect(machine.lexicalTargetGaps.exclusionDecisionCount).toBe(6);
+    expect(machine.lexicalTargetGaps.pendingIndependentExclusionReview).toBe(6);
   });
 });

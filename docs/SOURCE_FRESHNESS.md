@@ -1,16 +1,17 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Last human review: 2026-09-03  
+Last registry review: 2026-09-11  
 Next review due: 2026-10-03  
 Calendar policy: Africa/Tunis  
 Registry version: `source-freshness-v1`
 
 ## Scope
 
-The central registry contains 12 official references:
+The central registry contains 18 official references:
 
 - 5 exam-format references: Goethe overview/terms/model set and telc overview/current mock link;
 - 5 remote-AI references: Gemini pricing/limits and OpenRouter free variant/router/limits;
+- 6 browser-model references: Transformers.js version/license, WebGPU guidance, multilingual MiniLM base/ONNX records, and multilingual Whisper tiny base/ONNX records;
 - 1 Vercel Hobby reference;
 - 1 GitHub Actions billing reference.
 
@@ -32,6 +33,7 @@ The policy uses the Africa/Tunis calendar day so CI near UTC midnight does not f
 - Gemini accepts only the explicitly allowlisted free-tier models.
 - OpenRouter accepts only `openrouter/free` or IDs ending in `:free`.
 - A stale/clock-invalid AI source blocks the request before any `fetch`; Disabled and local Ollama remain available.
+- A stale/clock-invalid Transformers.js/model/license source blocks a new MiniLM or Whisper model download while deterministic follow-up and record/playback remain available. Installed local inference is never presented as newly verified after expiry.
 - `npm run check` includes the strict local freshness audit.
 
 ## Monthly workflow
@@ -53,11 +55,16 @@ For every due record:
 1. open the official source manually;
 2. compare meaning, not only URL/status;
 3. for exams, compare parts, timings, points, passing rules, versions, and provider separation;
-4. for AI, compare free eligibility, model IDs, quotas, paid fallbacks, account/billing conditions, and privacy notes;
-5. for Vercel/GitHub, compare personal/public/free-use terms and limits;
-6. update `observedState`, dependent code/tests/docs, and only then `lastVerifiedAt`;
-7. run `npm run check` and relevant Playwright tests.
+4. for remote AI, compare free eligibility, model IDs, quotas, paid fallbacks, account/billing conditions, and privacy notes;
+5. for each browser model, compare Runtime version/license, WebGPU API, MiniLM/Whisper model card and license, ONNX revision, quantized size, language/task support, and cache behavior;
+6. for Vercel/GitHub, compare personal/public/free-use terms and limits;
+7. update `observedState`, dependent code/tests/docs, and only then `lastVerifiedAt`;
+8. run `npm run check` and relevant Playwright tests.
 
 ## Integrity boundary
 
 HTTP 200/206, an unchanged URL, or an unchanged filename does not establish semantic stability. The automation is a staleness/reachability alarm, not an official-format validator or legal review.
+
+## Accountability extension — 2026-09-09
+
+Every one of the 18 source records now has a distinct stable `ownerId` and `reviewerId`. The source schema rejects missing or identical roles, while `content-accountability-lifecycle-v1` verifies 18/18 coverage together with content and learner-risk ownership. These role IDs assign responsibility; they do not claim that a scheduled human semantic review has already occurred.

@@ -9,6 +9,8 @@ import { analyzeWriting } from "@/core/writing/analyze";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { behavioralPraise } from "@/core/coach/behavioral-praise";
+import { StatusAnnouncement } from "./status-announcement";
 
 export function TargetedWritingSimulationView({ simulation }: { simulation: TargetedWritingSimulation }) {
   const { state, update } = useLearning();
@@ -112,6 +114,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
     return (
       <div className="wide-page targeted-writing-result">
         <header><span><Check size={27} /></span><small>{profile.displayName} · تدريب كتابي غير رسمي</small><h1>حُفظت النسخة محليًا</h1><p>{analysis.wordCount} كلمة · المهمة: <b lang="de" dir="ltr">{choice.titleDe}</b></p></header>
+        <StatusAnnouncement message={behavioralPraise("exam-submission")} channel="targeted-writing-result" className="compact gamification-surface"/>
         <div className="writing-result-grid">
           <section><h2>فحوص حتمية</h2>{analysis.checks.map((check) => <article key={check.label} className={check.passed ? "passed" : ""}><span>{check.passed ? <Check size={13} /> : "—"}</span><p>{check.label}</p></article>)}</section>
           <section><h2>تدقيق ذاتي خاص بالمهمة</h2>{choice.checklistAr.map((item) => <article key={item}><span>□</span><p>{item}</p></article>)}</section>
@@ -129,7 +132,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
         <div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف الزمني" : "وقت متبقٍ"}</small></div>
       </header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>
-      {simulation.choices.length > 1 && <div className="writing-choice-switch">{simulation.choices.map((item) => <button key={item.id} className={choiceId === item.id ? "active" : ""} onClick={() => { setChoiceId(item.id); setText(""); }}>{item.titleDe}</button>)}</div>}
+      {simulation.choices.length > 1 && <div className="writing-choice-switch">{simulation.choices.map((item) => <button key={item.id} lang="de" dir="ltr" className={choiceId === item.id ? "active" : ""} onClick={() => { setChoiceId(item.id); setText(""); }}>{item.titleDe}</button>)}</div>}
       {choice ? (
         <div className="targeted-writing-layout">
           <section className="writing-prompt-card">
@@ -141,7 +144,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
             <div className="exam-integrity-note"><CircleAlert size={16} /><p>{simulation.wordTargetNoteAr}</p></div>
           </section>
           <section className="writing-exam-editor">
-            <textarea lang="de" dir="ltr" value={text} onChange={(event) => setText(event.target.value)} placeholder="Schreiben Sie hier …" spellCheck={false} />
+            <textarea lang="de" dir="ltr" value={text} onChange={(event) => setText(event.target.value)} placeholder="Schreiben Sie hier …" spellCheck={false} autoCorrect="off" autoCapitalize="off" />
             <footer><span className={analysis.wordCount >= simulation.minimumWordsForPractice ? "good" : ""}>{analysis.wordCount} كلمة · هدف التدريب {simulation.minimumWordsForPractice}</span><div><button className="secondary-button" disabled={!text.trim()} onClick={() => persist("draft")}><Save size={15} /> حفظ مسودة</button><button className="primary-button" disabled={analysis.wordCount < 50} onClick={() => persist("submitted")}><Send size={15} /> {continuousSession ? "ثبّت النص وانتقل" : "تسليم التدريب"}</button></div></footer>
           </section>
         </div>

@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import{PracticalDayMode}from"@/components/practical-day-mode";export const metadata:Metadata={title:"اليوم العملي"};export default function PracticalDayPage(){return <PracticalDayMode/>}

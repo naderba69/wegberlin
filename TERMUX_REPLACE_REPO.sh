@@ -7,9 +7,9 @@ REPOSITORY="wegberlin"
 REPO_URL="https://github.com/${GITHUB_USER}/${REPOSITORY}.git"
 ARCHIVE="${1:-${HOME}/storage/downloads/wegberlin-full.zip}"
 WORKDIR="${HOME}/wegberlin-clean-upload"
-COMMIT_MESSAGE="${2:-Update audited WegBerlin handoff and A1 lexical grammar}"
+COMMIT_MESSAGE="${2:-Update audited WegBerlin learning platform}"
 
-for command in git gh unzip sha256sum; do
+for command in git gh unzip sha256sum node npm; do
   command -v "$command" >/dev/null 2>&1 || { echo "Missing command: $command"; exit 1; }
 done
 
@@ -93,10 +93,23 @@ rm -rf "$STAGING_DIR"
 rm -rf node_modules .next test-results playwright-report coverage
 rm -f .env .env.local .env.production tsconfig.tsbuildinfo
 find . -name '*.dwnb' -delete
+# The audited Transformers browser bundle is reconstructed by npm ci/prebuild
+# from a checksum-pinned packed payload. Never commit its false-positive plaintext.
+git rm --cached --ignore-unmatch public/vendor/webgpu/transformers.web.min.js >/dev/null 2>&1 || true
+# Agent workspaces may not persist newly created workflow files. Materialize all
+# audited deployment templates inside the real clean Git worktree.
+mkdir -p .github/workflows
+for workflow in deployment/deployment-smoke.yml deployment/release-candidate.yml deployment/release.yml; do
+  [ -f "$workflow" ] || { echo "Missing deployment workflow template: $workflow"; exit 1; }
+  cp "$workflow" ".github/workflows/$(basename "$workflow")"
+done
 
 git config user.name "$GITHUB_USER"
 git config user.email "$GITHUB_EMAIL"
 git remote set-url origin "$REPO_URL"
+chmod +x .githooks/pre-commit
+git config core.hooksPath .githooks
+node scripts/audit-secrets.mjs --working-tree --history --require-history
 
 git add -A
 echo "Changes that will be committed:"

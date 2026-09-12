@@ -16,6 +16,10 @@ The product outcome is **verified skill readiness**, not lesson completion. The 
 
 This product is not a course catalog and must never behave primarily as a list of lessons. Its default home is a **Coach / Today** screen that decides and explains the learner’s next best action from goals, time, prerequisites, retention, weaknesses, productive-skill balance, and exam risk. The curriculum browser is secondary. At every moment the learner must be able to answer: “What do I do now, why this task, how long will it take, what counts as success, and what happens next?”
 
+The shipped `journey-state-machine-v1` also exposes the evidence-derived macro journey on Today: orientation → foundation → growth → consolidation → provider-scoped exam readiness. Its phase, percentage, rationale, and next transition are derived from onboarding/diagnostic state, lesson completions, level gates, and exam-module readiness; browsing never advances it, and it is not an official CEFR judgment.
+
+Optional reading calibration follows `reading-comprehension-benchmark-v1`: a visible-only timer starts explicitly, the text hides before two questions, and WPM is omitted unless both are correct. Optional writing-device calibration follows `writing-device-benchmark-v1` only after the real Writing Lab gate: a manual copy with paste blocked and bounded similarity/length checks measures input speed, not German quality. Qualified reading/writing speed may only split existing lesson or practice/production budgets into bounded blocks; it never changes CEFR, mastery, correctness, or writing feedback.
+
 ### HARD ZERO-COST CONSTRAINT
 
 The mandatory end-user and deployment cost is **USD 0.00**. Core learning, progress, tests, audio fallbacks, backup, and the full authored curriculum must work without a paid subscription, paid API, paid database, paid hosting plan, purchased asset, or payment card. Free-tier services may be optional accelerators only; the architecture must remain usable if any free tier disappears. Never silently call a paid model, exceed a free quota, activate billing, or require the user to add credits. The system must hard-stop before any potentially billable request. Local-first and offline-capable operation is the source-of-truth architecture.
@@ -571,11 +575,11 @@ Speaking workflows:
 - discussion and argument exchange;
 - information-gap task;
 - exam role cards;
-- follow-up questions generated from the learner’s answer;
+- follow-up questions grounded in a learner-typed answer summary/transcript under `content-grounded-follow-up-v1`;
 - timed preparation and response;
 - self-assessment before automated feedback.
 
-Possible AI audio capabilities vary by provider and model. Implement capability detection. If audio input is unsupported, fall back to user-provided transcript or local/browser speech recognition where available. Never fabricate acoustic analysis from text alone.
+The shipped follow-up path does not perform STT: after listening back, the learner optionally types German content, and the Offline engine uses a verified cue from that text. Optional Gemini/OpenRouter Free-only/Ollama generation requires a fresh preview-and-consent action for every send, must return an exact grounding cue from the approved text, and never receives the audio Blob. Possible future AI audio capabilities vary by provider and model and require separate capability/privacy review. Never fabricate acoustic analysis or recording understanding from text alone.
 
 Separate:
 
@@ -771,10 +775,14 @@ Use current stable compatible releases at implementation time; do not pin an obs
 - installable PWA with explicit cache/version/content-pack strategy;
 - browser MediaRecorder for learner recordings;
 - browser SpeechSynthesis as the universal zero-cost TTS fallback;
-- optional local Piper-compatible TTS and Whisper/Vosk-compatible STT adapters;
-- optional local OpenAI-compatible/Ollama and in-browser WebLLM adapters;
+- shipped optional local Whisper tiny WebGPU STT for bounded German expected-word matching, with any Piper/Vosk or phoneme-alignment adapter still optional future work;
+- optional local OpenAI-compatible/Ollama and in-browser WebGPU model adapters;
 - pnpm with a committed lockfile;
 - optional Dockerfile and Docker Compose for local self-hosting, never required for normal use.
+
+The shipped `browser-webgpu-model-v1` adapter is deliberately narrower than a generative WebLLM: after explicit 130–150 MB opt-in, a pinned multilingual q8 embedding model ranks authored content-follow-up candidates inside a Web Worker. Secure-context/adapter/memory/buffer/storage/source checks, a dedicated removable Cache, browser-only runtime hashes/licenses, deterministic fallback, and exclusion of weights from Git/ZIP/default Offline packs are mandatory. It has no silent WASM or paid fallback and no STT/acoustic/CEFR claim.
+
+The separate `local-german-word-matching-v1` adapter uses a pinned multilingual Whisper tiny q8 model after explicit 70–90 MB opt-in. It decodes short recordings locally, resamples them to 16 kHz, transcribes German in a dedicated Worker, and matches only authored expected words. It sends no audio and persists no transcript/result. ASR recognition is not phoneme alignment, accent scoring, fluency scoring, or proof of pronunciation quality.
 
 ### Optional free-tier deployment adapters
 
@@ -940,7 +948,7 @@ At minimum model:
 - SRSItem and SRSReview;
 - DailyPlan and DailyPlanItem;
 - WritingSubmission and WritingDraft;
-- SpeakingSubmission and media reference;
+- SpeakingSubmission and media reference, plus optional typed-transcript follow-up hash/cue/question/provider/consent provenance;
 - ExamSession, section, answer, timer state, and result;
 - AI feedback with provider/model/prompt version/confidence;
 - consent record and deletion request;

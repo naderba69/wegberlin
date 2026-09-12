@@ -1,0 +1,8 @@
+{
+  "policyVersion": "meaning-not-word-order-translation-audit-v1",
+  "rowCount": 3146,
+  "signalCount": 3,
+  "issues": [],
+  "boundary": "structural-literal-gloss-guard-plus-authored-meaning-fields-not-independent-arabic-quality-review",
+  "generatedAt": "2026-09-10"
+}

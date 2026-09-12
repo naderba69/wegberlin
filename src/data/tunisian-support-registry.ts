@@ -1,0 +1,159 @@
+import type { ArabicSupportMode } from "@/types/learning";
+import type { TunisianSupportNote } from "@/types/tunisian-support";
+
+const note = (value: Omit<TunisianSupportNote, "id" | "visibleFor" | "reviewStatus" | "sourceVersion">): TunisianSupportNote => ({
+  ...value,
+  id: `${value.lessonId}-${value.category}-tn`,
+  visibleFor: ["tunisian-supported"],
+  reviewStatus: "authored-review-pending",
+  sourceVersion: "tunisian-support-v1",
+});
+
+export const tunisianSupportNotes: TunisianSupportNote[] = [
+  note({
+    lessonId: "a1-01", level: "A1", theoryIds: ["a1-01-t2"], category: "question-order",
+    titleDe: "Fragewort und Verb", titleAr: "السؤال وترتيب الفعل",
+    msaBridgeAr: "في العربية قد يظهر السؤال بأداة استفهام ثم اسم أو ضمير، ولا تكون حركة الفعل في الجملة هي العلامة الأساسية دائمًا.",
+    tunisianNoteAr: "بالتونسي تنجم تسأل «شنوّة اسمك؟» من غير ما يكون تبديل مكان الفعل ظاهر كيف الألمانية. في الألمانية ركّز على الترتيب نفسه: أداة السؤال، ثم الفعل، ثم الضمير.",
+    differenceImpactAr: "إذا نقلت ترتيب السؤال التونسي حرفيًا قد تضع الضمير قبل الفعل في السؤال الألماني المستقل.",
+    germanAnchorDe: "Wie heißt du? — Wie + Verb + Person",
+  }),
+  note({
+    lessonId: "a1-02", level: "A1", theoryIds: ["a1-02-t1"], category: "origin-location",
+    titleDe: "Herkunft und Wohnort", titleAr: "الأصل ومكان السكن",
+    msaBridgeAr: "تقول العربية عادة «أنا من تونس» للأصل، بينما يحتاج الجواب الألماني الشائع إلى فعل وحرف جر يختلفان عن جواب مكان السكن.",
+    tunisianNoteAr: "نقولو عادة «أنا من تونس» و«نسكن في تونس». في الألمانية فرّق بين الأصل والسكن؛ ما يكفيش تبدّل اسم البلاصة وحده.",
+    differenceImpactAr: "الخلط يحول جواب الأصل إلى جواب مكان، أو يحذف التركيب الذي يحتاجه الفعل الألماني.",
+    germanAnchorDe: "Ich komme aus Tunesien. — Ich wohne in Tunis.",
+  }),
+  note({
+    lessonId: "a1-04", level: "A1", theoryIds: ["a1-04-t1"], category: "possessive-gender",
+    titleDe: "mein oder meine", titleAr: "الملكية وجنس الاسم",
+    msaBridgeAr: "الملكية العربية ترتبط غالبًا بصاحب الشيء عبر ضمير أو لاحقة، أما شكل أداة الملكية الألمانية فيتأثر أيضًا بالاسم الذي يليها.",
+    tunisianNoteAr: "نقولو «كتابي» و«داري»، والملكية تبان في آخر الكلمة. في الألمانية شكل أداة الملكية يتبدّل زادة حسب جنس الاسم وعدده.",
+    differenceImpactAr: "معرفة صاحب الشيء وحدها لا تكفي لاختيار الصيغة الألمانية؛ يجب معرفة جنس الاسم وعدده ودوره.",
+    germanAnchorDe: "mein Vater — meine Mutter — mein Kind — meine Eltern",
+  }),
+  note({
+    lessonId: "a1-08", level: "A1", theoryIds: ["a1-08-t2"], category: "verb-second",
+    titleDe: "Zeit zuerst, Verb an Position zwei", titleAr: "الوقت أولًا والفعل ثانيًا",
+    msaBridgeAr: "يسمح ترتيب العربية بمرونة في تقديم الزمن، لكن تقديمه لا يصنع قاعدة مطابقة لقاعدة الموقع الثاني الألمانية.",
+    tunisianNoteAr: "تنجم تقول «مع السبعة أنا نقوم» بترتيب مرن. في الألمانية كي تبدأ بالوقت، الفعل المصرف يبقى في الموضع الثاني والفاعل يجي بعده.",
+    differenceImpactAr: "النقل الحرفي يسبب ترتيبًا من نوع زمن ثم فاعل ثم فعل، وهو يكسر قاعدة الموقع الثاني.",
+    germanAnchorDe: "Um sieben Uhr stehe ich auf.",
+  }),
+  note({
+    lessonId: "a1-10", level: "A1", theoryIds: ["a1-10-t1"], category: "case-role",
+    titleDe: "Objektrolle vor Akkusativform", titleAr: "دور المفعول قبل صيغة الحالة",
+    msaBridgeAr: "ابدأ بالمعنى: ما الشيء الذي يقع عليه الأكل أو الشراء؟ بعد تحديد الدور افحص أداة الاسم الألماني.",
+    tunisianNoteAr: "في الكلام التونسي دور المفعول ما يظهرش عادة في أداة تتبدّل. في الألمانية التغيير يبان بوضوح مع الاسم المذكر.",
+    differenceImpactAr: "غياب أداة متغيرة في التونسي قد يجعل المتعلم يهمل التحول الألماني رغم أنه يحمل وظيفة نحوية.",
+    germanAnchorDe: "der/ein Apfel → den/einen Apfel",
+  }),
+  note({
+    lessonId: "a1-14", level: "A1", theoryIds: ["a1-14-t1"], category: "case-role",
+    titleDe: "Ort mit Dativ", titleAr: "المكان الثابت وصيغة الأداة",
+    msaBridgeAr: "حرف المكان العربي لا يملك نظام أدوات مطابقًا للألمانية؛ لذلك احفظ حرف الجر مع عبارة المكان والأداة.",
+    tunisianNoteAr: "نقولو «فوق الطاولة» أو «في الكوجينة» من غير أداة تتبدّل بالحالة. في الألمانية احفظ العبارة كاملة، موش حرف الجر وحده.",
+    differenceImpactAr: "حفظ معنى حرف الجر وحده لا يخبرك بصيغة الأداة الألمانية في المكان الثابت.",
+    germanAnchorDe: "auf dem Tisch — in der Küche",
+  }),
+  note({
+    lessonId: "a2-01", level: "A2", theoryIds: ["a2-01-t1"], category: "perfect-bracket",
+    titleDe: "Perfekt als Satzklammer", titleAr: "قوس الماضي المحكي",
+    msaBridgeAr: "قد تحمل كلمة عربية واحدة معنى الحدث الماضي، بينما يوزع الماضي المحكي الألماني المعنى على فعل مساعد وصيغة حدث في نهاية الجملة.",
+    tunisianNoteAr: "بالتونسي تنجم تقول «خدمت البارح» في فعل واحد. في الماضي المحكي الألماني المعنى يتوزّع: الفعل المساعد في الموضع الثاني وصيغة الحدث في الآخر.",
+    differenceImpactAr: "النقل المباشر قد يجمع الفعلين الألمانيين أو ينسى الجزء الموجود في نهاية القوس.",
+    germanAnchorDe: "Ich habe gestern lange gearbeitet.",
+  }),
+  note({
+    lessonId: "a2-03", level: "A2", theoryIds: ["a2-03-t1"], category: "temporal-connector",
+    titleDe: "als oder wenn", titleAr: "حدث ماضٍ واحد أم تكرار وشرط",
+    msaBridgeAr: "قد تقابل «عندما» أكثر من رابط ألماني؛ الاختيار الألماني يعتمد على كون الحدث الماضي فريدًا أو متكررًا أو مشروطًا.",
+    tunisianNoteAr: "«وقتلي» و«كي» ينجموا يغطّيو أكثر من حالة حسب السياق. في الألمانية اختَر الرابط حسب نوع الحدث، موش حسب ترجمة كلمة واحدة.",
+    differenceImpactAr: "الاعتماد على مقابل تونسي واحد يخفي الفرق الألماني بين حدث ماضٍ غير متكرر وحالة متكررة أو شرطية.",
+    germanAnchorDe: "Als ich ankam … — Wenn ich Zeit habe …",
+  }),
+  note({
+    lessonId: "a2-05", level: "A2", theoryIds: ["a2-05-t1"], category: "modal-negation",
+    titleDe: "nicht müssen oder nicht dürfen", titleAr: "عدم الضرورة أم المنع",
+    msaBridgeAr: "هناك فرق بين «ليس ضروريًا» و«غير مسموح». النفي لا يحول فعل الضرورة الألماني إلى فعل منع.",
+    tunisianNoteAr: "«ما يلزمكش» معناها موش ضروري، أمّا «ممنوع» أو «ما عندكش الحق» فمعناها موش مسموح. خلّي الفرق واضح في الألمانية زادة.",
+    differenceImpactAr: "الخلط قد يعطي إذنًا حين تقصد منعًا، أو يصنع منعًا حين تقصد أن الفعل اختياري.",
+    germanAnchorDe: "nicht müssen ≠ nicht dürfen",
+  }),
+  note({
+    lessonId: "a2-08", level: "A2", theoryIds: ["a2-08-t2"], category: "subordinate-clause",
+    titleDe: "dass und Verbende", titleAr: "الجملة التابعة والفعل في النهاية",
+    msaBridgeAr: "الرابط العربي الذي يقدم مضمون القول لا يفرض ترتيبًا مطابقًا لترتيب الجملة التابعة الألمانية.",
+    tunisianNoteAr: "تنجم تقول «نظن اللي الخدمة تناسب» من غير ما يمشي الفعل للآخر. بعد الرابط الألماني، الفعل المصرف يمشي إلى نهاية الجملة التابعة.",
+    differenceImpactAr: "النقل الحرفي يبقي الفعل الألماني قرب بداية الجملة التابعة بدل موضعه الأخير.",
+    germanAnchorDe: "Ich glaube, dass die Stelle passt.",
+  }),
+  note({
+    lessonId: "a2-23", level: "A2", theoryIds: ["a2-23-t1"], category: "relative-pronoun",
+    titleDe: "Relativpronomen im Nominativ", titleAr: "الضمير الموصول بوصفه فاعلًا",
+    msaBridgeAr: "الضمير الموصول الألماني يطابق جنس الاسم وعدده، ثم يتحدد شكله أيضًا من دوره داخل الجملة الموصولة.",
+    tunisianNoteAr: "في التونسي «اللي» تنجم تربط أسماء مختلفة وما تبيّنش الجنس ولا الحالة. في الألمانية لازم تختار الشكل حسب الاسم ودوره.",
+    differenceImpactAr: "استعمال مقابل واحد لكل الأسماء يخفي معلومات يطلبها الضمير الموصول الألماني.",
+    germanAnchorDe: "der Helfer, der hilft — die Gruppe, die sich trifft",
+  }),
+  note({
+    lessonId: "b1-04", level: "B1", theoryIds: ["b1-04-t1"], category: "passive-focus",
+    titleDe: "Vorgangspassiv", titleAr: "إبراز العملية لا المنفذ",
+    msaBridgeAr: "يمكن للعربية أن تبني المجهول صرفيًا أو تحذف المنفذ، ولا يلزم أن يظهر فعل مساعد مطابق لفعل المبني للمجهول الألماني.",
+    tunisianNoteAr: "بالتونسي تنجم تستعمل صيغة مجهول أو تخلي شكون عمل الفعل غير مذكور. ما تقيسهاش كلمة بكلمة على البناء الألماني.",
+    differenceImpactAr: "الترجمة الحرفية قد تحذف الفعل المساعد الألماني أو تخلط معناه بمعنى المستقبل.",
+    germanAnchorDe: "Die Texte werden geprüft.",
+  }),
+  note({
+    lessonId: "b1-08", level: "B1", theoryIds: ["b1-08-t1"], category: "relative-pronoun",
+    titleDe: "Funktion vor Relativpronomen", titleAr: "دور الاسم قبل شكل الضمير الموصول",
+    msaBridgeAr: "بعد مرحلة الفاعل، يجب التمييز بين من يفعل ومن يقع عليه الفعل ومن يتلقى شيئًا داخل الجملة الموصولة.",
+    tunisianNoteAr: "«اللي» ما تتبدّلش عادة حسب شكون يعمل الفعل أو على شكون وقع أو لشكون صار. الألمانية تبيّن الدور في شكل الضمير.",
+    differenceImpactAr: "اختيار الضمير من جنس الاسم وحده لا يكفي؛ الحالة تأتي من وظيفته داخل الجملة الموصولة.",
+    germanAnchorDe: "der Mann, der … — der Mann, den … — der Mann, dem …",
+  }),
+  note({
+    lessonId: "b1-18", level: "B1", theoryIds: ["b1-18-t1"], category: "reported-distance",
+    titleDe: "sollen als Distanz", titleAr: "نقل ادعاء دون تبنّيه",
+    msaBridgeAr: "تستخدم العربية «يقال» أو «يزعم» لنسبة خبر غير مؤكد إلى مصدر، بينما يستطيع الألماني استعمال فعل يبدو في سياقات أخرى فعلًا دالًا على واجب.",
+    tunisianNoteAr: "كي تقول «يقولوا اللي…» إنت تبعد روحك على صحّة الخبر. في الألمانية الفعل هنا ينقل ادعاء؛ موش نصيحة وموش واجب.",
+    differenceImpactAr: "قراءة الفعل بمعنى الواجب فقط تغيّر موقف الكاتب من الخبر وتفقد مسافة المصدر.",
+    germanAnchorDe: "Die Methode soll das Lernen beschleunigen.",
+  }),
+  note({
+    lessonId: "b1-23", level: "B1", theoryIds: ["b1-23-t1"], category: "prepositional-pronoun",
+    titleDe: "wo- und da-Komposita", titleAr: "حرف الجر مع السؤال والجواب عن الأشياء",
+    msaBridgeAr: "تستعمل العربية حرف جر مع اسم استفهام أو ضمير، بينما تدمج الألمانية الحرف في مركب خاص عند الإشارة إلى شيء أو فكرة.",
+    tunisianNoteAr: "نقولو «بشنوّة؟ وبيها» أو «على شنوّة؟ وعليها». للأشياء، الألمانية تدمج حرف الجر في كلمة السؤال والجواب؛ مع الأشخاص تستعمل تركيبًا آخر.",
+    differenceImpactAr: "تركيب حرف الجر مع ضمير شخصي لكل شيء ينتج صيغة غير طبيعية، كما أن تعميم مركبات السؤال على الأشخاص خطأ.",
+    germanAnchorDe: "Womit? — Damit. | Worauf? — Darauf.",
+  }),
+  note({
+    lessonId: "b2-04", level: "B2", theoryIds: ["b2-04-t1"], category: "formal-preposition",
+    titleDe: "Formelle Präpositionalstrukturen", titleAr: "التراكيب الرسمية والحالة المحكومة",
+    msaBridgeAr: "تقرب تراكيب مثل «فيما يتعلق» و«نظرًا إلى» الوظيفة الدلالية، لكنها لا تعطي تلقائيًا الحالة التي يحكمها التركيب الألماني.",
+    tunisianNoteAr: "«فيما يخص» و«بالنظر إلى» يقرّبوا المعنى، أمّا ما يحدّدوش وحدهم الحالة الألمانية. احفظ كل تركيب ألماني مع الحالة متاعه.",
+    differenceImpactAr: "التشابه في المعنى قد يخدع المتعلم فيختار حرفًا أو حالة من الترجمة بدل الحكومة الألمانية.",
+    germanAnchorDe: "hinsichtlich + Genitiv | im Hinblick auf + Akkusativ",
+  }),
+  note({
+    lessonId: "b2-05", level: "B2", theoryIds: ["b2-05-t1"], category: "quantitative-precision",
+    titleDe: "Prozent oder Prozentpunkte", titleAr: "النسبة أم النقاط المئوية",
+    msaBridgeAr: "يجب تمييز التغير النسبي من الفرق المباشر بين نسبتين، حتى لو استعمل الكلام اليومي عبارة «بالمئة» للمعنيين.",
+    tunisianNoteAr: "في الكلام اليومي «زاد عشرة بالمية» تنجم تكون غامضة: نسبة نسبية وإلا عشر نقاط؟ في الألمانية الدقيقة لازم تسمّي الوحدة الصحيحة.",
+    differenceImpactAr: "الغموض يضخم البيانات أو يصغرها، ويغيّر معنى الاستنتاج المهني أو الامتحاني.",
+    germanAnchorDe: "um zehn Prozent ≠ um zehn Prozentpunkte",
+  }),
+];
+
+export const tunisianSupportByLesson = tunisianSupportNotes.reduce<Partial<Record<string, TunisianSupportNote[]>>>((byLesson, item) => {
+  (byLesson[item.lessonId] ??= []).push(item);
+  return byLesson;
+}, {});
+
+export function tunisianSupportForMode(lessonId: string, mode: ArabicSupportMode | undefined): TunisianSupportNote[] {
+  if (mode !== "tunisian-supported") return [];
+  return tunisianSupportByLesson[lessonId] ?? [];
+}

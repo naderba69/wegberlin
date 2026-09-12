@@ -456,7 +456,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h1-clip-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 61750,
+      "opusSha256": "4679983f33ec80162ed1989598e49e31dec711e3fdceaf1c2e1f7c954c03f2f9"
     },
     {
       "fileId": "goethe-h1-clip-2",
@@ -477,7 +481,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h1-clip-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 59395,
+      "opusSha256": "ad4e464092a94082821c3d6ad985decd1c5809dc5a3c934ecee2c893a9e93cfc"
     },
     {
       "fileId": "goethe-h1-clip-3",
@@ -498,7 +506,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h1-clip-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 67141,
+      "opusSha256": "9116f82e5c63fa42ee9e7b3c2138e1b19114f31a8e3e48fc718350e8c8a0b82f"
     },
     {
       "fileId": "goethe-h1-clip-4",
@@ -519,7 +531,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h1-clip-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 59331,
+      "opusSha256": "6bf18317ede2436d32fd7a250f14483b0461cfd1b80ce5e603c4e916f0688ff9"
     },
     {
       "fileId": "goethe-h1-clip-5",
@@ -540,7 +556,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h1-clip-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 67086,
+      "opusSha256": "ac8b6858f8d53e6f13a179c3912753b318adfcb3c6149103a7b2b3489b6f9034"
     },
     {
       "fileId": "telc-h3-clip-1",
@@ -561,7 +581,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h3-clip-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 45308,
+      "opusSha256": "63100daff9df2561c551df995b491651ec814dc9a6894f6724dd36c4f3006437"
     },
     {
       "fileId": "telc-h3-clip-2",
@@ -582,7 +606,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h3-clip-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 45791,
+      "opusSha256": "f08aaf6db1ea93a2012843e1e4a825a2f3fb3799fb2ba2088f280e518c82fe7a"
     },
     {
       "fileId": "telc-h3-clip-3",
@@ -603,7 +631,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h3-clip-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 43360,
+      "opusSha256": "d1f89719afa136ef554438fca7b7c1ef79cee166cb36ac58e2ae6e2e677612e3"
     },
     {
       "fileId": "telc-h3-clip-4",
@@ -624,7 +656,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h3-clip-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 43087,
+      "opusSha256": "efd2e41fc2bb7cac2d1640b0933d27458f1574aa3f79bd0165945e6d753d0be2"
     },
     {
       "fileId": "telc-h3-clip-5",
@@ -645,7 +681,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h3-clip-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 42897,
+      "opusSha256": "eaa60cd62374ca746ad82b378206d1503f847f57912b1e0c831a25fadb0895b1"
     },
     {
       "fileId": "telc-h1-news",
@@ -666,7 +706,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h1-news.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 160428,
+      "opusSha256": "b8bae6c38293768817e2edf41a27719e20ef7cea284914905fbd449125f95d67"
     },
     {
       "fileId": "goethe-h2-museum-interview-seg-1",
@@ -687,7 +731,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h2-museum-interview-seg-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 194139,
+      "opusSha256": "0daa1f8cae825ab22256923baeb289ace09d79a23212520ee8e99062947ca2bb"
     },
     {
       "fileId": "goethe-h2-museum-interview-seg-2",
@@ -708,7 +756,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h2-museum-interview-seg-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 158200,
+      "opusSha256": "59919e64bd6726adc01ecfdd05885be652d6c195a7c45bf360e175ce2cb69db2"
     },
     {
       "fileId": "goethe-h3-garden-discussion-seg-1",
@@ -729,7 +781,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h3-garden-discussion-seg-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 123944,
+      "opusSha256": "c7c1392c432dba962c64fa2514cf969f5fb7fd04034a7d8a41716d7c8e5cb1a8"
     },
     {
       "fileId": "goethe-h3-garden-discussion-seg-2",
@@ -750,7 +806,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h3-garden-discussion-seg-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 201288,
+      "opusSha256": "7058b2dae1ae23b65841eb60892691e94b13ee57c827b5988acd5edbaf00807c"
     },
     {
       "fileId": "telc-h2-mobility-dialogue-seg-1",
@@ -771,7 +831,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h2-mobility-dialogue-seg-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 137536,
+      "opusSha256": "0ee068f39a2fb07fad2bf2ab35e46d1b9c11882540e5652e46f6f8a83a2becd1"
     },
     {
       "fileId": "telc-h2-mobility-dialogue-seg-2",
@@ -792,7 +856,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/telc-h2-mobility-dialogue-seg-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 156904,
+      "opusSha256": "7a9d080dc43fa34a30c0e1f0aa5509cb36a8290a8f6d60b36918bb62e75bc5dd"
     },
     {
       "fileId": "goethe-h4-wayfinding-lecture-seg-1",
@@ -813,7 +881,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h4-wayfinding-lecture-seg-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 168516,
+      "opusSha256": "2590419857808f1ece57b4a110c557f1a8e34e853d04fb210f37fe8c94eb07ab"
     },
     {
       "fileId": "goethe-h4-wayfinding-lecture-seg-2",
@@ -834,7 +906,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h4-wayfinding-lecture-seg-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 151042,
+      "opusSha256": "b569b64b2da273b374a3dc4edb0a68b86f8ab86bf8d56465508f5cceacbce8fc"
     },
     {
       "fileId": "goethe-h4-wayfinding-lecture-seg-3",
@@ -855,7 +931,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/goethe-h4-wayfinding-lecture-seg-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 140756,
+      "opusSha256": "c332335abf1079274fa304c5305f3c967d24e45b15b84b94b4dd200f178b346e"
     },
     {
       "fileId": "g2-h1-1",
@@ -876,7 +956,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h1-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 41461,
+      "opusSha256": "4ab71ca89ccded805d5aeede183078852f7686bba36f8a4369783d8caab069df"
     },
     {
       "fileId": "g2-h1-2",
@@ -897,7 +981,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h1-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 41295,
+      "opusSha256": "a68a5956354063512ff4446390da8c3e74d8c0e3056deec1b05d7c6c8daa1960"
     },
     {
       "fileId": "g2-h1-3",
@@ -918,7 +1006,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h1-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 42397,
+      "opusSha256": "cabbee55de91c8b5f8f56a5bbcd1553af3f222a3c7997aed323f2abf85558e3b"
     },
     {
       "fileId": "g2-h1-4",
@@ -939,7 +1031,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h1-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 37789,
+      "opusSha256": "aad31042b1aaabace50864e59cb269e12fe14baed31be7602c6739344ca21f44"
     },
     {
       "fileId": "g2-h1-5",
@@ -960,7 +1056,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h1-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 38450,
+      "opusSha256": "c8a0dfd0bfdddb2d3c83addc85ae741b00544428e165a7af18ccc834489e67ce"
     },
     {
       "fileId": "g2-h2",
@@ -981,7 +1081,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 242447,
+      "opusSha256": "f0fe4ec01cd42e40140ac8462c06676eb9e5291c7750651008dbbf0928c29e7f"
     },
     {
       "fileId": "g2-h3",
@@ -1002,7 +1106,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 185326,
+      "opusSha256": "a97d4bd5a79435eb5823bb8c7f1393aff3d545917206c217af70531840e3f703"
     },
     {
       "fileId": "g2-h4-seg-1",
@@ -1023,7 +1131,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h4-seg-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 146263,
+      "opusSha256": "fc10c880c9b3a004f0b9765ed6fca1728edb13021f5b4b8436e1cff7fa69e6b4"
     },
     {
       "fileId": "g2-h4-seg-2",
@@ -1044,7 +1156,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g2-h4-seg-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 162544,
+      "opusSha256": "3ebd1808e0d4fd610c9c0d29db8d99c369c489fc912492d6c09d0681ebebde21"
     },
     {
       "fileId": "t2-h1",
@@ -1065,7 +1181,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 75583,
+      "opusSha256": "c2520b96f4c7b68c3acc92d58b3f174c9a6ff7de26c7fec264d23985a217bbe3"
     },
     {
       "fileId": "t2-h2",
@@ -1086,7 +1206,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 147610,
+      "opusSha256": "9570371b165f8b58f3888deb8148fedee61281a483d17f2015c0815ff2d1cac6"
     },
     {
       "fileId": "t2-h3-1",
@@ -1107,7 +1231,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h3-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14145,
+      "opusSha256": "05309934e1799691d057c29ee50c7451a34f8ddc227fdc4216cabb010df9b719"
     },
     {
       "fileId": "t2-h3-2",
@@ -1128,7 +1256,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h3-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 15876,
+      "opusSha256": "3a9b86d96d44c2b0a83d44271618d0945588bfa32bb1bc47a93782f597c733bc"
     },
     {
       "fileId": "t2-h3-3",
@@ -1149,7 +1281,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h3-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16694,
+      "opusSha256": "3f6533767eb384dc2e5f5b9795437ceb7462b5ccfb00c82abdf277647cd1154d"
     },
     {
       "fileId": "t2-h3-4",
@@ -1170,7 +1306,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h3-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16064,
+      "opusSha256": "0f6c628c93fe44574dcb3a86f2de6f3ceb972fc6b987b7a2d3329423136a9649"
     },
     {
       "fileId": "t2-h3-5",
@@ -1191,7 +1331,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t2-h3-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 15189,
+      "opusSha256": "5d92156dc785fad8f8fea80171201fa0571d4fd7cccf967b32e2f2ce804c8ae5"
     },
     {
       "fileId": "g3-h2",
@@ -1212,7 +1356,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 185379,
+      "opusSha256": "e12f3c7350cf80579c274a7e7b5506eeedec3cb0fb3b9232d750d72b3eaf58de"
     },
     {
       "fileId": "g3-h3",
@@ -1233,7 +1381,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 130283,
+      "opusSha256": "d1512b43ae5d4cb784e5f69a3d3446256ce34a5030f91133f79f28c6454ec920"
     },
     {
       "fileId": "g3-h4",
@@ -1254,7 +1406,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 207450,
+      "opusSha256": "eefea089889ade1da6772957f4a79c5078988213f91f333a94f79bb62383958a"
     },
     {
       "fileId": "t3-h1",
@@ -1275,7 +1431,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 52573,
+      "opusSha256": "e160fcbb7ab97a972d204e0fd22495ab863e07d407d2b9aa801e9349986595fe"
     },
     {
       "fileId": "t3-h2",
@@ -1296,7 +1456,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 92315,
+      "opusSha256": "d812d3e7c86add2f52354bcf3924af439ad3e85e47b34358c3fcf626505b5ff3"
     },
     {
       "fileId": "t3-h3-1",
@@ -1317,7 +1481,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h3-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 12581,
+      "opusSha256": "9528a7797b2d2efaf15b057d95ac85f6ca5f272893b5087ec77c5c0dccd76fe7"
     },
     {
       "fileId": "t3-h3-2",
@@ -1338,7 +1506,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h3-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14658,
+      "opusSha256": "a22c62510cd9d49a3c3c2bcdbb896bccba4871c2f9b9705f7128ea7f70010135"
     },
     {
       "fileId": "t3-h3-3",
@@ -1359,7 +1531,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h3-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14033,
+      "opusSha256": "6c94213702acb780d7ead4bd0125fb435cbf5e21c77c4b4fcb4696775c691328"
     },
     {
       "fileId": "t3-h3-4",
@@ -1380,7 +1556,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h3-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 10916,
+      "opusSha256": "5e075bc2ea8cfe6bd7222d875d59f2f21d5220d4685cbb5db87ee7f8b217002e"
     },
     {
       "fileId": "t3-h3-5",
@@ -1401,7 +1581,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t3-h3-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14051,
+      "opusSha256": "e1c2a2d9e08ed3bb569fb1c5cd03717fb91026d74d698aa56be7f07c404444b9"
     },
     {
       "fileId": "g3-h1-1",
@@ -1422,7 +1606,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h1-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 20680,
+      "opusSha256": "c00b9643ba827b2b5fb8978bd63ea0fd6213d122045e4a7d14ddaf5ee88b6209"
     },
     {
       "fileId": "g3-h1-2",
@@ -1443,7 +1631,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h1-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 20992,
+      "opusSha256": "d8b7a7e56385240c6296bd7fe9031308362d640b9d33b064c3dbb1f7cd4a3c43"
     },
     {
       "fileId": "g3-h1-3",
@@ -1464,7 +1656,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h1-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16660,
+      "opusSha256": "282ec197e1f427398a71da1d965cf92f5a5b51caa51186049be4981d340e2536"
     },
     {
       "fileId": "g3-h1-4",
@@ -1485,7 +1681,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h1-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16752,
+      "opusSha256": "86f326e84b8b077a04e52e40c36d29652fb7d984f3a79c51f271615059c11ecc"
     },
     {
       "fileId": "g3-h1-5",
@@ -1506,7 +1706,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g3-h1-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 19881,
+      "opusSha256": "d61873f5769a76c64c082ddfd4dd870a12cc3eff2c9a2df7638b5c7f672e801b"
     },
     {
       "fileId": "g4-h1-1",
@@ -1527,7 +1731,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h1-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16916,
+      "opusSha256": "9440ac17512c57fee043bc211b86431820bf272080eebff97abbd0c69e16ece8"
     },
     {
       "fileId": "g4-h1-2",
@@ -1548,7 +1756,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h1-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16656,
+      "opusSha256": "52548065104051e20eaf3a2df6fbdd5284e74b4729a62d8d181a9c49bd90d49d"
     },
     {
       "fileId": "g4-h1-3",
@@ -1569,7 +1781,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h1-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14697,
+      "opusSha256": "b98f0cdcc68c48aa68c1c87b11501aaccdc62366b9bb83d0dfa228f0959faee7"
     },
     {
       "fileId": "g4-h1-4",
@@ -1590,7 +1806,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h1-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 14787,
+      "opusSha256": "ed6b3d7baf52812c387d58b6ac312deb522fce7a80aa7c149554b78317be3aa3"
     },
     {
       "fileId": "g4-h1-5",
@@ -1611,7 +1831,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h1-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 19433,
+      "opusSha256": "c9f97a7b3573d1febb56fad2f6a1173875f199fbfdff709a16bd8db7a2b13567"
     },
     {
       "fileId": "g4-h2",
@@ -1632,7 +1856,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 151321,
+      "opusSha256": "2d52a38bbb869bbf6d8445f968a0efa2c0a7fa7809a9a7b98e5066e8d8d69153"
     },
     {
       "fileId": "g4-h3",
@@ -1653,7 +1881,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 123510,
+      "opusSha256": "b4085a7275f3353f43c2a4e7b31eb40a0f2485a024d5e0b9d71403b32ce60ad8"
     },
     {
       "fileId": "g4-h4",
@@ -1674,7 +1906,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g4-h4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 189086,
+      "opusSha256": "f152427d810898cff28f8e95b0abbe34f7977be594c11c54fa73b619aa82bffe"
     },
     {
       "fileId": "t4-h1",
@@ -1695,7 +1931,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 48670,
+      "opusSha256": "7d4a8db88165859baf5db990272b9fde4a991ed84d426b36cf905865db4f6b91"
     },
     {
       "fileId": "t4-h2",
@@ -1716,7 +1956,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 84265,
+      "opusSha256": "fe50746d65d6f908f3b8dfeb2d44fa258a5edd8f0272af5ab9f3a2c8c21c1223"
     },
     {
       "fileId": "t4-h3-1",
@@ -1737,7 +1981,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h3-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 7746,
+      "opusSha256": "45eb403ebbf5ef3065422ed381a0608c0611109a62fcd1ed32ef99047e7eede0"
     },
     {
       "fileId": "t4-h3-2",
@@ -1758,7 +2006,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h3-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 9791,
+      "opusSha256": "73f66ce4b794f50526d5223464c88c649644cda0d03e1cdf321bf333a1f6d26f"
     },
     {
       "fileId": "t4-h3-3",
@@ -1779,7 +2031,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h3-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 8654,
+      "opusSha256": "6f1aeaff951dccafbb72720f71ffe099085ef9580de347eb50227c4f01421bab"
     },
     {
       "fileId": "t4-h3-4",
@@ -1800,7 +2056,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h3-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 11169,
+      "opusSha256": "a9e9e0bd1efd5ceb7d395c55c4de53c71ed039e9b45458706a892b352d6226e1"
     },
     {
       "fileId": "t4-h3-5",
@@ -1821,7 +2081,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t4-h3-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 8852,
+      "opusSha256": "5c2a5150db802b459f120a96dc50693e6a01ecd9abf2149589e5dc767f657406"
     },
     {
       "fileId": "g5-h2",
@@ -1842,7 +2106,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 134207,
+      "opusSha256": "c33daada287f57153e2b0e8aaecedbf9d380fc70fcbb3fd02b2ed5d3eda462b6"
     },
     {
       "fileId": "g5-h3",
@@ -1863,7 +2131,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 113732,
+      "opusSha256": "4b0388bfb78ac74e15298ffb353b32fda71a45aeb55d74eb1a7f51d9b338e4cd"
     },
     {
       "fileId": "g5-h4",
@@ -1884,7 +2156,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 160295,
+      "opusSha256": "2298b840776bafd95506ee11b973f9eee0c0ff64e803cea64aed2a44c01e441e"
     },
     {
       "fileId": "t5-h1",
@@ -1905,7 +2181,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 47056,
+      "opusSha256": "f61b85915a0088cdba9155f52027777025c80eb498fc68cac575165ffbd9f455"
     },
     {
       "fileId": "t5-h2",
@@ -1926,7 +2206,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 78169,
+      "opusSha256": "9a6dd33bc808d673fc65b1c9fbc3f9dbdcff6d5eb26159ce31aaedc45f0f07e1"
     },
     {
       "fileId": "t5-h3-1",
@@ -1947,7 +2231,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h3-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 8265,
+      "opusSha256": "14ebcc85088da01d6be0627ecaff1ca5fc51b08285fe8ff5c0657cb2e4e7a0c9"
     },
     {
       "fileId": "t5-h3-2",
@@ -1968,7 +2256,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h3-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 9347,
+      "opusSha256": "4bba4c84564401e4a05461609003159ce55ca33748ea3507706f27d88ecca74e"
     },
     {
       "fileId": "t5-h3-3",
@@ -1989,7 +2281,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h3-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 9302,
+      "opusSha256": "f4e285e5c5f2de8ca95cece3acf839640d849f2ec43b98c3a319578cb309d73d"
     },
     {
       "fileId": "t5-h3-4",
@@ -2010,7 +2306,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h3-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 6986,
+      "opusSha256": "e93a4d95d93724828ca765f2ebee23eb15893a52b8d98daf848d8d3f138a04c5"
     },
     {
       "fileId": "t5-h3-5",
@@ -2031,7 +2331,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t5-h3-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 7546,
+      "opusSha256": "8c0551ea56601b04355b5398066ee41ccd87e0000b9a278fb9eaf1fefa32fa7a"
     },
     {
       "fileId": "g5-h1-1",
@@ -2052,7 +2356,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h1-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 15048,
+      "opusSha256": "0b7e46927f2975d6ce607178946bf3164c2d099c8f89e05d3fe24913e1391bed"
     },
     {
       "fileId": "g5-h1-2",
@@ -2073,7 +2381,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h1-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 19469,
+      "opusSha256": "6e9a395e65c47a4358225615e3a0e6f1cb5fe61216d871258c5c80c27b27f336"
     },
     {
       "fileId": "g5-h1-3",
@@ -2094,7 +2406,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h1-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 17707,
+      "opusSha256": "d430f8e5ae0c1f7deeb618c0b23cb12332d497f26161a9bf76a349e0712f382b"
     },
     {
       "fileId": "g5-h1-4",
@@ -2115,7 +2431,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h1-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16384,
+      "opusSha256": "fbe9adfbe4e0a3265c9b881d8ebd7a3bd49a7b8297fc28310f7b932db2d2d0fa"
     },
     {
       "fileId": "g5-h1-5",
@@ -2136,7 +2456,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g5-h1-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 17996,
+      "opusSha256": "0c5411ac62b4bf33d57e3af1489fa564aea24d7e05b3a565efd000da59b43b1a"
     },
     {
       "fileId": "g6-h1-1",
@@ -2157,7 +2481,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h1-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 13317,
+      "opusSha256": "99cb19be5cdb3b4d07e24b1b33bb6fa2eeff40d0c015de8fcb2374c65c88deb3"
     },
     {
       "fileId": "g6-h1-2",
@@ -2178,7 +2506,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h1-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 13572,
+      "opusSha256": "9d2c89fe225329cee7a80bc2c7cc416c5a0a0a42a459e57c5077ec262962a339"
     },
     {
       "fileId": "g6-h1-3",
@@ -2199,7 +2531,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h1-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 11856,
+      "opusSha256": "4618f343df9673c3eee0cb8807328e48341a71e990df768afe2cf7c5a6e04186"
     },
     {
       "fileId": "g6-h1-4",
@@ -2220,7 +2556,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h1-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 11792,
+      "opusSha256": "fc90974b7eac0dcb7b83809f1442f35a3c89418ed75dcfd567fcecddcaae1fe0"
     },
     {
       "fileId": "g6-h1-5",
@@ -2241,7 +2581,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h1-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 16753,
+      "opusSha256": "70f8b5f42e9ce67eb1e07b2edef708a4a5eec7a4c897df8d51fdbf5b4088c018"
     },
     {
       "fileId": "g6-h2",
@@ -2262,7 +2606,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 129593,
+      "opusSha256": "8b60ac7e3b40c9f72d8f263552464b4653759812d2d13273264f0a8e25ca6f52"
     },
     {
       "fileId": "g6-h3",
@@ -2283,7 +2631,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 100152,
+      "opusSha256": "f2a5697771cee6bec036fcbcd2f211d575b04c848b5b5deae86bd92f63fd7ec3"
     },
     {
       "fileId": "g6-h4",
@@ -2304,7 +2656,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/g6-h4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 133616,
+      "opusSha256": "7649c0235f3d7cb4cdf627aa64d64fcd2b7f45678371633f9cfa4afc9a7ff6e5"
     },
     {
       "fileId": "t6-h1",
@@ -2325,7 +2681,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49347,
+      "opusSha256": "0360928ace68a70a2bc8c4a31ed8db6088e141dfddda0f0be2d8e2fef8c1bed0"
     },
     {
       "fileId": "t6-h2",
@@ -2346,7 +2706,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 85757,
+      "opusSha256": "5607d3ca2e6d29659650e43355e246149c221521d0a552a17e982160227a4119"
     },
     {
       "fileId": "t6-h3-1",
@@ -2367,7 +2731,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h3-1.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 7600,
+      "opusSha256": "1dde3e8fcd0623d9090be60edef44b7dced347190d55272cc83d235ec203ccf3"
     },
     {
       "fileId": "t6-h3-2",
@@ -2388,7 +2756,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h3-2.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 10029,
+      "opusSha256": "08ab2be5de12af16f11fbb315e56c9f957a205509766de8b87f398db2ffc4417"
     },
     {
       "fileId": "t6-h3-3",
@@ -2409,7 +2781,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h3-3.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 8871,
+      "opusSha256": "89933015eb8c31fbb4d89e8b794e07a609128e8d8b6c69337bd9aee107f6b6c3"
     },
     {
       "fileId": "t6-h3-4",
@@ -2430,7 +2806,11 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h3-4.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 9055,
+      "opusSha256": "2520be8537d65efb10a35a39e28a6106384cd9bbd34680d835d5ac3d6bed5c5d"
     },
     {
       "fileId": "t6-h3-5",
@@ -2451,7 +2831,13 @@
       "synthesisProvider": "Arena.ai speech synthesis",
       "sourceContent": "original-exam-practice-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/exams/t6-h3-5.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 6835,
+      "opusSha256": "1dfce51419475b80e96144bf4922b4e0b0df4861781a93bbfc02a6703b542ac7"
     }
-  ]
+  ],
+  "opusAssetCount": 96,
+  "opusPolicyVersion": "optional-opus-with-mp3-fallback-v1"
 }

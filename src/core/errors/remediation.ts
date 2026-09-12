@@ -1,5 +1,6 @@
 import { normalizeGermanText } from "@/core/lesson/evaluate";
 import type { ErrorRecord } from "@/types/learning";
+import { classifyErrorRecord } from "./pattern";
 
 export function errorCorrectionVariants(expected: string) {
   return expected
@@ -22,6 +23,15 @@ export function errorRepairState(error: ErrorRecord, now = new Date()): ErrorRep
   if (error.resolved) return "confirmed";
   if ((error.repairCount ?? 0) === 0 || !error.nextReviewAt) return "untreated";
   return Date.parse(error.nextReviewAt) <= now.getTime() ? "due" : "waiting";
+}
+
+export function recordFailedErrorRepair(error: ErrorRecord, now = new Date()): ErrorRecord {
+  return classifyErrorRecord({
+    ...error,
+    resolved: false,
+    failedRepairCount: (error.failedRepairCount ?? 0) + 1,
+    lastFailedRepairAt: now.toISOString(),
+  });
 }
 
 export function applySuccessfulErrorRepair(error: ErrorRecord, now = new Date()): ErrorRecord {

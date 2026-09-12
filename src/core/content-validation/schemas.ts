@@ -365,12 +365,12 @@ export const nounGrammarEntrySchema = z.object({
   lessonId: id,
   lemma: text,
   article: z.enum(["der", "die", "das"]),
-  gender: z.enum(["masculine", "feminine", "neuter"]),
+  gender: z.enum(["masculine", "feminine", "neuter", "plural-only"]),
   meaningAr: text,
-  plural: z.object({ form: text.nullable(), noteAr: text }).strict(),
-  caseForms: z.object({ nominative: text, accusative: text, dative: text }).strict(),
+  plural: z.object({ form: text.nullable(), noteAr: text, dativeForm: text.optional() }).strict(),
+  caseForms: z.object({ nominative: text, accusative: text, dative: text, genitive: text.optional() }).strict(),
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
 }).strict();
 
 export const verbPrepositionFrameSchema = z.object({
@@ -384,5 +384,29 @@ export const verbPrepositionFrameSchema = z.object({
   exampleDe: text,
   contrastAr: text,
   firstStructuredStage: z.literal("vocabulary"),
-  sourceVersion: z.literal("a1-lexical-grammar-v1"),
+  sourceVersion: z.enum(["a1-lexical-grammar-v1", "a2-lexical-grammar-v1", "b1-lexical-grammar-v1", "b2-lexical-grammar-v1"]),
+}).strict();
+
+export const tunisianSupportNoteSchema = z.object({
+  id,
+  lessonId: id,
+  level: cefrLevel,
+  theoryIds: z.array(id).min(1),
+  category: z.enum([
+    "question-order", "origin-location", "possessive-gender", "verb-second", "case-role",
+    "perfect-bracket", "temporal-connector", "modal-negation", "subordinate-clause",
+    "relative-pronoun", "passive-focus", "reported-distance", "prepositional-pronoun",
+    "quantitative-precision", "formal-preposition",
+  ]),
+  titleDe: text,
+  titleAr: text,
+  msaBridgeAr: text,
+  tunisianNoteAr: text,
+  differenceImpactAr: text,
+  germanAnchorDe: text,
+  visibleFor: z.tuple([z.literal("tunisian-supported")]),
+  reviewStatus: z.enum(["authored-review-pending", "independently-reviewed"]),
+  reviewedBy: text.optional(),
+  reviewedAt: text.optional(),
+  sourceVersion: z.literal("tunisian-support-v1"),
 }).strict();

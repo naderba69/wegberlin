@@ -20,7 +20,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 45231,
+      "opusSha256": "824d0dcac316c3abd556324ca63b3a0828ca749bdebc2dcd64bee4c43bdceea5"
     },
     {
       "itemId": "lib-l-a1-02",
@@ -36,7 +40,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 40907,
+      "opusSha256": "e5231bb562995b1a8cf46f859619978382d5f4c6ff4112fa0617b6ad8107e21a"
     },
     {
       "itemId": "lib-l-a2-01",
@@ -52,7 +60,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 52205,
+      "opusSha256": "962c0b6b61054a27d359095523d93871815ab35c5c879434d09e6d93d33fbef0"
     },
     {
       "itemId": "lib-l-a2-02",
@@ -68,7 +80,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 45352,
+      "opusSha256": "4b69d39d9a8c193a4402308974b9cf77812929fe9fb4c2eec95b8382fc902581"
     },
     {
       "itemId": "lib-l-a2-03",
@@ -84,7 +100,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49761,
+      "opusSha256": "75bdff55c2e82d4b6aa177038c17b9927a84badbebd36a36bd936bba1b1d5759"
     },
     {
       "itemId": "lib-l-b1-01",
@@ -100,7 +120,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73947,
+      "opusSha256": "663688053c3a5ff633fcb9370a19fc4cdfdc065cc4a0e0dda73c6675074a9dd3"
     },
     {
       "itemId": "lib-l-b1-02",
@@ -116,7 +140,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 62844,
+      "opusSha256": "8b878097714cbc7281d5334b837dc34539a3fb773a4c50dceb126144ebe33e61"
     },
     {
       "itemId": "lib-l-b1-03",
@@ -132,7 +160,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 68485,
+      "opusSha256": "51100b822962b8d1ca51bcb1b53d9862360c7b60d05e36ed1d4978d18ed23804"
     },
     {
       "itemId": "lib-l-b2-01",
@@ -148,7 +180,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 82095,
+      "opusSha256": "37732bce12371e95f08f562f6f4683936be1d43e3d048dcba480b3b3dd59cef5"
     },
     {
       "itemId": "lib-l-b2-02",
@@ -164,7 +200,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 83345,
+      "opusSha256": "4e36b02f0cf09bc519dd2fe6f8b94b7577af61c6377c3bdcac9e8d0c874fd0fb"
     },
     {
       "itemId": "lib-l-a1-03",
@@ -180,7 +220,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 39483,
+      "opusSha256": "89b6ee913ffcfec701319d474c703cf2262ffd07efe33b25f6b179a6e929ff48"
     },
     {
       "itemId": "lib-l-a1-04",
@@ -196,7 +240,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 40114,
+      "opusSha256": "c02c5494d760bdc033e062a6bd8b1948e26f56a29e7663f7f5ac14f8dffb6a0f"
     },
     {
       "itemId": "lib-l-a2-04",
@@ -212,7 +260,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 53936,
+      "opusSha256": "9e9b48387f8a17d534a562f4ce4972dcb173185f6f541413a819229bbfb027c7"
     },
     {
       "itemId": "lib-l-a2-05",
@@ -228,7 +280,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 44951,
+      "opusSha256": "43bb6e29ac41ca646aab14abff6ac23269d42567ce740fd5903f92b36bff84ca"
     },
     {
       "itemId": "lib-l-a2-06",
@@ -244,7 +300,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 47015,
+      "opusSha256": "db4b52dc7a7eec1de5417e83e7d8bfedc742fdb109b22d7241e929136320fe04"
     },
     {
       "itemId": "lib-l-b1-04",
@@ -260,7 +320,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 71772,
+      "opusSha256": "3981fe9a6525165afd5d765d409dfd34498db8377c1b96084cbcd3dee0434703"
     },
     {
       "itemId": "lib-l-b1-05",
@@ -276,7 +340,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 65136,
+      "opusSha256": "6e9782a273ea7ca5d6f7f776c83a30e13eb8b1b04507defe47b0ac57d7edeb7a"
     },
     {
       "itemId": "lib-l-b1-06",
@@ -292,7 +360,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 66784,
+      "opusSha256": "940be586d721a8177ddc4929de2df0115ebbc61bc6d178be18c101cd6998475f"
     },
     {
       "itemId": "lib-l-b2-03",
@@ -308,7 +380,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 76665,
+      "opusSha256": "c90bd02cc540f00c64dc4a4f71fb4be4d5df7fe4f1892853b40f786f25f2fc71"
     },
     {
       "itemId": "lib-l-b2-04",
@@ -324,7 +400,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 88766,
+      "opusSha256": "1c52e05a3a30fec0484105ccc3de880458d8fda294124b2568101e0df7f6d7a9"
     },
     {
       "itemId": "lib-l-a1-05",
@@ -340,7 +420,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 28864,
+      "opusSha256": "68e284a0a11ba92edb0077c973cdc6285b00a57c52db1bb895ed62c35f3348c2"
     },
     {
       "itemId": "lib-l-a1-06",
@@ -356,7 +440,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 38548,
+      "opusSha256": "0ab84277d86441d1cc09fe0a8993fdefbe35ea788f041e7fd553465319151da7"
     },
     {
       "itemId": "lib-l-a2-07",
@@ -372,7 +460,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 51072,
+      "opusSha256": "94a3707e96131a7af5014a2da478837a5756c76f08a6c7277f1a9dea7b8dd145"
     },
     {
       "itemId": "lib-l-a2-08",
@@ -388,7 +480,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 48215,
+      "opusSha256": "c134ee1b69bf85bc84e1194ba4c5bccd2fb62e89b05ce58273c91096bb84c2cf"
     },
     {
       "itemId": "lib-l-a2-09",
@@ -404,7 +500,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 54473,
+      "opusSha256": "07059ecf7df7de32f9f622fc198c71930f97aa7cb0af27a01f04be38b4c5deb3"
     },
     {
       "itemId": "lib-l-b1-07",
@@ -420,7 +520,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73729,
+      "opusSha256": "4cbf87d3044f46755148887725ba7156948b243c2510f0930187ca7d11c86765"
     },
     {
       "itemId": "lib-l-b1-08",
@@ -436,7 +540,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 64460,
+      "opusSha256": "b46e2b5696bd3facc18acf0661db3e74890fe8fa482b951c07e4abc8cf398fc4"
     },
     {
       "itemId": "lib-l-b1-09",
@@ -452,7 +560,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73812,
+      "opusSha256": "e6d1d840b0d8676f6aa7ef71bfa4eff1729ce94d787e290ca4dc7f9339896820"
     },
     {
       "itemId": "lib-l-b2-05",
@@ -468,7 +580,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 86552,
+      "opusSha256": "b0538bc83f73c732065c5b81e6dd96baaa118d9277cef7dda670b831621694df"
     },
     {
       "itemId": "lib-l-b2-06",
@@ -484,7 +600,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 82686,
+      "opusSha256": "9cfe9b698564e9ab6da934229eeaed19009b6e5338d6b028a2aff7256d93745b"
     },
     {
       "itemId": "lib-l-a1-07",
@@ -500,7 +620,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 41688,
+      "opusSha256": "524aa8e9d7bd154cee00d6e7aa3920a7145d054a3c5371be20ad96da4711b3f8"
     },
     {
       "itemId": "lib-l-a1-08",
@@ -516,7 +640,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 44933,
+      "opusSha256": "f2041021bc16d095867ade2fa3deee7dabb97d631a382fe30b6eff21580dcb0d"
     },
     {
       "itemId": "lib-l-a2-10",
@@ -532,7 +660,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 41960,
+      "opusSha256": "97f5280e59b40607361799ef781c9268aabdbc07536e1d485b6e7c617fca28fb"
     },
     {
       "itemId": "lib-l-a2-11",
@@ -548,7 +680,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 48546,
+      "opusSha256": "e55a3c8bfce78aad67b5159ec89d3762a59baa641c016f19fba165b276c232e2"
     },
     {
       "itemId": "lib-l-a2-12",
@@ -564,7 +700,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 52228,
+      "opusSha256": "3d58bf037a77505149cc0cccdb2099fb67da083923b3bab9b42bd1b704c82c6d"
     },
     {
       "itemId": "lib-l-b1-10",
@@ -580,7 +720,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 56929,
+      "opusSha256": "a2d78bca5f3b5471c8cb6ef3498aeb99a7cc12bae96a862a0984559a2237fa28"
     },
     {
       "itemId": "lib-l-b1-11",
@@ -596,7 +740,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 62013,
+      "opusSha256": "54bd0c62399334c78364a8228ebc78df47cfebf5ef0a262bf1c6c54a67d368bb"
     },
     {
       "itemId": "lib-l-b1-12",
@@ -612,7 +760,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 59866,
+      "opusSha256": "f693ffbb4e10a3071bd5a8a49f597048fa434aca8e7939288c7295ddb83486f6"
     },
     {
       "itemId": "lib-l-b2-07",
@@ -628,7 +780,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 65037,
+      "opusSha256": "f2978ace27178009b15381cc7062d2a6386e6d8dc77c4a3f72c0001cf0bc26ac"
     },
     {
       "itemId": "lib-l-b2-08",
@@ -644,7 +800,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73246,
+      "opusSha256": "5bbcf46430c8b0c61a1dc1ac3da3699410a26390d23112396393c5e1466464df"
     },
     {
       "itemId": "lib-l-a1-09",
@@ -660,7 +820,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49075,
+      "opusSha256": "04b2257a9499cfae3b32a38c39838cb6fba8c1628af108896e1f617165100b99"
     },
     {
       "itemId": "lib-l-a1-10",
@@ -676,7 +840,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 33789,
+      "opusSha256": "2f2b52e435e56abe62eb2fdf16c92b97fb02d3808e0420b28cc715777225f3e7"
     },
     {
       "itemId": "lib-l-a2-13",
@@ -692,7 +860,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 52690,
+      "opusSha256": "f80b923fd807f933f5bdcae490fbaefee2ccad7cc26784b1fefd4737c890413e"
     },
     {
       "itemId": "lib-l-a2-14",
@@ -708,7 +880,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 50590,
+      "opusSha256": "3f4c4253cba761825e73d5efb441b052958bb865a3ca8bb6ca3db4a504a4a434"
     },
     {
       "itemId": "lib-l-a2-15",
@@ -724,7 +900,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 51196,
+      "opusSha256": "a96c44ded3c662f727ca2a4101a9653eb51dcaecb9a11a1ff7dfcedbca5ac3d9"
     },
     {
       "itemId": "lib-l-b1-13",
@@ -740,7 +920,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 71238,
+      "opusSha256": "d60c2b062539a2fbe3889f38e7fd08d9c3a7b8b00b0a330f9f12a25fedb7fe77"
     },
     {
       "itemId": "lib-l-b1-14",
@@ -756,7 +940,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 63406,
+      "opusSha256": "8b1b1819993b8325c0e086227f97427d13912ac9d73fea9742949a736ca17abd"
     },
     {
       "itemId": "lib-l-b1-15",
@@ -772,7 +960,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 69005,
+      "opusSha256": "d874ac4adbbd607054c7fbff70a2821286044fdbe64dc1009b8f2e4409c3dc6a"
     },
     {
       "itemId": "lib-l-b2-09",
@@ -788,7 +980,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49226,
+      "opusSha256": "262e0f2bbc8ba011ebd080b3ebef57d6a186e41de12ee2f2b78323b6ecc820dd"
     },
     {
       "itemId": "lib-l-b2-10",
@@ -804,7 +1000,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 79120,
+      "opusSha256": "81c6d1671a0d34579c11ab81c1df91fed35c1abfcb2c1aa019b8c19291ba587b"
     },
     {
       "itemId": "lib-l-a1-11",
@@ -820,7 +1020,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 43391,
+      "opusSha256": "f8b2ecaf432fff6e7949ad2e400ac10bb4d073e4e9e99e375678ad8be784f383"
     },
     {
       "itemId": "lib-l-a1-12",
@@ -836,7 +1040,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 36167,
+      "opusSha256": "9b02853faa86bb106e65d50e07cee7756ac90a366304694826beaf920c30ea83"
     },
     {
       "itemId": "lib-l-a2-16",
@@ -852,7 +1060,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 39076,
+      "opusSha256": "adc55be301a8b5e1ebb552e9c317e75af07c8dea187d44ce03f1f2d1e0fa3c69"
     },
     {
       "itemId": "lib-l-a2-17",
@@ -868,7 +1080,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-17.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 39419,
+      "opusSha256": "71053787d42229fe4e2c624f800f61ee0ecf63b2c2abfcbd72fadd1d9a67887e"
     },
     {
       "itemId": "lib-l-a2-18",
@@ -884,7 +1100,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-18.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 48032,
+      "opusSha256": "c08c8d968bb1fc1cbbc1f9da5b29a2ff136a321e37131337f91ebf462929cd8b"
     },
     {
       "itemId": "lib-l-b1-16",
@@ -900,7 +1120,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49922,
+      "opusSha256": "fb94bf638441c3c802a116876fd4699a214eef5aee8a317966122467c66bce89"
     },
     {
       "itemId": "lib-l-b1-17",
@@ -916,7 +1140,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-17.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 58267,
+      "opusSha256": "8fa8be6140eadbaacb69ea09975f5c6278ff1977a1acb87112905891b9564ad4"
     },
     {
       "itemId": "lib-l-b1-18",
@@ -932,7 +1160,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-18.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 54389,
+      "opusSha256": "d4a264a9490caaeee37383dd6cafceddcbf4769ad8e4b9f8710f78154fc06c80"
     },
     {
       "itemId": "lib-l-b2-11",
@@ -948,7 +1180,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 62739,
+      "opusSha256": "f30dd4f9c495951baa01a0fa1cba1516387281dd8abe3302e65868238b55d62f"
     },
     {
       "itemId": "lib-l-b2-12",
@@ -964,7 +1200,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 75294,
+      "opusSha256": "7bf00a2d2deb2436f6cb177fc6363ca4b3a2678b6b3708e6a1eabb5adc87f390"
     },
     {
       "itemId": "lib-l-a1-13",
@@ -980,7 +1220,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 37193,
+      "opusSha256": "02c2c78b64011e785eda770be2cd559dee064ab82b9fa711d92490624f8fb9cb"
     },
     {
       "itemId": "lib-l-a1-14",
@@ -996,7 +1240,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 36497,
+      "opusSha256": "0bf3f4ad41528fb16593ced2b5c27cf0431b6adfedb7bb0171882cc448b8ea29"
     },
     {
       "itemId": "lib-l-a2-19",
@@ -1012,7 +1260,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-19.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 46231,
+      "opusSha256": "cb249ee691e607609750f48d8368b7436b555a65e048d466750776f162dae7c9"
     },
     {
       "itemId": "lib-l-a2-20",
@@ -1028,7 +1280,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-20.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 39365,
+      "opusSha256": "0c55a7c11bc1ffcde13b71068afe2d7f0dc78d81e16a601d4ea47a65a460c73c"
     },
     {
       "itemId": "lib-l-a2-21",
@@ -1044,7 +1300,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-21.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 44899,
+      "opusSha256": "15a190f57c199f018eda66c58eec58c108fd75736abb010a44778511769b0b40"
     },
     {
       "itemId": "lib-l-b1-19",
@@ -1060,7 +1320,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-19.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73784,
+      "opusSha256": "65f20bd7a321fec81c9c4904a65f042edba3d4b121727db1e08c6b2f6e434dd1"
     },
     {
       "itemId": "lib-l-b1-20",
@@ -1076,7 +1340,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-20.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 44248,
+      "opusSha256": "110876a5a6128ae618697c089db550c85a0ca74c64ffd8925897158209c8ea38"
     },
     {
       "itemId": "lib-l-b1-21",
@@ -1092,7 +1360,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-21.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 49480,
+      "opusSha256": "cd04cec9d9ff5b8963f50ee257f6e618740a8be0d4e80b8cd4785a239bb9b6a3"
     },
     {
       "itemId": "lib-l-b2-13",
@@ -1108,7 +1380,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 69786,
+      "opusSha256": "b1392b3ceb369356d32901262977897fcc8ac76840f4e7293f6dffb2f5a9b665"
     },
     {
       "itemId": "lib-l-b2-14",
@@ -1124,7 +1400,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 63259,
+      "opusSha256": "80dac943f76986a225751ff5dcf6b2a35eeb4adff1418d710177583c65641231"
     },
     {
       "itemId": "lib-l-a1-15",
@@ -1140,7 +1420,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 37328,
+      "opusSha256": "059c9e91018c513ecbaf474b6a1774578da99e641fdfd1bce6f96c9204d0e231"
     },
     {
       "itemId": "lib-l-a1-16",
@@ -1156,7 +1440,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a1-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 31671,
+      "opusSha256": "5575e136432f2c6dbc3eccf10689442db179599641361b88e40c01a8147d26c4"
     },
     {
       "itemId": "lib-l-a2-22",
@@ -1172,7 +1460,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-22.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 39397,
+      "opusSha256": "750fa395a3d3aba382ed0bb4ac51a2055fcd1bd239d6fca1146890557c15b79e"
     },
     {
       "itemId": "lib-l-a2-23",
@@ -1188,7 +1480,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-23.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 51574,
+      "opusSha256": "137c031b21c6b52fb2e5294cf49c579dc6e8509042ff959dae661b696ea68a04"
     },
     {
       "itemId": "lib-l-a2-24",
@@ -1204,7 +1500,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-a2-24.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 42540,
+      "opusSha256": "fdba1ec561a5e1c297c9df7a80076d3e20e2c98d14e45acc1b6343ab7fec93c0"
     },
     {
       "itemId": "lib-l-b1-22",
@@ -1220,7 +1520,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-22.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 56918,
+      "opusSha256": "77f803e038ad626ba7d32b9ae8ec1ae6e49e6ec00bb3588d210ab7aa61f81b68"
     },
     {
       "itemId": "lib-l-b1-23",
@@ -1236,7 +1540,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-23.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 54620,
+      "opusSha256": "1fd7786e24e6308f1a603c3c1c5ad5aaff92d616cba26d01836c9f74659a5f3a"
     },
     {
       "itemId": "lib-l-b1-24",
@@ -1252,7 +1560,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b1-24.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 51449,
+      "opusSha256": "ddda5eb7c2ed099d5e7985c7468356e832ac82b5ea9fd58dd0fc3d9009d8bc9e"
     },
     {
       "itemId": "lib-l-b2-15",
@@ -1268,7 +1580,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 59724,
+      "opusSha256": "588e2aad1b442277a15e9b5a8fd1dad95ac1bd98c4500d7cceda5bb3bf5565ba"
     },
     {
       "itemId": "lib-l-b2-16",
@@ -1284,7 +1600,13 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-project-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/library/lib-l-b2-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 73679,
+      "opusSha256": "56d8f94f9fe1855a497bcccc596530bc4526d5242503007fe2888548730285de"
     }
-  ]
+  ],
+  "opusAssetCount": 80,
+  "opusPolicyVersion": "optional-opus-with-mp3-fallback-v1"
 }

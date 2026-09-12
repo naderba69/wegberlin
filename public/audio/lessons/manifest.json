@@ -20,7 +20,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 66048,
+      "opusSha256": "0c00153099e73ad65efe89ac656bf2fd56eee004bbf8f87ff944fdf7c0d10acb"
     },
     {
       "lessonId": "a1-02",
@@ -36,7 +40,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 60368,
+      "opusSha256": "7e3406b1ff5dfcd64299d204829e1dcae2d31427678547254a48f8b53771fc7c"
     },
     {
       "lessonId": "a1-03",
@@ -52,7 +60,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 121988,
+      "opusSha256": "8660905eb59c5380e7451eb844f93f91ff6a18e13e588462c7c44cc73f52af8b"
     },
     {
       "lessonId": "a1-04",
@@ -68,7 +80,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 69956,
+      "opusSha256": "814b8a4983b48e2dccf97055739fb4de38a512548f4e253b313da26dccaaa637"
     },
     {
       "lessonId": "a1-05",
@@ -84,7 +100,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 71594,
+      "opusSha256": "94315be8c6f1f5943a12c49cca1fe868743e46bd49c47440fea057208b8fbb92"
     },
     {
       "lessonId": "a1-06",
@@ -100,7 +120,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 68775,
+      "opusSha256": "26a10a5c238b0b79c9976413cc5069b0f59fc0844b45c69558635bf51d6973de"
     },
     {
       "lessonId": "a1-07",
@@ -116,7 +140,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 65468,
+      "opusSha256": "faee11590db72fe92c371f94d54a7ab94238a3c70a4cdb8e993120a498533d8c"
     },
     {
       "lessonId": "a1-08",
@@ -132,7 +160,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 76772,
+      "opusSha256": "2370299689f1b838ccb97b298144a311a5a832fd39951f8181e3aaf013f28551"
     },
     {
       "lessonId": "a1-09",
@@ -148,7 +180,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 83884,
+      "opusSha256": "79e611c198f53477b2a75ada430a65b05b4aeeabc981c1854c32e76e1ec222a8"
     },
     {
       "lessonId": "a1-10",
@@ -164,7 +200,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 64515,
+      "opusSha256": "05ae37f300209ed7158779bb9c2c6a741c336d687eec3efef0b2b558a876f9cf"
     },
     {
       "lessonId": "a1-11",
@@ -180,7 +220,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 100334,
+      "opusSha256": "176cd9017ca737b05261636fb633a008f4845c3b99186260d3d72ca42ae07aa6"
     },
     {
       "lessonId": "a1-12",
@@ -196,7 +240,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 78462,
+      "opusSha256": "787f21d95215227df397fe4d1df5bd501819a0584de0b209088f638536a22f1c"
     },
     {
       "lessonId": "a1-13",
@@ -212,7 +260,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 72874,
+      "opusSha256": "a51efdde3802d753b2d0c705970577715d4af64946869e03826d3ed633110bd3"
     },
     {
       "lessonId": "a1-14",
@@ -228,7 +280,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 84298,
+      "opusSha256": "7440488c9059cf2ee33b59196c5a67275a9226d62742fc4167f50df9be6ebd72"
     },
     {
       "lessonId": "a1-15",
@@ -244,7 +300,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 85757,
+      "opusSha256": "bc9dc17b0d27af2cf3817b1fa727abf98092e5bffc48962b7c924d118c1d7cc6"
     },
     {
       "lessonId": "a1-16",
@@ -260,7 +320,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 87569,
+      "opusSha256": "20c75f0796206cbd3b57c81ec658818bcfb5c5addd13e735bb68f2d7f476232f"
     },
     {
       "lessonId": "a1-17",
@@ -276,7 +340,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-17.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 81045,
+      "opusSha256": "271c95a83955e15aef1c3188381c54f950310761cd0c061381040958ec56c8d5"
     },
     {
       "lessonId": "a1-18",
@@ -292,7 +360,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-18.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 74238,
+      "opusSha256": "f66d7b6e909ad9c11eda45fb9b65415250ea973df069d559e5b8ffb2c98c4485"
     },
     {
       "lessonId": "a1-19",
@@ -308,7 +380,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-19.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 97316,
+      "opusSha256": "84fea78a486713a526c1b0ff42b667976ee4cc87e66bc4bf4c268294c396d509"
     },
     {
       "lessonId": "a1-20",
@@ -324,7 +400,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-20.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 92457,
+      "opusSha256": "24035d4405a92bedca8ae4e466d2b27097a617353d8a5f6428bf8c22239b3ca5"
     },
     {
       "lessonId": "a1-21",
@@ -340,7 +420,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-21.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 88143,
+      "opusSha256": "ccad02f4c720a3ec733da40ed0457096aa4aaa33ce8b0fa9fa0a1030a1110462"
     },
     {
       "lessonId": "a1-22",
@@ -356,7 +440,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-22.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 66383,
+      "opusSha256": "84f40b21f50db42166e8071bd986c62ff8b04eb6b77ca09dd96c4e83042dbd42"
     },
     {
       "lessonId": "a1-23",
@@ -372,7 +460,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-23.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 95279,
+      "opusSha256": "bd0f69bc7d7f85fd4590da75b3644dd52df811307ea441caa7965d089698ae96"
     },
     {
       "lessonId": "a1-24",
@@ -388,7 +480,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a1-24.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 85030,
+      "opusSha256": "b8c393cbabbb045199a01df7245348e78874b2fa65f100074497ae74b7c3dcd1"
     },
     {
       "lessonId": "a2-01",
@@ -404,7 +500,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 76808,
+      "opusSha256": "a0c32983701b0c46987e8f09d7848da4edbb233bf02484063807dc978c88095d"
     },
     {
       "lessonId": "a2-02",
@@ -420,7 +520,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 102092,
+      "opusSha256": "63b22cc8a88548081f8ab2564f977d21913b948e5a915072977569ff8653e52f"
     },
     {
       "lessonId": "a2-03",
@@ -436,7 +540,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 89745,
+      "opusSha256": "81ff5bfe88c5f94219c082f79abd75419f6142fbf276de41cb64fbedf478127a"
     },
     {
       "lessonId": "a2-04",
@@ -452,7 +560,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 82541,
+      "opusSha256": "d12a3df31fbde27cad2029b4d6b4ddb6142bb95742bad87e6fcdc142b22bafef"
     },
     {
       "lessonId": "a2-05",
@@ -468,7 +580,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 78780,
+      "opusSha256": "f0f05be49ef2d5d6fa43ed5dcd5d361f26d9d2d887647a8dbe3d7bf6c5e06a26"
     },
     {
       "lessonId": "a2-06",
@@ -484,7 +600,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 90492,
+      "opusSha256": "3149b6e53e4ca49ac7e0be13a8d1530706757c0f81cf2f0c6a576cfb25977f04"
     },
     {
       "lessonId": "a2-07",
@@ -500,7 +620,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 89779,
+      "opusSha256": "b0f3c6ca5dcce4bc7c6800b4b5a6a08b26c55f8c356848f6a2c6d6695df42292"
     },
     {
       "lessonId": "a2-08",
@@ -516,7 +640,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 86091,
+      "opusSha256": "f69c13d5fbf0ff45d9db2c550c4897739b363e6c50775cc151f979c39dd29fb0"
     },
     {
       "lessonId": "a2-09",
@@ -532,7 +660,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 113150,
+      "opusSha256": "fa2477c37da52cf5030c230c1240d7e843c6d3dced1720dc50ff129eb35b468c"
     },
     {
       "lessonId": "a2-10",
@@ -548,7 +680,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 96517,
+      "opusSha256": "04489a075058e418cca44e76318408dcd6129d86218ddf21b4233a151b9df153"
     },
     {
       "lessonId": "a2-11",
@@ -564,7 +700,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 99572,
+      "opusSha256": "298a86314ae6d2cde6fd2f7c7a9e4e2d33a4f1581a6e72f8c80b9bee52828618"
     },
     {
       "lessonId": "a2-12",
@@ -580,7 +720,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 95489,
+      "opusSha256": "4c30a42c8ea83641db85b3cc1f285f019b95355635cf9dfecb400660765e6eb2"
     },
     {
       "lessonId": "a2-13",
@@ -596,7 +740,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 95089,
+      "opusSha256": "5ad608c1027461d9288e54b83e66aa6abc507765ef14e991e95f72f068bebc1e"
     },
     {
       "lessonId": "a2-14",
@@ -612,7 +760,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 92019,
+      "opusSha256": "58eec5057548c0215dec08764758029cece1daacd6b8f3f7c09720774b567878"
     },
     {
       "lessonId": "a2-15",
@@ -628,7 +780,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 112802,
+      "opusSha256": "f67555a129f30b79fb46b29f1693eb7df101cbf12d00344724f2586cefac4cd4"
     },
     {
       "lessonId": "a2-16",
@@ -644,7 +800,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 97121,
+      "opusSha256": "ce50060a8bef034e33a925330de5a5eb094617506bfc997e8f69a64ff4c1e780"
     },
     {
       "lessonId": "a2-17",
@@ -660,7 +820,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-17.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 101214,
+      "opusSha256": "456b03c07a2af1bb0557f872d7f8ea111e31656b0beb822123183cab36ea3cb3"
     },
     {
       "lessonId": "a2-18",
@@ -676,7 +840,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-18.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 107470,
+      "opusSha256": "f157e3470f53ab11a951aeddf2367928652aa92f9e31d6f8880d0cd1bcfb7b8e"
     },
     {
       "lessonId": "a2-19",
@@ -692,7 +860,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-19.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 108137,
+      "opusSha256": "43d0d68e794a756e8e93d7ea64ab37955df29bf52964147a49ebb363c43f1b99"
     },
     {
       "lessonId": "a2-20",
@@ -708,7 +880,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-20.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 99939,
+      "opusSha256": "06fd8ab03e7584aaaabc88dff16a7771340eb9e733463bc5000337469b7b09d6"
     },
     {
       "lessonId": "a2-21",
@@ -724,7 +900,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-21.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 109978,
+      "opusSha256": "c92247dc564a8469129e75772913807f858e0ae596881f9bdb7c2ac281824c1b"
     },
     {
       "lessonId": "a2-22",
@@ -740,7 +920,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-22.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 99075,
+      "opusSha256": "0c7d860df12f8163806af784364d4bf0453f96bc6340a8873163643d056a5f93"
     },
     {
       "lessonId": "a2-23",
@@ -756,7 +940,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-23.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 115382,
+      "opusSha256": "d3a815ba59599799a7cd77cf236fffee7620f309ed52799afc68a5a18ee371df"
     },
     {
       "lessonId": "a2-24",
@@ -772,7 +960,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/a2-24.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 123553,
+      "opusSha256": "9e2ebe1434cdcc17a219f6562bd25f3a47f13b90695cc05b95dbc02a9f0c74cf"
     },
     {
       "lessonId": "b1-01",
@@ -788,7 +980,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 131673,
+      "opusSha256": "bbbf53b4e2c57bfe36d534c0acb5a2843c3e10178b5286174d3db1aff27f35c9"
     },
     {
       "lessonId": "b1-02",
@@ -804,7 +1000,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 110016,
+      "opusSha256": "47c33d037572c01a9430381501684a4dfcebe33054df5ff809d2d637d8ba8365"
     },
     {
       "lessonId": "b1-03",
@@ -820,7 +1020,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 118538,
+      "opusSha256": "1a81e0b92d64a98070e1f50abd880b4b53b58f4563eefb447e3298e25600c61a"
     },
     {
       "lessonId": "b1-04",
@@ -836,7 +1040,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 111856,
+      "opusSha256": "bb4a6c690bc52f127b07d2e2c9e9072a92a80bb8c31c8fb0bf3a2d62f781e523"
     },
     {
       "lessonId": "b1-05",
@@ -852,7 +1060,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 114066,
+      "opusSha256": "727616507b1dd1d5f3880cc4e2a401389216df8a205c6a81de6dd329d937eb0e"
     },
     {
       "lessonId": "b1-06",
@@ -868,7 +1080,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 132001,
+      "opusSha256": "a02f5ecad6c4cb8c4fe42409f05f3229775192ababd214b5a3579014ab5b31a5"
     },
     {
       "lessonId": "b1-07",
@@ -884,7 +1100,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 112708,
+      "opusSha256": "53ed87f3a2b9d3b1a17210590470ab58829ef5166ead15861db26a28d4842186"
     },
     {
       "lessonId": "b1-08",
@@ -900,7 +1120,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 109312,
+      "opusSha256": "7aa264934bca6d4723c7181f25368ef5f403bcd948b98f605f6dff9e73954f58"
     },
     {
       "lessonId": "b1-09",
@@ -916,7 +1140,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 138441,
+      "opusSha256": "39cc3d03fc90491dd89fdd59e4ba312f478ddf36d395d9f054e31db1400e68d0"
     },
     {
       "lessonId": "b1-10",
@@ -932,7 +1160,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 105720,
+      "opusSha256": "6dd433fff0dcafa34ab47d21c9c9187e0deeb8a10ad0cd5d0a508b1dbc459151"
     },
     {
       "lessonId": "b1-11",
@@ -948,7 +1180,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 139594,
+      "opusSha256": "f831154ebb5ce0a60211bf0675d0b4c92cdd5963ed42316d2d5a49a00b003085"
     },
     {
       "lessonId": "b1-12",
@@ -964,7 +1200,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 115614,
+      "opusSha256": "9c9d7bc4f8f9a47ce24af3818d30c92d4027d238f9041f36beb905b1e3bdb88d"
     },
     {
       "lessonId": "b1-13",
@@ -980,7 +1220,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-13.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 108131,
+      "opusSha256": "661f90e4ba7d7b0b870e1f6a6e151937d9520b24803eff2567d5dff6308aee1e"
     },
     {
       "lessonId": "b1-14",
@@ -996,7 +1240,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-14.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 113597,
+      "opusSha256": "9b8877d4cdb45afac516cb1c65b5b45be8689eba8f6185006150b14d23822139"
     },
     {
       "lessonId": "b1-15",
@@ -1012,7 +1260,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-15.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 123474,
+      "opusSha256": "99926690d40e75265034d4c4d4d28956f77a9f582c0d6a8c20db53100d04baf7"
     },
     {
       "lessonId": "b1-16",
@@ -1028,7 +1280,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-16.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 129190,
+      "opusSha256": "0416c9d660c7e90c675eae5b2d7320cef9785ae0e07e1f2a0c0e4c05b8d3bbcc"
     },
     {
       "lessonId": "b1-17",
@@ -1044,7 +1300,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-17.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 139051,
+      "opusSha256": "513ee4047a161b63abd2104c03c37f1be788d31300e94f37c1ed7291d7bdd950"
     },
     {
       "lessonId": "b1-18",
@@ -1060,7 +1320,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-18.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 131204,
+      "opusSha256": "8d4ccecc7afbd0a8772090c343a6bb8a27b199a9d53d9d33be0dd3c0372b45ea"
     },
     {
       "lessonId": "b1-19",
@@ -1076,7 +1340,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-19.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 106573,
+      "opusSha256": "2d823f2374f34a4922c40964a7f009e07ab5a4a3cfe0af929c5fa733111e2f9e"
     },
     {
       "lessonId": "b1-20",
@@ -1092,7 +1360,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-20.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 122343,
+      "opusSha256": "ac832ad83cc49e59f7d4c98a06a3aacde38a40ccb4043a65b4efdeb6ff43c8df"
     },
     {
       "lessonId": "b1-21",
@@ -1108,7 +1380,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-21.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 107127,
+      "opusSha256": "4bcb1ae2ef430cb7f3d28a317b455c7815064a8440f50cb786659a1b4665f1e7"
     },
     {
       "lessonId": "b1-22",
@@ -1124,7 +1400,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-22.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 117701,
+      "opusSha256": "b36b8db4371063640dac769b2ac25570af8b7c90c3dba51133bbfe92baa6f400"
     },
     {
       "lessonId": "b1-23",
@@ -1140,7 +1420,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-23.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 125405,
+      "opusSha256": "15613d0ae280d8270e60cb5dc76960ce0efcc7db45a56b5889a8627fe4c9498d"
     },
     {
       "lessonId": "b1-24",
@@ -1156,7 +1440,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b1-24.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 113784,
+      "opusSha256": "c1730dec2337db1146a0325a90a5d5c4b4f84775c573e521d3dd60d91fc43183"
     },
     {
       "lessonId": "b2-01",
@@ -1172,7 +1460,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-01.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 158703,
+      "opusSha256": "05027af25c9cc96ce345b7639677125e6b87e67ab489cb92fac7ce9490643f38"
     },
     {
       "lessonId": "b2-02",
@@ -1188,7 +1480,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-02.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 161537,
+      "opusSha256": "22a9b325c82b183d90def90e9bb0665de69eb221c8a8316cbb154c462c295477"
     },
     {
       "lessonId": "b2-03",
@@ -1204,7 +1500,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-03.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 153708,
+      "opusSha256": "77b64a03de4e6c15e96f68875b5756c87c7438ff3d5c5306d589e9eaa3275848"
     },
     {
       "lessonId": "b2-04",
@@ -1220,7 +1520,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-04.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 132998,
+      "opusSha256": "9b6da283e3b6980037e486e85869a35868abff7736064d4f9831124359a903c0"
     },
     {
       "lessonId": "b2-05",
@@ -1236,7 +1540,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-05.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 161029,
+      "opusSha256": "060b80efbd871b8368cd8a865e6cf248ae02ae732da94458f59acefb2244b435"
     },
     {
       "lessonId": "b2-06",
@@ -1252,7 +1560,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-06.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 192118,
+      "opusSha256": "4bc196871a3eda1f135f8fe9990b4355b43482b02ba380c3b73413b091130bfa"
     },
     {
       "lessonId": "b2-07",
@@ -1268,7 +1580,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-07.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 205078,
+      "opusSha256": "911614e8e4d1bb85e84e856cb0dd2172b74c798c8eebc3e5b56a5a6b66bdd4d2"
     },
     {
       "lessonId": "b2-08",
@@ -1284,7 +1600,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-08.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 163150,
+      "opusSha256": "c2fbc06917ab814f2b7e49b5bf51aac832ecdcb03f2f978dcccc2073b1490e7a"
     },
     {
       "lessonId": "b2-09",
@@ -1300,7 +1620,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-09.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 213326,
+      "opusSha256": "076cb603becf55b3d71523a11a67ec8cb606672b57dc55b2c99a6eadd5ea6ab7"
     },
     {
       "lessonId": "b2-10",
@@ -1316,7 +1640,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-10.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 187898,
+      "opusSha256": "4e4547f30383f8b28ac4d1c30c83035a49cdcf2292092887efd73591dbce7e4a"
     },
     {
       "lessonId": "b2-11",
@@ -1332,7 +1660,11 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-11.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 180908,
+      "opusSha256": "3a0e3f11e1873a937e82b8ccf2384d9525309eeeaf0f8bd0c95dc5e901b90206"
     },
     {
       "lessonId": "b2-12",
@@ -1348,7 +1680,13 @@
       "generatedAt": "2026-08-30",
       "sourceContent": "original-lesson-listening-transcript",
       "rightsStatus": "generated-for-project-review-required",
-      "examGrade": false
+      "examGrade": false,
+      "opusPath": "/audio/lessons/b2-12.opus",
+      "opusFormat": "audio/ogg; codecs=opus",
+      "opusBytes": 155181,
+      "opusSha256": "edc5f25508c978e6bbd2c620f67e6a85d8c9079e002ecfd0644ec9f0d4d6395a"
     }
-  ]
+  ],
+  "opusAssetCount": 84,
+  "opusPolicyVersion": "optional-opus-with-mp3-fallback-v1"
 }

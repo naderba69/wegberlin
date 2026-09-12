@@ -5,6 +5,8 @@ import { Check, Clock3, LockKeyhole, MapPin, Sparkles } from "lucide-react";
 import { curriculum, moduleTitles } from "@/data/curriculum";
 import type { CEFRLevel } from "@/types/learning";
 import { useLearning } from "./learning-provider";
+import { GrammarProgressionMap } from "./grammar-progression-map";
+import { UnifiedConceptMap } from "./unified-concept-map";
 
 const levelCopy: Record<CEFRLevel, string> = { A1: "الأساس", A2: "الاستقلال الأول", B1: "التواصل المترابط", B2: "الطلاقة والامتحان" };
 
@@ -14,6 +16,8 @@ export function PathView() {
   return (
     <div className="wide-page">
       <header className="page-heading"><div><span className="eyebrow"><MapPin size={15}/> مسارك الموجّه</span><h1>من أول جملة إلى <em>B2</em></h1><p>84 محطة أصلية. المدرب يختار لك الطريق؛ وهذه الخريطة للاستكشاف وفهم الصورة الكبرى.</p></div><div className="path-summary"><strong>{curriculum.filter((lesson) => lesson.status === "published").length}</strong><span>دروس متاحة أكاديميًا<br/>من أصل 84 مخططًا</span></div></header>
+      <UnifiedConceptMap/>
+      <GrammarProgressionMap/>
       <div className="level-stack">
         {levels.map((level) => {
           const lessons = curriculum.filter((lesson) => lesson.level === level);

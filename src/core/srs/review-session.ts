@@ -22,7 +22,8 @@ export function applyReviewGrade(
   const previous = queued.review ?? newReviewItem(queued.card.id, now);
   const nextReview = calculateSM2(previous, grade, now, calendarPolicy);
   const delayed = !queued.isNew && Date.parse(queued.dueAt) <= now.getTime();
-  const masteryDelta = delayed && grade >= 3 ? 4 : 0;
+  const personalErrorRemediation = queued.card.tags.includes("personal-error");
+  const masteryDelta = delayed && grade >= 3 && !personalErrorRemediation ? 4 : 0;
   const lessonId = lessonIdOf(queued);
   const event: ReviewEvent = {
     id: eventId,
@@ -30,6 +31,7 @@ export function applyReviewGrade(
     lessonId,
     grade,
     evidenceKind: delayed ? "delayed" : "initial",
+    evidenceScope: personalErrorRemediation ? "personal-error-remediation" : "lesson-card",
     scheduledFor: queued.dueAt,
     reviewedAt: now.toISOString(),
     masteryDelta,
@@ -60,7 +62,7 @@ function latestDelayedByCard(events: ReviewEvent[]) {
 
 export function retentionEvidence(state: LearningState) {
   const delayedLatest = latestDelayedByCard(state.reviewEvents);
-  const successfulDelayed = [...delayedLatest.values()].filter((event) => event.grade >= 3);
+  const successfulDelayed = [...delayedLatest.values()].filter((event) => event.grade >= 3 && event.evidenceScope !== "personal-error-remediation");
   const byLesson = new Map<string, Set<string>>();
   for (const event of successfulDelayed) {
     const cards = byLesson.get(event.lessonId) ?? new Set<string>();

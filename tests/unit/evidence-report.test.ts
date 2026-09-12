@@ -47,7 +47,7 @@ describe("learner evidence report", () => {
     expect(writing.detailAr).toContain("1 مهام");
     expect(writing.detailAr).toContain("1 منقحة");
     expect(writing.boundaryAr).toContain("لا جودة اللغة");
-    expect(speaking.detailAr).toContain("1 تسجيلات");
+    expect(speaking.detailAr).toContain("1 محاولات مستقلة");
     expect(speaking.boundaryAr).toContain("لا يقيس النطق");
   });
 
@@ -87,6 +87,17 @@ describe("learner evidence report", () => {
 
   it("calculates a real consecutive-day streak from study history", () => {
     const state = { ...defaultState, studyHistory: [{date:"2026-08-29",minutes:10,evidenceCount:1},{date:"2026-08-30",minutes:15,evidenceCount:2}] };
-    expect(buildEvidenceReport(state, now).studyStreakDays).toBe(2);
+    const report=buildEvidenceReport(state, now);
+    expect(report.studyStreakDays).toBe(2);
+    expect(report.graceDayDate).toBeNull();
+    expect(report.continuityPolicyVersion).toBe("weekly-grace-v1");
+  });
+
+  it("bridges one missed calendar day without fabricating study evidence",()=>{
+    const state={...defaultState,studyHistory:[{date:"2026-08-28",minutes:10,evidenceCount:1},{date:"2026-08-30",minutes:15,evidenceCount:2}]};
+    const report=buildEvidenceReport(state,now);
+    expect(report.studyStreakDays).toBe(2);
+    expect(report.streakCalendarSpanDays).toBe(3);
+    expect(report.graceDayDate).toBe("2026-08-29");
   });
 });

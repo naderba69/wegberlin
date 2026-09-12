@@ -6,9 +6,11 @@ import { ArrowRight, Check, CircleAlert, CircleStop, LockKeyhole, Mic2, RotateCc
 import type { TargetedSpeakingSimulation } from "@/types/exam";
 import { examProfiles } from "@/data/exam-profiles";
 import { deleteMedia, loadMedia, saveMedia } from "@/core/portability/db";
+import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { StatusAnnouncement } from "./status-announcement";
 
 type Phase = "setup" | "preparing" | "ready" | "recording" | "recorded" | "saved";
 type SpeakingDraft = { choiceId?: string; phase?: Phase; mediaId?: string; duration?: number; selfScore?: number; reflection?: string };
@@ -108,7 +110,7 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
   async function startRecording() {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const recorder = new MediaRecorder(stream);
+      const { recorder } = createRecordingMediaRecorder(stream);
       chunksRef.current = [];
       startedAtRef.current = Date.now();
       setResponseSeconds(simulation.responseSeconds);
@@ -235,7 +237,7 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
           {phase === "recording" && <div className="speaking-phase-timer recording"><span className="record-dot" /><span><small>Aufnahme läuft</small><strong>{responseMinutes}:{responseRemainder}</strong></span><button onClick={stopRecording}><CircleStop size={16} /> إيقاف</button></div>}
           {(phase === "recorded" || phase === "saved") && !continuousSession && <><audio controls src={audioUrl} className="audio-player" /><div className="follow-up-card"><small>سؤال شريك محتمل — بعد العرض</small><strong lang="de" dir="ltr">{followUp}</strong><p>أجب عنه شفهيًا لنفسك أو اكتب في التأمل كيف ستجيب. السؤال لا يحاكي تفاعلًا حيًا ولا يُقيّم آليًا.</p></div></>}
           {phase === "recorded" && continuousSession && <div className="closed-recording-ready"><Check size={18} /><div><strong>اكتمل التسجيل المؤقت</strong><p>ثبّته للانتقال دون تشغيل راجع أو معايير تقييم أثناء البروفة.</p></div></div>}
-          {message && <div className="exam-integrity-note"><CircleAlert size={17} /><p>{message}</p></div>}
+          {message && <StatusAnnouncement message={message} channel="targeted-speaking" className="exam-integrity-note" icon={<CircleAlert size={17}/>}/>} 
         </section>
         {continuousSession ? <aside className="closed-assistance-submit-card">
           <LockKeyhole size={24} />

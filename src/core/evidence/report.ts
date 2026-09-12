@@ -1,10 +1,19 @@
 import { academicLessonList } from "@/data/academic-lessons";
 import type { LearningState } from "@/types/learning";
+import { buildContinuityStreak } from "@/core/coach/continuity";
 import { buildDueReviewQueue, eligibleReviewCards } from "@/core/srs/review-queue";
 import { errorRepairState } from "@/core/errors/remediation";
 import { buildErrorClinics } from "@/core/errors/clinic";
 import { retentionEvidence } from "@/core/srs/review-session";
 import { buildNoveltyWeightedEvidence, MASTERY_WEIGHTING_VERSION } from "./mastery-weighting";
+import { classifyErrorPattern } from "@/core/errors/pattern";
+import { confirmedErrorSrsCards } from "@/core/srs/error-cards";
+import { evidenceFreshness, EVIDENCE_FRESHNESS_POLICY } from "./freshness";
+import { summarizeSupportUsage } from "./support-usage";
+import { governanceForRisk } from "@/config/content-governance-registry";
+import { buildAssistanceSeparatedEvidence } from "./assistance-separation";
+import { summarizeAttemptProcess } from "./attempt-process";
+import { speakingAttemptIsIndependent } from "@/core/speaking/workflow";
 
 export type EvidenceSkillKey = "reading" | "listening" | "grammar" | "writing" | "speaking";
 export type EvidenceConfidence = "none" | "low" | "medium" | "high";
@@ -14,6 +23,8 @@ export type SkillEvidenceMetric = {
   labelAr: string;
   score: number | null;
   confidence: EvidenceConfidence;
+  baseConfidence: EvidenceConfidence;
+  freshness: ReturnType<typeof evidenceFreshness>;
   evidenceCount: number;
   correctCount?: number;
   coverageCount: number;
@@ -35,6 +46,7 @@ export type EvidenceRisk = {
   titleAr: string;
   reasonAr: string;
   href: string;
+  governance?: ReturnType<typeof governanceForRisk>;
 };
 
 export type EvidenceAction = {
@@ -43,6 +55,13 @@ export type EvidenceAction = {
   reasonAr: string;
   href: string;
 };
+
+type RawSkillEvidenceMetric = Omit<SkillEvidenceMetric, "baseConfidence" | "freshness">;
+
+function applyFreshness(metric: RawSkillEvidenceMetric, now: Date): SkillEvidenceMetric {
+  const freshness = evidenceFreshness(metric.latestAt, metric.confidence, now);
+  return { ...metric, baseConfidence: metric.confidence, confidence: freshness.adjustedConfidence, freshness };
+}
 
 const attemptSkill = new Map<string, { skill: "reading" | "listening" | "grammar"; lessonId: string; novelty: "practice" | "transfer" }>();
 for (const lesson of academicLessonList) {
@@ -75,7 +94,7 @@ function latestLessonAttempts(state: LearningState) {
   return [...latest.values()];
 }
 
-function receptiveMetric(state: LearningState, key: "reading" | "listening" | "grammar", labelAr: string): SkillEvidenceMetric {
+function receptiveMetric(state: LearningState, key: "reading" | "listening" | "grammar", labelAr: string): RawSkillEvidenceMetric {
   const rawAttempts = state.exerciseAttempts.filter((attempt) => attemptSkill.get(attempt.exerciseId)?.skill === key);
   const attempts = latestLessonAttempts(state).filter((attempt) => attemptSkill.get(attempt.exerciseId)?.skill === key);
   const transferIds = new Set(rawAttempts.filter((attempt) => attemptSkill.get(attempt.exerciseId)?.novelty === "transfer").map((attempt) => attempt.exerciseId));
@@ -106,7 +125,7 @@ function receptiveMetric(state: LearningState, key: "reading" | "listening" | "g
   };
 }
 
-function writingMetric(state: LearningState): SkillEvidenceMetric {
+function writingMetric(state: LearningState): RawSkillEvidenceMetric {
   const submitted = state.writingSubmissions.filter((item) => item.status !== "draft");
   const byTask = new Map<string, typeof submitted>();
   for (const item of submitted) byTask.set(item.taskId, [...(byTask.get(item.taskId) ?? []), item]);
@@ -130,8 +149,8 @@ function writingMetric(state: LearningState): SkillEvidenceMetric {
   };
 }
 
-function speakingMetric(state: LearningState): SkillEvidenceMetric {
-  const attempts = state.speakingAttempts;
+function speakingMetric(state: LearningState): RawSkillEvidenceMetric {
+  const attempts = state.speakingAttempts.filter(speakingAttemptIsIndependent);
   const byTask = new Map<string, typeof attempts>();
   for (const item of attempts) byTask.set(item.taskId, [...(byTask.get(item.taskId) ?? []), item]);
   const coverageCount = byTask.size;
@@ -150,20 +169,9 @@ function speakingMetric(state: LearningState): SkillEvidenceMetric {
     evidenceCount: attempts.length,
     coverageCount,
     latestAt: latestIso(attempts.map((item) => item.createdAt)),
-    detailAr: attempts.length ? `${attempts.length} تسجيلات · ${coverageCount} مهام · متوسط ذاتي ${averageSelfScore.toFixed(1)}/5` : "لا توجد محاولة صوتية محفوظة بعد",
-    boundaryAr: "لا يقيس النطق أو الطلاقة صوتيًا؛ التقييم الذاتي جزء صغير فقط من المؤشر.",
+    detailAr: attempts.length ? `${attempts.length} محاولات مستقلة · ${coverageCount} مهام · متوسط ذاتي ${averageSelfScore.toFixed(1)}/5` : "لا توجد محاولة صوتية مستقلة محفوظة بعد",
+    boundaryAr: "المحاولة ذات العبارات الظاهرة تدريب موجّه ولا تدخل هنا؛ لا يقيس النطق أو الطلاقة صوتيًا.",
   };
-}
-
-function studyStreakDays(state: LearningState, now: Date) {
-  const studied = new Set(state.studyHistory.filter((day) => day.minutes > 0 || day.evidenceCount > 0).map((day) => day.date));
-  let streak = 0;
-  const cursor = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  while (studied.has(cursor.toISOString().slice(0, 10))) {
-    streak += 1;
-    cursor.setDate(cursor.getDate() - 1);
-  }
-  return streak;
 }
 
 export function buildEvidenceReport(state: LearningState, now = new Date()) {
@@ -173,7 +181,7 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
     receptiveMetric(state, "grammar", "القواعد والمفردات"),
     writingMetric(state),
     speakingMetric(state),
-  ];
+  ].map((metric) => applyFreshness(metric, now));
   const scored = skills.filter((skill) => skill.score !== null);
   const overallScore = scored.length >= 3 ? Math.round(scored.reduce((sum, skill) => sum + (skill.score ?? 0), 0) / scored.length) : null;
   const dueReviews = buildDueReviewQueue(state, now).length;
@@ -189,10 +197,14 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
   const dueErrorReviews = activeErrors.filter((error) => errorRepairState(error, now) === "due");
   const pendingErrorReviews = activeErrors.filter((error) => errorRepairState(error, now) === "waiting");
   const repeatedErrors = activeErrors.filter((error) => error.occurrences >= 2 && errorRepairState(error, now) !== "waiting");
+  const highConfidenceErrors = activeErrors.filter((error)=>(error.highConfidenceWrongCount??0)>0&&errorRepairState(error,now)!=="waiting");
+  const misconceptionRiskErrors = activeErrors.filter((error)=>(error.patternClassification??classifyErrorPattern(error.occurrences,error.highConfidenceWrongCount??0,error.failedRepairCount??0))==="misconception-risk");
+  const personalErrorSrsCards = confirmedErrorSrsCards(state.errors);
   const risks: EvidenceRisk[] = [];
 
   if (dueReviews >= 20) risks.push({ id: "reviews", severity: "priority", titleAr: "تراكم مراجعات مستحقة", reasonAr: `${dueReviews} بطاقة مستحقة الآن؛ إضافة محتوى جديد قبلها تزيد النسيان.`, href: "/review" });
   if (dueErrorReviews.length) risks.push({ id: "error-retests", severity: "priority", titleAr: "اختبارات أخطاء مؤجلة مستحقة", reasonAr: `${dueErrorReviews.length} أخطاء نجح علاجها أوليًا وحان الآن اختبارها دون كشف.`, href: "/errors" });
+  if (highConfidenceErrors.length) risks.push({ id:"high-confidence-errors", severity:"priority", titleAr:"خطأ مع ثقة عالية", reasonAr:`${highConfidenceErrors.length} إجابات خاطئة سُجلت مع ثقة عالية؛ ابدأ بها لأنها تكشف تعارضًا بين التوقع والنتيجة، لا تشخيصًا معرفيًا.`, href:"/errors" });
   if (errorClinics.length) risks.push({ id: "error-clinic", severity: "priority", titleAr: "عيادة نمط خطأ متكرر", reasonAr: `${errorClinics[0].titleAr}: تجمعت ${errorClinics[0].evidenceCount} أدلة من النوع نفسه؛ ابدأ بالقاعدة ثم تمرين النقل.`, href: "/errors" });
   if (repeatedErrors.length && !errorClinics.length) risks.push({ id: "errors", severity: "priority", titleAr: "أخطاء متكررة غير محلولة", reasonAr: `${repeatedErrors.length} أنماط تكررت مرتين أو أكثر وتحتاج إنتاج التصحيح.`, href: "/errors" });
   for (const skill of skills.filter((item) => item.evidenceCount >= 5 && (item.score ?? 100) < 60)) {
@@ -205,6 +217,7 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
   let nextAction: EvidenceAction;
   if (dueReviews >= 20) nextAction = { skill: "review", titleAr: "أوقف تراكم النسيان", reasonAr: `ابدأ بـ${dueReviews} بطاقة مستحقة قبل درس جديد.`, href: "/review" };
   else if (dueErrorReviews.length) nextAction = { skill: "errors", titleAr: "اختبر العلاج بعد التأخير", reasonAr: `${dueErrorReviews.length} تصحيحات حان موعد استرجاعها دون كشف.`, href: "/errors" };
+  else if (highConfidenceErrors.length) nextAction = { skill:"errors", titleAr:"ابدأ بالخطأ عالي الثقة", reasonAr:`كنت واثقًا في ${highConfidenceErrors[0].wrong} لكن النتيجة خالفت توقعك؛ اكتب التصحيح وفسر القاعدة قبل درس جديد.`, href:"/errors" };
   else if (errorClinics.length) nextAction = { skill: "errors", titleAr: errorClinics[0].titleAr, reasonAr: `ابدأ بالقاعدة المشتركة وتمرين نقل جديد بعد ${errorClinics[0].evidenceCount} أدلة متشابهة.`, href: "/errors" };
   else if (repeatedErrors.length) nextAction = { skill: "errors", titleAr: "عالج الخطأ المتكرر", reasonAr: `اكتب تصحيح ${repeatedErrors[0].wrong} من الذاكرة.`, href: "/errors" };
   else {
@@ -215,6 +228,8 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
       nextAction = { skill: weakest.key, titleAr: `قوِّ ${weakest.labelAr}`, reasonAr: `${weakest.detailAr}. هذه أضعف عينة حالية، وليست حكمًا نهائيًا.`, href };
     }
   }
+
+  const continuity = buildContinuityStreak(state, now);
 
   return {
     skills,
@@ -232,11 +247,21 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
     wrongCheckedItemCount,
     errorsPer100CheckedItems,
     repeatedErrors: repeatedErrors.length,
+    highConfidenceErrors: highConfidenceErrors.length,
+    misconceptionRiskErrors: misconceptionRiskErrors.length,
+    personalErrorSrsCards: personalErrorSrsCards.length,
     dueErrorReviews: dueErrorReviews.length,
     pendingErrorReviews: pendingErrorReviews.length,
-    risks,
+    risks:risks.map((risk)=>({...risk,governance:governanceForRisk(risk.id)})),
     nextAction,
-    studyStreakDays: studyStreakDays(state, now),
+    studyStreakDays: continuity.studiedDays,
+    streakCalendarSpanDays: continuity.calendarSpanDays,
+    graceDayDate: continuity.graceDayDate,
+    continuityPolicyVersion: continuity.policyVersion,
+    evidenceFreshnessPolicyVersion: EVIDENCE_FRESHNESS_POLICY,
+    supportUsage: summarizeSupportUsage(state.supportUsageEvents),
+    assistanceSeparation:buildAssistanceSeparatedEvidence(state),
+    attemptProcess:summarizeAttemptProcess(state),
     latestEvidenceAt: latestIso(skills.map((skill) => skill.latestAt)),
   };
 }

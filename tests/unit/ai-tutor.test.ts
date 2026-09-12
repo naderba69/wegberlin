@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { askTutor, buildTutorContextPrompt, isTutorConsentRequired, parseTutorPayload, TUTOR_PROMPT_VERSION, type TutorContext } from "@/core/ai/client";
+import { askSpeakingFollowUp, askTutor, buildTutorContextPrompt, isTutorConsentRequired, parseSpeakingFollowUpPayload, parseTutorPayload, SPEAKING_FOLLOW_UP_PROMPT_VERSION, TUTOR_PROMPT_VERSION, type TutorContext } from "@/core/ai/client";
 
 const payload = {
   hintAr: "راقب موضع الفعل.",
@@ -90,5 +90,32 @@ describe("P0 structured and consented tutor", () => {
     const request = fetchMock.mock.calls[0][1];
     const body = JSON.parse(request.body);
     expect(body).toMatchObject({ model: "qwen2.5:3b", stream: false, format: "json" });
+  });
+
+  it("accepts only a follow-up whose grounding cue is copied from the learner-typed transcript", () => {
+    const transcript = "Ich komme aus Tunesien und wohne in Berlin.";
+    expect(parseSpeakingFollowUpPayload(JSON.stringify({ questionDe: "Was mögen Sie an Tunesien?", supportAr: "السؤال مرتبط بالبلد المذكور.", groundingCue: "Tunesien" }), transcript)).toMatchObject({ groundingCue: "Tunesien" });
+    expect(() => parseSpeakingFollowUpPayload(JSON.stringify({ questionDe: "Was mögen Sie an München?", supportAr: "متابعة.", groundingCue: "München" }), transcript)).toThrow("إشارة فعلية");
+    expect(() => parseSpeakingFollowUpPayload(JSON.stringify({ questionDe: "Was noch?", supportAr: "متابعة.", groundingCue: "Tunesien", score: 90 }), transcript)).toThrow("لا يطابق عقد سؤال المتابعة");
+  });
+
+  it("blocks a network speaking follow-up before fetch when fresh per-send consent is absent", async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+    await expect(askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, now: new Date("2026-09-06T12:00:00Z") })).rejects.toThrow("تأكيد الإرسال");
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("sends only the approved typed transcript and returns strict Gemini follow-up provenance", async () => {
+    const followUpPayload = { questionDe: "Was machen Sie gern in Berlin?", supportAr: "السؤال مرتبط بمكان السكن المذكور.", groundingCue: "Berlin" };
+    const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(followUpPayload) }] } }] }), { status: 200, headers: { "content-type": "application/json" } }));
+    vi.stubGlobal("fetch", fetchMock);
+    const answer = await askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, consentGranted: true, now: new Date("2026-09-06T12:00:00Z") });
+    expect(answer).toMatchObject({ ...followUpPayload, provider: "gemini", model: "gemini-2.5-flash", promptVersion: SPEAKING_FOLLOW_UP_PROMPT_VERSION });
+    const request = fetchMock.mock.calls[0][1];
+    const body = JSON.parse(request.body);
+    expect(body.generationConfig.responseMimeType).toBe("application/json");
+    expect(body.contents[0].parts[0].text).toBe(JSON.stringify({ source: "typed-transcript", transcript: "Ich wohne in Berlin." }));
+    expect(Object.keys(JSON.parse(body.contents[0].parts[0].text))).toEqual(["source", "transcript"]);
   });
 });

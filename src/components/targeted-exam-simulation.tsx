@@ -8,6 +8,7 @@ import { examProfiles, examSourceById } from "@/data/exam-profiles";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { StatusAnnouncement } from "./status-announcement";
 
 export function TargetedExamSimulationView({ simulation }: { simulation: TargetedExamSimulation }) {
   const { state, update } = useLearning();
@@ -104,6 +105,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
           <h2>{score / simulation.items.length >= 0.8 ? "فهم جيد لهذا النوع — أعده لاحقًا بنص جديد" : "راجع مواضع الخلط ثم أعد نوعًا مماثلًا"}</h2>
           <p>هذه نسبة تدريب داخل التطبيق ولا تُحوّل إلى نقاط رسمية أو حكم نجاح في الوحدة الكاملة.</p>
         </header>
+        <StatusAnnouncement message={`ثُبّتت ${simulation.items.length} إجابات وظهرت مراجعة هذا النوع دون تحويلها إلى نتيجة رسمية.`} channel="targeted-matching-result" className="compact"/>
         <div className="targeted-review-list">
           {simulation.items.map((item, index) => {
             const correct = answers[item.id] === item.correctOptionId;
@@ -170,7 +172,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
               <option value="">اختر</option>
               {simulation.options.map((option) => {
                 const usedElsewhere = !simulation.allowOptionReuse && selectedOptionIds.includes(option.id) && answers[item.id] !== option.id;
-                return <option key={option.id} value={option.id} disabled={usedElsewhere}>{option.labelDe}</option>;
+                return <option key={option.id} value={option.id} disabled={usedElsewhere} lang="de" dir="ltr">{option.labelDe}</option>;
               })}
             </select>
           </label>

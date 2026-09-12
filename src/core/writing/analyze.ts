@@ -1,4 +1,5 @@
 import type { WritingDimensionEvidence } from "@/types/learning";
+import { detectWritingErrorPatterns, type WritingErrorPatternMatch } from "./error-practice";
 
 export type WritingAnalysis = {
   wordCount:number;
@@ -6,6 +7,7 @@ export type WritingAnalysis = {
   feedback:string[];
   checks:Array<{label:string;passed:boolean}>;
   dimensions:WritingDimensionEvidence[];
+  errorPatterns:WritingErrorPatternMatch[];
 };
 
 function quote(value:string){const compact=value.replace(/\s+/gu," ").trim();return compact.length>110?`${compact.slice(0,107)}…`:compact}
@@ -30,17 +32,19 @@ export function analyzeWriting(text:string,options:{minWords?:number;requireGree
   const taskCoveragePassed=taskPointsTotal===0||taskPointsCompleted===taskPointsTotal;
   const registerPassed=options.requireGreeting===false?(/\b(ich denke|meiner meinung|sollte|könnte|allerdings|zusammenfassend)\b/iu.test(cleaned)||sentenceCount>=4):(hasGreeting&&hasClosing);
   const weakCapitalSentence=sentences.find((sentence)=>!/^([A-ZÄÖÜ]|\d)/u.test(sentence));
+  const errorPatterns=detectWritingErrorPatterns(cleaned);
+  const firstErrorPattern=errorPatterns[0];
 
   const dimensions:WritingDimensionEvidence[]=[
     {key:"task-achievement",labelAr:"إنجاز المهمة",passed:words.length>=minWords&&taskCoveragePassed,detailAr:words.length<minWords?`النص ${words.length} كلمة ويحتاج ${minWords} على الأقل.`:taskCoveragePassed?"بلغ طول المهمة وأكدت تغطية نقاطها.":`أكدت ${taskPointsCompleted}/${taskPointsTotal} من نقاط المهمة.`,evidenceQuote:firstQuote||undefined},
     {key:"coherence",labelAr:"الترابط",passed:sentenceCount>=3&&hasConnector,detailAr:sentenceCount<3?"نحتاج ثلاث جمل مكتملة على الأقل.":hasConnector?"توجد إشارة ربط بين الأفكار.":"أضف رابطًا يوضح السبب أو المقابلة أو التسلسل.",evidenceQuote:firstQuote||undefined},
     {key:"vocabulary",labelAr:"المفردات",passed:uniqueWords.size>=vocabularyThreshold,detailAr:`رُصدت ${uniqueWords.size} كلمة محتوى فريدة؛ الحد الداخلي لهذه العينة ${vocabularyThreshold}.`,evidenceQuote:firstQuote||undefined},
-    {key:"grammar",labelAr:"القواعد وبناء الجملة",passed:hasVerb&&sentenceCount>0&&capitalSentences/sentenceCount>=.8,detailAr:!hasVerb?"لم يُرصد فعل مصرف واضح في العينة.":weakCapitalSentence?"توجد جملة لا تبدأ بحرف كبير.":"رُصد فعل مصرف وبدايات جمل واضحة؛ هذا لا يثبت الخلو من الأخطاء.",evidenceQuote:quote(weakCapitalSentence??sentences[0]??cleaned)||undefined},
+    {key:"grammar",labelAr:"القواعد وبناء الجملة",passed:hasVerb&&sentenceCount>0&&capitalSentences/sentenceCount>=.8&&errorPatterns.length===0,detailAr:!hasVerb?"لم يُرصد فعل مصرف واضح في العينة.":firstErrorPattern?`${firstErrorPattern.explanationAr} رُصد بنمط محلي محدود ويمكن فتح تمرين علاج قصير.`:weakCapitalSentence?"توجد جملة لا تبدأ بحرف كبير.":"رُصد فعل مصرف وبدايات جمل واضحة ولم تطابق العينة الأنماط المحلية المحدودة؛ هذا لا يثبت الخلو من الأخطاء.",evidenceQuote:quote(firstErrorPattern?.sourceExcerpt??weakCapitalSentence??sentences[0]??cleaned)||undefined},
     {key:"register",labelAr:"السجل والملاءمة",passed:registerPassed,detailAr:options.requireGreeting===false?(registerPassed?"توجد مؤشرات موقف أو حجاج مناسبة.":"أظهر موقفًا أو صيغة حجاج مناسبة للسياق."):(registerPassed?"توجد تحية وخاتمة مناسبتان.":"أضف تحية وخاتمة تناسبان الرسالة."),evidenceQuote:firstQuote||undefined},
   ];
 
   const checks=[...(options.requireGreeting===false?[]:[{label:"افتتاح أو تحية مناسبة",passed:hasGreeting}]),{label:"ثلاث جمل على الأقل",passed:sentenceCount>=3},{label:"وجود فعل مصرف واضح",passed:hasVerb},{label:"بداية بحرف كبير",passed:hasCapitalStart},{label:`${minWords} كلمة على الأقل`,passed:words.length>=minWords}];
   const feedback=dimensions.filter((dimension)=>!dimension.passed).map((dimension)=>`${dimension.labelAr}: ${dimension.detailAr}${dimension.evidenceQuote?` قرب «${dimension.evidenceQuote}»`:""}`);
   if(!feedback.length)feedback.push(`استوفيت المؤشرات الحتمية الخمسة في هذه العينة قرب «${firstQuote}». راجع الدقة اللغوية بشريًا ثم احفظ نسخة منقحة.`);
-  return{wordCount:words.length,sentenceCount,feedback,checks,dimensions};
+  return{wordCount:words.length,sentenceCount,feedback,checks,dimensions,errorPatterns};
 }

@@ -20,6 +20,13 @@ describe("P0 onboarding profile", () => {
         ...baseProfile,
         goals: ["exam", "work"],
         priorExperience: "none",
+        onboardingContext:{
+          policyVersion:"prior-experience-context-v1",
+          priorLearningSources:["book","course"],
+          priorCourseOrBookNote:"دورة مسائية وكتاب قديم",
+          concerns:["speaking","time"],
+          evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery",
+        },
         deviceReadiness: {
           audio: "ready",
           microphone: "permission-denied",
@@ -29,6 +36,7 @@ describe("P0 onboarding profile", () => {
     });
     expect(parsed.profile?.goals).toEqual(["exam", "work"]);
     expect(parsed.profile?.priorExperience).toBe("none");
+    expect(parsed.profile?.onboardingContext).toMatchObject({priorLearningSources:["book","course"],concerns:["speaking","time"],evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery"});
     expect(parsed.profile?.deviceReadiness?.microphone).toBe("permission-denied");
   });
 
@@ -40,5 +48,10 @@ describe("P0 onboarding profile", () => {
   it("rejects an explicitly empty goal selection", () => {
     const parsed = learningStateSchema.safeParse({ ...defaultState, profile: { ...baseProfile, goals: [] } });
     expect(parsed.success).toBe(false);
+  });
+
+  it("keeps the optional planning context strict and prevents duplicate signals",()=>{
+    const context={policyVersion:"prior-experience-context-v1",priorLearningSources:["book","book"],concerns:["speaking"],evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery",unexpected:"must fail"};
+    expect(learningStateSchema.safeParse({...defaultState,profile:{...baseProfile,onboardingContext:context}}).success).toBe(false);
   });
 });

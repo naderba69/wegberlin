@@ -20,6 +20,10 @@ export type ExamAudioAsset = {
   sourceContent: "original-exam-practice-transcript";
   rightsStatus: "generated-for-project-review-required";
   examGrade: false;
+  opusPath:string;
+  opusFormat:"audio/ogg; codecs=opus";
+  opusBytes:number;
+  opusSha256:string;
 };
 
 export type ExamAudioTaskCoverage = {
@@ -48,6 +52,8 @@ type ExamAudioManifest = {
   totalTargetedListeningTaskCount: number;
   totalFullSimulationListeningTaskCount: number;
   humanRecordedAssetCount: number;
+  opusAssetCount:number;
+  opusPolicyVersion:"optional-opus-with-mp3-fallback-v1";
   usageNoteAr: string;
   taskCoverage: ExamAudioTaskCoverage[];
   assets: ExamAudioAsset[];

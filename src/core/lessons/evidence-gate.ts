@@ -32,28 +32,28 @@ export function lessonEvidenceGate(lesson: FullLesson, state: LearningState): Le
   const baseCriteria: Array<Omit<LessonEvidenceCriterion, "passed">> = [
     {
       id: "controlled",
-      labelAr: "تدريب موجّه صحيح وفريد",
+      labelAr: "التمارين الأساسية",
       achieved: correctUnique(attempts, controlledIds),
       required: controlledRequired,
       total: lesson.exercises.length,
     },
     {
       id: "reading",
-      labelAr: "دليل فهم قراءة",
+      labelAr: "فهم القراءة",
       achieved: correctUnique(attempts, readingIds),
       required: 1,
       total: lesson.reading.questions.length,
     },
     {
       id: "listening",
-      labelAr: "دليل فهم استماع",
+      labelAr: "فهم الاستماع",
       achieved: correctUnique(attempts, listeningIds),
       required: 1,
       total: lesson.listening.questions.length,
     },
     {
       id: "mini-test",
-      labelAr: "إجابات صحيحة في الاختبار المصغر",
+      labelAr: "الاختبار القصير",
       achieved: correctUnique(attempts, miniTestIds),
       required: miniTestRequired,
       total: lesson.miniTest.length,

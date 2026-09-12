@@ -3,13 +3,17 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const routes = new Set([
+const commonRoutes = [
   "/",
   "/today",
   "/path",
   "/diagnostic",
   "/review",
   "/practice",
+  "/practice/collocations",
+  "/practice/conversation-paths",
+  "/practice/dictation",
+  "/practice/practical-day",
   "/library",
   "/search",
   "/writing",
@@ -18,11 +22,15 @@ const routes = new Set([
   "/shadowing",
   "/errors",
   "/tutor",
-  "/exams",
   "/progress",
   "/settings",
+  "/privacy",
+  "/portfolio/writing",
+  "/status",
+  "/offline",
   "/manifest.webmanifest",
-]);
+];
+const routes = new Set(commonRoutes);
 
 const pad = (value) => String(value).padStart(2, "0");
 
@@ -54,6 +62,7 @@ const targeted = {
   ],
 };
 
+routes.add("/exams");
 for (const [provider, taskIds] of Object.entries(targeted)) {
   for (const taskId of taskIds) routes.add(`/exams/${provider}/${taskId}`);
 }
@@ -78,12 +87,23 @@ for (let simulation = 1; simulation <= 6; simulation += 1) {
   routes.add(`/exams/telc-deutsch-b2/full/telc-b2-full-${number}`);
 }
 
+const sortedRoutes = [...routes].sort();
+const packDefinitions = [
+  { id: "a1", label: "A1", routes: sortedRoutes.filter((route) => commonRoutes.includes(route) || route.startsWith("/lernen/a1-") || route.startsWith("/module/a1-") || route === "/assessment/a1") },
+  { id: "a2", label: "A2", routes: sortedRoutes.filter((route) => commonRoutes.includes(route) || route.startsWith("/lernen/a2-") || route.startsWith("/module/a2-") || route === "/assessment/a2") },
+  { id: "b1", label: "B1", routes: sortedRoutes.filter((route) => commonRoutes.includes(route) || route.startsWith("/lernen/b1-") || route.startsWith("/module/b1-") || route === "/assessment/b1") },
+  { id: "b2", label: "B2 + Prüfung", routes: sortedRoutes.filter((route) => commonRoutes.includes(route) || route.startsWith("/lernen/b2-") || route.startsWith("/module/b2-") || route === "/assessment/b2" || route.startsWith("/exams")) },
+  { id: "full", label: "A1–B2 komplett", routes: sortedRoutes },
+].map((pack) => ({ ...pack, routeCount: pack.routes.length, audioScope: pack.id === "full" ? "all" : pack.id }));
+
 const manifest = {
   format: "dwnb-offline-routes",
-  version: 1,
-  routeCount: routes.size,
-  routes: [...routes].sort(),
+  version: 2,
+  defaultPackId: "full",
+  routeCount: sortedRoutes.length,
+  routes: sortedRoutes,
+  packs: packDefinitions,
 };
 
 await writeFile(resolve(root, "public/offline-routes.json"), `${JSON.stringify(manifest, null, 2)}\n`);
-console.log(`Generated ${manifest.routeCount} offline routes.`);
+console.log(`Generated ${manifest.routeCount} offline routes and ${manifest.packs.length} independent packs (${manifest.packs.map((pack) => `${pack.id}:${pack.routeCount}`).join(", ")}).`);

@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import { academicLessonList } from "@/data/academic-lessons";
 import { useLearning } from "./learning-provider";
+import { StatusAnnouncement } from "./status-announcement";
+import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
+import { speakingAttemptIsIndependent } from "@/core/speaking/workflow";
 
 const lessons = academicLessonList.filter((lesson) => lesson.level === "B2");
 const questions = lessons.flatMap((lesson) =>
@@ -43,7 +46,7 @@ export function B2LevelAssessment() {
   const writing = state.writingSubmissions.filter(
     (item) => item.taskId.startsWith("b2-") && item.status !== "draft",
   ).length;
-  const speaking = state.speakingAttempts.filter((item) => item.taskId.startsWith("b2-")).length;
+  const speaking = state.speakingAttempts.filter((item) => item.taskId.startsWith("b2-") && speakingAttemptIsIndependent(item)).length;
   const completed = state.completedLessonIds.filter((id) => id.startsWith("b2-")).length;
   const criteria = {
     prerequisite: (state.mastery["level-b1-ready"] ?? 0) >= 100,
@@ -85,6 +88,7 @@ export function B2LevelAssessment() {
             هذه نتيجة داخل المنصة وليست شهادة لغة أو محاكاة رسمية. تُفحص بوابة B1 وإكمال 12 درسًا وست كتابات وست محاولات محادثة مرتبطة بـB2.
           </p>
         </header>
+        <StatusAnnouncement message={`اكتمل تقييم بوابة B2: ${score} من 48. ${ready?"استوفت الأدلة الداخلية شروط المنهج.":"ما زالت بعض شروط المعرفة أو الإنتاج ناقصة."}`} channel="assessment-b2-result" className="compact"/>
         <div className="gate-criteria">
           {[
             ["prerequisite", "بوابة B1", criteria.prerequisite ? "مكتملة" : "غير مكتملة"],
@@ -154,7 +158,7 @@ export function B2LevelAssessment() {
                   onChange={(event) => setAnswers((current) => ({ ...current, [question.id]: Number(event.target.value) }))}
                 >
                   <option value="">اختر الجواب</option>
-                  {question.options.map((option, optionIndex) => <option key={option} value={optionIndex}>{option}</option>)}
+                  {question.options.map((option, optionIndex) => <option key={option} value={optionIndex} {...fragmentLanguageAttributes(option)}>{option}</option>)}
                 </select>
               </article>
             ))}

@@ -1,5 +1,6 @@
 import type { FullLesson, PracticeExercise, Question } from "@/types/lesson-content";
-import type { ErrorRecord } from "@/types/learning";
+import type { AnswerConfidence, ErrorRecord } from "@/types/learning";
+import { classifyErrorRecord } from "./pattern";
 
 function exerciseExpected(exercise: PracticeExercise) {
   if (exercise.type === "multiple-choice") return exercise.options[exercise.correctIndex];
@@ -26,17 +27,24 @@ function exerciseErrorType(exercise: PracticeExercise): ErrorRecord["type"] {
 
 function upsertError(errors: ErrorRecord[], next: Omit<ErrorRecord, "occurrences">) {
   const existing = errors.find((error) => error.id === next.id);
-  if (!existing) return [...errors, { ...next, occurrences: 1, repairCount: next.repairCount ?? 0 }];
-  return errors.map((error) => error.id === next.id ? {
-    ...error,
-    ...next,
-    occurrences: error.occurrences + 1,
-    resolved: false,
-    repairCount: 0,
-    lastRepairedAt: undefined,
-    nextReviewAt: undefined,
-    confirmedAt: undefined,
-  } : error);
+  if (!existing) {
+    const created = classifyErrorRecord({ ...next, occurrences: 1, highConfidenceWrongCount: next.lastConfidence === "high" ? 1 : 0, repairCount: next.repairCount ?? 0 });
+    return [...errors, created];
+  }
+  return errors.map((error) => {
+    if (error.id !== next.id) return error;
+    return classifyErrorRecord({
+      ...error,
+      ...next,
+      occurrences: error.occurrences + 1,
+      highConfidenceWrongCount: (error.highConfidenceWrongCount ?? 0) + (next.lastConfidence === "high" ? 1 : 0),
+      resolved: false,
+      repairCount: 0,
+      lastRepairedAt: undefined,
+      nextReviewAt: undefined,
+      confirmedAt: undefined,
+    });
+  });
 }
 
 export function captureLessonError(
@@ -45,6 +53,7 @@ export function captureLessonError(
   exerciseId: string,
   answer: string,
   now = new Date(),
+  confidence?: AnswerConfidence,
 ): ErrorRecord[] {
   const exercise = lesson.exercises.find((item) => item.id === exerciseId);
   if (exercise) {
@@ -56,6 +65,9 @@ export function captureLessonError(
       correct: correction.correct,
       explanationAr: exercise.explanationAr,
       lastSeenAt: now.toISOString(),
+      sourceLessonId: lesson.id,
+      sourceExerciseId: exercise.id,
+      lastConfidence: confidence,
       resolved: false,
     });
   }
@@ -70,6 +82,9 @@ export function captureLessonError(
     correct: question.options[question.correctIndex],
     explanationAr: question.explanationAr,
     lastSeenAt: now.toISOString(),
+    sourceLessonId: lesson.id,
+    sourceExerciseId: question.id,
+    lastConfidence: confidence,
     resolved: false,
   });
 }

@@ -8,6 +8,9 @@ import { examProfiles } from "@/data/exam-profiles";
 import { useLearning } from "./learning-provider";
 import { clearContinuousTaskDraft, continuousTaskDraft, findContinuousSessionForTask, markContinuousTaskComplete, saveContinuousTaskDraft } from "@/core/exams/continuous-session";
 import { ContinuousTaskSubmitted } from "./continuous-exam-session";
+import { behavioralPraise } from "@/core/coach/behavioral-praise";
+import { StatusAnnouncement } from "./status-announcement";
+import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 
 export function TargetedChoiceSimulationView({ simulation }: { simulation: TargetedChoiceSimulation }) {
   const { state, update } = useLearning();
@@ -84,7 +87,8 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
     return (
       <div className="wide-page targeted-result">
         <header><span><ShieldCheck size={28} /></span><small>{profile.displayName} · {isReading ? "تدريب قراءة تفصيلية" : "تدريب عناصر لغوية"}</small><h1>{score}<i>/{simulation.items.length}</i></h1><h2>{score >= 8 ? "تحكم جيد — اختبره لاحقًا بنص جديد" : "حدد الروابط والصيغ التي تكررت فيها الفجوة"}</h2><p>نسبة تدريب داخلية وليست نقاطًا رسمية.</p></header>
-        <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b lang="de" dir="ltr">{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b lang="de" dir="ltr">{item.options[item.correctIndex]}</b></small>}<p>{item.explanationAr}</p></div></article>; })}</div>
+        <StatusAnnouncement message={behavioralPraise("exam-submission")} channel="targeted-choice-result" className="compact gamification-surface"/>
+        <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b {...fragmentLanguageAttributes(item.options[answers[item.id]])}>{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b {...fragmentLanguageAttributes(item.options[item.correctIndex])}>{item.options[item.correctIndex]}</b></small>}<p>{item.explanationAr}</p></div></article>; })}</div>
         <footer><button className="secondary-button" onClick={reset}><RotateCcw size={16} /> إعادة التدريب</button><Link href="/exams" className="primary-button">مركز الامتحان <ArrowRight size={16} /></Link></footer>
       </div>
     );
@@ -95,7 +99,7 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
       <header className="targeted-exam-header"><div><span className="eyebrow">{profile.displayName} · {simulation.officialPartLabel}</span><h1>{simulation.titleAr} <em lang="de" dir="ltr">{simulation.titleDe}</em></h1></div><div className={remainingSeconds === 0 ? "exam-timer expired" : "exam-timer"}><Timer size={17} /><strong>{minutes}:{seconds}</strong><small>{remainingSeconds === 0 ? "انتهى الهدف التدريبي" : "وقت متبقٍ"}</small></div></header>
       <section className="exam-instructions"><p lang="de" dir="ltr">{simulation.instructionsDe}</p><small>{simulation.instructionsAr}</small></section>
       <article className="language-cloze-text" lang="de" dir="ltr">{simulation.textDe}</article>
-      <section className="choice-item-grid">{simulation.items.map((item) => <article key={item.id}><header><strong>{item.promptDe}</strong><small>{item.promptAr}</small></header><div>{item.options.map((option, optionIndex) => <button key={option} className={answers[item.id] === optionIndex ? "selected" : ""} onClick={() => chooseAnswer(item.id, optionIndex)}><span>{String.fromCharCode(97 + optionIndex)}</span>{option}</button>)}</div></article>)}</section>
+      <section className="choice-item-grid">{simulation.items.map((item) => <article key={item.id}><header><strong lang="de" dir="ltr">{item.promptDe}</strong><small>{item.promptAr}</small></header><div>{item.options.map((option, optionIndex) => <button key={option} className={answers[item.id] === optionIndex ? "selected" : ""} onClick={() => chooseAnswer(item.id, optionIndex)}><span>{String.fromCharCode(97 + optionIndex)}</span><bdi {...fragmentLanguageAttributes(option)}>{option}</bdi></button>)}</div></article>)}</section>
       <button className="primary-button targeted-submit" disabled={answered < simulation.items.length} onClick={finish}><Check size={17} /> {continuous ? "ثبّت الإجابات وانتقل" : "التزم بالإجابات وصحح"}</button>
     </div>
   );

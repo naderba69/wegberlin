@@ -27,6 +27,10 @@ debug-*.png
 # production
 /build
 
+# Materialized during npm ci/prebuild from the audited packed vendor payload.
+# The upstream minified plaintext triggers a GitHub Mistral-key false positive.
+/public/vendor/webgpu/transformers.web.min.js
+
 # misc
 .DS_Store
 *.pem

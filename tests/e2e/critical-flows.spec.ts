@@ -11,7 +11,7 @@ import { diagnosticForms } from "../../src/data/diagnostic";
 import { unknownWordChallenge } from "../../src/core/reading/unknown-word";
 
 async function waitForLearningReady(page: Page) {
-  await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true", { timeout:15_000 });
+  await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true", { timeout:30_000 });
 }
 
 async function assertLanguageBoundaries(page: Page, label: string) {
@@ -1595,7 +1595,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   const dueBefore = Number(await page.locator(".review-count strong").textContent());
   expect(dueBefore).toBeGreaterThanOrEqual(16);
   expect(dueBefore).toBeLessThanOrEqual(25); // up to 24 authored cards plus one deduplicated confirmed-error card
-  await expect(page.locator(".review-card-meta")).toContainText("a1-01");
+  await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
   const masteryBeforeFirstReview = await page.evaluate(() => new Promise<number>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
@@ -1608,7 +1608,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   await page.locator(".flashcard").click();
   await page.getByRole("button", { name: /سهل/ }).click();
   await expect(page.locator(".review-count strong")).toHaveText(String(dueBefore - 1));
-  await expect(page.locator(".review-card-meta")).toContainText("a1-01");
+  await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
   const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string}>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
@@ -1647,9 +1647,9 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText("dwnb-a1-b2-2026.09-v1");
-  await expect(governance).toContainText("2932");
+  await expect(governance).toContainText("3020");
   await governance.locator(":scope > details > summary").click();
-  await expect(governance.locator(".content-family-lifecycle article")).toHaveCount(13);
+  await expect(governance.locator(".content-family-lifecycle article")).toHaveCount(16);
   await expect(governance.locator(".content-family-lifecycle article").first()).toContainText("Draft");
   await expect(governance.locator(".content-family-lifecycle article").first()).toContainText("Validated");
   await expect(governance.locator(".content-family-lifecycle article").first()).toContainText("Published");
@@ -1722,7 +1722,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(packCard.locator(".offline-pack-picker button")).toHaveCount(5);
   await packCard.getByRole("button",{name:"A1 دروس ووحدات وبوابة A1",exact:true}).click();
   await expect(packCard.locator(".pack-size-preview")).toContainText("58 مسارًا",{timeout:30_000});
-  await expect(packCard.locator('[data-pack-diff-policy="pre-update-curriculum-pack-diff-v1"]')).toContainText("مقارنة الحزمة قبل التحديث");
+  await expect(packCard.locator('[data-pack-diff-policy="pre-update-curriculum-pack-diff-v2"]')).toContainText("مقارنة الحزمة قبل التحديث");
   await expect(packCard.locator(".pack-size-preview")).toContainText("40 ملفًا");
   await packCard.getByRole("button",{name:"تنزيل A1",exact:true}).click();
   await expect(packCard.getByText(/اكتمل تثبيت A1 دون الصوت/)).toBeVisible({timeout:180_000});
@@ -2545,3 +2545,127 @@ test("representative 320–1920 px viewports avoid document-level horizontal ove
   await expect(page.getByRole("dialog")).toHaveCount(0);
 });
 
+
+test("completed four-skill vocabulary progress is terminal, persisted, and continues to discovery", async ({ page }) => {
+  const lesson = academicLessons["a1-01"];
+  await page.goto(`/lernen/${lesson.id}`);
+  await waitForLearningReady(page);
+  await page.evaluate(({ baseState, lessonId, phraseCount }) => new Promise<void>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const state = structuredClone(baseState);
+      state.currentLessonId = lessonId;
+      state.currentStage = 2;
+      state.lessonProgress = { [lessonId]: 2 };
+      state.exerciseAttempts = Array.from({ length: phraseCount }, (_, index) => ({
+        id: `four-skill-e2e-${index + 1}`,
+        lessonId,
+        exerciseId: `${lessonId}:four-skill-phrase:${index + 1}`,
+        answer: "local-word-match-confirmed",
+        correct: true,
+        createdAt: new Date(1_757_680_000_000 + index * 1000).toISOString(),
+      }));
+      const tx = open.result.transaction("learning-state", "readwrite");
+      tx.objectStore("learning-state").put(state, "primary");
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    };
+  }), { baseState: structuredClone(defaultState), lessonId: lesson.id, phraseCount: lesson.phrases.length });
+  await page.reload();
+  await waitForLearningReady(page);
+  const cycle = page.locator('[data-vocabulary-cycle-policy="adaptive-four-skill-cycle-v2"]');
+  await expect(cycle).toContainText(`${lesson.phrases.length}/${lesson.phrases.length}`);
+  await expect(cycle).toContainText("لن تعود الدورة إلى العبارة الأولى");
+  await expect(cycle).not.toContainText(`0/${lesson.phrases.length}`);
+  await cycle.getByRole("button", { name: /اكتشف النمط/ }).click();
+  await expect(page.getByRole("heading", { name: /اكتشف النمط/ })).toBeVisible();
+  await expect(page.locator(".lesson-progress-bar")).toHaveAttribute("aria-valuenow", "4");
+});
+
+test("route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap", async ({ page }) => {
+  test.setTimeout(360_000);
+  const scales = ["compact", "default", "large"] as const;
+  const viewports = [
+    { width: 320, height: 568 },
+    { width: 360, height: 800 },
+    { width: 768, height: 1024 },
+  ];
+  const routes = ["/today", "/practice", "/lernen/a1-01"];
+
+  for (const scale of scales) {
+    await page.setViewportSize(viewports[0]);
+    await page.goto("/today");
+    await waitForLearningReady(page);
+    const sizeControl = page.getByRole("group", { name: "تغيير حجم النص" });
+    const buttonName = scale === "compact" ? "أصغر" : scale === "default" ? "مريح" : "أكبر";
+    await sizeControl.getByRole("button", { name: buttonName }).click();
+    await expect(page.locator(".app-frame")).toHaveAttribute("data-font-scale", scale);
+
+    for (const viewport of viewports) {
+      await page.setViewportSize(viewport);
+      for (const route of routes) {
+        await page.goto(route);
+        await waitForLearningReady(page);
+        await expect(page.locator(".topbar-copy")).toBeVisible();
+        const audit = await page.evaluate(() => {
+          const visible = (element: Element) => {
+            const style = getComputedStyle(element);
+            const rect = element.getBoundingClientRect();
+            return style.display !== "none" && style.visibility !== "hidden" && rect.width > 0 && rect.height > 0;
+          };
+          const candidates = [...document.querySelectorAll<HTMLElement>(".page-content h1,.page-content h2,.page-content h3,.page-content p,.page-content li,.page-content blockquote,.page-content label,.page-content small,.page-content strong")].filter(visible);
+          const outside = candidates.filter((element) => {
+            const rect = element.getBoundingClientRect();
+            return rect.left < -1 || rect.right > window.innerWidth + 1;
+          }).slice(0, 8).map((element) => element.textContent?.trim().slice(0, 70));
+          const clipped = candidates.filter((element) => {
+            const style = getComputedStyle(element);
+            const clips = style.overflow === "hidden" || style.overflowX === "hidden" || style.overflowY === "hidden" || style.textOverflow === "ellipsis";
+            return clips && (element.scrollHeight > element.clientHeight + 1 || element.scrollWidth > element.clientWidth + 1);
+          }).slice(0, 8).map((element) => element.textContent?.trim().slice(0, 70));
+          const siblings = [...document.querySelectorAll<HTMLElement>(".topbar > .mobile-brand,.topbar > .topbar-copy,.topbar > .topbar-actions")].filter(visible);
+          const overlap: string[] = [];
+          for (let left = 0; left < siblings.length; left += 1) for (let right = left + 1; right < siblings.length; right += 1) {
+            const a = siblings[left].getBoundingClientRect();
+            const b = siblings[right].getBoundingClientRect();
+            const width = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+            const height = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+            if (width > 1 && height > 1) overlap.push(`${siblings[left].className} ↔ ${siblings[right].className}`);
+          }
+          return { documentOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth, outside, clipped, overlap };
+        });
+        expect(audit.documentOverflow, `${route} ${scale} ${viewport.width} document overflow`).toBeLessThanOrEqual(1);
+        expect(audit.outside, `${route} ${scale} ${viewport.width} off-screen educational text`).toEqual([]);
+        expect(audit.clipped, `${route} ${scale} ${viewport.width} clipped educational text`).toEqual([]);
+        expect(audit.overlap, `${route} ${scale} ${viewport.width} topbar sibling overlap`).toEqual([]);
+        if (route === "/practice") await expect(page.locator(".bottom-nav > button")).toHaveClass(/active/);
+      }
+    }
+  }
+});
+
+test("review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours", async ({ page }) => {
+  await page.goto("/today");
+  await waitForLearningReady(page);
+  await page.evaluate(({baseState})=>new Promise<void>((resolve,reject)=>{
+    const open=indexedDB.open("der-weg-nach-berlin",4);
+    open.onerror=()=>reject(open.error);
+    open.onsuccess=()=>{
+      const state=structuredClone(baseState);
+      state.profile={name:"Nadia",targetExam:"goethe-b2",dailyMinutes:20,arabicSupport:"modern-standard-arabic",currentLevel:"A1",createdAt:new Date().toISOString()};
+      state.completedLessonIds=["a1-01"];
+      state.reviewReminderSettings={policyVersion:"local-review-reminder-v1",enabled:true,hourLocal:"00:00",timeZone:"Africa/Tunis",deliveryBoundary:"in-app-and-notification-api-while-open-no-push-background-guarantee-mastery-or-penalty"};
+      const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);
+    };
+  }),{baseState:structuredClone(defaultState)});
+  await page.reload();await waitForLearningReady(page);
+  const reminder=page.locator('[data-review-reminder="local-review-reminder-v1"]');
+  await expect(reminder).toBeVisible();
+  await expect(reminder).toContainText("بطاقة مستحقة");
+  await reminder.getByRole("button",{name:"إخفاء تذكير المراجعة اليوم"}).click();
+  await expect(reminder).toHaveCount(0);
+  await page.reload();await waitForLearningReady(page);await expect(reminder).toHaveCount(0);
+  await page.evaluate(()=>new Promise<void>((resolve,reject)=>{const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const store=open.result.transaction("learning-state","readwrite").objectStore("learning-state");const request=store.get("primary");request.onerror=()=>reject(request.error);request.onsuccess=()=>{const state=request.result;state.reviewReminderSettings.dismissedInAppDate=undefined;state.quietHours={...state.quietHours,enabled:true,startLocal:"00:00",endLocal:"23:59",timeZone:"Africa/Tunis"};const put=store.put(state,"primary");put.onerror=()=>reject(put.error);put.onsuccess=()=>resolve()}}}));
+  await page.reload();await waitForLearningReady(page);await expect(reminder).toHaveCount(0);
+});

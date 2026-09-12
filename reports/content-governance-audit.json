@@ -3,7 +3,7 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "42b7363539c9c6df4bf8f148f51c81c3cfb27cd5aed8067f9883ad86cf85381b",
+  "contentSha256": "404179be689ca146de022470cfbeb9ed00246e463f6f6325655146b90daef5dc",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
@@ -11,9 +11,9 @@
     "independent": true
   },
   "counts": {
-    "contentRecords": 2932,
-    "contentFamilies": 13,
-    "publishedFamilies": 13,
+    "contentRecords": 3020,
+    "contentFamilies": 16,
+    "publishedFamilies": 16,
     "sources": 18,
     "ownedRiskTypes": 12,
     "highRiskContextClaims": 12,
@@ -34,7 +34,10 @@
     "lesson-speaking": 84,
     "lesson-writing": 84,
     "library-listening": 160,
-    "library-reading": 160
+    "library-reading": 160,
+    "practice-dictation": 16,
+    "practice-branching": 8,
+    "practice-collocation": 64
   },
   "contentRows": [
     {
@@ -15914,6 +15917,654 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "branching:branch-a1-bakery",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-a1-course",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-a2-appointment",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-a2-landlord",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-b1-feedback",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-b1-study",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-b2-civic",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "branching:branch-b2-flexwork",
+      "scope": "practice-branching",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "productive-task-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-frage",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-frage-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-frage-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-frage-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-kaffee",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-kaffee-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-kaffee-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-kaffee-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-termin",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-termin-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-termin-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-termin-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-wohnung",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-wohnung-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-wohnung-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a1-wohnung-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-antrag",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-antrag-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-antrag-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-antrag-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-entscheidung",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-entscheidung-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-entscheidung-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-entscheidung-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-problem",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-problem-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-problem-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-problem-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-vereinbarung",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-vereinbarung-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-vereinbarung-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-a2-vereinbarung-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-daten",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-daten-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-daten-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-daten-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-massnahme",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-massnahme-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-massnahme-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-massnahme-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-verantwortung",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-verantwortung-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-verantwortung-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-verantwortung-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-ziel",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-ziel-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-ziel-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b1-ziel-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-annahme",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-annahme-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-annahme-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-annahme-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-auswirkungen",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-auswirkungen-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-auswirkungen-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-auswirkungen-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-position",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-position-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-position-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-position-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-risiko",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-risiko-c1",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-risiko-c2",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "collocation:coll-b2-risiko-c3",
+      "scope": "practice-collocation",
+      "ownerId": "vocabulary-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "diag-a-a1-grammar",
       "scope": "diagnostic",
       "ownerId": "assessment-content-owner",
@@ -16197,6 +16848,150 @@
       "scope": "diagnostic",
       "ownerId": "assessment-content-owner",
       "reviewerId": "assessment-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a1-bus",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a1-greeting",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a1-learning",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a1-office",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a2-confirmation",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a2-invoice",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a2-rain",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-a2-yesterday",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b1-analysis",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b1-application",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b1-model",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b1-rent",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b2-argument",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b2-costs",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b2-flexibility",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "dictation:dict-b2-results",
+      "scope": "practice-dictation",
+      "ownerId": "practice-content-owner",
+      "reviewerId": "listening-item-reviewer-role",
       "lifecycleStage": "published",
       "reviewStatus": "automated-validated-independent-review-pending",
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"

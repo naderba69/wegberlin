@@ -130,7 +130,7 @@ Last audited: 2026-09-11
 | 334 | اختبار Offline كامل في Playwright. | `implemented` | Full Offline pack مختبر في Playwright على Desktop وMobile مع موارد غير مزارة. | — |
 | 335 | إضافة Property-based tests للمقارنة والدمج عند الإمكان. | `implemented` | `deterministic-generative-properties-v1` يضيف Harness حتميًا قابلًا لإعادة Seed مع Shrink bounded، ويشغل 8 خصائص عبر 8,301 حالة مولدة/معادة للمقارنة والتطبيع وإدخال الحروف وMerge union/max/idempotence، إضافة إلى صحة عدادات Collocations ومسارات المحادثة وZod. كشف الاختبار حد ß→SS وحُفظ بوصفه strict boundary بدل إخفائه. | — |
 | 336 | منع إعلان النجاح إذا لم تُنفذ الأوامر فعليًا. | `implemented` | `npm run check` وhandoff fail-closed؛ لا يطبعان نجاحًا إذا فشلت مرحلة. | — |
-| 345 | توفير مقارنة نسخ المنهج قبل تحديث حزمة. | `implemented` | `pre-update-curriculum-pack-diff-v1` يعرض قبل التثبيت نسخة المنهج والبصمة والنطاق وعدد المسارات المثبت→المرشح، ويفصل curriculum update عن build/scope change وأول تثبيت. المقارنة Metadata فقط ولا تثبت تلقائيًا؛ Worker يحفظ curriculumVersion في metadata. | — |
+| 345 | توفير مقارنة نسخ المنهج قبل تحديث حزمة. | `implemented` | `pre-update-curriculum-pack-diff-v2` يعرض قبل التثبيت نسخة المنهج والبصمة والنطاق وعدد المسارات المثبت→المرشح، ويفصل curriculum update عن build/scope change وأول تثبيت. المقارنة Metadata فقط ولا تثبت تلقائيًا؛ Worker يحفظ curriculumVersion في metadata. | — |
 | 346 | إضافة زر نسخ مثال مع اتجاه النص الصحيح. | `implemented` | `all-visible-german-examples-copy-v1` يعزز كل German leaf ظاهر بزر Copy LTR مع Clipboard fallback. | — |
 | 347 | إنشاء Quick Practice من خمس دقائق حسب أضعف هدف. | `implemented` | `weakest-target-five-minute-practice-v1` يركب أربع خطوات مجموعها خمس دقائق من الخطأ أو المراجعة أو هدف المدرب الحالي. | — |
 | 348 | إتاحة تخصيص أصوات ونغمات محلية دون تتبع. | `implemented` | `local-synthetic-voice-preferences-v1` يحفظ voiceURI وpitch ويطبقه على كل أسطح Browser TTS دون تتبع. | — |
@@ -154,7 +154,7 @@ Last audited: 2026-09-11
 | 382 | إظهار ترجمة المعنى لا ترتيب الكلمات الحرفي. | `implemented` | `meaning-not-word-order-translation-audit-v1` يفحص 3,146 حقل معنى ضد token-by-token gloss مع فصل المراجعة العربية. | — |
 | 383 | إضافة Glossary للمصطلحات النحوية بالعربية والألمانية. | `implemented` | `bilingual-grammar-glossary-v1` يعرض 24 مصطلحًا مؤلفًا متوازنًا 6/6/6/6 عبر A1–B2 مع تعريف عربي ومثال ألماني ومعناه، وبحث/فلتر محلي داخل Search دون Network أو mastery. | — |
 | 384 | مراجعة الشرح العربي لضمان وضوحه في تونس وبقية العالم العربي. | `partial` | 17 دعمًا تونسيًا منفصلًا وحالة مراجعة معلقة. | المراجعة المستقلة لتونس وبقية العالم العربي لم تنفذ. |
-| 393 | حساب عدد الأسئلة الأصلية لا نسخ السؤال بتغييرات سطحية. | `implemented` | التدقيق يعد 2,932 Prompt أصلية ويقارن 4,296,846 زوجًا ويمنع التشابه غير المعفى. | — |
+| 393 | حساب عدد الأسئلة الأصلية لا نسخ السؤال بتغييرات سطحية. | `implemented` | التدقيق يعد 3,020 Prompt أصلية ويقارن 4,558,690 زوجًا ويمنع التشابه غير المعفى. | — |
 | 394 | وضع ميزانية حجم للمنهج والصوت وحزمة كل مستوى. | `implemented` | `media-pack-budget-v1` يفرض حدودًا مستقلة للمنهج والصوت ولكل حزمة A1/A2/B1/B2/full مع 15% reserve. | — |
 | 395 | إضافة تقرير أصول مفقودة وChecksums. | `implemented` | تقارير الصوت وOffline تتحقق من الملفات الناقصة والحجم وSHA-256. | — |
 | 396 | نشر Known limitations بدل إخفاء النقص. | `implemented` | README وPROJECT_STATUS وKnown limitations تسجل النقص والحدود بدل إخفائها. | — |

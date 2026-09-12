@@ -3,20 +3,20 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6ac2`
+Content SHA-256: `9950a20b1057c5fb9ee05bb1111ee99de9958a4011884f9fe63ad2ee6231cd0f`
 
 ## Result
 
-`PASS` — 172 TSX files and 6764 opening JSX tags were scanned.
+`PASS` — 175 TSX files and 6877 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 384 |
+| Explicit German fragments (lang=de + dir=ltr) | 388 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 4 |
 | LTR tags audited | 421 |
 | RTL tags audited | 4 |
 | Auto-direction adaptive fragments | 2 |
-| Technical/numeric/secret bidi scopes | 37 |
+| Technical/numeric/secret bidi scopes | 33 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 12 |
 | Adaptive answer-bank consumers | 10 |
@@ -55,9 +55,9 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/app/progress/page.tsx:53 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:58 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:63 | ليس حكم CEFR | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:57 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:57 | تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفرد | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:59 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:66 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:66 | تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفرد | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:68 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/a1-level-assessment.tsx:23 | بوابة A1 — تقييم داخلي غير رسمي | Arabic host + plaintext boundary |
 | src/components/a1-level-assessment.tsx:23 | لا يفتح النظام A2 من علامة اختيارات فقط. يجب إكمال المسار وتقديم أدلة كتابة ومحادثة وتشخيص أولي. | Arabic host + plaintext boundary |
 | src/components/a1-level-assessment.tsx:26 | تقييم نهاية A1 | Arabic host + plaintext boundary |
@@ -85,24 +85,24 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:44 | من A1 إلى B2 | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:77 | يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة. | Arabic host + plaintext boundary |
-| src/components/branching-conversation-lab.tsx:91 | محادثة متفرعة دون AI | Arabic host + plaintext boundary |
-| src/components/branching-conversation-lab.tsx:95 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
-| src/components/branching-conversation-lab.tsx:115 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
-| src/components/branching-conversation-lab.tsx:143 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
+| src/components/branching-conversation-lab.tsx:101 | محادثة متفرعة دون AI | Arabic host + plaintext boundary |
+| src/components/branching-conversation-lab.tsx:105 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
+| src/components/branching-conversation-lab.tsx:125 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
+| src/components/branching-conversation-lab.tsx:153 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
 | src/components/coach-dashboard.tsx:204 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
 | src/components/coach-dashboard.tsx:212 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
-| src/components/collocation-network-lab.tsx:33 | محلي ودون AI | Arabic host + plaintext boundary |
-| src/components/collocation-network-lab.tsx:42 | هذه نتيجة جولة محلية صغيرة، وليست حكم مفردات أو CEFR. راجع الفرق ثم استعمل تركيبًا في درس أو كتابة فعلية. | Arabic host + plaintext boundary |
-| src/components/collocation-network-lab.tsx:43 | نحفظ معرفات الوصلات والعدد فقط، لا نصًا حرًا ولا نضيف بطاقات SRS تلقائيًا. | Arabic host + plaintext boundary |
-| src/components/collocation-network-lab.tsx:43 | المطابقة حتمية من بنك مؤلف. لا AI، لا شبكة، لا mastery، ولا ادعاء أن هذه كل التراكيب الممكنة. | Arabic host + plaintext boundary |
-| src/components/content-error-report-control.tsx:26 | يرفق النموذج العنوان والمسار ومعرف المحتوى وإصدار التطبيق فقط. لا يرفق Answer key أو تقدمك أو مفاتيحك أو نص إن | Arabic host + plaintext boundary |
-| src/components/content-error-report-control.tsx:28 | نسخ JSON الآمن | Arabic host + plaintext boundary |
-| src/components/content-error-report-control.tsx:28 | تنزيل JSON | Arabic host + plaintext boundary |
+| src/components/collocation-network-lab.tsx:37 | محلي ودون AI | Arabic host + plaintext boundary |
+| src/components/collocation-network-lab.tsx:46 | هذه نتيجة جولة محلية صغيرة، وليست حكم مفردات أو CEFR. راجع الفرق ثم استعمل تركيبًا في درس أو كتابة فعلية. | Arabic host + plaintext boundary |
+| src/components/collocation-network-lab.tsx:47 | نحفظ معرفات الوصلات والعدد فقط، لا نصًا حرًا ولا نضيف بطاقات SRS تلقائيًا. | Arabic host + plaintext boundary |
+| src/components/collocation-network-lab.tsx:47 | المطابقة حتمية من بنك مؤلف. لا AI، لا شبكة، لا mastery، ولا ادعاء أن هذه كل التراكيب الممكنة. | Arabic host + plaintext boundary |
+| src/components/content-error-report-control.tsx:27 | يرفق النموذج العنوان والمسار ومعرف المحتوى وإصدار التطبيق فقط. لا يرفق Answer key أو تقدمك أو مفاتيحك أو نص إن | Arabic host + plaintext boundary |
+| src/components/content-error-report-control.tsx:29 | نسخ JSON الآمن | Arabic host + plaintext boundary |
+| src/components/content-error-report-control.tsx:29 | تنزيل JSON | Arabic host + plaintext boundary |
 | src/components/content-error-reports-manager.tsx:22 | لا توجد مزامنة أو إرسال تلقائي إلى GitHub أو البريد. | Arabic host + plaintext boundary |
 | src/components/content-governance-summary.tsx:6 | كل عائلة منشورة تمر عبر Draft → Validated → Published ولها مالك ودور مراجعة منفصل. | Arabic host + plaintext boundary |
 | src/components/content-note-control.tsx:22 | Meine Notiz · ملاحظتي | Arabic host + plaintext boundary |
 | src/components/content-notes-manager.tsx:18 | DWNB ينقل هذه السجلات مع ملفك. لا نحفظ جواب التمرين تلقائيًا ولا نرسل النص إلى مزود. | Arabic host + plaintext boundary |
-| src/components/context-appropriateness-quiz.tsx:1 | اختر الصيغة الأنسب للموقف، ثم اقرأ سبب الملاءمة. لا تُمنح mastery من هذا المختبر. | Arabic host + plaintext boundary |
+| src/components/context-appropriateness-quiz.tsx:27 | اختر الصيغة الأنسب للموقف، ثم اقرأ سبب الملاءمة. لا تُمنح mastery من هذا المختبر. | Arabic host + plaintext boundary |
 | src/components/daily-focus-tools.tsx:23 | ابدأ Quick Practice | Arabic host + plaintext boundary |
 | src/components/daily-focus-tools.tsx:28 | صدّر DWNB الآن | Arabic host + plaintext boundary |
 | src/components/data-usage-preferences-control.tsx:1 | يمنع تنزيل الصوت الاختياري ونموذج WebGPU الكبير. لا يوجد Autoplay أصلًا. | Arabic host + plaintext boundary |
@@ -116,9 +116,9 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/diagnostic-view.tsx:109 | الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا. | Arabic host + plaintext boundary |
 | src/components/diagnostic-view.tsx:118 | Produktionsprobe · العينة الإنتاجية | Arabic host + plaintext boundary |
 | src/components/diagnostic-view.tsx:129 | استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني. | Arabic host + plaintext boundary |
-| src/components/dictation-lab.tsx:144 | استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكام | Arabic host + plaintext boundary |
-| src/components/dictation-lab.tsx:148 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
-| src/components/dictation-lab.tsx:225 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
+| src/components/dictation-lab.tsx:151 | استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكام | Arabic host + plaintext boundary |
+| src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
+| src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:110 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:110 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:111 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
@@ -127,7 +127,6 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/exam-hub.tsx:119 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:163 | بوابة B2 الداخلية | Arabic host + plaintext boundary |
 | src/components/exam-print-tools.tsx:1 | ورقة تدريب محلية غير رسمية · Goethe وtelc لا يختلطان. | Arabic host + plaintext boundary |
-| src/components/four-skill-vocabulary-cycle.tsx:1 | القراءة ظاهرة في سياق قصير، والصوت TTS اصطناعي. تثبيت الكلام تقرير ذاتي؛ لا يستمع التطبيق ولا يمنح mastery. | Arabic host + plaintext boundary |
 | src/components/grammar-progression-map.tsx:8 | 24 قاعدة محورية مرتبة بعلاقات تدريس فعلية. الأسهم تعني «تعلم هذا أولًا»، لا حكم CEFR رسميًا ولا إتقانًا بالتصف | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:24 | ليس تقييم مدرس رسميًا ولا حكم CEFR. | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:25 | للاستعانة بـGemini عند الشك، اختر Gemini BYOK من | Arabic host + plaintext boundary |
@@ -210,7 +209,7 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/plan-change-timeline.tsx:1 | لا نص إجابة أو ملاحظة Reflection · لا mastery · لا عقوبة · مشتق من سجلات التخطيط القابلة للحذف مع حالتها الأصل | Arabic host + plaintext boundary |
 | src/components/planning-preferences-control.tsx:16 | لا رفع تلقائي: «مكثفة» لا تطبق إلا بعد اختيارك. Check-in والطاقة و«لدي وقت أقل» تستطيع دائمًا خفضها. | Arabic host + plaintext boundary |
 | src/components/planning-preferences-control.tsx:16 | إشعار الموعد الامتحاني النشط يبقى Safety exception لأن ساعته لا تتوقف. | Arabic host + plaintext boundary |
-| src/components/planning-preferences-control.tsx:16 | العقد وساعات الهدوء لا يغيران mastery أو correctness أو بوابات المستويات. لا يطلب التطبيق إذن Notifications ول | Arabic host + plaintext boundary |
+| src/components/planning-preferences-control.tsx:16 | العقد وساعات الهدوء لا يغيران mastery أو correctness أو بوابات المستويات. إذن الجهاز لا يُطلب إلا من بطاقة تذك | Arabic host + plaintext boundary |
 | src/components/practical-day-mode.tsx:1 | يحفظ السجل السيناريو والخطوات وأطوال الرد فقط، لا نص المعاملة. لا إرسال ولا نتيجة لغوية ولا mastery. | Arabic host + plaintext boundary |
 | src/components/pronunciation-articulation-lab.tsx:34 | vereinfachte Lernskizze · رسم تعليمي مبسط | Arabic host + plaintext boundary |
 | src/components/pronunciation-articulation-lab.tsx:94 | Hörprobe starten · ابدأ عينة مخفية | Arabic host + plaintext boundary |
@@ -221,21 +220,22 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/reading-benchmark.tsx:55 | الحد: `planning-only-no-cefr-or-mastery`. الكلمات/دقيقة تضبط وقت القراءة فقط ولا تصبح درجة لغة أو امتحان. | Arabic host + plaintext boundary |
 | src/components/redemittel-bank.tsx:1 | 32 عبارة مؤلفة · formal/neutral/colloquial/professional · لا تمنح دليلًا أو mastery بمجرد عرضها. | Arabic host + plaintext boundary |
 | src/components/resilient-audio-player.tsx:93 | إعادة تحميل MP3 | Arabic host + plaintext boundary |
+| src/components/review-reminder-control.tsx:30 | تذكير محلي للبطاقات المستحقة، بلا حساب أو خادم أو Push مدفوع. | Arabic host + plaintext boundary |
 | src/components/separated-rubrics.tsx:1 | عام وGoethe وtelc — دون خلط | Arabic host + plaintext boundary |
 | src/components/session-ritual-preferences-control.tsx:4 | تفضيل محلي فقط · `optional-session-rituals-v1` · التأمل الأسبوعي مستقل عن هذا المفتاح. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:203 | تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:220 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:223 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:225 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:228 | تصدير .dwnb | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:229 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:230 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:230 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:237 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:237 | مفتاح API | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:240 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:242 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:255 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:205 | تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:223 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:226 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:228 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:231 | تصدير .dwnb | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:232 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:233 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:233 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:240 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:240 | مفتاح API | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:243 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:245 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:258 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:148 | ملف MP3 متاح | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:148 | للتقليد دون TTS | Arabic host + plaintext boundary |
 | src/components/skill-diagnostic-retest.tsx:7 | كل عينة تسأل سؤالًا واحدًا من A1 إلى B2 وتحفظ منفصلة. لا تستبدل تشخيصك العام ولا تفتح مستوى. | Arabic host + plaintext boundary |
@@ -255,8 +255,8 @@ Content SHA-256: `fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6a
 | src/components/tutor-view.tsx:239 | Ich heiße أم Ich bin؟ | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:240 | مكان الفعل بعد weil | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:241 | Dativ مع mit | Arabic host + plaintext boundary |
-| src/components/unified-concept-map.tsx:1 | Grammatik · القواعد | Arabic host + plaintext boundary |
-| src/components/unified-concept-map.tsx:1 | Wortschatz · المفردات | Arabic host + plaintext boundary |
+| src/components/unified-concept-map.tsx:40 | Grammatik · القواعد | Arabic host + plaintext boundary |
+| src/components/unified-concept-map.tsx:49 | Wortschatz · المفردات | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:81 | ترتيب دلالي محلي لأسئلة المتابعة عبر WebGPU، وليس معلمًا أو مصحح نطق. | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:89 | نحو 130–150 MB | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:89 | الأوزان الكمية المعلنة 118 MB، ويضاف Tokenizer وRuntime. | Arabic host + plaintext boundary |

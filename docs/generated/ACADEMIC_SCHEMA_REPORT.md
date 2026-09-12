@@ -2,11 +2,11 @@
 
 Generated: 2026-09-05  
 Version: `academic-governance-v1`  
-Content SHA-256: `c00ad4c752f6345384cb5f84f8060f14e8475cdc370cbba553f9274b5df6c927`
+Content SHA-256: `8ff50e524d4dffb6f8d321742d850196c2019fa92327237d1156c12d2ad2e640`
 
 ## Result
 
-`PASS` — 3710 top-level runtime academic objects passed 13 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, and conditional Tunisian-support note.
+`PASS` — 3750 top-level runtime academic objects passed 16 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, conditional Tunisian-support note, adaptive dictation, branching conversation, and collocation network.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -23,7 +23,10 @@ Content SHA-256: `c00ad4c752f6345384cb5f84f8060f14e8475cdc370cbba553f9274b5df6c9
 | nounGrammarEntries | 1044 | Zod strict + nested objects |
 | verbPrepositionFrames | 104 | Zod strict + nested objects |
 | tunisianSupportNotes | 17 | Zod strict + nested objects |
-| **Total top-level objects** | **3710** | **0 schema failures** |
+| dictationItems | 16 | Zod strict + nested objects |
+| branchingConversationScenarios | 8 | Zod strict + nested objects |
+| collocationNetworks | 16 | Zod strict + nested objects |
+| **Total top-level objects** | **3750** | **0 schema failures** |
 
 ## Cross-reference gates
 
@@ -35,6 +38,9 @@ Content SHA-256: `c00ad4c752f6345384cb5f84f8060f14e8475cdc370cbba553f9274b5df6c9
 - choice/listening correct index → available option;
 - full dashboard → published provider-owned task ID;
 - Tunisian-support note → published lesson and theory block;
+- partial dictation template → complete canonical answer;
+- branching choice → reachable local node and all three terminal outcomes;
+- collocation node → stable parent-network ownership;
 - unique IDs within every root collection.
 
 The committed report is checked during `prebuild`; content drift without regenerated reports fails the build.

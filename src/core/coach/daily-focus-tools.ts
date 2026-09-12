@@ -1,6 +1,7 @@
 import type { LearningState, MissionBlock, PinnedLearningTask, StudyRoutineModeSettings } from "@/types/learning";
 import { getCoachTarget } from "./coach";
 import { buildExamTargetForecast } from "./exam-target-forecast";
+import { buildDueReviewQueue } from "@/core/srs/review-queue";
 
 export const PINNED_TASK_POLICY_VERSION="learner-pinned-task-v1" as const;
 export const ROUTINE_MODE_POLICY_VERSION="learner-selected-morning-evening-mode-v1" as const;
@@ -17,7 +18,7 @@ export function clearPinnedLearningTask(state:LearningState):LearningState{retur
 export function setStudyRoutineMode(state:LearningState,mode:StudyRoutineModeSettings["mode"],now=new Date()):LearningState{return{...state,studyRoutineMode:{policyVersion:ROUTINE_MODE_POLICY_VERSION,mode,...(mode==="auto"?{}:{selectedAt:now.toISOString()}),evidenceBoundary:"learner-selected-entry-mode-no-automatic-completion-mastery-or-time-debt"}}}
 
 export function buildFiveMinuteQuickPractice(state:LearningState,now=new Date()){
- const activeErrors=state.errors.filter((error)=>!error.resolved);const target=activeErrors.length?{href:"/errors",titleAr:"عالج أضعف نمط نشط",titleDe:"Fehler kurz prüfen",reasonAr:`ابدأ بخطأ نشط واحد من ${activeErrors.length} دون فتح حل مسبق.`}:state.dueReviews>0?{href:"/review",titleAr:"استرجع بطاقة مستحقة",titleDe:"Fünf Minuten abrufen",reasonAr:`لديك ${state.dueReviews} مراجعة مستحقة؛ خذ أول عينة فقط.`}:getCoachTarget(state,now);
+ const activeErrors=state.errors.filter((error)=>!error.resolved);const dueReviews=buildDueReviewQueue(state,now).length;const target=activeErrors.length?{href:"/errors",titleAr:"عالج أضعف نمط نشط",titleDe:"Fehler kurz prüfen",reasonAr:`ابدأ بخطأ نشط واحد من ${activeErrors.length} دون فتح حل مسبق.`}:dueReviews>0?{href:"/review",titleAr:"استرجع بطاقة مستحقة",titleDe:"Fünf Minuten abrufen",reasonAr:`لديك ${dueReviews} مراجعة مستحقة؛ خذ أول عينة فقط.`}:getCoachTarget({...state,dueReviews},now);
  return{policyVersion:QUICK_PRACTICE_POLICY_VERSION,minutes:5,href:target.href,titleAr:target.titleAr,titleDe:target.titleDe,steps:[{minute:1,labelAr:"استرجاع دون كشف"},{minute:2,labelAr:"محاولة واحدة من الهدف"},{minute:1,labelAr:"تحقق من السبب"},{minute:1,labelAr:"سجل قرار العودة"}],reasonAr:target.reasonAr,evidenceBoundary:"five-minute-route-to-current-weakest-evidence-no-auto-completion-mastery-or-session-debt" as const};
 }
 

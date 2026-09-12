@@ -14,6 +14,7 @@ import { globalStudyShortcut, GLOBAL_STUDY_SHORTCUT_POLICY_VERSION } from "@/cor
 import { ExamPrintTools } from "./exam-print-tools";
 import { GermanCopyEnhancer } from "./german-copy-enhancer";
 import { GermanCharacterDock } from "./german-character-dock";
+import { ReviewReminderCoordinator } from "./review-reminder-coordinator";
 
 const nav = [
   { href: "/today", label: "مهمتي اليوم", short: "اليوم", icon: Sparkles },
@@ -49,6 +50,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const [exitOpen, setExitOpen] = useState(false);
   const [mobileNavOpen,setMobileNavOpen]=useState(false);
   const pageContext=routeContext(pathname);
+  const mobileMoreActive=!mobilePrimary.some((item)=>pathname===item.href||pathname.startsWith(`${item.href}/`));
   const initials = state.profile?.name.trim().slice(0, 1) || "م";
   const accessibility = state.accessibilityPreferences;
   const quietHoursActive = ready && isQuietHoursActive(state.quietHours, new Date());
@@ -131,13 +133,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <span className="avatar" aria-label="ملف المتعلم">{initials}</span>
           </div>
         </header>}
+        {!focusSession&&<ReviewReminderCoordinator/>}
         {!focusSession && activeSession && <aside className="active-rehearsal-reminder" aria-label="بروفة امتحان نشطة"><Clock3 size={17} /><p><strong>لديك بروفة متصلة نشطة.</strong><span>الموعد النهائي لم يتوقف عند مغادرة صفحة الامتحان.</span></p><Link href={activeDashboard}>استئناف البروفة</Link></aside>}
         <main id="main-content" className="page-content" tabIndex={-1}>{children}{pathname.startsWith("/exams")&&!focusSession&&<ExamPrintTools path={pathname}/>}<GermanCopyEnhancer scopeKey={pathname}/><GermanCharacterDock/></main>
       </div>
 
       {!focusSession && <nav className="bottom-nav" aria-label="التنقل على الهاتف">
         {mobilePrimary.map(({href,short,icon:Icon})=>{const active=pathname===href||pathname.startsWith(`${href}/`);return <Link key={href} href={href} className={active?"active":""}><Icon size={20}/><span>{short}</span></Link>})}
-        <button type="button" className={resourceNav.some((item)=>pathname===item.href||pathname.startsWith(`${item.href}/`))?"active":""} aria-expanded={mobileNavOpen} aria-controls="mobile-navigation-sheet" onClick={()=>setMobileNavOpen(true)}><LayoutGrid size={20}/><span>المزيد</span></button>
+        <button type="button" className={mobileMoreActive?"active":""} aria-current={mobileMoreActive?"page":undefined} aria-expanded={mobileNavOpen} aria-controls="mobile-navigation-sheet" onClick={()=>setMobileNavOpen(true)}><LayoutGrid size={20}/><span>المزيد</span></button>
       </nav>}
 
       {!focusSession&&mobileNavOpen&&<AccessibleDialog labelledBy="mobile-navigation-title" describedBy="mobile-navigation-description" className="mobile-navigation-sheet" onClose={()=>setMobileNavOpen(false)}><header><div><small>تنقل سريع</small><h2 id="mobile-navigation-title">كل أقسام المنصة</h2><p id="mobile-navigation-description">اختر وجهتك؛ تقدمك محفوظ محليًا ولن تتغير المهمة بمجرد التصفح.</p></div><button type="button" data-autofocus onClick={()=>setMobileNavOpen(false)} aria-label="إغلاق قائمة الأقسام"><X size={20}/></button></header><nav id="mobile-navigation-sheet" aria-label="كل أقسام المنصة">{nav.map(({href,label,icon:Icon})=>{const active=pathname===href||pathname.startsWith(`${href}/`);return <Link key={href} href={href} onClick={()=>setMobileNavOpen(false)} className={active?"active":""}><span><Icon size={20}/></span><strong>{label}</strong>{active&&<small>أنت هنا</small>}</Link>})}</nav><footer><b>نصيحة</b><span>ابدأ دائمًا من «مهمتي اليوم» عندما تريد متابعة الدراسة.</span></footer></AccessibleDialog>}

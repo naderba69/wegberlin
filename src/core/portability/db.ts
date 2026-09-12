@@ -7,6 +7,7 @@ import { CURRENT_CURRICULUM_VERSION } from "@/config/curriculum-version";
 import { normalizeEventDerivedMastery } from "@/core/evidence/event-derived-mastery";
 import { DEFAULT_PLANNING_INTENSITY } from "@/core/coach/intensity-presets";
 import { DEFAULT_SPEECH_PREFERENCES } from "@/core/audio/speech-preferences";
+import { DEFAULT_REVIEW_REMINDER_SETTINGS } from "@/core/review/reminder";
 import { buildRawStoreExport, serializeRawStoreValue, type RawStoreName } from "./raw-store-export";
 
 const DB_NAME = "der-weg-nach-berlin";
@@ -30,13 +31,14 @@ export const defaultState: LearningState = {
   sessionRitualPreferences:{policyVersion:"optional-session-rituals-v1",startEnabled:true,endEnabled:true,evidenceBoundary:"learner-selected-ritual-visibility-no-completion-mastery-or-penalty"},
   weeklyReflections:[],
   quietHours: DEFAULT_QUIET_HOURS,
+  reviewReminderSettings:DEFAULT_REVIEW_REMINDER_SETTINGS,
   completedBlockIds: [],
   completedLessonIds: [],
   currentLessonId: "a1-01",
   currentStage: 0,
   lessonProgress: {},
   exerciseAttempts: [],
-  dueReviews: 3,
+  dueReviews: 0,
   mastery: { greeting: 0, "v2-order": 0, "personal-info": 0 },
   masteryEvidenceEvents: [],
   errors: [],
@@ -124,6 +126,7 @@ export function migrateLearningState(value: unknown): unknown {
       sessionRitualPreferences:source.sessionRitualPreferences??defaultState.sessionRitualPreferences,
       weeklyReflections:source.weeklyReflections??[],
       quietHours: source.quietHours ?? defaultState.quietHours,
+      reviewReminderSettings:source.reviewReminderSettings??defaultState.reviewReminderSettings,
       errorClinicAttempts: source.errorClinicAttempts ?? [],
       masteryEvidenceEvents: source.masteryEvidenceEvents ?? [],
       reviewItems: source.reviewItems ?? [],

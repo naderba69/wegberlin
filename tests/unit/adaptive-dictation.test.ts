@@ -84,5 +84,7 @@ describe("P2 adaptive partial and full dictation", () => {
     expect(source).toContain("لا نحفظ النص الذي كتبته");
     expect(source).toContain("ليس اختبار CEFR");
     expect(source).not.toMatch(/pronunciationScore|fluencyScore|officialScore/);
+    expect(source).not.toContain("% items.length");
+    expect(source).toContain("إنهاء والعودة إلى اليوم");
   });
 });

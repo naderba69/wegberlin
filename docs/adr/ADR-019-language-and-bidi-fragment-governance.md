@@ -38,8 +38,8 @@ Arabic-host static text receives a plaintext paragraph boundary, while explicit 
 ## Current audit
 
 ```text
-TSX files: 172
-Opening JSX tags: 6,764
+TSX files: 175
+Opening JSX tags: 6,877
 Explicit German fragments: 384
 Explicit technical/numeric/secret scopes: 36
 Adaptive answer-bank consumers: 10

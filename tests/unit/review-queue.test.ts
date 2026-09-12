@@ -24,6 +24,15 @@ describe("evidence-scoped SRS review queue", () => {
     expect(due.every((item) => item.card.tags.includes(lesson.id))).toBe(true);
   });
 
+  it("includes pronunciation reviews and enriches noun cards without exposing technical labels", () => {
+    const cards = buildLessonSrsCards(academicLessons["a1-14"]);
+    expect(cards.filter((card) => card.tags.includes("pronunciation")).length).toBeGreaterThanOrEqual(2);
+    const noun = cards.find((card) => card.tags.includes("noun-grammar"));
+    expect(noun?.back).toContain("الجمع:");
+    expect(noun?.hint).toContain("Akkusativ:");
+    expect(noun?.hint).toContain("Dativ:");
+  });
+
   it("removes graded future cards from today's queue and reports the next date", () => {
     const state = { ...defaultState, completedLessonIds: [lesson.id] };
     const card = buildLessonSrsCards(lesson)[0];

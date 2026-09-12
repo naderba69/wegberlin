@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { LOCAL_PRONUNCIATION_MODEL_CACHE, LOCAL_PRONUNCIATION_MODEL_META_PATH, localPronunciationModelRegistry } from "@/config/local-pronunciation-model-registry";
 import { deleteLocalPronunciationModel, detectLocalPronunciationCapability, getLocalPronunciationSourceDecision, inspectLocalPronunciationModel } from "@/core/pronunciation/local-model";
-import { germanWords, matchExpectedGermanWords, normalizeGermanWord } from "@/core/pronunciation/word-matching";
+import { germanWords, matchExpectedGermanPhrase, matchExpectedGermanWords, normalizeGermanWord } from "@/core/pronunciation/word-matching";
 import { resampleLinear } from "@/core/pronunciation/audio-sample";
 import { analyzeMicrophoneSignal, waveformEnvelope } from "@/core/pronunciation/microphone-signal";
 
@@ -69,6 +69,14 @@ describe("standard local German word-matching pack",()=>{
     expect(result.heardCount).toBe(result.expectedCount);
     expect(result.feedbackAr.join(" ")).toContain("مطابقة الكلمات فقط");
     expect(result).not.toHaveProperty("score");
+  });
+
+  it("aligns every phrase word in order and preserves repeated words",()=>{
+    const complete=matchExpectedGermanPhrase("Wie bitte wie war das", "Wie bitte, wie war das?");
+    expect(complete.words.map((item)=>item.normalized)).toEqual(["wie","bitte","wie","war","das"]);
+    expect(complete.heardCount).toBe(5);
+    const reordered=matchExpectedGermanPhrase("Bitte wie wie war das", "Wie bitte, wie war das?");
+    expect(reordered.heardCount).toBeLessThan(reordered.expectedCount);
   });
 
   it("resamples locally with bounded linear interpolation",()=>{

@@ -78,5 +78,7 @@ describe("P2 deterministic offline branching conversations", () => {
     for (const marker of ["Kommunikatives Ziel", "Wie reagieren Sie?", "موجّه", "تحدٍ", "ماذا حدث؟", "Transfer ohne Auswahl", "ليست محادثة حية", "لا شخص حقيقي", "data-branching-conversation-policy"]) expect(source).toContain(marker);
     expect(source).toContain("لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery");
     expect(source).not.toMatch(/fetch\(|WebSocket|MediaRecorder|pronunciationScore|fluencyScore/);
+    expect(source).not.toContain("% scenarios.length");
+    expect(source).toContain("إنهاء والعودة إلى المختبرات");
   });
 });

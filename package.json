@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "vendor:materialize": "node scripts/materialize-vendor-runtime.mjs",
-    "prepare": "npm run vendor:materialize",
+    "prepare": "npm run vendor:materialize && npm run runtime:materialize",
     "offline:manifest": "node scripts/generate-offline-manifest.mjs",
     "offline:size": "node scripts/generate-offline-size-manifest.mjs",
     "handoff:check": "node scripts/verify-continuation-handoff.mjs",
@@ -37,7 +37,7 @@
     "security:audit:write": "tsx scripts/audit-security-headers.ts --write",
     "governance:audit": "tsx scripts/generate-content-governance-audit.ts",
     "governance:audit:write": "tsx scripts/generate-content-governance-audit.ts --write",
-    "prebuild": "npm run vendor:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit",
+    "prebuild": "npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit",
     "build": "next build --webpack",
     "postbuild": "npm run offline:size && npm run js:budget && npm run media:budget",
     "js:budget": "node scripts/audit-js-budgets.mjs",
@@ -46,10 +46,12 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:e2e": "playwright test",
+    "test:e2e": "npm run test:e2e:desktop && npm run test:e2e:mobile",
     "test:e2e:desktop": "playwright test --project=chromium",
     "check": "npm run lint && npm run typecheck && npm run test && npm run secret:audit && npm run source:audit -- --strict && npm run handoff:check && npm run build",
-    "dev:turbo": "next dev --turbopack"
+    "dev:turbo": "next dev --turbopack",
+    "test:e2e:mobile": "playwright test --project=mobile-chromium",
+    "runtime:materialize": "node scripts/materialize-runtime-config.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

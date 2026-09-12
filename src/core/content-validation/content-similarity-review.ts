@@ -1,4 +1,7 @@
 import { buildAnswerIntegrityAudit, type AnswerAuditRow, type ProductiveTaskAuditRow } from "./answer-integrity";
+import { dictationBank } from "@/data/dictation-bank";
+import { branchingConversationScenarios } from "@/data/branching-conversations";
+import { collocationNetworks } from "@/data/collocation-networks";
 import {
   authorizedExternalReferenceCorpora,
   CONTENT_REVIEW_STATE_POLICY,
@@ -117,9 +120,45 @@ function contextId(row: AnswerAuditRow | ProductiveTaskAuditRow) {
 
 export function buildSimilarityCorpus(): SimilarityCorpusEntry[] {
   const audit = buildAnswerIntegrityAudit();
+  const dictationEntries = dictationBank.map((item) => ({
+    id: `dictation:${item.id}`,
+    contextId: item.id,
+    scope: "practice-dictation",
+    kind: "closed-question" as const,
+    text: `${item.titleDe} ${item.instructionDe} ${item.canonicalText} ${item.titleAr} ${item.situationAr} ${item.focusAr}`,
+  }));
+  const branchingEntries = branchingConversationScenarios.map((scenario) => ({
+    id: `branching:${scenario.id}`,
+    contextId: scenario.id,
+    scope: "practice-branching",
+    kind: "productive-task" as const,
+    text: [
+      scenario.titleDe, scenario.goalDe, scenario.contextAr, scenario.goalAr,
+      ...scenario.nodes.flatMap((node) => [node.utteranceDe, node.supportAr, ...(node.choices?.flatMap((choice) => [choice.responseDe, choice.feedbackAr, choice.repairTipAr]) ?? [])]),
+    ].join(" "),
+  }));
+  const collocationEntries = collocationNetworks.flatMap((network) => [
+    {
+      id: `collocation:${network.id}`,
+      contextId: network.id,
+      scope: "practice-collocation",
+      kind: "productive-task" as const,
+      text: `${network.headwordDe} ${network.questionDe} ${network.headwordAr} ${network.guidanceAr}`,
+    },
+    ...network.nodes.map((node) => ({
+      id: `collocation:${node.id}`,
+      contextId: network.id,
+      scope: "practice-collocation",
+      kind: "closed-question" as const,
+      text: `${node.phraseDe} ${node.contextDe} ${node.exampleDe} ${node.meaningAr} ${node.contextAr} ${node.exampleAr} ${node.contrastAr}`,
+    })),
+  ]);
   return [
     ...audit.rows.map((row)=>({id:row.id,contextId:contextId(row),scope:row.scope,kind:"closed-question" as const,text:row.prompt})),
     ...audit.productiveTasks.map((row)=>({id:row.id,contextId:contextId(row),scope:row.scope,kind:"productive-task" as const,text:row.prompt})),
+    ...dictationEntries,
+    ...branchingEntries,
+    ...collocationEntries,
   ].sort((left,right)=>left.id.localeCompare(right.id));
 }
 

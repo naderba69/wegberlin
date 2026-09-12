@@ -80,7 +80,7 @@ Offline route manifest v2 exposes A1/A2/B1/B2/full packs with 50/50/50/199/298 r
 
 `error-pattern-classification-v1` closes P1-78/79 with optional German-first confidence, high-confidence wrong prioritization, and bounded slip/pattern/misconception-risk labels. Two failed treatments return to the captured source Rule stage, closing P1-80 without guessing a dependency. `confirmed-error-srs-v1` closes P1-77 only after initial plus delayed successful repair; normalized duplicates collapse, review scope is personal remediation, and mastery stays zero. See ADR-031.
 
-`content-near-duplicate-v1` closes P1-293 with a fail-closed 2,932-object/4,296,846-pair internal token+bigram scan; 24 initial cross-context prompts were rewritten and 10 same-context progression pairs remain visible. `content-review-state-v1` closes P1-295 with separate German/Arabic/CEFR/copyright states on every object, all honestly human-pending. External authorized corpora remain zero, so P1-92 and copyright clearance stay partial. See ADR-032.
+`content-near-duplicate-v1` closes P1-293 with a fail-closed 3,020-object/4,558,690-pair internal token+bigram scan; 24 initial cross-context prompts were rewritten and 10 same-context progression pairs remain visible. `content-review-state-v1` closes P1-295 with separate German/Arabic/CEFR/copyright states on every object, all honestly human-pending. External authorized corpora remain zero, so P1-92 and copyright clearance stay partial. See ADR-032.
 
 `local-study-exports-v1` closes P1-53/281/339/340 with preview-first local ICS, semantic print, Canvas/JPEG PDF, and formula-safe UTF-8 Anki TSV. Name is opt-in; media, keys, tutor payloads, and free learner text are excluded; DWNB remains the only restore format. PDF is printable but not tagged/selectable. See ADR-033.
 
@@ -114,7 +114,7 @@ The owner selected an honest primary self-study teacher rather than a false “c
 
 `weekly-planned-actual-no-blame-v1` closes P1-282 with an elapsed-plan versus recorded-activity comparison, explicit flexibility band, and no penalty/debt/mastery consequence. `evidence-velocity-readiness-range-v1` closes P1-284 with provider-scoped evidence-gap ranges or insufficient-data, never a pass date. `vercel-csp-headers-v1` closes P1-318 with 15 centralized directives, seven headers, exact remote/loopback allowlists, documented Next/WASM exceptions, and a fail-closed generated audit. `dwnb-deprecation-policy-v1` closes P1-365 with a v1/v2/v3 matrix, more than 180 days of v1 support through 2027-03-31, runtime migration warning, old-state migration before strict validation, and explicit pre-mutation expiry/unknown rejection. See ADR-050, `docs/SECURITY_HEADERS.md`, and `docs/DWNB_DEPRECATION_POLICY.md`.
 
-`independent-curriculum-version-v1` closes P1-367 by storing `dwnb-a1-b2-2026.09-v1` independently from app `0.1.0` in state, DWNB, migration, Merge, and import preview. `content-accountability-lifecycle-v1` closes P1-368/389 with owner/reviewer role separation across 2,932 content rows, 13 Draft→Validated→Published families, 18 sources, and 12 runtime learner-risk types. Published remains explicitly separate from independent-review completion. `general-consular-legal-claims-v1` adds 12 safe not-claimed contexts but keeps P1-377 partial for specialist review. `arabic-learner-pronunciation-inventory-v1` adds 18 not-universal rows with lesson/diagram/evidence mapping; 11 exact TTS pairs exist, so seven pairs plus independent phonetics review keep P1-380 partial. See ADR-051.
+`independent-curriculum-version-v1` closes P1-367 by storing `dwnb-a1-b2-2026.09-v1` independently from app `0.1.0` in state, DWNB, migration, Merge, and import preview. `content-accountability-lifecycle-v1` closes P1-368/389 with owner/reviewer role separation across 3,020 content rows, 16 Draft→Validated→Published families, 18 sources, and 12 runtime learner-risk types. Published remains explicitly separate from independent-review completion. `general-consular-legal-claims-v1` adds 12 safe not-claimed contexts but keeps P1-377 partial for specialist review. `arabic-learner-pronunciation-inventory-v1` adds 18 not-universal rows with lesson/diagram/evidence mapping; 11 exact TTS pairs exist, so seven pairs plus independent phonetics review keep P1-380 partial. See ADR-051.
 
 `P2_AUDIT.md` is the conservative source of truth for all 140 P2 proposals: 118 implemented, 2 partial, 20 not implemented, and 0 blocked as of 2026-09-11. A closure sprint moved all 44 technically closable partial rows to implemented only after adding named UI/state/audit contracts and tests. P2-264 remains partial for real WCAG/assistive-technology testing; P2-384 remains partial for independent Arabic regional review. P2 counts never close P0/P1 human-review items.
 
@@ -179,4 +179,20 @@ The owner selected an honest primary self-study teacher rather than a false “c
 `pre-production-release-candidate-v1` يغلق P2-369: workflow يدوي يفحص الأسرار وcheck وE2E ويرفع Attestation مرتبطة بالـcommit، بلا أي خطوة نشر. الترقية فعل منفصل ولا ندعي Run بعيدًا قبل Push. راجع ADR-069.
 
 ## 2026-09-12 — مقارنة Offline قبل التحديث
-`pre-update-curriculum-pack-diff-v1` يفصل curriculum/build/scope/route delta قبل التثبيت، بلا Diff دلالية أو تثبيت تلقائي. راجع ADR-070.
+`pre-update-curriculum-pack-diff-v2` يفصل curriculum/build/scope/route delta قبل التثبيت، بلا Diff دلالية أو تثبيت تلقائي. راجع ADR-070.
+
+## 2026-09-12 — Terminal four-skill word confirmation and spaced pronunciation
+
+`adaptive-four-skill-cycle-v2` replaces the in-memory modulo/self-report loop with level- and phrase-shaped writing goals, successful playback evidence, transient signal validation, ordered local ASR word confirmation, stable IndexedDB completion events, and terminal Vocabulary→Discover navigation. Selected SM-2 cards reuse the same all-words-confirmed interaction and can be deferred without false credit. Responsive reflow keeps mobile context visible and tests clipping/overlap across compact/default/large at 320/360/768. This remains expected-word matching, not phoneme/accent/fluency scoring. See ADR-071.
+
+## 2026-09-12 — Zero-cost local review reminders
+
+`local-review-reminder-v1` uses the actual due SM-2 queue, a learner-selected local time, IANA-zone quiet hours, and persisted once-per-day markers. In-app delivery is primary; Notification API is requested only by a direct Settings action and can notify only while the app is open. Denial or unsupported browsers retain the in-app path. There is no push, paid scheduler, background guarantee, mastery credit, or penalty. See ADR-072.
+
+## 2026-09-12 — Single-source runtime curriculum identity
+
+`src/config/curriculum-version.json` is now the authored version registry. `runtime:materialize` validates it and generates both the TypeScript runtime module and marked Service Worker constant during prepare/prebuild. Tests fail on drift. `pre-update-curriculum-pack-diff-v2` also treats old completed packs without a curriculum identity as an unknown curriculum update. See ADR-073.
+
+## 2026-09-12 — Finite practice never wraps silently
+
+Learner-visible “next” actions in finite Dictation, Branching, Collocation, and context-appropriateness rounds now reach the next task/level and a terminal destination; restart is explicit. Five-minute practice uses the real eligible SRS queue and cannot follow a stale aggregate counter into an empty Review page. Technical provider/content/task IDs are retained in state/export metadata but replaced by human labels in learning UI. See ADR-074.

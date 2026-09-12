@@ -24,7 +24,7 @@ export function WritingRepairPractice({ exercises, attempts, onAttempt }: {
       const answer=answers[exercise.id]??"";
       const currentCorrect=latest?.correct??(committed[exercise.id]?evaluateWritingRepair(exercise,answer):undefined);
       return <article key={exercise.id} className={revealed?(currentCorrect?"correct":"committed"):""}>
-        <small>{exercise.patternId}</small>
+        <small>نمط محلي رُصد في نصك</small>
         <h4 lang="de" dir="ltr">{exercise.promptDe}</h4><p>{exercise.promptAr}</p>
         <blockquote lang="de" dir="ltr">{exercise.sourceExcerpt}</blockquote>
         <label>Ihre Korrektur · تصحيحك<input lang="de" dir="ltr" value={answer} onChange={(event)=>setAnswers((current)=>({...current,[exercise.id]:event.target.value}))} disabled={Boolean(committed[exercise.id])}/></label>

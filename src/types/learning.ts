@@ -408,6 +408,16 @@ export interface QuietHoursSettings {
   notificationBoundary: "no-push-no-notification-api-in-app-nudges-only";
 }
 
+export interface ReviewReminderSettings {
+  policyVersion: "local-review-reminder-v1";
+  enabled: boolean;
+  hourLocal: string;
+  timeZone: string;
+  lastDeviceNotificationDate?: string;
+  dismissedInAppDate?: string;
+  deliveryBoundary: "in-app-and-notification-api-while-open-no-push-background-guarantee-mastery-or-penalty";
+}
+
 export type SessionNextFocus = "continue" | "review" | "lighter" | "production";
 export type SessionAdaptationReason = "less-time" | "too-easy" | "too-hard" | "load-suggestion";
 export type LoadReductionTrigger = "consecutive-errors" | "active-time-overrun";
@@ -865,7 +875,7 @@ export interface FullExamSession {
 
 export interface LearningState {
   schemaVersion: 3;
-  curriculumVersion: "dwnb-a1-b2-2026.09-v1";
+  curriculumVersion: string;
   profile: LearnerProfile | null;
   diagnosticResult: DiagnosticResult | null;
   diagnosticSessionDraft:DiagnosticSessionDraft|null;
@@ -880,6 +890,7 @@ export interface LearningState {
   sessionRitualPreferences:SessionRitualPreferences;
   weeklyReflections:WeeklyReflectionRecord[];
   quietHours: QuietHoursSettings;
+  reviewReminderSettings: ReviewReminderSettings;
   completedBlockIds: string[];
   completedLessonIds: string[];
   currentLessonId: string;

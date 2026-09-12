@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, BotOff, CheckCircle2, ChevronLeft, CircleHelp, GitBranch, Headphones, Lightbulb, MessageCircleMore, RefreshCcw, Route, ShieldCheck, Sparkles, Volume2 } from "lucide-react";
 import type { CEFRLevel } from "@/types/learning";
 import { BRANCHING_CONVERSATION_BOUNDARY, BRANCHING_CONVERSATION_POLICY, branchNode, branchingScenariosForLevel, type BranchChoice } from "@/data/branching-conversations";
@@ -22,6 +23,7 @@ const outcomeLabels = {
 
 export function BranchingConversationLab() {
   const { state, update } = useLearning();
+  const router=useRouter();
   const [level, setLevel] = useState<CEFRLevel>(() => state.profile?.currentLevel ?? "A1");
   const scenarios = useMemo(() => branchingScenariosForLevel(level), [level]);
   const [scenarioIndex, setScenarioIndex] = useState(0);
@@ -51,6 +53,14 @@ export function BranchingConversationLab() {
     setSupportedNodes(new Set());
     setSpeechStatus("");
   }
+
+  function advanceScenario(){
+    if(scenarioIndex<scenarios.length-1){reset(level,scenarioIndex+1,mode);return}
+    const nextLevel=levels[levels.indexOf(level)+1];
+    if(nextLevel){reset(nextLevel,0,mode);return}
+    router.push("/practice");
+  }
+  const advanceScenarioLabel=scenarioIndex<scenarios.length-1?"السيناريو التالي":level!=="B2"?`ابدأ ${levels[levels.indexOf(level)+1]}`:"إنهاء والعودة إلى المختبرات";
 
   function speak(text: string) {
     if (!("speechSynthesis" in window)) { setSpeechStatus("صوت المتصفح الألماني غير متاح على هذا الجهاز."); return; }
@@ -133,7 +143,7 @@ export function BranchingConversationLab() {
           <div className="branching-support-row"><button type="button" aria-expanded={supportedNodes.has(nodeId)} onClick={showSupport}><CircleHelp size={16}/> ما الذي أحتاج إلى نقله الآن؟</button>{supportedNodes.has(nodeId) && <p>{currentNode.supportAr}</p>}</div>
           <fieldset className="branching-choices"><legend><span lang="de" dir="ltr">Wie reagieren Sie?</span><small>اختر الرد الذي يخدم هدف هذه اللحظة</small></legend>{currentNode.choices?.map((choice, index) => <button key={choice.id} type="button" onClick={() => choose(choice.id)}><span>{String.fromCharCode(65 + index)}</span><div><strong lang="de" dir="ltr">{choice.responseDe}</strong>{mode === "guided" && <small>{choice.intentionAr}</small>}</div><ArrowLeft size={17}/></button>)}</fieldset>
         </section> : <section className={`branching-outcome ${currentNode.outcome}`} aria-labelledby="branching-outcome-title">
-          {(() => { const display = outcomeLabels[currentNode.outcome!]; const Icon = display.icon; return <><header><span><Icon size={24}/></span><div><small lang="de" dir="ltr">{currentNode.outcomeTitleDe}</small><h2 id="branching-outcome-title" ref={resultRef} tabIndex={-1}>{display.ar}</h2><strong>{currentNode.outcomeTitleAr}</strong></div></header><p lang="de" dir="ltr">{currentNode.utteranceDe}</p><article><small>ماذا حدث؟</small><p>{currentNode.outcomeSummaryAr}</p></article><article className="transfer"><small lang="de" dir="ltr">Transfer ohne Auswahl</small><strong>انقل المهارة خارج الشجرة</strong><p lang="de" dir="ltr">{currentNode.transferPromptDe}</p></article><footer><button type="button" className="secondary-button" onClick={() => reset(level, scenarioIndex, mode)}><RefreshCcw size={16}/> أعد السيناريو</button><button type="button" className="primary-button" onClick={() => reset(level, (scenarioIndex + 1) % scenarios.length, mode)}>السيناريو التالي <ArrowLeft size={16}/></button></footer></>; })()}
+          {(() => { const display = outcomeLabels[currentNode.outcome!]; const Icon = display.icon; return <><header><span><Icon size={24}/></span><div><small lang="de" dir="ltr">{currentNode.outcomeTitleDe}</small><h2 id="branching-outcome-title" ref={resultRef} tabIndex={-1}>{display.ar}</h2><strong>{currentNode.outcomeTitleAr}</strong></div></header><p lang="de" dir="ltr">{currentNode.utteranceDe}</p><article><small>ماذا حدث؟</small><p>{currentNode.outcomeSummaryAr}</p></article><article className="transfer"><small lang="de" dir="ltr">Transfer ohne Auswahl</small><strong>انقل المهارة خارج الشجرة</strong><p lang="de" dir="ltr">{currentNode.transferPromptDe}</p></article><footer><button type="button" className="secondary-button" onClick={() => reset(level, scenarioIndex, mode)}><RefreshCcw size={16}/> أعد السيناريو</button><button type="button" className="primary-button" onClick={advanceScenario}>{advanceScenarioLabel} <ArrowLeft size={16}/></button></footer></>; })()}
         </section>}
       </section>
 

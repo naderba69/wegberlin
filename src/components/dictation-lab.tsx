@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, Check, CheckCircle2, Headphones, Lightbulb, LockKeyhole, RefreshCcw, RotateCcw, ShieldCheck, Sparkles, Volume2 } from "lucide-react";
 import type { CEFRLevel } from "@/types/learning";
 import { buildPartialCanonical, DICTATION_EVIDENCE_BOUNDARY, DICTATION_POLICY, dictationItemsForLevel, type DictationItem } from "@/data/dictation-bank";
@@ -53,6 +54,7 @@ function PartialFields({ item, answers, onChange }: { item: DictationItem; answe
 
 export function DictationLab() {
   const { state, update } = useLearning();
+  const router=useRouter();
   const [level, setLevel] = useState<CEFRLevel>(() => state.profile?.currentLevel ?? "A1");
   const items = useMemo(() => dictationItemsForLevel(level), [level]);
   const [itemIndex, setItemIndex] = useState(0);
@@ -131,9 +133,14 @@ export function DictationLab() {
   }
 
   function nextTask() {
-    resetTask(level, (itemIndex + 1) % items.length);
+    if(itemIndex<items.length-1){resetTask(level,itemIndex+1);return}
+    const levelIndex=levels.indexOf(level);
+    const nextLevel=levels[levelIndex+1];
+    if(nextLevel){resetTask(nextLevel,0);return}
+    router.push("/today");
   }
 
+  const nextTaskLabel=itemIndex<items.length-1?"المهمة التالية":level!=="B2"?`ابدأ ${levels[levels.indexOf(level)+1]}`:"إنهاء والعودة إلى اليوم";
   const renderedCanonical = item.mode === "partial" ? buildPartialCanonical(item) : item.canonicalText;
 
   return <div className="wide-page dictation-page" data-dictation-policy={DICTATION_POLICY} data-evidence-boundary={DICTATION_EVIDENCE_BOUNDARY}>
@@ -215,7 +222,7 @@ export function DictationLab() {
             {result.evaluation.mismatches.length > 6 && <p>توجد {result.evaluation.mismatches.length - 6} فروق أخرى؛ استخدم النموذج الكامل للمقارنة.</p>}
           </div>}
           <div className="dictation-model"><small lang="de" dir="ltr">Lösung zum Vergleichen</small><strong>النموذج بعد الالتزام</strong><p lang="de" dir="ltr">{renderedCanonical}</p></div>
-          <footer><button type="button" className="secondary-button" onClick={retry}><RefreshCcw size={16}/> أخفِ النموذج وأعد</button><button type="button" className="primary-button" onClick={nextTask}>المهمة التالية <ArrowLeft size={16}/></button></footer>
+          <footer><button type="button" className="secondary-button" onClick={retry}><RefreshCcw size={16}/> أخفِ النموذج وأعد</button><button type="button" className="primary-button" onClick={nextTask}>{nextTaskLabel} <ArrowLeft size={16}/></button></footer>
         </section>}
       </div>
 

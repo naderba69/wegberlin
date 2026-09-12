@@ -18,7 +18,7 @@ export function buildContentGovernanceAudit(){
  const familyScopes=contentFamilyGovernance.map((item)=>item.scope).sort();
  if(JSON.stringify(scopes)!==JSON.stringify(familyScopes))issues.push("Content family registry does not exactly cover corpus scopes.");
  if(contentRows.length!==GOVERNED_CONTENT_RECORD_COUNT)issues.push(`Expected ${GOVERNED_CONTENT_RECORD_COUNT} governed content records, received ${contentRows.length}.`);
- if(contentFamilyGovernance.length!==13)issues.push("Expected 13 content lifecycle families.");
+ if(contentFamilyGovernance.length!==16)issues.push("Expected 16 content lifecycle families.");
  for(const family of contentFamilyGovernance){if(family.ownerId===family.reviewerId)issues.push(`${family.scope}: owner and reviewer must differ.`);if(JSON.stringify(family.transitionOrder)!==JSON.stringify(["draft","validated","published"]))issues.push(`${family.scope}: lifecycle order drifted.`);if(!family.validationEvidence||!family.publicationEvidence)issues.push(`${family.scope}: transition evidence is missing.`)}
  if(!canTransitionContent("draft","validated")||!canTransitionContent("validated","published")||canTransitionContent("draft","published")||canTransitionContent("published","validated"))issues.push("Lifecycle transition guard is invalid.");
  const sources=sourceVerificationRegistry.records.map((record)=>({sourceId:record.id,ownerId:record.ownerId,reviewerId:record.reviewerId,reviewStatus:"scheduled-manual-semantic-review" as const}));

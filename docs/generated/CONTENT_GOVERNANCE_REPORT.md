@@ -3,7 +3,7 @@
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
 Curriculum: `dwnb-a1-b2-2026.09-v1` (app `0.1.0`)  
-Content SHA-256: `42b7363539c9c6df4bf8f148f51c81c3cfb27cd5aed8067f9883ad86cf85381b`
+Content SHA-256: `404179be689ca146de022470cfbeb9ed00246e463f6f6325655146b90daef5dc`
 
 ## Result
 
@@ -11,9 +11,9 @@ PASS
 
 | Contract | Count |
 |---|---:|
-| Content records with owner + reviewer + lifecycle | 2932 |
-| Content families Draft → Validated → Published | 13 |
-| Published families | 13 |
+| Content records with owner + reviewer + lifecycle | 3020 |
+| Content families Draft → Validated → Published | 16 |
+| Published families | 16 |
 | External source records with owner + reviewer | 18 |
 | Learner-risk types with owner + reviewer | 12 |
 | General consular/legal context claims | 12 |
@@ -37,6 +37,9 @@ PASS
 - `lesson-writing`: 84 published records; automated validation passed, independent review pending.
 - `library-listening`: 160 published records; automated validation passed, independent review pending.
 - `library-reading`: 160 published records; automated validation passed, independent review pending.
+- `practice-dictation`: 16 published records; automated validation passed, independent review pending.
+- `practice-branching`: 8 published records; automated validation passed, independent review pending.
+- `practice-collocation`: 64 published records; automated validation passed, independent review pending.
 
 ## Claim boundaries
 

@@ -3,14 +3,14 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 172,
-  "openingTagCount": 6764,
-  "germanTagCount": 384,
+  "tsxFiles": 175,
+  "openingTagCount": 6877,
+  "germanTagCount": 388,
   "arabicTagCount": 4,
   "ltrTagCount": 421,
   "rtlTagCount": 4,
   "autoDirCount": 2,
-  "technicalScopeCount": 37,
+  "technicalScopeCount": 33,
   "dynamicPairCount": 4,
   "bdiCount": 12,
   "adaptiveConsumerCount": 10,
@@ -108,17 +108,17 @@
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 57,
+      "line": 66,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 57,
+      "line": 66,
       "text": "تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفردات جديدة من درس غير منجز."
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 59,
+      "line": 68,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -258,22 +258,22 @@
     },
     {
       "path": "src/components/branching-conversation-lab.tsx",
-      "line": 91,
+      "line": 101,
       "text": "محادثة متفرعة دون AI"
     },
     {
       "path": "src/components/branching-conversation-lab.tsx",
-      "line": 95,
+      "line": 105,
       "text": "لا شخص حقيقي ولا AI يتظاهر بفهم كلامك"
     },
     {
       "path": "src/components/branching-conversation-lab.tsx",
-      "line": 115,
+      "line": 125,
       "text": "الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR."
     },
     {
       "path": "src/components/branching-conversation-lab.tsx",
-      "line": 143,
+      "line": 153,
       "text": "نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery."
     },
     {
@@ -288,37 +288,37 @@
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
-      "line": 33,
+      "line": 37,
       "text": "محلي ودون AI"
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
-      "line": 42,
+      "line": 46,
       "text": "هذه نتيجة جولة محلية صغيرة، وليست حكم مفردات أو CEFR. راجع الفرق ثم استعمل تركيبًا في درس أو كتابة فعلية."
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
-      "line": 43,
+      "line": 47,
       "text": "نحفظ معرفات الوصلات والعدد فقط، لا نصًا حرًا ولا نضيف بطاقات SRS تلقائيًا."
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
-      "line": 43,
+      "line": 47,
       "text": "المطابقة حتمية من بنك مؤلف. لا AI، لا شبكة، لا mastery، ولا ادعاء أن هذه كل التراكيب الممكنة."
     },
     {
       "path": "src/components/content-error-report-control.tsx",
-      "line": 26,
+      "line": 27,
       "text": "يرفق النموذج العنوان والمسار ومعرف المحتوى وإصدار التطبيق فقط. لا يرفق Answer key أو تقدمك أو مفاتيحك أو نص إنتاج آخر."
     },
     {
       "path": "src/components/content-error-report-control.tsx",
-      "line": 28,
+      "line": 29,
       "text": "نسخ JSON الآمن"
     },
     {
       "path": "src/components/content-error-report-control.tsx",
-      "line": 28,
+      "line": 29,
       "text": "تنزيل JSON"
     },
     {
@@ -343,7 +343,7 @@
     },
     {
       "path": "src/components/context-appropriateness-quiz.tsx",
-      "line": 1,
+      "line": 27,
       "text": "اختر الصيغة الأنسب للموقف، ثم اقرأ سبب الملاءمة. لا تُمنح mastery من هذا المختبر."
     },
     {
@@ -413,17 +413,17 @@
     },
     {
       "path": "src/components/dictation-lab.tsx",
-      "line": 144,
+      "line": 151,
       "text": "استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكاملة."
     },
     {
       "path": "src/components/dictation-lab.tsx",
-      "line": 148,
+      "line": 155,
       "text": "4 لكل مستوى · دون AI أو شبكة من المنصة"
     },
     {
       "path": "src/components/dictation-lab.tsx",
-      "line": 225,
+      "line": 232,
       "text": "هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini أو أي مزود."
     },
     {
@@ -465,11 +465,6 @@
       "path": "src/components/exam-print-tools.tsx",
       "line": 1,
       "text": "ورقة تدريب محلية غير رسمية · Goethe وtelc لا يختلطان."
-    },
-    {
-      "path": "src/components/four-skill-vocabulary-cycle.tsx",
-      "line": 1,
-      "text": "القراءة ظاهرة في سياق قصير، والصوت TTS اصطناعي. تثبيت الكلام تقرير ذاتي؛ لا يستمع التطبيق ولا يمنح mastery."
     },
     {
       "path": "src/components/grammar-progression-map.tsx",
@@ -884,7 +879,7 @@
     {
       "path": "src/components/planning-preferences-control.tsx",
       "line": 16,
-      "text": "العقد وساعات الهدوء لا يغيران mastery أو correctness أو بوابات المستويات. لا يطلب التطبيق إذن Notifications ولا يرسل Push."
+      "text": "العقد وساعات الهدوء لا يغيران mastery أو correctness أو بوابات المستويات. إذن الجهاز لا يُطلب إلا من بطاقة تذكير المراجعة، ولا يوجد Push."
     },
     {
       "path": "src/components/practical-day-mode.tsx",
@@ -937,6 +932,11 @@
       "text": "إعادة تحميل MP3"
     },
     {
+      "path": "src/components/review-reminder-control.tsx",
+      "line": 30,
+      "text": "تذكير محلي للبطاقات المستحقة، بلا حساب أو خادم أو Push مدفوع."
+    },
+    {
       "path": "src/components/separated-rubrics.tsx",
       "line": 1,
       "text": "عام وGoethe وtelc — دون خلط"
@@ -948,67 +948,67 @@
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 203,
+      "line": 205,
       "text": "تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 220,
+      "line": 223,
       "text": "لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 223,
+      "line": 226,
       "text": "ملف محمول قابل للتحقق بـSHA-256."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 225,
+      "line": 228,
       "text": "التسجيلات الصوتية محفوظة في Media Store منفصل."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 228,
+      "line": 231,
       "text": "تصدير .dwnb"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 229,
+      "line": 232,
       "text": "يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة المرور ومفتاح API مستبعدان دائمًا."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 230,
+      "line": 233,
       "text": "دعم نسخ DWNB القديمة"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 230,
+      "line": 233,
       "text": "v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على الأقل حتى 2027-09-30. لا تُرفض نسخة مدعومة بصمت."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 237,
+      "line": 240,
       "text": "عنوان Ollama المحلي"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 237,
+      "line": 240,
       "text": "مفتاح API"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 240,
+      "line": 243,
       "text": "طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 242,
+      "line": 245,
       "text": "يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 255,
+      "line": 258,
       "text": "المفتاح أو عنوان Ollama المؤقت"
     },
     {
@@ -1108,12 +1108,12 @@
     },
     {
       "path": "src/components/unified-concept-map.tsx",
-      "line": 1,
+      "line": 40,
       "text": "Grammatik · القواعد"
     },
     {
       "path": "src/components/unified-concept-map.tsx",
-      "line": 1,
+      "line": 49,
       "text": "Wortschatz · المفردات"
     },
     {
@@ -1194,5 +1194,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "fc8df4bf20c2756b387c06b386912e58e81bda1b73c5551e8a9f2bbcb16e6ac2"
+  "contentSha256": "9950a20b1057c5fb9ee05bb1111ee99de9958a4011884f9fe63ad2ee6231cd0f"
 }

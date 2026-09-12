@@ -17,9 +17,12 @@
       "nounGrammarEntries": 1044,
       "verbPrepositionFrames": 104,
       "tunisianSupportNotes": 17,
-      "totalRootObjects": 3710
+      "dictationItems": 16,
+      "branchingConversationScenarios": 8,
+      "collocationNetworks": 16,
+      "totalRootObjects": 3750
     },
-    "schemaFamilies": 13,
+    "schemaFamilies": 16,
     "issues": []
   },
   "answerIntegrity": {
@@ -160055,5 +160058,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "c00ad4c752f6345384cb5f84f8060f14e8475cdc370cbba553f9274b5df6c927"
+  "contentSha256": "8ff50e524d4dffb6f8d321742d850196c2019fa92327237d1156c12d2ad2e640"
 }

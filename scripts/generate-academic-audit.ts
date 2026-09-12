@@ -63,7 +63,7 @@ Content SHA-256: \`${contentHash}\`
 
 ## Result
 
-\`PASS\` — ${schema.counts.totalRootObjects} top-level runtime academic objects passed ${schema.schemaFamilies} strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, and conditional Tunisian-support note.
+\`PASS\` — ${schema.counts.totalRootObjects} top-level runtime academic objects passed ${schema.schemaFamilies} strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, conditional Tunisian-support note, adaptive dictation, branching conversation, and collocation network.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -80,6 +80,9 @@ ${schemaRows}
 - choice/listening correct index → available option;
 - full dashboard → published provider-owned task ID;
 - Tunisian-support note → published lesson and theory block;
+- partial dictation template → complete canonical answer;
+- branching choice → reachable local node and all three terminal outcomes;
+- collocation node → stable parent-network ownership;
 - unique IDs within every root collection.
 
 The committed report is checked during \`prebuild\`; content drift without regenerated reports fails the build.

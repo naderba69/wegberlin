@@ -410,3 +410,98 @@ export const tunisianSupportNoteSchema = z.object({
   reviewedAt: text.optional(),
   sourceVersion: z.literal("tunisian-support-v1"),
 }).strict();
+
+
+export const dictationItemSchema = z.object({
+  id,
+  policyVersion: z.literal("adaptive-partial-full-dictation-v1"),
+  level: cefrLevel,
+  mode: z.enum(["partial", "full"]),
+  titleDe: text,
+  titleAr: text,
+  situationAr: text,
+  instructionDe: text,
+  instructionAr: text,
+  focusAr: text,
+  canonicalText: text,
+  partialTemplate: text.optional(),
+  slots: z.array(z.object({ index: positiveInt, answer: text, focusAr: text }).strict()).optional(),
+  source: z.literal("original-authored-dictation-bank"),
+  audioSource: z.literal("browser-tts-synthetic"),
+  examGrade: z.literal(false),
+}).strict().superRefine((item, context) => {
+  if (item.mode === "partial" && (!item.partialTemplate || !item.slots?.length)) context.addIssue({ code: "custom", message: "Partial dictation requires a template and answer slots." });
+  if (item.mode === "full" && (item.partialTemplate || item.slots)) context.addIssue({ code: "custom", message: "Full dictation cannot contain partial answer slots." });
+});
+
+const branchChoiceSchema = z.object({
+  id,
+  responseDe: text,
+  intentionAr: text,
+  feedbackAr: text,
+  repairTipAr: text,
+  quality: z.enum(["effective", "repairable", "misaligned"]),
+  nextNodeId: id,
+}).strict();
+
+const branchNodeSchema = z.object({
+  id,
+  speakerDe: text,
+  utteranceDe: text,
+  supportAr: text,
+  choices: z.array(branchChoiceSchema).min(1).optional(),
+  outcome: z.enum(["goal-reached", "partial", "restart-recommended"]).optional(),
+  outcomeTitleDe: text.optional(),
+  outcomeTitleAr: text.optional(),
+  outcomeSummaryAr: text.optional(),
+  transferPromptDe: text.optional(),
+}).strict().superRefine((node, context) => {
+  const terminalFields = [node.outcomeTitleDe, node.outcomeTitleAr, node.outcomeSummaryAr, node.transferPromptDe];
+  if (node.outcome && terminalFields.some((value) => !value)) context.addIssue({ code: "custom", message: "Terminal branch node requires complete outcome and transfer guidance." });
+  if (!node.outcome && !node.choices?.length) context.addIssue({ code: "custom", message: "Non-terminal branch node requires choices." });
+  if (node.outcome && node.choices?.length) context.addIssue({ code: "custom", message: "Terminal branch node cannot expose more choices." });
+});
+
+export const branchingConversationScenarioSchema = z.object({
+  id,
+  policyVersion: z.literal("offline-branching-conversation-v1"),
+  level: cefrLevel,
+  titleDe: text,
+  titleAr: text,
+  contextAr: text,
+  learnerRoleDe: text,
+  learnerRoleAr: text,
+  goalDe: text,
+  goalAr: text,
+  openingNodeId: id,
+  estimatedTurns: z.union([z.literal(2), z.literal(3)]),
+  nodes: z.array(branchNodeSchema).min(2),
+  source: z.literal("original-authored-branching-dialogue"),
+  engine: z.literal("deterministic-local-tree"),
+  aiRequired: z.literal(false),
+}).strict();
+
+const collocationNodeSchema = z.object({
+  id,
+  phraseDe: text,
+  meaningAr: text,
+  contextDe: text,
+  contextAr: text,
+  exampleDe: text,
+  exampleAr: text,
+  contrastAr: text,
+  register: z.enum(["daily", "neutral", "formal", "academic"]),
+}).strict();
+
+export const collocationNetworkSchema = z.object({
+  id,
+  policyVersion: z.literal("contextual-collocation-network-v1"),
+  level: cefrLevel,
+  headwordDe: text,
+  headwordAr: text,
+  questionDe: text,
+  guidanceAr: text,
+  nodes: z.tuple([collocationNodeSchema, collocationNodeSchema, collocationNodeSchema]),
+  source: z.literal("original-authored-collocation-network"),
+  aiRequired: z.literal(false),
+}).strict();

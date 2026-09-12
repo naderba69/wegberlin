@@ -15,7 +15,7 @@ const objectives = buildObjectiveCoverageReport();
 describe("P0 academic schemas, answer integrity, and objective coverage", () => {
   it("validates every runtime academic root through strict nested Zod schemas", () => {
     expect(schema.ok, schema.issues.join("\n")).toBe(true);
-    expect(schema.schemaFamilies).toBe(13);
+    expect(schema.schemaFamilies).toBe(16);
     expect(schema.counts).toEqual({
       lessons: 84,
       lessonMetadata: 84,
@@ -30,7 +30,10 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
       nounGrammarEntries: 1044,
       verbPrepositionFrames: 104,
       tunisianSupportNotes: 17,
-      totalRootObjects: 3710,
+      dictationItems: 16,
+      branchingConversationScenarios: 8,
+      collocationNetworks: 16,
+      totalRootObjects: 3750,
     });
   });
 

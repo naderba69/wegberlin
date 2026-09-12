@@ -1,9 +1,9 @@
 export const CONTENT_GOVERNANCE_POLICY = "content-accountability-lifecycle-v1" as const;
-export const GOVERNED_CONTENT_RECORD_COUNT = 2_932 as const;
+export const GOVERNED_CONTENT_RECORD_COUNT = 3_020 as const;
 export const GOVERNED_SOURCE_COUNT = 18 as const;
 
 export type ContentLifecycleStage="draft"|"validated"|"published";
-export type ContentFamilyScope="diagnostic"|"exam"|"exam-speaking"|"exam-writing"|"lesson-controlled"|"lesson-listening"|"lesson-mediation"|"lesson-mini-test"|"lesson-reading"|"lesson-speaking"|"lesson-writing"|"library-listening"|"library-reading";
+export type ContentFamilyScope="diagnostic"|"exam"|"exam-speaking"|"exam-writing"|"lesson-controlled"|"lesson-listening"|"lesson-mediation"|"lesson-mini-test"|"lesson-reading"|"lesson-speaking"|"lesson-writing"|"library-listening"|"library-reading"|"practice-dictation"|"practice-branching"|"practice-collocation";
 
 export type ContentFamilyGovernance={
   scope:ContentFamilyScope;
@@ -40,6 +40,9 @@ export const contentFamilyGovernance:readonly ContentFamilyGovernance[]=[
   {scope:"lesson-writing",labelAr:"مهام كتابة الدروس",labelDe:"Schreiben im Kurs",ownerId:"curriculum-content-owner",reviewerId:"productive-task-reviewer-role",validationEvidence:"productive-task contract + objective mapping",publicationEvidence:"84 writing stages are reachable",...shared},
   {scope:"library-listening",labelAr:"مكتبة الاستماع",labelDe:"Hörbibliothek",ownerId:"library-content-owner",reviewerId:"listening-item-reviewer-role",validationEvidence:"strict library schema + audio manifest + answer integrity",publicationEvidence:"80 listening library records are reachable",...shared},
   {scope:"library-reading",labelAr:"مكتبة القراءة",labelDe:"Lesebibliothek",ownerId:"library-content-owner",reviewerId:"reading-item-reviewer-role",validationEvidence:"strict library schema + answer integrity",publicationEvidence:"80 reading library records are reachable",...shared},
+  {scope:"practice-dictation",labelAr:"الإملاء المتكيف",labelDe:"Adaptives Diktat",ownerId:"practice-content-owner",reviewerId:"listening-item-reviewer-role",validationEvidence:"strict partial/full dictation schema + canonical reconstruction + similarity review",publicationEvidence:"16 A1–B2 dictation tasks are reachable from /practice/dictation",...shared},
+  {scope:"practice-branching",labelAr:"المحادثات المتفرعة",labelDe:"Verzweigte Dialoge",ownerId:"practice-content-owner",reviewerId:"productive-task-reviewer-role",validationEvidence:"strict deterministic tree schema + reachable choices and terminals + similarity review",publicationEvidence:"8 A1–B2 scenarios are reachable from /practice/conversation-paths",...shared},
+  {scope:"practice-collocation",labelAr:"شبكات التلازم اللفظي",labelDe:"Kollokationsnetze",ownerId:"vocabulary-content-owner",reviewerId:"german-item-reviewer-role",validationEvidence:"strict network/node schema + stable ownership + similarity review",publicationEvidence:"16 networks and 48 links are reachable from /practice/collocations",...shared},
 ] as const;
 
 export const riskOwnershipRegistry=[

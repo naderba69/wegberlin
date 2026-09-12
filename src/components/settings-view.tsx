@@ -22,6 +22,7 @@ import { PersonalVocabularyImport } from "./personal-vocabulary-import";
 import { ContentErrorReportsManager } from "./content-error-reports-manager";
 import { StudyExportControl } from "./study-export-control";
 import { PlanningPreferencesControl } from "./planning-preferences-control";
+import { ReviewReminderControl } from "./review-reminder-control";
 import { SessionRitualPreferencesControl } from "./session-ritual-preferences-control";
 import { RawDataExport } from "./raw-data-export";
 import { DataUsagePreferencesControl } from "./data-usage-preferences-control";
@@ -32,6 +33,7 @@ import { ContentGovernanceSummary } from "./content-governance-summary";
 import { probeLiveProviderCapabilities, type LiveCapabilityProbe } from "@/core/ai/live-capability-probe";
 
 type PrivacyAction = "recordings" | "tutor-history" | "support-history" | "practice-process" | "writing-history";
+const profileExamLabel=(targetExam:string)=>targetExam==="goethe-b2"?"Goethe B2":targetExam==="telc-deutsch-b2"?"telc Deutsch B2":"ألمانية عامة";
 
 export function SettingsView() {
   const { state, update, adoptCommittedState, profiles, activeProfileId, switchProfile, renameProfile, deleteProfile } = useLearning();
@@ -209,6 +211,7 @@ export function SettingsView() {
       <PersonalVocabularyImport />
       <ContentErrorReportsManager />
       <PlanningPreferencesControl />
+      <ReviewReminderControl />
       <SessionRitualPreferencesControl />
       <DataUsagePreferencesControl />
       <SpeechPreferencesControl />
@@ -221,7 +224,7 @@ export function SettingsView() {
       <section className="settings-card privacy-policy-link"><div className="settings-title"><span><ShieldCheck size={20}/></span><div><h2>سياسة الخصوصية العربية</h2><p>صفحة مستقلة قابلة للرابط والطباعة تشرح التخزين والإرسال والحذف بلا لغة قانونية معقدة.</p></div></div><Link className="secondary-button" href="/privacy">اقرأ سياسة الخصوصية</Link></section>
       <section className="settings-card">
         <div className="settings-title"><span><HardDrive size={20} /></span><div><h2>الحفظ والنسخة الاحتياطية</h2><p>ملف محمول قابل للتحقق بـSHA-256.</p></div></div>
-        <div className="profile-switcher"><strong>الملفات المحلية</strong>{profiles.map((profile) => <div className={profile.id === activeProfileId ? "profile-row active" : "profile-row"} key={profile.id}><button className="profile-open" disabled={profile.id === activeProfileId || busy} onClick={() => void switchProfile(profile.id)}><span>{profile.name}</span><small>{profile.targetExam} · {profile.id === activeProfileId ? "نشط" : "فتح"}</small></button><button aria-label={`إعادة تسمية ${profile.name}`} onClick={() => void renameLocal(profile.id, profile.name)}><Pencil size={13} /></button><button aria-label={`حذف ${profile.name}`} disabled={profile.id === activeProfileId} onClick={() => void deleteLocal(profile.id, profile.name)}><Trash2 size={13} /></button></div>)}</div>
+        <div className="profile-switcher"><strong>الملفات المحلية</strong>{profiles.map((profile) => <div className={profile.id === activeProfileId ? "profile-row active" : "profile-row"} key={profile.id}><button className="profile-open" disabled={profile.id === activeProfileId || busy} onClick={() => void switchProfile(profile.id)}><span>{profile.name}</span><small>{profileExamLabel(profile.targetExam)} · {profile.id === activeProfileId ? "نشط" : "فتح"}</small></button><button aria-label={`إعادة تسمية ${profile.name}`} onClick={() => void renameLocal(profile.id, profile.name)}><Pencil size={13} /></button><button aria-label={`حذف ${profile.name}`} disabled={profile.id === activeProfileId} onClick={() => void deleteLocal(profile.id, profile.name)}><Trash2 size={13} /></button></div>)}</div>
         <div className="storage-meter"><div><span>بيانات التعلم</span><strong>محلية فقط</strong></div><i><b style={{ width: "12%" }} /></i><small>التسجيلات الصوتية محفوظة في Media Store منفصل.</small></div>
         <label className="backup-media-option"><input type="checkbox" checked={includeMedia} onChange={(event) => setIncludeMedia(event.target.checked)} /><span>تضمين التسجيلات الصوتية في ملف النسخة</span></label>
         <label>عبارة مرور اختيارية<input dir="ltr" data-bidi-scope="secret" type="password" value={backupPassphrase} onChange={(event) => setBackupPassphrase(event.target.value)} placeholder="8 أحرف على الأقل — لا تُحفظ" /></label>

@@ -274,9 +274,9 @@ React: 19.2.8
 TypeScript: 5
 IndexedDB DB version: 4
 LearningState schemaVersion: 3
-Unit/Integrity tests: 868/868
-Test files: 136/136
-Playwright desktop + mobile: 76/76
+Unit/Integrity tests: 879/879
+Test files: 137/137
+Playwright desktop + mobile: 82/82
 Playwright browser channel: chromium (full new-headless; local retries remain 0)
 Static/SSG pages: 306
 Offline routes: 306/306
@@ -316,7 +316,7 @@ axe serious/critical on tested pages: 0
 - خمس فئات تمارين.
 - واجهة تمرين German-first مع دعم عربي، لا تعرض IDs داخلية: أسماء أنواع مفهومة، German stem ظاهر، وخانة مرئية للفراغ بدل `___` غير الواضحة.
 - `docs/CONTENT_COMPLETENESS_AUDIT.md`: صفر نصوص runtime مؤلفة فارغة، 588 سطح تمرين، 924 سؤال درس ألماني، 320 سؤال مكتبة ألماني، و150 مهمة امتحان مدققة بنيويًا.
-- 13 عائلة Zod صارمة تتحقق عند `prebuild` من 3,710 كائنًا أكاديميًا علويًا وبنيته المتداخلة، ومنها 1,044 سجل اسم و104 إطارات فعل/حرف جر و17 سجل دعم تونسي لـA1–B2؛ تغيير المحتوى دون إعادة توليد التقارير يفشل Build.
+- 16 عائلة Zod صارمة تتحقق عند `prebuild` من 3,750 كائنًا أكاديميًا علويًا وبنيته المتداخلة، ومنها 1,044 سجل اسم و104 إطارات فعل/حرف جر و17 سجل دعم تونسي لـA1–B2؛ تغيير المحتوى دون إعادة توليد التقارير يفشل Build.
 - تقرير إجابة موحد: 2,584 عنصرًا مغلقًا مرتبطًا بالجواب والدليل + 348 مهمة إنتاجية بلا جواب وحيد، صفر تسريب غير معتمد وثلاثة إعفاءات تواصلية/تحريرية موثقة.
 - تقرير هدف بنيوي قابل للقراءة: 336/336 هدفًا يملك مواضع تدريس وتدريب وMini-Test، مع حد صريح أنه لا يساوي تدقيقًا دلاليًا بشريًا لكل عنصر.
 - `meaning-first-case-v1`: 17 عقدًا تعرض Bedeutung→Rolle→Form قبل النظرية، مرتبطة بـ21 نظرية و54 تدريبًا و40 Mini-Test؛ `case:audit` يعمل في `prebuild` ويكشف أي إشارة حالة صريحة غير مملوكة.
@@ -494,7 +494,7 @@ Blocked: 0
 
 أُغلق P1-77–80 عبر `error-pattern-classification-v1` و`confirmed-error-srs-v1`: ثقة اختيارية قبل التحقق، وتصنيف زلة محتملة/نمط ناشئ/خطر تصور، وأولوية high-confidence wrong بلا تغيير correctness. فشل علاجان يعيدان إلى Rule في درس المصدر. لا تدخل بطاقة الخطأ SRS إلا بعد نجاح أولي ومؤجل، وتُزال النسخ المكررة حسب wrong→correct؛ كل ReviewEvent شخصي يملك `masteryDelta=0` ولا يدخل عينة احتفاظ الدرس. Zod/DWNB/Merge و11 اختبار وحدة ودورة Desktop/Mobile تغطي الحدود دون ادعاء تشخيص معرفي.
 
-أُغلق P1-293/295 عبر `content-near-duplicate-v1` و`content-review-state-v1`: جرى فحص 2,932 Prompt عبر 4,296,846 زوجًا، وأصلحت 24 صياغة عابرة للسياقات، وبقيت 10 أزواج داخل السياق نفسه موثقة و0 Issues. لكل كائن حالات german/arabic/cefr/copyright منفصلة؛ كل بعد 2,932 automated-pass-human-pending و0 مستقل. P1-92 جزئي فقط لأن authorized external corpora = 0 وCopyright clearance معلّق، ولا يُخزن نص Menschen/Hueber أو نص امتحان رسمي للمقارنة.
+أُغلق P1-293/295 عبر `content-near-duplicate-v1` و`content-review-state-v1`: جرى فحص 3,020 Prompt عبر 4,558,690 زوجًا، وأصلحت 24 صياغة عابرة للسياقات، وبقيت 10 أزواج داخل السياق نفسه موثقة و0 Issues. لكل كائن حالات german/arabic/cefr/copyright منفصلة؛ كل بعد 3,020 automated-pass-human-pending و0 مستقل. P1-92 جزئي فقط لأن authorized external corpora = 0 وCopyright clearance معلّق، ولا يُخزن نص Menschen/Hueber أو نص امتحان رسمي للمقارنة.
 
 أُغلق P1-53/281/339/340 عبر `local-study-exports-v1`: Preview يختار الخطة/الأدلة/الاسم Opt-in، ثم ICS IANA، طباعة HTML دلالية، PDF Canvas/JPEG محلي، وAnki TSV UTF-8+BOM مع Formula-injection guard. لا وسائط ولا مفاتيح ولا نصوص إنتاج حر؛ DWNB وحده للاستعادة. 10 اختبارات وحدة وDesktop/Mobile Downloads حقيقية تثبت MIME/الأسماء والبنية، مع حد أن PDF صوري غير Tagged.
 
@@ -530,7 +530,7 @@ Blocked: 0
 
 أُغلق P1-282/284/318/365 عبر `weekly-planned-actual-no-blame-v1` و`evidence-velocity-readiness-range-v1` و`vercel-csp-headers-v1` و`dwnb-deprecation-policy-v1`: Today يقارن الوقت المنقضي بالدقائق المسجلة دون عقوبة أو دين، ومركز الامتحان يعرض نطاق أسابيع أو insufficient-data دون Pass date. CSP مركزية تمنع wildcard وgeneric unsafe-eval وتسمح فقط بأصول AI/WebGPU/loopback المدققة. v1 مدعوم بتحذير حتى 2027-03-31 ثم يرفض قبل mutation؛ v2/v3 حاليان. انظر ADR-050.
 
-أُغلق P1-367/368/389 عبر `independent-curriculum-version-v1` و`content-accountability-lifecycle-v1`: نسخة المنهج مستقلة في State/DWNB/Merge، و2,932 سجلًا/13 عائلة/16 مصدرًا/12 Risk تملك owner/reviewer ودورة Draft→Validated→Published. أضيف 12 Claim قنصليًا/قانونيًا عامًا و18 بند نطق محتملًا للعرب؛ تبقى P1-377/380 جزئية لأن المراجعة المختصة/الفونيتية الفعلية معلقة و7 بنود نطق guided-only. انظر ADR-051.
+أُغلق P1-367/368/389 عبر `independent-curriculum-version-v1` و`content-accountability-lifecycle-v1`: نسخة المنهج مستقلة في State/DWNB/Merge، و3,020 سجلًا/16 عائلة/18 مصدرًا/12 Risk تملك owner/reviewer ودورة Draft→Validated→Published. أضيف 12 Claim قنصليًا/قانونيًا عامًا و18 بند نطق محتملًا للعرب؛ تبقى P1-377/380 جزئية لأن المراجعة المختصة/الفونيتية الفعلية معلقة و7 بنود نطق guided-only. انظر ADR-051.
 
 ### P1 الجزئي — 4
 
@@ -632,7 +632,7 @@ P2-384 يبقى للمراجعة العربية المستقلة في تونس �
 
 ## 11. الأولوية التالية المقترحة
 
-كل P0 القابل للبناء محليًا يملك دورة استخدام، و`P1_AUDIT.md` مكتمل 136/136 بلا أي بند `not-implemented`. أُغلقت P1-367/368/389، وتبقى 4 بنود P1 جزئية تحتاج دليلًا بشريًا مستقلًا. البنية الآلية لـP1-377/380 اكتملت دون ادعاء المراجعة. الأولوية البرمجية التالية:
+كل P0 القابل للبناء محليًا يملك دورة استخدام، و`P1_AUDIT.md` مكتمل 132/132 بلا أي بند `not-implemented`. أُغلقت P1-367/368/389، وتبقى 4 بنود P1 جزئية تحتاج دليلًا بشريًا مستقلًا. البنية الآلية لـP1-377/380 اكتملت دون ادعاء المراجعة. الأولوية البرمجية التالية:
 
 ```text
 ثبّت Sprint إغلاق 44 بندًا: npm run check ثم Playwright Desktop/Mobile ثم ZIP.
@@ -759,7 +759,7 @@ npx playwright install --with-deps chromium && npm run test:e2e
 ### تقدم الأولويات
 P0: X/124 منجز، Y جزئي، Z غير منجز، B متوقف
 P1: X/132 منجز، Y جزئي، Z غير منجز وفق P1_AUDIT.md
-P2: 117/140 منجز، 2 جزئي، 21 غير منجز، 0 متوقف وفق P2_AUDIT.md
+P2: 118/140 منجز، 2 جزئي، 20 غير منجز، 0 متوقف وفق P2_AUDIT.md
 
 ### الجودة
 Unit/Integrity: N/N
@@ -783,7 +783,7 @@ Offline cache: vX
 
 ## 16. أمر البدء للوكيل الجديد
 
-بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». P0 القابل للبناء مكتمل و`P1_AUDIT.md` يصنف 136/136 بلا بنود `not-implemented`؛ الباقي P1-92/331/377/380 يحتاج Corpus أو قارئات شاشة أو مراجعة مختصة فعلية. `P2_AUDIT.md` يصنف 140/140، وكل البنود الجزئية البرمجية أُغلقت؛ يبقى P2-264/384 للجولة اليدوية/البشرية النهائية. إذا توفر Push فتحقق من CI وPR Preview لإغلاق P0-302/301. اترك المراجعات البشرية وتثبيت WebGPU الحقيقي على أجهزة ممثلة للجولة النهائية وفق قرار المالك.
+بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». P0 القابل للبناء مكتمل و`P1_AUDIT.md` يصنف 132/132 بلا بنود `not-implemented`؛ الباقي P1-92/331/377/380 يحتاج Corpus أو قارئات شاشة أو مراجعة مختصة فعلية. `P2_AUDIT.md` يصنف 140/140، وكل البنود الجزئية البرمجية أُغلقت؛ يبقى P2-264/384 للجولة اليدوية/البشرية النهائية. إذا توفر Push فتحقق من CI وPR Preview لإغلاق P0-302/301. اترك المراجعات البشرية وتثبيت WebGPU الحقيقي على أجهزة ممثلة للجولة النهائية وفق قرار المالك.
 
 ---
 
@@ -917,8 +917,8 @@ npx playwright test --project=mobile-chromium
 12/12 full simulations
 260 physical MP3 files + 260 physical Opus files
 306/306 Offline routes
-868/868 unit/integrity tests across 136/136 files
-76/76 desktop+mobile browser tests
+879/879 unit/integrity tests across 137/137 files
+82/82 desktop+mobile browser tests
 P0 = 115 implemented / 9 partial / 0 missing / 0 blocked
 P1 = 128 implemented / 4 partial / 0 not implemented / 0 blocked
 ```
@@ -1275,4 +1275,4 @@ P0-160 المنجز والمرجعي:
 أُغلق P2-369 عبر `pre-production-release-candidate-v1`: `.github/workflows/release-candidate.yml` يدوي، يشغل secret history وcheck وكامل E2E، ثم يولد Attestation باسم RC وSHA كامل ويرفعها 14 يومًا. لا Deploy أو `--prod`؛ الحالة candidate-not-promoted والترقية فعل بشري منفصل. لا تدع Run بعيدًا قبل Push.
 
 ## مقارنة الحزمة — ADR-070
-أُغلق P2-345 عبر `pre-update-curriculum-pack-diff-v1`: واجهة Offline تعرض curriculumVersion والبصمة والنطاق والمسارات المثبتة→المرشحة قبل التثبيت. Metadata فقط، لا semantic diff أو تثبيت تلقائي. Cache الحالية v119.
+أُغلق P2-345 عبر `pre-update-curriculum-pack-diff-v2`: واجهة Offline تعرض curriculumVersion والبصمة والنطاق والمسارات المثبتة→المرشحة قبل التثبيت، وتعامل حزمة قديمة مكتملة بلا curriculumVersion كـ`unknown-installed-curriculum` وتحديث منهج بدل طمأنة build-only. Metadata فقط، لا semantic diff أو تثبيت تلقائي. Cache الحالية v119.

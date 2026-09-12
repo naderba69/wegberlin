@@ -36,16 +36,13 @@ function expectedUniqueWords(phrases: string[]) {
   return words;
 }
 
-export function matchExpectedGermanWords(transcript: string, expectedPhrases: string[]): LocalWordMatchResult {
-  const heard = new Set(germanWords(transcript).map(normalizeGermanWord).filter(Boolean));
-  const words: LocalWordMatchItem[] = expectedUniqueWords(expectedPhrases).map((item) => ({
-    ...item,
-    status: heard.has(item.normalized) ? "heard" : "unconfirmed",
-  }));
+function buildMatchResult(transcript: string, words: LocalWordMatchItem[]): LocalWordMatchResult {
   const unconfirmed = words.filter((item) => item.status === "unconfirmed");
   const heardCount = words.length - unconfirmed.length;
-  const feedbackAr = unconfirmed.slice(0, localPronunciationModelRegistry.maximumFeedbackItems).map((item) => `لم يستطع النموذج تأكيد «${item.word}». استمع إلى الكلمة وسجّلها مرة أخرى؛ قد يكون السبب النطق أو الضوضاء أو الميكروفون.`);
-  if (words.length > 0 && unconfirmed.length === 0) feedbackAr.push("استطاع النموذج التعرف على جميع الكلمات المستهدفة. هذا يثبت مطابقة الكلمات فقط، ولا يثبت نطق الأصوات أو اللهجة أو الطلاقة.");
+  const feedbackAr = unconfirmed
+    .slice(0, localPronunciationModelRegistry.maximumFeedbackItems)
+    .map((item) => `لم يستطع النموذج تأكيد «${item.word}». استمع إلى الكلمة ثم أعد العبارة كاملة؛ قد يكون السبب النطق أو الضوضاء أو الميكروفون.`);
+  if (words.length > 0 && unconfirmed.length === 0) feedbackAr.push("استطاع النموذج التعرف على جميع الكلمات المستهدفة وبترتيبها. هذا يثبت مطابقة الكلمات فقط، ولا يثبت تحليل الفونيمات أو اللهجة أو الطلاقة.");
   if (words.length > 0 && heardCount === 0) feedbackAr.unshift("لم يتعرف النموذج بثقة على الكلمات المستهدفة. افحص الميكروفون والضوضاء قبل اعتبار النطق سببًا.");
   return {
     policyVersion: localPronunciationModelRegistry.policyVersion,
@@ -56,4 +53,48 @@ export function matchExpectedGermanWords(transcript: string, expectedPhrases: st
     feedbackAr: feedbackAr.slice(0, localPronunciationModelRegistry.maximumFeedbackItems),
     evaluationBoundary: localPronunciationModelRegistry.evaluationBoundary,
   };
+}
+
+export function matchExpectedGermanWords(transcript: string, expectedPhrases: string[]): LocalWordMatchResult {
+  const heard = new Set(germanWords(transcript).map(normalizeGermanWord).filter(Boolean));
+  const words: LocalWordMatchItem[] = expectedUniqueWords(expectedPhrases).map((item) => ({
+    ...item,
+    status: heard.has(item.normalized) ? "heard" : "unconfirmed",
+  }));
+  return buildMatchResult(transcript, words);
+}
+
+/**
+ * Aligns one known target phrase against a transcript in sequence. Unlike the
+ * vocabulary-wide matcher, repeated words stay repeated and a reordered
+ * utterance cannot complete the phrase merely because its word set matches.
+ */
+export function matchExpectedGermanPhrase(transcript: string, expectedPhrase: string): LocalWordMatchResult {
+  const expected = germanWords(expectedPhrase).map((word) => ({ word, normalized: normalizeGermanWord(word) }));
+  const heard = germanWords(transcript).map(normalizeGermanWord).filter(Boolean);
+  const rows = expected.length + 1;
+  const columns = heard.length + 1;
+  const lengths = Array.from({ length: rows }, () => new Uint16Array(columns));
+  for (let expectedIndex = 1; expectedIndex < rows; expectedIndex += 1) {
+    for (let heardIndex = 1; heardIndex < columns; heardIndex += 1) {
+      lengths[expectedIndex][heardIndex] = expected[expectedIndex - 1].normalized === heard[heardIndex - 1]
+        ? lengths[expectedIndex - 1][heardIndex - 1] + 1
+        : Math.max(lengths[expectedIndex - 1][heardIndex], lengths[expectedIndex][heardIndex - 1]);
+    }
+  }
+  const matchedExpectedIndexes = new Set<number>();
+  let expectedIndex = expected.length;
+  let heardIndex = heard.length;
+  while (expectedIndex > 0 && heardIndex > 0) {
+    if (expected[expectedIndex - 1].normalized === heard[heardIndex - 1]) {
+      matchedExpectedIndexes.add(expectedIndex - 1);
+      expectedIndex -= 1;
+      heardIndex -= 1;
+    } else if (lengths[expectedIndex - 1][heardIndex] >= lengths[expectedIndex][heardIndex - 1]) expectedIndex -= 1;
+    else heardIndex -= 1;
+  }
+  return buildMatchResult(transcript, expected.map((item, index) => ({
+    ...item,
+    status: matchedExpectedIndexes.has(index) ? "heard" : "unconfirmed",
+  })));
 }

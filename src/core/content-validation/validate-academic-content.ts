@@ -9,6 +9,9 @@ import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { tunisianSupportNotes } from "@/data/tunisian-support-registry";
 import { reviewCards } from "@/data/review-cards";
+import { buildPartialCanonical, dictationBank } from "@/data/dictation-bank";
+import { branchingConversationScenarios } from "@/data/branching-conversations";
+import { collocationNetworks } from "@/data/collocation-networks";
 import {
   diagnosticQuestionSchema,
   examProfileSchema,
@@ -23,6 +26,9 @@ import {
   reviewCardSchema,
   verbPrepositionFrameSchema,
   tunisianSupportNoteSchema,
+  dictationItemSchema,
+  branchingConversationScenarioSchema,
+  collocationNetworkSchema,
 } from "./schemas";
 
 export type AcademicSchemaCounts = {
@@ -39,6 +45,9 @@ export type AcademicSchemaCounts = {
   nounGrammarEntries: number;
   verbPrepositionFrames: number;
   tunisianSupportNotes: number;
+  dictationItems: number;
+  branchingConversationScenarios: number;
+  collocationNetworks: number;
   totalRootObjects: number;
 };
 
@@ -74,6 +83,9 @@ export function validateAcademicContent() {
   validateCollection("nounGrammarEntries", nounGrammarEntrySchema, nounGrammarEntries, issues);
   validateCollection("verbPrepositionFrames", verbPrepositionFrameSchema, verbPrepositionFrames, issues);
   validateCollection("tunisianSupportNotes", tunisianSupportNoteSchema, tunisianSupportNotes, issues);
+  validateCollection("dictationItems", dictationItemSchema, dictationBank, issues);
+  validateCollection("branchingConversationScenarios", branchingConversationScenarioSchema, branchingConversationScenarios, issues);
+  validateCollection("collocationNetworks", collocationNetworkSchema, collocationNetworks, issues);
 
   const sourceIds = new Set(examSources.map((source) => source.id));
   const taskIds = new Set(allPublishedExamTasks.map((task) => task.id));
@@ -90,6 +102,26 @@ export function validateAcademicContent() {
   checkUnique("noun grammar entries", nounGrammarEntries.map((entry) => entry.id), issues);
   checkUnique("verb-preposition frames", verbPrepositionFrames.map((entry) => entry.id), issues);
   checkUnique("Tunisian support notes", tunisianSupportNotes.map((entry) => entry.id), issues);
+  checkUnique("dictation items", dictationBank.map((entry) => entry.id), issues);
+  checkUnique("branching scenarios", branchingConversationScenarios.map((entry) => entry.id), issues);
+  checkUnique("collocation networks", collocationNetworks.map((entry) => entry.id), issues);
+  checkUnique("branching nodes", branchingConversationScenarios.flatMap((scenario) => scenario.nodes.map((node) => node.id)), issues);
+  checkUnique("branching choices", branchingConversationScenarios.flatMap((scenario) => scenario.nodes.flatMap((node) => node.choices?.map((choice) => choice.id) ?? [])), issues);
+  checkUnique("collocation nodes", collocationNetworks.flatMap((network) => network.nodes.map((node) => node.id)), issues);
+
+  for (const item of dictationBank) {
+    if (item.mode === "partial" && buildPartialCanonical(item) !== item.canonicalText) issues.push(`dictationItems.${item.id}: template and slots do not reconstruct canonical text`);
+  }
+  for (const scenario of branchingConversationScenarios) {
+    const nodeIds = new Set(scenario.nodes.map((node) => node.id));
+    if (!nodeIds.has(scenario.openingNodeId)) issues.push(`branchingConversationScenarios.${scenario.id}: opening node is missing`);
+    for (const node of scenario.nodes) for (const choice of node.choices ?? []) if (!nodeIds.has(choice.nextNodeId)) issues.push(`branchingConversationScenarios.${scenario.id}.${choice.id}: next node is missing`);
+    const outcomes = new Set(scenario.nodes.flatMap((node) => node.outcome ? [node.outcome] : []));
+    for (const outcome of ["goal-reached", "partial", "restart-recommended"]) if (!outcomes.has(outcome as "goal-reached" | "partial" | "restart-recommended")) issues.push(`branchingConversationScenarios.${scenario.id}: missing ${outcome} terminal`);
+  }
+  for (const network of collocationNetworks) {
+    if (network.nodes.some((node) => !node.id.startsWith(`${network.id}-c`))) issues.push(`collocationNetworks.${network.id}: node ID is not anchored to its network`);
+  }
 
   const structuredLessonIds = academicLessonList.map((lesson) => lesson.id);
   const genderArticle = { masculine: "der", feminine: "die", neuter: "das", "plural-only": "die" } as const;
@@ -180,13 +212,16 @@ export function validateAcademicContent() {
     nounGrammarEntries: nounGrammarEntries.length,
     verbPrepositionFrames: verbPrepositionFrames.length,
     tunisianSupportNotes: tunisianSupportNotes.length,
+    dictationItems: dictationBank.length,
+    branchingConversationScenarios: branchingConversationScenarios.length,
+    collocationNetworks: collocationNetworks.length,
   };
   const counts: AcademicSchemaCounts = {
     ...countsWithoutTotal,
     totalRootObjects: Object.values(countsWithoutTotal).reduce((sum, count) => sum + count, 0),
   };
 
-  return { ok: issues.length === 0, issues, counts, schemaFamilies: 13 };
+  return { ok: issues.length === 0, issues, counts, schemaFamilies: 16 };
 }
 
 export function assertAcademicContentValid() {

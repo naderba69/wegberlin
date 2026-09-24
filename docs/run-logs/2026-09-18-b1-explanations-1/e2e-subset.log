@@ -1,0 +1,12 @@
+
+Running 8 tests using 1 worker
+
+[1/8] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[2/8] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[3/8] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[4/8] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[5/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[6/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[7/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[8/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  8 passed (2.3m)

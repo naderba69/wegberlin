@@ -1,0 +1,4 @@
+Error: Project(s) "desktop-chromium" not found. Available projects: "chromium", "mobile-chromium"
+    at Object.filterProjects (/home/user/der-weg-nach-berlin/node_modules/playwright/lib/runner/index.js:2142:11)
+    at runTests (/home/user/der-weg-nach-berlin/node_modules/playwright/lib/cli/testActions.js:61:30)
+    at _Command.<anonymous> (/home/user/der-weg-nach-berlin/node_modules/playwright/lib/program.js:55:7)

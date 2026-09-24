@@ -1,0 +1,2020 @@
+{
+  "format": "dwnb-offline-size-manifest",
+  "version": 1,
+  "generatedAt": "2026-09-05",
+  "compressionPolicy": "gzip-level-9-estimate-v1",
+  "buildFingerprint": "4ae21e02c1d580b428c57f3514c06d28912c9924a7e5cd9243f4ff7a7fd84e84",
+  "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
+  "packs": [
+    {
+      "id": "a1",
+      "label": "A1",
+      "routeCount": 58,
+      "routeRawBytes": 3746556,
+      "routeGzipBytes": 746058,
+      "nextAssetCount": 71,
+      "nextAssetRawBytes": 5871546,
+      "nextAssetGzipBytes": 1669427,
+      "supportRawBytes": 67256,
+      "supportGzipBytes": 11941,
+      "totalRawBytes": 9685358,
+      "totalGzipBytes": 2427426,
+      "assets": [
+        {
+          "path": "/_next/static/chunks/1068-a5930a2bf4d802d0.js",
+          "rawBytes": 68840,
+          "gzipBytes": 18590
+        },
+        {
+          "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
+          "rawBytes": 53484,
+          "gzipBytes": 9467
+        },
+        {
+          "path": "/_next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+          "rawBytes": 341546,
+          "gzipBytes": 100809
+        },
+        {
+          "path": "/_next/static/chunks/174-949ffaadf4e270b9.js",
+          "rawBytes": 13654,
+          "gzipBytes": 3901
+        },
+        {
+          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
+          "rawBytes": 18433,
+          "gzipBytes": 7400
+        },
+        {
+          "path": "/_next/static/chunks/202-01ecd73af9582a10.js",
+          "rawBytes": 13998,
+          "gzipBytes": 5304
+        },
+        {
+          "path": "/_next/static/chunks/3348-1bb6a99ce17f420f.js",
+          "rawBytes": 175974,
+          "gzipBytes": 53515
+        },
+        {
+          "path": "/_next/static/chunks/3657-1b1c600596655e04.js",
+          "rawBytes": 12653,
+          "gzipBytes": 5269
+        },
+        {
+          "path": "/_next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+          "rawBytes": 241388,
+          "gzipBytes": 65550
+        },
+        {
+          "path": "/_next/static/chunks/3918-77bc8412595f0fbb.js",
+          "rawBytes": 11442,
+          "gzipBytes": 3305
+        },
+        {
+          "path": "/_next/static/chunks/4282-74670c80a59b0c1c.js",
+          "rawBytes": 8722,
+          "gzipBytes": 2692
+        },
+        {
+          "path": "/_next/static/chunks/4484-30e7c4ff7e6e7221.js",
+          "rawBytes": 83898,
+          "gzipBytes": 12035
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+          "rawBytes": 201060,
+          "gzipBytes": 63160
+        },
+        {
+          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
+          "rawBytes": 13806,
+          "gzipBytes": 4751
+        },
+        {
+          "path": "/_next/static/chunks/5540-89794ecb7b6fc658.js",
+          "rawBytes": 63058,
+          "gzipBytes": 10875
+        },
+        {
+          "path": "/_next/static/chunks/6175-7016ddd826305447.js",
+          "rawBytes": 16786,
+          "gzipBytes": 5469
+        },
+        {
+          "path": "/_next/static/chunks/6850-87a29aad1e4a5bba.js",
+          "rawBytes": 68850,
+          "gzipBytes": 19706
+        },
+        {
+          "path": "/_next/static/chunks/6901-9ed49aa178e9017d.js",
+          "rawBytes": 11755,
+          "gzipBytes": 4906
+        },
+        {
+          "path": "/_next/static/chunks/7075-319f458ac624c316.js",
+          "rawBytes": 15902,
+          "gzipBytes": 6655
+        },
+        {
+          "path": "/_next/static/chunks/7164-a4adc4cb1854f302.js",
+          "rawBytes": 24014,
+          "gzipBytes": 8307
+        },
+        {
+          "path": "/_next/static/chunks/7602-fe78800246f5c9bb.js",
+          "rawBytes": 26486,
+          "gzipBytes": 8700
+        },
+        {
+          "path": "/_next/static/chunks/7903-6b68ae144959896c.js",
+          "rawBytes": 28121,
+          "gzipBytes": 10642
+        },
+        {
+          "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
+          "rawBytes": 45915,
+          "gzipBytes": 14671
+        },
+        {
+          "path": "/_next/static/chunks/8153-68de7058e3852579.js",
+          "rawBytes": 26933,
+          "gzipBytes": 8366
+        },
+        {
+          "path": "/_next/static/chunks/8311-551d65e5ef1ed4b9.js",
+          "rawBytes": 58615,
+          "gzipBytes": 18831
+        },
+        {
+          "path": "/_next/static/chunks/8500-01a63dafd809e317.js",
+          "rawBytes": 8665,
+          "gzipBytes": 3561
+        },
+        {
+          "path": "/_next/static/chunks/8623-c2ad72341bf3f62c.js",
+          "rawBytes": 30142,
+          "gzipBytes": 5356
+        },
+        {
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
+        },
+        {
+          "path": "/_next/static/chunks/9960-894b91b22adc0b30.js",
+          "rawBytes": 33704,
+          "gzipBytes": 12116
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/a1/page-1d91312cb4872acd.js",
+          "rawBytes": 10557,
+          "gzipBytes": 4547
+        },
+        {
+          "path": "/_next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+          "rawBytes": 45120,
+          "gzipBytes": 15262
+        },
+        {
+          "path": "/_next/static/chunks/app/errors/page-f686989f9b942b57.js",
+          "rawBytes": 40790,
+          "gzipBytes": 13401
+        },
+        {
+          "path": "/_next/static/chunks/app/layout-d9aefe6571874ad8.js",
+          "rawBytes": 30749,
+          "gzipBytes": 10495
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-686206214ad0585d.js",
+          "rawBytes": 163271,
+          "gzipBytes": 46987
+        },
+        {
+          "path": "/_next/static/chunks/app/library/page-552add91ed8fdace.js",
+          "rawBytes": 20147,
+          "gzipBytes": 7472
+        },
+        {
+          "path": "/_next/static/chunks/app/mediation/page-98175d9799c28624.js",
+          "rawBytes": 19541,
+          "gzipBytes": 7224
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-1/page-39fc5b2b5936eefd.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-2/page-2750fecdeec3527c.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-3/page-c1d5b15563611e88.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-4/page-b0759ae45b7fb65c.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-5/page-7a76d7424dc2db12.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-6/page-224275f057a0f750.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-7/page-d1cefa2bda28bab4.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-8/page-cff12d5d112d6b87.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/offline/page-b8da0eb8ce5e2b03.js",
+          "rawBytes": 2241,
+          "gzipBytes": 838
+        },
+        {
+          "path": "/_next/static/chunks/app/path/page-f42f6e96b743704f.js",
+          "rawBytes": 19206,
+          "gzipBytes": 4197
+        },
+        {
+          "path": "/_next/static/chunks/app/portfolio/writing/page-8a4522220a407eb5.js",
+          "rawBytes": 19556,
+          "gzipBytes": 7625
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/collocations/page-1c0c610dbca3b462.js",
+          "rawBytes": 39203,
+          "gzipBytes": 12144
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/conversation-paths/page-b6518be5c2cf3823.js",
+          "rawBytes": 51729,
+          "gzipBytes": 16283
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/dictation/page-1f7af1dac6bcb7ea.js",
+          "rawBytes": 33056,
+          "gzipBytes": 11186
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/page-e4996e2796f1a44b.js",
+          "rawBytes": 7527,
+          "gzipBytes": 3350
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/practical-day/page-56d3464e31ecbbea.js",
+          "rawBytes": 7536,
+          "gzipBytes": 3235
+        },
+        {
+          "path": "/_next/static/chunks/app/privacy/page-2848f1cbced5c4b7.js",
+          "rawBytes": 1274,
+          "gzipBytes": 741
+        },
+        {
+          "path": "/_next/static/chunks/app/progress/page-d1550cb51c6e28c1.js",
+          "rawBytes": 34204,
+          "gzipBytes": 11230
+        },
+        {
+          "path": "/_next/static/chunks/app/review/page-ace56cbad6c3a221.js",
+          "rawBytes": 17862,
+          "gzipBytes": 6900
+        },
+        {
+          "path": "/_next/static/chunks/app/search/page-aab7967dd2320cf4.js",
+          "rawBytes": 47089,
+          "gzipBytes": 16802
+        },
+        {
+          "path": "/_next/static/chunks/app/settings/page-3e542bef08d8c14a.js",
+          "rawBytes": 164612,
+          "gzipBytes": 46970
+        },
+        {
+          "path": "/_next/static/chunks/app/shadowing/page-6857b61f45568622.js",
+          "rawBytes": 23189,
+          "gzipBytes": 8894
+        },
+        {
+          "path": "/_next/static/chunks/app/speaking/page-944aa02d4fcd115a.js",
+          "rawBytes": 86224,
+          "gzipBytes": 26207
+        },
+        {
+          "path": "/_next/static/chunks/app/status/page-36a912486cc61aea.js",
+          "rawBytes": 8052,
+          "gzipBytes": 3422
+        },
+        {
+          "path": "/_next/static/chunks/app/today/page-47eab24bc83917d7.js",
+          "rawBytes": 98247,
+          "gzipBytes": 29707
+        },
+        {
+          "path": "/_next/static/chunks/app/tutor/page-ae9ac791ca7d5f43.js",
+          "rawBytes": 13694,
+          "gzipBytes": 5140
+        },
+        {
+          "path": "/_next/static/chunks/app/writing/page-23fce5f34a2f4f61.js",
+          "rawBytes": 61819,
+          "gzipBytes": 20986
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a1-2bf779df79cc5af8.js",
+          "rawBytes": 395713,
+          "gzipBytes": 105422
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a2-1157f9800ee27b2b.js",
+          "rawBytes": 589391,
+          "gzipBytes": 164398
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b1-63b7f1528493e615.js",
+          "rawBytes": 588041,
+          "gzipBytes": 168418
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b2-82b47a8d7c8e3a58.js",
+          "rawBytes": 822497,
+          "gzipBytes": 250914
+        },
+        {
+          "path": "/_next/static/chunks/main-app-6ea83e354847db5d.js",
+          "rawBytes": 529,
+          "gzipBytes": 232
+        },
+        {
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "rawBytes": 112594,
+          "gzipBytes": 39520
+        },
+        {
+          "path": "/_next/static/chunks/webpack-9660626b6ab2c75c.js",
+          "rawBytes": 3332,
+          "gzipBytes": 1674
+        },
+        {
+          "path": "/_next/static/css/7ad0eaac0428f148.css",
+          "rawBytes": 442308,
+          "gzipBytes": 71444
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "label": "A2",
+      "routeCount": 58,
+      "routeRawBytes": 4135871,
+      "routeGzipBytes": 875930,
+      "nextAssetCount": 71,
+      "nextAssetRawBytes": 5871555,
+      "nextAssetGzipBytes": 1669476,
+      "supportRawBytes": 67256,
+      "supportGzipBytes": 11941,
+      "totalRawBytes": 10074682,
+      "totalGzipBytes": 2557347,
+      "assets": [
+        {
+          "path": "/_next/static/chunks/1068-a5930a2bf4d802d0.js",
+          "rawBytes": 68840,
+          "gzipBytes": 18590
+        },
+        {
+          "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
+          "rawBytes": 53484,
+          "gzipBytes": 9467
+        },
+        {
+          "path": "/_next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+          "rawBytes": 341546,
+          "gzipBytes": 100809
+        },
+        {
+          "path": "/_next/static/chunks/174-949ffaadf4e270b9.js",
+          "rawBytes": 13654,
+          "gzipBytes": 3901
+        },
+        {
+          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
+          "rawBytes": 18433,
+          "gzipBytes": 7400
+        },
+        {
+          "path": "/_next/static/chunks/202-01ecd73af9582a10.js",
+          "rawBytes": 13998,
+          "gzipBytes": 5304
+        },
+        {
+          "path": "/_next/static/chunks/3348-1bb6a99ce17f420f.js",
+          "rawBytes": 175974,
+          "gzipBytes": 53515
+        },
+        {
+          "path": "/_next/static/chunks/3657-1b1c600596655e04.js",
+          "rawBytes": 12653,
+          "gzipBytes": 5269
+        },
+        {
+          "path": "/_next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+          "rawBytes": 241388,
+          "gzipBytes": 65550
+        },
+        {
+          "path": "/_next/static/chunks/3918-77bc8412595f0fbb.js",
+          "rawBytes": 11442,
+          "gzipBytes": 3305
+        },
+        {
+          "path": "/_next/static/chunks/4282-74670c80a59b0c1c.js",
+          "rawBytes": 8722,
+          "gzipBytes": 2692
+        },
+        {
+          "path": "/_next/static/chunks/4484-30e7c4ff7e6e7221.js",
+          "rawBytes": 83898,
+          "gzipBytes": 12035
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+          "rawBytes": 201060,
+          "gzipBytes": 63160
+        },
+        {
+          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
+          "rawBytes": 13806,
+          "gzipBytes": 4751
+        },
+        {
+          "path": "/_next/static/chunks/5540-89794ecb7b6fc658.js",
+          "rawBytes": 63058,
+          "gzipBytes": 10875
+        },
+        {
+          "path": "/_next/static/chunks/6175-7016ddd826305447.js",
+          "rawBytes": 16786,
+          "gzipBytes": 5469
+        },
+        {
+          "path": "/_next/static/chunks/6850-87a29aad1e4a5bba.js",
+          "rawBytes": 68850,
+          "gzipBytes": 19706
+        },
+        {
+          "path": "/_next/static/chunks/6901-9ed49aa178e9017d.js",
+          "rawBytes": 11755,
+          "gzipBytes": 4906
+        },
+        {
+          "path": "/_next/static/chunks/7075-319f458ac624c316.js",
+          "rawBytes": 15902,
+          "gzipBytes": 6655
+        },
+        {
+          "path": "/_next/static/chunks/7164-a4adc4cb1854f302.js",
+          "rawBytes": 24014,
+          "gzipBytes": 8307
+        },
+        {
+          "path": "/_next/static/chunks/7602-fe78800246f5c9bb.js",
+          "rawBytes": 26486,
+          "gzipBytes": 8700
+        },
+        {
+          "path": "/_next/static/chunks/7903-6b68ae144959896c.js",
+          "rawBytes": 28121,
+          "gzipBytes": 10642
+        },
+        {
+          "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
+          "rawBytes": 45915,
+          "gzipBytes": 14671
+        },
+        {
+          "path": "/_next/static/chunks/8153-68de7058e3852579.js",
+          "rawBytes": 26933,
+          "gzipBytes": 8366
+        },
+        {
+          "path": "/_next/static/chunks/8311-551d65e5ef1ed4b9.js",
+          "rawBytes": 58615,
+          "gzipBytes": 18831
+        },
+        {
+          "path": "/_next/static/chunks/8500-01a63dafd809e317.js",
+          "rawBytes": 8665,
+          "gzipBytes": 3561
+        },
+        {
+          "path": "/_next/static/chunks/8623-c2ad72341bf3f62c.js",
+          "rawBytes": 30142,
+          "gzipBytes": 5356
+        },
+        {
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
+        },
+        {
+          "path": "/_next/static/chunks/9960-894b91b22adc0b30.js",
+          "rawBytes": 33704,
+          "gzipBytes": 12116
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/a2/page-728626a18969cf8f.js",
+          "rawBytes": 10566,
+          "gzipBytes": 4596
+        },
+        {
+          "path": "/_next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+          "rawBytes": 45120,
+          "gzipBytes": 15262
+        },
+        {
+          "path": "/_next/static/chunks/app/errors/page-f686989f9b942b57.js",
+          "rawBytes": 40790,
+          "gzipBytes": 13401
+        },
+        {
+          "path": "/_next/static/chunks/app/layout-d9aefe6571874ad8.js",
+          "rawBytes": 30749,
+          "gzipBytes": 10495
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-686206214ad0585d.js",
+          "rawBytes": 163271,
+          "gzipBytes": 46987
+        },
+        {
+          "path": "/_next/static/chunks/app/library/page-552add91ed8fdace.js",
+          "rawBytes": 20147,
+          "gzipBytes": 7472
+        },
+        {
+          "path": "/_next/static/chunks/app/mediation/page-98175d9799c28624.js",
+          "rawBytes": 19541,
+          "gzipBytes": 7224
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-1/page-c6d98b32084d9ff9.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-2/page-314a471e369f43e3.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-3/page-9af3f759e69691fc.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-4/page-ec960b83306f0a64.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-5/page-2e3a4ce86cc2d1c0.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-6/page-a2023fb8609ddc46.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-7/page-c209da5fbe0e82d5.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-8/page-b2f351298a8952e0.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/offline/page-b8da0eb8ce5e2b03.js",
+          "rawBytes": 2241,
+          "gzipBytes": 838
+        },
+        {
+          "path": "/_next/static/chunks/app/path/page-f42f6e96b743704f.js",
+          "rawBytes": 19206,
+          "gzipBytes": 4197
+        },
+        {
+          "path": "/_next/static/chunks/app/portfolio/writing/page-8a4522220a407eb5.js",
+          "rawBytes": 19556,
+          "gzipBytes": 7625
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/collocations/page-1c0c610dbca3b462.js",
+          "rawBytes": 39203,
+          "gzipBytes": 12144
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/conversation-paths/page-b6518be5c2cf3823.js",
+          "rawBytes": 51729,
+          "gzipBytes": 16283
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/dictation/page-1f7af1dac6bcb7ea.js",
+          "rawBytes": 33056,
+          "gzipBytes": 11186
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/page-e4996e2796f1a44b.js",
+          "rawBytes": 7527,
+          "gzipBytes": 3350
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/practical-day/page-56d3464e31ecbbea.js",
+          "rawBytes": 7536,
+          "gzipBytes": 3235
+        },
+        {
+          "path": "/_next/static/chunks/app/privacy/page-2848f1cbced5c4b7.js",
+          "rawBytes": 1274,
+          "gzipBytes": 741
+        },
+        {
+          "path": "/_next/static/chunks/app/progress/page-d1550cb51c6e28c1.js",
+          "rawBytes": 34204,
+          "gzipBytes": 11230
+        },
+        {
+          "path": "/_next/static/chunks/app/review/page-ace56cbad6c3a221.js",
+          "rawBytes": 17862,
+          "gzipBytes": 6900
+        },
+        {
+          "path": "/_next/static/chunks/app/search/page-aab7967dd2320cf4.js",
+          "rawBytes": 47089,
+          "gzipBytes": 16802
+        },
+        {
+          "path": "/_next/static/chunks/app/settings/page-3e542bef08d8c14a.js",
+          "rawBytes": 164612,
+          "gzipBytes": 46970
+        },
+        {
+          "path": "/_next/static/chunks/app/shadowing/page-6857b61f45568622.js",
+          "rawBytes": 23189,
+          "gzipBytes": 8894
+        },
+        {
+          "path": "/_next/static/chunks/app/speaking/page-944aa02d4fcd115a.js",
+          "rawBytes": 86224,
+          "gzipBytes": 26207
+        },
+        {
+          "path": "/_next/static/chunks/app/status/page-36a912486cc61aea.js",
+          "rawBytes": 8052,
+          "gzipBytes": 3422
+        },
+        {
+          "path": "/_next/static/chunks/app/today/page-47eab24bc83917d7.js",
+          "rawBytes": 98247,
+          "gzipBytes": 29707
+        },
+        {
+          "path": "/_next/static/chunks/app/tutor/page-ae9ac791ca7d5f43.js",
+          "rawBytes": 13694,
+          "gzipBytes": 5140
+        },
+        {
+          "path": "/_next/static/chunks/app/writing/page-23fce5f34a2f4f61.js",
+          "rawBytes": 61819,
+          "gzipBytes": 20986
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a1-2bf779df79cc5af8.js",
+          "rawBytes": 395713,
+          "gzipBytes": 105422
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a2-1157f9800ee27b2b.js",
+          "rawBytes": 589391,
+          "gzipBytes": 164398
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b1-63b7f1528493e615.js",
+          "rawBytes": 588041,
+          "gzipBytes": 168418
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b2-82b47a8d7c8e3a58.js",
+          "rawBytes": 822497,
+          "gzipBytes": 250914
+        },
+        {
+          "path": "/_next/static/chunks/main-app-6ea83e354847db5d.js",
+          "rawBytes": 529,
+          "gzipBytes": 232
+        },
+        {
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "rawBytes": 112594,
+          "gzipBytes": 39520
+        },
+        {
+          "path": "/_next/static/chunks/webpack-9660626b6ab2c75c.js",
+          "rawBytes": 3332,
+          "gzipBytes": 1674
+        },
+        {
+          "path": "/_next/static/css/7ad0eaac0428f148.css",
+          "rawBytes": 442308,
+          "gzipBytes": 71444
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "label": "B1",
+      "routeCount": 58,
+      "routeRawBytes": 4140050,
+      "routeGzipBytes": 889356,
+      "nextAssetCount": 71,
+      "nextAssetRawBytes": 5871583,
+      "nextAssetGzipBytes": 1669466,
+      "supportRawBytes": 67256,
+      "supportGzipBytes": 11941,
+      "totalRawBytes": 10078889,
+      "totalGzipBytes": 2570763,
+      "assets": [
+        {
+          "path": "/_next/static/chunks/1068-a5930a2bf4d802d0.js",
+          "rawBytes": 68840,
+          "gzipBytes": 18590
+        },
+        {
+          "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
+          "rawBytes": 53484,
+          "gzipBytes": 9467
+        },
+        {
+          "path": "/_next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+          "rawBytes": 341546,
+          "gzipBytes": 100809
+        },
+        {
+          "path": "/_next/static/chunks/174-949ffaadf4e270b9.js",
+          "rawBytes": 13654,
+          "gzipBytes": 3901
+        },
+        {
+          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
+          "rawBytes": 18433,
+          "gzipBytes": 7400
+        },
+        {
+          "path": "/_next/static/chunks/202-01ecd73af9582a10.js",
+          "rawBytes": 13998,
+          "gzipBytes": 5304
+        },
+        {
+          "path": "/_next/static/chunks/3348-1bb6a99ce17f420f.js",
+          "rawBytes": 175974,
+          "gzipBytes": 53515
+        },
+        {
+          "path": "/_next/static/chunks/3657-1b1c600596655e04.js",
+          "rawBytes": 12653,
+          "gzipBytes": 5269
+        },
+        {
+          "path": "/_next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+          "rawBytes": 241388,
+          "gzipBytes": 65550
+        },
+        {
+          "path": "/_next/static/chunks/3918-77bc8412595f0fbb.js",
+          "rawBytes": 11442,
+          "gzipBytes": 3305
+        },
+        {
+          "path": "/_next/static/chunks/4282-74670c80a59b0c1c.js",
+          "rawBytes": 8722,
+          "gzipBytes": 2692
+        },
+        {
+          "path": "/_next/static/chunks/4484-30e7c4ff7e6e7221.js",
+          "rawBytes": 83898,
+          "gzipBytes": 12035
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+          "rawBytes": 201060,
+          "gzipBytes": 63160
+        },
+        {
+          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
+          "rawBytes": 13806,
+          "gzipBytes": 4751
+        },
+        {
+          "path": "/_next/static/chunks/5540-89794ecb7b6fc658.js",
+          "rawBytes": 63058,
+          "gzipBytes": 10875
+        },
+        {
+          "path": "/_next/static/chunks/6175-7016ddd826305447.js",
+          "rawBytes": 16786,
+          "gzipBytes": 5469
+        },
+        {
+          "path": "/_next/static/chunks/6850-87a29aad1e4a5bba.js",
+          "rawBytes": 68850,
+          "gzipBytes": 19706
+        },
+        {
+          "path": "/_next/static/chunks/6901-9ed49aa178e9017d.js",
+          "rawBytes": 11755,
+          "gzipBytes": 4906
+        },
+        {
+          "path": "/_next/static/chunks/7075-319f458ac624c316.js",
+          "rawBytes": 15902,
+          "gzipBytes": 6655
+        },
+        {
+          "path": "/_next/static/chunks/7164-a4adc4cb1854f302.js",
+          "rawBytes": 24014,
+          "gzipBytes": 8307
+        },
+        {
+          "path": "/_next/static/chunks/7602-fe78800246f5c9bb.js",
+          "rawBytes": 26486,
+          "gzipBytes": 8700
+        },
+        {
+          "path": "/_next/static/chunks/7903-6b68ae144959896c.js",
+          "rawBytes": 28121,
+          "gzipBytes": 10642
+        },
+        {
+          "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
+          "rawBytes": 45915,
+          "gzipBytes": 14671
+        },
+        {
+          "path": "/_next/static/chunks/8153-68de7058e3852579.js",
+          "rawBytes": 26933,
+          "gzipBytes": 8366
+        },
+        {
+          "path": "/_next/static/chunks/8311-551d65e5ef1ed4b9.js",
+          "rawBytes": 58615,
+          "gzipBytes": 18831
+        },
+        {
+          "path": "/_next/static/chunks/8500-01a63dafd809e317.js",
+          "rawBytes": 8665,
+          "gzipBytes": 3561
+        },
+        {
+          "path": "/_next/static/chunks/8623-c2ad72341bf3f62c.js",
+          "rawBytes": 30142,
+          "gzipBytes": 5356
+        },
+        {
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
+        },
+        {
+          "path": "/_next/static/chunks/9960-894b91b22adc0b30.js",
+          "rawBytes": 33704,
+          "gzipBytes": 12116
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/b1/page-bf194af6594529a9.js",
+          "rawBytes": 10595,
+          "gzipBytes": 4588
+        },
+        {
+          "path": "/_next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+          "rawBytes": 45120,
+          "gzipBytes": 15262
+        },
+        {
+          "path": "/_next/static/chunks/app/errors/page-f686989f9b942b57.js",
+          "rawBytes": 40790,
+          "gzipBytes": 13401
+        },
+        {
+          "path": "/_next/static/chunks/app/layout-d9aefe6571874ad8.js",
+          "rawBytes": 30749,
+          "gzipBytes": 10495
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-686206214ad0585d.js",
+          "rawBytes": 163271,
+          "gzipBytes": 46987
+        },
+        {
+          "path": "/_next/static/chunks/app/library/page-552add91ed8fdace.js",
+          "rawBytes": 20147,
+          "gzipBytes": 7472
+        },
+        {
+          "path": "/_next/static/chunks/app/mediation/page-98175d9799c28624.js",
+          "rawBytes": 19541,
+          "gzipBytes": 7224
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-1/page-717e04bd27c7843b.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-2/page-d640fe3d2649e2ef.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-3/page-ef7b024dbe6ff7f1.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-4/page-ea8e5bc2f9eda7b9.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-5/page-8afbd4e7a8f08ceb.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-6/page-f28eee5c1a346139.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-7/page-f23f78b83f2cc5b6.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-8/page-47d20d1eb62309c1.js",
+          "rawBytes": 169,
+          "gzipBytes": 149
+        },
+        {
+          "path": "/_next/static/chunks/app/offline/page-b8da0eb8ce5e2b03.js",
+          "rawBytes": 2241,
+          "gzipBytes": 838
+        },
+        {
+          "path": "/_next/static/chunks/app/path/page-f42f6e96b743704f.js",
+          "rawBytes": 19206,
+          "gzipBytes": 4197
+        },
+        {
+          "path": "/_next/static/chunks/app/portfolio/writing/page-8a4522220a407eb5.js",
+          "rawBytes": 19556,
+          "gzipBytes": 7625
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/collocations/page-1c0c610dbca3b462.js",
+          "rawBytes": 39203,
+          "gzipBytes": 12144
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/conversation-paths/page-b6518be5c2cf3823.js",
+          "rawBytes": 51729,
+          "gzipBytes": 16283
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/dictation/page-1f7af1dac6bcb7ea.js",
+          "rawBytes": 33056,
+          "gzipBytes": 11186
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/page-e4996e2796f1a44b.js",
+          "rawBytes": 7527,
+          "gzipBytes": 3350
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/practical-day/page-56d3464e31ecbbea.js",
+          "rawBytes": 7536,
+          "gzipBytes": 3235
+        },
+        {
+          "path": "/_next/static/chunks/app/privacy/page-2848f1cbced5c4b7.js",
+          "rawBytes": 1274,
+          "gzipBytes": 741
+        },
+        {
+          "path": "/_next/static/chunks/app/progress/page-d1550cb51c6e28c1.js",
+          "rawBytes": 34204,
+          "gzipBytes": 11230
+        },
+        {
+          "path": "/_next/static/chunks/app/review/page-ace56cbad6c3a221.js",
+          "rawBytes": 17862,
+          "gzipBytes": 6900
+        },
+        {
+          "path": "/_next/static/chunks/app/search/page-aab7967dd2320cf4.js",
+          "rawBytes": 47089,
+          "gzipBytes": 16802
+        },
+        {
+          "path": "/_next/static/chunks/app/settings/page-3e542bef08d8c14a.js",
+          "rawBytes": 164612,
+          "gzipBytes": 46970
+        },
+        {
+          "path": "/_next/static/chunks/app/shadowing/page-6857b61f45568622.js",
+          "rawBytes": 23189,
+          "gzipBytes": 8894
+        },
+        {
+          "path": "/_next/static/chunks/app/speaking/page-944aa02d4fcd115a.js",
+          "rawBytes": 86224,
+          "gzipBytes": 26207
+        },
+        {
+          "path": "/_next/static/chunks/app/status/page-36a912486cc61aea.js",
+          "rawBytes": 8052,
+          "gzipBytes": 3422
+        },
+        {
+          "path": "/_next/static/chunks/app/today/page-47eab24bc83917d7.js",
+          "rawBytes": 98247,
+          "gzipBytes": 29707
+        },
+        {
+          "path": "/_next/static/chunks/app/tutor/page-ae9ac791ca7d5f43.js",
+          "rawBytes": 13694,
+          "gzipBytes": 5140
+        },
+        {
+          "path": "/_next/static/chunks/app/writing/page-23fce5f34a2f4f61.js",
+          "rawBytes": 61819,
+          "gzipBytes": 20986
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a1-2bf779df79cc5af8.js",
+          "rawBytes": 395713,
+          "gzipBytes": 105422
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a2-1157f9800ee27b2b.js",
+          "rawBytes": 589391,
+          "gzipBytes": 164398
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b1-63b7f1528493e615.js",
+          "rawBytes": 588041,
+          "gzipBytes": 168418
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b2-82b47a8d7c8e3a58.js",
+          "rawBytes": 822497,
+          "gzipBytes": 250914
+        },
+        {
+          "path": "/_next/static/chunks/main-app-6ea83e354847db5d.js",
+          "rawBytes": 529,
+          "gzipBytes": 232
+        },
+        {
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "rawBytes": 112594,
+          "gzipBytes": 39520
+        },
+        {
+          "path": "/_next/static/chunks/webpack-9660626b6ab2c75c.js",
+          "rawBytes": 3332,
+          "gzipBytes": 1674
+        },
+        {
+          "path": "/_next/static/css/7ad0eaac0428f148.css",
+          "rawBytes": 442308,
+          "gzipBytes": 71444
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "label": "B2 + Prüfung",
+      "routeCount": 219,
+      "routeRawBytes": 9441885,
+      "routeGzipBytes": 2205798,
+      "nextAssetCount": 73,
+      "nextAssetRawBytes": 5992537,
+      "nextAssetGzipBytes": 1706641,
+      "supportRawBytes": 67256,
+      "supportGzipBytes": 11941,
+      "totalRawBytes": 15501678,
+      "totalGzipBytes": 3924380,
+      "assets": [
+        {
+          "path": "/_next/static/chunks/1068-a5930a2bf4d802d0.js",
+          "rawBytes": 68840,
+          "gzipBytes": 18590
+        },
+        {
+          "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
+          "rawBytes": 53484,
+          "gzipBytes": 9467
+        },
+        {
+          "path": "/_next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+          "rawBytes": 341546,
+          "gzipBytes": 100809
+        },
+        {
+          "path": "/_next/static/chunks/174-949ffaadf4e270b9.js",
+          "rawBytes": 13654,
+          "gzipBytes": 3901
+        },
+        {
+          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
+          "rawBytes": 18433,
+          "gzipBytes": 7400
+        },
+        {
+          "path": "/_next/static/chunks/202-01ecd73af9582a10.js",
+          "rawBytes": 13998,
+          "gzipBytes": 5304
+        },
+        {
+          "path": "/_next/static/chunks/3348-1bb6a99ce17f420f.js",
+          "rawBytes": 175974,
+          "gzipBytes": 53515
+        },
+        {
+          "path": "/_next/static/chunks/3657-1b1c600596655e04.js",
+          "rawBytes": 12653,
+          "gzipBytes": 5269
+        },
+        {
+          "path": "/_next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+          "rawBytes": 241388,
+          "gzipBytes": 65550
+        },
+        {
+          "path": "/_next/static/chunks/3918-77bc8412595f0fbb.js",
+          "rawBytes": 11442,
+          "gzipBytes": 3305
+        },
+        {
+          "path": "/_next/static/chunks/4282-74670c80a59b0c1c.js",
+          "rawBytes": 8722,
+          "gzipBytes": 2692
+        },
+        {
+          "path": "/_next/static/chunks/4484-30e7c4ff7e6e7221.js",
+          "rawBytes": 83898,
+          "gzipBytes": 12035
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+          "rawBytes": 201060,
+          "gzipBytes": 63160
+        },
+        {
+          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
+          "rawBytes": 13806,
+          "gzipBytes": 4751
+        },
+        {
+          "path": "/_next/static/chunks/5540-89794ecb7b6fc658.js",
+          "rawBytes": 63058,
+          "gzipBytes": 10875
+        },
+        {
+          "path": "/_next/static/chunks/6175-7016ddd826305447.js",
+          "rawBytes": 16786,
+          "gzipBytes": 5469
+        },
+        {
+          "path": "/_next/static/chunks/6850-87a29aad1e4a5bba.js",
+          "rawBytes": 68850,
+          "gzipBytes": 19706
+        },
+        {
+          "path": "/_next/static/chunks/6901-9ed49aa178e9017d.js",
+          "rawBytes": 11755,
+          "gzipBytes": 4906
+        },
+        {
+          "path": "/_next/static/chunks/7075-319f458ac624c316.js",
+          "rawBytes": 15902,
+          "gzipBytes": 6655
+        },
+        {
+          "path": "/_next/static/chunks/7164-a4adc4cb1854f302.js",
+          "rawBytes": 24014,
+          "gzipBytes": 8307
+        },
+        {
+          "path": "/_next/static/chunks/7602-fe78800246f5c9bb.js",
+          "rawBytes": 26486,
+          "gzipBytes": 8700
+        },
+        {
+          "path": "/_next/static/chunks/7903-6b68ae144959896c.js",
+          "rawBytes": 28121,
+          "gzipBytes": 10642
+        },
+        {
+          "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
+          "rawBytes": 45915,
+          "gzipBytes": 14671
+        },
+        {
+          "path": "/_next/static/chunks/8153-68de7058e3852579.js",
+          "rawBytes": 26933,
+          "gzipBytes": 8366
+        },
+        {
+          "path": "/_next/static/chunks/8311-551d65e5ef1ed4b9.js",
+          "rawBytes": 58615,
+          "gzipBytes": 18831
+        },
+        {
+          "path": "/_next/static/chunks/8500-01a63dafd809e317.js",
+          "rawBytes": 8665,
+          "gzipBytes": 3561
+        },
+        {
+          "path": "/_next/static/chunks/8529-9ba71ae745a0a13b.js",
+          "rawBytes": 11378,
+          "gzipBytes": 4325
+        },
+        {
+          "path": "/_next/static/chunks/8623-c2ad72341bf3f62c.js",
+          "rawBytes": 30142,
+          "gzipBytes": 5356
+        },
+        {
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
+        },
+        {
+          "path": "/_next/static/chunks/9960-894b91b22adc0b30.js",
+          "rawBytes": 33704,
+          "gzipBytes": 12116
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/b2/page-9a340fad08604d55.js",
+          "rawBytes": 10928,
+          "gzipBytes": 4712
+        },
+        {
+          "path": "/_next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+          "rawBytes": 45120,
+          "gzipBytes": 15262
+        },
+        {
+          "path": "/_next/static/chunks/app/errors/page-f686989f9b942b57.js",
+          "rawBytes": 40790,
+          "gzipBytes": 13401
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-856465801e47f621.js",
+          "rawBytes": 57492,
+          "gzipBytes": 15936
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-29dbe5a2a7cb1ea5.js",
+          "rawBytes": 12670,
+          "gzipBytes": 4604
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/page-5edbd86ec1e2fbfa.js",
+          "rawBytes": 39420,
+          "gzipBytes": 12484
+        },
+        {
+          "path": "/_next/static/chunks/app/layout-d9aefe6571874ad8.js",
+          "rawBytes": 30749,
+          "gzipBytes": 10495
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-686206214ad0585d.js",
+          "rawBytes": 163271,
+          "gzipBytes": 46987
+        },
+        {
+          "path": "/_next/static/chunks/app/library/page-552add91ed8fdace.js",
+          "rawBytes": 20147,
+          "gzipBytes": 7472
+        },
+        {
+          "path": "/_next/static/chunks/app/mediation/page-98175d9799c28624.js",
+          "rawBytes": 19541,
+          "gzipBytes": 7224
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-1/page-9ac73a34c02f0a00.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-2/page-61b57a2bc94f2e31.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-3/page-c8d42ef4d282bec5.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-4/page-2188a01d08c644da.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-5/page-fbf6996609bfa681.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-6/page-f3b106516054a886.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/offline/page-b8da0eb8ce5e2b03.js",
+          "rawBytes": 2241,
+          "gzipBytes": 838
+        },
+        {
+          "path": "/_next/static/chunks/app/path/page-f42f6e96b743704f.js",
+          "rawBytes": 19206,
+          "gzipBytes": 4197
+        },
+        {
+          "path": "/_next/static/chunks/app/portfolio/writing/page-8a4522220a407eb5.js",
+          "rawBytes": 19556,
+          "gzipBytes": 7625
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/collocations/page-1c0c610dbca3b462.js",
+          "rawBytes": 39203,
+          "gzipBytes": 12144
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/conversation-paths/page-b6518be5c2cf3823.js",
+          "rawBytes": 51729,
+          "gzipBytes": 16283
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/dictation/page-1f7af1dac6bcb7ea.js",
+          "rawBytes": 33056,
+          "gzipBytes": 11186
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/page-e4996e2796f1a44b.js",
+          "rawBytes": 7527,
+          "gzipBytes": 3350
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/practical-day/page-56d3464e31ecbbea.js",
+          "rawBytes": 7536,
+          "gzipBytes": 3235
+        },
+        {
+          "path": "/_next/static/chunks/app/privacy/page-2848f1cbced5c4b7.js",
+          "rawBytes": 1274,
+          "gzipBytes": 741
+        },
+        {
+          "path": "/_next/static/chunks/app/progress/page-d1550cb51c6e28c1.js",
+          "rawBytes": 34204,
+          "gzipBytes": 11230
+        },
+        {
+          "path": "/_next/static/chunks/app/review/page-ace56cbad6c3a221.js",
+          "rawBytes": 17862,
+          "gzipBytes": 6900
+        },
+        {
+          "path": "/_next/static/chunks/app/search/page-aab7967dd2320cf4.js",
+          "rawBytes": 47089,
+          "gzipBytes": 16802
+        },
+        {
+          "path": "/_next/static/chunks/app/settings/page-3e542bef08d8c14a.js",
+          "rawBytes": 164612,
+          "gzipBytes": 46970
+        },
+        {
+          "path": "/_next/static/chunks/app/shadowing/page-6857b61f45568622.js",
+          "rawBytes": 23189,
+          "gzipBytes": 8894
+        },
+        {
+          "path": "/_next/static/chunks/app/speaking/page-944aa02d4fcd115a.js",
+          "rawBytes": 86224,
+          "gzipBytes": 26207
+        },
+        {
+          "path": "/_next/static/chunks/app/status/page-36a912486cc61aea.js",
+          "rawBytes": 8052,
+          "gzipBytes": 3422
+        },
+        {
+          "path": "/_next/static/chunks/app/today/page-47eab24bc83917d7.js",
+          "rawBytes": 98247,
+          "gzipBytes": 29707
+        },
+        {
+          "path": "/_next/static/chunks/app/tutor/page-ae9ac791ca7d5f43.js",
+          "rawBytes": 13694,
+          "gzipBytes": 5140
+        },
+        {
+          "path": "/_next/static/chunks/app/writing/page-23fce5f34a2f4f61.js",
+          "rawBytes": 61819,
+          "gzipBytes": 20986
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a1-2bf779df79cc5af8.js",
+          "rawBytes": 395713,
+          "gzipBytes": 105422
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a2-1157f9800ee27b2b.js",
+          "rawBytes": 589391,
+          "gzipBytes": 164398
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b1-63b7f1528493e615.js",
+          "rawBytes": 588041,
+          "gzipBytes": 168418
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b2-82b47a8d7c8e3a58.js",
+          "rawBytes": 822497,
+          "gzipBytes": 250914
+        },
+        {
+          "path": "/_next/static/chunks/main-app-6ea83e354847db5d.js",
+          "rawBytes": 529,
+          "gzipBytes": 232
+        },
+        {
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "rawBytes": 112594,
+          "gzipBytes": 39520
+        },
+        {
+          "path": "/_next/static/chunks/webpack-9660626b6ab2c75c.js",
+          "rawBytes": 3332,
+          "gzipBytes": 1674
+        },
+        {
+          "path": "/_next/static/css/7ad0eaac0428f148.css",
+          "rawBytes": 442308,
+          "gzipBytes": 71444
+        }
+      ]
+    },
+    {
+      "id": "full",
+      "label": "A1–B2 komplett",
+      "routeCount": 318,
+      "routeRawBytes": 16315372,
+      "routeGzipBytes": 3990038,
+      "nextAssetCount": 100,
+      "nextAssetRawBytes": 6028334,
+      "nextAssetGzipBytes": 1723973,
+      "supportRawBytes": 67256,
+      "supportGzipBytes": 11941,
+      "totalRawBytes": 22410962,
+      "totalGzipBytes": 5725952,
+      "assets": [
+        {
+          "path": "/_next/static/chunks/1068-a5930a2bf4d802d0.js",
+          "rawBytes": 68840,
+          "gzipBytes": 18590
+        },
+        {
+          "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
+          "rawBytes": 53484,
+          "gzipBytes": 9467
+        },
+        {
+          "path": "/_next/static/chunks/1269-5a7ba5e82b59f8a4.js",
+          "rawBytes": 341546,
+          "gzipBytes": 100809
+        },
+        {
+          "path": "/_next/static/chunks/174-949ffaadf4e270b9.js",
+          "rawBytes": 13654,
+          "gzipBytes": 3901
+        },
+        {
+          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
+          "rawBytes": 18433,
+          "gzipBytes": 7400
+        },
+        {
+          "path": "/_next/static/chunks/202-01ecd73af9582a10.js",
+          "rawBytes": 13998,
+          "gzipBytes": 5304
+        },
+        {
+          "path": "/_next/static/chunks/3348-1bb6a99ce17f420f.js",
+          "rawBytes": 175974,
+          "gzipBytes": 53515
+        },
+        {
+          "path": "/_next/static/chunks/3657-1b1c600596655e04.js",
+          "rawBytes": 12653,
+          "gzipBytes": 5269
+        },
+        {
+          "path": "/_next/static/chunks/3794-4d73df1ee3dd1b8a.js",
+          "rawBytes": 241388,
+          "gzipBytes": 65550
+        },
+        {
+          "path": "/_next/static/chunks/3918-77bc8412595f0fbb.js",
+          "rawBytes": 11442,
+          "gzipBytes": 3305
+        },
+        {
+          "path": "/_next/static/chunks/4282-74670c80a59b0c1c.js",
+          "rawBytes": 8722,
+          "gzipBytes": 2692
+        },
+        {
+          "path": "/_next/static/chunks/4484-30e7c4ff7e6e7221.js",
+          "rawBytes": 83898,
+          "gzipBytes": 12035
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
+          "rawBytes": 201060,
+          "gzipBytes": 63160
+        },
+        {
+          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
+          "rawBytes": 13806,
+          "gzipBytes": 4751
+        },
+        {
+          "path": "/_next/static/chunks/5540-89794ecb7b6fc658.js",
+          "rawBytes": 63058,
+          "gzipBytes": 10875
+        },
+        {
+          "path": "/_next/static/chunks/6175-7016ddd826305447.js",
+          "rawBytes": 16786,
+          "gzipBytes": 5469
+        },
+        {
+          "path": "/_next/static/chunks/6850-87a29aad1e4a5bba.js",
+          "rawBytes": 68850,
+          "gzipBytes": 19706
+        },
+        {
+          "path": "/_next/static/chunks/6901-9ed49aa178e9017d.js",
+          "rawBytes": 11755,
+          "gzipBytes": 4906
+        },
+        {
+          "path": "/_next/static/chunks/7075-319f458ac624c316.js",
+          "rawBytes": 15902,
+          "gzipBytes": 6655
+        },
+        {
+          "path": "/_next/static/chunks/7164-a4adc4cb1854f302.js",
+          "rawBytes": 24014,
+          "gzipBytes": 8307
+        },
+        {
+          "path": "/_next/static/chunks/7602-fe78800246f5c9bb.js",
+          "rawBytes": 26486,
+          "gzipBytes": 8700
+        },
+        {
+          "path": "/_next/static/chunks/7903-6b68ae144959896c.js",
+          "rawBytes": 28121,
+          "gzipBytes": 10642
+        },
+        {
+          "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
+          "rawBytes": 45915,
+          "gzipBytes": 14671
+        },
+        {
+          "path": "/_next/static/chunks/8153-68de7058e3852579.js",
+          "rawBytes": 26933,
+          "gzipBytes": 8366
+        },
+        {
+          "path": "/_next/static/chunks/8311-551d65e5ef1ed4b9.js",
+          "rawBytes": 58615,
+          "gzipBytes": 18831
+        },
+        {
+          "path": "/_next/static/chunks/8500-01a63dafd809e317.js",
+          "rawBytes": 8665,
+          "gzipBytes": 3561
+        },
+        {
+          "path": "/_next/static/chunks/8529-9ba71ae745a0a13b.js",
+          "rawBytes": 11378,
+          "gzipBytes": 4325
+        },
+        {
+          "path": "/_next/static/chunks/8623-c2ad72341bf3f62c.js",
+          "rawBytes": 30142,
+          "gzipBytes": 5356
+        },
+        {
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
+        },
+        {
+          "path": "/_next/static/chunks/9960-894b91b22adc0b30.js",
+          "rawBytes": 33704,
+          "gzipBytes": 12116
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/a1/page-1d91312cb4872acd.js",
+          "rawBytes": 10557,
+          "gzipBytes": 4547
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/a2/page-728626a18969cf8f.js",
+          "rawBytes": 10566,
+          "gzipBytes": 4596
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/b1/page-bf194af6594529a9.js",
+          "rawBytes": 10595,
+          "gzipBytes": 4588
+        },
+        {
+          "path": "/_next/static/chunks/app/assessment/b2/page-9a340fad08604d55.js",
+          "rawBytes": 10928,
+          "gzipBytes": 4712
+        },
+        {
+          "path": "/_next/static/chunks/app/diagnostic/page-9c2a1d3b0fdef596.js",
+          "rawBytes": 45120,
+          "gzipBytes": 15262
+        },
+        {
+          "path": "/_next/static/chunks/app/errors/page-f686989f9b942b57.js",
+          "rawBytes": 40790,
+          "gzipBytes": 13401
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-856465801e47f621.js",
+          "rawBytes": 57492,
+          "gzipBytes": 15936
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-29dbe5a2a7cb1ea5.js",
+          "rawBytes": 12670,
+          "gzipBytes": 4604
+        },
+        {
+          "path": "/_next/static/chunks/app/exams/page-5edbd86ec1e2fbfa.js",
+          "rawBytes": 39420,
+          "gzipBytes": 12484
+        },
+        {
+          "path": "/_next/static/chunks/app/layout-d9aefe6571874ad8.js",
+          "rawBytes": 30749,
+          "gzipBytes": 10495
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-686206214ad0585d.js",
+          "rawBytes": 163271,
+          "gzipBytes": 46987
+        },
+        {
+          "path": "/_next/static/chunks/app/library/page-552add91ed8fdace.js",
+          "rawBytes": 20147,
+          "gzipBytes": 7472
+        },
+        {
+          "path": "/_next/static/chunks/app/mediation/page-98175d9799c28624.js",
+          "rawBytes": 19541,
+          "gzipBytes": 7224
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-1/page-39fc5b2b5936eefd.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-2/page-2750fecdeec3527c.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-3/page-c1d5b15563611e88.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-4/page-b0759ae45b7fb65c.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-5/page-7a76d7424dc2db12.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-6/page-224275f057a0f750.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-7/page-d1cefa2bda28bab4.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a1-8/page-cff12d5d112d6b87.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-1/page-c6d98b32084d9ff9.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-2/page-314a471e369f43e3.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-3/page-9af3f759e69691fc.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-4/page-ec960b83306f0a64.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-5/page-2e3a4ce86cc2d1c0.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-6/page-a2023fb8609ddc46.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-7/page-c209da5fbe0e82d5.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/a2-8/page-b2f351298a8952e0.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-1/page-717e04bd27c7843b.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-2/page-d640fe3d2649e2ef.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-3/page-ef7b024dbe6ff7f1.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-4/page-ea8e5bc2f9eda7b9.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-5/page-8afbd4e7a8f08ceb.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-6/page-f28eee5c1a346139.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-7/page-f23f78b83f2cc5b6.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b1-8/page-47d20d1eb62309c1.js",
+          "rawBytes": 169,
+          "gzipBytes": 149
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-1/page-9ac73a34c02f0a00.js",
+          "rawBytes": 170,
+          "gzipBytes": 151
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-2/page-61b57a2bc94f2e31.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-3/page-c8d42ef4d282bec5.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-4/page-2188a01d08c644da.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-5/page-fbf6996609bfa681.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/module/b2-6/page-f3b106516054a886.js",
+          "rawBytes": 170,
+          "gzipBytes": 150
+        },
+        {
+          "path": "/_next/static/chunks/app/offline/page-b8da0eb8ce5e2b03.js",
+          "rawBytes": 2241,
+          "gzipBytes": 838
+        },
+        {
+          "path": "/_next/static/chunks/app/path/page-f42f6e96b743704f.js",
+          "rawBytes": 19206,
+          "gzipBytes": 4197
+        },
+        {
+          "path": "/_next/static/chunks/app/portfolio/writing/page-8a4522220a407eb5.js",
+          "rawBytes": 19556,
+          "gzipBytes": 7625
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/collocations/page-1c0c610dbca3b462.js",
+          "rawBytes": 39203,
+          "gzipBytes": 12144
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/conversation-paths/page-b6518be5c2cf3823.js",
+          "rawBytes": 51729,
+          "gzipBytes": 16283
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/dictation/page-1f7af1dac6bcb7ea.js",
+          "rawBytes": 33056,
+          "gzipBytes": 11186
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/page-e4996e2796f1a44b.js",
+          "rawBytes": 7527,
+          "gzipBytes": 3350
+        },
+        {
+          "path": "/_next/static/chunks/app/practice/practical-day/page-56d3464e31ecbbea.js",
+          "rawBytes": 7536,
+          "gzipBytes": 3235
+        },
+        {
+          "path": "/_next/static/chunks/app/privacy/page-2848f1cbced5c4b7.js",
+          "rawBytes": 1274,
+          "gzipBytes": 741
+        },
+        {
+          "path": "/_next/static/chunks/app/progress/page-d1550cb51c6e28c1.js",
+          "rawBytes": 34204,
+          "gzipBytes": 11230
+        },
+        {
+          "path": "/_next/static/chunks/app/review/page-ace56cbad6c3a221.js",
+          "rawBytes": 17862,
+          "gzipBytes": 6900
+        },
+        {
+          "path": "/_next/static/chunks/app/search/page-aab7967dd2320cf4.js",
+          "rawBytes": 47089,
+          "gzipBytes": 16802
+        },
+        {
+          "path": "/_next/static/chunks/app/settings/page-3e542bef08d8c14a.js",
+          "rawBytes": 164612,
+          "gzipBytes": 46970
+        },
+        {
+          "path": "/_next/static/chunks/app/shadowing/page-6857b61f45568622.js",
+          "rawBytes": 23189,
+          "gzipBytes": 8894
+        },
+        {
+          "path": "/_next/static/chunks/app/speaking/page-944aa02d4fcd115a.js",
+          "rawBytes": 86224,
+          "gzipBytes": 26207
+        },
+        {
+          "path": "/_next/static/chunks/app/status/page-36a912486cc61aea.js",
+          "rawBytes": 8052,
+          "gzipBytes": 3422
+        },
+        {
+          "path": "/_next/static/chunks/app/today/page-47eab24bc83917d7.js",
+          "rawBytes": 98247,
+          "gzipBytes": 29707
+        },
+        {
+          "path": "/_next/static/chunks/app/tutor/page-ae9ac791ca7d5f43.js",
+          "rawBytes": 13694,
+          "gzipBytes": 5140
+        },
+        {
+          "path": "/_next/static/chunks/app/writing/page-23fce5f34a2f4f61.js",
+          "rawBytes": 61819,
+          "gzipBytes": 20986
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a1-2bf779df79cc5af8.js",
+          "rawBytes": 395713,
+          "gzipBytes": 105422
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-a2-1157f9800ee27b2b.js",
+          "rawBytes": 589391,
+          "gzipBytes": 164398
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b1-63b7f1528493e615.js",
+          "rawBytes": 588041,
+          "gzipBytes": 168418
+        },
+        {
+          "path": "/_next/static/chunks/curriculum-b2-82b47a8d7c8e3a58.js",
+          "rawBytes": 822497,
+          "gzipBytes": 250914
+        },
+        {
+          "path": "/_next/static/chunks/main-app-6ea83e354847db5d.js",
+          "rawBytes": 529,
+          "gzipBytes": 232
+        },
+        {
+          "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "rawBytes": 112594,
+          "gzipBytes": 39520
+        },
+        {
+          "path": "/_next/static/chunks/webpack-9660626b6ab2c75c.js",
+          "rawBytes": 3332,
+          "gzipBytes": 1674
+        },
+        {
+          "path": "/_next/static/css/7ad0eaac0428f148.css",
+          "rawBytes": 442308,
+          "gzipBytes": 71444
+        }
+      ]
+    }
+  ]
+}

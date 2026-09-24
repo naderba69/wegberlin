@@ -1,0 +1,9 @@
+[1/4] chromium
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.7 MiB
+Chrome Headless Shell 151.0.7922.34 (playwright chromium-headless-shell v1234) downloaded to /home/user/.cache/ms-playwright/chromium_headless_shell-1234
+[2/4] system libs
+82
+[3/4] launch check
+Google Chrome for Testing 151.0.7922.34 
+missing_libs=0
+[4/4] full e2e

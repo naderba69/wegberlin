@@ -1,0 +1,11 @@
+# environment capture 2026-09-20T20:1x (swapless sandbox)
+               total        used        free      shared  buff/cache   available
+Mem:            1984         655        1027         203         670        1329
+Swap:              0           0           0
+--- /usr/sbin/swapon attempt ---
+swapon: /home/user/.swapfile: insecure file owner 1000, 0 (root) suggested.
+swapon: /home/user/.swapfile: swapon failed: Operation not permitted
+--- /proc/swaps ---
+Filename				Type		Size		Used		Priority
+--- node heap recipe used ---
+warm tsc --max-old-space-size=900 AFTER .next/types exist (26s, exit 0) then NODE_OPTIONS=--max-old-space-size=900 npm run build (exit 0, ~100s)

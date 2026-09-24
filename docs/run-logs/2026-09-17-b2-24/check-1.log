@@ -1,0 +1,497 @@
+
+> der-weg-nach-berlin@0.1.0 check
+> npm run lint && npm run typecheck && npm run test && npm run secret:audit && npm run source:audit -- --strict && npm run handoff:check && npm run build
+
+
+> der-weg-nach-berlin@0.1.0 lint
+> eslint
+
+
+> der-weg-nach-berlin@0.1.0 typecheck
+> tsc --noEmit
+
+
+> der-weg-nach-berlin@0.1.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/user/der-weg-nach-berlin[39m
+
+ [32m✓[39m tests/unit/mp3-bitstream.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 659[2mms[22m[39m
+     [33m[2m✓[22m[39m finds a playable MPEG Layer III frame chain in all 272 generated files [33m 341[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps parsed stream duration close to every manifest duration [33m 308[2mms[22m[39m
+ [32m✓[39m tests/unit/deterministic-property-invariants.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 688[2mms[22m[39m
+ [32m✓[39m tests/unit/study-modes-listening-evidence.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 454[2mms[22m[39m
+     [33m[2m✓[22m[39m renders synthetic prosody limits and separate Easy/Exam reading controls [33m 356[2mms[22m[39m
+ [32m✓[39m tests/unit/backup.test.ts [2m([22m[2m17 tests[22m[2m)[22m[33m 438[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-target-gap.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 388[2mms[22m[39m
+     [33m[2m✓[22m[39m classifies every row explicitly and keeps stable IDs unique [33m 376[2mms[22m[39m
+ [32m✓[39m tests/unit/attempt-process.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 368[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 415[2mms[22m[39m
+     [33m[2m✓[22m[39m renders German-first A1 anchors and stays absent for unsupported levels [33m 357[2mms[22m[39m
+ [32m✓[39m tests/unit/content-integrity.test.ts [2m([22m[2m16 tests[22m[2m)[22m[33m 325[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-a2.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 335[2mms[22m[39m
+     [33m[2m✓[22m[39m renders the A2 German-first panel and authored additional frames [33m 302[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-b2.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 370[2mms[22m[39m
+ [32m✓[39m tests/unit/content-governance-curriculum-version.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 269[2mms[22m[39m
+ [32m✓[39m tests/unit/pairwise-migration-matrix.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 220[2mms[22m[39m
+ [32m✓[39m tests/unit/playback-speed.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 187[2mms[22m[39m
+ [32m✓[39m tests/unit/accessible-dialog.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 193[2mms[22m[39m
+ [32m✓[39m tests/unit/search.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 189[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-b1.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 234[2mms[22m[39m
+ [32m✓[39m tests/unit/status-announcement.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 186[2mms[22m[39m
+ [32m✓[39m tests/unit/academic-content-governance.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 157[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-corpus.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 146[2mms[22m[39m
+ [32m✓[39m tests/unit/complete-runtime-content-audit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 147[2mms[22m[39m
+ [32m✓[39m tests/unit/webgpu-model.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 108[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-strategy.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[32m 110[2mms[22m[39m
+ [32m✓[39m tests/unit/gated-surfaces-behavior.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 102[2mms[22m[39m
+ [32m✓[39m tests/unit/seeded-shuffle.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 113[2mms[22m[39m
+ [32m✓[39m tests/unit/german-grammar-signals.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 98[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-repair-claim-boundary.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-resilience.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 87[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-architecture.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[32m 90[2mms[22m[39m
+ [32m✓[39m tests/unit/practical-context-training-log.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/unit/hybrid-writing-review.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m tests/unit/opus-audio-assets.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-audio-assets.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-provider-mock-matrix.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m tests/unit/meaning-first-case.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m tests/unit/local-pronunciation-model.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 78[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-review-grounding-gate.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m tests/unit/tunisian-support.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-support.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 66[2mms[22m[39m
+ [32m✓[39m tests/unit/external-evaluator-persistence.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-tutor.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m tests/unit/session-signals.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m tests/unit/error-pattern-srs.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 60[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-agreement-skill-retest.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m tests/unit/listening-pronunciation-sequence.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m tests/unit/review-queue.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m tests/unit/personal-vocabulary-error-report.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m tests/unit/error-insights.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m tests/unit/content-similarity-review.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 39[2mms[22m[39m
+ [32m✓[39m tests/unit/support-usage-freshness.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-audio-assets.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m tests/unit/library-adversarial-audit.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/unit/library.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m tests/unit/planning-readiness-security-deprecation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32m✓[39m tests/unit/review-shortcuts-content-notes.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/unit/audio-assets.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/unit/speech-preferences.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-profiles.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/unit/study-exports.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/unit/achievements-gamification.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/unit/daily-focus-tools.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/sm2-timezone.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m tests/unit/event-derived-mastery.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/unit/contextual-collocation-network.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/unit/source-freshness.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m tests/unit/review-reminder.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/unit/intensity-presets.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/unit/evidence-report.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-manifest.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/unit/weekly-reflection-target-planning.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/unit/mastery-weighting.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/atomic-persistence.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m tests/unit/best-speaking-attempt.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/accessibility-preferences.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-reference.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/unit/live-capability-probe.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-workflow.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-engines.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32m✓[39m tests/unit/review-session.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-provider-capabilities.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/content-follow-up.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/speaking-workflow.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/unit/adaptive-dictation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-format-verification.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-branching-conversation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/unit/zz-b2-20-probe.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/unit/diagnostic-productive-sample.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/rhythm-tap-practice.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-device-benchmark.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/unit/onboarding-profile.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/unit/practical-day-mode.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-vocabulary-extraction.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/reading-benchmark.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/unit/coach.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/unit/mediation-workflow.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/unit/german-copy-enhancer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-evidence-gate.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/unit/external-evaluator-bridge.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/unit/library-interest-profile.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-recovery-partial-export.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/speaking-review-lanes.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/unit/plan-change-timeline.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/diagnostic-fatigue-resume.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/unit/merge.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-alignment.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/unit/low-data-mode.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/unit/meaning-translation-audit.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/german-writing-support.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/release-candidate-gate.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-policy.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/unit/assistance-separation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/unit/language-boundary.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-format-claims.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/weekly-plan.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/error-clinic.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-readiness.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/journey-state.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/adaptive-diagnostic.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-portfolio.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/continuous-exam-session.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/today-offline-readiness.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/secret-scanner.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-pack-controls.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/four-skill-vocabulary-cycle.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/vercel-docs-only-skip.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/global-study-shortcuts.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-print-tools.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/behavioral-praise.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/error-remediation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/context-style-alternatives.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/raw-store-export-privacy.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/curriculum-pack-diff.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/recording-format.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/information-gap.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/error-capture.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/local-error-classifier.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/feature-proposal-gate.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/threat-model-redaction.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/error-span.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/tagged-release.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/beginner-readable-completion.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/unified-concept-map.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/guided-mediation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/rubric-separation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/delivery-health-dashboard.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-curriculum-rollback.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/media-pack-budgets.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/deployment-smoke.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-writing-input-integrity.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/post-listening-response.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/reading-summary-transfer.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m150 passed[39m[22m[90m (150)[39m
+[2m      Tests [22m [1m[32m985 passed[39m[22m[90m (985)[39m
+[2m   Start at [22m 10:54:52
+[2m   Duration [22m 161.36s[2m (transform 6.35s, setup 0ms, import 64.32s, tests 10.31s, environment 64.96s)[22m
+
+
+> der-weg-nach-berlin@0.1.0 secret:audit
+> node scripts/audit-secrets.mjs --working-tree
+
+Secret audit secret-audit-v1:
+- working tree: 800 text files scanned; 547 binary/oversize files skipped
+- findings: 0
+Boundary: pattern scanning reduces accidental credential commits; it does not prove that arbitrary high-entropy data is harmless or replace provider-side revocation.
+
+> der-weg-nach-berlin@0.1.0 source:audit
+> node scripts/audit-source-freshness.mjs --strict
+
+Source freshness audit (source-freshness-v1) as of 2026-09-17:
+- FRESH       goethe-b2-overview-2026 · verified 2026-09-03 · due 2026-10-03
+- FRESH       goethe-b2-terms-2025 · verified 2026-09-03 · due 2026-10-03
+- FRESH       goethe-b2-model-2025 · verified 2026-09-03 · due 2026-10-03
+- FRESH       telc-b2-overview-2026 · verified 2026-09-03 · due 2026-10-03
+- FRESH       telc-b2-mock-2019-current-link · verified 2026-09-03 · due 2026-10-03
+- FRESH       gemini-api-pricing-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       gemini-api-limits-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       openrouter-free-variant-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       openrouter-free-router-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       openrouter-rate-limits-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       vercel-hobby-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       github-actions-public-2026-09 · verified 2026-09-03 · due 2026-10-03
+- FRESH       transformers-js-runtime-4-2-0 · verified 2026-09-07 · due 2026-10-07
+- FRESH       transformers-js-webgpu-guide-2026-09 · verified 2026-09-07 · due 2026-10-07
+- FRESH       multilingual-minilm-base-license-2026-09 · verified 2026-09-07 · due 2026-10-07
+- FRESH       multilingual-minilm-onnx-web-2026-09 · verified 2026-09-07 · due 2026-10-07
+- FRESH       whisper-tiny-base-license-2026-09 · verified 2026-09-11 · due 2026-10-11
+- FRESH       whisper-tiny-onnx-web-2026-09 · verified 2026-09-11 · due 2026-10-11
+Summary: 18 records · fresh 18 · due soon 0 · stale 0 · clock errors 0
+Boundary: HTTP reachability never proves that an exam format, quota, price, or terms stayed semantically unchanged; a human review remains required.
+
+> der-weg-nach-berlin@0.1.0 handoff:check
+> node scripts/verify-continuation-handoff.mjs
+
+Continuation handoff verified:
+- backlog: P0 124, P1 132, P2 140
+- P0 state: 115 implemented, 9 partial, 0 missing, 0 blocked
+- P1 state: 128 implemented, 4 partial, 0 missing, 0 blocked across 132 audited rows
+- P2 state: 118 implemented, 2 partial, 20 missing, 0 blocked across 140 audited rows
+curriculum/audio: 96 lessons, 80 library MP3, 96 lesson MP3 + 96 lesson Opus, 96 exam files / 90 clips
+- governance: 18 official sources; 4292 Zod roots; 2805 answers; 389 objectives
+- A1–B2 lexical anchors: 1244 nouns + 134 verb frames; pending 89 nouns + 4 unclassified frames; exclusions awaiting confirmation 8
+- deployment: last verified public push be56463e (2026-09-04); this sandbox holds no .git, so no push or hosting state is claimed by this batch
+- journey: journey-state-machine-v1 across orientation/foundation/growth/consolidation/exam-readiness
+- device calibration: reading WPM after 2/2 + writing WPM/CPM after copy integrity; P1-126 and P1-18 closed
+- evidence context: support-usage-v1 + evidence-freshness-v1; confidence only, no score/mastery mutation
+- error intervention: error-pattern-classification-v1 + confirmed-error-srs-v1; personal reviews stay masteryDelta=0
+- similarity/review: 3277 objects / 5367726 pairs / 0 issues; copyright clearance pending
+- exports: local-study-exports-v1 ICS + semantic print/image-PDF + formula-safe Anki TSV
+- planning: fourteen-day-learning-contract-v1 + single-skill-diagnostic-v1 + quiet-hours-local-v1
+- planning range: weekly-planned-actual-no-blame-v1 + evidence-velocity-readiness-range-v1; no pass date or penalty
+- CSP: 15 directives / 7 headers / no global wildcard; DWNB v1 supported through 2027-03-31
+- content governance: 3277 records / 16 lifecycle families / 18 sources / 12 risks; curriculum dwnb-a1-b2-2026.09-v1
+- bounded pending review: 12 general consular/legal claims + 18 Arabic-learner pronunciation rows (11 exact synthetic pairs)
+- optional AI resilience: ai-resilient-fallback-v1, one attempt then local, retry needs new consent
+- Tutor/provider governance: tutor-follow-up-command-v1 + ai-provider-capability-matrix-v1; P1-210/222/224 closed
+- listening/pronunciation: three-pass-listening-sequence-v1 + articulation-contrast-practice-v1; P1-139/150/151 closed
+- writing/claim boundaries: writing-error-micro-practice-v1 + practice-law-language-boundary-v1; P1-175/186 closed
+- motivation: evidence-derived-achievement-v1 + gamification-visibility-v1; P1-271/272 closed
+- personal tools: review-keyboard-shortcuts-v1 + local-content-note-v1; P1-338/341 closed
+- import/report tools: personal-vocabulary-import-v1 + local-content-error-report-v1; P1-344/366 closed
+- guided session: prior-experience context + equivalent alternatives + one-time learner-controlled load offer + verified Today Offline; P1-17/41/43/44 closed
+- lexical strategy: 32 families / 32 register examples / 24 bounded confusions / 30 calculated module plans; P1-91/101/102/103 closed
+- learning architecture: 24 grammar nodes / 31 prerequisite edges / 576 comprehension labels; P1-113/114/115/125 closed
+- study modes: Easy/Exam reading + 63 word challenges + unified listening evidence + 16 prosody steps; P1-127/128/137/138 closed
+- writing teacher: hybrid-writing-review-v1, local primary + consented Gemini doubt review, no complete-corrector claim
+- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1
+- event-derived mastery: event-derived-mastery-v1 rematerializes after stable-ID Merge; legacy fallback remains explicit; P2-72/237 closed
+- support separation: guided-independent-support-separation-v1 keeps guided / transfer-independent / transfer-assisted evidence distinct; P2-70/287 closed
+- attempt process: bounded-attempt-process-v1 records visible time, committed choice revisions, and learner-attributed uncertainty without keystrokes; P2-33/34 closed
+- plan changes: explainable-plan-change-timeline-v1 derives a no-answer/no-reflection-text Today history; P2-48 closed
+- intensity: learner-selected-intensity-presets-v1 keeps Light/Balanced/Intensive explicit and bounded; P2-57 closed
+- security: secret-audit-v1 working tree + required full-history CI + versioned pre-commit hook
+- Offline: packs a1:58, a2:58, b1:58, b2:219, full:318; gzip fingerprint e926aaba71fe
+- accessibility: accessibility-preferences-v1 large text/high contrast/reduced motion + status-announcement-v1; P0-255 physical review pending
+- diagnostic production: diagnostic-productive-sample-v1, self-evidence only, no automated language score
+- case teaching: 19 meaning→role→form contracts / 57 controlled / 44 assessment
+- language/Bidi: 179 TSX / 6990 tags / 399 German / 0 issues
+- Tunisian support: 17 optional notes / 17 lessons / 17 pending independent review
+- listening speed: learning-playback-speed-v1 across 5 authored surfaces; human distortion review pending
+- speaking follow-up: content-grounded-follow-up-v1, typed-transcript only, local default, explicit consent for optional AI, no STT/audio claim
+- browser model: browser-webgpu-model-v1, pinned q8 MiniLM ranking in a Worker, opt-in cache/delete, no silent WASM/paid fallback
+- delivery: 318 Offline routes, dwnb-full-pack-v123, 985 unit/integrity and 82 browser tests documented
+
+> der-weg-nach-berlin@0.1.0 prebuild
+> npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit
+
+
+> der-weg-nach-berlin@0.1.0 vendor:materialize
+> node scripts/materialize-vendor-runtime.mjs
+
+Materialized audited WebGPU vendor runtime: 431652 bytes / 0a96dcf4c489.
+
+> der-weg-nach-berlin@0.1.0 runtime:materialize
+> node scripts/materialize-runtime-config.mjs
+
+Materialized TypeScript and Service Worker curriculum version: dwnb-a1-b2-2026.09-v1.
+
+> der-weg-nach-berlin@0.1.0 offline:manifest
+> tsx scripts/generate-offline-manifest.ts
+
+Generated 318 offline routes and 5 independent packs (a1:58, a2:58, b1:58, b2:219, full:318).
+
+> der-weg-nach-berlin@0.1.0 feature:gate
+> tsx scripts/audit-feature-proposals.ts
+
+Feature proposal gate passed: 3 decision-changing proposals / 0 unowned or no-impact rows.
+
+> der-weg-nach-berlin@0.1.0 library:adversarial:audit
+> tsx scripts/audit-library-adversarial.ts
+
+Library adversarial audit passed: 320 questions / positions 84/66/80/90 / prompt leak 0.63% / exact evidence 320.
+
+> der-weg-nach-berlin@0.1.0 meaning:translation:audit
+> tsx scripts/audit-meaning-translations.ts
+
+Meaning-first Arabic translation audit passed: 3559 rows / 3 literal-gloss guards / 0 issues.
+
+> der-weg-nach-berlin@0.1.0 security:audit
+> tsx scripts/audit-security-headers.ts
+
+Security headers audit PASS: 15 CSP directives, 7 headers, no global wildcard, SHA-256 eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf.
+
+> der-weg-nach-berlin@0.1.0 governance:audit
+> tsx scripts/generate-content-governance-audit.ts
+
+Content governance verified: 3277 records / 16 families / 18 sources / 12 risks / 12 claims / 18 pronunciation rows.
+
+> der-weg-nach-berlin@0.1.0 content:audit
+> tsx scripts/generate-academic-audit.ts --check
+
+Academic content governance verified:
+- Zod: 4292 root objects / 16 schema families / 0 failures
+- answers: 2805 closed items + 384 productive tasks / 3 explicit exemptions / 0 leaks
+- objectives: 389/389 teaching→practice→assessment maps / 0 structural gaps
+- lexical target gaps: 89 noun + 4 verb-frame candidates pending human review
+- content SHA-256: b310475bd8bcc67cbc2de196474f48158756957eeb1ec8cd1d7ce65abf4d986f
+
+> der-weg-nach-berlin@0.1.0 similarity:audit
+> tsx scripts/generate-content-similarity-review-audit.ts --check
+
+Content similarity/review governance: 3277 objects / 5367726 pairs / 0 issues / external corpora 0
+- separate review states: German/Arabic/CEFR/copyright × 3277; independent review remains explicit
+- content SHA-256: efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0
+
+> der-weg-nach-berlin@0.1.0 case:audit
+> tsx scripts/generate-case-teaching-audit.ts --check
+
+Meaning-first case governance verified: 19 contracts / 23 theory / 57 controlled / 44 assessment / 0 gaps
+- content SHA-256: 1c0b3dfda2e73df0528ccd029444a3c9f355ae6af6f88f5c328b97bb874a8b6d
+
+> der-weg-nach-berlin@0.1.0 language:audit
+> node scripts/generate-language-boundary-audit.mjs --check
+
+Language/Bidi governance verified: 179 TSX / 6990 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 460f84c7034789956041afe11dd2043906076848c4f313a14b15302f8050539a
+
+> der-weg-nach-berlin@0.1.0 exam:format-claims:audit
+> node scripts/verify-official-exam-format-claims.mjs --check
+
+Official exam-format claim guard: 8 surfaces, 4 with a boundary sentence, 0 forbidden claims, 0 missing, fingerprint 733a12e7b996.
+
+> der-weg-nach-berlin@0.1.0 exam:formats:verify
+> tsx scripts/verify-official-exam-formats.ts --check
+
+Official exam-format verification: 2 profiles, 3 snapshots, 35 pinned facts (24 cross-checked), 0 evidence issues, 0 mismatches, 2 declared gaps, fingerprint 1e61862c8a97.
+
+> der-weg-nach-berlin@0.1.0 tunisian:audit
+> tsx scripts/generate-tunisian-support-audit.ts --check
+
+Tunisian support governance verified: 17 notes / 17 lessons / 17 theory refs / 17 pending independent review / 0 structural gaps
+- content SHA-256: 769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d
+
+> der-weg-nach-berlin@0.1.0 lexical:strategy:audit
+> tsx scripts/generate-lexical-strategy-audit.ts --check
+
+Lexical strategy audit verified: 32 families / 32 register examples / 24 confusions / 30 module plans / 0 issues
+
+> der-weg-nach-berlin@0.1.0 learning:architecture:audit
+> tsx scripts/generate-learning-architecture-audit.ts --check
+
+Learning architecture audit verified: 24 rules / 576 questions / 0 issues
+
+> der-weg-nach-berlin@0.1.0 study:modes:audit
+> tsx scripts/generate-study-modes-audit.ts --check
+
+Study modes audit verified: 80 reading / 63 word challenges / 16 prosody steps / 0 issues
+
+> der-weg-nach-berlin@0.1.0 practical:context:audit
+> tsx scripts/generate-practical-context-audit.ts --check
+
+Practical context audit verified: 16 culture / 20 documents / 0 issues
+
+> der-weg-nach-berlin@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.3.3 (webpack)
+✓ Running next.config.ts took 142ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 10.0s
+  Running TypeScript ...
+  Finished TypeScript in 6.2s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/321) ...
+  Generating static pages using 1 worker (80/321) 
+  Generating static pages using 1 worker (160/321) 
+  Generating static pages using 1 worker (240/321) 
+✓ Generating static pages using 1 worker (321/321) in 9.5s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /assessment/a1
+├ ○ /assessment/a2
+├ ○ /assessment/b1
+├ ○ /assessment/b2
+├ ○ /diagnostic
+├ ○ /errors
+├ ○ /exams
+├   /exams/[provider]/[simulationId]
+│ ├ ● /exams/goethe-b2/goethe-b2-reading-01
+│ ├ ● /exams/telc-deutsch-b2/telc-b2-reading-01
+│ ├ ● /exams/goethe-b2/goethe-b2-reading-02
+│ └ ● [+147 more paths]
+├   /exams/[provider]/full/[simulationId]
+│ ├ ● /exams/goethe-b2/full/goethe-b2-full-01
+│ ├ ● /exams/telc-deutsch-b2/full/telc-b2-full-01
+│ ├ ● /exams/goethe-b2/full/goethe-b2-full-02
+│ └ ● [+9 more paths]
+├   /lernen/[lessonId]
+│ ├ ● /lernen/a1-01
+│ ├ ● /lernen/a1-02
+│ ├ ● /lernen/a1-03
+│ └ ● [+93 more paths]
+├ ○ /library
+├ ○ /manifest.webmanifest
+├ ○ /mediation
+├ ○ /module/a1-1
+├ ○ /module/a1-2
+├ ○ /module/a1-3
+├ ○ /module/a1-4
+├ ○ /module/a1-5
+├ ○ /module/a1-6
+├ ○ /module/a1-7
+├ ○ /module/a1-8
+├ ○ /module/a2-1
+├ ○ /module/a2-2
+├ ○ /module/a2-3
+├ ○ /module/a2-4
+├ ○ /module/a2-5
+├ ○ /module/a2-6
+├ ○ /module/a2-7
+├ ○ /module/a2-8
+├ ○ /module/b1-1
+├ ○ /module/b1-2
+├ ○ /module/b1-3
+├ ○ /module/b1-4
+├ ○ /module/b1-5
+├ ○ /module/b1-6
+├ ○ /module/b1-7
+├ ○ /module/b1-8
+├ ○ /module/b2-1
+├ ○ /module/b2-2
+├ ○ /module/b2-3
+├ ○ /module/b2-4
+├ ○ /module/b2-5
+├ ○ /module/b2-6
+├ ○ /offline
+├ ○ /path
+├ ○ /portfolio/writing
+├ ○ /practice
+├ ○ /practice/collocations
+├ ○ /practice/conversation-paths
+├ ○ /practice/dictation
+├ ○ /practice/practical-day
+├ ○ /privacy
+├ ○ /progress
+├ ○ /review
+├ ○ /search
+├ ○ /settings
+├ ○ /shadowing
+├ ○ /speaking
+├ ○ /status
+├ ○ /today
+├ ○ /tutor
+└ ○ /writing
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+> der-weg-nach-berlin@0.1.0 postbuild
+> npm run offline:size && npm run js:budget && npm run media:budget
+
+
+> der-weg-nach-berlin@0.1.0 offline:size
+> node scripts/generate-offline-size-manifest.mjs
+
+Generated Offline size manifest 086c745e3efd (a1:2324762, a2:2389869, b1:2423014, b2:3768387, full:5439846).
+
+> der-weg-nach-berlin@0.1.0 js:budget
+> node scripts/audit-js-budgets.mjs
+
+JavaScript budget passed: 107 chunks / 1660420 gzip bytes / max 608849
+
+> der-weg-nach-berlin@0.1.0 media:budget
+> node scripts/audit-media-pack-budgets.mjs
+
+Media/pack budgets passed: 544 MP3+Opus files / 52943843 bytes / curriculum 887581 gzip / 15% reserve enforced.

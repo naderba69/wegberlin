@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 governance:audit:write
+> tsx scripts/generate-content-governance-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL governance:audit:write

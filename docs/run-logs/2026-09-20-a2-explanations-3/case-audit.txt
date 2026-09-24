@@ -1,0 +1,7 @@
+
+> der-weg-nach-berlin@0.1.0 case:audit
+> tsx scripts/generate-case-teaching-audit.ts --check
+
+Meaning-first case governance verified: 19 contracts / 23 theory / 57 controlled / 44 assessment / 0 gaps
+- content SHA-256: 167645dd621b2da13201ade19aba2cf5c1511b29a573018be6c22412d94dda98
+CASE_EXIT=0

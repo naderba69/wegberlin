@@ -1,0 +1,86 @@
+
+Running 8 tests using 1 worker
+
+[1/8] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[2/8] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[3/8] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[4/8] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  1) [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+    Expected: visible
+    Timeout: 360000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 360000ms
+      - waiting for locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+
+
+      1759 |   await expect(downloadButton).toBeEnabled({ timeout: 30_000 });
+      1760 |   await downloadButton.click();
+    > 1761 |   await expect(packCard.getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)).toBeVisible({ timeout: 360_000 });
+           |                                                                           ^
+      1762 |   await expect(packCard).toContainText("318 مسارًا");
+      1763 |   const todayReadiness=await page.evaluate(async()=>{const worker=navigator.serviceWorker.controller;if(!worker)throw new Error("Service Worker must control the settings page");return new Promise<{type:string;missingRoutes:string[];missingAudioAssets:string[]}>((resolve,reject)=>{const channel=new MessageChannel();const timeout=setTimeout(()=>reject(new Error("readiness timeout")),10_000);channel.port1.onmessage=(event)=>{clearTimeout(timeout);resolve(event.data)};worker.postMessage({type:"DWNB_TODAY_READINESS_CHECK",policyVersion:"today-session-offline-readiness-v1",routes:["/today","/lernen/a1-01","/practice","/speaking"],audioAssets:["/audio/lessons/a1-01.mp3"]},[channel.port2])})});
+      1764 |   expect(todayReadiness).toMatchObject({type:"DWNB_TODAY_READINESS_RESULT",missingRoutes:[],missingAudioAssets:[]});
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:1761:75
+
+    Error Context: test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[5/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[6/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[7/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[8/8] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  2) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+    Expected: visible
+    Timeout: 360000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 360000ms
+      - waiting for locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+
+
+      1759 |   await expect(downloadButton).toBeEnabled({ timeout: 30_000 });
+      1760 |   await downloadButton.click();
+    > 1761 |   await expect(packCard.getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)).toBeVisible({ timeout: 360_000 });
+           |                                                                           ^
+      1762 |   await expect(packCard).toContainText("318 مسارًا");
+      1763 |   const todayReadiness=await page.evaluate(async()=>{const worker=navigator.serviceWorker.controller;if(!worker)throw new Error("Service Worker must control the settings page");return new Promise<{type:string;missingRoutes:string[];missingAudioAssets:string[]}>((resolve,reject)=>{const channel=new MessageChannel();const timeout=setTimeout(()=>reject(new Error("readiness timeout")),10_000);channel.port1.onmessage=(event)=>{clearTimeout(timeout);resolve(event.data)};worker.postMessage({type:"DWNB_TODAY_READINESS_CHECK",policyVersion:"today-session-offline-readiness-v1",routes:["/today","/lernen/a1-01","/practice","/speaking"],audioAssets:["/audio/lessons/a1-01.mp3"]},[channel.port2])})});
+      1764 |   expect(todayReadiness).toMatchObject({type:"DWNB_TODAY_READINESS_RESULT",missingRoutes:[],missingAudioAssets:[]});
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:1761:75
+
+    Error Context: test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  Slow test file: [chromium] › tests/e2e/critical-flows.spec.ts (6.8m)
+  Slow test file: [mobile-chromium] › tests/e2e/critical-flows.spec.ts (6.7m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  2 failed
+    [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+  6 passed (13.8m)

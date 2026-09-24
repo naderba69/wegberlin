@@ -1,0 +1,400 @@
+{
+  "schemaVersion": "dwnb-official-exam-format-evidence-v1",
+  "collectedAt": "2026-09-15",
+  "boundaryAr": "لقطات نصية من صفحات رسمية جُمعت يدويًا في تاريخ محدد لمطابقة بنية الامتحان داخل التطبيق. لا تُثبت أن التنسيق الرسمي لم يتغير، ولا تُخزَّن أو تُعرض للمتعلّم.",
+  "collectionAr": "تُجلب النصوص خارج البناء بأداة جلب صريحة، ثم تُثبَّت هنا مع بصمة لكل مقتطف. الفاحص دون شبكة يقارن بيانات التطبيق مع هذه اللقطة فقط.",
+  "liveModeAr": "الوضع الحيّ يعيد الجلب ويقارن الأنماط النصية فقط؛ فشل الشبكة يفشل الفحص صراحةً ولا يُعدّ نجاحًا. لا يستطيع الوضع الحيّ فحص جداول HTML ولا ملفات PDF، فيُعلن صراحةً عدد الحقائق غير القابلة للفحص الحيّ بدل ادعاء تغطية كاملة؛ اللقطة المثبّتة هنا تبقى سجل التدقيق، وهو ليس جزءًا من البناء.",
+  "sources": [
+    {
+      "id": "goethe-b2-terms-2025",
+      "profileId": "goethe-b2",
+      "organization": "Goethe-Institut",
+      "title": "Goethe-Zertifikat B2 — Terms and Conditions for Exam Administration (Stand: 1. September 2025)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/en/Durchfuehrungsbestimmungen_B2.pdf",
+      "documentVersion": "Stand: 1. September 2025 / Last updated: September 1, 2025",
+      "fetchedAt": "2026-09-14",
+      "excerptNoteAr": "جُمل منقولة حرفيًا من نص المستند المحمّل من مواضع مختلفة، مع تسوية أسطر الالتفاف إلى مسافة واحدة وإزالة علامات التوكيد في Markdown؛ لم تُعد صياغتها.",
+      "evidenceExcerpt": "The GOETHE-ZERTIFIKAT B2 exam for adults and young learners consists of four modules, which may be taken individually or in conjunction with one another:\ntexts and tasks for the READING module (parts 1-5);\ntasks for the LISTENING module (parts 1-4)\ntasks for the WRITING module (parts 1-2);\ntasks for the SPEAKING module (parts 1-2, with a choice of two topics for part 1).\n| LESEN | 65 Minuten |\n| HÖREN | ca. 40 Minuten |\n| SCHREIBEN | 75 Minuten |\n| Gesamt | ca. 180 Minuten |\nEine Paarprüfung dauert circa 15 Minuten, eine Einzelprüfung dauert circa 10 Minuten.\nExams held in pairs shall take approximately 15 minutes; individual exams shall take approximately 10 minutes Participants shall be given 15 minutes to prepare for both the exam held in pairs and the individual exam.\nThere are 30 items in the READING module. Each item shall act as a checkpoint.\nThere are 30 items in the LISTENING module. Each item shall act as a checkpoint.\nA maximum of 100 points can be attained in the WRITING module.\nA maximum of 100 points can be attained in the SPEAKING module.\nIn jedem Modul können maximal 100 Punkte = 100 % erreicht werden.\nA module shall be deemed to have been passed if at least 60 points or 60 % are attained.\nless than the pass mark of 60 points\nIn all instances, the exam shall be graded by two independent graders.\nThe participants shall allocate approx. five minutes of their exam time to transferring their answers.\nA break of at least 15 minutes must be provided between each of these modules.\nDiese Durchführungsbestimmungen treten am 1. September 2025 in Kraft und gelten erstmals für Prüfungsteilnehmende, deren Prüfung nach dem 1. September 2025 stattfindet.\nIm Falle von sprachlichen Unstimmigkeiten zwischen den einzelnen Sprachversionen der Durchführungsbestimmungen ist die deutsche Fassung maßgeblich.",
+      "excerptSha256": "82a1008fa7012d48e26e8d83d5fe08591b6f4c0b505e4ddfd80446362fcd690a"
+    },
+    {
+      "id": "telc-b2-overview-2026",
+      "profileId": "telc-deutsch-b2",
+      "organization": "telc gGmbH",
+      "title": "telc Deutsch B2 — official examination overview",
+      "url": "https://www.telc.net/en/language-examinations/certificate-exams/german/telc-german-b2/",
+      "documentVersion": "current overview page at fetch time",
+      "fetchedAt": "2026-09-14",
+      "excerptNoteAr": "جُمل وجدول منقولان حرفيًا من نص الصفحة المحمّلة، مع تسوية أسطر الالتفاف إلى مسافة واحدة؛ لم تُعد صياغتها.",
+      "evidenceExcerpt": "The telc B2 consists of a written and an oral examination.\nReceptive skills are tested through reading and listening comprehension tasks, as well as language elements section.\n| Written examination | Reading | 3 | 90 | No break |\n| Language Elements | 2 |\n| Listening | 3 | approx. 20 |\n| Writing | 1 | 30 |\n| Oral examination | Speaking | 3 | approx. 15 | Pair examination 20-minute preparation time |\nThis examination is available in digital, hybrid, and paper-based formats. It can be taken as a partial examination.",
+      "excerptSha256": "693c5f8bf247d28a231c3a3ed45657d93df61ce37496ed24ecf5a0c1aec419b0"
+    },
+    {
+      "id": "telc-b2-mock-2019-current-link",
+      "profileId": "telc-deutsch-b2",
+      "organization": "telc gGmbH",
+      "title": "telc Deutsch B2, Übungstest 1 — Punkte und Gewichtung (S. 47) und Bestehensregel/Noten (S. 48) im Übungstest-PDF",
+      "url": "https://www.telc.net/fileadmin/user_upload/mock_exams/Deutsch/telc_deutsch_b2.zip",
+      "documentVersion": "© telc gGmbH, Frankfurt a. M., telc Deutsch B2, 2019 (Übungstest 1, überarbeitete Fassung 2019)",
+      "fetchedAt": "2026-09-15",
+      "excerptNoteAr": "نص من ملف telc_deutsch_b2_uebungstest_1.pdf داخل أرشيف telc_deutsch_b2.zip المرتبط بصفحة telc الحالية؛ جُمعات الأسطر المكسورة بمسافة واحدة وتُرك ترتيب خلايا الجدول كما أخرجته طبقة النص (لذا يظهر «11–2 0» تقسيمًا للخلية). المستند هو طبعة 2019، وهو ما يثبّت الأرقام لا كونها سارية بلا تغيير اليوم؛ الدليل على ذلك يظل مراجعة بشرية.",
+      "evidenceExcerpt": "Punkte und Gewichtung Subtest Aufgabe Punkte Punkte max. Gewichtung Schriftliche Prüfung 1 Leseverstehen Teil 1 Teil 2 Teil 3 1–5 6–10 11–2 0 25 25 25 75 25 % 2 Sprachbausteine Teil 1 Teil 2 21–30 31–40 15 15 30 10 % 3 Hörverstehen Teil 1 Teil 2 Teil 3 41–45 46–55 56–60 25 25 25 75 25 % 4 Schriftlicher Ausdruck E-Mail 45 15 % Teilergebnis I 225 75 % Mündliche Prüfung 5 Mündlicher Ausdruck Teil 1 Teil 2 Teil 3 Über Erfahrungen sprechen Diskussion Gemeinsam etwas planen 25 25 25 75 25 % Teilergebnis II 75 25 % Teilergebnis I (Schriftliche Prüfung) Teilergebnis II (Mündliche Prüfung) 225 75 75 % 25 % Gesamtpunktzahl 300 100 %\n© telc gGmbH, Frankfurt a. M., telc Deutsch B2, 2019 © telc gGmbH, Frankfurt a. M., telc Deutsch B2, 2019 telc Deutsch B2, Übungstest 1\nUm die Prüfung zu bestehen, müssen die Teilnehmerinnen und Teilnehmer sowohl in der Schriftlichen als auch in der Mündlichen Prüfung jeweils 60 % der möglichen Höchstpunktzahl erreichen. Dies entspricht 135 Punkten in der Schriftlichen und 45 Punkten in der Mündlichen Prüfung.\nDie Endnote errechnet sich wie folgt: 270–300 Punkte sehr gut 240–269,5 Punkte gut 210–239,5 Punkte befriedigend 180–209,5 Punkte ausreichend 0–179,5 Punkte nicht bestanden",
+      "excerptSha256": "fe6084f379bb819d1f927367a5c35c38e0e4b3296ddb960e8e783b44e643dc68"
+    }
+  ],
+  "allowedHostSuffixes": {
+    "Goethe-Institut": [
+      "goethe.de"
+    ],
+    "telc gGmbH": [
+      "telc.net"
+    ]
+  },
+  "facts": [
+    {
+      "id": "goethe-b2-module-count",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleCount",
+      "value": 4,
+      "checkPattern": "consists of four modules",
+      "claimAr": "أربع وحدات تُمنح منفردة أو مجتمعة."
+    },
+    {
+      "id": "goethe-b2-lesen-parts",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleParts",
+      "moduleId": "lesen",
+      "value": 5,
+      "checkPattern": "READING module \\(parts 1-5\\)",
+      "claimAr": "القراءة خمسة أجزاء."
+    },
+    {
+      "id": "goethe-b2-hoeren-parts",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleParts",
+      "moduleId": "hoeren",
+      "value": 4,
+      "checkPattern": "LISTENING module \\(parts 1-4\\)",
+      "claimAr": "الاستماع أربعة أجزاء."
+    },
+    {
+      "id": "goethe-b2-schreiben-parts",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleParts",
+      "moduleId": "schreiben",
+      "value": 2,
+      "checkPattern": "WRITING module \\(parts 1-2\\)",
+      "claimAr": "الكتابة جزآن."
+    },
+    {
+      "id": "goethe-b2-sprechen-parts",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleParts",
+      "moduleId": "sprechen",
+      "value": 2,
+      "checkPattern": "SPEAKING module \\(parts 1-2",
+      "claimAr": "المحادثة جزآن مع خيار موضوعين في الجزء الأول."
+    },
+    {
+      "id": "goethe-b2-lesen-minutes",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleMinutes",
+      "moduleId": "lesen",
+      "value": 65,
+      "checkPattern": "\\| LESEN \\| 65 Minuten \\|",
+      "claimAr": "القراءة 65 دقيقة."
+    },
+    {
+      "id": "goethe-b2-hoeren-minutes",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleMinutes",
+      "moduleId": "hoeren",
+      "value": 40,
+      "checkPattern": "\\| HÖREN \\| ca\\. 40 Minuten \\|",
+      "claimAr": "الاستماع حوالي 40 دقيقة."
+    },
+    {
+      "id": "goethe-b2-schreiben-minutes",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleMinutes",
+      "moduleId": "schreiben",
+      "value": 75,
+      "checkPattern": "\\| SCHREIBEN \\| 75 Minuten \\|",
+      "claimAr": "الكتابة 75 دقيقة."
+    },
+    {
+      "id": "goethe-b2-sprechen-minutes",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleMinutes",
+      "moduleId": "sprechen",
+      "value": 15,
+      "checkPattern": "approximately 15 minutes; individual exams shall take approximately 10 minutes",
+      "claimAr": "المحادثة حوالي 15 دقيقة في الثنائي (حوالي 10 في الفردي)."
+    },
+    {
+      "id": "goethe-b2-lesen-items",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleNoteNumber",
+      "moduleId": "lesen",
+      "value": 30,
+      "checkPattern": "There are 30 items in the READING module",
+      "claimAr": "ثلاثون عنصرًا في القراءة، كل عنصر نقطة قياس."
+    },
+    {
+      "id": "goethe-b2-hoeren-items",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleNoteNumber",
+      "value": 30,
+      "checkPattern": "There are 30 items in the LISTENING module",
+      "claimAr": "ثلاثون عنصرًا في الاستماع، كل عنصر نقطة قياس — وهو العدد المذكور الآن في وصف التطبيق.",
+      "moduleId": "hoeren"
+    },
+    {
+      "id": "goethe-b2-module-max-points",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "moduleMaxPointsAll",
+      "value": 100,
+      "checkPattern": "maximal 100 Punkte = 100 %",
+      "claimAr": "كل وحدة من 100 نقطة."
+    },
+    {
+      "id": "goethe-b2-pass-mark",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "passMark",
+      "value": 60,
+      "checkPattern": "at least 60 points or 60 % are attained",
+      "claimAr": "تُعدّ الوحدة ناجحة عند 60 نقطة أو 60% على الأقل."
+    },
+    {
+      "id": "goethe-b2-two-graders",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "informational",
+      "checkPattern": "graded by two independent graders",
+      "claimAr": "تُقيَّم الوحدات الكتابية بمقيِّمين مستقلين."
+    },
+    {
+      "id": "goethe-b2-answer-transfer",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "informational",
+      "checkPattern": "five minutes of their exam time to transferring",
+      "claimAr": "نقل الإجابات داخل وقت الامتحان بنحو خمس دقائق."
+    },
+    {
+      "id": "goethe-b2-break",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "informational",
+      "checkPattern": "break of at least 15 minutes must be provided",
+      "claimAr": "استراحة لا تقل عن 15 دقيقة بين الوحدات الكتابية."
+    },
+    {
+      "id": "goethe-b2-effective",
+      "profileId": "goethe-b2",
+      "sourceId": "goethe-b2-terms-2025",
+      "kind": "informational",
+      "checkPattern": "am 1\\. September 2025 in Kraft",
+      "claimAr": "الوثيقة سارية منذ 1 سبتمبر 2025؛ النسخة الألمانية هي المعتمدة عند التعارض."
+    },
+    {
+      "id": "telc-b2-lesen-parts",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleParts",
+      "moduleId": "lesen",
+      "value": 3,
+      "checkPattern": "\\| Written examination \\| Reading \\| 3 \\| 90 \\| No break \\|",
+      "claimAr": "فهم القراءة ثلاثة أجزاء في كتلة 90 دقيقة بلا استراحة."
+    },
+    {
+      "id": "telc-b2-lesen-minutes",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleMinutes",
+      "moduleId": "lesen",
+      "value": 90,
+      "checkPattern": "\\| Written examination \\| Reading \\| 3 \\| 90 \\| No break \\|",
+      "claimAr": "90 دقيقة للقراءة مع العناصر اللغوية."
+    },
+    {
+      "id": "telc-b2-sprachbausteine-parts",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleParts",
+      "moduleId": "sprachbausteine",
+      "value": 2,
+      "checkPattern": "\\| Language Elements \\| 2 \\|",
+      "claimAr": "العناصر اللغوية جزآن."
+    },
+    {
+      "id": "telc-b2-hoeren-parts",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleParts",
+      "moduleId": "hoeren",
+      "value": 3,
+      "checkPattern": "\\| Listening \\| 3 \\| approx\\. 20 \\|",
+      "claimAr": "فهم الاستماع ثلاثة أجزاء."
+    },
+    {
+      "id": "telc-b2-hoeren-minutes",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleMinutes",
+      "moduleId": "hoeren",
+      "value": 20,
+      "checkPattern": "\\| Listening \\| 3 \\| approx\\. 20 \\|",
+      "claimAr": "الاستماع حوالي 20 دقيقة."
+    },
+    {
+      "id": "telc-b2-schreiben-parts",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleParts",
+      "moduleId": "schreiben",
+      "value": 1,
+      "checkPattern": "\\| Writing \\| 1 \\| 30 \\|",
+      "claimAr": "التعبير الكتابي جزء واحد في 30 دقيقة."
+    },
+    {
+      "id": "telc-b2-schreiben-minutes",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleMinutes",
+      "moduleId": "schreiben",
+      "value": 30,
+      "checkPattern": "\\| Writing \\| 1 \\| 30 \\|",
+      "claimAr": "30 دقيقة للكتابة."
+    },
+    {
+      "id": "telc-b2-sprechen-parts",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleParts",
+      "moduleId": "sprechen",
+      "value": 3,
+      "checkPattern": "\\| Oral examination \\| Speaking \\| 3 \\| approx\\. 15 \\|",
+      "claimAr": "التعبير الشفهي ثلاثة أجزاء."
+    },
+    {
+      "id": "telc-b2-sprechen-minutes",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "moduleMinutes",
+      "moduleId": "sprechen",
+      "value": 15,
+      "checkPattern": "\\| Oral examination \\| Speaking \\| 3 \\| approx\\. 15 \\|",
+      "claimAr": "الشّفهي حوالي 15 دقيقة."
+    },
+    {
+      "id": "telc-b2-preparation",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "informational",
+      "checkPattern": "Pair examination\\s+20-minute preparation time",
+      "claimAr": "فحص ثنائي مع 20 دقيقة تحضير."
+    },
+    {
+      "id": "telc-b2-formats",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-overview-2026",
+      "kind": "informational",
+      "checkPattern": "available in digital, hybrid, and paper-based formats",
+      "claimAr": "متاح رقميًا وهجينًا وورقيًا، ويمكن كجزء ناقص."
+    },
+    {
+      "id": "telc-b2-passmark-written-135",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "passMark",
+      "value": 135,
+      "checkPattern": "135 Punkten in der Schriftlichen",
+      "claimAr": "حدّ النجاح في القسم الكتابي 135 نقطة، أي 60 % من 225."
+    },
+    {
+      "id": "telc-b2-passmark-oral-45",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "passMark",
+      "value": 45,
+      "checkPattern": "45 Punkten in der Mündlichen Prüfung",
+      "claimAr": "حدّ النجاح في القسم الشفهي 45 نقطة، أي 60 % من 75؛ ولا يُعوَّض قسم بالآخر."
+    },
+    {
+      "id": "telc-b2-total-points-300",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "informational",
+      "checkPattern": "Gesamtpunktzahl 300 100 %",
+      "claimAr": "المجموع الكامل 300 نقطة في طبعة النموذج الرسمية (2019)."
+    },
+    {
+      "id": "telc-b2-written-subtest-points",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "informational",
+      "checkPattern": "Teilergebnis I 225 75 %",
+      "claimAr": "مجموع القسم الكتابي 225 نقطة (75 % من الكل): قراءة 75، عناصر لغوية 30، استماع 75، كتابة 45."
+    },
+    {
+      "id": "telc-b2-oral-subtest-points",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "informational",
+      "checkPattern": "Teilergebnis II 75 25 %",
+      "claimAr": "مجموع القسم الشفهي 75 نقطة (25 %)، ثلاثة أجزاء بـ25 لكل منها."
+    },
+    {
+      "id": "telc-b2-sprachbausteine-weight-10",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "informational",
+      "checkPattern": "2 Sprachbausteine Teil 1 Teil 2 21–30 31–40 15 15 30 10 %",
+      "claimAr": "العناصر اللغوية 30 نقطة من 225 أي 10 % — أصغر بند كتابي."
+    },
+    {
+      "id": "telc-b2-grade-bands",
+      "profileId": "telc-deutsch-b2",
+      "sourceId": "telc-b2-mock-2019-current-link",
+      "kind": "informational",
+      "checkPattern": "270–300 Punkte sehr gut 240–269,5 Punkte gut 210–239,5 Punkte befriedigend 180–209,5 Punkte ausreichend 0–179,5 Punkte nicht bestanden",
+      "claimAr": "درجات النهاية في نموذج telc: 270–300 sehr gut، 240–269,5 gut، 210–239,5 befriedigend، 180–209,5 ausreichend، وحتى 179,5 nicht bestanden."
+    }
+  ],
+  "openFacts": [
+    {
+      "id": "telc-b2-point-distribution",
+      "profileId": "telc-deutsch-b2",
+      "fields": [
+        "maxPoints currency for the 2026 edition",
+        "passMark currency for the 2026 edition"
+      ],
+      "whyAr": "الأرقام نفسها (225 كتابيًا/75 شفهيًا، 135 و45 للحد الأدنى، 30 للعناصر اللغوية، 45 للكتابة، 300 للمجموع) أصبحت مثبّتة بمقتطف حرفي من ملف telc الرسمي على telc.net (Übungstest 1، طبعة 2019، ص 47–48)؛ لكن صفحة telc الحالية 2026 تعرض الأجزاء والمدد فقط ولا تنشر جدول النقاط، فلم يُعثر على نص رسمي بتاريخ 2026 يؤكد أن التوزيع لم يتغيّر. لذلك المفتوح الآن هو *سريان* الرقم لا *وجوده*.",
+      "nextAr": "يُغلق السريان بنشر telc جدول نقاط بتاريخ 2026 أو بتأكيد مكتوب من مركز امتحان معتمد، أو بمراجعة بشرية تسجّل أن نسخة 2019 ما تزال المعتمدة؛ ولا يكفي أن الصفحة الحالية لم تذكر تغيّرًا.",
+      "corroborationAr": "خمس صفحات لطرف ثالث غير رسمي (مدارس لغات ومدونات) تذكر جميعًا 225 كتابيًا و75 شفهيًا و135/45 كحدّ 60% لكل قسم، أي أن أرقام التطبيق متسقة معها؛ ولم تُستعمل كدليل لأن الفاحص يقبل نطاق telc.net الرسمي فقط."
+    },
+    {
+      "id": "telc-b2-sprachbausteine-minutes",
+      "profileId": "telc-deutsch-b2",
+      "fields": [
+        "sprachbausteine.minutes (90 مشتركة مع القراءة)"
+      ],
+      "whyAr": "الجدول الرسمي لا يمنح هذا القسم مدة منفصلة؛ المدة المشتركة مأخوذة من نفس كتلة الـ90 دقيقة.",
+      "nextAr": "تُثبَّت بجملة صريحة في Handbuch بدل الاستنتاج من الجدول."
+    }
+  ]
+}

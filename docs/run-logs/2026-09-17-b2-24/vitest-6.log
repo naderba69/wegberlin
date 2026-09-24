@@ -1,0 +1,277 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/user/der-weg-nach-berlin[39m
+
+ [32m✓[39m tests/unit/content-integrity.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 200[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-b2.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 250[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-architecture.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-manifest.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [31m❯[39m tests/unit/release-candidate-gate.test.ts [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[32m 21[2mms[22m[39m
+[31m     [31m×[31m creates a commit-bound non-production attestation[39m[32m 14[2mms[22m[39m
+     [32m✓[39m rejects invalid labels and commit identifiers[32m 1[2mms[22m[39m
+     [32m✓[39m accepts an explicit label and uploads the generated attestation path[32m 3[2mms[22m[39m
+     [32m✓[39m contains no deployment step and requires separate promotion[32m 0[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-pack-controls.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [31m❯[39m tests/unit/academic-content-governance.test.ts [2m([22m[2m9 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 188[2mms[22m[39m
+[31m     [31m×[31m validates every runtime academic root through strict nested Zod schemas[39m[32m 8[2mms[22m[39m
+     [32m✓[39m rejects missing nested lesson fields and unknown content keys[32m 3[2mms[22m[39m
+     [32m✓[39m rejects malformed exam answer indexes before content can publish[32m 1[2mms[22m[39m
+     [32m✓[39m links every closed answer to evidence with zero unapproved prompt leaks[32m 2[2mms[22m[39m
+     [32m✓[39m audits all five controlled exercise types and every receptive scope[32m 1[2mms[22m[39m
+     [32m✓[39m keeps productive work separate from fabricated single-answer grading[32m 0[2mms[22m[39m
+[31m     [31m×[31m maps every lesson objective to teaching, practice, and assessment surfaces[39m[32m 2[2mms[22m[39m
+     [32m✓[39m uses unique stable report IDs and the canonical fourteen-stage contract[32m 1[2mms[22m[39m
+[31m     [31m×[31m commits human-readable and machine-readable reports with one content hash[39m[32m 170[2mms[22m[39m
+ [32m✓[39m tests/unit/deterministic-property-invariants.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 462[2mms[22m[39m
+ [32m✓[39m tests/unit/mp3-bitstream.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 777[2mms[22m[39m
+     [33m[2m✓[22m[39m finds a playable MPEG Layer III frame chain in all 272 generated files [33m 548[2mms[22m[39m
+ [32m✓[39m tests/unit/study-modes-listening-evidence.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 334[2mms[22m[39m
+ [32m✓[39m tests/unit/backup.test.ts [2m([22m[2m17 tests[22m[2m)[22m[33m 301[2mms[22m[39m
+ [32m✓[39m tests/unit/attempt-process.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 301[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-a2.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 238[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 343[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-target-gap.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 297[2mms[22m[39m
+ [32m✓[39m tests/unit/content-governance-curriculum-version.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 220[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-grammar-b1.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 162[2mms[22m[39m
+ [32m✓[39m tests/unit/playback-speed.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 151[2mms[22m[39m
+ [32m✓[39m tests/unit/pairwise-migration-matrix.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 145[2mms[22m[39m
+ [32m✓[39m tests/unit/accessible-dialog.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 143[2mms[22m[39m
+ [32m✓[39m tests/unit/status-announcement.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 128[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-corpus.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 107[2mms[22m[39m
+ [32m✓[39m tests/unit/search.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 176[2mms[22m[39m
+ [32m✓[39m tests/unit/complete-runtime-content-audit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 105[2mms[22m[39m
+ [32m✓[39m tests/unit/webgpu-model.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 199[2mms[22m[39m
+ [32m✓[39m tests/unit/gated-surfaces-behavior.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-resilience.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m tests/unit/lexical-strategy.test.tsx [2m([22m[2m11 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-provider-mock-matrix.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m tests/unit/hybrid-writing-review.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 64[2mms[22m[39m
+ [32m✓[39m tests/unit/german-grammar-signals.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 82[2mms[22m[39m
+ [32m✓[39m tests/unit/seeded-shuffle.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m tests/unit/local-pronunciation-model.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m tests/unit/meaning-first-case.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 59[2mms[22m[39m
+ [32m✓[39m tests/unit/opus-audio-assets.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 251[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-review-grounding-gate.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-agreement-skill-retest.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m tests/unit/error-pattern-srs.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 50[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-support.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-audio-assets.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 63[2mms[22m[39m
+ [32m✓[39m tests/unit/tunisian-support.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m tests/unit/external-evaluator-persistence.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 83[2mms[22m[39m
+ [32m✓[39m tests/unit/evidence-report.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-tutor.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+ [32m✓[39m tests/unit/personal-vocabulary-error-report.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/unit/review-queue.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/unit/session-signals.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m tests/unit/support-usage-freshness.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-repair-claim-boundary.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/unit/achievements-gamification.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-audio-assets.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/unit/review-shortcuts-content-notes.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/planning-readiness-security-deprecation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/unit/study-exports.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m tests/unit/listening-pronunciation-sequence.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/unit/event-derived-mastery.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/library-adversarial-audit.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/unit/practical-context-training-log.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-profiles.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/unit/error-insights.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m tests/unit/contextual-collocation-network.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/unit/review-session.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32m✓[39m tests/unit/speech-preferences.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/unit/content-similarity-review.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 43[2mms[22m[39m
+ [32m✓[39m tests/unit/intensity-presets.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-device-benchmark.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/source-freshness.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/unit/library.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/unit/weekly-reflection-target-planning.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/audio-assets.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/unit/accessibility-preferences.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/atomic-persistence.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/unit/rhythm-tap-practice.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/unit/learning-engines.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/unit/live-capability-probe.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/content-follow-up.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/unit/sm2-timezone.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/unit/ai-provider-capabilities.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/unit/review-reminder.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/unit/mediation-workflow.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/unit/daily-focus-tools.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/coach.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-branching-conversation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-format-verification.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/unit/merge.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/zz-b2-20-probe.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/unit/reading-benchmark.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/unit/adaptive-dictation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/onboarding-profile.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/unit/german-copy-enhancer.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-workflow.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-vocabulary-extraction.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/unit/external-evaluator-bridge.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/lesson-evidence-gate.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/speaking-review-lanes.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-reference.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/unit/speaking-workflow.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m tests/unit/german-writing-support.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/best-speaking-attempt.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-alignment.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/plan-change-timeline.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/practical-day-mode.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/diagnostic-productive-sample.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/unit/assistance-separation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/low-data-mode.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-format-claims.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/german-phoneme-policy.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/mastery-weighting.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/unit/meaning-translation-audit.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/library-interest-profile.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/diagnostic-fatigue-resume.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-recovery-partial-export.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/unit/language-boundary.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/writing-portfolio.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/secret-scanner.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/adaptive-diagnostic.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/weekly-plan.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/threat-model-redaction.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/continuous-exam-session.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/vercel-docs-only-skip.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/error-clinic.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-readiness.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/journey-state.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/curriculum-pack-diff.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/behavioral-praise.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/global-study-shortcuts.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/today-offline-readiness.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/four-skill-vocabulary-cycle.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/raw-store-export-privacy.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/error-capture.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-print-tools.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/error-remediation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/local-error-classifier.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/context-style-alternatives.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/tagged-release.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/unit/beginner-readable-completion.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/feature-proposal-gate.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/delivery-health-dashboard.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/exam-writing-input-integrity.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/recording-format.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-curriculum-rollback.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/information-gap.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/deployment-smoke.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/unified-concept-map.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/error-span.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/guided-mediation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/rubric-separation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/unit/post-listening-response.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/media-pack-budgets.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/unit/reading-summary-transfer.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 4 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m tests/unit/academic-content-governance.test.ts[2m > [22mP0 academic schemas, answer integrity, and objective coverage[2m > [22mvalidates every runtime academic root through strict nested Zod schemas
+[31m[1mAssertionError[22m: expected { lessons: 96, …(16) } to deeply equal { lessons: 96, …(16) }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -13,7 +13,7 @@[39m
+[2m    "nounGrammarEntries": 1244,[22m
+[2m    "readingLibrary": 80,[22m
+[2m    "reviewCards": 2304,[22m
+[2m    "totalRootObjects": 4292,[22m
+[2m    "tunisianSupportNotes": 17,[22m
+[32m-   "verbPrepositionFrames": 126,[39m
+[31m+   "verbPrepositionFrames": 134,[39m
+[2m  }[22m
+
+[36m [2m❯[22m tests/unit/academic-content-governance.test.ts:[2m19:27[22m[39m
+    [90m 17|[39m     [34mexpect[39m(schema[33m.[39mok[33m,[39m schema[33m.[39missues[33m.[39m[34mjoin[39m([32m"\n"[39m))[33m.[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+    [90m 18|[39m     [34mexpect[39m(schema[33m.[39mschemaFamilies)[33m.[39m[34mtoBe[39m([34m16[39m)[33m;[39m
+    [90m 19|[39m     [34mexpect[39m(schema[33m.[39mcounts)[33m.[39m[34mtoEqual[39m({
+    [90m   |[39m                           [31m^[39m
+    [90m 20|[39m       lessons[33m:[39m [34m96[39m[33m,[39m
+    [90m 21|[39m       lessonMetadata[33m:[39m [34m96[39m[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/academic-content-governance.test.ts[2m > [22mP0 academic schemas, answer integrity, and objective coverage[2m > [22mmaps every lesson objective to teaching, practice, and assessment surfaces
+[31m[1mAssertionError[22m: expected { A1: { objectives: 96, …(2) }, …(3) } to deeply equal { A1: { objectives: 96, …(2) }, …(3) }[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[33m@@ -13,10 +13,10 @@[39m
+[2m      "covered": 96,[22m
+[2m      "gaps": 0,[22m
+[2m      "objectives": 96,[22m
+[2m    },[22m
+[2m    "B2": {[22m
+[32m-     "covered": 81,[39m
+[31m+     "covered": 101,[39m
+[2m      "gaps": 0,[22m
+[32m-     "objectives": 81,[39m
+[31m+     "objectives": 101,[39m
+[2m    },[22m
+[2m  }[22m
+
+[36m [2m❯[22m tests/unit/academic-content-governance.test.ts:[2m87:32[22m[39m
+    [90m 85|[39m     [34mexpect[39m(objectives[33m.[39mok[33m,[39m objectives[33m.[39missues[33m.[39m[34mjoin[39m([32m"\n"[39m))[33m.[39m[34mtoBe[39m([35mtrue[39m)[33m;[39m
+    [90m 86|[39m     [34mexpect[39m(objectives[33m.[39mrows)[33m.[39m[34mtoHaveLength[39m([34m389[39m)[33m;[39m
+    [90m 87|[39m     [34mexpect[39m(objectives[33m.[39mbyLevel)[33m.[39m[34mtoEqual[39m({
+    [90m   |[39m                                [31m^[39m
+    [90m 88|[39m       [33mA1[39m[33m:[39m { objectives[33m:[39m [34m96[39m[33m,[39m covered[33m:[39m [34m96[39m[33m,[39m gaps[33m:[39m [34m0[39m }[33m,[39m
+    [90m 89|[39m       [33mA2[39m[33m:[39m { objectives[33m:[39m [34m96[39m[33m,[39m covered[33m:[39m [34m96[39m[33m,[39m gaps[33m:[39m [34m0[39m }[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/academic-content-governance.test.ts[2m > [22mP0 academic schemas, answer integrity, and objective coverage[2m > [22mcommits human-readable and machine-readable reports with one content hash
+[31m[1mAssertionError[22m: expected 89 to be +0 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 0[39m
+[31m+ 89[39m
+
+[36m [2m❯[22m tests/unit/academic-content-governance.test.ts:[2m115:64[22m[39m
+    [90m113|[39m     [34mexpect[39m(machine[33m.[39mobjectiveCoverage[33m.[39mrows)[33m.[39m[34mtoHaveLength[39m([34m389[39m)[33m;[39m
+    [90m114|[39m     [34mexpect[39m(machine[33m.[39mlexicalTargetGaps[33m.[39mnounSummary[33m.[39mcovered)[33m.[39m[34mtoBe[39m([34m1319[39m)[33m;[39m
+    [90m115|[39m     [34mexpect[39m(machine[33m.[39mlexicalTargetGaps[33m.[39mnounSummary[33m.[39mpendingHuman)[33m.[39m[34mtoBe[39m([34m0[39m)[33m;[39m
+    [90m   |[39m                                                                [31m^[39m
+    [90m116|[39m     expect(machine.lexicalTargetGaps.verbFrameSummary.covered).toBe(12…
+    [90m117|[39m     expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).to…
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m tests/unit/release-candidate-gate.test.ts[2m > [22mP2 pre-production release candidate[2m > [22mcreates a commit-bound non-production attestation
+[31m[1mAssertionError[22m: expected { …(9) } to match object { …(5) }
+(4 matching properties omitted from actual)[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[2m  {[22m
+[2m    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",[22m
+[2m    "evidenceBoundary": "ci-attestation-only-no-production-promotion-without-separate-human-action",[22m
+[32m-   "offlineRouteCount": 314,[39m
+[31m+   "offlineRouteCount": 318,[39m
+[2m    "policyVersion": "pre-production-release-candidate-v1",[22m
+[2m    "status": "candidate-tests-passed-not-promoted",[22m
+[2m  }[22m
+
+[36m [2m❯[22m tests/unit/release-candidate-gate.test.ts:[2m12:23[22m[39m
+    [90m 10|[39m     expect(RELEASE_CANDIDATE_POLICY).toBe("pre-production-release-cand…
+    [90m 11|[39m     const candidate = createReleaseCandidateAttestation({ label: "rc-2…
+    [90m 12|[39m     [34mexpect[39m(candidate)[33m.[39m[34mtoMatchObject[39m({
+    [90m   |[39m                       [31m^[39m
+    [90m 13|[39m       policyVersion[33m:[39m [33mRELEASE_CANDIDATE_POLICY[39m[33m,[39m
+    [90m 14|[39m       commit[33m:[39m sha[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m148 passed[39m[22m[90m (150)[39m
+[2m      Tests [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m981 passed[39m[22m[90m (985)[39m
+[2m   Start at [22m 07:45:25
+[2m   Duration [22m 129.47s[2m (transform 6.22s, setup 0ms, import 50.13s, tests 8.39s, environment 52.69s)[22m
+

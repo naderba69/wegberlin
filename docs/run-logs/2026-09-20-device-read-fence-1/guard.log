@@ -1,0 +1,13 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/user/der-weg-nach-berlin[39m
+
+ [32m✓[39m tests/unit/no-storage-in-render-init.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m tests/unit/language-boundary.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/offline-pack-controls.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[32m18 passed[39m[22m[90m (18)[39m
+[2m   Start at [22m 12:22:50
+[2m   Duration [22m 1.41s[2m (transform 203ms, setup 0ms, import 272ms, tests 61ms, environment 631ms)[22m
+
+exit=0

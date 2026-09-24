@@ -1,0 +1,91 @@
+══════════════════════════════════════════════════════════════════════════════════════
+  الأمر الواحد — حذف كل ملفات المشروع، فكّ الضغط، والرفع إلى main بـ PAT
+  wegberlin-full.zip  (+ wegberlin-full.zip.sha256 بجانبه للتحقق)
+══════════════════════════════════════════════════════════════════════════════════════
+
+ضع wegberlin-full.zip **و** wegberlin-full.zip.sha256 في Downloads،
+ثم انسخ السطر التالي كاملًا إلى Termux
+(بدّل github_pat_XXXX بالرمز الحقيقي):
+
+
+PAT='github_pat_XXXX' bash -c '
+set -e
+[ -n "$PAT" ] || { echo "❌ ضع الـ PAT داخل السطر"; exit 1; }
+command -v unzip >/dev/null || pkg install -y unzip
+command -v git   >/dev/null || pkg install -y git
+ZIP=""
+for d in ~/storage/downloads ~/downloads ~/Download ~/; do
+  [ -f "$d/wegberlin-full.zip" ] && ZIP="$d/wegberlin-full.zip" && break
+done
+[ -n "$ZIP" ] || { echo "❌ نزّل wegberlin-full.zip إلى Downloads أولاً"; exit 1; }
+echo "── الأرشيف: $ZIP"
+SUM=$(sha256sum "$ZIP" | cut -d" " -f1)
+if [ -f "$ZIP.sha256" ]; then
+  EXP=$(cut -d" " -f1 < "$ZIP.sha256")
+  [ "$SUM" = "$EXP" ] || { echo "❌ الأرشيف لا يطابق $ZIP.sha256"; echo "   المتوقع: $EXP"; echo "   الفعلي : $SUM"; exit 1; }
+  echo "── البصمة مطابقة للملف المرافق ✓"
+else
+  echo "── تحذير: لا يوجد ملف بصمة مرافق — البصمة الفعلية: $SUM"
+fi
+rm -rf ~/wegberlin
+mkdir -p ~/wegberlin
+unzip -q "$ZIP" -d ~/wegberlin
+cd ~/wegberlin
+[ -f package.json ] && [ -f src/app/page.tsx ] || { echo "❌ الأرشيف ملفوف داخل مجلد — لا ترفعه"; exit 1; }
+[ "$(ls src/data/lessons-*.ts 2>/dev/null | wc -l)" -ge 24 ] || { echo "❌ دروس مفقودة — لا ترفع قوقعة فارغة"; exit 1; }
+echo "── مسطّح ✓ · $(ls src/data/*.ts | wc -l) ملف بيانات · $(ls src/data/lessons-*.ts | wc -l) ملف دروس"
+git init -q -b main
+git config user.name  "naderba69"
+git config user.email "naderba69@users.noreply.github.com"
+git add -A
+git commit -qm "wegberlin v156.4 — إصلاح انهيار الصفحات لكل متعلّم أتمّ 8 دروس (React #185: ساعة متغيّرة في useSyncExternalStore) · useDeviceEpoch · كاش الاختبار يُقرأ من sw.js · 1036 وحدة + 42 e2e خضراء"
+git push -f "https://naderba69:$PAT@github.com/naderba69/wegberlin.git" main:main
+echo "── ✓ رُفع v156.4 إلى main بجذر مسطّح — Vercel سيجد src/app مباشرة"
+'
+
+
+──────────────────────────────────────────────────────────────────────────────────────
+  للتحقق بعد الرفع
+──────────────────────────────────────────────────────────────────────────────────────
+
+cd ~/wegberlin && git log -1 --oneline && git ls-files | wc -l && git ls-files src/app | wc -l
+
+
+يجب أن تُظهر: ‏1749 ملفًا تقريبًا، و‏src/app أكبر من صفر.
+وعلى GitHub يجب أن ترى package.json و src/ في **جذر** المستودع، لا داخل مجلد.
+
+
+──────────────────────────────────────────────────────────────────────────────────────
+  ما الذي يفعله الأمر بالضبط
+──────────────────────────────────────────────────────────────────────────────────────
+
+1. يتحقق من البصمة مقابل الملف المرافق wegberlin-full.zip.sha256 — أرشيف تالف أو
+   منقوص التنزيل يُرفض قبل حذف أي شيء. (البصمة لا تُكتب داخل هذا الملف لأنه نفسه
+   داخل الأرشيف، فتغييره يغيّر البصمة — دور لا ينتهي.)
+2. `rm -rf ~/wegberlin` يحذف نسخة المشروع القديمة كاملةً على الهاتف.
+3. يفكّ الضغط في مجلد نظيف.
+4. يرفض الرفع إن كان الأرشيف ملفوفًا داخل مجلد (هذا سبب فشل Vercel السابق:
+   «Couldn't find any pages or app directory»).
+5. يرفض الرفع إن كانت ملفات الدروس ناقصة (لا تُرفع قوقعة فارغة).
+6. `git init` جديد ثم `push -f` — يستبدل تاريخ main بالكامل بلقطة واحدة نظيفة.
+
+⚠️ `push -f` يمحو تاريخ main على GitHub. إن أردت الاحتفاظ به، شغّل هذا **قبل** الأمر:
+
+  git ls-remote "https://naderba69:$PAT@github.com/naderba69/wegberlin.git" main
+
+ثم أنشئ وسمًا احتياطيًا من واجهة GitHub قبل الرفع.
+
+⚠️ لا تشارك الـ PAT ولا تحفظه في ملف. بعد نجاح الرفع يُستحسن إبطاله من:
+  GitHub → Settings → Developer settings → Personal access tokens
+
+──────────────────────────────────────────────────────────────────────────────────────
+  إعادةُ توليد الأرشيف (إن فُقد أو أردت نسخةً أحدث)
+──────────────────────────────────────────────────────────────────────────────────────
+
+الأرشيفُ مُنتَجٌ لا ملفٌ محفوظ — يُعاد بناؤه في ثوانٍ من شجرةٍ مُتحقَّقة:
+
+  node scripts/verify-generation-state.mjs   # يجب: no drift
+  npm run zip:delivery                       # يكتب ~/wegberlin-full.zip + .sha256
+
+ويرفض البناءُ نفسُه أيَّ شجرةٍ ناقصة (أقلّ من 24 ملف دروس، أو أقلّ من 1,500 حقل شرح)،
+فلا يخرج أرشيفٌ يَنشُر قوقعةً فارغة.

@@ -1,0 +1,4 @@
+Error: http://127.0.0.1:3100 is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.
+
+EXIT=1
+STOPPED_BY_AGENT (خطئي لا خطأ التطبيق): خادم next start اليتيم من المحاولة السابقة كان يحتل المنفذ 3100 فرفض playwright إعادة الاستخدام. أُسكت الخادم وأُعيد التشغيل في 16/17.

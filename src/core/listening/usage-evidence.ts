@@ -1,0 +1,6 @@
+import type { ListeningUsageEvent,ListeningUsageSurface } from "@/types/learning";
+export const LISTENING_USAGE_POLICY="unified-listening-usage-evidence-v1" as const;
+export const LISTENING_USAGE_BOUNDARY="process-evidence-no-comprehension-pronunciation-or-mastery-score" as const;
+export type ListeningUsageSignal={surface:ListeningUsageSurface;contentId:string;event:"playback"|"transcript-revealed";playbackSource?:"mp3"|"browser-tts";revealAfterAnswerCommit?:boolean};
+export function appendListeningUsageEvent(events:ListeningUsageEvent[],signal:ListeningUsageSignal,now=new Date(),id=`listening-usage-${crypto.randomUUID()}`){const related=events.filter((item)=>item.surface===signal.surface&&item.contentId===signal.contentId);const plays=related.filter((item)=>item.event==="playback");const first=plays[0];const record:ListeningUsageEvent={id,policyVersion:LISTENING_USAGE_POLICY,...signal,playOrdinal:signal.event==="playback"?plays.length+1:plays.length, ...(first?{secondsSinceFirstPlayback:Math.max(0,Math.round((now.getTime()-Date.parse(first.createdAt))/1000))}:{}),evidenceBoundary:LISTENING_USAGE_BOUNDARY,createdAt:now.toISOString()};return[...events,record]}
+export function emitListeningUsage(signal:ListeningUsageSignal){if(typeof window!=="undefined")window.dispatchEvent(new CustomEvent("dwnb:listening-usage",{detail:signal}))}

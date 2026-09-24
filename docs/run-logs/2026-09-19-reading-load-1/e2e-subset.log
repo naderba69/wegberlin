@@ -1,0 +1,10 @@
+
+Running 6 tests using 1 worker
+
+[1/6] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[2/6] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[3/6] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[4/6] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[5/6] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[6/6] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+  6 passed (59.3s)

@@ -1,0 +1,6 @@
+
+Running 2 tests using 1 worker
+
+[1/2] [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+[2/2] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+  2 passed (29.1s)

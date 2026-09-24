@@ -1,0 +1,80 @@
+{
+  "format": "dwnb-media-pack-budget-report",
+  "version": "media-pack-budget-v1",
+  "generatedAt": "2026-09-10",
+  "safetyMarginPercent": 15,
+  "hardLimits": {
+    "curriculumSourceGzipBytes": 1500000,
+    "totalAudioBytes": 70000000,
+    "packs": {
+      "a1": 16000000,
+      "a2": 16000000,
+      "b1": 16000000,
+      "b2": 38000000,
+      "full": 70000000
+    }
+  },
+  "safetyCeilings": {
+    "curriculumSourceGzipBytes": 1275000,
+    "totalAudioBytes": 59500000,
+    "packs": {
+      "a1": 13600000,
+      "a2": 13600000,
+      "b1": 13600000,
+      "b2": 32300000,
+      "full": 59500000
+    }
+  },
+  "actual": {
+    "curriculumFileCount": 80,
+    "curriculumSourceGzipBytes": 974225,
+    "physicalAudioFileCount": 544,
+    "mp3AssetCount": 272,
+    "opusAssetCount": 272,
+    "totalAudioBytes": 52943843,
+    "packs": {
+      "a1": {
+        "pageGzipBytes": 2427426,
+        "mp3Bytes": 3539304,
+        "opusBytes": 2563432,
+        "selectedMaximumBytes": 3539304,
+        "audioAssetCount": 40,
+        "totalBytes": 5966730
+      },
+      "a2": {
+        "pageGzipBytes": 2557347,
+        "mp3Bytes": 4714032,
+        "opusBytes": 3497558,
+        "selectedMaximumBytes": 4714032,
+        "audioAssetCount": 48,
+        "totalBytes": 7271379
+      },
+      "b1": {
+        "pageGzipBytes": 2570763,
+        "mp3Bytes": 5838576,
+        "opusBytes": 4373622,
+        "selectedMaximumBytes": 5838576,
+        "audioAssetCount": 48,
+        "totalBytes": 8409339
+      },
+      "b2": {
+        "pageGzipBytes": 3924380,
+        "mp3Bytes": 16242792,
+        "opusBytes": 12174527,
+        "selectedMaximumBytes": 16242792,
+        "audioAssetCount": 136,
+        "totalBytes": 20167172
+      },
+      "full": {
+        "pageGzipBytes": 5725952,
+        "mp3Bytes": 30334704,
+        "opusBytes": 22609139,
+        "selectedMaximumBytes": 30334704,
+        "audioAssetCount": 272,
+        "totalBytes": 36060656
+      }
+    }
+  },
+  "issues": [],
+  "boundary": "Hard build-fail budgets for authored curriculum source gzip, physical generated MP3 and Opus bytes, and each optional Offline page+audio pack. A mandatory 15% reserve is kept below every hard limit; this is not a network or device-memory measurement."
+}

@@ -1,0 +1,11 @@
+npm error Missing script: "productive:audit:write"
+npm error
+npm error Did you mean one of these?
+npm error   npm run content:audit:write # run the "content:audit:write" package script
+npm error   npm run case:audit:write # run the "case:audit:write" package script
+npm error   npm run language:audit:write # run the "language:audit:write" package script
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: /home/user/.npm/_logs/2026-09-20T09_20_34_283Z-debug-0.log
+FAIL productive:audit:write

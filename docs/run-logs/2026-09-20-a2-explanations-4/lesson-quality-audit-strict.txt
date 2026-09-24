@@ -1,0 +1,4 @@
+Lesson quality: 1250 scored items · answer mix 25.92/23.84/24.4/25.84 · longest-key cue 39.28% · writing-range violations 0 · single-string productive items 50.9% · explanation median 25 · objective review-prompts 26 · listening median 93 words (~32s).
+Lesson quality gate failed:
+- productive exercises with one accepted string: 50.9% (max 25%)
+- median explanation length 25 chars (min 60)

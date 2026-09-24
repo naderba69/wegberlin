@@ -1,0 +1,6 @@
+
+Running 2 tests using 1 worker
+
+[1/2] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[2/2] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  2 passed (1.1m)

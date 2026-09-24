@@ -1,0 +1,1101 @@
+{
+  "format": "dwnb-lesson-quality-audit",
+  "version": "lesson-quality-v1",
+  "generatedAt": "2026-09-17",
+  "lessons": 96,
+  "thresholds": {
+    "writingModelRangeViolations": 0,
+    "maxPositionSharePct": 40,
+    "minPositionSharePct": 15,
+    "longestOptionCuePctMax": 40,
+    "singleVariantSharePctMax": 25,
+    "noOpAcceptedVariantsMax": 0,
+    "explanationMedianCharsMin": 60
+  },
+  "multipleChoice": {
+    "items": 1250,
+    "positions": {
+      "A": 324,
+      "B": 298,
+      "C": 305,
+      "D": 323
+    },
+    "sharePct": [
+      25.92,
+      23.84,
+      24.4,
+      25.84
+    ],
+    "lessonsWithoutPositionD": 3,
+    "longestOptionIsKeyPct": 39.28
+  },
+  "writing": {
+    "statedRangeTasks": 92,
+    "violations": 0,
+    "violationList": []
+  },
+  "productive": {
+    "total": 387,
+    "singleAcceptedString": 338,
+    "sharePct": 87.34,
+    "broadenedExercises": 49,
+    "acceptedAnswerHygieneVersion": "accepted-answer-hygiene-v1",
+    "noOpVariants": 0,
+    "noOpVariantItems": [],
+    "hygienePolicy": "A listed accepted answer is padding when it normalizes onto another listed answer: students cannot type it distinctly, the grader cannot reward it, and counting it widens the claimed answer breadth without widening acceptance.",
+    "countingRule": "An exercise counts as broadened only when it lists at least two DISTINCT normalized forms; sentence-initial capitalization or a trailing full stop is never a second form (P1-398 ceiling <=25% is evaluated on this basis)."
+  },
+  "feedback": {
+    "allItems": 1733,
+    "allMedianChars": 37,
+    "allUnder60Chars": 1010,
+    "allMissing": 0,
+    "explanationMedianChars": 31,
+    "under40Chars": 803,
+    "ofItems": 1250
+  },
+  "objectives": {
+    "total": 389,
+    "lexicalReviewPrompts": 26,
+    "reviewPromptList": [
+      "a1-04#0 Ich kann Familienmitglieder nennen.",
+      "a1-05#1 Ich kann ein einfaches Geburtsdatum verstehen.",
+      "a1-05#2 Ich kann Kontaktangaben erfragen.",
+      "a1-05#3 Ich benutze sein mit ich, du und er/sie.",
+      "a1-06#2 Ich benutze als, bei und in passend.",
+      "a1-08#3 Ich kann Häufigkeit einfach ausdrücken.",
+      "a1-10#2 Ich kann einfache Akkusativformen benutzen.",
+      "a1-10#3 Ich kann Vorlieben und Nichtvorhandensein ausdrücken.",
+      "a1-11#3 Ich kann einen einfachen Einkaufsdialog führen.",
+      "a1-12#2 Ich kann Wünsche mit mit und ohne ausdrücken.",
+      "a1-18#1 Ich kann Wetterinformationen verstehen.",
+      "a1-19#3 Ich kann einfache Fahrkarteninformationen verstehen.",
+      "a1-20#1 Ich kann einfache Wegbeschreibungen verstehen.",
+      "a1-20#2 Ich kann formelle Anweisungen geben.",
+      "a1-23#0 Ich kann einen Arzttermin vereinbaren.",
+      "a2-06#0 Ich kann ein Wohnproblem sachlich beschreiben.",
+      "a2-07#3 Ich kann Arbeitsabläufe mit wenn erklären.",
+      "a2-11#0 Ich kann Unterkunftsangebote verstehen.",
+      "a2-12#0 Ich kann ein Reiseproblem genau beschreiben.",
+      "a2-20#1 Ich kann Prüfungsinformationen gezielt erfragen.",
+      "a2-21#0 Ich kann Zukunftspläne ausdrücken.",
+      "a2-24#3 Ich kann einen Gruppenentscheid dokumentieren.",
+      "b1-10#2 Ich kann fehlende Begleithandlungen mit ohne … zu beschreiben.",
+      "b1-11#0 Ich kann Mobilitätsoptionen systematisch vergleichen.",
+      "b1-23#3 Ich kann eine begrenzte Testentscheidung treffen.",
+      "b2-22#4 Ich vermeide Verschachtelung, die den Lesefaden abbricht."
+    ],
+    "rule": "A can-do is flagged when none of its German content words (or stems) occur in the lesson body. This is a review prompt, not a defect count: 8 of the currently flagged objectives were inspected by hand (b2-22#4, a1-20#0, a1-11#2, b1-09#3, a1-04#0, a1-18#1, a1-10#2, a1-19#3) and all eight are taught and assessed through instances (Mutter/Vater/Bruder, Wetter/Regen/Sonne, Fahrkarte/Zug, b2-22-e8 plus theory t4) rather than the objective wording. The check is therefore reported, not enforced."
+  },
+  "listening": {
+    "medianWords": 93,
+    "minWords": 50,
+    "maxWords": 213,
+    "medianSecondsAt175wpm": 32
+  },
+  "reading": {
+    "definition": "cumulative-taught-v2 · fixed fold · numeric tokens excluded",
+    "medianUnknownWordPct": 22.7,
+    "medianByLevel": {
+      "A1": 21.6,
+      "A2": 19,
+      "B1": 23.9,
+      "B2": 23.3
+    },
+    "lessonsOver45Pct": 0,
+    "maxUnknownWordPct": 39.1,
+    "measurementNote": "Unknown = a German content word in the reading text that no phrase, flashcard front, or reading glossary entry teaches anywhere at this level or below (stemmed comparison). Reported, not thresholded: the stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze) without a lemma dictionary, and proper names count as unknown, so the figure is a conservative upper bound. Turning it into a gate requires a lemmatizer first.",
+    "legacyFoldMedianUnknownWordPct": 35,
+    "worstLessons": [
+      {
+        "id": "b2-07",
+        "pct": 39.1
+      },
+      {
+        "id": "b2-01",
+        "pct": 38.2
+      },
+      {
+        "id": "b1-23",
+        "pct": 36.5
+      },
+      {
+        "id": "b1-12",
+        "pct": 35.4
+      },
+      {
+        "id": "a1-04",
+        "pct": 35.2
+      },
+      {
+        "id": "b2-12",
+        "pct": 35
+      },
+      {
+        "id": "b2-11",
+        "pct": 34.2
+      },
+      {
+        "id": "b1-09",
+        "pct": 34.1
+      },
+      {
+        "id": "a1-05",
+        "pct": 34
+      },
+      {
+        "id": "b2-08",
+        "pct": 33.8
+      },
+      {
+        "id": "a1-06",
+        "pct": 33.3
+      },
+      {
+        "id": "a2-16",
+        "pct": 33.3
+      }
+    ],
+    "unknownByLesson": [
+      {
+        "lessonId": "b2-07",
+        "level": "B2",
+        "pct": 39.1,
+        "unknown": [
+          "bezirk",
+          "pavillon",
+          "nachbarschaftszentrum",
+          "umwandeln",
+          "organisierte",
+          "abendveranstaltung",
+          "ueberwiegend",
+          "fuenfzig",
+          "direkten",
+          "jugendliche",
+          "entfernten",
+          "wohnblocks",
+          "bezeichnete",
+          "repraesentative",
+          "kritik",
+          "projektteam"
+        ]
+      },
+      {
+        "lessonId": "b2-01",
+        "level": "B2",
+        "pct": 38.2,
+        "unknown": [
+          "diskussion",
+          "smartphones",
+          "unterricht",
+          "extreme",
+          "positionen",
+          "fordert",
+          "vollstaendiges",
+          "betrachtet",
+          "geraete",
+          "moderne",
+          "lernwerkzeuge",
+          "kursen",
+          "nachrichten",
+          "haeufige",
+          "wechsel",
+          "apps"
+        ]
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "pct": 36.5,
+        "unknown": [
+          "verein",
+          "anwesenheitslisten",
+          "digitalisieren",
+          "app",
+          "funktionen",
+          "jahresvertrag",
+          "abschloss",
+          "definierte",
+          "papierlisten",
+          "mussten",
+          "doppelt",
+          "testeten",
+          "export",
+          "gab",
+          "geraete",
+          "oeffnen"
+        ]
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "pct": 35.4,
+        "unknown": [
+          "nachbarschaftsinitiative",
+          "verhindern",
+          "tauschmarkt",
+          "dinge",
+          "weiterzugeben",
+          "veranstaltung",
+          "datenschutz",
+          "festgelegt",
+          "freiwillige",
+          "uebernahmen",
+          "definierte",
+          "programm",
+          "verkuerzt",
+          "besuchten",
+          "brachten",
+          "wechselten"
+        ]
+      },
+      {
+        "lessonId": "a1-04",
+        "level": "A1",
+        "pct": 35.2,
+        "unknown": [
+          "leila",
+          "anna",
+          "foto",
+          "sousse",
+          "hatem",
+          "nadia",
+          "leilas",
+          "karim",
+          "neunzehn",
+          "studiert",
+          "mouna",
+          "adam",
+          "lebt",
+          "grosseltern",
+          "antwortet",
+          "grossmutter"
+        ]
+      },
+      {
+        "lessonId": "b2-12",
+        "level": "B2",
+        "pct": 35,
+        "unknown": [
+          "lernzentrum",
+          "interne",
+          "bildete",
+          "goethe",
+          "telc",
+          "gemeinsame",
+          "kompetenzen",
+          "komplexe",
+          "argumentieren",
+          "verlaengerte",
+          "bibliothekszeiten",
+          "zugangskosten",
+          "begruendete",
+          "farid",
+          "sorgfaeltig",
+          "genutzte"
+        ]
+      },
+      {
+        "lessonId": "b2-11",
+        "level": "B2",
+        "pct": 34.2,
+        "unknown": [
+          "internen",
+          "training",
+          "lernende",
+          "genutzte",
+          "arbeitsraeume",
+          "vorteile",
+          "sprachlich",
+          "verfasster",
+          "erhielt",
+          "schwache",
+          "vielfaeltigen",
+          "wortschatz",
+          "fehlerfreie",
+          "nebensaetze",
+          "vorteilen",
+          "arbeitsplaetze"
+        ]
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
+        "pct": 34.1,
+        "unknown": [
+          "mittelgrosse",
+          "geschuetzten",
+          "anwohnerinnen",
+          "wuenschen",
+          "sicherere",
+          "uebergaenge",
+          "geschaeftsleute",
+          "befuerchten",
+          "verwaltung",
+          "viermonatigen",
+          "pilotversuch",
+          "umgebaut",
+          "lieferzonen",
+          "genutzt",
+          "verkehrszahlen",
+          "laermwerte"
+        ]
+      },
+      {
+        "lessonId": "a1-05",
+        "level": "A1",
+        "pct": 34,
+        "unknown": [
+          "mariam",
+          "kontaktkarten",
+          "eigene",
+          "paul",
+          "zwoelften",
+          "oktober",
+          "aylin",
+          "nummer",
+          "offene",
+          "schreiben",
+          "uebungs",
+          "trainer",
+          "mal",
+          "findet",
+          "ihrer",
+          "statt"
+        ]
+      },
+      {
+        "lessonId": "b2-08",
+        "level": "B2",
+        "pct": 33.8,
+        "unknown": [
+          "veroeffentlichten",
+          "portale",
+          "aehnliche",
+          "ueberschriften",
+          "videos",
+          "zerstoeren",
+          "unsere",
+          "blick",
+          "wirkten",
+          "ergab",
+          "dieselbe",
+          "unternehmens",
+          "konzentrations",
+          "app",
+          "verkauft",
+          "mitteilung"
+        ]
+      },
+      {
+        "lessonId": "a1-06",
+        "level": "A1",
+        "pct": 33.3,
+        "unknown": [
+          "achtzehn",
+          "adel",
+          "oft",
+          "wochenende",
+          "lena",
+          "technische",
+          "projekte",
+          "manchmal",
+          "rami",
+          "supermarkt",
+          "beantwortet",
+          "kundinnen",
+          "ueben",
+          "arbeitsorte",
+          "schreiben",
+          "echte"
+        ]
+      },
+      {
+        "lessonId": "a2-16",
+        "level": "A2",
+        "pct": 33.3,
+        "unknown": [
+          "bauarbeiten",
+          "hafenstrasse",
+          "buslinien",
+          "hauptbahnhof",
+          "route",
+          "haltestellen",
+          "empfiehlt",
+          "strassenbahnlinie",
+          "busverkehr",
+          "staedtischen",
+          "webseite",
+          "aktuelle",
+          "sozialen",
+          "medien",
+          "schreiben",
+          "einige"
+        ]
+      },
+      {
+        "lessonId": "a2-23",
+        "level": "A2",
+        "pct": 33.3,
+        "unknown": [
+          "unterstuetzt",
+          "freiwillige",
+          "begruessen",
+          "gaeste",
+          "gespraechsgruppen",
+          "sprachlehrer",
+          "datenschutz",
+          "situationen",
+          "sara",
+          "zunaechst",
+          "stunde",
+          "geholfen",
+          "kennenzulernen",
+          "bald",
+          "gemerkt",
+          "organisation"
+        ]
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "pct": 32.9,
+        "unknown": [
+          "vierwoechigen",
+          "mobilitaetsversuch",
+          "dasselbe",
+          "verkehrsmittel",
+          "passende",
+          "laengeren",
+          "zusaetzlichen",
+          "nachtschichten",
+          "bekamen",
+          "informationen",
+          "fahrgemeinschaften",
+          "versuch",
+          "dokumentierten",
+          "teilnehmenden",
+          "reisezeit",
+          "geschah"
+        ]
+      },
+      {
+        "lessonId": "a2-08",
+        "level": "A2",
+        "pct": 32.8,
+        "unknown": [
+          "unternehmen",
+          "leipzig",
+          "september",
+          "mitarbeiterin",
+          "mitarbeiter",
+          "gehoeren",
+          "telefonische",
+          "anfragen",
+          "terminvereinbarungen",
+          "einfacher",
+          "kundendaten",
+          "bewerberinnen",
+          "deutschkenntnisse",
+          "gruendliche",
+          "arbeitszeiten",
+          "zeugnisse"
+        ]
+      },
+      {
+        "lessonId": "a2-12",
+        "level": "A2",
+        "pct": 32.8,
+        "unknown": [
+          "muenchen",
+          "probleme",
+          "gebuchter",
+          "schalter",
+          "fahrkarten",
+          "mitarbeiterin",
+          "reservierte",
+          "familienzimmer",
+          "fertig",
+          "rezeption",
+          "kleineres",
+          "getraenke",
+          "koffer",
+          "farbe",
+          "serviceschalter",
+          "geblieben"
+        ]
+      },
+      {
+        "lessonId": "b1-14",
+        "level": "B1",
+        "pct": 32.5,
+        "unknown": [
+          "nadia",
+          "interessierte",
+          "sechsmonatige",
+          "projektmanagement",
+          "anerkanntes",
+          "berufschancen",
+          "anmeldete",
+          "unabhaengigen",
+          "erfuhr",
+          "arbeitgeber",
+          "beide",
+          "fanden",
+          "praktische",
+          "projekterfahrung",
+          "zertifikats",
+          "gebuehren"
+        ]
+      },
+      {
+        "lessonId": "a1-16",
+        "level": "A1",
+        "pct": 32.1,
+        "unknown": [
+          "person",
+          "hobby",
+          "kenji",
+          "fotografiert",
+          "salma",
+          "couscous",
+          "jonas",
+          "spielt",
+          "gitarre",
+          "leila",
+          "joggt",
+          "fotos",
+          "organisiert",
+          "wanderung",
+          "aktivitaeten",
+          "dabei"
+        ]
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "pct": 32,
+        "unknown": [
+          "saras",
+          "meldete",
+          "telefonisch",
+          "reparierte",
+          "sara",
+          "dokumentierte",
+          "temperatur",
+          "fotografierte",
+          "notierte",
+          "kontakte",
+          "sowie",
+          "vermieterin",
+          "gemeldet",
+          "beschrieb",
+          "zeitraum",
+          "temperaturen"
+        ]
+      },
+      {
+        "lessonId": "b2-02",
+        "level": "B2",
+        "pct": 31.7,
+        "unknown": [
+          "berechtigte",
+          "aufeinander",
+          "befuerworter",
+          "kuerzere",
+          "arbeitswochen",
+          "motivation",
+          "gesundheit",
+          "pilotprojekte",
+          "produktivitaet",
+          "kritiker",
+          "dieselbe",
+          "arbeitsmenge",
+          "moeglicherweise",
+          "dieselben",
+          "erledigen",
+          "ueberstunden"
+        ]
+      },
+      {
+        "lessonId": "a2-02",
+        "level": "A2",
+        "pct": 31.6,
+        "unknown": [
+          "dalia",
+          "koeln",
+          "wagen",
+          "mann",
+          "schwarzen",
+          "gesessen",
+          "aufgemacht",
+          "darin",
+          "kleider",
+          "kamera",
+          "reisende",
+          "gefunden",
+          "stunde",
+          "informationsschalter",
+          "nichts",
+          "gegangen"
+        ]
+      },
+      {
+        "lessonId": "a2-15",
+        "level": "A2",
+        "pct": 31.5,
+        "unknown": [
+          "sprachkurs",
+          "uebt",
+          "informationen",
+          "medikamentenpackung",
+          "erwachsene",
+          "glas",
+          "bekannten",
+          "produkt",
+          "medikamente",
+          "nachfragen",
+          "atemproblemen",
+          "fachliche",
+          "lernenden",
+          "dosis",
+          "zeitpunkt",
+          "warnungen"
+        ]
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "pct": 31.4,
+        "unknown": [
+          "agentur",
+          "urspruenglich",
+          "geplante",
+          "lieferung",
+          "bereitzustellen",
+          "projektteam",
+          "abzulehnen",
+          "verkuerzten",
+          "vollstaendige",
+          "reihenfolge",
+          "formulierte",
+          "option",
+          "sah",
+          "restlichen",
+          "funktionen",
+          "ermoeglichte"
+        ]
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "pct": 31.4,
+        "unknown": [
+          "kulturzentrum",
+          "deutschsprachige",
+          "dreitaegige",
+          "medienwerkstatt",
+          "arabischsprachiges",
+          "vermittlung",
+          "werkstatt",
+          "uebernachtungskosten",
+          "bezahlt",
+          "ausgangstext",
+          "interessierte",
+          "mussten",
+          "teilnahmegebuehr",
+          "fahrtkosten",
+          "festgelegten",
+          "uebernommen"
+        ]
+      },
+      {
+        "lessonId": "b2-14",
+        "level": "B2",
+        "pct": 30.9,
+        "unknown": [
+          "behoerdenbriefen",
+          "berichten",
+          "fachtexten",
+          "grammatikstunde",
+          "art",
+          "aneinander",
+          "andocken",
+          "werkzeuge",
+          "last",
+          "fuerwort",
+          "demonstrativum",
+          "nomen",
+          "konnektoren",
+          "zeitverlauf",
+          "loser",
+          "aneinandergereihten"
+        ]
+      },
+      {
+        "lessonId": "a2-18",
+        "level": "A2",
+        "pct": 30.7,
+        "unknown": [
+          "unterricht",
+          "einige",
+          "lernende",
+          "smartphones",
+          "hilfreich",
+          "audio",
+          "oeffnen",
+          "nutzt",
+          "rania",
+          "digitales",
+          "woerterbuch",
+          "aussprache",
+          "nachrichten",
+          "soziale",
+          "medien",
+          "ben"
+        ]
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
+        "pct": 30.3,
+        "unknown": [
+          "weiterbildungszentrum",
+          "testete",
+          "freiwillige",
+          "eingeladenen",
+          "nahmen",
+          "nutzten",
+          "testergebnis",
+          "vergleichsgruppe",
+          "schlagzeile",
+          "verdreifacht",
+          "lernfortschritt",
+          "rechnerisch",
+          "anstieg",
+          "betrug",
+          "uebertreibt",
+          "motivierte"
+        ]
+      },
+      {
+        "lessonId": "a1-10",
+        "level": "A1",
+        "pct": 30,
+        "unknown": [
+          "personen",
+          "fruehstueck",
+          "julia",
+          "wochenende",
+          "samir",
+          "fruehstueckt",
+          "tomate",
+          "mei",
+          "buero",
+          "joghurt",
+          "freitag",
+          "eier"
+        ]
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "pct": 30,
+        "unknown": [
+          "lina",
+          "glaubte",
+          "taegliche",
+          "unproblematisch",
+          "zeitpunkt",
+          "inhalt",
+          "dabei",
+          "oeffnete",
+          "gesamte",
+          "doch",
+          "sah",
+          "videos",
+          "weiterliefen",
+          "eigentlich",
+          "blieben",
+          "arbeitsbloecke"
+        ]
+      },
+      {
+        "lessonId": "b1-02",
+        "level": "B1",
+        "pct": 29.6,
+        "unknown": [
+          "samir",
+          "jungen",
+          "technikfirma",
+          "interessantere",
+          "hoeheres",
+          "gehalt",
+          "bisherige",
+          "bot",
+          "berufliche",
+          "entwicklung",
+          "finanzielle",
+          "familienzeit",
+          "befristete",
+          "vertrag",
+          "sorgen",
+          "moeglichen"
+        ]
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "pct": 29.4,
+        "unknown": [
+          "terminaenderungen",
+          "informierst",
+          "rechtzeitig",
+          "klang",
+          "ben",
+          "erklaerte",
+          "gruppenchat",
+          "gepostet",
+          "beide",
+          "dieselben",
+          "ereignisse",
+          "bewerteten",
+          "kollegin",
+          "beispiele",
+          "dabei",
+          "heraus"
+        ]
+      },
+      {
+        "lessonId": "a1-09",
+        "level": "A1",
+        "pct": 29.2,
+        "unknown": [
+          "mona",
+          "david",
+          "kenji",
+          "deutschtest",
+          "achtzehn",
+          "dienstag",
+          "arzttermin",
+          "uhrzeit",
+          "stadtbibliothek",
+          "raum",
+          "grammatiknotizen",
+          "wortkarten",
+          "jemand",
+          "person"
+        ]
+      },
+      {
+        "lessonId": "b2-17",
+        "level": "B2",
+        "pct": 28.8,
+        "unknown": [
+          "pruefvorbereitung",
+          "ben",
+          "studienbehoerde",
+          "saetzen",
+          "derselben",
+          "struktur",
+          "sprachlich",
+          "befehlsliste",
+          "aziz",
+          "funktionen",
+          "benannt",
+          "deren",
+          "genannt",
+          "anlagen",
+          "anbot",
+          "zuweist"
+        ]
+      },
+      {
+        "lessonId": "a1-14",
+        "level": "A1",
+        "pct": 28.3,
+        "unknown": [
+          "mila",
+          "haengt",
+          "laptop",
+          "tasche",
+          "fenster",
+          "milas",
+          "findet",
+          "sieht",
+          "buch",
+          "legt",
+          "wichtige",
+          "dinge",
+          "immer"
+        ]
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "pct": 27.6,
+        "unknown": [
+          "drucker",
+          "guenstigste",
+          "modell",
+          "kostete",
+          "mitarbeiterin",
+          "gesamtkosten",
+          "dabei",
+          "billigen",
+          "geraets",
+          "doppelt",
+          "einzeln",
+          "strom",
+          "guenstigere",
+          "laengere",
+          "kaufpreis",
+          "schauen"
+        ]
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "pct": 27.5,
+        "unknown": [
+          "lerngruppe",
+          "kurswochen",
+          "idee",
+          "informationen",
+          "entwickelte",
+          "handlungsplan",
+          "begruessung",
+          "erhaelt",
+          "vortag",
+          "aktuelle",
+          "teilnehmerliste",
+          "fachliche",
+          "lehrkraft",
+          "gefragt",
+          "ben",
+          "datei"
+        ]
+      },
+      {
+        "lessonId": "a1-11",
+        "level": "A1",
+        "pct": 27.1,
+        "unknown": [
+          "nabil",
+          "vier",
+          "personen",
+          "kartoffeln",
+          "gurken",
+          "apfelsaft",
+          "fuenfzig",
+          "saft",
+          "supermarkt",
+          "mitarbeiterin",
+          "prueft",
+          "preis",
+          "korrigiert"
+        ]
+      },
+      {
+        "lessonId": "a2-17",
+        "level": "A2",
+        "pct": 26.8,
+        "unknown": [
+          "jonas",
+          "digitale",
+          "gemerkt",
+          "konkreten",
+          "oeffnet",
+          "unwichtige",
+          "konzentrieren",
+          "soziale",
+          "apps",
+          "startbildschirm",
+          "ausserdem",
+          "prueft",
+          "nachrichten",
+          "komplett",
+          "abgeschaltet",
+          "bewusster"
+        ]
+      },
+      {
+        "lessonId": "a1-03",
+        "level": "A1",
+        "pct": 26.1,
+        "unknown": [
+          "sami",
+          "ben",
+          "salem",
+          "mitarbeiterin",
+          "bensalem",
+          "freundlich",
+          "dazwischen",
+          "buchstabiert",
+          "punkt",
+          "nummer",
+          "vier",
+          "richtig"
+        ]
+      },
+      {
+        "lessonId": "a1-24",
+        "level": "A1",
+        "pct": 25.5,
+        "unknown": [
+          "amir",
+          "liest",
+          "klar",
+          "mitarbeiterin",
+          "gehoert",
+          "erfundene",
+          "uebungsadresse",
+          "echte",
+          "lernnotizen",
+          "ganz",
+          "unten",
+          "datum",
+          "prueft"
+        ]
+      },
+      {
+        "lessonId": "a2-03",
+        "level": "A2",
+        "pct": 25.4,
+        "unknown": [
+          "mariam",
+          "wichtige",
+          "vortrags",
+          "schule",
+          "gestanden",
+          "haende",
+          "begonnen",
+          "geschaut",
+          "geworden",
+          "kursteilnehmenden",
+          "zugehoert",
+          "gestellt",
+          "konnte",
+          "antworten",
+          "oefter",
+          "praesentieren"
+        ]
+      }
+    ]
+  },
+  "pronunciation": {
+    "medianCoveragePct": 33.3
+  },
+  "policyNotes": [
+    "Exact-match grading with explicit orthographic variants only is a tested policy (tests/unit/content-integrity.test.ts:77-78); the remedy is more acceptedAnswers in data plus ADR-078, not comparator folding.",
+    "Accepted-answer breadth is measured after normalization (accepted-answer-hygiene-v1). On 2026-09-23 the tree listed 150 variants that normalized onto a form already listed, which made this metric read 50.9% while the grader actually accepted exactly one string in 87.3% of productive exercises; the padding was removed and the same batch added `noOpVariants` as a hard gate at 0, so breadth can no longer be bought with a capital letter or a full stop.",
+    "Feedback length is measured twice: over the 1,250 multiple-choice items (thresholded) and over every scored item including fill-blank, word-ordering, error-correction and matching (reported, not thresholded yet, so raising the authoring bar cannot silently hide behind a narrower scope).",
+    "Objective traceability is lexical by design. Under the previous stricter rule (keys >4 chars, entry/dialogue excluded) 37 objectives were flagged; after widening the corpus and accepting any content word, the count is recomputed here. Four flagged cases were also inspected by hand and are taught and assessed: b2-22#4 (b2-22-e8 + theory t4), a1-20#0 (Weg/links/rechts/geradeaus in phrases and dialogue), a1-11#2 (möchte/bestellen), b1-09#3 (Pilotversuch/vorschlagen). A lexical flag is a prompt to look, not proof of a gap.",
+    "This audit measures item quality, not human pedagogical review; a green run here never licenses an official-course claim."
+  ],
+  "status": "fail",
+  "issues": [
+    "productive exercises with one accepted string: 87.3% (max 25%)",
+    "median explanation length 31 chars (min 60)"
+  ]
+}

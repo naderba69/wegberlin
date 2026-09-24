@@ -1,0 +1,7 @@
+
+> der-weg-nach-berlin@0.1.0 lesson:quality
+> tsx scripts/generate-lesson-quality-audit.ts --write
+
+Wrote reports/lesson-quality-audit.json.
+Lesson quality: 1250 scored items · answer mix 25.92/23.84/24.4/25.84 · longest-key cue 39.28% · writing-range violations 0 · single-string productive items 50.9% · explanation median 25 · objective review-prompts 26 · listening median 93 words (~32s).
+GATE_EXIT=0

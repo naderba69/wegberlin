@@ -1,0 +1,57 @@
+{
+ "b2-17-e7": [
+  "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin lässt sich kurzfristig vereinbaren, und die Gebühr entfällt damit.",
+  "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen, und einen Termin können wir kurzfristig nicht vereinbaren, weil die Prüfung Fragen aufwirft.",
+  "Bitte prüfen Sie die Anlagen bis zum 5.; ein Termin lässt sich vereinbaren, falls Fragen auftauchen, und die Gebühr ist zu entrichten."
+ ],
+ "b2-17-rq1": [
+  "Weil drei Sätze hintereinander dieselbe Pflichtstruktur trugen.",
+  "Weil die Rechtschreibung in zwei Zeilen fehlte.",
+  "Weil Ben die zuständige Behörde nicht nannte."
+ ],
+ "b2-17-rq2": [
+  "Eine Pflicht, deren Träger ausdrücklich genannt wird.",
+  "Ein Vorwurf, der sich an die Behörde richtet.",
+  "Einen Termin ohne jede Frist im Bescheid."
+ ],
+ "b2-17-rq3": [
+  "An der Anzahl der Passivsätze im zweiten Absatz und in der Anrede des Bescheids.",
+  "An der Seltenheit der verwendeten Formen und ihrer Länge.",
+  "An der Länge des Schlusssatzes, nicht der ganzen Begründung."
+ ],
+ "b2-17-lq1": [
+  "Die Gebühr wird neu berechnet und ohne jede Frist im Bescheid erhoben.",
+  "Der Termin wird auf den 5. Mai verlegt und schriftlich bestätigt.",
+  "Die Rechtschreibung aller Amtsbezeichnungen wird vor dem Versand noch kontrolliert."
+ ],
+ "b2-17-lq2": [
+  "Weil er als Frage formuliert ist und damit eine Antwort offen bleibt.",
+  "Weil die Frist genannt wird und sonst keine Angabe folgt.",
+  "Weil er höflicher klingt als jede Bitte im Bescheid."
+ ],
+ "b2-17-lq3": [
+  "Wer die Frist nennt, nennt dafür weder Gebühr noch Träger und bleibt unklar.",
+  "Wer die Bewertung wählt, nennt immer einen Träger und keine Frist.",
+  "Wer höflich schreibt, verliert die Note und gewinnt den Termin."
+ ],
+ "b2-17-m1": [
+  "Die Belege lassen sich später beifügen.",
+  "Die Belege sind umgehend und vollständig beizufügen.",
+  "Wir fügen die Belege selbst bei."
+ ],
+ "b2-17-m3": [
+  "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
+  "Das konnte bisher nicht belegt werden.",
+  "Das muss für unsere Zwecke unbelegt bleiben."
+ ],
+ "b2-17-m4": [
+  "Das erste ist höflicher, das zweite ist sachlich.",
+  "Es gibt zwischen beiden Sätzen überhaupt keinen Unterschied.",
+  "Das zweite ist ein Werturteil, das erste eine schlichte Feststellung."
+ ],
+ "b2-17-m5": [
+  "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin ließe sich kurzfristig vereinbaren, und eine mündliche Auskunft wäre danach möglich.",
+  "Man könnte die Anlagen vielleicht prüfen, sofern ein Termin vereinbart wird; eine Auskunft wäre dann mündlich und nicht mehr nachvollziehbar.",
+  "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin ließe sich kurzfristig vereinbaren, und eine schriftliche Auskunft wäre in jedem Fall zumutbar."
+ ]
+}

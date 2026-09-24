@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 practical:context:audit:write
+> tsx scripts/generate-practical-context-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL practical:context:audit:write

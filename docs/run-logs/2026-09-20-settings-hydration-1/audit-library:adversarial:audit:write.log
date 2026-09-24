@@ -1,0 +1,9 @@
+npm error Missing script: "library:adversarial:audit:write"
+npm error
+npm error Did you mean this?
+npm error   npm run library:adversarial:audit # run the "library:adversarial:audit" package script
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: /home/user/.npm/_logs/2026-09-20T09_20_33_644Z-debug-0.log
+FAIL library:adversarial:audit:write

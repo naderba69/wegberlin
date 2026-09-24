@@ -1,0 +1,7 @@
+Lesson quality: 1250 scored items · answer mix 25.92/23.84/24.4/25.84 · longest-key cue 55.2% · writing-range violations 81 · single-string productive items 51.94% · explanation median 23 · untraceable objectives 37 · listening median 93 words (~32s).
+Lesson quality gate failed:
+- writing model answers outside their own stated range: 81 (allowed 0)
+- longest option is the key in 55.2% of items (max 40%)
+- productive exercises with one accepted string: 51.9% (max 25%)
+- median explanation length 23 chars (min 60)
+- objectives with no traceable practice: 37 (max 0)

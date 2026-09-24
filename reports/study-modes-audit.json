@@ -1,0 +1,1333 @@
+{
+  "format": "dwnb-study-modes-audit",
+  "version": "study-modes-audit-v1",
+  "generatedAt": "2026-09-08",
+  "ok": true,
+  "policyVersions": {
+    "readingModes": "easy-vs-exam-reading-v1",
+    "unknownWords": "unknown-word-and-compound-strategy-v1",
+    "listeningUsage": "unified-listening-usage-evidence-v1",
+    "prosody": "prosody-rhythm-progression-v1",
+    "pauseAnalysis": "local-rms-pause-estimate-v1",
+    "conditionAttribution": "learner-attributed-language-vs-device-v1",
+    "redemittel": "central-redemittel-function-register-v1"
+  },
+  "counts": {
+    "readingItems": 80,
+    "unknownWordChallenges": 63,
+    "prosodyItems": 16,
+    "prosodyLevels": 4,
+    "redemittelEntries": 32,
+    "redemittelFunctions": 8,
+    "redemittelRegisters": 4
+  },
+  "unknownWordByLevel": {
+    "A1": {
+      "total": 16,
+      "covered": 8
+    },
+    "A2": {
+      "total": 24,
+      "covered": 20
+    },
+    "B1": {
+      "total": 24,
+      "covered": 20
+    },
+    "B2": {
+      "total": 16,
+      "covered": 15
+    }
+  },
+  "boundaries": {
+    "reading": "mode-scoped-answers-no-exam-help-carryover",
+    "unknownWords": "hypothesis-before-authored-meaning-no-generated-semantics",
+    "listening": "process-evidence-no-comprehension-pronunciation-or-mastery-score",
+    "prosody": "synthetic-model-and-self-practice-no-acoustic-fluency-or-pronunciation-score"
+  },
+  "issues": [],
+  "prosodyRows": [
+    {
+      "id": "a1-word",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A1",
+      "sequence": 1,
+      "focus": "word-stress",
+      "titleDe": "Wortakzent hören",
+      "titleAr": "نبر الكلمة",
+      "exampleDe": "Guten Morgen.",
+      "markedDe": "GU-ten MOR-gen.",
+      "instructionAr": "صفّق مرة على المقطع المكتوب كبيرًا ثم قل العبارة كاملة.",
+      "limitAr": "هذا نموذج سمعي اصطناعي؛ لا يقيس التطبيق نبرك."
+    },
+    {
+      "id": "a1-focus",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A1",
+      "sequence": 2,
+      "focus": "sentence-focus",
+      "titleDe": "Ein wichtiges Wort",
+      "titleAr": "كلمة مهمة واحدة",
+      "exampleDe": "Ich komme aus Tunesien.",
+      "markedDe": "Ich komme aus TU-ne-si-en.",
+      "instructionAr": "ابرز المعلومة الجديدة فقط ولا ترفع كل الكلمات.",
+      "limitAr": "موضع التركيز يتغير مع السؤال والمقصد."
+    },
+    {
+      "id": "a1-rhythm",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A1",
+      "sequence": 3,
+      "focus": "rhythm",
+      "titleDe": "Kurze Sprechgruppen",
+      "titleAr": "مجموعات قصيرة",
+      "exampleDe": "Am Montag um neun Uhr.",
+      "markedDe": "Am MON-tag | um NEUN Uhr.",
+      "instructionAr": "اقرأ بين العلامتين كمجموعتين لا كلمات منفصلة.",
+      "limitAr": "العلامة التعليمية ليست ترقيمًا ألمانيًا مكتوبًا."
+    },
+    {
+      "id": "a1-repair",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A1",
+      "sequence": 4,
+      "focus": "hesitation-repair",
+      "titleDe": "Langsam weiterreden",
+      "titleAr": "واصل بعد توقف",
+      "exampleDe": "Ich wohne … in Berlin.",
+      "markedDe": "Ich wohne … in BER-lin.",
+      "instructionAr": "توقف قصيرًا ثم أكمل الكلمة التي تعرفها بدل إنهاء المحاولة.",
+      "limitAr": "التوقف الطبيعي ليس خطأ طلاقة ولا يمنح درجة."
+    },
+    {
+      "id": "a2-word",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A2",
+      "sequence": 1,
+      "focus": "word-stress",
+      "titleDe": "Komposita gliedern",
+      "titleAr": "نبر المركب",
+      "exampleDe": "Die Reiseplanung beginnt heute.",
+      "markedDe": "Die REI-se-pla-nung beginnt HEU-te.",
+      "instructionAr": "قسّم المركب إلى أجزاء ثم اجعل النبر الرئيس في الجزء الأول غالبًا.",
+      "limitAr": "ليست قاعدة مطلقة لكل مركب أو كلمة دخيلة."
+    },
+    {
+      "id": "a2-focus",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A2",
+      "sequence": 2,
+      "focus": "sentence-focus",
+      "titleDe": "Neue Information markieren",
+      "titleAr": "تمييز المعلومة الجديدة",
+      "exampleDe": "Wir fahren morgen mit dem Zug.",
+      "markedDe": "Wir fahren MOR-gen mit dem ZUG.",
+      "instructionAr": "غيّر التركيز حسب هل السؤال عن الوقت أم الوسيلة.",
+      "limitAr": "لا يوجد موضع وحيد صحيح خارج السياق."
+    },
+    {
+      "id": "a2-rhythm",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A2",
+      "sequence": 3,
+      "focus": "rhythm",
+      "titleDe": "Nebensatz als Gruppe",
+      "titleAr": "الجملة الفرعية كمجموعة",
+      "exampleDe": "Ich bleibe zu Hause, weil ich krank bin.",
+      "markedDe": "Ich bleibe zu HAU-se | weil ich KRANK bin.",
+      "instructionAr": "لا تقطع weil عن الجملة التابعة؛ خذ نفسًا قبلها إن احتجت.",
+      "limitAr": "السرعة الأبطأ تدريب وليست نطق امتحان."
+    },
+    {
+      "id": "a2-repair",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "A2",
+      "sequence": 4,
+      "focus": "hesitation-repair",
+      "titleDe": "Mit einem Füller planen",
+      "titleAr": "كسب وقت طبيعي",
+      "exampleDe": "Also, ich denke, dass …",
+      "markedDe": "AL-so | ich DEN-ke, dass …",
+      "instructionAr": "استعمل also أو ich denke مرة واحدة لكسب وقت ثم أكمل الفكرة.",
+      "limitAr": "الإكثار من الحشو قد يضعف الوضوح؛ لا نحسبه آليًا."
+    },
+    {
+      "id": "b1-word",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B1",
+      "sequence": 1,
+      "focus": "word-stress",
+      "titleDe": "Lange Wörter strukturieren",
+      "titleAr": "تنظيم الكلمات الطويلة",
+      "exampleDe": "Die Stadtentwicklung verändert den Verkehr.",
+      "markedDe": "Die STADT-ent-wick-lung verändert den Ver-KEHR.",
+      "instructionAr": "حدد الجذر أو أجزاء المركب قبل القراءة بصوت واحد.",
+      "limitAr": "الكتابة الكبيرة توجيه بصري لا IPA."
+    },
+    {
+      "id": "b1-focus",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B1",
+      "sequence": 2,
+      "focus": "sentence-focus",
+      "titleDe": "Kontrast hörbar machen",
+      "titleAr": "إظهار المقابلة",
+      "exampleDe": "Einerseits ist es günstig, andererseits dauert es länger.",
+      "markedDe": "EI-ner-seits GÜNS-tig | AN-der-er-seits LÄN-ger.",
+      "instructionAr": "ابرز طرفي المقابلة وخفف الكلمات الوظيفية بينهما.",
+      "limitAr": "النبر لا يعوض رابطًا منطقيًا ناقصًا."
+    },
+    {
+      "id": "b1-rhythm",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B1",
+      "sequence": 3,
+      "focus": "rhythm",
+      "titleDe": "Gedankenbogen",
+      "titleAr": "قوس الفكرة",
+      "exampleDe": "Zuerst nenne ich das Problem, dann schlage ich eine Lösung vor.",
+      "markedDe": "Zu-ERST das Pro-BLEM | DANN eine LÖ-sung.",
+      "instructionAr": "قسّم العرض عند الانتقال من المشكلة إلى الحل.",
+      "limitAr": "العلامات لا تفرض توقفًا بالمدة نفسها لكل متحدث."
+    },
+    {
+      "id": "b1-repair",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B1",
+      "sequence": 4,
+      "focus": "hesitation-repair",
+      "titleDe": "Präzisieren statt abbrechen",
+      "titleAr": "صحح بدل التوقف",
+      "exampleDe": "Genauer gesagt, die Frist endet am Freitag.",
+      "markedDe": "Ge-NAU-er ge-SAGT | die FRIST endet am FREI-tag.",
+      "instructionAr": "استعمل genauer gesagt لتصحيح معلومة ثم أكمل.",
+      "limitAr": "هذا تدريب إصلاح ذاتي لا تقييم طلاقة."
+    },
+    {
+      "id": "b2-word",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B2",
+      "sequence": 1,
+      "focus": "word-stress",
+      "titleDe": "Fachwörter kontrolliert sprechen",
+      "titleAr": "نبر المصطلح",
+      "exampleDe": "Die Repräsentativität bleibt begrenzt.",
+      "markedDe": "Die Re-prä-sen-ta-ti-vi-TÄT bleibt be-GRENZT.",
+      "instructionAr": "جزّئ المصطلح ثم أعده داخل الجملة لا منفردًا فقط.",
+      "limitAr": "Browser TTS قد ينطق بعض المصطلحات بطريقة مختلفة."
+    },
+    {
+      "id": "b2-focus",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B2",
+      "sequence": 2,
+      "focus": "sentence-focus",
+      "titleDe": "Reichweite begrenzen",
+      "titleAr": "إبراز القيد",
+      "exampleDe": "Die Daten zeigen einen Zusammenhang, aber keine Ursache.",
+      "markedDe": "einen ZU-sam-men-hang | aber KEI-ne UR-sa-che.",
+      "instructionAr": "اجعل القيد مسموعًا حتى لا يبدو الاستنتاج أقوى من الدليل.",
+      "limitAr": "التطبيق لا يتحقق من صحة الادعاء العلمي."
+    },
+    {
+      "id": "b2-rhythm",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B2",
+      "sequence": 3,
+      "focus": "rhythm",
+      "titleDe": "Komplexe Sätze bündeln",
+      "titleAr": "تجميع الجملة المعقدة",
+      "exampleDe": "Obwohl die Stichprobe klein ist, liefert sie einen wichtigen Hinweis.",
+      "markedDe": "Ob-WOHL die Stichprobe KLEIN ist | liefert sie einen WICH-ti-gen Hinweis.",
+      "instructionAr": "اقرأ التنازل مجموعة ثم النتيجة مجموعة ثانية.",
+      "limitAr": "لا يعني طول المجموعة أن الكلام الأسرع أفضل."
+    },
+    {
+      "id": "b2-repair",
+      "policyVersion": "prosody-rhythm-progression-v1",
+      "level": "B2",
+      "sequence": 4,
+      "focus": "hesitation-repair",
+      "titleDe": "Argument neu rahmen",
+      "titleAr": "إعادة صياغة الحجة",
+      "exampleDe": "Anders formuliert: Der Effekt ist möglich, aber nicht bewiesen.",
+      "markedDe": "AN-ders for-mu-LIERT | MÖG-lich | nicht be-WIE-sen.",
+      "instructionAr": "استعمل anders formuliert عندما تحتاج إلى إعادة بناء الحجة بدقة.",
+      "limitAr": "لا توجد درجة آلية للتوقف أو الإيقاع أو الحجة."
+    }
+  ],
+  "challengeRows": [
+    {
+      "itemId": "lib-r-a1-02",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-01",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-02",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "reisen",
+        "meaningAr": "يسافر",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-03",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-01",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-02",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-03",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-01",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "verantwortlich",
+        "meaningAr": "مسؤول",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-02",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Verantwortung",
+        "meaningAr": "المسؤولية",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-04",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-04",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "prüfen",
+        "meaningAr": "يفحص",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-05",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Regel",
+        "meaningAr": "القاعدة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-06",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-04",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-05",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "regeln",
+        "meaningAr": "ينظم / يسوي",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-06",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-03",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "teilnehmen",
+        "meaningAr": "يشارك",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-04",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-07",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "helfen",
+        "meaningAr": "يساعد",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-08",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-09",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-07",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-08",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Fahrt",
+        "meaningAr": "الرحلة بالمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-09",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "prüfen",
+        "meaningAr": "يفحص",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-05",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "teilnehmen",
+        "meaningAr": "يشارك",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-07",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-10",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "regeln",
+        "meaningAr": "ينظم / يسوي",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-11",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-10",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Nutzung",
+        "meaningAr": "الاستخدام",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-11",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "verantwortlich",
+        "meaningAr": "مسؤول",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-12",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-07",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Entscheidung",
+        "meaningAr": "القرار",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-08",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-10",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-13",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-14",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Sprache",
+        "meaningAr": "اللغة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-15",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-13",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Wohnung",
+        "meaningAr": "الشقة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-14",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Hilfe",
+        "meaningAr": "المساعدة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-09",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Information",
+        "meaningAr": "المعلومة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-10",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Kritik",
+        "meaningAr": "النقد",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-12",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "fahren",
+        "meaningAr": "يتنقل بمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-17",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Reise",
+        "meaningAr": "الرحلة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-18",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Fahrt",
+        "meaningAr": "الرحلة بالمركبة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-16",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Nutzung",
+        "meaningAr": "الاستخدام",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-18",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Information",
+        "meaningAr": "المعلومة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-11",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Prüfung",
+        "meaningAr": "الامتحان / الفحص",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-12",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Reise",
+        "meaningAr": "الرحلة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-13",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "reisen",
+        "meaningAr": "يسافر",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-14",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "teilnehmen",
+        "meaningAr": "يشارك",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-19",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "kaufen",
+        "meaningAr": "يشتري",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-20",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "teilnehmen",
+        "meaningAr": "يشارك",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-21",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Wohnung",
+        "meaningAr": "الشقة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-19",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-20",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Entscheidung",
+        "meaningAr": "القرار",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-13",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Entscheidung",
+        "meaningAr": "القرار",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-14",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Arbeit",
+        "meaningAr": "العمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a1-15",
+      "level": "A1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Fahrrad",
+        "meaningAr": "الدراجة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-a2-24",
+      "level": "A2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-23",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Sprache",
+        "meaningAr": "اللغة",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b1-24",
+      "level": "B1",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "arbeiten",
+        "meaningAr": "يعمل",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-15",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "sprechen",
+        "meaningAr": "يتحدث",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    },
+    {
+      "itemId": "lib-r-b2-16",
+      "level": "B2",
+      "challenge": {
+        "policyVersion": "unknown-word-and-compound-strategy-v1",
+        "surfaceDe": "Entscheidung",
+        "meaningAr": "القرار",
+        "compoundParts": [],
+        "stepsDe": [
+          "Wortart vermuten",
+          "Kontext prüfen",
+          "Nicht künstlich teilen",
+          "Bedeutung erst dann öffnen"
+        ],
+        "boundary": "hypothesis-before-authored-gloss-no-inferred-meaning-or-mastery"
+      }
+    }
+  ],
+  "contentSha256": "1645b5caa1b0b561554bfa7f9ba626a514f4b8b635fde622c769ed6b70e1a413"
+}

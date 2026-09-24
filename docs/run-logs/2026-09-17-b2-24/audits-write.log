@@ -1,0 +1,32 @@
+### content:audit:write
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v20.20.2
+### similarity:audit:write
+Content similarity/review governance: 3277 objects / 5367726 pairs / 0 issues / external corpora 0
+- separate review states: German/Arabic/CEFR/copyright × 3277; independent review remains explicit
+- content SHA-256: efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0
+### case:audit:write
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v20.20.2
+### language:audit:write
+Language/Bidi governance verified: 179 TSX / 6990 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 460f84c7034789956041afe11dd2043906076848c4f313a14b15302f8050539a
+### tunisian:audit:write
+Tunisian support governance verified: 17 notes / 17 lessons / 17 theory refs / 17 pending independent review / 0 structural gaps
+- content SHA-256: 769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d
+### lexical:strategy:audit:write
+Wrote lexical strategy audit 439956b453f0.
+### learning:architecture:audit:write
+Wrote learning architecture audit 4d25c5fe7435.
+### study:modes:audit:write
+Wrote study modes audit 1645b5caa1b0.
+### practical:context:audit:write
+Wrote practical context audit c935b0f4ef8b
+### security:audit:write
+Security headers audit PASS: 15 CSP directives, 7 headers, no global wildcard, SHA-256 eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf.
+### governance:audit:write
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v20.20.2

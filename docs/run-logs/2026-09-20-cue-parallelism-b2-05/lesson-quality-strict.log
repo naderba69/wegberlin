@@ -1,0 +1,10 @@
+
+> der-weg-nach-berlin@0.1.0 lesson:quality:audit
+> tsx scripts/generate-lesson-quality-audit.ts --strict
+
+Lesson quality: 1250 scored items · answer mix 25.92/23.84/24.4/25.84 · longest-key cue 41.92% · writing-range violations 0 · single-string productive items 50.9% · explanation median 24 · objective review-prompts 26 · listening median 93 words (~32s).
+Lesson quality gate failed:
+- longest option is the key in 41.9% of items (max 40%)
+- productive exercises with one accepted string: 50.9% (max 25%)
+- median explanation length 24 chars (min 60)
+LESSON_QUALITY_EXIT=1

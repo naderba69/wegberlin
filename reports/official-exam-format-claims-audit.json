@@ -1,0 +1,15 @@
+{
+  "format": "dwnb-official-exam-format-claims-audit",
+  "version": "exam-format-claim-guard-v1",
+  "ok": true,
+  "auditedAt": "committed-state",
+  "surfaceCount": 8,
+  "boundarySurfaceCount": 4,
+  "violationCount": 0,
+  "missingSurfaceCount": 0,
+  "sourceFingerprint": "d729860a7334",
+  "claimsAboutOfficialFormat": false,
+  "claimsFormatUnchanged": false,
+  "issues": [],
+  "ruleAr": "الحارس يمنع الادعاءات الإيجابية على أسطح الامتحان، ويقيس عدد الأسطح التي تحمل عبارة حدّ صريحة ويسجّلها في الأثر: حذفُ عبارة حدّ من سطح موجود يغيّر العدد فيفشل التدقيق. لا يُثبِت أي رقم هنا شيئًا عن صيغة امتحان رسمي ولا عن بقائها بلا تغيير."
+}

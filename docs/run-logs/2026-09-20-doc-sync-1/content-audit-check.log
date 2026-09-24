@@ -1,0 +1,6 @@
+Academic content governance verified:
+- Zod: 4345 root objects / 16 schema families / 0 failures
+- answers: 2805 closed items + 384 productive tasks / 3 explicit exemptions / 0 leaks
+- objectives: 389/389 teaching→practice→assessment maps / 0 structural gaps
+- lexical target gaps: 89 noun + 4 verb-frame candidates pending human review
+- content SHA-256: 4c4fc71b383f8a8d80146b7cf3da0566573cb6d5c152d9bc1c64db781cc4177f

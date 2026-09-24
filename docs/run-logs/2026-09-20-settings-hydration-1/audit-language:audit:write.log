@@ -1,0 +1,11 @@
+
+> der-weg-nach-berlin@0.1.0 language:audit:write
+> node scripts/generate-language-boundary-audit.mjs --write
+
+Language/Bidi governance verified: 179 TSX / 6991 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 08cc45eb50e9c9e1f69e7d99f0a88d7ec83c62a948a62a620fdf67ef43a1d45c
+npm notice
+npm notice New major version of npm available! 10.8.2 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice

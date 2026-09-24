@@ -1,0 +1,38 @@
+items 1250 · cue 577 (46.2%)
+  src ex: items 194 cue 87 (44.8%)
+  src rd: items 288 cue 178 (61.8%)
+  src ls: items 288 cue 145 (50.3%)
+  src mt: items 480 cue 167 (34.8%)
+  lvl A1: items 312 cue 82 (26.3%)
+  lvl A2: items 312 cue 147 (47.1%)
+  lvl B1: items 312 cue 184 (59.0%)
+  lvl B2: items 314 cue 164 (52.2%)
+  gap distribution (chars over longest distractor): [[1,40],[2,31],[3,27],[4,33],[5,24],[6,23],[7,22],[8,22],[9,18],[10,15],[11,16],[12,17],[13,16],[14,14],[15,13],[16,246]]
+top 26 lessons by cue count:
+  b1-07 B1 cue 11/13 (85%) medianGap 14
+  b1-12 B1 cue 11/13 (85%) medianGap 6
+  b1-16 B1 cue 11/13 (85%) medianGap 20
+  b1-22 B1 cue 11/13 (85%) medianGap 18
+  b2-05 B2 cue 11/13 (85%) medianGap 16
+  b2-13 B2 cue 11/13 (85%) medianGap 22
+  b2-17 B2 cue 11/13 (85%) medianGap 17
+  b2-19 B2 cue 11/13 (85%) medianGap 21
+  a2-06 A2 cue 10/13 (77%) medianGap 10
+  a2-12 A2 cue 10/13 (77%) medianGap 17
+  b1-02 B1 cue 10/13 (77%) medianGap 10
+  b1-09 B1 cue 10/13 (77%) medianGap 16
+  b1-13 B1 cue 10/13 (77%) medianGap 21
+  b2-06 B2 cue 10/13 (77%) medianGap 29
+  b2-09 B2 cue 10/13 (77%) medianGap 48
+  b2-10 B2 cue 10/13 (77%) medianGap 33
+  b2-14 B2 cue 10/13 (77%) medianGap 23
+  b2-16 B2 cue 10/13 (77%) medianGap 17
+  b2-20 B2 cue 10/14 (71%) medianGap 25
+  b2-21 B2 cue 10/13 (77%) medianGap 7
+  b1-06 B1 cue 9/13 (69%) medianGap 17
+  b1-10 B1 cue 9/13 (69%) medianGap 18
+  b1-11 B1 cue 9/13 (69%) medianGap 14
+  b1-14 B1 cue 9/13 (69%) medianGap 22
+  b1-24 B1 cue 9/13 (69%) medianGap 27
+  b2-03 B2 cue 9/13 (69%) medianGap 29
+to reach <=40%: convert 7 lessons (removes up to 77 cue items, need 77)

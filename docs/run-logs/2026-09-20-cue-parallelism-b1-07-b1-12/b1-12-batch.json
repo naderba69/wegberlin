@@ -1,0 +1,70 @@
+{
+ "b1-12": {
+  "b1-12-e1": [
+   "Die Abfallmenge im Viertel reduzieren",
+   "Bewohner des Viertels",
+   "Getauschte Dinge zählen",
+   "Tauschmarkt organisieren"
+  ],
+  "b1-12-e6": [
+   "Wir hoffen, dass es nicht regnet, und planen nichts anderes",
+   "Falls es regnet, nutzen wir den reservierten Innenraum.",
+   "Eine Alternative brauchen wir nicht, wir entscheiden danach",
+   "Wir planen den Ausweichtermin erst danach vollständig"
+  ],
+  "b1-12-rq1": [
+   "Nein, es waren nur 85 Dinge am Ende",
+   "Nein, es kam niemand",
+   "Das lässt sich ohne die Daten nicht sagen",
+   "Ja, 265 Dinge wurden getauscht."
+  ],
+  "b1-12-rq2": [
+   "Es waren deutlich zu wenige Freiwillige im Team",
+   "Es kamen gar keine Besucher",
+   "Kein Plan für 85 übrig gebliebene Dinge",
+   "Die Kategorien fehlten im Ablaufplan"
+  ],
+  "b1-12-rq3": [
+   "Sie sammelt so viele Geräte wie möglich, ohne Grenze",
+   "Sie löscht alle Ergebnisse der Liste",
+   "Sie beendet den Datenschutz vorzeitig",
+   "Sie begrenzt die Menge und plant den Abtransport."
+  ],
+  "b1-12-lq2": [
+   "Alle Termine bleiben unverändert bestehen",
+   "Die Sicherheitsregeln entfallen komplett",
+   "Die Zahl der Termine wird reduziert.",
+   "Es werden mehr Geräte angenommen"
+  ],
+  "b1-12-lq3": [
+   "Kleine Geräte aus dem Haushalt",
+   "Alle Geräte aus dem Viertel",
+   "Günstige Geräte",
+   "Gefährlich defekte Geräte"
+  ],
+  "b1-12-m1": [
+   "Tauschmarkt organisieren",
+   "Den Abfall im Viertel reduzieren",
+   "Bewohner",
+   "Die Termine verschieben"
+  ],
+  "b1-12-m2": [
+   "Gute Idee",
+   "Schöne Zukunft für alle",
+   "Zahl getauschter Dinge",
+   "Motivation der Freiwilligen"
+  ],
+  "b1-12-m3": [
+   "Falls es wird regnen, nutzen wir innen Platz",
+   "Falls es regnet, nutzen wir den Innenraum.",
+   "Falls regnet es, den Innenraum wir nutzen",
+   "Wir nutzen den Innenraum"
+  ],
+  "b1-12-m4": [
+   "Wir hoffen einfach, dass genug Leute kommen",
+   "Einen Plan B brauchen wir für solche Fälle wirklich nicht",
+   "Falls zu wenige kommen, verkürzen wir das Programm.",
+   "Danach entscheiden wir, was wir machen können"
+  ]
+ }
+}

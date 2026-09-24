@@ -1,0 +1,54 @@
+{
+  "format": "dwnb-security-headers-audit",
+  "version": "security-headers-audit-v1",
+  "policyVersion": "vercel-csp-headers-v1",
+  "ok": true,
+  "policySha256": "eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf",
+  "directiveCount": 15,
+  "headerCount": 7,
+  "externalConnectOrigins": [
+    "https://generativelanguage.googleapis.com",
+    "https://openrouter.ai",
+    "https://huggingface.co",
+    "https://cdn-lfs.huggingface.co",
+    "https://cdn-lfs-us-1.huggingface.co",
+    "https://cas-bridge.xethub.hf.co"
+  ],
+  "localOllamaOrigins": [
+    "http://localhost:*",
+    "https://localhost:*",
+    "http://127.0.0.1:*",
+    "https://127.0.0.1:*",
+    "http://[::1]:*",
+    "https://[::1]:*"
+  ],
+  "documentedExceptions": [
+    {
+      "token": "'unsafe-inline'",
+      "directives": [
+        "script-src",
+        "style-src"
+      ],
+      "reason": "Next.js hydration emits inline boot scripts and this UI uses bounded inline style values; remove only after nonce/hash plumbing is proven in production."
+    },
+    {
+      "token": "'wasm-unsafe-eval'",
+      "directives": [
+        "script-src"
+      ],
+      "reason": "The explicit opt-in ONNX/WebGPU runtime compiles its pinned local WASM support module; generic unsafe-eval is not allowed."
+    },
+    {
+      "token": "blob:",
+      "directives": [
+        "img-src",
+        "media-src",
+        "worker-src"
+      ],
+      "reason": "Local recordings, generated report previews, and the isolated model Worker use revocable Blob URLs without remote upload."
+    }
+  ],
+  "globalWildcardTokens": 0,
+  "genericUnsafeEval": false,
+  "issues": []
+}

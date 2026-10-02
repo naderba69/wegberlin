@@ -1,4 +1,7 @@
 import type { DelayedTransferTaskRecord, LearningState } from "@/types/learning";
+import type { CEFRLevel } from "@/types/learning";
+import { academicLessons } from "@/data/academic-lessons";
+import { independentProductionTask } from "@/data/independent-production-tasks";
 
 /**
  * مهامّ النقل المؤجّل (ADR-086).
@@ -22,6 +25,23 @@ export type DelayedTransferCandidate = {
   promptAr: string;
 };
 
+/**
+ * A learner never sees a raw identifier: the task is named by the lesson or production task it came
+ * from, and its level follows that source, not the profile level that may have moved on since.
+ */
+function sourceLevelAndLabel(taskId: string, state: LearningState): { level: CEFRLevel; labelAr: string } {
+  const independent = independentProductionTask(taskId.replace(/-(writing|speaking|mediation)$/u, ""));
+  const lesson = academicLessons[independent?.sourceLessonId ?? taskId];
+  const level = (independent?.level ?? lesson?.level ?? state.profile?.currentLevel ?? "A1") as CEFRLevel;
+  const labelAr = independent?.titleAr ?? lesson?.titleAr ?? null;
+  return { level, labelAr: labelAr ?? "" };
+}
+
+function sourceTitle(taskId: string, state: LearningState) {
+  const { labelAr } = sourceLevelAndLabel(taskId, state);
+  return labelAr ? `«${labelAr}»` : "نصّك السابق";
+}
+
 function writingCandidates(state: LearningState): DelayedTransferCandidate[] {
   return state.writingSubmissions
     .filter((submission) => submission.status !== "draft" && submission.wordCount > 0)
@@ -29,8 +49,8 @@ function writingCandidates(state: LearningState): DelayedTransferCandidate[] {
       sourceKind: "writing-submission" as const,
       sourceId: submission.id,
       sourceCreatedAt: submission.createdAt,
-      level: state.profile?.currentLevel ?? "A1",
-      promptAr: `أعد إنتاج أفكار «${submission.taskId}» في نصٍّ جديد بجمل مختلفة عن نصّك الأول.`,
+      level: sourceLevelAndLabel(submission.taskId, state).level,
+      promptAr: `أعد إنتاج أفكار ${sourceTitle(submission.taskId, state)} في نصٍّ جديد بجمل مختلفة عن نصّك الأول.`,
     }));
 }
 
@@ -39,8 +59,8 @@ function mediationCandidates(state: LearningState): DelayedTransferCandidate[] {
     sourceKind: "mediation-submission" as const,
     sourceId: submission.id,
     sourceCreatedAt: submission.createdAt,
-    level: state.profile?.currentLevel ?? "A1",
-    promptAr: "أعد صياغة رسالة وساطة جديدة لنفس الموقف بمعلومات مختلفة عن نصّك السابق.",
+    level: sourceLevelAndLabel(submission.taskId, state).level,
+    promptAr: `أعد صياغة رسالة وساطة جديدة لموقف ${sourceTitle(submission.taskId, state)} بمعلومات مختلفة عن نصّك السابق.`,
   }));
 }
 
@@ -51,8 +71,9 @@ function speakingCandidates(state: LearningState): DelayedTransferCandidate[] {
       sourceKind: "speaking-attempt" as const,
       sourceId: attempt.id,
       sourceCreatedAt: attempt.createdAt,
-      level: state.profile?.currentLevel ?? "A1",
-      promptAr: "أعد التحدّث عن الموقف نفسه بمفردات جديدة وبترتيب مختلف عن محاولتك الأولى.",
+      level: sourceLevelAndLabel(attempt.taskId, state).level,
+      promptAr: `أعد التحدّث عن موقف ${sourceTitle(attempt.taskId, state)} بمفردات جديدة وبترتيب مختلف عن محاولتك الأولى.`,
+
     }));
 }
 

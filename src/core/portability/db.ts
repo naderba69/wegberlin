@@ -40,7 +40,7 @@ export const defaultState: LearningState = {
   lessonProgress: {},
   exerciseAttempts: [],
   dueReviews: 0,
-  mastery: { greeting: 0, "v2-order": 0, "personal-info": 0 },
+  mastery: {},
   masteryEvidenceEvents: [],
   errors: [],
   errorClinicAttempts: [],

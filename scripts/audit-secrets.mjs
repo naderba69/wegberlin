@@ -84,7 +84,7 @@ function scanGitHistory() {
 }
 
 const gitAvailable = hasGitHistory();
-if (gitAvailable && git(["ls-files", "--error-unmatch", "public/vendor/webgpu/transformers.web.min.js"], true).status === 0) throw new Error("Materialized Transformers plaintext must remain Git-ignored; commit only the checksum-pinned packed payload.");
+for (const path of ["public/vendor/webgpu/transformers.web.min.js", "public/vendor/webgpu/ort.webgpu.bundle.min.mjs"]) if (gitAvailable && git(["ls-files", "--error-unmatch", path], true).status === 0) throw new Error(`Materialized browser runtime plaintext must remain Git-ignored (${path}); commit only the checksum-pinned packed payloads.`);
 if (requireHistory && !gitAvailable) throw new Error("Secret history audit requires a real Git worktree with fetched history.");
 const allFindings = [];
 let workingSummary = { scannedFiles: 0, skippedBinary: 0 };

@@ -1,3 +1,6 @@
+import { dailyReviewQuota } from "@/core/review/daily-quota";
+import { levelAssessmentQuestions } from "@/data/level-assessment-bank";
+import { uniqueRecentSpeakingTasks, uniqueRecentWritingTasks } from "./independence";
 import { academicLessonList } from "@/data/academic-lessons";
 import type { LearningState } from "@/types/learning";
 import { buildContinuityStreak } from "@/core/coach/continuity";
@@ -71,6 +74,8 @@ for (const lesson of academicLessonList) {
   for (const question of lesson.miniTest) attemptSkill.set(question.id, { skill: "grammar", lessonId: lesson.id, novelty: "transfer" });
 }
 
+for(const level of ["A1","A2","B1","B2"] as const)for(const form of ["A","B"] as const)for(const question of levelAssessmentQuestions(level,form))attemptSkill.set(question.id,{skill:"grammar",lessonId:`assessment-${level.toLowerCase()}`,novelty:"transfer"});
+
 function confidence(evidenceCount: number, coverageCount: number): EvidenceConfidence {
   if (evidenceCount === 0) return "none";
   if (evidenceCount < 5 || coverageCount < 2) return "low";
@@ -102,8 +107,7 @@ function receptiveMetric(state: LearningState, key: "reading" | "listening" | "g
   const correctCount = attempts.filter((attempt) => attempt.correct).length;
   const coverageCount = new Set(attempts.map((attempt) => attempt.lessonId)).size;
   const accuracy = attempts.length ? correctCount / attempts.length : 0;
-  const coverageFactor = Math.min(1, coverageCount / 6);
-  const score = attempts.length ? Math.round(accuracy * 100 * (0.7 + coverageFactor * 0.3)) : null;
+  const score = attempts.length ? Math.round(accuracy * 100) : null;
   return {
     key,
     labelAr,
@@ -125,17 +129,16 @@ function receptiveMetric(state: LearningState, key: "reading" | "listening" | "g
   };
 }
 
-function writingMetric(state: LearningState): RawSkillEvidenceMetric {
+function writingMetric(state: LearningState, now: Date): RawSkillEvidenceMetric {
   const submitted = state.writingSubmissions.filter((item) => item.status !== "draft");
   const byTask = new Map<string, typeof submitted>();
   for (const item of submitted) byTask.set(item.taskId, [...(byTask.get(item.taskId) ?? []), item]);
   const coverageCount = byTask.size;
   const revisedCount = [...byTask.values()].filter((versions) => versions.length > 1 || versions.some((item) => item.status === "revised")).length;
-  const nonEmptyCount = [...byTask.values()].filter((versions) => (versions.at(-1)?.wordCount ?? 0) > 0).length;
-  const coverageFactor = Math.min(1, coverageCount / 6);
-  const revisionFactor = coverageCount ? revisedCount / coverageCount : 0;
-  const completeFactor = coverageCount ? nonEmptyCount / coverageCount : 0;
-  const score = coverageCount ? Math.round((coverageFactor * 0.55 + revisionFactor * 0.25 + completeFactor * 0.2) * 100) : null;
+
+
+  const score = null;
+  const independentTasks=(["A1","A2","B1","B2"] as const).reduce((sum,level)=>sum+uniqueRecentWritingTasks(state,level,now).size,0);
   return {
     key: "writing",
     labelAr: "الكتابة",
@@ -144,12 +147,12 @@ function writingMetric(state: LearningState): RawSkillEvidenceMetric {
     evidenceCount: submitted.length,
     coverageCount,
     latestAt: latestIso(submitted.map((item) => item.updatedAt)),
-    detailAr: coverageCount ? `${coverageCount} مهام · ${revisedCount} منقحة · ${submitted.length} نسخ` : "لا توجد كتابة مسلّمة بعد",
+    detailAr: coverageCount ? `${coverageCount} مهام · ${revisedCount} منقحة · ${submitted.length} نسخ · ${independentTasks} مهام مستقلة حديثة` : "لا توجد كتابة مسلّمة بعد",
     boundaryAr: "يقيس كمية الأدلة والمراجعة، لا جودة اللغة أو الحجة مثل مصحح بشري.",
   };
 }
 
-function speakingMetric(state: LearningState): RawSkillEvidenceMetric {
+function speakingMetric(state: LearningState, now: Date): RawSkillEvidenceMetric {
   const attempts = state.speakingAttempts.filter(speakingAttemptIsIndependent);
   const byTask = new Map<string, typeof attempts>();
   for (const item of attempts) byTask.set(item.taskId, [...(byTask.get(item.taskId) ?? []), item]);
@@ -157,10 +160,9 @@ function speakingMetric(state: LearningState): RawSkillEvidenceMetric {
   const repeatedTasks = [...byTask.values()].filter((items) => items.length > 1).length;
   const durationEvidence = attempts.filter((item) => item.durationSeconds >= 30).length;
   const averageSelfScore = attempts.length ? attempts.reduce((sum, item) => sum + item.selfScore, 0) / attempts.length : 0;
-  const coverageFactor = Math.min(1, coverageCount / 6);
-  const repetitionFactor = coverageCount ? repeatedTasks / coverageCount : 0;
-  const durationFactor = attempts.length ? durationEvidence / attempts.length : 0;
-  const score = attempts.length ? Math.round((coverageFactor * 0.5 + repetitionFactor * 0.2 + durationFactor * 0.2 + (averageSelfScore / 5) * 0.1) * 100) : null;
+
+  const score = null;
+  const independentTasks=(["A1","A2","B1","B2"] as const).reduce((sum,level)=>sum+uniqueRecentSpeakingTasks(state,level,now).size,0);
   return {
     key: "speaking",
     labelAr: "المحادثة",
@@ -169,7 +171,7 @@ function speakingMetric(state: LearningState): RawSkillEvidenceMetric {
     evidenceCount: attempts.length,
     coverageCount,
     latestAt: latestIso(attempts.map((item) => item.createdAt)),
-    detailAr: attempts.length ? `${attempts.length} محاولات مستقلة · ${coverageCount} مهام · متوسط ذاتي ${averageSelfScore.toFixed(1)}/5` : "لا توجد محاولة صوتية مستقلة محفوظة بعد",
+    detailAr: attempts.length ? `${attempts.length} محاولات بمصدر استقلال · ${coverageCount} مهام · ${independentTasks} مهام حديثة · ${repeatedTasks} مهام معادة · ${durationEvidence} تسجيلات 30 ثانية فأكثر · متوسط ذاتي ${averageSelfScore.toFixed(1)}/5 بلا درجة لغة` : "لا توجد محاولة صوتية مستقلة محفوظة بعد",
     boundaryAr: "المحاولة ذات العبارات الظاهرة تدريب موجّه ولا تدخل هنا؛ لا يقيس النطق أو الطلاقة صوتيًا.",
   };
 }
@@ -179,11 +181,12 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
     receptiveMetric(state, "reading", "القراءة"),
     receptiveMetric(state, "listening", "الاستماع"),
     receptiveMetric(state, "grammar", "القواعد والمفردات"),
-    writingMetric(state),
-    speakingMetric(state),
+    writingMetric(state,now),
+    speakingMetric(state,now),
   ].map((metric) => applyFreshness(metric, now));
   const scored = skills.filter((skill) => skill.score !== null);
-  const overallScore = scored.length >= 3 ? Math.round(scored.reduce((sum, skill) => sum + (skill.score ?? 0), 0) / scored.length) : null;
+  // Accuracy, activity volume, and self-review are different constructs. Never average them.
+  const overallScore = null;
   const dueReviews = buildDueReviewQueue(state, now).length;
   const eligibleCards = eligibleReviewCards(state);
   const reviewedCardIds = new Set(state.reviewItems.map((item) => item.cardId));
@@ -215,13 +218,14 @@ export function buildEvidenceReport(state: LearningState, now = new Date()) {
   if (state.completedLessonIds.length >= 3 && skills.find((skill) => skill.key === "speaking")?.evidenceCount === 0) risks.push({ id: "missing-speaking", severity: "attention", titleAr: "لا توجد عينة محادثة", reasonAr: "أنجزت ثلاثة دروس أو أكثر دون تسجيل؛ نحتاج دليلًا صوتيًا محليًا.", href: "/speaking" });
 
   let nextAction: EvidenceAction;
-  if (dueReviews >= 20) nextAction = { skill: "review", titleAr: "أوقف تراكم النسيان", reasonAr: `ابدأ بـ${dueReviews} بطاقة مستحقة قبل درس جديد.`, href: "/review" };
+  if (dueReviews >= 20 && !dailyReviewQuota(state,now).reached) nextAction = { skill: "review", titleAr: "أوقف تراكم النسيان", reasonAr: `ابدأ بـ${dueReviews} بطاقة مستحقة قبل درس جديد.`, href: "/review" };
   else if (dueErrorReviews.length) nextAction = { skill: "errors", titleAr: "اختبر العلاج بعد التأخير", reasonAr: `${dueErrorReviews.length} تصحيحات حان موعد استرجاعها دون كشف.`, href: "/errors" };
   else if (highConfidenceErrors.length) nextAction = { skill:"errors", titleAr:"ابدأ بالخطأ عالي الثقة", reasonAr:`كنت واثقًا في ${highConfidenceErrors[0].wrong} لكن النتيجة خالفت توقعك؛ اكتب التصحيح وفسر القاعدة قبل درس جديد.`, href:"/errors" };
   else if (errorClinics.length) nextAction = { skill: "errors", titleAr: errorClinics[0].titleAr, reasonAr: `ابدأ بالقاعدة المشتركة وتمرين نقل جديد بعد ${errorClinics[0].evidenceCount} أدلة متشابهة.`, href: "/errors" };
   else if (repeatedErrors.length) nextAction = { skill: "errors", titleAr: "عالج الخطأ المتكرر", reasonAr: `اكتب تصحيح ${repeatedErrors[0].wrong} من الذاكرة.`, href: "/errors" };
   else {
-    const weakest = skills.filter((skill) => skill.score !== null).sort((left, right) => (left.score ?? 0) - (right.score ?? 0))[0];
+    const missingProduction = state.completedLessonIds.length>=3 ? skills.find(skill=>(skill.key==="writing"||skill.key==="speaking")&&skill.evidenceCount===0) : undefined;
+    const weakest = missingProduction ?? skills.filter((skill) => skill.score !== null).sort((left, right) => (left.score ?? 0) - (right.score ?? 0))[0];
     if (!weakest) nextAction = { skill: "grammar", titleAr: "ابدأ بجمع أول دليل", reasonAr: "أكمل أول درس وتمارينه حتى تصبح لوحة المهارات شخصية.", href: "/today" };
     else {
       const href = weakest.key === "writing" ? "/writing" : weakest.key === "speaking" ? "/speaking" : weakest.key === "grammar" ? "/review" : "/library";

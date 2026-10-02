@@ -10,8 +10,8 @@ describe("P0 monthly official-source and zero-cost governance", () => {
   it("keeps a unique HTTPS registry whose records require human semantic review", () => {
     expect(sourceVerificationRegistry.schemaVersion).toBe(1);
     expect(sourceVerificationRegistry.policyVersion).toBe("source-freshness-v1");
-    expect(sourceVerificationRegistry.records).toHaveLength(18);
-    expect(new Set(sourceVerificationRegistry.records.map((record) => record.id)).size).toBe(18);
+    expect(sourceVerificationRegistry.records).toHaveLength(19);
+    expect(new Set(sourceVerificationRegistry.records.map((record) => record.id)).size).toBe(19);
     for (const record of sourceVerificationRegistry.records) {
       expect(record.url).toMatch(/^https:\/\//);
       expect(record.verificationMode).toBe("manual-semantic-review");
@@ -66,23 +66,23 @@ describe("P0 monthly official-source and zero-cost governance", () => {
     expect(getAICostDecision("openrouter", "openrouter/free", at("2026-10-04"))).toMatchObject({ allowed: false, freshness: "stale" });
   });
 
-  it("registers the optional browser WebGPU model as zero-cost with four fresh audited sources", () => {
+  it("registers the optional browser WebGPU model as zero-cost with five governed sources", () => {
     const service=costRegistry.find((item)=>item.id==="browser-webgpu");
     expect(service).toMatchObject({mandatory:false,costStatus:"browser-local-zero-cost",paymentCardRequired:false,owner:"learner"});
-    expect(service?.sourceIds).toHaveLength(4);
-    expect(summarizeSourceFreshness(service?.sourceIds ?? [],at("2026-09-07"))).toMatchObject({status:"fresh",dueAt:"2026-10-07"});
+    expect(service?.sourceIds).toHaveLength(5);
+    expect(summarizeSourceFreshness(service?.sourceIds ?? [],at("2026-10-02"))).toMatchObject({status:"due-soon",dueAt:"2026-10-07"});
   });
 
-  it("registers local Whisper matching as zero-cost with four fresh audited sources", () => {
+  it("registers local Whisper matching as zero-cost with five governed sources", () => {
     const service=costRegistry.find((item)=>item.id==="browser-pronunciation");
     expect(service).toMatchObject({mandatory:false,costStatus:"browser-local-zero-cost",paymentCardRequired:false,owner:"learner"});
-    expect(service?.sourceIds).toHaveLength(4);
-    expect(summarizeSourceFreshness(service?.sourceIds ?? [],at("2026-09-11"))).toMatchObject({status:"fresh",dueAt:"2026-10-07"});
+    expect(service?.sourceIds).toHaveLength(5);
+    expect(summarizeSourceFreshness(service?.sourceIds ?? [],at("2026-10-02"))).toMatchObject({status:"due-soon",dueAt:"2026-10-07"});
   });
 
   it("uses blocking stale actions for all zero-cost external sources", () => {
     const externalCostSources = sourceVerificationRegistry.records.filter((record) => record.category !== "exam-format");
-    expect(externalCostSources).toHaveLength(13);
+    expect(externalCostSources).toHaveLength(14);
     expect(externalCostSources.every((record) => record.staleAction === "block-remote-ai" || record.staleAction === "block-release")).toBe(true);
   });
 });

@@ -15,13 +15,14 @@ const requiredDirectives=["default-src","base-uri","object-src","frame-src","fra
 for(const directive of requiredDirectives)if(!directives[directive]?.length)issues.push(`Missing CSP directive ${directive}.`);
 for(const [directive,values] of Object.entries(directives)){
   const stringValues=values as string[];
+  if(stringValues.some(value=>value.includes("[::1]")))issues.push(`${directive} contains an IPv6 source literal not accepted by Chromium CSP; use localhost/127.0.0.1.`);
   if(stringValues.includes("*"))issues.push(`${directive} contains a global wildcard.`);
   if(stringValues.includes("https:")||stringValues.includes("http:"))issues.push(`${directive} permits an entire network scheme.`);
 }
 if((directives["script-src"] as readonly string[]|undefined)?.includes("'unsafe-eval'"))issues.push("Generic unsafe-eval is forbidden.");
 if(!directives["script-src"]?.includes("'wasm-unsafe-eval'"))issues.push("Pinned browser model WASM compilation is not declared.");
 if(!directives["object-src"]?.includes("'none'")||!directives["frame-ancestors"]?.includes("'none'"))issues.push("Object or framing denial is incomplete.");
-const requiredConnections=["'self'","https://generativelanguage.googleapis.com","https://openrouter.ai","https://huggingface.co","https://cdn-lfs.huggingface.co","https://cdn-lfs-us-1.huggingface.co","https://cas-bridge.xethub.hf.co","http://localhost:*","https://localhost:*","http://127.0.0.1:*","https://127.0.0.1:*","http://[::1]:*","https://[::1]:*"];
+const requiredConnections=["'self'","https://generativelanguage.googleapis.com","https://openrouter.ai","https://huggingface.co","https://cdn-lfs.huggingface.co","https://cdn-lfs-us-1.huggingface.co","https://cas-bridge.xethub.hf.co","http://localhost:*","https://localhost:*","http://127.0.0.1:*","https://127.0.0.1:*"];
 if(JSON.stringify(directives["connect-src"])!==JSON.stringify(requiredConnections))issues.push("connect-src differs from the audited AI/WebGPU/local-Ollama allowlist.");
 for(const exception of securityHeaderExceptions)for(const directive of exception.directives)if(!directives[directive]?.includes(exception.token))issues.push(`Documented exception ${exception.token} is absent from ${directive}.`);
 const headerMap=Object.fromEntries(securityHeaders.map((header)=>[header.key,header.value]));

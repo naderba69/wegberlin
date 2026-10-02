@@ -1,6 +1,11 @@
 # Architecture Decisions
 
-Sync batch: v179 · 2026-09-23 · re-verified in full against pack `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+
+
+Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
 ## ADR-001 — Local-first learner state
 IndexedDB is the canonical durable store. Vercel hosts the application but never stores learner progress.

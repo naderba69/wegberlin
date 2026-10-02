@@ -1,0 +1,211 @@
+{
+  "format": "dwnb-learning-integrity-audit",
+  "version": "learning-integrity-v1",
+  "definitionDate": "2026-10-02",
+  "ok": true,
+  "sourceSha256": "00831ecebdc1984017a411a700945a7e72ef9eceba151f2285126c6584e3c95e",
+  "assessmentBankVersion": "authored-parallel-level-check-v1",
+  "assessmentTemplateInstances": 384,
+  "competencyFamilies": 24,
+  "forms": [
+    {
+      "level": "A1",
+      "formId": "A",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "A1",
+      "formId": "B",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "A2",
+      "formId": "A",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "A2",
+      "formId": "B",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "B1",
+      "formId": "A",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "B1",
+      "formId": "B",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "B2",
+      "formId": "A",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "level": "B2",
+      "formId": "B",
+      "questions": 48,
+      "required": 39,
+      "domains": 6,
+      "domainSizes": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "b2ModuleCounts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "independentProductionTasks": 32,
+  "extendedInputs": [
+    {
+      "id": "endurance-a1-A",
+      "level": "A1",
+      "words": 114,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-a1-B",
+      "level": "A1",
+      "words": 113,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-a2-A",
+      "level": "A2",
+      "words": 208,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-a2-B",
+      "level": "A2",
+      "words": 223,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b1-A",
+      "level": "B1",
+      "words": 326,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b1-B",
+      "level": "B1",
+      "words": 335,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b2-A",
+      "level": "B2",
+      "words": 454,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b2-B",
+      "level": "B2",
+      "words": 473,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    }
+  ],
+  "objectiveSemanticReviewPending": 389,
+  "independentHumanReviews": 0,
+  "qualityBoundary": "automated-contract-checks-not-independent-german-arabic-cefr-rights-or-acoustic-review",
+  "issues": []
+}

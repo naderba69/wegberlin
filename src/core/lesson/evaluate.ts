@@ -16,5 +16,14 @@ export function evaluateExercise(exercise: PracticeExercise, answer: string | nu
     return exercise.pairs.every((pair)=>answer[pair.left]===pair.right);
   }
   if (typeof answer !== "string") return false;
+  if (exercise.type === "error-correction" && exercise.orthographyPolicy) {
+    const normalize = (text: string) => {
+      let value = text.normalize("NFKC").trim().replace(/\s+/gu, " ");
+      if (exercise.orthographyPolicy === "punctuation-sensitive") value = value.toLocaleLowerCase("de-DE");
+      if (exercise.orthographyPolicy === "case-sensitive") value = value.replace(/[.!?،,:;„“"']/gu, "");
+      return value;
+    };
+    return exercise.acceptedAnswers.some((accepted) => normalize(answer) === normalize(accepted));
+  }
   return compareAccepted(answer, exercise.acceptedAnswers);
 }

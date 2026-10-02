@@ -21,12 +21,12 @@ describe("P0 exhaustive language and Bidi boundaries",()=>{
   });
 
   it("audits every TSX opening tag with zero pairing or control-character issues",()=>{
-    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:189,openingTagCount:7496,germanTagCount:416,technicalScopeCount:49,adaptiveConsumerCount:10,mixedStaticCount:235,issues:[]});
+    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:194,openingTagCount:7413,germanTagCount:422,technicalScopeCount:51,adaptiveConsumerCount:7,mixedStaticCount:202,issues:[]});
     expect(report.ltrTagCount).toBeGreaterThanOrEqual(report.germanTagCount);
   });
 
   it("keeps all generic answer-bank renderers on adaptive language attributes",()=>{
-    const files=["exercise-card","diagnostic-view","library-view","module-review","a1-level-assessment","a2-level-assessment","b1-level-assessment","b2-level-assessment","targeted-choice-simulation","targeted-listening-simulation"];
+    const files=["exercise-card","diagnostic-view","library-view","module-review","level-assessment","targeted-choice-simulation","targeted-listening-simulation"];
     for(const file of files)expect(readFileSync(`src/components/${file}.tsx`,"utf8"),file).toContain("fragmentLanguageAttributes");
   });
 

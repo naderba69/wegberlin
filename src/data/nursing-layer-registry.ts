@@ -33,6 +33,10 @@ export const NURSING_ROLLBACK_BREAKER = {
   metric: "general exam-shape task accuracy (goethe-b2 + telc-deutsch-b2 simulations)",
   windowDays: 14,
   ifDropsPercentagePoints: 5,
+  comparisonRequires: "same-provider-skill-task-family-and-fresh-independent-samples",
+  minimumQuestionsPerWindow: 20,
+  causalEffectClaim: false,
+  cautionOnly: true,
   actionAr: "تُخفَّض الطبقة (إخفاء الوحدات ووقف إضافة كلمات) وتُقدَّم الشهادة العامة، ولا يُبرَّر الانخفاض بأنه «تعمّق مهني».",
   layerRemovable: true,
 } as const;

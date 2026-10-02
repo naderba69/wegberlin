@@ -1,7 +1,6 @@
 import type { LessonEvidenceCriterion } from "./evidence-gate";
 
-export const BEGINNER_READABLE_COMPLETION_POLICY = "beginner-readable-completion-v1" as const;
-
+export const BEGINNER_READABLE_COMPLETION_POLICY = "beginner-readable-completion-v2" as const;
 export type LessonCompletionGuidance = {
   criterionId: LessonEvidenceCriterion["id"];
   statusAr: "مكتمل" | "قيد التقدم" | "لم يبدأ بعد";
@@ -10,65 +9,21 @@ export type LessonCompletionGuidance = {
   remaining: number;
 };
 
-function remainingItems(criterion: LessonEvidenceCriterion): number {
-  return Math.max(0, criterion.required - criterion.achieved);
-}
-
-function countPhrase(count: number, singular: string, plural: string): string {
-  return count === 1 ? singular : `${count} ${plural}`;
-}
+export const criterionStage: Record<LessonEvidenceCriterion["id"], number> = { controlled: 5, reading: 6, listening: 7, "mini-test": 13, writing: 9, speaking: 10, mediation: 11 };
 
 export function lessonCompletionGuidance(criterion: LessonEvidenceCriterion): LessonCompletionGuidance {
-  const remaining = remainingItems(criterion);
-  const statusAr = criterion.passed ? "مكتمل" : criterion.achieved > 0 ? "قيد التقدم" : "لم يبدأ بعد";
-
-  if (criterion.passed) {
-    return {
-      criterionId: criterion.id,
-      statusAr,
-      detailAr: "أكملت المطلوب في هذا الجزء. يمكنك متابعة الدرس.",
-      actionAr: "مراجعة هذا الجزء",
-      remaining,
-    };
-  }
-
-  if (criterion.id === "reading") {
-    return {
-      criterionId: criterion.id,
-      statusAr,
-      detailAr: `أجب إجابة صحيحة عن سؤال قراءة واحد. لديك ${criterion.total} تمارين، ويكفي إنجاز واحد.`,
-      actionAr: "ابدأ تمرين القراءة",
-      remaining,
-    };
-  }
-
-  if (criterion.id === "listening") {
-    return {
-      criterionId: criterion.id,
-      statusAr,
-      detailAr: `استمع إلى مقطع قصير ثم أجب إجابة صحيحة عن سؤال واحد. لديك ${criterion.total} تمارين، ويكفي إنجاز واحد.`,
-      actionAr: "ابدأ تمرين الاستماع",
-      remaining,
-    };
-  }
-
-  if (criterion.id === "controlled") {
-    return {
-      criterionId: criterion.id,
-      statusAr,
-      detailAr: `أكمل ${countPhrase(remaining, "تمرينًا أساسيًا آخر", "تمارين أساسية أخرى")} بإجابة صحيحة ومختلفة.`,
-      actionAr: criterion.achieved > 0 ? "أكمل التمارين الأساسية" : "ابدأ التمارين الأساسية",
-      remaining,
-    };
-  }
-
-  return {
-    criterionId: criterion.id,
-    statusAr,
-    detailAr: `أكمل ${countPhrase(remaining, "سؤالًا آخر", "أسئلة أخرى")} في الاختبار القصير بإجابة صحيحة.`,
-    actionAr: criterion.achieved > 0 ? "أكمل الاختبار القصير" : "ابدأ الاختبار القصير",
-    remaining,
+  const remaining = criterion.passed ? 0 : Math.max(0, criterion.required - criterion.achieved);
+  const statusAr = criterion.passed ? "مكتمل" : criterion.achieved ? "قيد التقدم" : "لم يبدأ بعد";
+  const details: Record<LessonEvidenceCriterion["id"], [string, string]> = {
+    controlled: [`أكمل ${remaining} تمارين أساسية مختلفة بإجابة صحيحة. أحدث جواب هو الذي يصف التدريب الحالي.`, "ابدأ التمارين الأساسية"],
+    reading: [`أجب عن ${criterion.required} من ${criterion.total} أسئلة قراءة؛ سؤال واحد لا يكفي للحكم على الفهم.`, "ابدأ تمرين القراءة"],
+    listening: [`استمع إلى مقطع قصير فعلًا، ثم أجب عن ${criterion.required} من ${criterion.total} أسئلة.`, "ابدأ تمرين الاستماع"],
+    "mini-test": [`أكمل ${remaining} أسئلة أخرى صحيحة في الاختبار القصير. الإعادة لا تصبح سؤالًا جديدًا.`, "ابدأ الاختبار القصير"],
+    writing: ["خطّط لمسودة مرتبطة بالدرس ثم سلّمها في مختبر الكتابة. تسليمها ليس حكمًا على سلامة اللغة.", "افتح مهمة الكتابة"],
+    speaking: ["سجّل محاولة قصيرة، استمع إليها، واكتب مراجعة ذاتية. فشل الجهاز ليس خطأ لغة؛ يمكنك مواصلة التعلّم دون ادعاء إثبات الكلام.", "افتح مهمة الكلام"],
+    mediation: ["حدّد المتلقي والغرض ثم سلّم نقل المعنى في مختبر الوساطة.", "افتح مهمة الوساطة"],
   };
+  return { criterionId: criterion.id, statusAr, detailAr: criterion.passed ? "أنجزت نشاط هذا الجزء؛ الجودة الحرة والاستقلال يعرضان منفصلين." : details[criterion.id][0], actionAr: criterion.passed ? "مراجعة هذا الجزء" : details[criterion.id][1], remaining };
 }
 
 export function nextLessonCompletionGuidance(criteria: LessonEvidenceCriterion[]): LessonCompletionGuidance | null {

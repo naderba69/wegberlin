@@ -1,7 +1,7 @@
 // @vitest-environment node
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { LOCAL_PRONUNCIATION_MODEL_CACHE, LOCAL_PRONUNCIATION_MODEL_META_PATH, localPronunciationModelRegistry } from "@/config/local-pronunciation-model-registry";
+import { LOCAL_PRONUNCIATION_MODEL_CACHE, LOCAL_PRONUNCIATION_MODEL_META_PATH, LOCAL_PRONUNCIATION_RUNTIME_ASSETS, localPronunciationModelRegistry } from "@/config/local-pronunciation-model-registry";
 import { deleteLocalPronunciationModel, detectLocalPronunciationCapability, getLocalPronunciationSourceDecision, inspectLocalPronunciationModel } from "@/core/pronunciation/local-model";
 import { germanWords, matchExpectedGermanPhrase, matchExpectedGermanWords, normalizeGermanWord } from "@/core/pronunciation/word-matching";
 import { resampleLinear } from "@/core/pronunciation/audio-sample";
@@ -23,7 +23,7 @@ describe("standard local German word-matching pack",()=>{
   it("pins one multilingual Whisper model, revision, q8 package, German task, and bounded claim",()=>{
     expect(localPronunciationModelRegistry).toMatchObject({policyVersion:"local-german-word-matching-v1",task:"automatic-speech-recognition",purpose:"local-german-expected-word-matching",modelId:"onnx-community/whisper-tiny",modelRevision:"ff4177021cc41f7db950912b73ea4fdf7d01d8e7",dtype:"q8",language:"german",sampleRateHz:16000,maximumAudioSeconds:20,maximumFeedbackItems:3,modelLicense:"Apache-2.0"});
     expect(localPronunciationModelRegistry.evaluationBoundary).toContain("no-phoneme-accent-fluency");
-    expect(localPronunciationModelRegistry.sourceIds).toHaveLength(4);
+    expect(localPronunciationModelRegistry.sourceIds).toHaveLength(5);
   });
 
   it("requires secure WebGPU, memory, buffer size, and storage without downloading",async()=>{
@@ -36,7 +36,7 @@ describe("standard local German word-matching pack",()=>{
   });
 
   it("blocks fresh downloads after model or license source expiry",()=>{
-    expect(getLocalPronunciationSourceDecision(new Date("2026-09-11T12:00:00Z"))).toMatchObject({allowed:true,status:"fresh",dueAt:"2026-10-07"});
+    expect(getLocalPronunciationSourceDecision(new Date("2026-10-02T12:00:00Z"))).toMatchObject({allowed:true,status:"due-soon",dueAt:"2026-10-07"});
     expect(getLocalPronunciationSourceDecision(new Date("2026-10-12T12:00:00Z"))).toMatchObject({allowed:false,status:"stale"});
   });
 
@@ -104,8 +104,9 @@ describe("standard local German word-matching pack",()=>{
     expect(waveformEnvelope(new Float32Array(200),200)).toHaveLength(96);
   });
 
-  it("keeps install and inference inside a dedicated Worker and disables remote loading for transcription",()=>{
+  it("keeps install and inference inside a dedicated Worker, caches the pinned ORT bundle, and disables remote loading for transcription",()=>{
     const worker=readFileSync("public/pronunciation-model-worker.js","utf8");
+    expect(LOCAL_PRONUNCIATION_RUNTIME_ASSETS).toContain(localPronunciationModelRegistry.runtime.onnxRuntimeBundlePath);
     expect(worker).toContain('const MODEL_CACHE = "dwnb-pronunciation-model-v1"');
     expect(worker).toContain('device: "webgpu"');
     expect(worker).toContain("dtype: registry.dtype");

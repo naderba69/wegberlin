@@ -3,18 +3,18 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "cd507293b939cf6440cfdac67969906daefcd92624f665563609ab41b72db109",
+  "contentSha256": "7a0425102ccf28e084f45c492a761c3d6035637f49cfec4ee78c46c8b896cedb",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
-    "curriculumVersion": "dwnb-a1-b2-2026.09-v1",
+    "curriculumVersion": "dwnb-a1-b2-2026.10-v2",
     "independent": true
   },
   "counts": {
     "contentRecords": 3277,
     "contentFamilies": 16,
     "publishedFamilies": 16,
-    "sources": 18,
+    "sources": 19,
     "ownedRiskTypes": 12,
     "highRiskContextClaims": 12,
     "pronunciationInventoryItems": 18,
@@ -29611,6 +29611,12 @@
       "sourceId": "transformers-js-runtime-4-2-0",
       "ownerId": "browser-model-owner",
       "reviewerId": "browser-model-source-reviewer-role",
+      "reviewStatus": "scheduled-manual-semantic-review"
+    },
+    {
+      "sourceId": "onnxruntime-web-webgpu-1-26-dev-20260416",
+      "ownerId": "browser-model-owner",
+      "reviewerId": "onnxruntime-source-reviewer-role",
       "reviewStatus": "scheduled-manual-semantic-review"
     },
     {

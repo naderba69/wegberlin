@@ -24,6 +24,7 @@ export const localPronunciationModelRegistry = {
   evaluationBoundary: "asr-expected-word-match-no-phoneme-accent-fluency-or-official-pronunciation-score",
   sourceIds: [
     "transformers-js-runtime-4-2-0",
+    "onnxruntime-web-webgpu-1-26-dev-20260416",
     "transformers-js-webgpu-guide-2026-09",
     "whisper-tiny-base-license-2026-09",
     "whisper-tiny-onnx-web-2026-09",
@@ -37,6 +38,7 @@ export const localPronunciationModelRegistry = {
 export const LOCAL_PRONUNCIATION_RUNTIME_ASSETS = [
   localPronunciationModelRegistry.runtime.workerPath,
   localPronunciationModelRegistry.runtime.browserBundlePath,
+  localPronunciationModelRegistry.runtime.onnxRuntimeBundlePath,
   localPronunciationModelRegistry.runtime.wasmModulePath,
   localPronunciationModelRegistry.runtime.wasmBinaryPath,
 ] as const;

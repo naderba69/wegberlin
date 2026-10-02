@@ -10,7 +10,7 @@ describe("full offline route manifest", () => {
   it("is deterministic, unique, safe, and limited to A1-B2", () => {
     expect(offlineManifest.format).toBe("dwnb-offline-routes");
     expect(offlineManifest.version).toBe(2);
-    expect(offlineManifest.routeCount).toBe(318);
+    expect(offlineManifest.routeCount).toBe(319);
     expect(routes.size).toBe(offlineManifest.routeCount);
     for (const route of routes) {
       expect(route).toMatch(/^\/[a-z0-9./-]*$/);
@@ -21,7 +21,7 @@ describe("full offline route manifest", () => {
   it("publishes isolated A1/A2/B1/B2 choices plus the full pack",()=>{
     expect(offlineManifest.defaultPackId).toBe("full");
     expect(offlineManifest.packs.map((pack)=>[pack.id,pack.routeCount,pack.audioScope])).toEqual([
-      ["a1",58,"a1"],["a2",58,"a2"],["b1",58,"b1"],["b2",219,"b2"],["full",318,"all"],
+      ["a1",59,"a1"],["a2",59,"a2"],["b1",59,"b1"],["b2",220,"b2"],["full",319,"all"],
     ]);
     for(const pack of offlineManifest.packs)expect(new Set(pack.routes).size,pack.id).toBe(pack.routeCount);
     expect(offlineManifest.packs.find((pack)=>pack.id==="full")?.routes).toEqual(offlineManifest.routes);

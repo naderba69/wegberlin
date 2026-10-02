@@ -9,7 +9,7 @@ P0-219 requires support for a model inside the browser when WebGPU is available.
 
 ## GitHub-safe exact-byte materialization
 
-The upstream minified Transformers browser bundle produced a GitHub Push Protection false positive for an opaque Mistral-style token. We do not disable protection, bypass the alert, or edit unaudited runtime semantics. The plaintext is Git-ignored and reconstructed by `npm ci`/prebuild from `vendor-assets/webgpu/transformers.web.min.js.xor-gzip.packed`; the materializer verifies packed and original SHA-256 values before writing. XOR+gzip is reversible packaging, not encryption or secret handling. ONNX JSEP files and licenses remain directly vendored.
+The upstream minified Transformers browser bundle produced a GitHub Push Protection false positive for an opaque Mistral-style token. We do not disable protection or bypass the alert. In addition to verifying the exact upstream bytes, prebuild now applies two manifest-counted ESM import-path rewrites for native browser Worker compatibility; it does not change inference code, model behavior, device selection, or privacy policy. The generated plaintext is Git-ignored and reconstructed from checksum-pinned packed inputs; the ONNX WebGPU ESM bundle is pinned to its exact npm tarball integrity, source SHA-256, and MIT license. The materializer verifies packed, upstream, and final output hashes before writing. XOR+gzip is reversible packaging, not encryption or secret handling. See ADR-102 for the bare-specifier diagnosis and regression test.
 
 ## Decision
 

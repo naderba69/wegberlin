@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 189,
-  "openingTagCount": 7496,
-  "germanTagCount": 416,
-  "arabicTagCount": 5,
-  "ltrTagCount": 459,
-  "rtlTagCount": 5,
+  "tsxFiles": 194,
+  "openingTagCount": 7413,
+  "germanTagCount": 422,
+  "arabicTagCount": 7,
+  "ltrTagCount": 467,
+  "rtlTagCount": 7,
   "autoDirCount": 12,
-  "technicalScopeCount": 49,
+  "technicalScopeCount": 51,
   "dynamicPairCount": 4,
   "bdiCount": 21,
-  "adaptiveConsumerCount": 10,
-  "mixedStaticCount": 235,
+  "adaptiveConsumerCount": 7,
+  "mixedStaticCount": 202,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -73,37 +73,37 @@
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 24,
+      "line": 27,
       "text": "كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مستوى CEFR رسمي."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 44,
+      "line": 48,
       "text": "القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 45,
+      "line": 49,
       "text": "مفاتيح قديمة بلا Event بعد"
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 57,
+      "line": 61,
       "text": "لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يصبح درجة ذكاء أو CEFR أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 59,
+      "line": 63,
       "text": "الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف الدرس بأنه يملك عينة احتفاظ. هذا ليس إتقانًا دائمًا. سياسة `weekly-grace-v1` تسمح بفاصل يوم واحد بين يومي دراسة دون اختلاق دليل لذلك اليوم أو تصفير العودة. معدل الخطأ يحسب كل تحقق مسجل، بما فيه الإعادة، ولا يدّعي تحليل أخطاء لكل 100 كلمة من الكتابة الحرة."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 64,
+      "line": 68,
       "text": "تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 69,
+      "line": 73,
       "text": "ليس حكم CEFR"
     },
     {
@@ -122,61 +122,6 @@
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
-      "path": "src/components/a1-level-assessment.tsx",
-      "line": 23,
-      "text": "بوابة A1 — تقييم داخلي غير رسمي"
-    },
-    {
-      "path": "src/components/a1-level-assessment.tsx",
-      "line": 23,
-      "text": "لا يفتح النظام A2 من علامة اختيارات فقط. يجب إكمال المسار وتقديم أدلة كتابة ومحادثة وتشخيص أولي."
-    },
-    {
-      "path": "src/components/a1-level-assessment.tsx",
-      "line": 26,
-      "text": "تقييم نهاية A1"
-    },
-    {
-      "path": "src/components/a1-level-assessment.tsx",
-      "line": 26,
-      "text": "48 سؤالًا يغطي الوحدات الثماني. أجب دون فتح الدروس. النتيجة المعرفية لا تكفي وحدها لفتح A2."
-    },
-    {
-      "path": "src/components/a1-level-assessment.tsx",
-      "line": 26,
-      "text": "إنهاء وحساب بوابة A1"
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 20,
-      "text": "بوابة A2 — تقييم داخلي غير رسمي"
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 20,
-      "text": "تحتاج البوابة إلى نجاح معرفي، إكمال المسار، عينات كتابة ومحادثة مرتبطة بـA2، وبوابة A1 السابقة."
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 22,
-      "text": "نتيجة المعرفة حسب وحدة A2"
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 23,
-      "text": "تقييم نهاية A2"
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 23,
-      "text": "48 سؤالًا متوازنًا على ثماني وحدات. بعدها تُفحص أدلة الكتابة والمحادثة وإكمال المسار قبل B1."
-    },
-    {
-      "path": "src/components/a2-level-assessment.tsx",
-      "line": 23,
-      "text": "إنهاء وحساب بوابة A2"
-    },
-    {
       "path": "src/components/accessibility-preferences-control.tsx",
       "line": 105,
       "text": "Live-Vorschau · معاينة مباشرة"
@@ -185,61 +130,6 @@
       "path": "src/components/ai-provider-capability-matrix.tsx",
       "line": 57,
       "text": "حد 0 USD"
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 16,
-      "text": "بوابة B1 — تقييم داخلي غير رسمي"
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 16,
-      "text": "لا يكفي اختبار الاختيارات. تُفحص بوابة A2 وإكمال 24 درسًا وخمس كتابات وخمس محاولات محادثة مرتبطة بـB1."
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 16,
-      "text": "نتيجة المعرفة حسب وحدة B1"
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 17,
-      "text": "تقييم نهاية B1"
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 17,
-      "text": "ثم ابدأ B2."
-    },
-    {
-      "path": "src/components/b1-level-assessment.tsx",
-      "line": 17,
-      "text": "إنهاء وحساب بوابة B1"
-    },
-    {
-      "path": "src/components/b2-level-assessment.tsx",
-      "line": 84,
-      "text": "بوابة B2 — تقييم تعلم داخلي غير رسمي"
-    },
-    {
-      "path": "src/components/b2-level-assessment.tsx",
-      "line": 108,
-      "text": "نتيجة المعرفة حسب وحدة B2"
-    },
-    {
-      "path": "src/components/b2-level-assessment.tsx",
-      "line": 135,
-      "text": "تقييم نهاية B2"
-    },
-    {
-      "path": "src/components/b2-level-assessment.tsx",
-      "line": 137,
-      "text": "48 سؤالًا موزعة بالتساوي على الوحدات الست، مع بوابة إنتاج تمنع تحويل B2 إلى اختبار تعرّف فقط."
-    },
-    {
-      "path": "src/components/b2-level-assessment.tsx",
-      "line": 143,
-      "text": "لا يخلط صيغة Goethe بصيغة telc ولا يمثل امتحانًا رسميًا. بعده تُراجع متطلبات الجهة التي اخترتها بصورة منفصلة."
     },
     {
       "path": "src/components/bilingual-search-view.tsx",
@@ -427,6 +317,11 @@
       "text": "هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini أو أي مزود."
     },
     {
+      "path": "src/components/endurance-lab.tsx",
+      "line": 58,
+      "text": "ثمانية سياقات أصلية من A1 إلى B2. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
+    },
+    {
       "path": "src/components/error-notebook.tsx",
       "line": 110,
       "text": "دخلت بطاقة علاج شخصية إلى SRS."
@@ -448,17 +343,17 @@
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 65,
+      "line": 67,
       "text": "ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق."
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 120,
+      "line": 122,
       "text": "بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة مراقبة أو نتيجة رسمية."
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 166,
+      "line": 168,
       "text": "بوابة B2 الداخلية"
     },
     {
@@ -578,12 +473,12 @@
     },
     {
       "path": "src/components/nursing-layer-panel.tsx",
-      "line": 95,
+      "line": 101,
       "text": "مفردات B1+ تُحفظ وتُراجَع"
     },
     {
       "path": "src/components/nursing-layer-panel.tsx",
-      "line": 104,
+      "line": 110,
       "text": "الصيغة نفسها التي يقبلها «استيراد مفردات شخصية» في الإعدادات (German → Arabic → Example → Tags)؛ الطبقة لا تكتب في التخزين بنفسها."
     },
     {
@@ -784,67 +679,7 @@
     {
       "path": "src/components/path-view.tsx",
       "line": 40,
-      "text": "مراجعة ومشروع الوحدة الأولى B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-01–02 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "مراجعة ومشروع الوحدة الثانية B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-03–04 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "مراجعة ومشروع الوحدة الثالثة B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-05–06 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "مراجعة ومشروع الوحدة الرابعة B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-07–08 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "مراجعة ومشروع الوحدة الخامسة B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-09–10 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "مراجعة ومشروع الوحدة السادسة B2"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "الدروس B2-11–12 · مكتملة"
-    },
-    {
-      "path": "src/components/path-view.tsx",
-      "line": 40,
-      "text": "بوابة الجاهزية النهائية B2"
+      "text": "بوابة انتقال B2 الداخلية"
     },
     {
       "path": "src/components/personal-vocabulary-import.tsx",
@@ -1194,5 +1029,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "5e6c3dc0fe95928f7bf522b63c287298cb70aed51073c684fdd496fe00e5bde2"
+  "contentSha256": "6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617bbb"
 }

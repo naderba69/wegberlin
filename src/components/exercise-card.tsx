@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, Lightbulb, RotateCcw, X } from "lucide-react";
 import type { PracticeExercise, Question } from "@/types/lesson-content";
-import type { AnswerConfidence, AttemptUncertaintyKind } from "@/types/learning";
+import type { AnswerConfidence, AttemptUncertaintyKind, CEFRLevel, ArabicSupportMode } from "@/types/learning";
 import { evaluateExercise } from "@/core/lesson/evaluate";
 import { exerciseHintSteps, questionHintSteps } from "@/core/lesson/support";
 import { LESSON_SHUFFLE_VERSION, shuffledExerciseOptions, shuffledQuestionOptions } from "@/core/lesson/shuffle";
 import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import type { QuestionTaxonomyDisplay } from "@/core/comprehension/question-taxonomy";
+import { ArabicScaffold } from "./arabic-scaffold";
 import { locateErrorSpan } from "@/core/lesson/error-span";
 
 export type LessonAttemptMetadata = { confidence?: AnswerConfidence; answerIndex?: number; shuffleSeed?: string; shuffleVersion?: typeof LESSON_SHUFFLE_VERSION; responseTimeMs?: number; answerChangeCount?: number; uncertaintyKind?: AttemptUncertaintyKind; processPolicyVersion?: "bounded-attempt-process-v1" };
@@ -66,7 +67,7 @@ function GapSentence({ template }: { template: string }) {
   return <p className="fill-sentence" lang="de" dir="ltr">{parts.map((part, index) => <span key={`${part}-${index}`}>{part}{index < parts.length - 1 && <mark className="blank-slot" aria-label="الكلمة الألمانية الناقصة">?</mark>}</span>)}</p>;
 }
 
-export function ExerciseCard({ exercise, onAttempt, onSupport }: { exercise: PracticeExercise; onAttempt: (answer: string, correct: boolean, metadata?: LessonAttemptMetadata) => void; onSupport?: (contentId: string, level: 1 | 2) => void }) {
+export function ExerciseCard({ exercise, onAttempt, onSupport, level, arabicSupport }: { level?: CEFRLevel; arabicSupport?: ArabicSupportMode; exercise: PracticeExercise; onAttempt: (answer: string, correct: boolean, metadata?: LessonAttemptMetadata) => void; onSupport?: (contentId: string, level: 1 | 2) => void }) {
   const [choice, setChoice] = useState<number | null>(null);
   const [text, setText] = useState("");
   const [matches, setMatches] = useState<Record<string, string>>({});
@@ -112,7 +113,7 @@ export function ExerciseCard({ exercise, onAttempt, onSupport }: { exercise: Pra
   return <article data-exercise-id={exercise.id} className={result === null ? "exercise-card" : result ? "exercise-card correct" : "exercise-card wrong"} aria-labelledby={`${exercise.id}-prompt`}>
     <div className="exercise-label"><span>{exerciseTypeLabels[exercise.type]}</span><small lang="de" dir="ltr">Direkte Übung</small></div>
     <h3 id={`${exercise.id}-prompt`} lang="de" dir="ltr">{exerciseInstructionsDe[exercise.type]}</h3>
-    <p className="exercise-prompt-ar">{exercise.promptAr}</p>
+    <ArabicScaffold level={level} mode={arabicSupport} onReveal={()=>onSupport?.(exercise.id,1)}><p className="exercise-prompt-ar">{exercise.promptAr}</p></ArabicScaffold>
     {exercise.type === "multiple-choice" && exercise.promptDe && <p className="exercise-german-stem" lang="de" dir="ltr">{exercise.promptDe.replace("___", "□")}</p>}
 
     {exercise.type === "multiple-choice" && shuffledMcq && <div className="exercise-options" lang="de" dir="ltr">{shuffledMcq.options.map((option, position) => <button key={option.label} data-original-index={option.originalIndex} aria-pressed={choice === option.originalIndex} onClick={() => { process.select("choice",String(option.originalIndex));setChoice(option.originalIndex); setResult(null); }} className={choice === option.originalIndex ? "selected" : ""}><span>{String.fromCharCode(65 + position)}</span><bdi {...fragmentLanguageAttributes(option.label)}>{option.label}</bdi></button>)}</div>}
@@ -138,7 +139,9 @@ export function ExerciseCard({ exercise, onAttempt, onSupport }: { exercise: Pra
   </article>;
 }
 
-export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, taxonomyByQuestionId, shuffleSeed = "lesson-quiz", onSupport }: {
+export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, taxonomyByQuestionId, shuffleSeed = "lesson-quiz", onSupport, level, arabicSupport }: {
+  level?: CEFRLevel;
+  arabicSupport?: ArabicSupportMode;
   questions: Question[];
   onAttempt: (id: string, answer: string, correct: boolean, metadata?: LessonAttemptMetadata) => void;
   evidenceByQuestionId?: Record<string, string>;
@@ -168,7 +171,7 @@ export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, taxon
     return <article key={question.id} className={isChecked ? (correct ? "quiz-item correct" : "quiz-item wrong") : "quiz-item"} aria-labelledby={`${question.id}-prompt`}>
       <div className="question-function-meta"><small>سؤال {index + 1}</small>{taxonomy&&<span data-question-category={taxonomy.category}><b lang="de" dir="ltr">{taxonomy.labelDe}</b> · {taxonomy.labelAr}</span>}</div>
       <h3 id={`${question.id}-prompt`} lang="de" dir="ltr">{question.promptDe}</h3>
-      <p>{question.promptAr}</p>
+      <ArabicScaffold level={level} mode={arabicSupport} onReveal={()=>onSupport?.(question.id,1)}><p>{question.promptAr}</p></ArabicScaffold>
       <div className="quiz-options">{shuffled.options.map((option, position) => <button key={option.label} data-original-index={option.originalIndex} aria-pressed={answer === option.originalIndex} className={answer === option.originalIndex ? "selected" : ""} disabled={isChecked} onClick={() => {processes.select(question.id,option.originalIndex);setAnswers((current) => ({ ...current, [question.id]: option.originalIndex }))}}><span>{String.fromCharCode(65 + position)}</span><bdi {...fragmentLanguageAttributes(option.label)}>{option.label}</bdi></button>)}</div>
 
       {!isChecked && <fieldset className="answer-confidence"><legend><span lang="de" dir="ltr">Wie sicher sind Sie?</span><small>اختياري · ثقة عالية مع خطأ ترفع أولوية العلاج فقط</small></legend><div>{confidenceOptions.map((option)=><button type="button" key={option.value} className={confidence===option.value?"active":""} aria-pressed={confidence===option.value} onClick={()=>{processes.start(question.id);setConfidences((current)=>({...current,[question.id]:option.value}))}}><b lang="de" dir="ltr">{option.de}</b><small>{option.ar}</small></button>)}</div></fieldset>}

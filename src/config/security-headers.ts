@@ -27,8 +27,6 @@ export const contentSecurityPolicyDirectives = {
     "https://localhost:*",
     "http://127.0.0.1:*",
     "https://127.0.0.1:*",
-    "http://[::1]:*",
-    "https://[::1]:*",
   ],
 } as const;
 

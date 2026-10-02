@@ -16,6 +16,7 @@ const alternativePresentation:Record<Exclude<MissionBlockKind,"diagnostic"|"chec
   reading:{titleAr:"بديل القراءة: نص آخر بالمستوى نفسه",titleDe:"Alternativer Text auf demselben Niveau",fallbackHref:"/library"},
   writing:{titleAr:"بديل الكتابة: صياغة أقصر بالهدف نفسه",titleDe:"Kürzer schreiben mit demselben Ziel",fallbackHref:"/writing"},
   practice:{titleAr:"بديل التدريب: نوع سؤال آخر للقاعدة نفسها",titleDe:"Andere Übungsform zum selben Ziel",fallbackHref:"/practice"},
+  exam:{titleAr:"بديل جزء امتحاني من الجهة نفسها",titleDe:"Alternative Aufgabe desselben Prüfungsprofils",fallbackHref:"/exams"},
   production:{titleAr:"بديل الإنتاج: موقف آخر بالهدف نفسه",titleDe:"Andere Situation mit demselben Ziel",fallbackHref:"/speaking"},
 };
 

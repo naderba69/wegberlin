@@ -8,7 +8,7 @@ const writeMode=process.argv.includes("--write");
 const checkMode=process.argv.includes("--check")||!writeMode;
 const requiredAdaptiveConsumers=[
   "src/components/exercise-card.tsx","src/components/diagnostic-view.tsx","src/components/library-view.tsx","src/components/module-review.tsx",
-  "src/components/a1-level-assessment.tsx","src/components/a2-level-assessment.tsx","src/components/b1-level-assessment.tsx","src/components/b2-level-assessment.tsx",
+  "src/components/level-assessment.tsx",
   "src/components/targeted-choice-simulation.tsx","src/components/targeted-listening-simulation.tsx",
 ];
 

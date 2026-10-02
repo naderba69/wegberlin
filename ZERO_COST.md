@@ -1,6 +1,11 @@
 # Zero-Cost Contract
 
-Sync batch: v179 · 2026-09-23 · re-verified in full against pack `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+
+
+Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
 Last registry update: 2026-09-11 (0 USD boundary re-checked 2026-09-20: 18/18 records fresh, no paid fallback path added)  
 Policy: `source-freshness-v1`  

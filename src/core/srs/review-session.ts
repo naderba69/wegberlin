@@ -23,7 +23,8 @@ export function applyReviewGrade(
   const nextReview = calculateSM2(previous, grade, now, calendarPolicy);
   const delayed = !queued.isNew && Date.parse(queued.dueAt) <= now.getTime();
   const personalErrorRemediation = queued.card.tags.includes("personal-error");
-  const masteryDelta = delayed && grade >= 3 && !personalErrorRemediation ? 4 : 0;
+  // A self-graded lexical card cannot increase whole-lesson skill mastery.
+  const masteryDelta = 0;
   const lessonId = lessonIdOf(queued);
   const event: ReviewEvent = {
     id: eventId,

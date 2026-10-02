@@ -52,6 +52,7 @@ const errorCorrectionExerciseSchema = z.object({
   promptAr: text,
   sentence: text,
   acceptedAnswers: z.array(text).min(1),
+  orthographyPolicy: z.enum(["case-sensitive", "punctuation-sensitive", "exact"]).optional(),
   explanationAr: text,
 }).strict();
 

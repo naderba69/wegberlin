@@ -1,6 +1,6 @@
 # Local German word-matching model
 
-Last reviewed: 2026-09-11 — Africa/Tunis
+Last reviewed: 2026-10-02 — Africa/Tunis
 
 ## Purpose
 
@@ -9,6 +9,7 @@ Last reviewed: 2026-09-11 — Africa/Tunis
 ## Pinned stack
 
 - Runtime: audited local Transformers.js browser bundle `4.2.0`.
+- ONNX runtime: same-origin `onnxruntime-web@1.26.0-dev.20260416-b7804b056c` WebGPU ESM bundle, SHA-256-pinned; the materializer rewrites the two known bare package imports to this one local module URL.
 - Model: `onnx-community/whisper-tiny`.
 - Revision: `ff4177021cc41f7db950912b73ea4fdf7d01d8e7`.
 - Base: multilingual `openai/whisper-tiny`, including German.
@@ -26,7 +27,9 @@ The exact model files loaded by Transformers.js may vary with runtime graph sele
 
 Installation requires an explicit checkbox and button. The install worker may download the pinned model files from Hugging Face and writes a complete metadata marker only after pipeline creation succeeds. A failed installation deletes the dedicated model cache. Later transcription loads with remote model access disabled and must use the complete local cache.
 
-Low-data mode blocks a new installation. Source freshness blocks new installations when runtime, model, ONNX revision, or license verification is stale. The pack is not bundled into the base ZIP or curriculum Offline pack.
+Low-data mode blocks a new installation. Source freshness blocks new installations when the Transformers runtime, exact ONNX Runtime WebGPU bundle, model, ONNX revision, or license verification is stale. The pack is not bundled into the base ZIP or curriculum Offline pack.
+
+The browser Worker imports only same-origin ESM URLs. Both external ONNX package specifiers left in the upstream Transformers browser bundle are redirected at materialization time to the single pinned WebGPU bundle; there is no CDN/package-manager resolution at inference time and no silent WASM-device fallback. The existing JSEP WASM files remain pinned support assets. Chromium verifies module loading and the ONNX `Tensor` export in a real module Worker without downloading Whisper weights; actual GPU inference remains unclaimed until physical-device testing.
 
 ## Matching contract
 

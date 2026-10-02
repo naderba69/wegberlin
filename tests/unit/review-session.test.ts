@@ -23,11 +23,11 @@ describe("delayed retention evidence", () => {
     expect(result.state.reviewEvents).toHaveLength(1);
   });
 
-  it("raises mastery only after a due delayed retrieval succeeds", () => {
+  it("records delayed lexical retrieval without raising whole-lesson mastery", () => {
     const state = { ...defaultState, completedLessonIds: [lesson.id], mastery: { [lesson.id]: 65 } };
     const result = applyReviewGrade(state, queued(0, false), 4, now, "event-delayed");
-    expect(result.event).toMatchObject({ evidenceKind: "delayed", masteryDelta: 4 });
-    expect(result.state.mastery[lesson.id]).toBe(69);
+    expect(result.event).toMatchObject({ evidenceKind: "delayed", masteryDelta: 0 });
+    expect(result.state.mastery[lesson.id]).toBe(65);
   });
 
   it("uses the latest delayed result per card so a later failure removes confirmation", () => {

@@ -13,7 +13,12 @@ export default defineConfig({
     // قيود الجهاز (2026-09-29): المضيف 1.9 GB بلا مبادلة، والسويت الكامل (51 اختبارًا في عاملٍ واحد) كان
     // يُنهي جلسة Chromium مرة في أواخر التشغيل (`session closed` + مهلات 30 ث على /settings). هذه أعلام
     // استقرار قياسية لا تُغيّر أي تأكيد أو مهلة، وخادم البناء صار كومته 384 MB ليبقى للمتصفح متّسع.
-    launchOptions: { args: ["--disable-dev-shm-usage", "--disable-gpu", "--disable-software-rasterizer"] },
+    launchOptions: {
+      // Optional local QA executable when the sandbox cannot reach Playwright's CDN.
+      // CI defaults to its pinned full Chromium; no browser is downloaded into Git.
+      executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
+      args: ["--disable-dev-shm-usage", "--disable-gpu", "--disable-software-rasterizer"],
+    },
     trace: "retain-on-failure",
   },
   webServer: {

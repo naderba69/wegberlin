@@ -84,7 +84,7 @@ export function LessonListeningSequence({
         <header><span>2</span><div><small lang="de" dir="ltr">Beim ersten Hören</small><h2>الفكرة العامة أولًا</h2></div></header>
         <p lang="de" dir="ltr">{sequence.during.promptDe}</p><p>{sequence.during.promptAr}</p>
         {progress.playbackStarted
-          ? <QuestionQuiz questions={[sequence.during.question]} taxonomyByQuestionId={questionTaxonomy} onAttempt={commitGist} onSupport={onHint} shuffleSeed={`${lesson.id}:listening:gist`}/>
+          ? <QuestionQuiz level={lesson.level} questions={[sequence.during.question]} taxonomyByQuestionId={questionTaxonomy} onAttempt={commitGist} onSupport={onHint} shuffleSeed={`${lesson.id}:listening:gist`}/>
           : <div className="listening-phase-lock"><Headphones size={18}/><div><strong>شغّل المقطع أولًا</strong><p>بعد بدء MP3 أو Browser TTS يظهر سؤال الفكرة العامة. لا تحتاج إلى التقاط كل كلمة.</p></div></div>}
       </article>
     </> : <div className="listening-phase-lock"><LockKeyhole size={18}/><div><strong>الصوت ينتظر هدفًا واحدًا</strong><p>اختر ما ستراقبه في السماع الأول؛ الاختيار تخطيطي وغير مصحح.</p></div></div>}
@@ -92,7 +92,7 @@ export function LessonListeningSequence({
     {progress.gistCommitted ? <article className="listening-phase-card after">
       <header><span>3</span><div><small lang="de" dir="ltr">Nach dem ersten Hören</small><h2>السماع الثاني للتفاصيل</h2></div></header>
       <p lang="de" dir="ltr">{sequence.after.promptDe}</p><p>{sequence.after.promptAr}</p>
-      <QuestionQuiz questions={sequence.after.questions} taxonomyByQuestionId={questionTaxonomy} onAttempt={commitDetail} onSupport={onHint} shuffleSeed={`${lesson.id}:listening:detail`}/>
+      <QuestionQuiz level={lesson.level} questions={sequence.after.questions} taxonomyByQuestionId={questionTaxonomy} onAttempt={commitDetail} onSupport={onHint} shuffleSeed={`${lesson.id}:listening:detail`}/>
     </article> : <div className="listening-phase-lock"><LockKeyhole size={18}/><div><strong>التفاصيل مؤجلة</strong><p>التزم أولًا بجواب الفكرة العامة، ثم تظهر أسئلة التفاصيل.</p></div></div>}
 
     <div className={progress.transcriptUnlocked ? "listening-transcript-gate unlocked" : "listening-transcript-gate"}>

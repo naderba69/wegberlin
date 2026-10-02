@@ -1,6 +1,11 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v179 · 2026-09-23 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+
+
+Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
 > هذه القائمة Backlog وليست قائمة إطلاق واحدة. P0 ضروري، P1 عالي القيمة بعد استقرار الأساس، وP2 اختياري/مستقبلي. يجب عدم إضافة أي فكرة إلى المنتج قبل تعريف مشكلة المتعلم ومعيار قبولها.
 

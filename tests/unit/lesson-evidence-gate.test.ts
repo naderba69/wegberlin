@@ -19,7 +19,7 @@ describe("lesson evidence gate", () => {
   it("keeps completion locked when the learner only browses the 14 stages", () => {
     const gate = lessonEvidenceGate(lesson, defaultState);
     expect(gate.passed).toBe(false);
-    expect(gate.criteria.map((criterion) => criterion.achieved)).toEqual([0, 0, 0, 0]);
+    expect(gate.criteria.map((criterion) => criterion.achieved)).toEqual([0, 0, 0, 0, 0, 0, 0]);
     expect(gate.criteria.find((criterion) => criterion.id === "controlled")?.required).toBe(Math.ceil(lesson.exercises.length * 0.7));
     expect(gate.criteria.find((criterion) => criterion.id === "mini-test")?.required).toBe(Math.ceil(lesson.miniTest.length * 0.8));
   });
@@ -31,26 +31,27 @@ describe("lesson evidence gate", () => {
     expect(gate.passed).toBe(false);
   });
 
-  it("unlocks only after controlled, reading, listening, and mini-test thresholds all pass", () => {
+  it("does not unlock the productive workflow after receptive answers alone", () => {
     const controlledRequired = Math.ceil(lesson.exercises.length * 0.7);
     const testRequired = Math.ceil(lesson.miniTest.length * 0.8);
     const ids = [
       ...lesson.exercises.slice(0, controlledRequired).map((exercise) => exercise.id),
-      lesson.reading.questions[0].id,
-      lesson.listening.questions[0].id,
+      ...lesson.reading.questions.slice(0,2).map(q=>q.id),
+      ...lesson.listening.questions.slice(0,2).map(q=>q.id),
       ...lesson.miniTest.slice(0, testRequired).map((question) => question.id),
     ];
     const gate = lessonEvidenceGate(lesson, withAttempts(ids.map((id, index) => attempt(id, true, index))));
-    expect(gate.passed).toBe(true);
-    expect(gate.criteria.every((criterion) => criterion.passed)).toBe(true);
+    expect(gate.passed).toBe(false);
+    expect(gate.criteria.find(criterion=>criterion.id==="writing")?.passed).toBe(false);
+    expect(gate.criteria.find(criterion=>criterion.id==="speaking")?.passed).toBe(false);
   });
 
-  it("applies the same four-criterion contract to all 96 lessons", () => {
+  it("applies the same seven-activity contract to all 96 lessons", () => {
     const lessons = Object.values(academicLessons);
     expect(lessons).toHaveLength(96);
     for (const item of lessons) {
       const gate = lessonEvidenceGate(item, defaultState);
-      expect(gate.criteria.map((criterion) => criterion.id)).toEqual(["controlled", "reading", "listening", "mini-test"]);
+      expect(gate.criteria.map((criterion) => criterion.id)).toEqual(["controlled", "reading", "listening", "mini-test", "writing", "speaking", "mediation"]);
       expect(gate.criteria.find((criterion) => criterion.id === "controlled")?.required).toBe(Math.ceil(item.exercises.length * 0.7));
       expect(gate.criteria.find((criterion) => criterion.id === "mini-test")?.required).toBe(Math.ceil(item.miniTest.length * 0.8));
     }

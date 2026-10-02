@@ -1,15 +1,5 @@
 import { ModuleReview } from "@/components/module-review";
-import { b2Module4Lessons } from "@/data/lessons-b2-module4";
+import { academicLessonList } from "@/data/academic-lessons";
+import { moduleTitles } from "@/data/curriculum";
 
-export default function B2ModuleFourReviewPage() {
-  return (
-    <ModuleReview
-      moduleId="B2.4"
-      titleAr="المشاركة ونقد الإعلام"
-      titleDe="Gesellschaft im Diskurs"
-      lessons={b2Module4Lessons}
-      projectTitle="صمم مشاركة عادلة ودقّق روايتها الإعلامية"
-      projectCopy="حلل الفئات المتأثرة والعوائق ودرجات التأثير، صمم آليات وصول ورد معلل، ثم افحص تقريرًا عن العملية عبر المصدر الأولي وما قيس والتأطير والمصلحة والتصحيح دون اتهام أو تبنٍ غير مبرر."
-    />
-  );
-}
+export default function B2ModuleReviewPage(){const moduleMeta=moduleTitles.B2[3];const lessons=academicLessonList.filter(lesson=>lesson.level==="B2"&&lesson.module===4);return <ModuleReview moduleId="B2.4" titleAr={moduleMeta.titleAr} titleDe={moduleMeta.titleDe} lessons={lessons} projectTitle="راجع موقفك ونظّم النص أمام اعتراض جديد" projectCopy="أعد صياغة موقف بعد دليل مخالف، حافظ على الإحالات وخيط النص، وفسّر قرارًا سابقًا دون اتهام أو يقين غير مسند."/>}

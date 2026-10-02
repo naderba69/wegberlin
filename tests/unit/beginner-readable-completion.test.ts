@@ -8,12 +8,15 @@ const criteria = lessonEvidenceGate(academicLessons["a1-01"], defaultState).crit
 
 describe("beginner-readable lesson completion", () => {
   it("uses learner-facing labels instead of evidence jargon", () => {
-    expect(BEGINNER_READABLE_COMPLETION_POLICY).toBe("beginner-readable-completion-v1");
+    expect(BEGINNER_READABLE_COMPLETION_POLICY).toBe("beginner-readable-completion-v2");
     expect(criteria.map((criterion) => criterion.labelAr)).toEqual([
       "التمارين الأساسية",
       "فهم القراءة",
       "فهم الاستماع",
       "الاختبار القصير",
+      "مسودة كتابة مسلّمة",
+      "كلام مسجّل ومراجَع ذاتيًا",
+      "مهمة وساطة مسلّمة",
     ]);
   });
 
@@ -21,7 +24,7 @@ describe("beginner-readable lesson completion", () => {
     const reading = lessonCompletionGuidance(criteria.find((criterion) => criterion.id === "reading")!);
     const listening = lessonCompletionGuidance(criteria.find((criterion) => criterion.id === "listening")!);
     expect(reading.actionAr).toBe("ابدأ تمرين القراءة");
-    expect(reading.detailAr).toContain("ويكفي إنجاز واحد");
+    expect(reading.detailAr).toContain("سؤال واحد لا يكفي");
     expect(listening.actionAr).toBe("ابدأ تمرين الاستماع");
     expect(listening.detailAr).toContain("استمع إلى مقطع قصير");
   });

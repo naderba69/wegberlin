@@ -22,3 +22,7 @@ npm run security:audit
 ```
 
 The audit compares the registry with `reports/security-headers-audit.json` and fails the production prebuild on drift. Browser response-header acceptance is also covered by Playwright. This is a configuration audit, not a penetration test.
+
+## 2026-10-02 preview and CSP validity correction
+
+Production still denies embedding and generic unsafe-eval. Development only allows the named Arena parent origins, removes X-Frame-Options there, and permits Webpack source-map eval so hydration actually runs. Invalid IPv6 literal CSP tokens were removed, not replaced by a broad wildcard; local endpoints use localhost or 127.0.0.1 (localhost can resolve to IPv6). The endpoint validator rejects literal [::1] instead of falsely claiming it is CSP-supported.

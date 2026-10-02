@@ -1,3 +1,5 @@
+import { studyPhase } from "./study-phase";
+import { latestLearningContract } from "./learning-agreement";
 import type { LearningState } from "@/types/learning";
 import { getCoachTarget } from "./coach";
 import { effectiveSessionMinutes, localSessionDate } from "./session-signals";
@@ -32,14 +34,17 @@ function allocateMinutes(total:number,definitions:SlotDefinition[]):WeeklyPlanSl
   return definitions.map((definition,index)=>({id:definition.id,kind:definition.kind,titleAr:definition.titleAr,href:definition.href,minutes:allocated[index]})).filter((item)=>item.minutes>0);
 }
 
-function definitionsForDay(index:number,lessonHref:string):SlotDefinition[]{
+function definitionsForDay(index:number,lessonHref:string,state:LearningState,now:Date):SlotDefinition[]{
+  const phase=studyPhase(state,now);
+  const examHref=phase.examSpecific?"/exams":`/practice/endurance?level=${phase.level}`;
+  const writingReady=state.completedLessonIds.length>0||Object.values(state.lessonProgress).some(stage=>stage>=9);
   const rows:SlotDefinition[][]=[
     [{id:"review-mon",kind:"review",titleAr:"استرجاع الأسبوع",href:"/review",weight:1},{id:"lesson-mon",kind:"lesson",titleAr:"هدف المنهج",href:lessonHref,weight:2}],
     [{id:"listening-tue",kind:"listening",titleAr:"استماع وفهم",href:"/library",weight:1},{id:"lesson-tue",kind:"lesson",titleAr:"تثبيت الهدف",href:lessonHref,weight:2}],
-    [{id:"writing-wed",kind:"writing",titleAr:"كتابة مستقلة",href:"/writing",weight:2},{id:"review-wed",kind:"review",titleAr:"مراجعة قصيرة",href:"/review",weight:1}],
+    [{id:"writing-wed",kind:"writing",titleAr:writingReady?"كتابة مستقلة":"تحضير لكتابة قصيرة",href:writingReady?"/writing":lessonHref,weight:2},{id:"review-wed",kind:"review",titleAr:"مراجعة قصيرة",href:"/review",weight:1}],
     [{id:"speaking-thu",kind:"speaking",titleAr:"محادثة أو تسجيل",href:"/speaking",weight:2},{id:"lesson-thu",kind:"lesson",titleAr:"نقل هدف الدرس",href:lessonHref,weight:1}],
     [{id:"review-fri",kind:"review",titleAr:"مراجعة تراكمية",href:"/review",weight:1},{id:"lesson-fri",kind:"lesson",titleAr:"هدف المنهج",href:lessonHref,weight:2}],
-    [{id:"exam-sat",kind:"exam",titleAr:"تدريب صيغة الامتحان",href:"/exams",weight:3},{id:"reflection-sat",kind:"reflection",titleAr:"تأمل أسبوعي مستقل",href:"/today#weekly-reflection",weight:1}],
+    [{id:"exam-sat",kind:"exam",titleAr:phase.examSpecific?"مهمة من صيغة الجهة المختارة":"فهم وتعليمات على مستوى المتعلم",href:examHref,weight:3},{id:"reflection-sat",kind:"reflection",titleAr:"تأمل أسبوعي مستقل",href:"/today#weekly-reflection",weight:1}],
     [{id:"lesson-sun",kind:"lesson",titleAr:"جلسة اختيارية خفيفة",href:lessonHref,weight:2},{id:"review-sun",kind:"review",titleAr:"مراجعة هادئة",href:"/review",weight:1}],
   ];
   return rows[index];
@@ -47,7 +52,10 @@ function definitionsForDay(index:number,lessonHref:string):SlotDefinition[]{
 
 function dayBudget(state:LearningState,date:string,index:number,today:string,now:Date):number{
   const session=state.dailySessions[date];
-  if(index===6&&!session)return 0;
+  const contract=latestLearningContract(state.learningContracts);
+  const weekday=index+1;
+  if(!session&&contract&&!contract.studyWeekdays.includes(weekday as 1|2|3|4|5|6|7))return 0;
+  if(index===6&&!session&&!contract)return 0;
   if(date===today)return effectiveSessionMinutes(state,now);
   if(session)return session.energyBefore<=2?Math.min(session.availableMinutes,20):session.availableMinutes;
   return planningPresetMinutes(state).minutes;
@@ -77,8 +85,8 @@ export function buildWeeklyPlan(state:LearningState,now=new Date()):WeeklyPlan{
     const date=localSessionDate(addDays(start,index));
     const budget=dayBudget(state,date,index,today,now);
     const studied=studiedOn(state,date);
-    const status:WeeklyDayStatus=index===6&&budget===0?"rest":date===today?"today":date<today?(studied?"complete":"missed"):"upcoming";
-    return{date,weekdayAr:dayNames[index],status,budgetMinutes:budget,slots:allocateMinutes(budget,definitionsForDay(index,lessonHref))};
+    const status:WeeklyDayStatus=budget===0?"rest":date===today?"today":date<today?(studied?"complete":"missed"):"upcoming";
+    return{date,weekdayAr:dayNames[index],status,budgetMinutes:budget,slots:allocateMinutes(budget,definitionsForDay(index,lessonHref,state,now))};
   });
   const graceDayDate=weeklyGraceCandidate(baseDays);
   const graceAppliedDays=baseDays.map((day)=>day.date===graceDayDate?{...day,status:"grace" as const}:day);
@@ -86,7 +94,7 @@ export function buildWeeklyPlan(state:LearningState,now=new Date()):WeeklyPlan{
   const recoveryDay=graceAppliedDays.find((day)=>day.status==="today"||day.status==="upcoming");
   const days=graceAppliedDays.map((day)=>{
     if(!missed.length||day!==recoveryDay||day.status==="rest")return day;
-    const definitions:SlotDefinition[]=[{id:`recovery-${missed[0].date}`,kind:"recovery",titleAr:"استعادة مهمة فائتة واحدة",href:lessonHref,weight:1},...definitionsForDay(graceAppliedDays.indexOf(day),lessonHref).map((item)=>({...item,weight:item.weight*3}))];
+    const definitions:SlotDefinition[]=[{id:`recovery-${missed[0].date}`,kind:"recovery",titleAr:"استعادة مهمة فائتة واحدة",href:lessonHref,weight:1},...definitionsForDay(graceAppliedDays.indexOf(day),lessonHref,state,now).map((item)=>({...item,weight:item.weight*3}))];
     return{...day,recoverySourceDate:missed[0].date,slots:allocateMinutes(day.budgetMinutes,definitions)};
   });
   return{

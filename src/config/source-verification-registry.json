@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "policyVersion": "source-freshness-v1",
-  "reviewedAt": "2026-09-11",
+  "reviewedAt": "2026-10-02",
   "calendarTimeZone": "Africa/Tunis",
   "warningBeforeExpiryDays": 7,
   "records": [
@@ -213,6 +213,22 @@
       "staleAction": "block-release",
       "ownerId": "browser-model-owner",
       "reviewerId": "browser-model-source-reviewer-role"
+    },
+    {
+      "id": "onnxruntime-web-webgpu-1-26-dev-20260416",
+      "category": "browser-model",
+      "service": "browser-webgpu",
+      "organization": "Microsoft",
+      "title": "ONNX Runtime Web WebGPU ESM bundle and package license",
+      "url": "https://www.npmjs.com/package/onnxruntime-web/v/1.26.0-dev.20260416-b7804b056c",
+      "lastVerifiedAt": "2026-10-02",
+      "maxAgeDays": 30,
+      "verificationMode": "manual-semantic-review",
+      "observedState": "The pinned npm package is MIT-licensed and exposes a WebGPU ESM bundle; the package tarball integrity and the exact browser asset SHA-256 are pinned in vendor-assets/webgpu/manifest.json.",
+      "claimAr": "يثبت إصدار محرك WebGPU وترخيصه ومصدر الحزمة؛ يتطلب تنزيل الأوزان موافقة ولا يغيّر device=webgpu إلى WASM.",
+      "staleAction": "block-release",
+      "ownerId": "browser-model-owner",
+      "reviewerId": "onnxruntime-source-reviewer-role"
     },
     {
       "id": "transformers-js-webgpu-guide-2026-09",

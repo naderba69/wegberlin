@@ -1,3 +1,4 @@
+import { buildLevelEvidenceGate } from "@/core/assessment/level-evidence";
 import { curriculum } from "@/data/curriculum";
 import { buildExamReadiness } from "@/core/exams/readiness";
 import type { LearningState } from "@/types/learning";
@@ -29,15 +30,15 @@ function completedIn(state:LearningState,levels:string[]) {
   return curriculum.filter((lesson)=>levels.includes(lesson.level)&&state.completedLessonIds.includes(lesson.id)).length;
 }
 
-function gateReady(state:LearningState,level:"a1"|"a2"|"b1"|"b2") {
-  return (state.mastery[`level-${level}-ready`]??0)>=100;
+function gateReady(state:LearningState,level:"a1"|"a2"|"b1"|"b2",now:Date) {
+  return buildLevelEvidenceGate(state,level.toUpperCase() as "A1"|"A2"|"B1"|"B2",now).passed;
 }
 
 function phaseDefinition(id:JourneyPhaseId) {
   return journeyPhases.find((phase)=>phase.id===id)!;
 }
 
-export function deriveJourneyState(state:LearningState):JourneyState {
+export function deriveJourneyState(state:LearningState,now=new Date()):JourneyState {
   const needsOrientation=!state.profile||(!state.diagnosticResult&&state.profile.priorExperience!=="none");
   let phaseId:JourneyPhaseId;
   let progressPercent=0;
@@ -49,10 +50,10 @@ export function deriveJourneyState(state:LearningState):JourneyState {
     progressPercent=state.profile?50:0;
     reasonAr=state.profile?"حُفظت تفضيلاتك؛ بقي تحديد نقطة البداية دون افتراض مستوى قطعي.":"نحتاج تفضيلاتك وخبرتك قبل تركيب أول جلسة مناسبة.";
     nextTransitionAr=state.profile?"أكمل التشخيص القصير أو اختر بداية الصفر بوضوح.":"أكمل التهيئة المحلية ثم انتقل إلى نقطة البداية.";
-  }else if(!gateReady(state,"a2")){
+  }else if(!gateReady(state,"a2",now)){
     phaseId="foundation";
     const lowerCompleted=completedIn(state,["A1","A2"]);
-    const evidenceUnits=lowerCompleted+(gateReady(state,"a1")?1:0)+(gateReady(state,"a2")?1:0);
+    const evidenceUnits=lowerCompleted+(gateReady(state,"a1",now)?1:0)+(gateReady(state,"a2",now)?1:0);
     progressPercent=Math.round(evidenceUnits/50*100);
     reasonAr="هذه المرحلة تبني A1 وA2 مع الاسترجاع والإنتاج والبوابات، لا بمجرد تصفح الدروس.";
     nextTransitionAr="تنتقل إلى التوسيع بعد إكمال A1 وA2 واجتياز بوابتي الأدلة الداخليتين.";
@@ -61,12 +62,13 @@ export function deriveJourneyState(state:LearningState):JourneyState {
     const upperTotal=curriculum.filter((lesson)=>lesson.level==="B1"||lesson.level==="B2").length;const allUpperComplete=upperCompleted===upperTotal;
     if(!allUpperComplete){
       phaseId="growth";
-      progressPercent=Math.round((upperCompleted+(gateReady(state,"b1")?1:0))/(upperTotal+1)*100);
+      progressPercent=Math.round((upperCompleted+(gateReady(state,"b1",now)?1:0))/(upperTotal+1)*100);
       reasonAr="توسع الآن الاستقلال اللغوي عبر B1 وB2 مع مهام نقل وكتابة ومحادثة.";
       nextTransitionAr="تبدأ مرحلة التثبيت بعد إكمال دروس B1 وB2، مع بقاء بوابة B1 شرطًا للمسار.";
-    }else if(!gateReady(state,"b2")){
+    }else if(!gateReady(state,"b2",now)){
       phaseId="consolidation";
-      progressPercent=Math.max(0,Math.min(99,Math.round(state.mastery["level-b2-ready"]??0)));
+      const gate=buildLevelEvidenceGate(state,"B2",now);
+      progressPercent=Math.round(Object.values(gate.criteria).filter(Boolean).length/Object.keys(gate.criteria).length*100);
       reasonAr="اكتمل مسار الدروس؛ المطلوب الآن تثبيت المعرفة وأدلة الكتابة والمحادثة في بوابة B2 الداخلية.";
       nextTransitionAr="تنتقل للاستعداد الامتحاني بعد بوابة B2 الداخلية، دون ادعاء شهادة رسمية.";
     }else{

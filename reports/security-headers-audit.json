@@ -3,7 +3,7 @@
   "version": "security-headers-audit-v1",
   "policyVersion": "vercel-csp-headers-v1",
   "ok": true,
-  "policySha256": "eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf",
+  "policySha256": "397a1090e49351ada9ddb1995ca35d6fd8adc6cc82255d25d10633fef7850c5b",
   "directiveCount": 15,
   "headerCount": 7,
   "externalConnectOrigins": [
@@ -18,9 +18,7 @@
     "http://localhost:*",
     "https://localhost:*",
     "http://127.0.0.1:*",
-    "https://127.0.0.1:*",
-    "http://[::1]:*",
-    "https://[::1]:*"
+    "https://127.0.0.1:*"
   ],
   "documentedExceptions": [
     {

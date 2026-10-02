@@ -29,5 +29,5 @@ export function speakingDurationBand(duration:number,target:number):"short"|"wit
 export function canSaveSpeakingReview(input:{listenedBack:boolean;reflection:string}):boolean{return input.listenedBack&&input.reflection.trim().length>=5}
 
 export function speakingAttemptIsIndependent(attempt:Pick<SpeakingAttempt,"selfReview">):boolean{
-  return attempt.selfReview?.supportVisibleDuringRecording !== true;
+  return attempt.selfReview?.supportVisibleDuringRecording === false && attempt.selfReview.listenedBack;
 }

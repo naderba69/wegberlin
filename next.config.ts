@@ -29,8 +29,13 @@ function splitCurriculumByLevel(config: Parameters<NonNullable<NextConfig["webpa
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  allowedDevOrigins: ["*.e2b.app"],
   async headers() {
-    return [{ source: "/(.*)", headers: [...securityHeaders] }];
+    // Production stays non-embeddable. Arena's development preview is an explicit,
+    // origin-bounded exception. Webpack dev source maps also need development-only
+    // unsafe-eval; the production directive registry never permits generic eval.
+    const headers=process.env.NODE_ENV==="development"?securityHeaders.filter(header=>header.key.toLowerCase()!=="x-frame-options").map(header=>header.key.toLowerCase()==="content-security-policy"?{...header,value:header.value.replace("frame-ancestors 'none'", "frame-ancestors 'self' https://arena.ai https://*.arena.ai").replace("script-src 'self'", "script-src 'self' 'unsafe-eval'")}:header):[...securityHeaders];
+    return [{ source: "/(.*)", headers }];
   },
   webpack: (config) => splitCurriculumByLevel(config),
 };

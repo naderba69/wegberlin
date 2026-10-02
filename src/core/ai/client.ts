@@ -350,7 +350,7 @@ export function endpointFrom(config: AIConfig) {
   let parsed: URL;
   try { parsed = new URL(endpoint); } catch { throw new Error("عنوان Ollama المحلي غير صالح."); }
   if (!["http:", "https:"].includes(parsed.protocol)) throw new Error("عنوان Ollama يجب أن يستخدم HTTP أو HTTPS.");
-  if(!["localhost","127.0.0.1","[::1]"].includes(parsed.hostname)||parsed.username||parsed.password)throw new Error("لحماية CSP يقبل Ollama عنوان Loopback محليًا فقط دون اسم مستخدم أو كلمة مرور.");
+  if(!["localhost","127.0.0.1"].includes(parsed.hostname)||parsed.username||parsed.password)throw new Error("لحماية CSP يقبل Ollama عنوان Loopback محليًا فقط دون اسم مستخدم أو كلمة مرور.");
   if(parsed.pathname!=="/"||parsed.search||parsed.hash)throw new Error("اكتب أصل Ollama المحلي فقط، مثل http://localhost:11434، دون مسار أو Query.");
   return parsed.origin;
 }

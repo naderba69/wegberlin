@@ -18,7 +18,7 @@ export type PracticeExercise =
   | { id: string; type: "multiple-choice"; promptAr: string; promptDe?: string; options: [string,string,string,string]; correctIndex: 0|1|2|3; explanationAr: string }
   | { id: string; type: "fill-blank"; promptAr: string; template: string; acceptedAnswers: string[]; explanationAr: string }
   | { id: string; type: "word-ordering"; promptAr: string; words: string[]; acceptedAnswers: string[]; explanationAr: string }
-  | { id: string; type: "error-correction"; promptAr: string; sentence: string; acceptedAnswers: string[]; explanationAr: string }
+  | { id: string; type: "error-correction"; promptAr: string; sentence: string; acceptedAnswers: string[]; orthographyPolicy?: "case-sensitive" | "punctuation-sensitive" | "exact"; explanationAr: string }
   | { id: string; type: "matching"; promptAr: string; pairs: Array<{ left: string; right: string }>; explanationAr: string };
 
 export interface TheoryBlock {

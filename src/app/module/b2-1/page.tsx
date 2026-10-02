@@ -1,3 +1,5 @@
 import { ModuleReview } from "@/components/module-review";
-import { b2Module1Lessons } from "@/data/lessons-b2-module1";
-export default function B2ModuleOneReviewPage(){return <ModuleReview moduleId="B2.1" titleAr="المواقف والمناظرة" titleDe="Argumentieren" lessons={b2Module1Lessons} projectTitle="اكتب موقفًا وادخل مناظرة B2" projectCopy="ابنِ أطروحة وحججًا وأدلة وحدودًا، لخص أقوى موقف مقابل واطلب تأكيده، ثم قدم تنازلًا وتفنيدًا ونقطة اتفاق وسؤالًا مفتوحًا في كتابة وعرض شفهي."/>}
+import { academicLessonList } from "@/data/academic-lessons";
+import { moduleTitles } from "@/data/curriculum";
+
+export default function B2ModuleReviewPage(){const moduleMeta=moduleTitles.B2[0];const lessons=academicLessonList.filter(lesson=>lesson.level==="B2"&&lesson.module===1);return <ModuleReview moduleId="B2.1" titleAr={moduleMeta.titleAr} titleDe={moduleMeta.titleDe} lessons={lessons} projectTitle="ناقش تغييرًا وبلّغ عنه بسجل مناسب" projectCopy="قارن موقفين حول إجراء عملي، ادمج اعتراضًا حقيقيًا، ثم اكتب رسالة مهنية بمقترح محدود وخطوة تحقق."/>}

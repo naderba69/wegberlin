@@ -1,15 +1,5 @@
 import { ModuleReview } from "@/components/module-review";
-import { b2Module3Lessons } from "@/data/lessons-b2-module3";
+import { academicLessonList } from "@/data/academic-lessons";
+import { moduleTitles } from "@/data/curriculum";
 
-export default function B2ModuleThreeReviewPage() {
-  return (
-    <ModuleReview
-      moduleId="B2.3"
-      titleAr="فهم البيانات وتبسيط المعرفة"
-      titleDe="Wissen und Forschung"
-      lessons={b2Module3Lessons}
-      projectTitle="حلل نتيجة بحثية واشرحها لجمهور عام"
-      projectCopy="افصل التغير المطلق من النسبي والارتباط من السببية، قيّد الاستنتاج بالعينة والتوزيع، ثم حوّل المصطلح والطريقة والنتيجة والحدود إلى شرح واضح لا يزوّر درجة اليقين."
-    />
-  );
-}
+export default function B2ModuleReviewPage(){const moduleMeta=moduleTitles.B2[2];const lessons=academicLessonList.filter(lesson=>lesson.level==="B2"&&lesson.module===3);return <ModuleReview moduleId="B2.3" titleAr={moduleMeta.titleAr} titleDe={moduleMeta.titleDe} lessons={lessons} projectTitle="انقل فكرة معقدة ثم أنتج تحت وقت مناسب" projectCopy="قدّم وساطة لجمهور غير متخصص، ثم اكتب وتحدث تحت قيد زمني معلن. هذه بروفة مرحلية لا إعلان جاهزية B2 النهائية."/>}

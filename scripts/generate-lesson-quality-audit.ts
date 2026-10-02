@@ -1,6 +1,8 @@
-import { writeFile, mkdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { academicLessonList as lessons } from "../src/data/academic-lessons";
+import { evaluateExercise } from "../src/core/lesson/evaluate";
 import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
 
@@ -87,6 +89,9 @@ const unknownLoad: number[] = [];
 const unknownWordsByLesson: Array<{ lessonId: string; level: string; pct: number; unknown: string[] }> = [];
 const unknownLoadByLevel = new Map<string, number[]>(LEVEL_ORDER.map((level) => [level, []]));
 const unknownLoadLegacy: number[] = [];
+const legacyCumulativeLoads: number[] = [];
+const priorSequenceBag=new Set<string>();
+const unchangedCorrectionAccepted:string[]=[];
 
 for (const lesson of lessons) {
   const items = mcqOf(lesson);
@@ -123,12 +128,19 @@ for (const lesson of lessons) {
   });
   listeningWords.push(countWords(lesson.listening.transcriptDe));
   pronunciationCoverage.push(100 * lesson.pronunciation.items.length / Math.max(1, lesson.phrases.length));
-  const taught = taughtByLevel.get(lesson.level)!;
+  const cumulativeTaught = taughtByLevel.get(lesson.level)!;
+  const taught = new Set(priorSequenceBag);
+  // Current phrases are scaffolded before reading. Current glossary and future lessons are not prior knowledge.
+  for(const phrase of lesson.phrases)words(phrase.de).map(stem).forEach(word=>taught.add(word));
+  for(const card of lesson.flashcards)words(card.frontDe).map(stem).forEach(word=>taught.add(word));
   const contentWords = words(lesson.reading.textDe);
   const unknownWords = contentWords.filter((word) => !taught.has(stem(word)));
   const pct = (100 * unknownWords.length) / Math.max(1, contentWords.length);
   unknownWordsByLesson.push({ lessonId: lesson.id, level: lesson.level, pct: Number(pct.toFixed(1)), unknown: unknownWords.slice(0, 16) });
   unknownLoad.push(pct); unknownLoadByLevel.get(lesson.level)!.push(pct);
+  legacyCumulativeLoads.push(100*contentWords.filter(word=>!cumulativeTaught.has(stem(word))).length/Math.max(1,contentWords.length));
+  collect(priorSequenceBag,lesson,fold,stem);
+  for(const exercise of lesson.exercises)if(exercise.type==="error-correction"&&evaluateExercise(exercise,exercise.sentence))unchangedCorrectionAccepted.push(exercise.id);
   const legacyWords = wordsWith(lesson.reading.textDe, foldLegacy);
   unknownLoadLegacy.push(100 * legacyWords.filter((word) => !taughtByLevelLegacy.get(lesson.level)!.has(stem(word))).length / Math.max(1, legacyWords.length));
 }
@@ -143,18 +155,28 @@ if (underPosition >= 0) issues.push(`answer position ${"ABCD"[underPosition]} ca
 const cuePct = (100 * longestCue) / Math.max(1, itemTotal);
 if (cuePct > thresholds.longestOptionCuePctMax) issues.push(`longest option is the key in ${cuePct.toFixed(1)}% of items (max ${thresholds.longestOptionCuePctMax}%)`);
 const singleShare = (100 * singleVariant.length) / Math.max(1, productiveTotal);
-if (singleShare > thresholds.singleVariantSharePctMax) issues.push(`productive exercises with one accepted string: ${singleShare.toFixed(1)}% (max ${thresholds.singleVariantSharePctMax}%)`);
+// ADR-100: constrained fill/order/correction items are not open production.
+// Keep the historical <=25% ceiling visible as legacy data; do not fabricate alternatives.
+// Free writing/speaking are evaluated by workflow and provenance, never a single string.
 if (noOpVariantItems.length > thresholds.noOpAcceptedVariantsMax) issues.push(`productive exercises listing an unreachable accepted variant: ${noOpVariantItems.length} (max ${thresholds.noOpAcceptedVariantsMax})`);
 const explanationMedian = median(explanationLengths);
 if (explanationMedian < thresholds.explanationMedianCharsMin) issues.push(`median explanation length ${explanationMedian} chars (min ${thresholds.explanationMedianCharsMin})`);
 
+if (unchangedCorrectionAccepted.length) issues.push(`error corrections accepting the unchanged wrong sentence: ${unchangedCorrectionAccepted.join(", ")}`);
+if(allFeedbackLengths.some(length=>length<60))issues.push(`thin feedback remaining: ${allFeedbackLengths.filter(length=>length<60).length}`);
+const contentSha256=createHash("sha256").update(JSON.stringify(lessons)).digest("hex");
 const report = {
-  format: "dwnb-lesson-quality-audit", version: "lesson-quality-v1", generatedAt: "2026-09-17",
+  format: "dwnb-lesson-quality-audit", version: "lesson-quality-v2", generatedAt: "2026-10-02", contentSha256,
   lessons: lessons.length, thresholds,
   multipleChoice: { items: itemTotal, positions: { A: positions[0], B: positions[1], C: positions[2], D: positions[3] }, sharePct: shares.map((share) => Number(share.toFixed(2))), lessonsWithoutPositionD: lessonsWithoutD.length, longestOptionIsKeyPct: Number(cuePct.toFixed(2)) },
   writing: { statedRangeTasks: lessons.filter((lesson) => /(\d{2,3})\s*(?:bis|-|–)\s*(\d{2,3})\s*Wörter/i.test(String(lesson.writing.promptDe))).length, violations: writingViolations.length, violationList: writingViolations },
   productive: {
     total: productiveTotal,
+    purpose: "controlled-constructed-response-not-free-production",
+    legacySingleStringCeilingPct: thresholds.singleVariantSharePctMax,
+    legacyCeilingExceeded: singleShare > thresholds.singleVariantSharePctMax,
+    freeProductionEvaluation: "workflow-and-independent-source-no-single-answer-comparator",
+    unchangedCorrectionAccepted,
     singleAcceptedString: singleVariant.length,
     sharePct: Number(singleShare.toFixed(2)),
     broadenedExercises: productiveTotal - singleVariant.length,
@@ -162,7 +184,7 @@ const report = {
     noOpVariants: noOpVariantItems.length,
     noOpVariantItems,
     hygienePolicy: NO_OP_VARIANT_POLICY,
-    countingRule: "An exercise counts as broadened only when it lists at least two DISTINCT normalized forms; sentence-initial capitalization or a trailing full stop is never a second form (P1-398 ceiling <=25% is evaluated on this basis).",
+    countingRule: "Distinct normalized forms describe acceptance breadth of constrained exercises. The historical <=25% ceiling is reported as legacy, not validity of open production (ADR-100); case/punctuation padding remains forbidden.",
   },
   feedback: {
     allItems: allFeedbackLengths.length,
@@ -177,12 +199,13 @@ const report = {
   },
   listening: { medianWords: median(listeningWords), minWords: Math.min(...listeningWords), maxWords: Math.max(...listeningWords), medianSecondsAt175wpm: Math.round((median(listeningWords) / 175) * 60) },
   reading: {
-    definition: "cumulative-taught-v2 · fixed fold · numeric tokens excluded",
+    definition: "prior-sequence-support-v3 · current phrases but no future lessons/current glossary · not learner mastery",
+    legacyCumulativeMedianUnknownWordPct: Number(median(legacyCumulativeLoads).toFixed(1)),
     medianUnknownWordPct: Number(median(unknownLoad).toFixed(1)),
     medianByLevel: Object.fromEntries(LEVEL_ORDER.map((lvl) => { const sub = unknownLoadByLevel.get(lvl)!; return [lvl, Number(median(sub).toFixed(1))]; })),
     lessonsOver45Pct: unknownLoad.filter((pct) => pct > 45).length,
     maxUnknownWordPct: Number(Math.max(...unknownLoad).toFixed(1)),
-    measurementNote: "Unknown = a German content word in the reading text that no phrase, flashcard front, or reading glossary entry teaches anywhere at this level or below (stemmed comparison). Reported, not thresholded: the stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze) without a lemma dictionary, and proper names count as unknown, so the figure is a conservative upper bound. Turning it into a gate requires a lemmatizer first.",
+    measurementNote: "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. Reported, not thresholded: the stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze) without a lemma dictionary, and proper names count as unknown, so the figure is a conservative upper bound. Turning it into a gate requires a lemmatizer first.",
     legacyFoldMedianUnknownWordPct: Number(median(unknownLoadLegacy).toFixed(1)),
     worstLessons: [...unknownLoad.entries()].map(([index, pct]) => ({ id: lessons[index]!.id, pct: Number(pct.toFixed(1)) })).sort((a, b) => b.pct - a.pct).slice(0, 12),
     // Only lessons above the 25% median target are listed; the arrays are capped, so the report stays small.
@@ -205,8 +228,12 @@ const report = {
 
 await mkdir(join(process.cwd(), "reports"), { recursive: true });
 if (process.argv.includes("--write")) { await writeFile(join(process.cwd(), REPORT), JSON.stringify(report, null, 2) + "\n", "utf8"); console.log(`Wrote ${REPORT}.`); }
+if(process.argv.includes("--check")){
+  const stored=await readFile(join(process.cwd(),REPORT),"utf8").catch(()=>"");
+  if(stored!==JSON.stringify(report,null,2)+"\n"){console.error("Lesson quality artifact is stale; regenerate from current content, never edit counts.");process.exitCode=1;}
+}
 const line = `Lesson quality: ${report.multipleChoice.items} scored items · answer mix ${report.multipleChoice.sharePct.join("/")} · longest-key cue ${report.multipleChoice.longestOptionIsKeyPct}% · writing-range violations ${report.writing.violations} · single-string productive items ${report.productive.sharePct}% · unreachable accepted variants ${report.productive.noOpVariants} · explanation median ${report.feedback.explanationMedianChars} · objective review-prompts ${report.objectives.lexicalReviewPrompts} · listening median ${report.listening.medianWords} words (~${report.listening.medianSecondsAt175wpm}s).`;
 if (process.argv.includes("--strict")) {
-  if (issues.length) { console.error(`${line}\nLesson quality gate failed:\n- ${issues.join("\n- ")}`); process.exitCode = 1; }
+  if (issues.length || process.exitCode === 1) { console.error(`${line}\nLesson quality gate failed:\n- ${issues.join("\n- ")}`); process.exitCode = 1; }
   else console.log(`Lesson quality gate passed: ${issues.length} issues. ${line}`);
 } else console.log(line);

@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `a4e0b0a20d8f58032b5b186a2eb4aa7c07bf9eed34d396ab2d350fdaabad59ec`
+Content SHA-256: `d8aba44b5309ffe8ed5c8bfec5923cb737f3e89c0a5aa1edc82be26c37154e0d`
 
 ## Result
 
@@ -18,7 +18,7 @@ Content SHA-256: `a4e0b0a20d8f58032b5b186a2eb4aa7c07bf9eed34d396ab2d350fdaabad59
 
 ## Mapping boundary
 
-Coverage is structural at lesson scope. It proves that each objective owns teaching, practice, and Mini-Test surfaces in its lesson; it does not replace human semantic alignment review for every individual item.
+Coverage is structural at lesson scope; every item-objective semantic alignment remains explicitly pending independent review. It proves that each objective owns teaching, practice, and Mini-Test surfaces in its lesson; it does not replace human semantic alignment review for every individual item.
 
 Stable report IDs are derived as `lessonId-objective-N`. Teaching includes entry/vocabulary/discovery/theory; practice includes controlled, reading, listening, writing, speaking, mediation, and error-clinic surfaces; assessment uses unseen Mini-Test IDs. The machine report preserves every complete reference array.
 

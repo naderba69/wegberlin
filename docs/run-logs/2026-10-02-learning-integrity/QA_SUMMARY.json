@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-02",
+  "branch": "arena/01a0fba1-wegberlin",
+  "curriculumVersion": "dwnb-a1-b2-2026.10-v2",
+  "pack": "dwnb-full-pack-v180",
+  "check": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "unitTests": 1185,
+    "unitFiles": 172,
+    "lintErrors": 0,
+    "standingLintWarnings": 6,
+    "typecheck": "pass",
+    "secretAudit": "pass",
+    "sourceAudit": "pass-due-soon-not-human-reviewed",
+    "handoff": "pass",
+    "buildPages": 322
+  },
+  "build": {
+    "fingerprint": "edc7f6ccae12",
+    "fullPackGzipBytes": 5758035,
+    "jsChunks": 123,
+    "jsGzipBytes": 1878095,
+    "maxChunkGzipBytes": 266168,
+    "audioPhysicalFiles": 544,
+    "audioBytes": 52943843,
+    "curriculumGzipBytes": 1033335
+  },
+  "browser": {
+    "engine": "real headless Chromium 153.0.8010.0 via temporary NPM distribution",
+    "desktop": {
+      "distinctPassed": 57,
+      "total": 57,
+      "fullRunPassed": 55,
+      "fullRunFailed": 2,
+      "finalTargetedPassed": 2,
+      "finalTargetedFailed": 0,
+      "mode": "57 distinct contracts across measured split runs; not a claimed single green run"
+    },
+    "mobile": {
+      "distinctPassed": 57,
+      "total": 57,
+      "fullRunPassed": 55,
+      "fullRunFailed": 2,
+      "finalTargetedPassed": 2,
+      "finalTargetedFailed": 0,
+      "mode": "split verification after one sandbox browser closure and one desktop-only test selector was corrected"
+    },
+    "ttsSequence": "explicit mock, not physical audio validation",
+    "physicalDeviceOrGPUOrScreenReaderReview": false
+  },
+  "externalBoundaries": {
+    "independentHumanLinguisticReview": false,
+    "humanAudio": false,
+    "phoneticCalibration": false,
+    "causalLearningEffect": false,
+    "remoteProductionDeployment": false
+  },
+  "preview": {
+    "port": 3000,
+    "bind": "0.0.0.0",
+    "realBrowserSmoke": "HTTP 200, learning ready=true, h1 rendered, no page errors or failed requests via localhost",
+    "developmentOnlyEval": true,
+    "productionGenericEval": false,
+    "invalidIPv6CspSourcesRemoved": true
+  }
+}

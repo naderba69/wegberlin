@@ -1,6 +1,6 @@
 export const CONTENT_GOVERNANCE_POLICY = "content-accountability-lifecycle-v1" as const;
 export const GOVERNED_CONTENT_RECORD_COUNT = 3_277 as const;
-export const GOVERNED_SOURCE_COUNT = 18 as const;
+export const GOVERNED_SOURCE_COUNT = 19 as const;
 
 export type ContentLifecycleStage="draft"|"validated"|"published";
 export type ContentFamilyScope="diagnostic"|"exam"|"exam-speaking"|"exam-writing"|"lesson-controlled"|"lesson-listening"|"lesson-mediation"|"lesson-mini-test"|"lesson-reading"|"lesson-speaking"|"lesson-writing"|"library-listening"|"library-reading"|"practice-dictation"|"practice-branching"|"practice-collocation";

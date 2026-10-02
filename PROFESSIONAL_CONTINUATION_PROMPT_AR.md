@@ -1,6 +1,46 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v179 · 2026-09-25 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v176`.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-102 browser WebGPU ESM-resolution fix; ADR-101 Vercel output compatibility remains verified.
+
+## متابعة إصلاح نشر Vercel — 2026-10-02 (ADR-101، نفس حزمة v180)
+
+- الخطأ في ce7e166 وقع بعد نجاح 322 صفحة، لأن سكربت postbuild افترض .next/server/app/index.html بعد تشغيل محوّل Next 16.
+- يقرأ القياس الآن Build Output API v3 وملفات prerender-fallback والمخرجات الثابتة، وينشر البيان الجديد في public/ وفي static/ المقدمة فعليًا. حارس JS يقيس الأصول المغلفة، ولا يُستخدم Cache قديم لتعويض ملف مفقود.
+- البناء المحلي ومحوّل @vercel/next@16.0.0 الفعلي نجحا في 322/322 صفحة وكل مراحل postbuild. المقارنة بين public ونسخة static نجحت حرفيًا؛ لا ادعاء نجاح نشر سحابي من اختبار محلي.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (actual complete run); 13 اختبارات جديدة دون تخفيف حدود 15% أو تعطيل الملفات المفقودة.
+- قياس البناء المحلي بعد إصلاح ADR-102: 94129001c039 · full 5,758,999؛ JS 123 chunks / 1,879,182 gzip / max 266,168. لم يتغير المنهج أو الصوت.
+- لا تعديل للمنهج أو المسارات أو Service Worker؛ تبقى البيانات التعليمية والمراجعات البشرية كما في ADR-100. تحذيرات npm install-scripts ليست سبب العطل ولم تُعتمد سكربتات إضافية عشوائيًا.
+
+
+## إصلاح مسارات ESM لـWebGPU — 2026-10-02 (ADR-102)
+
+- أُعيد إنتاج رسالة `Failed to resolve module specifier "onnxruntime-web/webgpu"` في Chromium 153.0.8010.0 قبل التغيير. ملف Transformers.js 4.2.0 المتصفحّي كان يترك أيضًا `onnxruntime-common` كـbare import، فكان فشل حل الوحدة يسبق إنشاء pipeline.
+- صار materializer يتحقق من ملف Transformers الأصلي وبصمة npm الثابتة لحزمة `onnxruntime-web@1.26.0-dev.20260416-b7804b056c`، ثم يعيد كتابة المرجعين المحددين فقط إلى حزمة WebGPU محلية واحدة، ويتحقق من hashes المصدر والمخرجات. لا تغيير للنموذج أو `device: webgpu` أو تنزيل الأوزان أو موافقة المستخدم أو سياسة الخصوصية/البديل.
+- نجاح `npm run build`: 322/322 صفحة، 123 chunk، وميزانيات Offline/JS/الصوت اجتازت. نجاح `npm test`: 1,198/1,198 في 173/173 ملفًا. اختبار Chromium native module Worker: 1/1 desktop و1/1 mobile، استورد الملفين الفعليين وبنى Tensor ولم يطلب أوزان Hugging Face.
+- هذا يثبت تحميل ESM فقط؛ لم تُنزّل أوزان ولا جرى استدلال فعلي على WebGPU، لذلك لا ندّعي نجاحًا على GPU حقيقي. تظل مراجعة الأجهزة/التوافق الفيزيائي معلقة.
+
+## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
+
+هذه الفقرة وADR-100 و`docs/LEARNING_REPAIRS_AR.md` هي الحالة الحالية. أرقام التشغيلات القديمة أسفلها تاريخية وليست اختبارات أو حقائق لهذا الجيل.
+
+- المنهج 96 درسًا (24 لكل مستوى)، B2 ست وحدات من أربعة دروس، مع 30 مراجعة/مشروعًا.
+- المعرفة: 8 صيغ A/B مستقلة، 48 سؤالًا لكل صيغة، المطلوب 39، ولا انتقال من Cache قديم وحده.
+- الإكمال سبعة أنشطة، والاستقلال والاحتفاظ المعجمي المؤجل منفصلان عن جودة الإنتاج الحر غير المحسومة.
+- المادة الإضافية: 32 موقف إنتاج بلا نموذج، و8 مدخلات 113–473 كلمة، بصوت جهاز اصطناعي فقط لا MP3 بشري مخترع.
+- جودة الشرح: 0 تحت 60 من 1,733، الوسيط العام 211 والاختيار من متعدد 232، ومراجعة المعنى المستقلة معلقة. نسبة الأجوبة المقيدة الواحدة 87.34% باقية بصدق في legacy؛ صفر بدائل ميتة.
+- خطة 90 دقيقة: 50 عمودًا فقريًا تشمل التهيئة/الإغلاق، 25 كلامًا، 15 مهمة مناسبة. السبت التأسيسي لا يحمل ورقة B2؛ الكامل جلسة منفصلة. المراجعة محدودة والراحة بلا دين.
+- لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
+- 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
+- Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
+- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
+- last measured source build fingerprint: 83a30907df07 · full 5,758,675 · JavaScript 123 chunks / 1,879,182 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (full `npm test` run after ADR-102). Browser: desktop 57 distinct contracts / mobile 57 distinct contracts verified in split runs (55/57 full + 2/2 isolated per project), not a claimed single 114/114 run; real headless Chromium 153, TTS mocked explicitly; see docs/run-logs/2026-10-02-learning-integrity/QA_SUMMARY.json.
+- P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
+- P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
+- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+
 
 آخر تدقيق للتسليم: **2026-09-08 — Africa/Tunis**
 
@@ -294,7 +334,7 @@ Playwright browser channel: chromium (full new-headless; local retries remain 0)
 Static/SSG pages: 321
 Offline routes: 318/318
 Search entries: 3,360
-Official source records: 18/18
+Official source records: 19/19
 Offline cache: dwnb-full-pack-v179
 Responsive tested: 320×568 to 1920×1080
 axe serious/critical on tested pages: 0

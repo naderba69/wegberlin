@@ -56,7 +56,7 @@ describe("selective Offline pack controls", () => {
     expect(workerSource).toContain('DWNB_OFFLINE_PACK_REMOVE_AUDIO');
     expect(workerSource).toContain('url.pathname.startsWith("/audio/")');
     expect(workerSource).toContain('includesAudio: false');
-    expect(workerSource).toContain('dwnb-full-pack-v179');
+    expect(workerSource).toContain('dwnb-full-pack-v180');
   });
 
   it("ignores a stale estimate response after the learner selects another pack",()=>{

@@ -1,3 +1,5 @@
+import { academicLessonList } from "@/data/academic-lessons";
+import { lessonEvidenceGate } from "@/core/lessons/evidence-gate";
 import { reviewCards } from "@/data/review-cards";
 import type { LearningState, ReviewItem } from "@/types/learning";
 import type { LessonSrsCard } from "./lesson-cards";
@@ -15,7 +17,7 @@ function lessonIdOf(card: LessonSrsCard) {
 }
 
 export function eligibleReviewCards(state: LearningState) {
-  const completed = new Set(state.completedLessonIds);
+  const completed = new Set([...state.completedLessonIds, ...academicLessonList.filter(lesson=>lessonEvidenceGate(lesson,state).basicTrainingPassed).map(lesson=>lesson.id)]);
   const authored = reviewCards.filter((card) => {
     const lessonId = lessonIdOf(card);
     return Boolean(lessonId && completed.has(lessonId));

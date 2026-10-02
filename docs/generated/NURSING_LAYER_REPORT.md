@@ -3,7 +3,7 @@
 Generated: 2026-09-23  
 Policy: `nursing-layer-v1`  
 Audit: `nursing-layer-audit-v1`  
-Content SHA-256: `1fdb3b00e1baf8c6e8f1238fa72348fee1ed41a285d870fe3409bb61a0dc26e7`
+Content SHA-256: `44a9492e90d12fad9d5289d3e41cbbe5b3f975959ffc2dfbb4fcd55d65e65560`
 
 ## Result
 

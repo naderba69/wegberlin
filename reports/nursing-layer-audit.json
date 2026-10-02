@@ -53,6 +53,10 @@
   "metric": "general exam-shape task accuracy (goethe-b2 + telc-deutsch-b2 simulations)",
   "windowDays": 14,
   "ifDropsPercentagePoints": 5,
+  "comparisonRequires": "same-provider-skill-task-family-and-fresh-independent-samples",
+  "minimumQuestionsPerWindow": 20,
+  "causalEffectClaim": false,
+  "cautionOnly": true,
   "actionAr": "تُخفَّض الطبقة (إخفاء الوحدات ووقف إضافة كلمات) وتُقدَّم الشهادة العامة، ولا يُبرَّر الانخفاض بأنه «تعمّق مهني».",
   "layerRemovable": true
  },
@@ -70,5 +74,5 @@
  ],
  "unexpectedImporters": [],
  "couplingHits": [],
- "contentSha256": "1fdb3b00e1baf8c6e8f1238fa72348fee1ed41a285d870fe3409bb61a0dc26e7"
+ "contentSha256": "44a9492e90d12fad9d5289d3e41cbbe5b3f975959ffc2dfbb4fcd55d65e65560"
 }

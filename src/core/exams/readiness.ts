@@ -3,7 +3,7 @@ import { examProfiles } from "@/data/exam-profiles";
 import type { PublishedTargetedExamSimulation } from "@/types/exam";
 import type { ExamProvider, LearningState } from "@/types/learning";
 
-export type ExamReadinessStatus="no-evidence"|"building"|"needs-work"|"strengthening"|"strong-evidence";
+export type ExamReadinessStatus="no-evidence"|"building"|"needs-work"|"strengthening"|"strong-evidence"|"quality-unverified";
 export type ExamModuleReadiness={
   moduleId:string;titleAr:string;titleDe:string;skill:PublishedTargetedExamSimulation["skill"];
   totalTasks:number;attemptedTasks:number;requiredSamples:number;coveragePercent:number;
@@ -19,7 +19,7 @@ const moduleSkill:Record<ExamProvider,Record<string,PublishedTargetedExamSimulat
   "goethe-b2":{lesen:"reading",hoeren:"listening",schreiben:"writing",sprechen:"speaking"},
   "telc-deutsch-b2":{lesen:"reading",sprachbausteine:"language-elements",hoeren:"listening",schreiben:"writing",sprechen:"speaking"},
 };
-const statusLabels:Record<ExamReadinessStatus,string>={"no-evidence":"بلا دليل","building":"عينة أولية","needs-work":"يحتاج علاجًا","strengthening":"قيد التثبيت","strong-evidence":"دليل تدريبي قوي"};
+const statusLabels:Record<ExamReadinessStatus,string>={"no-evidence":"بلا دليل","building":"عينة أولية","needs-work":"يحتاج علاجًا","strengthening":"قيد التثبيت","strong-evidence":"فهم تدريبي قوي","quality-unverified":"تغطية تدريب؛ جودة الإنتاج غير محسومة"};
 const isReceptive=(skill:PublishedTargetedExamSimulation["skill"])=>skill==="reading"||skill==="listening"||skill==="language-elements";
 
 function attemptedTaskIds(state:LearningState,tasks:PublishedTargetedExamSimulation[],skill:PublishedTargetedExamSimulation["skill"]){
@@ -48,13 +48,13 @@ function moduleStatus(input:{attempted:number;required:number;accuracy:number|nu
   if(input.attempted<input.required)return"building";
   if(isReceptive(input.skill)&&input.accuracy!==null&&input.accuracy<60)return"needs-work";
   if(isReceptive(input.skill)&&input.accuracy!==null&&input.accuracy>=80)return"strong-evidence";
-  if(!isReceptive(input.skill)&&input.repeatCount>0)return"strong-evidence";
+  if(!isReceptive(input.skill))return"quality-unverified";
   return"strengthening";
 }
 
 function localDateStamp(date:Date){return`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`}
 function addLocalDays(date:Date,days:number){const next=new Date(date.getFullYear(),date.getMonth(),date.getDate());next.setDate(next.getDate()+days);return next}
-function remainingUnits(modules:ExamModuleReadiness[]){return modules.reduce((sum,module)=>{if(module.status==="strong-evidence")return sum;const sampleGap=Math.max(0,module.requiredSamples-module.attemptedTasks);if(module.status==="needs-work")return sum+sampleGap+2;if(module.status==="strengthening")return sum+Math.max(1,sampleGap);return sum+sampleGap;},0)}
+function remainingUnits(modules:ExamModuleReadiness[]){return modules.reduce((sum,module)=>{if(module.status==="strong-evidence"||module.status==="quality-unverified")return sum;const sampleGap=Math.max(0,module.requiredSamples-module.attemptedTasks);if(module.status==="needs-work")return sum+sampleGap+2;if(module.status==="strengthening")return sum+Math.max(1,sampleGap);return sum+sampleGap;},0)}
 
 export function buildReadinessForecast(state:LearningState,provider:ExamProvider,modules:ExamModuleReadiness[],now=new Date()):ReadinessForecast{
   const remainingEvidenceUnits=remainingUnits(modules);
@@ -67,7 +67,7 @@ export function buildReadinessForecast(state:LearningState,provider:ExamProvider
   const activeEvidenceDays=new Set(state.studyHistory.filter((item)=>item.date>=observationStart&&item.date<=today&&item.evidenceCount>0).map((item)=>item.date)).size;
   const base={policyVersion:READINESS_FORECAST_POLICY_VERSION,provider,remainingEvidenceUnits,observationDays,activeEvidenceDays,evidenceBoundary:"planning-range-not-pass-date-official-score-or-guarantee" as const};
   const assumptionsAr=["وحدة الفجوة تعني عينة جديدة أو إعادة/مراجعة مطلوبة، لا نقطة امتحان.","الوتيرة تحسب أيامًا حديثة أنتجت دليلًا محفوظًا، لا عدد ساعات الحضور.","قد يتسع النطاق إذا تغير الوقت أو بقيت فجوة جودة لا يقيسها التطبيق."];
-  if(remainingEvidenceUnits===0)return{...base,status:"evidence-threshold-met",evidenceDaysPerWeek:null,minimumWeeks:null,maximumWeeks:null,confidence:"medium",messageAr:"اكتملت عتبات الدليل التدريبي الداخلية لهذه الجهة. لا نعرض تاريخ نجاح؛ راجع الأدلة وخطط لمراجعة بشرية ومحاكاة كاملة.",assumptionsAr};
+  if(remainingEvidenceUnits===0)return{...base,status:"evidence-threshold-met",evidenceDaysPerWeek:null,minimumWeeks:null,maximumWeeks:null,confidence:"medium",messageAr:"اكتملت تغطية العينات التدريبية الداخلية؛ جودة الكتابة والكلام غير محسومة. لا نعرض تاريخ نجاح، وهذا ليس اكتمال جاهزية. راجع الإنتاج والمحاكاة الكاملة بصورة مستقلة.",assumptionsAr};
   if(observationDays<7||activeEvidenceDays<3)return{...base,status:"insufficient-data",evidenceDaysPerWeek:null,minimumWeeks:null,maximumWeeks:null,confidence:"low",messageAr:`لا تكفي الوتيرة الحديثة لبناء نطاق: نحتاج 3 أيام منتجة للدليل خلال نافذة لا تقل عن 7 أيام. الفجوة الحالية ${remainingEvidenceUnits} وحدات تدريبية.`,assumptionsAr};
   const evidenceDaysPerWeek=Math.round(activeEvidenceDays/(observationDays/7)*10)/10;
   const optimisticRate=Math.max(.5,evidenceDaysPerWeek*1.35);
@@ -94,9 +94,9 @@ export function buildExamReadiness(state:LearningState,provider:ExamProvider,now
     const next=nextTaskForModule(state,tasks,skill,attemptedIds);
     const productive=!isReceptive(skill);
     const detailAr=attempted===0?"لا توجد محاولة محفوظة من مهام هذه الوحدة.":productive?`${attempted}/${tasks.length} مهام بدليل، و${repeatCount} مهام لها إعادة أو نسخة منقحة. المؤشر لا يحكم الجودة اللغوية.`:`${attempted}/${tasks.length} مهام، ومتوسط أحدث النتائج الداخلية ${accuracyPercent}%. لا يُحوّل إلى نقاط رسمية.`;
-    return{moduleId:module.id,titleAr:module.titleAr,titleDe:module.titleDe,skill,totalTasks:tasks.length,attemptedTasks:attempted,requiredSamples,coveragePercent:Math.round(attempted/Math.max(tasks.length,1)*100),accuracyPercent,revisionOrRetryCount:repeatCount,status,statusAr:statusLabels[status],detailAr,nextTaskId:next?.id,nextHref:next?`/exams/${provider}/${next.id}`:"/exams"};
+    return{moduleId:module.id,titleAr:module.titleAr,titleDe:module.titleDe,skill,totalTasks:tasks.length,attemptedTasks:attempted,requiredSamples,coveragePercent:Math.round(attempted/Math.max(tasks.length,1)*100),accuracyPercent,revisionOrRetryCount:repeatCount,status,statusAr:statusLabels[status],detailAr,nextTaskId:next?.id,nextHref:productive&&status==="quality-unverified"?"/progress#productive-evidence":next?`/exams/${provider}/${next.id}`:"/exams"};
   });
-  const rank:Record<ExamReadinessStatus,number>={"no-evidence":0,"needs-work":1,"building":2,"strengthening":3,"strong-evidence":4};
+  const rank:Record<ExamReadinessStatus,number>={"no-evidence":0,"needs-work":1,"building":2,"strengthening":3,"strong-evidence":4,"quality-unverified":3};
   const weakestModule=[...modules].sort((left,right)=>rank[left.status]-rank[right.status]||left.coveragePercent-right.coveragePercent)[0];
-  return{provider,modules,readyModuleCount:modules.filter((module)=>module.status==="strong-evidence").length,totalModules:modules.length,weakestModule,forecast:buildReadinessForecast(state,provider,modules,now),boundaryAr:provider==="goethe-b2"?"هذه مؤشرات تدريب منفصلة لكل وحدة، وليست نتيجة Goethe أو تطبيقًا آليًا لحد 60/100.":"هذه مؤشرات تدريب منفصلة؛ لا تجمع نقاطًا رسمية ولا تطبق قاعدة Goethe على telc."};
+  return{provider,modules,readyModuleCount:modules.filter((module)=>module.status==="strong-evidence").length,totalModules:modules.length,weakestModule,forecast:buildReadinessForecast(state,provider,modules,now),boundaryAr:provider==="goethe-b2"?"هذه مؤشرات فهم وتغطية منفصلة؛ جودة الإنتاج غير محسومة. ليست نتيجة Goethe أو تطبيقًا آليًا لحد 60/100.":"هذه مؤشرات فهم وتغطية منفصلة؛ جودة الإنتاج غير محسومة. لا تجمع نقاطًا رسمية ولا تطبق قاعدة Goethe على telc."};
 }

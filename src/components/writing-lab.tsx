@@ -6,10 +6,12 @@ import { ArrowLeft, BookOpenCheck, Check, FilePenLine, Lightbulb, RotateCcw, Sav
 import { analyzeWriting, type WritingAnalysis } from "@/core/writing/analyze";
 import { behavioralPraise } from "@/core/coach/behavioral-praise";
 import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
+import { independentProductionTask } from "@/data/independent-production-tasks";
 import { academicLessons } from "@/data/academic-lessons";
 import type { WritingPlan, WritingSubmission } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { StatusAnnouncement } from "./status-announcement";
+import { ArabicScaffold } from "./arabic-scaffold";
 import { WritingDeviceBenchmark } from "./writing-device-benchmark";
 import { WritingRepairPractice } from "./writing-repair-practice";
 import { WritingGrammarSignalsPanel } from "./writing-grammar-signals-panel";
@@ -22,16 +24,17 @@ import { appendTrainingInteraction } from "@/core/evidence/training-interactions
 type WritingPhase="plan"|"draft"|"self-check"|"feedback"|"revision";
 const phaseLabels:Array<{id:WritingPhase;label:string}>=[{id:"plan",label:"التخطيط"},{id:"draft",label:"المسودة"},{id:"self-check",label:"التحقق الذاتي"},{id:"feedback",label:"الملاحظات"},{id:"revision",label:"إعادة الكتابة"}];
 
-export function WritingLab({lessonId}:{lessonId?:string}){
+export function WritingLab({lessonId,independentTaskId}:{lessonId?:string;independentTaskId?:string}){
   const{state,update}=useLearning();
-  const requestedLesson=lessonId?academicLessons[lessonId]:undefined;
+  const independentTask=independentProductionTask(independentTaskId);
+  const requestedLesson=(independentTask?.sourceLessonId??lessonId)?academicLessons[independentTask?.sourceLessonId??lessonId!]:undefined;
   const latestCompletedLesson=[...state.completedLessonIds].reverse().map((id)=>academicLessons[id]).find(Boolean);
   const currentLesson=academicLessons[state.currentLessonId]??academicLessons["a1-01"];
   const lesson=requestedLesson??latestCompletedLesson??currentLesson;
-  const lessonReady=Boolean(state.completedLessonIds.includes(lesson.id)||(state.lessonProgress[lesson.id]??0)>=9);
-  const task=lesson.writing;
-  const taskId=lesson.id;
-  const level=lesson.level;
+  const lessonReady=Boolean(state.completedLessonIds.includes(lesson.id)||(state.lessonProgress[lesson.id]??0)>=9||(state.profile?.priorExperience!=="none"&&state.diagnosticResult));
+  const task=independentTask?.writing??lesson.writing;
+  const taskId=independentTask?`${independentTask.id}-writing`:lesson.id;
+  const level=independentTask?.level??lesson.level;
   const rangeMatch=task.promptDe.match(/(\d{2,3})[–-](\d{2,3})\s+Wörter/i);
   const singleMatch=task.promptDe.match(/(\d{2,3})\s+Wörter/i);
   const fallbackMinimum=level==="A1"?30:level==="A2"?70:level==="B1"?100:140;
@@ -39,6 +42,7 @@ export function WritingLab({lessonId}:{lessonId?:string}){
   const requireGreeting=/Nachricht|E-Mail|Brief|Mail/iu.test(task.promptDe);
   const submissions=state.writingSubmissions.filter((submission)=>submission.taskId===taskId);
   const latest=submissions.at(-1);
+  const roundStartedAt=useRef(latest?.status==="draft"?latest.evidenceContext?.draftStartedAt??latest.createdAt:new Date().toISOString());
   const interactionThrottle=useRef(0);
   const [phase,setPhase]=useState<WritingPhase>(()=>latest?.status==="draft"?"self-check":latest?"feedback":"plan");
   const [plan,setPlan]=useState<WritingPlan>(()=>latest?.plan??{audience:"",purpose:"",points:["","",""]});
@@ -62,7 +66,7 @@ export function WritingLab({lessonId}:{lessonId?:string}){
     const now=new Date().toISOString();
     const version=submissions.length+1;
     const sourceVersion=[...submissions].reverse().find((submission)=>submission.status!=="draft")?.version;
-    const submission:WritingSubmission={id:`writing-${crypto.randomUUID()}`,taskId,text,wordCount:analysis.wordCount,version,status,feedback:withAnalysis?analysis.feedback:[],plan:cleanPlan(),selfChecklist:[...selfChecklist],dimensions:withAnalysis?analysis.dimensions:undefined,sourceVersion:status==="revised"?sourceVersion:undefined,createdAt:now,updatedAt:now};
+    const submission:WritingSubmission={id:`writing-${crypto.randomUUID()}`,taskId,text,wordCount:analysis.wordCount,version,status,evidenceContext:{policyVersion:"productive-independence-v1",taskLevel:level,firstDraft:status==="submitted"&&!submissions.some(item=>item.status!=="draft"&&Date.parse(item.createdAt)>=Date.parse(roundStartedAt.current)),draftStartedAt:roundStartedAt.current,supportUsedBeforeDraft:state.supportUsageEvents.some(event=>event.contentId===`${taskId}:writing-model`&&event.kind==="writing-model"&&Date.parse(event.createdAt)>=Date.parse(roundStartedAt.current))},feedback:withAnalysis?analysis.feedback:[],plan:cleanPlan(),selfChecklist:[...selfChecklist],dimensions:withAnalysis?analysis.dimensions:undefined,sourceVersion:status==="revised"?sourceVersion:undefined,createdAt:now,updatedAt:now};
     update((current)=>({...current,writingSubmissions:[...current.writingSubmissions,submission]}));
     if(withAnalysis){setReviewedAnalysis(analysis);setReviewedText(text);setReviewedSubmissionId(submission.id);setPhase("feedback")}else setPhase("self-check");
   }
@@ -75,26 +79,26 @@ export function WritingLab({lessonId}:{lessonId?:string}){
 
   return <div className="lab-page">
     <header className="page-heading"><div><span className="eyebrow"><FilePenLine size={15}/> مختبر الكتابة · {level}</span><h1>خطّط، اكتب، <em>ثم أثبت المراجعة.</em></h1><p>{lesson?`المهمة مرتبطة بهدف «${lesson.titleAr}» في مستوى ${lesson.level}.`:"اختر درسًا من المسار للحصول على مهمة مرتبطة بهدفه."}</p></div><div className="lab-counter"><strong>{submissions.length}</strong><span>نسخ المهمة<br/>محفوظة محليًا</span></div></header>
-    <WritingDeviceBenchmark level={level}/>
+    <WritingDeviceBenchmark level={level}/>{independentTask&&<p className="assessment-warning" data-independent-production-task={independentTask.id}>مهمة مستقلة جديدة بلا نموذج. المراجعة بعد التسليم مفيدة، لكن التنقيح ليس عينة مستقلة ثانية، والجودة اللغوية غير مصادق عليها.</p>}
     <nav className="writing-workflow" aria-label="مراحل دورة الكتابة">{phaseLabels.map((item,index)=><span key={item.id} className={phase===item.id?"active":index<activeIndex?"complete":""}><i>{index<activeIndex?<Check size={12}/>:index+1}</i>{item.label}</span>)}</nav>
     <div className="writing-layout">
       <section className="writing-editor">
-        <div className="task-box"><span>{level} · {task.titleAr}</span><p lang="de" dir="ltr">{task.promptDe}</p><div><Lightbulb size={16}/><small>{task.promptAr}</small></div></div>
+        <div className="task-box"><span>{level} · {task.titleAr}</span><p lang="de" dir="ltr">{task.promptDe}</p><ArabicScaffold level={level} mode={state.profile?.arabicSupport}><div><Lightbulb size={16}/><small>{task.promptAr}</small></div></ArabicScaffold></div>
 
         {phase==="plan"&&<section className="writing-plan"><header><strong>1. فكّ المهمة قبل الكتابة</strong><small>لا تُفتح المسودة قبل تحديد المتلقي والغرض ونقطتين على الأقل.</small></header><label>لمن أكتب؟<input value={plan.audience} onChange={(event)=>setPlan((current)=>({...current,audience:event.target.value}))} placeholder="مثال: إدارة الدورة"/></label><label>ما النتيجة التي أريدها؟<input value={plan.purpose} onChange={(event)=>setPlan((current)=>({...current,purpose:event.target.value}))} placeholder="مثال: طلب موعد بديل"/></label><div><strong>نقاط المحتوى</strong>{plan.points.map((point,index)=><input key={index} value={point} onChange={(event)=>setPlan((current)=>({...current,points:current.points.map((value,itemIndex)=>itemIndex===index?event.target.value:value)}))} placeholder={`النقطة ${index+1}`}/>)}</div><button className="primary-button" disabled={!planComplete} onClick={()=>setPhase("draft")}>ابدأ المسودة <ArrowLeft size={16}/></button></section>}
 
         {(phase==="draft"||phase==="revision")&&<><section className="plan-summary"><span><b>المتلقي</b>{plan.audience}</span><span><b>الغرض</b>{plan.purpose}</span><span><b>النقاط</b>{plan.points.filter(Boolean).join(" · ")}</span></section><textarea aria-label={phase==="revision"?"النسخة المنقحة":"المسودة الألمانية"} dir="ltr" lang="de" value={text} onFocus={()=>logInteraction("resume")} onBlur={()=>logInteraction("pause")} onChange={(event)=>{if(text&&event.target.value!==text)logInteraction("answer-change");setText(event.target.value)}} placeholder="Schreiben Sie hier …" spellCheck={false} autoCorrect="off" autoCapitalize="off"/><div className="editor-footer"><span className={analysis.wordCount>=minWords?"good":""}>{analysis.wordCount} كلمة · الهدف الأدنى {minWords}</span><div>{phase==="draft"?<button className="primary-button" onClick={()=>persist("draft",false)} disabled={!text.trim()}><Save size={16}/> حفظ المسودة والانتقال</button>:<button className="primary-button" onClick={()=>persist("revised",true)} disabled={analysis.wordCount<10||text.trim()===reviewedText.trim()}><Save size={16}/> حفظ النسخة المنقحة</button>}</div></div></>}
 
-        {phase==="self-check"&&<section className="writing-self-check"><header><strong>3. تحقق قبل طلب الملاحظات</strong><small>أكد ما نفذته فعلًا، لا ما كنت تنوي تنفيذه.</small></header><article lang="de" dir="ltr">{text}</article><div>{task.checklistAr.map((item)=><label key={item} className={selfChecklist.includes(item)?"checked":""}><input type="checkbox" checked={selfChecklist.includes(item)} onChange={()=>toggleCheck(item)}/><span>{item}</span></label>)}</div><footer><button className="secondary-button" onClick={()=>setPhase("draft")}><RotateCcw size={15}/> عدّل المسودة</button><button className="primary-button" disabled={!selfCheckComplete||analysis.wordCount<10} onClick={()=>persist("submitted",true)}><Sparkles size={15}/> شغّل الفحص المرتبط بنصي</button></footer></section>}
+        {phase==="self-check"&&<section className="writing-self-check"><header><strong>3. تحقق قبل طلب الملاحظات</strong><small>أكد ما نفذته فعلًا، لا ما كنت تنوي تنفيذه.</small></header><article lang="de" dir="ltr">{text}</article><div>{task.checklistAr.map((item)=><label key={item} className={selfChecklist.includes(item)?"checked":""}><input type="checkbox" checked={selfChecklist.includes(item)} onChange={()=>toggleCheck(item)}/><span>{item}</span></label>)}</div><footer><button className="secondary-button" onClick={()=>setPhase("draft")}><RotateCcw size={15}/> عدّل المسودة</button><button className="primary-button" disabled={!selfCheckComplete||analysis.wordCount<minWords} onClick={()=>persist("submitted",true)}><Sparkles size={15}/> شغّل الفحص المرتبط بنصي</button></footer></section>}
 
-        {phase==="feedback"&&<section className="writing-reviewed-text"><header><strong>النص الذي فُحص</strong><small>النسخة محفوظة ولا تتغير عند بدء المراجعة.</small></header><article lang="de" dir="ltr">{reviewedText}</article><button className="primary-button" onClick={()=>setPhase("revision")}><RotateCcw size={16}/> ابدأ إعادة الكتابة</button></section>}
+        {phase==="feedback"&&<section className="writing-reviewed-text"><header><strong>النص الذي فُحص</strong><small>النسخة محفوظة ولا تتغير عند بدء المراجعة.</small></header><article lang="de" dir="ltr">{reviewedText}</article><button className="primary-button" onClick={()=>setPhase("revision")}><RotateCcw size={16}/> ابدأ إعادة الكتابة</button>{independentTask&&<button className="secondary-button" onClick={()=>{roundStartedAt.current=new Date().toISOString();setText("");setPlan({audience:"",purpose:"",points:["","",""]});setSelfChecklist([]);setReviewedAnalysis(null);setReviewedText("");setReviewedSubmissionId("");setPhase("plan");}}>ابدأ محاولة مستقلة جديدة؛ نفس المهمة لا تضاعف التنوع</button>}</section>}
       </section>
 
       <aside className="writing-feedback">
         <div className="card-title"><span>خمسة محاور منفصلة</span><small>مؤشرات حتمية، ليست درجة امتحان</small></div>
         {latestRevision&&revisionSource&&<WritingVersionDiff before={revisionSource.text} after={latestRevision.text}/>} 
         {latest?.status==="revised"&&<StatusAnnouncement message={behavioralPraise("writing-revision")} channel="writing-lab" className="behavioral-praise gamification-surface" icon={<Sparkles size={15}/>}/>} 
-        {reviewedAnalysis?<><div className="writing-dimensions">{reviewedAnalysis.dimensions.map((dimension)=><article key={dimension.key} className={dimension.passed?"passed":""}><header><span>{dimension.passed?<Check size={13}/>:"—"}</span><strong>{dimension.labelAr}</strong></header><p>{dimension.detailAr}</p>{dimension.evidenceQuote&&<blockquote lang="de" dir="ltr">{dimension.evidenceQuote}</blockquote>}</article>)}</div><div className="feedback-box"><strong>ملاحظات مرتبطة بجملتك</strong>{reviewedAnalysis.feedback.map((item)=><p key={item}>{item}</p>)}</div><WritingGrammarSignalsPanel text={reviewedText}/><WritingRepairPractice exercises={repairExercises} attempts={repairAttempts} onAttempt={recordRepairAttempt}/>{reviewedSubmission&&<HybridWritingReview sourceText={reviewedText} sourceSubmissionId={reviewedSubmission.id} taskId={taskId} sourceVersion={reviewedSubmission.version} level={level} taskPromptDe={task.promptDe} localPatternIds={reviewedAnalysis.errorPatterns.map((pattern)=>pattern.patternId)}/>}{reviewedText&&reviewedSubmission?<ExternalEvaluatorBridge sourceText={reviewedText} submissionId={reviewedSubmission.id} taskId={taskId} level={level}/>:null}<details className="translation-panel" onToggle={(event)=>{if(event.currentTarget.open)recordModelReveal()}}><summary>النموذج بعد فحص المسودة</summary><p lang="de" dir="ltr">{task.modelDe}</p></details></>:<div className="feedback-placeholder"><FilePenLine size={26}/><p>أكمل التخطيط والمسودة والتحقق الذاتي. لن نستبدل نصك بإجابة مثالية صامتة.</p></div>}
+        {reviewedAnalysis?<><div className="writing-dimensions">{reviewedAnalysis.dimensions.map((dimension)=><article key={dimension.key} className={dimension.passed?"passed":""}><header><span>{dimension.passed?<Check size={13}/>:"—"}</span><strong>{dimension.labelAr}</strong></header><p>{dimension.detailAr}</p>{dimension.evidenceQuote&&<blockquote lang="de" dir="ltr">{dimension.evidenceQuote}</blockquote>}</article>)}</div><div className="feedback-box"><strong>ملاحظات مرتبطة بجملتك</strong>{reviewedAnalysis.feedback.map((item)=><p key={item}>{item}</p>)}</div><WritingGrammarSignalsPanel text={reviewedText}/><WritingRepairPractice exercises={repairExercises} attempts={repairAttempts} onAttempt={recordRepairAttempt}/>{reviewedSubmission&&<HybridWritingReview sourceText={reviewedText} sourceSubmissionId={reviewedSubmission.id} taskId={taskId} sourceVersion={reviewedSubmission.version} level={level} taskPromptDe={task.promptDe} localPatternIds={reviewedAnalysis.errorPatterns.map((pattern)=>pattern.patternId)}/>}{reviewedText&&reviewedSubmission?<ExternalEvaluatorBridge sourceText={reviewedText} submissionId={reviewedSubmission.id} taskId={taskId} level={level}/>:null}{!independentTask&&<details className="translation-panel" onToggle={(event)=>{if(event.currentTarget.open)recordModelReveal()}}><summary>النموذج بعد فحص المسودة</summary><p lang="de" dir="ltr">{task.modelDe}</p></details>}</>:<div className="feedback-placeholder"><FilePenLine size={26}/><p>أكمل التخطيط والمسودة والتحقق الذاتي. لن نستبدل نصك بإجابة مثالية صامتة.</p></div>}
       </aside>
     </div>
   </div>;

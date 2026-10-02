@@ -13,6 +13,7 @@ export type ObjectiveCoverageRow = {
   assessedIn: string[];
   status: "covered" | "gap";
   mappingBasis: "lesson-scoped-structural-contract";
+  semanticReviewStatus: "pending-independent-item-alignment";
 };
 
 export function buildObjectiveCoverageReport() {
@@ -45,6 +46,7 @@ export function buildObjectiveCoverageReport() {
       assessedIn,
       status: taughtIn.length > 0 && practicedIn.length > 0 && assessedIn.length > 0 ? "covered" : "gap",
       mappingBasis: "lesson-scoped-structural-contract",
+      semanticReviewStatus: "pending-independent-item-alignment",
     };
   }));
 
@@ -75,6 +77,6 @@ export function buildObjectiveCoverageReport() {
     byLevel,
     byLesson,
     canonicalStages: [...LESSON_STAGE_KEYS],
-    mappingBoundary: "Coverage is structural at lesson scope. It proves that each objective owns teaching, practice, and Mini-Test surfaces in its lesson; it does not replace human semantic alignment review for every individual item.",
+    mappingBoundary: "Coverage is structural at lesson scope; every item-objective semantic alignment remains explicitly pending independent review. It proves that each objective owns teaching, practice, and Mini-Test surfaces in its lesson; it does not replace human semantic alignment review for every individual item.",
   };
 }

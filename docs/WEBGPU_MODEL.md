@@ -1,6 +1,6 @@
 # Optional in-browser WebGPU model
 
-Last reviewed: 2026-09-07  
+Last reviewed: 2026-10-02
 Policy: `browser-webgpu-model-v1`
 
 ## Purpose
@@ -28,14 +28,21 @@ The quantized weight file is approximately 118 MB. The UI presents a conservativ
 
 ## Vendored browser-only runtime
 
-The ONNX WebGPU JSEP runtime is committed directly. The audited Transformers browser plaintext is materialized during `npm ci` (`prepare`) and again before build from a GitHub-safe packed payload because GitHub Push Protection misclassified an opaque substring in the upstream minified bundle as a Mistral key. The generated plaintext is ignored by Git; both packed input and materialized output are checked before use:
+Chromium 153 reproduced the reported failure in a native module import: Transformers.js 4.2.0 left the bare ESM imports `onnxruntime-common` and `onnxruntime-web/webgpu` in its browser file. A browser Worker does not resolve npm package names without a bundler/import map, so module loading failed before pipeline initialization.
+
+The pinned materializer now performs only two counted import-path rewrites, sending both imports to the same local `ort.webgpu.bundle.min.mjs` module. Using one module URL also keeps Transformers' `Tensor` constructor and the ONNX WebGPU backend on the same runtime export. The upstream Transformers bytes remain independently SHA-256-pinned; the transformed browser output has its own expected hash. No model, inference, `device: "webgpu"`, privacy, or fallback behavior is rewritten.
 
 ```text
-vendor-assets/webgpu/transformers.web.min.js.xor-gzip.packed
-Packed SHA-256 29eb4707c7605fe1291ad9b0db192c90fd88465db5ccbfc97f02e3d891ac1019
+Transformers.js 4.2.0 upstream source SHA-256
+0a96dcf4c48981b7d05f53827e6975ec239132606ad0d526bbc2db0fcdbc4ded
 
 public/vendor/webgpu/transformers.web.min.js (generated, Git-ignored)
-Output SHA-256 0a96dcf4c48981b7d05f53827e6975ec239132606ad0d526bbc2db0fcdbc4ded
+SHA-256 2c570c9d88af5d8f269fbcece6c274e82b0470e3b0e519c5d4ad69a75598f9d2
+
+onnxruntime-web@1.26.0-dev.20260416-b7804b056c
+package tarball SHA-512 integrity is pinned in vendor-assets/webgpu/manifest.json
+public/vendor/webgpu/ort.webgpu.bundle.min.mjs (generated, Git-ignored)
+SHA-256 2ec70f685749470635e64dd142c2510dc13b37bb593d9cd6ab4f8923e5204479
 
 public/vendor/webgpu/ort-wasm-simd-threaded.jsep.mjs
 SHA-256 522b3769929f5684c83a12cf1e06eedf073b65d161728b4f3757c75d62b14384
@@ -44,7 +51,9 @@ public/vendor/webgpu/ort-wasm-simd-threaded.jsep.wasm
 SHA-256 ae61141f8fbf0a4e43fd7b4f4d40a1a115627f6facc4f33ddf84074a655e33ea
 ```
 
-Apache and MIT license texts remain committed beside the runtime directory. Packing is reversible transport encoding, not encryption or secret storage: `scripts/materialize-vendor-runtime.mjs` verifies the packed SHA-256, applies gunzip plus XOR reversal, verifies the original SHA-256, and only then writes the ignored runtime. The full NPM package is deliberately not a production dependency. This keeps `npm audit` at zero known vulnerabilities, preserves exact upstream bytes, and prevents the false-positive plaintext from entering Git history.
+The ORT browser bundle is additionally traced to the exact npm tarball using its package version, npm integrity value, and source SHA-256; its package license and the Transformers Apache license remain beside the runtime. The WASM JSEP files remain separately pinned as ONNX runtime support files; they are not a silent switch to `device: "wasm"`. Both new plaintext bundles are generated during `npm ci` (`prepare`) and prebuild from GitHub-safe packed payloads. The materializer checks packed bytes, original upstream bytes, exact rewrite occurrence counts, and final browser hashes before writing. Packing is reversible transport encoding, not encryption or secret storage. No full NPM package is added as a dependency.
+
+A Chromium regression test imports both modules from a same-origin module Worker and constructs a small ONNX `Tensor` without downloading model weights or contacting Hugging Face. Real WebGPU model initialization and device performance remain separate physical-device checks.
 
 ## Capability and installation contract
 
@@ -66,18 +75,19 @@ When the model cannot load or rank candidates, the UI immediately returns to the
 
 ## Source governance
 
-The model registry owns four 30-day source records:
+Both model registries own five 30-day source records:
 
 - Transformers.js 4.2.0 package/version/license;
+- the exact ONNX Runtime WebGPU package version, ESM export, and MIT license;
 - official Transformers.js WebGPU guidance;
-- sentence-transformers base model card/language/license;
-- Transformers.js-compatible ONNX revision and quantized-file size.
+- the selected base model card/language/license;
+- its pinned ONNX revision and quantized-file size.
 
 A stale or clock-invalid record blocks a new model download. Existing deterministic learning remains available. HTTP success alone does not authorize advancing review dates.
 
 ## Verification boundary
 
-Unit tests verify capability decisions, storage/memory boundaries, source expiry, registry pins, vendor hashes/licenses, cache completion/deletion, authored-candidate ranking contracts, and Worker WebGPU-only configuration. Desktop and mobile Playwright replace only the heavy inference Worker with a deterministic mock; they verify opt-in UI, zero automatic download, progress/installed state, use inside the Speaking Lab, persisted provenance, and deletion. The 118 MB weights are intentionally not downloaded in CI.
+Unit tests verify capability decisions, storage/memory boundaries, source expiry, registry pins, vendor hashes/licenses, cache completion/deletion, authored-candidate ranking contracts, and Worker WebGPU-only configuration. A separate desktop/mobile Playwright test loads the actual generated Transformers and ORT modules inside a same-origin native module Worker, verifies the pinned runtime version and `Tensor` API, and makes no model-host request. The broader UI flow still mocks only expensive inference: it verifies opt-in, zero automatic weight download, progress/installed state, use inside the Speaking Lab, provenance, and deletion. The 118 MB weights are intentionally not downloaded in CI.
 
 Real installation speed, GPU-driver compatibility, thermals, memory pressure, and browser cache eviction still require representative physical-device testing in the final whole-project manual review.
 ## Separate Whisper word-matching pack

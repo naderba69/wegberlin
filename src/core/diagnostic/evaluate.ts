@@ -10,9 +10,11 @@ const emptySkillRecord = (): Record<DiagnosticSkill, { correct: number; attempte
 });
 
 function confidenceForBoundary(levelScores: Record<CEFRLevel, number>, levelAttempted: Record<CEFRLevel, number>): "low" | "medium" | "high" {
+  // Four uncalibrated items cannot justify "high" confidence, even after 4/4.
   const boundary = [...diagnosticLevels].reverse().find((level) => levelAttempted[level] > 0) ?? "A1";
+  const attempted = levelAttempted[boundary];
   const score = levelScores[boundary];
-  return score === 0 || score === 4 ? "high" : score === 1 || score === 3 ? "medium" : "low";
+  return attempted === 4 && (score === 0 || score === 4) ? "medium" : "low";
 }
 
 export function evaluateDiagnostic(answers: Record<string, number>, formId: DiagnosticFormId = "A", now = new Date()): { result: DiagnosticResult; errors: ErrorRecord[] } {

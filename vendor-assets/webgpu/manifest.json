@@ -1,14 +1,55 @@
 {
   "format": "dwnb-packed-vendor-runtime",
-  "version": 1,
+  "version": 2,
   "algorithm": "xor-0xa5-then-gzip",
   "sourcePath": "public/vendor/webgpu/transformers.web.min.js",
   "packedPath": "vendor-assets/webgpu/transformers.web.min.js.xor-gzip.packed",
+  "packedBytes": 120463,
+  "packedSha256": "83cd991f9537a5f5b0e958e3ff9f783609e726bb77ecaa1ed35a4a8962fad8e6",
   "sourceBytes": 431652,
-  "packedBytes": 120686,
   "sourceSha256": "0a96dcf4c48981b7d05f53827e6975ec239132606ad0d526bbc2db0fcdbc4ded",
-  "packedSha256": "29eb4707c7605fe1291ad9b0db192c90fd88465db5ccbfc97f02e3d891ac1019",
+  "materializedBytes": 431692,
+  "materializedSha256": "2c570c9d88af5d8f269fbcece6c274e82b0470e3b0e519c5d4ad69a75598f9d2",
   "package": "@huggingface/transformers browser bundle",
+  "packageVersion": "4.2.0",
   "license": "Apache-2.0",
-  "boundary": "Build-time materialization avoids committing a GitHub false-positive plaintext token; it is not encryption or secret storage."
+  "onnxRuntimeDependency": {
+    "package": "onnxruntime-web",
+    "version": "1.26.0-dev.20260416-b7804b056c",
+    "declaredBy": "@huggingface/transformers@4.2.0"
+  },
+  "moduleSpecifierRewrites": [
+    {
+      "specifier": "onnxruntime-common",
+      "replacement": "/vendor/webgpu/ort.webgpu.bundle.min.mjs",
+      "expectedOccurrences": 1
+    },
+    {
+      "specifier": "onnxruntime-web/webgpu",
+      "replacement": "/vendor/webgpu/ort.webgpu.bundle.min.mjs",
+      "expectedOccurrences": 1
+    }
+  ],
+  "compatibilityBoundary": "Only two static package specifiers are redirected to the same-origin, version-pinned ONNX Runtime WebGPU bundle. Transformers and ORT therefore share the bundle Tensor export. No inference code, model revision, device, weights, or network policy is changed.",
+  "companionAssets": [
+    {
+      "sourcePath": "public/vendor/webgpu/ort.webgpu.bundle.min.mjs",
+      "packedPath": "vendor-assets/webgpu/ort.webgpu.bundle.min.mjs.xor-gzip.packed",
+      "packedBytes": 37673,
+      "packedSha256": "8fde8ace681048eb2664b33ebe18d38273e01b11e912d2c0c773a7de195699ed",
+      "sourceBytes": 112901,
+      "sourceSha256": "2ec70f685749470635e64dd142c2510dc13b37bb593d9cd6ab4f8923e5204479",
+      "materializedBytes": 112901,
+      "materializedSha256": "2ec70f685749470635e64dd142c2510dc13b37bb593d9cd6ab4f8923e5204479",
+      "package": "onnxruntime-web",
+      "packageVersion": "1.26.0-dev.20260416-b7804b056c",
+      "packageSubpath": "./webgpu",
+      "license": "MIT",
+      "packageTarballUrl": "https://registry.npmjs.org/onnxruntime-web/-/onnxruntime-web-1.26.0-dev.20260416-b7804b056c.tgz",
+      "packageTarballIntegrity": "sha512-MD6Ss4GSpQBo6zqoJzyT9LRbKYs7x/JVN23FT24EcEvlqF4VuzPOeH6X38orZPKHQDbprn7K+SBpu0/mj2CQiw==",
+      "packageTarballSha1": "453f29768836322a6b8b6d1d730a8426b6582ae2",
+      "compatibilityBoundary": "Upstream webgpu ESM bundle; the runtime exports Tensor and contains the pinned common API used by the Transformers browser bundle. Existing ONNX WASM JSEP companion files remain pinned separately."
+    }
+  ],
+  "boundary": "Build-time reversible transport encoding, not encryption or secret storage. Original upstream package bytes and final browser outputs are SHA-256 checked before writing."
 }

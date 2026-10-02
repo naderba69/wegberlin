@@ -22,6 +22,7 @@ import {
   Trash2,
   Volume2,
 } from "lucide-react";
+import { independentProductionTask } from "@/data/independent-production-tasks";
 import { academicLessons } from "@/data/academic-lessons";
 import { deleteMedia, saveMedia } from "@/core/portability/db";
 import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
@@ -115,12 +116,13 @@ const providerLabel = {
   local: "Ollama المحلي",
 } as const;
 
-export function SpeakingLab({ lessonId }: { lessonId?: string }) {
+export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string; independentTaskId?: string }) {
   const { state, update } = useLearning();
-  const lesson = lessonId ? academicLessons[lessonId] : undefined;
-  const task = lesson?.speaking ?? fallback;
-  const taskId = lesson?.id ?? "a1-introduction";
-  const level = lesson?.level ?? "A1";
+  const independentTask = independentProductionTask(independentTaskId);
+  const lesson = (independentTask?.sourceLessonId ?? lessonId) ? academicLessons[independentTask?.sourceLessonId ?? lessonId!] : undefined;
+  const task = independentTask?.speaking ?? lesson?.speaking ?? fallback;
+  const taskId = independentTask ? `${independentTask.id}-speaking` : lesson?.id ?? "a1-introduction";
+  const level = independentTask?.level ?? lesson?.level ?? "A1";
   const firstLessonScaffold = taskId === "a1-01";
   const targetSeconds = speakingTargetSeconds(task.promptDe, level, {
     beginnerFirstLesson: firstLessonScaffold,
@@ -131,6 +133,7 @@ export function SpeakingLab({ lessonId }: { lessonId?: string }) {
   );
   const latestAttempt = attempts.at(-1);
   const recorderRef = useRef<MediaRecorder | null>(null);
+  const supportDuringRecordingRef = useRef(false);
   const chunksRef = useRef<Blob[]>([]);
   const startedAtRef = useRef(0);
   const pauseMonitorRef = useRef<Awaited<
@@ -141,7 +144,8 @@ export function SpeakingLab({ lessonId }: { lessonId?: string }) {
     useState(preparationTotal);
   const [responseRemaining, setResponseRemaining] = useState(targetSeconds);
   const [preparationNotes, setPreparationNotes] = useState(["", "", ""]);
-  const [showRecordingSupport, setShowRecordingSupport] = useState(true);
+  const [showRecordingSupport, setShowRecordingSupport] = useState(!independentTask);
+  useEffect(()=>{if(showRecordingSupport&&recorderRef.current?.state==="recording")supportDuringRecordingRef.current=true;},[showRecordingSupport]);
   const [audioUrl, setAudioUrl] = useState("");
   const [blob, setBlob] = useState<Blob | null>(null);
   const [duration, setDuration] = useState(0);
@@ -317,6 +321,7 @@ export function SpeakingLab({ lessonId }: { lessonId?: string }) {
         setPhase("review");
       };
       recorderRef.current = recorder;
+      supportDuringRecordingRef.current = showRecordingSupport;
       recorder.start();
       setMessage("");
       setLocalWordMatch(null);
@@ -620,7 +625,7 @@ export function SpeakingLab({ lessonId }: { lessonId?: string }) {
             preparationNotes: preparationNotes
               .map((note) => note.trim())
               .filter(Boolean),
-            supportVisibleDuringRecording: showRecordingSupport,
+            supportVisibleDuringRecording: supportDuringRecordingRef.current,
           },
           contentFollowUp: followUpEvidence ?? undefined,
           transcriptConfirmation:

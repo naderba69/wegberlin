@@ -2,8 +2,8 @@
 
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
-Curriculum: `dwnb-a1-b2-2026.09-v1` (app `0.1.0`)  
-Content SHA-256: `cd507293b939cf6440cfdac67969906daefcd92624f665563609ab41b72db109`
+Curriculum: `dwnb-a1-b2-2026.10-v2` (app `0.1.0`)
+Content SHA-256: `7a0425102ccf28e084f45c492a761c3d6035637f49cfec4ee78c46c8b896cedb`
 
 ## Result
 
@@ -14,7 +14,7 @@ PASS
 | Content records with owner + reviewer + lifecycle | 3277 |
 | Content families Draft → Validated → Published | 16 |
 | Published families | 16 |
-| External source records with owner + reviewer | 18 |
+| External source records with owner + reviewer | 19 |
 | Learner-risk types with owner + reviewer | 12 |
 | General consular/legal context claims | 12 |
 | Arabic-learner pronunciation inventory | 18 |

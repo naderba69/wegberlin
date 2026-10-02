@@ -12,14 +12,6 @@ function words(value: string) {
     .filter((word) => word.length >= 3 && !germanStopwords.has(word));
 }
 
-function answerShape(answer: string) {
-  return answer
-    .trim()
-    .split(/\s+/u)
-    .map((part) => part.length <= 2 ? "•".repeat(part.length) : `${part.slice(0, 1)}${"•".repeat(Math.min(8, part.length - 1))}`)
-    .join(" ");
-}
-
 export function exerciseHintSteps(exercise: PracticeExercise): [string, string] {
   if (exercise.type === "multiple-choice") return [
     "اقرأ الجملة كاملة وحدد الوظيفة المطلوبة قبل مقارنة الخيارات.",
@@ -27,7 +19,7 @@ export function exerciseHintSteps(exercise: PracticeExercise): [string, string] 
   ];
   if (exercise.type === "fill-blank") return [
     "حدد نوع الكلمة التي يحتاجها الفراغ: فعل، أداة، رابط أم نهاية صرفية.",
-    `شكل الجواب المستهدف دون كشفه: ${answerShape(exercise.acceptedAnswers[0] ?? "?")}`,
+    "اقرأ ما قبل الفراغ وما بعده، وطبّق قاعدة هذا الدرس دون البحث عن عدد الحروف.",
   ];
   if (exercise.type === "word-ordering") return [
     "ابحث أولًا عن الفعل المصرف وحدد هل الجملة رئيسية أم تابعة.",
@@ -44,9 +36,10 @@ export function exerciseHintSteps(exercise: PracticeExercise): [string, string] 
 }
 
 export function questionHintSteps(question: Question): [string, string] {
+  const focus=/^wann/iu.test(question.promptDe)?"حدّد الحدث الذي يُطلب وقته، ثم افصل موعده عن الأوقات الأخرى.":/^warum/iu.test(question.promptDe)?"ابحث عن السبب المرتبط بالحدث، لا عن تفصيل صحيح لكنه لا يفسره.":/^wo/iu.test(question.promptDe)?"حدّد الشخص أو الحدث المقصود ثم ابحث عن مكانه، لا عن كل مكان مذكور.":"أعد صياغة السؤال بكلماتك وحدد هل يطلب فكرة عامة أم تفصيلًا أم سببًا.";
   return [
-    "أعد صياغة السؤال بكلماتك وحدد هل يطلب فكرة عامة أم تفصيلًا أم سببًا.",
-    `ابحث عن كلمات السؤال الأساسية، ثم قارنها بالخيارات. شكل الخيار الصحيح: ${answerShape(question.options[question.correctIndex])}`,
+    focus,
+    "ابحث عن دليل يجيب عن السؤال داخل النص أو المسموع، ثم استبعد الخيارات التي تغيّر الفاعل أو الزمن أو المقصد.",
   ];
 }
 

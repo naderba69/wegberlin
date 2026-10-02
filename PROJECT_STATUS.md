@@ -1,8 +1,48 @@
 # Project Status
 
-Sync batch: v179 · 2026-09-25 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v176`.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-102 browser WebGPU ESM-resolution fix; ADR-101 Vercel output compatibility remains verified.
 
-Last updated: 2026-09-23 (generation `v157`)
+## متابعة إصلاح نشر Vercel — 2026-10-02 (ADR-101، نفس حزمة v180)
+
+- الخطأ في ce7e166 وقع بعد نجاح 322 صفحة، لأن سكربت postbuild افترض .next/server/app/index.html بعد تشغيل محوّل Next 16.
+- يقرأ القياس الآن Build Output API v3 وملفات prerender-fallback والمخرجات الثابتة، وينشر البيان الجديد في public/ وفي static/ المقدمة فعليًا. حارس JS يقيس الأصول المغلفة، ولا يُستخدم Cache قديم لتعويض ملف مفقود.
+- البناء المحلي ومحوّل @vercel/next@16.0.0 الفعلي نجحا في 322/322 صفحة وكل مراحل postbuild. المقارنة بين public ونسخة static نجحت حرفيًا؛ لا ادعاء نجاح نشر سحابي من اختبار محلي.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (actual complete run); 13 اختبارات جديدة دون تخفيف حدود 15% أو تعطيل الملفات المفقودة.
+- قياس البناء المحلي بعد إصلاح ADR-102: 94129001c039 · full 5,758,999؛ JS 123 chunks / 1,879,182 gzip / max 266,168. لم يتغير المنهج أو الصوت.
+- لا تعديل للمنهج أو المسارات أو Service Worker؛ تبقى البيانات التعليمية والمراجعات البشرية كما في ADR-100. تحذيرات npm install-scripts ليست سبب العطل ولم تُعتمد سكربتات إضافية عشوائيًا.
+
+
+## إصلاح مسارات ESM لـWebGPU — 2026-10-02 (ADR-102)
+
+- أُعيد إنتاج رسالة `Failed to resolve module specifier "onnxruntime-web/webgpu"` في Chromium 153.0.8010.0 قبل التغيير. ملف Transformers.js 4.2.0 المتصفحّي كان يترك أيضًا `onnxruntime-common` كـbare import، فكان فشل حل الوحدة يسبق إنشاء pipeline.
+- صار materializer يتحقق من ملف Transformers الأصلي وبصمة npm الثابتة لحزمة `onnxruntime-web@1.26.0-dev.20260416-b7804b056c`، ثم يعيد كتابة المرجعين المحددين فقط إلى حزمة WebGPU محلية واحدة، ويتحقق من hashes المصدر والمخرجات. لا تغيير للنموذج أو `device: webgpu` أو تنزيل الأوزان أو موافقة المستخدم أو سياسة الخصوصية/البديل.
+- نجاح `npm run build`: 322/322 صفحة، 123 chunk، وميزانيات Offline/JS/الصوت اجتازت. نجاح `npm test`: 1,198/1,198 في 173/173 ملفًا. اختبار Chromium native module Worker: 1/1 desktop و1/1 mobile، استورد الملفين الفعليين وبنى Tensor ولم يطلب أوزان Hugging Face.
+- هذا يثبت تحميل ESM فقط؛ لم تُنزّل أوزان ولا جرى استدلال فعلي على WebGPU، لذلك لا ندّعي نجاحًا على GPU حقيقي. تظل مراجعة الأجهزة/التوافق الفيزيائي معلقة.
+
+## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
+
+هذه الفقرة وADR-100 و`docs/LEARNING_REPAIRS_AR.md` هي الحالة الحالية. أرقام التشغيلات القديمة أسفلها تاريخية وليست اختبارات أو حقائق لهذا الجيل.
+
+- المنهج 96 درسًا (24 لكل مستوى)، B2 ست وحدات من أربعة دروس، مع 30 مراجعة/مشروعًا.
+- المعرفة: 8 صيغ A/B مستقلة، 48 سؤالًا لكل صيغة، المطلوب 39، ولا انتقال من Cache قديم وحده.
+- الإكمال سبعة أنشطة، والاستقلال والاحتفاظ المعجمي المؤجل منفصلان عن جودة الإنتاج الحر غير المحسومة.
+- المادة الإضافية: 32 موقف إنتاج بلا نموذج، و8 مدخلات 113–473 كلمة، بصوت جهاز اصطناعي فقط لا MP3 بشري مخترع.
+- جودة الشرح: 0 تحت 60 من 1,733، الوسيط العام 211 والاختيار من متعدد 232، ومراجعة المعنى المستقلة معلقة. نسبة الأجوبة المقيدة الواحدة 87.34% باقية بصدق في legacy؛ صفر بدائل ميتة.
+- خطة 90 دقيقة: 50 عمودًا فقريًا تشمل التهيئة/الإغلاق، 25 كلامًا، 15 مهمة مناسبة. السبت التأسيسي لا يحمل ورقة B2؛ الكامل جلسة منفصلة. المراجعة محدودة والراحة بلا دين.
+- لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
+- 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
+- Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
+- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
+- last measured source build fingerprint: 83a30907df07 · full 5,758,675 · JavaScript 123 chunks / 1,879,182 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (full `npm test` run after ADR-102). Browser: desktop 57 distinct contracts / mobile 57 distinct contracts verified in split runs (55/57 full + 2/2 isolated per project), not a claimed single 114/114 run; real headless Chromium 153, TTS mocked explicitly; see docs/run-logs/2026-10-02-learning-integrity/QA_SUMMARY.json.
+- P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
+- P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
+- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+
+
+Last updated: 2026-10-02 (learning-integrity repair pack v180; previous generations below are historical)
 
 ## Current milestone
 Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, bilingual search, full generated audio, evidence-gated lessons, evidence-derived analytics, and delayed error remediation are complete. All **96/96** A1–B2 lessons (24 per level, measured from `academicLessonList`) and all 80/80 library listening items have generated MP3 assets. Synthetic exam-audio production is now complete: 96 verified physical MP3 files cover all 90/90 logical clips, all 7/7 targeted listening tasks, and all 35/35 full-simulation listening tasks across Goethe and telc. Long clips play as ordered segment sequences under one persisted play limit. Exam-audio manifest v2 audits all 42/42 listening tasks and reports zero partial or missing tasks. `docs/AUDIO_PRODUCTION_BACKLOG.md` now records the completed production state. Human/multi-speaker voice review, rights review, and independent academic review remain.
@@ -383,7 +423,7 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
 - ADR-066 closes P2-108. `contextual-collocation-network-v1` adds 16 original networks and 48 contextual links balanced 4/4/4/4 across A1–B2. Every link has German/Arabic situation, register, example, meaning, and a contrast boundary. Learners must explore all three links before a three-context German-first guided/challenge match. Strict `collocationNetworkAttempts` stores only authored IDs and count, without free text, auto-SRS, AI, mastery, or CEFR. `/practice/collocations` moves current Offline packs to 58/58/58/210/309 and synchronized caches to v118.
 - ADR-067 closes P2-335. `deterministic-generative-properties-v1` adds a dependency-free seeded property harness with deterministic replay, bounded shrinking, and counterexample reporting. Eight tests execute 8,301 generated/replayed cases over German normalization, accepted comparison, special-character insertion, Merge union/max/idempotence, strict collocation counts, random conversation terminals, and Zod portability. The first run exposed `Straße→STRASSE`; the test preserves the intentional strict ß/ss boundary rather than weakening evaluation.
 - ADR-068 closes P2-310. `vercel-docs-only-build-skip-v1` wires a dependency-free `ignoreCommand` into `vercel.json`: only root/authored-docs Markdown changes return Vercel's skip code. Runtime, package, public, tests, workflows, config, and generated governance docs always build. Empty/unavailable diffs, unsafe paths, Git errors, and timeouts fail open to a build; main deployment remains enabled.
-- P0 official-source/free-tier governance is now operational. `src/config/source-verification-registry.json` contains 18/18 official source records (five exam-format, five remote-AI, six browser-runtime/model/license, Vercel Hobby, and GitHub Actions), each with a stable ID, observed state, exact project claim, human-verification date, 30-day maximum age, and stale action. `npm run source:audit -- --strict` is part of `npm run check`; `.github/workflows/source-freshness.yml` runs monthly, probes reachability, and opens/updates one maintenance Issue when review is due. The Exam Hub renders current/due/stale source state, while the 0 USD guard blocks unknown Gemini models, non-Free-only OpenRouter IDs, and all stale remote-AI requests before `fetch`; Disabled/Ollama and the full local course remain available. HTTP success is explicitly not treated as semantic verification.
+- P0 official-source/free-tier governance is now operational. `src/config/source-verification-registry.json` contains 19/19 official source records (five exam-format, five remote-AI, seven browser-runtime/model/license, Vercel Hobby, and GitHub Actions), each with a stable ID, observed state, exact project claim, human-verification date, 30-day maximum age, and stale action. `npm run source:audit -- --strict` is part of `npm run check`; `.github/workflows/source-freshness.yml` runs monthly, probes reachability, and opens/updates one maintenance Issue when review is due. The Exam Hub renders current/due/stale source state, while the 0 USD guard blocks unknown Gemini models, non-Free-only OpenRouter IDs, and all stale remote-AI requests before `fetch`; Disabled/Ollama and the full local course remain available. HTTP success is explicitly not treated as semantic verification.
 - `ZERO_COST.md`, `docs/SOURCE_FRESHNESS.md`, and ADR-007 record the current zero-cost boundaries, model allowlists, local fallbacks, anti-billing behavior, and human review checklist. Current verification is 2026-09-03 with the next deadline 2026-10-03; the Goethe HTML overview returns an anti-bot 403 to generic CI and is explicitly retained as a manual check while official PDFs remain probeable.
 - `beginner-readable-completion-v1` and `guided-mediation-from-understanding-to-free-v1` start the real-learner UX repair. Comfortable typography is the default with compact/comfortable/larger controls in Settings and the top bar. The lesson gate now exposes one next action and a plain checklist rather than raw evidence fractions. `a1-01` speaking is reduced to 5–10 seconds, begins with synthetic phrase models, has no forced preparation timer, and keeps support visible by default; `supportVisibleDuringRecording` prevents guided attempts from counting as independent level-gate or progress evidence. `a1-01` mediation now starts with an aligned goal and source-grounded audience/purpose/facts. ADR-060 now adds word-level local STT separately; phoneme correction remains pending. See ADR-059.
 - `local-german-word-matching-v1` adds the first actual local speech-recognition cycle. Settings checks HTTPS/WebGPU/4 GB/128 MiB/browser quota, source freshness, and low-data mode before an explicit 70–90 MB q8 Whisper tiny download into `dwnb-pronunciation-model-v1`. A dedicated Worker transcribes only 0.35–20 second German samples from its complete cache. `local-microphone-signal-check-v1` blocks silence, low level, and clipping before ASR without pretending to identify a noise source; the speaking lab matches authored target words, ignores extra names, shows at most three corrections, and turns one unconfirmed word into a complete listen→record→playback→signal-check→local-match→retry loop. Transcript/result stay in page memory, audio is never sent, and no score/mastery/phoneme/accent/fluency claim is created. Real device/thermal/crash and Arabic-learner acoustic validation remain under P0-255/P1-380. See ADR-060.
@@ -548,7 +588,7 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
 - Generated lesson-listening MP3 assets: 96/96 (A1 24/24; A2 24/24; B1 24/24; B2 24/24), each with an Opus twin; human-recorded lesson assets: 0/96.
 - Generated exam-practice MP3 assets: 96 physical files / 90 logical clips across all 7/7 targeted and 35/35 full-simulation listening tasks; remaining synthetic production: 0 files / 0 tasks; human-recorded exam assets: 0.
 - Bilingual contextual search index: 3,750/3,750 unique entries.
-- Versioned governance registry: 18/18 official source records; the earliest current deadline is 2026-10-03 and browser-model records are current through 2026-10-07.
+- Versioned governance registry: 19/19 official source records; the earliest current deadline is 2026-10-03 and browser-model records are current through 2026-10-07.
 - Academic schema audit: 4,345/4,345 root objects across 16 strict Zod families; content SHA-256 `e9c471b4046a5c9f3fa4b3a4a3b68e9d376d0032225db5c6d13e4080ada20d90`.
 - A1–B2 lexical layer: 1,297 noun anchors + 134 frames; nouns 4,802 = 1,380 covered / 89 pending human / 3,333 context. Verb frames 1,233 = 134 covered / 4 unclassified / 1,095 not-target, with eight exclusions pending independent confirmation.
 - Unified answer audit: 2,805 closed-answer rows + 384 productive-task contracts; 0 unapproved leaks, 3 explicit type-aware exemptions.

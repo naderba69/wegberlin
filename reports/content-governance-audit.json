@@ -3,11 +3,11 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "cd507293b939cf6440cfdac67969906daefcd92624f665563609ab41b72db109",
+  "contentSha256": "481a713b619adf0ffe7497b8c78e3ddd3b66d186f1907c6ffece8564370e16be",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
-    "curriculumVersion": "dwnb-a1-b2-2026.09-v1",
+    "curriculumVersion": "dwnb-a1-b2-2026.10-v2",
     "independent": true
   },
   "counts": {

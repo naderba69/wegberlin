@@ -1,8 +1,31 @@
 # Project Status
 
-Sync batch: v179 · 2026-09-25 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v176`.
+Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
 
-Last updated: 2026-09-23 (generation `v157`)
+## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
+
+هذه الفقرة وADR-100 و`docs/LEARNING_REPAIRS_AR.md` هي الحالة الحالية. أرقام التشغيلات القديمة أسفلها تاريخية وليست اختبارات أو حقائق لهذا الجيل.
+
+- المنهج 96 درسًا (24 لكل مستوى)، B2 ست وحدات من أربعة دروس، مع 30 مراجعة/مشروعًا.
+- المعرفة: 8 صيغ A/B مستقلة، 48 سؤالًا لكل صيغة، المطلوب 39، ولا انتقال من Cache قديم وحده.
+- الإكمال سبعة أنشطة، والاستقلال والاحتفاظ المعجمي المؤجل منفصلان عن جودة الإنتاج الحر غير المحسومة.
+- المادة الإضافية: 32 موقف إنتاج بلا نموذج، و8 مدخلات 113–473 كلمة، بصوت جهاز اصطناعي فقط لا MP3 بشري مخترع.
+- جودة الشرح: 0 تحت 60 من 1,733، الوسيط العام 211 والاختيار من متعدد 232، ومراجعة المعنى المستقلة معلقة. نسبة الأجوبة المقيدة الواحدة 87.34% باقية بصدق في legacy؛ صفر بدائل ميتة.
+- خطة 90 دقيقة: 50 عمودًا فقريًا تشمل التهيئة/الإغلاق، 25 كلامًا، 15 مهمة مناسبة. السبت التأسيسي لا يحمل ورقة B2؛ الكامل جلسة منفصلة. المراجعة محدودة والراحة بلا دين.
+- لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
+- 18/18 official source records: فحص 2026-10-02 = 2 fresh، 16 due-soon، 0 stale؛ لم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
+- Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
+- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
+- last measured source build fingerprint: edc7f6ccae12 · full 5,758,035 · JavaScript 123 chunks / 1,878,095 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
+- Unit/Integrity tests: 1,185/1,185 in 172/172 files (measured after the repairs, not copied from a historical log). Browser: desktop 57 distinct contracts / mobile 57 distinct contracts verified in split runs (55/57 full + 2/2 isolated per project), not a claimed single 114/114 run; real headless Chromium 153, TTS mocked explicitly; see docs/run-logs/2026-10-02-learning-integrity/QA_SUMMARY.json.
+- P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
+- P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
+- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+
+
+Last updated: 2026-10-02 (learning-integrity repair pack v180; previous generations below are historical)
 
 ## Current milestone
 Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, bilingual search, full generated audio, evidence-gated lessons, evidence-derived analytics, and delayed error remediation are complete. All **96/96** A1–B2 lessons (24 per level, measured from `academicLessonList`) and all 80/80 library listening items have generated MP3 assets. Synthetic exam-audio production is now complete: 96 verified physical MP3 files cover all 90/90 logical clips, all 7/7 targeted listening tasks, and all 35/35 full-simulation listening tasks across Goethe and telc. Long clips play as ordered segment sequences under one persisted play limit. Exam-audio manifest v2 audits all 42/42 listening tasks and reports zero partial or missing tasks. `docs/AUDIO_PRODUCTION_BACKLOG.md` now records the completed production state. Human/multi-speaker voice review, rights review, and independent academic review remain.

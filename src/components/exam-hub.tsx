@@ -1,4 +1,5 @@
 "use client";
+import { buildLevelEvidenceGate } from "@/core/assessment/level-evidence";
 
 import Link from "next/link";
 import {
@@ -47,7 +48,7 @@ export function ExamHub() {
   const readiness = buildExamReadiness(state, exam);
   const sourceFreshness = summarizeSourceFreshness(profile.sourceRefs);
   const readinessByModule = Object.fromEntries(readiness.modules.map((module) => [module.moduleId, module]));
-  const b2Ready = (state.mastery["level-b2-ready"] ?? 0) >= 100;
+  const b2Ready = buildLevelEvidenceGate(state,"B2").passed;
 
   function choose(value: ExamProvider) {
     update((current) => ({
@@ -62,6 +63,7 @@ export function ExamHub() {
         <div>
           <span className="eyebrow"><GraduationCap size={15} /> مركز الاستعداد</span>
           <h1>تدرّب على امتحانك، <em>لا على امتحان هجين.</em></h1>
+          <p>المحاكاة الكاملة جلسة مستقلة بوقت ملف الجهة، وليست كتلة 15 دقيقة أو جلسة يومية مضغوطة في 90 دقيقة. ابدأ بالمهام المناسبة لمستواك.</p>
           <p>ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق.</p>
         </div>
         <div className="path-summary"><strong>{simulations.length}</strong><span>تدريب موجّه منشور<br />لهذه الجهة</span></div>
@@ -102,9 +104,9 @@ export function ExamHub() {
       </div>
 
       <section className="exam-readiness-board">
-        <header><div><span className="eyebrow">جاهزية الأدلة حسب الوحدة</span><h2>لا يوجد متوسط يخفي فجوة مهارة.</h2></div><strong>{readiness.readyModuleCount}/{readiness.totalModules} وحدات بدليل قوي</strong></header>
+        <header><div><span className="eyebrow">جاهزية الأدلة حسب الوحدة</span><h2>لا يوجد متوسط يخفي فجوة مهارة.</h2></div><strong>{readiness.readyModuleCount}/{readiness.totalModules} وحدات استقبال بفهم تدريبي قوي؛ الإنتاج منفصل</strong></header>
         <section className={`readiness-forecast ${readiness.forecast.status}`} data-readiness-forecast-policy={readiness.forecast.policyVersion}>
-          <header><div><small>نطاق زمني تخطيطي</small><strong>{readiness.forecast.status==="range"?`${readiness.forecast.minimumWeeks}–${readiness.forecast.maximumWeeks} أسابيع`:readiness.forecast.status==="evidence-threshold-met"?"عتبات الدليل مكتملة":"بيانات الوتيرة غير كافية"}</strong></div><span>{readiness.forecast.remainingEvidenceUnits} وحدات فجوة</span></header>
+          <header><div><small>نطاق زمني تخطيطي</small><strong>{readiness.forecast.status==="range"?`${readiness.forecast.minimumWeeks}–${readiness.forecast.maximumWeeks} أسابيع`:readiness.forecast.status==="evidence-threshold-met"?"تغطية العينات مكتملة؛ الجودة غير محسومة":"بيانات الوتيرة غير كافية"}</strong></div><span>{readiness.forecast.remainingEvidenceUnits} وحدات فجوة</span></header>
           <p>{readiness.forecast.messageAr}</p>
           <details><summary>كيف بُني النطاق؟</summary><ul>{readiness.forecast.assumptionsAr.map((assumption)=><li key={assumption}>{assumption}</li>)}</ul></details>
           <footer>لا تاريخ نجاح قطعي · لا نتيجة رسمية · لا خلط بين {exam==="goethe-b2"?"Goethe":"telc"} والجهة الأخرى</footer>

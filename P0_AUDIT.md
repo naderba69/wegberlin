@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v179 · 2026-09-23 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
 
 Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دفعات المحتوى، وأرقام الجرد مُعاد تثبيتها من `reports/academic-content-audit.json` عند `v138`.
 

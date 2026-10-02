@@ -13,7 +13,7 @@ const commonRoutes = [
   "/practice",
   "/practice/collocations",
   "/practice/conversation-paths",
-  "/practice/dictation",
+  "/practice/dictation", "/practice/endurance",
   "/practice/practical-day",
   "/library",
   "/search",

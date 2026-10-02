@@ -3071,7 +3071,7 @@
       "moduleId": "B2.1",
       "level": "B2",
       "module": 1,
-      "titleDe": "Argumentieren",
+      "titleDe": "Argumentieren und Kommunizieren",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3091,12 +3091,12 @@
         "recycling-b2-1-v1",
         "b2-02-m1",
         "recycling-b2-1-v2",
-        "b2-01-m2",
+        "b2-03-m1",
         "recycling-b2-1-g1",
-        "b2-02-m2",
+        "b2-04-m1",
         "recycling-b2-1-g2",
-        "b2-01-m3",
-        "b2-02-m3"
+        "b2-01-m2",
+        "b2-02-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3107,7 +3107,7 @@
       "moduleId": "B2.2",
       "level": "B2",
       "module": 2,
-      "titleDe": "Beruf und Wandel",
+      "titleDe": "Wissen und Quellen",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3115,24 +3115,24 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-22",
-        "b1-10",
+        "a1-23",
+        "b1-12",
         "a2-09",
-        "b1-22"
+        "b1-23"
       ],
       "policyVersion": "module-recycling-ratio-v1",
       "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
       "questionIds": [
-        "b2-03-m1",
+        "b2-05-m1",
         "recycling-b2-2-v1",
-        "b2-04-m1",
+        "b2-06-m1",
         "recycling-b2-2-v2",
-        "b2-03-m2",
+        "b2-07-m1",
         "recycling-b2-2-g1",
-        "b2-04-m2",
+        "b2-08-m1",
         "recycling-b2-2-g2",
-        "b2-03-m3",
-        "b2-04-m3"
+        "b2-05-m2",
+        "b2-06-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3143,7 +3143,7 @@
       "moduleId": "B2.3",
       "level": "B2",
       "module": 3,
-      "titleDe": "Wissen und Forschung",
+      "titleDe": "Vermitteln und Produzieren",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3151,24 +3151,24 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-23",
-        "b1-12",
-        "a2-10",
-        "b1-24"
+        "a1-24",
+        "b1-15",
+        "a2-11",
+        "b2-03"
       ],
       "policyVersion": "module-recycling-ratio-v1",
       "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
       "questionIds": [
-        "b2-05-m1",
+        "b2-09-m1",
         "recycling-b2-3-v1",
-        "b2-06-m1",
+        "b2-10-m1",
         "recycling-b2-3-v2",
-        "b2-05-m2",
+        "b2-11-m1",
         "recycling-b2-3-g1",
-        "b2-06-m2",
+        "b2-12-m1",
         "recycling-b2-3-g2",
-        "b2-05-m3",
-        "b2-06-m3"
+        "b2-09-m2",
+        "b2-10-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3179,7 +3179,7 @@
       "moduleId": "B2.4",
       "level": "B2",
       "module": 4,
-      "titleDe": "Gesellschaft im Diskurs",
+      "titleDe": "Revidieren und Strukturieren",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3187,24 +3187,24 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-23",
-        "b1-13",
-        "a2-11",
-        "b2-02"
+        "a2-01",
+        "b1-17",
+        "a2-12",
+        "b2-06"
       ],
       "policyVersion": "module-recycling-ratio-v1",
       "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
       "questionIds": [
-        "b2-07-m1",
+        "b2-13-m1",
         "recycling-b2-4-v1",
-        "b2-08-m1",
+        "b2-14-m1",
         "recycling-b2-4-v2",
-        "b2-07-m2",
+        "b2-15-m1",
         "recycling-b2-4-g1",
-        "b2-08-m2",
+        "b2-16-m1",
         "recycling-b2-4-g2",
-        "b2-07-m3",
-        "b2-08-m3"
+        "b2-13-m2",
+        "b2-14-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3215,7 +3215,7 @@
       "moduleId": "B2.5",
       "level": "B2",
       "module": 5,
-      "titleDe": "Kultur und Identität",
+      "titleDe": "Formell handeln",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3223,24 +3223,24 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-24",
-        "b1-15",
-        "a2-12",
-        "b2-04"
+        "a2-02",
+        "b1-20",
+        "a2-14",
+        "b2-10"
       ],
       "policyVersion": "module-recycling-ratio-v1",
       "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
       "questionIds": [
-        "b2-09-m1",
+        "b2-17-m1",
         "recycling-b2-5-v1",
-        "b2-10-m1",
+        "b2-18-m1",
         "recycling-b2-5-v2",
-        "b2-09-m2",
+        "b2-19-m1",
         "recycling-b2-5-g1",
-        "b2-10-m2",
+        "b2-20-m1",
         "recycling-b2-5-g2",
-        "b2-09-m3",
-        "b2-10-m3"
+        "b2-17-m2",
+        "b2-18-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3251,7 +3251,7 @@
       "moduleId": "B2.6",
       "level": "B2",
       "module": 6,
-      "titleDe": "B2-Prüfungsreife",
+      "titleDe": "Berichten und Verdichten",
       "totalQuestions": 10,
       "currentCount": 6,
       "recycledCount": 4,
@@ -3259,24 +3259,24 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a2-01",
-        "b1-16",
-        "a2-13",
-        "b2-06"
+        "a2-03",
+        "b1-24",
+        "a2-15",
+        "b2-13"
       ],
       "policyVersion": "module-recycling-ratio-v1",
       "evidenceBoundary": "review-composition-ratio-no-automatic-mastery-or-cefr",
       "questionIds": [
-        "b2-11-m1",
+        "b2-21-m1",
         "recycling-b2-6-v1",
-        "b2-12-m1",
+        "b2-22-m1",
         "recycling-b2-6-v2",
-        "b2-13-m1",
+        "b2-23-m1",
         "recycling-b2-6-g1",
-        "b2-14-m1",
+        "b2-24-m1",
         "recycling-b2-6-g2",
-        "b2-15-m1",
-        "b2-16-m1"
+        "b2-21-m2",
+        "b2-22-m2"
       ],
       "recycledKinds": [
         "vocabulary-retrieval",
@@ -3284,5 +3284,5 @@
       ]
     }
   ],
-  "contentSha256": "439956b453f0d76259d9e917160d4d19cba0174ddfceeb52c1b9cee1113e19f6"
+  "contentSha256": "30552a823e15ee22a1a6ed1dce822c28f8724ba96852adba66ea38056dd12aa2"
 }

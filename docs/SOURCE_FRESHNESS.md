@@ -1,6 +1,10 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v179 · 2026-09-23 · re-verified in full against pack `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
+
+Measured 2026-10-02: 18 references; fresh 2, due-soon 16, stale 0. Verification dates unchanged; semantic human review remains required beginning 2026-10-03.
 
 Last registry review: 2026-09-11 (auditor re-run 2026-09-20: 18 records, 18 fresh, 0 due-soon, 0 stale, 0 clock errors)  
 Next review due: 2026-10-03  

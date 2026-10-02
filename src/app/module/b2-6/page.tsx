@@ -1,15 +1,5 @@
 import { ModuleReview } from "@/components/module-review";
-import { b2Module6Lessons } from "@/data/lessons-b2-module6";
+import { academicLessonList } from "@/data/academic-lessons";
+import { moduleTitles } from "@/data/curriculum";
 
-export default function B2ModuleSixReviewPage() {
-  return (
-    <ModuleReview
-      moduleId="B2.6"
-      titleAr="الإنتاج والبروفة النهائية"
-      titleDe="B2-Prüfungsreife"
-      lessons={b2Module6Lessons}
-      projectTitle="نفّذ بروفة B2 داخلية وابنِ خطة أدلة"
-      projectCopy="فك أفعال المهمة، أنجز كتابة وعرضًا تحت الوقت، ادمج دليل القراءة واعتراض الاستماع، ثم سجل الفجوة وسببها وتمرينًا لاحقًا. البروفة محايدة ولا تخلط صيغ Goethe وtelc الرسمية."
-    />
-  );
-}
+export default function B2ModuleReviewPage(){const moduleMeta=moduleTitles.B2[5];const lessons=academicLessonList.filter(lesson=>lesson.level==="B2"&&lesson.module===6);return <ModuleReview moduleId="B2.6" titleAr={moduleMeta.titleAr} titleDe={moduleMeta.titleDe} lessons={lessons} projectTitle="انقل تقريرًا كثيفًا إلى رسالة واضحة" projectCopy="انسب الكلام إلى صاحبه، فك الصفات والمركبات والإضافات الطويلة، واضبط الترقيم. راجع ما تغير من المعنى قبل جمع ملف الأدلة النهائي."/>}

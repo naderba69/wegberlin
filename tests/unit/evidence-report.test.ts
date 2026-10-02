@@ -39,7 +39,7 @@ describe("learner evidence report", () => {
         { id:"w1",taskId:"a1-01",text:"Hallo",wordCount:1,version:1,status:"submitted" as const,feedback:[],createdAt:"2026-08-30T09:00:00Z",updatedAt:"2026-08-30T09:00:00Z" },
         { id:"w2",taskId:"a1-01",text:"Hallo Berlin",wordCount:2,version:2,status:"revised" as const,feedback:[],createdAt:"2026-08-30T10:00:00Z",updatedAt:"2026-08-30T10:00:00Z" },
       ],
-      speakingAttempts: [{ id:"s1",taskId:"a1-01",durationSeconds:45,selfScore:4,reflection:"",createdAt:"2026-08-30T11:00:00Z" }],
+      speakingAttempts: [{ id:"s1",taskId:"a1-01",durationSeconds:45,selfScore:4,reflection:"مراجعة صوتية",selfReview:{listenedBack:true,achievedCriteria:[],clarityScore:4 as const,turnTaking:false,repairUsed:false,preparationNotes:[],supportVisibleDuringRecording:false},createdAt:"2026-08-30T11:00:00Z" }],
     };
     const report = buildEvidenceReport(state, now);
     const writing = report.skills.find((skill) => skill.key === "writing")!;
@@ -47,7 +47,9 @@ describe("learner evidence report", () => {
     expect(writing.detailAr).toContain("1 مهام");
     expect(writing.detailAr).toContain("1 منقحة");
     expect(writing.boundaryAr).toContain("لا جودة اللغة");
-    expect(speaking.detailAr).toContain("1 محاولات مستقلة");
+    expect(writing.score).toBeNull();
+    expect(speaking.score).toBeNull();
+    expect(speaking.detailAr).toContain("محاولات بمصدر استقلال");
     expect(speaking.boundaryAr).toContain("لا يقيس النطق");
   });
 

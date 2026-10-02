@@ -2,8 +2,8 @@
 
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
-Curriculum: `dwnb-a1-b2-2026.09-v1` (app `0.1.0`)  
-Content SHA-256: `cd507293b939cf6440cfdac67969906daefcd92624f665563609ab41b72db109`
+Curriculum: `dwnb-a1-b2-2026.10-v2` (app `0.1.0`)
+Content SHA-256: `481a713b619adf0ffe7497b8c78e3ddd3b66d186f1907c6ffece8564370e16be`
 
 ## Result
 

@@ -50,3 +50,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local QA/browser scratch; never ship generated browsers or temporary logs.
+.arena/

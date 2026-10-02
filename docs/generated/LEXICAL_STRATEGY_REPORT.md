@@ -2,7 +2,7 @@
 
 Generated: 2026-09-08  
 Version: `lexical-strategy-audit-v1`  
-Content SHA-256: `439956b453f0d76259d9e917160d4d19cba0174ddfceeb52c1b9cee1113e19f6`
+Content SHA-256: `30552a823e15ee22a1a6ed1dce822c28f8724ba96852adba66ea38056dd12aa2`
 
 ## Result
 

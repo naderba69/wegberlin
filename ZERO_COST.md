@@ -1,6 +1,8 @@
 # Zero-Cost Contract
 
-Sync batch: v179 · 2026-09-23 · re-verified in full against pack `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
 Last registry update: 2026-09-11 (0 USD boundary re-checked 2026-09-20: 18/18 records fresh, no paid fallback path added)  
 Policy: `source-freshness-v1`  

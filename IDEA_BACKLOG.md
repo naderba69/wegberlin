@@ -1,6 +1,8 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v179 · 2026-09-23 · صُودق على هذه الوثيقة كاملة مقابل دفعة `dwnb-full-pack-v175`.
+Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
+
+Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
 > هذه القائمة Backlog وليست قائمة إطلاق واحدة. P0 ضروري، P1 عالي القيمة بعد استقرار الأساس، وP2 اختياري/مستقبلي. يجب عدم إضافة أي فكرة إلى المنتج قبل تعريف مشكلة المتعلم ومعيار قبولها.
 

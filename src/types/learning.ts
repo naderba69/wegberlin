@@ -50,8 +50,8 @@ export interface LessonMeta {
   status: LessonStatus;
 }
 
-export type MissionBlockKind = "diagnostic" | "check-in" | "review" | "warmup" | "lesson" | "reading" | "writing" | "practice" | "production" | "reflection";
-export type MissionEvidenceKind = "diagnostic-sample" | "planning-check-in" | "retrieval-process" | "lesson-evidence" | "reading-comprehension" | "writing-production" | "controlled-practice" | "productive-practice" | "planning-reflection";
+export type MissionBlockKind = "diagnostic" | "check-in" | "review" | "warmup" | "lesson" | "reading" | "writing" | "practice" | "production" | "reflection" | "exam";
+export type MissionEvidenceKind = "diagnostic-sample" | "planning-check-in" | "retrieval-process" | "lesson-evidence" | "reading-comprehension" | "writing-production" | "controlled-practice" | "productive-practice" | "planning-reflection" | "exam-practice";
 
 export interface MissionBlock {
   id: string;
@@ -595,6 +595,7 @@ export interface WritingSubmission {
   version: number;
   status: "draft" | "submitted" | "revised";
   feedback: string[];
+  evidenceContext?: { policyVersion: "productive-independence-v1"; supportUsedBeforeDraft: boolean; firstDraft: boolean; taskLevel: CEFRLevel; draftStartedAt?: string };
   plan?: WritingPlan;
   selfChecklist?: string[];
   dimensions?: WritingDimensionEvidence[];
@@ -939,6 +940,7 @@ export interface ExerciseAttempt {
   answerChangeCount?:number;
   uncertaintyKind?:AttemptUncertaintyKind;
   processPolicyVersion?:"bounded-attempt-process-v1";
+  evidenceContext?: { policyVersion: "independent-assessment-v1"; kind: "level-check" | "placement-challenge" | "endurance"; level: CEFRLevel; formId: "A" | "B"; runId: string; independent: boolean; expectedItems: number };
   createdAt: string;
 }
 

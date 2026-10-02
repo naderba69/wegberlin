@@ -6,10 +6,7 @@ import { STATUS_ANNOUNCEMENT_VERSION, StatusAnnouncement } from "@/components/st
 
 const requiredResultSurfaces = [
   "src/components/diagnostic-view.tsx",
-  "src/components/a1-level-assessment.tsx",
-  "src/components/a2-level-assessment.tsx",
-  "src/components/b1-level-assessment.tsx",
-  "src/components/b2-level-assessment.tsx",
+  "src/components/level-assessment.tsx",
   "src/components/module-review.tsx",
   "src/components/error-notebook.tsx",
   "src/components/writing-lab.tsx",

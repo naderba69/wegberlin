@@ -6,13 +6,17 @@ import { allPublishedExamTasks } from "../../src/data/exam-simulation-registry";
 import { curriculum } from "../../src/data/curriculum";
 import { readingLibrary } from "../../src/data/library-registry";
 import { writingBenchmarkPrompt } from "../../src/core/writing/device-benchmark";
+import { eligibleReviewCards } from "../../src/core/srs/review-queue";
+import { newReviewItem } from "../../src/core/srs/sm2";
+import { verifiedThrough } from "../helpers/verified-learning-state";
+import { CURRENT_CURRICULUM_VERSION } from "../../src/config/curriculum-version";
 import { defaultState } from "../../src/core/portability/db";
 import { diagnosticForms } from "../../src/data/diagnostic";
 import { unknownWordChallenge } from "../../src/core/reading/unknown-word";
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v179";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v180";
 
 async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true", { timeout:30_000 });
@@ -329,6 +333,8 @@ test("visual accessibility preferences preview immediately, persist, reset, and 
 test("P0 exam readiness stays provider-scoped and exposes weak modules instead of one average", async ({ page }) => {
   const goetheReadingIds=allPublishedExamTasks.filter((task)=>task.provider==="goethe-b2"&&task.skill==="reading").slice(0,6).map((task)=>task.id);
   const completedLessonIds=curriculum.map((lesson)=>lesson.id);
+  const verified=verifiedThrough(["A1","A2","B1","B2"],new Date());
+  verified.reviewItems=eligibleReviewCards(verified).map(card=>({...newReviewItem(card.id),nextReviewDate:new Date(Date.now()+86_400_000).toISOString()}));
   await page.goto("/exams");
   await waitForLearningReady(page);
   await page.evaluate(({baseState,goetheReadingIds,completedLessonIds})=>new Promise<void>((resolve,reject)=>{
@@ -341,13 +347,14 @@ test("P0 exam readiness stays provider-scoped and exposes weak modules instead o
       state.diagnosticResult={estimatedLevel:"B2",score:16,maxScore:16,levelScores:{A1:4,A2:4,B1:4,B2:4},completedAt:now.toISOString()};
       state.studyHistory=[18,15,12,9,6,3].map((daysAgo)=>({date:new Date(now.getTime()-daysAgo*86_400_000).toISOString().slice(0,10),minutes:30,evidenceCount:2}));
       state.completedLessonIds=completedLessonIds;
+
       state.mastery={...state.mastery,"level-a1-ready":100,"level-a2-ready":100,"level-b1-ready":100,"level-b2-ready":100,...Object.fromEntries(goetheReadingIds.map((id:string)=>[`exam-target-${id}`,50]))};
       const tx=open.result.transaction("learning-state","readwrite");
       tx.objectStore("learning-state").put(state,"primary");
       tx.oncomplete=()=>resolve();
       tx.onerror=()=>reject(tx.error);
     };
-  }),{baseState:structuredClone(defaultState),goetheReadingIds,completedLessonIds});
+  }),{baseState:structuredClone(verified),goetheReadingIds,completedLessonIds});
   await page.reload();
   await waitForLearningReady(page);
   const board=page.locator(".exam-readiness-board");
@@ -711,8 +718,8 @@ test("P0 daily check-in rebalances load and reflection stores tomorrow's decisio
   await expect(page.getByText("نحو 20 دقيقة")).toBeVisible();
   await expect(page.locator(".weekly-plan-day")).toHaveCount(7);
   await expect(page.locator(".weekly-plan-day.today")).toContainText("20 د");
-  await expect(page.locator(".weekly-plan-card")).toContainText("كتابة مستقلة");
-  await expect(page.locator(".weekly-plan-card")).toContainText("تدريب صيغة الامتحان");
+  await expect(page.locator(".weekly-plan-card")).toContainText("تحضير لكتابة قصيرة");
+  await expect(page.locator(".weekly-plan-card")).toContainText("فهم وتعليمات على مستوى المتعلم");
 
   const reflectionCard = page.locator(".session-signal-card.reflection");
   await reflectionCard.locator(".signal-scale").nth(0).locator("button").nth(4).click();
@@ -1504,11 +1511,12 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
     }
     if (index === 6) {
       await expect(page.locator(".reading-support-lock")).toContainText("القاموس والترجمة مؤجلان");
-      await expect(page.locator(".glossary-strip")).toHaveCount(0);
+      await expect(page.locator(".reading-vocabulary-bridge")).not.toHaveAttribute("open", "");
+      await expect(page.locator(".reading-vocabulary-bridge .glossary-strip")).not.toBeVisible();
       const readingQuestion = page.locator(".question-stack .quiz-item").first();
-      await expect(readingQuestion.locator("[data-question-category]")).toBeVisible();await expect(readingQuestion.locator("h3[lang=de]")).toHaveText(lesson.reading.questions[0].promptDe);await expect(readingQuestion.locator("h3[lang=de]+p")).toHaveText(lesson.reading.questions[0].promptAr);
+      await expect(readingQuestion.locator("[data-question-category]")).toBeVisible();await expect(readingQuestion.locator("h3[lang=de]")).toHaveText(lesson.reading.questions[0].promptDe);await expect(readingQuestion.locator(".arabic-scaffold p")).toHaveText(lesson.reading.questions[0].promptAr);
       await readingQuestion.getByRole("button", { name: "تلميح قبل الإجابة" }).click();
-      await expect(readingQuestion.locator(".hint-panel")).toContainText("فكرة عامة أم تفصيلًا أم سببًا");
+      await expect(readingQuestion.locator(".hint-panel")).toContainText(/فكرة عامة أم تفصيلًا أم سببًا|حدّد الشخص أو الحدث/);
       await readingQuestion.locator(".quiz-options button").filter({ hasText: lesson.reading.questions[0].options[lesson.reading.questions[0].correctIndex] }).click();
       await readingQuestion.getByRole("button", { name: "تحقق" }).click();
       await expect(readingQuestion.locator(".question-evidence q")).toBeVisible();
@@ -1570,7 +1578,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
     mastery:defaultState.mastery,
   });
   await expect(page.getByRole("button", { name: /أكمل الخطوة التالية أولًا/ })).toBeDisabled();
-  await expect(page.locator(".lesson-evidence-gate")).toContainText("1/4");
+  await expect(page.locator(".lesson-evidence-gate")).toContainText("0/7"); // One reading answer and failed listening are not completed receptive evidence.
   await expect(page.locator(".lesson-evidence-gate")).toContainText("خطوتك التالية");
   await expect(page.locator(".lesson-evidence-gate")).not.toContainText("0/1 مطلوب");
 
@@ -1578,8 +1586,8 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   const miniTestRequired = Math.ceil(lesson.miniTest.length * 0.8);
   const evidenceIds = [
     ...lesson.exercises.slice(0, controlledRequired).map((exercise) => exercise.id),
-    lesson.reading.questions[0].id,
-    lesson.listening.questions[0].id,
+    ...lesson.reading.questions.slice(0,2).map(question=>question.id),
+    ...lesson.listening.questions.slice(0,2).map(question=>question.id),
     ...lesson.miniTest.slice(0, miniTestRequired).map((question) => question.id),
   ];
   await page.evaluate(({ lessonId, evidenceIds }) => new Promise<void>((resolve, reject) => {
@@ -1601,6 +1609,10 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
           correct: true,
           createdAt: now,
         }))];
+        state.writingSubmissions=[{id:"lesson-workflow-writing",taskId:lessonId,text:Array.from({length:40},()=>"Deutsch").join(" "),wordCount:40,version:1,status:"submitted",feedback:[],createdAt:now,updatedAt:now}];
+        state.speakingAttempts=[{id:"lesson-workflow-speaking",taskId:lessonId,durationSeconds:30,selfScore:3,reflection:"راجعت التسجيل بعد الاستماع",selfReview:{listenedBack:true,achievedCriteria:[],clarityScore:3,turnTaking:false,repairUsed:false,preparationNotes:[],supportVisibleDuringRecording:true},createdAt:now}];
+        state.mediationSubmissions=[{id:"lesson-workflow-mediation",taskId:lessonId,audience:"صديق",purpose:"نقل معنى الرسالة",keyFacts:["اسم"],transferAr:"نقلت معنى الرسالة لصديقي دون اختلاق حقائق جديدة.",responseDe:"",version:1,status:"submitted",selfChecklist:[],feedback:[],createdAt:now,updatedAt:now}];
+        // Workflow participation fixture only: no claim of independent free-language quality.
         store.put(state, "primary");
       };
       transaction.oncomplete = () => resolve();
@@ -1610,7 +1622,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
 
   await page.reload();
   await waitForLearningReady(page);
-  await expect(page.locator(".lesson-evidence-gate.passed")).toContainText("4/4");
+  await expect(page.locator(".lesson-evidence-gate.passed")).toContainText("7/7");
   await page.getByRole("link", { name: /إنهاء وتحديث الخطة/ }).click();
   await expect(page).toHaveURL(/\/lernen\/a1-02$/);
   await expect.poll(() => page.evaluate(() => new Promise<boolean>((resolve, reject) => {
@@ -1719,7 +1731,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   await expect(page.locator(".retention-evidence-strip")).toContainText("1");
   await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
     const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const request=open.result.transaction("learning-state","readonly").objectStore("learning-state").get("primary");request.onerror=()=>reject(request.error);request.onsuccess=()=>{const state=request.result;const event=state.reviewEvents.at(-1);const masteryEvent=state.masteryEvidenceEvents.at(-1);resolve({kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"],masteryOperation:masteryEvent.operation,masterySource:masteryEvent.source});};};
-  }))).toEqual({kind:"delayed",delta:4,mastery:Math.min(100,masteryBeforeFirstReview+4),masteryOperation:"increment",masterySource:"lesson-evidence"});
+  }))).toEqual({kind:"delayed",delta:0,mastery:masteryBeforeFirstReview,masteryOperation:"set",masterySource:"lesson-evidence"});
 });
 
 test("settings exports an encrypted DWNB archive and imports it as an isolated profile", async ({ page }) => {
@@ -1729,7 +1741,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.getByRole("heading", { name: /الإعدادات/ })).toBeVisible();
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
-  await expect(governance).toContainText("dwnb-a1-b2-2026.09-v1");
+  await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
   await expect(governance).toContainText("3277");
   await governance.locator(":scope > details > summary").click();
   await expect(governance.locator(".content-family-lifecycle article")).toHaveCount(16);
@@ -1762,7 +1774,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   const preview = page.locator(".import-preview");
   await expect(preview.getByText("معاينة النسخة قبل التنفيذ")).toBeVisible();
   await expect(preview).toContainText("مشفرة · DWNB v3");
-  await expect(preview).toContainText("Curriculum dwnb-a1-b2-2026.09-v1");
+  await expect(preview).toContainText(`Curriculum ${CURRENT_CURRICULUM_VERSION}`);
   await preview.getByRole("button", { name: /ملف جديد/ }).click();
   await preview.getByRole("button", { name: "تأكيد إنشاء الملف" }).click();
 
@@ -1807,18 +1819,18 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   const packCard = page.locator(".offline-pack-card");
   await expect(packCard.locator(".offline-pack-picker button")).toHaveCount(5);
   await packCard.getByRole("button",{name:"A1 دروس ووحدات وبوابة A1",exact:true}).click();
-  await expect(packCard.locator(".pack-size-preview")).toContainText("58 مسارًا",{timeout:30_000});
+  await expect(packCard.locator(".pack-size-preview")).toContainText("59 مسارًا",{timeout:30_000});
   await expect(packCard.locator('[data-pack-diff-policy="pre-update-curriculum-pack-diff-v2"]')).toContainText("مقارنة الحزمة قبل التحديث");
   await expect(packCard.locator(".pack-size-preview")).toContainText("40 ملفًا");
   await packCard.getByRole("button",{name:"تنزيل A1",exact:true}).click();
   await expect(packCard.getByText(/اكتمل تثبيت A1 دون الصوت/)).toBeVisible({timeout:180_000});
   const isolatedA1=await page.evaluate(async(PACK_CACHE_NAME)=>{const cache=await caches.open(PACK_CACHE_NAME);const meta=await cache.match("/__dwnb_offline_pack_meta__");return{metadata:meta?await meta.json():null,a1:Boolean(await cache.match("/lernen/a1-24")),a2:Boolean(await cache.match("/lernen/a2-01")),exam:Boolean(await cache.match("/exams/goethe-b2/goethe-b2-reading-01"))}},PACK_CACHE_NAME);
-  expect(isolatedA1).toMatchObject({metadata:{packId:"a1",routeCount:58,includesAudio:false},a1:true,a2:false,exam:false});
+  expect(isolatedA1).toMatchObject({metadata:{packId:"a1",routeCount:59,includesAudio:false},a1:true,a2:false,exam:false});
   await packCard.getByRole("button",{name:/^B2 \+ Prüfung/}).click();
-  await expect(packCard.locator(".pack-size-preview")).toContainText("219 مسارًا",{timeout:30_000});
+  await expect(packCard.locator(".pack-size-preview")).toContainText("220 مسارًا",{timeout:30_000});
   await expect(packCard.locator(".pack-size-preview")).toContainText("136 ملفًا");
   await packCard.getByRole("button",{name:/^A1–B2 komplett/}).click();
-  await expect(packCard.locator(".pack-size-preview")).toContainText("318 مسارًا",{timeout:30_000});
+  await expect(packCard.locator(".pack-size-preview")).toContainText("319 مسارًا",{timeout:30_000});
   await expect(packCard.locator(".pack-size-preview")).toContainText("272 ملفًا");
   await expect(packCard.locator(".pack-size-preview")).toContainText("Gzip مبني مسبقًا");
   await packCard.getByRole("checkbox", { name: /تضمين صوت A1–B2 komplett/ }).check();
@@ -1826,7 +1838,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
   await expect(downloadButton).toBeEnabled({ timeout: 30_000 });
   await downloadButton.click();
   await expect(packCard.getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)).toBeVisible({ timeout: 360_000 });
-  await expect(packCard).toContainText("318 مسارًا");
+  await expect(packCard).toContainText("319 مسارًا");
   const todayReadiness=await page.evaluate(async()=>{const worker=navigator.serviceWorker.controller;if(!worker)throw new Error("Service Worker must control the settings page");return new Promise<{type:string;missingRoutes:string[];missingAudioAssets:string[]}>((resolve,reject)=>{const channel=new MessageChannel();const timeout=setTimeout(()=>reject(new Error("readiness timeout")),10_000);channel.port1.onmessage=(event)=>{clearTimeout(timeout);resolve(event.data)};worker.postMessage({type:"DWNB_TODAY_READINESS_CHECK",policyVersion:"today-session-offline-readiness-v1",routes:["/today","/lernen/a1-01","/practice","/speaking"],audioAssets:["/audio/lessons/a1-01.mp3"]},[channel.port2])})});
   expect(todayReadiness).toMatchObject({type:"DWNB_TODAY_READINESS_RESULT",missingRoutes:[],missingAudioAssets:[]});
 
@@ -1876,7 +1888,7 @@ test("the optional full content pack opens unvisited lessons and exam tasks offl
     return { metadata, generatedAudioCached: Boolean(firstAudio && secondBatchAudio && thirdBatchAudio && fourthBatchAudio && fifthBatchAudio && sixthBatchAudio && seventhBatchAudio && eighthBatchAudio && lessonAudio && secondLessonAudioBatch && thirdLessonAudioBatch && fourthLessonAudioBatch && fifthLessonAudioBatch && sixthLessonAudioBatch && seventhLessonAudioBatch && eighthLessonAudioBatch && finalLessonAudioBatch && goetheExamAudio && telcExamAudio && segmentedGoetheExamAudio && segmentedTelcExamAudio && fullGoetheExamAudio && fullTelcExamAudio && completedFull02TelcAudio && full03GoetheAudio && full03TelcAudio && completedFull03TelcAudio && full03GoetheShortAudio && full04GoetheAudio && full04TelcAudio && completedFull04TelcAudio && full05GoetheAudio && full05TelcAudio && completedFull05TelcAudio && completedFull05GoetheAudio && full06GoetheAudio && full06TelcAudio && completedFull06TelcDialogue && completedFull06TelcAnnouncement) };
   }, PACK_CACHE_NAME);
   expect(packEvidence.metadata?.packId).toBe("full");
-  expect(packEvidence.metadata?.routeCount).toBe(318);
+  expect(packEvidence.metadata?.routeCount).toBe(319);
   expect(packEvidence.metadata?.compressedPageByteSize).toBeGreaterThan(1_000_000);
   expect(packEvidence.metadata?.sizeManifestFingerprint).toMatch(/^[a-f0-9]{64}$/);
   expect(packEvidence.metadata?.assetCount).toBeGreaterThan(90);

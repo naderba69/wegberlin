@@ -1204,3 +1204,27 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .nursing-boundary{border-top:1px solid #d9e5df;padding-top:9px;color:#54706a;font-size:var(--fs-7);line-height:1.8}
 @media(max-width:700px){.nursing-layer-panel{padding:13px}.nursing-layer-panel>header{grid-template-columns:42px 1fr}.nursing-layer-panel>header>b{grid-column:1/-1;width:max-content;max-width:100%;white-space:normal}.nursing-words>ul>li{grid-template-columns:1fr}}
 .delayed-transfer-panel p, .delayed-transfer-panel span, .delayed-transfer-panel small, .delayed-transfer-panel li { color: #5b6b66; }
+
+/* ADR-100: separate evidence, readable assessments, and bounded longer input. */
+.learning-evidence-states,.learning-outcome-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin-block:16px}
+.learning-evidence-states article,.learning-outcome-grid article{padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--white);min-width:0}
+.learning-evidence-states article.passed{border-color:var(--ink-2);background:var(--mint-2)}
+.learning-evidence-states p,.learning-outcome-panel p{line-height:1.8;margin-block:8px;font-size:var(--fs-14)}
+.learning-outcome-panel{padding:22px;background:var(--white);border:1px solid var(--line);border-radius:18px;margin-block:22px}
+.learning-outcome-panel>header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.learning-outcome-panel select,.endurance-controls select,.endurance-voices select{max-width:100%;width:100%;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--white);color:var(--ink)}
+.arabic-scaffold{margin-block:8px;font-size:var(--fs-14);line-height:1.8}
+.arabic-scaffold summary,.reading-vocabulary-bridge summary{cursor:pointer;font-weight:700;padding:8px;list-style-position:inside}
+.reading-vocabulary-bridge{border:1px solid var(--line);padding:12px;border-radius:10px;margin-block:14px;background:var(--mint-2)}
+.assessment-start,.assessment-review,.endurance-task{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--white);margin-block:20px;min-width:0}
+.assessment-review details{padding:14px;border-block-end:1px solid var(--line);line-height:1.9}
+.assessment-review summary{cursor:pointer;overflow-wrap:anywhere}
+.level-production-actions,.endurance-audio-actions,.endurance-terminal{display:flex;flex-wrap:wrap;gap:12px;margin-block:18px;align-items:center}
+.endurance-controls,.endurance-voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;margin-block:18px}
+.endurance-controls label,.endurance-voices label{display:grid;gap:8px;min-width:0}
+.endurance-task .reading-text{padding:18px;line-height:2;max-width:78ch;margin-inline:auto}
+.endurance-task .reading-text section{margin-block-end:22px}
+.endurance-task .reading-text p{overflow-wrap:anywhere}
+.endurance-timer{font-size:var(--fs-14);color:var(--ink-2)}
+.nursing-budget{padding:12px;border:1px solid var(--line);border-radius:10px;margin-block:12px;line-height:1.8}
+@media(max-width:600px){.assessment-start,.assessment-review,.endurance-task,.learning-outcome-panel{padding:14px}.level-production-actions>a,.endurance-terminal>a{width:100%;text-align:center}.learning-evidence-states,.learning-outcome-grid{grid-template-columns:1fr}.endurance-controls,.endurance-voices{grid-template-columns:1fr}}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ClipboardCheck, Copy, HeartHandshake, Info, Volume2 } from "lucide-react";
 import {
   NURSING_LAYER_DISCLAIMER_AR,
@@ -25,10 +25,15 @@ export function NursingLayerPanel({ lessonId, level, onSpeak }: { lessonId: stri
   const units = nursingUnitsForLesson(lessonId);
   const [chosenIndex, setChosenIndex] = useState<Record<string, number>>({});
   const [copied, setCopied] = useState(false);
+  const [hidden,setHidden]=useState(false);
+  const [practiceSeconds,setPracticeSeconds]=useState(0);
+  const [practiceStarted,setPracticeStarted]=useState(false);
+  const maximumMinutes=level==="A1"||level==="A2"?2:5;
+  useEffect(()=>{if(!practiceStarted||hidden||practiceSeconds>=maximumMinutes*60)return;const timer=window.setInterval(()=>{if(document.visibilityState==="visible")setPracticeSeconds(seconds=>seconds+1);},1000);return()=>window.clearInterval(timer);},[practiceStarted,hidden,practiceSeconds,maximumMinutes]);
   if (!units.length) return null;
 
   const track = units[0].track;
-  void level;
+  if(hidden)return <aside className="nursing-layer-panel"><p>{NURSING_LAYER_DISCLAIMER_AR}. أخفيت الطبقة؛ المنهج العام والأدلة محفوظان دون تغيير.</p><button className="secondary-button" onClick={()=>setHidden(false)}>أظهر الطبقة الاختيارية</button></aside>;
   const tsv = nursingReviewTsvForLesson(lessonId);
   const copyTsv = async () => {
     if (!tsv) return;
@@ -50,6 +55,7 @@ export function NursingLayerPanel({ lessonId, level, onSpeak }: { lessonId: stri
       </div>
       <b data-nursing-rules-count={NURSING_LAYER_RULES_AR.length}><Info size={14}/> 3 قواعد</b>
     </header>
+    <div className="nursing-budget" data-nursing-budget-minutes={maximumMinutes}><p>اختياري: حتى {maximumMinutes} دقائق من ميزانية الدرس، لا تضاف إلى الجلسة. المراجعة المهنية معلقة ولا توجد دعوى تأهيل.</p><button className="secondary-button" onClick={()=>setHidden(true)}>أخفِ الطبقة وقدّم اللغة العامة</button><p>الانخفاض في عينات مختلفة لا يثبت أثرًا للطبقة. قارن الجهة والمهارة وعائلة المهمة وحجم العينة قبل اقتراح تخفيف احترازي؛ لا تفسير سببي تلقائي.</p>{practiceSeconds>=maximumMinutes*60&&<p role="status">بلغت ميزانية التدريب. عد إلى هدف اللغة العامة؛ لم تُسجّل عقوبة أو درجة.</p>}</div>
     <details className="nursing-rules">
       <summary>القواعد الثلاث الصارمة</summary>
       <ol>{NURSING_LAYER_RULES_AR.map((rule) => <li key={rule}>{rule}</li>)}</ol>
@@ -78,7 +84,7 @@ export function NursingLayerPanel({ lessonId, level, onSpeak }: { lessonId: stri
                 const isChosen = index === optionIndex;
                 const verdict = isChosen ? outcome?.status : undefined;
                 return <button key={option.textDe} type="button" data-nursing-option-kind={option.kind} data-nursing-verdict={verdict}
-                  onClick={() => setChosenIndex((current) => ({ ...current, [item.id]: optionIndex }))}>
+                  disabled={practiceSeconds>=maximumMinutes*60} onClick={() => {setPracticeStarted(true);setChosenIndex((current) => ({ ...current, [item.id]: optionIndex }));}}>
                   <bdi lang="de" dir="ltr">{option.textDe}</bdi>
                   {isChosen && outcome && <span data-nursing-feedback={outcome.status}>{outcome.status === "accepted" ? "مقبول: " : "مرفوض: "}{outcome.reasonAr}</span>}
                 </button>;

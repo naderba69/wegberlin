@@ -23,7 +23,7 @@ import { buildStartingGoalReport } from "@/core/coach/starting-goal-report";
 import { buildExamTargetForecast } from "@/core/coach/exam-target-forecast";
 import { DailyFocusTools } from "./daily-focus-tools";
 
-const kindIcons = { diagnostic: ClipboardCheck, "check-in": Sparkles, review: RotateCcw, warmup: BrainCircuit, lesson: BrainCircuit, reading: BookOpenCheck, writing: FilePenLine, practice: Target, production: Mic2, reflection: CalendarCheck2 };
+const kindIcons = { diagnostic: ClipboardCheck, "check-in": Sparkles, review: RotateCcw, warmup: BrainCircuit, lesson: BrainCircuit, reading: BookOpenCheck, writing: FilePenLine, practice: Target, production: Mic2, reflection: CalendarCheck2, exam: Target };
 const ratingValues = [1, 2, 3, 4, 5] as const;
 
 function RetrievalWarmupCard({block,index,items,isDone,onComplete,gamificationVisible}:{block:MissionBlock;index:number;items:RetrievalWarmupItem[];isDone:boolean;onComplete:()=>void;gamificationVisible:boolean}){
@@ -66,9 +66,9 @@ export function CoachDashboard() {
   const target = getCoachTarget(state);
   const needsDiagnostic = target.kind === "diagnostic";
   const primaryHref = target.href;
-  const heroTitle = needsDiagnostic ? "لن نخمن مستواك." : target.kind === "review" ? "المراجعة أولويتك الآن." : target.kind === "errors" ? "العلاج المستحق قبل الجديد." : target.kind === "assessment" ? "حان وقت بوابة المستوى." : target.kind === "exam" ? "هذه أضعف وحدة امتحانية." : "هذه خطوتك التالية.";
+  const heroTitle = target.kind==="rest"?"راحة بلا دين متراكم.":needsDiagnostic ? "لن نخمن مستواك." : target.kind === "review" ? "المراجعة أولويتك الآن." : target.kind === "errors" ? "العلاج المستحق قبل الجديد." : target.kind === "assessment" ? "حان وقت بوابة المستوى." : target.kind === "exam" ? "هذه أضعف وحدة امتحانية." : "هذه خطوتك التالية.";
   const heroAccent = needsDiagnostic ? "سنقيس نقطة البداية." : target.titleAr;
-  const actionLabel = needsDiagnostic ? "ابدأ التشخيص" : target.kind === "review" ? "ابدأ المراجعة" : target.kind === "errors" ? "افتح عيادة الأخطاء" : target.kind === "assessment" ? "ابدأ بوابة المستوى" : target.kind === "exam" ? "ابدأ تدريب الوحدة" : "ابدأ المهمة";
+  const actionLabel = target.kind==="rest"?"اختر جلسة اختيارية":needsDiagnostic ? "ابدأ التشخيص" : target.kind === "review" ? "ابدأ المراجعة" : target.kind === "errors" ? "افتح عيادة الأخطاء" : target.kind === "assessment" ? "ابدأ بوابة المستوى" : target.kind === "exam" ? "ابدأ تدريب الوحدة" : "ابدأ المهمة";
   const dateLabel = new Intl.DateTimeFormat("ar-TN", { weekday:"long", day:"numeric", month:"long" }).format(now);
   const journeyDay = state.profile ? Math.max(1, Math.floor((now.getTime()-Date.parse(state.profile.createdAt))/86_400_000)+1) : 1;
   const studiedDates = new Set(state.studyHistory.filter((day)=>day.minutes>0||day.evidenceCount>0).map((day)=>day.date));
@@ -173,7 +173,7 @@ export function CoachDashboard() {
             const Icon = kindIcons[block.kind];
             const isDone = completed.has(missionKey(block.id));
             if(block.kind==="warmup")return <RetrievalWarmupCard key={block.id} block={block} index={index} items={warmupItems} isDone={isDone} onComplete={completeWarmup} gamificationVisible={gamificationVisible}/>;
-            if(block.kind==="check-in")return <section key={block.id} className={isDone?"session-signal-card done":"session-signal-card"}>
+            if(block.kind==="check-in")return <section id="session-check-in" key={block.id} className={isDone?"session-signal-card done":"session-signal-card"}>
               <header><span className="mission-check">{isDone?<Check size={16}/>:index+1}</span><span className="mission-icon"><Icon size={19}/></span><div><strong>{block.titleAr}</strong><small lang="de" dir="ltr">{block.titleDe}</small><p>اختر طاقتك والوقت الحقيقي المتاح؛ الطاقة المنخفضة تخفّض الخطة إلى عشرين دقيقة كحد أقصى.</p></div><b>{block.minutes} د</b></header>
               <div className="session-signal-fields"><label><span>الطاقة قبل الجلسة</span><div className="signal-scale">{ratingValues.map((value)=><button type="button" key={value} aria-pressed={energyBefore===value} className={energyBefore===value?"active":""} onClick={()=>setEnergyBefore(value)}>{value}</button>)}</div></label><label><span>الوقت المتاح فعلًا</span><select value={availableMinutes} onChange={(event)=>setAvailableMinutes(Number(event.target.value) as LearnerProfile["dailyMinutes"])}>{[10,20,30,45,60,90].map((value)=><option key={value} value={value}>{value} دقيقة</option>)}</select></label></div>
               <footer><small>{todaySession?.checkedInAt?"يمكنك تعديل الفحص؛ ستُعاد موازنة خطة اليوم دون حذف الأدلة.":"1 = طاقة منخفضة، 5 = طاقة مرتفعة."}</small><button type="button" onClick={saveCheckIn}>{isDone?"حدّث التهيئة":"ثبّت تهيئة اليوم"}</button></footer>

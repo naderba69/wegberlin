@@ -5,10 +5,10 @@ Policy: `exam-format-claim-guard-v1` · Result: **PASS**
 | Measurement | Value |
 | --- | --- |
 | Exam-facing surfaces audited | 8 |
-| Surfaces carrying an explicit boundary sentence | 4 |
+| Surfaces carrying an explicit boundary sentence | 3 |
 | Forbidden claim matches | 0 |
 | Missing surfaces | 0 |
-| Source fingerprint | `3b2ccdacf260` |
+| Source fingerprint | `aeba09263c29` |
 
 No surface claims an official grade, a guaranteed pass, a certificate, a certified level, or a readiness decision.
 
@@ -16,7 +16,7 @@ No surface claims an official grade, a guaranteed pass, a certificate, a certifi
 
 ## Surfaces
 
-- `src/core/exams/readiness.ts` — boundary: وليست نتيجة
+- `src/core/exams/readiness.ts` — no boundary sentence
 - `src/core/exams/continuous-session.ts` — no boundary sentence
 - `src/core/coach/exam-target-forecast.ts` — no boundary sentence
 - `src/components/exam-hub.tsx` — boundary: لا نتيجة رسمية, لا تاريخ نجاح قطعي

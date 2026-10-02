@@ -58,7 +58,14 @@
     "remotePrHeadAtTimeOfQa": "075d69796e21fae4889809b06b85ccbdf63d0cd1",
     "vercelPreview": "access-protected; anonymous request redirected to Vercel login",
     "productionMergedOrDeployed": false,
-    "latestWorkflowFollowupPush": "blocked: GitHub App lacks workflows permission"
+    "latestWorkflowFollowupPush": "succeeded: pushed to the session review branch; PR remains open",
+    "remotePrHeadAfterPush": "2072a31cdacc984583062bc6adaa4b83d2b1e344",
+    "checksAtLastStatusQuery": {
+      "check": "pending",
+      "e2e": "pending",
+      "Vercel Preview Comments": "pass",
+      "Vercel": "pending"
+    }
   },
   "staticChecks": {
     "lint": {

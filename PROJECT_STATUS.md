@@ -40,7 +40,7 @@ Sync batch: v180 · 2026-10-02 · re-verified after ADR-102 browser WebGPU ESM-r
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
 - Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- هذه مساحة Git فعلية في `/home/user/wegberlin` على `arena/01a0fba1-wegberlin`. الدفعة السابقة مدفوعة في [PR #3](https://github.com/naderba69/wegberlin/pull/3)؛ متابعة هذا التشغيل تشمل إصلاح تباين Axe وتصفية smoke تلقائيًا لنسخ Vercel Preview المحمية، ولم تُدفع بعد لأن GitHub App يفتقر إلى `workflows` permission. لم يحدث دمج أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+- هذه مساحة Git فعلية في `/home/user/wegberlin` على `arena/01a0fba1-wegberlin`. رُفعت متابعة التباين وفحص Smoke وسجل QA إلى [PR #3](https://github.com/naderba69/wegberlin/pull/3)، ورأسه الحالي `2072a31`؛ الطلب ما زال مفتوحًا. فحص Vercel Preview Comments ناجح؛ فحوص check وe2e وVercel ما زالت قيد التشغيل عند آخر تحقق. لم يحدث دمج أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 
 
 Last updated: 2026-10-02 (learning-integrity repair pack v180; previous generations below are historical)

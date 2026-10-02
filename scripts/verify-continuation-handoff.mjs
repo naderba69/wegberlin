@@ -468,8 +468,8 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,185/1,185", "172/172", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,185/1,185", "172/172", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,198/1,198", "173/173", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,198/1,198", "173/173", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
 for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
 if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
@@ -485,7 +485,7 @@ for (const [id, routeCount] of Object.entries(expectedPacks)) {
   if (!pack || pack.routeCount !== routeCount || pack.totalGzipBytes <= 100000 || pack.totalGzipBytes >= pack.totalRawBytes || pack.nextAssetCount < 1) fail(`offline size entry ${id} drifted`);
 }
 for (const text of ["A1", "A2", "B1", "B2 + Prüfung", "A1–B2 komplett", "Gzip مبني مسبقًا", "compressedPageByteSize"]) requireText(offlineControl, text, "level Offline pack UI");
-for (const text of ["gzip-level-9-estimate-v1", "routeGzipBytes", "nextAssetGzipBytes", "buildFingerprint", "decodeURIComponent(encodedRelative)", "Unsafe Next asset path"]) requireText(offlineSizeGenerator, text, "post-build Offline size generator");
+for (const text of ["gzip-level-9-estimate-v1", "routeGzipBytes", "nextAssetGzipBytes", "buildFingerprint", "decodeURIComponent(encodedRelative)", "Unsafe Next asset path", "discoverBuiltPayloads", "layout.sizeManifestOutputs"]) requireText(offlineSizeGenerator, text, "post-build Offline size generator");
 for (const text of ["51 routes", "200 routes", "gzip level-9 bytes", "regenerated after every production build", "%5BlessonId%5D", "rejects traversal"]) requireText(offlineAdr, text, "Offline pack ADR");
 for (const text of ["59/59/59/220/319", "offline-size-manifest", "Gzip للصفحات وNext قبل التنزيل"] ) requireText(prompt, text, "continuation prompt Offline packs");
 if (partialIds.some((id) => [242, 243].includes(id))) fail("closed Offline pack P0 IDs returned to partial state");

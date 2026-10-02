@@ -1,6 +1,16 @@
 # Project Status
 
-Sync batch: v180 · 2026-10-02 · current source verified; historical run logs are not current measurements.
+Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+
+## متابعة إصلاح نشر Vercel — 2026-10-02 (ADR-101، نفس حزمة v180)
+
+- الخطأ في ce7e166 وقع بعد نجاح 322 صفحة، لأن سكربت postbuild افترض .next/server/app/index.html بعد تشغيل محوّل Next 16.
+- يقرأ القياس الآن Build Output API v3 وملفات prerender-fallback والمخرجات الثابتة، وينشر البيان الجديد في public/ وفي static/ المقدمة فعليًا. حارس JS يقيس الأصول المغلفة، ولا يُستخدم Cache قديم لتعويض ملف مفقود.
+- البناء المحلي ومحوّل @vercel/next@16.0.0 الفعلي نجحا في 322/322 صفحة وكل مراحل postbuild. المقارنة بين public ونسخة static نجحت حرفيًا؛ لا ادعاء نجاح نشر سحابي من اختبار محلي.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (actual complete run); 13 اختبارات جديدة دون تخفيف حدود 15% أو تعطيل الملفات المفقودة.
+- قياس البناء المحلي الحالي: 189535d1e7cc · full 5,758,185؛ JS 123 chunks / 1,878,095 gzip / max 266,168. المنهج والصوت لم يتغيرا.
+- لا تعديل للمنهج أو المسارات أو Service Worker؛ تبقى البيانات التعليمية والمراجعات البشرية كما في ADR-100. تحذيرات npm install-scripts ليست سبب العطل ولم تُعتمد سكربتات إضافية عشوائيًا.
+
 
 ## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
 
@@ -16,7 +26,7 @@ Sync batch: v180 · 2026-10-02 · current source verified; historical run logs a
 - 18/18 official source records: فحص 2026-10-02 = 2 fresh، 16 due-soon، 0 stale؛ لم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
 - Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
-- last measured source build fingerprint: edc7f6ccae12 · full 5,758,035 · JavaScript 123 chunks / 1,878,095 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
+- last measured source build fingerprint: 189535d1e7cc · full 5,758,185 · JavaScript 123 chunks / 1,878,095 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
 - Unit/Integrity tests: 1,185/1,185 in 172/172 files (measured after the repairs, not copied from a historical log). Browser: desktop 57 distinct contracts / mobile 57 distinct contracts verified in split runs (55/57 full + 2/2 isolated per project), not a claimed single 114/114 run; real headless Chromium 153, TTS mocked explicitly; see docs/run-logs/2026-10-02-learning-integrity/QA_SUMMARY.json.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.

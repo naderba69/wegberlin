@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-02",
+  "failedCommit": "ce7e16612c7caca6b5e18107e9a8ac0c5a142dd3",
+  "branch": "arena/01a0fba1-wegberlin",
+  "unit": {
+    "passed": 1198,
+    "failed": 0,
+    "files": 173,
+    "newRegressionTests": 13
+  },
+  "traditionalBuild": {
+    "pages": 322,
+    "postbuild": "passed",
+    "fingerprint": "189535d1e7cc",
+    "fullPackGzipBytes": 5758185
+  },
+  "actualAdapterBuild": {
+    "adapter": "@vercel/next@16.0.0",
+    "next": "16.3.8",
+    "node": "22.22.3",
+    "pages": 322,
+    "postbuild": "passed",
+    "layout": "build-output-api-v3",
+    "fingerprint": "272ff093340f",
+    "servingManifestMatchesPublic": true
+  },
+  "remoteRedeployment": "not yet observed",
+  "budgets": {
+    "reservePercent": 15,
+    "totalJsHardLimit": 2500000,
+    "singleChunkHardLimit": 750000
+  },
+  "fullCheck": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "lintErrors": 0,
+    "standingLintWarnings": 6,
+    "typecheck": "passed",
+    "secretAudit": "passed",
+    "sourceAudit": "passed; verification dates not altered",
+    "handoff": "passed",
+    "postbuild": "passed"
+  }
+}

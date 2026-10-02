@@ -1,0 +1,5 @@
+# 2026-10-02 — ADR-101 Vercel Offline postbuild fix
+
+The supplied remote failure for ce7e166 occurred after compiling and generating all 322 pages. The new resolver supports the actual @vercel/next Build Output API v3 layout (.next/output/functions prerender fallbacks and static assets) and the final CLI location (.vercel/output). Missing deployment payloads and unsafe paths still fail; stale raw Next files are not used as fallback. public/offline-size-manifest.json and the packaged serving copy are both atomically refreshed. JS/audio/curriculum budgets and 15% reserves are unchanged.
+
+Measured: 13 new regression tests; full unit run 1198/1198 in 173 files; both the traditional local build and the real @vercel/next@16.0.0 adapter build succeeded (322 pages plus every postbuild guard). The serving manifest matched public/ byte-for-byte. The adapter package was temporary in ignored .arena/, not an application dependency. Local validation is not a claim that a later remote deployment is already green.

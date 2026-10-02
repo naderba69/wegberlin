@@ -13,7 +13,9 @@ permissions:
   contents: read
 
 env:
-  DEPLOYMENT_URL: ${{ inputs.deployment_url || github.event.deployment_status.environment_url || github.event.deployment_status.target_url }}
+  # A deployment-specific *.projects.vercel.app URL can sit behind Vercel Authentication, which would only
+  # prove the checker is unauthenticated. Prefer the public production alias when the owner has set it.
+  DEPLOYMENT_URL: ${{ inputs.deployment_url || vars.DEPLOYMENT_SMOKE_PRODUCTION_URL || github.event.deployment_status.environment_url || github.event.deployment_status.target_url }}
 
 jobs:
   smoke:
@@ -32,3 +34,6 @@ jobs:
           node-version: 20
       - name: Verify deployed critical routes and headers
         run: node scripts/smoke-deployment.mjs
+      - name: Explain an authentication-blocked run
+        if: failure()
+        run: echo "If the report says status=blocked-by-auth, the smoke never reached the app: set DEPLOYMENT_SMOKE_PRODUCTION_URL to the public production alias. Never mark smoke successful on a blocked run, and never bypass Vercel Authentication in CI." >> "$GITHUB_STEP_SUMMARY"

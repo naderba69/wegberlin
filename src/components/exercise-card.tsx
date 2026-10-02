@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Check, Lightbulb, RotateCcw, X } from "lucide-react";
+import { Check, Info, Lightbulb, RotateCcw, X } from "lucide-react";
 import type { PracticeExercise, Question } from "@/types/lesson-content";
 import type { AnswerConfidence, AttemptUncertaintyKind, CEFRLevel, ArabicSupportMode } from "@/types/learning";
 import { evaluateExercise } from "@/core/lesson/evaluate";
@@ -9,6 +9,7 @@ import { exerciseHintSteps, questionHintSteps } from "@/core/lesson/support";
 import { LESSON_SHUFFLE_VERSION, shuffledExerciseOptions, shuffledQuestionOptions } from "@/core/lesson/shuffle";
 import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import type { QuestionTaxonomyDisplay } from "@/core/comprehension/question-taxonomy";
+import type { ReadingEvidence } from "@/core/lesson/support";
 import { ArabicScaffold } from "./arabic-scaffold";
 import { locateErrorSpan } from "@/core/lesson/error-span";
 
@@ -144,7 +145,7 @@ export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, taxon
   arabicSupport?: ArabicSupportMode;
   questions: Question[];
   onAttempt: (id: string, answer: string, correct: boolean, metadata?: LessonAttemptMetadata) => void;
-  evidenceByQuestionId?: Record<string, string>;
+  evidenceByQuestionId?: Record<string, ReadingEvidence>;
   taxonomyByQuestionId?: Record<string, QuestionTaxonomyDisplay>;
   shuffleSeed?: string;
   onSupport?: (contentId: string, level: 1 | 2) => void;
@@ -180,7 +181,7 @@ export function QuestionQuiz({ questions, onAttempt, evidenceByQuestionId, taxon
 
       {!isChecked && hintLevel > 0 && <p className="hint-panel" role="status" aria-live="polite"><Lightbulb size={14} /><span><b>تلميح {hintLevel}/2</b>{hints[hintLevel - 1]}</span></p>}
 
-      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span>{question.explanationAr}</span></div>{evidence && <blockquote className="question-evidence"><small>موضع الدليل من النص بعد الالتزام</small><q lang="de" dir="ltr">{evidence}</q></blockquote>}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => { processes.start(question.id);const nextLevel = Math.min(2, hintLevel + 1) as 1 | 2; setHintLevels((current) => ({ ...current, [question.id]: nextLevel })); onSupport?.(question.id, nextLevel); }} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { confidence, answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION,uncertaintyKind,...processes.snapshot(question.id) }); }}>Prüfen</button></div>}
+      {isChecked ? <footer role="status" aria-live="polite" aria-atomic="true"><div><b>{correct ? "صحيح" : "غير صحيح"}</b><span>{question.explanationAr}</span></div>{evidence && evidence.kind !== "ungrounded" ? (<blockquote className="question-evidence"><small>{evidence.labelAr}</small><q lang="de" dir="ltr">{evidence.quote}</q></blockquote>) : (<p className="question-evidence inference"><Info size={13}/> سؤال استنتاجي: لا جملة واحدة في النص تنقل الجواب، فالدليل هو النص كله معًا لا سطرًا واحدًا.</p>)}</footer> : <div className="quiz-actions"><button aria-label="تلميح قبل الإجابة" className="tiny-hint" onClick={() => { processes.start(question.id);const nextLevel = Math.min(2, hintLevel + 1) as 1 | 2; setHintLevels((current) => ({ ...current, [question.id]: nextLevel })); onSupport?.(question.id, nextLevel); }} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button><button aria-label="تحقق" className="quiz-check" disabled={answer === undefined} onClick={() => { setChecked((current) => ({ ...current, [question.id]: true })); onAttempt(question.id, question.options[answer], correct, { confidence, answerIndex: answer, shuffleSeed: `${shuffleSeed}:${question.id}`, shuffleVersion: LESSON_SHUFFLE_VERSION,uncertaintyKind,...processes.snapshot(question.id) }); }}>Prüfen</button></div>}
     </article>;
   })}</div>;
 }

@@ -1,0 +1,76 @@
+{
+ "b1-20": {
+  "b1-20-e1": [
+   "Was ist dein wichtigstes Ziel?",
+   "Kündige sofort und denk nicht nach",
+   "Du darfst nur meine Lösung nehmen",
+   "Warte ab und sag dazu nichts"
+  ],
+  "b1-20-e6": [
+   "Ich garantiere dir das Ergebnis, weil ich deine Lage genau kenne und prüfe",
+   "Dein Vertrag ist genauso wie meiner, deshalb kannst du genau so entscheiden wie ich damals",
+   "Du brauchst keine Beratung und auch keine Quelle, das ist ganz einfach",
+   "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat."
+  ],
+  "b1-20-rq1": [
+   "Sie wollte nicht helfen und ließ den Kurs links liegen",
+   "Sie wollte Ziele, Einschränkungen und Versuche verstehen.",
+   "Sie kannte den Kursleiter schon und wollte nur gratulieren",
+   "Amal war gar nicht müde, sondern richtig motiviert"
+  ],
+  "b1-20-rq2": [
+   "Vier Wochen eine Aufgabe plus Erholungstag testen",
+   "Sofort aufhören und alles abbrechen",
+   "Zwei weitere Kurse besuchen und alles gleichzeitig lernen",
+   "Keine Hausaufgaben für immer und ewig verlangen"
+  ],
+  "b1-20-rq3": [
+   "Nur die Kursgebühr, ohne den Rest",
+   "Nur die Noten der anderen Teilnehmenden",
+   "Energie, Lernergebnis und Stress",
+   "Die Wohnung allein"
+  ],
+  "b1-20-lq1": [
+   "Nur das Gehalt und sonst gar nichts",
+   "Schulen, Familienzeit und Sicherheit",
+   "Nur die Stadtgröße, ohne die Wege",
+   "Freizeit ohne Familie ist völlig ausreichend und passt"
+  ],
+  "b1-20-lq2": [
+   "Sofort annehmen, ohne nachzudenken",
+   "Die Familie nicht fragen und allein entscheiden",
+   "Gesamtkosten und Szenarien prüfen",
+   "Den Vertrag später lesen"
+  ],
+  "b1-20-lq3": [
+   "Sie kennt Vertrag und Familiensituation nicht vollständig.",
+   "Sie hat keine eigene Meinung zu dem Thema",
+   "Das Angebot ist schlecht und deshalb abgelehnt worden",
+   "Sie möchte umziehen, kennt aber die Bedingungen nicht genau"
+  ],
+  "b1-20-m1": [
+   "Du musst genau das tun, sonst klappt nichts",
+   "Ich entscheide für dich und nicht umgekehrt",
+   "Fragen sind dafür nicht nötig",
+   "An deiner Stelle würde ich nachfragen."
+  ],
+  "b1-20-m3": [
+   "Löse das sofort, ohne Rückfrage",
+   "Meine eigene Erfahrung reicht hier völlig aus",
+   "Die Risiken sind unwichtig",
+   "Ziel und Einschränkungen fragen"
+  ],
+  "b1-20-m4": [
+   "Das müsste ein Fachberater prüfen.",
+   "Ich weiß sicher alles darüber und brauche keine Hilfe",
+   "Jeder Vertrag ist gleich, das ist doch klar",
+   "Eine Quelle brauche ich nicht"
+  ],
+  "b1-20-m5": [
+   "Ich entscheide für dich, nicht du",
+   "Du darfst nur meine Lösung nehmen, sonst keine",
+   "Die Entscheidung liegt bei dir.",
+   "Rat ist Pflicht für alle"
+  ]
+ }
+}

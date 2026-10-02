@@ -1,0 +1,10 @@
+npm error Missing script: "answer-integrity:audit:write"
+npm error
+npm error Did you mean one of these?
+npm error   npm run similarity:audit:write # run the "similarity:audit:write" package script
+npm error   npm run security:audit:write # run the "security:audit:write" package script
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: /home/user/.npm/_logs/2026-09-20T09_20_34_027Z-debug-0.log
+FAIL answer-integrity:audit:write

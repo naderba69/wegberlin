@@ -1,0 +1,98 @@
+{
+ "a2-01-rq2": {
+  "explanationAr": "النصّ يقول: «In der Mittagspause hat er nur einen Kaffee getrunken». كلمة nur تنفي ما عدا ذلك، أمّا Besprechung وبناءُ الأثاث فوارِدان في وقتين آخرين من اليوم. فحص ذاتي: هل ربطتَ الفعلَ بوقته؟",
+  "oldLen": 13
+ },
+ "a2-02-m4": {
+  "explanationAr": "mitnehmen فعلٌ منفصل، وفي Partizip II تُدمج البادئة مع الجذر: «mitgenommen». و«gemitnimmt» تُبدّل الجذرَ نفسه، و«mitgenehmt» تُخطئ في حرفه، أمّا «genommenmit» فيُبقي البادئةَ مفصولة. فحص ذاتي: أين استقرّت ge-؟",
+  "oldLen": 12
+ },
+ "a2-04-lq1": {
+  "explanationAr": "السببُ مذكورٌ صراحةً: «Ich muss aber arbeiten». بن يوافق على الاستلام ويحفظ الطردَ عنده، و«zwischen zehn und zwölf» وقتُ الوصول لا سببُ الغياب. فحص ذاتي: هل أخذتَ السبب لا التوقيت؟",
+  "oldLen": 12
+ },
+ "a2-08-m4": {
+  "explanationAr": "«Mit freundlichen Grüßen» خاتمةٌ رسمية للرسالة المهنية، أمّا Tschüs و Hallo Leute فودّيتانِ لا تُناسبانِ طلبًا أو بلاغًا، و«Bis später» تُستعمل لموعدٍ متَّفق عليه. فحص ذاتي: هل كان السياقُ رسميًا؟",
+  "oldLen": 12
+ },
+ "a2-14-m4": {
+  "explanationAr": "voraussichtlich ترجيحٌ قويّ لا قطع: «Voraussichtlich fehle ich auch morgen». لذلك لا تعني «بالتأكيد المطلق»، ولا تشير إلى زمانٍ كالأمس ولا إلى الكتمان؛ وهي تُبقي تحديثًا لاحقًا مفتوحًا. فحص ذاتي: هل بقي الاحتمال؟",
+  "oldLen": 11
+ },
+ "a2-15-lq2": {
+  "explanationAr": "المريض يقول: «Kein Fieber, aber nachts ist der Husten stärker». فالسعالُ الليلي ومدةُ ثلاثة أيام مذكوران، والمفقودُ هو الحمى؛ والسؤالُ عمّا لم يُذكَر. فحص ذاتي: هل نفيتَ ما نُفي نصًّا لا ما توقّعتَه؟",
+  "oldLen": 12
+ },
+ "a2-15-rq1": {
+  "explanationAr": "النصّ يصف تمرينًا على عبوةٍ وهمية: «Erwachsene nehmen eine Tablette zweimal täglich nach dem Essen». العددُ يُؤخذ مع وحدتِه ووقته، والتمرينُ لتعلّم اللغة لا بوصفةٍ طبية. فحص ذاتي: مع أيّ كلمةٍ ورد التكرار؟",
+  "oldLen": 13
+ },
+ "a2-15-m4": {
+  "explanationAr": "الأمرُ مع صيغة الاحترام يبدأ بالفعل ثم Sie: «Nehmen Sie das mit Wasser». و«Sie nehmen das!» جملةٌ خبرية، و«Nimmst Sie» تخلط تصريفَ المفرد غير الرسمي مع Sie. فحص ذاتي: مَن يقصد الحديثُ رسميًا؟",
+  "oldLen": 13
+ },
+ "a2-16-lq1": {
+  "explanationAr": "رسالةُ المكتبة: «Bereits ausgeliehene Bücher können ohne zusätzliche Kosten bis Montag zurückgegeben werden». الجمعةُ يومُ إغلاق المكتبة، والسبت 16 Uhr موعدُ المهرجان لا الإرجاع. فحص ذاتي: هل ربطتَ الموعدَ بغرضه؟",
+  "oldLen": 12
+ },
+ "a2-17-rq2": {
+  "explanationAr": "قبل مشاركة الأخبار: «Außerdem prüft er bei Nachrichten die Quelle, bevor er etwas teilt». أمّا سؤالُ الأشخاص فيكون قبل نشر الصور، فالاثنانِ عادةٌ مختلفةٌ في النصّ. فحص ذاتي: لأيّ نشرٍ ورد الشرط؟",
+  "oldLen": 12
+ },
+ "a2-21-m1": {
+  "explanationAr": "الفعل vorhaben يطلب المصدرَ مع zu في الآخر: «Ich habe vor, mehr zu lernen». و«Ich habe vor, ich lerne» يُصرّف الجملةَ بعد الأداة، و«Ich habe zu vor» يفصل zu عن مصدرها. فحص ذاتي: هل جاء zu قبل المصدر؟",
+  "oldLen": 11
+ },
+ "a2-21-m2": {
+  "explanationAr": "مع الأفعال المنفصلة تدخل zu بين البادئة والمصدر: auf + zu + stehen ⇒ «aufzustehen». و«zu aufstehen» تضع الأداةَ أمام البادئة، و«aufgestanden zu» تأتي بتصريف الماضي حيث يُطلب المصدر. فحص ذاتي: أين استقرّت zu؟",
+  "oldLen": 12
+ },
+ "a2-22-lq1": {
+  "explanationAr": "سامي يقول: «Leider kann ich erst ab acht, weil ich vorher arbeite». الثامنةُ إذن وقتُ حضوره لا سببٌ آخر، و«Die Feier beginnt um acht» ليست في النصّ — بل 18:30. فحص ذاتي: هل أخذتَ السبب كما قيل؟",
+  "oldLen": 11
+ },
+ "a2-22-m4": {
+  "explanationAr": "الاعتذارُ المؤدَّب جملةٌ كاملة مع kann: «Leider kann ich nicht teilnehmen». أمّا «Nein Feier» و«Absage bin» فبلا تصريفٍ ومعنىً ناقص، و«Ich komme nicht, schlecht» جافّةٌ لا مجاملة. فحص ذاتي: هل بقي الرفضُ مهذّبًا؟",
+  "oldLen": 12
+ },
+ "a2-23-lq3": {
+  "explanationAr": "المتحدّثة تقول: «Herr Klein, der das Samstagsteam leitet». أمّا «eine erfahrene Person» فهي مَن يعمل معه Amir في أسبوعه الافتتاحي، والمنسّقةُ تُدير التعريفَ لا فريقَ السبت. فحص ذاتي: هل أخذتَ الاسمَ مع وظيفته؟",
+  "oldLen": 12
+ },
+ "a2-23-m3": {
+  "explanationAr": "اسمُ Projekt يأخذ das في المفرد: das Projekt، والجمع die Projekte. لذلك لا تكون der ولا die أداةً معه، و dem formٌ آخر لا يصلح لمبتدأٍ في هذه الصيغة. فحص ذاتي: هل حفظتَ الاسمَ بأداته؟",
+  "oldLen": 11
+ },
+ "a2-24-m2": {
+  "explanationAr": "نفيُ شيئين معًا بـ«weder … noch»: «Weder kalt noch hungrig». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيءًا يبقى بعد الرابط؟",
+  "oldLen": 12
+ },
+ "a2-24-m3": {
+  "explanationAr": "الجمعُ بين صفتين إثباتًا بـ«sowohl … als auch»: «sowohl schnell als auch günstig». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و«ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟",
+  "oldLen": 11
+ },
+ "a2-09-rq1": {
+  "explanationAr": "سببُ الاتصال في النصّ: «…weil seine Bestellung noch nicht angekommen ist». ذكرُ Frau Keller والموظفِ وسيرُ المكالمة يشرح ما جرى بعد الاتصال، لا سببَه. فحص ذاتي: هل فرّقتَ بين السبب والنتيجة؟",
+  "oldLen": 13
+ },
+ "a2-10-m3": {
+  "explanationAr": "لصفة gut مقارنةٌ شاذّة: besser، ثم am besten في التفضيل الأقصى. و«guter» تُطبّق اللاحقةَ المنتظمة على صفةٍ لا تقبلها، و«mehr gut» ترجمةٌ حرفية، و günstiger صفةٌ أخرى لا شكلٌ لـ gut. فحص ذاتي: هل تذكّرتَ الشذوذ؟",
+  "oldLen": 13
+ },
+ "a2-11-rq2": {
+  "explanationAr": "النصّ عن الشقة: «Sie hat eine Küche und einen kostenlosen Parkplatz, aber Frühstück gibt es nicht». الفطورُ مجاني في النُزل والفندق، و WLAN مذكورٌ للفندق فقط، ولا Aufzug في النُزل. فحص ذاتي: من أيّ مسكنٍ أخذتَها؟",
+  "oldLen": 13
+ },
+ "a2-18-m2": {
+  "explanationAr": "المثالُ يُقدَّم بـ«Zum Beispiel …» ثم يأتي الشرحُ بعده. و Meiner Meinung nach يُبدي رأيًا، و Trotzdem يُقابل أمرًا سابقًا، و Obwohl يقدّم تناقضًا — لا واحد منها يُورِد مثالًا. فحص ذاتي: هل طلب السياقُ مثالًا؟",
+  "oldLen": 13
+ },
+ "a2-20-m3": {
+  "explanationAr": "«Interner Test» تقييمٌ داخل الدورة تُوَظِّفه المدرسةُ لنفسها، أما الشهادةُ الرسمية فتُصدرها جهةُ امتحانٍ خارجيّة. والنصّ لا يعدُضمانَ نجاحٍ ولا يربط اختبارَ المستوى بموعدِ Goethe. فحص ذاتي: من يُصدر الوثيقة؟",
+  "oldLen": 13
+ },
+ "a2-22-m1": {
+  "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و«Wenn ich gestern … wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟",
+  "oldLen": 13
+ }
+}

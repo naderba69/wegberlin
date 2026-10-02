@@ -1,0 +1,53 @@
+{
+  "policyVersion": "exam-format-claim-guard-v1",
+  "surfaces": [
+    "src/core/exams/readiness.ts",
+    "src/core/exams/continuous-session.ts",
+    "src/core/coach/exam-target-forecast.ts",
+    "src/components/exam-hub.tsx",
+    "src/components/full-exam-simulation.tsx",
+    "src/components/targeted-exam-simulation.tsx",
+    "src/components/exam-print-tools.tsx",
+    "src/components/continuous-exam-session.tsx"
+  ],
+  "forbiddenClaimPatterns": [
+    {
+      "id": "official-grade",
+      "pattern": "(نتيجتك|درجتك|علامتك)\\s*(في الامتحان الرسمي|الرسمية\\s*(هي|=|:))|(Sie|Du) hast (die )?(Prüfung|Test) (nicht )?bestanden|Prüfungsnote\\s*(:|=|ist)|Dein (Prüfungs)?ergebnis\\s*(:|=|ist)",
+      "whyAr": "لا يمنح التطبيق درجة امتحان ولا نتيجة رسمية."
+    },
+    {
+      "id": "guaranteed-pass",
+      "pattern": "(نضمن|مضمون)\\s+(النجاح|اجتياز)|we guarantee (you will )?pass|Bestehensgarantie|wir garantieren (dir )?das Bestehen",
+      "whyAr": "لا يضمن التطبيق نجاحًا في أي فحص."
+    },
+    {
+      "id": "certificate-issued",
+      "pattern": "(نمنحك|نُصدر لك|تمنحك)\\s+شهادة|this app issues a certificate|diese App stellt ein Zertifikat aus",
+      "whyAr": "التطبيق لا يُصدر شهادة ولا يعادلها."
+    },
+    {
+      "id": "level-certified",
+      "pattern": "مستواك\\s+(معتمد|موثّق|رسمي)|your level is certified|dein Niveau ist bestätigt|Certified\\s+(A1|A2|B1|B2)",
+      "whyAr": "لا يُصدَّق مستوى ولا يُثبَت رسميًّا."
+    },
+    {
+      "id": "exam-readiness-certified",
+      "pattern": "(أنت|صرت)\\s+جاهزًا\\s+(للدخول\\s+)?للامتحان\\s+رسميًا|you are exam ready|prüfungsberechtigt|antrittsfähig",
+      "whyAr": "لا يقرّر التطبيق جهوزية المتعلم للامتحان."
+    }
+  ],
+  "negationMarkers": ["لا", "ولا", "غير", "بدون", "دون", "ليست", "وليس", "not", "no", "keine", "kein", "ohne", "weder", "ausgeschlossen"],
+  "boundaryFragments": [
+    "لا نتيجة رسمية",
+    "لا تاريخ نجاح قطعي",
+    "ولا تُنشئ شهادة",
+    "دون تحويلها إلى نتيجة رسمية",
+    "لا درجات رسمية",
+    "بلا ادعاء مطابقة فحص رسمي",
+    "لا يمنح هذا التطبيق قرار امتحان",
+    "وليست نتيجة",
+    "لا تُعدّ نتيجة"
+  ],
+  "ruleAr": "الحارس يمنع الادعاءات الإيجابية على أسطح الامتحان، ويقيس عدد الأسطح التي تحمل عبارة حدّ صريحة ويسجّلها في الأثر: حذفُ عبارة حدّ من سطح موجود يغيّر العدد فيفشل التدقيق. لا يُثبِت أي رقم هنا شيئًا عن صيغة امتحان رسمي ولا عن بقائها بلا تغيير."
+}

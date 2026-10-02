@@ -1,0 +1,70 @@
+{
+ "b2-05": {
+  "b2-05-e1": [
+   "plus zwanzig Prozentpunkte und relativ plus sechzig Prozent",
+   "plus zehn Prozentpunkte und relativ plus fünfzig Prozent",
+   "plus fünf Prozent und relativ keine Veränderung",
+   "genau zehn Prozentpunkte und doppelt so viel"
+  ],
+  "b2-05-e6": [
+   "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
+   "Üben war hier völlig wirkungslos und alle Werte blieben gleich.",
+   "In dieser Stichprobe ging längeres Üben mit höheren Werten einher.",
+   "Längeres Üben senkte die Werte in jeder Gruppe messbar."
+  ],
+  "b2-05-rq1": [
+   "Weil die Zufallszuteilung und die identische Dauer den Unterschied vollständig erklären.",
+   "Weil beide Gruppen dieselbe Personenzahl und denselben Test hatten.",
+   "Weil die Lehrperson den Bericht schon vor der ersten Messung schrieb.",
+   "Weil Selbstselektion und zusätzliche Übung den Unterschied mit erklären könnten."
+  ],
+  "b2-05-rq2": [
+   "Ein Teil gewann deutlich, während ein Fünftel kaum Veränderung zeigte.",
+   "Alle Teilnehmenden verloren Punkte, und die Streuung blieb dabei unverändert.",
+   "Nur eine Person verbesserte sich, und zwar um neun Punkte.",
+   "Die Vergleichsgruppe zeigte denselben Zuwachs wie die Testgruppe."
+  ],
+  "b2-05-rq3": [
+   "Die freiwillige Begleitung verursachte bei allen Lernenden denselben dreifachen Fortschritt im selben Semester.",
+   "Regelmäßige Nutzung hing in dieser freiwilligen Stichprobe mit höherem mittlerem Zuwachs zusammen.",
+   "Dieses Ergebnis gilt ohne jede Einschränkung für alle Lernenden in jedem einzelnen Kurs.",
+   "Ohne die freiwillige Anmeldung der Teilnehmenden wäre dieser Unterschied nie entstanden."
+  ],
+  "b2-05-lq2": [
+   "Es gab keine Befragung, weil die Kurse im Sommer vollständig geschlossen waren.",
+   "Die Werte waren beide null und blieben es auch nach der zweiten Messung.",
+   "Es waren andere Personen und die Altersverteilung änderte sich.",
+   "Die Maßnahme begann erst nach dem letzten Bericht im Januar."
+  ],
+  "b2-05-lq3": [
+   "Sofort Kausalität behaupten und alle anderen Erklärungen ignorieren.",
+   "Nur die relative Zahl veröffentlichen und den Ausgangswert weglassen.",
+   "Die dritte Messung fällt aus und wird nie ersetzt.",
+   "Nach Altersgruppen auswerten und eine dritte Messung abwarten"
+  ],
+  "b2-05-m1": [
+   "plus zehn Prozentpunkte und relativ minus zwanzig Prozent",
+   "relativ plus zehn Prozent und genau null Punkte",
+   "minus fünf Prozentpunkte und relativ null",
+   "plus zehn Prozentpunkte, relativ plus zwanzig Prozent"
+  ],
+  "b2-05-m3": [
+   "Welche Personen wurden verglichen?",
+   "Wer wurde wie ausgewählt?",
+   "Wie groß war sie?",
+   "War der Zufall dabei?"
+  ],
+  "b2-05-m4": [
+   "Verteilung und Gruppenunterschiede",
+   "Ein einziger Grund wurde belegt",
+   "die Streuung innerhalb beider Gruppen",
+   "die Reihenfolge der Texte"
+  ],
+  "b2-05-m5": [
+   "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
+   "Die Daten deuten in dieser Stichprobe auf einen Zusammenhang hin.",
+   "Der Trend gilt für jeden einzelnen Menschen unverändert.",
+   "Andere Erklärungen sind nicht ausgeschlossen und bleiben offen."
+  ]
+ }
+}

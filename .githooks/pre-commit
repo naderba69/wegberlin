@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+printf '%s\n' 'Running Der Weg nach Berlin secret gate before commit…'
+npm run secret:audit

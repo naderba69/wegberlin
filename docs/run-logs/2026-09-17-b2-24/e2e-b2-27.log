@@ -1,0 +1,393 @@
+
+Running 82 tests using 1 worker
+
+[1/82] [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+[2/82] [chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+[3/82] [chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+[4/82] [chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+[5/82] [chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+[6/82] [chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+[7/82] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[8/82] [chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+[9/82] [chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+[10/82] [chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+[11/82] [chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+[12/82] [chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+[13/82] [chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+[14/82] [chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+[15/82] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[16/82] [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+[17/82] [chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally
+[18/82] [chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI
+[19/82] [chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision
+[20/82] [chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback
+[21/82] [chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback
+[22/82] [chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript
+[23/82] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[24/82] [chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile
+[25/82] [chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload
+[26/82] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[27/82] [chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping
+[28/82] [chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence
+[29/82] [chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals
+[30/82] [chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries
+[31/82] [chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS
+[32/82] [chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts
+[33/82] [chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only
+[34/82] [chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV
+[35/82] [chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only
+[36/82] [chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only
+[37/82] [chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent
+[38/82] [chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow
+[39/82] [chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery
+[40/82] [chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap
+[41/82] [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+[42/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+[43/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+[44/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+[45/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+[46/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+[47/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+[48/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[49/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+[50/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+[51/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+[52/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+[53/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+[54/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+[55/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+[56/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[57/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+[58/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally
+[59/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI
+[60/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision
+[61/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback
+[62/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback
+[63/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript
+[64/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[65/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile
+[66/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload
+[67/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[68/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping
+[69/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence
+[70/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals
+[71/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries
+[72/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS
+  1) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3100/lernen/a1-01
+    Call log:
+      - navigating to "http://127.0.0.1:3100/lernen/a1-01", waiting until "load"
+
+
+      2204 |   const wrong = exercise.options[wrongIndex];
+      2205 |   const correct = exercise.options[exercise.correctIndex];
+    > 2206 |   await page.goto("/lernen/a1-01");
+           |              ^
+      2207 |   await waitForLearningReady(page);
+      2208 |   await page.evaluate((baseState) => new Promise<void>((resolve,reject)=>{
+      2209 |     const state=structuredClone(baseState);state.currentLessonId="a1-01";state.currentStage=5;state.lessonProgress={"a1-01":5};
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2206:14
+
+    Error Context: test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[73/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts
+  2) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3100/lernen/a1-01
+    Call log:
+      - navigating to "http://127.0.0.1:3100/lernen/a1-01", waiting until "load"
+
+
+      2278 |     id:`old-${question.id}`, lessonId:lesson.id, exerciseId:question.id, answer:question.options[question.correctIndex], correct:true, createdAt:"2025-01-01T10:00:00Z",
+      2279 |   }))).slice(0, 15);
+    > 2280 |   await page.goto("/lernen/a1-01");
+           |              ^
+      2281 |   await waitForLearningReady(page);
+      2282 |   await page.evaluate(({ baseState, attempts }) => new Promise<void>((resolve, reject) => {
+      2283 |     const state = structuredClone(baseState);
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2280:14
+
+    Error Context: test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[74/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only
+  3) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3100/settings
+    Call log:
+      - navigating to "http://127.0.0.1:3100/settings", waiting until "load"
+
+
+      2346 | test("fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only", async ({ page }) => {
+      2347 |   await page.clock.setFixedTime(new Date("2026-09-07T23:00:00Z"));
+    > 2348 |   await page.goto("/settings");await waitForLearningReady(page);
+           |              ^
+      2349 |   await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{const state=structuredClone(baseState);state.profile={name:"Nadia",targetExam:"goethe-b2",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",goals:["work"],createdAt:"2026-08-01T00:00:00Z"};state.diagnosticResult={estimatedLevel:"A1",score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},formId:"A",completedAt:"2026-09-01T10:00:00Z"};const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}),structuredClone(defaultState));
+      2350 |   await page.reload();await waitForLearningReady(page);
+      2351 |   const planning=page.locator('[data-contract-policy="fourteen-day-learning-contract-v1"]');
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2348:14
+
+    Error Context: test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[75/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV
+  4) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-export-policy="local-study-exports-v1"]').locator('.study-export-preview')
+    Expected substring: "الاسم غير مضمّن"
+    Received string:    ""
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-export-policy="local-study-exports-v1"]').locator('.study-export-preview')
+      - Protocol error (Runtime.callFunctionOn): Internal server error, session closed.
+
+
+      2378 |   const card=page.locator('[data-export-policy="local-study-exports-v1"]');
+      2379 |   await expect(card).toContainText("معاينة قبل التنزيل");
+    > 2380 |   await expect(card.locator(".study-export-preview")).toContainText("الاسم غير مضمّن");
+           |                                                       ^
+      2381 |   await expect(card.locator(".study-export-summary")).toContainText("30");
+      2382 |
+      2383 |   const [icsDownload]=await Promise.all([page.waitForEvent("download"),card.getByRole("button",{name:/تنزيل ICS/}).click()]);
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2380:55
+
+    Error Context: test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[76/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only
+  5) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only 
+
+    Test timeout of 30000ms exceeded.
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('[data-dictation-policy="adaptive-partial-full-dictation-v1"]').getByRole('button', { name: /Jetzt hören/ })
+
+
+      2428 |   await expect(lab).toContainText("16 مهمة أصلية");
+      2429 |   await expect(lab.locator(".dictation-task-nav>button")).toHaveCount(4);
+    > 2430 |   await lab.getByRole("button", { name: /Jetzt hören/ }).click();
+           |                                                          ^
+      2431 |   await expect(lab.getByRole("textbox", { name: /Lücke 1/ })).toBeVisible();
+      2432 |   await lab.getByRole("textbox", { name: /Lücke 1/ }).fill("Tag");
+      2433 |   await lab.getByRole("textbox", { name: /Lücke 2/ }).fill("heisse");
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2430:58
+
+    Error Context: test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[77/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only
+  6) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-branching-conversation-policy="offline-branching-conversation-v1"]').locator('.branching-feedback')
+    Expected substring: "فهمت البائعة الشيء والعدد مباشرة"
+    Received string:    ""
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-branching-conversation-policy="offline-branching-conversation-v1"]').locator('.branching-feedback')
+      - Protocol error (Runtime.callFunctionOn): Internal server error, session closed.
+
+
+      2491 |   expect(branchingAxe.violations.filter((item)=>item.impact==="serious"||item.impact==="critical")).toEqual([]);
+      2492 |   await lab.locator(".branching-choices>button").first().click();
+    > 2493 |   await expect(lab.locator(".branching-feedback")).toContainText("فهمت البائعة الشيء والعدد مباشرة");
+           |                                                    ^
+      2494 |   await expect(lab.locator(".branching-partner-bubble")).toContainText("Möchten Sie sonst noch etwas?");
+      2495 |   await lab.locator(".branching-choices>button").first().click();
+      2496 |   await expect(lab.getByRole("heading",{name:"تحقق الهدف التواصلي"})).toBeFocused();
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2493:52
+
+    Error Context: test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[78/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent
+  7) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-collocation-network-policy="contextual-collocation-network-v1"]')
+    Expected substring: "16 شبكة · 48 تركيبًا"
+    Received string:    ""
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-collocation-network-policy="contextual-collocation-network-v1"]')
+      - Protocol error (Runtime.callFunctionOn): Internal server error, session closed.
+
+
+      2519 | test("contextual collocation networks require exploration and match communicative intent",async({page})=>{
+      2520 |   await page.goto("/practice");await waitForLearningReady(page);await expect(page.getByRole("link",{name:/شبكات التراكيب/})).toContainText("48 تركيبًا");
+    > 2521 |   await page.goto("/practice/collocations");await waitForLearningReady(page);const lab=page.locator('[data-collocation-network-policy="contextual-collocation-network-v1"]');await expect(lab).toContainText("16 شبكة · 48 تركيبًا");await expect(lab.locator(".collocation-tabs>button")).toHaveCount(4);
+           |                                                                                                                                                                                                ^
+      2522 |   const start=lab.getByRole("button",{name:/ابدأ اختبار السياق/});await expect(start).toBeDisabled();const mapButtons=lab.locator(".collocation-map>button");await expect(mapButtons).toHaveCount(3);for(let index=0;index<3;index+=1)await mapButtons.nth(index).click();await expect(start).toBeEnabled();
+      2523 |   const axe=await new AxeBuilder({page}).include("main").withTags(["wcag2a","wcag2aa"]).analyze();expect(axe.violations.filter(item=>item.impact==="serious"||item.impact==="critical")).toEqual([]);
+      2524 |   await start.click();await expect(lab.locator(".collocation-quiz")).toContainText("Sie brauchen einen neuen Termin.");await lab.locator(".collocation-quiz>div>button").nth(1).click();await expect(lab.locator(".collocation-quiz>aside")).toContainText("راجع الفرق");await lab.locator(".collocation-quiz>footer button").click();await lab.locator(".collocation-quiz>div>button").nth(1).click();await lab.locator(".collocation-quiz>footer button").click();await lab.locator(".collocation-quiz>div>button").nth(2).click();await lab.locator(".collocation-quiz>footer button").click();
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2521:192
+
+    Error Context: test-results/critical-flows-contextual--a78d9--match-communicative-intent-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-contextual--a78d9--match-communicative-intent-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-contextual--a78d9--match-communicative-intent-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[79/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow
+  8) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow 
+
+    Test timeout of 240000ms exceeded.
+
+    Error: page.goto: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - navigating to "http://127.0.0.1:3100/exams", waiting until "load"
+
+
+      2542 |   for (const size of sizes) {
+      2543 |     await page.setViewportSize(size);
+    > 2544 |     await page.goto("/exams");
+           |                ^
+      2545 |     await expect(page.locator("main")).toBeVisible();
+      2546 |     const dimensions = await page.evaluate(() => ({ width: document.documentElement.clientWidth, scrollWidth: document.documentElement.scrollWidth }));
+      2547 |     expect(dimensions.scrollWidth, `/exams at ${size.width}×${size.height}`).toBeLessThanOrEqual(dimensions.width + 1);
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2544:16
+
+    Error Context: test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[80/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery
+  9) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery 
+
+    Test timeout of 30000ms exceeded while setting up "page".
+
+    Tearing down "context" exceeded the test timeout of 30000ms.
+
+    Error Context: test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[81/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap
+[82/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+  10) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3100/today
+    Call log:
+      - navigating to "http://127.0.0.1:3100/today", waiting until "load"
+
+
+      2675 |
+      2676 | test("review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours", async ({ page }) => {
+    > 2677 |   await page.goto("/today");
+           |              ^
+      2678 |   await waitForLearningReady(page);
+      2679 |   await page.evaluate(({baseState})=>new Promise<void>((resolve,reject)=>{
+      2680 |     const open=indexedDB.open("der-weg-nach-berlin",4);
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:2677:14
+
+    Error Context: test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  Slow test file: [chromium] › tests/e2e/critical-flows.spec.ts (8.8m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  10 failed
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours 
+  72 passed (27.7m)
+PLAYWRIGHT_EXIT=1

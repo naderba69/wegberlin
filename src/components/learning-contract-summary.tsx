@@ -1,0 +1,4 @@
+"use client";
+import Link from"next/link";import{CalendarRange}from"lucide-react";import{latestLearningContract}from"@/core/coach/learning-agreement";import{useLearning}from"./learning-provider";
+const goalLabels={exam:"الامتحان",work:"العمل",study:"الدراسة","daily-life":"الحياة اليومية",settlement:"الاستقرار"};
+export function LearningContractSummary(){const{state}=useLearning();const contract=latestLearningContract(state.learningContracts);if(!contract)return null;return<section className="learning-contract-summary" data-contract-policy={contract.policyVersion}><CalendarRange size={18}/><div><small>عقد التعلم · المراجعة {contract.revision}</small><strong>{contract.startsOn} ← {contract.endsOn}</strong><p>{goalLabels[contract.goal]} · {contract.dailyMinutes} دقيقة · {contract.studyWeekdays.length} أيام أسبوعيًا</p></div><Link href="/settings">مراجعة العقد</Link><footer>التزام تخطيطي فقط؛ لا يفتح مستوى ولا يغير الإتقان.</footer></section>}

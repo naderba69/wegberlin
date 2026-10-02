@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function manifest(): MetadataRoute.Manifest { return { name: "الطريق إلى برلين", short_name: "Berlin B2", description: "مرشد ألماني شخصي من A1 إلى B2", start_url: "/today", display: "standalone", background_color: "#f5f2ea", theme_color: "#123f39", lang: "ar", dir: "rtl", icons: [{ src: "/icons/app-icon.svg", sizes: "any", type: "image/svg+xml" }] }; }

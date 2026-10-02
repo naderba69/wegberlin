@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 content:audit:write
+> tsx scripts/generate-academic-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL content:audit:write

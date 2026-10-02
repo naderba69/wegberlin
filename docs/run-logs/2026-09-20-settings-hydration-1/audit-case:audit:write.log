@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 case:audit:write
+> tsx scripts/generate-case-teaching-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL case:audit:write

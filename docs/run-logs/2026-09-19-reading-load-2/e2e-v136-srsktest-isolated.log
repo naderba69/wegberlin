@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+[1/1] [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+  1 passed (8.6s)
+PLAYWRIGHT_EXIT=0

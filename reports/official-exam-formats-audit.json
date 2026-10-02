@@ -1,0 +1,42 @@
+{
+  "name": "dwnb-official-exam-format-verification-v1",
+  "ok": true,
+  "profileCount": 2,
+  "sourceCount": 3,
+  "factCount": 35,
+  "crossCheckedFactCount": 24,
+  "informationalFactCount": 11,
+  "evidenceIssueCount": 0,
+  "mismatchCount": 0,
+  "openFactCount": 2,
+  "uncoveredFieldCount": 0,
+  "evidenceCollectedAt": "2026-09-15",
+  "boundaryAr": "لقطات نصية من صفحات رسمية جُمعت يدويًا في تاريخ محدد لمطابقة بنية الامتحان داخل التطبيق. لا تُثبت أن التنسيق الرسمي لم يتغير، ولا تُخزَّن أو تُعرض للمتعلّم.",
+  "claimsFormatUnchanged": false,
+  "claimsOfficialApproval": false,
+  "fingerprint": "1e61862c8a97",
+  "evidenceIssues": [],
+  "mismatches": [],
+  "openFacts": [
+    {
+      "id": "telc-b2-point-distribution",
+      "profileId": "telc-deutsch-b2",
+      "fields": [
+        "maxPoints currency for the 2026 edition",
+        "passMark currency for the 2026 edition"
+      ],
+      "whyAr": "الأرقام نفسها (225 كتابيًا/75 شفهيًا، 135 و45 للحد الأدنى، 30 للعناصر اللغوية، 45 للكتابة، 300 للمجموع) أصبحت مثبّتة بمقتطف حرفي من ملف telc الرسمي على telc.net (Übungstest 1، طبعة 2019، ص 47–48)؛ لكن صفحة telc الحالية 2026 تعرض الأجزاء والمدد فقط ولا تنشر جدول النقاط، فلم يُعثر على نص رسمي بتاريخ 2026 يؤكد أن التوزيع لم يتغيّر. لذلك المفتوح الآن هو *سريان* الرقم لا *وجوده*.",
+      "nextAr": "يُغلق السريان بنشر telc جدول نقاط بتاريخ 2026 أو بتأكيد مكتوب من مركز امتحان معتمد، أو بمراجعة بشرية تسجّل أن نسخة 2019 ما تزال المعتمدة؛ ولا يكفي أن الصفحة الحالية لم تذكر تغيّرًا.",
+      "corroborationAr": "خمس صفحات لطرف ثالث غير رسمي (مدارس لغات ومدونات) تذكر جميعًا 225 كتابيًا و75 شفهيًا و135/45 كحدّ 60% لكل قسم، أي أن أرقام التطبيق متسقة معها؛ ولم تُستعمل كدليل لأن الفاحص يقبل نطاق telc.net الرسمي فقط."
+    },
+    {
+      "id": "telc-b2-sprachbausteine-minutes",
+      "profileId": "telc-deutsch-b2",
+      "fields": [
+        "sprachbausteine.minutes (90 مشتركة مع القراءة)"
+      ],
+      "whyAr": "الجدول الرسمي لا يمنح هذا القسم مدة منفصلة؛ المدة المشتركة مأخوذة من نفس كتلة الـ90 دقيقة.",
+      "nextAr": "تُثبَّت بجملة صريحة في Handbuch بدل الاستنتاج من الجدول."
+    }
+  ]
+}

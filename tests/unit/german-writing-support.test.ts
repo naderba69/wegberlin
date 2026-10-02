@@ -1,0 +1,13 @@
+// @vitest-environment node
+import{readFileSync}from"node:fs";
+import{describe,expect,it}from"vitest";
+import{GERMAN_CHARACTERS,GERMAN_CHARACTER_KEYBOARD_POLICY,insertGermanCharacter}from"@/core/accessibility/german-character-input";
+import{grammarGlossary,GRAMMAR_GLOSSARY_POLICY}from"@/data/grammar-glossary";
+
+describe("P2 professional German writing support",()=>{
+ it("offers the exact German characters without letters that normal keyboards already expose",()=>{expect(GERMAN_CHARACTER_KEYBOARD_POLICY).toBe("virtual-german-character-keyboard-v1");expect(GERMAN_CHARACTERS).toEqual(["ä","ö","ü","ß","Ä","Ö","Ü"])});
+ it("inserts at the cursor or replaces only the selected range",()=>{expect(insertGermanCharacter("Ich heie",7,7,"ß")).toEqual({value:"Ich heiße",selectionStart:8,selectionEnd:8});expect(insertGermanCharacter("schon",3,4,"ö")).toEqual({value:"schön",selectionStart:4,selectionEnd:4});expect(insertGermanCharacter("uber",null,null,"ü").value).toBe("uberü")});
+ it("ships 24 unique A1-B2 terms with six per level and bilingual examples",()=>{expect(GRAMMAR_GLOSSARY_POLICY).toBe("bilingual-grammar-glossary-v1");expect(grammarGlossary).toHaveLength(24);expect(new Set(grammarGlossary.map((item)=>item.id)).size).toBe(24);for(const level of["A1","A2","B1","B2"])expect(grammarGlossary.filter((item)=>item.level===level)).toHaveLength(6);for(const item of grammarGlossary){expect(item.termDe.length).toBeGreaterThan(2);expect(item.termAr.length).toBeGreaterThan(1);expect(item.definitionAr.length).toBeGreaterThan(20);expect(item.exampleDe).toMatch(/[A-Za-zÄÖÜäöüß]/);expect(item.exampleAr).toMatch(/[\u0600-\u06ff]/u)}});
+ it("keeps the contextual keyboard global, labeled, non-correcting, and print-hidden",()=>{const dock=readFileSync("src/components/german-character-dock.tsx","utf8"),shell=readFileSync("src/components/app-shell.tsx","utf8"),css=readFileSync("src/app/globals.css","utf8");expect(shell).toContain("<GermanCharacterDock/>");expect(dock).toContain("أحرف ألمانية للحقل الحالي");expect(dock).toContain("لا تصحح الإجابة ولا ترسل النص");expect(css).toContain("@media print{.german-character-dock{display:none!important}")});
+ it("renders the glossary as an optional local search surface without mastery mutation",()=>{const view=readFileSync("src/components/grammar-glossary.tsx","utf8"),search=readFileSync("src/components/bilingual-search-view.tsx","utf8");expect(view).toContain('data-grammar-glossary-policy');expect(view).toContain("قاموس مصطلحات القواعد");expect(view).toContain("لا يضيف إتقانًا ولا يغير الخطة");expect(search).toContain("<GrammarGlossary/>");expect(view).not.toContain("update(");expect(view).not.toContain("fetch(")});
+});

@@ -1,0 +1,4 @@
+
+Running 82 tests using 1 worker
+
+[1/82] [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations

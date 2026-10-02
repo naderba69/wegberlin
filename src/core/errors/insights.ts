@@ -1,0 +1,37 @@
+import type { ErrorRecord, LearningState } from "@/types/learning";
+
+export const ERROR_WEEKLY_TREND_POLICY = "actual-attempt-weekly-error-trend-v1" as const;
+export const ERROR_INTERVENTION_TIMELINE_POLICY = "derived-error-intervention-timeline-v1" as const;
+export const ERROR_PRINT_PRIVACY_POLICY = "learner-sensitive-error-print-redaction-v1" as const;
+export const ERROR_TIME_PRESSURE_TAG_POLICY = "learner-declared-time-pressure-error-v1" as const;
+
+export type WeeklyErrorTrendRow={weekStart:string;weekEnd:string;labelAr:string;attemptCount:number;errorCount:number;uniqueErrorItems:number;errorRatePercent:number|null};
+export type WeeklyErrorTrend={policyVersion:typeof ERROR_WEEKLY_TREND_POLICY;weeks:WeeklyErrorTrendRow[];direction:"decreasing"|"stable"|"increasing"|"insufficient-data";summaryAr:string;evidenceBoundary:"actual-exercise-attempt-rate-no-causal-learning-effect-or-forecast"};
+export type ErrorInterventionEvent={id:string;policyVersion:typeof ERROR_INTERVENTION_TIMELINE_POLICY;kind:"last-error-seen"|"repair-failed"|"repair-succeeded"|"delayed-review-scheduled"|"error-confirmed"|"clinic-attempt"|"personal-review";occurredAt:string;titleAr:string;outcomeAr:string;errorType?:ErrorRecord["type"];sourceCount:number;sensitiveInPrint:boolean;evidenceBoundary:"derived-chronology-no-answer-text-psychological-diagnosis-or-causal-effect-claim"};
+
+function localDay(date:Date){return`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`}
+function mondayStart(date:Date){const copy=new Date(date.getFullYear(),date.getMonth(),date.getDate(),12);const day=copy.getDay()||7;copy.setDate(copy.getDate()-(day-1));return copy}
+function addDays(date:Date,days:number){const copy=new Date(date);copy.setDate(copy.getDate()+days);return copy}
+function parseValid(value:string){const date=new Date(value);return Number.isFinite(date.getTime())?date:null}
+
+export function buildWeeklyErrorTrend(state:LearningState,now=new Date(),weekCount=8):WeeklyErrorTrend{
+  const bounded=Math.max(4,Math.min(12,Math.round(weekCount)));const current=mondayStart(now);
+  const weeks=Array.from({length:bounded},(_,index)=>{const start=addDays(current,-7*(bounded-1-index));const end=addDays(start,6);const startDay=localDay(start),endDay=localDay(end);const attempts=state.exerciseAttempts.filter((attempt)=>{const day=attempt.createdAt.slice(0,10);return day>=startDay&&day<=endDay});const wrong=attempts.filter((attempt)=>!attempt.correct);return{weekStart:startDay,weekEnd:endDay,labelAr:`${start.getDate()}/${start.getMonth()+1}`,attemptCount:attempts.length,errorCount:wrong.length,uniqueErrorItems:new Set(wrong.map((attempt)=>`${attempt.lessonId}:${attempt.exerciseId}`)).size,errorRatePercent:attempts.length?Math.round(wrong.length/attempts.length*100):null} satisfies WeeklyErrorTrendRow});
+  const observed=weeks.filter((week)=>week.errorRatePercent!==null);let direction:WeeklyErrorTrend["direction"]="insufficient-data";let summaryAr="نحتاج أسبوعين فيهما محاولات قبل وصف اتجاه الخطأ.";
+  if(observed.length>=2){const first=observed[0].errorRatePercent!,last=observed.at(-1)!.errorRatePercent!,delta=last-first;direction=delta<=-5?"decreasing":delta>=5?"increasing":"stable";summaryAr=direction==="decreasing"?`انخفضت نسبة المحاولات الخاطئة من ${first}% إلى ${last}% بين أول وآخر أسبوع مرصود.`:direction==="increasing"?`ارتفعت نسبة المحاولات الخاطئة من ${first}% إلى ${last}%. هذا وصف للبيانات، لا حكم على قدرتك.`:`بقيت نسبة المحاولات الخاطئة قريبة من مستواها الأول (${first}% ثم ${last}%).`}
+  return{policyVersion:ERROR_WEEKLY_TREND_POLICY,weeks,direction,summaryAr,evidenceBoundary:"actual-exercise-attempt-rate-no-causal-learning-effect-or-forecast"};
+}
+
+function sensitiveErrorMap(errors:ErrorRecord[]){return new Map(errors.map((error)=>[error.id,Boolean(error.sensitiveInPrint)]))}
+export function buildErrorInterventionTimeline(state:LearningState):ErrorInterventionEvent[]{
+  const events:ErrorInterventionEvent[]=[];const sensitiveById=sensitiveErrorMap(state.errors);const errorById=new Map(state.errors.map((error)=>[error.id,error]));
+  const add=(input:Omit<ErrorInterventionEvent,"policyVersion"|"evidenceBoundary">)=>{if(!parseValid(input.occurredAt))return;events.push({...input,policyVersion:ERROR_INTERVENTION_TIMELINE_POLICY,evidenceBoundary:"derived-chronology-no-answer-text-psychological-diagnosis-or-causal-effect-claim"})};
+  for(const error of state.errors){const common={errorType:error.type,sourceCount:Math.max(1,error.occurrences),sensitiveInPrint:Boolean(error.sensitiveInPrint)};add({id:`${error.id}:seen:${error.lastSeenAt}`,kind:"last-error-seen",occurredAt:error.lastSeenAt,titleAr:"آخر ظهور مسجل للنمط",outcomeAr:`سُجل ${error.occurrences} ظهورًا إجماليًا لهذا النوع.`,...common});if(error.lastFailedRepairAt)add({id:`${error.id}:failed:${error.lastFailedRepairAt}`,kind:"repair-failed",occurredAt:error.lastFailedRepairAt,titleAr:"محاولة علاج لم تنجح",outcomeAr:`فشل العلاج المسجل ${error.failedRepairCount??1} مرة؛ لا تغيير في الإتقان.`,...common});if(error.lastRepairedAt)add({id:`${error.id}:repair:${error.lastRepairedAt}`,kind:"repair-succeeded",occurredAt:error.lastRepairedAt,titleAr:"نجح العلاج الأول",outcomeAr:error.nextReviewAt?"جُدولت إعادة مؤجلة قبل تأكيد العلاج.":"سُجل نجاح العلاج دون ادعاء ثبات طويل.",...common});if(error.lastRepairedAt&&error.nextReviewAt)add({id:`${error.id}:scheduled:${error.nextReviewAt}`,kind:"delayed-review-scheduled",occurredAt:error.lastRepairedAt,titleAr:"تدخل مؤجل مجدول",outcomeAr:`موعد إعادة الاختبار ${error.nextReviewAt.slice(0,10)}.`,...common});if(error.confirmedAt)add({id:`${error.id}:confirmed:${error.confirmedAt}`,kind:"error-confirmed",occurredAt:error.confirmedAt,titleAr:"تأكد العلاج بعد التأخير",outcomeAr:"نجح الاسترجاع المؤجل وأُغلق السجل الفردي.",...common})}
+  for(const attempt of state.errorClinicAttempts){add({id:`clinic:${attempt.id}`,kind:"clinic-attempt",occurredAt:attempt.createdAt,titleAr:"تدريب على نمط متكرر",outcomeAr:attempt.correct?"نجح تمرين النقل في العيادة؛ الأخطاء الفردية لا تُغلق تلقائيًا.":"لم ينجح تمرين النقل؛ بقيت القاعدة أولوية للعلاج.",errorType:attempt.clinicType,sourceCount:attempt.sourceErrorIds.length,sensitiveInPrint:attempt.sourceErrorIds.some((id)=>sensitiveById.get(id))})}
+  for(const review of state.reviewEvents.filter((event)=>event.evidenceScope==="personal-error-remediation")){const rawId=review.cardId.startsWith("personal-error-card:")?review.cardId.slice("personal-error-card:".length):"";const error=errorById.get(rawId);add({id:`review:${review.id}`,kind:"personal-review",occurredAt:review.reviewedAt,titleAr:"مراجعة بطاقة علاج شخصية",outcomeAr:review.grade>=3?"نجحت المراجعة الشخصية دون إضافة إتقان.":"تحتاج البطاقة إلى مراجعة أخرى.",errorType:error?.type,sourceCount:1,sensitiveInPrint:Boolean(error?.sensitiveInPrint)})}
+  return events.sort((left,right)=>Date.parse(right.occurredAt)-Date.parse(left.occurredAt)||left.id.localeCompare(right.id)).slice(0,60);
+}
+
+export function updateErrorLearnerMetadata(error:ErrorRecord,patch:{timePressureTag?:boolean;sensitiveInPrint?:boolean},now=new Date()):ErrorRecord{
+  const currentTags=new Set(error.learnerContextTags??[]);if(patch.timePressureTag===true)currentTags.add("knows-rule-under-time-pressure");if(patch.timePressureTag===false)currentTags.delete("knows-rule-under-time-pressure");return{...error,learnerContextTags:[...currentTags],sensitiveInPrint:patch.sensitiveInPrint??error.sensitiveInPrint??false,learnerMetadataUpdatedAt:now.toISOString()};
+}

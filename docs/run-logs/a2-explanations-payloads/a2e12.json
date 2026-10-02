@@ -1,0 +1,98 @@
+{
+ "a2-01-m4": {
+  "explanationAr": "الفعلُ einkaufen منفصلُ البادئة، والـPartizip II يحصر الجذر بين ein وge-: «eingekauft». أمّا geeinkauft فتكرّر ge، وeinkaufen تبقى مصدرًا، وeingekaufen تقلب الترتيب. فحص ذاتي: أين وقع الجذرُ بين ein وge؟",
+  "oldLen": 20
+ },
+ "a2-02-m2": {
+  "explanationAr": "الحالةُ في الماضي تُروى بـPräteritum لا بـPerfekt: «Ich war müde.». وأمّا «Ich habe müde.» و«Ich bin müde gehabt.» فيبنيان Perfekt مع صفةٍ لا مع فعل. فحص ذاتي: هل وصفتَ حالةً أم حدثًا؟",
+  "oldLen": 19
+ },
+ "a2-02-m3": {
+  "explanationAr": "رابطُ المفاجأة في سرد الماضي هو «Plötzlich»: يقطع التوقّع فجأة. أمّا Zuerst فيفتح تسلسلًا عاديًّا، وAm Ende يختم السرد، وSeitdem يربط بدايةً بمدةٍ ممتدة. فحص ذاتي: هل جاء الحدثُ مفاجئًا؟",
+  "oldLen": 19
+ },
+ "a2-03-m1": {
+  "explanationAr": "الحدثُ الفريد في الماضي يُربط بـals وحده: «ich angekommen bin, war es spät» بعد الفراغ. أمّا Wenn فللتكرار أو الشرط، وDeshalb وSeit لا تربطان حدثين متتاليين. فحص ذاتي: حدثٌ مرةً واحدة أم عادة؟",
+  "oldLen": 19
+ },
+ "a2-04-m1": {
+  "explanationAr": "الفعلُ helfen يطلب Dativ فيكون المفعولُ «mir» لا mich ولا ich ولا mein. وهذا ما يفسّر عنوان التمرين helfen + ich: تُصرَّف الضميرةُ في الحالة التي يفتحها الفعل. فحص ذاتي: أيّ حالةٍ يطلبها فعلك؟",
+  "oldLen": 20
+ },
+ "a2-04-m5": {
+  "explanationAr": "المخاطبةُ الرسمية تُكتب Ihnen بحرفٍ كبير، بترتيبٍ سليم: «Kann ich Ihnen helfen?». وأمّا «Kann ich ihnen helfen?» بحرفٍ صغير فلمن نعرفه، والباقي يكسّر الترتيبَ. فحص ذاتي: لمن توجّه الجملة؟",
+  "oldLen": 20
+ },
+ "a2-04-rq2": {
+  "explanationAr": "النصّ يسمّي ما جاءت به الجارة بالضبط: «Sie hat Hana einen kleinen Kuchen gegeben». وقد جلبت هناءُ صناديقها بنفسها، أمّا المفتاحُ والطردُ واللمبةُ فلا ذكر لها مع السيدة ماير. فحص ذاتي: مَن أعطى ماذا ولمن؟",
+  "oldLen": 20
+ },
+ "a2-05-m2": {
+  "explanationAr": "المنعُ يُصاغ بـdürfen مع nicht: «Man darf nicht rauchen.». وأمّا «Man muss nicht rauchen.» فتعني أنّ التدخين غيرُ مطلوب (إباحة)، و«Man kann rauchen.» تُبيحه صراحةً. فحص ذاتي: هل منعتَ أم أبيحتَ؟",
+  "oldLen": 19
+ },
+ "a2-06-m1": {
+  "explanationAr": "الطلبُ المهذّب يبدأ بـ«Könntest du bitte aufräumen?» فيبقى الفعلُ في النهاية. وأمّا «Räum sofort auf!» فأمرٌ جافّ، و«Können du räumt?» و«Du aufräumen jetzt.» فجملتان مكسورتان. فحص ذاتي: هل بقي طلبُك مؤدّبًا؟",
+  "oldLen": 20
+ },
+ "a2-06-m4": {
+  "explanationAr": "الموافقةُ على حلٍّ وسط جملةٌ كاملة: «Damit bin ich einverstanden.». وأمّا «Das stört ich.» و«Kompromiss nicht passt alle.» فبلا فاعلٍ صحيح وبترتيبٍ عربيٍّ بالكلمات الألمانية. فحص ذاتي: هل جملتُك مبنيّة؟",
+  "oldLen": 19
+ },
+ "a2-07-lq1": {
+  "explanationAr": "القائدُ كلّف سارة صراحةً: «kannst du dich um die Gästeliste kümmern?». فالتقنيةُ عملُ David، والرعايةُ اللوجستية لليلى، واستقبالُ الضيوف يتناوب عليه الفريق. فحص ذاتي: مَن كلّفه القائدُ بماذا؟",
+  "oldLen": 19
+ },
+ "a2-09-lq1": {
+  "explanationAr": "نبيل يعرّف بنفسه في مطلع المكالمة: «hier spricht Nabil Osman von der Firma Meditex». فالعيادةُ Praxis am Markt جهةٌ يُتصل بها لا جهةُ عمله، وتفاصيل الشهاداتِ لا ترد في النصّ. فحص ذاتي: مَن المتّصل ومَن الجهة؟",
+  "oldLen": 19
+ },
+ "a2-11-rq1": {
+  "explanationAr": "النصّ يثبت المركزية للفندق وحده: «Das Hotel Hafenblick liegt zentral». وأمّا Pension Seerose فتبعد ثلاثة كيلومترات عن المركز، والشقةُ تُقارن بالسعر لا بالموقع. فحص ذاتي: أيّ إقامةٍ وصفها النصّ بالمركزية؟",
+  "oldLen": 19
+ },
+ "a2-13-m2": {
+  "explanationAr": "الفعلُ الانعكاسي مع ich يأخذ الضميرَ «mich»: ich entspanne mich. وأمّا sich فللغائب، وdich للمخاطَب، وmir ضميرُ جرٍّ لا يطلبه هذا الفعل. فحص ذاتي: مَن الفاعل ومَن الضمير العائد إليه؟",
+  "oldLen": 19
+ },
+ "a2-14-lq1": {
+  "explanationAr": "أمينة تحدّد المدة بنفسها: «Heute und wahrscheinlich morgen». فكلمةُ wahrscheinlich لا تعِد بيومٍ رابع، وموعدُ العصر يخصّ اتصالها بعد الطبيب لا مدةَ الغياب. فحص ذاتي: هل أخذتَ القيدَ من جوابها؟",
+  "oldLen": 19
+ },
+ "a2-15-m2": {
+  "explanationAr": "السؤالُ عن Zeitpunkt يسأل عن وقت تناول القرص: «nach dem Essen». وأمّا zwei Tabletten فالكمية، وfünf Tage مدةُ الاستعمال، وmit Wasser طريقةُ البلع. فحص ذاتي: أتجيب عن وقتٍ أم عن كمية؟",
+  "oldLen": 19
+ },
+ "a2-15-rq2": {
+  "explanationAr": "النصّ يوجّه السؤال إلى من يتناول دواءً آخر: «Wer andere Medikamente nimmt, soll vorher … nachfragen». فلا يُلزم الأطفالُ وحدهم، والتحذيرُ من الحساسية حالةٌ أخرى. فحص ذاتي: ما الشرطُ الذي يُوجب السؤال؟",
+  "oldLen": 19
+ },
+ "a2-16-lq3": {
+  "explanationAr": "الشرطةُ تنفي الإشاعة بنصّها: «Der Hauptbahnhof ist gesperrt». فهذا هو الخبرُ الكاذب، بينما «Der Bahnhof bleibt geöffnet.» والمصادرُ الرسمية في المتن. فحص ذاتي: أيُّ معلومةٍ جاءت منفية؟",
+  "oldLen": 19
+ },
+ "a2-16-m5": {
+  "explanationAr": "شبكةُ الخبر تُبنى على أسئلةٍ تُغطّي الحدث: «Wer, was, wann, wo». وأمّا الصفاتُ العامة (schön, schlecht, toll) والأسئلةُ التي تُجاب بنعم أو لا فلا تُنتج خبرًا. فحص ذاتي: أيُّ سؤالٍ يبقى بلا جواب في مسودتك؟",
+  "oldLen": 20
+ },
+ "a2-16-rq2": {
+  "explanationAr": "الخبرُ يسرد الوقائع، والرأيُ حكمٌ على المشروع: «Das Projekt ist unnötig» صياغةُ تقييمٍ شخصيّ. وأمّا الموعدُ والمدةُ والتكلفةُ فمعطياتٌ نُقلت عن جهةٍ رسمية. فحص ذاتي: هل الجملةُ خبرٌ أم تقييم؟",
+  "oldLen": 19
+ },
+ "a2-17-m1": {
+  "explanationAr": "حين يتّحد الفاعلان يُستعمل um … zu بدل damit: «Ich lese, um informiert zu bleiben». وأمّا «Ich lese, damit informiert zu bleiben.» فتخلط الأداتين، وسائرُ الجمل تكسر الترتيب. فحص ذاتي: أفاعلٌ واحد أم فاعلان؟",
+  "oldLen": 20
+ },
+ "a2-20-rq2": {
+  "explanationAr": "الشرطُ يسبق التسجيل عند الجميع: «Vor der Anmeldung müssen alle einen Einstufungstest machen». والاختبارُ الداخليّ في نهاية الدورة ليس شهادةً رسمية ولا امتحانًا خارجيًّا. فحص ذاتي: ما الخطوةُ الملزمة قبل الدفع؟",
+  "oldLen": 19
+ },
+ "a2-21-rq1": {
+  "explanationAr": "الخطةُ تعدّ الأيامَ صراحةً: «montags, dienstags, donnerstags und samstags jeweils 45 Minuten». فهي أربع جلساتٍ في الأسبوع، والأحدُ للتقييم لا للدرس الجديد. فحص ذاتي: هل عددتَ الأيام أم خمّنت؟",
+  "oldLen": 19
+ },
+ "a2-23-m4": {
+  "explanationAr": "الفاعلُ المعرّف في الجمع يأخذ die في Nominativ، وهو «die» في هذا التمرين. وأمّا der وdas فمفرد، وden تُستعمل في الجمع المنصوب (Akkusativ). فحص ذاتي: أهو فاعلٌ أم مفعولٌ في جملتك؟",
+  "oldLen": 19
+ }
+}

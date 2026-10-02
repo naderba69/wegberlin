@@ -1,0 +1,19 @@
+
+> der-weg-nach-berlin@0.1.0 prebuild
+> npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit
+
+
+> der-weg-nach-berlin@0.1.0 vendor:materialize
+> node scripts/materialize-vendor-runtime.mjs
+
+Materialized audited WebGPU vendor runtime: 431652 bytes / 0a96dcf4c489.
+
+> der-weg-nach-berlin@0.1.0 runtime:materialize
+> node scripts/materialize-runtime-config.mjs
+
+Materialized TypeScript and Service Worker curriculum version: dwnb-a1-b2-2026.09-v1.
+
+> der-weg-nach-berlin@0.1.0 offline:manifest
+> tsx scripts/generate-offline-manifest.ts
+
+sh: 1: tsx: not found

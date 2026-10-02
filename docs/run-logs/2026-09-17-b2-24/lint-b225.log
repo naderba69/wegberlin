@@ -1,0 +1,18 @@
+
+> der-weg-nach-berlin@0.1.0 lint
+> eslint
+
+
+/home/user/der-weg-nach-berlin/scripts/generate-human-review-packet.ts
+  39:48  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  88:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/home/user/der-weg-nach-berlin/scripts/generate-lesson-quality-audit.ts
+  32:41  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  34:6   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  71:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 7 problems (7 errors, 0 warnings)
+

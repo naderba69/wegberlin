@@ -1,0 +1,49 @@
+name: Release Candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_label:
+        description: "Immutable candidate label, for example rc-2026.09.12-1"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  RC_LABEL: ${{ inputs.candidate_label }}
+  RC_OUTPUT: release-candidate-attestation.json
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Scan the complete repository history for secrets
+        run: npm run secret:audit:history
+      - name: Run the complete production quality gate
+        run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - name: Run desktop and mobile browser projects
+        run: npm run test:e2e
+      - name: Create commit-bound candidate attestation
+        run: node scripts/create-release-candidate-attestation.mjs
+      - name: Upload candidate attestation
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-candidate-${{ inputs.candidate_label }}
+          path: release-candidate-attestation.json
+          if-no-files-found: error
+          retention-days: 30
+      - run: echo "no deployment or production-promotion step"
+
+# pre-production-release-candidate-v1

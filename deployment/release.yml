@@ -1,0 +1,46 @@
+name: Tagged Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Scan the complete repository history for secrets
+        run: npm run secret:audit:history
+      - name: Run the complete production quality gate
+        run: npm run check
+      - name: Find the previous immutable semantic tag
+        id: previous
+        shell: bash
+        run: |
+          previous="$(git tag --sort=-version:refname | grep -Fxv "$GITHUB_REF_NAME" | head -n 1 || true)"
+          echo "tag=$previous" >> "$GITHUB_OUTPUT"
+      - name: Generate release changelog and rollback instructions
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+          PREVIOUS_TAG: ${{ steps.previous.outputs.tag }}
+          CHANGELOG_OUTPUT: release-changelog.md
+        run: node scripts/generate-release-changelog.mjs
+      - name: Publish immutable tagged release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release-changelog.md
+          fail_on_unmatched_files: true
+
+# tagged-release-changelog-rollback-v1

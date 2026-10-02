@@ -1,0 +1,122 @@
+
+> der-weg-nach-berlin@0.1.0 prebuild
+> npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit
+
+
+> der-weg-nach-berlin@0.1.0 vendor:materialize
+> node scripts/materialize-vendor-runtime.mjs
+
+Materialized audited WebGPU vendor runtime: 431652 bytes / 0a96dcf4c489.
+
+> der-weg-nach-berlin@0.1.0 runtime:materialize
+> node scripts/materialize-runtime-config.mjs
+
+Materialized TypeScript and Service Worker curriculum version: dwnb-a1-b2-2026.09-v1.
+
+> der-weg-nach-berlin@0.1.0 offline:manifest
+> tsx scripts/generate-offline-manifest.ts
+
+Generated 318 offline routes and 5 independent packs (a1:58, a2:58, b1:58, b2:219, full:318).
+
+> der-weg-nach-berlin@0.1.0 feature:gate
+> tsx scripts/audit-feature-proposals.ts
+
+Feature proposal gate passed: 3 decision-changing proposals / 0 unowned or no-impact rows.
+
+> der-weg-nach-berlin@0.1.0 library:adversarial:audit
+> tsx scripts/audit-library-adversarial.ts
+
+Library adversarial audit passed: 320 questions / positions 84/66/80/90 / prompt leak 0.63% / exact evidence 320.
+
+> der-weg-nach-berlin@0.1.0 meaning:translation:audit
+> tsx scripts/audit-meaning-translations.ts
+
+Meaning-first Arabic translation audit passed: 3559 rows / 3 literal-gloss guards / 0 issues.
+
+> der-weg-nach-berlin@0.1.0 security:audit
+> tsx scripts/audit-security-headers.ts
+
+Security headers audit PASS: 15 CSP directives, 7 headers, no global wildcard, SHA-256 eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf.
+
+> der-weg-nach-berlin@0.1.0 governance:audit
+> tsx scripts/generate-content-governance-audit.ts
+
+Content governance verified: 3277 records / 16 families / 18 sources / 12 risks / 12 claims / 18 pronunciation rows.
+
+> der-weg-nach-berlin@0.1.0 content:audit
+> tsx scripts/generate-academic-audit.ts --check
+
+Academic content governance verified:
+- Zod: 4345 root objects / 16 schema families / 0 failures
+- answers: 2805 closed items + 384 productive tasks / 3 explicit exemptions / 0 leaks
+- objectives: 389/389 teaching→practice→assessment maps / 0 structural gaps
+- lexical target gaps: 89 noun + 4 verb-frame candidates pending human review
+- content SHA-256: f62de3e9a8feee1aa1213d75214153db8e5ef63daac508882875576af205540e
+
+> der-weg-nach-berlin@0.1.0 similarity:audit
+> tsx scripts/generate-content-similarity-review-audit.ts --check
+
+Content similarity/review governance: 3277 objects / 5367726 pairs / 0 issues / external corpora 0
+- separate review states: German/Arabic/CEFR/copyright × 3277; independent review remains explicit
+- content SHA-256: efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0
+
+> der-weg-nach-berlin@0.1.0 case:audit
+> tsx scripts/generate-case-teaching-audit.ts --check
+
+Meaning-first case governance verified: 19 contracts / 23 theory / 57 controlled / 44 assessment / 0 gaps
+- content SHA-256: ba4a3957fe9ed44126b962c1e2587a7f90ad81e6cf3671d224bd586c92786080
+
+> der-weg-nach-berlin@0.1.0 language:audit
+> node scripts/generate-language-boundary-audit.mjs --check
+
+Language/Bidi governance verified: 179 TSX / 6990 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 460f84c7034789956041afe11dd2043906076848c4f313a14b15302f8050539a
+
+> der-weg-nach-berlin@0.1.0 exam:format-claims:audit
+> node scripts/verify-official-exam-format-claims.mjs --check
+
+Official exam-format claim guard: 8 surfaces, 4 with a boundary sentence, 0 forbidden claims, 0 missing, fingerprint 733a12e7b996.
+
+> der-weg-nach-berlin@0.1.0 exam:formats:verify
+> tsx scripts/verify-official-exam-formats.ts --check
+
+Official exam-format verification: 2 profiles, 3 snapshots, 35 pinned facts (24 cross-checked), 0 evidence issues, 0 mismatches, 2 declared gaps, fingerprint 1e61862c8a97.
+
+> der-weg-nach-berlin@0.1.0 tunisian:audit
+> tsx scripts/generate-tunisian-support-audit.ts --check
+
+Tunisian support governance verified: 17 notes / 17 lessons / 17 theory refs / 17 pending independent review / 0 structural gaps
+- content SHA-256: 769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d
+
+> der-weg-nach-berlin@0.1.0 lexical:strategy:audit
+> tsx scripts/generate-lexical-strategy-audit.ts --check
+
+Lexical strategy audit verified: 32 families / 32 register examples / 24 confusions / 30 module plans / 0 issues
+
+> der-weg-nach-berlin@0.1.0 learning:architecture:audit
+> tsx scripts/generate-learning-architecture-audit.ts --check
+
+Learning architecture audit verified: 24 rules / 576 questions / 0 issues
+
+> der-weg-nach-berlin@0.1.0 study:modes:audit
+> tsx scripts/generate-study-modes-audit.ts --check
+
+Study modes audit verified: 80 reading / 63 word challenges / 16 prosody steps / 0 issues
+
+> der-weg-nach-berlin@0.1.0 practical:context:audit
+> tsx scripts/generate-practical-context-audit.ts --check
+
+Practical context audit verified: 16 culture / 20 documents / 0 issues
+
+> der-weg-nach-berlin@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.3.3 (webpack)
+✓ Running next.config.ts took 329ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 22.3s
+  Running TypeScript ...
+Failed to type check.
+
+build exit: 1

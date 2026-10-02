@@ -1,0 +1,70 @@
+{
+ "b2-19": {
+  "b2-19-e7": [
+   "Der Bescheid ist am 4. April abgelaufen; ich bitte Sie, die Prüfung bis zum 12. nachzuholen.",
+   "Der Bescheid ist am 4. April abgelaufen; ich verlange, dass Sie mir die Prüfung sofort erlauben.",
+   "Die Frist war am 12. April abgelaufen, und eine Nachholung kommt für Sie nicht mehr in Frage.",
+   "Ich wollte Ihnen nur mitteilen, dass ich die Prüfung bald schaffe, und danke Ihnen."
+  ],
+  "b2-19-rq1": [
+   "Die erste trägt Vorwurf und Entschuldigung in den Partikeln, die zweite enthält beides nicht.",
+   "Die erste ist höflicher, weil sie länger ist und zwei Nebensätze enthält statt eines einzigen kurzen Hauptsatzes.",
+   "Beide Sätze bringen Vorwurf und Entschuldigung völlig gleich stark zum Ausdruck, ohne jeden Unterschied.",
+   "Die zweite enthält den Vorwurf, die erste dagegen die Entschuldigung für dasselbe Versehen."
+  ],
+  "b2-19-rq2": [
+   "Weil sie ohne Vollverb auskommt und deshalb viel kürzer wirkt als die anderen Sätze.",
+   "Weil in ihr kein Wort eine Haltung trägt, die jemand falsch lesen könnte.",
+   "Weil sie kein Datum nennt und dadurch für die Behörde unvollständig wirkt.",
+   "Weil die Sachbearbeiterin diesen Satz schon bestätigt hatte."
+  ],
+  "b2-19-rq3": [
+   "Mit der Partikel wohl wird die Aussage zu einer sicheren Feststellung, die von niemandem mehr bestritten werden kann.",
+   "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
+   "Ohne die Partikel wohl bleibt der Satz eine bloße Vermutung, deren Beweis ganz beim anderen liegt.",
+   "Die Partikel wohl ändert am sachlichen Inhalt nichts, sondern nur die Betonung beim Sprechen."
+  ],
+  "b2-19-lq1": [
+   "Derselbe Inhalt, aber eine andere Haltung gegenüber der Behörde.",
+   "Zwei Fristdaten, die dieselbe Sachbearbeiterin in beiden Bescheiden eingetragen hat.",
+   "Ein Streit über die Zuständigkeit der Behörde für die Prüfung.",
+   "Zwei ganz verschiedene Sachverhalte, die nur ähnlich klingen."
+  ],
+  "b2-19-lq2": [
+   "Weil sie den Antrag ausdrücklich zurückweisen und dabei eine neue Frist setzen wollen.",
+   "Weil sie ohne jede Anrede auskommen und dadurch abweisend auf die Behörde wirken.",
+   "Weil sie wie Beschwichtigung klingen und den eigentlichen Antrag überdecken.",
+   "Weil sie zu kurz sind und deshalb unhöflich auf die Behörde wirken."
+  ],
+  "b2-19-lq3": [
+   "Es bestreitet die bereits getroffene Entscheidung und verlangt ihre sofortige Aufhebung.",
+   "Es hält die Bitte offen, ohne die bereits getroffene Entscheidung zu bestreiten.",
+   "Es ersetzt die genannte Frist durch ein neues Datum, und zwar ohne jede Begründung.",
+   "Es wiederholt nur die Begründung der Behörde, ohne etwas hinzuzufügen."
+  ],
+  "b2-19-m1": [
+   "Ja, am Montag habe ich sie ganz sicher nicht abgeschickt.",
+   "Nein, abgeschickt habe ich sie am Montag ebenfalls nicht.",
+   "Doch, ich habe sie am Montag abgeschickt.",
+   "Doch, am Montag schicke ich sie ab."
+  ],
+  "b2-19-m3": [
+   "Das ist wohl ein Versehen in der Liste.",
+   "Das ist ein Versehen in der Liste; ich bestehe darauf.",
+   "Das ist sicher ein Versehen in der Liste, ohne Zweifel.",
+   "In der Liste steht alles richtig."
+  ],
+  "b2-19-m4": [
+   "Ihr Bescheid vom 2. April nennt die Frist nicht; ich bitte um eine Berichtigung bis zum 15.",
+   "Ihr Bescheid vom 2. April nennt die Frist nicht, und ich verlange hiermit eine Berichtigung.",
+   "Sie haben die Frist in Ihrem Bescheid vom 2. April absichtlich weggelassen, oder etwa nicht?",
+   "Ich danke Ihnen für Ihren Bescheid vom 2. April und komme später darauf zurück."
+  ],
+  "b2-19-m5": [
+   "Es ist ein Hinweis, doch kein Beleg.",
+   "Das ist nur ein Beleg, doch kein Hinweis für uns.",
+   "Ein solcher Hinweis genügt hier völlig.",
+   "Belege habe ich hier keine."
+  ]
+ }
+}

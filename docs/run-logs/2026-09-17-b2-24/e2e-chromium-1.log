@@ -1,0 +1,1029 @@
+
+Running 41 tests using 1 worker
+
+[1/41] [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+  1) [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-critical-pa-32fac-ble-serious-WCAG-violations-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-critical-pa-32fac-ble-serious-WCAG-violations-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-critical-pa-32fac-ble-serious-WCAG-violations-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[2/41] [chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+  2) [chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-library-and-2477c-completed-content-contracts-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-library-and-2477c-completed-content-contracts-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-library-and-2477c-completed-content-contracts-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[3/41] [chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+  3) [chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-bilingual-l-c12d4-ults-and-returns-to-context-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-bilingual-l-c12d4-ults-and-returns-to-context-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-bilingual-l-c12d4-ults-and-returns-to-context-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[4/41] [chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+  4) [chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-visual-acce-04b5b-t-and-respect-system-motion-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-visual-acce-04b5b-t-and-respect-system-motion-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-visual-acce-04b5b-t-and-respect-system-motion-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[5/41] [chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+  5) [chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-exam-rea-7eb37-ules-instead-of-one-average-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-exam-rea-7eb37-ules-instead-of-one-average-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-exam-rea-7eb37-ules-instead-of-one-average-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[6/41] [chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+  6) [chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-onboardi-2e033-t-device-check-skip-locally-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-onboardi-2e033-t-device-check-skip-locally-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-onboardi-2e033-t-device-check-skip-locally-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[7/41] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+  7) [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-an-absolute-f17ee--an-isolated-writing-demand-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-an-absolute-f17ee--an-isolated-writing-demand-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-an-absolute-f17ee--an-isolated-writing-demand-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[8/41] [chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+  8) [chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-adaptive-03817-nd-stores-four-skill-scores-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-adaptive-03817-nd-stores-four-skill-scores-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-adaptive-03817-nd-stores-four-skill-scores-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[9/41] [chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+  9) [chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-tutor-re-ebc3a-and-deletes-its-local-trace-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-tutor-re-ebc3a-and-deletes-its-local-trace-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-tutor-re-ebc3a-and-deletes-its-local-trace-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[10/41] [chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+  10) [chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-optional-AI-87639-etry-requires-fresh-consent-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-optional-AI-87639-etry-requires-fresh-consent-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-optional-AI-87639-etry-requires-fresh-consent-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[11/41] [chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+  11) [chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-daily-ch-c7440--stores-tomorrow-s-decision-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-daily-ch-c7440--stores-tomorrow-s-decision-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-daily-ch-c7440--stores-tomorrow-s-decision-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[12/41] [chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+  12) [chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P2-partial--dea1f-ist-bounded-local-decisions-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P2-partial--dea1f-ist-bounded-local-decisions-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P2-partial--dea1f-ist-bounded-local-decisions-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[13/41] [chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+  13) [chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P1-repeated-283a2-d-reduction-without-penalty-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P1-repeated-283a2-d-reduction-without-penalty-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P1-repeated-283a2-d-reduction-without-penalty-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[14/41] [chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+  14) [chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-clustere-be3bc-d-stores-a-transfer-attempt-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-clustere-be3bc-d-stores-a-transfer-attempt-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-clustere-be3bc-d-stores-a-transfer-attempt-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[15/41] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+  15) [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-writing--40c21-cited-feedback-and-revision-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-writing--40c21-cited-feedback-and-revision-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-writing--40c21-cited-feedback-and-revision-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[16/41] [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+  16) [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-WebGPU-m-0ce08--locally-and-can-be-deleted-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-WebGPU-m-0ce08--locally-and-can-be-deleted-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-WebGPU-m-0ce08--locally-and-can-be-deleted-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[17/41] [chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally
+  17) [chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-standard-pr-ad4fc-pected-German-words-locally-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-standard-pr-ad4fc-pected-German-words-locally-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-standard-pr-ad4fc-pected-German-words-locally-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[18/41] [chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI
+  18) [chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-guided-spea-c7bc0--consent-before-optional-AI-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-guided-spea-c7bc0--consent-before-optional-AI-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-guided-spea-c7bc0--consent-before-optional-AI-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[19/41] [chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision
+  19) [chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-P0-mediatio-ee5b7-eck-comparison-and-revision-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-P0-mediatio-ee5b7-eck-comparison-and-revision-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-P0-mediatio-ee5b7-eck-comparison-and-revision-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[20/41] [chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback
+  20) [chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-generated-l-17de5-ck-and-Browser-TTS-fallback-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-generated-l-17de5-ck-and-Browser-TTS-fallback-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-generated-l-17de5-ck-and-Browser-TTS-fallback-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[21/41] [chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback
+  21) [chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-generated-e-6c45a-nce-labels-and-TTS-fallback-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-generated-e-6c45a-nce-labels-and-TTS-fallback-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-generated-e-6c45a-nce-labels-and-TTS-fallback-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[22/41] [chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript
+  22) [chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-shadowing-s-e45fe-rols-and-delayed-transcript-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-shadowing-s-e45fe-rols-and-delayed-transcript-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-shadowing-s-e45fe-rols-and-delayed-transcript-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[23/41] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+  23) [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-a-complete--486c4-ges-and-persists-completion-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-a-complete--486c4-ges-and-persists-completion-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-a-complete--486c4-ges-and-persists-completion-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[24/41] [chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile
+  24) [chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-settings-ex-966c3-s-it-as-an-isolated-profile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-settings-ex-966c3-s-it-as-an-isolated-profile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-settings-ex-966c3-s-it-as-an-isolated-profile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[25/41] [chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload
+  25) [chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-a-previousl-c9c75-vives-a-real-offline-reload-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-a-previousl-c9c75-vives-a-real-offline-reload-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-a-previousl-c9c75-vives-a-real-offline-reload-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[26/41] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  26) [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[27/41] [chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping
+  27) [chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-continuous--fd327-ck-and-blocks-task-skipping-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-continuous--fd327-ck-and-blocks-task-skipping-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-continuous--fd327-ck-and-blocks-task-skipping-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[28/41] [chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence
+  28) [chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-progress-an-9a709-s-and-streaks-from-evidence-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-progress-an-9a709-s-and-streaks-from-evidence-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-progress-an-9a709-s-and-streaks-from-evidence-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[29/41] [chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals
+  29) [chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-keyboard-us-3e795-r-results-and-escape-modals-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-keyboard-us-3e795-r-results-and-escape-modals-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-keyboard-us-3e795-r-results-and-escape-modals-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[30/41] [chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries
+  30) [chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-Arabic-shel-70203-ep-explicit-Bidi-boundaries-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-Arabic-shel-70203-ep-explicit-Bidi-boundaries-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-Arabic-shel-70203-ep-explicit-Bidi-boundaries-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[31/41] [chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS
+  31) [chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-high-confid-22a50-deduplicated-no-mastery-SRS-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[32/41] [chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts
+  32) [chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-support-use-a1337-e-without-deleting-attempts-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[33/41] [chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only
+  33) [chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-fourteen-da-602bb-agnostic-stay-planning-only-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[34/41] [chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV
+  34) [chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-local-study-d053c-table-PDF-and-safe-Anki-TSV-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[35/41] [chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only
+  35) [chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-adaptive-di-8c283--A2-and-stores-summary-only-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[36/41] [chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only
+  36) [chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-offline-bra-f6dcc-t-structured-summaries-only-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[37/41] [chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent
+  37) [chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-contextual--a78d9--match-communicative-intent-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-contextual--a78d9--match-communicative-intent-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-contextual--a78d9--match-communicative-intent-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[38/41] [chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow
+  38) [chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-representat-bb919-t-level-horizontal-overflow-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[39/41] [chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery
+  39) [chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-completed-f-c9f54--and-continues-to-discovery-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[40/41] [chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap
+  40) [chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-route-×-fon-064a0-clipping-or-sibling-overlap-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-route-×-fon-064a0-clipping-or-sibling-overlap-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-route-×-fon-064a0-clipping-or-sibling-overlap-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[41/41] [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+  41) [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours 
+
+    Error: browserType.launch: Executable doesn't exist at /home/user/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-review-remi-fe49a-sal-and-respect-quiet-hours-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  41 failed
+    [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations 
+    [chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts 
+    [chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context 
+    [chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion 
+    [chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average 
+    [chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally 
+    [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand 
+    [chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores 
+    [chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace 
+    [chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent 
+    [chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision 
+    [chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions 
+    [chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty 
+    [chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt 
+    [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision 
+    [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted 
+    [chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally 
+    [chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+    [chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap 
+    [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours 

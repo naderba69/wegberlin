@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 review:packet
+> tsx scripts/generate-human-review-packet.ts
+
+sh: 1: tsx: not found
+FAIL review:packet

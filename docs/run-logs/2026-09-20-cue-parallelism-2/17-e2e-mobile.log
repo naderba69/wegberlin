@@ -1,0 +1,21 @@
+
+Running 41 tests using 1 worker
+
+[1/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+[2/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+[3/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+[4/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+[5/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+[6/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+[7/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[8/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+[9/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+[10/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+[11/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+[12/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+[13/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+[14/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+[15/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[16/41] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+STOPPED_BY_AGENT: أُوقف مشروع mobile في الدقيقة 4 من 41 لتفريغ الذاكرة (1,557 من 1,984 ميغابايت مستعمَلة والحِمل 3.2) ولإعادة اختبار بندة واحدة معزولة. لا نتيجة له؛ ليس فشل اختبار.
+خلاصة: مشروع mobile لم يُقَس في هذه الدفعة (أُوقف لتفريغ الموارد)؛ آخر قياس نظيف للحزمتين ‏82/82 عند v138.

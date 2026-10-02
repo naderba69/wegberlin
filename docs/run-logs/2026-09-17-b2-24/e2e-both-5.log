@@ -1,0 +1,90 @@
+
+Running 82 tests using 1 worker
+
+[1/82] [chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+[2/82] [chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+[3/82] [chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+[4/82] [chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+[5/82] [chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+[6/82] [chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+[7/82] [chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[8/82] [chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+[9/82] [chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+[10/82] [chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+[11/82] [chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+[12/82] [chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+[13/82] [chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+[14/82] [chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+[15/82] [chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[16/82] [chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+[17/82] [chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally
+[18/82] [chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI
+[19/82] [chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision
+[20/82] [chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback
+[21/82] [chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback
+[22/82] [chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript
+[23/82] [chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[24/82] [chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile
+[25/82] [chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload
+[26/82] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[27/82] [chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping
+[28/82] [chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence
+[29/82] [chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals
+[30/82] [chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries
+[31/82] [chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS
+[32/82] [chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts
+[33/82] [chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only
+[34/82] [chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV
+[35/82] [chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only
+[36/82] [chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only
+[37/82] [chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent
+[38/82] [chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow
+[39/82] [chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery
+[40/82] [chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap
+[41/82] [chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+[42/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:47:1 › critical pages have no automatically detectable serious WCAG violations
+[43/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:57:1 › library and exam hubs render their completed content contracts
+[44/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:194:1 › bilingual local search ranks German and Arabic results and returns to context
+[45/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:232:1 › visual accessibility preferences preview immediately, persist, reset, and respect system motion
+[46/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:308:1 › P0 exam readiness stays provider-scoped and exposes weak modules instead of one average
+[47/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:354:1 › P0 onboarding captures goals and an explicit device-check skip locally
+[48/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:400:1 › an absolute beginner starts A1 step by step and never receives an isolated writing demand
+[49/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:425:1 › P0 adaptive diagnostic stops at a clear boundary and stores four skill scores
+[50/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:464:1 › P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace
+[51/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:608:1 › optional AI 429 falls back locally once and retry requires fresh consent
+[52/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:618:1 › P0 daily check-in rebalances load and reflection stores tomorrow's decision
+[53/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:717:1 › P2 partial-closure guidance surfaces persist bounded local decisions
+[54/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:732:1 › P1 repeated session errors offer one learner-controlled load reduction without penalty
+[55/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:740:1 › P0 clustered error clinic opens at three occurrences and stores a transfer attempt
+[56/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:774:1 › P0 writing lab enforces plan, draft, self-check, cited feedback, and revision
+[57/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:866:1 › P0 WebGPU model is opt-in, runs ranked follow-up locally, and can be deleted
+[58/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:931:1 › standard pronunciation pack installs explicitly and matches expected German words locally
+[59/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:995:1 › guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI
+[60/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1097:1 › P0 mediation lab enforces source analysis, transfer, self-check, comparison, and revision
+[61/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1130:1 › generated library audio exposes provenance, playback, and Browser TTS fallback
+[62/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1164:1 › generated exam clips play with limits, provenance labels, and TTS fallback
+[63/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1308:1 › shadowing studio uses generated audio, speed controls, and delayed transcript
+[64/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1324:1 › a complete lesson run traverses all 14 stages and persists completion
+[65/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1658:1 › settings exports an encrypted DWNB archive and imports it as an isolated profile
+[66/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1708:1 › a previously loaded library survives a real offline reload
+[67/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+[68/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1871:1 › continuous full-exam mode persists one central clock and blocks task skipping
+[69/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2063:1 › progress and daily coach derive metrics, risks, dates, and streaks from evidence
+[70/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2136:1 › keyboard users can skip navigation, follow lesson focus, hear results, and escape modals
+[71/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2184:1 › Arabic shell and every tested German or technical fragment keep explicit Bidi boundaries
+[72/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2199:1 › high-confidence errors route through prerequisite repair into deduplicated no-mastery SRS
+[73/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2275:1 › support use is logged without penalty and old evidence lowers confidence without deleting attempts
+[74/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2346:1 › fourteen-day contract, quiet hours, and one-skill diagnostic stay planning-only
+[75/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2372:1 › local study exports preview and download ICS, printable PDF, and safe Anki TSV
+[76/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2403:1 › adaptive dictation moves from partial A1 to full A2 and stores summary only
+[77/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2477:1 › offline branching conversations change consequences and persist structured summaries only
+[78/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2519:1 › contextual collocation networks require exploration and match communicative intent
+[79/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2530:1 › representative 320–1920 px viewports avoid document-level horizontal overflow
+[80/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2572:1 › completed four-skill vocabulary progress is terminal, persisted, and continues to discovery
+[81/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2609:1 › route × font-scale × compact-viewport matrix keeps context visible without text clipping or sibling overlap
+[82/82] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:2676:1 › review reminders use due SRS evidence, persist daily dismissal, and respect quiet hours
+  Slow test file: [mobile-chromium] › tests/e2e/critical-flows.spec.ts (9.3m)
+  Slow test file: [chromium] › tests/e2e/critical-flows.spec.ts (7.6m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  82 passed (17.0m)
+EXIT=0

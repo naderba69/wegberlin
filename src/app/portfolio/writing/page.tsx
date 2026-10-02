@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import{WritingPortfolio}from"@/components/writing-portfolio";export const metadata:Metadata={title:"ملف الكتابة"};export default function WritingPortfolioPage(){return <WritingPortfolio/>}

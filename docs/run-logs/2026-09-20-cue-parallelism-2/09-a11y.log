@@ -1,0 +1,6 @@
+npm error Missing script: "accessibility:audit"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: /home/user/.npm/_logs/2026-09-20T07_27_38_753Z-debug-0.log
+a11y=1

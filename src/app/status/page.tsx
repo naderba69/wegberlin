@@ -1,0 +1,1 @@
+import type{Metadata}from"next";import{DeliveryHealthDashboard}from"@/components/delivery-health-dashboard";export const metadata:Metadata={title:"حالة التسليم"};export default function StatusPage(){return <DeliveryHealthDashboard/>}

@@ -1,0 +1,6 @@
+{
+  "//": "Type-checks the archived run-log probes SEPARATELY from the deploy. They import from src, so checking them catches real drift when a content type changes -- but an archived historical log must never be able to fail a production build (a Vercel deploy died on exactly that on 2026-09-22). Run: npm run typecheck:probes",
+  "extends": "./tsconfig.json",
+  "include": ["docs/run-logs/**/*.ts", "src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

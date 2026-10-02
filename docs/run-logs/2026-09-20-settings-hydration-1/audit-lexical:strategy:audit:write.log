@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 lexical:strategy:audit:write
+> tsx scripts/generate-lexical-strategy-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL lexical:strategy:audit:write

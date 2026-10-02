@@ -1,0 +1,153 @@
+"use client";
+
+import { useState } from "react";
+import { ArrowLeft, BriefcaseBusiness, CalendarDays, Check, Clock3, GraduationCap, Headphones, Home, Mic2, Plane, Route, ShieldCheck, SkipForward } from "lucide-react";
+import { useLearning } from "./learning-provider";
+import type { ArabicSupportMode, DeviceCapabilityStatus, DeviceReadiness, ExamProvider, LearnerGoal, LearnerProfile, LearningConcern, PriorGermanExperience, PriorLearningSource } from "@/types/learning";
+import { listeningLibrary } from "@/data/library-registry";
+import { libraryAudioAssetByItemId } from "@/data/library-audio-assets";
+import { ResilientAudioPlayer } from "./resilient-audio-player";
+
+const goalOptions: Array<{ id: LearnerGoal; label: string; detail: string; icon: typeof GraduationCap }> = [
+  { id: "exam", label: "النجاح في B2", detail: "أولوية لصيغة الامتحان وإدارة الوقت", icon: GraduationCap },
+  { id: "work", label: "العمل", detail: "مراسلات واجتماعات ومواقف مهنية", icon: BriefcaseBusiness },
+  { id: "study", label: "الدراسة", detail: "محاضرات وعروض وكتابة أكاديمية عملية", icon: GraduationCap },
+  { id: "daily-life", label: "الحياة اليومية", detail: "السكن والخدمات والمواعيد والتواصل", icon: Home },
+  { id: "settlement", label: "الاستقرار والسفر", detail: "إدارة وتنقل واندماج دون استشارة قانونية", icon: Plane },
+];
+
+const priorSourceOptions:Array<{id:PriorLearningSource;label:string}>=[
+  {id:"school",label:"مدرسة أو جامعة"},{id:"course",label:"دورة مع مدرس"},{id:"book",label:"كتاب"},{id:"app",label:"تطبيق"},{id:"self-study",label:"تعلم ذاتي"},{id:"other",label:"شيء آخر"},
+];
+const concernOptions:Array<{id:LearningConcern;label:string}>=[
+  {id:"speaking",label:"الكلام"},{id:"listening",label:"فهم المسموع"},{id:"writing",label:"الكتابة"},{id:"grammar",label:"القواعد"},{id:"pronunciation",label:"النطق"},{id:"exam",label:"الامتحان"},{id:"time",label:"ضيق الوقت"},{id:"technology",label:"الجهاز أو الإنترنت"},
+];
+
+const sampleAudioItem = listeningLibrary.find((item) => item.id === "lib-l-a1-01")!;
+const sampleAudioAsset = libraryAudioAssetByItemId["lib-l-a1-01"];
+
+const readinessLabels: Record<DeviceCapabilityStatus, string> = {
+  unchecked: "لم يُفحص",
+  ready: "جاهز",
+  unavailable: "غير متاح",
+  "permission-denied": "الإذن مرفوض",
+  skipped: "تم التخطي",
+};
+
+export function OnboardingPanel() {
+  const { update } = useLearning();
+  const [name, setName] = useState("");
+  const [exam, setExam] = useState<ExamProvider>("goethe-b2");
+  const [priorExperience, setPriorExperience] = useState<PriorGermanExperience>("none");
+  const [priorLearningSources,setPriorLearningSources]=useState<PriorLearningSource[]>([]);
+  const [priorCourseOrBookNote,setPriorCourseOrBookNote]=useState("");
+  const [concerns,setConcerns]=useState<LearningConcern[]>([]);
+  const [minutes, setMinutes] = useState<LearnerProfile["dailyMinutes"]>(45);
+  const [targetDate, setTargetDate] = useState("");
+  const [arabicSupport, setArabicSupport] = useState<ArabicSupportMode>("modern-standard-arabic");
+  const [goals, setGoals] = useState<LearnerGoal[]>(["exam"]);
+  const [deviceReadiness, setDeviceReadiness] = useState<DeviceReadiness>({ audio: "unchecked", microphone: "unchecked" });
+  const [checkingDevices, setCheckingDevices] = useState(false);
+  const [deviceMessage, setDeviceMessage] = useState("الفحص اختياري ويمكن تخطيه دون منع إنشاء الخطة.");
+
+  function toggleGoal(goal: LearnerGoal) {
+    setGoals((current) => current.includes(goal) ? current.filter((item) => item !== goal) : [...current, goal]);
+  }
+  function togglePriorSource(source:PriorLearningSource){setPriorLearningSources((current)=>current.includes(source)?current.filter((item)=>item!==source):[...current,source])}
+  function toggleConcern(concern:LearningConcern){setConcerns((current)=>current.includes(concern)?current.filter((item)=>item!==concern):[...current,concern])}
+
+  async function checkDevices() {
+    setCheckingDevices(true);
+    const audio: DeviceCapabilityStatus = document.createElement("audio").canPlayType("audio/mpeg") ? "ready" : "unavailable";
+    let microphone: DeviceCapabilityStatus = "unavailable";
+    try {
+      if (navigator.mediaDevices?.getUserMedia) {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        stream.getTracks().forEach((track) => track.stop());
+        microphone = "ready";
+      }
+    } catch (error) {
+      microphone = error instanceof DOMException && error.name === "NotAllowedError" ? "permission-denied" : "unavailable";
+    }
+    const checkedAt = new Date().toISOString();
+    setDeviceReadiness({ audio, microphone, checkedAt });
+    setDeviceMessage(microphone === "ready"
+      ? "ملفات MP3 والميكروفون متاحان. هذا فحص قدرة تقنية، وليس تقييمًا لجودة السماعات أو التسجيل."
+      : "يمكن متابعة الدراسة والاستماع حتى دون الميكروفون؛ ستبقى مهام التسجيل اختيارية إلى أن يتاح الإذن.");
+    setCheckingDevices(false);
+  }
+
+  function skipDeviceCheck() {
+    setDeviceReadiness({ audio: "skipped", microphone: "skipped", checkedAt: new Date().toISOString() });
+    setDeviceMessage("تم تخطي فحص الجهاز. يمكنك منح إذن الميكروفون لاحقًا عند فتح مهمة تسجيل دون فقدان التقدم.");
+  }
+
+  function start() {
+    if (!name.trim() || goals.length === 0) return;
+    update((state) => ({ ...state, profile: {
+      name: name.trim(), targetExam: exam, targetDate: targetDate || undefined,
+      dailyMinutes: minutes, arabicSupport, currentLevel: "A1", goals, deviceReadiness, priorExperience,
+      onboardingContext:{policyVersion:"prior-experience-context-v1",priorLearningSources,concerns,...(priorCourseOrBookNote.trim()?{priorCourseOrBookNote:priorCourseOrBookNote.trim().slice(0,160)}:{}),evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery"},
+      createdAt: new Date().toISOString(),
+    }}));
+  }
+
+  return (
+    <section className="onboarding-card">
+      <div className="onboarding-copy">
+        <span className="eyebrow"><Route size={15} /> نقطة البداية</span>
+        <h1>لن نعطيك قائمة دروس.<br/><em>سنرسم لك الطريق.</em></h1>
+        <p>أخبرنا بهدفك ووقتك. إن كنت تبدأ من الصفر سنبدأ بأول درس، وإن كانت لديك خبرة نقترح تشخيصًا قصيرًا؛ ثم نبني مهمة يومية تتغير مع أدلتك.</p>
+        <div className="trust-row"><span><ShieldCheck size={16}/> حفظ محلي</span><span><Clock3 size={16}/> خطة حسب وقتك</span><span><CalendarDays size={16}/> هدف امتحاني</span></div>
+      </div>
+      <div className="onboarding-form">
+        <label>كيف نناديك؟<input value={name} onChange={(event) => setName(event.target.value)} placeholder="اكتب اسمك" autoFocus /></label>
+        <fieldset className="onboarding-experience">
+          <legend>ما خبرتك بالألمانية الآن؟</legend>
+          <div>
+            <button type="button" aria-pressed={priorExperience==="none"} className={priorExperience==="none"?"selected":""} onClick={()=>setPriorExperience("none")}><strong>أبدأ من الصفر</strong><small>لا أعرف الألمانية بعد — ابدأ بالحروف والتحية دون اختبار أو كتابة.</small></button>
+            <button type="button" aria-pressed={priorExperience==="some"} className={priorExperience==="some"?"selected":""} onClick={()=>setPriorExperience("some")}><strong>أعرف بعض الأساسيات</strong><small>أفهم كلمات أو درست سابقًا — اقترح تشخيصًا قصيرًا.</small></button>
+            <button type="button" aria-pressed={priorExperience==="unsure"} className={priorExperience==="unsure"?"selected":""} onClick={()=>setPriorExperience("unsure")}><strong>لست متأكدًا</strong><small>دع التشخيص يختار نقطة بداية محافظة.</small></button>
+          </div>
+          <p>{priorExperience==="none"?"سنفتح الدرس A1-01 من البداية. لن نطلب كتابة ألمانية أو اختبار فهم قبل أن تتعلم أولى العبارات.":"بعد إنشاء الخطة يظهر تشخيص متكيف من أربعة أسئلة في كل مستوى ويتوقف مبكرًا عند الحد."}</p>
+        </fieldset>
+        <details className="onboarding-context">
+          <summary><span><strong>خبرتك السابقة وما يقلقك</strong><small>اختياري — يساعدنا على توجيه الخطة، ولا يحدد مستواك.</small></span><b>فتح</b></summary>
+          <div>
+            <fieldset><legend>هل تعلمت سابقًا بإحدى هذه الطرق؟</legend><div className="context-choice-grid">{priorSourceOptions.map((option)=><button type="button" key={option.id} aria-pressed={priorLearningSources.includes(option.id)} className={priorLearningSources.includes(option.id)?"selected":""} onClick={()=>togglePriorSource(option.id)}>{option.label}</button>)}</div></fieldset>
+            <label><span>اسم كتاب أو دورة إن أردت</span><input value={priorCourseOrBookNote} maxLength={160} onChange={(event)=>setPriorCourseOrBookNote(event.target.value)} placeholder="يمكنك الكتابة بالعربية أو تركه فارغًا"/><small>{priorCourseOrBookNote.length}/160 · لن نستنتج مستواك من الاسم.</small></label>
+            <fieldset><legend>ما الذي تخشى أن يعيقك؟ <small>اختر ما ينطبق أو لا تختر شيئًا</small></legend><div className="context-choice-grid concern-grid">{concernOptions.map((option)=><button type="button" key={option.id} aria-pressed={concerns.includes(option.id)} className={concerns.includes(option.id)?"selected":""} onClick={()=>toggleConcern(option.id)}>{option.label}</button>)}</div></fieldset>
+            <p>هذه إجابات تخطيط محلية فقط. لا تمنح مستوى أو إتقانًا، ولا تطلب منك كتابة كلمة ألمانية.</p>
+          </div>
+        </details>
+        <label>الامتحان المستهدف<select value={exam} onChange={(event) => setExam(event.target.value as ExamProvider)}><option value="goethe-b2">Goethe-Zertifikat B2</option><option value="telc-deutsch-b2">telc Deutsch B2</option></select></label>
+        <div className="form-row">
+          <label>وقت الدراسة<select value={minutes} onChange={(event) => setMinutes(Number(event.target.value) as LearnerProfile["dailyMinutes"])}>{[10,20,30,45,60,90].map((value) => <option key={value} value={value}>{value} دقيقة</option>)}</select></label>
+          <label>تاريخ الهدف<input type="date" value={targetDate} onChange={(event) => setTargetDate(event.target.value)} /></label>
+        </div>
+        <label>الدعم العربي<select value={arabicSupport} onChange={(event) => setArabicSupport(event.target.value as ArabicSupportMode)}><option value="modern-standard-arabic">العربية الفصحى</option><option value="tunisian-supported">فصحى مع دعم تونسي</option><option value="minimal-arabic">عربي عند الحاجة فقط</option></select></label>
+        <p className="arabic-support-choice" data-arabic-support={arabicSupport}>{arabicSupport === "tunisian-supported" ? "ستبقى الفصحى المرجع، وتظهر في نقاط الفرق المهمة ملاحظة تونسية قصيرة منفصلة بوضوح." : arabicSupport === "minimal-arabic" ? "ستظهر المساندة العربية عند الحاجة، من دون تغيير الأسئلة الألمانية أو قواعدها." : "ستُعرض الشروح العربية بالفصحى بوصفها المرجع الأساسي."}</p>
+
+        <fieldset className="onboarding-goals">
+          <legend>لماذا تتعلم الألمانية؟ <small>اختر هدفًا واحدًا على الأقل</small></legend>
+          <div>{goalOptions.map((goal) => {
+            const Icon = goal.icon;
+            const selected = goals.includes(goal.id);
+            return <button type="button" key={goal.id} aria-pressed={selected} className={selected ? "selected" : ""} onClick={() => toggleGoal(goal.id)}><Icon size={16}/><span><strong>{goal.label}</strong><small>{goal.detail}</small></span>{selected && <Check size={15}/>}</button>;
+          })}</div>
+          {goals.length === 0 && <p role="alert">اختر هدفًا واحدًا حتى يعرف المدرب سياق مهام الإنتاج.</p>}
+        </fieldset>
+
+        <section className="device-readiness" aria-label="فحص الصوت والميكروفون">
+          <header><div><Headphones size={17}/><span><strong>جاهزية الصوت والتسجيل</strong><small>فحص اختياري قبل بدء الطريق</small></span></div><div><b>الصوت: {readinessLabels[deviceReadiness.audio]}</b><b>الميكروفون: {readinessLabels[deviceReadiness.microphone]}</b></div></header>
+          {sampleAudioAsset && <ResilientAudioPlayer src={sampleAudioAsset.path} transcriptDe={sampleAudioItem.transcriptDe} expectedDurationMs={sampleAudioAsset.durationMs} label="عينة فحص الصوت الألماني" listeningSurface="onboarding" listeningContentId={sampleAudioItem.id}/>}
+          <div className="device-check-actions"><button type="button" onClick={() => void checkDevices()} disabled={checkingDevices}><Mic2 size={15}/>{checkingDevices ? "جارٍ الفحص…" : "افحص الجهاز"}</button><button type="button" onClick={skipDeviceCheck}><SkipForward size={15}/> تخطَّ الفحص</button></div>
+          <p>{deviceMessage}</p>
+        </section>
+
+        <button className="primary-button" onClick={start} disabled={!name.trim() || goals.length === 0}>{priorExperience==="none"?"ابدأ معي من الصفر":"أنشئ خطتي ثم شخّص مستواي"} <ArrowLeft size={18}/></button>
+        <small>لا نحتاج حسابًا. تُحفظ أهدافك ونتيجة فحص الجهاز محليًا، ويمكنك تصديرها أو حذفها متى شئت.</small>
+      </div>
+    </section>
+  );
+}

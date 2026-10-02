@@ -1,0 +1,719 @@
+{
+  "format": "dwnb-practical-context-audit",
+  "version": "practical-context-audit-v1",
+  "generatedAt": "2026-09-08",
+  "ok": true,
+  "counts": {
+    "culturalNotes": 16,
+    "practicalDocuments": 20,
+    "forms": 4,
+    "notices": 16
+  },
+  "issues": [],
+  "culturalRows": [
+    {
+      "id": "culture-a1-address",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-01",
+      "titleDe": "Du oder Sie?",
+      "titleAr": "اختيار المخاطبة",
+      "guidanceAr": "ابدأ بـSie في خدمة أو لقاء رسمي ثم اتبع ما يقترحه الشخص.",
+      "exampleDe": "Wie möchten Sie angesprochen werden?",
+      "scopeAr": "موقف خدمة أو تعارف أول، لا قاعدة لكل علاقة.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a1-01:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a1-time",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-09",
+      "titleDe": "Termin bestätigen",
+      "titleAr": "تأكيد الموعد",
+      "guidanceAr": "أعد اليوم والوقت والمكان لتقليل سوء الفهم.",
+      "exampleDe": "Also: Mittwoch, 18 Uhr, in der Bibliothek.",
+      "scopeAr": "تنظيم عملي لا حكم على ثقافة كاملة.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a1-09:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a1-guest",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-17",
+      "titleDe": "Vorher fragen",
+      "titleAr": "السؤال قبل الزيارة",
+      "guidanceAr": "اسأل عن الوقت وما يلزم إحضاره بدل الافتراض.",
+      "exampleDe": "Soll ich etwas mitbringen?",
+      "scopeAr": "دعوة محددة بين أشخاص.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a1-17:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a1-service",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-24",
+      "titleDe": "Daten schützen",
+      "titleAr": "حماية البيانات",
+      "guidanceAr": "استعمل بيانات تدريبية في النماذج العامة واسأل لماذا يلزم الحقل.",
+      "exampleDe": "Ist dieses Feld notwendig?",
+      "scopeAr": "تدريب خصوصية، لا استشارة قانونية.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a1-24:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a2-neighbors",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-04",
+      "titleDe": "Hilfe konkret anbieten",
+      "titleAr": "عرض مساعدة محددة",
+      "guidanceAr": "حدد نوع المساعدة والوقت واترك إمكانية الرفض.",
+      "exampleDe": "Ich kann am Samstag eine Stunde helfen.",
+      "scopeAr": "سياق جيران، لا افتراض أن الجميع يريد المساعدة.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a2-04:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a2-rules",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-05",
+      "titleDe": "Regel und Grund",
+      "titleAr": "القاعدة وسببها",
+      "guidanceAr": "اشرح القاعدة ومقصدها قبل لوم الشخص.",
+      "exampleDe": "Der Weg muss für Notfälle frei bleiben.",
+      "scopeAr": "نظام مبنى مؤلف داخل الدرس، لا قانون عام.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a2-05:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a2-invitation",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-22",
+      "titleDe": "Eigene Erfahrung markieren",
+      "titleAr": "تحديد التجربة الشخصية",
+      "guidanceAr": "قل في عائلتي أو غالبًا بدل الجميع.",
+      "exampleDe": "In meiner Familie feiern wir klein.",
+      "scopeAr": "تجربة موضوعة لا وصف شعب.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a2-22:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-a2-volunteer",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-23",
+      "titleDe": "Grenzen nennen",
+      "titleAr": "ذكر الحدود",
+      "guidanceAr": "وضح الوقت الذي تستطيع تقديمه ولا تعد بما لا تستطيع.",
+      "exampleDe": "Ich kann zweimal im Monat mithelfen.",
+      "scopeAr": "التزام تطوعي محدد.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "a2-23:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b1-feedback",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-05",
+      "titleDe": "Beobachtung vor Bewertung",
+      "titleAr": "الملاحظة قبل الحكم",
+      "guidanceAr": "صف العبارة والأثر ثم اسأل عن المقصد.",
+      "exampleDe": "Als du mich unterbrochen hast, konnte ich den Punkt nicht beenden.",
+      "scopeAr": "موقف فريق لا سمة قومية.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b1-05:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b1-housing",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-07",
+      "titleDe": "Prioritäten statt Pauschalen",
+      "titleAr": "الأولويات بدل التعميم",
+      "guidanceAr": "اربط السكن بالمرحلة والنقل والتكلفة بدل وصف المدينة أو الريف بأنه الأفضل للجميع.",
+      "exampleDe": "Für meine aktuelle Situation ist die Verbindung wichtig.",
+      "scopeAr": "قرار شخصي مشروط.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b1-07:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b1-advice",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-20",
+      "titleDe": "Erst nachfragen",
+      "titleAr": "اسأل قبل النصيحة",
+      "guidanceAr": "افهم القيود وحدود معرفتك قبل اقتراح حل.",
+      "exampleDe": "Was ist dir dabei besonders wichtig?",
+      "scopeAr": "نصيحة بين أفراد لا حكم مهني.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b1-20:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b1-media",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-18",
+      "titleDe": "Quelle sichtbar machen",
+      "titleAr": "إظهار المصدر",
+      "guidanceAr": "انسب الادعاء وافصل ما تعرفه عما لم تتحقق منه.",
+      "exampleDe": "Laut dem Bericht soll …; geprüft ist das noch nicht.",
+      "scopeAr": "ممارسة تحقق، لا رفض تلقائي للمصدر.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b1-18:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b2-debate",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-02",
+      "titleDe": "Steelman",
+      "titleAr": "عرض أقوى موقف مقابل",
+      "guidanceAr": "لخص الحجة المقابلة واطلب التأكيد قبل الرد.",
+      "exampleDe": "Verstehe ich richtig, dass Ihr Hauptargument … ist?",
+      "scopeAr": "تقنية نقاش لا قاعدة ثقافية.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b2-02:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b2-participation",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-07",
+      "titleDe": "Zugang prüfen",
+      "titleAr": "فحص الوصول",
+      "guidanceAr": "اسأل من لم يستطع المشاركة وما الحاجز بدل إعلان التمثيل الكامل.",
+      "exampleDe": "Welche Gruppen konnten nicht teilnehmen?",
+      "scopeAr": "حالة مشروع محدد.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b2-07:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b2-perspective",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-09",
+      "titleDe": "Keine Kulturschublade",
+      "titleAr": "لا صناديق ثقافية",
+      "guidanceAr": "افصل الملاحظة عن التفسير واذكر عوامل الدور والعلاقة والوقت واللغة.",
+      "exampleDe": "Sie sprach zweimal; der Grund ist noch offen.",
+      "scopeAr": "تحليل موقف واحد لا تشخيص جماعة.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b2-09:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    },
+    {
+      "id": "culture-b2-mediation",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-10",
+      "titleDe": "Handlungsziel zuerst",
+      "titleAr": "الغرض العملي أولًا",
+      "guidanceAr": "انقل ما يجب فعله والشروط والاستثناءات وعدم اليقين.",
+      "exampleDe": "Reicht das Formular bis Montag ein.",
+      "scopeAr": "وساطة نص مؤلف، لا ضمان من جهة حقيقية.",
+      "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
+      "source": {
+        "kind": "project-lesson",
+        "ref": "b2-10:theory",
+        "authoredAt": "2026-09-08",
+        "reviewedAt": "2026-09-08",
+        "reviewStatus": "authored-review-pending"
+      },
+      "evidenceBoundary": "situated-communication-guidance-no-population-claim"
+    }
+  ],
+  "documentRows": [
+    {
+      "id": "doc-a1-form",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-03",
+      "kind": "form",
+      "titleDe": "Anmeldeformular",
+      "titleAr": "استمارة تسجيل",
+      "artifactDe": "Vorname: ___ | Nachname: ___ | E-Mail: ___",
+      "instructionDe": "Füllen Sie die Übungsfelder aus.",
+      "instructionAr": "املأ حقولًا تدريبية.",
+      "requiredActionsAr": [
+        "فرق الاسم واللقب",
+        "راجع البريد والرقم"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a1-03:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a1-appointment",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-09",
+      "kind": "appointment-notice",
+      "titleDe": "Terminbestätigung",
+      "titleAr": "تأكيد موعد",
+      "artifactDe": "Mittwoch, 18:00 Uhr, Raum 2",
+      "instructionDe": "Bestätigen oder verschieben Sie den Termin.",
+      "instructionAr": "أكد الموعد أو اقترح بديلًا.",
+      "requiredActionsAr": [
+        "اليوم والساعة",
+        "المكان والرد"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a1-09:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a1-receipt",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-11",
+      "kind": "service-notice",
+      "titleDe": "Kassenbon",
+      "titleAr": "إيصال",
+      "artifactDe": "2 Brote · 5,80 € | Summe 5,80 €",
+      "instructionDe": "Prüfen Sie Menge und Preis.",
+      "instructionAr": "راجع الكمية والسعر.",
+      "requiredActionsAr": [
+        "الكمية",
+        "المجموع"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a1-11:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a1-flat",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-15",
+      "kind": "service-notice",
+      "titleDe": "Wohnungsanzeige",
+      "titleAr": "إعلان سكن",
+      "artifactDe": "2 Zimmer · 680 € warm · Besichtigung Freitag",
+      "instructionDe": "Notieren Sie drei Rückfragen.",
+      "instructionAr": "اكتب ثلاثة أسئلة.",
+      "requiredActionsAr": [
+        "السعر",
+        "المعاينة"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a1-15:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a1-service",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A1",
+      "lessonId": "a1-24",
+      "kind": "form",
+      "titleDe": "Serviceformular",
+      "titleAr": "نموذج خدمة",
+      "artifactDe": "Kundennummer: ___ | Anliegen: ___",
+      "instructionDe": "Fragen Sie nach unbekannten Feldern.",
+      "instructionAr": "اسأل عن الحقول المجهولة.",
+      "requiredActionsAr": [
+        "رقم تدريبي",
+        "سبب الطلب"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a1-24:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a2-house",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-05",
+      "kind": "service-notice",
+      "titleDe": "Hausordnung",
+      "titleAr": "نظام المبنى",
+      "artifactDe": "Ruhezeit 22–7 Uhr. Fahrräder in den Keller.",
+      "instructionDe": "Erklären Sie Regel und Grund.",
+      "instructionAr": "اشرح القاعدة وسببها.",
+      "requiredActionsAr": [
+        "القاعدة",
+        "السبب"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a2-05:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a2-job",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-08",
+      "kind": "workplace-message",
+      "titleDe": "Bewerbungsanforderungen",
+      "titleAr": "متطلبات تقديم",
+      "artifactDe": "Lebenslauf + kurze Nachricht bis Freitag",
+      "instructionDe": "Ordnen Sie Anforderung und eigenen Beleg.",
+      "instructionAr": "طابق المطلوب بدليلك.",
+      "requiredActionsAr": [
+        "المرفقات",
+        "الموعد"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a2-08:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a2-phone",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-09",
+      "kind": "workplace-message",
+      "titleDe": "Telefonnotiz",
+      "titleAr": "ملاحظة هاتف",
+      "artifactDe": "Anruf von Frau Klein · Rückruf bis 15 Uhr",
+      "instructionDe": "Leiten Sie die Nachricht vollständig weiter.",
+      "instructionAr": "انقل الملاحظة كاملة.",
+      "requiredActionsAr": [
+        "المتصل",
+        "طلب الرد"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a2-09:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a2-booking",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-11",
+      "kind": "appointment-notice",
+      "titleDe": "Buchungsbestätigung",
+      "titleAr": "تأكيد حجز",
+      "artifactDe": "Anreise 12. Mai · 2 Nächte · Frühstück inklusive",
+      "instructionDe": "Prüfen Sie die Buchungsdaten.",
+      "instructionAr": "راجع بيانات الحجز.",
+      "requiredActionsAr": [
+        "التاريخ",
+        "الخدمات"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a2-11:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-a2-sick",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "A2",
+      "lessonId": "a2-14",
+      "kind": "workplace-message",
+      "titleDe": "Krankmeldung",
+      "titleAr": "بلاغ غياب",
+      "artifactDe": "Ich kann heute nicht kommen. Übergabe: Datei im Teamordner.",
+      "instructionDe": "Melden Sie Abwesenheit und Übergabe.",
+      "instructionAr": "أبلغ الغياب والتسليم.",
+      "requiredActionsAr": [
+        "الغياب",
+        "التسليم"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "a2-14:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b1-board",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-04",
+      "kind": "workplace-message",
+      "titleDe": "Aufgabenboard",
+      "titleAr": "لوحة مهام",
+      "artifactDe": "Freigabe: Nora · Termin: Freitag · Status: offen",
+      "instructionDe": "Klären Sie Rolle, Frist und Ergebnis.",
+      "instructionAr": "حدد المسؤول والموعد والنتيجة.",
+      "requiredActionsAr": [
+        "المالك",
+        "الحالة"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b1-04:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b1-defect",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-08",
+      "kind": "service-notice",
+      "titleDe": "Mängelmeldung",
+      "titleAr": "بلاغ عيب",
+      "artifactDe": "Heizung seit Montag kalt · Foto vorhanden",
+      "instructionDe": "Dokumentieren Sie Beobachtung und Bitte.",
+      "instructionAr": "وثق الملاحظة والطلب.",
+      "requiredActionsAr": [
+        "الوصف",
+        "طلب الإصلاح"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b1-08:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b1-project",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-12",
+      "kind": "form",
+      "titleDe": "Projektsteckbrief",
+      "titleAr": "بطاقة مشروع",
+      "artifactDe": "Ziel: ___ | Indikator: ___ | Risiko: ___",
+      "instructionDe": "Trennen Sie Ziel, Messung und Risiko.",
+      "instructionAr": "افصل الهدف والقياس والخطر.",
+      "requiredActionsAr": [
+        "الهدف",
+        "المؤشر"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b1-12:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b1-course",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-14",
+      "kind": "service-notice",
+      "titleDe": "Kursinformation",
+      "titleAr": "معلومة دورة",
+      "artifactDe": "Umfang 80 Stunden · Anerkennung bitte extern prüfen",
+      "instructionDe": "Markieren Sie offene Prüfungen.",
+      "instructionAr": "حدد ما يحتاج تحققًا.",
+      "requiredActionsAr": [
+        "الحمل",
+        "الاعتراف"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b1-14:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b1-correction",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B1",
+      "lessonId": "b1-18",
+      "kind": "service-notice",
+      "titleDe": "Korrekturhinweis",
+      "titleAr": "إشعار تصحيح",
+      "artifactDe": "Korrektur 14:20 Uhr: Zahl 1.600 statt 1.060",
+      "instructionDe": "Erklären Sie Änderung und Grund.",
+      "instructionAr": "اشرح التغيير وسببه.",
+      "requiredActionsAr": [
+        "الوقت",
+        "قبل/بعد"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b1-18:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b2-policy",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-03",
+      "kind": "workplace-message",
+      "titleDe": "Pilot-Memo",
+      "titleAr": "مذكرة تجربة",
+      "artifactDe": "Pilot 8 Wochen · drei Kriterien · Entscheidung danach",
+      "instructionDe": "Bewerten Sie Bedingungen und Verteilung.",
+      "instructionAr": "قيّم الشروط والتوزيع.",
+      "requiredActionsAr": [
+        "المدة",
+        "معيار القرار"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b2-03:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b2-option",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-04",
+      "kind": "workplace-message",
+      "titleDe": "Entscheidungsvorlage",
+      "titleAr": "مذكرة قرار",
+      "artifactDe": "Option A: Kern Montag | Option B: reduziert Montag",
+      "instructionDe": "Vergleichen Sie Wirkung und Risiko.",
+      "instructionAr": "قارن الأثر والخطر.",
+      "requiredActionsAr": [
+        "الخياران",
+        "التوصية"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b2-04:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b2-data",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-05",
+      "kind": "service-notice",
+      "titleDe": "Datenhinweis",
+      "titleAr": "ملاحظة بيانات",
+      "artifactDe": "62 % von 400 Befragten · keine Vergleichsgruppe",
+      "instructionDe": "Begrenzen Sie die Aussage.",
+      "instructionAr": "قيد الاستنتاج.",
+      "requiredActionsAr": [
+        "العينة",
+        "الحد"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b2-05:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b2-invite",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-07",
+      "kind": "form",
+      "titleDe": "Beteiligungseinladung",
+      "titleAr": "دعوة مشاركة",
+      "artifactDe": "Termin A/B · Telefon möglich · Kinderbetreuung",
+      "instructionDe": "Prüfen Sie Zugang und Einfluss.",
+      "instructionAr": "افحص الوصول والتأثير.",
+      "requiredActionsAr": [
+        "قنوات المشاركة",
+        "حد القرار"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b2-07:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    },
+    {
+      "id": "doc-b2-media",
+      "policyVersion": "practical-context-registry-v1",
+      "level": "B2",
+      "lessonId": "b2-08",
+      "kind": "service-notice",
+      "titleDe": "Transparente Korrektur",
+      "titleAr": "تصحيح شفاف",
+      "artifactDe": "Aktualisiert 16:10 Uhr · Grund: falscher Bildkontext",
+      "instructionDe": "Dokumentieren Sie Beleg und Unsicherheit.",
+      "instructionAr": "وثق الدليل وعدم اليقين.",
+      "requiredActionsAr": [
+        "التوقيت",
+        "سبب التصحيح"
+      ],
+      "privacyAr": "استخدم بيانات تدريبية غير حقيقية ولا ترسل الوثيقة إلى جهة من داخل المنصة.",
+      "sourceRef": "b2-08:published-project-content",
+      "evidenceBoundary": "document-literacy-training-no-legal-or-official-validity"
+    }
+  ],
+  "boundary": "internal-dated-situated-guidance-pending-independent-cultural-review",
+  "contentSha256": "c935b0f4ef8bfad8d966e8bea002e8d9f9c87f4fbeeaad233bc4af3d3a00ad4d"
+}

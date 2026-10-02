@@ -1,0 +1,12 @@
+# environment capture 2026-09-20T20:5x (still swapless)
+               total        used        free      shared  buff/cache   available
+Mem:            1984         784         797         210         779        1200
+Swap:              0           0           0
+--- swapon attempt ---
+swapon: cannot open /home/user/.swapfile: No such file or directory
+--- /proc/swaps ---
+Filename				Type		Size		Used		Priority
+--- recipe applied ---
+build #1 -> Compiled successfully (27.9s) -> stalled at "Running TypeScript" 6:43 with 17MB free -> killed by PID (3075)
+warm tsc standalone AFTER .next/types: 24.5s exit 0, .tsbuildinfo 246523 bytes
+build #2 NODE_OPTIONS=--max-old-space-size=900: BUILD_EXIT=0 in 71s, 321 pages, SSG 9.8s

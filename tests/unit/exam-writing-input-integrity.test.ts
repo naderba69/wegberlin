@@ -1,0 +1,2 @@
+import{readFileSync}from"node:fs";import{describe,expect,it}from"vitest";
+describe("P2 exam-like writing input integrity",()=>{it("turns off browser spelling, autocorrect, and capitalization in independent and exam writing",()=>{for(const file of["src/components/writing-lab.tsx","src/components/targeted-writing-simulation.tsx"]){const source=readFileSync(file,"utf8");expect(source).toContain('spellCheck={false}');expect(source).toContain('autoCorrect="off"');expect(source).toContain('autoCapitalize="off"')}})});

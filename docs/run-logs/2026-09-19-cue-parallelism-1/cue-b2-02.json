@@ -1,0 +1,82 @@
+{
+  "b2-02": {
+    "b2-02-e1": [
+      "Sie sind offensichtlich gegen jeden technischen Fortschritt in der Firma.",
+      "Ihr Argument ist unlogisch, deshalb brauchen wir darauf gar nicht einzugehen oder zu antworten.",
+      "Wenn ich Sie richtig verstehe, befürchten Sie unbezahlte Mehrarbeit und höheren Druck.",
+      "Sie möchten am liebsten alles verbieten, was mit Veränderung zu tun hat."
+    ],
+    "b2-02-e6": [
+      "Du verstehst die ökonomischen Zusammenhänge hier offenbar überhaupt nicht.",
+      "Selbst wenn der Pilot produktiv war, wurden Überstunden nicht erfasst.",
+      "Dieses Argument ist Unsinn und verdient keine Antwort.",
+      "Ich habe in diesem Feld mehr Erfahrung als Sie beide."
+    ],
+    "b2-02-rq1": [
+      "Sie warnen vor Verkürzung ohne Personal- und Belastungsanalyse.",
+      "Sie lehnen jede Veränderung am Arbeitszeitgesetz rundweg ab.",
+      "Sie interessiert am Ende nur das Geld und sonst gar nichts.",
+      "Sie bestreiten sämtliche Daten aus den bisherigen Pilotprojekten."
+    ],
+    "b2-02-rq2": [
+      "Weil Überstunden, Gesundheit und Gruppenverteilung fehlen können.",
+      "Weil Produktivität sich grundsätzlich überhaupt nicht messen lässt.",
+      "Weil weniger Arbeitstage nachweislich immer und überall scheitern.",
+      "Weil ausschließlich Kliniken und die Pflege hier zählen."
+    ],
+    "b2-02-rq3": [
+      "Ein sofortiger Standard für alle Branchen ohne jede Prüfung",
+      "Branchenspezifische Tests mit transparenten Kriterien",
+      "Keine Veränderung an der aktuellen Arbeitszeitregel",
+      "Ein Ende aller Tests in den meisten Branchen"
+    ],
+    "b2-02-lq1": [
+      "A lehnt neue Technik grundsätzlich ab.",
+      "A möchte alle von Anfang an ausschließen.",
+      "Der Arbeitsweg spielt für die Debatte keine Rolle.",
+      "Es geht um Interaktion, nicht nur um den Raum."
+    ],
+    "b2-02-lq2": [
+      "Online-Treffen sind grundsätzlich immer und überall besser.",
+      "Präsenz im Büro hat überhaupt keine Vorteile für irgendwen.",
+      "Online-Phasen können Zugang für bestimmte Gruppen ermöglichen.",
+      "Ohne schriftliche Notizen ist die gesamte Interaktion völlig unnötig."
+    ],
+    "b2-02-lq3": [
+      "Vollständig online arbeiten",
+      "Ziel einer guten Interaktion",
+      "Kein hybrides Modell überhaupt",
+      "Technik ist für uns unwichtig"
+    ],
+    "b2-02-m1": [
+      "Sie sind offenbar gegen jeden Fortschritt in unserem Unternehmen.",
+      "Ihr Argument ist dumm und verdient keine Antwort.",
+      "Sie befürchten unbezahlte Mehrarbeit und höheren Druck.",
+      "Sie lehnen jede zusätzliche Arbeit rundweg ab."
+    ],
+    "b2-02-m2": [
+      "Selbst wenn die Leistung steigt, prüfen wir die Belastung.",
+      "Selbst wenn steigt die Leistung, wir prüfen die Belastung.",
+      "Selbst wenn die Leistung steigt, wir die Belastung prüfen.",
+      "Selbst die Leistung wenn steigt, prüfen wir die Belastung."
+    ],
+    "b2-02-m3": [
+      "Büros flexibel sind, wohingegen Kliniken Schichten brauchen.",
+      "Wohingegen Kliniken Schichten brauchen, Büros sind flexibel.",
+      "Büros sind flexibel, wohingegen Kliniken Schichten brauchen.",
+      "Büros sind flexibel, wohingegen brauchen Kliniken Schichten."
+    ],
+    "b2-02-m4": [
+      "Der Einwand ist völlig lächerlich und wird nicht beachtet.",
+      "Es zählen hier nur meine eigenen Daten aus dem letzten Projekt.",
+      "Diesen Einwand ignoriere ich einfach und sage gar nichts dazu.",
+      "Der Einwand ist berechtigt; allerdings fehlt ein Belastungsmaß."
+    ],
+    "b2-02-m5": [
+      "Den anderen so lange unterbrechen, bis er schweigt",
+      "Mit der meisten Stimme gewinnen",
+      "Gemeinsamkeit und offene Frage klären",
+      "Die Position des Gegners verzerren"
+    ]
+  }
+}

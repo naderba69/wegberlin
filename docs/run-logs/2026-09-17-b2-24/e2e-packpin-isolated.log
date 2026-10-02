@@ -1,0 +1,80 @@
+
+Running 2 tests using 1 worker
+
+[1/2] [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  1) [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.offline-pack-card')
+    Expected substring: "314 مسارًا"
+    Received string:    "حزمة الدراسة دون إنترنتتنزيل اختياري كامل؛ لا يفرض استهلاك الشبكة على المتعلم.اكتمل تثبيت A1–B2 komplett مع الصوت الاختياري.318 مسارًا · 378 موردًا · 42.3 MB · 275 مورد صوت · 17‏/09‏/2026، 10:06 صA1دروس ووحدات وبوابة A1A2دروس ووحدات وبوابة A2B1دروس ووحدات وبوابة B1B2 + PrüfungB2 وكل تدريبات Goethe وtelcA1–B2 komplettكل المستويات والامتحاناتكل مستوى حزمة مستقلة مع صفحات المنصة المشتركة. حزمة B2 تشمل تدريبات Goethe وtelc المنفصلة، بينما الحزمة الكاملة تضم 84 درسًا و306 مسارات. لا تشمل أي حزمة مفتاح AI أو التسجيلات الشخصية.قبل التنزيل · A1–B2 komplett318 مسارًا · 5.2 MB97 ملف Next فريد · Gzip مبني مسبقًا · 8894072766a2تضمين صوت A1–B2 komplett اختياريًا272 ملفًا · 21.6 MB · Ogg Opus مضغوطإجمالي التنزيل المتوقع26.8 MBGzip للصفحات وNext + بايتات الصوت المحدد الدقيقة. قد يختلف نقل CDN حسب Brotli والرؤوس.الحجم المثبت الفعلي42.3 MB275 موردًا صوتيًا مثبتًاVor dem Update vergleichenمقارنة الحزمة قبل التحديثنسخة المنهج في الحزمة القديمة غير مسجلة؛ تعامل معها كتحديث منهج وراجع النطاق قبل الاستبدال.المنهج غير مسجل → dwnb-a1-b2-2026.09-v1المسارات 318 → 318 (+0)مقارنة Metadata فقط؛ ليست Diff دلالية للمحتوى ولا تثبت الحزمة تلقائيًا.تحديث A1–B2 komplett وإضافة الصوت حذف صوت الحزمة فقط ارجع لآخر حزمة سليمة حذف الحزمةاستخدام هذا الموقع حاليًا: 107.2 MB. تقدمك محفوظ منفصلًا في IndexedDB."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.offline-pack-card')
+        14 × locator resolved to <section class="settings-card offline-pack-card">…</section>
+           - unexpected value "حزمة الدراسة دون إنترنتتنزيل اختياري كامل؛ لا يفرض استهلاك الشبكة على المتعلم.اكتمل تثبيت A1–B2 komplett مع الصوت الاختياري.318 مسارًا · 378 موردًا · 42.3 MB · 275 مورد صوت · 17‏/09‏/2026، 10:06 صA1دروس ووحدات وبوابة A1A2دروس ووحدات وبوابة A2B1دروس ووحدات وبوابة B1B2 + PrüfungB2 وكل تدريبات Goethe وtelcA1–B2 komplettكل المستويات والامتحاناتكل مستوى حزمة مستقلة مع صفحات المنصة المشتركة. حزمة B2 تشمل تدريبات Goethe وtelc المنفصلة، بينما الحزمة الكاملة تضم 84 درسًا و306 مسارات. لا تشمل أي حزمة مفتاح AI أو التسجيلات الشخصية.قبل التنزيل · A1–B2 komplett318 مسارًا · 5.2 MB97 ملف Next فريد · Gzip مبني مسبقًا · 8894072766a2تضمين صوت A1–B2 komplett اختياريًا272 ملفًا · 21.6 MB · Ogg Opus مضغوطإجمالي التنزيل المتوقع26.8 MBGzip للصفحات وNext + بايتات الصوت المحدد الدقيقة. قد يختلف نقل CDN حسب Brotli والرؤوس.الحجم المثبت الفعلي42.3 MB275 موردًا صوتيًا مثبتًاVor dem Update vergleichenمقارنة الحزمة قبل التحديثنسخة المنهج في الحزمة القديمة غير مسجلة؛ تعامل معها كتحديث منهج وراجع النطاق قبل الاستبدال.المنهج غير مسجل → dwnb-a1-b2-2026.09-v1المسارات 318 → 318 (+0)مقارنة Metadata فقط؛ ليست Diff دلالية للمحتوى ولا تثبت الحزمة تلقائيًا.تحديث A1–B2 komplett وإضافة الصوت حذف صوت الحزمة فقط ارجع لآخر حزمة سليمة حذف الحزمةاستخدام هذا الموقع حاليًا: 107.2 MB. تقدمك محفوظ منفصلًا في IndexedDB."
+
+
+      1760 |   await downloadButton.click();
+      1761 |   await expect(packCard.getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)).toBeVisible({ timeout: 360_000 });
+    > 1762 |   await expect(packCard).toContainText("314 مسارًا");
+           |                          ^
+      1763 |   const todayReadiness=await page.evaluate(async()=>{const worker=navigator.serviceWorker.controller;if(!worker)throw new Error("Service Worker must control the settings page");return new Promise<{type:string;missingRoutes:string[];missingAudioAssets:string[]}>((resolve,reject)=>{const channel=new MessageChannel();const timeout=setTimeout(()=>reject(new Error("readiness timeout")),10_000);channel.port1.onmessage=(event)=>{clearTimeout(timeout);resolve(event.data)};worker.postMessage({type:"DWNB_TODAY_READINESS_CHECK",policyVersion:"today-session-offline-readiness-v1",routes:["/today","/lernen/a1-01","/practice","/speaking"],audioAssets:["/audio/lessons/a1-01.mp3"]},[channel.port2])})});
+      1764 |   expect(todayReadiness).toMatchObject({type:"DWNB_TODAY_READINESS_RESULT",missingRoutes:[],missingAudioAssets:[]});
+      1765 |
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:1762:26
+
+    Error Context: test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[2/2] [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline
+  2) [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+    Expected: visible
+    Timeout: 360000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 360000ms
+      - waiting for locator('.offline-pack-card').getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)
+
+
+      1759 |   await expect(downloadButton).toBeEnabled({ timeout: 30_000 });
+      1760 |   await downloadButton.click();
+    > 1761 |   await expect(packCard.getByText(/اكتمل تثبيت A1–B2 komplett مع الصوت/)).toBeVisible({ timeout: 360_000 });
+           |                                                                           ^
+      1762 |   await expect(packCard).toContainText("314 مسارًا");
+      1763 |   const todayReadiness=await page.evaluate(async()=>{const worker=navigator.serviceWorker.controller;if(!worker)throw new Error("Service Worker must control the settings page");return new Promise<{type:string;missingRoutes:string[];missingAudioAssets:string[]}>((resolve,reject)=>{const channel=new MessageChannel();const timeout=setTimeout(()=>reject(new Error("readiness timeout")),10_000);channel.port1.onmessage=(event)=>{clearTimeout(timeout);resolve(event.data)};worker.postMessage({type:"DWNB_TODAY_READINESS_CHECK",policyVersion:"today-session-offline-readiness-v1",routes:["/today","/lernen/a1-01","/practice","/speaking"],audioAssets:["/audio/lessons/a1-01.mp3"]},[channel.port2])})});
+      1764 |   expect(todayReadiness).toMatchObject({type:"DWNB_TODAY_READINESS_RESULT",missingRoutes:[],missingAudioAssets:[]});
+        at /home/user/der-weg-nach-berlin/tests/e2e/critical-flows.spec.ts:1761:75
+
+    Error Context: test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/critical-flows-the-optiona-b61fe-sons-and-exam-tasks-offline-mobile-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  Slow test file: [mobile-chromium] › tests/e2e/critical-flows.spec.ts (6.2m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  2 failed
+    [chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 
+    [mobile-chromium] › tests/e2e/critical-flows.spec.ts:1733:1 › the optional full content pack opens unvisited lessons and exam tasks offline 

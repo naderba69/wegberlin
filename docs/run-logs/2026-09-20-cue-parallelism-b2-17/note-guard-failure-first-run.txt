@@ -1,0 +1,11 @@
+ملاحظة: هذا نصّ فشل التقط من تشغيل الحارس عند إضافة `b2-17` إلى `PARALLELISED` (قبل إصلاح `b2-17-m2`)؛
+لم يُعَد توليده لأن الإصلاح مطبَّق، وهو مسجّل هنا بدل سجلّ تشغيل كامل حتى لا يُدَّعى أنه قياس مستقل.
+
+$ ./node_modules/.bin/vitest run tests/unit/mcq-option-parallelism.test.ts
+     × b2-17 holds the design rule on every scored item 7ms
+AssertionError: b2-17:b2-17-m2 key is the unique shortest (12/13/13/18): expected true to be false
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 passed (15)
+
+المسار: مُرِّر الإصلاح عبر `scripts/cue-batch.py` بملف عناصر من سطر واحد (b2-17-m2-items.jsonl) ثم
+`scripts/parallelise-options.py --batch b2-17-m2-batch.json --write`؛ بعدها مرّ الحارس 15/15 (انظر guard-test.log).

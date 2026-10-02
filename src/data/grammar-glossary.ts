@@ -1,0 +1,29 @@
+import type{CEFRLevel}from"@/types/learning";
+export const GRAMMAR_GLOSSARY_POLICY="bilingual-grammar-glossary-v1" as const;
+export type GrammarGlossaryEntry={id:string;level:CEFRLevel;termDe:string;termAr:string;definitionAr:string;exampleDe:string;exampleAr:string};
+export const grammarGlossary:GrammarGlossaryEntry[]=[
+{id:"artikel",level:"A1",termDe:"Artikel",termAr:"أداة الاسم",definitionAr:"كلمة ترافق الاسم وتبين جنسه وحالته، مثل der أو die أو das.",exampleDe:"der Kurs · die Schule · das Buch",exampleAr:"الدورة · المدرسة · الكتاب"},
+{id:"nomen",level:"A1",termDe:"Nomen",termAr:"اسم",definitionAr:"كلمة تدل على شخص أو شيء أو مكان أو فكرة، وتبدأ بحرف كبير في الألمانية.",exampleDe:"Berlin ist eine Stadt.",exampleAr:"برلين مدينة."},
+{id:"verb",level:"A1",termDe:"Verb",termAr:"فعل",definitionAr:"كلمة تصف فعلًا أو حالة، وتتغير غالبًا حسب الفاعل والزمن.",exampleDe:"Ich lerne Deutsch.",exampleAr:"أنا أتعلم الألمانية."},
+{id:"subjekt",level:"A1",termDe:"Subjekt",termAr:"فاعل الجملة",definitionAr:"الشخص أو الشيء الذي يقوم بالفعل أو تُنسب إليه الحالة.",exampleDe:"Nora wohnt in Berlin.",exampleAr:"نورا تسكن في برلين."},
+{id:"praedikat",level:"A1",termDe:"Prädikat",termAr:"الفعل المصرف",definitionAr:"الجزء الفعلي المركزي في الجملة؛ يأتي غالبًا في الموقع الثاني في الجملة الرئيسية.",exampleDe:"Heute arbeitet Sami.",exampleAr:"اليوم يعمل سامي."},
+{id:"fragewort",level:"A1",termDe:"Fragewort",termAr:"أداة سؤال",definitionAr:"كلمة تبدأ سؤال معلومات، مثل wie أو wo أو wann أو warum.",exampleDe:"Wo wohnen Sie?",exampleAr:"أين تسكن حضرتك؟"},
+{id:"akkusativ",level:"A2",termDe:"Akkusativ",termAr:"حالة المفعول المباشر",definitionAr:"حالة تُستعمل غالبًا للشيء الذي يقع عليه الفعل مباشرة، وبعد حروف جر محددة.",exampleDe:"Ich kaufe einen Tisch.",exampleAr:"أشتري طاولة."},
+{id:"dativ",level:"A2",termDe:"Dativ",termAr:"حالة المفعول غير المباشر",definitionAr:"حالة تظهر مع بعض الأفعال وحروف الجر، وغالبًا تجيب عن لمن أو مع من.",exampleDe:"Ich fahre mit dem Bus.",exampleAr:"أذهب بالحافلة."},
+{id:"modalverb",level:"A2",termDe:"Modalverb",termAr:"فعل ناقص مساعد",definitionAr:"فعل مثل können أو müssen يغير معنى الفعل الآخر ويدفعه إلى نهاية الجملة بصيغة المصدر.",exampleDe:"Ich muss heute arbeiten.",exampleAr:"يجب أن أعمل اليوم."},
+{id:"trennbares-verb",level:"A2",termDe:"trennbares Verb",termAr:"فعل قابل للانفصال",definitionAr:"فعل ينفصل جزؤه الأول في الجملة الرئيسية ويذهب إلى النهاية.",exampleDe:"Der Kurs fängt um neun Uhr an.",exampleAr:"تبدأ الدورة في التاسعة."},
+{id:"perfekt",level:"A2",termDe:"Perfekt",termAr:"الماضي المركب",definitionAr:"صيغة شائعة للكلام عن الماضي باستعمال haben أو sein مع Partizip II.",exampleDe:"Ich bin nach Berlin gefahren.",exampleAr:"ذهبت إلى برلين."},
+{id:"nebensatz",level:"A2",termDe:"Nebensatz",termAr:"جملة فرعية",definitionAr:"جملة تعتمد على جملة أخرى؛ مع روابط مثل weil ينتقل الفعل المصرف عادةً إلى النهاية.",exampleDe:"Ich bleibe zu Hause, weil ich krank bin.",exampleAr:"أبقى في المنزل لأنني مريض."},
+{id:"relativsatz",level:"B1",termDe:"Relativsatz",termAr:"جملة موصولة",definitionAr:"جملة تضيف معلومات عن اسم سابق وتبدأ غالبًا بضمير موصول.",exampleDe:"Das ist der Kurs, den ich besuche.",exampleAr:"هذه هي الدورة التي أحضرها."},
+{id:"passiv",level:"B1",termDe:"Passiv",termAr:"المبني للمجهول",definitionAr:"صيغة تركز على الحدث أو النتيجة بدل الشخص الذي يقوم بالفعل.",exampleDe:"Die Straße wird repariert.",exampleAr:"يتم إصلاح الطريق."},
+{id:"konjunktiv-zwei",level:"B1",termDe:"Konjunktiv II",termAr:"صيغة الافتراض والتهذيب",definitionAr:"تستعمل للرغبات والاحتمالات والطلبات المهذبة والمواقف غير الواقعية.",exampleDe:"Ich würde gern einen Termin vereinbaren.",exampleAr:"أود تحديد موعد."},
+{id:"praeteritum",level:"B1",termDe:"Präteritum",termAr:"الماضي البسيط",definitionAr:"صيغة ماضٍ تكثر في الكتابة، وتشيع شفهيًا مع sein وhaben والأفعال الناقصة.",exampleDe:"Früher wohnte ich in Tunis.",exampleAr:"كنت أسكن سابقًا في تونس."},
+{id:"genitiv",level:"B1",termDe:"Genitiv",termAr:"حالة الإضافة",definitionAr:"حالة تبين الملكية أو العلاقة، وتظهر أيضًا بعد بعض حروف الجر.",exampleDe:"Das ist die Tür des Hauses.",exampleAr:"هذا باب المنزل."},
+{id:"infinitiv-mit-zu",level:"B1",termDe:"Infinitiv mit zu",termAr:"المصدر مع zu",definitionAr:"تركيب يربط فعلًا بصيغة المصدر بفكرة أو خطة أو غرض ضمن شروط محددة.",exampleDe:"Ich versuche, früher zu kommen.",exampleAr:"أحاول أن آتي أبكر."},
+{id:"nominalisierung",level:"B2",termDe:"Nominalisierung",termAr:"تحويل الفعل أو الصفة إلى اسم",definitionAr:"أسلوب يحول حدثًا أو صفة إلى اسم، ويكثر في اللغة الرسمية والمكتوبة.",exampleDe:"Die Anmeldung ist online möglich.",exampleAr:"التسجيل ممكن عبر الإنترنت."},
+{id:"partizipialattribut",level:"B2",termDe:"Partizipialattribut",termAr:"نعت بصيغة اسم المفعول أو الفاعل",definitionAr:"تركيب مختصر يصف اسمًا بواسطة Partizip I أو Partizip II.",exampleDe:"die gestern veröffentlichte Meldung",exampleAr:"الرسالة المنشورة أمس"},
+{id:"funktionsverbgefuege",level:"B2",termDe:"Funktionsverbgefüge",termAr:"تركيب اسمي فعلي ثابت",definitionAr:"اسم مع فعل عام يؤديان معًا معنى فعل أدق، ويشيع في اللغة الرسمية.",exampleDe:"eine Entscheidung treffen",exampleAr:"يتخذ قرارًا"},
+{id:"indirekte-rede",level:"B2",termDe:"indirekte Rede",termAr:"الكلام المنقول",definitionAr:"طريقة لنقل كلام شخص آخر دون اقتباسه حرفيًا، وقد تستعمل Konjunktiv I.",exampleDe:"Sie sagt, der Termin sei verschoben.",exampleAr:"تقول إن الموعد قد أُجل."},
+{id:"konnektor",level:"B2",termDe:"Konnektor",termAr:"أداة ربط",definitionAr:"كلمة أو تركيب يوضح العلاقة بين الأفكار، مثل السبب أو النتيجة أو التناقض.",exampleDe:"Obwohl es regnet, gehen wir spazieren.",exampleAr:"مع أن المطر يهطل، نخرج للمشي."},
+{id:"satzklammer",level:"B2",termDe:"Satzklammer",termAr:"إطار الجملة الفعلي",definitionAr:"جزآن من الفعل يحيطان بعناصر وسط الجملة، مثل الفعل الناقص والمصدر.",exampleDe:"Wir müssen den Antrag heute abgeben.",exampleAr:"يجب أن نقدم الطلب اليوم."},
+];

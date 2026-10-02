@@ -1,0 +1,55 @@
+
+> der-weg-nach-berlin@0.1.0 handoff:check
+> node scripts/verify-continuation-handoff.mjs
+
+- doc sync: 13 standing documents re-synced against dwnb-full-pack-v140 (ADR-079)
+Continuation handoff verified:
+- backlog: P0 124, P1 135, P2 142
+- P0 state: 115 implemented, 9 partial, 0 missing, 0 blocked
+- P1 state: 128 implemented, 4 partial, 3 missing, 0 blocked across 135 audited rows
+- P2 state: 118 implemented, 2 partial, 22 missing, 0 blocked across 142 audited rows
+curriculum/audio: 96 lessons, 80 library MP3, 96 lesson MP3 + 96 lesson Opus, 96 exam files / 90 clips
+- governance: 18 official sources; 4345 Zod roots; 2805 answers; 389 objectives
+- A1–B2 lexical anchors: 1297 nouns + 134 verb frames; pending 89 nouns + 4 unclassified frames; exclusions awaiting confirmation 8
+- deployment: last verified public push be56463e (2026-09-04); this sandbox holds no .git, so no push or hosting state is claimed by this batch
+- journey: journey-state-machine-v1 across orientation/foundation/growth/consolidation/exam-readiness
+- device calibration: reading WPM after 2/2 + writing WPM/CPM after copy integrity; P1-126 and P1-18 closed
+- evidence context: support-usage-v1 + evidence-freshness-v1; confidence only, no score/mastery mutation
+- error intervention: error-pattern-classification-v1 + confirmed-error-srs-v1; personal reviews stay masteryDelta=0
+- similarity/review: 3277 objects / 5367726 pairs / 0 issues; copyright clearance pending
+- exports: local-study-exports-v1 ICS + semantic print/image-PDF + formula-safe Anki TSV
+- planning: fourteen-day-learning-contract-v1 + single-skill-diagnostic-v1 + quiet-hours-local-v1
+- planning range: weekly-planned-actual-no-blame-v1 + evidence-velocity-readiness-range-v1; no pass date or penalty
+- CSP: 15 directives / 7 headers / no global wildcard; DWNB v1 supported through 2027-03-31
+- content governance: 3277 records / 16 lifecycle families / 18 sources / 12 risks; curriculum dwnb-a1-b2-2026.09-v1
+- bounded pending review: 12 general consular/legal claims + 18 Arabic-learner pronunciation rows (11 exact synthetic pairs)
+- optional AI resilience: ai-resilient-fallback-v1, one attempt then local, retry needs new consent
+- Tutor/provider governance: tutor-follow-up-command-v1 + ai-provider-capability-matrix-v1; P1-210/222/224 closed
+- listening/pronunciation: three-pass-listening-sequence-v1 + articulation-contrast-practice-v1; P1-139/150/151 closed
+- writing/claim boundaries: writing-error-micro-practice-v1 + practice-law-language-boundary-v1; P1-175/186 closed
+- motivation: evidence-derived-achievement-v1 + gamification-visibility-v1; P1-271/272 closed
+- personal tools: review-keyboard-shortcuts-v1 + local-content-note-v1; P1-338/341 closed
+- import/report tools: personal-vocabulary-import-v1 + local-content-error-report-v1; P1-344/366 closed
+- guided session: prior-experience context + equivalent alternatives + one-time learner-controlled load offer + verified Today Offline; P1-17/41/43/44 closed
+- lexical strategy: 32 families / 32 register examples / 24 bounded confusions / 30 calculated module plans; P1-91/101/102/103 closed
+- learning architecture: 24 grammar nodes / 31 prerequisite edges / 576 comprehension labels; P1-113/114/115/125 closed
+- study modes: Easy/Exam reading + 63 word challenges + unified listening evidence + 16 prosody steps; P1-127/128/137/138 closed
+- writing teacher: hybrid-writing-review-v1, local primary + consented Gemini doubt review, no complete-corrector claim
+- mastery/calendar: novelty-weighting-v1, sm2-v2-calendar, review-calendar-v1
+- event-derived mastery: event-derived-mastery-v1 rematerializes after stable-ID Merge; legacy fallback remains explicit; P2-72/237 closed
+- support separation: guided-independent-support-separation-v1 keeps guided / transfer-independent / transfer-assisted evidence distinct; P2-70/287 closed
+- attempt process: bounded-attempt-process-v1 records visible time, committed choice revisions, and learner-attributed uncertainty without keystrokes; P2-33/34 closed
+- plan changes: explainable-plan-change-timeline-v1 derives a no-answer/no-reflection-text Today history; P2-48 closed
+- intensity: learner-selected-intensity-presets-v1 keeps Light/Balanced/Intensive explicit and bounded; P2-57 closed
+- security: secret-audit-v1 working tree + required full-history CI + versioned pre-commit hook
+- Offline: packs a1:58, a2:58, b1:58, b2:219, full:318; gzip fingerprint 3bd784b8622f
+- accessibility: accessibility-preferences-v1 large text/high contrast/reduced motion + status-announcement-v1; P0-255 physical review pending
+- diagnostic production: diagnostic-productive-sample-v1, self-evidence only, no automated language score
+- case teaching: 19 meaning→role→form contracts / 57 controlled / 44 assessment
+- language/Bidi: 179 TSX / 6990 tags / 399 German / 0 issues
+- Tunisian support: 17 optional notes / 17 lessons / 17 pending independent review
+- listening speed: learning-playback-speed-v1 across 5 authored surfaces; human distortion review pending
+- speaking follow-up: content-grounded-follow-up-v1, typed-transcript only, local default, explicit consent for optional AI, no STT/audio claim
+- browser model: browser-webgpu-model-v1, pinned q8 MiniLM ranking in a Worker, opt-in cache/delete, no silent WASM/paid fallback
+- delivery: 318 Offline routes, dwnb-full-pack-v140, 1,000 unit/integrity and 82 browser tests documented
+handoff=0

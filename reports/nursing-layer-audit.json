@@ -1,0 +1,74 @@
+{
+ "format": "dwnb-nursing-layer-audit",
+ "generatedAt": "2026-09-23",
+ "ok": true,
+ "version": "nursing-layer-audit-v1",
+ "policyVersion": "nursing-layer-v1",
+ "disclaimerAr": "هذه صياغات لغوية لا إرشاد سريري",
+ "unitCount": 14,
+ "lessonCount": 14,
+ "byLevel": {
+  "A1": 4,
+  "A2": 4,
+  "B1": 3,
+  "B2": 3
+ },
+ "clusterByLevel": {
+  "A1": "recognition",
+  "A2": "confirmation",
+  "B1": "questioning",
+  "B2": "documentation"
+ },
+ "acceptedKindByLevel": {
+  "A1": "recognize",
+  "A2": "confirm",
+  "B1": "ask",
+  "B2": "document"
+ },
+ "safetyTaskCount": 14,
+ "acceptedOptionCount": 14,
+ "failedGuessOptionCount": 22,
+ "reviewWordCount": 8,
+ "reviewWordBudget": 8,
+ "reviewWordsByLevel": {
+  "A1": [],
+  "A2": [],
+  "B1": [
+   "die Übergabe",
+   "der Dienstplan",
+   "die Zuständigkeit",
+   "die Bewohnerin"
+  ],
+  "B2": [
+   "die Rückfrage",
+   "die Angabe",
+   "der Vermerk",
+   "die Dokumentation"
+  ]
+ },
+ "pendingProfessionalReview": 14,
+ "professionalReviews": 0,
+ "rollbackBreaker": {
+  "version": "nursing-layer-rollback-v1",
+  "metric": "general exam-shape task accuracy (goethe-b2 + telc-deutsch-b2 simulations)",
+  "windowDays": 14,
+  "ifDropsPercentagePoints": 5,
+  "actionAr": "تُخفَّض الطبقة (إخفاء الوحدات ووقف إضافة كلمات) وتُقدَّم الشهادة العامة، ولا يُبرَّر الانخفاض بأنه «تعمّق مهني».",
+  "layerRemovable": true
+ },
+ "masteryEffect": "none",
+ "gateEffect": "none",
+ "examEffect": "none",
+ "boundary": "الصياغات لغوية بحتة: لا إرشاد سريري ولا قرار صحي ولا تدريب مهني معتمد، والمراجعة المهنية معلّقة (0 مراجعات) — ولا ترفع الطبقة إتقانًا ولا تؤثر في بوابة مستوى ولا في مهام الامتحان.",
+ "issues": [],
+ "layerImporters": [
+  "scripts/generate-nursing-layer-audit.ts",
+  "src/components/nursing-layer-panel.tsx",
+  "src/core/content-validation/nursing-layer.ts",
+  "src/core/nursing/safety-practice.ts",
+  "tests/unit/nursing-layer.test.ts"
+ ],
+ "unexpectedImporters": [],
+ "couplingHits": [],
+ "contentSha256": "1fdb3b00e1baf8c6e8f1238fa72348fee1ed41a285d870fe3409bb61a0dc26e7"
+}

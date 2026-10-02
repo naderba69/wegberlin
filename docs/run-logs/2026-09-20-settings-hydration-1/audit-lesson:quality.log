@@ -1,0 +1,6 @@
+
+> der-weg-nach-berlin@0.1.0 lesson:quality
+> tsx scripts/generate-lesson-quality-audit.ts --write
+
+sh: 1: tsx: not found
+FAIL lesson:quality

@@ -1,0 +1,31 @@
+@@@ content:audit:write
+- lexical target gaps: 89 noun + 4 verb-frame candidates pending human review
+- content SHA-256: dac99157d91c2b7fdbe13e0453c3bd755d1c1e44151ea70ca58a5d23afb5bfc4
+@@@ similarity:audit:write
+- separate review states: German/Arabic/CEFR/copyright × 3277; independent review remains explicit
+- content SHA-256: efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0
+@@@ case:audit:write
+Meaning-first case governance verified: 19 contracts / 23 theory / 57 controlled / 44 assessment / 0 gaps
+- content SHA-256: 167645dd621b2da13201ade19aba2cf5c1511b29a573018be6c22412d94dda98
+@@@ language:audit:write
+Language/Bidi governance verified: 179 TSX / 6991 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 9da1a2e19f1eff58527b6026d884e5ffd7bfee223d150961f024ce760995c2d0
+@@@ tunisian:audit:write
+Tunisian support governance verified: 17 notes / 17 lessons / 17 theory refs / 17 pending independent review / 0 structural gaps
+- content SHA-256: 769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d
+@@@ lexical:strategy:audit:write
+Wrote lexical strategy audit 439956b453f0.
+@@@ learning:architecture:audit:write
+Wrote learning architecture audit 4d25c5fe7435.
+@@@ study:modes:audit:write
+Wrote study modes audit 1645b5caa1b0.
+@@@ practical:context:audit:write
+Wrote practical context audit c935b0f4ef8b
+@@@ security:audit:write
+Security headers audit PASS: 15 CSP directives, 7 headers, no global wildcard, SHA-256 eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf.
+@@@ governance:audit:write
+Content governance verified: 3277 records / 16 families / 18 sources / 12 risks / 12 claims / 18 pronunciation rows.
+@@@ exam:format-claims:write
+Official exam-format claim guard: 8 surfaces, 4 with a boundary sentence, 0 forbidden claims, 0 missing, fingerprint d729860a7334.
+@@@ exam:formats:verify:write
+Official exam-format verification: 2 profiles, 3 snapshots, 35 pinned facts (24 cross-checked), 0 evidence issues, 0 mismatches, 2 declared gaps, fingerprint 1e61862c8a97.

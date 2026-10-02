@@ -1,0 +1,130 @@
+Materialized audited WebGPU vendor runtime: 431652 bytes / 0a96dcf4c489.
+Materialized TypeScript and Service Worker curriculum version: dwnb-a1-b2-2026.09-v1.
+Generated 318 offline routes and 5 independent packs (a1:58, a2:58, b1:58, b2:219, full:318).
+Feature proposal gate passed: 3 decision-changing proposals / 0 unowned or no-impact rows.
+Library adversarial audit passed: 320 questions / positions 84/66/80/90 / prompt leak 0.63% / exact evidence 320.
+Meaning-first Arabic translation audit passed: 3559 rows / 3 literal-gloss guards / 0 issues.
+Security headers audit PASS: 15 CSP directives, 7 headers, no global wildcard, SHA-256 eda49e1d4ad16ec296fe545a104cace566b947ee7cdfbbc57db6a32f0674b3bf.
+Content governance verified: 3277 records / 16 families / 18 sources / 12 risks / 12 claims / 18 pronunciation rows.
+Academic content governance verified:
+- Zod: 4292 root objects / 16 schema families / 0 failures
+- answers: 2805 closed items + 384 productive tasks / 3 explicit exemptions / 0 leaks
+- objectives: 389/389 teaching→practice→assessment maps / 0 structural gaps
+- lexical target gaps: 89 noun + 4 verb-frame candidates pending human review
+- content SHA-256: eb97707d6fc775fc61047b1f2fb46884fb93c1e5eea74ed2e1a1a09cba83a0d2
+Content similarity/review governance: 3277 objects / 5367726 pairs / 0 issues / external corpora 0
+- separate review states: German/Arabic/CEFR/copyright × 3277; independent review remains explicit
+- content SHA-256: efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0
+Meaning-first case governance verified: 19 contracts / 23 theory / 57 controlled / 44 assessment / 0 gaps
+- content SHA-256: 1c0b3dfda2e73df0528ccd029444a3c9f355ae6af6f88f5c328b97bb874a8b6d
+Language/Bidi governance verified: 179 TSX / 6990 tags / 399 German / 45 scoped / 233 mixed static / 0 issues
+- content SHA-256: 460f84c7034789956041afe11dd2043906076848c4f313a14b15302f8050539a
+Official exam-format claim guard: 8 surfaces, 4 with a boundary sentence, 0 forbidden claims, 0 missing, fingerprint 733a12e7b996.
+Official exam-format verification: 2 profiles, 3 snapshots, 35 pinned facts (24 cross-checked), 0 evidence issues, 0 mismatches, 2 declared gaps, fingerprint 1e61862c8a97.
+Tunisian support governance verified: 17 notes / 17 lessons / 17 theory refs / 17 pending independent review / 0 structural gaps
+- content SHA-256: 769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d
+Lexical strategy audit verified: 32 families / 32 register examples / 24 confusions / 30 module plans / 0 issues
+Learning architecture audit verified: 24 rules / 576 questions / 0 issues
+Study modes audit verified: 80 reading / 63 word challenges / 16 prosody steps / 0 issues
+Practical context audit verified: 16 culture / 20 documents / 0 issues
+▲ Next.js 16.3.3 (webpack)
+✓ Running next.config.ts took 146ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 28.0s
+  Running TypeScript ...
+  Finished TypeScript in 27.6s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/321) ...
+  Generating static pages using 1 worker (80/321) 
+  Generating static pages using 1 worker (160/321) 
+  Generating static pages using 1 worker (240/321) 
+✓ Generating static pages using 1 worker (321/321) in 10.8s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /assessment/a1
+├ ○ /assessment/a2
+├ ○ /assessment/b1
+├ ○ /assessment/b2
+├ ○ /diagnostic
+├ ○ /errors
+├ ○ /exams
+├   /exams/[provider]/[simulationId]
+│ ├ ● /exams/goethe-b2/goethe-b2-reading-01
+│ ├ ● /exams/telc-deutsch-b2/telc-b2-reading-01
+│ ├ ● /exams/goethe-b2/goethe-b2-reading-02
+│ └ ● [+147 more paths]
+├   /exams/[provider]/full/[simulationId]
+│ ├ ● /exams/goethe-b2/full/goethe-b2-full-01
+│ ├ ● /exams/telc-deutsch-b2/full/telc-b2-full-01
+│ ├ ● /exams/goethe-b2/full/goethe-b2-full-02
+│ └ ● [+9 more paths]
+├   /lernen/[lessonId]
+│ ├ ● /lernen/a1-01
+│ ├ ● /lernen/a1-02
+│ ├ ● /lernen/a1-03
+│ └ ● [+93 more paths]
+├ ○ /library
+├ ○ /manifest.webmanifest
+├ ○ /mediation
+├ ○ /module/a1-1
+├ ○ /module/a1-2
+├ ○ /module/a1-3
+├ ○ /module/a1-4
+├ ○ /module/a1-5
+├ ○ /module/a1-6
+├ ○ /module/a1-7
+├ ○ /module/a1-8
+├ ○ /module/a2-1
+├ ○ /module/a2-2
+├ ○ /module/a2-3
+├ ○ /module/a2-4
+├ ○ /module/a2-5
+├ ○ /module/a2-6
+├ ○ /module/a2-7
+├ ○ /module/a2-8
+├ ○ /module/b1-1
+├ ○ /module/b1-2
+├ ○ /module/b1-3
+├ ○ /module/b1-4
+├ ○ /module/b1-5
+├ ○ /module/b1-6
+├ ○ /module/b1-7
+├ ○ /module/b1-8
+├ ○ /module/b2-1
+├ ○ /module/b2-2
+├ ○ /module/b2-3
+├ ○ /module/b2-4
+├ ○ /module/b2-5
+├ ○ /module/b2-6
+├ ○ /offline
+├ ○ /path
+├ ○ /portfolio/writing
+├ ○ /practice
+├ ○ /practice/collocations
+├ ○ /practice/conversation-paths
+├ ○ /practice/dictation
+├ ○ /practice/practical-day
+├ ○ /privacy
+├ ○ /progress
+├ ○ /review
+├ ○ /search
+├ ○ /settings
+├ ○ /shadowing
+├ ○ /speaking
+├ ○ /status
+├ ○ /today
+├ ○ /tutor
+└ ○ /writing
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+Generated Offline size manifest b69d77e3b0d4 (a1:2328699, a2:2393854, b1:2426999, b2:3778142, full:5451053).
+JavaScript budget passed: 107 chunks / 1663940 gzip bytes / max 612369
+Media/pack budgets passed: 544 MP3+Opus files / 52943843 bytes / curriculum 892780 gzip / 15% reserve enforced.

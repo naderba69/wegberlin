@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "94129001c039a94eb3a8a4b78380a5cf96186bc2fcac150dd7a83cc38c9f7515",
+  "buildFingerprint": "d1069c0c1d44d4ddfdaca6d3f1571348834d637c17f4406c5e8a86bf5ddde277",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 59,
       "routeRawBytes": 3904620,
-      "routeGzipBytes": 739613,
+      "routeGzipBytes": 739509,
       "nextAssetCount": 82,
       "nextAssetRawBytes": 6543878,
-      "nextAssetGzipBytes": 1796034,
+      "nextAssetGzipBytes": 1796030,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
       "totalRawBytes": 10515936,
-      "totalGzipBytes": 2547597,
+      "totalGzipBytes": 2547489,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -426,9 +426,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/0cf53d4a8934fbc7.css",
+          "path": "/_next/static/css/bc43792fee5934ea.css",
           "rawBytes": 445230,
-          "gzipBytes": 71989
+          "gzipBytes": 71985
         }
       ]
     },
@@ -437,14 +437,14 @@
       "label": "A2",
       "routeCount": 59,
       "routeRawBytes": 4039266,
-      "routeGzipBytes": 856028,
+      "routeGzipBytes": 855932,
       "nextAssetCount": 82,
       "nextAssetRawBytes": 6543878,
-      "nextAssetGzipBytes": 1796031,
+      "nextAssetGzipBytes": 1796027,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
       "totalRawBytes": 10650582,
-      "totalGzipBytes": 2664009,
+      "totalGzipBytes": 2663909,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -852,9 +852,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/0cf53d4a8934fbc7.css",
+          "path": "/_next/static/css/bc43792fee5934ea.css",
           "rawBytes": 445230,
-          "gzipBytes": 71989
+          "gzipBytes": 71985
         }
       ]
     },
@@ -863,14 +863,14 @@
       "label": "B1",
       "routeCount": 59,
       "routeRawBytes": 4196582,
-      "routeGzipBytes": 878296,
+      "routeGzipBytes": 878207,
       "nextAssetCount": 82,
       "nextAssetRawBytes": 6543876,
-      "nextAssetGzipBytes": 1796033,
+      "nextAssetGzipBytes": 1796029,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
       "totalRawBytes": 10807896,
-      "totalGzipBytes": 2686279,
+      "totalGzipBytes": 2686186,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1278,9 +1278,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/0cf53d4a8934fbc7.css",
+          "path": "/_next/static/css/bc43792fee5934ea.css",
           "rawBytes": 445230,
-          "gzipBytes": 71989
+          "gzipBytes": 71985
         }
       ]
     },
@@ -1289,14 +1289,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 220,
       "routeRawBytes": 9600200,
-      "routeGzipBytes": 2216320,
+      "routeGzipBytes": 2215959,
       "nextAssetCount": 86,
       "nextAssetRawBytes": 6697293,
-      "nextAssetGzipBytes": 1844068,
+      "nextAssetGzipBytes": 1844064,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
       "totalRawBytes": 16364931,
-      "totalGzipBytes": 4072338,
+      "totalGzipBytes": 4071973,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1724,9 +1724,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/0cf53d4a8934fbc7.css",
+          "path": "/_next/static/css/bc43792fee5934ea.css",
           "rawBytes": 445230,
-          "gzipBytes": 71989
+          "gzipBytes": 71985
         }
       ]
     },
@@ -1735,14 +1735,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 319,
       "routeRawBytes": 16285639,
-      "routeGzipBytes": 3898509,
+      "routeGzipBytes": 3898024,
       "nextAssetCount": 113,
       "nextAssetRawBytes": 6702466,
-      "nextAssetGzipBytes": 1848540,
+      "nextAssetGzipBytes": 1848536,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
       "totalRawBytes": 23055543,
-      "totalGzipBytes": 5758999,
+      "totalGzipBytes": 5758510,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -2305,9 +2305,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/0cf53d4a8934fbc7.css",
+          "path": "/_next/static/css/bc43792fee5934ea.css",
           "rawBytes": 445230,
-          "gzipBytes": 71989
+          "gzipBytes": 71985
         }
       ]
     }

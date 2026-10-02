@@ -1266,7 +1266,7 @@ console.log(`- P2 state: ${p2Counts.implemented} implemented, ${p2Counts.partial
 console.log(`curriculum/audio: ${academicAudit.schema.counts.lessons} lessons, ${libraryAudio.assets.length} library MP3, ${lessonAudio.assets.length} lesson MP3 + ${lessonAudio.opusAssetCount} lesson Opus, ${examAudio.assets.length} exam files / ${examAudio.coveredClipCount} clips`);
 console.log(`- governance: ${sourceRegistry.records.length} official sources; ${academicAudit.schema.counts.totalRootObjects} Zod roots; ${academicAudit.answerIntegrity.closedAnswerItems} answers; ${academicAudit.objectiveCoverage.objectives} objectives`);
 console.log(`- A1–B2 lexical anchors: ${academicAudit.schema.counts.nounGrammarEntries} nouns + ${academicAudit.schema.counts.verbPrepositionFrames} verb frames; pending ${lexicalGaps.nounSummary.pendingHuman} nouns + ${lexicalGaps.verbFrameSummary.pendingHuman} unclassified frames; exclusions awaiting confirmation ${lexicalGaps.pendingIndependentExclusionReview}`);
-console.log(`- deployment: last verified public push be56463e (2026-09-04); this sandbox holds a real branch checkout; no push or hosting state is claimed by this batch`);
+console.log(`- deployment: verify the pushed session branch and PR status separately; protected Vercel Preview deployments may require authentication; a local build does not establish Production merge or deployment`);
 console.log(`- journey: journey-state-machine-v1 across orientation/foundation/growth/consolidation/exam-readiness`);
 console.log(`- device calibration: reading WPM after 2/2 + writing WPM/CPM after copy integrity; P1-126 and P1-18 closed`);
 console.log(`- evidence context: support-usage-v1 + evidence-freshness-v1; confidence only, no score/mastery mutation`);

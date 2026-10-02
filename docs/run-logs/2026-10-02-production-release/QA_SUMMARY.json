@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-02",
+  "branch": "arena/01a0fba1-wegberlin",
+  "runScope": "local production build and QA of the complete working tree; not a production deployment",
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "nextVersion": "16.3.8",
+    "pages": 322,
+    "offlineBuildFingerprint": "d1069c0c1d44",
+    "fullPackGzipBytes": 5758510,
+    "jsChunks": 123,
+    "jsGzipBytes": 1879182,
+    "maxChunkGzipBytes": 266168,
+    "physicalAudioFiles": 544,
+    "audioBytes": 52943843,
+    "curriculumGzipBytes": 1033335
+  },
+  "unit": {
+    "command": "npm test",
+    "filesPassed": 173,
+    "testsPassed": 1198,
+    "exitCode": 0
+  },
+  "browser": {
+    "engine": "headless Chromium 153 via temporary executable at /tmp/chromium",
+    "desktop": {
+      "command": "npm run test:e2e:desktop",
+      "passed": 58,
+      "total": 58,
+      "exitCode": 0
+    },
+    "mobile": {
+      "command": "npm run test:e2e:mobile",
+      "passed": 58,
+      "total": 58,
+      "exitCode": 0
+    },
+    "tts": "explicitly mocked in the relevant test",
+    "accessibility": {
+      "surface": "/practice/endurance?level=B2",
+      "oldForeground": "#7b8984",
+      "oldContrastRatio": 3.59,
+      "newForeground": "#596c65",
+      "newContrastRatio": 5.5,
+      "axeAssertion": "passed on the tested endurance question surface after correction"
+    }
+  },
+  "webgpuEsmProbe": {
+    "workerImportsPassed": true,
+    "ortTensorConstructed": true,
+    "weightsRequested": false,
+    "inferenceRun": false,
+    "physicalGpuVerified": false
+  },
+  "deployment": {
+    "pr": "https://github.com/naderba69/wegberlin/pull/3",
+    "remotePrHeadAtTimeOfQa": "075d69796e21fae4889809b06b85ccbdf63d0cd1",
+    "vercelPreview": "access-protected; anonymous request redirected to Vercel login",
+    "productionMergedOrDeployed": false,
+    "latestWorkflowFollowupPush": "blocked: GitHub App lacks workflows permission"
+  },
+  "staticChecks": {
+    "lint": {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 6
+    },
+    "typecheck": {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    "sourceFreshness": {
+      "command": "npm run source:audit -- --strict",
+      "exitCode": 0,
+      "records": 19,
+      "fresh": 3,
+      "dueSoon": 16,
+      "stale": 0,
+      "clockErrors": 0
+    }
+  }
+}

@@ -8,7 +8,8 @@ Sync batch: v180 · 2026-10-02 · re-verified after ADR-102 browser WebGPU ESM-r
 - يقرأ القياس الآن Build Output API v3 وملفات prerender-fallback والمخرجات الثابتة، وينشر البيان الجديد في public/ وفي static/ المقدمة فعليًا. حارس JS يقيس الأصول المغلفة، ولا يُستخدم Cache قديم لتعويض ملف مفقود.
 - البناء المحلي ومحوّل @vercel/next@16.0.0 الفعلي نجحا في 322/322 صفحة وكل مراحل postbuild. المقارنة بين public ونسخة static نجحت حرفيًا؛ لا ادعاء نجاح نشر سحابي من اختبار محلي.
 - Unit/Integrity tests: 1,198/1,198 in 173/173 files (actual complete run); 13 اختبارات جديدة دون تخفيف حدود 15% أو تعطيل الملفات المفقودة.
-- قياس البناء المحلي بعد إصلاح ADR-102: 94129001c039 · full 5,758,999؛ JS 123 chunks / 1,879,182 gzip / max 266,168. لم يتغير المنهج أو الصوت.
+- lint: 0 errors / 6 warnings · TypeScript typecheck passed · source freshness: 19 records, 3 fresh / 16 due soon / 0 stale / 0 clock errors.
+- قياس البناء المحلي بعد إصلاح ADR-102 وتباين سؤال endurance: d1069c0c1d44 · full 5,758,510؛ JS 123 chunks / 1,879,182 gzip / max 266,168. لم يتغير المنهج أو الصوت.
 - لا تعديل للمنهج أو المسارات أو Service Worker؛ تبقى البيانات التعليمية والمراجعات البشرية كما في ADR-100. تحذيرات npm install-scripts ليست سبب العطل ولم تُعتمد سكربتات إضافية عشوائيًا.
 
 
@@ -33,13 +34,13 @@ Sync batch: v180 · 2026-10-02 · re-verified after ADR-102 browser WebGPU ESM-r
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
 - Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
-- last measured source build fingerprint: 83a30907df07 · full 5,758,675 · JavaScript 123 chunks / 1,879,182 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
-- Unit/Integrity tests: 1,198/1,198 in 173/173 files (full `npm test` run after ADR-102). Browser: desktop 57 distinct contracts / mobile 57 distinct contracts verified in split runs (55/57 full + 2/2 isolated per project), not a claimed single 114/114 run; real headless Chromium 153, TTS mocked explicitly; see docs/run-logs/2026-10-02-learning-integrity/QA_SUMMARY.json.
+- last measured source build fingerprint: d1069c0c1d44 · full 5,758,510 · JavaScript 123 chunks / 1,879,182 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
+- Unit/Integrity tests: 1,198/1,198 in 173/173 files (`npm test`). Browser: full production suite 58/58 desktop and 58/58 mobile in separate complete runs using headless Chromium 153; TTS explicitly mocked. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
 - Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+- هذه مساحة Git فعلية في `/home/user/wegberlin` على `arena/01a0fba1-wegberlin`. الدفعة السابقة مدفوعة في [PR #3](https://github.com/naderba69/wegberlin/pull/3)؛ متابعة هذا التشغيل تشمل إصلاح تباين Axe وتصفية smoke تلقائيًا لنسخ Vercel Preview المحمية، ولم تُدفع بعد لأن GitHub App يفتقر إلى `workflows` permission. لم يحدث دمج أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 
 
 Last updated: 2026-10-02 (learning-integrity repair pack v180; previous generations below are historical)

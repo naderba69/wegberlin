@@ -44,13 +44,26 @@ describe("lesson stage work gate", () => {
     expect(ready.boundary).toBe("stage-navigation-gate-only-no-mastery-no-completion-change");
   });
 
+  it("locks only what lies beyond the assessment and never freezes the learner in place", () => {
+    const testIndex = LESSON_STAGE_KEYS.indexOf("test");
+    // No attempts at all: stage 0 must still walk forward, and every explanatory stage stays reachable.
+    expect(lessonStageGate(lesson, [], 0).reachLimit, "objectives can advance").toBe(testIndex - 1);
+    expect(lessonStageGate(lesson, [], 0).advanceBlocked, "objectives need no work").toBe(false);
+    expect(lessonStageGate(lesson, [], 4).reachLimit, "rule stage can advance to controlled").toBe(testIndex - 1);
+    // A learner restored deep in the lesson keeps that position and can move back or stay; only the
+    // un-practiced mini-test stays out of reach.
+    expect(lessonStageGate(lesson, [], 9).reachLimit, "restored at writing keeps its place and may keep practising").toBe(testIndex - 1);
+    expect(lessonStageGate(lesson, [], 12).reachLimit, "one step before the test stays").toBe(12);
+    expect(testIndex, "the assessment sits one step past the frozen limit").toBeGreaterThan(lessonStageGate(lesson, [], testIndex - 1).reachLimit);
+  });
+
   it("applies the same contract to every published lesson", () => {
     for (const item of academicLessonList) {
       const gate = lessonStageGate(item, [], 0);
       expect(gate.policyVersion, item.id).toBe("lesson-stage-work-gate-v1");
       expect(gate.advanceBlocked, `${item.id} opens on objectives`).toBe(false);
       const testIndex = LESSON_STAGE_KEYS.indexOf("test");
-      expect(lessonStageGate(item, [], testIndex).reachLimit, `${item.id} hides the mini-test`).toBe(testIndex - 1);
+      expect(lessonStageGate(item, [], testIndex - 1).reachLimit, `${item.id} hides the mini-test`).toBe(testIndex - 1);
     }
   });
 });

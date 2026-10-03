@@ -2158,6 +2158,9 @@ test("progress and daily coach derive metrics, risks, dates, and streaks from ev
       request.onerror = () => reject(request.error);
       request.onsuccess = () => {
         const state = request.result ?? structuredClone(baseState);
+        // ADR-103 أزال مفاتيح الإتقان الوهمية من التهيئة، فتُزرع بقايا جيل سابق صراحة هنا لأن اللوحة تُعنى
+        // بإبلاغ المتعلم عن مفاتيح بلا Event، لا بما يولّده التطبيق لمتعلم جديد.
+        state.mastery = { ...state.mastery, greeting: 40, "v2-order": 60, "personal-info": 20 };
         const now = new Date();
         const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
         const local = (date: Date) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`;

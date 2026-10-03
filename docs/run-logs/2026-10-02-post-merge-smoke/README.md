@@ -11,7 +11,7 @@
 | `gh run list --workflow "Deployment Smoke"` | run `37066936703` على `Production`؛ فشل عند «Verify deployed critical routes and headers»؛ تشغيلات Preview مُتخطّاة |
 | `gh api .../deployments/6818675193/statuses` | `environment_url` = `https://wegberlin-8u19akx07-balinader-2671s-projects.vercel.app` (مضيف نشر محمي، لا الاسم المستعار) |
 | annotations الـcheck-run | 7 مسارات × `app identity missing` + `CSP missing` + `nosniff missing`، أي قراءة صفحة دخول Vercel |
-| `npx vitest run --reporter=dot` | 1,209/1,209 في 174/174 ملفًا (+10 عن جيل ما قبل الدمج) |
+| `npx vitest run --reporter=dot` | 1,210/1,210 في 174/174 ملفًا (+10 عن جيل ما قبل الدمج) |
 | `npm run lint` | 0 أخطاء / 6 تحذيرات قائمة مسبقًا |
 | `npx tsc --noEmit` | نجح |
 | `npm run build` | 322/322 صفحة؛ `offline:size` بصمة ef613e05d712 وfull 5,760,592؛ `js:budget` 123 chunks / 1,880,826 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
@@ -58,7 +58,9 @@ PR #4 شغّل `Quality Gate` كاملاً على الشجرة الجديدة، 
 |---|---|---|
 | وظيفة `e2e` **فشلت** (`check` نجح) | `gh api repos/…/actions/runs/37076858750/jobs` — الخطوة 7 «Run full desktop and mobile production suite» = failure؛ لا artifact ولا سجل مقروء (`results-receiver` يعيد EOF) | القراءة أوضحت السبب: تدفّق مختبر الكتابة (`critical-flows.spec.ts:810`) كان يمشي 9 مراحل بنقرة ذاتية بلا أي محاولة، وهو بالضبط سلوك «الإكمال بالادعاء» الذي تُغلقه `lesson-stage-work-gate-v1`. الاختبار حُدِّث ليسجّل محاولة واحدة لكل مرحلة تطلب عملًا في نفس سجلّ `exerciseAttempts` الذي يكتبه المتعلم — لا تخفيف البوابة ولا تزوير إتقان |
 | `Deployment Smoke` على الفرع انتهى **فشلًا في 0 ثانية بلا وظائف** | `gh api …/actions/runs/37076820547` → `name: .github/workflows/deployment-smoke.yml`، `jobs: null`، event push/PR — تسمية الملف بدل عنوان الالتزام تعني خطأ تحليل ملف الـworkflow | خطوة الشرح في `GITHUB_STEP_SUMMARY` كانت plain scalar فيه `": "` غير مقتبس (`… the smoke never reached the app: set …`) وهو YAML غير صالح. صارت `run: |` مع heredoc، في النسختين المتطابقتين |
+| **5 وظائف `e2e` فشلت بعد إصلاح التدفّق الأول** (`:81`, `:382`, `:1400`, `:1814`, `:2144`) | annotations عبر `reporter: github` — لم تكن سجلات Actions قابلة للقراءة من هذه البيئة (`results-receiver` و`blob.core.windows.net` كلاهما يفشل TLS)؛ لذلك حُوّل reporter في CI إلى `github` لتُقرأ الإخفاقات من API مباشرة | القياس كشف خطأين لا ثالث لهما: (1) `reachLimit` كان يُحسب `Math.min(stageIndex, lockIndex-1)` فيجمّد المتعلم في المرحلة الأولى لكل درس بلا استثناء — صُحّح إلى `Math.max` مع اختبار وحدة يمنع الانحدار مرة أخرى؛ (2) لوحة `event-derived-mastery-v1` كانت تعدّ «3 مفاتيح قديمة» من التهيئة الوهمية التي أزلناها، فأصبح العدّ صفرًا — الاختبار يزرع البقايا صراحةً الآن بدل الاعتماد على بذرة كاذبة |
+|---|---|---|
 
-ولأن العطل الثاني لا تراه أي بوابة قائمة، أُضيف حارس بلا اعتمادية: `scripts/check-workflow-scalars.mjs` (`npm run workflows:check`) يمسح كل نسخ الـworkflows ويرفض plain scalar فيه `": "` خارج الاقتباس، ويُلزَم الحارس بنفسه على fixture للعطل الحقيقي نفسه، و`npm run check` يستدعيه الآن قبل `handoff:check`. القياس بعد كل هذا: **1,209/1,209** في 174/174 ملفًا، typecheck نظيف، lint 0 أخطاء، والحارس يمرّ على 8 ملفات.
+ولأن العطل الثاني لا تراه أي بوابة قائمة، أُضيف حارس بلا اعتمادية: `scripts/check-workflow-scalars.mjs` (`npm run workflows:check`) يمسح كل نسخ الـworkflows ويرفض plain scalar فيه `": "` خارج الاقتباس، ويُلزَم الحارس بنفسه على fixture للعطل الحقيقي نفسه، و`npm run check` يستدعيه الآن قبل `handoff:check`. القياس بعد كل هذا: **1,210/1,210** في 174/174 ملفًا، typecheck نظيف، lint 0 أخطاء، والحارس يمرّ على 8 ملفات.
 
 بقي معلَّقًا بصدق: نتيجة `e2e` بعد هذا الإصلاح تُقرأ من CI لا من هنا؛ وفحص الإنتاج ما لم يُعَدّ بعد تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` (ولا يملك هذا الحساب صلاحية `workflow_dispatch`/`variables` — API أعاد 403 `Resource not accessible by integration`).

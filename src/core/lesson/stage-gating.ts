@@ -64,7 +64,9 @@ export function lessonStageGate(lesson: FullLesson, attempts: readonly ExerciseA
   let reachLimit = LESSON_STAGE_KEYS.length - 1;
   for (let index = 0; index < LESSON_STAGE_KEYS.length; index += 1) {
     if (entryLocked(LESSON_STAGE_KEYS[index])) {
-      reachLimit = Math.min(stageIndex, index - 1);
+      // القفل يمنع ما بعد المرحلة المقفولة فقط؛ الموضع الحالي والأسبق منه يبقيان متاحين، وإلا جُمّدت
+      // كل دروس المتعلم في المرحلة الأولى لمجرد أن الاختبار القصير لم يُدرَّب بعد (انكسر به e2e في 2026-10-02).
+      reachLimit = Math.max(stageIndex, index - 1);
       break;
     }
   }

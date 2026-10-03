@@ -12,6 +12,7 @@ import {
 import { LEARNING_STATE_INDEPENDENCE_NOTE, LEARNING_STATE_LABELS } from "@/core/lessons/learning-state";
 import { fullLessonSchema } from "@/core/content-validation/schemas";
 import { buildLessonSrsCards } from "@/core/srs/lesson-cards";
+import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "@/core/lesson/teaching-contract";
 import { reviewCards } from "@/data/review-cards";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
 
@@ -152,4 +153,61 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     expect(englishGrammarTermLeak("يتصرف modal في الموقع الثاني")).toContain("modal");
   });
 
+
+  it("keeps generic feedback tails out of item-specific explanations (ع2)", () => {
+    const texts: string[] = [];
+    for (const lesson of academicLessonList) {
+      for (const item of [...lesson.exercises, ...lesson.reading.questions, ...lesson.listening.questions, ...lesson.miniTest] as Array<{ explanationAr?: string }>) {
+        texts.push(String(item.explanationAr ?? "").trim());
+      }
+      for (const mistake of (lesson as unknown as { mistakes?: Array<{ whyAr?: string; trickAr?: string }> }).mistakes ?? []) {
+        texts.push(String(mistake.whyAr ?? "").trim(), String(mistake.trickAr ?? "").trim());
+      }
+    }
+    // لا يكون الفحص خُلُوًّا: لكل عنصر تدريب ردٌّ ولعيادة الخطأ سببٌ وحيلة، وإلا صار الصفر كذبة.
+    expect(texts.filter((text) => text.length > 0).length).toBeGreaterThanOrEqual(1733);
+    expect(texts.filter((text) => /^(?:مع |لحظة |أيام |الساعة |المحايد|النفي|الشهر)/u.test(text)).length).toBeGreaterThan(0);
+    expect(texts.filter((text) => feedbackBoilerplateTail(text) !== null)).toEqual([]);
+  });
+
+  it("never makes a learner read the same explanation twice inside one lesson (ع4)", () => {
+    const duplicated: string[] = [];
+    for (const lesson of academicLessonList) {
+      const seen = new Map<string, number>();
+      for (const item of [...lesson.exercises, ...lesson.reading.questions, ...lesson.listening.questions, ...lesson.miniTest] as Array<{ explanationAr?: string }>) {
+        const text = String(item.explanationAr ?? "").trim();
+        if (text) seen.set(text, (seen.get(text) ?? 0) + 1);
+      }
+      for (const [text, count] of seen) if (count > 1) duplicated.push(`${lesson.id}: ${text.slice(0, 40)}`);
+    }
+    expect(duplicated).toEqual([]);
+  });
+
+  it("labels mechanically located reading evidence instead of hiding it", () => {
+    let cited = 0, marked = 0;
+    for (const lesson of academicLessonList) {
+      for (const question of lesson.reading.questions) {
+        const text = String(question.explanationAr ?? "");
+        if (text.includes("ارجع إلى")) cited += 1;
+        if (text.includes(FEEDBACK_DISCLOSURE_MARKER)) marked += 1;
+      }
+    }
+    expect(cited).toBeGreaterThan(0);
+    // الوسم على كل مرجع آليّ فقط: لا يُلغى ولا يُلصق بما لا يحتاجه.
+    expect(marked).toBe(cited);
+  });
+
+  it("keeps the committed quality artifact honest about feedback ceilings", () => {
+    const quality = JSON.parse(readFileSync("reports/lesson-quality-audit.json", "utf8")) as {
+      feedback: { boilerplateTailItems: number; boilerplateTailCeiling: number; duplicateExplanationPairs: number; maxRepeatedFinalSentence: number; repeatedFinalSentenceCeiling: number; allUnder60Chars: number };
+      thresholds: Record<string, number>;
+      status: string;
+    };
+    expect(quality.feedback.boilerplateTailItems).toBe(0);
+    expect(quality.feedback.boilerplateTailCeiling).toBe(0);
+    expect(quality.feedback.duplicateExplanationPairs).toBe(0);
+    expect(quality.feedback.allUnder60Chars).toBe(0);
+    expect(quality.feedback.maxRepeatedFinalSentence).toBeLessThanOrEqual(quality.feedback.repeatedFinalSentenceCeiling);
+    expect(quality.status).toBe("pass");
+  });
 });

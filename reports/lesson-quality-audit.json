@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "9eff09291f99e0974b5b5452f364ea078878570881f94ea27cf40a725872f9bd",
+  "contentSha256": "ae6797ea0d38aca2778e76384240605a7e286818c2616a9bea1736565379e29e",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -11,7 +11,10 @@
     "longestOptionCuePctMax": 40,
     "singleVariantSharePctMax": 25,
     "noOpAcceptedVariantsMax": 0,
-    "explanationMedianCharsMin": 60
+    "explanationMedianCharsMin": 60,
+    "feedbackBoilerplateTailsMax": 0,
+    "duplicateExplanationsInLessonMax": 0,
+    "maxRepeatedFinalSentence": 24
   },
   "multipleChoice": {
     "items": 1250,
@@ -52,11 +55,18 @@
     "countingRule": "Distinct normalized forms describe acceptance breadth of constrained exercises. The historical <=25% ceiling is reported as legacy, not validity of open production (ADR-100); case/punctuation padding remains forbidden."
   },
   "feedback": {
+    "boilerplateTailItems": 0,
+    "boilerplateTailCeiling": 0,
+    "boilerplateTailExamples": [],
+    "duplicateExplanationPairs": 0,
+    "duplicateExplanationExamples": [],
+    "maxRepeatedFinalSentence": 10,
+    "repeatedFinalSentenceCeiling": 24,
     "allItems": 1733,
-    "allMedianChars": 211,
+    "allMedianChars": 179,
     "allUnder60Chars": 0,
     "allMissing": 0,
-    "explanationMedianChars": 232,
+    "explanationMedianChars": 178,
     "under40Chars": 0,
     "ofItems": 1250
   },

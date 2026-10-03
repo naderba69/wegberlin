@@ -5,6 +5,7 @@ import { academicLessonList as lessons } from "../src/data/academic-lessons";
 import { evaluateExercise } from "../src/core/lesson/evaluate";
 import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
+import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "../src/core/lesson/teaching-contract";
 
 /**
  * Lesson-quality audit — measures what the structural gates do not:
@@ -23,6 +24,9 @@ const thresholds = {
   singleVariantSharePctMax: 25,
   noOpAcceptedVariantsMax: 0,
   explanationMedianCharsMin: 60,
+  feedbackBoilerplateTailsMax: 0,
+  duplicateExplanationsInLessonMax: 0,
+  maxRepeatedFinalSentence: 24,
 };
 
 const STOP = new Set("der die das und oder aber für mit von zu im am an ein eine einen einer einem des dem den ich du er sie es wir ihr sie nicht kein keine alle jeder jede wenn als auch noch schon sehr mehr weniger man uns euch ihnen ihm sein ihre ihrem diesem dieser dieses bei nach aus über unter vor hinter zwischen um ohne innerhalb außerhalb kann werde werden wird hat haben hatte sollte müssen will möchten".split(" "));
@@ -49,12 +53,27 @@ const mcqOf = (lesson: (typeof lessons)[number]): ScoredItem[] => [
 
 const positions = [0, 0, 0, 0]; let itemTotal = 0, longestCue = 0;
 const allFeedbackLengths: number[] = [];
+/** ع2/ع4 من تدقيق 2026-10-03: لا ذيل عامًّا مكرَّرًا، ولا فقرة تُقرأ مرتين في الدرس نفسه. */
+let boilerplateTailItems = 0;
+const boilerplateLessons: string[] = [], duplicateExplanationPairs: string[] = [];
+const finalSentenceCounts = new Map<string, number>();
 for (const lesson of lessons) {
   const texts: string[] = [];
   for (const exercise of lesson.exercises) texts.push(String((exercise as { explanationAr?: string }).explanationAr ?? "").trim());
   for (const question of [...lesson.reading.questions, ...lesson.listening.questions, ...lesson.miniTest]) texts.push(String(question.explanationAr ?? "").trim());
-  for (const text of texts) allFeedbackLengths.push(text.length);
+  const seen = new Map<string, number>();
+  for (const text of texts) {
+    allFeedbackLengths.push(text.length);
+    if (feedbackBoilerplateTail(text)) { boilerplateTailItems += 1; boilerplateLessons.push(`${lesson.id}:${text.slice(0, 24)}`); }
+    if (text) seen.set(text, (seen.get(text) ?? 0) + 1);
+    const sentences = text.split(/(?<=[.!؟])\s+/u).map((sentence) => sentence.trim()).filter(Boolean);
+    const last = sentences[sentences.length - 1];
+    // وسم الأمانة مُكرَّر عن قصد، فلا يُحسب في سقف الجُملة الختامية.
+    if (last && last.replace(/[.!؟]\s*$/u, "") !== FEEDBACK_DISCLOSURE_MARKER.replace(/[.]$/u, "")) finalSentenceCounts.set(last, (finalSentenceCounts.get(last) ?? 0) + 1);
+  }
+  for (const [text, count] of seen) if (count > 1) duplicateExplanationPairs.push(`${lesson.id} (${count}×) ${text.slice(0, 40)}`);
 }
+const maxRepeatedFinalSentence = finalSentenceCounts.size ? Math.max(...finalSentenceCounts.values()) : 0;
 const shortExplanations: string[] = [], explanationLengths: number[] = [];
 type Violation = { lessonId: string; modelWords: number; statedMin: number; statedMax: number };
 const writingViolations: Violation[] = [], singleVariant: string[] = [], noOpVariantItems: string[] = [], untraceable: string[] = [];
@@ -159,6 +178,9 @@ const singleShare = (100 * singleVariant.length) / Math.max(1, productiveTotal);
 // Keep the historical <=25% ceiling visible as legacy data; do not fabricate alternatives.
 // Free writing/speaking are evaluated by workflow and provenance, never a single string.
 if (noOpVariantItems.length > thresholds.noOpAcceptedVariantsMax) issues.push(`productive exercises listing an unreachable accepted variant: ${noOpVariantItems.length} (max ${thresholds.noOpAcceptedVariantsMax})`);
+if (boilerplateTailItems > thresholds.feedbackBoilerplateTailsMax) issues.push(`generic feedback tail pasted onto item-specific explanations: ${boilerplateTailItems} items (max ${thresholds.feedbackBoilerplateTailsMax})`);
+if (duplicateExplanationPairs.length > thresholds.duplicateExplanationsInLessonMax) issues.push(`same explanation read twice inside one lesson: ${duplicateExplanationPairs.length} pair(s) (max ${thresholds.duplicateExplanationsInLessonMax})`);
+if (maxRepeatedFinalSentence > thresholds.maxRepeatedFinalSentence) issues.push(`one final sentence closes ${maxRepeatedFinalSentence} explanations (max ${thresholds.maxRepeatedFinalSentence}) — diversify by the item's own content, not by another generic sentence`);
 const explanationMedian = median(explanationLengths);
 if (explanationMedian < thresholds.explanationMedianCharsMin) issues.push(`median explanation length ${explanationMedian} chars (min ${thresholds.explanationMedianCharsMin})`);
 
@@ -187,6 +209,9 @@ const report = {
     countingRule: "Distinct normalized forms describe acceptance breadth of constrained exercises. The historical <=25% ceiling is reported as legacy, not validity of open production (ADR-100); case/punctuation padding remains forbidden.",
   },
   feedback: {
+    boilerplateTailItems, boilerplateTailCeiling: thresholds.feedbackBoilerplateTailsMax, boilerplateTailExamples: boilerplateLessons.slice(0, 8),
+    duplicateExplanationPairs: duplicateExplanationPairs.length, duplicateExplanationExamples: duplicateExplanationPairs.slice(0, 8),
+    maxRepeatedFinalSentence, repeatedFinalSentenceCeiling: thresholds.maxRepeatedFinalSentence,
     allItems: allFeedbackLengths.length,
     allMedianChars: median(allFeedbackLengths),
     allUnder60Chars: allFeedbackLengths.filter((size) => size < 60).length,

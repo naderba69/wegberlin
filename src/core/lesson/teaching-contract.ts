@@ -42,6 +42,26 @@ export function englishGrammarTermLeak(text: string): string[] {
     new RegExp(`(^|[^A-Za-z\u00c0-\u024f])${term.replace(/ /gu, "[\\s_-]+")}([^A-Za-z\u00c0-\u024f]|$)`, "iu").test(text));
 }
 
+/**
+ * جُمل «الذيل العام» التي مُنعت نهائيًا في حقول التغذية الراجعة (ع2 من تدقيق 2026-10-03).
+ * هذه جُمل صحيحة المعنى لكنها لا تقول شيئًا عن العنصر الذي تُذَيَّل به: تكرارها حرفيًّا في
+ * نسبة معتبرة من المنهج يجعل التبرير يبدو آليًّا. تُقاس ceilings لا تُصلَح بإبدال صيغة بأخرى.
+ */
+export const FEEDBACK_BOILERPLATE_TAILS = [
+  "افحص المعنى وترتيب الكلمات في سياق السؤال قبل تثبيت جوابك، ثم كوّن استعمالًا جديدًا للهدف بدل تكرار المفتاح فقط",
+  "أعد سماع موضع المعلومة وحدّد من يتكلم وما يقصده؛ لا تختَر تفصيلًا سمعته إذا كان يخص شخصًا أو وقتًا آخر",
+  "بعد الفهم قل المعلومة بكلماتك دون قراءة النص",
+] as const;
+
+/** وسم أمانة لا نصيحة تعليمية: مكرَّر عمدًا على كل سؤال قراءة آليّ المرجع، فلا يدخل سقف التكرار. */
+export const FEEDBACK_DISCLOSURE_MARKER = "موضع الرجوع آلي ويحتاج مراجعة دلالية مستقلة.";
+
+/** أيّ جُملة ذيل عامّ توجد في هذا النصّ؟ (تُعاد الجملة المحظورة أو null) */
+export function feedbackBoilerplateTail(text: string): string | null {
+  if (!text) return null;
+  return FEEDBACK_BOILERPLATE_TAILS.find((tail) => text.includes(tail)) ?? null;
+}
+
 /** Every learner-facing Arabic string of a lesson-shaped object, with its path. */
 export function learnerArabicFields(node: unknown, path = ""): Array<{ path: string; text: string }> {
   const found: Array<{ path: string; text: string }> = [];

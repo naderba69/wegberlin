@@ -1,0 +1,26 @@
+{
+ "a1-05-m1": {
+  "expect": "مع du من sein: bist. الصيغة المطلوبة هنا هي «bist». تعبّر الألمانية عن العمر بالفعل sein: Ich bin 22 Jahre alt.",
+  "text": "مع du لا يكون إلا bist، والخطأ الشائع إسقاطه كلّه: «Ich 22 Jahre» جملة بلا فعل. الصيغة المطلوبة هنا هي «bist». صحّحها في جملة جديدة: Du bist zwanzig Jahre alt."
+ },
+ "a1-07-m2": {
+  "expect": "لحظة البداية تأخذ um. الصيغة المطلوبة هنا هي «um».",
+  "text": "الساعة المحددة تدخلها um، أما البداية الممتدة فبـ ab أو seit. الصيغة المطلوبة هنا هي «um». مثال من يومك: Der Film beginnt um zwanzig Uhr."
+ },
+ "a1-14-m2": {
+  "expect": "Küche مؤنث في Dativ: der. الصيغة المطلوبة هنا هي «der».",
+  "text": "in مع المكان المغلق تأخذ Dativ، فيصير المؤنث der: in der Küche. جرّبها على مؤنث آخر: in der Schule، in der Stadt. الصيغة المطلوبة هنا هي «der»."
+ },
+ "a1-16-m2": {
+  "expect": "مع du: kannst. الصيغة المطلوبة هنا هي «Kannst». يأتي können مصرفًا في الموقع الثاني، بينما يأتي فعل النشاط في المصدر في نهاية الجملة: Ich kann gut schwimmen.",
+  "text": "في سؤال نعم/لا ينتقل kannst إلى أول الجملة ويبقى فعل النشاط مصدرًا في النهاية: Kannst du am Montag kommen? الصيغة المطلوبة هنا هي «Kannst». لا تُدخل zu بين الفعلين."
+ },
+ "a1-21-m2": {
+  "expect": "مع ich: muss. الصيغة المطلوبة هنا هي «muss». نستعمل müssen عندما يكون الأمر ضروريًا: Ich muss umsteigen.",
+  "text": "نفي muss هو muss nicht، ويعني انتفاء الضرورة لا المنع: Ich muss heute nicht arbeiten. الصيغة المطلوبة هنا هي «muss». أما المنع فبـ dürfen منفيًا: Hier darfst du nicht parken."
+ },
+ "a1-24-m1": {
+  "expect": "Nachname هو اللقب. الصيغة المطلوبة هنا هي «Nachname». تطلب النماذج بيانات محددة: Vorname هو الاسم الأول، Nachname اللقب، Geburtsdatum تاريخ الميلاد، Geburtsort مدينة الميلاد، Anschrift العنوان، Unterschrift التوقيع.",
+  "text": "حقول النماذج أسماء مركبة تُقرأ من الآخر إلى الأول: Geburtsdatum تاريخُ الميلاد وGeburtsort مكانُه، فلا تخلط بينهما. الصيغة المطلوبة هنا هي «Nachname». وفي الاستمارة يُكتب اللقب أولًا عادةً: Nachname, Vorname."
+ }
+}

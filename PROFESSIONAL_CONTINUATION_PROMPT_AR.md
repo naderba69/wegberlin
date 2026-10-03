@@ -58,7 +58,7 @@ Sync batch: v180 · 2026-10-03 · re-verified after ADR-105 review-session dose 
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
 - Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- هذه مساحة Git فعلية في `/home/user/wegberlin` على `arena/01a0fba1-wegberlin`. رُفعت متابعة التباين وفحص Smoke وسجل QA إلى [PR #3](https://github.com/naderba69/wegberlin/pull/3)، ورأسه الحالي `2072a31`؛ الطلب ما زال مفتوحًا. فحص Vercel Preview Comments ناجح؛ فحوص check وe2e وVercel ما زالت قيد التشغيل عند آخر تحقق. لم يحدث دمج أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+- حالة Git الفعلية: مساحة العمل في `/home/user/wegberlin` على الفرع `arena/01a0febf-wegberlin`، وكل تعديل يمر عبر [PR #4](https://github.com/naderba69/wegberlin/pull/4) — لا رفع مباشر إلى `main`. أُدمج [PR #3](https://github.com/naderba69/wegberlin/pull/3) في `main` برأس دمج `eb9c061` عند 2026-10-02T21:23:59Z ونُشر إلى Production؛ وكان هذا السطر نفسه يقول سابقًا «الطلب ما زال مفتوحًا وفحوص check وe2e وVercel قيد التشغيل» — ذلك وصفٌ للحظة الفحص القديمة لا للحالة الحالية، وصحّحناه هنا بلا إعادة قياس. أمّا `docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json` فتبقى لقطة تاريخية كما قِيسَت (بما فيها حقل `branch` سُجّل باسم فرع خاطئ `arena/01a0fba1-wegberlin`)، ولا نعدّل الأرقام القديمة بحجة التجميل. فحص `Deployment Smoke` على الإنتاج لم يُعَد تشغيله بعد: تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` وإعادة التشغيل خطوتان للمالك.
 
 
 آخر تدقيق للتسليم: **2026-09-08 — Africa/Tunis**

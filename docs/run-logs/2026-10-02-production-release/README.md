@@ -17,7 +17,7 @@ Publication state: PR #3 is open with latest pushed head `2072a31`. Vercel Previ
 
 ما فوق صحيح كما قيس قبل الدمج، وجُدد أسفله فقط لتفادي قراءة حالته كحالة حالية:
 
-- PR #3 **أُدمج** في `main` عند 2026-10-02T21:23:59Z برأس `eb9c0616`؛ عبارة «Nothing has been merged to `main` or deployed to Production» و«PR #3 is open» تصفان لحظة الفحص لا الآن.
+- PR #3 **أُدمج** في `main` عند 2026-10-02T21:23:59Z برأس `eb9c0616`؛ عبارة «Nothing has been merged to `main` or deployed to Production» و«PR #3 is open» تصفان لحظة الفحص لا الآن. يُضاف إلى ذلك أن حقل `branch` في `QA_SUMMARY.json` سُجّل باسم فرع خاطئ (`arena/01a0fba1-wegberlin`) والفرع الفعلي كان `arena/01a0febf-wegberlin`؛ تُركت اللقطة كما هي لأن أرقامها مقيسة عليها، وصُحّح الوصف الحالي في `PROJECT_STATUS.md` وبرومبت الاستمرار.
 - `npm run build` و`npm test` كانا 322 صفحة و1,198/173؛ القياس الحالي بعد إصلاحات ADR-103/ADR-104 هو **1,210/1,210 في 174/174**، وبصمة البناء `329d37aa1324` (`full 5,759,874`).
 - `checks: pending` استُنفدت: `smoke` على `Production` انتهى **فشلًا** (run `37066936703`) عند تحقق المسارات والترويسات، والسبب والتحليل والإصلاح في `docs/run-logs/2026-10-02-post-merge-smoke/README.md` وADR-104. لم نصف ذلك الفشل «ناجحًا باستثناء».
 - أرقام المتصفح 58/58 desktop و58/58 mobile تخص هذا الجيل من الشجرة (قبل بوابة مراحل الدرس)؛ **لم تُعَد** في بيئة لا تملك Chromium.

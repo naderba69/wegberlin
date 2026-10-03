@@ -68,5 +68,6 @@ PR #4 شغّل `Quality Gate` كاملاً على الشجرة الجديدة، 
 ## النتيجة النهائية لهذه الجلسة
 
 - PR #4 على رأس `076cd48`: `check` نجح (4m26s) و**`e2e` نجح (16m16s، Chromium، desktop وmobile معًا)**، وVercel Preview نجح، و`smoke` مُتخطًى عمدًا على Preview المحمي.
+- الرأس النهائي `f0bf8a3` (وثائق وبصمة قياس فقط): `check` نجح 4m21s و**`e2e` نجح 16m34s** في run `37083839559`، وVercel نجح، و`smoke` متخطًى على Preview. الحساب الحاكم في `PROJECT_STATUS.md` يعتمد هذا القياس.
 - القياس المحلي المقابل: 1,210/1,210 في 174/174 · typecheck نظيف · lint 0 أخطاء · `workflows:check` يمرّ على 8 ملفات · `handoff:check` نجح · `npm run build` 322/322 صفحة.
 - لا يزال مطلوبًا من المالك (لا صلاحية لي): تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` ثم إعادة تشغيل `Deployment Smoke` على `Production`. حساب هذه الجلسة أعاد 403 على `workflow_dispatch` وضبط متغيرات المستودع، ولا egress إلى `*.vercel.app` من هنا، فنتيجة الإنتاج لا تُدّعى من هذه البيئة.

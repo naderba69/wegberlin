@@ -39,6 +39,7 @@
 | `npm test` | **1,229/1,229** في **176/176** ملفًا |
 | `npm run build` | 322/322 صفحة؛ `offline:size` بصمة `d399ed70a36e` وfull 5,761,912؛ `js:budget` 123 chunks / 1,881,970 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
 | `npm run handoff:check` · `npm run workflows:check` | نجحا |
+| CI على head `6fb5667` (run `37108553360`) | `check` و`e2e` نجحا في 11m06s لكلٍّ منهما (خلاصة التشغيل success، مشروعا desktop وmobile)، Vercel نجح، و`Deployment Smoke` = skipping على تشغيل الـPR بحكم الحارس. حارس العقد الجديد مُنفَّذ داخل `check` (prebuild + handoff) لا محليًا فقط |
 
 ## ملاحظة تشغيلية: حالة الصندوق
 

@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 123,
-    "totalChunkGzipBytes": 1886244,
+    "totalChunkGzipBytes": 1895365,
     "maxSingleChunkGzipBytes": 266750
   },
   "issues": [],
@@ -74,6 +74,11 @@
       "gzipBytes": 45012
     },
     {
+      "path": ".next/static/chunks/8804-813f08169b20ffe5.js",
+      "rawBytes": 171741,
+      "gzipBytes": 44763
+    },
+    {
       "path": ".next/static/chunks/main-63fb81d12711c451.js",
       "rawBytes": 139577,
       "gzipBytes": 40677
@@ -82,11 +87,6 @@
       "path": ".next/static/chunks/polyfills-42372ed130431b0a.js",
       "rawBytes": 112594,
       "gzipBytes": 39520
-    },
-    {
-      "path": ".next/static/chunks/8804-139655af8f02ec9e.js",
-      "rawBytes": 144259,
-      "gzipBytes": 35642
     },
     {
       "path": ".next/static/chunks/app/today/page-e75e587cd6c810e9.js",

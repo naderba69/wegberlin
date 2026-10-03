@@ -46,10 +46,11 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     expect(contract.answers.prerequisites.ok).toBe(true);
   });
 
-  it("names the two known gaps on a B2 pilot instead of hiding them", () => {
+  it("keeps the B2 pilot's remaining gap visible instead of hiding it", () => {
     const contract = lessonTeachingContract(academicLessons["b2-14"]);
     expect(contract.hardFailures).toEqual([]);
-    expect(contract.gaps.join(" ")).toContain("لا مهمة نقل مؤجلة");
+    expect(contract.gaps.join(" ")).toContain("متطلب");
+    expect(contract.gaps.some((gap) => gap.startsWith("transfer"))).toBe(false);
     expect(contract.answers.prerequisites.valueAr).toContain("ترتيب المنهج");
     expect(contract.answers["explanation-model"].ok).toBe(true);
   });
@@ -74,10 +75,14 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     expect(results.every((result) => result.answers["evidence-split"].ok)).toBe(true);
   });
 
-  it("counts the authored gaps that the content work has to close", () => {
+  it("has a deferred transfer task for every lesson after Stage C", () => {
     const withDeferred = academicLessonList.filter((lesson) => independentProductionTasks.some((task) => task.sourceLessonId === lesson.id)).length;
-    expect(withDeferred).toBe(32);
-    expect(results.filter((result) => result.gaps.some((gap) => gap.startsWith("transfer")))).toHaveLength(64);
+    expect(independentProductionTasks).toHaveLength(96);
+    expect(withDeferred).toBe(96);
+    expect(results.filter((result) => result.gaps.some((gap) => gap.startsWith("transfer")))).toHaveLength(0);
+    // Zero scaffolding before the attempt: the model and phrases stay hidden even now.
+    expect(independentProductionTasks.every((task) => task.speaking.usefulPhrases.length === 0)).toBe(true);
+    expect(independentProductionTasks.every((task) => task.writing.modelDe.startsWith("لا يوجد نموذج"))).toBe(true);
   });
 
   it("leaves no error-clinic line as a stub after Stage B authoring", () => {

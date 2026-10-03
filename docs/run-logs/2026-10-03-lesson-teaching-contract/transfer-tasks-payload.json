@@ -1,0 +1,394 @@
+{
+ "A1": [
+  [
+   "a1-02",
+   "سؤال في قاعة الانتظار",
+   "Sie warten im Sprachkurs bei einer Behörde. Sprechen Sie mit der Person neben Ihnen: Sagen Sie, woher Sie kommen und wo Sie jetzt wohnen, und fragen Sie nach Herkunft, Wohnung und Sprache.",
+   "Sie schreiben eine kurze Nachricht an die Familie, bei der Sie wohnen: woher Sie kommen, wo Sie jetzt wohnen, und Sie fragen, woher die Mutter kommt und welche Sprache sie spricht."
+  ],
+  [
+   "a1-03",
+   "تسجيل هاتفي في مدرسة",
+   "Sie rufen bei einer Sprachschule an und möchten sich anmelden. Buchstabieren Sie Ihren Nachnamen, sagen Sie Ihre Telefonnummer und bitten Sie zweimal um Wiederholung: den Namen und die Kursnummer.",
+   "Sie schreiben eine Nachricht an die Schule: Sie buchstabieren Ihren Nachnamen, nennen Ihre Telefonnummer und bitten um Wiederholung der Raumnummer und des Kurses."
+  ],
+  [
+   "a1-04",
+   "صورة في مجموعة الدورة",
+   "Sie zeigen in der Kursgruppe ein Foto Ihrer Familie. Stellen Sie drei Personen vor und sagen Sie, wer Ihr Bruder und wer Ihre Tante ist. Die Person versteht einen Namen nicht; wiederholen Sie ihn und buchstabieren Sie ihn.",
+   "Sie schreiben über das Foto in die Gruppe: stellen Sie zwei Personen mit mein/meine vor und fragen Sie eine Person in der Gruppe nach ihrer Familie."
+  ],
+  [
+   "a1-05",
+   "انضمام إلى نادٍ رياضي",
+   "Sie sind auf einer Feier und sprechen mit einer neuen Person. Sagen Sie Ihr Alter und wann Sie Geburtstag haben, fragen Sie nach Name, Alter und E-Mail-Adresse und wiederholen Sie die Nummer, wenn Sie sie nicht verstehen.",
+   "Sie möchten in einem Sportverein trainieren. Schreiben Sie an den Verein: Ihren Namen, Ihr Alter, Ihren Geburtstag und Ihre Telefonnummer, und fragen Sie, wann das erste Training ist."
+  ],
+  [
+   "a1-06",
+   "حديث عن العمل في العيد",
+   "Auf einem Fest sprechen Sie über Arbeit. Sagen Sie, was Sie arbeiten und wo Sie arbeiten, fragen Sie nach dem Beruf der anderen Person und bitten Sie um Wiederholung, wenn Sie den Beruf nicht verstehen.",
+   "Sie schreiben einer Freundin über Ihre Arbeitswoche: Ihren Beruf, wo Sie arbeiten, und Sie fragen, was ihre Schwester arbeitet und wo sie arbeitet."
+  ],
+  [
+   "a1-07",
+   "مكالمة في وقت غير مناسب",
+   "Sie fragen an der Information nach den Öffnungszeiten und sagen dann Ihrem Bruder am Telefon, wann das Amt öffnet und schließt. Sagen Sie eine Uhrzeit zweimal: amtlich und normal. Bitten Sie um Wiederholung, wenn Sie eine Zahl nicht verstehen.",
+   "Ihre Freundin möchte Sie anrufen. Schreiben Sie: wann Sie zu Hause sind (von … bis), wann Sie anfangen und aufhören, und nennen Sie zwei Uhrzeiten — einmal amtlich, einmal normal."
+  ],
+  [
+   "a1-08",
+   "يوم جديد في السكن المشترك",
+   "Sie erzählen Ihrer Kurspartnerin von Ihrem Morgen. Beginnen Sie zwei Sätze mit der Uhrzeit und benutzen Sie trennbare Verben (aufstehen, anfangen, aufräumen). Dann fragen Sie, wann sie aufsteht.",
+   "Ein neues Mitglied in Ihrer WG möchte Ihren Tagesablauf kennen. Schreiben Sie vier Sätze: Uhrzeit am Anfang, dann das Verb, und am Schluss eine Frage an die Person."
+  ],
+  [
+   "a1-10",
+   "طبخ لشخص نباتي",
+   "Sie kaufen mit einer Person im Supermarkt ein. Sagen Sie, was Sie brauchen und was Sie nicht brauchen, fragen Sie nach dem Preis und bitten Sie um Wiederholung, wenn Sie eine Zahl nicht verstehen.",
+   "Sie kochen am Sonntag für einen Gast, der kein Fleisch isst. Schreiben Sie in kurzen Sätzen, was Sie brauchen (Akkusativ mit ein/kein) und was Sie nicht kaufen."
+  ],
+  [
+   "a1-12",
+   "طلب مع ملاحظة",
+   "Sie bestellen im Restaurant. Sagen Sie, was Sie möchten und was Sie nicht möchten (ohne Zucker, ohne Fleisch). Dann beschweren Sie sich höflich: Die Suppe ist kalt. Fragen Sie nach einer Lösung.",
+   "Sie sind im Restaurant mit einer Person, die kein Fleisch isst und keinen Kaffee trinkt. Schreiben Sie, was Sie bestellen, was die Person bekommt, und bitten Sie um die Rechnung."
+  ],
+  [
+   "a1-13",
+   "شقة تبحث عن ساكن",
+   "Sie zeigen einer Person Ihre Wohnung am Telefon. Beschreiben Sie drei Räume mit es gibt und nennen Sie die Größe. Die Person fragt nach der Miete; sagen Sie, dass Sie das nicht wissen.",
+   "Ihr Cousin sucht ein Zimmer. Schreiben Sie eine Nachricht über Ihre Wohnung: wie groß sie ist, welche Räume es gibt (es gibt …), und ob es einen Balkon gibt."
+  ],
+  [
+   "a1-14",
+   "ترتيب السكن يوم السبت",
+   "Sie helfen beim Aufräumen. Sagen Sie viermal, wo etwas ist (auf dem Tisch, im Regal, an der Wand, unter dem Bett). Ihre Mitbewohnerin fragt: Liegt der Ausweis auch dort? Antworten Sie und korrigieren Sie.",
+   "Ihre Mitbewohnerin sucht drei Dinge: Schlüssel, Buch, Jacke. Schreiben Sie, wo die Dinge liegen/stehen/hängen, mit Präposition und Dativ."
+  ],
+  [
+   "a1-16",
+   "برنامج نهاية الأسبوع",
+   "Sie sprechen mit einer Person über die freie Zeit. Sagen Sie, was Sie gern und was Sie nicht so gern machen, fragen Sie nach Hobbys und laden Sie für Samstag ein. Die Person hat schon etwas vor; fragen Sie nach einem anderen Tag.",
+   "In Ihrem Verein fehlt jemand für das Wochenendprogramm. Schreiben Sie: was Sie gern machen, was Sie am liebsten machen, was Sie können, und laden Sie eine Person ein."
+  ],
+  [
+   "a1-18",
+   "الخطة معلّقة بالطقس",
+   "Sie planen den Samstag mit einer Person. Beschreiben Sie das Wetter und sagen Sie, was Sie deshalb machen oder verschieben. Fragen Sie, was die Person lieber macht, und einigen Sie euch.",
+   "Sie wollen mit Freunden grillen. Schreiben Sie eine Nachricht: wie das Wetter heute und morgen ist, was Sie deshalb tun, und wen Sie einladen."
+  ],
+  [
+   "a1-20",
+   "عاملة التوصيل أمام الباب",
+   "Jemand fragt Sie auf der Straße nach dem Weg zum Bahnhof. Geben Sie drei formelle Anweisungen und nennen Sie einen Landmark. Die Person versteht nicht; wiederholen Sie mit einem anderen Landmark.",
+   "Eine Paketbotin findet Ihr Haus nicht. Schreiben Sie eine kurze Anleitung im formellen Imperativ (Gehen Sie …, Biegen Sie … ab) und nennen Sie zwei Merkmale auf dem Weg (Apotheke, Brunnen)."
+  ],
+  [
+   "a1-21",
+   "إلغاء القطار",
+   "Sie kaufen am Schalter ein Ticket nach Dresden und sollen um 8 Uhr ankommen. Fragen Sie nach Abfahrt, Gleis und Preis und sagen Sie, dass Sie eine Rückfahrkarte brauchen. Der Schalter versteht Ihr Datum nicht; wiederholen Sie es.",
+   "Ihr Zug nach Kassel fällt aus. Schreiben Sie an einen Freund: welchen Zug Sie jetzt nehmen, wann Sie ankommen, und fragen Sie, ob er Sie abholt."
+  ],
+  [
+   "a1-22",
+   "اعتذار بسبب المرض",
+   "Sie sind in der Apotheke und beschreiben drei Beschwerden (Kopf, Rücken, Augen). Sagen Sie, was wehtut und seit wann, und fragen Sie, ob Sie heute arbeiten können.",
+   "Sie können heute nicht in den Kurs kommen. Schreiben Sie der Kursleiterin: was Sie haben (mein … tut weh), seit wann, und dass Sie zum Arzt gehen müssen."
+  ]
+ ],
+ "A2": [
+  [
+   "a2-02",
+   "تأخّر القطار عن رحلة",
+   "Sie erzählen einer Freundin von einer versprochenen Verabredung, die nicht geklappt hat: Was ist passiert, warum, und was haben Sie danach gemacht? Benutzen Sie Perfekt mit trennbaren Verben.",
+   "Sie schreiben eine kurze Geschichte über einen verpassten Termin: drei Handlungen in der richtigen Reihenfolge, mit danach, dann und schließlich, und einem Satz im Perfekt mit ge- … -t."
+  ],
+  [
+   "a2-03",
+   "أول يوم في المدينة",
+   "Erzählen Sie einem Kollegen von Ihrem ersten Tag in dieser Stadt: Was war neu, wie haben Sie sich gefühlt, und was ist daraus geworden? Beginnen Sie den ersten Satz mit Als.",
+   "Sie schreiben an eine Freundin über ein einmaliges Erlebnis (ein Fest, ein Prüfungstag): was passiert ist, wie es war, und was davon geblieben ist — mit einem als-Satz."
+  ],
+  [
+   "a2-04",
+   "رسالة إلى الجيران الجدد",
+   "Sie hören nachts Lärm in der Wohnung über Ihnen. Klopfen Sie an die Tür, sagen Sie höflich, was das Problem ist, fragen Sie nach einer Lösung und bieten Sie einmal Ihre Hilfe an.",
+   "Sie schreiben eine Nachricht an die neuen Nachbarn: stellen Sie sich kurz vor, bieten Sie Hilfe an (kann ich Ihnen helfen?) und erklären Sie eine Regel im Haus mit einem Dativ-Satz."
+  ],
+  [
+   "a2-05",
+   "قواعد use المكتب الجديد",
+   "Sie arbeiten zum ersten Mal in einem gemeinsamen Büro. Fragen Sie Ihre Kollegin nach vier Regeln (Rauchen, Musik, Gäste, Küche) und sagen Sie, was Sie schon wissen.",
+   "Sie schreiben eine kurze Mail an alle im Büro: drei Regeln mit man muss / man darf / man darf nicht und ein Hinweis darauf, was in der Küche zu tun ist."
+  ],
+  [
+   "a2-07",
+   "تسليم الملفات في آخر يوم",
+   "Sie geben Ihre Aufgaben an eine neue Kollegin weiter. Erklären Sie am Telefon drei Aufgaben, sagen Sie, wer wofür zuständig ist, und fragen Sie nach einem Termin für die Übergabe.",
+   "Sie schreiben an Ihr Team: welche Aufgabe Sie machen (Ich bin für … zuständig / Ich kümmere mich um …), was passiert, wenn ein Kunde anruft, und wann Sie morgen im Büro sind."
+  ],
+  [
+   "a2-09",
+   "مكالمة في غير وقتها",
+   "Sie rufen in einem Büro an und brauchen Frau Berger. Sie ist nicht da: bitten Sie um einen Rückruf, sagen Sie, wann Sie erreichbar sind, und sprechen Sie eine kurze Nachricht mit Ihrer Telefonnummer.",
+   "Sie schreiben dem Sekretariat: Sie möchten Frau Berger sprechen, sie ist nicht da. Bitten Sie um einen Rückruf, fragen Sie, ob ein Termin am Donnerstag möglich ist, und hinterlassen Sie Ihre Nummer."
+  ],
+  [
+   "a2-10",
+   "رحلة بين مدينتين",
+   "Sie planen eine Reise und vergleichen zwei Angebote. Sagen Sie am Telefon, was schneller, teurer oder bequemer ist, und begründen Sie Ihre Wahl mit einem als-Vergleich.",
+   "Sie schreiben Ihrem Bruder zwei Zugverbindungen: Vergleichen Sie Preis, Dauer und Abfahrtszeit mit als und so … wie und sagen Sie, welche Verbindung Sie nehmen und warum."
+  ],
+  [
+   "a2-12",
+   "حجز لم يُنفَّذ",
+   "Sie rufen bei einer Agentur an: Ihr Zimmer ist reserviert, aber die Anmeldung ist falsch. Beschreiben Sie das Problem höflich, nennen Sie zwei Beweise und verlangen Sie einen konkreten Ersatz.",
+   "Sie schreiben eine Beschwerde: Sie haben eine Wohnung für drei Nächte gemietet, aber beim Ankommen war alles wie vorher (kein Bett, kein Schlüssel). Nennen Sie die Fakten und bitten Sie um eine Lösung bis Freitag."
+  ],
+  [
+   "a2-13",
+   "وعود السنة الجديدة",
+   "Sie sprechen mit Ihrem Arzt über Ihre Gewohnheiten: Was machen Sie oft, was sollen Sie ändern, und welche zwei Schritte passen wirklich in Ihren Tag?",
+   "Ein Freund fragt nach Ihrem neuen Plan. Schreiben Sie ihm: zwei Sätze mit sollte (für ihn) und zwei Sätze über sich selbst mit reflexiven Verben (sich bewegen, sich Zeit nehmen) und einem realistischen Termin."
+  ],
+  [
+   "a2-14",
+   "مرض قبل الموعد",
+   "Sie rufen in der Firma an und melden sich krank. Sagen Sie, wie lange Sie fehlen, dass ein Kollege die Dateien hat, und dass Sie am Montag anrufen.",
+   "Sie schreiben eine Mail an Ihr Team: Sie sind krank (dass-Satz), Sie sind bis Mittwoch nicht erreichbar, und ein Kollege übernimmt eine Aufgabe. Fragen Sie, ob etwas bis heute fertig sein muss."
+  ],
+  [
+   "a2-15",
+   "سؤال في الصيدلية",
+   "Sie sind in der Apotheke und beschreiben Ihre Beschwerden seit drei Tagen. Fragen Sie nach dem Medikament: wie oft, wie lange und was Sie dabei nicht tun dürfen.",
+   "Sie schreiben Ihrem Bruder die Anleitung einer Tablette: was der Apotheker gesagt hat (zweimal nach dem Essen, nicht mit Alkohol, drei Tage) und was er tun soll, wenn es schlechter wird."
+  ],
+  [
+   "a2-17",
+   "قواعد الخصوصية في العائلة",
+   "Sie erklären Ihrem jüngeren Bruder am Telefon zwei Regeln am Handy: was er tun soll und was nicht, und Sie sagen, warum (damit er sicher ist).",
+   "Sie schreiben in der Familiengruppe zwei Regeln für das WLAN und erklären sie: eine mit um … zu, eine mit damit (anderes Subjekt). Nennen Sie auch eine Ausnahme."
+  ],
+  [
+   "a2-18",
+   "رأي في عمل جديد",
+   "Sie treffen einen Freund und ihr Club soll neu eröffnet werden. Sagen Sie Ihre Meinung mit einem Beispiel, nennen Sie einen Vorteil und einen Nachteil und fragen Sie nach seiner Ansicht.",
+   "Sie schreiben uns an die Kursgruppe: Sie finden ein neues Lerncenter nicht gut. Nennen Sie Ihre Meinung mit zwei Gründen und formulieren Sie einen Einwand mit zwar … aber."
+  ],
+  [
+   "a2-20",
+   "تسجيل قبل بدء الدورة",
+   "Sie rufen in einer Sprachschule an und möchten einen Kurs buchen. Fragen Sie nach Preis, Termin und Prüfung, und bitten Sie um Wiederholung, wenn Sie eine Zahl nicht verstanden haben.",
+   "Sie schreiben der Schule: Sie möchten sich anmelden, aber vorher wissen, wie lange der Kurs dauert, wann er anfängt und welche Prüfung es gibt (bevor-Satz)."
+  ],
+  [
+   "a2-22",
+   "دعوة لمناسبة عائلية",
+   "Sie planen eine kleine Geburtstagsfeier mit Ihrer Schwester. Sagen Sie, was Sie jedes Jahr machen, was diesmal anders ist und wen Sie einladen.",
+   "Sie schreiben eine Einladung für ein Familienfest: Datum, Uhrzeit, Ort und eine Regel für alle (zum Beispiel jeder bringt etwas mit). Erwähnen Sie einmal, was Sie früher immer gemacht haben (als-Satz)."
+  ],
+  [
+   "a2-23",
+   "يوم في المركز الاجتماعي",
+   "Sie möchten einmal im Monat in einem Nachbarschaftszentrum helfen. Fragen Sie am Telefon, welche Aufgaben es gibt und was Sie gut können.",
+   "Sie schreiben einem Freund über die Nachbarschaftshilfe: Sie haben eine Gruppe, die samstags Kindern hilft, erklären Sie, was Sie dort machen, und fragen ihn, ob er mitkommen will (Relativsatz mit der/die/das)."
+  ]
+ ],
+ "B1": [
+  [
+   "b1-01",
+   "مسار مهني في مقابلة",
+   "Ein Kollege fragt in der Kantine nach Ihrem Weg hierher. Erzählen Sie drei Stationen Ihres Lebenslaufs und sagen Sie, was daraus folgte. Ihr Kollege versteht einen Termin nicht; wiederholen Sie ihn mit dem Jahr.",
+   "Sie schreiben für eine Bewerbung drei Absätze über Ihren Werdegang: drei Stationen in der Reihenfolge, im Präteritum (war, hatte, zog, machte), und getrennt davon, was Sie daraus gelernt haben — ohne Daten zu erfinden."
+  ],
+  [
+   "b1-03",
+   "تحوّل غيّر الخطة",
+   "Sie erklären Ihrem Berater, warum Sie den Kurs gewechselt haben. Nennen Sie einen Schritt, der vorher erledigt war, und sagen Sie, was seitdem besser läuft.",
+   "Sie schreiben einer Freundin über eine Entscheidung, die vieles verändert hat: was vorher passiert war (nachdem-Satz im Plusquamperfekt), was Sie dann taten und was seitdem anders ist."
+  ],
+  [
+   "b1-04",
+   "توزيع مهام في فريق",
+   "Sie besprechen in der Abteilung eine neue Aufgabe. Fragen Sie dreimal im Passiv (Wie wird das dokumentiert? Bis wann wird das geprüft?) und sagen Sie, welche Aufgabe Sie übernehmen.",
+   "Ihr Team braucht eine schriftliche Regelung für die Woche. Schreiben Sie vier Sätze im Passiv (Die Unterlagen werden … geschickt, die Frist wird … geprüft) und nennen Sie zu jedem Satz die Person, die handelt."
+  ],
+  [
+   "b1-06",
+   "مقابلة بعد سنة",
+   "Sie sind im Vorstellungsgespräch. Erzählen Sie in zwei Minuten von einem Projekt: Situation, Aufgabe, Handlung, Ergebnis; belegen Sie jede Stärke mit einer Zahl und stellen Sie am Ende zwei Fragen.",
+   "Sie schreiben die Antworten auf drei Interviewfragen zu einem Konflikt: jede Antwort mit Situation, Aufgabe, Handlung und Ergebnis — ohne Erfolge zu behaupten, die Sie nicht belegen können."
+  ],
+  [
+   "b1-07",
+   "قرار بين مكانين",
+   "Sie diskutieren mit einer Freundin über das Wohnen. Nennen Sie zwei Punkte pro Seite und antworten Sie auf den Einwand, dass auf dem Land alles ruhiger sei, mit einem je … desto-Satz.",
+   "Ihre Schwester überlegt, aufs Land zu ziehen. Schreiben Sie einen Vergleich: was für die Stadt spricht und was für das Land (während-Satz), und schließen Sie mit Je näher die Arbeit, desto weniger Zeit verloren."
+  ],
+  [
+   "b1-09",
+   "اقتراح لساحة الحي",
+   "Sie stellen im Stadtteiltreffen einen Plan für mehr Fahrradstellplätze vor. Erklären Sie Ziel und Maßnahme mit indem und beantworten Sie die Frage, wer das bezahlen soll.",
+   "Der Bezirk will den Platz vor der Schule ändern. Schreiben Sie einen Vorschlag: das Ziel, eine Maßnahme (indem-Satz) und einen Indikator, mit dem man in sechs Monaten prüfen kann, ob es gewirkt hat."
+  ],
+  [
+   "b1-10",
+   "شراء بلا حاجة",
+   "Ein Freund will ein neues Handy, nur weil alle es haben. Diskutieren Sie mit ihm: nennen Sie zwei Kriterien für den Kauf und erklären Sie, wie Sie selbst sparen, ohne auf Wichtiges zu verzichten.",
+   "Sie haben drei Dinge gekauft, die Sie nicht brauchten. Schreiben Sie: was Sie künftig tun (statt … zu), was Sie lassen (ohne … zu), und nach welchem Kriterium Sie sich entscheiden."
+  ],
+  [
+   "b1-12",
+   "مبادرة في الحي",
+   "Sie stellen Ihre Initiative im Nachbarschaftsbüro vor. Erklären Sie Ziel und Ablauf, sagen Sie, wer noch fehlt, und nennen Sie, was Sie tun, falls am ersten Tag niemand kommt.",
+   "Sie planen eine Kleidersammlung im Viertel. Schreiben Sie das Ziel, die Gruppe, die es erreichen soll, drei Schritte — und den Plan, falls der Raum am Samstag nicht frei ist."
+  ],
+  [
+   "b1-13",
+   "طريق تعلّم",
+   "Sie erklären einem neuen Kursteilnehmer Ihren Lernweg. Sagen Sie zweimal, was Ihnen beim Lernen hilft, und beschreiben Sie einen Fortschritt mit Zahlen.",
+   "Sie schreiben einen Lernrückblick: Was hat sich beim Sprechen und beim Hören gezeigt, was haben Sie durch eine bestimmte Übung erreicht, und was ändern Sie ab morgen?"
+  ],
+  [
+   "b1-15",
+   "عرض أمام الفريق",
+   "Sie halten einen Kurzvortrag über Ihr Projekt. Stellen Sie die Leitfrage vor, markieren Sie drei Übergänge und beantworten Sie eine Frage in vierzig Sekunden mit einem Beispiel.",
+   "Sie schreiben den Einstieg und den Schluss eines Vortrags: eine Leitfrage, zwei Signale (Im Folgenden …, Zusammenfassend …) und die Bitte um Fragen am Ende — ohne neue Themen."
+  ],
+  [
+   "b1-16",
+   "تجربة مع الإعلام",
+   "Sie erklären Ihrem Kurs eine eigene Medienregel. Beschreiben Sie Ihre alte Gewohnheit und sagen Sie, was Sie tun wollen, statt dass Sie abends ins Handy schauen.",
+   "Sie analysieren Ihre Bildschirmzeit: was Sie gestern getan haben, was statt dessen passiert ist (statt dass-Satz) und was Sie eine Woche lang testen wollen."
+  ],
+  [
+   "b1-17",
+   "توصية بشيء شاهدته",
+   "Sie erklären einem Freund, warum ein Buch zu ihm passt: nennen Sie ein Kapitel und eine Person, sagen Sie, wen Sie damit nicht erreichen, und belegen Sie alles mit Szenen.",
+   "Sie schreiben im Kursforum eine Empfehlung: wovon das Werk handelt, ohne das Ende zu erzählen, eine gut gespielte Rolle, ein gestörter Punkt und für wen es sich nicht eignet."
+  ],
+  [
+   "b1-20",
+   "نصيحة بعد خطأ",
+   "Jemand bittet Sie um Rat bei einem Nachbarschaftsstreit. Sagen Sie zweimal An deiner Stelle würde ich …, nennen Sie ein Risiko und sagen Sie offen, was Sie nicht wissen.",
+   "Ihre Freundin hat einen Vertrag unterschrieben und ärgert sich. Antworten Sie: erst zwei Rückfragen, dann zwei Ratschläge mit würde oder sollte — und ein Satz darüber, was Sie ihr nicht raten können."
+  ],
+  [
+   "b1-21",
+   "قواعد عمل مشترك",
+   "Sie erklären in einem Teammeeting, wie ihr zusammenarbeitet. Bilden Sie zwei Regeln mit Wer … , der … und melden Sie ein Hindernis mit einer konkreten Bitte.",
+   "Ihr Projekt braucht eine schriftliche Regel. Schreiben Sie drei Sätze mit Wer …, der … und Was …, das … über Aufgaben, Fristen und Hilfe — und benennen Sie, was Sie als Nächstes melden."
+  ],
+  [
+   "b1-22",
+   "هدف كبير بخطوات",
+   "Sie planen mit einer Freundin ein Trainingsziel für acht Wochen. Sagen Sie, was Sie tun wollen, ohne sich zu überfordern, und fragen Sie, wann sie Zeit hat; einigt euch auf einen Check-Termin.",
+   "Sie haben sich ein großes Ziel für dieses Jahr gesetzt. Schreiben Sie es in drei Schritten: was Sie tun, ohne … zu, und was Ihre Partnerin tut, ohne dass Sie daran erinnert werden muss."
+  ],
+  [
+   "b1-23",
+   "قرار حول تطبيق",
+   "Sie beraten einen Kollegen bei einer Termin-App. Erklären Sie, worauf Sie achten, und sagen Sie, was fehlt, wenn kein Netz da ist.",
+   "Ihre Mutter fragt nach einer Notiz-App. Schreiben Sie eine kurze Antwort: wofür Sie sie benutzen, worauf Sie dabei achten, und was ohne Internet nicht funktioniert."
+  ]
+ ],
+ "B2": [
+  [
+   "b2-02",
+   "مناظرة داخلية",
+   "Sie sitzen in einer Diskussion über ein neues Schichtmodell. Gehen Sie auf einen Einwand ein, ohne die Person zu beurteilen, und nennen Sie einen Punkt, den Sie ändern wollten, selbst wenn die Gegenseite in allem recht hätte.",
+   "Sie schreiben zur Debatte über Homeoffice-Tage: fassen Sie die Gegenseite so zusammen, dass sie selbst zustimmen kann, stellen Sie zwei Positionen mit wohingegen gegenüber und sagen Sie, was selbst wenn ihr Modell gelingt, noch offen bleibt."
+  ],
+  [
+   "b2-04",
+   "رسالة فيها أكثر من غرض",
+   "Sie erklären Ihrem Team am Telefon, warum eine Entscheidung vom Amt später kommt: nennen Sie die Voraussetzung, die Folge und den Termin, ohne eine Zusage zu erfinden.",
+   "Ihre Abteilung braucht eine Regel zur Dokumentenablage. Schreiben Sie einen Satz im behördlichen Nominalstil (Die Durchführung der Ablage erfolgt …) und danach denselben Inhalt in zwei klaren Verbsätzen."
+  ],
+  [
+   "b2-06",
+   "شرح علمي لغير المختص",
+   "Sie erklären einer Gruppe von Eltern, warum eine neue Ernährungsempfehlung in der Schule schwer umzusetzen ist — mit einer Grenze: was die Studie nicht zeigt.",
+   "Ein Forschungsteam hat ein Pausenkonzept in zwei Schulen getestet. Schreiben Sie den Befund so, dass ihn eine Laie versteht: ein Passivsatz, zwei Aktivsätze und der Satz mit dem, was die Untersuchung nicht belegen kann."
+  ],
+  [
+   "b2-07",
+   "مشاركة تُقيَّم",
+   "Sie werden gefragt, warum die Beteiligung an der Befragung niedrig war. Erklären Sie in der Versammlung, wodurch sie entsteht und wodurch sie nicht entsteht.",
+   "Ihr Bezirk lässt Anwohner über einen Platz abstimmen, aber es kommen wenige. Schreiben Sie: wie Beteiligung zustande kommt (indem / dadurch dass), was sie bewirkt und was sie nicht bewirkt — ohne ein Ergebnis zu behaupten."
+  ],
+  [
+   "b2-09",
+   "ملاحظة وتفسير وحكم",
+   "Ein Kollege sagt, eine andere Gruppe mache nie Fehler. Sagen Sie, was Sie darüber wirklich wissen, und ordnen Sie es in ein Muster ein, das Sie mit zwei Beispielen belegen können.",
+   "Ein Kollege sagt: Hier ist alles unpünktlich. Schreiben Sie drei Absätze: was Sie beobachtet haben, wie Sie es deuten, und ob daraus schon ein Urteil über Menschen folgt."
+  ],
+  [
+   "b2-11",
+   "كتابة تحت الوقت",
+   "Sie geben Ihrer Gruppe in drei Minuten ein Projekt wieder: Einstieg, zwei Punkte, Schluss — ohne auf Details zu warten, die Sie nicht belegen können.",
+   "Sie haben 20 Minuten für eine Stellungnahme. Schreiben Sie vor dem ersten Satz Ihre drei Ziele hin (Leitfrage, Zahl der Argumente, Schlusssatz) und begründen Sie, was Sie weglassen."
+  ],
+  [
+   "b2-12",
+   "بروفة قبل الامتحان",
+   "Sie präsentieren im Team den Stand des Projekts: fünfzehn Minuten, drei Quellen, danach beantworten Sie zwei Fragen, ohne Zahlen zu erfinden.",
+   "Sie fanden ein Zitat, das Ihrer These widerspricht. Bauen Sie es in den Text ein, ohne die Argumentation zu verlieren, und schreiben Sie, was Sie an der Stelle noch prüfen müssten."
+  ],
+  [
+   "b2-14",
+   "فقرة متماسكة",
+   "Sie erklären in vier Minuten einen langen Abschnitt: führen Sie den Begriff ein, verweisen Sie später mit Pronomen und einem Nominalverweis darauf und enden Sie mit einer Konsequenz.",
+   "Ein Absatz beginnt fünfmal mit Das Projekt. Schreiben Sie ihn um: mit Pronomen, einem Adverb und einem Nominalverweis — und sagen Sie in einem Satz, welche Verweiskette den Absatz trägt."
+  ],
+  [
+   "b2-15",
+   "تقسيم وقت الامتحان",
+   "Sie planen mit Ihrem Partner die letzten 30 Minuten vor der Prüfung und erklären, was Sie tun wollen, damit nichts zu kurz kommt.",
+   "Sie schreiben eine Prüfung in 90 Minuten. Notieren Sie Ihre Planung in fünf Sätzen mit um … zu, bevor und solange: was Sie zuerst tun und was Sie vor dem Abgeben noch prüfen."
+  ],
+  [
+   "b2-16",
+   "مراجعة بلا اتهام",
+   "In der Teamsitzung heißt es, die Berichte seien immer zu spät. Antworten Sie in drei Sätzen: was hätte anders laufen können, was Sie jetzt vorschlagen — ohne so zu tun, als ob das keine Folgen hätte.",
+   "Ein Kollege wirft Ihnen vor, Sie hätten die Datei nicht geschickt. Schreiben Sie eine Antwort über den einzelnen Fall: was Sie hätten tun können, was Sie jetzt tun würden — ohne einen Vorwurf aus dem Vorwurf zu machen."
+  ],
+  [
+   "b2-18",
+   "رسمية بلا ضباب",
+   "Sie lehnen in einer offiziellen Antwort einen Vorschlag ab: sagen Sie, was nicht in Betracht kommt, was Berücksichtigung findet, und was sich ohne zusätzliche Kräfte nicht umsetzen lässt.",
+   "Ein Bericht schreibt: Wir haben eine Analyse durchgeführt. Schreiben Sie drei Sätze mit Funktionsverbgefügen (in Betracht ziehen, zur Anwendung bringen, Berücksichtigung finden) und sagen Sie, wo diese Form nützt und wo sie verschleiert."
+  ],
+  [
+   "b2-19",
+   "كلمات قصيرة تحمل الموقف",
+   "Ein Kollege beschwert sich über einen Termin. Antworten Sie in vier Sätzen mit zweimal doch, einmal ja und einmal halt — und erklären Sie, was Sie damit jeweils signalisieren.",
+   "Ihre Freundin schreibt: Die Anmeldung ist schon wieder abgelehnt worden. Antworten Sie in drei Sätzen: einer mit doch als Widerspruch gegen eine Negation, einer mit ja als gemeinsames Wissen, einer mit halt als Resignation ohne Zustimmung."
+  ],
+  [
+   "b2-20",
+   "روابط من جزأين",
+   "Sie antworten auf den Satz Die Prüfung war schwer: sagen Sie in vier Minuten, was sie gebracht hat — mit je …, desto … und mit nicht nur …, sondern auch … als zwei getrennten Aussagen.",
+   "Sie schreiben über Ihr Jahr: verwenden Sie bald … bald … zweimal, nicht nur …, sondern auch … einmal und je …, desto … einmal — jeder Satz mit einer eigenen Situation, keine Aufzählung."
+  ],
+  [
+   "b2-21",
+   "نقل بلا تبنٍّ",
+   "In der Sitzung sagt jemand, das sei doch besprochen worden. Sagen Sie in drei Sätzen, was diese Person behauptet hat, was eine andere gesagt haben soll, und was Sie nachprüfen werden.",
+   "Sie lesen ein Interview: Die Person sagt, ihr Modell funktioniere schon. Belege fehlen. Schreiben Sie drei Sätze im Konjunktiv I: was sie behauptet (wollen), was man ihr nachsagt (sollen), und was Sie selbst prüfen wollen."
+  ],
+  [
+   "b2-23",
+   "سلسلة أسماء تُفكّ",
+   "Sie erklären in drei Sätzen eine Regelung aus dem Amt: lösen Sie zwei lange Nominalketten in Verben auf und sagen Sie, welcher Unterschied dadurch sichtbar wird.",
+   "Ein Satz lautet: Die Prüfung der Ergebnisse des Projekts durch den Ausschuss verzögerte sich. Schreiben Sie daraus drei Verbsätze und sagen Sie, welche Information in der Genitivkette steckte und in Ihrer Fassung verloren geht."
+  ],
+  [
+   "b2-24",
+   "ترقيم يُظهر البنية",
+   "Sie erklären einer Gruppe eine Regel mit zwei Einschüben — einer davon nach dem Gedankenstrich — und sagen dann, wo im gesprochenen Text ein Komma fehlen würde und warum.",
+   "Ihr Absatz enthält einen Einschub und einen Nebensatz. Schreiben Sie ihn neu: schließen Sie die Nebensatzklammer mit dem Komma, setzen Sie den Einschub zwischen Gedankenstriche — und sagen Sie in einem Satz, welche Kommas die Struktur tragen."
+  ]
+ ]
+}

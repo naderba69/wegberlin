@@ -27,7 +27,7 @@
     "lessonsTotal": 96,
     "hardFailures": 0,
     "lessonsWithoutAuthoredPrerequisiteLink": 73,
-    "lessonsWithoutDeferredTransferTask": 64,
+    "lessonsWithoutDeferredTransferTask": 0,
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
@@ -37,42 +37,42 @@
     "lessonsTotal": 96,
     "hardFailures": 0,
     "lessonsWithoutAuthoredPrerequisiteLink": 73,
-    "lessonsWithoutDeferredTransferTask": 64,
+    "lessonsWithoutDeferredTransferTask": 0,
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "b317852b27e0",
+  "contentSha256": "a8ae1da45553",
   "counts": {
     "lessons": 96,
     "questions": 8,
     "answeredOk": 697,
-    "gaps": 135
+    "gaps": 71
   },
   "byLevel": {
     "A1": {
       "lessons": 24,
       "withoutAuthoredPrerequisite": 19,
-      "withoutDeferredTransferTask": 16,
+      "withoutDeferredTransferTask": 0,
       "hardFailures": 0
     },
     "A2": {
       "lessons": 24,
       "withoutAuthoredPrerequisite": 18,
-      "withoutDeferredTransferTask": 16,
+      "withoutDeferredTransferTask": 0,
       "hardFailures": 0
     },
     "B1": {
       "lessons": 24,
       "withoutAuthoredPrerequisite": 18,
-      "withoutDeferredTransferTask": 16,
+      "withoutDeferredTransferTask": 0,
       "hardFailures": 0
     },
     "B2": {
       "lessons": 24,
       "withoutAuthoredPrerequisite": 18,
-      "withoutDeferredTransferTask": 16,
+      "withoutDeferredTransferTask": 0,
       "hardFailures": 0
     }
   },
@@ -125,11 +125,9 @@
       "id": "a1-02",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -151,7 +149,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 92 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 92 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -172,11 +170,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -198,7 +195,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 135 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 89 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 135 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 89 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -218,11 +215,9 @@
       "id": "a1-04",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -244,7 +239,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 98 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 98 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -265,11 +260,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -291,7 +285,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 107 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 107 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -312,11 +306,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -338,7 +331,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 105 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 92 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 105 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 92 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -359,11 +352,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -385,7 +377,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 90 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 83 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 90 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 83 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -405,11 +397,9 @@
       "id": "a1-08",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-08",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -431,7 +421,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -496,11 +486,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -522,7 +511,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 112 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 79 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 112 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 79 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -589,11 +578,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -615,7 +603,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 154 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 101 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 154 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 101 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -636,11 +624,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -662,7 +649,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 118 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 118 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -682,11 +669,9 @@
       "id": "a1-14",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -708,7 +693,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 110 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 110 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -775,11 +760,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -801,7 +785,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 108 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 108 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -868,11 +852,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -894,7 +877,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -961,11 +944,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -987,7 +969,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1008,11 +990,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1034,7 +1015,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 56 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 56 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1055,11 +1036,10 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a1-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1081,7 +1061,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 65 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 65 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1238,11 +1218,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1264,7 +1243,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 114 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 63 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 114 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 63 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1284,11 +1263,9 @@
       "id": "a2-03",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1310,7 +1287,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1330,11 +1307,9 @@
       "id": "a2-04",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1356,7 +1331,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1377,11 +1352,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1403,7 +1377,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 117 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 85 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 117 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 85 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1468,11 +1442,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1494,7 +1467,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 100 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 100 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1559,11 +1532,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1585,7 +1557,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 119 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 106 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 119 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 106 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1605,11 +1577,9 @@
       "id": "a2-10",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1631,7 +1601,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 138 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 138 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1698,11 +1668,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1724,7 +1693,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 53 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 53 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1745,11 +1714,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1771,7 +1739,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1792,11 +1760,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1818,7 +1785,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1839,11 +1806,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1865,7 +1831,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 87 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 87 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1932,11 +1898,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -1958,7 +1923,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -1979,11 +1944,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2005,7 +1969,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2072,11 +2036,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2098,7 +2061,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2165,11 +2128,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2191,7 +2153,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 127 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 127 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2212,11 +2174,10 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "a2-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2238,7 +2199,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2304,11 +2265,9 @@
       "id": "b1-01",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-01",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2330,7 +2289,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 153 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 153 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2396,11 +2355,9 @@
       "id": "b1-03",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2422,7 +2379,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 155 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 64 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 155 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 64 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2442,11 +2399,9 @@
       "id": "b1-04",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2468,7 +2423,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2535,11 +2490,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2561,7 +2515,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 124 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 74 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 124 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 74 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2582,11 +2536,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2608,7 +2561,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 145 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 61 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 145 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 61 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2672,11 +2625,9 @@
       "id": "b1-09",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2698,7 +2649,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2718,11 +2669,9 @@
       "id": "b1-10",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2744,7 +2693,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2811,11 +2760,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2837,7 +2785,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 151 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 57 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 151 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 57 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2858,11 +2806,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2884,7 +2831,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 141 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 141 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2951,11 +2898,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -2977,7 +2923,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -2998,11 +2944,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3024,7 +2969,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3045,11 +2990,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3071,7 +3015,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3182,11 +3126,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3208,7 +3151,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 130 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 130 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3229,11 +3172,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3255,7 +3197,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 125 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 48 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 125 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 48 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3276,11 +3218,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3302,7 +3243,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 139 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 139 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3323,11 +3264,10 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b1-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3349,7 +3289,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 137 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 137 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3460,11 +3400,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3486,7 +3425,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3552,11 +3491,9 @@
       "id": "b2-04",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3578,7 +3515,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 76 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 76 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3642,11 +3579,9 @@
       "id": "b2-06",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3668,7 +3603,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 220 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 220 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3689,11 +3624,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3715,7 +3649,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 213 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 95 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 213 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 95 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3779,11 +3713,9 @@
       "id": "b2-09",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3805,7 +3737,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 234 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 86 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 234 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 86 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3872,11 +3804,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-11",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3898,7 +3829,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 201 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 201 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -3919,11 +3850,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -3945,7 +3875,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 272 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 272 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4012,11 +3942,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4038,7 +3967,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 195 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 105 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 195 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 105 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4059,11 +3988,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4085,7 +4013,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 269 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 140 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 269 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 140 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4106,11 +4034,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4132,7 +4059,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 342 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 146 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 342 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 146 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4199,11 +4126,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4225,7 +4151,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 394 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 213 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 394 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 213 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4246,11 +4172,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-19",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4272,7 +4197,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 329 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 185 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 329 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 185 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4293,11 +4218,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4319,7 +4243,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 207 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 163 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 207 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 163 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4340,11 +4264,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4366,7 +4289,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 147 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 147 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4433,11 +4356,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4459,7 +4381,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 201 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 103 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 201 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 103 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,
@@ -4480,11 +4402,10 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
-      "deferredTransferTask": null,
+      "deferredTransferTask": "b2-24",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
@@ -4506,7 +4427,7 @@
         },
         "transfer": {
           "ok": true,
-          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: غير مؤلَّفة"
+          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: موجودة"
         },
         "feedback": {
           "ok": true,

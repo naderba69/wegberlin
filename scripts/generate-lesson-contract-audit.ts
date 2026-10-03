@@ -22,7 +22,7 @@ const limits = {
   lessonsTotal: 96,
   hardFailures: 0,
   lessonsWithoutAuthoredPrerequisiteLink: 73,
-  lessonsWithoutDeferredTransferTask: 64,
+  lessonsWithoutDeferredTransferTask: 0,
   mistakeWhyStubs: 0,
   mistakeTrickStubs: 0,
   itemsWithoutExplanation: 0,

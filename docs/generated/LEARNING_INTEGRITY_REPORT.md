@@ -2,13 +2,13 @@
 
 Definition: 2026-10-02 · learning-integrity-v1
 
-Source SHA-256: `e31e52077f88d8a4533aa41eb8e0573b0f708e11374e08e556620a17fa96eb5c`
+Source SHA-256: `34d638a7f35a6d014f1eac38efe236ebbd66d258170087a7326e50e5a203c677`
 
 Result: **PASS** — 0 contract issues. This is not academic or acoustic certification.
 
 - 384 authored assessment template instances across 8 parallel forms; 48 items/form, knowledge threshold 39/48, 6 × 8 domain balance. Templates are not 384 unrelated skills or psychometrically calibrated items.
 - B2 modules: 4 / 4 / 4 / 4 / 4 / 4 lessons, IDs preserved.
-- 32 new independent production situations, without ready-made speaking phrases or German writing models.
+- 96 new independent production situations, without ready-made speaking phrases or German writing models.
 - Objective/item semantic alignment still pending independent review: 389.
 - Independent human reviews for new material: 0.
 

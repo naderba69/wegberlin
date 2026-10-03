@@ -39,8 +39,8 @@
 | `npm test` | **1,229/1,229** في **176/176** ملفًا |
 | `npm run build` | 322/322 صفحة؛ `offline:size` بصمة `d399ed70a36e` وfull 5,761,912؛ `js:budget` 123 chunks / 1,881,970 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
 | `npm run handoff:check` · `npm run workflows:check` | نجحا |
-| CI على head `6fb5667` (run `37108553360`) | `check` و`e2e` نجحا في 11m06s لكلٍّ منهما (خلاصة التشغيل success، مشروعا desktop وmobile)، Vercel نجح، و`Deployment Smoke` = skipping على تشغيل الـPR بحكم الحارس. حارس العقد الجديد مُنفَّذ داخل `check` (prebuild + handoff) لا محليًا فقط |
-
+| CI على head `6fb5667` (run `37108553360`) | `check` نجح في 4m26s (منها `npm run check` 3m58s) و`e2e` في 11m06s (المجموعة 9m20s للمشروعين)، Vercel نجح، و`Deployment Smoke` = skipping على تشغيل الـPR بحكم الحارس. حارس العقد مُنفَّذ داخل `check` لا محليًا فقط. **تصحيح**: سطرًا سابقًا هنا نَسب 11m06s للوظيفتين معًا؛ كان ذلك مقروءًا من حقل job في GraphQL لا من أزمنة الخطوات |
+| CI على head `95bfcfe` (run `37110656051`) | `check` 3m28s (`npm run check` 3m03s) و`e2e` 16m46s (build 1m37s، المجموعة 14m17s)، Vercel نجح، smoke = skipping؛ تشغيل رأس الكود `152467b` وحده أُلغي بالـconcurrency فلا يُنسب له رقم متصفح |
 ## ملاحظة تشغيلية: حالة الصندوق
 
 ثالث تراجع للتجهيز في هذه الجلسة: `HEAD` رجع إلى `eb9c061` و`node_modules` حُذفت بينما الملفات على القرص هي المدفوعة. الاستعادة تمت بلا لمس محتوى: مقارنة بايت‑ببايت (`git show <pushed>:<path> | cmp -`) لكل مسار مختلف، ثم تحريك مؤشر الفرع بـ`reset --mixed` وحده. لا `clean` ولا `checkout` ولا حذف عمل. `npm ci` أُعيد (471 حزمة، exit 0).

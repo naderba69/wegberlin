@@ -4,7 +4,7 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 195,
-  "openingTagCount": 7440,
+  "openingTagCount": 7441,
   "germanTagCount": 422,
   "arabicTagCount": 7,
   "ltrTagCount": 467,
@@ -14,7 +14,7 @@
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 202,
+  "mixedStaticCount": 201,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -108,17 +108,12 @@
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 79,
+      "line": 80,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 79,
-      "text": "تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفردات جديدة من درس غير منجز."
-    },
-    {
-      "path": "src/app/review/page.tsx",
-      "line": 81,
+      "line": 82,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -1029,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b1221"
+  "contentSha256": "3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aace6"
 }

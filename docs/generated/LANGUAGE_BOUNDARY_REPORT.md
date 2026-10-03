@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b1221`
+Content SHA-256: `3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aace6`
 
 ## Result
 
-`PASS` — 195 TSX files and 7440 opening JSX tags were scanned.
+`PASS` — 195 TSX files and 7441 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -20,7 +20,7 @@ Content SHA-256: `b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b12
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 202 |
+| Static Arabic + Latin text nodes under plaintext host policy | 201 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -55,9 +55,8 @@ Content SHA-256: `b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b12
 | src/app/progress/page.tsx:63 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:68 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:73 | ليس حكم CEFR | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:79 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:79 | تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفرد | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:81 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:80 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:82 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
 | src/components/ai-provider-capability-matrix.tsx:57 | حد 0 USD | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |

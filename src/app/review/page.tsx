@@ -8,7 +8,7 @@ import { useLearning } from "@/components/learning-provider";
 import { newReviewItem } from "@/core/srs/sm2";
 import { buildDueReviewQueue, nextScheduledReviewDate } from "@/core/srs/review-queue";
 import { applyReviewGrade, retentionEvidence } from "@/core/srs/review-session";
-import { dailyReviewQuota } from "@/core/review/daily-quota";
+import { dailyReviewQuota, reviewBacklogPlan } from "@/core/review/daily-quota";
 import { isRemediationCard, reviewHourFromLocalClock, reviewSessionDose, REVIEW_SESSION_DOSE_POLICY } from "@/core/review/session-dose";
 import { behavioralPraise } from "@/core/coach/behavioral-praise";
 import { StatusAnnouncement } from "@/components/status-announcement";
@@ -37,6 +37,7 @@ export default function ReviewPage() {
   const reviewNow = useMemo(()=>epochOr(deviceNow),[deviceNow]);
   const queue = useMemo(() => buildDueReviewQueue(state, reviewNow), [state, reviewNow]);
   const quota = useMemo(() => dailyReviewQuota(state, reviewNow), [state, reviewNow]);
+  const backlog = useMemo(() => reviewBacklogPlan(state, reviewNow), [state, reviewNow]);
   const dose = useMemo(() => reviewSessionDose({ queue, quotaRequired: quota.required, remediationDone, extended: doseExtended }), [queue, quota.required, remediationDone, doseExtended]);
   const nextScheduled = useMemo(() => nextScheduledReviewDate(state, reviewNow), [state, reviewNow]);
   const queued = dose.visible.find((item)=>!deferredCardIds.includes(item.card.id));
@@ -76,7 +77,7 @@ export default function ReviewPage() {
   function deferCurrentCard(){if(!card)return;setDeferredCardIds((current)=>current.includes(card.id)?current:[...current,card.id]);setFlipped(false)}
 
   return <div className="focus-page">
-    <header className="page-heading"><div><span className="eyebrow"><RotateCcw size={15}/> مراجعة SM-2</span><h1>استرجع أولًا، <em>ثم اكشف.</em></h1><p>تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفردات جديدة من درس غير منجز.</p></div><div className="review-count"><strong>{queue.length}</strong><span>مراجعة مستحقة<br/><small className="review-dose" data-review-dose-policy={REVIEW_SESSION_DOSE_POLICY}>حصة العلاج في هذه الجلسة {remediationDone} من {dose.remediationCap} · المستحق كله {dose.remediationCount}</small><br/>{reviewedThisSession ? `أنجزت الآن: ${reviewedThisSession}` : lastInterval !== null ? `الفاصل الأخير: ${lastInterval} يوم` : "حسب الدروس المكتملة"}</span></div></header>
+    <header className="page-heading"><div><span className="eyebrow"><RotateCcw size={15}/> مراجعة SM-2</span><h1>استرجع أولًا، <em>ثم اكشف.</em></h1><p>تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفردات جديدة من درس غير منجز.{' '}{backlog.due > backlog.perDay && <span className="review-backlog-plan">في الطابور {backlog.due} بطاقة؛ بسقفك {backlog.perDay} في يوم الدراسة يفكّ هذا التراكم في نحو {backlog.studyDaysToClear} يوم دراسة — تقدير خطّي لا وعد، ولا تُحذف بطاقة ولا تُحتسب دينًا.</span>}</p></div><div className="review-count"><strong>{queue.length}</strong><span>مراجعة مستحقة<br/><small className="review-dose" data-review-dose-policy={REVIEW_SESSION_DOSE_POLICY}>حصة العلاج في هذه الجلسة {remediationDone} من {dose.remediationCap} · المستحق كله {dose.remediationCount}</small><br/>{reviewedThisSession ? `أنجزت الآن: ${reviewedThisSession}` : lastInterval !== null ? `الفاصل الأخير: ${lastInterval} يوم` : "حسب الدروس المكتملة"}</span></div></header>
 
     <section className="retention-evidence-strip" aria-label="دليل الاحتفاظ المؤجل"><div><small>مراجعات أولى</small><strong>{retention.initialReviewEvents}</strong></div><div><small>بطاقات نجحت بعد موعد مؤجل</small><strong>{retention.successfulDelayedCards}</strong></div><div><small>دروس بعينة احتفاظ مؤجلة</small><strong>{retention.confirmedLessonIds.length}</strong></div><p>كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا.</p></section>
     <section className="review-shortcut-guide" data-review-shortcut-policy={REVIEW_SHORTCUT_POLICY} aria-label="اختصارات لوحة مفاتيح المراجعة"><strong>اختصارات سريعة</strong><span><kbd>Space</kbd> كشف/إخفاء</span><span><kbd>1</kbd> نسيت</span><span><kbd>3</kbd> بصعوبة</span><span><kbd>4</kbd> جيد</span><span><kbd>5</kbd> سهل</span><small>لا تعمل داخل حقول الكتابة، ولا تُقبل درجة قبل كشف البطاقة.</small></section>
@@ -101,7 +102,7 @@ export default function ReviewPage() {
     </div> : <section className="review-empty-state">
       <span><CalendarCheck size={28}/></span>
       <h2>{state.completedLessonIds.length === 0 ? "لا توجد بطاقات منجزة بعد" : queue.length > 0 ? "أجلت بقية بطاقات هذه الجلسة" : "أنهيت مراجعات اليوم"}</h2>
-      <p>{state.completedLessonIds.length === 0 ? "أكمل أول درس بأدلته الأربعة حتى تدخل بطاقاته إلى الطابور." : queue.length > 0 ? "لم تُحتسب البطاقات المؤجلة نجاحًا، وستبقى مستحقة عند عودتك." : nextScheduled ? `الموعد القادم: ${new Date(nextScheduled).toLocaleDateString("ar-TN")}. لا حاجة لمراجعة عشوائية الآن.` : "ستظهر البطاقات هنا عندما يحين موعدها وفق SM-2."}</p>
+      <p>{state.completedLessonIds.length === 0 ? "أكمل أول درس بأدلته الأربعة حتى تدخل بطاقاته إلى الطابور." : queue.length > 0 ? `لم تُحتسب البطاقات المؤجلة نجاحًا، وستبقى مستحقة عند عودتك؛ هي ${backlog.due} بطاقة تُراجع منها ${backlog.perDay} في يوم الدراسة — لا نُلغيها ولا نحوّلها دينًا.` : nextScheduled ? `الموعد القادم: ${new Date(nextScheduled).toLocaleDateString("ar-TN")}. لا حاجة لمراجعة عشوائية الآن.` : "ستظهر البطاقات هنا عندما يحين موعدها وفق SM-2."}</p>
       <Link href="/today" className="primary-button">العودة إلى مهمة اليوم</Link>
     </section>}
   </div>;

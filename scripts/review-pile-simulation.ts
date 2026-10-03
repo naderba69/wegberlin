@@ -1,12 +1,18 @@
 /*
  * محاكاة ديناميكية كومة المراجعة (م5 · الصف 8 من سجل تدقيق 2026-10-03).
  *
- * تُجيب رقميًا عن سؤال واحد: هل الكومة التي يخلّفها «٢٤ بطاقة لكل درس» مقابل
- * «سقف جلسة مُقيَّد بزمن» تتلاشى أم تتباعد؟ تُشغَّل على بيانات المقرر الحقيقي
+ * تُجيب رقميًا عن سؤالين: (1) هل الكومة التي يخلّفها «24 بطاقة لكل درس» مقابل «سقف جلسة
+ * مُقيَّد بزمن» تتلاشى أم تتباعد؟ (2) هل رفع سعة اليوم (مدة الجلسة المُعلنة) كافٍ أصلًا؟
+ * تُشغَّل على بيانات المقرر الحقيقي
  * ودوالّ الجدولة نفسها (buildDueReviewQueue / applyReviewGrade / dailyReviewQuota)،
  * بلا IndexedDB وبلا أي ادّعاء عن جودة الحفظ عند المتعلم.
  *
- *   node_modules/.bin/tsx scripts/review-pile-simulation.ts --lessons 96 --days 140 --grade 4
+ *   # درس كل يوم، 30 دقيقة (= 5 بطاقات/يوم)
+ *   node_modules/.bin/tsx scripts/review-pile-simulation.ts --days 200 --minutes 30
+ *   # نفس الوتيرة بسقف مزدوج
+ *   node_modules/.bin/tsx scripts/review-pile-simulation.ts --days 200 --minutes 60
+ *   # درس كل خمسة أيام (الوتيرة التي تغطيها السعة)
+ *   node_modules/.bin/tsx scripts/review-pile-simulation.ts --days 480 --every 5 --sample 120
  */
 import { academicLessonList } from "../src/data/academic-lessons";
 import { reviewCards } from "../src/data/review-cards";
@@ -16,7 +22,7 @@ import { applyReviewGrade } from "../src/core/srs/review-session";
 import { dailyReviewQuota } from "../src/core/review/daily-quota";
 import type { LearningState } from "../src/types/learning";
 
-type Options = { lessons: number; days: number; grade: number; minutes: number; sample: number };
+type Options = { lessons: number; days: number; grade: number; minutes: number; sample: number; every: number };
 
 function flag<T extends string>(name: string, fallback: T): T {
   const at = process.argv.indexOf(`--${name}`);
@@ -28,6 +34,7 @@ const options: Options = {
   days: Number(flag("days", "140")),
   grade: Number(flag("grade", "4")),
   minutes: Number(flag("minutes", "30")),
+  every: Number(flag("every", "1")),
   sample: 10,
 };
 
@@ -44,9 +51,23 @@ const rows: string[] = [];
 for (let day = 0; day < options.days; day += 1) {
   const now = new Date(start + day * DAY);
   const lesson = course[day];
-  if (lesson) {
+  if (lesson && day % options.every === 0) {
     injected += cardsPerLesson.get(lesson.id) ?? 0;
-    state = { ...state, completedLessonIds: [...state.completedLessonIds, lesson.id] };
+    // يُحاكى ما يفعله المتعلم فعلًا: محاولات بالعنصر + قيد يوم دراسة (هذه مصادر مرجع الإفراج)
+    const attempts = lesson.exercises.slice(0, 3).map((exercise, index) => ({
+      id: `sim-attempt-${lesson.id}-${index}`,
+      lessonId: lesson.id,
+      exerciseId: exercise.id,
+      answer: "sim",
+      correct: true,
+      createdAt: new Date(now.getTime() + index * 60_000).toISOString(),
+    }));
+    state = {
+      ...state,
+      completedLessonIds: [...state.completedLessonIds, lesson.id],
+      exerciseAttempts: [...state.exerciseAttempts, ...attempts as never],
+      studyHistory: [...state.studyHistory, { date: new Date(now.getTime()).toISOString().slice(0, 10), minutes: lesson.estimatedMinutes, evidenceCount: attempts.length } as never],
+    };
   }
   const quota = dailyReviewQuota(state, now).required;
   let reviewed = 0;
@@ -57,6 +78,7 @@ for (let day = 0; day < options.days; day += 1) {
     reviewed += 1;
   }
   const due = buildDueReviewQueue(state, now).length;
+
   if (day % options.sample === 0 || day === course.length - 1 || day === options.days - 1) {
     rows.push(
       `يوم ${String(day + 1).padStart(3)} · دروس ${String(Math.min(day + 1, course.length)).padStart(2)}/${course.length} · بطاقات مُدخلة ${String(injected).padStart(4)} · مراجعة اليوم ${reviewed} · مستحقة الآن ${String(due).padStart(4)} · مُجدولة ${state.reviewItems.length}`,

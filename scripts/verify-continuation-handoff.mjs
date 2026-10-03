@@ -888,10 +888,12 @@ for (const text of ["dwnb-official-exam-format-verification-v1", "buildExamForma
 for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "1e61862c8a97"']) requireText(examFormatReport, text, "exam-format verification artifact");
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 195 || languageAudit.openingTagCount !== 7440 || languageAudit.germanTagCount !== 422 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 202 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+// أُعيد توليد العدّادَين 7440→7441 و202→201 في جيل ADR-107 (سطر خطة تفريغ الكومة في /review):
+// وسم افتتاحي زائد، وفقرة انتقلت من «mixed static» إلى داخل عنصر مُوسَّم.
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 195 || languageAudit.openingTagCount !== 7441 || languageAudit.germanTagCount !== 422 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:195", "openingTagCount:7440", "germanTagCount:422", "technicalScopeCount:51", "mixedStaticCount:202"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:195", "openingTagCount:7441", "germanTagCount:422", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 123,
-    "totalChunkGzipBytes": 1880826,
+    "totalChunkGzipBytes": 1881894,
     "maxSingleChunkGzipBytes": 266168
   },
   "issues": [],

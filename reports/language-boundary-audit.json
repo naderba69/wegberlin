@@ -4,7 +4,7 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 194,
-  "openingTagCount": 7419,
+  "openingTagCount": 7430,
   "germanTagCount": 422,
   "arabicTagCount": 7,
   "ltrTagCount": 467,
@@ -108,17 +108,17 @@
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 72,
+      "line": 79,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 72,
+      "line": 79,
       "text": "تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفردات جديدة من درس غير منجز."
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 74,
+      "line": 81,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -1029,5 +1029,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "9b8b4f8f8bf60cb8ea9a1fd716db93219487628f3542bc91060eaf9f7c57fbf6"
+  "contentSha256": "25ebdd4abedab3b1638fc9436e3f5fb5aa661d3ec066299a7edd429c49e19ad6"
 }

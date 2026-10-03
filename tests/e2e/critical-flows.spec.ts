@@ -1693,6 +1693,9 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   expect(dueBefore).toBeGreaterThanOrEqual(16);
   expect(dueBefore).toBeLessThanOrEqual(25); // up to 24 authored cards plus one deduplicated confirmed-error card
   await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
+  // حصة العلاج معروضة باسمها وسياسيتها، ولا تُخفى بطاقة مجدولة وراء السقف.
+  await expect(page.locator(".review-dose")).toHaveAttribute("data-review-dose-policy", "review-session-dose-v1");
+  await expect(page.locator(".review-dose")).toContainText("حصة العلاج في هذه الجلسة");
   const masteryBeforeFirstReview = await page.evaluate(() => new Promise<number>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
@@ -1706,16 +1709,21 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   await page.getByRole("button", { name: /سهل/ }).click();
   await expect(page.locator(".review-count strong")).toHaveText(String(dueBefore - 1));
   await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
-  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string}>((resolve, reject) => {
+  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string;reviewHourLocal:number;reminderHour:number;nextHourInZone:number}>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
     open.onsuccess = () => {
       const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); const review=state.reviewItems.find((item:{cardId:string})=>item.cardId===event.cardId); resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0,algorithmVersion:review.algorithmVersion,calendarPolicyVersion:event.calendarPolicyVersion,calendarTimeZone:event.calendarTimeZone}); };
+      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); const review=state.reviewItems.find((item:{cardId:string})=>item.cardId===event.cardId); const reminderHour=Number.parseInt(state.reviewReminderSettings?.hourLocal??"0:00",10);
+const hourInZone=Number(new Intl.DateTimeFormat("en-GB",{timeZone:review.calendarTimeZone,hour:"2-digit",hour12:false}).formatToParts(new Date(review.nextReviewDate)).find((part:Intl.DateTimeFormatPart)=>part.type==="hour")?.value);
+resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0,algorithmVersion:review.algorithmVersion,calendarPolicyVersion:event.calendarPolicyVersion,calendarTimeZone:event.calendarTimeZone,reviewHourLocal:review.reviewHourLocal??0,reminderHour,nextHourInZone:hourInZone}); };
     };
   }));
   expect(firstReview).toMatchObject({ kind:"initial",delta:0,mastery:masteryBeforeFirstReview,algorithmVersion:"sm2-v2-calendar",calendarPolicyVersion:"review-calendar-v1",calendarTimeZone:expect.any(String) });
+  // ساعة المراجعة التي يريدها المتعلم تثبّت الاستحقاق: لا منتصف الليل ولا UTC الافتراضي.
+  expect(firstReview.reviewHourLocal).toBe(firstReview.reminderHour);
+  expect(firstReview.nextHourInZone).toBe(firstReview.reminderHour);
 
   await page.evaluate((cardId) => new Promise<void>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);

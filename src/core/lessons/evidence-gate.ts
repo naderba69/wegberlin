@@ -15,7 +15,8 @@ export type LessonEvidenceGate = {
   policyVersion: typeof LESSON_COMPLETION_POLICY;
   passed: boolean;
   basicTrainingPassed: boolean;
-  independentKnowledgePassed: boolean;
+  /** First unaided recall inside the sitting: training evidence, not proof of independence. */
+  firstUnaidedRecallPassed: boolean;
   criteria: LessonEvidenceCriterion[];
   uniqueCorrectEvidence: number;
   boundaryAr: string;
@@ -57,15 +58,15 @@ export function lessonEvidenceGate(lesson: FullLesson, state: LearningState): Le
     { id: "mediation", labelAr: "مهمة وساطة مسلّمة", achieved: mediation.length ? 1 : 0, required: 1, total: 1 },
   ];
   const criteria = rows.map((row) => ({ ...row, passed: row.achieved >= row.required }));
-  const independentKnowledgePassed = correctUnique(independent, controlledIds) >= controlledRequired &&
+  const firstUnaidedRecallPassed = correctUnique(independent, controlledIds) >= controlledRequired &&
     correctUnique(independent, readingIds) >= readingRequired && played && correctUnique(independentListening, listeningIds) >= listeningRequired && correctUnique(independent, testIds) >= testRequired;
   return {
     policyVersion: LESSON_COMPLETION_POLICY,
     passed: criteria.every((row) => row.passed),
     basicTrainingPassed: criteria.slice(0, 4).every((row) => row.passed),
-    independentKnowledgePassed,
+    firstUnaidedRecallPassed,
     criteria,
     uniqueCorrectEvidence: correctUnique(attempts, new Set([...controlledIds, ...readingIds, ...listeningIds, ...testIds])),
-    boundaryAr: "إكمال الأنشطة لا يثبت جودة الكتابة أو الكلام. المحاولة المساعدة أو المعادة تدريب، وليست نجاحًا مستقلًا جديدًا.",
+    boundaryAr: "إكمال الأنشطة لا يثبت جودة الكتابة أو الكلام. المحاولة المساعدة أو المعادة تدريب، وأول استدعاء بلا سند تدريبٌ أيضًا؛ الاستقلال دليلٌ مؤجل.",
   };
 }

@@ -469,8 +469,8 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,221/1,221", "175/175", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,221/1,221", "175/175", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,229/1,229", "176/176", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,229/1,229", "176/176", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
 for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
 if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
@@ -1254,7 +1254,7 @@ if (!packageJson.scripts.check.includes("source:audit -- --strict")) fail("stric
 if (!packageJson.scripts.prebuild.includes("content:audit")) fail("academic content audit must remain in prebuild");
 if (!packageJson.scripts.postbuild?.includes("npm run offline:size") || !packageJson.scripts.postbuild?.includes("npm run js:budget") || !packageJson.scripts["offline:size"]?.includes("generate-offline-size-manifest")) fail("post-build Offline size generation is missing");
 
-for(const command of ["lesson:quality:audit","learning:integrity:audit"]){
+for(const command of ["lesson:quality:audit","lesson:contract:audit","learning:integrity:audit"]){
  if(!packageJson.scripts.prebuild.includes(command))fail(`${command} is missing from the build gate`);
  try{execFileSync("npm",["run",command],{stdio:"pipe",timeout:120000});}catch(error){fail(`${command} fresh-source verification failed: ${error.message}`);}
 }

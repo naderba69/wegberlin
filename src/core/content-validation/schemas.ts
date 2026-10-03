@@ -1,6 +1,12 @@
 import { z } from "zod";
 
 const text = z.string().trim().min(1);
+/** ADR-106 Stage B floors for the error clinic: a feedback line shorter than this cannot say
+ * both why the sentence fails and what to check next. They mirror CONTRACT_THRESHOLDS
+ * mistakeWhyMinChars / mistakeTrickMinChars (asserted equal in tests) and are an anti-collapse
+ * limit only — length is not a quality certificate and no human linguistic review is claimed. */
+const mistakeWhyAr = z.string().trim().min(20);
+const mistakeTrickAr = z.string().trim().min(15);
 const id = z.string().trim().min(2);
 const positiveInt = z.number().int().positive();
 const nonNegativeInt = z.number().int().nonnegative();
@@ -127,7 +133,13 @@ export const fullLessonSchema = z.object({
   writing: z.object({ titleAr: text, promptDe: text, promptAr: text, checklistAr: z.array(text).min(1), modelDe: text }).strict(),
   speaking: z.object({ titleAr: text, promptDe: text, promptAr: text, usefulPhrases: z.array(text).min(1), successCriteriaAr: z.array(text).min(1) }).strict(),
   mediation: z.object({ scenarioAr: text, sourceDe: text, taskAr: text, suggestedAr: text }).strict(),
-  mistakes: z.array(z.object({ wrong: text, correct: text, whyAr: text, trickAr: text }).strict()).min(1),
+  mistakes: z.array(
+    z
+      .object({ wrong: text, correct: text, whyAr: mistakeWhyAr, trickAr: mistakeTrickAr })
+      .strict()
+      .refine((entry) => entry.whyAr.trim() !== entry.trickAr.trim(), { message: "mistake feedback repeats one line in both whyAr and trickAr" })
+      .refine((entry) => !/(?:TODO|placeholder|lorem ipsum|FIXME)/i.test(`${entry.whyAr} ${entry.trickAr}`), { message: "mistake feedback carries a placeholder token" }),
+  ).min(1),
   miniTest: z.array(academicQuestionSchema).min(1),
   flashcards: z.array(z.object({ id, frontDe: text, backAr: text, exampleDe: text }).strict()).min(1),
 }).strict();

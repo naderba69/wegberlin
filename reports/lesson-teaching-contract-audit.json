@@ -28,8 +28,8 @@
     "hardFailures": 0,
     "lessonsWithoutAuthoredPrerequisiteLink": 73,
     "lessonsWithoutDeferredTransferTask": 64,
-    "mistakeWhyStubs": 54,
-    "mistakeTrickStubs": 53,
+    "mistakeWhyStubs": 0,
+    "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
     "cardsMissingFromReviewPool": 0
   },
@@ -38,17 +38,17 @@
     "hardFailures": 0,
     "lessonsWithoutAuthoredPrerequisiteLink": 73,
     "lessonsWithoutDeferredTransferTask": 64,
-    "mistakeWhyStubs": 54,
-    "mistakeTrickStubs": 53,
+    "mistakeWhyStubs": 0,
+    "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "22546a65f9f9",
+  "contentSha256": "b317852b27e0",
   "counts": {
     "lessons": 96,
     "questions": 8,
     "answeredOk": 697,
-    "gaps": 192
+    "gaps": 135
   },
   "byLevel": {
     "A1": {
@@ -126,13 +126,12 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 2,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -156,7 +155,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -174,13 +173,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -204,7 +202,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -268,12 +266,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -298,7 +295,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -316,13 +313,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 2,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -346,7 +342,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -364,12 +360,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -394,7 +389,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -456,13 +451,11 @@
       "id": "a1-09",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": "a1-09",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -486,7 +479,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -504,13 +497,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -534,7 +526,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -551,13 +543,12 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a1-11",
-      "mistakeWhyStubs": 2,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -581,7 +572,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -599,12 +590,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -629,7 +619,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -693,12 +683,11 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -723,7 +712,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -833,13 +822,12 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a1-17",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -863,7 +851,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -881,12 +869,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -911,7 +898,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -975,13 +962,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1005,7 +991,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1023,13 +1009,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1053,7 +1038,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1071,12 +1056,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -1101,7 +1085,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1118,13 +1102,12 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a1-23",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1148,7 +1131,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1165,13 +1148,12 @@
       "level": "A1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a1-24",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1195,7 +1177,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1349,12 +1331,11 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -1379,7 +1360,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1397,12 +1378,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -1427,7 +1407,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1443,13 +1423,11 @@
       "id": "a2-06",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": "a2-06",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1473,7 +1451,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1491,13 +1469,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 3,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1521,7 +1498,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و3 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1537,13 +1514,11 @@
       "id": "a2-08",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": "a2-08",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1567,7 +1542,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1585,12 +1560,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -1615,7 +1589,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1632,13 +1606,12 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1662,7 +1635,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1679,13 +1652,12 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a2-11",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1709,7 +1681,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1727,13 +1699,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1757,7 +1728,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1775,13 +1746,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1805,7 +1775,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1823,13 +1793,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 4 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1853,7 +1822,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1871,13 +1840,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 2,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -1901,7 +1869,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -1965,12 +1933,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -1995,7 +1962,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2013,13 +1980,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2043,7 +2009,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2060,13 +2026,12 @@
       "level": "A2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "a2-19",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2090,7 +2055,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2201,13 +2166,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 4 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 3,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2231,7 +2195,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 3 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2249,12 +2213,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -2279,7 +2242,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2388,12 +2351,11 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-02",
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -2418,7 +2380,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2527,13 +2489,12 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-05",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2557,7 +2518,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2575,12 +2536,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -2605,7 +2565,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2623,12 +2583,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -2653,7 +2612,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2806,13 +2765,12 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 5 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-11",
-      "mistakeWhyStubs": 2,
-      "mistakeTrickStubs": 3,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2836,7 +2794,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و3 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2854,13 +2812,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2884,7 +2841,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2902,13 +2859,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2932,7 +2888,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2949,13 +2905,12 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-14",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -2979,7 +2934,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -2997,13 +2952,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3027,7 +2981,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3045,13 +2999,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3075,7 +3028,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3093,13 +3046,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 4 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 2,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3123,7 +3075,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3139,12 +3091,10 @@
       "id": "b1-18",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": "b1-18",
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3169,7 +3119,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3186,13 +3136,12 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-19",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3216,7 +3165,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3234,13 +3183,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 1,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3264,7 +3212,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3282,12 +3230,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3312,7 +3259,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3330,12 +3277,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3360,7 +3306,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3378,13 +3324,12 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3408,7 +3353,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3425,12 +3370,11 @@
       "level": "B1",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b1-24",
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3455,7 +3399,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3471,13 +3415,11 @@
       "id": "b2-01",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "feedback: 3 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": "b2-01",
-      "mistakeWhyStubs": 1,
-      "mistakeTrickStubs": 2,
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3501,7 +3443,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3519,12 +3461,11 @@
       "hardFailures": [],
       "gaps": [
         "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": null,
-      "mistakeWhyStubs": 1,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3549,7 +3490,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 1 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3566,12 +3507,11 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b2-03",
-      "mistakeWhyStubs": 2,
+      "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
@@ -3596,7 +3536,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 2 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -3613,13 +3553,12 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام",
-        "feedback: 1 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "transfer: لا مهمة نقل مؤجلة مرتبطة بهذا الدرس: لا دليل استقلال بعد ثلاثة أيام"
       ],
       "authoredPrerequisiteNodes": 1,
       "deferredTransferTask": null,
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 1,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -3643,7 +3582,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و1 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
         },
         "evidence-split": {
           "ok": true,
@@ -4448,13 +4387,12 @@
       "level": "B2",
       "hardFailures": [],
       "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة",
-        "feedback: 2 سطر تصحيح بلا تفصيل يكفي طالبًا عربيًا"
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
       ],
       "authoredPrerequisiteNodes": 0,
       "deferredTransferTask": "b2-22",
       "mistakeWhyStubs": 0,
-      "mistakeTrickStubs": 2,
+      "mistakeTrickStubs": 0,
       "answers": {
         "goal": {
           "ok": true,
@@ -4478,7 +4416,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و2 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
         },
         "evidence-split": {
           "ok": true,

@@ -23,8 +23,8 @@ const limits = {
   hardFailures: 0,
   lessonsWithoutAuthoredPrerequisiteLink: 73,
   lessonsWithoutDeferredTransferTask: 64,
-  mistakeWhyStubs: 54,
-  mistakeTrickStubs: 53,
+  mistakeWhyStubs: 0,
+  mistakeTrickStubs: 0,
   itemsWithoutExplanation: 0,
   cardsMissingFromReviewPool: (() => {
     const pool = new Set(reviewCards.map((card) => card.id));

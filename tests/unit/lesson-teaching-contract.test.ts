@@ -10,6 +10,7 @@ import {
   lessonTeachingContract,
 } from "@/core/lesson/teaching-contract";
 import { LEARNING_STATE_INDEPENDENCE_NOTE, LEARNING_STATE_LABELS } from "@/core/lessons/learning-state";
+import { fullLessonSchema } from "@/core/content-validation/schemas";
 import { buildLessonSrsCards } from "@/core/srs/lesson-cards";
 import { reviewCards } from "@/data/review-cards";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
@@ -77,6 +78,35 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     const withDeferred = academicLessonList.filter((lesson) => independentProductionTasks.some((task) => task.sourceLessonId === lesson.id)).length;
     expect(withDeferred).toBe(32);
     expect(results.filter((result) => result.gaps.some((gap) => gap.startsWith("transfer")))).toHaveLength(64);
+  });
+
+  it("leaves no error-clinic line as a stub after Stage B authoring", () => {
+    const items = academicLessonList.flatMap((lesson) => lesson.mistakes);
+    expect(items.length).toBe(392);
+    for (const lesson of academicLessonList) {
+      for (const mistake of lesson.mistakes) {
+        expect(mistake.whyAr.trim().length, `${lesson.id} whyAr`).toBeGreaterThanOrEqual(CONTRACT_THRESHOLDS.mistakeWhyMinChars);
+        expect(mistake.trickAr.trim().length, `${lesson.id} trickAr`).toBeGreaterThanOrEqual(CONTRACT_THRESHOLDS.mistakeTrickMinChars);
+        expect(mistake.whyAr.trim() === mistake.trickAr.trim(), `${lesson.id} repeats one line`).toBe(false);
+        expect(mistake.whyAr.trim(), `${lesson.id} stub whyAr`).not.toMatch(/TODO|placeholder/i);
+      }
+    }
+    expect(report.measured.mistakeWhyStubs).toBe(0);
+    expect(report.measured.mistakeTrickStubs).toBe(0);
+    // The ceiling is pinned at zero, so a new stub fails the gate instead of being tolerated.
+    expect(report.limits.mistakeWhyStubs).toBe(0);
+    expect(report.limits.mistakeTrickStubs).toBe(0);
+  });
+
+  it("keeps the schema floor and the contract threshold on the same number", () => {
+    expect(CONTRACT_THRESHOLDS.mistakeWhyMinChars).toBe(20);
+    expect(CONTRACT_THRESHOLDS.mistakeTrickMinChars).toBe(15);
+    const lesson = academicLessons["a1-10"];
+    expect(fullLessonSchema.safeParse(lesson).success).toBe(true);
+    const thin = { ...lesson, mistakes: [{ wrong: "Ich habe kein Milch.", correct: "Ich habe keine Milch.", whyAr: "مؤنث.", trickAr: "die → keine." }] };
+    expect(fullLessonSchema.safeParse(thin).success).toBe(false);
+    const doubled = { ...lesson, mistakes: [{ wrong: "a", correct: "b", whyAr: "جملة عربية طويلة بما يكفي للشرح هنا", trickAr: "جملة عربية طويلة بما يكفي للشرح هنا" }] };
+    expect(fullLessonSchema.safeParse(doubled).success).toBe(false);
   });
 
   it("pins every lesson's cards into the review pool that /review reads", () => {

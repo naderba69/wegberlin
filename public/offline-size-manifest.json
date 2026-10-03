@@ -3,22 +3,22 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "d1069c0c1d44d4ddfdaca6d3f1571348834d637c17f4406c5e8a86bf5ddde277",
+  "buildFingerprint": "3b352f46533dcfb919cdcedeef26b0c0c97e53f15103932e17cbb8a63aedeed4",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
       "id": "a1",
       "label": "A1",
       "routeCount": 59,
-      "routeRawBytes": 3904620,
-      "routeGzipBytes": 739509,
-      "nextAssetCount": 82,
-      "nextAssetRawBytes": 6543878,
-      "nextAssetGzipBytes": 1796030,
+      "routeRawBytes": 3782018,
+      "routeGzipBytes": 739530,
+      "nextAssetCount": 83,
+      "nextAssetRawBytes": 6444025,
+      "nextAssetGzipBytes": 1811357,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
-      "totalRawBytes": 10515936,
-      "totalGzipBytes": 2547489,
+      "totalRawBytes": 10293481,
+      "totalGzipBytes": 2562837,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -31,14 +31,9 @@
           "gzipBytes": 100809
         },
         {
-          "path": "/_next/static/chunks/1619-85cae64e8e1da318.js",
-          "rawBytes": 13275,
-          "gzipBytes": 5557
-        },
-        {
-          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
-          "rawBytes": 18433,
-          "gzipBytes": 7400
+          "path": "/_next/static/chunks/1619-023bb4a2dbcf7288.js",
+          "rawBytes": 13260,
+          "gzipBytes": 5548
         },
         {
           "path": "/_next/static/chunks/2004-48d0b5c2bbcd18e2.js",
@@ -49,6 +44,11 @@
           "path": "/_next/static/chunks/22-0aa429ef245b0a0f.js",
           "rawBytes": 6952,
           "gzipBytes": 2514
+        },
+        {
+          "path": "/_next/static/chunks/2629-13efe777cfe97185.js",
+          "rawBytes": 22977,
+          "gzipBytes": 8897
         },
         {
           "path": "/_next/static/chunks/2811-b7b7717799914c26.js",
@@ -66,9 +66,9 @@
           "gzipBytes": 53515
         },
         {
-          "path": "/_next/static/chunks/3397-1fc25435d7736d5a.js",
-          "rawBytes": 19519,
-          "gzipBytes": 6371
+          "path": "/_next/static/chunks/3397-8815cb6141120300.js",
+          "rawBytes": 21506,
+          "gzipBytes": 7051
         },
         {
           "path": "/_next/static/chunks/3794-83acfce05009cf38.js",
@@ -101,9 +101,9 @@
           "gzipBytes": 10875
         },
         {
-          "path": "/_next/static/chunks/5774-fa98290683e54696.js",
-          "rawBytes": 37709,
-          "gzipBytes": 13856
+          "path": "/_next/static/chunks/5774-6b37c31a997e69e7.js",
+          "rawBytes": 37996,
+          "gzipBytes": 13998
         },
         {
           "path": "/_next/static/chunks/5923-b2d89b709fe8fe08.js",
@@ -116,9 +116,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-4d9a79609ee2e66c.js",
-          "rawBytes": 15249,
-          "gzipBytes": 6204
+          "path": "/_next/static/chunks/6043-211e8c9af00e8fa6.js",
+          "rawBytes": 15268,
+          "gzipBytes": 6219
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -141,14 +141,9 @@
           "gzipBytes": 14121
         },
         {
-          "path": "/_next/static/chunks/6850-07f9fc92d0632925.js",
-          "rawBytes": 84454,
-          "gzipBytes": 25116
-        },
-        {
-          "path": "/_next/static/chunks/7047-3d4621b067eb03a0.js",
-          "rawBytes": 7380,
-          "gzipBytes": 2730
+          "path": "/_next/static/chunks/6850-ebe207120d9a2d4e.js",
+          "rawBytes": 85573,
+          "gzipBytes": 25477
         },
         {
           "path": "/_next/static/chunks/7075-4dde4081f94db590.js",
@@ -176,6 +171,11 @@
           "gzipBytes": 2760
         },
         {
+          "path": "/_next/static/chunks/7857-cbe2fb322c3e6398.js",
+          "rawBytes": 40379,
+          "gzipBytes": 14374
+        },
+        {
           "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
           "rawBytes": 45915,
           "gzipBytes": 14671
@@ -196,9 +196,9 @@
           "gzipBytes": 4698
         },
         {
-          "path": "/_next/static/chunks/8804-139655af8f02ec9e.js",
-          "rawBytes": 144259,
-          "gzipBytes": 35642
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
         },
         {
           "path": "/_next/static/chunks/9133-f90564b90fd34ae8.js",
@@ -211,34 +211,39 @@
           "gzipBytes": 11891
         },
         {
-          "path": "/_next/static/chunks/9307-708e4e1bce30841c.js",
-          "rawBytes": 13817,
-          "gzipBytes": 5254
+          "path": "/_next/static/chunks/9307-b63ff1485dd7724f.js",
+          "rawBytes": 13866,
+          "gzipBytes": 5288
         },
         {
-          "path": "/_next/static/chunks/app/assessment/a1/page-fc775d7439c893f7.js",
-          "rawBytes": 373,
-          "gzipBytes": 294
+          "path": "/_next/static/chunks/956-8d8e8a93c91ef6d1.js",
+          "rawBytes": 7630,
+          "gzipBytes": 2806
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d97177624c4fd6f7.js",
-          "rawBytes": 46646,
-          "gzipBytes": 15913
+          "path": "/_next/static/chunks/app/assessment/a1/page-d7aa5efef748c05c.js",
+          "rawBytes": 378,
+          "gzipBytes": 296
         },
         {
-          "path": "/_next/static/chunks/app/errors/page-6952c252b6ba4666.js",
-          "rawBytes": 35410,
-          "gzipBytes": 11510
+          "path": "/_next/static/chunks/app/diagnostic/page-ef557b7312be5fbf.js",
+          "rawBytes": 46635,
+          "gzipBytes": 15912
         },
         {
-          "path": "/_next/static/chunks/app/layout-3ab5f63c3db56106.js",
-          "rawBytes": 25215,
-          "gzipBytes": 8608
+          "path": "/_next/static/chunks/app/errors/page-fa7d852f9edba132.js",
+          "rawBytes": 35399,
+          "gzipBytes": 11530
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-bf97986b39dfaec2.js",
-          "rawBytes": 151124,
-          "gzipBytes": 44174
+          "path": "/_next/static/chunks/app/layout-b90a96f73eb3890c.js",
+          "rawBytes": 26755,
+          "gzipBytes": 9126
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c6c6303430961aa9.js",
+          "rawBytes": 153882,
+          "gzipBytes": 45024
         },
         {
           "path": "/_next/static/chunks/app/library/page-7f6e872d3b36e8ff.js",
@@ -246,9 +251,9 @@
           "gzipBytes": 6274
         },
         {
-          "path": "/_next/static/chunks/app/mediation/page-029882a5b3966448.js",
-          "rawBytes": 21059,
-          "gzipBytes": 7890
+          "path": "/_next/static/chunks/app/mediation/page-f0e602e0fd90f8cc.js",
+          "rawBytes": 25663,
+          "gzipBytes": 9332
         },
         {
           "path": "/_next/static/chunks/app/module/a1-1/page-5e8b6a0c3b7b1777.js",
@@ -321,9 +326,9 @@
           "gzipBytes": 11863
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-6179ac0a84983385.js",
-          "rawBytes": 44029,
-          "gzipBytes": 17427
+          "path": "/_next/static/chunks/app/practice/endurance/page-8fecab13d70086de.js",
+          "rawBytes": 44232,
+          "gzipBytes": 17492
         },
         {
           "path": "/_next/static/chunks/app/practice/page-08d8398c1ee9ca08.js",
@@ -341,14 +346,14 @@
           "gzipBytes": 740
         },
         {
-          "path": "/_next/static/chunks/app/progress/page-f4ef2162d4507b69.js",
-          "rawBytes": 59602,
-          "gzipBytes": 18074
+          "path": "/_next/static/chunks/app/progress/page-d15cc11fe9920140.js",
+          "rawBytes": 60497,
+          "gzipBytes": 18484
         },
         {
-          "path": "/_next/static/chunks/app/review/page-c624879e6f521020.js",
-          "rawBytes": 15893,
-          "gzipBytes": 6296
+          "path": "/_next/static/chunks/app/review/page-20e70df1084b0588.js",
+          "rawBytes": 19779,
+          "gzipBytes": 7668
         },
         {
           "path": "/_next/static/chunks/app/search/page-29568a21f9973ca8.js",
@@ -356,9 +361,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-05a7ea67ba8c58c9.js",
-          "rawBytes": 193390,
-          "gzipBytes": 53925
+          "path": "/_next/static/chunks/app/settings/page-4df35652bff4bd5f.js",
+          "rawBytes": 193395,
+          "gzipBytes": 53929
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-44107b3bc0dabb01.js",
@@ -366,9 +371,9 @@
           "gzipBytes": 14927
         },
         {
-          "path": "/_next/static/chunks/app/speaking/page-725cd0f0f6e16687.js",
-          "rawBytes": 90020,
-          "gzipBytes": 27734
+          "path": "/_next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+          "rawBytes": 90064,
+          "gzipBytes": 27780
         },
         {
           "path": "/_next/static/chunks/app/status/page-169977f6fdef94e0.js",
@@ -376,9 +381,9 @@
           "gzipBytes": 3445
         },
         {
-          "path": "/_next/static/chunks/app/today/page-e75e587cd6c810e9.js",
-          "rawBytes": 93854,
-          "gzipBytes": 28721
+          "path": "/_next/static/chunks/app/today/page-02a260bf615c1932.js",
+          "rawBytes": 94324,
+          "gzipBytes": 28987
         },
         {
           "path": "/_next/static/chunks/app/tutor/page-8fb0149ff7bbbd59.js",
@@ -386,29 +391,29 @@
           "gzipBytes": 10120
         },
         {
-          "path": "/_next/static/chunks/app/writing/page-76791b264dcae785.js",
-          "rawBytes": 69522,
-          "gzipBytes": 22662
+          "path": "/_next/static/chunks/app/writing/page-b34c571d8242901c.js",
+          "rawBytes": 69553,
+          "gzipBytes": 22689
         },
         {
-          "path": "/_next/static/chunks/curriculum-a1-92f05501bbc7f7ca.js",
-          "rawBytes": 552346,
-          "gzipBytes": 112274
+          "path": "/_next/static/chunks/curriculum-a1-8a25b3e078c0ce65.js",
+          "rawBytes": 483619,
+          "gzipBytes": 114037
         },
         {
-          "path": "/_next/static/chunks/curriculum-a2-58543d3bd1938af9.js",
-          "rawBytes": 617936,
-          "gzipBytes": 167127
+          "path": "/_next/static/chunks/curriculum-a2-19c908a4a37247cd.js",
+          "rawBytes": 611821,
+          "gzipBytes": 167303
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-6df5c63e84b1be59.js",
-          "rawBytes": 695675,
-          "gzipBytes": 173269
+          "path": "/_next/static/chunks/curriculum-b1-b875df65b0d20b5e.js",
+          "rawBytes": 657349,
+          "gzipBytes": 174056
         },
         {
-          "path": "/_next/static/chunks/curriculum-b2-a5ec4107558c17ee.js",
-          "rawBytes": 929069,
-          "gzipBytes": 266168
+          "path": "/_next/static/chunks/curriculum-b2-de5dd86d9fd7618a.js",
+          "rawBytes": 889796,
+          "gzipBytes": 260759
         },
         {
           "path": "/_next/static/chunks/main-app-d20cdad587442bec.js",
@@ -426,9 +431,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/bc43792fee5934ea.css",
-          "rawBytes": 445230,
-          "gzipBytes": 71985
+          "path": "/_next/static/css/a909915497c3a8f7.css",
+          "rawBytes": 447597,
+          "gzipBytes": 72396
         }
       ]
     },
@@ -436,15 +441,15 @@
       "id": "a2",
       "label": "A2",
       "routeCount": 59,
-      "routeRawBytes": 4039266,
-      "routeGzipBytes": 855932,
-      "nextAssetCount": 82,
-      "nextAssetRawBytes": 6543878,
-      "nextAssetGzipBytes": 1796027,
+      "routeRawBytes": 4041944,
+      "routeGzipBytes": 856296,
+      "nextAssetCount": 83,
+      "nextAssetRawBytes": 6444025,
+      "nextAssetGzipBytes": 1811356,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
-      "totalRawBytes": 10650582,
-      "totalGzipBytes": 2663909,
+      "totalRawBytes": 10553407,
+      "totalGzipBytes": 2679602,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -457,14 +462,9 @@
           "gzipBytes": 100809
         },
         {
-          "path": "/_next/static/chunks/1619-85cae64e8e1da318.js",
-          "rawBytes": 13275,
-          "gzipBytes": 5557
-        },
-        {
-          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
-          "rawBytes": 18433,
-          "gzipBytes": 7400
+          "path": "/_next/static/chunks/1619-023bb4a2dbcf7288.js",
+          "rawBytes": 13260,
+          "gzipBytes": 5548
         },
         {
           "path": "/_next/static/chunks/2004-48d0b5c2bbcd18e2.js",
@@ -475,6 +475,11 @@
           "path": "/_next/static/chunks/22-0aa429ef245b0a0f.js",
           "rawBytes": 6952,
           "gzipBytes": 2514
+        },
+        {
+          "path": "/_next/static/chunks/2629-13efe777cfe97185.js",
+          "rawBytes": 22977,
+          "gzipBytes": 8897
         },
         {
           "path": "/_next/static/chunks/2811-b7b7717799914c26.js",
@@ -492,9 +497,9 @@
           "gzipBytes": 53515
         },
         {
-          "path": "/_next/static/chunks/3397-1fc25435d7736d5a.js",
-          "rawBytes": 19519,
-          "gzipBytes": 6371
+          "path": "/_next/static/chunks/3397-8815cb6141120300.js",
+          "rawBytes": 21506,
+          "gzipBytes": 7051
         },
         {
           "path": "/_next/static/chunks/3794-83acfce05009cf38.js",
@@ -527,9 +532,9 @@
           "gzipBytes": 10875
         },
         {
-          "path": "/_next/static/chunks/5774-fa98290683e54696.js",
-          "rawBytes": 37709,
-          "gzipBytes": 13856
+          "path": "/_next/static/chunks/5774-6b37c31a997e69e7.js",
+          "rawBytes": 37996,
+          "gzipBytes": 13998
         },
         {
           "path": "/_next/static/chunks/5923-b2d89b709fe8fe08.js",
@@ -542,9 +547,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-4d9a79609ee2e66c.js",
-          "rawBytes": 15249,
-          "gzipBytes": 6204
+          "path": "/_next/static/chunks/6043-211e8c9af00e8fa6.js",
+          "rawBytes": 15268,
+          "gzipBytes": 6219
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -567,14 +572,9 @@
           "gzipBytes": 14121
         },
         {
-          "path": "/_next/static/chunks/6850-07f9fc92d0632925.js",
-          "rawBytes": 84454,
-          "gzipBytes": 25116
-        },
-        {
-          "path": "/_next/static/chunks/7047-3d4621b067eb03a0.js",
-          "rawBytes": 7380,
-          "gzipBytes": 2730
+          "path": "/_next/static/chunks/6850-ebe207120d9a2d4e.js",
+          "rawBytes": 85573,
+          "gzipBytes": 25477
         },
         {
           "path": "/_next/static/chunks/7075-4dde4081f94db590.js",
@@ -602,6 +602,11 @@
           "gzipBytes": 2760
         },
         {
+          "path": "/_next/static/chunks/7857-cbe2fb322c3e6398.js",
+          "rawBytes": 40379,
+          "gzipBytes": 14374
+        },
+        {
           "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
           "rawBytes": 45915,
           "gzipBytes": 14671
@@ -622,9 +627,9 @@
           "gzipBytes": 4698
         },
         {
-          "path": "/_next/static/chunks/8804-139655af8f02ec9e.js",
-          "rawBytes": 144259,
-          "gzipBytes": 35642
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
         },
         {
           "path": "/_next/static/chunks/9133-f90564b90fd34ae8.js",
@@ -637,34 +642,39 @@
           "gzipBytes": 11891
         },
         {
-          "path": "/_next/static/chunks/9307-708e4e1bce30841c.js",
-          "rawBytes": 13817,
-          "gzipBytes": 5254
+          "path": "/_next/static/chunks/9307-b63ff1485dd7724f.js",
+          "rawBytes": 13866,
+          "gzipBytes": 5288
         },
         {
-          "path": "/_next/static/chunks/app/assessment/a2/page-bcf4a9e2b0d42e32.js",
-          "rawBytes": 373,
-          "gzipBytes": 293
+          "path": "/_next/static/chunks/956-8d8e8a93c91ef6d1.js",
+          "rawBytes": 7630,
+          "gzipBytes": 2806
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d97177624c4fd6f7.js",
-          "rawBytes": 46646,
-          "gzipBytes": 15913
+          "path": "/_next/static/chunks/app/assessment/a2/page-fdb8c552952cde08.js",
+          "rawBytes": 378,
+          "gzipBytes": 297
         },
         {
-          "path": "/_next/static/chunks/app/errors/page-6952c252b6ba4666.js",
-          "rawBytes": 35410,
-          "gzipBytes": 11510
+          "path": "/_next/static/chunks/app/diagnostic/page-ef557b7312be5fbf.js",
+          "rawBytes": 46635,
+          "gzipBytes": 15912
         },
         {
-          "path": "/_next/static/chunks/app/layout-3ab5f63c3db56106.js",
-          "rawBytes": 25215,
-          "gzipBytes": 8608
+          "path": "/_next/static/chunks/app/errors/page-fa7d852f9edba132.js",
+          "rawBytes": 35399,
+          "gzipBytes": 11530
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-bf97986b39dfaec2.js",
-          "rawBytes": 151124,
-          "gzipBytes": 44174
+          "path": "/_next/static/chunks/app/layout-b90a96f73eb3890c.js",
+          "rawBytes": 26755,
+          "gzipBytes": 9126
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c6c6303430961aa9.js",
+          "rawBytes": 153882,
+          "gzipBytes": 45024
         },
         {
           "path": "/_next/static/chunks/app/library/page-7f6e872d3b36e8ff.js",
@@ -672,9 +682,9 @@
           "gzipBytes": 6274
         },
         {
-          "path": "/_next/static/chunks/app/mediation/page-029882a5b3966448.js",
-          "rawBytes": 21059,
-          "gzipBytes": 7890
+          "path": "/_next/static/chunks/app/mediation/page-f0e602e0fd90f8cc.js",
+          "rawBytes": 25663,
+          "gzipBytes": 9332
         },
         {
           "path": "/_next/static/chunks/app/module/a2-1/page-1c9e59a9b472979f.js",
@@ -747,9 +757,9 @@
           "gzipBytes": 11863
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-6179ac0a84983385.js",
-          "rawBytes": 44029,
-          "gzipBytes": 17427
+          "path": "/_next/static/chunks/app/practice/endurance/page-8fecab13d70086de.js",
+          "rawBytes": 44232,
+          "gzipBytes": 17492
         },
         {
           "path": "/_next/static/chunks/app/practice/page-08d8398c1ee9ca08.js",
@@ -767,14 +777,14 @@
           "gzipBytes": 740
         },
         {
-          "path": "/_next/static/chunks/app/progress/page-f4ef2162d4507b69.js",
-          "rawBytes": 59602,
-          "gzipBytes": 18074
+          "path": "/_next/static/chunks/app/progress/page-d15cc11fe9920140.js",
+          "rawBytes": 60497,
+          "gzipBytes": 18484
         },
         {
-          "path": "/_next/static/chunks/app/review/page-c624879e6f521020.js",
-          "rawBytes": 15893,
-          "gzipBytes": 6296
+          "path": "/_next/static/chunks/app/review/page-20e70df1084b0588.js",
+          "rawBytes": 19779,
+          "gzipBytes": 7668
         },
         {
           "path": "/_next/static/chunks/app/search/page-29568a21f9973ca8.js",
@@ -782,9 +792,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-05a7ea67ba8c58c9.js",
-          "rawBytes": 193390,
-          "gzipBytes": 53925
+          "path": "/_next/static/chunks/app/settings/page-4df35652bff4bd5f.js",
+          "rawBytes": 193395,
+          "gzipBytes": 53929
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-44107b3bc0dabb01.js",
@@ -792,9 +802,9 @@
           "gzipBytes": 14927
         },
         {
-          "path": "/_next/static/chunks/app/speaking/page-725cd0f0f6e16687.js",
-          "rawBytes": 90020,
-          "gzipBytes": 27734
+          "path": "/_next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+          "rawBytes": 90064,
+          "gzipBytes": 27780
         },
         {
           "path": "/_next/static/chunks/app/status/page-169977f6fdef94e0.js",
@@ -802,9 +812,9 @@
           "gzipBytes": 3445
         },
         {
-          "path": "/_next/static/chunks/app/today/page-e75e587cd6c810e9.js",
-          "rawBytes": 93854,
-          "gzipBytes": 28721
+          "path": "/_next/static/chunks/app/today/page-02a260bf615c1932.js",
+          "rawBytes": 94324,
+          "gzipBytes": 28987
         },
         {
           "path": "/_next/static/chunks/app/tutor/page-8fb0149ff7bbbd59.js",
@@ -812,29 +822,29 @@
           "gzipBytes": 10120
         },
         {
-          "path": "/_next/static/chunks/app/writing/page-76791b264dcae785.js",
-          "rawBytes": 69522,
-          "gzipBytes": 22662
+          "path": "/_next/static/chunks/app/writing/page-b34c571d8242901c.js",
+          "rawBytes": 69553,
+          "gzipBytes": 22689
         },
         {
-          "path": "/_next/static/chunks/curriculum-a1-92f05501bbc7f7ca.js",
-          "rawBytes": 552346,
-          "gzipBytes": 112274
+          "path": "/_next/static/chunks/curriculum-a1-8a25b3e078c0ce65.js",
+          "rawBytes": 483619,
+          "gzipBytes": 114037
         },
         {
-          "path": "/_next/static/chunks/curriculum-a2-58543d3bd1938af9.js",
-          "rawBytes": 617936,
-          "gzipBytes": 167127
+          "path": "/_next/static/chunks/curriculum-a2-19c908a4a37247cd.js",
+          "rawBytes": 611821,
+          "gzipBytes": 167303
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-6df5c63e84b1be59.js",
-          "rawBytes": 695675,
-          "gzipBytes": 173269
+          "path": "/_next/static/chunks/curriculum-b1-b875df65b0d20b5e.js",
+          "rawBytes": 657349,
+          "gzipBytes": 174056
         },
         {
-          "path": "/_next/static/chunks/curriculum-b2-a5ec4107558c17ee.js",
-          "rawBytes": 929069,
-          "gzipBytes": 266168
+          "path": "/_next/static/chunks/curriculum-b2-de5dd86d9fd7618a.js",
+          "rawBytes": 889796,
+          "gzipBytes": 260759
         },
         {
           "path": "/_next/static/chunks/main-app-d20cdad587442bec.js",
@@ -852,9 +862,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/bc43792fee5934ea.css",
-          "rawBytes": 445230,
-          "gzipBytes": 71985
+          "path": "/_next/static/css/a909915497c3a8f7.css",
+          "rawBytes": 447597,
+          "gzipBytes": 72396
         }
       ]
     },
@@ -862,15 +872,15 @@
       "id": "b1",
       "label": "B1",
       "routeCount": 59,
-      "routeRawBytes": 4196582,
-      "routeGzipBytes": 878207,
-      "nextAssetCount": 82,
-      "nextAssetRawBytes": 6543876,
-      "nextAssetGzipBytes": 1796029,
+      "routeRawBytes": 4134850,
+      "routeGzipBytes": 876530,
+      "nextAssetCount": 83,
+      "nextAssetRawBytes": 6444023,
+      "nextAssetGzipBytes": 1811355,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
-      "totalRawBytes": 10807896,
-      "totalGzipBytes": 2686186,
+      "totalRawBytes": 10646311,
+      "totalGzipBytes": 2699835,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -883,14 +893,9 @@
           "gzipBytes": 100809
         },
         {
-          "path": "/_next/static/chunks/1619-85cae64e8e1da318.js",
-          "rawBytes": 13275,
-          "gzipBytes": 5557
-        },
-        {
-          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
-          "rawBytes": 18433,
-          "gzipBytes": 7400
+          "path": "/_next/static/chunks/1619-023bb4a2dbcf7288.js",
+          "rawBytes": 13260,
+          "gzipBytes": 5548
         },
         {
           "path": "/_next/static/chunks/2004-48d0b5c2bbcd18e2.js",
@@ -901,6 +906,11 @@
           "path": "/_next/static/chunks/22-0aa429ef245b0a0f.js",
           "rawBytes": 6952,
           "gzipBytes": 2514
+        },
+        {
+          "path": "/_next/static/chunks/2629-13efe777cfe97185.js",
+          "rawBytes": 22977,
+          "gzipBytes": 8897
         },
         {
           "path": "/_next/static/chunks/2811-b7b7717799914c26.js",
@@ -918,9 +928,9 @@
           "gzipBytes": 53515
         },
         {
-          "path": "/_next/static/chunks/3397-1fc25435d7736d5a.js",
-          "rawBytes": 19519,
-          "gzipBytes": 6371
+          "path": "/_next/static/chunks/3397-8815cb6141120300.js",
+          "rawBytes": 21506,
+          "gzipBytes": 7051
         },
         {
           "path": "/_next/static/chunks/3794-83acfce05009cf38.js",
@@ -953,9 +963,9 @@
           "gzipBytes": 10875
         },
         {
-          "path": "/_next/static/chunks/5774-fa98290683e54696.js",
-          "rawBytes": 37709,
-          "gzipBytes": 13856
+          "path": "/_next/static/chunks/5774-6b37c31a997e69e7.js",
+          "rawBytes": 37996,
+          "gzipBytes": 13998
         },
         {
           "path": "/_next/static/chunks/5923-b2d89b709fe8fe08.js",
@@ -968,9 +978,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-4d9a79609ee2e66c.js",
-          "rawBytes": 15249,
-          "gzipBytes": 6204
+          "path": "/_next/static/chunks/6043-211e8c9af00e8fa6.js",
+          "rawBytes": 15268,
+          "gzipBytes": 6219
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -993,14 +1003,9 @@
           "gzipBytes": 14121
         },
         {
-          "path": "/_next/static/chunks/6850-07f9fc92d0632925.js",
-          "rawBytes": 84454,
-          "gzipBytes": 25116
-        },
-        {
-          "path": "/_next/static/chunks/7047-3d4621b067eb03a0.js",
-          "rawBytes": 7380,
-          "gzipBytes": 2730
+          "path": "/_next/static/chunks/6850-ebe207120d9a2d4e.js",
+          "rawBytes": 85573,
+          "gzipBytes": 25477
         },
         {
           "path": "/_next/static/chunks/7075-4dde4081f94db590.js",
@@ -1028,6 +1033,11 @@
           "gzipBytes": 2760
         },
         {
+          "path": "/_next/static/chunks/7857-cbe2fb322c3e6398.js",
+          "rawBytes": 40379,
+          "gzipBytes": 14374
+        },
+        {
           "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
           "rawBytes": 45915,
           "gzipBytes": 14671
@@ -1048,9 +1058,9 @@
           "gzipBytes": 4698
         },
         {
-          "path": "/_next/static/chunks/8804-139655af8f02ec9e.js",
-          "rawBytes": 144259,
-          "gzipBytes": 35642
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
         },
         {
           "path": "/_next/static/chunks/9133-f90564b90fd34ae8.js",
@@ -1063,34 +1073,39 @@
           "gzipBytes": 11891
         },
         {
-          "path": "/_next/static/chunks/9307-708e4e1bce30841c.js",
-          "rawBytes": 13817,
-          "gzipBytes": 5254
+          "path": "/_next/static/chunks/9307-b63ff1485dd7724f.js",
+          "rawBytes": 13866,
+          "gzipBytes": 5288
         },
         {
-          "path": "/_next/static/chunks/app/assessment/b1/page-480f290a005541e6.js",
-          "rawBytes": 372,
-          "gzipBytes": 295
+          "path": "/_next/static/chunks/956-8d8e8a93c91ef6d1.js",
+          "rawBytes": 7630,
+          "gzipBytes": 2806
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d97177624c4fd6f7.js",
-          "rawBytes": 46646,
-          "gzipBytes": 15913
+          "path": "/_next/static/chunks/app/assessment/b1/page-aca848fba821ace5.js",
+          "rawBytes": 377,
+          "gzipBytes": 296
         },
         {
-          "path": "/_next/static/chunks/app/errors/page-6952c252b6ba4666.js",
-          "rawBytes": 35410,
-          "gzipBytes": 11510
+          "path": "/_next/static/chunks/app/diagnostic/page-ef557b7312be5fbf.js",
+          "rawBytes": 46635,
+          "gzipBytes": 15912
         },
         {
-          "path": "/_next/static/chunks/app/layout-3ab5f63c3db56106.js",
-          "rawBytes": 25215,
-          "gzipBytes": 8608
+          "path": "/_next/static/chunks/app/errors/page-fa7d852f9edba132.js",
+          "rawBytes": 35399,
+          "gzipBytes": 11530
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-bf97986b39dfaec2.js",
-          "rawBytes": 151124,
-          "gzipBytes": 44174
+          "path": "/_next/static/chunks/app/layout-b90a96f73eb3890c.js",
+          "rawBytes": 26755,
+          "gzipBytes": 9126
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c6c6303430961aa9.js",
+          "rawBytes": 153882,
+          "gzipBytes": 45024
         },
         {
           "path": "/_next/static/chunks/app/library/page-7f6e872d3b36e8ff.js",
@@ -1098,9 +1113,9 @@
           "gzipBytes": 6274
         },
         {
-          "path": "/_next/static/chunks/app/mediation/page-029882a5b3966448.js",
-          "rawBytes": 21059,
-          "gzipBytes": 7890
+          "path": "/_next/static/chunks/app/mediation/page-f0e602e0fd90f8cc.js",
+          "rawBytes": 25663,
+          "gzipBytes": 9332
         },
         {
           "path": "/_next/static/chunks/app/module/b1-1/page-f031a3adc7cb4800.js",
@@ -1173,9 +1188,9 @@
           "gzipBytes": 11863
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-6179ac0a84983385.js",
-          "rawBytes": 44029,
-          "gzipBytes": 17427
+          "path": "/_next/static/chunks/app/practice/endurance/page-8fecab13d70086de.js",
+          "rawBytes": 44232,
+          "gzipBytes": 17492
         },
         {
           "path": "/_next/static/chunks/app/practice/page-08d8398c1ee9ca08.js",
@@ -1193,14 +1208,14 @@
           "gzipBytes": 740
         },
         {
-          "path": "/_next/static/chunks/app/progress/page-f4ef2162d4507b69.js",
-          "rawBytes": 59602,
-          "gzipBytes": 18074
+          "path": "/_next/static/chunks/app/progress/page-d15cc11fe9920140.js",
+          "rawBytes": 60497,
+          "gzipBytes": 18484
         },
         {
-          "path": "/_next/static/chunks/app/review/page-c624879e6f521020.js",
-          "rawBytes": 15893,
-          "gzipBytes": 6296
+          "path": "/_next/static/chunks/app/review/page-20e70df1084b0588.js",
+          "rawBytes": 19779,
+          "gzipBytes": 7668
         },
         {
           "path": "/_next/static/chunks/app/search/page-29568a21f9973ca8.js",
@@ -1208,9 +1223,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-05a7ea67ba8c58c9.js",
-          "rawBytes": 193390,
-          "gzipBytes": 53925
+          "path": "/_next/static/chunks/app/settings/page-4df35652bff4bd5f.js",
+          "rawBytes": 193395,
+          "gzipBytes": 53929
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-44107b3bc0dabb01.js",
@@ -1218,9 +1233,9 @@
           "gzipBytes": 14927
         },
         {
-          "path": "/_next/static/chunks/app/speaking/page-725cd0f0f6e16687.js",
-          "rawBytes": 90020,
-          "gzipBytes": 27734
+          "path": "/_next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+          "rawBytes": 90064,
+          "gzipBytes": 27780
         },
         {
           "path": "/_next/static/chunks/app/status/page-169977f6fdef94e0.js",
@@ -1228,9 +1243,9 @@
           "gzipBytes": 3445
         },
         {
-          "path": "/_next/static/chunks/app/today/page-e75e587cd6c810e9.js",
-          "rawBytes": 93854,
-          "gzipBytes": 28721
+          "path": "/_next/static/chunks/app/today/page-02a260bf615c1932.js",
+          "rawBytes": 94324,
+          "gzipBytes": 28987
         },
         {
           "path": "/_next/static/chunks/app/tutor/page-8fb0149ff7bbbd59.js",
@@ -1238,29 +1253,29 @@
           "gzipBytes": 10120
         },
         {
-          "path": "/_next/static/chunks/app/writing/page-76791b264dcae785.js",
-          "rawBytes": 69522,
-          "gzipBytes": 22662
+          "path": "/_next/static/chunks/app/writing/page-b34c571d8242901c.js",
+          "rawBytes": 69553,
+          "gzipBytes": 22689
         },
         {
-          "path": "/_next/static/chunks/curriculum-a1-92f05501bbc7f7ca.js",
-          "rawBytes": 552346,
-          "gzipBytes": 112274
+          "path": "/_next/static/chunks/curriculum-a1-8a25b3e078c0ce65.js",
+          "rawBytes": 483619,
+          "gzipBytes": 114037
         },
         {
-          "path": "/_next/static/chunks/curriculum-a2-58543d3bd1938af9.js",
-          "rawBytes": 617936,
-          "gzipBytes": 167127
+          "path": "/_next/static/chunks/curriculum-a2-19c908a4a37247cd.js",
+          "rawBytes": 611821,
+          "gzipBytes": 167303
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-6df5c63e84b1be59.js",
-          "rawBytes": 695675,
-          "gzipBytes": 173269
+          "path": "/_next/static/chunks/curriculum-b1-b875df65b0d20b5e.js",
+          "rawBytes": 657349,
+          "gzipBytes": 174056
         },
         {
-          "path": "/_next/static/chunks/curriculum-b2-a5ec4107558c17ee.js",
-          "rawBytes": 929069,
-          "gzipBytes": 266168
+          "path": "/_next/static/chunks/curriculum-b2-de5dd86d9fd7618a.js",
+          "rawBytes": 889796,
+          "gzipBytes": 260759
         },
         {
           "path": "/_next/static/chunks/main-app-d20cdad587442bec.js",
@@ -1278,9 +1293,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/bc43792fee5934ea.css",
-          "rawBytes": 445230,
-          "gzipBytes": 71985
+          "path": "/_next/static/css/a909915497c3a8f7.css",
+          "rawBytes": 447597,
+          "gzipBytes": 72396
         }
       ]
     },
@@ -1288,15 +1303,15 @@
       "id": "b2",
       "label": "B2 + Prüfung",
       "routeCount": 220,
-      "routeRawBytes": 9600200,
-      "routeGzipBytes": 2215959,
-      "nextAssetCount": 86,
-      "nextAssetRawBytes": 6697293,
-      "nextAssetGzipBytes": 1844064,
+      "routeRawBytes": 9573181,
+      "routeGzipBytes": 2213011,
+      "nextAssetCount": 87,
+      "nextAssetRawBytes": 6597402,
+      "nextAssetGzipBytes": 1859391,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
-      "totalRawBytes": 16364931,
-      "totalGzipBytes": 4071973,
+      "totalRawBytes": 16238021,
+      "totalGzipBytes": 4084352,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1309,14 +1324,9 @@
           "gzipBytes": 100809
         },
         {
-          "path": "/_next/static/chunks/1619-85cae64e8e1da318.js",
-          "rawBytes": 13275,
-          "gzipBytes": 5557
-        },
-        {
-          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
-          "rawBytes": 18433,
-          "gzipBytes": 7400
+          "path": "/_next/static/chunks/1619-023bb4a2dbcf7288.js",
+          "rawBytes": 13260,
+          "gzipBytes": 5548
         },
         {
           "path": "/_next/static/chunks/2004-48d0b5c2bbcd18e2.js",
@@ -1327,6 +1337,11 @@
           "path": "/_next/static/chunks/22-0aa429ef245b0a0f.js",
           "rawBytes": 6952,
           "gzipBytes": 2514
+        },
+        {
+          "path": "/_next/static/chunks/2629-13efe777cfe97185.js",
+          "rawBytes": 22977,
+          "gzipBytes": 8897
         },
         {
           "path": "/_next/static/chunks/2811-b7b7717799914c26.js",
@@ -1344,9 +1359,9 @@
           "gzipBytes": 53515
         },
         {
-          "path": "/_next/static/chunks/3397-1fc25435d7736d5a.js",
-          "rawBytes": 19519,
-          "gzipBytes": 6371
+          "path": "/_next/static/chunks/3397-8815cb6141120300.js",
+          "rawBytes": 21506,
+          "gzipBytes": 7051
         },
         {
           "path": "/_next/static/chunks/3794-83acfce05009cf38.js",
@@ -1384,9 +1399,9 @@
           "gzipBytes": 10875
         },
         {
-          "path": "/_next/static/chunks/5774-fa98290683e54696.js",
-          "rawBytes": 37709,
-          "gzipBytes": 13856
+          "path": "/_next/static/chunks/5774-6b37c31a997e69e7.js",
+          "rawBytes": 37996,
+          "gzipBytes": 13998
         },
         {
           "path": "/_next/static/chunks/5923-b2d89b709fe8fe08.js",
@@ -1399,9 +1414,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-4d9a79609ee2e66c.js",
-          "rawBytes": 15249,
-          "gzipBytes": 6204
+          "path": "/_next/static/chunks/6043-211e8c9af00e8fa6.js",
+          "rawBytes": 15268,
+          "gzipBytes": 6219
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -1424,14 +1439,9 @@
           "gzipBytes": 14121
         },
         {
-          "path": "/_next/static/chunks/6850-07f9fc92d0632925.js",
-          "rawBytes": 84454,
-          "gzipBytes": 25116
-        },
-        {
-          "path": "/_next/static/chunks/7047-3d4621b067eb03a0.js",
-          "rawBytes": 7380,
-          "gzipBytes": 2730
+          "path": "/_next/static/chunks/6850-ebe207120d9a2d4e.js",
+          "rawBytes": 85573,
+          "gzipBytes": 25477
         },
         {
           "path": "/_next/static/chunks/7075-4dde4081f94db590.js",
@@ -1464,6 +1474,11 @@
           "gzipBytes": 2760
         },
         {
+          "path": "/_next/static/chunks/7857-cbe2fb322c3e6398.js",
+          "rawBytes": 40379,
+          "gzipBytes": 14374
+        },
+        {
           "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
           "rawBytes": 45915,
           "gzipBytes": 14671
@@ -1489,9 +1504,9 @@
           "gzipBytes": 2495
         },
         {
-          "path": "/_next/static/chunks/8804-139655af8f02ec9e.js",
-          "rawBytes": 144259,
-          "gzipBytes": 35642
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
         },
         {
           "path": "/_next/static/chunks/9133-f90564b90fd34ae8.js",
@@ -1504,49 +1519,54 @@
           "gzipBytes": 11891
         },
         {
-          "path": "/_next/static/chunks/9307-708e4e1bce30841c.js",
-          "rawBytes": 13817,
-          "gzipBytes": 5254
+          "path": "/_next/static/chunks/9307-b63ff1485dd7724f.js",
+          "rawBytes": 13866,
+          "gzipBytes": 5288
         },
         {
-          "path": "/_next/static/chunks/app/assessment/b2/page-da45c9338a6b4edc.js",
-          "rawBytes": 369,
-          "gzipBytes": 293
+          "path": "/_next/static/chunks/956-8d8e8a93c91ef6d1.js",
+          "rawBytes": 7630,
+          "gzipBytes": 2806
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d97177624c4fd6f7.js",
-          "rawBytes": 46646,
-          "gzipBytes": 15913
+          "path": "/_next/static/chunks/app/assessment/b2/page-3f24f0097d58fd86.js",
+          "rawBytes": 374,
+          "gzipBytes": 297
         },
         {
-          "path": "/_next/static/chunks/app/errors/page-6952c252b6ba4666.js",
-          "rawBytes": 35410,
-          "gzipBytes": 11510
+          "path": "/_next/static/chunks/app/diagnostic/page-ef557b7312be5fbf.js",
+          "rawBytes": 46635,
+          "gzipBytes": 15912
         },
         {
-          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-715bf1d1a5e8cb06.js",
-          "rawBytes": 54588,
-          "gzipBytes": 14723
+          "path": "/_next/static/chunks/app/errors/page-fa7d852f9edba132.js",
+          "rawBytes": 35399,
+          "gzipBytes": 11530
         },
         {
-          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-1436eed0aef46988.js",
-          "rawBytes": 16102,
-          "gzipBytes": 5882
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-149da309085e5adb.js",
+          "rawBytes": 54540,
+          "gzipBytes": 14711
         },
         {
-          "path": "/_next/static/chunks/app/exams/page-43fca70ac5d4496a.js",
-          "rawBytes": 60634,
-          "gzipBytes": 19303
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-555d4f1f4e36d0e1.js",
+          "rawBytes": 16107,
+          "gzipBytes": 5887
         },
         {
-          "path": "/_next/static/chunks/app/layout-3ab5f63c3db56106.js",
-          "rawBytes": 25215,
-          "gzipBytes": 8608
+          "path": "/_next/static/chunks/app/exams/page-fcdbfacb63727b8d.js",
+          "rawBytes": 60639,
+          "gzipBytes": 19308
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-bf97986b39dfaec2.js",
-          "rawBytes": 151124,
-          "gzipBytes": 44174
+          "path": "/_next/static/chunks/app/layout-b90a96f73eb3890c.js",
+          "rawBytes": 26755,
+          "gzipBytes": 9126
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c6c6303430961aa9.js",
+          "rawBytes": 153882,
+          "gzipBytes": 45024
         },
         {
           "path": "/_next/static/chunks/app/library/page-7f6e872d3b36e8ff.js",
@@ -1554,9 +1574,9 @@
           "gzipBytes": 6274
         },
         {
-          "path": "/_next/static/chunks/app/mediation/page-029882a5b3966448.js",
-          "rawBytes": 21059,
-          "gzipBytes": 7890
+          "path": "/_next/static/chunks/app/mediation/page-f0e602e0fd90f8cc.js",
+          "rawBytes": 25663,
+          "gzipBytes": 9332
         },
         {
           "path": "/_next/static/chunks/app/module/b2-1/page-05b45c81b0615a38.js",
@@ -1619,9 +1639,9 @@
           "gzipBytes": 11863
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-6179ac0a84983385.js",
-          "rawBytes": 44029,
-          "gzipBytes": 17427
+          "path": "/_next/static/chunks/app/practice/endurance/page-8fecab13d70086de.js",
+          "rawBytes": 44232,
+          "gzipBytes": 17492
         },
         {
           "path": "/_next/static/chunks/app/practice/page-08d8398c1ee9ca08.js",
@@ -1639,14 +1659,14 @@
           "gzipBytes": 740
         },
         {
-          "path": "/_next/static/chunks/app/progress/page-f4ef2162d4507b69.js",
-          "rawBytes": 59602,
-          "gzipBytes": 18074
+          "path": "/_next/static/chunks/app/progress/page-d15cc11fe9920140.js",
+          "rawBytes": 60497,
+          "gzipBytes": 18484
         },
         {
-          "path": "/_next/static/chunks/app/review/page-c624879e6f521020.js",
-          "rawBytes": 15893,
-          "gzipBytes": 6296
+          "path": "/_next/static/chunks/app/review/page-20e70df1084b0588.js",
+          "rawBytes": 19779,
+          "gzipBytes": 7668
         },
         {
           "path": "/_next/static/chunks/app/search/page-29568a21f9973ca8.js",
@@ -1654,9 +1674,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-05a7ea67ba8c58c9.js",
-          "rawBytes": 193390,
-          "gzipBytes": 53925
+          "path": "/_next/static/chunks/app/settings/page-4df35652bff4bd5f.js",
+          "rawBytes": 193395,
+          "gzipBytes": 53929
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-44107b3bc0dabb01.js",
@@ -1664,9 +1684,9 @@
           "gzipBytes": 14927
         },
         {
-          "path": "/_next/static/chunks/app/speaking/page-725cd0f0f6e16687.js",
-          "rawBytes": 90020,
-          "gzipBytes": 27734
+          "path": "/_next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+          "rawBytes": 90064,
+          "gzipBytes": 27780
         },
         {
           "path": "/_next/static/chunks/app/status/page-169977f6fdef94e0.js",
@@ -1674,9 +1694,9 @@
           "gzipBytes": 3445
         },
         {
-          "path": "/_next/static/chunks/app/today/page-e75e587cd6c810e9.js",
-          "rawBytes": 93854,
-          "gzipBytes": 28721
+          "path": "/_next/static/chunks/app/today/page-02a260bf615c1932.js",
+          "rawBytes": 94324,
+          "gzipBytes": 28987
         },
         {
           "path": "/_next/static/chunks/app/tutor/page-8fb0149ff7bbbd59.js",
@@ -1684,29 +1704,29 @@
           "gzipBytes": 10120
         },
         {
-          "path": "/_next/static/chunks/app/writing/page-76791b264dcae785.js",
-          "rawBytes": 69522,
-          "gzipBytes": 22662
+          "path": "/_next/static/chunks/app/writing/page-b34c571d8242901c.js",
+          "rawBytes": 69553,
+          "gzipBytes": 22689
         },
         {
-          "path": "/_next/static/chunks/curriculum-a1-92f05501bbc7f7ca.js",
-          "rawBytes": 552346,
-          "gzipBytes": 112274
+          "path": "/_next/static/chunks/curriculum-a1-8a25b3e078c0ce65.js",
+          "rawBytes": 483619,
+          "gzipBytes": 114037
         },
         {
-          "path": "/_next/static/chunks/curriculum-a2-58543d3bd1938af9.js",
-          "rawBytes": 617936,
-          "gzipBytes": 167127
+          "path": "/_next/static/chunks/curriculum-a2-19c908a4a37247cd.js",
+          "rawBytes": 611821,
+          "gzipBytes": 167303
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-6df5c63e84b1be59.js",
-          "rawBytes": 695675,
-          "gzipBytes": 173269
+          "path": "/_next/static/chunks/curriculum-b1-b875df65b0d20b5e.js",
+          "rawBytes": 657349,
+          "gzipBytes": 174056
         },
         {
-          "path": "/_next/static/chunks/curriculum-b2-a5ec4107558c17ee.js",
-          "rawBytes": 929069,
-          "gzipBytes": 266168
+          "path": "/_next/static/chunks/curriculum-b2-de5dd86d9fd7618a.js",
+          "rawBytes": 889796,
+          "gzipBytes": 260759
         },
         {
           "path": "/_next/static/chunks/main-app-d20cdad587442bec.js",
@@ -1724,9 +1744,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/bc43792fee5934ea.css",
-          "rawBytes": 445230,
-          "gzipBytes": 71985
+          "path": "/_next/static/css/a909915497c3a8f7.css",
+          "rawBytes": 447597,
+          "gzipBytes": 72396
         }
       ]
     },
@@ -1734,15 +1754,15 @@
       "id": "full",
       "label": "A1–B2 komplett",
       "routeCount": 319,
-      "routeRawBytes": 16285639,
-      "routeGzipBytes": 3898024,
-      "nextAssetCount": 113,
-      "nextAssetRawBytes": 6702466,
-      "nextAssetGzipBytes": 1848536,
+      "routeRawBytes": 16058493,
+      "routeGzipBytes": 3891237,
+      "nextAssetCount": 114,
+      "nextAssetRawBytes": 6602590,
+      "nextAssetGzipBytes": 1863870,
       "supportRawBytes": 67438,
       "supportGzipBytes": 11950,
-      "totalRawBytes": 23055543,
-      "totalGzipBytes": 5758510,
+      "totalRawBytes": 22728521,
+      "totalGzipBytes": 5767057,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1755,14 +1775,9 @@
           "gzipBytes": 100809
         },
         {
-          "path": "/_next/static/chunks/1619-85cae64e8e1da318.js",
-          "rawBytes": 13275,
-          "gzipBytes": 5557
-        },
-        {
-          "path": "/_next/static/chunks/1923-b166658647a5dabb.js",
-          "rawBytes": 18433,
-          "gzipBytes": 7400
+          "path": "/_next/static/chunks/1619-023bb4a2dbcf7288.js",
+          "rawBytes": 13260,
+          "gzipBytes": 5548
         },
         {
           "path": "/_next/static/chunks/2004-48d0b5c2bbcd18e2.js",
@@ -1773,6 +1788,11 @@
           "path": "/_next/static/chunks/22-0aa429ef245b0a0f.js",
           "rawBytes": 6952,
           "gzipBytes": 2514
+        },
+        {
+          "path": "/_next/static/chunks/2629-13efe777cfe97185.js",
+          "rawBytes": 22977,
+          "gzipBytes": 8897
         },
         {
           "path": "/_next/static/chunks/2811-b7b7717799914c26.js",
@@ -1790,9 +1810,9 @@
           "gzipBytes": 53515
         },
         {
-          "path": "/_next/static/chunks/3397-1fc25435d7736d5a.js",
-          "rawBytes": 19519,
-          "gzipBytes": 6371
+          "path": "/_next/static/chunks/3397-8815cb6141120300.js",
+          "rawBytes": 21506,
+          "gzipBytes": 7051
         },
         {
           "path": "/_next/static/chunks/3794-83acfce05009cf38.js",
@@ -1830,9 +1850,9 @@
           "gzipBytes": 10875
         },
         {
-          "path": "/_next/static/chunks/5774-fa98290683e54696.js",
-          "rawBytes": 37709,
-          "gzipBytes": 13856
+          "path": "/_next/static/chunks/5774-6b37c31a997e69e7.js",
+          "rawBytes": 37996,
+          "gzipBytes": 13998
         },
         {
           "path": "/_next/static/chunks/5923-b2d89b709fe8fe08.js",
@@ -1845,9 +1865,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-4d9a79609ee2e66c.js",
-          "rawBytes": 15249,
-          "gzipBytes": 6204
+          "path": "/_next/static/chunks/6043-211e8c9af00e8fa6.js",
+          "rawBytes": 15268,
+          "gzipBytes": 6219
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -1870,14 +1890,9 @@
           "gzipBytes": 14121
         },
         {
-          "path": "/_next/static/chunks/6850-07f9fc92d0632925.js",
-          "rawBytes": 84454,
-          "gzipBytes": 25116
-        },
-        {
-          "path": "/_next/static/chunks/7047-3d4621b067eb03a0.js",
-          "rawBytes": 7380,
-          "gzipBytes": 2730
+          "path": "/_next/static/chunks/6850-ebe207120d9a2d4e.js",
+          "rawBytes": 85573,
+          "gzipBytes": 25477
         },
         {
           "path": "/_next/static/chunks/7075-4dde4081f94db590.js",
@@ -1910,6 +1925,11 @@
           "gzipBytes": 2760
         },
         {
+          "path": "/_next/static/chunks/7857-cbe2fb322c3e6398.js",
+          "rawBytes": 40379,
+          "gzipBytes": 14374
+        },
+        {
           "path": "/_next/static/chunks/8082-656063cb37a7a58b.js",
           "rawBytes": 45915,
           "gzipBytes": 14671
@@ -1935,9 +1955,9 @@
           "gzipBytes": 2495
         },
         {
-          "path": "/_next/static/chunks/8804-139655af8f02ec9e.js",
-          "rawBytes": 144259,
-          "gzipBytes": 35642
+          "path": "/_next/static/chunks/8836-ad672038ca52b020.js",
+          "rawBytes": 131442,
+          "gzipBytes": 31050
         },
         {
           "path": "/_next/static/chunks/9133-f90564b90fd34ae8.js",
@@ -1950,64 +1970,69 @@
           "gzipBytes": 11891
         },
         {
-          "path": "/_next/static/chunks/9307-708e4e1bce30841c.js",
-          "rawBytes": 13817,
-          "gzipBytes": 5254
+          "path": "/_next/static/chunks/9307-b63ff1485dd7724f.js",
+          "rawBytes": 13866,
+          "gzipBytes": 5288
         },
         {
-          "path": "/_next/static/chunks/app/assessment/a1/page-fc775d7439c893f7.js",
-          "rawBytes": 373,
-          "gzipBytes": 294
+          "path": "/_next/static/chunks/956-8d8e8a93c91ef6d1.js",
+          "rawBytes": 7630,
+          "gzipBytes": 2806
         },
         {
-          "path": "/_next/static/chunks/app/assessment/a2/page-bcf4a9e2b0d42e32.js",
-          "rawBytes": 373,
-          "gzipBytes": 293
+          "path": "/_next/static/chunks/app/assessment/a1/page-d7aa5efef748c05c.js",
+          "rawBytes": 378,
+          "gzipBytes": 296
         },
         {
-          "path": "/_next/static/chunks/app/assessment/b1/page-480f290a005541e6.js",
-          "rawBytes": 372,
-          "gzipBytes": 295
+          "path": "/_next/static/chunks/app/assessment/a2/page-fdb8c552952cde08.js",
+          "rawBytes": 378,
+          "gzipBytes": 297
         },
         {
-          "path": "/_next/static/chunks/app/assessment/b2/page-da45c9338a6b4edc.js",
-          "rawBytes": 369,
-          "gzipBytes": 293
+          "path": "/_next/static/chunks/app/assessment/b1/page-aca848fba821ace5.js",
+          "rawBytes": 377,
+          "gzipBytes": 296
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d97177624c4fd6f7.js",
-          "rawBytes": 46646,
-          "gzipBytes": 15913
+          "path": "/_next/static/chunks/app/assessment/b2/page-3f24f0097d58fd86.js",
+          "rawBytes": 374,
+          "gzipBytes": 297
         },
         {
-          "path": "/_next/static/chunks/app/errors/page-6952c252b6ba4666.js",
-          "rawBytes": 35410,
-          "gzipBytes": 11510
+          "path": "/_next/static/chunks/app/diagnostic/page-ef557b7312be5fbf.js",
+          "rawBytes": 46635,
+          "gzipBytes": 15912
         },
         {
-          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-715bf1d1a5e8cb06.js",
-          "rawBytes": 54588,
-          "gzipBytes": 14723
+          "path": "/_next/static/chunks/app/errors/page-fa7d852f9edba132.js",
+          "rawBytes": 35399,
+          "gzipBytes": 11530
         },
         {
-          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-1436eed0aef46988.js",
-          "rawBytes": 16102,
-          "gzipBytes": 5882
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/%5BsimulationId%5D/page-149da309085e5adb.js",
+          "rawBytes": 54540,
+          "gzipBytes": 14711
         },
         {
-          "path": "/_next/static/chunks/app/exams/page-43fca70ac5d4496a.js",
-          "rawBytes": 60634,
-          "gzipBytes": 19303
+          "path": "/_next/static/chunks/app/exams/%5Bprovider%5D/full/%5BsimulationId%5D/page-555d4f1f4e36d0e1.js",
+          "rawBytes": 16107,
+          "gzipBytes": 5887
         },
         {
-          "path": "/_next/static/chunks/app/layout-3ab5f63c3db56106.js",
-          "rawBytes": 25215,
-          "gzipBytes": 8608
+          "path": "/_next/static/chunks/app/exams/page-fcdbfacb63727b8d.js",
+          "rawBytes": 60639,
+          "gzipBytes": 19308
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-bf97986b39dfaec2.js",
-          "rawBytes": 151124,
-          "gzipBytes": 44174
+          "path": "/_next/static/chunks/app/layout-b90a96f73eb3890c.js",
+          "rawBytes": 26755,
+          "gzipBytes": 9126
+        },
+        {
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c6c6303430961aa9.js",
+          "rawBytes": 153882,
+          "gzipBytes": 45024
         },
         {
           "path": "/_next/static/chunks/app/library/page-7f6e872d3b36e8ff.js",
@@ -2015,9 +2040,9 @@
           "gzipBytes": 6274
         },
         {
-          "path": "/_next/static/chunks/app/mediation/page-029882a5b3966448.js",
-          "rawBytes": 21059,
-          "gzipBytes": 7890
+          "path": "/_next/static/chunks/app/mediation/page-f0e602e0fd90f8cc.js",
+          "rawBytes": 25663,
+          "gzipBytes": 9332
         },
         {
           "path": "/_next/static/chunks/app/module/a1-1/page-5e8b6a0c3b7b1777.js",
@@ -2200,9 +2225,9 @@
           "gzipBytes": 11863
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-6179ac0a84983385.js",
-          "rawBytes": 44029,
-          "gzipBytes": 17427
+          "path": "/_next/static/chunks/app/practice/endurance/page-8fecab13d70086de.js",
+          "rawBytes": 44232,
+          "gzipBytes": 17492
         },
         {
           "path": "/_next/static/chunks/app/practice/page-08d8398c1ee9ca08.js",
@@ -2220,14 +2245,14 @@
           "gzipBytes": 740
         },
         {
-          "path": "/_next/static/chunks/app/progress/page-f4ef2162d4507b69.js",
-          "rawBytes": 59602,
-          "gzipBytes": 18074
+          "path": "/_next/static/chunks/app/progress/page-d15cc11fe9920140.js",
+          "rawBytes": 60497,
+          "gzipBytes": 18484
         },
         {
-          "path": "/_next/static/chunks/app/review/page-c624879e6f521020.js",
-          "rawBytes": 15893,
-          "gzipBytes": 6296
+          "path": "/_next/static/chunks/app/review/page-20e70df1084b0588.js",
+          "rawBytes": 19779,
+          "gzipBytes": 7668
         },
         {
           "path": "/_next/static/chunks/app/search/page-29568a21f9973ca8.js",
@@ -2235,9 +2260,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-05a7ea67ba8c58c9.js",
-          "rawBytes": 193390,
-          "gzipBytes": 53925
+          "path": "/_next/static/chunks/app/settings/page-4df35652bff4bd5f.js",
+          "rawBytes": 193395,
+          "gzipBytes": 53929
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-44107b3bc0dabb01.js",
@@ -2245,9 +2270,9 @@
           "gzipBytes": 14927
         },
         {
-          "path": "/_next/static/chunks/app/speaking/page-725cd0f0f6e16687.js",
-          "rawBytes": 90020,
-          "gzipBytes": 27734
+          "path": "/_next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+          "rawBytes": 90064,
+          "gzipBytes": 27780
         },
         {
           "path": "/_next/static/chunks/app/status/page-169977f6fdef94e0.js",
@@ -2255,9 +2280,9 @@
           "gzipBytes": 3445
         },
         {
-          "path": "/_next/static/chunks/app/today/page-e75e587cd6c810e9.js",
-          "rawBytes": 93854,
-          "gzipBytes": 28721
+          "path": "/_next/static/chunks/app/today/page-02a260bf615c1932.js",
+          "rawBytes": 94324,
+          "gzipBytes": 28987
         },
         {
           "path": "/_next/static/chunks/app/tutor/page-8fb0149ff7bbbd59.js",
@@ -2265,29 +2290,29 @@
           "gzipBytes": 10120
         },
         {
-          "path": "/_next/static/chunks/app/writing/page-76791b264dcae785.js",
-          "rawBytes": 69522,
-          "gzipBytes": 22662
+          "path": "/_next/static/chunks/app/writing/page-b34c571d8242901c.js",
+          "rawBytes": 69553,
+          "gzipBytes": 22689
         },
         {
-          "path": "/_next/static/chunks/curriculum-a1-92f05501bbc7f7ca.js",
-          "rawBytes": 552346,
-          "gzipBytes": 112274
+          "path": "/_next/static/chunks/curriculum-a1-8a25b3e078c0ce65.js",
+          "rawBytes": 483619,
+          "gzipBytes": 114037
         },
         {
-          "path": "/_next/static/chunks/curriculum-a2-58543d3bd1938af9.js",
-          "rawBytes": 617936,
-          "gzipBytes": 167127
+          "path": "/_next/static/chunks/curriculum-a2-19c908a4a37247cd.js",
+          "rawBytes": 611821,
+          "gzipBytes": 167303
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-6df5c63e84b1be59.js",
-          "rawBytes": 695675,
-          "gzipBytes": 173269
+          "path": "/_next/static/chunks/curriculum-b1-b875df65b0d20b5e.js",
+          "rawBytes": 657349,
+          "gzipBytes": 174056
         },
         {
-          "path": "/_next/static/chunks/curriculum-b2-a5ec4107558c17ee.js",
-          "rawBytes": 929069,
-          "gzipBytes": 266168
+          "path": "/_next/static/chunks/curriculum-b2-de5dd86d9fd7618a.js",
+          "rawBytes": 889796,
+          "gzipBytes": 260759
         },
         {
           "path": "/_next/static/chunks/main-app-d20cdad587442bec.js",
@@ -2305,9 +2330,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/bc43792fee5934ea.css",
-          "rawBytes": 445230,
-          "gzipBytes": 71985
+          "path": "/_next/static/css/a909915497c3a8f7.css",
+          "rawBytes": 447597,
+          "gzipBytes": 72396
         }
       ]
     }

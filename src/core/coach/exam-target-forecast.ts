@@ -1,8 +1,10 @@
 import type { LearningState } from "@/types/learning";
+import { studyDayKey } from "./session-signals";
 import { curriculum } from "@/data/curriculum";
 import { buildExamReadiness } from "@/core/exams/readiness";
 import { buildWeeklyPlan } from "./weekly-plan";
 import { buildDueReviewQueue } from "@/core/srs/review-queue";
+import { dailyReviewQuota } from "@/core/review/daily-quota";
 
 export const TARGET_DATE_LOAD_POLICY_VERSION="target-date-workload-risk-v2" as const;
 const GATE_MINUTES=60,EXAM_SAMPLE_MINUTES=20;
@@ -20,17 +22,25 @@ export function buildExamTargetForecast(state:LearningState,now=new Date()){
   const retrievalReserveMinutes=Math.ceil(lessonMinutes*.35);
   const repairReserveMinutes=Math.ceil(lessonMinutes*.2)+state.errors.filter(error=>!error.resolved).length*5;
   const productiveReserveMinutes=remainingLessons.length*10;
-  const dueReviewMinutes=Math.ceil(buildDueReviewQueue(state,now).length*45/60);
+  // الكومة المؤجَّلة ليست دينًا يُدفع قبل الامتحان: يُحسب ما تسعه القدرة اليومية المعلنة فقط
+  // (ADR-107 · نصّ المدرّب «لا تُلغِ الإنتاج أو تحوّل التراكم إلى دين»).
+  const reviewQueueCount=buildDueReviewQueue(state,now).length;
+  const reviewCapacityPerDay=Math.max(1,dailyReviewQuota(state,now).required);
+  const reviewableBeforeTarget=Math.min(reviewQueueCount,reviewCapacityPerDay*Math.max(1,daysRemaining));
+  const reviewsDeferredCount=reviewQueueCount-reviewableBeforeTarget;
+  const dueReviewMinutes=Math.ceil(reviewableBeforeTarget*45/60);
   const gateMinutes=(["a1","a2","b1","b2"] as const).filter(level=>(state.mastery[`level-${level}-ready`]??0)<100).length*GATE_MINUTES;
   const provider=state.profile?.targetExam??"goethe-b2";const readiness=buildExamReadiness(state,provider);
   const missingExamSamples=readiness.modules.reduce((sum,module)=>sum+Math.max(0,module.requiredSamples-module.attemptedTasks),0);
   const remainingStudyMinutes=lessonMinutes+retrievalReserveMinutes+repairReserveMinutes+productiveReserveMinutes+dueReviewMinutes+gateMinutes+missingExamSamples*EXAM_SAMPLE_MINUTES;
   const requiredWeeklyMinutes=Math.ceil(remainingStudyMinutes/weeksRemaining/5)*5;const gapMinutes=Math.max(0,requiredWeeklyMinutes-plannedWeeklyMinutes);
-  const productiveDays=new Set(state.studyHistory.filter(item=>item.evidenceCount>0&&item.date>=new Date(now.getTime()-28*86_400_000).toISOString().slice(0,10)).map(item=>item.date)).size;
+  const productiveDays=new Set(state.studyHistory.filter(item=>item.evidenceCount>0&&item.date>=studyDayKey(new Date(now.getTime()-28*86_400_000))).map(item=>item.date)).size;
   const acquisitionTimeStatus=productiveDays<7?"insufficient-observation" as const:"still-unmeasured-language-acquisition" as const;
   const status=daysRemaining<0?"past-date" as const:gapMinutes>0?"load-gap" as const:"within-plan" as const;
   const solutionsAr=status==="past-date"?["حدّث التاريخ المستهدف؛ لا نضغط المهام في أيام مضت."]:
     status==="load-gap"?[`يوجد فرق حمل تقديري ${gapMinutes} دقيقة أسبوعيًا؛ غيّر الخطة أو التاريخ إذا كان ذلك واقعيًا، دون دين يومي.`,"قدّم أضعف دليل ولا تضاعف جلسة العودة."]:
       ["ميزانية الأنشطة تغطي هذا التقدير مع احتياطي مراجعة وإصلاح؛ لا يثبت ذلك بلوغ B1/B2 أو جاهزية الامتحان.","راجع النطاق من عينات جديدة ومؤجلة، لا من إنهاء الشاشات فقط."];
-  return{policyVersion:TARGET_DATE_LOAD_POLICY_VERSION,status,targetDate,weeksRemaining,remainingStudyMinutes,requiredWeeklyMinutes,plannedWeeklyMinutes,gapMinutes,solutionsAr,acquisitionTimeStatus,productiveDays,breakdown:{lessonMinutes,retrievalReserveMinutes,repairReserveMinutes,productiveReserveMinutes,dueReviewMinutes,gateMinutes,examMinutes:missingExamSamples*EXAM_SAMPLE_MINUTES},assumptions:{gateMinutes:GATE_MINUTES,examSampleMinutes:EXAM_SAMPLE_MINUTES,retrievalReserveRatio:.35,repairReserveRatio:.2,uncalibratedPlanningEstimate:true},evidenceBoundary:boundary};
+  // الكومة التي لا تسعها الأيام الباقية تُسمَّى بصراحة ولا تُحمَّل التقدير (ADR-107 · م5).
+  const solutionsArWithBacklog=reviewsDeferredCount>0?[...solutionsAr,`في طابور المراجعة ${reviewQueueCount} بطاقة؛ حُسب منها ${reviewableBeforeTarget} لأنها ما تسعه قدرتك اليومية (${reviewCapacityPerDay} بطاقة في يوم الدراسة) حتى هدفك. المؤجَّلة ${reviewsDeferredCount} لا تُحتسب دينًا ولا تُحذف: ارفع مدة الجلسة أو أبطِئ درسًا جديدًا لتفريغها.`]:solutionsAr;
+  return{policyVersion:TARGET_DATE_LOAD_POLICY_VERSION,status,targetDate,weeksRemaining,remainingStudyMinutes,requiredWeeklyMinutes,plannedWeeklyMinutes,gapMinutes,solutionsAr:solutionsArWithBacklog,acquisitionTimeStatus,productiveDays,breakdown:{lessonMinutes,retrievalReserveMinutes,repairReserveMinutes,productiveReserveMinutes,dueReviewMinutes,reviewQueueCount,reviewCapacityPerDay,reviewsDeferredCount,gateMinutes,examMinutes:missingExamSamples*EXAM_SAMPLE_MINUTES},assumptions:{gateMinutes:GATE_MINUTES,examSampleMinutes:EXAM_SAMPLE_MINUTES,retrievalReserveRatio:.35,repairReserveRatio:.2,uncalibratedPlanningEstimate:true},evidenceBoundary:boundary};
 }

@@ -3,7 +3,7 @@
   "version": "learning-integrity-v1",
   "definitionDate": "2026-10-02",
   "ok": true,
-  "sourceSha256": "00831ecebdc1984017a411a700945a7e72ef9eceba151f2285126c6584e3c95e",
+  "sourceSha256": "4d74a680f131c28b17bbf1d9bd1e61bbe8f0fa0bef32fa3f3cc98625bfd17a2a",
   "assessmentBankVersion": "authored-parallel-level-check-v1",
   "assessmentTemplateInstances": 384,
   "competencyFamilies": 24,
@@ -137,7 +137,7 @@
     4,
     4
   ],
-  "independentProductionTasks": 32,
+  "independentProductionTasks": 96,
   "extendedInputs": [
     {
       "id": "endurance-a1-A",

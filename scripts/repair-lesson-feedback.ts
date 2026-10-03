@@ -10,6 +10,8 @@ import { selectReadingEvidence } from "../src/core/lesson/support";
 const apply = process.argv.includes("--apply");
 const explanations = new Map<string,string>();
 let restored = 0, expanded = 0;
+/** عناصر لم يبلغ ردّها حدّ الـ60 حرفًا: تُعلَن بحاجة إلى تأليف ولا تُحشى بجملة عامة (جذر ع2 من تدقيق 2026-10-03). */
+const needsAuthoring:string[]=[];
 const saved = new Map<string,string>();
 const payloadDir = "docs/run-logs/a2-explanations-payloads";
 const order = (name:string) => { const match=/a2e(\d+)(?:-fix(\d+))?\.json$/u.exec(name); return match?Number(match[1])*100+Number(match[2]??0):0; };
@@ -31,14 +33,15 @@ for(const lesson of academicLessonList){
       const evidence=selectReadingEvidence(lesson.reading.textDe,item as typeof lesson.reading.questions[number]);
       text+=` الجواب الموافق للمعلومة هو «${target}». ارجع إلى «${evidence}» وقارن الفاعل والفعل والتفصيل بالسؤال؛ لا يكفي تشابه كلمة في الخيار. موضع الرجوع آلي ويحتاج مراجعة دلالية مستقلة.`;
     }else if(lesson.listening.questions.some(question=>question.id===item.id)){
-      text+=` المطلوب في هذا السؤال هو «${target}». أعد سماع موضع المعلومة وحدّد من يتكلم وما يقصده؛ لا تختَر تفصيلًا سمعته إذا كان يخص شخصًا أو وقتًا آخر. بعد الفهم قل المعلومة بكلماتك دون قراءة النص.`;
+      text+=` المطلوب في هذا السؤال هو «${target}».`;
     }else{
       const targetTokens=tokens(target);
       const block=lesson.theory.map(block=>({block,overlap:[...tokens(block.examples.map(example=>example.de).join(" "))].filter(token=>token.length>3&&targetTokens.has(token)).length})).sort((a,b)=>b.overlap-a.overlap)[0];
       const firstSentence=block?.overlap?block.block.explanationAr.split(/(?<=[.!؟])\s+/u)[0]:"";
       const safeRule=firstSentence&&!/\b(?:Nominativ|Akkusativ|Dativ|Genitiv)\b/u.test(firstSentence)?firstSentence:"";
-      text+=` الصيغة المطلوبة هنا هي «${target}». ${safeRule?`${safeRule} `:""}افحص المعنى وترتيب الكلمات في سياق السؤال قبل تثبيت جوابك، ثم كوّن استعمالًا جديدًا للهدف بدل تكرار المفتاح فقط.`;
+      text+=` الصيغة المطلوبة هنا هي «${target}». ${safeRule?`${safeRule} `:""}`;
     }
+    if(text.trim().length<60){needsAuthoring.push(`${lesson.id}:${item.id}`);continue;}
     explanations.set(item.id,text);expanded+=1;
   }
 }
@@ -63,4 +66,4 @@ for(const name of (await readdir("src/data")).filter(name=>/^lessons-[ab][12]-mo
 }
 const missing=[...explanations.keys()].filter(id=>!found.has(id));
 if(missing.length)throw new Error(`Missing feedback owners: ${missing.join(", ")}`);
-console.log(JSON.stringify({operation:apply?"authored-context-repair-applied":"dry-run",restoredPayloads:restored,expandedThinFeedback:expanded,changedFields:fields,changedFiles:files,missing,reviewStatus:"independent-semantic-review-pending"},null,2));
+console.log(JSON.stringify({operation:apply?"authored-context-repair-applied":"dry-run",restoredPayloads:restored,expandedThinFeedback:expanded,needsAuthoringCount:needsAuthoring.length,needsAuthoring,changedFields:fields,changedFiles:files,missing,reviewStatus:"independent-semantic-review-pending"},null,2));

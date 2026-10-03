@@ -8,6 +8,7 @@ import { independentProductionTasks } from "@/data/independent-production-tasks"
 import { buildLevelEvidenceGate, diagnosticSuggestsChallenge, nextAssessmentForm } from "@/core/assessment/level-evidence";
 import { shuffledQuestionOptions } from "@/core/lesson/shuffle";
 import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
+import { studyDayKey } from "@/core/coach/session-signals";
 import { useLearning } from "./learning-provider";
 import { StatusAnnouncement } from "./status-announcement";
 
@@ -54,7 +55,7 @@ function LevelAssessmentForm({ level }: { level: CEFRLevel }) {
       createdAt,
     }));
     update((current) => {
-      const candidate = { ...current, exerciseAttempts: [...current.exerciseAttempts, ...attempts], studyHistory: [...current.studyHistory, { date: createdAt.slice(0,10), minutes: Math.ceil(visibleSeconds/60), evidenceCount: questions.length }] };
+      const candidate = { ...current, exerciseAttempts: [...current.exerciseAttempts, ...attempts], studyHistory: [...current.studyHistory, { date: studyDayKey(new Date(createdAt)), minutes: Math.ceil(visibleSeconds/60), evidenceCount: questions.length }] };
       const evaluated = buildLevelEvidenceGate(candidate, level, now);
       return { ...candidate, mastery: { ...candidate.mastery, [`level-${level.toLowerCase()}-knowledge`]: Math.round(score/questions.length*100), [`level-${level.toLowerCase()}-ready`]: evaluated.passed ? 100 : 0 } };
     });

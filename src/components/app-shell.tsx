@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { BookOpen, ChartNoAxesCombined, LibraryBig, ChevronLeft, Clock3, Compass, FlaskConical, GraduationCap, LayoutGrid, LockKeyhole, LogOut, RotateCcw, Search, Settings, Sparkles, X } from "lucide-react";
 import { Brand } from "./brand";
+import { StateIntegrityNotice } from "./state-integrity-notice";
 import { useLearning } from "./learning-provider";
 import { continuousFocusSession, isContinuousSessionFocusActive } from "@/core/exams/continuous-session";
 import { AccessibleDialog } from "./accessible-dialog";
@@ -134,6 +135,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </header>}
         {!focusSession&&<ReviewReminderCoordinator/>}
+        {!focusSession&&<StateIntegrityNotice/>}
         {!focusSession && activeSession && <aside className="active-rehearsal-reminder" aria-label="بروفة امتحان نشطة"><Clock3 size={17} /><p><strong>لديك بروفة متصلة نشطة.</strong><span>الموعد النهائي لم يتوقف عند مغادرة صفحة الامتحان.</span></p><Link href={activeDashboard}>استئناف البروفة</Link></aside>}
         <main id="main-content" className="page-content" tabIndex={-1}>{children}{pathname.startsWith("/exams")&&!focusSession&&<ExamPrintTools path={pathname}/>}<GermanCopyEnhancer scopeKey={pathname}/><GermanCharacterDock/></main>
       </div>

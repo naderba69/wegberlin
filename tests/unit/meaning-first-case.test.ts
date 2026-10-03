@@ -10,7 +10,7 @@ const audit=buildMeaningFirstCaseAudit();
 describe("P0 meaning-first case teaching",()=>{
   it("covers every explicit case signal with zero structural gaps",()=>{
     expect(audit.ok,audit.issues.join("\n")).toBe(true);
-    expect(audit).toMatchObject({version:"meaning-first-case-audit-v1",contractCount:19,lessonCount:19,theoryReferenceCount:23,controlledReferenceCount:57,assessmentReferenceCount:44,discoveredSignals:{theory:20,controlled:20,assessment:20},byLevel:{A1:6,A2:4,B1:4,B2:5}});
+    expect(audit).toMatchObject({version:"meaning-first-case-audit-v1",contractCount:19,lessonCount:19,theoryReferenceCount:23,controlledReferenceCount:57,assessmentReferenceCount:44,discoveredSignals:{theory:20,controlled:20,assessment:22},byLevel:{A1:6,A2:4,B1:4,B2:5}});
   });
 
   it("forces the sequence meaning then role then form",()=>{

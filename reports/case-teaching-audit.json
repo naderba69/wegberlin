@@ -11,7 +11,7 @@
   "discoveredSignals": {
     "theory": 20,
     "controlled": 20,
-    "assessment": 20
+    "assessment": 22
   },
   "byLevel": {
     "A1": 6,
@@ -675,5 +675,5 @@
     }
   ],
   "boundary": "The audit proves authored sequencing and complete ownership of explicit case-name signals. It does not replace an independent linguistic judgment of every explanation or learner interpretation.",
-  "contentSha256": "167645dd621b2da13201ade19aba2cf5c1511b29a573018be6c22412d94dda98"
+  "contentSha256": "c585e919993f365a534e8b16f6b30b931947433c5c34a54aab9dce045ab0e4d5"
 }

@@ -3,6 +3,7 @@ import { buildLevelEvidenceGate, diagnosticSuggestsChallenge } from "@/core/asse
 import { lessonEvidenceGate } from "@/core/lessons/evidence-gate";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
 import { dailyReviewQuota } from "@/core/review/daily-quota";
+import { placementDiagnosticShouldPreempt } from "./diagnostic-priority";
 import { isPlannedRestDay } from "./study-calendar";
 import { studyPhase } from "./study-phase";
 import { curriculum } from "@/data/curriculum";
@@ -59,7 +60,7 @@ export type CoachTarget={kind:"diagnostic"|"review"|"errors"|"lesson"|"assessmen
 
 export function getCoachTarget(state:LearningState,now=new Date()):CoachTarget{
   if(isPlannedRestDay(state,now))return{kind:"rest",href:"/today#session-check-in",titleAr:"راحة مخططة؛ جلسة اختيارية فقط",titleDe:"Geplante Pause",reasonAr:"اليوم خارج أيام الدراسة التي اخترتها أو الأحد الافتراضي. لا دين ولا دليل وهمي؛ ابدأ تهيئة صريحة إذا رغبت في جلسة اختيارية."};
-  if(!state.diagnosticResult&&state.profile?.priorExperience!=="none")return{kind:"diagnostic",href:"/diagnostic",titleAr:"تشخيص نقطة البداية",titleDe:"Einstufung",reasonAr:"نجمع عينة محافظة؛ النتيجة توجه إلى تحدّي تجاوز ولا تمنح إكمالًا أو شهادة."};
+  if(placementDiagnosticShouldPreempt(state))return{kind:"diagnostic",href:"/diagnostic",titleAr:"تشخيص نقطة البداية",titleDe:"Einstufung",reasonAr:"نجمع عينة محافظة؛ النتيجة توجه إلى تحدّي تجاوز ولا تمنح إكمالًا أو شهادة."};
   const dueReviews=buildDueReviewQueue(state,now).length;
   if(dueReviews>=20&&!dailyReviewQuota(state,now).reached)return{kind:"review",href:"/review",titleAr:"استرجاع مستحق ضمن الوقت",titleDe:"Fällige Wiederholung",reasonAr:`لديك ${dueReviews} بطاقات مستحقة فعلًا. خذ حصة محدودة من المراجعة، ولا تُلغِ الإنتاج أو تحوّل التراكم إلى دين.`};
   const activeErrors=state.errors.filter(error=>!error.resolved);
@@ -116,7 +117,7 @@ export function composeTodayMission(state:LearningState,now=new Date()):MissionB
     const beginnerMission=baseBlocks.filter((block)=>ids.includes(block.id)).map((block)=>block.id==="check-in"?{...block,minutes:checkMinutes,objective:"أخبرنا بطاقتك ووقتك؛ لا يوجد اختبار في جلسة الصفر."}:block.id==="warmup"?{...block,minutes:warmupMinutes}:block.id==="lesson"?{...block,titleAr:"أول خطوة من الصفر",titleDe:target.titleDe,minutes:lessonMinutes,objective:target.reasonAr,href:target.href}:{...block,minutes:reflectionMinutes,objective:"اختم بما فهمته دون علامة أو مهمة كتابة."});
     return applySelectedMissionAlternatives(state,applySessionRitualPreferences(state,beginnerMission),now);
   }
-  if(!state.diagnosticResult&&state.profile?.priorExperience!=="none")return applySelectedMissionAlternatives(state,applySessionRitualPreferences(state,baseBlocks.filter((block)=>["diagnostic","reflection"].includes(block.id))),now);
+  if(placementDiagnosticShouldPreempt(state))return applySelectedMissionAlternatives(state,applySessionRitualPreferences(state,baseBlocks.filter((block)=>["diagnostic","reflection"].includes(block.id))),now);
   const target=getCoachTarget(state,now);
   const phase=studyPhase(state,now);
   const minutes=effectiveSessionMinutes(state,now);

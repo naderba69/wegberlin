@@ -6,6 +6,7 @@ import { ArrowLeft, BookOpenCheck, Check, FilePenLine, Lightbulb, RotateCcw, Sav
 import { analyzeWriting, type WritingAnalysis } from "@/core/writing/analyze";
 import { behavioralPraise } from "@/core/coach/behavioral-praise";
 import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
+import { scheduleDelayedTransferTasksForState } from "@/core/evidence/delayed-transfer-task";
 import { independentProductionTask } from "@/data/independent-production-tasks";
 import { academicLessons } from "@/data/academic-lessons";
 import type { WritingPlan, WritingSubmission } from "@/types/learning";
@@ -67,7 +68,7 @@ export function WritingLab({lessonId,independentTaskId}:{lessonId?:string;indepe
     const version=submissions.length+1;
     const sourceVersion=[...submissions].reverse().find((submission)=>submission.status!=="draft")?.version;
     const submission:WritingSubmission={id:`writing-${crypto.randomUUID()}`,taskId,text,wordCount:analysis.wordCount,version,status,evidenceContext:{policyVersion:"productive-independence-v1",taskLevel:level,firstDraft:status==="submitted"&&!submissions.some(item=>item.status!=="draft"&&Date.parse(item.createdAt)>=Date.parse(roundStartedAt.current)),draftStartedAt:roundStartedAt.current,supportUsedBeforeDraft:state.supportUsageEvents.some(event=>event.contentId===`${taskId}:writing-model`&&event.kind==="writing-model"&&Date.parse(event.createdAt)>=Date.parse(roundStartedAt.current))},feedback:withAnalysis?analysis.feedback:[],plan:cleanPlan(),selfChecklist:[...selfChecklist],dimensions:withAnalysis?analysis.dimensions:undefined,sourceVersion:status==="revised"?sourceVersion:undefined,createdAt:now,updatedAt:now};
-    update((current)=>({...current,writingSubmissions:[...current.writingSubmissions,submission]}));
+    update((current)=>scheduleDelayedTransferTasksForState({...current,writingSubmissions:[...current.writingSubmissions,submission]}));
     if(withAnalysis){setReviewedAnalysis(analysis);setReviewedText(text);setReviewedSubmissionId(submission.id);setPhase("feedback")}else setPhase("self-check");
   }
   function toggleCheck(item:string){setSelfChecklist((current)=>current.includes(item)?current.filter((value)=>value!==item):[...current,item])}

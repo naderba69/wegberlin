@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import { Check, Eye, EyeOff, Hand, RotateCcw, UsersRound } from "lucide-react";
 import { canCompleteInformationGap, evaluateInformationGap, INFORMATION_GAP_POLICY, INFORMATION_GAP_SCENARIO, type InformationGapDecision } from "@/core/speaking/information-gap";
 import { useLearning } from "./learning-provider";
@@ -23,7 +24,7 @@ export function InformationGapLab({ lessonId }: { lessonId: string }) {
   function save() {
     if (!saveReady || phase === "saved") return;
     const now = new Date();
-    update((state) => ({ ...state, speakingAttempts:[...state.speakingAttempts,{id:`info-gap-${crypto.randomUUID()}`,taskId:`information-gap:${lessonId}`,durationSeconds:Math.max(1,Math.round((Date.now()-startedAt.current)/1000)),selfScore:3,reflection:`Kurs Beta · ${turns.filter(Boolean).length} turns · partner confirmed`,createdAt:now.toISOString()}],studyHistory:[...state.studyHistory,{date:now.toISOString().slice(0,10),minutes:5,evidenceCount:1}] }));
+    update((state) => ({ ...state, speakingAttempts:[...state.speakingAttempts,{id:`info-gap-${crypto.randomUUID()}`,taskId:`information-gap:${lessonId}`,durationSeconds:Math.max(1,Math.round((Date.now()-startedAt.current)/1000)),selfScore:3,reflection:`Kurs Beta · ${turns.filter(Boolean).length} turns · partner confirmed`,createdAt:now.toISOString()}],studyHistory:[...state.studyHistory,{date:studyDayKey(new Date(now)),minutes:5,evidenceCount:1}] }));
     setPhase("saved");
   }
 

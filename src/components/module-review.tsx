@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Check, ClipboardCheck, Mic2, PenLine, RotateCcw, Trophy } from "lucide-react";
 import type { FullLesson } from "@/types/lesson-content";
 import { useLearning } from "./learning-provider";
+import { studyDayKey } from "@/core/coach/session-signals";
 import { StatusAnnouncement } from "./status-announcement";
 import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import { buildModuleReviewQuestionPlan, summarizeModuleRecycling } from "@/core/lexical-strategy/recycling";
@@ -20,7 +21,7 @@ export function ModuleReview({moduleId,titleAr,titleDe,lessons,projectTitle,proj
 
   function finish(){
     setFinished(true);
-    update((current)=>({...current,mastery:{...current.mastery,[`module-${moduleId}`]:score*10},studyHistory:[...current.studyHistory,{date:new Date().toISOString().slice(0,10),minutes:20,evidenceCount:questions.length}]}));
+    update((current)=>({...current,mastery:{...current.mastery,[`module-${moduleId}`]:score*10},studyHistory:[...current.studyHistory,{date:studyDayKey(),minutes:20,evidenceCount:questions.length}]}));
   }
 
   if(finished)return <div className="module-result"><span><Trophy size={28}/></span><small>مراجعة الوحدة {moduleId}</small><h1>{score}/10</h1><h2>{score>=8?"أداء جيد — انتقل إلى مشروع النقل":"تحتاج إلى علاج قبل مشروع النقل"}</h2><p>{score>=8?"هذه نتيجة فورية فقط. سيعيد المدرب اختبار أهداف مختارة بعد مدة للتأكد من الاحتفاظ.":"راجع التفسيرات ودفتر الأخطاء ثم أجب عن صيغة جديدة، لا تحفظ هذه الخيارات."}</p><StatusAnnouncement message={`اكتملت مراجعة الوحدة ${moduleId}: ${score} من 10. ${score>=8?"افتح مشروع نقل جديدًا.":"ارجع إلى العلاج ثم استخدم صيغة جديدة."}`} channel={`module-review-${moduleId}`} className="compact"/><div>{score>=8?<Link href="/writing" className="primary-button">ابدأ مشروع الوحدة <ArrowLeft size={17}/></Link>:<Link href="/errors" className="primary-button">افتح دفتر الأخطاء</Link>}<button className="secondary-button" onClick={()=>{setFinished(false);setAnswers({})}}><RotateCcw size={16}/> إعادة التدريب</button></div></div>;

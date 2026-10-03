@@ -6,7 +6,9 @@ export default defineConfig({
   workers: 1,
   retries: process.env.CI ? 1 : 0,
   forbidOnly: Boolean(process.env.CI),
-  reporter: "line",
+  // On CI the failure text must survive into check-run annotations: this sandbox cannot download Actions
+  // job logs (blob/results hosts are unreachable), so annotations are the only readable evidence.
+  reporter: process.env.CI ? [["github", { printSteps: true }], ["line"]] : "line",
   use: {
     baseURL: "http://127.0.0.1:3100",
     channel: "chromium", // full Chromium's new headless mode avoids repeated headless-shell SIGSEGV in long media/Offline suites

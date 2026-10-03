@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, Clock3, ExternalLink, Flag, LockKeyhole, Play, RotateCcw, ShieldCheck } from "lucide-react";
 import type { FullExamSimulation, PublishedTargetedExamSimulation } from "@/types/exam";
@@ -73,7 +74,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
       const withEvidence = {
         ...current,
         mastery: { ...current.mastery, [completedKey]: 100 },
-        studyHistory: [...current.studyHistory, { date: now.toISOString().slice(0, 10), minutes: simulation.modules.reduce((sum, module) => sum + module.officialMinutes, 0), evidenceCount: taskIds.length }],
+        studyHistory: [...current.studyHistory, { date: studyDayKey(new Date(now)), minutes: simulation.modules.reduce((sum, module) => sum + module.officialMinutes, 0), evidenceCount: taskIds.length }],
       };
       return connected ? completeContinuousSession(withEvidence, simulation.id, now) : withEvidence;
     });

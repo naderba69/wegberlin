@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, BookOpenCheck, Check, ClipboardCheck, Gauge, Headphones, Pause, Play, ShieldCheck } from "lucide-react";
 import { diagnosticForms, diagnosticSkills, type DiagnosticQuestion } from "@/data/diagnostic";
@@ -67,7 +68,7 @@ export function DiagnosticView() {
       errors: [...current.errors.filter((error) => !error.id.startsWith("diagnostic-")), ...pendingEvaluation.errors],
       mastery: { ...current.mastery, diagnostic: Math.round((result.score / Math.max(result.maxScore, 1)) * 100) },
       studyHistory: [...current.studyHistory, {
-        date: new Date().toISOString().slice(0, 10),
+        date: studyDayKey(),
         minutes: Math.max(5, Math.ceil((result.questionsAnswered ?? result.maxScore) * 0.75) + (sample.mode === "not-yet" ? 1 : 2)),
         evidenceCount: result.questionsAnswered ?? result.maxScore,
       }],

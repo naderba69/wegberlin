@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, Clock3, ExternalLink, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedExamSimulation } from "@/types/exam";
@@ -56,7 +57,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
       studyHistory: [
         ...current.studyHistory,
         {
-          date: new Date().toISOString().slice(0, 10),
+          date: studyDayKey(),
           minutes: simulation.practiceMinutes,
           evidenceCount: simulation.items.length,
         },

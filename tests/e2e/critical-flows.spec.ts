@@ -805,8 +805,10 @@ test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revis
   await page.route("**/v1beta/models/**",async route=>{writingReviewRequests+=1;const secondPass=writingReviewRequests>1;const payload=secondPass?{summaryAr:"المراجعة الثانية ركّزت على الصياغة واقترحت جملة أقصر مع مفردة أدقّ.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und komme aus Tunesien.",confidence:"high"},{category:"vocabulary",excerpt:"arbeite heute im Büro",explanationAr:"«derzeit» أدقّ زمنيًا من heute في سياق الحالة الراهنة.",suggestionDe:"arbeite derzeit im Büro",confidence:"medium"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]}:{summaryAr:"حدد Gemini خطأ صرف واضحًا وترك ملاءمة النبرة للحكم السياقي.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und ich komme aus Tunesien.",confidence:"high"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]};await route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(payload)}]}}]})})});
   await page.goto("/lernen/a1-01");
   await waitForLearningReady(page);
-  await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{sessionStorage.setItem("dwnb-ai-key","writing-test-key");const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const read=open.result.transaction("learning-state","readonly").objectStore("learning-state").get("primary");read.onerror=()=>reject(read.error);read.onsuccess=()=>{const state=read.result??structuredClone(baseState);state.aiSettings={provider:"gemini",model:"gemini-2.5-flash",enabledFeatures:["writing"]};const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}}),structuredClone(defaultState));
+  await page.evaluate(({baseState,gateIds})=>new Promise<void>((resolve,reject)=>{sessionStorage.setItem("dwnb-ai-key","writing-test-key");const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const read=open.result.transaction("learning-state","readonly").objectStore("learning-state").get("primary");read.onerror=()=>reject(read.error);read.onsuccess=()=>{const state=read.result??structuredClone(baseState);state.aiSettings={provider:"gemini",model:"gemini-2.5-flash",enabledFeatures:["writing"]};const hasAttempt=(id:string)=>state.exerciseAttempts.some((attempt:{lessonId:string;exerciseId:string})=>attempt.lessonId==="a1-01"&&attempt.exerciseId===id);gateIds.filter((id:string)=>!hasAttempt(id)).forEach((id:string,index:number)=>state.exerciseAttempts.push({id:`writing-lab-stage-gate-${index}`,lessonId:"a1-01",exerciseId:id,answer:"recorded attempt",correct:true,createdAt:new Date().toISOString()}));const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}}),{baseState:structuredClone(defaultState),gateIds:[academicLessons["a1-01"].exercises[0].id,academicLessons["a1-01"].reading.questions[0].id,academicLessons["a1-01"].listening.questions[0].id]});
   await page.reload();await waitForLearningReady(page);
+  // ADR-103: مراحل التدريب لا تُغلق بنقرة ذاتية، فمحاولة مسجّلة واحدة لكل مرحلة تطلب عملًا هي ما يفتح مسار المشي.
+  // المحاولة تُكتب إلى نفس سجلّ Attempts الذي يكتبه المتعلم، ولا تُستخدم لتزوير أي إتقان أو إكمال.
   for(let stage=0;stage<9;stage+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
   await page.getByRole("link",{name:/افتح مختبر الكتابة/}).click();
   await expect(page).toHaveURL(/\/writing\?lesson=a1-01$/);
@@ -1691,6 +1693,9 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   expect(dueBefore).toBeGreaterThanOrEqual(16);
   expect(dueBefore).toBeLessThanOrEqual(25); // up to 24 authored cards plus one deduplicated confirmed-error card
   await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
+  // حصة العلاج معروضة باسمها وسياسيتها، ولا تُخفى بطاقة مجدولة وراء السقف.
+  await expect(page.locator(".review-dose")).toHaveAttribute("data-review-dose-policy", "review-session-dose-v1");
+  await expect(page.locator(".review-dose")).toContainText("حصة العلاج في هذه الجلسة");
   const masteryBeforeFirstReview = await page.evaluate(() => new Promise<number>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
@@ -1704,16 +1709,21 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   await page.getByRole("button", { name: /سهل/ }).click();
   await expect(page.locator(".review-count strong")).toHaveText(String(dueBefore - 1));
   await expect(page.locator(".review-card-meta")).toContainText("مرحبًا برلين!");
-  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string}>((resolve, reject) => {
+  const firstReview = await page.evaluate(() => new Promise<{cardId:string;kind:string;delta:number;mastery:number;algorithmVersion:string;calendarPolicyVersion:string;calendarTimeZone:string;reviewHourLocal:number;reminderHour:number;nextHourInZone:number}>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
     open.onerror = () => reject(open.error);
     open.onsuccess = () => {
       const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); const review=state.reviewItems.find((item:{cardId:string})=>item.cardId===event.cardId); resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0,algorithmVersion:review.algorithmVersion,calendarPolicyVersion:event.calendarPolicyVersion,calendarTimeZone:event.calendarTimeZone}); };
+      request.onsuccess = () => { const state=request.result; const event=state.reviewEvents.at(-1); const review=state.reviewItems.find((item:{cardId:string})=>item.cardId===event.cardId); const reminderHour=Number.parseInt(state.reviewReminderSettings?.hourLocal??"0:00",10);
+const hourInZone=Number(new Intl.DateTimeFormat("en-GB",{timeZone:review.calendarTimeZone,hour:"2-digit",hour12:false}).formatToParts(new Date(review.nextReviewDate)).find((part:Intl.DateTimeFormatPart)=>part.type==="hour")?.value);
+resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,mastery:state.mastery["a1-01"]??0,algorithmVersion:review.algorithmVersion,calendarPolicyVersion:event.calendarPolicyVersion,calendarTimeZone:event.calendarTimeZone,reviewHourLocal:review.reviewHourLocal??0,reminderHour,nextHourInZone:hourInZone}); };
     };
   }));
   expect(firstReview).toMatchObject({ kind:"initial",delta:0,mastery:masteryBeforeFirstReview,algorithmVersion:"sm2-v2-calendar",calendarPolicyVersion:"review-calendar-v1",calendarTimeZone:expect.any(String) });
+  // ساعة المراجعة التي يريدها المتعلم تثبّت الاستحقاق: لا منتصف الليل ولا UTC الافتراضي.
+  expect(firstReview.reviewHourLocal).toBe(firstReview.reminderHour);
+  expect(firstReview.nextHourInZone).toBe(firstReview.reminderHour);
 
   await page.evaluate((cardId) => new Promise<void>((resolve, reject) => {
     const open = indexedDB.open("der-weg-nach-berlin", 4);
@@ -2156,6 +2166,9 @@ test("progress and daily coach derive metrics, risks, dates, and streaks from ev
       request.onerror = () => reject(request.error);
       request.onsuccess = () => {
         const state = request.result ?? structuredClone(baseState);
+        // ADR-103 أزال مفاتيح الإتقان الوهمية من التهيئة، فتُزرع بقايا جيل سابق صراحة هنا لأن اللوحة تُعنى
+        // بإبلاغ المتعلم عن مفاتيح بلا Event، لا بما يولّده التطبيق لمتعلم جديد.
+        state.mastery = { ...state.mastery, greeting: 40, "v2-order": 60, "personal-info": 20 };
         const now = new Date();
         const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
         const local = (date: Date) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`;
@@ -3013,8 +3026,8 @@ test("P2 delayed transfer tasks are scheduled from real production and recorded 
                       version: 1,
                       status: "submitted",
                       feedback: [],
-                      createdAt: "2026-09-25T08:00:00.000Z",
-                      updatedAt: "2026-09-25T08:10:00.000Z",
+                      createdAt: new Date().toISOString(),
+                      updatedAt: new Date().toISOString(),
                     },
                   ],
                 };

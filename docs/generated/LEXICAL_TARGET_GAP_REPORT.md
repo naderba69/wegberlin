@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `d8aba44b5309ffe8ed5c8bfec5923cb737f3e89c0a5aa1edc82be26c37154e0d`
+Content SHA-256: `e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98c6`
 
 ## Honest result
 
@@ -78,7 +78,7 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-23-d8bc3eef` | B2 | `b2-23` | Bearbeitungsdauer | `phrases[14].de`: die Bearbeitungsdauer des Antrags |
 | `lex-n-b2-23-21b7b975` | B2 | `b2-23` | Bescheids | `phrases[7].de`: die Zustellung des Bescheids per Einschreiben |
 | `lex-n-b2-23-41929dc9` | B2 | `b2-23` | Daten | `phrases[11].de`: die Auswertung der Daten durch die Arbeitsgruppe |
-| `lex-n-b2-23-903fe721` | B2 | `b2-23` | Einrichtung | `phrases[4].de`: die Versäumnis seitens der Einrichtung |
+| `lex-n-b2-23-903fe721` | B2 | `b2-23` | Einrichtung | `phrases[4].de`: das Versäumnis seitens der Einrichtung |
 | `lex-n-b2-23-a84c0992` | B2 | `b2-23` | Einspruch | `phrases[15].de`: ein Einspruch gegen die Ablehnung |
 | `lex-n-b2-23-428bbbb7` | B2 | `b2-23` | Einverständnis | `phrases[3].de`: das Einverständnis der Eltern |
 | `lex-n-b2-23-a0fe65ff` | B2 | `b2-23` | Eltern | `phrases[3].de`: das Einverständnis der Eltern |
@@ -98,7 +98,7 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-23-9e728169` | B2 | `b2-23` | Stundung | `flashcards[1].frontDe`: die Stundung |
 | `lex-n-b2-23-f897595c` | B2 | `b2-23` | Verhältnis | `phrases[12].de`: das Verhältnis von Aufwand und Ertrag |
 | `lex-n-b2-23-51e9b216` | B2 | `b2-23` | Verlängerung | `phrases[5].de`: die Verlängerung der Nachfrist um zwei Wochen |
-| `lex-n-b2-23-f4d4ba7b` | B2 | `b2-23` | Versäumnis | `phrases[4].de`: die Versäumnis seitens der Einrichtung |
+| `lex-n-b2-23-f4d4ba7b` | B2 | `b2-23` | Versäumnis | `phrases[4].de`: das Versäumnis seitens der Einrichtung |
 | `lex-n-b2-23-9b02ad13` | B2 | `b2-23` | Vorlage | `phrases[16].de`: die Vorlage eines ärztlichen Attests |
 | `lex-n-b2-23-2aeb1bf1` | B2 | `b2-23` | Wort | `phrases[17].de`: ein Wort, drei Glieder: Grundwort, Bestimmungswort, Fuge. |
 | `lex-n-b2-23-29730a0a` | B2 | `b2-23` | Zustellung | `phrases[7].de`: die Zustellung des Bescheids per Einschreiben |

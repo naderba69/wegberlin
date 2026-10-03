@@ -87,5 +87,31 @@
       "stale": 0,
       "clockErrors": 0
     }
+  },
+  "postMergeCorrection": {
+    "asOf": "2026-10-02",
+    "note": "Fields above are the pre-merge snapshot of this run and stay unmodified as dated evidence. This block records the state measured afterwards.",
+    "pr3State": "merged",
+    "mergedAt": "2026-10-02T21:23:59Z",
+    "mergedHead": "eb9c0616d2dcc1f7b7ba8b6709c5669a4d53fd63",
+    "productionMergedOrDeployed": true,
+    "deploymentSmoke": {
+      "workflow": "Deployment Smoke",
+      "runId": 37066936703,
+      "environment": "Production",
+      "conclusion": "failure",
+      "failingStep": "Verify deployed critical routes and headers",
+      "cause": "environment_url is the login-protected Vercel deployment host; the anonymous smoke read the login redirect as a broken app",
+      "resolution": "scripts/smoke-deployment.mjs now distinguishes passed/failure/blocked-by-auth and prefers vars.DEPLOYMENT_SMOKE_PRODUCTION_URL (ADR-104)"
+    },
+    "supersededMetrics": {
+      "unitTests": "1,210/1,210 in 174/174 files",
+      "offlineBuildFingerprint": "4ee51eb6c820",
+      "fullPackGzipBytes": 5759934,
+      "jsGzipBytes": 1880826,
+      "fingerprintNote": "offline build fingerprint is computed from built output paths and changes on every `npm run build`, even with identical sources (three consecutive measurements this session: 329d37aa1324, ef613e05d712, 4ee51eb6c820)"
+    },
+    "browserSuiteReRun": "re-run in GitHub Actions for this generation: e2e passed in 16m16s on Chromium, desktop and mobile projects; not runnable in the local sandbox",
+    "seeAlso": "docs/run-logs/2026-10-02-post-merge-smoke/README.md"
   }
 }

@@ -14,18 +14,18 @@
 | `npx vitest run --reporter=dot` | 1,210/1,210 في 174/174 ملفًا (+10 عن جيل ما قبل الدمج) |
 | `npm run lint` | 0 أخطاء / 6 تحذيرات قائمة مسبقًا |
 | `npx tsc --noEmit` | نجح |
-| `npm run build` | 322/322 صفحة؛ `offline:size` بصمة ef613e05d712 وfull 5,760,592؛ `js:budget` 123 chunks / 1,880,826 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
+| `npm run build` | 322/322 صفحة؛ `offline:size` بصمة 4ee51eb6c820 وfull 5,759,934؛ `js:budget` 123 chunks / 1,880,826 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
 | `npm run handoff:check` | نجح بعد مزامنة العدادات في `PROJECT_STATUS.md` و`README.md` و`PROFESSIONAL_CONTINUATION_PROMPT_AR.md` والمثبت في `scripts/verify-continuation-handoff.mjs` |
 | `npm run language:audit:write` | أُعيد توليد `reports/language-boundary-audit.json` و`docs/generated/LANGUAGE_BOUNDARY_REPORT.md` (194 TSX / 7,419 وسمًا / 422 ألمانيًا / 0 مشاكل) لأن تغيّر `lesson-runner.tsx` خلّف التقارير مولّدة قديمة وأعطاب `language:audit --check` في البناء |
 
 ## ما لم يُقَس (حدود صريحة)
 
 - **لم يُعَد تشغيل Smoke ضد الإنتاج من هذه البيئة**: لا وصول شبكي إلى `*.vercel.app` من الـSandbox (`curl` = SSL_ERROR_SYSCALL، `fetch` = fetch failed). لذلك لا يدّعي هذا السجل أن الفحص الجديد اجتاز؛ يعيد المالك تشغيله بعد تثبيت المتغير.
-- **لم تُعَد مجموعة Playwright**: لا binary لـChromium ولا `~/.cache/ms-playwright` ولا CDN. أرقام 58/58 desktop و58/58 mobile في `docs/run-logs/2026-10-02-production-release/` تخص جيل ما قبل الدمج ولا تُنسب إلى التغييرات في هذه الجلسة. مسارات المتصفح في `tests/e2e/critical-flows.spec.ts` تمشي المراحل 0→4 (شارحة، غير مقيدة ببوابة العمل)، و`learning-integrity.spec.ts` يزرع الحالة مباشرة، فلا تعارض متوقع — لكن هذا استنتاج من قراءة الاختبارات لا تشغيلها.
+- مجموعة Playwright لم تُعَد **هنا** (لا binary لـChromium ولا `~/.cache/ms-playwright` ولا CDN)، لكنها أُعيدت في CI على رأس هذا الفرع: `e2e` نجح في 16m16s للمشروعين desktop وmobile بعد إصلاح خطأين كشفتهما الـannotations. أرقام 58/58 القديمة تخص جيل ما قبل الدمج ولا تُخلط بهذه النتيجة. أرقام 58/58 desktop و58/58 mobile في `docs/run-logs/2026-10-02-production-release/` تخص جيل ما قبل الدمج ولا تُنسب إلى التغييرات في هذه الجلسة. مسارات المتصفح في `tests/e2e/critical-flows.spec.ts` تمشي المراحل 0→4 (شارحة، غير مقيدة ببوابة العمل)، و`learning-integrity.spec.ts` يزرع الحالة مباشرة، فلا تعارض متوقع — لكن هذا استنتاج من قراءة الاختبارات لا تشغيلها.
 - `gh run view 37066936703 --log` أعاد `EOF` من results-receiver مرتين؛ الاعتماد على `--json jobs` والـannotations.
 - لا مراجعة بشرية لغوية/حقوقية، ولا اختبار أثر على متعلمين حقيقيين، ولا ادعاء «بديل أفضل»؛ ولا تقييم صوتي يفوق ما تثبته المحركات.
 
-- بصمة `offline:size` تُحسب من مخرجات البناء نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين على مصدر متطابق: أعطى البناء الأول 329d37aa1324 / full 5,759,874 والثاني ef613e05d712 / full 5,760,592 مع ثبات JS (1,880,826 gzip) والصوت (52,943,843 bytes) والمنهج (1,033,335 gzip). تُحدَّث الوثائق الحاكمة على آخر قياس، ولا تُقرأ البصمة كدليل تغيير محتوى.
+- بصمة `offline:size` تُحسب من مخرجات البناء نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين على مصدر متطابق: أعطت البناءات المتتالية 329d37aa1324 / full 5,759,874 ثم ef613e05d712 / full 5,760,592 ثم 4ee51eb6c820 / full 5,759,934 مع ثبات JS (1,880,826 gzip) والصوت (52,943,843 bytes) والمنهج (1,033,335 gzip). تُحدَّث الوثائق الحاكمة على آخر قياس، ولا تُقرأ البصمة كدليل تغيير محتوى.
 
 ## الإصلاحات التي نُفّذت في هذه الجلسة
 
@@ -64,3 +64,9 @@ PR #4 شغّل `Quality Gate` كاملاً على الشجرة الجديدة، 
 ولأن العطل الثاني لا تراه أي بوابة قائمة، أُضيف حارس بلا اعتمادية: `scripts/check-workflow-scalars.mjs` (`npm run workflows:check`) يمسح كل نسخ الـworkflows ويرفض plain scalar فيه `": "` خارج الاقتباس، ويُلزَم الحارس بنفسه على fixture للعطل الحقيقي نفسه، و`npm run check` يستدعيه الآن قبل `handoff:check`. القياس بعد كل هذا: **1,210/1,210** في 174/174 ملفًا، typecheck نظيف، lint 0 أخطاء، والحارس يمرّ على 8 ملفات.
 
 بقي معلَّقًا بصدق: نتيجة `e2e` بعد هذا الإصلاح تُقرأ من CI لا من هنا؛ وفحص الإنتاج ما لم يُعَدّ بعد تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` (ولا يملك هذا الحساب صلاحية `workflow_dispatch`/`variables` — API أعاد 403 `Resource not accessible by integration`).
+
+## النتيجة النهائية لهذه الجلسة
+
+- PR #4 على رأس `076cd48`: `check` نجح (4m26s) و**`e2e` نجح (16m16s، Chromium، desktop وmobile معًا)**، وVercel Preview نجح، و`smoke` مُتخطًى عمدًا على Preview المحمي.
+- القياس المحلي المقابل: 1,210/1,210 في 174/174 · typecheck نظيف · lint 0 أخطاء · `workflows:check` يمرّ على 8 ملفات · `handoff:check` نجح · `npm run build` 322/322 صفحة.
+- لا يزال مطلوبًا من المالك (لا صلاحية لي): تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` ثم إعادة تشغيل `Deployment Smoke` على `Production`. حساب هذه الجلسة أعاد 403 على `workflow_dispatch` وضبط متغيرات المستودع، ولا egress إلى `*.vercel.app` من هنا، فنتيجة الإنتاج لا تُدّعى من هذه البيئة.

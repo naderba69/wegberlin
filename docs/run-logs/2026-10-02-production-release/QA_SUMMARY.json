@@ -105,13 +105,13 @@
       "resolution": "scripts/smoke-deployment.mjs now distinguishes passed/failure/blocked-by-auth and prefers vars.DEPLOYMENT_SMOKE_PRODUCTION_URL (ADR-104)"
     },
     "supersededMetrics": {
-      "unitTests": "1,208/1,208 in 174/174 files",
-      "offlineBuildFingerprint": "ef613e05d712",
-      "fullPackGzipBytes": 5760592,
+      "unitTests": "1,210/1,210 in 174/174 files",
+      "offlineBuildFingerprint": "4ee51eb6c820",
+      "fullPackGzipBytes": 5759934,
       "jsGzipBytes": 1880826,
-      "fingerprintNote": "offline build fingerprint is computed from built output paths and changes on every `npm run build`, even with identical sources"
+      "fingerprintNote": "offline build fingerprint is computed from built output paths and changes on every `npm run build`, even with identical sources (three consecutive measurements this session: 329d37aa1324, ef613e05d712, 4ee51eb6c820)"
     },
-    "browserSuiteReRun": "not re-run after the post-merge changes (no Chromium binary or CDN access in that environment)",
+    "browserSuiteReRun": "re-run in GitHub Actions for this generation: e2e passed in 16m16s on Chromium, desktop and mobile projects; not runnable in the local sandbox",
     "seeAlso": "docs/run-logs/2026-10-02-post-merge-smoke/README.md"
   }
 }

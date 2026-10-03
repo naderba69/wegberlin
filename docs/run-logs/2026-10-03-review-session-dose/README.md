@@ -29,10 +29,11 @@
 | `npm test` | **1,221/1,221** في **175/175** ملفًا |
 | `npm run language:audit:write` | 194 ملف TSX / 7430 وسمًا افتتاحيًا / 422 وسم ألماني / 51 نطاقًا تقنيًا / 202 مختلط / 0 مشاكل — ثبّت `openingTagCount: 7430` في `tests/unit/language-boundary.test.ts` |
 | `npm run workflows:check` | يمرّ |
+| CI على head `65b6f03` (run `37105579225`، PR #4) | `check` نجح في 2m48s و`e2e` نجح في 16m28s (خلاصة التشغيل success، مشروعا desktop وmobile)، و`Vercel` نجح، و`Deployment Smoke` = skipping على تشغيل الـPR لأن الحارس يثبّته على Production وحده — لا يُوصف هذا اجتيازًا لفحص الإنتاج |
 | `npm run build` | 322/322 صفحة؛ `offline:size` بصمة `0d2add3b1207` وfull 5,761,228؛ `js:budget` 123 chunks / 1,881,894 gzip / max 266,168؛ `media:budget` 544 ملفًا / 52,943,843 bytes / منهج 1,033,335 gzip |
 
 ## ما يبقى خارج هذه البيئة
 
-- المتصفح: `e2e` يُقاس في Actions فقط (PR #4 → `check` و`e2e` بمشروعي desktop/mobile). لا Chromium ولا egress هنا، فلا يُنسب أي نجاح متصفح لهذا الصندوق.
+- المتصفح: `e2e` يُقاس في Actions فقط، وقيس هناك لهذا Head (الجدول أعلاه). لا Chromium ولا egress في هذا الصندوق، فلا يُنسب أي نجاح متصفح له.
 - الإنتاج: إعادة تشغيل `Deployment Smoke` وتثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` على عهدة المالك (توكن الجلسة يُرجع 403 على `gh variable set`/`gh workflow run`). الدمج أيضًا قرار المالك وحده.
 - لا ادعاء مراجعة بشرية لغوية أو حقوقية، ولا «أفضل للمتعلمين» بلا دراسة، ولا درجة صوتية تفوق ما تثبته المحركات.

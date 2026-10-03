@@ -22,6 +22,13 @@ jobs:
       - name: Scan working tree and complete Git history for secrets
         run: npm run secret:audit:history
       - run: npm run check
+      - name: Learner-local-day and storage-integrity gate under pinned zones (ADR-106 · م40)
+        run: |
+          for zone in Asia/Tunis Pacific/Kiritimati Pacific/Niue; do
+            echo "::group::TZ=$zone"
+            TZ=$zone node_modules/.bin/vitest run tests/unit/learner-day-key.test.ts tests/unit/state-integrity-guard.test.ts tests/unit/atomic-persistence.test.ts
+            echo "::endgroup::"
+          done
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 25

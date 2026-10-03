@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { AlertTriangle, BookOpenCheck, BrainCircuit, CalendarCheck, Check, Clock3, Eye, EyeOff, Filter, NotebookTabs, Printer, RotateCcw, Sparkles, X } from "lucide-react";
 import { useLearning } from "./learning-provider";
@@ -42,7 +43,7 @@ export function ErrorNotebook() {
   const sortedErrors = [...state.errors].sort((left,right)=>Number(Boolean(left.resolved))-Number(Boolean(right.resolved))||errorInterventionPriority(right)-errorInterventionPriority(left)||Date.parse(right.lastSeenAt)-Date.parse(left.lastSeenAt));
   const personalErrorCards = confirmedErrorSrsCards(state.errors);
 
-  function checkClinic(clinic:ErrorClinic){const answer=clinicAnswers[clinic.id]??"";const correct=matchesErrorCorrection(answer,clinic.followUpAnswer);setClinicFeedback((current)=>({...current,[clinic.id]:correct?"correct":"wrong"}));const now=new Date();update((current)=>({...current,errorClinicAttempts:[...current.errorClinicAttempts,{id:`clinic-attempt-${crypto.randomUUID()}`,clinicType:clinic.type,sourceErrorIds:clinic.sourceErrorIds,answer,correct,createdAt:now.toISOString()}],studyHistory:correct?[...current.studyHistory,{date:now.toISOString().slice(0,10),minutes:2,evidenceCount:1}]:current.studyHistory}))}
+  function checkClinic(clinic:ErrorClinic){const answer=clinicAnswers[clinic.id]??"";const correct=matchesErrorCorrection(answer,clinic.followUpAnswer);setClinicFeedback((current)=>({...current,[clinic.id]:correct?"correct":"wrong"}));const now=new Date();update((current)=>({...current,errorClinicAttempts:[...current.errorClinicAttempts,{id:`clinic-attempt-${crypto.randomUUID()}`,clinicType:clinic.type,sourceErrorIds:clinic.sourceErrorIds,answer,correct,createdAt:now.toISOString()}],studyHistory:correct?[...current.studyHistory,{date:studyDayKey(new Date(now)),minutes:2,evidenceCount:1}]:current.studyHistory}))}
 
   function checkCorrection(error: ErrorRecord) {
     const correct = matchesErrorCorrection(answers[error.id] ?? "", error.correct);
@@ -55,7 +56,7 @@ export function ErrorNotebook() {
     update((current) => ({
       ...current,
       errors: current.errors.map((item) => item.id === error.id ? applySuccessfulErrorRepair(item, now) : item),
-      studyHistory: [...current.studyHistory, { date: now.toISOString().slice(0, 10), minutes: 1, evidenceCount: 1 }],
+      studyHistory: [...current.studyHistory, { date: studyDayKey(now), minutes: 1, evidenceCount: 1 }],
     }));
   }
 

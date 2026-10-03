@@ -17,6 +17,46 @@ import { LEARNING_STATE_LABELS, LEARNING_STATE_INDEPENDENCE_NOTE } from "@/core/
 export const LESSON_TEACHING_CONTRACT_POLICY = "lesson-teaching-contract-v1" as const;
 export const LESSON_TEACHING_CONTRACT_BOUNDARY = "content-and-evidence-contract-audit-no-mastery-no-cefr-no-human-linguistic-review" as const;
 
+/**
+ * Arabic learner-facing prose keeps the **German** metalanguage (Akkusativ, Modalverben, Nebensatz…).
+ * An English grammar word appearing there is an authoring leak, not a style choice: it was measured
+ * in 25 fields on 2026-10-03 (ADR-106 · ع1) and is pinned to zero by the lesson-contract audit.
+ * German spellings (Modal, Verb, Genus, Partikel) are deliberately absent from the list.
+ */
+export const ENGLISH_GRAMMAR_TERMS = [
+  "modal verb", "modal", "auxiliary", "conjugation", "declension", "tense", "clause", "suffix",
+  "prefix", "particle", "noun", "adjective", "adverb", "pronoun", "preposition", "conjunction",
+  "word order", "gerund",
+] as const;
+
+const ARABIC_SCRIPT = /[\u0600-\u06ff]/u;
+
+export function isLearnerArabicFieldKey(key: string): boolean {
+  return /^[A-Za-z][A-Za-z0-9]*Ar$/u.test(key.replace(/\[\d+\]$/u, ""));
+}
+
+/** English grammar terms leaking into Arabic text. German words are legitimate and never matched. */
+export function englishGrammarTermLeak(text: string): string[] {
+  if (!text || !ARABIC_SCRIPT.test(text)) return [];
+  return ENGLISH_GRAMMAR_TERMS.filter((term) =>
+    new RegExp(`(^|[^A-Za-z\u00c0-\u024f])${term.replace(/ /gu, "[\\s_-]+")}([^A-Za-z\u00c0-\u024f]|$)`, "iu").test(text));
+}
+
+/** Every learner-facing Arabic string of a lesson-shaped object, with its path. */
+export function learnerArabicFields(node: unknown, path = ""): Array<{ path: string; text: string }> {
+  const found: Array<{ path: string; text: string }> = [];
+  const walk = (value: unknown, at: string) => {
+    if (typeof value === "string") {
+      if (value && isLearnerArabicFieldKey(at.split(".").pop() ?? "")) found.push({ path: at, text: value });
+      return;
+    }
+    if (Array.isArray(value)) return value.forEach((item, index) => walk(item, `${at}[${index}]`));
+    if (value && typeof value === "object") for (const [key, child] of Object.entries(value)) walk(child, at ? `${at}.${key}` : key);
+  };
+  walk(node, path);
+  return found;
+}
+
 export const CONTRACT_THRESHOLDS = {
   objectiveArMinChars: 10,
   objectiveDeMinChars: 5,

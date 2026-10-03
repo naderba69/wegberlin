@@ -15,7 +15,16 @@ export const DELAYED_TRANSFER_MIN_DAYS = 3;
 export const DELAYED_TRANSFER_MIN_ANSWER_CHARS = 60;
 export const DELAYED_TRANSFER_EVIDENCE_BOUNDARY = "transfer-evidence-no-mastery-no-gate" as const;
 
+
+
 export type DelayedTransferSourceKind = "writing-submission" | "mediation-submission" | "speaking-attempt";
+
+/** The learner never sees the internal source identifier: Arabic names only. */
+export const DELAYED_TRANSFER_SOURCE_LABEL_AR: Record<DelayedTransferSourceKind, string> = {
+  "writing-submission": "كتابة",
+  "mediation-submission": "وساطة",
+  "speaking-attempt": "كلام",
+};
 
 export type DelayedTransferCandidate = {
   sourceKind: DelayedTransferSourceKind;
@@ -55,7 +64,7 @@ function writingCandidates(state: LearningState): DelayedTransferCandidate[] {
 }
 
 function mediationCandidates(state: LearningState): DelayedTransferCandidate[] {
-  return state.mediationSubmissions.filter((submission) => submission.status !== "draft" && submission.responseDe.trim().length > 0).map((submission) => ({
+  return state.mediationSubmissions.filter((submission) => submission.status !== "draft" && (submission.responseDe ?? "").trim().length > 0).map((submission) => ({
     sourceKind: "mediation-submission" as const,
     sourceId: submission.id,
     sourceCreatedAt: submission.createdAt,
@@ -105,6 +114,8 @@ export function scheduleDelayedTransferTask(
 ): { record: DelayedTransferTaskRecord; candidate: DelayedTransferCandidate } | null {
   const now = options.now ?? new Date();
   const minDays = options.minDays ?? DELAYED_TRANSFER_MIN_DAYS;
+  // The delay is anchored to the production itself, not to the moment of scheduling: an old
+  // submission becomes due at once, a fresh one after DELAYED_TRANSFER_MIN_DAYS.
   const candidate = sourceCandidates(state).find((item) => !alreadyScheduled(state, item));
   if (!candidate) return null;
   const createdAt = now.toISOString();
@@ -116,7 +127,7 @@ export function scheduleDelayedTransferTask(
       sourceKind: candidate.sourceKind,
       sourceId: candidate.sourceId,
       sourceCreatedAt: candidate.sourceCreatedAt,
-      scheduledFor: addDays(createdAt, minDays),
+      scheduledFor: addDays(candidate.sourceCreatedAt, minDays),
       taskKind: "fresh-production",
       promptAr: candidate.promptAr,
       level: candidate.level,
@@ -125,6 +136,16 @@ export function scheduleDelayedTransferTask(
       createdAt,
     },
   };
+}
+
+/** Real productions that could still yield a transfer task, scheduled or not. */
+export function countTransferSources(state: LearningState): number {
+  return sourceCandidates(state).length;
+}
+
+/** Real productions with no transfer task derived from them yet. */
+export function countUnscheduledTransferSources(state: LearningState): number {
+  return sourceCandidates(state).filter((item) => !alreadyScheduled(state, item)).length;
 }
 
 export function scheduleDelayedTransferTasksForState(state: LearningState, options: { now?: Date } = {}): LearningState {

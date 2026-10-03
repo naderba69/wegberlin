@@ -1,5 +1,6 @@
 import type { LearningState } from "@/types/learning";
 import { attemptIsIndependent, latestUniqueAttempts } from "./independence";
+import { localSessionDate } from "@/core/coach/session-signals";
 import { retentionEvidence } from "@/core/srs/review-session";
 
 export const LOCAL_LEARNING_OUTCOMES_POLICY = "local-learning-outcome-observation-v1" as const;
@@ -8,7 +9,7 @@ export const LOCAL_LEARNING_OUTCOMES_POLICY = "local-learning-outcome-observatio
 export function buildLearningOutcomeObservation(state: LearningState, now = new Date(), windowDays = 14) {
   const from = now.getTime() - windowDays * 86_400_000;
   const today=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
-  const oldest=new Date(from).toISOString().slice(0,10);
+  const oldest=localSessionDate(new Date(from));
   const attempts = state.exerciseAttempts.filter(attempt => Date.parse(attempt.createdAt) >= from && Date.parse(attempt.createdAt) <= now.getTime());
   const firstByItem = new Map<string, typeof attempts[number]>();
   for (const attempt of [...state.exerciseAttempts].sort((a,b)=>Date.parse(a.createdAt)-Date.parse(b.createdAt))) {

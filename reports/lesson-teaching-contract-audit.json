@@ -31,6 +31,7 @@
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
+    "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
   "measured": {
@@ -41,9 +42,10 @@
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
     "itemsWithoutExplanation": 0,
+    "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "a8ae1da45553",
+  "contentSha256": "4b812055b2e3",
   "counts": {
     "lessons": 96,
     "questions": 8,
@@ -1007,7 +1009,7 @@
         },
         "explanation-model": {
           "ok": true,
-          "valueAr": "2 كتلة شرح (أقصرها 237 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 448 حرفًا"
+          "valueAr": "2 كتلة شرح (أقصرها 251 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 448 حرفًا"
         },
         "graded-practice": {
           "ok": true,
@@ -3959,7 +3961,7 @@
         },
         "explanation-model": {
           "ok": true,
-          "valueAr": "3 كتلة شرح (أقصرها 378 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1295 حرفًا"
+          "valueAr": "3 كتلة شرح (أقصرها 377 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1295 حرفًا"
         },
         "graded-practice": {
           "ok": true,

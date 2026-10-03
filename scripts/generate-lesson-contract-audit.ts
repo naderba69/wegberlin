@@ -6,7 +6,7 @@ import { independentProductionTasks } from "../src/data/independent-production-t
 import { grammarNodesByLesson } from "../src/data/grammar-progression-registry";
 import { reviewCards } from "../src/data/review-cards";
 import { buildLessonSrsCards } from "../src/core/srs/lesson-cards";
-import { allLessonsTeachingContract, CONTRACT_QUESTIONS, CONTRACT_THRESHOLDS, LESSON_TEACHING_CONTRACT_BOUNDARY, LESSON_TEACHING_CONTRACT_POLICY } from "../src/core/lesson/teaching-contract";
+import { allLessonsTeachingContract, CONTRACT_QUESTIONS, CONTRACT_THRESHOLDS, englishGrammarTermLeak, LESSON_TEACHING_CONTRACT_BOUNDARY, LESSON_TEACHING_CONTRACT_POLICY, learnerArabicFields } from "../src/core/lesson/teaching-contract";
 
 /**
  * معيار الدرس الواحد — تقرير فوق الـ96 درسًا يجيب الأسئلة الثمانية من البيانات.
@@ -26,6 +26,11 @@ const limits = {
   mistakeWhyStubs: 0,
   mistakeTrickStubs: 0,
   itemsWithoutExplanation: 0,
+  // سطر عربي موجّه للمتعلم فيه مصطلح نحوي إنجليزي: صفر منذ إصلاح ع1 (2026-10-03).
+  englishTermLeaksInLearnerArabic: (() => {
+    const rows = [...lessons, ...independentProductionTasks] as unknown as Array<Record<string, unknown>>;
+    return rows.reduce((sum, row) => sum + learnerArabicFields(row).filter((field) => englishGrammarTermLeak(field.text).length > 0).length, 0);
+  })(),
   cardsMissingFromReviewPool: (() => {
     const pool = new Set(reviewCards.map((card) => card.id));
     return lessons.reduce((sum, lesson) => sum + buildLessonSrsCards(lesson).filter((card) => !pool.has(card.id)).length, 0);
@@ -61,6 +66,7 @@ const measured = {
   mistakeWhyStubs: perLesson.reduce((sum, row) => sum + row.mistakeWhyStubs, 0),
   mistakeTrickStubs: perLesson.reduce((sum, row) => sum + row.mistakeTrickStubs, 0),
   itemsWithoutExplanation: lessons.reduce((sum, lesson) => sum + [...lesson.exercises, ...lesson.reading.questions, ...lesson.listening.questions, ...lesson.miniTest].filter((item) => (item.explanationAr ?? "").trim().length < CONTRACT_THRESHOLDS.itemExplanationMinChars).length, 0),
+  englishTermLeaksInLearnerArabic: 0,
   cardsMissingFromReviewPool: 0,
 };
 
@@ -169,7 +175,7 @@ if (process.argv.includes("--check")) {
   const stored = await readFile(join(process.cwd(), REPORT), "utf8").catch(() => "");
   if (stored !== json) { console.error("Lesson contract artifact is stale; regenerate with `npm run lesson:contract`, never edit counts."); process.exitCode = 1; }
 }
-const summary = `Lesson teaching contract: ${measured.lessonsTotal} lessons × ${CONTRACT_QUESTIONS.length} questions · hard failures ${measured.hardFailures} · no authored prerequisite link ${measured.lessonsWithoutAuthoredPrerequisiteLink} · no deferred transfer task ${measured.lessonsWithoutDeferredTransferTask} · stub mistake explanations ${measured.mistakeWhyStubs}/${measured.mistakeTrickStubs} (why/trick) · items without explanation ${measured.itemsWithoutExplanation}.`;
+const summary = `Lesson teaching contract: ${measured.lessonsTotal} lessons × ${CONTRACT_QUESTIONS.length} questions · hard failures ${measured.hardFailures} · no authored prerequisite link ${measured.lessonsWithoutAuthoredPrerequisiteLink} · no deferred transfer task ${measured.lessonsWithoutDeferredTransferTask} · stub mistake explanations ${measured.mistakeWhyStubs}/${measured.mistakeTrickStubs} (why/trick) · items without explanation ${measured.itemsWithoutExplanation} · english term leaks in learner Arabic ${measured.englishTermLeaksInLearnerArabic}.`;
 if (process.argv.includes("--strict")) {
   if (issues.length || process.exitCode === 1) { console.error(`${summary}\nLesson contract gate failed:\n- ${issues.join("\n- ")}`); process.exitCode = 1; }
   else console.log(`Lesson contract gate passed: ${issues.length} issues. ${summary}`);

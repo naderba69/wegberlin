@@ -3,8 +3,8 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 194,
-  "openingTagCount": 7430,
+  "tsxFiles": 195,
+  "openingTagCount": 7440,
   "germanTagCount": 422,
   "arabicTagCount": 7,
   "ltrTagCount": 467,
@@ -288,17 +288,17 @@
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 109,
+      "line": 110,
       "text": "الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا."
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 118,
+      "line": 119,
       "text": "Produktionsprobe · العينة الإنتاجية"
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 129,
+      "line": 130,
       "text": "استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني."
     },
     {
@@ -323,17 +323,17 @@
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 110,
+      "line": 111,
       "text": "دخلت بطاقة علاج شخصية إلى SRS."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 110,
+      "line": 111,
       "text": "تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 111,
+      "line": 112,
       "text": "يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط."
     },
     {
@@ -393,7 +393,7 @@
     },
     {
       "path": "src/components/information-gap-lab.tsx",
-      "line": 35,
+      "line": 36,
       "text": "افتح بطاقة الشخص A فقط"
     },
     {
@@ -903,12 +903,12 @@
     },
     {
       "path": "src/components/targeted-choice-simulation.tsx",
-      "line": 77,
+      "line": 78,
       "text": "هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe."
     },
     {
       "path": "src/components/targeted-listening-simulation.tsx",
-      "line": 201,
+      "line": 202,
       "text": "TTS بديل"
     },
     {
@@ -1029,5 +1029,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "25ebdd4abedab3b1638fc9436e3f5fb5aa661d3ec066299a7edd429c49e19ad6"
+  "contentSha256": "b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b1221"
 }

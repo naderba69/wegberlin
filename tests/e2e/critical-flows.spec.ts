@@ -3026,8 +3026,8 @@ test("P2 delayed transfer tasks are scheduled from real production and recorded 
                       version: 1,
                       status: "submitted",
                       feedback: [],
-                      createdAt: "2026-09-25T08:00:00.000Z",
-                      updatedAt: "2026-09-25T08:10:00.000Z",
+                      createdAt: new Date().toISOString(),
+                      updatedAt: new Date().toISOString(),
                     },
                   ],
                 };

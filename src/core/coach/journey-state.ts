@@ -1,4 +1,5 @@
 import { buildLevelEvidenceGate } from "@/core/assessment/level-evidence";
+import { placementDiagnosticShouldPreempt } from "./diagnostic-priority";
 import { curriculum } from "@/data/curriculum";
 import { buildExamReadiness } from "@/core/exams/readiness";
 import type { LearningState } from "@/types/learning";
@@ -39,7 +40,7 @@ function phaseDefinition(id:JourneyPhaseId) {
 }
 
 export function deriveJourneyState(state:LearningState,now=new Date()):JourneyState {
-  const needsOrientation=!state.profile||(!state.diagnosticResult&&state.profile.priorExperience!=="none");
+  const needsOrientation=!state.profile||placementDiagnosticShouldPreempt(state);
   let phaseId:JourneyPhaseId;
   let progressPercent=0;
   let reasonAr:string;

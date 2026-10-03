@@ -1244,3 +1244,17 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .endurance-timer{font-size:var(--fs-14);color:var(--ink-2)}
 .nursing-budget{padding:12px;border:1px solid var(--line);border-radius:10px;margin-block:12px;line-height:1.8}
 @media(max-width:600px){.assessment-start,.assessment-review,.endurance-task,.learning-outcome-panel{padding:14px}.level-production-actions>a,.endurance-terminal>a{width:100%;text-align:center}.learning-evidence-states,.learning-outcome-grid{grid-template-columns:1fr}.endurance-controls,.endurance-voices{grid-template-columns:1fr}}
+
+.state-integrity-notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0 auto 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--warn, #b45309);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--warn, #b45309) 12%, var(--panel, #fff));
+}
+.state-integrity-notice p { flex: 1 1 320px; margin: 0; }
+.state-integrity-notice div { display: flex; align-items: center; gap: 10px; }

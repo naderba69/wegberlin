@@ -14,6 +14,7 @@ import { FourSkillVocabularyCycle } from "./four-skill-vocabulary-cycle";
 import { LessonListeningSequence } from "./lesson-listening-sequence";
 import { PronunciationArticulationLab } from "./pronunciation-articulation-lab";
 import { buildLessonSrsCards } from "@/core/srs/lesson-cards";
+import { studyDayKey } from "@/core/coach/session-signals";
 import { lessonLearningEvidence } from "@/core/lessons/learning-state";
 import { lessonEvidenceGate } from "@/core/lessons/evidence-gate";
 import { BEGINNER_READABLE_COMPLETION_POLICY, criterionStage, lessonCompletionGuidance, nextLessonCompletionGuidance } from "@/core/lessons/completion-guidance";
@@ -92,7 +93,7 @@ export function LessonRunner({lesson,nextLessonId}:{lesson:FullLesson;nextLesson
       window.speechSynthesis.speak(utterance);
     });
   }
-  function finish(){if(!evidenceGate.passed)return;update((current)=>{if(current.completedLessonIds.includes(lesson.id))return current;const mastery=lessonMasteryFromAttempts(lesson,current.exerciseAttempts);return{...current,completedLessonIds:[...current.completedLessonIds,lesson.id],dueReviews:current.dueReviews+srsCardCount,studyHistory:[...current.studyHistory,{date:new Date().toISOString().slice(0,10),minutes:lesson.estimatedMinutes,evidenceCount:mastery.evidence.novelItemCount}],mastery:{...current.mastery,[lesson.id]:mastery.score}}})}
+  function finish(){if(!evidenceGate.passed)return;update((current)=>{if(current.completedLessonIds.includes(lesson.id))return current;const mastery=lessonMasteryFromAttempts(lesson,current.exerciseAttempts);return{...current,completedLessonIds:[...current.completedLessonIds,lesson.id],dueReviews:current.dueReviews+srsCardCount,studyHistory:[...current.studyHistory,{date:studyDayKey(),minutes:lesson.estimatedMinutes,evidenceCount:mastery.evidence.novelItemCount}],mastery:{...current.mastery,[lesson.id]:mastery.score}}})}
 
   const content=(()=>{
     switch(stageKey){

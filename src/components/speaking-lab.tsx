@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
+import { scheduleDelayedTransferTasksForState } from "@/core/evidence/delayed-transfer-task";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -605,7 +607,7 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
     const mediaId = `speaking-${crypto.randomUUID()}`;
     await saveMedia(mediaId, blob);
     const now = new Date().toISOString();
-    update((current) => ({
+    update((current) => scheduleDelayedTransferTasksForState({
       ...current,
       speakingAttempts: [
         ...current.speakingAttempts,
@@ -660,7 +662,7 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
       studyHistory: [
         ...current.studyHistory,
         {
-          date: now.slice(0, 10),
+          date: studyDayKey(new Date(now)),
           minutes: Math.max(1, Math.ceil((preparationTotal + duration) / 60)),
           evidenceCount: 1,
         },

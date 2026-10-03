@@ -19,7 +19,7 @@ const now = new Date("2026-09-26T12:00:00.000Z");
 const longAnswer =
   "Ich möchte mich heute für einen anderen Deutschkurs anmelden und dabei erklären, wie sich mein Zeitplan seit dem letzten Monat verändert hat und warum ich mehr Übung im Schreiben brauche.";
 
-function withWriting(): LearningState {
+function withWriting(createdAt = "2026-09-20T08:00:00.000Z"): LearningState {
   return {
     ...defaultState,
     writingSubmissions: [
@@ -31,8 +31,8 @@ function withWriting(): LearningState {
         version: 1,
         status: "submitted",
         feedback: [],
-        createdAt: "2026-09-20T08:00:00.000Z",
-        updatedAt: "2026-09-20T08:10:00.000Z",
+        createdAt,
+        updatedAt: createdAt,
       },
     ],
   };
@@ -54,8 +54,10 @@ describe("delayed transfer tasks — from real production, no mastery, no gate",
     expect(scheduled?.record.status).toBe("scheduled");
     expect(scheduled?.record.evidenceBoundary).toBe(DELAYED_TRANSFER_EVIDENCE_BOUNDARY);
     expect(DELAYED_TRANSFER_MIN_DAYS).toBe(3);
-    const dueInDays = (Date.parse(scheduled!.record.scheduledFor) - now.getTime()) / 86_400_000;
-    expect(Math.round(dueInDays)).toBe(DELAYED_TRANSFER_MIN_DAYS);
+    // التأجيل محسوب من تاريخ الإنتاج نفسه، لا من لحظة الجدولة (م2 من تدقيق 2026-10-03).
+    expect(Date.parse(scheduled!.record.scheduledFor)).toBe(
+      Date.parse("2026-09-20T08:00:00.000Z") + DELAYED_TRANSFER_MIN_DAYS * 86_400_000,
+    );
   });
 
   it("never schedules the same source twice", () => {
@@ -67,12 +69,35 @@ describe("delayed transfer tasks — from real production, no mastery, no gate",
   });
 
   it("labels scheduled, due and completed tasks from the clock, not from a counter", () => {
-    const scheduled = scheduleDelayedTransferTasksForState(withWriting(), { now });
+    const scheduled = scheduleDelayedTransferTasksForState(withWriting("2026-09-26T09:00:00.000Z"), { now });
     expect(listDelayedTransferTasks(scheduled, now)[0].status).toBe("scheduled");
     expect(listDelayedTransferTasks(scheduled, now)[0].labelAr).toContain("مؤجّلة");
     const later = new Date("2026-09-30T12:00:00.000Z");
     expect(listDelayedTransferTasks(scheduled, later)[0].status).toBe("due");
     expect(listDelayedTransferTasks(scheduled, later)[0].labelAr).toContain("حان وقت");
+  });
+
+  it("makes an older production due the moment it is scheduled, never waiting another three days", () => {
+    const scheduled = scheduleDelayedTransferTasksForState(withWriting("2026-09-20T08:00:00.000Z"), { now });
+    const view = listDelayedTransferTasks(scheduled, now)[0];
+    expect(view.status).toBe("due");
+    expect(view.labelAr).toContain("حان وقت");
+    expect(view.daysRemaining).toBeLessThanOrEqual(0);
+  });
+
+  it("names every source in Arabic: the learner never sees a raw identifier", async () => {
+    const { DELAYED_TRANSFER_SOURCE_LABEL_AR } = await import("@/core/evidence/delayed-transfer-task");
+    const { countTransferSources, countUnscheduledTransferSources } = await import("@/core/evidence/delayed-transfer-task");
+    expect(Object.values(DELAYED_TRANSFER_SOURCE_LABEL_AR).every((label) => /[\u0600-\u06ff]/u.test(label))).toBe(true);
+    expect(Object.keys(DELAYED_TRANSFER_SOURCE_LABEL_AR).sort()).toEqual(
+      ["mediation-submission", "speaking-attempt", "writing-submission"],
+    );
+    expect(countTransferSources(defaultState)).toBe(0);
+    expect(countUnscheduledTransferSources(defaultState)).toBe(0);
+    const produced = withWriting();
+    expect(countTransferSources(produced)).toBe(1);
+    expect(countUnscheduledTransferSources(produced)).toBe(1);
+    expect(countUnscheduledTransferSources(scheduleDelayedTransferTasksForState(produced, { now }))).toBe(0);
   });
 
   it("records fresh production as transfer evidence with the boundary written into the row", () => {
@@ -111,7 +136,9 @@ describe("delayed transfer tasks — from real production, no mastery, no gate",
     const audit = delayedTransferAudit(scheduled, now);
     expect(audit.policyVersion).toBe(DELAYED_TRANSFER_POLICY);
     expect(audit.total).toBe(1);
-    expect(audit.scheduled).toBe(1);
+    // الإنتاج الأقدم من الأجل صار مستحقًّا فور جدولته: لا يُعدّ «مؤجَّلًا».
+    expect(audit.scheduled).toBe(0);
+    expect(audit.due).toBe(1);
     expect(audit.completed).toBe(0);
     expect(audit.sources).toEqual({ writing: 1, mediation: 0, speaking: 0 });
     expect(audit.minDays).toBe(DELAYED_TRANSFER_MIN_DAYS);

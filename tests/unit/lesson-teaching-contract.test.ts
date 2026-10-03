@@ -136,4 +136,20 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     expect(report.lessons).toHaveLength(96);
     expect(report.lessons.filter((row) => row.authoredPrerequisiteNodes === 0)).toHaveLength(73);
   });
+
+  it("keeps English grammar metalanguage out of learner-facing Arabic (ع1)", async () => {
+    const { academicLessonList } = await import("@/data/academic-lessons");
+    const { independentProductionTasks } = await import("@/data/independent-production-tasks");
+    const { englishGrammarTermLeak, learnerArabicFields, ENGLISH_GRAMMAR_TERMS } = await import("@/core/lesson/teaching-contract");
+    const rows = [...(academicLessonList as unknown as unknown[]), ...(independentProductionTasks as unknown as unknown[])];
+    const leaks = rows.flatMap((row) => learnerArabicFields(row).filter((field) => englishGrammarTermLeak(field.text).length > 0));
+    expect(leaks).toEqual([]);
+    // German metalanguage stays legitimate, so these spellings must not be in the blocklist.
+    for (const german of ["Akkusativ", "Nebensatz", "Modalverb", "Genus", "Partikel"]) {
+      expect(ENGLISH_GRAMMAR_TERMS).not.toContain(german.toLowerCase());
+    }
+    expect(englishGrammarTermLeak("Der Leser sieht das Modalverb am Ende.")).toEqual([]);
+    expect(englishGrammarTermLeak("يتصرف modal في الموقع الثاني")).toContain("modal");
+  });
+
 });

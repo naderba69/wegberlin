@@ -101,8 +101,8 @@ describe("P1 explicit DWNB deprecation and migration window",()=>{
     expect(dwnbFormatPolicyMatrix.map((row)=>row.formatVersion)).toEqual([1,2,3]);
     const noticeDays=(Date.parse(`${DWNB_V1_SUPPORT_ENDS_AT}T00:00:00Z`)-Date.parse("2026-09-09T00:00:00Z"))/86_400_000;
     expect(noticeDays).toBeGreaterThanOrEqual(180);
-    expect(dwnbFormatSupportDecision(1,new Date("2027-03-31T12:00:00Z"))).toMatchObject({policyVersion:DWNB_DEPRECATION_POLICY_VERSION,lifecycle:"deprecated-supported",importSupported:true});
-    expect(dwnbFormatSupportDecision(1,new Date("2027-04-01T12:00:00Z"))).toMatchObject({lifecycle:"expired",importSupported:false});
+    expect(dwnbFormatSupportDecision(1,new Date(2027,2,31,12))).toMatchObject({policyVersion:DWNB_DEPRECATION_POLICY_VERSION,lifecycle:"deprecated-supported",importSupported:true});
+    expect(dwnbFormatSupportDecision(1,new Date(2027,3,1,12))).toMatchObject({lifecycle:"expired",importSupported:false});
     expect(dwnbFormatSupportDecision(4,fixedNow)).toMatchObject({lifecycle:"unknown",importSupported:false});
   });
   it("imports and migrates supported v1 with a visible warning, then rejects it explicitly after the deadline",async()=>{

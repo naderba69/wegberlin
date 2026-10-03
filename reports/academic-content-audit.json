@@ -76396,10 +76396,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
-            "text": "Wenn ein Kunde anruft",
-            "surface": "Wenn ein Kunde anruft",
+            "text": "Wenn ein Kunde",
+            "surface": "Wenn ein Kunde",
             "strength": "context"
           },
           {
@@ -76561,10 +76561,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
-            "text": "notiere ich den Namen",
-            "surface": "notiere ich den Namen",
+            "text": "den Namen",
+            "surface": "den Namen",
             "strength": "context"
           },
           {
@@ -96841,7 +96841,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "Während des Studiums",
             "surface": "Während des Studiums",
@@ -98442,10 +98442,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
-            "text": "bekam sie ein Angebot",
-            "surface": "bekam sie ein Angebot",
+            "text": "ein Angebot",
+            "surface": "ein Angebot",
             "strength": "context"
           },
           {
@@ -98990,10 +98990,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
-            "text": "Nachdem sie den Kurs beendet hatte",
-            "surface": "Nachdem sie den Kurs beendet hatte",
+            "text": "Nachdem sie den Kurs",
+            "surface": "Nachdem sie den Kurs",
             "strength": "context"
           },
           {
@@ -111963,10 +111963,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
-            "text": "Falls der Raum nicht frei ist",
-            "surface": "Falls der Raum nicht frei ist",
+            "text": "Falls der Raum",
+            "surface": "Falls der Raum",
             "strength": "context"
           },
           {
@@ -112233,10 +112233,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
-            "text": "verschieben wir den Termin",
-            "surface": "verschieben wir den Termin",
+            "text": "den Termin",
+            "surface": "den Termin",
             "strength": "context"
           },
           {
@@ -121347,10 +121347,10 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
-            "text": "brauchst du die Datei Donnerstag",
-            "surface": "brauchst du die Datei Donnerstag",
+            "text": "die Datei Donnerstag",
+            "surface": "die Datei Donnerstag",
             "strength": "context"
           },
           {
@@ -220730,5 +220730,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "38502a4a4d06c59ee07e6c7647f616eaf55b15c7551d1cab9306bd7a2580faf7"
+  "contentSha256": "e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98c6"
 }

@@ -27,6 +27,7 @@ const thresholds = {
   feedbackBoilerplateTailsMax: 0,
   duplicateExplanationsInLessonMax: 0,
   maxRepeatedFinalSentence: 24,
+  wordOrderingTilesMin: 3,
 };
 
 const STOP = new Set("der die das und oder aber für mit von zu im am an ein eine einen einer einem des dem den ich du er sie es wir ihr sie nicht kein keine alle jeder jede wenn als auch noch schon sehr mehr weniger man uns euch ihnen ihm sein ihre ihrem diesem dieser dieses bei nach aus über unter vor hinter zwischen um ohne innerhalb außerhalb kann werde werden wird hat haben hatte sollte müssen will möchten".split(" "));
@@ -74,6 +75,18 @@ for (const lesson of lessons) {
   for (const [text, count] of seen) if (count > 1) duplicateExplanationPairs.push(`${lesson.id} (${count}×) ${text.slice(0, 40)}`);
 }
 const maxRepeatedFinalSentence = finalSentenceCounts.size ? Math.max(...finalSentenceCounts.values()) : 0;
+/** ع5 من تدقيق 2026-10-03: بلاطة واحدة مقابل قرار واحد = تخمين 50%. لا يُعدّ العنصر قصيرًا
+ * إلا إذا كان جوابه ثلاث كلمات فأكثر — فعبارة مثل «Langsamer, bitte» لا تُقسَّم إلى ثلاث. */
+const fewTileItems: string[] = [];
+for (const lesson of lessons) {
+  for (const exercise of lesson.exercises) {
+    if (exercise.type !== "word-ordering") continue;
+    const answerWords = String(exercise.acceptedAnswers[0] ?? "").replace(/[^\p{L}\p{N} ]/u, "").trim().split(/\s+/u).filter(Boolean).length;
+    if (answerWords >= 3 && exercise.words.length < thresholds.wordOrderingTilesMin) {
+      fewTileItems.push(`${lesson.id}:${exercise.id} (${exercise.words.length} tiles / ${answerWords} words)`);
+    }
+  }
+}
 const shortExplanations: string[] = [], explanationLengths: number[] = [];
 type Violation = { lessonId: string; modelWords: number; statedMin: number; statedMax: number };
 const writingViolations: Violation[] = [], singleVariant: string[] = [], noOpVariantItems: string[] = [], untraceable: string[] = [];
@@ -178,6 +191,7 @@ const singleShare = (100 * singleVariant.length) / Math.max(1, productiveTotal);
 // Keep the historical <=25% ceiling visible as legacy data; do not fabricate alternatives.
 // Free writing/speaking are evaluated by workflow and provenance, never a single string.
 if (noOpVariantItems.length > thresholds.noOpAcceptedVariantsMax) issues.push(`productive exercises listing an unreachable accepted variant: ${noOpVariantItems.length} (max ${thresholds.noOpAcceptedVariantsMax})`);
+if (fewTileItems.length) issues.push(`word-ordering items whose tiles force a single binary guess: ${fewTileItems.length} (min ${thresholds.wordOrderingTilesMin} tiles for a 3+ word answer) — ${fewTileItems.slice(0, 4).join(", ")}`);
 if (boilerplateTailItems > thresholds.feedbackBoilerplateTailsMax) issues.push(`generic feedback tail pasted onto item-specific explanations: ${boilerplateTailItems} items (max ${thresholds.feedbackBoilerplateTailsMax})`);
 if (duplicateExplanationPairs.length > thresholds.duplicateExplanationsInLessonMax) issues.push(`same explanation read twice inside one lesson: ${duplicateExplanationPairs.length} pair(s) (max ${thresholds.duplicateExplanationsInLessonMax})`);
 if (maxRepeatedFinalSentence > thresholds.maxRepeatedFinalSentence) issues.push(`one final sentence closes ${maxRepeatedFinalSentence} explanations (max ${thresholds.maxRepeatedFinalSentence}) — diversify by the item's own content, not by another generic sentence`);
@@ -212,6 +226,7 @@ const report = {
     boilerplateTailItems, boilerplateTailCeiling: thresholds.feedbackBoilerplateTailsMax, boilerplateTailExamples: boilerplateLessons.slice(0, 8),
     duplicateExplanationPairs: duplicateExplanationPairs.length, duplicateExplanationExamples: duplicateExplanationPairs.slice(0, 8),
     maxRepeatedFinalSentence, repeatedFinalSentenceCeiling: thresholds.maxRepeatedFinalSentence,
+    fewTileOrderingItems: fewTileItems.length, fewTileOrderingCeiling: 0, fewTileOrderingExamples: fewTileItems.slice(0, 8),
     allItems: allFeedbackLengths.length,
     allMedianChars: median(allFeedbackLengths),
     allUnder60Chars: allFeedbackLengths.filter((size) => size < 60).length,

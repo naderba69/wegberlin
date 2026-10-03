@@ -337,6 +337,42 @@ if (!state.diagnosticResult && state.profile?.priorExperience !== "none") return
 وJS 1,894,105 بدل 1,893,352): أي أن تغيير كود في مسار مُجمَّع يحرّك البصمة — بعكس ما أُوهم في جيل ع5 حيث لم يكن
 البناء قد أُعيد فعلًا.
 
+### حادثة البوابة عند 2026-10-03T23:00Z: 12 سجلّ توثيق تجاوزت نافذة الثلاثين يومًا
+
+**ما حدث مقاسًا**: عند 22:40Z كان `npm run check` أخضر على `30cfc87`؛ وعند 23:00Z انقلبت النتيجة إلى أحمر على
+نفس الشجرة تقريبًا، في `check` (بوابة `source:audit -- --strict`) و`e2e` معًا. القياس المباشر الآن:
+`source:audit` يقول «19 records · fresh 1 · due soon 6 · **stale 12** · clock errors 0» ويخرج **1** مع `--strict`
+و**0** بدونه (لا فرق في أي ملف آخر).
+
+**الآلية لا الصدفة**: `src/config/source-verification-registry.json` يحمل `calendarTimeZone:"Africa/Tunis"` و
+`warningBeforeExpiryDays:7`، و`getSourceFreshness` يحسب `ageDays` بمقارنة **أيام تقويم** لا ساعات، و`stale` حين
+`ageDays > maxAgeDays`. اثنا عشر سجلًّا `lastVerifiedAt:"2026-09-03"` و`maxAgeDays:30` ⇒ يوم الاستحقاق
+`2026-10-03`، وعند منتصف ليل تونس (23:00Z) صار اليوم 31 ⇒ STALE. أي أن البوابة عملت كما صُمّمت، في لحظة محسوبة.
+
+**ما لا يجب أن يُقرأ إصلاحًا**: لم نزد `lastVerifiedAt` ولم نغيّر `maxAgeDays`؛ وضع السجلّ `verificationMode:
+"manual-semantic-review"` وحدّه المعلن «HTTP reachability never proves … a human review remains required»، فتغيير
+التاريخ بغير مراجعة بشرية للمصادر **تلفيق دليل** لا إصلاح. قائمة ما يستلزم إعادة تحقق (مع `staleAction` المنصوص):
+`gemini-api-pricing-2026-09`، `gemini-api-limits-2026-09`، `openrouter-free-variant-2026-09`،
+`openrouter-free-router-2026-09`، `openrouter-rate-limits-2026-09` (كلها `block-remote-ai`) ·
+`vercel-hobby-2026-09`، `github-actions-public-2026-09` (`block-release`) ·
+`goethe-b2-overview-2026`، `goethe-b2-terms-2025`، `goethe-b2-model-2025`، `telc-b2-overview-2026`،
+`telc-b2-mock-2019-current-link` (`block-release-and-warn-runtime`).
+
+**أثره على المتعلم الآن**: أوضاع الذكاء البعيد (Gemini/OpenRouter) محجوبة برسالة صريحة؛ المرشد الحتمي المحلي يعمل.
+هذا هو سلوك ADR-084 المقصود لا عطلًا.
+
+**ما أصلحناه فعلًا (ومن فئة م41)**: أربع حالات اختبار كانت تقرأ **ساعة الآلة** فتكسر نفسها كل 30 يومًا —
+`writing-review-grounding-gate.test.ts` و`live-capability-probe.test.ts`؛ صارت تثبّت الساعة صراحةً داخل النافذة
+(`vi.useFakeTimers({toFake:["Date"]})` + `setSystemTime("2026-09-20")`) لأن موضوعها اشتقاق القدرة وأرضية الردّ لا
+صلاحية السجلّ. وفي `tests/e2e/critical-flows.spec.ts` أُثبتت ساعة المتصفح بالآلية نفسها في أربع حالات تقيس تدفق
+الموافقة/الإرسال (`page.clock.install`). **قاعدة الصلاحية نفسها تبقى مقيسة بتواريخ صريحة** في
+`tests/unit/source-freshness.test.ts` («stale» عند `2026-10-04` و`getAICostDecision` محجوب) — فلم تُخفَّف عتبة،
+بل أُزيل اعتماد الاختبار على التقويم.
+
+**حال الفروع**: `main` على `febd352` أحمر بسبب هذه البوابة (لا بسبب كود هذا الجيل — نفس الشجرة كانت خضراء قبل
+الانقلاب بعشرين دقيقة)، وهذا هو الغلق الصحيح للنشر حتى مراجعة بشرية. طلب الدفعة الحالية يبقى أخضر-أو-أحمر حسب
+وصولها بعد الإعادة، ويُثبَّت رقمه هنا عند وصوله.
+
 ### ع5 (نُفِّذت): تفصيل بلاطات «رتّب الكلمات» من 2 إلى 3–4
 
 **ما قيس قبل التغيير**: مسح على 96 درسًا أعطى **8** عناصر ترتيب ببلاطين فقط؛ منها 7 يحتمل ثلاثة بلاطات فأكثر،

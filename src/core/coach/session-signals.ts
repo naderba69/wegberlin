@@ -24,6 +24,12 @@ export function localSessionDate(date = new Date()): string {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 }
 
+/** The calendar day a study entry is booked to: the learner's local day — the same key every
+ * reader (streak, rest day, quota, plan) already uses. Never a UTC slice. */
+export function studyDayKey(date = new Date()): string {
+  return localSessionDate(date);
+}
+
 export function saveDailyCheckIn(
   state: LearningState,
   input: { availableMinutes: LearnerProfile["dailyMinutes"]; energyBefore: DailySessionRecord["energyBefore"] },

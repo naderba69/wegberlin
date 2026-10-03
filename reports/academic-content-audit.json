@@ -1656,7 +1656,7 @@
         "prompt": "رتب مع können:",
         "answer": "Wir können uns am Mittwoch treffen",
         "evidenceRef": "a1-09:controlled:a1-09-e3:explanationAr",
-        "evidenceExcerpt": "können في الموقع الثاني وtreffen في النهاية. الصيغة المطلوبة هنا هي «Wir können uns am Mittwoch treffen». عند استعمال können يتصرف الفعل modal في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir könn…",
+        "evidenceExcerpt": "können في الموقع الثاني وtreffen في النهاية. الصيغة المطلوبة هنا هي «Wir können uns am Mittwoch treffen». عند استعمال können يتصرف الفعل الناقص في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir kön…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -1667,7 +1667,7 @@
         "prompt": "صحح ترتيب الجملة: Ich kann kommen nicht am Dienstag.",
         "answer": "Ich kann am Dienstag nicht kommen",
         "evidenceRef": "a1-09:controlled:a1-09-e4:explanationAr",
-        "evidenceExcerpt": "الفعل الأساسي kommen يغلق الجملة. الصيغة المطلوبة هنا هي «Ich kann am Dienstag nicht kommen». عند استعمال können يتصرف الفعل modal في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mi…",
+        "evidenceExcerpt": "الفعل الأساسي kommen يغلق الجملة. الصيغة المطلوبة هنا هي «Ich kann am Dienstag nicht kommen». عند استعمال können يتصرف الفعل الناقص في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am M…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -1678,7 +1678,7 @@
         "prompt": "طابق الوظيفة بالعبارة:",
         "answer": "Vorschlag → Wie wäre es am Mittwoch? | Zustimmung → Ja, das passt gut. | Ablehnung → Leider kann ich nicht.",
         "evidenceRef": "a1-09:controlled:a1-09-e5:explanationAr",
-        "evidenceExcerpt": "تعلم الموقف التواصلي لا الترجمة فقط. الصيغة المطلوبة هنا هي «Vorschlag ↔ Wie wäre es am Mittwoch?؛ Zustimmung ↔ Ja, das passt gut.؛ Ablehnung ↔ Leider kann ich nicht.». عند استعمال können يتصرف الفعل modal في الموقع الث…",
+        "evidenceExcerpt": "تعلم الموقف التواصلي لا الترجمة فقط. الصيغة المطلوبة هنا هي «Vorschlag ↔ Wie wäre es am Mittwoch?؛ Zustimmung ↔ Ja, das passt gut.؛ Ablehnung ↔ Leider kann ich nicht.». عند استعمال können يتصرف الفعل الناقص في الموقع ال…",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -1700,7 +1700,7 @@
         "prompt": "___ du um sieben kommen? أكمل التصريف:",
         "answer": "Kannst",
         "evidenceRef": "a1-09:controlled:a1-09-e7:explanationAr",
-        "evidenceExcerpt": "مع du: kannst، وفي سؤال نعم/لا يأتي أولًا. الصيغة المطلوبة هنا هي «Kannst». عند استعمال können يتصرف الفعل modal في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. اف…",
+        "evidenceExcerpt": "مع du: kannst، وفي سؤال نعم/لا يأتي أولًا. الصيغة المطلوبة هنا هي «Kannst». عند استعمال können يتصرف الفعل الناقص في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. ا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -1799,7 +1799,7 @@
         "prompt": "Wir können uns morgen ___. أكمل المصدر:",
         "answer": "treffen",
         "evidenceRef": "a1-09:miniTest:a1-09-m3:explanationAr",
-        "evidenceExcerpt": "بعد können يأتي المصدر في النهاية. الصيغة المطلوبة هنا هي «treffen». عند استعمال können يتصرف الفعل modal في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. افحص المع…",
+        "evidenceExcerpt": "بعد können يأتي المصدر في النهاية. الصيغة المطلوبة هنا هي «treffen». عند استعمال können يتصرف الفعل الناقص في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. افحص الم…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1810,7 +1810,7 @@
         "prompt": "Höfliche Ablehnung اختر الرفض اللبق:",
         "answer": "Leider kann ich nicht.",
         "evidenceRef": "a1-09:miniTest:a1-09-m4:explanationAr",
-        "evidenceExcerpt": "leider تخفف الرفض. الصيغة المطلوبة هنا هي «Leider kann ich nicht.». عند استعمال können يتصرف الفعل modal في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. افحص المعن…",
+        "evidenceExcerpt": "leider تخفف الرفض. الصيغة المطلوبة هنا هي «Leider kann ich nicht.». عند استعمال können يتصرف الفعل الناقص في الموقع الثاني، بينما يأتي الفعل الآخر في المصدر في نهاية الجملة: Wir können uns am Mittwoch treffen. افحص المع…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -2844,7 +2844,7 @@
         "prompt": "رتب سؤال المعاينة:",
         "answer": "Wann kann ich die Wohnung besichtigen",
         "evidenceRef": "a1-15:controlled:a1-15-e3:explanationAr",
-        "evidenceExcerpt": "Wann ثم modal ثم الفاعل، والمصدر في النهاية. الصيغة المطلوبة هنا هي «Wann kann ich die Wohnung besichtigen». للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل…",
+        "evidenceExcerpt": "Wann ثم الفعل الناقص ثم الفاعل، والمصدر في النهاية. الصيغة المطلوبة هنا هي «Wann kann ich die Wohnung besichtigen». للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد …",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -2998,7 +2998,7 @@
         "prompt": "Besichtigung اختر السؤال الصحيح:",
         "answer": "Wann kann ich die Wohnung besichtigen?",
         "evidenceRef": "a1-15:miniTest:a1-15-m4:explanationAr",
-        "evidenceExcerpt": "modal بعد Wann والمصدر في النهاية. الصيغة المطلوبة هنا هي «Wann kann ich die Wohnung besichtigen?». للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: …",
+        "evidenceExcerpt": "الفعل الناقص بعد Wann والمصدر في النهاية. الصيغة المطلوبة هنا هي «Wann kann ich die Wohnung besichtigen?». للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل k…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5616,7 +5616,7 @@
         "prompt": "رتب القاعدة:",
         "answer": "Ab 22 Uhr muss man leise sein",
         "evidenceRef": "a2-05:controlled:a2-05-e3:explanationAr",
-        "evidenceExcerpt": "عنصر الوقت أولًا ثم modal والفاعل والمصدر أخيرًا. الصيغة المطلوبة هنا هي «Ab 22 Uhr muss man leise sein». müssen يعبر عن ضرورة أو واجب: Man muss die Tür schließen. افحص المعنى وترتيب الكلمات في سياق السؤال قبل تثبيت جوا…",
+        "evidenceExcerpt": "عنصر الوقت أولًا ثم الفعل الناقص والفاعل والمصدر أخيرًا. الصيغة المطلوبة هنا هي «Ab 22 Uhr muss man leise sein». müssen يعبر عن ضرورة أو واجب: Man muss die Tür schließen. افحص المعنى وترتيب الكلمات في سياق السؤال قبل تث…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -6438,7 +6438,7 @@
         "id": "a2-09-e6",
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
-        "prompt": " اختر الجملة مع modal:",
+        "prompt": " اختر الجملة مع الفعل الناقص:",
         "answer": "Sie soll später zurückrufen.",
         "evidenceRef": "a2-09:controlled:a2-09-e6:explanationAr",
         "evidenceExcerpt": "بعد soll يأتي المصدر zurückrufen كاملًا في النهاية. الصيغة المطلوبة هنا هي «Sie soll später zurückrufen.». تتكرر أفعال مثل zurückrufen، weiterleiten، durchstellen، ausrichten. افحص المعنى وترتيب الكلمات في سياق السؤال ق…",
@@ -17729,7 +17729,7 @@
         "prompt": "Auf die Verspätung müssen wir keine Rücksicht ___. أكمل الفعل الخفيف المناسب:",
         "answer": "nehmen",
         "evidenceRef": "b2-18:controlled:b2-18-e6:explanationAr",
-        "evidenceExcerpt": "التركيب ثابت: Rücksicht nehmen auf. مع Modal يسير كله إلى الأخير ويفقد لا يُصرَّف.",
+        "evidenceExcerpt": "التركيب ثابت: Rücksicht nehmen auf. مع الفعل الناقص يسير كله إلى النهاية، ولا يُصرَّف سوى الفعل الخفيف.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -31398,7 +31398,7 @@
         "id": "a1-24-speaking",
         "scope": "lesson-speaking",
         "prompt": "Bitten Sie um Hilfe mit einem Formular. Fragen Sie nach zwei Feldern, Unterlagen, Unterschrift und Abgabeort. اطلب مساعدة في نموذج، واسأل عن حقلين والوثائق والتوقيع ومكان التسليم.",
-        "reviewEvidence": "طلبت التوضيح بدل التخمين. · استعملت الأمر أو modal بترتيب صحيح. · أعدت قائمة الوثائق ومكان التسليم.",
+        "reviewEvidence": "طلبت التوضيح بدل التخمين. · استعملت الأمر أو الفعل الناقص بترتيب صحيح. · أعدت قائمة الوثائق ومكان التسليم.",
         "answerPolicy": "no-single-answer"
       },
       {
@@ -184724,8 +184724,8 @@
           {
             "path": "phrases[4].de",
             "stage": "vocabulary",
-            "text": "die Versäumnis seitens der Einrichtung",
-            "surface": "die Versäumnis seitens der Einrichtung",
+            "text": "das Versäumnis seitens der Einrichtung",
+            "surface": "das Versäumnis seitens der Einrichtung",
             "strength": "target"
           },
           {
@@ -186773,8 +186773,8 @@
           {
             "path": "phrases[4].de",
             "stage": "vocabulary",
-            "text": "die Versäumnis seitens der Einrichtung",
-            "surface": "die Versäumnis seitens der Einrichtung",
+            "text": "das Versäumnis seitens der Einrichtung",
+            "surface": "das Versäumnis seitens der Einrichtung",
             "strength": "target"
           },
           {
@@ -220730,5 +220730,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "d8aba44b5309ffe8ed5c8bfec5923cb737f3e89c0a5aa1edc82be26c37154e0d"
+  "contentSha256": "feb913db5218506fd2b8a5b3616eb32f1ce863cf523e877b1b1da8a92e77a3bb"
 }

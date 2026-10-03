@@ -1,0 +1,299 @@
+{
+ "a1-02#0": {
+  "trickAr": "من بلد أو مدينة بلا أداة = aus؛ وvon مع الشخص أو جهة العمل: von der Arbeit."
+ },
+ "a1-02#1": {
+  "trickAr": "wohne تجيب عن wo لا عن woher: in + Dativ — ich wohne in Berlin."
+ },
+ "a1-03#0": {
+  "trickAr": "اقلِب الترتيب العربي: الوحدة ثم und ثم العشرة — einundzwanzig لا zwanzigundeins."
+ },
+ "a1-03#3": {
+  "whyAr": "Telefonnummer مؤنث (die Telefonnummer)، وأداة الملكية تتبع جنس الاسم لا جنس المالك: في الرفع meine Telefonnummer، مقابل mein Vorname مع der Vorname."
+ },
+ "a1-05#2": {
+  "whyAr": "الشهر يُذكر بلا يوم فيأخذ in + Dativ = im Mai؛ am هو an dem ويسبق اليوم أو التاريخ: am Montag, am 3. Mai."
+ },
+ "a1-06#0": {
+  "trickAr": "المقارنة بأداتها: أكبر وأصغر تأتيان مع als، وso … wie للمساواة؛ قبل المهنة أو الدور als وحدها."
+ },
+ "a1-06#1": {
+  "trickAr": "als + مهنة، bei + جهة أو شخص؛ اسأل: هل الكلمة تصف عملاً أم مكاناً يعمل فيه؟"
+ },
+ "a1-07#3": {
+  "whyAr": "الصيغتان تُحفظان كاملتين: wie viel Uhr ist es? أو wie spät ist es?؛ حذف viel أو spät يترك كلمة معلقة بلا سؤال مكتمل."
+ },
+ "a1-09#0": {
+  "trickAr": "الفعل المصرف في الموضع الثاني والمصدر في النهاية، والظرف بينهما: kann am Dienstag nicht kommen."
+ },
+ "a1-09#2": {
+  "whyAr": "الساعة الكاملة تُقدَّم بـum (um sechs Uhr)؛ am لليوم والتاريخ، وim للشهر والفصل — تقسيم ثابت في الألمانية لا يتبدل."
+ },
+ "a1-10#1": {
+  "whyAr": "Milch مؤنث (die Milch)، والنفي عن مؤنث في حالة النصب يأخذ keine؛ kein بلا نهاية يبقى للمحايد: kein Brot.",
+  "trickAr": "der/die → keine، das → kein؛ احفظ الاسم بأداته ثم انْفِ على وزنه: die Milch → keine Milch."
+ },
+ "a1-11#0": {
+  "whyAr": "Flasche مؤنث (die Flasche) وفي حالة النصب تبقى الأداة eine: eine Flasche Wasser؛ ein للمحايد فقط مثل ein Glas."
+ },
+ "a1-11#1": {
+  "whyAr": "الفاعل die Tomaten جمع، والفعل يوافقه لا يوافق السؤال: wie viel kostet das Brot / kosten die Tomaten?",
+  "trickAr": "فاعل جمع؟ الفعل بلا -t: die Tomaten kosten، aber das Brot kostet."
+ },
+ "a1-12#1": {
+  "whyAr": "Wasser محايد (das Wasser)، وأداة النكران في النصب للمحايد ein بلا نهاية؛ eine للمؤنث: eine Flasche, ein Glas."
+ },
+ "a1-14#2": {
+  "whyAr": "stehen للأشياء العمودية ذات الدعم السفلي (die Lampe steht auf dem Tisch)، وliegen للرقادي المستوي (das Buch liegt auf dem Sofa)."
+ },
+ "a1-17#0": {
+  "trickAr": "الفعل الناقص هو الذي يُصرَّف: will في الموضع الثاني، والمصدر في النهاية غير مصروف — Ich will einen Film sehen."
+ },
+ "a1-18#0": {
+  "whyAr": "Wetter محايد (das Wetter)، ولا يشتق جنسه من المعنى العربي؛ احفظه في عبارة كاملة: Das Wetter ist heute gut."
+ },
+ "a1-20#0": {
+  "trickAr": "في الأمر: الفعل أولاً ثم Sie ثم التكملة — Gehen Sie geradeaus / Nehmen Sie das bitte."
+ },
+ "a1-20#1": {
+  "trickAr": "الحرف المنفصل ab في abbiegen يذهب إلى آخر الجملة: Biegen Sie links ab."
+ },
+ "a1-20#2": {
+  "whyAr": "Post هنا مؤنث (die Post)، وzu مع der تُدمج zur؛ zum لـzu + dem مع المحايد: zum Rathaus, zum Bahnhof."
+ },
+ "a1-21#0": {
+  "trickAr": "von … nach … بين مكانين بلا أداة؛ zu مع مكان محدد بأداة: zur Arbeit, zum Bahnhof."
+ },
+ "a1-22#0": {
+  "whyAr": "فاعل wehtun هنا جمع (die Augen)، فيُصرف الفعل معه جمعًا: meine Augen tun weh؛ tut يبقى للمفرد: mein Auge tut weh."
+ },
+ "a1-22#1": {
+  "whyAr": "Rücken مفرد مع أداة المفرد mein، والفعل يوافقه: der Rücken tut weh؛ tun مع الجمع فقط (die Beine tun weh)."
+ },
+ "a1-23#1": {
+  "trickAr": "soll في الموضع الثاني والمصدر في نهايته بلا تصريف: Ich soll Tabletten nehmen."
+ },
+ "a1-24#1": {
+  "trickAr": "الفعل ثم Sie ثم الظرف: Unterschreiben Sie hier — لا تُفصل Sie عن فعلها."
+ },
+ "a1-24#3": {
+  "whyAr": "Vorname مذكر (der Vorname)، وفي الرفع تكون أداة الملكية mein؛ meine للمؤنث: meine Nummer, meine Adresse."
+ },
+ "a2-04#0": {
+  "whyAr": "helfen يطلب المفعول غير المباشر (Dativ): jemandem helfen — mir, dir, ihm, Ihnen؛ mich مفعول مباشر لا يحتمله الفعل."
+ },
+ "a2-05#1": {
+  "whyAr": "man فاعل مفرد نحوياً كـ er، فيُصرف الفعل معه مفردًا: man muss, man kann؛ müssen الجمع تحتاج فاعلًا جمعًا مثل sie müssen."
+ },
+ "a2-06#2": {
+  "trickAr": "obwohl يرسل الفعل إلى آخر جملته: obwohl er müde ist, räumt er auf."
+ },
+ "a2-07#0": {
+  "trickAr": "zuständig ثابت مع für + Akkusativ؛ um تأتي مع sich kümmern فقط."
+ },
+ "a2-07#1": {
+  "trickAr": "الانعكاسي وحرفه لا ينفصلان: ich kümmere mich um + Akkusativ."
+ },
+ "a2-07#2": {
+  "trickAr": "في wenn يلحق الحرف المنفصل الفعل في النهاية: wenn ein Kunde anruft, notiere ich …"
+ },
+ "a2-08#1": {
+  "whyAr": "التعبير الثابت sich interessieren für + Akkusativ؛ حرف الجر هنا جزء من الفعل ولا يُستنتج من «مهتم بـ» العربية."
+ },
+ "a2-08#2": {
+  "trickAr": "weil ترفع الفعل إلى النهاية: weil ich Erfahrung habe — لا weil ich habe …"
+ },
+ "a2-09#1": {
+  "whyAr": "الفعل يتعدى بـmit + Dativ: jemanden mit jemandem verbinden؛ zu توصل شيئاً إلى شيء، لا شخصاً بشخص."
+ },
+ "a2-10#0": {
+  "trickAr": "بعد صيغة أفعل التفضيل: als (schneller als, teurer als)؛ wie للمساواة فقط: so schnell wie."
+ },
+ "a2-10#2": {
+  "trickAr": "أعلى التفضيل: am + الصفة + -sten مع Umlaut غالبًا — am günstigsten, am besten."
+ },
+ "a2-10#3": {
+  "whyAr": "gut شاذة في المقارنة: besser ثم am besten؛ لذا لا وجود لـguter als، والتغيّر في جذر الصفة لا في نهايتها."
+ },
+ "a2-11#1": {
+  "whyAr": "جملة ob جملة فرعية: ترتيبها خبري (فاعل ثم خبر) والفعل في آخرها؛ قلبُ الفعل إلى الموضع الثاني يجعلها سؤالاً قائماً داخل الجملة.",
+  "trickAr": "ob = «هل» وترتيبها خبري مع فعل في النهاية: ob Frühstück inklusive ist."
+ },
+ "a2-11#3": {
+  "trickAr": "العدد من اثنين فصاعدًا يرفع الاسم إلى الجمع: drei Nächte, zwei Tage, fünf Minuten."
+ },
+ "a2-12#1": {
+  "trickAr": "obwohl مع زمن تام: الفعل المساعد في النهاية — obwohl ich gebucht habe, …"
+ },
+ "a2-13#2": {
+  "whyAr": "الضمير الانعكاسي يوافق الفاعل: مع wir يأتي uns (Akk)؛ sich تخص الغائب مفردًا وجمعًا (er sich, sie sich).",
+  "trickAr": "ich mich – du dich – er/sie sich – wir uns – ihr euch – sie sich."
+ },
+ "a2-14#1": {
+  "whyAr": "في جملة ob يذهب كل جزء من الفعل إلى النهاية، فيلحق kann بالمصدر ولا يبقى في الموضع الثاني.",
+  "trickAr": "ob + فاعل + التكملة + المصدر + الفعل المصرف في النهاية."
+ },
+ "a2-14#2": {
+  "trickAr": "dass: الفاعل بعده مباشرة، والفعل المصرف آخر شيء: dass ich nicht arbeiten kann."
+ },
+ "a2-14#3": {
+  "whyAr": "مدة الغياب غير معروفة، فالحزم في الحضور وعدٌ قد لا يُنفَذ؛ voraussichtlich مع وقت تحديث محدد يبلّغ دون التزام كاذب."
+ },
+ "a2-15#0": {
+  "trickAr": "فعل ناقص + مصدر: soll في الثاني وnehmen في النهاية — لا nehme."
+ },
+ "a2-15#1": {
+  "trickAr": "الفعل ثم Sie ثم بقية العناصر: Nehmen Sie das bitte."
+ },
+ "a2-17#1": {
+  "whyAr": "um … zu مشروطة بوحدة الفاعل بين الجملتين؛ هنا الفاعل يتغير (أنا أُرسل، أنت تقرأ) فتجب damit مع فعل في النهاية."
+ },
+ "a2-18#3": {
+  "trickAr": "zwar لا تُكمل بـdeshalb: zwar praktisch, aber manchmal problematisch."
+ },
+ "a2-19#1": {
+  "trickAr": "wenn ترتّب الخبر وتؤخر الفعل: wenn ich müde bin, lerne ich nicht."
+ },
+ "a2-22#0": {
+  "whyAr": "als لحدث ماضٍ وقع مرة واحدة، وwenn للتكرر في الماضي وللمضارع والشرط؛ بلوغ الثامنة عشرة حدث مفرد في التاريخ."
+ },
+ "a2-22#1": {
+  "whyAr": "wenn تربط ما يتكرر (immer, jedes Mal) أو شرطًا في الحاضر؛ als للماضي المفرد، ومعها «التكرار» تصبح الجملة متناقضة.",
+  "trickAr": "مرة واحدة في الماضي؟ als. كل مرة؟ wenn."
+ },
+ "a2-22#2": {
+  "whyAr": "التعميم على شعب كامل لا يدعمه موقفك ويحوّل الوصف الشخصي حكمًا جماعيًا؛ السياق العائلي مع oft يبلّغان الغرض نفسه بدقة."
+ },
+ "a2-23#1": {
+  "whyAr": "ضمير الوصل يوافق جنس الاسم السابق: die Gruppe → die sich trifft؛ der يعود إلى مذكر مثل der Kurs, das zum Projekt führt."
+ },
+ "a2-23#2": {
+  "whyAr": "helfen يطلب Dativ للمتلقّي، واسم الجمع في Dativ بلا أداة يضيف -n: den Kindern → Kindern؛ das يبقى فاعل جملة الوصل."
+ },
+ "b1-02#0": {
+  "whyAr": "الفعل انعكاسي: sich entscheiden für + Akkusativ؛ حذف mich يترك الفعل بلا ضميره الانعكاسي المطلوب، فلا تُفهم منه عملية الاختيار نفسها."
+ },
+ "b1-05#0": {
+  "trickAr": "اذكر الواقعة: ماذا، كم مرة، متى — ثم أثرها؛ لا تحكم على شخص المتلقي."
+ },
+ "b1-06#0": {
+  "whyAr": "الصفة وحدها ادعاء يقوله كل متقدِّم؛ المقابلة تطلب مثالًا فيه إجراء ونتيجة يمكن السؤال عن تفاصيلهما، فتُختبر الصفة."
+ },
+ "b1-06#3": {
+  "whyAr": "الجواب المعدّ مسبقًا لا يسمي موقفًا ولا إجراءً فيبقى غير قابل للتصديق؛ والصواب نحوياً أيضًا die Schwäche (مؤنث) لا mein Schwäche."
+ },
+ "b1-07#2": {
+  "whyAr": "«لكل الناس» تُلغي المعايير وتخرج بالرأي من النقاش؛ تقييده بوضعك الحالي ومعاييرك (für meine aktuelle Situation) يجعله موقفًا قابلًا للمناقشة."
+ },
+ "b1-07#3": {
+  "whyAr": "أدوات الإطلاق (immer, alles) تُسقط الجملة أمام مثال مضاد واحد؛ in manchen Gebieten + das hängt vom Ort ab تُبقي الحكم قابلًا للدفاع."
+ },
+ "b1-11#0": {
+  "whyAr": "البنيتان مختلفتان: dadurch, dass + جملة، أو indem + جملة؛ دمجهما يخلط الوسيلة بالأداة ولا يعطي بنية صحيحة.",
+  "trickAr": "اختر واحدة: dadurch, dass weniger Autos fahren — أو indem weniger Autos fahren."
+ },
+ "b1-11#1": {
+  "trickAr": "dass تؤخر الفعل إلى النهاية: dadurch, dass weniger Autos fahren."
+ },
+ "b1-11#2": {
+  "trickAr": "من أي شريحة؟ قسّم حسب الدوام والمكان والوصول قبل أي استنتاج."
+ },
+ "b1-11#3": {
+  "whyAr": "حل واحد يحمّل الأقل قدرة تكلفة التنفيذ؛ حزمة خيارات تختلف بالمسافة والدوام والقدرة تجعل الاقتراح قابلًا للتطبيق للجميع."
+ },
+ "b1-12#0": {
+  "whyAr": "تنظيم السوق نشاط لا أثر: الهدف يُكتب بالنتيجة المقاسة — عدد الأغراض الممرَّرة ونسبة ما يُرمى — ليمكن تتبع التغيّر."
+ },
+ "b1-12#2": {
+  "trickAr": "falls تعمل عمل wenn: falls der Raum voll ist, nutzen wir den Nebenraum."
+ },
+ "b1-13#0": {
+  "whyAr": "الفعل بعد beim (= bei dem) اسم محوَّل من المصدر فيُكتب بحرف كبير: das Sprechen → beim Sprechen؛ والحرف الصغير يعيده فعلًا لا اسمًا."
+ },
+ "b1-13#1": {
+  "trickAr": "durch دائمًا مع Akkusativ: durch einen Kurs, ohne mich, gegen den Plan."
+ },
+ "b1-14#2": {
+  "whyAr": "الاعتراف علاقة بين جهة مانحة وجهة مستقبلة وغرض، لا صفة في الورقة؛ جملة بلا هذه الثلاثة لا تثبت صلاحية ولا قبولًا."
+ },
+ "b1-14#3": {
+  "trickAr": "التكلفة الكلية: رسوم + مواد + امتحان + ساعات + نقل — لا الرسوم وحدها."
+ },
+ "b1-15#0": {
+  "whyAr": "الكثافة تُربك المتلقي وتُخفي الخيط؛ العرض الغني = خيط حجة واحد تخدمه كل شريحة بمثال، لا عددٌ كبير من الشرائح."
+ },
+ "b1-15#1": {
+  "trickAr": "بعد أداة الإشارة يأتي الفعل ثم الفاعل: Anschließend zeige ich … (V2 بعد أي عنصر في الموضع الأول)."
+ },
+ "b1-16#3": {
+  "whyAr": "تغيير خمس عادات معًا يمنع عزو النتيجة: لا تعرف أي عادة حسّنت الوقت، فلا يمكنك تكرار الناجح ولا التخلي عن غير المفيد.",
+  "trickAr": "قاعدة واحدة، أسبوع واحد، قياس واحد — ثم القاعدة التالية."
+ },
+ "b1-17#1": {
+  "trickAr": "وصفٌ يقع فيه الفعل على الموصوف: Partizip II + نهاية الصفة — die gut gespielte Rolle."
+ },
+ "b1-17#2": {
+  "whyAr": "صفات الإعجاب وحدها رأي غير قابل للتقييم؛ التبرير يذكر عنصرًا في العمل (مشهد، صوت، بنية) ويفسّر أثره.",
+  "trickAr": "بعد كل صفة: لأن … مع عنصر محدد من العمل."
+ },
+ "b1-17#3": {
+  "whyAr": "«الجميع» تُلغي الذوق والاختلاف؛ geeignet für Menschen, die … يحدّد الجمهور وسبب الملاءمة فتصبح التوصية قابلة للاستعمال."
+ },
+ "b1-18#3": {
+  "whyAr": "12 نقطة فرق ليست ضعفًا: الضعف مضاعفة القيمة نفسها؛ على الادعاء أن يُحسب من الأرقام لا من اتجاهها فقط."
+ },
+ "b1-19#1": {
+  "whyAr": "جملة ob لا تحمل قلب سؤال: الفاعل ثم بقية العناصر والفعل في النهاية، فـob ist es سؤال مباشر مغلَّف داخل الجملة وهو غير جائز هنا.",
+  "trickAr": "ob + الفاعل + التكملة + الفعل في النهاية: ob es fertig ist."
+ },
+ "b1-19#3": {
+  "trickAr": "لخّط التفاصيل ثم اسأل عن صحتها: Donnerstag 18 Uhr, richtig?"
+ },
+ "b1-20#0": {
+  "trickAr": "قبل الاقتراح القاطع: اسأل عن القيود، ثم An deiner Stelle würde ich zuerst … prüfen."
+ },
+ "b1-20#2": {
+  "whyAr": "تجربتك الفردية ليست دليلًا على ملاءمتها لغيرك؛ könnte helfen + muss aber nicht passen يبقيان القرار عند المتلقي."
+ },
+ "b1-21#3": {
+  "whyAr": "العائق المؤجَّل يسرق من الفريق وقت المعالجة؛ الإبلاغ المبكر مع طلب محدد يجعل المساعدة ممكنة في الوقت المناسب."
+ },
+ "b1-22#0": {
+  "whyAr": "dass مشروطة بتغيّر الفاعل؛ هنا الفاعل واحد في الجملتين، فتُغلق الجملة بـohne … zu + المصدر: ohne mich zu überfordern."
+ },
+ "b1-23#0": {
+  "whyAr": "wo + حرف تسأل عن شيء لا عن شخص؛ مع الشخص يبقى الحرف في المقدمة ويُستعمل ضمير العاقل: Mit wem sprichst du? (Dativ).",
+  "trickAr": "لشيء؟ womit/wofür. لشخص؟ Mit wem? / Für wen?"
+ },
+ "b1-23#1": {
+  "trickAr": "للأشياء تُدمج wo + الحرف: wofür؛ Für was عامية محكية لا تُكتب في نص قياسي."
+ },
+ "b1-24#0": {
+  "whyAr": "الفعل هو الذي يحدد حرف الجر: sich konzentrieren auf + Akkusativ، فسؤال الشيء يكون worauf؛ womit مع أفعال أخرى (arbeiten mit)."
+ },
+ "b2-01#1": {
+  "whyAr": "الحالة الواحدة توضح الآلية لكنها لا تثبتها؛ إثبات القاعدة يحتاج Beleg من مصدر أو بيانات، وإلا بقي الاستنتاج استقراءً ناقصًا.",
+  "trickAr": "اسأل قبل الاستشهاد: مثال توضيحي (Beispiel) أم دليل (Beleg)؟"
+ },
+ "b2-01#3": {
+  "trickAr": "من نتيجة مؤقتة إلى Testphase: معايير وفترة وموعد مراجعة، لا قرار دائم."
+ },
+ "b2-02#0": {
+  "whyAr": "«أنت ضد التقدم» تُنسب للخصم موقفًا لم يقله (مغالطة الرجل القش)؛ تلخيص الحجة كما يقبلها صاحبها يجعل الرد حجة لا هجومًا."
+ },
+ "b2-03#0": {
+  "whyAr": "sofern شرط («بشرط أن / بقدر ما») لا سبب؛ إن كان الإنتاج ثابتًا فعلاً فالعلاقة سببية (weil / dadurch dass) وتغدو الحجة مكررة."
+ },
+ "b2-03#1": {
+  "whyAr": "الاستفهام غير المباشر بعد je nachdem ترتيبه خبري مع فعل في النهاية: welche Rolle jemand hat — لا يُقلَب كما في السؤال المباشر."
+ },
+ "b2-04#2": {
+  "trickAr": "إطار اسمي واحد ثم فاعل وفعل وموعد: Wir prüfen das bis Freitag."
+ },
+ "b2-22#1": {
+  "trickAr": "اسأل: هل فاعل الجملة الرئيسية هو من قام بالنعت؟ إن لم يكن فاجعلها جملة زمنية: nachdem alle gekommen waren."
+ },
+ "b2-22#2": {
+  "trickAr": "zu + Partizip I = «يجب أن يقع»؛ إن وقع الأمر فاحذف zu: die veröffentlichte Studie lag vor."
+ }
+}

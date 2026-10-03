@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617bbb`
+Content SHA-256: `b54c5733dbc11af2aef2d7c93788f88782f6472c8f68dfc6e2f91629228b1221`
 
 ## Result
 
-`PASS` — 194 TSX files and 7413 opening JSX tags were scanned.
+`PASS` — 195 TSX files and 7440 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -55,9 +55,9 @@ Content SHA-256: `6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617b
 | src/app/progress/page.tsx:63 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:68 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:73 | ليس حكم CEFR | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:72 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:72 | تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفرد | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:74 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:79 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:79 | تظهر بطاقات الدروس المكتملة وبطاقات العلاج الشخصية بعد تأكيد التصحيح المؤجل، مرتبة حسب موعد SM-2. لا تدخل مفرد | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:81 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
 | src/components/ai-provider-capability-matrix.tsx:57 | حد 0 USD | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |
@@ -91,16 +91,16 @@ Content SHA-256: `6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617b
 | src/components/diagnostic-productive-sample.tsx:102 | Kurze Sprechprobe · عينة كلام اختيارية | Arabic host + plaintext boundary |
 | src/components/diagnostic-productive-sample.tsx:104 | Wie selbstständig war das? · كيف كان إنتاجك؟ | Arabic host + plaintext boundary |
 | src/components/diagnostic-productive-sample.tsx:107 | لا يوجد تصحيح أو تقدير CEFR لهذه العينة. | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:109 | الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا. | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:118 | Produktionsprobe · العينة الإنتاجية | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:129 | استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني. | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:110 | الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا. | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:119 | Produktionsprobe · العينة الإنتاجية | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:130 | استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني. | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:151 | استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكام | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
 | src/components/endurance-lab.tsx:58 | ثمانية سياقات أصلية من A1 إلى B2. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:110 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:110 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:111 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:111 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:111 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:112 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
 | src/components/evidence-achievements.tsx:8 | لا تُفتح بزيارة صفحة أو تكرار نقرة، ولا تضيف mastery أو شهادة. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:67 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:122 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
@@ -112,7 +112,7 @@ Content SHA-256: `6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617b
 | src/components/hybrid-writing-review.tsx:34 | مراجعة Gemini استشارية | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:34 | لم يُرجع Gemini مشكلة محددة بعقده؛ لا يعني ذلك أن النص خالٍ من الأخطاء. | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:34 | لا درجة رسمية، لا mastery، ولا بديل مضمون عن مدرس بشري للحالات المعقدة. | Arabic host + plaintext boundary |
-| src/components/information-gap-lab.tsx:35 | افتح بطاقة الشخص A فقط | Arabic host + plaintext boundary |
+| src/components/information-gap-lab.tsx:36 | افتح بطاقة الشخص A فقط | Arabic host + plaintext boundary |
 | src/components/lesson-listening-player.tsx:35 | بديل Browser TTS | Arabic host + plaintext boundary |
 | src/components/lesson-listening-player.tsx:35 | المصدر وSHA-256 | Arabic host + plaintext boundary |
 | src/components/lesson-listening-sequence.tsx:88 | بعد بدء MP3 أو Browser TTS يظهر سؤال الفكرة العامة. لا تحتاج إلى التقاط كل كلمة. | Arabic host + plaintext boundary |
@@ -214,8 +214,8 @@ Content SHA-256: `6d93694587571df0f449498c889ce1084f94635a65e35dad2527bb4ffd617b
 | src/components/study-export-control.tsx:31 | لا تسجيلات · لا API keys · لا كتابة أو محادثة حرة · DWNB وحده قابل للاستعادة | Arabic host + plaintext boundary |
 | src/components/study-export-control.tsx:32 | تنزيل ICS | Arabic host + plaintext boundary |
 | src/components/study-export-control.tsx:33 | الاسم اختياري، ولا تدخل الوسائط أو مفاتيح AI أو النصوص الحرة. TSV للدراسة فقط ولا يستعيد التقدم؛ استخدم `.dwnb | Arabic host + plaintext boundary |
-| src/components/targeted-choice-simulation.tsx:77 | هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe. | Arabic host + plaintext boundary |
-| src/components/targeted-listening-simulation.tsx:201 | TTS بديل | Arabic host + plaintext boundary |
+| src/components/targeted-choice-simulation.tsx:78 | هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe. | Arabic host + plaintext boundary |
+| src/components/targeted-listening-simulation.tsx:202 | TTS بديل | Arabic host + plaintext boundary |
 | src/components/targeted-writing-simulation.tsx:122 | راجع النص بنفسك وفق النقاط قبل إنشاء نسخة ثانية. لا تعرض المنصة درجة Goethe أو telc اعتمادًا على عد الكلمات وا | Arabic host + plaintext boundary |
 | src/components/targeted-writing-simulation.tsx:151 | اختر المهمة A أو B أولًا | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:231 | Zum letzten Antwort · متابعة آخر جواب | Arabic host + plaintext boundary |

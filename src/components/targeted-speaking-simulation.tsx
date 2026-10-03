@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, CircleStop, LockKeyhole, Mic2, RotateCcw, Save, Timer, Trash2 } from "lucide-react";
 import type { TargetedSpeakingSimulation } from "@/types/exam";
@@ -177,7 +178,7 @@ export function TargetedSpeakingSimulationView({ simulation }: { simulation: Tar
           createdAt: new Date().toISOString(),
         },
       ],
-      studyHistory: [...current.studyHistory, { date: new Date().toISOString().slice(0, 10), minutes: simulation.practiceMinutes, evidenceCount: 1 }],
+      studyHistory: [...current.studyHistory, { date: studyDayKey(), minutes: simulation.practiceMinutes, evidenceCount: 1 }],
     }, simulation));
     setMessage("حُفظ التسجيل محليًا. لم يُرفع الصوت ولم تُحسب درجة نطق آلية.");
     setPhase("saved");

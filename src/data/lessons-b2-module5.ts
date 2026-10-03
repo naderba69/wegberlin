@@ -448,7 +448,7 @@ export const b2Module5Lessons: FullLesson[] = [
         { de: "SOFERN die Zusage rechtzeitig kommt", ipa: "[zoˈfɛʁn …]", ar: "بشرط وصول القبول" },
         { de: "IN BEGRÜNDETEN Fällen", ipa: "[… bəˈɡʁʏndətən …]", ar: "في حالات مبررة" },
       ],
-      trickAr: "إذا سمع المستمع الكلمات الاسمية وفاته modal verb، فقد ضاع أهم فرق؛ أعطِ الفعل نبر الجملة.",
+      trickAr: "إذا سمع المستمع الكلمات الاسمية وفاته الفعل الناقص، فقد ضاع أهم فرق؛ أعطِ الفعل نبر الجملة.",
     },
     writing: {
       titleAr: "وساطة عملية دقيقة",

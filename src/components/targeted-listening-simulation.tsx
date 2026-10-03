@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowRight, Check, CircleAlert, Headphones, Play, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedListeningSimulation } from "@/types/exam";
@@ -109,7 +110,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
       },
       studyHistory: [
         ...current.studyHistory,
-        { date: new Date().toISOString().slice(0, 10), minutes: simulation.practiceMinutes, evidenceCount: simulation.items.length },
+        { date: studyDayKey(), minutes: simulation.practiceMinutes, evidenceCount: simulation.items.length },
       ],
     }, simulation));
   }

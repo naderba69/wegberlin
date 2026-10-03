@@ -1,4 +1,5 @@
 import type { LearningState } from "@/types/learning";
+import { studyDayKey } from "./session-signals";
 import { curriculum } from "@/data/curriculum";
 import { buildExamReadiness } from "@/core/exams/readiness";
 import { buildWeeklyPlan } from "./weekly-plan";
@@ -26,7 +27,7 @@ export function buildExamTargetForecast(state:LearningState,now=new Date()){
   const missingExamSamples=readiness.modules.reduce((sum,module)=>sum+Math.max(0,module.requiredSamples-module.attemptedTasks),0);
   const remainingStudyMinutes=lessonMinutes+retrievalReserveMinutes+repairReserveMinutes+productiveReserveMinutes+dueReviewMinutes+gateMinutes+missingExamSamples*EXAM_SAMPLE_MINUTES;
   const requiredWeeklyMinutes=Math.ceil(remainingStudyMinutes/weeksRemaining/5)*5;const gapMinutes=Math.max(0,requiredWeeklyMinutes-plannedWeeklyMinutes);
-  const productiveDays=new Set(state.studyHistory.filter(item=>item.evidenceCount>0&&item.date>=new Date(now.getTime()-28*86_400_000).toISOString().slice(0,10)).map(item=>item.date)).size;
+  const productiveDays=new Set(state.studyHistory.filter(item=>item.evidenceCount>0&&item.date>=studyDayKey(new Date(now.getTime()-28*86_400_000))).map(item=>item.date)).size;
   const acquisitionTimeStatus=productiveDays<7?"insufficient-observation" as const:"still-unmeasured-language-acquisition" as const;
   const status=daysRemaining<0?"past-date" as const:gapMinutes>0?"load-gap" as const:"within-plan" as const;
   const solutionsAr=status==="past-date"?["حدّث التاريخ المستهدف؛ لا نضغط المهام في أيام مضت."]:

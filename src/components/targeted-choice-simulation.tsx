@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, Check, CircleAlert, Languages, RotateCcw, ShieldCheck, Timer } from "lucide-react";
 import type { TargetedChoiceSimulation } from "@/types/exam";
@@ -53,7 +54,7 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
     update((current) => markContinuousTaskComplete({
       ...current,
       mastery: { ...current.mastery, [`exam-target-${simulation.id}`]: Math.round((score / simulation.items.length) * 100) },
-      studyHistory: [...current.studyHistory, { date: new Date().toISOString().slice(0, 10), minutes: simulation.practiceMinutes, evidenceCount: simulation.items.length }],
+      studyHistory: [...current.studyHistory, { date: studyDayKey(), minutes: simulation.practiceMinutes, evidenceCount: simulation.items.length }],
     }, simulation));
   }
 

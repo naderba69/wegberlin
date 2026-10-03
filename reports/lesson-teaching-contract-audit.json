@@ -1,0 +1,4451 @@
+{
+  "format": "dwnb-lesson-teaching-contract-audit",
+  "version": "lesson-teaching-contract-audit-v1",
+  "policyVersion": "lesson-teaching-contract-v1",
+  "boundary": "content-and-evidence-contract-audit-no-mastery-no-cefr-no-human-linguistic-review",
+  "thresholds": {
+    "objectiveArMinChars": 10,
+    "objectiveDeMinChars": 5,
+    "descriptionArMinChars": 40,
+    "theoryExplanationMinChars": 60,
+    "theoryExamplesMin": 2,
+    "dialogueMinLines": 4,
+    "inLessonModelMinChars": 60,
+    "exercisesMin": 6,
+    "exerciseTypesMin": 3,
+    "itemExplanationMinChars": 20,
+    "mistakesMin": 3,
+    "mistakeWhyMinChars": 20,
+    "mistakeTrickMinChars": 15,
+    "transferPromptMinChars": 40,
+    "transferChecklistMin": 3,
+    "speakingCriteriaMin": 3,
+    "mediationTaskMinChars": 25,
+    "lessonCardsMin": 12
+  },
+  "limits": {
+    "lessonsTotal": 96,
+    "hardFailures": 0,
+    "lessonsWithoutAuthoredPrerequisiteLink": 73,
+    "lessonsWithoutDeferredTransferTask": 0,
+    "mistakeWhyStubs": 0,
+    "mistakeTrickStubs": 0,
+    "itemsWithoutExplanation": 0,
+    "englishTermLeaksInLearnerArabic": 0,
+    "cardsMissingFromReviewPool": 0
+  },
+  "measured": {
+    "lessonsTotal": 96,
+    "hardFailures": 0,
+    "lessonsWithoutAuthoredPrerequisiteLink": 73,
+    "lessonsWithoutDeferredTransferTask": 0,
+    "mistakeWhyStubs": 0,
+    "mistakeTrickStubs": 0,
+    "itemsWithoutExplanation": 0,
+    "englishTermLeaksInLearnerArabic": 0,
+    "cardsMissingFromReviewPool": 0
+  },
+  "contentSha256": "4b812055b2e3",
+  "counts": {
+    "lessons": 96,
+    "questions": 8,
+    "answeredOk": 697,
+    "gaps": 71
+  },
+  "byLevel": {
+    "A1": {
+      "lessons": 24,
+      "withoutAuthoredPrerequisite": 19,
+      "withoutDeferredTransferTask": 0,
+      "hardFailures": 0
+    },
+    "A2": {
+      "lessons": 24,
+      "withoutAuthoredPrerequisite": 18,
+      "withoutDeferredTransferTask": 0,
+      "hardFailures": 0
+    },
+    "B1": {
+      "lessons": 24,
+      "withoutAuthoredPrerequisite": 18,
+      "withoutDeferredTransferTask": 0,
+      "hardFailures": 0
+    },
+    "B2": {
+      "lessons": 24,
+      "withoutAuthoredPrerequisite": 18,
+      "withoutDeferredTransferTask": 0,
+      "hardFailures": 0
+    }
+  },
+  "lessons": [
+    {
+      "id": "a1-01",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-01",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 37 حرفًا، والوصف 100 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "نقطة قاعدة موصولة بدرسها بلا سابق: نقطة تأسيس"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 240 حرفًا، 6 مثالًا) + حوار 4 سطرًا + نموذج كتابة 212 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 103 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 65 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-02",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a1-02",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 75 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 221 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 216 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 92 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-03",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-03",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 93 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-02)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 245 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 182 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 135 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 89 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-04",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a1-04",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 27 حرفًا، والوصف 103 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 213 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 279 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 98 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-05",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-05",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 123 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-04)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 223 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 275 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 107 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-06",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-06",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 95 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-05)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 272 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 307 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 105 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 92 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-07",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-07",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 91 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-06)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 201 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 254 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 90 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 83 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-08",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a1-08",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 97 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 215 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 332 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-09",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a1-09",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 13 حرفًا، والوصف 86 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 228 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 343 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 99 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-10",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-10",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 121 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-09)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 233 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 325 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 112 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 79 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-11",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-11",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 84 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-10)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 217 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 355 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 114 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 65 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-12",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-12",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 102 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-11)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 220 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 283 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 154 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 101 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-13",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-13",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 83 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-12)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 238 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 265 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 118 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-14",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a1-14",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 109 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 227 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 374 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 110 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-15",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-15",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 100 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-14)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 235 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 408 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 130 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 82 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-16",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-16",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 118 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-15)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 225 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 388 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 108 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 80 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-17",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-17",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 12 حرفًا، والوصف 100 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-16)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 226 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 352 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 127 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 61 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-18",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-18",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 100 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-17)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 225 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 361 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-19",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-19",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 86 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-18)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 205 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 361 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 138 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-20",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-20",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 90 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-19)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 219 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 389 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-21",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-21",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 97 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-20)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 251 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 448 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 56 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-22",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-22",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 93 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-21)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 235 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 405 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 65 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-23",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-23",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 124 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-22)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 221 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 404 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 108 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 79 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a1-24",
+      "level": "A1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a1-24",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 123 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-23)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "2 كتلة شرح (أقصرها 253 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 464 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 140 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 63 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-01",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-01",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 29 حرفًا، والوصف 116 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 250 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 536 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 124 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 60 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-02",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-02",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 105 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-01)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 215 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 710 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 114 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 63 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-03",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-03",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 104 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 201 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 698 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 116 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 88 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-04",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-04",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 107 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 208 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 502 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 59 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-05",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-05",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 95 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-04)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 219 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 612 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 117 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 85 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-06",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-06",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 103 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 210 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 768 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-07",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-07",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 102 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-06)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 176 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 751 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 100 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-08",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-08",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 104 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 215 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 892 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 90 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-09",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-09",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 100 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-08)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 206 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 655 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 119 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 106 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-10",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "a2-10",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 93 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 201 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 666 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 138 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-11",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-11",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 96 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-10)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 208 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 741 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 101 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-12",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-12",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 96 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-11)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 219 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 777 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 53 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-13",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-13",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 118 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-12)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 185 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 679 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 71 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-14",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-14",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 101 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-13)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 193 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 694 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 132 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-15",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-15",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 106 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-14)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 196 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 769 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 121 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 87 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-16",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-16",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 105 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-15)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 176 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 771 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 146 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-17",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-17",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 98 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-16)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 199 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 733 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-18",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-18",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 90 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-17)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 183 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 824 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 123 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-19",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-19",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 99 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-18)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 185 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 722 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 108 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 57 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-20",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-20",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 109 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-19)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 177 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 771 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 113 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-21",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-21",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 109 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-20)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 206 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 797 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 114 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-22",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-22",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 98 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-21)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 169 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 721 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 127 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-23",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-23",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 107 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-22)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 186 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 828 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 126 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "a2-24",
+      "level": "A2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "a2-24",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 99 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-23)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 180 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 806 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-01",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-01",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 118 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "أول درس في المستوى: نقطة تأسيس بلا سابق"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 183 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1101 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 153 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-02",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-02",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 121 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-01)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 194 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1195 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 150 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 73 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-03",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-03",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 101 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 230 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1136 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 155 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 64 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-04",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-04",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 115 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 211 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1156 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 122 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-05",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-05",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 132 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-04)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 200 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1179 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 139 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-06",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-06",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 125 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-05)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 182 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 1255 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 124 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 74 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-07",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-07",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 131 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-06)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 206 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1108 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 145 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 61 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-08",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-08",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 116 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 208 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1253 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 77 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-09",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-09",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 27 حرفًا، والوصف 99 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 158 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1387 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-10",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-10",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 107 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 196 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1200 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-11",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-11",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 129 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-10)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 158 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1411 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 137 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 61 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-12",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-12",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 116 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-11)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 167 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1446 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 151 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 57 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-13",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-13",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 142 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-12)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 186 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1233 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 141 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-14",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-14",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 121 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-13)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 190 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1263 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 141 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 52 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-15",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-15",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 97 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-14)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 155 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1287 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 72 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-16",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-16",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 26 حرفًا، والوصف 116 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-15)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 174 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1286 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 131 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-17",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-17",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 103 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-16)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 176 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1398 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 62 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-18",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b1-18",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 111 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 173 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1387 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 156 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 50 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-19",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-19",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 112 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-18)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 179 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1064 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 140 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 52 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-20",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-20",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 111 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-19)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 155 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1319 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 130 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 81 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-21",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-21",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 109 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-20)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 168 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1275 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 125 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 48 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-22",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-22",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 26 حرفًا، والوصف 118 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-21)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 202 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1240 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 139 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 58 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-23",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-23",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 126 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-22)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 166 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1335 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 137 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 54 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b1-24",
+      "level": "B1",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b1-24",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 130 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-23)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 151 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1523 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 136 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 74 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-01",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-01",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 25 حرفًا، والوصف 122 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 209 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1828 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 148 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 67 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-02",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-02",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 134 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-01)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 165 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1721 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 162 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 69 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-03",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-03",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 27 حرفًا، والوصف 113 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-02)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 215 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1816 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 151 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 60 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-04",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-04",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 133 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 181 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1672 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 142 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 76 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-05",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-05",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 25 حرفًا، والوصف 127 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 261 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1739 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 200 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 79 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-06",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-06",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 33 حرفًا، والوصف 122 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 251 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1735 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 220 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-07",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-07",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 33 حرفًا، والوصف 144 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-06)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 263 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1921 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 213 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 95 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-08",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-08",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 30 حرفًا، والوصف 117 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 279 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1949 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 217 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 89 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-09",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [],
+      "authoredPrerequisiteNodes": 1,
+      "deferredTransferTask": "b2-09",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 27 حرفًا، والوصف 146 حرفًا"
+        },
+        "prerequisites": {
+          "ok": true,
+          "valueAr": "1 نقطة قاعدة موصولة بسابقها (تأليف صريح)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 255 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1887 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 234 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 86 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-10",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-10",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 127 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-09)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 243 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1799 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 250 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 104 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-11",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-11",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 29 حرفًا، والوصف 175 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-10)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 273 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1793 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 201 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 75 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-12",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-12",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 25 حرفًا، والوصف 171 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-11)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 264 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1875 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 272 حرفًا و4 معايير، كلام بـ3 معايير، وساطة 93 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-13",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-13",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 28 حرفًا، والوصف 140 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-12)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 238 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1678 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 188 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 94 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-14",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-14",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 28 حرفًا، والوصف 133 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-13)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 377 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 1295 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 195 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 105 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-15",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-15",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 31 حرفًا، والوصف 110 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-14)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 291 حرفًا، 4 مثالًا) + حوار 6 سطرًا + نموذج كتابة 1311 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 269 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 140 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-16",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-16",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 34 حرفًا، والوصف 105 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-15)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "3 كتلة شرح (أقصرها 439 حرفًا، 6 مثالًا) + حوار 6 سطرًا + نموذج كتابة 1359 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 342 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 146 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-17",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-17",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 42 حرفًا، والوصف 111 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-16)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 319 حرفًا، 6 مثالًا) + حوار 7 سطرًا + نموذج كتابة 1174 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 330 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 143 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-18",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-18",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 40 حرفًا، والوصف 126 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-17)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 514 حرفًا، 3 مثالًا) + حوار 7 سطرًا + نموذج كتابة 1246 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 394 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 213 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-19",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-19",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "4 أهداف؛ أقصرها 42 حرفًا، والوصف 162 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-18)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 394 حرفًا، 3 مثالًا) + حوار 7 سطرًا + نموذج كتابة 1164 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 329 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 185 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-20",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-20",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "5 أهداف؛ أقصرها 59 حرفًا، والوصف 433 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-19)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 167 حرفًا، 2 مثالًا) + حوار 8 سطرًا + نموذج كتابة 1148 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 207 حرفًا و4 معايير، كلام بـ4 معايير، وساطة 163 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-21",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-21",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "5 أهداف؛ أقصرها 44 حرفًا، والوصف 266 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-20)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 230 حرفًا، 3 مثالًا) + حوار 4 سطرًا + نموذج كتابة 1218 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 2) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 147 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-22",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-22",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "5 أهداف؛ أقصرها 33 حرفًا، والوصف 272 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-21)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 205 حرفًا، 3 مثالًا) + حوار 4 سطرًا + نموذج كتابة 1313 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 2) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 219 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 132 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-23",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-23",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "5 أهداف؛ أقصرها 38 حرفًا، والوصف 313 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-22)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 244 حرفًا، 3 مثالًا) + حوار 4 سطرًا + نموذج كتابة 1242 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 2) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 201 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 103 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    },
+    {
+      "id": "b2-24",
+      "level": "B2",
+      "hardFailures": [],
+      "gaps": [
+        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
+      ],
+      "authoredPrerequisiteNodes": 0,
+      "deferredTransferTask": "b2-24",
+      "mistakeWhyStubs": 0,
+      "mistakeTrickStubs": 0,
+      "answers": {
+        "goal": {
+          "ok": true,
+          "valueAr": "5 أهداف؛ أقصرها 38 حرفًا، والوصف 322 حرفًا"
+        },
+        "prerequisites": {
+          "ok": false,
+          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-23)"
+        },
+        "explanation-model": {
+          "ok": true,
+          "valueAr": "4 كتلة شرح (أقصرها 273 حرفًا، 3 مثالًا) + حوار 4 سطرًا + نموذج كتابة 1220 حرفًا"
+        },
+        "graded-practice": {
+          "ok": true,
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 2) + 5 سؤال اختبار قصير"
+        },
+        "transfer": {
+          "ok": true,
+          "valueAr": "كتابة 214 حرفًا و5 معايير، كلام بـ4 معايير، وساطة 96 حرفًا؛ مهمة نقل مؤجلة: موجودة"
+        },
+        "feedback": {
+          "ok": true,
+          "valueAr": "5 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
+        },
+        "evidence-split": {
+          "ok": true,
+          "valueAr": "التدريب: «أنهيت الأنشطة» و«أول استدعاء بلا سند — تدريب»؛ الاستقلال: «دليل الاستقلال: استرجاع مؤجل»"
+        },
+        "review-later": {
+          "ok": true,
+          "valueAr": "24 بطاقة تدخل طابور SM-2 (0 غير مسجلة في مجموعة المراجعة)"
+        }
+      }
+    }
+  ],
+  "status": "pass",
+  "issues": []
+}

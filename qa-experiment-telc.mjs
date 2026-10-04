@@ -62,6 +62,19 @@ for (const file of pdfs) {
 }
 note("telc pinned facts vs archive text", lines.length ? lines.join(" || ") : "no PDF in the archive matched any pinned fact or marker");
 
+// Same test with the extractor's "10 %" vs "10%" spacing difference normalized on BOTH sides (pattern and text).
+const unspaced = (value) => value.replace(/\s+/g, " ").replace(/ %/g, "%");
+const normalizedLines = [];
+for (const file of pdfs) {
+  for (const [modeName, flags] of modes) {
+    const text = unspaced(execFileSync("pdftotext", [...flags, file, "-"], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }));
+    const hit = facts.filter((fact) => new RegExp(unspaced(fact.checkPattern), "ius").test(text));
+    const miss = facts.filter((fact) => !hit.includes(fact)).map((fact) => fact.id.replace("telc-b2-", ""));
+    normalizedLines.push(`${modeName}: ${hit.length}/${facts.length}${miss.length ? ` missing [${miss.join(", ")}]` : " — all pinned facts present"}`);
+  }
+}
+note("telc facts with percent-spacing normalized", normalizedLines.join(" || "));
+
 // The 7th pinned fact (Sprachbausteine weight) depends on how the extractor orders table cells: show the raw window per mode.
 const sprachFact = facts.find((fact) => fact.id === "telc-b2-sprachbausteine-weight-10");
 note("pinned pattern of the 7th fact", sprachFact.checkPattern);

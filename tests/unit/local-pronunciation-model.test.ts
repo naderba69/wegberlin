@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { LOCAL_PRONUNCIATION_MODEL_CACHE, LOCAL_PRONUNCIATION_MODEL_META_PATH, LOCAL_PRONUNCIATION_RUNTIME_ASSETS, localPronunciationModelRegistry } from "@/config/local-pronunciation-model-registry";
 import { deleteLocalPronunciationModel, detectLocalPronunciationCapability, getLocalPronunciationSourceDecision, inspectLocalPronunciationModel } from "@/core/pronunciation/local-model";
+import { dueSoonAt, earliestDueDay, staleAt } from "../helpers/source-verification-clock";
 import { germanWords, matchExpectedGermanPhrase, matchExpectedGermanWords, normalizeGermanWord } from "@/core/pronunciation/word-matching";
 import { resampleLinear } from "@/core/pronunciation/audio-sample";
 import { analyzeMicrophoneSignal, waveformEnvelope } from "@/core/pronunciation/microphone-signal";
@@ -36,8 +37,9 @@ describe("standard local German word-matching pack",()=>{
   });
 
   it("blocks fresh downloads after model or license source expiry",()=>{
-    expect(getLocalPronunciationSourceDecision(new Date("2026-10-02T12:00:00Z"))).toMatchObject({allowed:true,status:"due-soon",dueAt:"2026-10-07"});
-    expect(getLocalPronunciationSourceDecision(new Date("2026-10-12T12:00:00Z"))).toMatchObject({allowed:false,status:"stale"});
+    const ids=localPronunciationModelRegistry.sourceIds;
+    expect(getLocalPronunciationSourceDecision(dueSoonAt(ids))).toMatchObject({allowed:true,status:"due-soon",dueAt:earliestDueDay(ids)});
+    expect(getLocalPronunciationSourceDecision(staleAt(ids))).toMatchObject({allowed:false,status:"stale"});
   });
 
   it("accepts only a complete pinned cache marker and deletes only its dedicated cache",async()=>{

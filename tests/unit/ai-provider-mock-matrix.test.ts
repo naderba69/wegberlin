@@ -16,6 +16,10 @@ import { generateLocalContentFollowUp } from "@/core/speaking/content-follow-up"
 import { rankFollowUpCandidatesWithWebGPU, resetWebGPUWorkerForTests } from "@/core/ai/webgpu-model";
 import { learningStateSchema } from "@/core/portability/schema";
 import { defaultState } from "@/core/portability/db";
+import { aiSourceIds, freshAt } from "../helpers/source-verification-clock";
+
+// Pinned inside the source-verification window, derived from the registry so re-verifying a source never edits this file.
+const AI_NOW = freshAt(aiSourceIds);
 
 const tutorPayload = {
   hintAr: "راقب موضع الفعل.",
@@ -82,7 +86,7 @@ describe("P1 provider success mocks for every connected feature", () => {
   it.each(providers)("returns a structured Tutor answer through $id", async (provider) => {
     const fetchMock = vi.fn().mockResolvedValue(new Response(provider.wrap(JSON.stringify(tutorPayload)), { status: 200, headers: { "content-type": "application/json" } }));
     vi.stubGlobal("fetch", fetchMock);
-    const answer = await askTutor(provider.config, "Warum steht das Verb am Ende?", { context, consentGranted: true, now: new Date("2026-09-08T12:00:00Z") });
+    const answer = await askTutor(provider.config, "Warum steht das Verb am Ende?", { context, consentGranted: true, now: AI_NOW });
     expect(answer).toMatchObject({ ...tutorPayload, provider: provider.id, model: provider.config.model, promptVersion: "tutor-v2" });
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
@@ -90,7 +94,7 @@ describe("P1 provider success mocks for every connected feature", () => {
   it.each(providers)("executes a consented linked Tutor command through $id", async (provider) => {
     const fetchMock = vi.fn().mockResolvedValue(new Response(provider.wrap(JSON.stringify(commandPayload)), { status: 200, headers: { "content-type": "application/json" } }));
     vi.stubGlobal("fetch", fetchMock);
-    const answer = await askTutorFollowUpCommand(provider.config, "simpler", source, { context, consentGranted: true, now: new Date("2026-09-08T12:00:00Z") });
+    const answer = await askTutorFollowUpCommand(provider.config, "simpler", source, { context, consentGranted: true, now: AI_NOW });
     expect(answer).toMatchObject({ ...commandPayload, provider: provider.id, promptVersion: TUTOR_FOLLOW_UP_COMMAND_POLICY });
     const sent = JSON.parse(userPayloadFromRequest(provider, fetchMock.mock.calls[0][1]));
     expect(sent).toEqual({ kind: "tutor-follow-up-command", command: "simpler", previousQuestion: source.question, previousAnswer: source.answer });
@@ -104,7 +108,7 @@ describe("P1 provider success mocks for every connected feature", () => {
     const answer = await askSpeakingFollowUp(provider.config, "Ich wohne in Berlin.", {
       context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." },
       consentGranted: true,
-      now: new Date("2026-09-08T12:00:00Z"),
+      now: AI_NOW,
     });
     expect(answer).toMatchObject({ ...speakingPayload, provider: provider.id, model: provider.config.model, promptVersion: "speaking-follow-up-v1" });
     expect(userPayloadFromRequest(provider, fetchMock.mock.calls[0][1])).toBe(JSON.stringify({ source: "typed-transcript", transcript: "Ich wohne in Berlin." }));
@@ -115,8 +119,8 @@ describe("P1 provider success mocks for every connected feature", () => {
     const provider = providers[0];
     const fetchMock = vi.fn().mockResolvedValue(new Response(provider.wrap(JSON.stringify(tutorPayload)), { status: 200 }));
     vi.stubGlobal("fetch", fetchMock);
-    await askTutor(provider.config, source.question, { context, consentGranted: true, now: new Date("2026-09-08T12:00:00Z") });
-    await expect(askTutorFollowUpCommand(provider.config, "simpler", source, { context, now: new Date("2026-09-08T12:00:00Z") })).rejects.toThrow("تأكيد جديد");
+    await askTutor(provider.config, source.question, { context, consentGranted: true, now: AI_NOW });
+    await expect(askTutorFollowUpCommand(provider.config, "simpler", source, { context, now: AI_NOW })).rejects.toThrow("تأكيد جديد");
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
@@ -156,7 +160,7 @@ describe("P1 provider success mocks for every connected feature", () => {
   it("falls back from one failed command request with command-specific provenance and no retry", async () => {
     const fetchMock = vi.fn().mockResolvedValue(new Response("limited", { status: 429 }));
     vi.stubGlobal("fetch", fetchMock);
-    const answer = await askTutorFollowUpCommand(providers[1].config, "another-example", source, { context, consentGranted: true, now: new Date("2026-09-08T12:00:00Z") });
+    const answer = await askTutorFollowUpCommand(providers[1].config, "another-example", source, { context, consentGranted: true, now: AI_NOW });
     expect(answer).toMatchObject({
       provider: "disabled",
       model: TUTOR_FOLLOW_UP_LOCAL_MODEL,

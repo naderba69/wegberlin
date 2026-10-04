@@ -6,6 +6,7 @@ import { describe, expect, it } from "vitest";
 import { WEBGPU_MODEL_CACHE, WEBGPU_MODEL_META_PATH, WEBGPU_RUNTIME_ASSET_PATHS, webGPUModelRegistry } from "@/config/webgpu-model-registry";
 import { createSpeakingContentFollowUpEvidence, generateContentFollowUpCandidates } from "@/core/speaking/content-follow-up";
 import { deleteWebGPUModel, detectWebGPUCapability, getWebGPUModelSourceDecision, inspectWebGPUModelCache } from "@/core/ai/webgpu-model";
+import { dueSoonAt, earliestDueDay, staleAt } from "../helpers/source-verification-clock";
 
 class FakeCache {
   entries = new Map<string, Response>();
@@ -79,8 +80,9 @@ describe("P0 optional in-browser WebGPU model", () => {
   });
 
   it("blocks a new model download when runtime/model/license sources expire", () => {
-    expect(getWebGPUModelSourceDecision(new Date("2026-10-02T12:00:00Z"))).toMatchObject({allowed:true,status:"due-soon",dueAt:"2026-10-07"});
-    expect(getWebGPUModelSourceDecision(new Date("2026-10-08T12:00:00Z"))).toMatchObject({allowed:false,status:"stale"});
+    const ids=webGPUModelRegistry.sourceIds;
+    expect(getWebGPUModelSourceDecision(dueSoonAt(ids))).toMatchObject({allowed:true,status:"due-soon",dueAt:earliestDueDay(ids)});
+    expect(getWebGPUModelSourceDecision(staleAt(ids))).toMatchObject({allowed:false,status:"stale"});
   });
 
   it("recognizes only a complete version-matched cache marker", async () => {

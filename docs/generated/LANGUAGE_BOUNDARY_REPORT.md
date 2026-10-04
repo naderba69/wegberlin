@@ -3,24 +3,24 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `98790ae00c7a837248c5ed8058f4d4929ae0612a6e28abd7a946625a24e1bee4`
+Content SHA-256: `47c29e6c3d677d8d9af1f7ff02aa8df778e93bad058aa2e91564d00d5a7b8739`
 
 ## Result
 
-`PASS` — 202 TSX files and 7751 opening JSX tags were scanned.
+`PASS` — 204 TSX files and 7812 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 431 |
+| Explicit German fragments (lang=de + dir=ltr) | 435 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 478 |
+| LTR tags audited | 482 |
 | RTL tags audited | 7 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 53 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 203 |
+| Static Arabic + Latin text nodes under plaintext host policy | 205 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -225,6 +225,8 @@ Content SHA-256: `98790ae00c7a837248c5ed8058f4d4929ae0612a6e28abd7a946625a24e1be
 | src/components/tutor-view.tsx:242 | Dativ مع mit | Arabic host + plaintext boundary |
 | src/components/unified-concept-map.tsx:40 | Grammatik · القواعد | Arabic host + plaintext boundary |
 | src/components/unified-concept-map.tsx:49 | Wortschatz · المفردات | Arabic host + plaintext boundary |
+| src/components/variants-lab.tsx:37 | وحدة تنوّع ألماني قبل B1 | Arabic host + plaintext boundary |
+| src/components/variants-lab.tsx:38 | نفس الشيء بثلاث كلمات: Semmel · Brötchen · Brötli | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:81 | ترتيب دلالي محلي لأسئلة المتابعة عبر WebGPU، وليس معلمًا أو مصحح نطق. | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:89 | نحو 130–150 MB | Arabic host + plaintext boundary |
 | src/components/webgpu-model-control.tsx:89 | الأوزان الكمية المعلنة 118 MB، ويضاف Tokenizer وRuntime. | Arabic host + plaintext boundary |

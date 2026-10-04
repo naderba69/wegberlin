@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 124,
-    "totalChunkGzipBytes": 1914075,
+    "totalChunkGzipBytes": 1915042,
     "maxSingleChunkGzipBytes": 262117
   },
   "issues": [],
@@ -89,9 +89,9 @@
       "gzipBytes": 31050
     },
     {
-      "path": ".next/static/chunks/app/today/page-02a260bf615c1932.js",
-      "rawBytes": 94324,
-      "gzipBytes": 28987
+      "path": ".next/static/chunks/app/today/page-d755de00b7b43a76.js",
+      "rawBytes": 97229,
+      "gzipBytes": 29954
     },
     {
       "path": ".next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",

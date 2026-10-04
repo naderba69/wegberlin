@@ -4,10 +4,10 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 196,
-  "openingTagCount": 7492,
-  "germanTagCount": 422,
+  "openingTagCount": 7508,
+  "germanTagCount": 423,
   "arabicTagCount": 7,
-  "ltrTagCount": 467,
+  "ltrTagCount": 468,
   "rtlTagCount": 7,
   "autoDirCount": 12,
   "technicalScopeCount": 51,
@@ -318,17 +318,17 @@
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 111,
+      "line": 115,
       "text": "دخلت بطاقة علاج شخصية إلى SRS."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 111,
+      "line": 115,
       "text": "تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 112,
+      "line": 116,
       "text": "يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط."
     },
     {
@@ -1024,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "3b78eea787ca4eb0389c33d7e205168bc1b22d483e4b14998fee47ad9744894b"
+  "contentSha256": "d37220712839160e1deb2524fca9370a6dc2ba3c4c87e5f642a503b21f21920f"
 }

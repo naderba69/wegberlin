@@ -469,8 +469,8 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,257/1,257", "181/181", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,257/1,257", "181/181", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,263/1,263", "182/182", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,263/1,263", "182/182", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
 for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
 if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
@@ -888,12 +888,13 @@ for (const text of ["dwnb-official-exam-format-verification-v1", "buildExamForma
 for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "6d24aabcd1a1"']) requireText(examFormatReport, text, "exam-format verification artifact");
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
-// أُعيد توليد العدّادين 7454→7492 و201→201 في جيل إعادة تجميع الإعدادات في مجموعات
-// (settings-group + شريط تنقّل داخلي)، ثم تحوّل وسمّ نصي مختلط واحد فعليًا: 200→201.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 196 || languageAudit.openingTagCount !== 7492 || languageAudit.germanTagCount !== 422 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+// أُعيد توليد العدّادين 7454→7508 و201→201 في جيلي الإعدادات ووسم الخطأ
+// (settings-group + شريط تنقّل داخلي) ثم 16 وسمًا لحزمة التغذية الراجعة،
+// وتحوّل وسمّ نصي مختلط واحد فعليًا: 200→201.
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 196 || languageAudit.openingTagCount !== 7508 || languageAudit.germanTagCount !== 423 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:196", "openingTagCount:7492", "germanTagCount:422", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:196", "openingTagCount:7508", "germanTagCount:423", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

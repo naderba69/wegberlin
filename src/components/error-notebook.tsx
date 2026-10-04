@@ -7,6 +7,7 @@ import { AlertTriangle, BookOpenCheck, BrainCircuit, CalendarCheck, Check, Clock
 import { useLearning } from "./learning-provider";
 import { StatusAnnouncement } from "./status-announcement";
 import { buildErrorClinics, type ErrorClinic } from "@/core/errors/clinic";
+import { FEEDBACK_TAXONOMY_POLICY, SPACED_MASTERY_MIN_GAP_HOURS, feedbackGuidanceFor, validateTransferSentence } from "@/core/errors/feedback-guidance";
 import { applySuccessfulErrorRepair, errorRepairState, matchesErrorCorrection, recordFailedErrorRepair } from "@/core/errors/remediation";
 import { classifyErrorPattern, errorInterventionPriority, errorPrerequisite } from "@/core/errors/pattern";
 import { confirmedErrorSrsCards } from "@/core/srs/error-cards";
@@ -32,6 +33,7 @@ const patternLabels: Record<ErrorPatternClassification, { title:string; detail:s
 export function ErrorNotebook() {
   const { state, update } = useLearning();
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [transfers, setTransfers] = useState<Record<string, string>>({});
   const [feedback, setFeedback] = useState<Record<string, Feedback>>({});
   const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
   const [clinicAnswers,setClinicAnswers]=useState<Record<string,string>>({});
@@ -97,14 +99,16 @@ export function ErrorNotebook() {
       const prerequisite = errorPrerequisite(error);
       const personalCard = personalErrorCards.find((card)=>card.id===`personal-error-card:${error.id}`);
       return <article key={error.id} className={`${error.resolved ? "resolved " : ""}${classification}${(error.highConfidenceWrongCount??0)>0?" high-confidence-wrong":""}${error.sensitiveInPrint?" sensitive-in-print":""}`.trim()}>
-        <span className="error-type"><AlertTriangle size={16}/>{error.type}<b className={`pattern-${classification}`}>{pattern.title}</b>{(error.highConfidenceWrongCount??0)>0&&<em>ثقة عالية + خطأ</em>}{error.learnerContextTags?.includes("knows-rule-under-time-pressure")&&<em className="time-pressure-tag"><Clock3 size={12}/> أفهمها دون ضغط</em>}</span>
+        <span className="error-type"><AlertTriangle size={16}/><span data-error-kind-ar={error.type}>{feedbackGuidanceFor(error.type).labelAr}</span><b className={`pattern-${classification}`}>{pattern.title}</b>{(error.highConfidenceWrongCount??0)>0&&<em>ثقة عالية + خطأ</em>}{error.learnerContextTags?.includes("knows-rule-under-time-pressure")&&<em className="time-pressure-tag"><Clock3 size={12}/> أفهمها دون ضغط</em>}</span>
         <div className="error-lines" lang="de" dir="ltr"><del>{error.wrong}</del>{error.resolved || waiting || isRevealed ? <strong>{error.correct}</strong> : <span className="hidden-correction">التصحيح مخفي حتى المحاولة</span>}</div>
         <p>{error.explanationAr}</p>
         <div className="error-pattern-explanation"><strong>{pattern.title}</strong><p>{pattern.detail}</p><small>السياسة `error-pattern-classification-v1` · التكرار {error.occurrences} · فشل العلاج {error.failedRepairCount??0} · أخطاء بثقة عالية {error.highConfidenceWrongCount??0}</small></div>
         {waiting && <div className="repair-pending"><CalendarCheck size={17}/><div><strong>علاج أولي ناجح — ينتظر اختبارًا مؤجلًا</strong><p>سيُخفى التصحيح من جديد في {new Date(error.nextReviewAt!).toLocaleDateString("ar-TN")}؛ لا يُعتبر الخطأ مستقرًا قبل نجاح الاسترجاع الثاني.</p></div></div>}
         {!error.resolved && !waiting && <form className="error-remediation" onSubmit={(event) => { event.preventDefault(); checkCorrection(error); }}>
+          <div className="error-kind-guidance" data-feedback-taxonomy={FEEDBACK_TAXONOMY_POLICY}><strong>{feedbackGuidanceFor(error.type).labelAr}</strong><p>{feedbackGuidanceFor(error.type).rulePromptAr}</p><small>{feedbackGuidanceFor(error.type).contrastAr}</small></div>
           <label><span>{due?"اختبار مؤجل: اكتب التصحيح من الذاكرة":"العلاج الأول: اكتب التصحيح من الذاكرة"}</span><input lang="de" dir="ltr" value={answers[error.id] ?? ""} onChange={(event) => { setAnswers((current) => ({ ...current, [error.id]: event.target.value })); setFeedback((current) => { const next = { ...current }; delete next[error.id]; return next; }); }} aria-label={`تصحيح ${error.wrong}`} placeholder="اكتب الجواب الصحيح…" /></label>
-          <div><button className="primary-button" disabled={!answers[error.id]?.trim()} type="submit"><Check size={14}/> تحقق من العلاج</button>{!isRevealed && <button className="secondary-button" type="button" onClick={() => reveal(error.id)}><Eye size={14}/> اكشف التصحيح</button>}</div>
+          <label className="error-transfer"><span>خطوة التعميم: {feedbackGuidanceFor(error.type).transferPromptAr}</span><input lang="de" dir="ltr" data-error-transfer={error.id} value={transfers[error.id] ?? ""} onChange={(event)=>{setTransfers((current)=>({...current,[error.id]:event.target.value}))}} aria-label="اكتب جملة جديدة تستعمل القاعدة" />{transfers[error.id] && !validateTransferSentence(transfers[error.id] ?? "", error.correct).accepted && <small>{validateTransferSentence(transfers[error.id] ?? "", error.correct).reasonAr}</small>}<small>لا يُغلق الخطأ بإعادة كتابة التصحيح وحدها؛ يُطلب استعماله في جملة جديدة، ولا يُوسم الإتقان قبل نجاحين متباعدين {SPACED_MASTERY_MIN_GAP_HOURS} ساعة.</small></label>
+          <div><button className="primary-button" disabled={!answers[error.id]?.trim() || (!due && !validateTransferSentence(transfers[error.id] ?? "", error.correct).accepted)} type="submit"><Check size={14}/> تحقق من العلاج</button>{!isRevealed && <button className="secondary-button" type="button" onClick={() => reveal(error.id)}><Eye size={14}/> اكشف التصحيح</button>}</div>
           {result && <StatusAnnouncement message={result === "correct" ? (due?"صحيح بعد التأخير — تأكد العلاج وأُغلق الخطأ.":"صحيح — جُدول اختبار مؤجل قبل إغلاق الخطأ.") : (error.failedRepairCount??0)+1>=2?"لم ينجح العلاج مرتين؛ افتح شرح القاعدة المرتبط قبل محاولة جديدة.":"ليس مطابقًا بعد. راجع الترتيب والكتابة ثم حاول ثانية."} channel={`error-repair-${error.id}`} className={result === "correct" ? "remediation-feedback correct" : "remediation-feedback wrong"} icon={result === "correct"?<Check size={14}/>:<X size={14}/>}/>}
         </form>}
         {prerequisite && !waiting && !error.resolved && <div className="error-prerequisite"><BookOpenCheck size={18}/><div><strong>ارجع إلى المتطلب قبل إعادة العلاج</strong><p>{prerequisite.reasonAr}</p></div><Link href={prerequisite.href} onClick={()=>openPrerequisite(error)}>افتح شرح القاعدة</Link></div>}

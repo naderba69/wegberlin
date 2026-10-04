@@ -3,17 +3,17 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `3b78eea787ca4eb0389c33d7e205168bc1b22d483e4b14998fee47ad9744894b`
+Content SHA-256: `d37220712839160e1deb2524fca9370a6dc2ba3c4c87e5f642a503b21f21920f`
 
 ## Result
 
-`PASS` — 196 TSX files and 7492 opening JSX tags were scanned.
+`PASS` — 196 TSX files and 7508 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 422 |
+| Explicit German fragments (lang=de + dir=ltr) | 423 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 467 |
+| LTR tags audited | 468 |
 | RTL tags audited | 7 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 51 |
@@ -97,9 +97,9 @@ Content SHA-256: `3b78eea787ca4eb0389c33d7e205168bc1b22d483e4b14998fee47ad974489
 | src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
 | src/components/endurance-lab.tsx:58 | ثمانية سياقات أصلية من A1 إلى B2. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:111 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:111 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:112 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:115 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:115 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:116 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
 | src/components/evidence-achievements.tsx:8 | لا تُفتح بزيارة صفحة أو تكرار نقرة، ولا تضيف mastery أو شهادة. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:67 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:122 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |

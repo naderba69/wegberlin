@@ -1465,3 +1465,13 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .weekly-writing-cycle .boundary-line{color:#5f716a;font-size:var(--fs-8);direction:rtl;text-align:start;line-height:1.75}
 .weekly-writing-actions{display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:900px){.weekly-writing-cycle>header{grid-template-columns:1fr}}
+
+.pronunciation-test-item{border:1px solid #d8e3dc;border-radius:14px;background:#f7faf8;padding:12px;display:grid;gap:8px}
+.pronunciation-test-prompt{display:flex;gap:7px;align-items:start;margin:0;color:#241f1a;font-size:var(--fs-9);font-weight:700;line-height:1.75}
+.pronunciation-test-note{margin:0;color:#5f716a;font-size:var(--fs-8);line-height:1.7}
+.pronunciation-test-options{display:flex;flex-wrap:wrap;gap:6px}
+.pronunciation-test-options button{display:flex;gap:5px;align-items:center;border:1px solid #d7dde6;background:#fff;border-radius:10px;padding:6px 11px;font-size:var(--fs-9);cursor:pointer;color:#22303d;direction:ltr}
+.pronunciation-test-options button.chosen{border-color:#2f5c4c;background:#eef4ef;font-weight:700}
+.pronunciation-test-options button.correct{border-color:#2f7d4f;background:#eaf6ec;font-weight:700}
+.pronunciation-test-options button.wrong{border-color:#b34232;background:#fdeeec}
+.pronunciation-test-actions{display:flex;gap:8px;flex-wrap:wrap}

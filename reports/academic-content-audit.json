@@ -4041,9 +4041,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح الجملة: Ich muss steige in Hannover um.",
-        "answer": "Ich muss in Hannover umsteigen",
+        "answer": "Ich muss in Hannover umsteigen | In Hannover umsteigen muss ich",
         "evidenceRef": "a1-21:controlled:a1-21-e4:explanationAr",
-        "evidenceExcerpt": "بعد muss يأتي المصدر الكامل umsteigen في النهاية. نستعمل müssen عندما يكون الأمر ضروريًا: Ich muss umsteigen.",
+        "evidenceExcerpt": "بعد muss يأتي المصدر الكامل umsteigen في النهاية. نستعمل müssen عندما يكون الأمر ضروريًا: Ich muss umsteigen. ويجوز تقديم الجار والمجرور إلى الموقع الأول للتركيز على المكان: In Hannover umsteigen muss ich — يبقى الفعل m…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -220695,5 +220695,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "4832e2cace92fed7bf815b5bb6b69caaeb10519c0db1464266ea368512920769"
+  "contentSha256": "7b4d2550278c2eec76453c11d205bbf10e5d68ebb5152f47ebc03da309acde78"
 }

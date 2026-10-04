@@ -1437,3 +1437,9 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .variants-footer{display:grid;gap:5px}
 .variants-footer p{margin:0;color:#5b666f;font-size:var(--fs-8);direction:ltr;text-align:start;line-height:1.7}
 @media (max-width:900px){.variants-hero{grid-template-columns:1fr}}
+
+.accepted-alternates{margin-top:7px;background:#f4f7fb;border:1px solid #dde6f0;border-radius:10px;padding:7px 10px;display:grid;gap:4px}
+.accepted-alternates>strong{color:#2c4664;font-size:var(--fs-9)}
+.accepted-alternates ul{margin:0;padding-inline-start:16px;display:grid;gap:2px}
+.accepted-alternates li{color:#22303d;font-size:var(--fs-9);direction:ltr}
+.accepted-alternates small{color:#4a5560;font-size:var(--fs-8);line-height:1.7}

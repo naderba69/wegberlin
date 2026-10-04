@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `4832e2cace92fed7bf815b5bb6b69caaeb10519c0db1464266ea368512920769`
+Content SHA-256: `7b4d2550278c2eec76453c11d205bbf10e5d68ebb5152f47ebc03da309acde78`
 
 ## Honest result
 

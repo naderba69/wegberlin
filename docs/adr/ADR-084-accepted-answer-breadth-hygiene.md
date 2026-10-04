@@ -47,6 +47,21 @@ like `Wie heißt du | Wie heißt du?` as if two forms were accepted.
    `lesson:quality:audit`, because a metric that improves when the data is padded is worse than a metric
    that looks bad.
 
+## Update 2026-10-04 — P1-11 completion in the method audit
+
+The authored worklist (`reports/accepted-answer-worklist.md`) shows that the remaining **337**
+single-answer exercises stay single **for an authored reason**, not from neglect: 178 sentences are
+too short to carry a second element, 69 are subordinate clauses or source sets whose order is the
+only grammatical one, 65 have no movable element, and 25 suggested reorderings would change the
+meaning. The one item marked confidently addable was added:
+
+- `a1-21-e4` now also accepts "In Hannover umsteigen muss ich" with the acceptance reason written
+  into `explanationAr`.
+
+Measured effect: **337/387 = 87.1%** (was 338/387 = 87.3%), broadened exercises **50** (was 49),
+unreachable variants **0**. In the exercise card the accepted alternates appear **after** checking
+with the reason they are accepted, and never before the attempt, so the list cannot be memorized.
+
 ## What was rejected
 
 - **Keeping the padding and only fixing the metric.** Rejected: the data would still claim two accepted

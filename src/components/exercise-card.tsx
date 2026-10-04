@@ -81,6 +81,10 @@ export function ExerciseCard({ exercise, onAttempt, onSupport, level, arabicSupp
   const hints = exerciseHintSteps(exercise);
   const shuffledMcq = exercise.type === "multiple-choice" ? shuffledExerciseOptions(exercise) : null;
   const correctionSpan=exercise.type==="error-correction"?locateErrorSpan(exercise.sentence,exercise.acceptedAnswers):null;
+  // تمارين الإنتاج تقبل أكثر من صياغة؛ نعرضها بعد التحقق مع سبب القبول (البند P1-11)،
+  // ولا نعرضها قبل المحاولة حتى لا تتحوّل إلى قائمة تُحفظ.
+  const acceptedAlternates=exercise.type!=="multiple-choice"&&exercise.type!=="matching"&&"acceptedAnswers" in exercise?[...new Set((exercise.acceptedAnswers??[]).map((variant)=>variant.trim()).filter(Boolean))]:[];
+  const acceptedAlternatesNoteAr=acceptedAlternates.length>1?"كل صياغة تولّي الفعل المصرف موضعه نفسه وتؤدّي الفكرة ذاتها مقبولة؛ الفرق بينها ترتيب أو بلاغة لا صحة.":"";
 
   function check() {
     const answer = exercise.type === "multiple-choice" ? (choice ?? -1) : exercise.type === "matching" ? matches : text;
@@ -131,7 +135,7 @@ export function ExerciseCard({ exercise, onAttempt, onSupport, level, arabicSupp
     {result === null && hintLevel > 0 && <p className="hint-panel" role="status" aria-live="polite"><Lightbulb size={14} /><span><b>تلميح {hintLevel}/2</b>{hints[hintLevel - 1]}</span></p>}
 
     <footer>
-      {result !== null ? <div className="exercise-feedback" role="status" aria-live="polite" aria-atomic="true"><span>{result ? <Check size={16} /> : <X size={16} />}</span><p><b>{result ? "إجابة صحيحة" : "تحتاج مراجعة"}</b>{exercise.explanationAr}</p>{result ? null : <div className="feedback-taxonomy" data-feedback-taxonomy={FEEDBACK_TAXONOMY_POLICY}><strong>نوع الخطأ: {feedbackGuidanceFor(feedbackKindForExercise(exercise)).labelAr}</strong><p>{feedbackGuidanceFor(feedbackKindForExercise(exercise)).rulePromptAr}</p><small>{feedbackGuidanceFor(feedbackKindForExercise(exercise)).transferPromptAr} · {feedbackGuidanceFor(feedbackKindForExercise(exercise)).contrastAr}</small></div>}</div> : <span />}
+      {result !== null ? <div className="exercise-feedback" role="status" aria-live="polite" aria-atomic="true"><span>{result ? <Check size={16} /> : <X size={16} />}</span><p><b>{result ? "إجابة صحيحة" : "تحتاج مراجعة"}</b>{exercise.explanationAr}</p>{acceptedAlternates.length > 1 ? <div className="accepted-alternates" data-accepted-alternates={acceptedAlternates.length}><strong>تُقبل أيضًا:</strong><ul>{acceptedAlternates.map((variant) => <li key={variant} lang="de" dir="ltr">{variant}</li>)}</ul><small>{acceptedAlternatesNoteAr}</small></div> : null}{result ? null : <div className="feedback-taxonomy" data-feedback-taxonomy={FEEDBACK_TAXONOMY_POLICY}><strong>نوع الخطأ: {feedbackGuidanceFor(feedbackKindForExercise(exercise)).labelAr}</strong><p>{feedbackGuidanceFor(feedbackKindForExercise(exercise)).rulePromptAr}</p><small>{feedbackGuidanceFor(feedbackKindForExercise(exercise)).transferPromptAr} · {feedbackGuidanceFor(feedbackKindForExercise(exercise)).contrastAr}</small></div>}</div> : <span />}
       <div className="exercise-actions">
         {result === null && <button aria-label="تلميح" className="tiny-hint" onClick={revealHint} disabled={hintLevel >= 2}><Lightbulb size={13} /> {hintLevel === 0 ? "Tipp" : hintLevel === 1 ? "Mehr Hilfe" : "Tipps benutzt"}</button>}
         {result !== null && <button aria-label="أعد" className="tiny-reset" onClick={reset}><RotateCcw size={14} /> Wiederholen</button>}

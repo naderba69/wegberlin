@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `3a2cb806d3a8d5f1dfea4e774aa2f98f25284cb7f664d740572d81afb3727f0c`
+Content SHA-256: `3856910d0c0bbfa6c1a50bea5ba2f69ea11a7a6de47ab0c6be72960297c914bf`
 
 ## Result
 
-`PASS` — 198 TSX files and 7566 opening JSX tags were scanned.
+`PASS` — 199 TSX files and 7580 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -66,8 +66,8 @@ Content SHA-256: `3a2cb806d3a8d5f1dfea4e774aa2f98f25284cb7f664d740572d81afb3727f
 | src/components/branching-conversation-lab.tsx:105 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:125 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:153 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:204 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:212 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
+| src/components/coach-dashboard.tsx:206 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
+| src/components/coach-dashboard.tsx:214 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:37 | محلي ودون AI | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:46 | هذه نتيجة جولة محلية صغيرة، وليست حكم مفردات أو CEFR. راجع الفرق ثم استعمل تركيبًا في درس أو كتابة فعلية. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:47 | نحفظ معرفات الوصلات والعدد فقط، لا نصًا حرًا ولا نضيف بطاقات SRS تلقائيًا. | Arabic host + plaintext boundary |

@@ -3,8 +3,8 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 198,
-  "openingTagCount": 7566,
+  "tsxFiles": 199,
+  "openingTagCount": 7580,
   "germanTagCount": 423,
   "arabicTagCount": 7,
   "ltrTagCount": 468,
@@ -163,12 +163,12 @@
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 204,
+      "line": 206,
       "text": "سياسة الاستمرارية · weekly-grace-v1:"
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 212,
+      "line": 214,
       "text": "تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery."
     },
     {
@@ -1024,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "3a2cb806d3a8d5f1dfea4e774aa2f98f25284cb7f664d740572d81afb3727f0c"
+  "contentSha256": "3856910d0c0bbfa6c1a50bea5ba2f69ea11a7a6de47ab0c6be72960297c914bf"
 }

@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `92b13f2d2d186117ba3c850e3fd56392731792a396b2a9ab126bf7b957fac179`
+Content SHA-256: `6d8a18e0106f3b86744826e705e3356d95d99ce68e22b2860ceff5bcd6d05935`
 
 ## Result
 
-`PASS` — 197 TSX files and 7516 opening JSX tags were scanned.
+`PASS` — 197 TSX files and 7521 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -97,9 +97,9 @@ Content SHA-256: `92b13f2d2d186117ba3c850e3fd56392731792a396b2a9ab126bf7b957fac1
 | src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
 | src/components/endurance-lab.tsx:58 | ثمانية سياقات أصلية من A1 إلى B2. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:115 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:115 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
-| src/components/error-notebook.tsx:116 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:117 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:117 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
+| src/components/error-notebook.tsx:118 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
 | src/components/evidence-achievements.tsx:8 | لا تُفتح بزيارة صفحة أو تكرار نقرة، ولا تضيف mastery أو شهادة. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:67 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
 | src/components/exam-hub.tsx:122 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |

@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 124,
-    "totalChunkGzipBytes": 1908425,
+    "totalChunkGzipBytes": 1911412,
     "maxSingleChunkGzipBytes": 262055
   },
   "issues": [],
@@ -59,9 +59,9 @@
       "gzipBytes": 59766
     },
     {
-      "path": ".next/static/chunks/app/settings/page-cf66c4ed38fe0d23.js",
+      "path": ".next/static/chunks/app/settings/page-68a89a4cf9af8ed2.js",
       "rawBytes": 199146,
-      "gzipBytes": 55299
+      "gzipBytes": 55298
     },
     {
       "path": ".next/static/chunks/3348-1bb6a99ce17f420f.js",
@@ -89,7 +89,7 @@
       "gzipBytes": 31050
     },
     {
-      "path": ".next/static/chunks/app/today/page-02a260bf615c1932.js",
+      "path": ".next/static/chunks/app/today/page-129f76699dbd318e.js",
       "rawBytes": 94324,
       "gzipBytes": 28987
     },
@@ -114,9 +114,9 @@
       "gzipBytes": 20563
     },
     {
-      "path": ".next/static/chunks/app/exams/page-7d1ba7d2bffd47e1.js",
-      "rawBytes": 61154,
-      "gzipBytes": 19527
+      "path": ".next/static/chunks/app/progress/page-d71066a1104170b0.js",
+      "rawBytes": 64526,
+      "gzipBytes": 19735
     }
   ],
   "boundary": "Built Next static chunk gzip envelope with a mandatory 15% reserve below hard limits; not network waterfall or device performance."

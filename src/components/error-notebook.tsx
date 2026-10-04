@@ -8,7 +8,7 @@ import { useLearning } from "./learning-provider";
 import { StatusAnnouncement } from "./status-announcement";
 import { buildErrorClinics, type ErrorClinic } from "@/core/errors/clinic";
 import { FEEDBACK_TAXONOMY_POLICY, SPACED_MASTERY_MIN_GAP_HOURS, feedbackGuidanceFor, validateTransferSentence } from "@/core/errors/feedback-guidance";
-import { applySuccessfulErrorRepair, errorRepairState, matchesErrorCorrection, recordFailedErrorRepair } from "@/core/errors/remediation";
+import { applySuccessfulErrorRepair, errorRepairPhase, errorRepairState, matchesErrorCorrection, recordFailedErrorRepair, scheduleRetryAfterFailure } from "@/core/errors/remediation";
 import { classifyErrorPattern, errorInterventionPriority, errorPrerequisite } from "@/core/errors/pattern";
 import { confirmedErrorSrsCards } from "@/core/srs/error-cards";
 import type { ErrorPatternClassification, ErrorRecord } from "@/types/learning";
@@ -52,7 +52,7 @@ export function ErrorNotebook() {
     setFeedback((current) => ({ ...current, [error.id]: correct ? "correct" : "wrong" }));
     const now = new Date();
     if (!correct) {
-      update((current) => ({ ...current, errors:current.errors.map((item)=>item.id===error.id?recordFailedErrorRepair(item,now):item) }));
+      update((current) => ({ ...current, errors:current.errors.map((item)=>item.id===error.id?scheduleRetryAfterFailure(recordFailedErrorRepair(item,now),now):item) }));
       return;
     }
     update((current) => ({
@@ -94,6 +94,7 @@ export function ErrorNotebook() {
       const repairState = errorRepairState(error);
       const waiting = repairState === "waiting";
       const due = repairState === "due";
+      const retrySoon = errorRepairPhase(error) === "retry-soon";
       const classification = error.patternClassification ?? classifyErrorPattern(error.occurrences,error.highConfidenceWrongCount??0,error.failedRepairCount??0);
       const pattern = patternLabels[classification];
       const prerequisite = errorPrerequisite(error);
@@ -103,7 +104,8 @@ export function ErrorNotebook() {
         <div className="error-lines" lang="de" dir="ltr"><del>{error.wrong}</del>{error.resolved || waiting || isRevealed ? <strong>{error.correct}</strong> : <span className="hidden-correction">التصحيح مخفي حتى المحاولة</span>}</div>
         <p>{error.explanationAr}</p>
         <div className="error-pattern-explanation"><strong>{pattern.title}</strong><p>{pattern.detail}</p><small>السياسة `error-pattern-classification-v1` · التكرار {error.occurrences} · فشل العلاج {error.failedRepairCount??0} · أخطاء بثقة عالية {error.highConfidenceWrongCount??0}</small></div>
-        {waiting && <div className="repair-pending"><CalendarCheck size={17}/><div><strong>علاج أولي ناجح — ينتظر اختبارًا مؤجلًا</strong><p>سيُخفى التصحيح من جديد في {new Date(error.nextReviewAt!).toLocaleDateString("ar-TN")}؛ لا يُعتبر الخطأ مستقرًا قبل نجاح الاسترجاع الثاني.</p></div></div>}
+        {retrySoon && <div className="repair-retry-soon" data-relearn-ladder="spaced-mastery-two-spaced-successes-v1"><RotateCcw size={17}/><div><strong>لم ينجح العلاج — رجوع قصير مقصود</strong><p>الخطأ يعود بعد فترة أقصر بدل تركه للطابور العادي: 10 دقائق، ثم يوم، ثم 3 أيام. لا يُغلق الخطأ قبل نجاح متأخّر.</p></div></div>}
+        {waiting && !retrySoon && <div className="repair-pending"><CalendarCheck size={17}/><div><strong>علاج أولي ناجح — ينتظر اختبارًا مؤجلًا</strong><p>سيُخفى التصحيح من جديد في {new Date(error.nextReviewAt!).toLocaleDateString("ar-TN")}؛ لا يُعتبر الخطأ مستقرًا قبل نجاح الاسترجاع الثاني.</p></div></div>}
         {!error.resolved && !waiting && <form className="error-remediation" onSubmit={(event) => { event.preventDefault(); checkCorrection(error); }}>
           <div className="error-kind-guidance" data-feedback-taxonomy={FEEDBACK_TAXONOMY_POLICY}><strong>{feedbackGuidanceFor(error.type).labelAr}</strong><p>{feedbackGuidanceFor(error.type).rulePromptAr}</p><small>{feedbackGuidanceFor(error.type).contrastAr}</small></div>
           <label><span>{due?"اختبار مؤجل: اكتب التصحيح من الذاكرة":"العلاج الأول: اكتب التصحيح من الذاكرة"}</span><input lang="de" dir="ltr" value={answers[error.id] ?? ""} onChange={(event) => { setAnswers((current) => ({ ...current, [error.id]: event.target.value })); setFeedback((current) => { const next = { ...current }; delete next[error.id]; return next; }); }} aria-label={`تصحيح ${error.wrong}`} placeholder="اكتب الجواب الصحيح…" /></label>

@@ -3,8 +3,8 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 197,
-  "openingTagCount": 7521,
+  "tsxFiles": 198,
+  "openingTagCount": 7555,
   "germanTagCount": 423,
   "arabicTagCount": 7,
   "ltrTagCount": 468,
@@ -73,37 +73,37 @@
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 27,
+      "line": 28,
       "text": "كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مستوى CEFR رسمي."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 48,
+      "line": 51,
       "text": "القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 49,
+      "line": 52,
       "text": "مفاتيح قديمة بلا Event بعد"
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 61,
+      "line": 64,
       "text": "لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يصبح درجة ذكاء أو CEFR أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 63,
+      "line": 66,
       "text": "الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف الدرس بأنه يملك عينة احتفاظ. هذا ليس إتقانًا دائمًا. سياسة `weekly-grace-v1` تسمح بفاصل يوم واحد بين يومي دراسة دون اختلاق دليل لذلك اليوم أو تصفير العودة. معدل الخطأ يحسب كل تحقق مسجل، بما فيه الإعادة، ولا يدّعي تحليل أخطاء لكل 100 كلمة من الكتابة الحرة."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 68,
+      "line": 71,
       "text": "تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 73,
+      "line": 76,
       "text": "ليس حكم CEFR"
     },
     {
@@ -1024,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "6d8a18e0106f3b86744826e705e3356d95d99ce68e22b2860ceff5bcd6d05935"
+  "contentSha256": "17755bef9241e0cef7e078580061ab118d0ef7114f89ba79d5d2e6c635e5f1af"
 }

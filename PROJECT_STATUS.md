@@ -1,6 +1,16 @@
 # Project Status
 
-Sync batch: v180 · 2026-10-03 · re-verified after ADR-105 review-session dose and review-hour anchoring; ADR-102 browser WebGPU ESM-resolution fix and ADR-101 Vercel output compatibility remain verified.
+Sync batch: v180 · 2026-10-04 · re-verified after ADR-108 source re-verification and registry-derived test clocks; ADR-105 review-session dose and review-hour anchoring, the ADR-102 browser WebGPU ESM-resolution fix and ADR-101 Vercel output compatibility remain verified.
+## بوابة المصدر وإعادة التحقق من 18 مصدرًا — 2026-10-04 (ADR-108، م45)
+
+- **الحدث (مقاسًا)**: عند 2026-10-03T23:00Z خرج `source:audit --strict` بـ1 («stale 12») فسقط `check`، وسقط في `e2e` اختبار واحد (`critical-flows.spec.ts:81`) لأنه يؤكّد حالة تتبع تاريخ اليوم؛ ولم يتغيّر كود المنتج.
+- **ما فُعل**: قُرئت المصادر الحيّة الـ18 (12 منتهية + 6 تنتهي في 2026-10-08/12) وقورنت بـ`observedState`/`claimAr`، وعُرض الجدول على المالك فأقرّ تسجيل 2026-10-04 للـ18 (الدليل في `docs/run-logs/2026-10-04-source-reverification/README.md`). صار `source:audit --strict` = **19/19 طازجة**؛ الاستحقاق التالي 2026-11-01 (`onnxruntime-web`) ثم 2026-11-03.
+- **الأثر على المتعلم**: يعود الذكاء البعيد الاختياري (Gemini/OpenRouter) وتنزيل نماذج المتصفح، ويعرض مركز الامتحانات «ملف الصيغة موثّق وحديث».
+- **فكّ ارتباط الاختبارات بالتواريخ**: `tests/helpers/source-verification-clock.ts` يشتق ساعة 10 ملفات وحدة و4 حالات e2e من السجلّ (محاكاة إعادة التحقق قبل التنفيذ كسّرت 11 ملفًا/44 حالة)؛ واختبار المركز يؤكّد تواريخ السجلّ لا حالةً تتبع اليوم، وثلاثة اختبارات جديدة تقيس «حديث / يقترب / يحتاج إعادة تحقق» بساعة مثبَّتة (الأخيرة لم تكن مغطّاة بأي اختبار واجهة)؛ وقاعدة النافذة تبقى مقيسة بتواريخ صريحة على كائن ثابت.
+- **البوابات**: `tsc` نظيف · lint 0 أخطاء / 3 تحذيرات (كانت 6) · `vitest` **1,250/1,250** في **179/179** (+1 عقد المساعد) · `source:audit --strict` 19/19 · `workflows:check` و`handoff:check` ناجحان · `npm run build` ناجح · e2e محلي على Chromium 153: المركز + 3 حالات + 4 مسارات ذكاء = 8/8. حالة CI لهذا الرأس في فحوص PR #6.
+- **حدود هذا الصف**: الإقرار قرار المالك لا فتحٌ يدويّ مستقل لكل صفحة؛ أرشيف telc (طبعة 2019، ويعتمد عليه 225/75 و135/45) ثبت رابطه ولم يُفتح؛ تحذيرا `public/sw.js` وتحذير `guest-session.ts` تُركت عمدًا (انظر ADR-108).
+- **باقٍ على المالك**: فتح أرشيف telc وتأكيد طبعته؛ مراجعة 2026-11-01؛ وتثبيت `ubuntu-latest` (ينتقل إلى Ubuntu 26 في 2026-10-19) كدفعة مستقلة.
+
 ## كومة المراجعة وتقدير الامتحان — 2026-10-03 (ADR-107، م43)
 
 - القياس قبل الشيفرة: `scripts/review-pile-simulation.ts` على المقرر الحقيقي — **2,189** بطاقة مستحقة بعد 96 درسًا، و**−0.83/يوم** بعدها (الكومة لا تتلاشى)، مقابل **68** في وتيرة «درس كل خمسة أيام».

@@ -2982,7 +2982,7 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
   await expect(wizard).toBeVisible();
   await expect(wizard.locator("[data-reset-attempt-log]")).toHaveAttribute("data-reset-attempt-log", "4");
   await expect(wizard).toContainText("سجل المحاولات (4 محاولة) محفوظ");
-  await expect(wizard).toContainText("66 حقلًا مصنَّفًا");
+  await expect(wizard).toContainText("67 حقلًا مصنَّفًا");
   await expect(wizard.locator("[data-reset-unclassified]")).toHaveAttribute("data-reset-unclassified", "0");
   await expect(wizard).toContainText("19 تقدّمًا");
   // بلا إقرار ولا كلمة تأكيد: لا تنفيذ.
@@ -3201,7 +3201,7 @@ test("P2 guest session starts with zero inherited evidence and promotes to a per
   await guest.getByLabel("اسم الملف الدائم").fill("ضيف الاختبار");
   await guest.locator("[data-guest-promote]").click();
   await expect(guest.locator("[data-guest-session]")).toHaveAttribute("data-guest-session", "promoted");
-  await expect(guest.locator("[data-guest-plan]")).toContainText("66 حقلًا مصنَّفًا");
+  await expect(guest.locator("[data-guest-plan]")).toContainText("67 حقلًا مصنَّفًا");
   await expect(guest.getByRole("status").first()).toContainText("ملف دائم محلي");
   await expect(guest.locator("[data-guest-active-profile]")).toContainText("لم يُمسّ");
 

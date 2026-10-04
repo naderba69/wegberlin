@@ -51,27 +51,28 @@ function seededState(): LearningState {
 describe("reset plan — تغطية كاملة وسلال أربع", () => {
   it("classifies every field of the shipped state with zero unclassified", () => {
     const coverage = classifyResetCoverage(defaultState);
-    // 66 صفًّا بلا تكرار، وكل حقل مشحون في `defaultState` مصنَّف (0 بلا سلة).
-    // صار 66 بـP2-93 (الهوية) وP2-119 (الإعدادات) وP2-156 (أحكام قابلية الفهم في سلة الأدلة).
-    expect(coverage.totalClassified).toBe(66);
-    expect(new Set(RESET_FIELD_POLICIES.map((row) => row.field)).size).toBe(66);
+    // 67 صفًّا بلا تكرار، وكل حقل مشحون في `defaultState` مصنَّف (0 بلا سلة).
+    // صار 66 بـP2-93 (الهوية) وP2-119 (الإعدادات) وP2-156 (أحكام قابلية الفهم في سلة الأدلة)،
+    // ثم 67 بمحاولات إعادة الصياغة المتماسكة (P1-12) في سلة الأدلة.
+    expect(coverage.totalClassified).toBe(67);
+    expect(new Set(RESET_FIELD_POLICIES.map((row) => row.field)).size).toBe(67);
     expect(coverage.unclassifiedFields).toEqual([]);
     // الحقول الاختيارية غير المشحونة (externalEvaluatorNotes · lastBackupAt) لا تظهر في الحالة الافتراضية،
     // لكنها مصنَّفة أيضًا: التغطية 66 صفًّا لكل حقول النوع، و0 حقل مشحون بلا سلة.
     expect(Object.keys(defaultState).length).toBeGreaterThanOrEqual(60);
   });
 
-  it("keeps the documented split: 19 cleared / 25 evidence / 12 settings / 10 identity", () => {
+  it("keeps the documented split: 19 cleared / 26 evidence / 12 settings / 10 identity", () => {
     const coverage = classifyResetCoverage(defaultState);
     expect({
       cleared: coverage.progressCleared,
       evidence: coverage.evidencePreserved,
       settings: coverage.settingsPreserved,
       identity: coverage.identityPreserved,
-    }).toEqual({ cleared: 19, evidence: 25, settings: 12, identity: 10 });
+    }).toEqual({ cleared: 19, evidence: 26, settings: 12, identity: 10 });
     expect(RESET_CLEARED_FIELDS).toHaveLength(19);
-    expect(RESET_EVIDENCE_FIELDS).toHaveLength(25);
-    expect(RESET_CLEARED_FIELDS.length + RESET_EVIDENCE_FIELDS.length + 12 + 10).toBe(66);
+    expect(RESET_EVIDENCE_FIELDS).toHaveLength(26);
+    expect(RESET_CLEARED_FIELDS.length + RESET_EVIDENCE_FIELDS.length + 12 + 10).toBe(67);
   });
 
   it("clears to the shipped defaults, not to hand-written copies", () => {
@@ -132,7 +133,7 @@ describe("reset plan — تغطية كاملة وسلال أربع", () => {
     const event = second.state.resetEvents?.[1];
     expect(event?.policyVersion).toBe(RESET_PLAN_POLICY);
     expect(event?.clearedFields).toHaveLength(19);
-    expect(event?.preservedEvidenceFields.length).toBe(25);
+    expect(event?.preservedEvidenceFields.length).toBe(26);
     expect(event?.keptAttemptCount).toBe(5);
     expect(event?.confirmationWord).toBe(RESET_CONFIRMATION_WORD);
     expect(event?.boundary).toBe("reset-clears-derived-progress-keeps-evidence-and-attempt-log");

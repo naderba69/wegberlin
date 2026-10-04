@@ -186,6 +186,22 @@ export interface BranchingConversationAttempt {
   createdAt:string;
 }
 
+export interface CohesionRewriteAttempt {
+  id:string;
+  policyVersion:"cohesion-unit-v1";
+  itemId:string;
+  connectorDe:string;
+  level:"A2"|"B1";
+  ruleKind:"verb-second"|"verb-final"|"element-connector";
+  text:string;
+  ok:boolean;
+  checkFlags:{connectorPresent:boolean;verbFinal:boolean;verbSecond:boolean;bothClausesPresent:boolean};
+  issuesAr:string[];
+  engine:"deterministic-rule-check";
+  evidenceBoundary:"rule-based-rewrite-check-not-style-or-fluency-assessment";
+  createdAt:string;
+}
+
 export interface CollocationNetworkAttempt {
   id:string;
   policyVersion:"contextual-collocation-network-v1";
@@ -1083,6 +1099,7 @@ export interface LearningState {
   dictationAttempts: DictationAttempt[];
   branchingConversationAttempts: BranchingConversationAttempt[];
   collocationNetworkAttempts: CollocationNetworkAttempt[];
+  cohesionRewriteAttempts: CohesionRewriteAttempt[];
   supportUsageEvents: SupportUsageEvent[];
   listeningProcessEvents: ListeningProcessEvent[];
   listeningUsageEvents: ListeningUsageEvent[];

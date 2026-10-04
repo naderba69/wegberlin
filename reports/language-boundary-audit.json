@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 200,
-  "openingTagCount": 7649,
-  "germanTagCount": 424,
+  "tsxFiles": 202,
+  "openingTagCount": 7751,
+  "germanTagCount": 431,
   "arabicTagCount": 7,
-  "ltrTagCount": 471,
+  "ltrTagCount": 478,
   "rtlTagCount": 7,
   "autoDirCount": 12,
   "technicalScopeCount": 53,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 201,
+  "mixedStaticCount": 203,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -170,6 +170,16 @@
       "path": "src/components/coach-dashboard.tsx",
       "line": 214,
       "text": "تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery."
+    },
+    {
+      "path": "src/components/cohesion-lab.tsx",
+      "line": 73,
+      "text": "وحدة تماسك مستقلة قبل B1"
+    },
+    {
+      "path": "src/components/cohesion-lab.tsx",
+      "line": 137,
+      "text": "الفعل المصرف في موضعه: بعد deshalb/trotzdem، وفي نهاية الجملة الفرعية بعد obwohl/damit/nachdem/bevor."
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
@@ -1024,5 +1034,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "2a898098e766a19327f0a946ac53792ec3bc8d57aec5d83ecd0166f37458dce8"
+  "contentSha256": "98790ae00c7a837248c5ed8058f4d4929ae0612a6e28abd7a946625a24e1bee4"
 }

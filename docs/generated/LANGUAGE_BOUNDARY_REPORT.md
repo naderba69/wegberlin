@@ -3,24 +3,24 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `2a898098e766a19327f0a946ac53792ec3bc8d57aec5d83ecd0166f37458dce8`
+Content SHA-256: `98790ae00c7a837248c5ed8058f4d4929ae0612a6e28abd7a946625a24e1bee4`
 
 ## Result
 
-`PASS` — 200 TSX files and 7649 opening JSX tags were scanned.
+`PASS` — 202 TSX files and 7751 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 424 |
+| Explicit German fragments (lang=de + dir=ltr) | 431 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 471 |
+| LTR tags audited | 478 |
 | RTL tags audited | 7 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 53 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 201 |
+| Static Arabic + Latin text nodes under plaintext host policy | 203 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -68,6 +68,8 @@ Content SHA-256: `2a898098e766a19327f0a946ac53792ec3bc8d57aec5d83ecd0166f37458dc
 | src/components/branching-conversation-lab.tsx:153 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
 | src/components/coach-dashboard.tsx:206 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
 | src/components/coach-dashboard.tsx:214 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
+| src/components/cohesion-lab.tsx:73 | وحدة تماسك مستقلة قبل B1 | Arabic host + plaintext boundary |
+| src/components/cohesion-lab.tsx:137 | الفعل المصرف في موضعه: بعد deshalb/trotzdem، وفي نهاية الجملة الفرعية بعد obwohl/damit/nachdem/bevor. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:37 | محلي ودون AI | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:46 | هذه نتيجة جولة محلية صغيرة، وليست حكم مفردات أو CEFR. راجع الفرق ثم استعمل تركيبًا في درس أو كتابة فعلية. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:47 | نحفظ معرفات الوصلات والعدد فقط، لا نصًا حرًا ولا نضيف بطاقات SRS تلقائيًا. | Arabic host + plaintext boundary |

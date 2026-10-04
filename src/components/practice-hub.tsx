@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowLeft, AudioWaveform, Bot, BriefcaseBusiness, FilePenLine, GitBranch, GraduationCap, Headphones, Languages, LibraryBig, Mic2, Network, NotebookTabs, Sparkles } from "lucide-react";
+import { ArrowLeft, AudioWaveform, Bot, BriefcaseBusiness, FilePenLine, GitBranch, GraduationCap, Headphones, Languages, LibraryBig, Mic2, Network, NotebookTabs, Sparkles, GitCompareArrows } from "lucide-react";
 import { ContextAppropriatenessQuiz } from "./context-appropriateness-quiz";
 
 const labs = [
+  {href:"/practice/cohesion",icon:GitCompareArrows,title:"وحدة التماسك قبل B1",de:"Sätze verbinden · deshalb · obwohl",copy:"اثنا عشر رابطًا (deshalb · trotzdem · obwohl · damit …) بإعادة صياغة يفحصها التطبيق بقواعد صريحة، ثم نموذجان وسؤال موازنة: لا جواب واحد يُحفظ.",status:"يعمل"},
   {href:"/practice/collocations",icon:Network,title:"شبكات التراكيب",de:"Kontext · Verbindung · Transfer",copy:"ست عشرة شبكة تربط الكلمة بأفعالها وسياقاتها، ثم تختبر المقصد بدل حفظ مرادفات معزولة.",status:"48 تركيبًا"},
   {href:"/practice/conversation-paths",icon:GitBranch,title:"مسارات المحادثة",de:"Verstehen · Entscheiden · Reparieren",copy:"ثمانية مواقف متفرعة دون AI؛ اختر ردًا، شاهد أثره، ثم أكمل الهدف أو أصلح المسار.",status:"8 سيناريوهات"},
   {href:"/practice/endurance",icon:Headphones,title:"الفهم والتحمل المتدرج",de:"Längere Texte · Verstehen · Übertragen",copy:"ثمانية سياقات أطول تدريجيًا للقراءة والاستماع من صوت الجهاز، دون ادعاء صوت بشري أو نتيجة امتحان.",status:"8 سياقات"},

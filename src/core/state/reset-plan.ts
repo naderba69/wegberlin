@@ -78,6 +78,7 @@ export const RESET_FIELD_POLICIES: readonly ResetFieldRow[] = [
   { field: "dictationAttempts", bucket: "evidence", rationaleAr: "محاولات الإملاء تبقى." },
   { field: "branchingConversationAttempts", bucket: "evidence", rationaleAr: "المحادثات المتشعّبة تبقى." },
   { field: "collocationNetworkAttempts", bucket: "evidence", rationaleAr: "شبكات المتلازمات تبقى." },
+  { field: "cohesionRewriteAttempts", bucket: "evidence", rationaleAr: "محاولات إعادة الصياغة المتماسكة تبقى دليلًا على التدريب." },
   { field: "supportUsageEvents", bucket: "evidence", rationaleAr: "أحداث استخدام المساندة تبقى." },
   { field: "listeningProcessEvents", bucket: "evidence", rationaleAr: "أحداث عملية الاستماع تبقى." },
   { field: "listeningUsageEvents", bucket: "evidence", rationaleAr: "أحداث استخدام الاستماع تبقى." },

@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { readFileSync } from "node:fs";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   askGeminiWritingReview,
   parseWritingReviewPayload,
@@ -52,6 +52,10 @@ function geminiResponse(overrides: Record<string, unknown> = {}) {
 }
 
 describe("Gemini writing review stays grounded and optional", () => {
+  // نافذة الـ30 يومًا في `src/config/source-verification-registry.json` تُحجب الإرسال عند انتهائها؛
+  // هذه الحالات تقيس أرضية الردّ والموافقة، فتُثبَّت الساعة داخل النافذة (القياس الخاص بالصلاحية له ملفه).
+  beforeEach(() => { vi.useFakeTimers({ toFake: ["Date"] }); vi.setSystemTime(new Date("2026-09-20T12:00:00Z")); });
+  afterEach(() => { vi.useRealTimers(); });
   it("accepts a payload whose excerpt is really in the learner text", () => {
     const result = evaluateWritingReviewGate(payload() as never, text);
     expect(result.accepted).toBe(true);

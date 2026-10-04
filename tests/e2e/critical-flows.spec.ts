@@ -490,6 +490,9 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
 });
 
 test("P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بتاريخ مُعلن.
+  await page.clock.install({ time: new Date("2026-09-20T12:00:00Z") });
   let networkRequests = 0;
   await page.route("**/v1beta/models/**", async (route) => {
     networkRequests += 1;
@@ -634,6 +637,9 @@ test("P0 tutor requires per-send consent, validates structured JSON, and deletes
 });
 
 test("optional AI 429 falls back locally once and retry requires fresh consent", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بتاريخ مُعلن.
+  await page.clock.install({ time: new Date("2026-09-20T12:00:00Z") });
   let requests=0;await page.route("https://openrouter.ai/api/v1/chat/completions",async route=>{requests+=1;await route.fulfill({status:429,body:"rate limit"})});
   await page.goto("/tutor");await waitForLearningReady(page);
   await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{const state=structuredClone(baseState);state.aiSettings={provider:"openrouter",model:"openrouter/free",enabledFeatures:["tutor"]};state.profile={name:"Nadia",targetExam:"goethe-b2",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",createdAt:"2026-08-01T00:00:00Z"};sessionStorage.setItem("dwnb-ai-key","test-key");const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}),structuredClone(defaultState));
@@ -801,6 +807,9 @@ test("P0 clustered error clinic opens at three occurrences and stores a transfer
 
 test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revision", async ({ page }) => {
   test.setTimeout(60_000);
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بتاريخ مُعلن.
+  await page.clock.install({ time: new Date("2026-09-20T12:00:00Z") });
   let writingReviewRequests=0;
   await page.route("**/v1beta/models/**",async route=>{writingReviewRequests+=1;const secondPass=writingReviewRequests>1;const payload=secondPass?{summaryAr:"المراجعة الثانية ركّزت على الصياغة واقترحت جملة أقصر مع مفردة أدقّ.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und komme aus Tunesien.",confidence:"high"},{category:"vocabulary",excerpt:"arbeite heute im Büro",explanationAr:"«derzeit» أدقّ زمنيًا من heute في سياق الحالة الراهنة.",suggestionDe:"arbeite derzeit im Büro",confidence:"medium"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]}:{summaryAr:"حدد Gemini خطأ صرف واضحًا وترك ملاءمة النبرة للحكم السياقي.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und ich komme aus Tunesien.",confidence:"high"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]};await route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(payload)}]}}]})})});
   await page.goto("/lernen/a1-01");
@@ -1068,6 +1077,9 @@ test("standard pronunciation pack installs explicitly and matches expected Germa
 });
 
 test("guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بتاريخ مُعلن.
+  await page.clock.install({ time: new Date("2026-09-20T12:00:00Z") });
   let followUpRequests = 0;
   await page.route("**/v1beta/models/**", async (route) => {
     followUpRequests += 1;

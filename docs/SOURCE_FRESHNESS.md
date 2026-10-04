@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v180 · 2026-10-04 · re-verified after the 2026-10-04 source re-verification (ADR-108); the ADR-101 Vercel build-output compatibility fix remains verified.
+Sync batch: v180 · 2026-10-04 · re-verified after the 2026-10-04 source re-verification (ADR-108) and the CI probe-policy update (ADR-109); the ADR-101 Vercel build-output compatibility fix remains verified.
 
 
 Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
@@ -57,7 +57,7 @@ The policy uses the Africa/Tunis calendar day so CI near UTC midnight does not f
 4. opens/updates one maintenance Issue when attention is required;
 5. closes the existing Issue after a later successful review update.
 
-The Goethe overview currently returns an anti-bot HTTP 403 to generic CI clients. Its record is explicitly `manual-on-403`; the report keeps that fact visible but does not pretend CI can read the page. Its official PDFs remain machine-probed.
+The Goethe overview and the two npmjs.com package pages (`transformers-js-runtime-4-2-0`, `onnxruntime-web-webgpu-1-26-dev-20260416`) currently return an anti-bot HTTP 403 to generic CI clients (measured from a GitHub runner on 2026-10-04, ADR-109). Their records are explicitly `manual-on-403`; the report keeps that fact visible but does not pretend CI can read the pages, and the manual review (30-day window) still applies to them. Every other record, including Goethe's official PDFs, remains machine-probed and must answer 2xx.
 
 ## Human review checklist
 

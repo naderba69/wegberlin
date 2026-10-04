@@ -80,7 +80,7 @@
       "lastVerifiedAt": "2026-10-04",
       "maxAgeDays": 30,
       "verificationMode": "manual-semantic-review",
-      "observedState": "The official overview still links the free mock archive (telc_deutsch_b2.zip); the archive was identified as the revised-2019 edition on 2026-09-03 and was not re-opened on 2026-10-04.",
+      "observedState": "The official overview still links the free mock archive (telc_deutsch_b2.zip). On 2026-10-04 the archive was re-read from a GitHub runner: HTTP 200, Last-Modified 2023-03-27, one PDF with the 2019 edition marker whose text layer still contains all seven pinned facts (135/225 and 45/75 pass marks, 300 total, grade bands, Sprachbausteine 10 %). Evidence: docs/run-logs/2026-10-04-source-reverification.",
       "claimAr": "توثيق أنواع المهام والنقاط من النموذج الرسمي المرتبط حاليًا دون نسخ التعبير المحمي.",
       "staleAction": "block-release-and-warn-runtime",
       "ownerId": "exam-source-owner",

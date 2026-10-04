@@ -61,3 +61,16 @@ for (const file of pdfs) {
   }
 }
 note("telc pinned facts vs archive text", lines.length ? lines.join(" || ") : "no PDF in the archive matched any pinned fact or marker");
+
+// The 7th pinned fact (Sprachbausteine weight) depends on how the extractor orders table cells: show the raw window per mode.
+const sprachFact = facts.find((fact) => fact.id === "telc-b2-sprachbausteine-weight-10");
+note("pinned pattern of the 7th fact", sprachFact.checkPattern);
+for (const file of pdfs) {
+  note("pdf sha256 (full)", createHash("sha256").update(readFileSync(file)).digest("hex"));
+  for (const [modeName, flags] of modes) {
+    const text = execFileSync("pdftotext", [...flags, file, "-"], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }).replace(/\s+/g, " ");
+    const hits = [...text.matchAll(/21–30/g)].map((match) => match.index);
+    const windows = hits.slice(0, 2).map((index) => `«${text.slice(Math.max(0, index - 90), index + 170)}»`);
+    note(`window around 21–30 (${modeName})`, windows.length ? windows.join(" ··· ") : "no occurrence of 21–30");
+  }
+}

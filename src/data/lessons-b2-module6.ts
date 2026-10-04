@@ -934,7 +934,7 @@ export const b2Module6Lessons: FullLesson[] = [
  {de:"den VerGLEICH anstellen",ipa:"[deːn fɛɐ̯ˈɡlaɪ̯ç ˈanˌʃtɛlən]",ar:"النبر على المقطع الثاني، و«ch» فيه [ç]"},
  {de:"zum ABschluss gebracht",ipa:"[tsuːm ˈapˌʃlʊs ɡəˈbʁaɪ̯kt]",ar:"بعد «ss» و«l» تُسمع [ʃ] لا [ts]"},
  {de:"ein RiSIko eingehen",ipa:"[aɪ̯n ʁiˈziːko ˈaɪ̯nɡəˌheːn]",ar:"«s» بين صوتين منبورين تُسمع [z] مجهورة"},
- {de:"BErücksichtigung braucht Raum",ipa:"[bɛˈʁʏkˌzɪçtɪɡʊŋ bʁaʊ̯çt ˈʁaʊ̯m]",ar:"«-lich-ung» خفيفة، والمدّ يقع على الجذر داخل «Raum»"},
+ {de:"BErücksichtigung braucht Raum",ipa:"[bɛˈʁʏkˌzɪçtɪɡʊŋ bʁaʊ̯xt ˈʁaʊ̯m]",ar:"«-lich-ung» خفيفة، والمدّ يقع على الجذر داخل «Raum»"},
  {de:"die etaPPIERTE Prüfung",ipa:"[diː ˌetaˈpiːɐ̯tə ˈprʏːfʊŋ]",ar:"نبر «Prüfung» قبلها، والاسم المنسوب إليه يحمل [iː]"}
  ],trickAr:"انبر الاسم لا الفعل الخفيف: «zur KENNTnis», «zum ABschluss» — و«ss» قبل l تُسمع [ʃ] لا [ts]."},
  writing:{titleAr:"فقرة رسمية بمراحل مسموعة",promptDe:"Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
@@ -1086,15 +1086,15 @@ export const b2Module6Lessons: FullLesson[] = [
  {id:"b2-19-lq2",promptDe:"Warum gelten drei Partikeln in zwei Sätzen als zu teuer?",promptAr:"لماذا تُعدّ ثلاث أدوات في جملتين كلفة زائدة؟",options:["Weil sie den Antrag ausdrücklich zurückweisen und dabei eine neue Frist setzen wollen.", "Weil sie ohne jede Anrede auskommen und dadurch abweisend auf die Behörde wirken.", "Weil sie wie Beschwichtigung klingen und den eigentlichen Antrag überdecken.", "Weil sie zu kurz sind und deshalb unhöflich auf die Behörde wirken."],correctIndex: 2,explanationAr:"العيب ليس في العدد وحده: „drei Partikeln in zwei Sätzen, das klinge nach Beschwichtigung“ — الإكثار يحوّل الطلب إلى تودد ويغطي المطلوب تحته."},
  {id:"b2-19-lq3",promptDe:"Was bewirkt „wohl wissend, dass darüber schon entschieden ist“?",promptAr:"ما أثر «wohl wissend, dass darüber schon entschieden ist»؟",options:["Es bestreitet die bereits getroffene Entscheidung und verlangt ihre sofortige Aufhebung.", "Es hält die Bitte offen, ohne die bereits getroffene Entscheidung zu bestreiten.", "Es ersetzt die genannte Frist durch ein neues Datum, und zwar ohne jede Begründung.", "Es wiederholt nur die Begründung der Behörde, ohne etwas hinzuzufügen."],correctIndex: 1,explanationAr:"«wohl» تُبقي الاعتراف بالقرار قائمًا وتترك الطلب احتمالًا لا اعتراضًا."}
  ]},
- pronunciation:{titleAr:"أدوات لا تُنبر، و«ch» في «doch»",focus:"Unbetonte Partikeln und das „ich“-Laut in „doch“",explanationAr:"أدوات النبرة مقاطع خفيفة: لا نبر عليها ولا تُمدّ أصواتها، فتُسمع قصيرة ملتحقة بما بعدها: «nur» [nuːɐ̯] لا [nuːɐ̯ˈ]. في «doch» يأتي «ch» بعد o صوتًا أماميًّا [ç] في النطق المعياري («dɔç»)، ومن قاله خوفيًا [dɔx] سُمع جنوبيًا لا خاطئًا. أمّا «schon» فيبقى ممدودًا [ʃoːn] مقابل «schnell» [ʃnɛl]، والفرق في الطول لا في الحرف.",
+ pronunciation:{titleAr:"أدوات لا تُنبر، وصوت ach [x] في «doch»",focus:"Unbetonte Partikeln und das ach-Laut [x] in „doch“",explanationAr:"أدوات النبرة مقاطع خفيفة: لا نبر عليها ولا تُمدّ أصواتها، فتُسمع قصيرة ملتحقة بما بعدها: «nur» [nuːɐ̯] لا [nuːɐ̯ˈ]. في «doch» يأتي «ch» بعد o (حركة خلفية) صوتًا خلفيًّا [x] في النطق المعياري («dɔx»)؛ وما يُسمع أحيانًا [ç] في «doch» لهجة وسطية غير معيارية لا صوابًا ثانيًا. أمّا «schon» فيبقى ممدودًا [ʃoːn] مقابل «schnell» [ʃnɛl]، والفرق في الطول لا في الحرف.",
  items:[
- {de:"der BeSCHEId liegt vor",ipa:"[deː bəˈʃaɪ̯t liːkt foːɐ̯]",ar:"النبر على «-scheid» و«ch» فيه [ç] لا [x]"},
+ {de:"der BeSCHEId liegt vor",ipa:"[deː bəˈʃaɪ̯t liːkt foːɐ̯]",ar:"النبر على «-scheid»، و«sch» فيه [ʃ] لا [ç] ولا [x]"},
  {de:"die FRIST war KURZ",ipa:"[diː ˈfʁɪst vaː ˈkʊʁts]",ar:"«kurz» بـ[ts] وبلا نبر على «-z» وحده"},
  {de:"das ist WOHL ein VerSEHen",ipa:"[das ɪst ˈvoːl ʔaɪ̯n fɛɐ̯ˈzeːən]",ar:"«wohl» منبورة قصيرة، وفي «Versehen» [z] مجهورة"},
  {de:"ich frage NUR dich",ipa:"[ɪç ˈfʁaːɡə nuːɐ̯ dɪç]",ar:"«nur» خفيفة بعد الفعل ولا تحمل نبرًا ذاتها"},
- {de:"doCH oder doch?",ipa:"[dɔç ˈoːdɐ dɔç]",ar:"منبورة تعني «jedoch»، وخفيفة تعترض على النفي"},
+ {de:"doCH oder doch?",ipa:"[dɔx ˈoːdɐ dɔx]",ar:"منبورة تعني «jedoch»، وخفيفة تعترض على النفي. بعد o (حركة خلفية) يُلفظ ch صوت [x] لا [ç]"},
  {de:"SCHON oder schnell?",ipa:"[ʃoːn ˈɔdɐ ʃnɛl]",ar:"المدّ في «schon» والقصر في «schnell»"}
- ],trickAr:"الأداة مقطع خفيف بلا نبر: «nur» [nuːɐ̯] لا [nuːɐ̯ˈ]، و«ch» في «doch» أمامي [ç] في المعيارية."},
+ ],trickAr:"الأداة مقطع خفيف بلا نبر: «nur» [nuːɐ̯] لا [nuːɐ̯ˈ]، و«ch» في «doch» خلفي [x] في المعيارية (بعد o/u/a)."},
  writing:{titleAr:"بريد رسمي بأدوات محسوبة",promptDe:"Schreiben Sie eine E-Mail an die Studienberatung (170–200 Wörter): Sie bitten um einen neuen Prüfungstermin, weil eine Auskunft unbeantwortet blieb. Verwenden Sie genau zwei Modalpartikeln im einleitenden Teil und schreiben Sie den Satz mit Datum und Frist ohne jede Partikel. Begründen Sie in einem Satz, warum dort keine steht.",
  promptAr:"اكتب بريدًا إلى إدارة الإرشاد الدراسي (170–200 كلمة): تطلب موعدًا اختباريًا جديدًا لأنّ بيانًا بقي بلا ردّ. واستعمل أداتَي نبرة فقط في الافتتاح، واكتب الجملة التي فيها التاريخ والأجل بلا أي أداة، ثم علّل في جملة واحدة لماذا غابت هناك.",
  checklistAr:[
@@ -1326,7 +1326,7 @@ export const b2Module6Lessons: FullLesson[] = [
  items: [
  { de: "je FRÜHER, desto KÜRZER", ipa: "[jeː ˈfʁyːɐ̯ ˈdɛstoː ˈkʏʁtɐ]", ar: "النبر على القياسين، و«desto» بفتحتين لا بكسرة" },
  { de: "nicht NUR, SONDERN auch", ipa: "[nɪçt ˈnuːɐ̯ ˈzɔndɐn aʊ̯x]", ar: "«sondern» منبورة، و«auch» بـ[aʊ̯x] لا [aʊ̯ç]" },
- { de: "sowohl ONLINE als auch PRÄSENZ", ipa: "[ˈzəvoːl ɔnˈliːn ˈals ɔɪ̯ç ˈpʁɛzɛnts]", ar: "«als» خفيفة هنا، والثقل على «Präsenz» لا عليها" },
+ { de: "sowohl ONLINE als auch PRÄSENZ", ipa: "[ˈzəvoːl ɔnˈliːn ˈals aʊ̯x ˈpʁɛzɛnts]", ar: "«als» خفيفة هنا، والثقل على «Präsenz» لا عليها" },
  { de: "WEDER noch", ipa: "[ˈveːdɐ nɔx]", ar: "«weder» ثقيل و«noch» خفيف بعده" },
  { de: "desto ÖFTER wird gePRÜFT", ipa: "[ˈdɛstə ˈœftɐ vɪʁt ɡəˈpʁyːft]", ar: "«geprüft» بـ[ch] بعد كسرة و«desto» طويل" },
  { de: "die KLAUSEL, nicht die Klauseln", ipa: "[diː ˈklaʊzl̩ nɪçt diː ˈklaʊzl̩n]", ar: "مفرد لا جمع: «die Klausel» تنتهي بـ[s] لا [zn]" },

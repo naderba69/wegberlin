@@ -12,8 +12,8 @@
     "maxSingleChunkGzipBytes": 637500
   },
   "actual": {
-    "chunkCount": 125,
-    "totalChunkGzipBytes": 1918717,
+    "chunkCount": 126,
+    "totalChunkGzipBytes": 1918152,
     "maxSingleChunkGzipBytes": 262117
   },
   "issues": [],
@@ -59,9 +59,9 @@
       "gzipBytes": 59766
     },
     {
-      "path": ".next/static/chunks/app/settings/page-cb1e40eded01083e.js",
-      "rawBytes": 208636,
-      "gzipBytes": 58347
+      "path": ".next/static/chunks/app/settings/page-796f0b14a0513ac8.js",
+      "rawBytes": 208768,
+      "gzipBytes": 58444
     },
     {
       "path": ".next/static/chunks/3348-1bb6a99ce17f420f.js",
@@ -69,9 +69,9 @@
       "gzipBytes": 53515
     },
     {
-      "path": ".next/static/chunks/app/lernen/[lessonId]/page-5f8bc7109d9450ed.js",
-      "rawBytes": 156729,
-      "gzipBytes": 45983
+      "path": ".next/static/chunks/app/lernen/[lessonId]/page-3bf09937397aecfb.js",
+      "rawBytes": 156839,
+      "gzipBytes": 46150
     },
     {
       "path": ".next/static/chunks/main-63fb81d12711c451.js",
@@ -89,14 +89,14 @@
       "gzipBytes": 31050
     },
     {
-      "path": ".next/static/chunks/app/today/page-34edaad11cdfce6a.js",
-      "rawBytes": 96927,
-      "gzipBytes": 29879
+      "path": ".next/static/chunks/app/today/page-9db5c778439a8b3b.js",
+      "rawBytes": 96932,
+      "gzipBytes": 29881
     },
     {
-      "path": ".next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
+      "path": ".next/static/chunks/app/speaking/page-be6221ecdfe207db.js",
       "rawBytes": 90064,
-      "gzipBytes": 27780
+      "gzipBytes": 27684
     },
     {
       "path": ".next/static/chunks/6850-ebe207120d9a2d4e.js",
@@ -104,12 +104,12 @@
       "gzipBytes": 25477
     },
     {
-      "path": ".next/static/chunks/app/writing/page-b34c571d8242901c.js",
+      "path": ".next/static/chunks/app/writing/page-365e6eba851446a0.js",
       "rawBytes": 69553,
-      "gzipBytes": 22689
+      "gzipBytes": 22688
     },
     {
-      "path": ".next/static/chunks/app/progress/page-76fdd085e1a94367.js",
+      "path": ".next/static/chunks/app/progress/page-42c7e0d0d444a0af.js",
       "rawBytes": 69103,
       "gzipBytes": 21284
     },

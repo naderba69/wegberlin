@@ -17,7 +17,7 @@ async function stored(page:Page){return page.evaluate(()=>new Promise<LearningSt
 
 test("B2 uses the actual 48-item parallel form and cannot pass 38 answers",async({page})=>{
   test.setTimeout(90_000);await seed(page,learner);await page.goto("/assessment/b2");
-  const panel=page.locator('[data-level-assessment-policy="independent-level-transition-v2"]');await expect(panel).toBeVisible();
+  const panel=page.locator('[data-level-assessment-policy="independent-level-transition-v3"]');await expect(panel).toBeVisible();
   await expect(panel).toContainText("39/48");await page.getByRole("button",{name:/ابدأ الصيغة/}).click();
   const qs=levelAssessmentQuestions("B2","A");await expect(page.locator("[data-assessment-question-id]")).toHaveCount(48);
   for(const [index,q] of qs.entries())await page.locator(`[data-assessment-question-id="${q.id}"] select`).selectOption(String(index<10?(q.correctIndex+1)%4:q.correctIndex));

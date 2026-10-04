@@ -3,20 +3,20 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `1be08ad3ea1387aeda52aec02e9297984595c7b87e5adec4958800714eca8466`
+Content SHA-256: `2a898098e766a19327f0a946ac53792ec3bc8d57aec5d83ecd0166f37458dce8`
 
 ## Result
 
-`PASS` — 199 TSX files and 7584 opening JSX tags were scanned.
+`PASS` — 200 TSX files and 7649 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
 | Explicit German fragments (lang=de + dir=ltr) | 424 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 469 |
+| LTR tags audited | 471 |
 | RTL tags audited | 7 |
 | Auto-direction adaptive fragments | 12 |
-| Technical/numeric/secret bidi scopes | 51 |
+| Technical/numeric/secret bidi scopes | 53 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
@@ -190,20 +190,20 @@ Content SHA-256: `1be08ad3ea1387aeda52aec02e9297984595c7b87e5adec4958800714eca84
 | src/components/review-reminder-control.tsx:35 | تذكير محلي للبطاقات المستحقة، بلا حساب أو خادم أو Push مدفوع. | Arabic host + plaintext boundary |
 | src/components/separated-rubrics.tsx:1 | عام وGoethe وtelc — دون خلط | Arabic host + plaintext boundary |
 | src/components/session-ritual-preferences-control.tsx:4 | تفضيل محلي فقط · `optional-session-rituals-v1` · التأمل الأسبوعي مستقل عن هذا المفتاح. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:215 | تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:250 | ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:267 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:269 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:272 | تصدير .dwnb | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:273 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:274 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:274 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:285 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:285 | مفتاح API | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:288 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:290 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:298 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:308 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:216 | تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:251 | ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:269 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:271 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:274 | تصدير .dwnb | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:275 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:276 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:276 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:287 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:287 | مفتاح API | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:290 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:292 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:300 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:310 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:149 | ملف MP3 متاح | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:149 | للتقليد دون TTS | Arabic host + plaintext boundary |
 | src/components/skill-diagnostic-retest.tsx:7 | كل عينة تسأل سؤالًا واحدًا من A1 إلى B2 وتحفظ منفصلة. لا تستبدل تشخيصك العام ولا تفتح مستوى. | Arabic host + plaintext boundary |

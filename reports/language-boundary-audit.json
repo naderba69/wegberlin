@@ -3,14 +3,14 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 199,
-  "openingTagCount": 7584,
+  "tsxFiles": 200,
+  "openingTagCount": 7649,
   "germanTagCount": 424,
   "arabicTagCount": 7,
-  "ltrTagCount": 469,
+  "ltrTagCount": 471,
   "rtlTagCount": 7,
   "autoDirCount": 12,
-  "technicalScopeCount": 51,
+  "technicalScopeCount": 53,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
@@ -783,72 +783,72 @@
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 215,
+      "line": 216,
       "text": "تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 250,
+      "line": 251,
       "text": "ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 267,
+      "line": 269,
       "text": "ملف محمول قابل للتحقق بـSHA-256."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 269,
+      "line": 271,
       "text": "التسجيلات الصوتية محفوظة في Media Store منفصل."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 272,
+      "line": 274,
       "text": "تصدير .dwnb"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 273,
+      "line": 275,
       "text": "يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة المرور ومفتاح API مستبعدان دائمًا."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 274,
+      "line": 276,
       "text": "دعم نسخ DWNB القديمة"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 274,
+      "line": 276,
       "text": "v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على الأقل حتى 2027-09-30. لا تُرفض نسخة مدعومة بصمت."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 285,
+      "line": 287,
       "text": "عنوان Ollama المحلي"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 285,
+      "line": 287,
       "text": "مفتاح API"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 288,
+      "line": 290,
       "text": "طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 290,
+      "line": 292,
       "text": "يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 298,
+      "line": 300,
       "text": "لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 308,
+      "line": 310,
       "text": "المفتاح أو عنوان Ollama المؤقت"
     },
     {
@@ -1024,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "1be08ad3ea1387aeda52aec02e9297984595c7b87e5adec4958800714eca8466"
+  "contentSha256": "2a898098e766a19327f0a946ac53792ec3bc8d57aec5d83ecd0166f37458dce8"
 }

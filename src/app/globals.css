@@ -1326,3 +1326,18 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .session-blocks-card li em{color:#4d5a54;font-size:var(--fs-8);font-style:normal;line-height:1.6}
 .session-blocks-card li i{display:flex;align-items:center;gap:4px;color:#6b4f16;font-size:var(--fs-8);font-style:normal}
 @media(max-width:900px){.session-blocks-card ol{grid-template-columns:1fr 1fr}}
+
+.human-review-card{grid-column:1/-1}
+.human-review-form{display:grid;gap:10px}
+.human-review-form label{display:grid;gap:4px;color:var(--ink);font-size:var(--fs-9);font-weight:700}
+.human-review-form input,.human-review-form select,.human-review-form textarea{width:100%;min-height:38px;border:1px solid #d9ddd8;border-radius:10px;padding:7px 9px;font-size:var(--fs-9);background:#fff}
+.human-review-form textarea{min-height:64px;resize:vertical}
+.human-review-checklist{border:1px solid #e2e0d8;border-radius:12px;padding:9px 11px;margin:0;background:#fbfaf6}
+.human-review-checklist legend{color:#2f5c4c;font-size:var(--fs-9);font-weight:800;padding:0 5px}
+.human-review-item{display:grid;grid-template-columns:auto 1fr;gap:7px;align-items:start;padding:5px 0;font-weight:600}
+.human-review-item input{width:16px;height:16px;margin-top:2px}
+.human-review-item span{display:grid;gap:1px}
+.human-review-item b{color:var(--ink);font-size:var(--fs-9)}
+.human-review-item small{color:#5f716a;font-size:var(--fs-8);line-height:1.6;font-weight:500}
+.human-review-message{margin:0;color:#2f5c4c;font-size:var(--fs-9);font-weight:700}
+.human-review-json{margin:0;max-height:220px;overflow:auto;background:#f4f4f1;border:1px solid #e2e0d8;border-radius:10px;padding:9px;font-size:var(--fs-8);direction:ltr;text-align:left}

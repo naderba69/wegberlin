@@ -1,0 +1,32 @@
+{
+ "format": "dwnb-human-review-audit",
+ "version": "human-review-audit-v1",
+ "generatedAt": "2026-10-04",
+ "ok": true,
+ "independentReviewStatus": "pending-zero-recorded-reviews",
+ "checklistItems": [
+  "german-correct",
+  "arabic-natural",
+  "cefr-level-fit",
+  "objective-aligned",
+  "answer-unambiguous",
+  "explanation-teaches-rule",
+  "audio-usable",
+  "no-cultural-harm",
+  "no-copyright-risk",
+  "transfer-task-realistic"
+ ],
+ "policyVersion": "human-review-ledger-v1",
+ "boundary": "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer",
+ "totalEntries": 0,
+ "reviewedLessons": 0,
+ "lessonTotal": 96,
+ "coveragePct": 0,
+ "monthlyTarget": 8,
+ "months": [],
+ "lastMonthReviewed": 0,
+ "targetMetLastMonth": false,
+ "invalidEntries": [],
+ "duplicateReviews": [],
+ "boundaryAr": "التطبيق لا يستطيع التحقق من هوية المراجع ولا من مؤهله؛ السجل يشهد بما سُجّل لا بما يُدّعى، ولذلك لا يمنح اعتمادًا ولا يغيّر حالة النشر تلقائيًا."
+}

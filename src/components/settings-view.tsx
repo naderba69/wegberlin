@@ -35,6 +35,7 @@ import { SpeechPreferencesControl } from "./speech-preferences-control";
 import { AIProviderCapabilityMatrix } from "./ai-provider-capability-matrix";
 import { PartialStudyExport } from "./partial-study-export";
 import { ContentGovernanceSummary } from "./content-governance-summary";
+import { HumanReviewLedgerPanel } from "./human-review-ledger-panel";
 import { probeLiveProviderCapabilities, type LiveCapabilityProbe } from "@/core/ai/live-capability-probe";
 
 type PrivacyAction = "recordings" | "tutor-history" | "support-history" | "practice-process" | "writing-history";
@@ -252,6 +253,7 @@ export function SettingsView() {
       <WebGPUModelControl />
       <LocalPronunciationModelControl />
       <ContentGovernanceSummary />
+      <HumanReviewLedgerPanel />
       <OfflinePackControl />
       <GuestSessionPanel />
         </div>

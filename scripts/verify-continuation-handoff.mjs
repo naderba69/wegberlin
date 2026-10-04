@@ -1143,10 +1143,10 @@ for (const text of ["real-task-comprehensibility-check-v1","listener-judged-real
 for (const text of ["data-comprehensibility-policy","data-comprehensibility-listener-question","data-comprehensibility-answer-key","data-comprehensibility-record","data-comprehensibility-summary","data-comprehensibility-no-effect","data-comprehensibility-honest-note"]) requireText(comprehensibilityPanel, text, "comprehensibility panel");
 for (const text of ["تقرير ذاتي لا يُعدّ تحقّقًا خارجيًا","المعلومة التي يجب أن تصل","لا تُمنح هنا درجة نطقٍ أو طلاقة"]) requireText(comprehensibilityPanel, text, "comprehensibility honesty copy");
 if (/\bfetch\(|localStorage|sessionStorage|indexedDB|navigator\./.test(comprehensibilityCore)) fail("comprehensibility core must stay network-free and storage-free");
-for (const text of ["8","3","66"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
+for (const text of ["8","3","67"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
 requireText(comprehensibilityAdr, "٨ مهام", "comprehensibility ADR inventory");
 requireText(comprehensibilityAdr, "self-report-no-external-verification", "comprehensibility ADR self-report label");
-requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count");
+requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count (historical record of the field count at that time)");
 requireText(read("src/components/shadowing-studio.tsx"), "<ComprehensibilityTaskPanel level={selected.level}/>", "comprehensibility panel mounted");
 if (!p2Rows.some((row) => row.id === 156 && row.status === "implemented")) fail("P2-156 comprehensibility state drifted");
 // ADR-098 (P2-165): محاكاة شريك الامتحان بسرعات وشخصيات — بنكٌ مؤلَّف، بلا سماعٍ ولا STT ولا درجة ولا نسبة رسمية.

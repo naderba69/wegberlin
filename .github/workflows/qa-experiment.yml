@@ -1,0 +1,46 @@
+name: QA experiment (temporary)
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/qa-experiment.yml"
+      - "qa-experiment-telc.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+      - name: Production smoke against the public alias
+        env:
+          DEPLOYMENT_URL: https://wegberlin.vercel.app
+        run: |
+          set +e
+          node scripts/smoke-deployment.mjs > smoke-report.json 2> smoke-stderr.txt
+          code=$?
+          echo "::notice title=smoke exit code::$code"
+          echo "::notice title=smoke report::$(tr '\n' ' ' < smoke-report.json | cut -c1-3500)"
+          echo "::notice title=smoke stderr::$(tr '\n' ' ' < smoke-stderr.txt | cut -c1-1500)"
+          exit 0
+      - name: Source probe from a runner (what the monthly workflow sees)
+        run: |
+          set +e
+          node scripts/audit-source-freshness.mjs --probe > probe.txt 2>&1
+          code=$?
+          echo "::notice title=probe exit code::$code"
+          echo "::notice title=probe report::$(tr '\n' '|' < probe.txt | cut -c1-5000)"
+          exit 0
+      - name: telc archive re-read
+        run: |
+          set +e
+          sudo apt-get update -qq > /dev/null 2>&1
+          sudo apt-get install -y -qq poppler-utils unzip > /dev/null 2>&1
+          node qa-experiment-telc.mjs
+          exit 0

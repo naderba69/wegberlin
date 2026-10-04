@@ -83,7 +83,8 @@
     "pronunciation:consistency": "tsx scripts/audit-pronunciation-consistency.ts",
     "pronunciation:consistency:write": "tsx scripts/audit-pronunciation-consistency.ts --write",
     "human:review": "tsx scripts/audit-human-review.ts",
-    "human:review:write": "tsx scripts/audit-human-review.ts --write"
+    "human:review:write": "tsx scripts/audit-human-review.ts --write",
+    "audio:listening:materialize": "node scripts/materialize-listening-voices.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

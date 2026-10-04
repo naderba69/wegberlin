@@ -23,9 +23,23 @@ import { useLearning } from "./learning-provider";
  * والتطبيق يمنع حفظ سطر ناقص أو مراجعة ذاتية، ثم يعطي JSON جاهزًا للالتزام في المستودع.
  * لا يدّعي التطبيق أنه يتحقق من هوية المراجع — الشهادة على ما سُجّل لا على ما يُدّعى.
  */
+/** تاريخ محلي ثابت خلال اليوم: دالة على نطاق الملف حتى لا تتغيّر القيمة مع كل رسم. */
+function localToday(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+/**
+ * لحظة الحساب تُبنى من تاريخ الجهاز المُهيَّأ بعد الترطيب، لا من ساعة داخل مُهيِّئ رسم
+ * (حارس `no-storage-in-render-init`: قراءة الزمن في أول رسم تكسر الترطيب).
+ */
+function reviewNow(deviceToday: string): Date {
+  return deviceToday ? new Date(`${deviceToday}T12:00:00.000Z`) : new Date(0);
+}
+
 export function HumanReviewLedgerPanel() {
   const { state } = useLearning();
-  const deviceToday = useDeviceValue(() => new Date().toISOString().slice(0, 10), "");
+  const deviceToday = useDeviceValue(localToday, "");
   const [lessonId, setLessonId] = useState(academicLessonList[0]?.id ?? "a1-01");
   const [reviewer, setReviewer] = useState("");
   const [verdict, setVerdict] = useState<HumanReviewVerdict>("accept");
@@ -38,7 +52,7 @@ export function HumanReviewLedgerPanel() {
   const [message, setMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const summary = useMemo(() => summarizeHumanReviewLedger([...humanReviewLedger, ...drafts], new Date(), state.profile?.name), [drafts, state.profile?.name]);
+  const summary = useMemo(() => summarizeHumanReviewLedger([...humanReviewLedger, ...drafts], reviewNow(deviceToday), state.profile?.name), [drafts, deviceToday, state.profile?.name]);
   const draft: HumanReviewEntry = {
     policyVersion: HUMAN_REVIEW_POLICY,
     lessonId,

@@ -8,7 +8,7 @@ permissions:
   issues: write
 jobs:
   audit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
@@ -23,7 +23,7 @@ jobs:
           set -o pipefail
           node scripts/audit-source-freshness.mjs --fail-on=due --probe | tee source-freshness-report.txt
       - name: Open, update, or close the monthly review issue
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           AUDIT_OUTCOME: ${{ steps.freshness.outcome }}
         with:

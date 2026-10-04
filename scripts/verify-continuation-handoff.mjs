@@ -891,10 +891,10 @@ if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-fir
 // أُعيد توليد العدّادين 7454→7508 و201→201 في جيلي الإعدادات ووسم الخطأ
 // (settings-group + شريط تنقّل داخلي) ثم 16 وسمًا لحزمة التغذية الراجعة،
 // وتحوّل وسمّ نصي مختلط واحد فعليًا: 200→201.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 198 || languageAudit.openingTagCount !== 7555 || languageAudit.germanTagCount !== 423 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 198 || languageAudit.openingTagCount !== 7566 || languageAudit.germanTagCount !== 423 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:198", "openingTagCount:7555", "germanTagCount:423", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:198", "openingTagCount:7566", "germanTagCount:423", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

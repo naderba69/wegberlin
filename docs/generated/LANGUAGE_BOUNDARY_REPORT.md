@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `17755bef9241e0cef7e078580061ab118d0ef7114f89ba79d5d2e6c635e5f1af`
+Content SHA-256: `3a2cb806d3a8d5f1dfea4e774aa2f98f25284cb7f664d740572d81afb3727f0c`
 
 ## Result
 
-`PASS` — 198 TSX files and 7555 opening JSX tags were scanned.
+`PASS` — 198 TSX files and 7566 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -55,8 +55,8 @@ Content SHA-256: `17755bef9241e0cef7e078580061ab118d0ef7114f89ba79d5d2e6c635e5f1
 | src/app/progress/page.tsx:66 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:71 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:76 | ليس حكم CEFR | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:80 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:82 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:81 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:83 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
 | src/components/ai-provider-capability-matrix.tsx:57 | حد 0 USD | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |

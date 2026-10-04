@@ -5,6 +5,7 @@ import { useDeviceValue, useDeviceEpoch } from "@/components/device-value";
 import Link from "next/link";
 import { BrainCircuit, CalendarCheck, Check, RotateCcw, Sparkles } from "lucide-react";
 import { useLearning } from "@/components/learning-provider";
+import { REVIEW_GRADE_POLICY, REVIEW_GRADE_DESCRIPTORS, gradeDescriptor, selfRatingBias } from "@/core/srs/grade-descriptors";
 import { newReviewItem } from "@/core/srs/sm2";
 import { buildDueReviewQueue, nextScheduledReviewDate } from "@/core/srs/review-queue";
 import { applyReviewGrade, retentionEvidence } from "@/core/srs/review-session";
@@ -97,7 +98,7 @@ export default function ReviewPage() {
         <p>{flipped ? card.hint : "قل المعنى والاستعمال قبل النقر"}</p>
         <small>{flipped ? "قيّم الاسترجاع بصدق" : "انقر لكشف الجواب"}</small>
       </button>
-      {flipped && <div className="grade-grid"><button aria-keyshortcuts="1" onClick={() => grade(1)}><span>1</span>نسيت</button><button aria-keyshortcuts="3" onClick={() => grade(3)}><span>3</span>بصعوبة</button><button aria-keyshortcuts="4" onClick={() => grade(4)} className="good"><span>4</span>جيد</button><button aria-keyshortcuts="5" onClick={() => grade(5)} className="easy"><Check size={15}/>سهل</button></div>}</>}
+      {flipped && <div className="grade-block" data-review-grade-policy={REVIEW_GRADE_POLICY}><div className="grade-grid"><button aria-keyshortcuts="1" onClick={() => grade(1)} data-grade-descriptor="1"><span>1</span>{REVIEW_GRADE_DESCRIPTORS[1].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[1].behaviourAr}</small></button><button aria-keyshortcuts="3" onClick={() => grade(3)} data-grade-descriptor="3"><span>3</span>{REVIEW_GRADE_DESCRIPTORS[3].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[3].behaviourAr}</small></button><button aria-keyshortcuts="4" onClick={() => grade(4)} className="good" data-grade-descriptor="4"><span>4</span>{REVIEW_GRADE_DESCRIPTORS[4].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[4].behaviourAr}</small></button><button aria-keyshortcuts="5" onClick={() => grade(5)} className="easy" data-grade-descriptor="5"><Check size={15}/>{REVIEW_GRADE_DESCRIPTORS[5].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[5].behaviourAr}</small></button></div><details className="grade-calibration"><summary>كيف تقدّر بسلوك لا بمزاج؟</summary>{([1,3,4,5] as const).map((value)=>{const descriptor=gradeDescriptor(value);return descriptor?<p key={value}><b>{value} · {descriptor.labelAr}</b> {descriptor.exampleAr} <em>{descriptor.avoidAr}</em></p>:null})}<small>{selfRatingBias(state.reviewEvents).noteAr} التقدير الذاتي يعاير الجدولة فقط؛ ليس نتيجة تقييم ولا دليل إتقان.</small></details></div>}</>}
       <div className="review-tip"><Sparkles size={18}/><p><b>التريك الخاص بهذه البطاقة:</b> {card.hint}</p></div>
     </div> : <section className="review-empty-state">
       <span><CalendarCheck size={28}/></span>

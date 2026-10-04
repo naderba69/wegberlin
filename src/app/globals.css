@@ -1304,3 +1304,11 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .not-found-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:22px 0 14px}
 .not-found-note{font-size:var(--fs-8)!important;color:#67716c!important;border-top:1px solid #eeeae6;padding-top:14px;margin-top:18px!important}
 @media(max-width:560px){.not-found-page{margin:22px auto;padding:26px 18px}}
+
+.grade-block{display:grid;gap:8px}
+.grade-grid button small{display:block;margin-top:3px;color:#5f716a;font-size:var(--fs-8);font-weight:600;line-height:1.5}
+.grade-calibration{border:1px solid #dde4df;border-radius:12px;background:#fbfaf6;padding:9px 12px}
+.grade-calibration summary{cursor:pointer;color:var(--ink);font-size:var(--fs-9);font-weight:800}
+.grade-calibration p{margin:7px 0 0;color:#4d5a54;font-size:var(--fs-8);line-height:1.75}
+.grade-calibration p em{color:#5f716a;font-style:normal}
+.grade-calibration small{display:block;margin-top:7px;color:#5f716a;font-size:var(--fs-8)}

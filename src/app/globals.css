@@ -1443,3 +1443,25 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .accepted-alternates ul{margin:0;padding-inline-start:16px;display:grid;gap:2px}
 .accepted-alternates li{color:#22303d;font-size:var(--fs-9);direction:ltr}
 .accepted-alternates small{color:#4a5560;font-size:var(--fs-8);line-height:1.7}
+
+.weekly-writing-cycle{margin:0 0 14px;background:#f7f8f4;border:1px solid #e2e0d8;border-radius:16px;padding:14px;display:grid;gap:11px}
+.weekly-writing-cycle>header{display:grid;grid-template-columns:1.7fr 1fr;gap:12px;align-items:start}
+.weekly-writing-cycle h2{margin:5px 0 6px;color:#241f1a;font-size:var(--fs-6)}
+.weekly-writing-cycle h2 b{color:#2f5c4c}
+.weekly-writing-cycle p{margin:0;color:#40483f;font-size:var(--fs-9);line-height:1.8}
+.weekly-writing-state{background:#fff;border:1px solid #e6e4dc;border-radius:12px;padding:9px 11px;display:grid;gap:3px}
+.weekly-writing-state small{color:#6b746c;font-size:var(--fs-8)}
+.weekly-writing-state strong{font-size:var(--fs-8)}
+.weekly-writing-state strong.ok{color:#22543d}
+.weekly-writing-state strong.pending{color:#8a5a1e}
+.weekly-writing-state em{color:#5f716a;font-style:normal;font-size:var(--fs-8);line-height:1.6}
+.weekly-writing-weeks{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.weekly-writing-weeks li{display:flex;align-items:center;gap:5px;border-radius:10px;padding:5px 9px;border:1px solid #e2e0d8;background:#fff;color:#4a544e;font-size:var(--fs-8)}
+.weekly-writing-weeks li.done{border-color:#cfe4d2;background:#f2f8f3;color:#22543d}
+.weekly-writing-weeks li.open{border-color:#f0e0c6;background:#fdf8f0;color:#8a5a1e}
+.weekly-writing-weeks li.idle{border-color:#e4e6ea;background:#f8f9fa;color:#6b746c}
+.weekly-writing-cycle footer{display:grid;gap:6px}
+.weekly-writing-cycle footer p{margin:0;color:#40483f;font-size:var(--fs-9)}
+.weekly-writing-cycle .boundary-line{color:#5f716a;font-size:var(--fs-8);direction:rtl;text-align:start;line-height:1.75}
+.weekly-writing-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:900px){.weekly-writing-cycle>header{grid-template-columns:1fr}}

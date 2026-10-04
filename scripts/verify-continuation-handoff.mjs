@@ -469,8 +469,8 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,317/1,317", "195/195", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,317/1,317", "195/195", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,322/1,322", "196/196", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,322/1,322", "196/196", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
 for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
 if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
@@ -891,10 +891,10 @@ if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-fir
 // أُعيد توليد العدّادين 7454→7508 و201→201 في جيلي الإعدادات ووسم الخطأ
 // (settings-group + شريط تنقّل داخلي) ثم 16 وسمًا لحزمة التغذية الراجعة،
 // وتحوّل وسمّ نصي مختلط واحد فعليًا: 200→201.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 204 || languageAudit.openingTagCount !== 7817 || languageAudit.germanTagCount !== 436 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 205 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 205 || languageAudit.openingTagCount !== 7845 || languageAudit.germanTagCount !== 436 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 205 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:204", "openingTagCount:7817", "germanTagCount:436", "technicalScopeCount:53", "mixedStaticCount:205"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:205", "openingTagCount:7845", "germanTagCount:436", "technicalScopeCount:53", "mixedStaticCount:205"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

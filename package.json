@@ -45,7 +45,7 @@
     "security:audit:write": "tsx scripts/audit-security-headers.ts --write",
     "governance:audit": "tsx scripts/generate-content-governance-audit.ts",
     "governance:audit:write": "tsx scripts/generate-content-governance-audit.ts --write",
-    "prebuild": "npm run imports:portable && npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run accepted:answers && npm run nursing:layer && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit && npm run lesson:quality:audit && npm run lesson:contract:audit && npm run learning:integrity:audit && npm run production:mix && npm run pronunciation:consistency && npm run human:review",
+    "prebuild": "npm run imports:portable && npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run accepted:answers && npm run nursing:layer && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit && npm run lesson:quality:audit && npm run lesson:contract:audit && npm run learning:integrity:audit && npm run production:mix && npm run pronunciation:consistency && npm run human:review && npm run writing:cycle",
     "build": "next build --webpack",
     "postbuild": "npm run offline:size && npm run js:budget && npm run media:budget && npm run contrast:audit",
     "js:budget": "node scripts/audit-js-budgets.mjs",
@@ -84,7 +84,9 @@
     "pronunciation:consistency:write": "tsx scripts/audit-pronunciation-consistency.ts --write",
     "human:review": "tsx scripts/audit-human-review.ts",
     "human:review:write": "tsx scripts/audit-human-review.ts --write",
-    "audio:listening:materialize": "node scripts/materialize-listening-voices.mjs"
+    "audio:listening:materialize": "node scripts/materialize-listening-voices.mjs",
+    "writing:cycle": "tsx scripts/audit-weekly-writing.ts",
+    "writing:cycle:write": "tsx scripts/audit-weekly-writing.ts --write"
   },
   "dependencies": {
     "fflate": "^0.8.3",

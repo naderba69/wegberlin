@@ -3,8 +3,8 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 204,
-  "openingTagCount": 7817,
+  "tsxFiles": 205,
+  "openingTagCount": 7845,
   "germanTagCount": 436,
   "arabicTagCount": 7,
   "ltrTagCount": 483,
@@ -1044,5 +1044,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "0698632746a7911079591b919868a7009eab6db853ef32d1722cafcfdf7ed7d1"
+  "contentSha256": "31d3a603aa322d0265f3f2a86a2212edebc2caa9b5e9c74ae9e94d12806ad96d"
 }

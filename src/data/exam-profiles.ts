@@ -51,7 +51,7 @@ export const examProfiles: Record<ExamProfile["id"], ExamProfile> = {
     id: "goethe-b2",
     displayName: "Goethe-Zertifikat B2",
     specificationVersion: "Goethe B2 terms 2025-09 + adult model set 2025-08",
-    verifiedAt: "2026-09-03",
+    verifiedAt: "2026-10-04",
     status: "verified",
     modules: [
       { id: "lesen", titleDe: "Lesen", titleAr: "القراءة", parts: 5, minutes: 65, maxPoints: 100, noteAr: "30 عنصرًا وفق النموذج الرسمي الحالي؛ الوحدة مستقلة." },
@@ -67,8 +67,8 @@ export const examProfiles: Record<ExamProfile["id"], ExamProfile> = {
   "telc-deutsch-b2": {
     id: "telc-deutsch-b2",
     displayName: "telc Deutsch B2",
-    specificationVersion: "Current official overview checked 2026-09-03 + linked mock revised 2019",
-    verifiedAt: "2026-09-03",
+    specificationVersion: "Current official overview checked 2026-10-04 + linked mock revised 2019",
+    verifiedAt: "2026-10-04",
     status: "verified",
     modules: [
       { id: "lesen", titleDe: "Leseverstehen", titleAr: "فهم القراءة", parts: 3, minutes: 90, maxPoints: 75, noteAr: "القراءة وSprachbausteine يشتركان في كتلة 90 دقيقة بلا فاصل." },

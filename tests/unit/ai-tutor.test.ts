@@ -1,6 +1,10 @@
 // @vitest-environment node
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { askSpeakingFollowUp, askTutor, buildTutorContextPrompt, isTutorConsentRequired, parseSpeakingFollowUpPayload, parseTutorPayload, SPEAKING_FOLLOW_UP_PROMPT_VERSION, TUTOR_PROMPT_VERSION, type TutorContext } from "@/core/ai/client";
+import { aiSourceIds, freshAt, staleAt } from "../helpers/source-verification-clock";
+
+// Pinned inside the source-verification window, derived from the registry so re-verifying a source never edits this file.
+const AI_NOW = freshAt(aiSourceIds);
 
 const payload = {
   hintAr: "راقب موضع الفعل.",
@@ -51,29 +55,29 @@ describe("P0 structured and consented tutor", () => {
     expect(isTutorConsentRequired("gemini")).toBe(true);
     expect(isTutorConsentRequired("openrouter")).toBe(true);
     expect(isTutorConsentRequired("local")).toBe(true);
-    await expect(askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum?", { context, now: new Date("2026-09-03T12:00:00Z") })).rejects.toThrow("تأكيد الإرسال");
+    await expect(askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum?", { context, now: AI_NOW })).rejects.toThrow("تأكيد الإرسال");
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it("rejects a paid-capable OpenRouter model before any request", async () => {
     const fetchMock = vi.fn();
     vi.stubGlobal("fetch", fetchMock);
-    await expect(askTutor({ provider: "openrouter", model: "vendor/paid-model", key: "secret" }, "Warum?", { context, consentGranted: true, now: new Date("2026-09-03T12:00:00Z") })).rejects.toThrow("Free-only");
+    await expect(askTutor({ provider: "openrouter", model: "vendor/paid-model", key: "secret" }, "Warum?", { context, consentGranted: true, now: AI_NOW })).rejects.toThrow("Free-only");
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it("blocks an unverified Gemini model and stale remote pricing before fetch", async () => {
     const fetchMock = vi.fn();
     vi.stubGlobal("fetch", fetchMock);
-    await expect(askTutor({ provider: "gemini", model: "gemini-3.1-pro-preview", key: "secret" }, "Warum?", { context, consentGranted: true, now: new Date("2026-09-03T12:00:00Z") })).rejects.toThrow("المجانية");
-    await expect(askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum?", { context, consentGranted: true, now: new Date("2026-10-04T12:00:00Z") })).rejects.toThrow("تجاوز مدة 30 يومًا");
+    await expect(askTutor({ provider: "gemini", model: "gemini-3.1-pro-preview", key: "secret" }, "Warum?", { context, consentGranted: true, now: AI_NOW })).rejects.toThrow("المجانية");
+    await expect(askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum?", { context, consentGranted: true, now: staleAt(aiSourceIds) })).rejects.toThrow("تجاوز مدة 30 يومًا");
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it("validates Gemini JSON and attaches trusted local provenance", async () => {
     const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(payload) }] } }] }), { status: 200, headers: { "content-type": "application/json" } }));
     vi.stubGlobal("fetch", fetchMock);
-    const answer = await askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum steht das Verb am Ende?", { context, consentGranted: true, now: new Date("2026-09-03T12:00:00Z") });
+    const answer = await askTutor({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Warum steht das Verb am Ende?", { context, consentGranted: true, now: AI_NOW });
     expect(answer).toMatchObject({ ...payload, provider: "gemini", model: "gemini-2.5-flash", promptVersion: "tutor-v2" });
     const [, request] = fetchMock.mock.calls[0];
     const body = JSON.parse(request.body);
@@ -102,7 +106,7 @@ describe("P0 structured and consented tutor", () => {
   it("blocks a network speaking follow-up before fetch when fresh per-send consent is absent", async () => {
     const fetchMock = vi.fn();
     vi.stubGlobal("fetch", fetchMock);
-    await expect(askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, now: new Date("2026-09-06T12:00:00Z") })).rejects.toThrow("تأكيد الإرسال");
+    await expect(askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, now: AI_NOW })).rejects.toThrow("تأكيد الإرسال");
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
@@ -110,7 +114,7 @@ describe("P0 structured and consented tutor", () => {
     const followUpPayload = { questionDe: "Was machen Sie gern in Berlin?", supportAr: "السؤال مرتبط بمكان السكن المذكور.", groundingCue: "Berlin" };
     const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify(followUpPayload) }] } }] }), { status: 200, headers: { "content-type": "application/json" } }));
     vi.stubGlobal("fetch", fetchMock);
-    const answer = await askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, consentGranted: true, now: new Date("2026-09-06T12:00:00Z") });
+    const answer = await askSpeakingFollowUp({ provider: "gemini", model: "gemini-2.5-flash", key: "secret" }, "Ich wohne in Berlin.", { context: { lessonId: "a1-01", level: "A1", taskPromptDe: "Stellen Sie sich vor." }, consentGranted: true, now: AI_NOW });
     expect(answer).toMatchObject({ ...followUpPayload, provider: "gemini", model: "gemini-2.5-flash", promptVersion: SPEAKING_FOLLOW_UP_PROMPT_VERSION });
     const request = fetchMock.mock.calls[0][1];
     const body = JSON.parse(request.body);

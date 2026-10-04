@@ -9,7 +9,6 @@ import {
   buildResetEvent,
   canExecuteReset,
   classifyResetCoverage,
-  planLearningReset,
   RESET_CLEARED_DEFAULTS,
   RESET_CLEARED_FIELDS,
   RESET_CONFIRMATION_WORD,

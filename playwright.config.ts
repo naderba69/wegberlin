@@ -6,6 +6,10 @@ export default defineConfig({
   workers: 1,
   retries: process.env.CI ? 1 : 0,
   forbidOnly: Boolean(process.env.CI),
+  // The whole suite lives in one serial file per project (workers: 1), so the default "slow test file" report (5 min)
+  // fired as a warning annotation on every green run and carried no signal. This changes reporting only: pass/fail,
+  // timeouts and retries are untouched, and the job's own timeout-minutes still bounds the total run time.
+  reportSlowTests: null,
   // On CI the failure text must survive into check-run annotations: this sandbox cannot download Actions
   // job logs (blob/results hosts are unreachable), so annotations are the only readable evidence.
   reporter: process.env.CI ? [["github", { printSteps: true }], ["line"]] : "line",

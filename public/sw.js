@@ -236,7 +236,10 @@ async function boundedFetch(url, init = {}) {
       clearTimeout(timer);
     }
   }
-  throw new Error(`تعذر تنزيل ${url} بعد ${PACK_FETCH_ATTEMPTS} محاولات (${PACK_FETCH_TIMEOUT_MS / 1000} ثانية لكل محاولة)؛ أعد المحاولة لاستئناف الحزمة من نقطة التحقّق.`);
+  // آخر خطأ شبكي يبقى سببًا (`cause`) لا يُرمى فيضيع، ووسم السياسة يُلحَق بالخطأ ليُقرأ في أدوات المطوّر عند التشخيص.
+  const failure = new Error(`تعذر تنزيل ${url} بعد ${PACK_FETCH_ATTEMPTS} محاولات (${PACK_FETCH_TIMEOUT_MS / 1000} ثانية لكل محاولة)؛ أعد المحاولة لاستئناف الحزمة من نقطة التحقّق.`, { cause: lastError });
+  failure.policy = PACK_FETCH_POLICY;
+  throw failure;
 }
 
 async function downloadSelectedPack(event, includeAudio, packId = "full", audioFormat = "mp3") {

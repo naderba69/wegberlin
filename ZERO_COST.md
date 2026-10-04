@@ -69,7 +69,7 @@ The browser model has no API key or paid endpoint. A learner must opt in after s
 
 ### Hosting and CI
 
-Vercel is restricted to Hobby personal/non-commercial use. The project does not depend on Functions, databases, Blob, paid image optimization, or analytics. GitHub Actions uses only `ubuntu-latest` standard runners in the public repository. No Larger runners or paid artifacts are required.
+Vercel is restricted to Hobby personal/non-commercial use. The project does not depend on Functions, databases, Blob, paid image optimization, or analytics. GitHub Actions uses only the standard `ubuntu-24.04` runner image in the public repository, pinned by version (never a moving `*-latest` label, so GitHub's runner-image migrations cannot change CI without a commit). No Larger runners or paid artifacts are required.
 
 ## Automated audit
 

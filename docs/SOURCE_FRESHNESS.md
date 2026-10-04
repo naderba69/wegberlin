@@ -1,26 +1,28 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v180 · 2026-10-04 · re-verified after the 2026-10-04 source re-verification (ADR-108) and the CI probe-policy update (ADR-109); the ADR-101 Vercel build-output compatibility fix remains verified.
 
 
 Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
 
 Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 
-Measured 2026-10-02: 18 references; fresh 2, due-soon 16, stale 0. Verification dates unchanged; semantic human review remains required beginning 2026-10-03.
+Measured 2026-10-04 before re-verification: 19 records; fresh 1, due-soon 6, stale 12, so `npm run source:audit -- --strict` exited 1 (the 30-day window of the 2026-09-03 records ended on the Africa/Tunis day 2026-10-04). After the owner-approved re-verification: fresh 19, due-soon 0, stale 0, clock errors 0.
 
-Last registry review: 2026-09-11 (auditor re-run 2026-09-20: 18 records, 18 fresh, 0 due-soon, 0 stale, 0 clock errors)  
-Next review due: 2026-10-03  
+Re-verification record: `docs/run-logs/2026-10-04-source-reverification/README.md` — an agent-assisted reading of 18 live official sources compared with `observedState`/`claimAr`, approved by the owner; the telc mock archive was confirmed as a link only (its content was not re-opened). `manual-semantic-review` and the UI label stay as they are: the owner's approval is what makes the review human.
+
+Last registry review: 2026-10-04 (auditor re-run 2026-10-04: 19 records, 19 fresh, 0 due-soon, 0 stale, 0 clock errors)  
+Next review due: 2026-11-01 (`onnxruntime-web`, verified 2026-10-02); every other record 2026-11-03  
 Calendar policy: Africa/Tunis  
 Registry version: `source-freshness-v1`
 
 ## Scope
 
-The central registry contains 18 official references:
+The central registry contains 19 official references:
 
 - 5 exam-format references: Goethe overview/terms/model set and telc overview/current mock link;
 - 5 remote-AI references: Gemini pricing/limits and OpenRouter free variant/router/limits;
-- 6 browser-model references: Transformers.js version/license, WebGPU guidance, multilingual MiniLM base/ONNX records, and multilingual Whisper tiny base/ONNX records;
+- 7 browser-model references: Transformers.js version/license, ONNX Runtime Web WebGPU bundle/license, WebGPU guidance, multilingual MiniLM base/ONNX records, and multilingual Whisper tiny base/ONNX records;
 - 1 Vercel Hobby reference;
 - 1 GitHub Actions billing reference.
 
@@ -55,7 +57,7 @@ The policy uses the Africa/Tunis calendar day so CI near UTC midnight does not f
 4. opens/updates one maintenance Issue when attention is required;
 5. closes the existing Issue after a later successful review update.
 
-The Goethe overview currently returns an anti-bot HTTP 403 to generic CI clients. Its record is explicitly `manual-on-403`; the report keeps that fact visible but does not pretend CI can read the page. Its official PDFs remain machine-probed.
+The Goethe overview and the two npmjs.com package pages (`transformers-js-runtime-4-2-0`, `onnxruntime-web-webgpu-1-26-dev-20260416`) currently return an anti-bot HTTP 403 to generic CI clients (measured from a GitHub runner on 2026-10-04, ADR-109). Their records are explicitly `manual-on-403`; the report keeps that fact visible but does not pretend CI can read the pages, and the manual review (30-day window) still applies to them. Every other record, including Goethe's official PDFs, remains machine-probed and must answer 2xx.
 
 ## Human review checklist
 
@@ -67,8 +69,10 @@ For every due record:
 4. for remote AI, compare free eligibility, model IDs, quotas, paid fallbacks, account/billing conditions, and privacy notes;
 5. for each browser model, compare Runtime version/license, WebGPU API, MiniLM/Whisper model card and license, ONNX revision, quantized size, language/task support, and cache behavior;
 6. for Vercel/GitHub, compare personal/public/free-use terms and limits;
-7. update `observedState`, dependent code/tests/docs, and only then `lastVerifiedAt`;
+7. update `observedState`, dependent code/docs, and only then `lastVerifiedAt`; keep `verifiedAt` in `src/data/exam-profiles.ts` equal to the oldest date of the profile's sources and regenerate the format reports (`npm run exam:formats:verify:write`);
 8. run `npm run check` and relevant Playwright tests.
+
+Tests are not edited when a source is re-verified (ADR-108): a test that is not about the window itself pins its clock with `tests/helpers/source-verification-clock.ts`, which derives the instant from the registry; the window rules are measured with explicit dates on a fixed record in `tests/unit/source-freshness.test.ts`.
 
 ## Integrity boundary
 

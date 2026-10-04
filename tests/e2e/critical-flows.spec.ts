@@ -13,10 +13,18 @@ import { CURRENT_CURRICULUM_VERSION } from "../../src/config/curriculum-version"
 import { defaultState } from "../../src/core/portability/db";
 import { diagnosticForms } from "../../src/data/diagnostic";
 import { unknownWordChallenge } from "../../src/core/reading/unknown-word";
+import { examProfiles } from "../../src/data/exam-profiles";
+import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay, staleAt } from "../helpers/source-verification-clock";
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
 const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v180";
+
+// الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
+// صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
+// 2026-10-04 بعد أن نجح مساء السبت بلا أي تغيّر في الكود)؛ فتُثبَّت ساعته على يوم دراسة. 2026-09-30 أربعاء، والظهيرة بتوقيت
+// UTC تبقى في اليوم نفسه عند أي منطقة زمنية من UTC−11 إلى UTC+11.
+const studyDayNow = new Date("2026-09-30T12:00:00Z");
 
 async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true", { timeout:30_000 });
@@ -102,8 +110,12 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(page.getByRole("heading", { name: /تدرّب على امتحانك/ })).toBeVisible();
   await expect(page.getByText(/Goethe-Zertifikat B2/).first()).toBeVisible();
   await expect(page.getByText(/telc Deutsch B2/).first()).toBeVisible();
-  await expect(page.locator(".exam-profile-banner")).toContainText(/ملف الصيغة موثّق وحديث|اقترب موعد إعادة التحقق/);
-  await expect(page.locator(".exam-profile-banner")).toContainText("إعادة التحقق قبل 2026-10-03");
+  // أيّ الحالات الثلاث (حديث / يقترب / يحتاج إعادة تحقق) تنطبق خاصيةٌ لتاريخ اليوم لا لمحتوى المركز: قياسها هنا بالساعة
+  // الحقيقية انقلب أحمر بلا أي تغيّر في الكود (2026-10-04)، فتُقاس الحالات الثلاث بساعة مثبَّتة في الاختبارات التي تلي
+  // هذا الاختبار. هنا يُثبَّت فقط أن المركز يعرض تواريخ السجلّ نفسها، مقروءةً من السجلّ لا من نصٍّ مكتوب.
+  const hubSourceIds = examProfiles["goethe-b2"].sourceRefs;
+  await expect(page.locator(".exam-profile-banner")).toContainText(`آخر تحقق بشري: ${oldestVerificationDay(hubSourceIds)}`);
+  await expect(page.locator(".exam-profile-banner")).toContainText(`إعادة التحقق قبل ${earliestDueDay(hubSourceIds)}`);
 
   await page.goto("/lernen/a1-14");
   await waitForLearningReady(page);
@@ -215,6 +227,28 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(b2LexicalPanel).toContainText("von der Situation abhängen");
   await expect(b2LexicalPanel).toContainText("A1–B2");
 });
+
+// مركز الامتحانات يعلن صلاحية ملف الصيغة بثلاث حالات تتبع تاريخ اليوم؛ فتُقاس هنا بساعة متصفح مثبَّتة بالنسبة لتواريخ السجلّ
+// نفسها، والتواريخ المتوقعة تُقرأ من السجلّ. بهذا تبقى حالة «تحتاج إعادة تحقق» (وجملة إيقاف التغييرات الامتحانية) مغطّاة
+// بلا انتظار أن تنتهي النافذة فعلًا، ولا يحتاج الاختبار تعديلًا كلما أُعيد التحقق من مصدر.
+const goetheSourceIds = examProfiles["goethe-b2"].sourceRefs;
+const staleHaltNote = "أوقف إصدار تغييرات امتحانية جديدة حتى المراجعة البشرية";
+for (const scenario of [
+  { name: "fresh", at: () => freshAt(goetheSourceIds), title: "ملف الصيغة موثّق وحديث", halted: false },
+  { name: "due-soon", at: () => dueSoonAt(goetheSourceIds), title: "اقترب موعد إعادة التحقق", halted: false },
+  { name: "stale", at: () => staleAt(goetheSourceIds), title: "ملف الصيغة يحتاج إعادة تحقق", halted: true },
+]) {
+  test(`exam hub reports a ${scenario.name} format profile on a pinned clock`, async ({ page }) => {
+    await page.clock.install({ time: scenario.at() });
+    await page.goto("/exams");
+    const banner = page.locator(".exam-profile-banner");
+    await expect(banner).toContainText(scenario.title);
+    await expect(banner).toContainText(`آخر تحقق بشري: ${oldestVerificationDay(goetheSourceIds)}`);
+    await expect(banner).toContainText(`إعادة التحقق قبل ${earliestDueDay(goetheSourceIds)}`);
+    if (scenario.halted) await expect(banner).toContainText(staleHaltNote);
+    else await expect(banner).not.toContainText(staleHaltNote);
+  });
+}
 
 test("bilingual local search ranks German and Arabic results and returns to context", async ({ page }) => {
   test.setTimeout(90_000);
@@ -331,10 +365,11 @@ test("visual accessibility preferences preview immediately, persist, reset, and 
 });
 
 test("P0 exam readiness stays provider-scoped and exposes weak modules instead of one average", async ({ page }) => {
+  await page.clock.setFixedTime(studyDayNow);
   const goetheReadingIds=allPublishedExamTasks.filter((task)=>task.provider==="goethe-b2"&&task.skill==="reading").slice(0,6).map((task)=>task.id);
   const completedLessonIds=curriculum.map((lesson)=>lesson.id);
-  const verified=verifiedThrough(["A1","A2","B1","B2"],new Date());
-  verified.reviewItems=eligibleReviewCards(verified).map(card=>({...newReviewItem(card.id),nextReviewDate:new Date(Date.now()+86_400_000).toISOString()}));
+  const verified=verifiedThrough(["A1","A2","B1","B2"],studyDayNow);
+  verified.reviewItems=eligibleReviewCards(verified).map(card=>({...newReviewItem(card.id),nextReviewDate:new Date(studyDayNow.getTime()+86_400_000).toISOString()}));
   await page.goto("/exams");
   await waitForLearningReady(page);
   await page.evaluate(({baseState,goetheReadingIds,completedLessonIds})=>new Promise<void>((resolve,reject)=>{
@@ -490,6 +525,10 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
 });
 
 test("P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بلحظة مشتقّة من السجلّ نفسه
+  // (لا بتاريخٍ مكتوب) كي لا يتعطّل الاختبار عند انتهاء النافذة ولا عند إعادة التحقق من مصدر.
+  await page.clock.install({ time: freshAt(aiSourceIds) });
   let networkRequests = 0;
   await page.route("**/v1beta/models/**", async (route) => {
     networkRequests += 1;
@@ -634,6 +673,10 @@ test("P0 tutor requires per-send consent, validates structured JSON, and deletes
 });
 
 test("optional AI 429 falls back locally once and retry requires fresh consent", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بلحظة مشتقّة من السجلّ نفسه
+  // (لا بتاريخٍ مكتوب) كي لا يتعطّل الاختبار عند انتهاء النافذة ولا عند إعادة التحقق من مصدر.
+  await page.clock.install({ time: freshAt(aiSourceIds) });
   let requests=0;await page.route("https://openrouter.ai/api/v1/chat/completions",async route=>{requests+=1;await route.fulfill({status:429,body:"rate limit"})});
   await page.goto("/tutor");await waitForLearningReady(page);
   await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{const state=structuredClone(baseState);state.aiSettings={provider:"openrouter",model:"openrouter/free",enabledFeatures:["tutor"]};state.profile={name:"Nadia",targetExam:"goethe-b2",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",createdAt:"2026-08-01T00:00:00Z"};sessionStorage.setItem("dwnb-ai-key","test-key");const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}),structuredClone(defaultState));
@@ -801,6 +844,10 @@ test("P0 clustered error clinic opens at three occurrences and stores a transfer
 
 test("P0 writing lab enforces plan, draft, self-check, cited feedback, and revision", async ({ page }) => {
   test.setTimeout(60_000);
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بلحظة مشتقّة من السجلّ نفسه
+  // (لا بتاريخٍ مكتوب) كي لا يتعطّل الاختبار عند انتهاء النافذة ولا عند إعادة التحقق من مصدر.
+  await page.clock.install({ time: freshAt(aiSourceIds) });
   let writingReviewRequests=0;
   await page.route("**/v1beta/models/**",async route=>{writingReviewRequests+=1;const secondPass=writingReviewRequests>1;const payload=secondPass?{summaryAr:"المراجعة الثانية ركّزت على الصياغة واقترحت جملة أقصر مع مفردة أدقّ.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und komme aus Tunesien.",confidence:"high"},{category:"vocabulary",excerpt:"arbeite heute im Büro",explanationAr:"«derzeit» أدقّ زمنيًا من heute في سياق الحالة الراهنة.",suggestionDe:"arbeite derzeit im Büro",confidence:"medium"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]}:{summaryAr:"حدد Gemini خطأ صرف واضحًا وترك ملاءمة النبرة للحكم السياقي.",issues:[{category:"grammar",excerpt:"Ich heiße Nadia und ich kommen aus Tunesien.",explanationAr:"بعد ich نحتاج الفعل المصرف.",suggestionDe:"Ich heiße Nadia und ich komme aus Tunesien.",confidence:"high"}],unresolvedAr:["ملاءمة النبرة للمؤسسة"]};await route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(payload)}]}}]})})});
   await page.goto("/lernen/a1-01");
@@ -1068,6 +1115,10 @@ test("standard pronunciation pack installs explicitly and matches expected Germa
 });
 
 test("guided speaking keeps learner-selected support visible, grounds typed follow-up, and requires consent before optional AI", async ({ page }) => {
+  // هذه الحالة تقيس تدفق الموافقة/الإرسال لا صلاحية سجلّ مصادر الذكاء (نافذة 30 يومًا في
+  // `src/config/source-verification-registry.json`)؛ فتُثبَّت ساعة المتصفح داخل النافذة بلحظة مشتقّة من السجلّ نفسه
+  // (لا بتاريخٍ مكتوب) كي لا يتعطّل الاختبار عند انتهاء النافذة ولا عند إعادة التحقق من مصدر.
+  await page.clock.install({ time: freshAt(aiSourceIds) });
   let followUpRequests = 0;
   await page.route("**/v1beta/models/**", async (route) => {
     followUpRequests += 1;
@@ -2150,6 +2201,7 @@ test("continuous full-exam mode persists one central clock and blocks task skipp
 });
 
 test("progress and daily coach derive metrics, risks, dates, and streaks from evidence", async ({ page }) => {
+  await page.clock.setFixedTime(studyDayNow);
   await page.goto("/progress");
   await waitForLearningReady(page);
   await expect(page.locator(".evidence-overview")).toContainText("—");

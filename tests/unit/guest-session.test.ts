@@ -7,13 +7,13 @@ import {
   GUEST_PROMOTION_REFUSAL_AR,
   GUEST_SESSION_POLICY,
   assertGuestIsolation,
-  buildGuestPromotionPlan,
   clampGuestMinutes,
   createGuestSession,
   createGuestState,
   describeGuestSession,
   guestSessionExpired,
   promoteGuestSession,
+  requireGuestIsolation,
 } from "@/core/state/guest-session";
 
 const NOW = new Date("2026-09-26T18:00:00.000Z");
@@ -78,6 +78,13 @@ describe("guest session — جلسة ضيف معزولة بلا وراثة أد�
     expect(isolation.nonEmptyEvidenceFields).toEqual([]);
     // والملف النشط نفسه ما زال يحمل أدلّته: الجلسة لم تسحبه.
     expect(active.exerciseAttempts.length).toBe(1);
+  });
+
+  it("refuses to build a session from a state that carries evidence or inherits it", () => {
+    const active = activeProfileWithEvidence();
+    expect(requireGuestIsolation(createGuestState(NOW), active)).toMatchObject({ evidenceInheritedFromActiveProfile: false, nonEmptyEvidenceFields: [] });
+    expect(() => requireGuestIsolation(active, null)).toThrow("رفض إنشاء جلسة الضيف: حقول أدلة غير فارغة");
+    expect(() => requireGuestIsolation(active, active)).toThrow("رفض إنشاء جلسة الضيف");
   });
 
   it("clamps the guest window to ten minutes minimum and 240 maximum — no eternal guest", () => {

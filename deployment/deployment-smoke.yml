@@ -13,9 +13,11 @@ permissions:
   contents: read
 
 env:
-  # A deployment-specific *.projects.vercel.app URL can sit behind Vercel Authentication, which would only
-  # prove the checker is unauthenticated. Prefer the public production alias when the owner has set it.
-  DEPLOYMENT_URL: ${{ inputs.deployment_url || vars.DEPLOYMENT_SMOKE_PRODUCTION_URL || github.event.deployment_status.environment_url || github.event.deployment_status.target_url }}
+  # Production is checked through its PUBLIC alias (ADR-109, amending ADR-104). The deployment-specific
+  # *.projects.vercel.app host that GitHub reports for a deployment sits behind Vercel Authentication, so testing it
+  # would only prove the checker is unauthenticated. The repository variable overrides the alias; a manual run
+  # passes its origin explicitly. Never bypass Vercel Authentication here.
+  DEPLOYMENT_URL: ${{ inputs.deployment_url || vars.DEPLOYMENT_SMOKE_PRODUCTION_URL || 'https://wegberlin.vercel.app' }}
 
 jobs:
   smoke:
@@ -25,7 +27,7 @@ jobs:
       (github.event_name == 'deployment_status' &&
        github.event.deployment_status.state == 'success' &&
        github.event.deployment.environment == 'Production')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
@@ -39,7 +41,8 @@ jobs:
         run: |
           cat >> "$GITHUB_STEP_SUMMARY" <<'SUMMARY'
           A `status=blocked-by-auth` report means the smoke never reached the app.
-          Set the repository variable `DEPLOYMENT_SMOKE_PRODUCTION_URL` to the public production alias
-          (for example `https://wegberlin.vercel.app`) and re-run this workflow.
+          Production runs default to the public alias https://wegberlin.vercel.app (the repository variable
+          `DEPLOYMENT_SMOKE_PRODUCTION_URL` overrides it). A deployment-specific *.vercel.app host is behind
+          Vercel Authentication: re-run this workflow with the public alias as `deployment_url`.
           Never mark smoke successful on a blocked run, and never bypass Vercel Authentication in CI.
           SUMMARY

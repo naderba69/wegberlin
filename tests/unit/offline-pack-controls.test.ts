@@ -71,6 +71,8 @@ describe("selective Offline pack controls", () => {
     expect(workerSource).toContain('const PACK_FETCH_POLICY = "bounded-pack-fetch-v1";');
     expect(workerSource).toContain("const PACK_FETCH_TIMEOUT_MS = 30_000;");
     expect(workerSource).toContain("const PACK_FETCH_ATTEMPTS = 3;");
+    expect(workerSource).toContain("{ cause: lastError }");
+    expect(workerSource).toContain("failure.policy = PACK_FETCH_POLICY;");
     const packBody = workerSource.slice(
       workerSource.indexOf("async function downloadSelectedPack"),
       workerSource.indexOf('self.addEventListener("install"'),

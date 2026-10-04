@@ -97,7 +97,7 @@ export function createGuestSession(input: GuestCreateInput): GuestCreateResult {
   const now = input.now ?? new Date();
   const minutes = clampGuestMinutes(input.minutes);
   const state = createGuestState(now);
-  const isolation = assertGuestIsolation(state, input.activeState ?? null);
+  requireGuestIsolation(state, input.activeState ?? null);
   const session: GuestSessionRecord = {
     id: `guest-${now.getTime().toString(36)}`,
     displayNameAr: `${GUEST_DEFAULT_NAME_AR} (${minutes} دقيقة)`,
@@ -155,6 +155,24 @@ export function assertGuestIsolation(
     }
   }
   return { evidenceInheritedFromActiveProfile: inherited, nonEmptyEvidenceFields: nonEmpty };
+}
+
+/**
+ * يفرض الوعد البنيوي في `GuestSessionBoundary` بدل الاكتفاء بقياسه: حالة ضيف تحمل حقل دليل غير فارغ، أو قيمة دليل
+ * مطابقة لقيمة الملف النشط، لا تُنشأ منها جلسة. (`assertGuestIsolation` تُبلغ ولا ترمي.)
+ */
+export function requireGuestIsolation(
+  guest: LearningState,
+  active: LearningState | null,
+): { evidenceInheritedFromActiveProfile: boolean; nonEmptyEvidenceFields: string[] } {
+  const isolation = assertGuestIsolation(guest, active);
+  if (isolation.nonEmptyEvidenceFields.length > 0 || isolation.evidenceInheritedFromActiveProfile) {
+    const reason = isolation.nonEmptyEvidenceFields.length > 0
+      ? `حقول أدلة غير فارغة (${isolation.nonEmptyEvidenceFields.join(", ")})`
+      : "قيمة دليل موروثة من الملف النشط";
+    throw new Error(`رفض إنشاء جلسة الضيف: ${reason}.`);
+  }
+  return isolation;
 }
 
 /** هل ما زالت الجلسة المؤقتة صالحة، أم انتهى وقتها؟ (لا حذف صامت — فقط جواب). */

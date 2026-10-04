@@ -544,6 +544,14 @@ export interface DiagnosticSessionDraft {
   updatedAt:string;
 }
 
+export interface ProductiveSampleComparison {
+  policyVersion: "four-week-productive-sample-comparison-v1";
+  baseline: DiagnosticProductiveSample;
+  followUpDueAt: string;
+  followUp?: DiagnosticProductiveSample;
+  evidenceBoundary: "paired-sample-comparison-only-no-language-quality-cefr-or-mastery";
+}
+
 export interface DiagnosticResult {
   estimatedLevel: CEFRLevel;
   score: number;
@@ -1035,6 +1043,7 @@ export interface LearningState {
   curriculumVersion: string;
   profile: LearnerProfile | null;
   diagnosticResult: DiagnosticResult | null;
+  productiveSampleComparison: ProductiveSampleComparison | null;
   diagnosticSessionDraft:DiagnosticSessionDraft|null;
   skillDiagnosticAttempts: SkillDiagnosticAttempt[];
   learningContracts: LearningContract[];

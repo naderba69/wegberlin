@@ -29,7 +29,7 @@ export type ResetFieldRow = {
 };
 
 /**
- * التصنيف الإلزامي: 65 حقلًا = 19 تقدّمًا يُصفَّر · 24 سجل أدلة يبقى قبل=بعد ·
+ * التصنيف الإلزامي: 68 حقلًا = 19 تقدّمًا يُصفَّر · 27 سجل دليل يبقى قبل=بعد ·
  * 12 إعدادًا يبقى · 10 حقول هوية تبقى. السلة «progress» هي الوحيدة التي تُصفَّر.
  */
 export const RESET_FIELD_POLICIES: readonly ResetFieldRow[] = [
@@ -64,6 +64,7 @@ export const RESET_FIELD_POLICIES: readonly ResetFieldRow[] = [
   { field: "contentErrorReports", bucket: "progress", rationaleAr: "بلاغات المحتوى صفوفُ مراجعة عابرة عندنا، لا دليل تعلّم." },
   { field: "trainingInteractionEvents", bucket: "progress", rationaleAr: "أحداث تفاعل التدريب تقود التكييف وتُعاد بناؤها." },
 
+  { field: "productiveSampleComparison", bucket: "evidence", rationaleAr: "سجل المقارنة الإنتاجية الذاتية يبقى دليلًا بعد إعادة التهيئة." },
   { field: "exerciseAttempts", bucket: "evidence", rationaleAr: "سجل المحاولات نفسه: يبقى قبل=بعد مهما كان عدد صفوفه." },
   { field: "reviewEvents", bucket: "evidence", rationaleAr: "أحداث المراجعة تبقى." },
   { field: "writingSubmissions", bucket: "evidence", rationaleAr: "نصوص الكتابة تبقى." },

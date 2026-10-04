@@ -12,6 +12,7 @@ import { verifiedThrough } from "../helpers/verified-learning-state";
 import { CURRENT_CURRICULUM_VERSION } from "../../src/config/curriculum-version";
 import { defaultState } from "../../src/core/portability/db";
 import { diagnosticForms } from "../../src/data/diagnostic";
+import { buildDiagnosticProductiveSample, buildProductiveSampleComparison } from "../../src/core/diagnostic/productive-sample";
 import { unknownWordChallenge } from "../../src/core/reading/unknown-word";
 import { examProfiles } from "../../src/data/exam-profiles";
 import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay, staleAt } from "../helpers/source-verification-clock";
@@ -468,6 +469,15 @@ test("an absolute beginner starts A1 step by step and never receives an isolated
   await page.getByRole("button", { name: /تخطَّ الفحص/ }).click();
   await page.getByRole("button", { name: /ابدأ معي من الصفر/ }).click();
   await expect(page.getByText(/لن نختبرك أو نطلب منك كتابة ألمانية الآن/)).toBeVisible();
+  await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => resolve(request.result?.productiveSampleComparison);
+    };
+  }))).toMatchObject({ policyVersion:"four-week-productive-sample-comparison-v1", baseline:{ mode:"not-yet", writingWordCount:0, selfAssessment:"not-yet", promptId:"diagnostic-self-introduction-v1" } });
   const journey=page.locator('[data-journey-policy="journey-state-machine-v1"]');
   await expect(journey.locator("nav > span")).toHaveCount(5);
   await expect(journey.locator('[aria-current="step"]')).toContainText("بناء الأساس");
@@ -519,9 +529,71 @@ test("P0 adaptive diagnostic stops at a clear boundary and stores four skill sco
     open.onsuccess = () => {
       const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
       request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result?.diagnosticResult);
+      request.onsuccess = () => resolve({ diagnosticResult:request.result?.diagnosticResult, productiveSampleComparison:request.result?.productiveSampleComparison });
     };
-  }))).toMatchObject({ formId:"A",questionsAnswered:4,stoppedEarly:true,confidence:"low",levelAttempted:{A1:4,A2:0,B1:0,B2:0},productiveSample:{policyVersion:"diagnostic-productive-sample-v1",mode:"writing",writingWordCount:6,selfAssessment:"independent",evaluationBoundary:"self-evidence-no-automated-language-score"} });
+  }))).toMatchObject({ diagnosticResult:{formId:"A",questionsAnswered:4,stoppedEarly:true,confidence:"low",levelAttempted:{A1:4,A2:0,B1:0,B2:0},productiveSample:{policyVersion:"diagnostic-productive-sample-v1",mode:"writing",writingWordCount:6,selfAssessment:"independent",evaluationBoundary:"self-evidence-no-automated-language-score"}},productiveSampleComparison:{policyVersion:"four-week-productive-sample-comparison-v1",baseline:{writingWordCount:6,selfAssessment:"independent"},evidenceBoundary:"paired-sample-comparison-only-no-language-quality-cefr-or-mastery"} });
+});
+
+test("P1-19 captures a four-week follow-up beside the unchanged productive baseline", async ({ page }) => {
+  const now = "2026-10-04T12:00:00.000Z";
+  await page.clock.install({ time: now });
+  const baseline = buildDiagnosticProductiveSample({
+    writingText: "Ich heiße Sara. Ich lerne Deutsch.", selfAssessment: "with-help", submittedAt: "2026-09-06T12:00:00.000Z",
+  });
+  const comparison = buildProductiveSampleComparison(baseline);
+  await page.goto("/progress");
+  await waitForLearningReady(page);
+  await page.evaluate(({ baseState, productiveSample, productiveComparison }) => new Promise<void>((resolve, reject) => {
+    const state = structuredClone(baseState);
+    state.diagnosticResult = {
+      estimatedLevel: "A1", score: 3, maxScore: 4, levelScores: { A1: 3, A2: 0, B1: 0, B2: 0 },
+      productiveSample, completedAt: productiveSample.submittedAt,
+    };
+    state.productiveSampleComparison = productiveComparison;
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const tx = open.result.transaction("learning-state", "readwrite");
+      tx.objectStore("learning-state").put(state, "primary");
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    };
+  }), { baseState: structuredClone(defaultState), productiveSample: baseline, productiveComparison: comparison });
+  await page.reload();
+  await waitForLearningReady(page);
+
+  const panel = page.locator('[data-productive-comparison-policy="four-week-productive-sample-comparison-v1"]');
+  await expect(panel).toHaveAttribute("data-follow-up-state", "due");
+  await expect(panel).toContainText("خط البداية المحفوظ");
+  await panel.getByRole("button", { name: "ابدأ عينة الأسبوع الرابع" }).click();
+  const followUp = panel.locator('[data-productive-stage="four-week-follow-up"]');
+  await followUp.getByLabel(/Kurze Schreibprobe/).fill("Ich heiße Sara. Jetzt spreche ich täglich Deutsch.");
+  await followUp.getByRole("button", { name: "دون مساعدة" }).click();
+  await followUp.getByRole("button", { name: "حفظ عينة الأسبوع الرابع ومقارنتها" }).click();
+
+  await expect(panel).toHaveAttribute("data-follow-up-state", "complete");
+  await expect(panel.locator(".productive-sample-card")).toHaveCount(2);
+  await expect(panel).toContainText("حجم الكتابة");
+  await expect(panel).toContainText("لا نفحص صحة النص أو النطق");
+  await expect.poll(() => page.evaluate(() => new Promise<unknown>((resolve, reject) => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    open.onerror = () => reject(open.error);
+    open.onsuccess = () => {
+      const request = open.result.transaction("learning-state", "readonly").objectStore("learning-state").get("primary");
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const state = request.result;
+        const result = state.diagnosticResult;
+        resolve({ estimatedLevel: result.estimatedLevel, score: result.score, completedAt: result.completedAt, comparison: state.productiveSampleComparison });
+      };
+    };
+  }))).toMatchObject({
+    estimatedLevel: "A1", score: 3, completedAt: baseline.submittedAt,
+    comparison: {
+      baseline: { writingText: baseline.writingText, writingWordCount: 6, selfAssessment: "with-help" },
+      followUp: { writingWordCount: 8, selfAssessment: "independent", evaluationBoundary: "self-evidence-no-automated-language-score" },
+    },
+  });
 });
 
 test("P0 tutor requires per-send consent, validates structured JSON, and deletes its local trace", async ({ page }) => {
@@ -2982,7 +3054,7 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
   await expect(wizard).toBeVisible();
   await expect(wizard.locator("[data-reset-attempt-log]")).toHaveAttribute("data-reset-attempt-log", "4");
   await expect(wizard).toContainText("سجل المحاولات (4 محاولة) محفوظ");
-  await expect(wizard).toContainText("67 حقلًا مصنَّفًا");
+  await expect(wizard).toContainText("68 حقلًا مصنَّفًا");
   await expect(wizard.locator("[data-reset-unclassified]")).toHaveAttribute("data-reset-unclassified", "0");
   await expect(wizard).toContainText("19 تقدّمًا");
   // بلا إقرار ولا كلمة تأكيد: لا تنفيذ.
@@ -3201,7 +3273,7 @@ test("P2 guest session starts with zero inherited evidence and promotes to a per
   await guest.getByLabel("اسم الملف الدائم").fill("ضيف الاختبار");
   await guest.locator("[data-guest-promote]").click();
   await expect(guest.locator("[data-guest-session]")).toHaveAttribute("data-guest-session", "promoted");
-  await expect(guest.locator("[data-guest-plan]")).toContainText("67 حقلًا مصنَّفًا");
+  await expect(guest.locator("[data-guest-plan]")).toContainText("68 حقلًا مصنَّفًا");
   await expect(guest.getByRole("status").first()).toContainText("ملف دائم محلي");
   await expect(guest.locator("[data-guest-active-profile]")).toContainText("لم يُمسّ");
 

@@ -2,6 +2,7 @@ import { z } from "zod";
 import { DEFAULT_ACCESSIBILITY_PREFERENCES } from "@/core/accessibility/preferences";
 import { DEFAULT_MOTIVATION_PREFERENCES } from "@/core/coach/motivation-preferences";
 import { CURRENT_CURRICULUM_VERSION, SUPPORTED_CURRICULUM_VERSIONS } from "@/config/curriculum-version";
+import { DIAGNOSTIC_PRODUCTIVE_PROMPT_ID, DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION, PRODUCTIVE_SAMPLE_COMPARISON_BOUNDARY, PRODUCTIVE_SAMPLE_COMPARISON_POLICY, PRODUCTIVE_SAMPLE_FOLLOW_UP_MS } from "@/core/diagnostic/productive-sample";
 
 const onboardingLearningContextSchema=z.object({
   policyVersion:z.literal("prior-experience-context-v1"),
@@ -32,6 +33,39 @@ const profileSchema = z.object({
   createdAt: z.string(),
 });
 
+const diagnosticProductiveSampleSchema = z.object({
+  policyVersion: z.literal(DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION),
+  promptId: z.literal(DIAGNOSTIC_PRODUCTIVE_PROMPT_ID),
+  mode: z.enum(["writing", "speaking", "writing-and-speaking", "not-yet"]),
+  writingText: z.string().optional(),
+  writingWordCount: z.number().int().nonnegative(),
+  speakingMediaId: z.string().optional(),
+  speakingDurationSeconds: z.number().int().positive().optional(),
+  selfAssessment: z.enum(["independent", "with-help", "not-yet"]),
+  evaluationBoundary: z.literal("self-evidence-no-automated-language-score"),
+  submittedAt: z.string(),
+}).strict();
+
+const productiveSampleComparisonSchema = z.object({
+  policyVersion: z.literal(PRODUCTIVE_SAMPLE_COMPARISON_POLICY),
+  baseline: diagnosticProductiveSampleSchema,
+  followUpDueAt: z.string(),
+  followUp: diagnosticProductiveSampleSchema.optional(),
+  evidenceBoundary: z.literal(PRODUCTIVE_SAMPLE_COMPARISON_BOUNDARY),
+}).strict().superRefine((comparison, context) => {
+  const baselineAt = Date.parse(comparison.baseline.submittedAt);
+  const dueAt = Date.parse(comparison.followUpDueAt);
+  if (!Number.isFinite(baselineAt) || !Number.isFinite(dueAt) || dueAt !== baselineAt + PRODUCTIVE_SAMPLE_FOLLOW_UP_MS) {
+    context.addIssue({ code:"custom", message:"Productive comparison must schedule the same intake baseline exactly 28 days later." });
+  }
+  if (comparison.followUp) {
+    const followUpAt = Date.parse(comparison.followUp.submittedAt);
+    if (comparison.followUp.promptId !== comparison.baseline.promptId || !Number.isFinite(followUpAt) || !Number.isFinite(dueAt) || followUpAt < dueAt) {
+      context.addIssue({ code:"custom", message:"Productive follow-up must use the baseline prompt and be submitted no earlier than its four-week due time." });
+    }
+  }
+});
+
 const diagnosticSchema = z.object({
   estimatedLevel: z.enum(["A1", "A2", "B1", "B2"]),
   score: z.number().int().nonnegative(),
@@ -48,18 +82,7 @@ const diagnosticSchema = z.object({
   questionsAnswered: z.number().int().positive().optional(),
   stoppedEarly: z.boolean().optional(),
   confidence: z.enum(["low", "medium", "high"]).optional(),
-  productiveSample: z.object({
-    policyVersion: z.literal("diagnostic-productive-sample-v1"),
-    promptId: z.literal("diagnostic-self-introduction-v1"),
-    mode: z.enum(["writing", "speaking", "writing-and-speaking", "not-yet"]),
-    writingText: z.string().optional(),
-    writingWordCount: z.number().int().nonnegative(),
-    speakingMediaId: z.string().optional(),
-    speakingDurationSeconds: z.number().int().positive().optional(),
-    selfAssessment: z.enum(["independent", "with-help", "not-yet"]),
-    evaluationBoundary: z.literal("self-evidence-no-automated-language-score"),
-    submittedAt: z.string(),
-  }).optional(),
+  productiveSample: diagnosticProductiveSampleSchema.optional(),
   completedAt: z.string(),
 });
 
@@ -153,6 +176,7 @@ export const learningStateSchema = z.object({
   curriculumVersion: z.enum(SUPPORTED_CURRICULUM_VERSIONS).default(CURRENT_CURRICULUM_VERSION),
   profile: profileSchema.nullable(),
   diagnosticResult: diagnosticSchema.nullable(),
+  productiveSampleComparison: productiveSampleComparisonSchema.nullable().default(null),
   diagnosticSessionDraft:z.object({policyVersion:z.literal("fatigue-pause-resume-diagnostic-v1"),formId:z.enum(["A","B"]),questionIds:z.array(z.string()).min(1).max(16),index:z.number().int().min(0).max(15),answers:z.record(z.string(),z.number().int().min(0).max(3)),status:z.enum(["paused","active"]),pauseReason:z.literal("learner-fatigue"),evidenceBoundary:z.literal("resume-process-only-no-score-mastery-or-fatigue-diagnosis"),updatedAt:z.string()}).strict().nullable().default(null),
   skillDiagnosticAttempts: z.array(z.object({id:z.string(),policyVersion:z.literal("single-skill-diagnostic-v1"),skill:z.enum(["grammar","vocabulary","reading","listening"]),formId:z.enum(["A","B"]),questionIds:z.array(z.string()).length(4),correctByLevel:z.object({A1:z.boolean(),A2:z.boolean(),B1:z.boolean(),B2:z.boolean()}),correctCount:z.number().int().min(0).max(4),attemptedCount:z.literal(4),recommendedFocusLevel:z.enum(["A1","A2","B1","B2"]),priorDiagnosticCompletedAt:z.string(),evidenceBoundary:z.literal("skill-sample-planning-only-no-level-change"),createdAt:z.string()})).default([]),
   learningContracts: z.array(z.object({id:z.string(),policyVersion:z.literal("fourteen-day-learning-contract-v1"),revision:z.number().int().positive(),previousContractId:z.string().optional(),startsOn:z.string(),endsOn:z.string(),goal:z.enum(["exam","work","study","daily-life","settlement"]),dailyMinutes:z.union([z.literal(10),z.literal(20),z.literal(30),z.literal(45),z.literal(60),z.literal(90)]),studyWeekdays:z.array(z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5),z.literal(6),z.literal(7)])).min(1),evidenceBoundary:z.literal("planning-commitment-no-mastery-or-gate"),createdAt:z.string()})).default([]),

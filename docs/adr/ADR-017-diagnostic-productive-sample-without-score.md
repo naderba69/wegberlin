@@ -38,7 +38,7 @@ Diagnostic audio remains in IndexedDB, participates in encrypted/optional-media 
 
 - Pure unit tests cover writing, speaking, mixed, `not-yet`, contradictory/empty rejection, schema v3 round-trip, no score property, and media namespacing.
 - Production Playwright completes the adaptive A1 boundary, enters a German writing sample, selects independent production, submits it, and verifies the persisted no-score contract.
-- The absolute-beginner onboarding test still bypasses diagnostic and isolated writing.
+- The absolute-beginner onboarding test still bypasses diagnostic and isolated writing; P1-19 records the explicit `not-yet` baseline from onboarding without adding a production requirement (see ADR-110).
 
 ## Consequences and boundary
 

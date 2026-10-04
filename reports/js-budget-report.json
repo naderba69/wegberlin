@@ -12,8 +12,8 @@
     "maxSingleChunkGzipBytes": 637500
   },
   "actual": {
-    "chunkCount": 128,
-    "totalChunkGzipBytes": 1937372,
+    "chunkCount": 127,
+    "totalChunkGzipBytes": 1946729,
     "maxSingleChunkGzipBytes": 262117
   },
   "issues": [],
@@ -54,14 +54,14 @@
       "gzipBytes": 63160
     },
     {
+      "path": ".next/static/chunks/app/settings/page-17cd1394fb3827e2.js",
+      "rawBytes": 221473,
+      "gzipBytes": 62762
+    },
+    {
       "path": ".next/static/chunks/framework-666c53740fc261c8.js",
       "rawBytes": 189686,
       "gzipBytes": 59766
-    },
-    {
-      "path": ".next/static/chunks/app/settings/page-0f8930fc40e364b8.js",
-      "rawBytes": 209027,
-      "gzipBytes": 58503
     },
     {
       "path": ".next/static/chunks/3348-1bb6a99ce17f420f.js",
@@ -84,14 +84,14 @@
       "gzipBytes": 39520
     },
     {
+      "path": ".next/static/chunks/app/today/page-326d8a579a38e8a1.js",
+      "rawBytes": 108202,
+      "gzipBytes": 33527
+    },
+    {
       "path": ".next/static/chunks/8836-ad672038ca52b020.js",
       "rawBytes": 131442,
       "gzipBytes": 31050
-    },
-    {
-      "path": ".next/static/chunks/app/today/page-a0dddb88dfe8c6ca.js",
-      "rawBytes": 97003,
-      "gzipBytes": 29752
     },
     {
       "path": ".next/static/chunks/app/speaking/page-975a2b7a46cd2d62.js",
@@ -99,19 +99,19 @@
       "gzipBytes": 27780
     },
     {
-      "path": ".next/static/chunks/6850-42a3eafc918b559b.js",
-      "rawBytes": 86223,
-      "gzipBytes": 25662
+      "path": ".next/static/chunks/6850-66da56ec84125737.js",
+      "rawBytes": 90128,
+      "gzipBytes": 26952
+    },
+    {
+      "path": ".next/static/chunks/app/progress/page-eeb2dded204a7e8c.js",
+      "rawBytes": 83504,
+      "gzipBytes": 25443
     },
     {
       "path": ".next/static/chunks/app/writing/page-72a50f0115a64b47.js",
       "rawBytes": 75156,
       "gzipBytes": 24286
-    },
-    {
-      "path": ".next/static/chunks/app/progress/page-42c7e0d0d444a0af.js",
-      "rawBytes": 69103,
-      "gzipBytes": 21284
     },
     {
       "path": ".next/static/chunks/2004-5ab4708b9d7c3f31.js",

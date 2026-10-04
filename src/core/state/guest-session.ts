@@ -193,7 +193,7 @@ export type GuestPromotionInput = {
 export type GuestPromotionPlan = {
   policyVersion: typeof GUEST_SESSION_POLICY;
   profileName: string;
-  /** 67 حقلًا مصنَّفًا: كم حقل أدلة دخل كما هو، وكم حقل تقدّم خرج كما هو. */
+  /** 68 حقلًا مصنَّفًا: كم حقل أدلة دخل كما هو، وكم حقل تقدّم خرج كما هو. */
   classifiedFieldCount: number;
   evidenceFieldsBefore: number;
   evidenceFieldsAfter: number;

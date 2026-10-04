@@ -107,14 +107,14 @@ describe("guest session — جلسة ضيف معزولة بلا وراثة أد�
     expect(text).not.toContain("بوابة مفتوحة");
   });
 
-  it("keeps the guest state on the same 67-field classified shape — zero unclassified fields", () => {
+  it("keeps the guest state on the same 68-field classified shape — zero unclassified fields", () => {
     const guest = createGuestState(NOW);
     const classified = new Set(RESET_FIELD_POLICIES.map((row) => String(row.field)));
     const unclassified = Object.keys(guest as unknown as Record<string, unknown>).filter(
       (key) => !classified.has(key),
     );
     expect(unclassified).toEqual([]);
-    expect(classified.size).toBe(67);
+    expect(classified.size).toBe(68);
   });
 
   it("refuses promotion without a real name while leaving the guest session intact", () => {
@@ -144,7 +144,7 @@ describe("guest session — جلسة ضيف معزولة بلا وراثة أد�
     expect(result.session.status).toBe("promoted");
     expect(result.session.displayNameAr).toBe("ضيف دائم");
     expect(result.state.profile?.name).toBe("ضيف دائم");
-    expect(result.plan.classifiedFieldCount).toBe(67);
+    expect(result.plan.classifiedFieldCount).toBe(68);
     expect(result.plan.evidenceFieldsAfter).toBe(result.plan.evidenceFieldsBefore);
     expect(result.activeProfileUntouched).toBe(true);
     expect(JSON.stringify(active)).toBe(activeBefore);

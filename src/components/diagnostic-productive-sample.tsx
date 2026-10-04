@@ -5,6 +5,8 @@ import { Check, CircleStop, Mic2, RotateCcw, Save, ShieldCheck } from "lucide-re
 import {
   buildDiagnosticProductiveSample,
   canSubmitDiagnosticProductiveSample,
+  DIAGNOSTIC_PRODUCTIVE_PROMPT_AR,
+  DIAGNOSTIC_PRODUCTIVE_PROMPT_DE,
   DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION,
   DIAGNOSTIC_SPEAKING_TARGET_SECONDS,
 } from "@/core/diagnostic/productive-sample";
@@ -13,9 +15,10 @@ import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
 import type { DiagnosticProductiveSample, DiagnosticProductiveSelfAssessment } from "@/types/learning";
 import { StatusAnnouncement } from "./status-announcement";
 
-type Props = { estimatedLevel: string; onComplete: (sample: DiagnosticProductiveSample) => void };
+type ProductiveSampleStage = "intake" | "new-baseline" | "four-week-follow-up";
+type Props = { estimatedLevel: string; onComplete: (sample: DiagnosticProductiveSample) => void; stage?: ProductiveSampleStage; onCancel?: () => void };
 
-export function DiagnosticProductiveSampleStep({ estimatedLevel, onComplete }: Props) {
+export function DiagnosticProductiveSampleStep({ estimatedLevel, onComplete, stage = "intake", onCancel }: Props) {
   const [writingText, setWritingText] = useState("");
   const [selfAssessment, setSelfAssessment] = useState<DiagnosticProductiveSelfAssessment | "">("");
   const [recording, setRecording] = useState(false);
@@ -95,9 +98,16 @@ export function DiagnosticProductiveSampleStep({ estimatedLevel, onComplete }: P
   }
 
   const canSubmit = Boolean(selfAssessment && canSubmitDiagnosticProductiveSample({ writingText, speakingDurationSeconds: duration || undefined, selfAssessment }));
-  return <div className="diagnostic-productive-sample" data-productive-policy={DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION}>
-    <header><span><ShieldCheck size={24}/></span><div><small lang="de" dir="ltr">Produktionsprobe ohne Note · {estimatedLevel}</small><h1>عينة قصيرة، بلا درجة لغوية مصطنعة</h1><p>هذه الخطوة تظهر فقط لمن اختار خبرة سابقة أو غير مؤكدة. لا تغيّر مستوى أسئلة التشخيص، بل تحفظ ما استطعت إنتاجه لمراجعته بنفسك.</p></div></header>
-    <section className="diagnostic-production-prompt"><strong lang="de" dir="ltr">Stellen Sie sich in ein bis drei Sätzen vor. Sagen Sie auch, warum Sie Deutsch lernen.</strong><p>قدّم نفسك في جملة إلى ثلاث، واذكر لماذا تتعلم الألمانية. اكتب أو سجّل، ولا تحتاج إلى فعل الاثنين.</p></section>
+  const stageTitle = stage === "four-week-follow-up" ? "عينة الأسبوع الرابع · المهمة نفسها" : stage === "new-baseline" ? "خط أساس إنتاجي جديد من اليوم" : "عينة تأسيسية قصيرة، بلا درجة لغوية مصطنعة";
+  const stageDescription = stage === "four-week-follow-up"
+    ? "أعد المهمة نفسها بعد أربعة أسابيع كاملة. سنعرض حجم الكتابة أو مدة التسجيل وتقييمك الذاتي جنبًا إلى جنب؛ لا نطلب منك أن تبدو أفضل ولا نصدر درجة لغة."
+    : stage === "new-baseline"
+      ? "لم نجد عينة بداية محفوظة. هذا خط أساس جديد يبدأ تاريخه اليوم؛ لا نخترع سجلًا سابقًا ولا نغيّر نتيجة التحديد."
+      : "تُحفظ نقطة بداية إنتاجية لكل متعلم: من اختار البدء من الصفر لديه تقدير ذاتي دون كتابة؛ وهنا تسجل ما تنتج بعد التشخيص. لا تغيّر مستوى أسئلة الفهم؛ تحفظ ما اخترت إنتاجه وتقييمك الذاتي فقط.";
+  const submitLabel = stage === "four-week-follow-up" ? "حفظ عينة الأسبوع الرابع ومقارنتها" : stage === "new-baseline" ? "حفظ خط الأساس" : "حفظ العينة وعرض نتيجة الفهم";
+  return <div className="diagnostic-productive-sample" data-productive-policy={DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION} data-productive-stage={stage}>
+    <header><span><ShieldCheck size={24}/></span><div><small lang="de" dir="ltr">{stage === "four-week-follow-up" ? "Produktionsprobe nach vier Wochen" : `Produktionsprobe ohne Note · ${estimatedLevel}`}</small><h1>{stageTitle}</h1><p>{stageDescription}</p></div></header>
+    <section className="diagnostic-production-prompt"><strong lang="de" dir="ltr">{DIAGNOSTIC_PRODUCTIVE_PROMPT_DE}</strong><p>{DIAGNOSTIC_PRODUCTIVE_PROMPT_AR}</p></section>
     <label className="diagnostic-writing-sample"><span>Kurze Schreibprobe · عينة كتابة قصيرة</span><textarea lang="de" dir="ltr" value={writingText} onChange={(event)=>setWritingText(event.target.value)} placeholder="Ich heiße … Ich lerne Deutsch, weil …" maxLength={500}/><small>{writingText.trim()?writingText.trim().split(/\s+/u).length:0} كلمات · الحد التقني للإرسال 3 كلمات، وليس معيار جودة.</small></label>
     <section className="diagnostic-speaking-sample"><header><Mic2 size={18}/><div><strong>Kurze Sprechprobe · عينة كلام اختيارية</strong><small>الهدف نحو {DIAGNOSTIC_SPEAKING_TARGET_SECONDS} ثانية، والحد الأقصى 45 ثانية. التسجيل محلي فقط.</small></div></header>{audioUrl?<><audio controls src={audioUrl} aria-label="تشغيل عينة المحادثة التشخيصية"/><button type="button" onClick={removeRecording}><RotateCcw size={14}/> حذف وإعادة التسجيل</button></>:recording?<button type="button" onClick={stopRecording}><CircleStop size={15}/> أوقف التسجيل</button>:<button type="button" onClick={()=>void startRecording()}><Mic2 size={15}/> ابدأ تسجيلًا محليًا</button>}</section>
     {message&&<StatusAnnouncement message={message} channel="diagnostic-productive-recording" className="compact"/>}
@@ -105,6 +115,6 @@ export function DiagnosticProductiveSampleStep({ estimatedLevel, onComplete }: P
       ["independent","دون مساعدة"],["with-help","بمساعدة أو تردد"],["not-yet","لا أستطيع بعد"],
     ] as const).map(([value,label])=><button type="button" key={value} aria-pressed={selfAssessment===value} className={selfAssessment===value?"active":""} onClick={()=>setSelfAssessment(value)}>{selfAssessment===value&&<Check size={13}/>} {label}</button>)}</div></fieldset>
     <div className="diagnostic-production-boundary"><ShieldCheck size={17}/><p><b>لا يوجد تصحيح أو تقدير CEFR لهذه العينة.</b> نحفظ النص، مدة التسجيل إن وجدت، وتقييمك الذاتي فقط. اختيار «لا أستطيع بعد» لا يخفض نتيجة الفهم.</p></div>
-    <button type="button" className="primary-button" disabled={!canSubmit} onClick={()=>void submit()}><Save size={16}/> حفظ العينة وعرض نتيجة الفهم</button>
+    <div className="diagnostic-productive-actions"><button type="button" className="primary-button" disabled={!canSubmit} onClick={()=>void submit()}><Save size={16}/> {submitLabel}</button>{onCancel&&<button type="button" className="secondary-button" onClick={onCancel}><RotateCcw size={14}/> ليس الآن</button>}</div>
   </div>;
 }

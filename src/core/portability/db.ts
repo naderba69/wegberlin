@@ -62,6 +62,7 @@ export const defaultState: LearningState = {
   curriculumVersion: CURRENT_CURRICULUM_VERSION,
   profile: null,
   diagnosticResult: null,
+  productiveSampleComparison: null,
   diagnosticSessionDraft:null,
   skillDiagnosticAttempts: [],
   learningContracts: [],

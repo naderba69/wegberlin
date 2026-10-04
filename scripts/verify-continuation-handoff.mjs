@@ -239,6 +239,10 @@ const diagnosticProductive = read("src/core/diagnostic/productive-sample.ts");
 const diagnosticProductiveView = read("src/components/diagnostic-productive-sample.tsx");
 const diagnosticProductiveTest = read("tests/unit/diagnostic-productive-sample.test.ts");
 const diagnosticProductiveAdr = read("docs/adr/ADR-017-diagnostic-productive-sample-without-score.md");
+const productiveComparisonAdr = read("docs/adr/ADR-110-four-week-productive-sample-comparison.md");
+const productiveComparisonPanel = read("src/components/productive-sample-comparison.tsx");
+const productiveComparisonTest = read("tests/unit/productive-sample-comparison.test.ts");
+const diagnosticProductiveE2E = read("tests/e2e/critical-flows.spec.ts");
 const caseAudit = json("reports/case-teaching-audit.json");
 const acceptedAnswerAudit = json("reports/accepted-answer-hygiene-audit.json");
 const nursingAudit = json("reports/nursing-layer-audit.json");
@@ -469,8 +473,8 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,327/1,327", "197/197", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,327/1,327", "197/197", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,335/1,335", "198/198", "322 صفحة مفحوصة للتباين", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,335/1,335", "198/198", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
 for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
 if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
@@ -830,10 +834,15 @@ for (const text of ["status-announcement-v1", "role=\"status\"", "aria-live=\"po
 for (const text of ["deduplicates unchanged rerenders", "requiredResultSurfaces", "data-announcement-sequence", "existing exercise contract"]) requireText(statusAnnouncementTest, text, "status announcement tests");
 for (const text of ["diagnostic/gate/lab/repair/exam", "physical assistive-technology review remains separate", "P0-255"]) requireText(statusAnnouncementAdr, text, "status announcement ADR");
 if (partialIds.includes(256)) fail("P0-256 returned to partial after shared status policy acceptance");
-for (const text of ["diagnostic-productive-sample-v1", "self-evidence-no-automated-language-score", "canSubmitDiagnosticProductiveSample", "not-yet"]) requireText(diagnosticProductive, text, "diagnostic productive contract");
-for (const text of ["Produktionsprobe ohne Note", "Stellen Sie sich in ein bis drei Sätzen vor", "45_000", "لا يوجد تصحيح أو تقدير CEFR"]) requireText(diagnosticProductiveView, text, "diagnostic productive UI");
-for (const text of ["without a language score", "supports local speaking or mixed evidence", "namespaces diagnostic audio", "not.toHaveProperty(\"score\")"]) requireText(diagnosticProductiveTest, text, "diagnostic productive tests");
+for (const text of ["diagnostic-productive-sample-v1", "self-evidence-no-automated-language-score", "canSubmitDiagnosticProductiveSample", "not-yet", "Stellen Sie sich in ein bis drei Sätzen vor"]) requireText(diagnosticProductive, text, "diagnostic productive contract");
+for (const text of ["Produktionsprobe ohne Note", "DIAGNOSTIC_PRODUCTIVE_PROMPT_DE", "45_000", "لا يوجد تصحيح أو تقدير CEFR"]) requireText(diagnosticProductiveView, text, "diagnostic productive UI");
+for (const text of ["without a language score", "supports local speaking or mixed evidence", "namespaces both recordings in the paired comparison", "not.toHaveProperty(\"score\")"]) requireText(diagnosticProductiveTest, text, "diagnostic productive tests");
 for (const text of ["absolute-beginner onboarding test still bypasses diagnostic", "never changes the receptive diagnostic result", "local 3–45 second sample"]) requireText(diagnosticProductiveAdr, text, "diagnostic productive ADR");
+for (const text of ["four-week-productive-sample-comparison-v1", "PRODUCTIVE_SAMPLE_FOLLOW_UP_DAYS = 28", "recordProductiveSampleFollowUp", "mergeProductiveSampleComparisons"]) requireText(diagnosticProductive, text, "four-week productive comparison policy");
+for (const text of ["data-follow-up-state", "حجم الكتابة", "لا نفحص صحة النص أو النطق", "ابدأ عينة الأسبوع الرابع"]) requireText(productiveComparisonPanel, text, "four-week productive comparison UI");
+for (const text of ["opens exactly 28 days", "rejects a duplicate follow-up", "preserves a completed comparison", "validates the timeline in portable schema-v3 data"]) requireText(productiveComparisonTest, text, "four-week productive comparison tests");
+for (const text of ["exactly 28 elapsed days", "not a learning-gain estimate", "DWNB/schema-v3 round trips", "LearningState.productiveSampleComparison", "start from zero", "No German production"]) requireText(productiveComparisonAdr, text, "four-week productive comparison decision");
+for (const text of ["P1-19 captures a four-week follow-up", "productiveSampleComparison:{policyVersion:\"four-week-productive-sample-comparison-v1\"", "baseline:{ mode:\"not-yet\""]) requireText(diagnosticProductiveE2E, text, "productive intake and follow-up browser assertions");
 if (partialIds.includes(26)) fail("P0-26 returned to partial after no-score productive sample acceptance");
 // Woven nursing layer (owner contract v152 / ADR-080): three rules, rollback breaker, zero gate coupling.
 if (nursingAudit.format !== "dwnb-nursing-layer-audit" || nursingAudit.version !== "nursing-layer-audit-v1" || nursingAudit.policyVersion !== "nursing-layer-v1" || nursingAudit.ok !== true) fail("nursing-layer audit identity drifted");
@@ -888,13 +897,11 @@ for (const text of ["dwnb-official-exam-format-verification-v1", "buildExamForma
 for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "6d24aabcd1a1"']) requireText(examFormatReport, text, "exam-format verification artifact");
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
-// أُعيد توليد العدّادين 7454→7508 و201→201 في جيلي الإعدادات ووسم الخطأ
-// (settings-group + شريط تنقّل داخلي) ثم 16 وسمًا لحزمة التغذية الراجعة،
-// وتحوّل وسمّ نصي مختلط واحد فعليًا: 200→201.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 206 || languageAudit.openingTagCount !== 7868 || languageAudit.germanTagCount !== 438 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 205 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+// P1-19 adds the paired progress panel and the intake/four-week step labels; its German prompt remains isolated.
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 207 || languageAudit.openingTagCount !== 7932 || languageAudit.germanTagCount !== 440 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:206", "openingTagCount:7868", "germanTagCount:438", "technicalScopeCount:53", "mixedStaticCount:205"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:207", "openingTagCount:7932", "germanTagCount:440", "technicalScopeCount:53", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");
@@ -1143,7 +1150,7 @@ for (const text of ["real-task-comprehensibility-check-v1","listener-judged-real
 for (const text of ["data-comprehensibility-policy","data-comprehensibility-listener-question","data-comprehensibility-answer-key","data-comprehensibility-record","data-comprehensibility-summary","data-comprehensibility-no-effect","data-comprehensibility-honest-note"]) requireText(comprehensibilityPanel, text, "comprehensibility panel");
 for (const text of ["تقرير ذاتي لا يُعدّ تحقّقًا خارجيًا","المعلومة التي يجب أن تصل","لا تُمنح هنا درجة نطقٍ أو طلاقة"]) requireText(comprehensibilityPanel, text, "comprehensibility honesty copy");
 if (/\bfetch\(|localStorage|sessionStorage|indexedDB|navigator\./.test(comprehensibilityCore)) fail("comprehensibility core must stay network-free and storage-free");
-for (const text of ["8","3","67"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
+for (const text of ["8","3","68"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
 requireText(comprehensibilityAdr, "٨ مهام", "comprehensibility ADR inventory");
 requireText(comprehensibilityAdr, "self-report-no-external-verification", "comprehensibility ADR self-report label");
 requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count (historical record of the field count at that time)");
@@ -1303,7 +1310,7 @@ console.log(`- intensity: learner-selected-intensity-presets-v1 keeps Light/Bala
 console.log(`- security: secret-audit-v1 working tree + required full-history CI + versioned pre-commit hook`);
 console.log(`- Offline: packs ${Object.entries(expectedPacks).map(([id,count])=>`${id}:${count}`).join(", ")}; gzip fingerprint ${offlineSize.buildFingerprint.slice(0,12)}`);
 console.log(`- accessibility: accessibility-preferences-v1 large text/high contrast/reduced motion + status-announcement-v1; P0-255 physical review pending`);
-console.log(`- diagnostic production: diagnostic-productive-sample-v1, self-evidence only, no automated language score`);
+console.log(`- diagnostic production: four-week-productive-sample-comparison-v1 at 28 days across all onboarding paths (beginner not-yet, top-level state); paired volume/self-report only, no language score`);
 console.log(`- case teaching: ${caseAudit.contractCount} meaning→role→form contracts / ${caseAudit.controlledReferenceCount} controlled / ${caseAudit.assessmentReferenceCount} assessment`);
 console.log(`- language/Bidi: ${languageAudit.tsxFiles} TSX / ${languageAudit.openingTagCount} tags / ${languageAudit.germanTagCount} German / 0 issues`);
 console.log(`- Tunisian support: ${tunisianAudit.noteCount} optional notes / ${tunisianAudit.lessonCount} lessons / ${tunisianAudit.pendingReview} pending independent review`);

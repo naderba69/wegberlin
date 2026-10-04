@@ -64,6 +64,8 @@ export function SettingsView() {
   const importPreview = pendingImport ? previewImport(state, pendingImport.state, pendingImport.media.length) : null;
   const linkedMediaIds = [...new Set([
     ...(state.diagnosticResult?.productiveSample?.speakingMediaId ? [state.diagnosticResult.productiveSample.speakingMediaId] : []),
+    ...(state.productiveSampleComparison?.baseline.speakingMediaId ? [state.productiveSampleComparison.baseline.speakingMediaId] : []),
+    ...(state.productiveSampleComparison?.followUp?.speakingMediaId ? [state.productiveSampleComparison.followUp.speakingMediaId] : []),
     ...state.speakingAttempts.flatMap((attempt) => attempt.mediaId ? [attempt.mediaId] : []),
     ...Object.values(state.examSessions).flatMap((session) => Object.values(session.taskDrafts).flatMap((draft) => typeof draft.payload.mediaId === "string" ? [draft.payload.mediaId] : [])),
   ])];
@@ -176,6 +178,11 @@ export function SettingsView() {
         update((current) => ({
           ...current,
           diagnosticResult: current.diagnosticResult?.productiveSample ? { ...current.diagnosticResult, productiveSample: { ...current.diagnosticResult.productiveSample, speakingMediaId: undefined } } : current.diagnosticResult,
+          productiveSampleComparison: current.productiveSampleComparison ? {
+            ...current.productiveSampleComparison,
+            baseline: { ...current.productiveSampleComparison.baseline, speakingMediaId: undefined },
+            ...(current.productiveSampleComparison.followUp ? { followUp: { ...current.productiveSampleComparison.followUp, speakingMediaId: undefined } } : {}),
+          } : current.productiveSampleComparison,
           speakingAttempts: current.speakingAttempts.map((attempt) => ({
             ...attempt,
             mediaId: undefined,

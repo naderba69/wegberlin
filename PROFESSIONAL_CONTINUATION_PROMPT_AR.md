@@ -1,6 +1,13 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v180 · 2026-10-03 · re-verified after ADR-105 review-session dose and review-hour anchoring; ADR-102 browser WebGPU ESM-resolution fix and ADR-101 Vercel output compatibility remain verified.
+Sync batch: v180 · 2026-10-04 · P1-19 four-week productive-sample comparison added without changing curriculum content; ADR-105 review-session dose, ADR-102 WebGPU ESM resolution, and ADR-101 Vercel output compatibility remain verified.
+
+## P1-19 — خط أساس إنتاجي لكل مسارات التهيئة — 2026-10-04
+
+- السجل `LearningState.productiveSampleComparison` مستقل عن `diagnosticResult`. من يختار البدء من الصفر يحصل على «لا أستطيع بعد» و0 كلمة في وقت إنشاء الملف، دون كتابة ألمانية أو ميكروفون أو تشخيص؛ سائر المتعلمين يحصلون على المهمة الإنتاجية نفسها بعد التحديد الأولي.
+- بعد 28 يومًا كاملة، تعرض `/progress` عينة متابعة اختيارية بالمطالبة نفسها. نعرض عدد الكلمات ومدة التسجيل المتاح وتقييم المتعلّم الذاتي فقط: لا تصحيح لغوي أو CEFR أو إتقان أو ترقية. تدعم الحالة النسخ والدمج، وتبقى عند إعادة التهيئة، ويمكن حذف التسجيلات من الإعدادات.
+- القياس الحالي: `npm run check` خروج 0؛ `npm test` **1,335/1,335** في **198/198** ملفًا، و`tsc` نظيف؛ lint صفر أخطاء وتحذيران؛ المصدر 19/19، `language:audit` ‏207 TSX / 7,932 وسمًا / 0 مشكلة؛ اختبارات الوظيفة والأرشيف والحدود المستهدفة **65/65**. البناء: `84eeaa2f3bb0` · full 5,919,787 · JS 127/1,946,729 gzip · الصوت 544/52,943,843 bytes · المنهج 1,051,798 gzip · التباين 0/22,881 عنصرًا في 322 صفحة. فُعّلت تأكيدات E2E لمساري المبتدئ والمتابعة، لكن تشغيل Chromium محليًا متعذر لغياب المتصفح ومكتباته وعدم توافر تنزيله من هذه البيئة.
+- المرجع التربوي: `CURRICULUM_METHOD_AUDIT_2026-10-04_AR.md`؛ القرار: `docs/adr/ADR-110-four-week-productive-sample-comparison.md`. لم تُعدّل درجات المقرر أو بواباته.
 
 ## معيار الدرس الواحد وإعادة تسمية «الاستقلال» — 2026-10-03 (ADR-106، م37)
 

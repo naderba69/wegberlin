@@ -20,6 +20,12 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
 const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v180";
 
+// الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
+// صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
+// 2026-10-04 بعد أن نجح مساء السبت بلا أي تغيّر في الكود)؛ فتُثبَّت ساعته على يوم دراسة. 2026-09-30 أربعاء، والظهيرة بتوقيت
+// UTC تبقى في اليوم نفسه عند أي منطقة زمنية من UTC−11 إلى UTC+11.
+const studyDayNow = new Date("2026-09-30T12:00:00Z");
+
 async function waitForLearningReady(page: Page) {
   await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready", "true", { timeout:30_000 });
 }
@@ -359,10 +365,11 @@ test("visual accessibility preferences preview immediately, persist, reset, and 
 });
 
 test("P0 exam readiness stays provider-scoped and exposes weak modules instead of one average", async ({ page }) => {
+  await page.clock.setFixedTime(studyDayNow);
   const goetheReadingIds=allPublishedExamTasks.filter((task)=>task.provider==="goethe-b2"&&task.skill==="reading").slice(0,6).map((task)=>task.id);
   const completedLessonIds=curriculum.map((lesson)=>lesson.id);
-  const verified=verifiedThrough(["A1","A2","B1","B2"],new Date());
-  verified.reviewItems=eligibleReviewCards(verified).map(card=>({...newReviewItem(card.id),nextReviewDate:new Date(Date.now()+86_400_000).toISOString()}));
+  const verified=verifiedThrough(["A1","A2","B1","B2"],studyDayNow);
+  verified.reviewItems=eligibleReviewCards(verified).map(card=>({...newReviewItem(card.id),nextReviewDate:new Date(studyDayNow.getTime()+86_400_000).toISOString()}));
   await page.goto("/exams");
   await waitForLearningReady(page);
   await page.evaluate(({baseState,goetheReadingIds,completedLessonIds})=>new Promise<void>((resolve,reject)=>{
@@ -2194,6 +2201,7 @@ test("continuous full-exam mode persists one central clock and blocks task skipp
 });
 
 test("progress and daily coach derive metrics, risks, dates, and streaks from evidence", async ({ page }) => {
+  await page.clock.setFixedTime(studyDayNow);
   await page.goto("/progress");
   await waitForLearningReady(page);
   await expect(page.locator(".evidence-overview")).toContainText("—");

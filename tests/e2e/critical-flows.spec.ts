@@ -78,7 +78,7 @@ async function readActiveProfileId(page: Page) {
 
 test("critical pages have no automatically detectable serious WCAG violations", async ({ page }) => {
   test.setTimeout(90_000);
-  for (const route of ["/library", "/library#lib-l-a1-01", "/shadowing", "/practice/dictation", "/search", "/errors", "/progress", "/exams", "/settings", "/tutor"]) {
+  for (const route of ["/library", "/library#lib-l-a1-01", "/shadowing", "/practice/dictation", "/search", "/errors", "/progress", "/exams", "/settings", "/tutor", "/today", "/path", "/speaking", "/lernen/a1-01", "/module/a1-1"]) {
     await page.goto(route);
     const result = await new AxeBuilder({ page }).include("main").withTags(["wcag2a", "wcag2aa"]).analyze();
     const serious = result.violations.filter((item) => item.impact === "serious" || item.impact === "critical");

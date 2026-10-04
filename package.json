@@ -47,7 +47,7 @@
     "governance:audit:write": "tsx scripts/generate-content-governance-audit.ts --write",
     "prebuild": "npm run imports:portable && npm run vendor:materialize && npm run runtime:materialize && npm run offline:manifest && npm run feature:gate && npm run library:adversarial:audit && npm run meaning:translation:audit && npm run security:audit && npm run governance:audit && npm run content:audit && npm run accepted:answers && npm run nursing:layer && npm run similarity:audit && npm run case:audit && npm run language:audit && npm run exam:format-claims:audit && npm run exam:formats:verify && npm run tunisian:audit && npm run lexical:strategy:audit && npm run learning:architecture:audit && npm run study:modes:audit && npm run practical:context:audit && npm run lesson:quality:audit && npm run lesson:contract:audit && npm run learning:integrity:audit",
     "build": "next build --webpack",
-    "postbuild": "npm run offline:size && npm run js:budget && npm run media:budget",
+    "postbuild": "npm run offline:size && npm run js:budget && npm run media:budget && npm run contrast:audit",
     "js:budget": "node scripts/audit-js-budgets.mjs",
     "media:budget": "node scripts/audit-media-pack-budgets.mjs",
     "start": "next start",
@@ -75,7 +75,9 @@
     "learning:integrity:audit": "tsx scripts/generate-learning-integrity-audit.ts --check",
     "learning:integrity:write": "tsx scripts/generate-learning-integrity-audit.ts --write",
     "lesson:contract": "tsx scripts/generate-lesson-contract-audit.ts --write",
-    "lesson:contract:audit": "tsx scripts/generate-lesson-contract-audit.ts --strict --check"
+    "lesson:contract:audit": "tsx scripts/generate-lesson-contract-audit.ts --strict --check",
+    "contrast:audit": "node scripts/audit-static-contrast.mjs",
+    "pronunciation:materialize": "node scripts/materialize-pronunciation-model.mjs"
   },
   "dependencies": {
     "fflate": "^0.8.3",

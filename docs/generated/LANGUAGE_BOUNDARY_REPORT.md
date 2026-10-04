@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aace6`
+Content SHA-256: `3b78eea787ca4eb0389c33d7e205168bc1b22d483e4b14998fee47ad9744894b`
 
 ## Result
 
-`PASS` — 195 TSX files and 7441 opening JSX tags were scanned.
+`PASS` — 196 TSX files and 7492 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -123,7 +123,6 @@ Content SHA-256: `3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aac
 | src/components/local-pronunciation-model-control.tsx:22 | نموذج Whisper صغير يعمل داخل Web Worker على جهازك بعد تنزيل صريح مرة واحدة. | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:25 | نحو 70–90 MB | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:25 | قد تختلف مساحة Cache الفعلية حسب المتصفح وملفات ONNX المطلوبة. | Arabic host + plaintext boundary |
-| src/components/local-pronunciation-model-control.tsx:26 | إصدار ONNX مثبت، والتنزيل الجديد يُحظر عند تقادم التحقق. | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:30 | يطلب المتصفح أوزانًا من Hugging Face ثم يحفظها محليًا. لا يُرسل اسمك أو تقدمك أو تسجيلاتك. | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:35 | المطابقة تقول ما إذا استطاع ASR سماع الكلمات المتوقعة. فشل كلمة قد يكون من الضوضاء أو الميكروفون، وليس حكمًا ق | Arabic host + plaintext boundary |
 | src/components/motivation-preferences-control.tsx:21 | الإخفاء فوري ومحلي ولا يحذف الأدلة ولا يخفض الإتقان أو الاستمرارية الفعلية. لا عقوبة ولا Dark pattern لإعادة ا | Arabic host + plaintext boundary |
@@ -192,18 +191,19 @@ Content SHA-256: `3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aac
 | src/components/separated-rubrics.tsx:1 | عام وGoethe وtelc — دون خلط | Arabic host + plaintext boundary |
 | src/components/session-ritual-preferences-control.tsx:4 | تفضيل محلي فقط · `optional-session-rituals-v1` · التأمل الأسبوعي مستقل عن هذا المفتاح. | Arabic host + plaintext boundary |
 | src/components/settings-view.tsx:215 | تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:235 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:238 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:240 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:243 | تصدير .dwnb | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:244 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:245 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:245 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:252 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:252 | مفتاح API | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:255 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:257 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
-| src/components/settings-view.tsx:270 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:250 | ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:267 | ملف محمول قابل للتحقق بـSHA-256. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:269 | التسجيلات الصوتية محفوظة في Media Store منفصل. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:272 | تصدير .dwnb | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:273 | يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:274 | دعم نسخ DWNB القديمة | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:274 | v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على  | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:285 | عنوان Ollama المحلي | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:285 | مفتاح API | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:288 | طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:290 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:298 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
+| src/components/settings-view.tsx:308 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:149 | ملف MP3 متاح | Arabic host + plaintext boundary |
 | src/components/shadowing-studio.tsx:149 | للتقليد دون TTS | Arabic host + plaintext boundary |
 | src/components/skill-diagnostic-retest.tsx:7 | كل عينة تسأل سؤالًا واحدًا من A1 إلى B2 وتحفظ منفصلة. لا تستبدل تشخيصك العام ولا تفتح مستوى. | Arabic host + plaintext boundary |

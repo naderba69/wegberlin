@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98c6`
+Content SHA-256: `4832e2cace92fed7bf815b5bb6b69caaeb10519c0db1464266ea368512920769`
 
 ## Honest result
 
@@ -14,9 +14,9 @@ The audit does **not** create grammatical facts. A pending noun row must receive
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | A1 | 570 | 298 | 0 | 272 | 106 | 25 | 0 | 81 |
 | A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
-| B1 | 1222 | 338 | 0 | 884 | 318 | 31 | 0 | 287 |
-| B2 | 2199 | 453 | 89 | 1657 | 629 | 48 | 4 | 577 |
-| **Total** | **4874** | **1381** | **89** | **3404** | **1257** | **134** | **4** | **1119** |
+| B1 | 1222 | 338 | 0 | 884 | 317 | 31 | 0 | 286 |
+| B2 | 2198 | 453 | 89 | 1656 | 629 | 48 | 4 | 577 |
+| **Total** | **4873** | **1381** | **89** | **3403** | **1256** | **134** | **4** | **1118** |
 
 ## Classification contract
 
@@ -54,10 +54,10 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-22-9c301c2e` | B2 | `b2-22` | Begründung | `phrases[7].de`: die nicht nachvollziehbare Begründung |
 | `lex-n-b2-22-241d586c` | B2 | `b2-22` | Behörde | `phrases[2].de`: der von der Behörde geprüfte Bescheid |
 | `lex-n-b2-22-0e913452` | B2 | `b2-22` | Berücksichtigung | `phrases[6].de`: ein unter Berücksichtigung der Lage getroffener Beschluss |
-| `lex-n-b2-22-7b4682df` | B2 | `b2-22` | Beschlusslage | `phrases[8].de`: der an die Beschlusslage angrenzende Hinweis |
 | `lex-n-b2-22-ecea19c1` | B2 | `b2-22` | Fall | `phrases[4].de`: der zu prüfende Fall |
 | `lex-n-b2-22-b6aa3172` | B2 | `b2-22` | Freitag | `phrases[14].de`: die bis Freitag zu liefernde Stellungnahme |
 | `lex-n-b2-22-c1d330ac` | B2 | `b2-22` | Frist | `phrases[10].de`: ein die Frist wahrender Einspruch<br>`phrases[5].de`: die derzeit geltende Frist |
+| `lex-n-b2-22-ccaa086b` | B2 | `b2-22` | Hinweis | `phrases[8].de`: der Hinweis zur Beschlusslage |
 | `lex-n-b2-22-0745839f` | B2 | `b2-22` | Lage | `phrases[6].de`: ein unter Berücksichtigung der Lage getroffener Beschluss |
 | `lex-n-b2-22-32c52d12` | B2 | `b2-22` | Montag | `phrases[3].de`: die am Montag eingegangene Beschwerde |
 | `lex-n-b2-22-e5088bd6` | B2 | `b2-22` | Nachbesserung | `phrases[16].de`: die mehrfach angemahnte Nachbesserung |
@@ -68,7 +68,7 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-22-65af7197` | B2 | `b2-22` | Sachverhalt | `phrases[15].de`: ein den Sachverhalt klärendes Gespräch |
 | `lex-n-b2-22-10412086` | B2 | `b2-22` | Seiten | `phrases[9].de`: die von allen Seiten geteilte Einschätzung |
 | `lex-n-b2-22-6d78bdc4` | B2 | `b2-22` | Vermerk | `flashcards[5].frontDe`: der Vermerk |
-| `lex-n-b2-22-40224550` | B2 | `b2-22` | Verstoß | `phrases[13].de`: ein kaum zu übersehender Verstoß |
+| `lex-n-b2-22-40224550` | B2 | `b2-22` | Verstoß | `phrases[13].de`: ein offensichtlicher Verstoß |
 | `lex-n-b2-23-8bf63695` | B2 | `b2-23` | Ablehnung | `phrases[15].de`: ein Einspruch gegen die Ablehnung |
 | `lex-n-b2-23-b14ddf94` | B2 | `b2-23` | Antrag | `phrases[1].de`: der Antrag auf Erlass der Nachforderung |
 | `lex-n-b2-23-049778a5` | B2 | `b2-23` | Antrags | `phrases[14].de`: die Bearbeitungsdauer des Antrags |

@@ -35,7 +35,6 @@ export type PronunciationConsistencyAudit = {
 };
 
 const FRONT = /(i|e|ä|ö|ü|ei|eu|äu|y)$/;
-const BACK = /(a|o|u|au)$/;
 
 function germanWords(text: string): string[] {
   return text

@@ -1,46 +1,46 @@
-name: QA experiment (temporary)
+name: QA experiment 2 (temporary)
 
 on:
   pull_request:
     paths:
       - ".github/workflows/qa-experiment.yml"
-      - "qa-experiment-telc.mjs"
 
 permissions:
   contents: read
+  issues: read
+
+env:
+  DEPLOYMENT_URL: ${{ inputs.deployment_url || vars.DEPLOYMENT_SMOKE_PRODUCTION_URL || 'https://wegberlin.vercel.app' }}
 
 jobs:
-  probe:
+  verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - name: Production smoke against the public alias
-        env:
-          DEPLOYMENT_URL: https://wegberlin.vercel.app
+      - name: Deployment smoke default expression and run
         run: |
           set +e
-          node scripts/smoke-deployment.mjs > smoke-report.json 2> smoke-stderr.txt
+          echo "::notice title=resolved DEPLOYMENT_URL on a non-dispatch event::$DEPLOYMENT_URL"
+          node scripts/smoke-deployment.mjs > smoke.json 2>&1
           code=$?
-          echo "::notice title=smoke exit code::$code"
-          echo "::notice title=smoke report::$(tr '\n' ' ' < smoke-report.json | cut -c1-3500)"
-          echo "::notice title=smoke stderr::$(tr '\n' ' ' < smoke-stderr.txt | cut -c1-1500)"
+          echo "::notice title=smoke exit code::$code · $(grep -o '"status": "[a-z-]*"' smoke.json | tr '\n' ' ')"
           exit 0
-      - name: Source probe from a runner (what the monthly workflow sees)
+      - name: Monthly audit with the committed registry
         run: |
           set +e
-          node scripts/audit-source-freshness.mjs --probe > probe.txt 2>&1
+          node scripts/audit-source-freshness.mjs --fail-on=due --probe > audit.txt 2>&1
           code=$?
-          echo "::notice title=probe exit code::$code"
-          echo "::notice title=probe report::$(tr '\n' '|' < probe.txt | cut -c1-5000)"
+          echo "::notice title=monthly audit exit code::$code"
+          echo "::notice title=monthly audit report::$(tr '\n' '|' < audit.txt | cut -c1-4500)"
           exit 0
-      - name: telc archive re-read
-        run: |
-          set +e
-          sudo apt-get update -qq > /dev/null 2>&1
-          sudo apt-get install -y -qq poppler-utils unzip > /dev/null 2>&1
-          node qa-experiment-telc.mjs
-          exit 0
+      - name: github-script v8 dry run (read-only)
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100 });
+            const real = issues.filter((issue) => !issue.pull_request).map((issue) => `#${issue.number} ${issue.title}`);
+            core.notice(`github-script v8 ran on this runner; ${real.length} open issue(s): ${real.join(" | ")}`);

@@ -885,7 +885,7 @@ const examFormatReport = read("reports/official-exam-formats-audit.json");
 const examFormatDoc = read("docs/generated/OFFICIAL-EXAM-FORMAT-VERIFICATION.md");
 for (const text of ["dwnb-official-exam-format-evidence-v1", "excerptSha256", "allowedHostSuffixes", "openFacts"]) requireText(examFormatEvidence, text, "exam-format evidence config");
 for (const text of ["dwnb-official-exam-format-verification-v1", "buildExamFormatReport", "async function runLive", "claimsFormatUnchanged: false", "npm run exam:formats:verify:write"]) requireText(examFormatScript, text, "exam-format verification script");
-for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "1e61862c8a97"']) requireText(examFormatReport, text, "exam-format verification artifact");
+for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "6d24aabcd1a1"']) requireText(examFormatReport, text, "exam-format verification artifact");
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
 // أُعيد توليد العدّادَين 7440→7441 و202→201 في جيل ADR-107 (سطر خطة تفريغ الكومة في /review):

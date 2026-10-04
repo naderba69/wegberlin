@@ -7,7 +7,6 @@ import {
   GUEST_PROMOTION_REFUSAL_AR,
   GUEST_SESSION_POLICY,
   assertGuestIsolation,
-  buildGuestPromotionPlan,
   clampGuestMinutes,
   createGuestSession,
   createGuestState,

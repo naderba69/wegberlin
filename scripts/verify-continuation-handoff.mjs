@@ -1155,6 +1155,7 @@ const examPartnerTest = read("tests/unit/exam-partner-simulation.test.ts");
 const examPartnerAdr = read("docs/adr/ADR-098-exam-partner-simulation.md");
 const examPartnerRunLog = read("docs/run-logs/2026-09-29-exam-partner-simulation/README.md");
 for (const text of ["exam-partner-simulation-v1","synthetic-scripted-exam-partner-no-real-partner-no-stt-no-scoring-no-official-partner-claim","unofficial-paraphrase-of-own-discussion-goal","EXAM_PARTNER_MAX_TURNS = 6","assertExamPartnerIntegrity","لا يفهم كلامك","ليس شريكًا بشريًا","unofficial-paraphrase-of-own-discussion-goal"]) requireText(examPartnerCore, text, "exam partner core");
+for (const text of ["assertExamPartnerIntegrity","EXAM_PARTNER_TURN_TOTAL","48"]) requireText(examPartnerTest, text, "exam partner unit tests");
 for (const text of ["data-exam-partner-policy","data-exam-partner-persona","data-exam-partner-pace","data-exam-partner-your-turn","data-exam-partner-play","data-exam-partner-no-effect","data-exam-partner-honest-note","applySpeechPreferences"]) requireText(examPartnerPanel, text, "exam partner panel");
 if (/\bfetch\(|XMLHttpRequest|localStorage|sessionStorage|indexedDB|navigator\./.test(examPartnerCore)) fail("exam partner core must stay network-free and storage-free");
 for (const text of ["48","0.8","1.15","11/11"]) requireText(examPartnerRunLog, text, "exam partner run log");

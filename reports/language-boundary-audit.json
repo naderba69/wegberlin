@@ -4,10 +4,10 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 199,
-  "openingTagCount": 7580,
-  "germanTagCount": 423,
+  "openingTagCount": 7584,
+  "germanTagCount": 424,
   "arabicTagCount": 7,
-  "ltrTagCount": 468,
+  "ltrTagCount": 469,
   "rtlTagCount": 7,
   "autoDirCount": 12,
   "technicalScopeCount": 51,
@@ -108,12 +108,12 @@
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 81,
+      "line": 83,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 83,
+      "line": 85,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -1024,5 +1024,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "3856910d0c0bbfa6c1a50bea5ba2f69ea11a7a6de47ab0c6be72960297c914bf"
+  "contentSha256": "1be08ad3ea1387aeda52aec02e9297984595c7b87e5adec4958800714eca8466"
 }

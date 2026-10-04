@@ -3,17 +3,17 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `3856910d0c0bbfa6c1a50bea5ba2f69ea11a7a6de47ab0c6be72960297c914bf`
+Content SHA-256: `1be08ad3ea1387aeda52aec02e9297984595c7b87e5adec4958800714eca8466`
 
 ## Result
 
-`PASS` — 199 TSX files and 7580 opening JSX tags were scanned.
+`PASS` — 199 TSX files and 7584 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 423 |
+| Explicit German fragments (lang=de + dir=ltr) | 424 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 468 |
+| LTR tags audited | 469 |
 | RTL tags audited | 7 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 51 |
@@ -55,8 +55,8 @@ Content SHA-256: `3856910d0c0bbfa6c1a50bea5ba2f69ea11a7a6de47ab0c6be72960297c914
 | src/app/progress/page.tsx:66 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:71 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:76 | ليس حكم CEFR | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:81 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:83 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:83 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:85 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
 | src/components/ai-provider-capability-matrix.tsx:57 | حد 0 USD | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |

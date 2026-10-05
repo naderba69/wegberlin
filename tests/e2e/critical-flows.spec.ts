@@ -1542,9 +1542,9 @@ test("P2 waveform comparison is local, temporary, accessible, and score-free", a
     if(!["GET","HEAD"].includes(request.method()))uploadRequests+=1;
   });
   const panel=page.locator('[data-waveform-comparison-policy="neutral-self-waveform-comparison-v1"]');
-  await expect(panel).toBeVisible();
   await page.getByRole("button",{name:/ابدأ التسجيل/}).click();
   await page.getByRole("button",{name:/أوقف التسجيل/}).click();
+  await expect(panel).toBeVisible();
   await page.getByRole("button",{name:/اعرض الرسمين محليًا/}).click();
   await expect(panel.locator("figure[data-waveform-trace]")).toHaveCount(2);
   await expect(panel.locator("figure[data-waveform-trace=reference] [role=img]")).toHaveAttribute("aria-label",/النموذج الاصطناعي/);

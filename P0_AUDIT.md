@@ -1,12 +1,12 @@
 # P0 Implementation Audit
 
-Sync batch: v182 · 2026-10-05 · P2-352 adds an opt-in local waveform outline in Shadowing, without pronunciation, quality, mastery, or CEFR judgments. P0-302 is now closed on green GitHub run 37335158220; P0-301's actual Vercel Preview passed on PR #7 head b974c48, but the PR remains open.
+Sync batch: v183 · 2026-10-05 · P2-276 adds hypothetical, non-testimonial guidance to `/practice`; P0 states/counts are unchanged. P0-302 remains closed on green run 37335158220; P0-301's actual Vercel Preview passed on PR #7 head b974c48, but the PR remains open.
 
-Batch follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. Offline active/staging caches are v182; v181 is retained for rollback. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
+Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 
 Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دفعات المحتوى، وأرقام الجرد مُعاد تثبيتها من `reports/academic-content-audit.json` عند `v138`.
 
-مزامنة البوابة في v182 (2026-10-05): صارت حالات P0 **116 منجزًا و8 جزئية من 124** بعد استيفاء P0-302 بتشغيل GitHub أخضر على `b974c48` (run `37335158220`). تحقق Vercel Preview الفعلي على PR #7 والرأس نفسه؛ يبقى P0-301 جزئيًا لأن PR لم يُغلق. تحققت صلة P2-352 بحدود P0-135 وP0-255: الرسم لا يقيّم النطق، والإتاحة الآلية لا تغلق مراجعة قارئ الشاشة/الجهاز الفعلية. تحقق الشجرة: `npm test` **1,352/1,352** في **199/199**؛ فحص الجودة البعيد الحالي يتضمن 64/64 لاختبارات E2E على كل من سطح المكتب والهاتف.
+مزامنة البوابة في v182 (2026-10-05): صارت حالات P0 **116 منجزًا و8 جزئية من 124** بعد استيفاء P0-302 بتشغيل GitHub أخضر على `b974c48` (run `37335158220`). تحقق Vercel Preview الفعلي على PR #7 والرأس نفسه؛ يبقى P0-301 جزئيًا لأن PR لم يُغلق. تحققت صلة P2-352 بحدود P0-135 وP0-255: الرسم لا يقيّم النطق، والإتاحة الآلية لا تغلق مراجعة قارئ الشاشة/الجهاز الفعلية. تحقق الشجرة عند v182 (تاريخي): `npm test` **1,352/1,352** في **199/199**؛ التشغيل البعيد السابق تضمّن 64/64 لاختبارات E2E على كل من سطح المكتب والهاتف، لكنه يسبق P2-276 ولا يثبتها.
 
 هذا التدقيق يطابق عناصر P0 الـ124 الواردة في `IDEA_BACKLOG.md` مع ما يوجد فعليًا في الشيفرة والاختبارات. كلمة «منجز» تعني أن مسارًا قابلًا للاستخدام ومعيار قبول آليًا موجودان؛ لا تعني مراجعة بشرية أكاديمية أو صوتية أو اعتمادًا رسميًا. تمت مزامنته مع بوابة الإنتاج الحالية دون تغيير حدود P0 البشرية أو البعيدة.
 

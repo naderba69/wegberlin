@@ -19,7 +19,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v182";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v183";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -75,6 +75,28 @@ async function readActiveProfileId(page: Page) {
       request.onsuccess = () => resolve(typeof request.result === "string" ? request.result : undefined);
     };
   }));
+}
+
+async function readLocalStateSnapshot(page: Page) {
+  return page.evaluate(async () => {
+    const open = indexedDB.open("der-weg-nach-berlin", 4);
+    const db = await new Promise<IDBDatabase>((resolve, reject) => {
+      open.onsuccess = () => resolve(open.result);
+      open.onerror = () => reject(open.error);
+    });
+    const transaction = db.transaction(["learning-state", "profiles", "metadata"], "readonly");
+    const read = (store: IDBObjectStore, key: IDBValidKey) => new Promise<unknown>((resolve, reject) => {
+      const request = store.get(key);
+      request.onsuccess = () => resolve(request.result ?? null);
+      request.onerror = () => reject(request.error);
+    });
+    const [state, profile, activeProfileId] = await Promise.all([
+      read(transaction.objectStore("learning-state"), "primary"),
+      read(transaction.objectStore("profiles"), "primary"),
+      read(transaction.objectStore("metadata"), "active-profile"),
+    ]);
+    return JSON.stringify({ state, profile, activeProfileId });
+  });
 }
 
 test("critical pages have no automatically detectable serious WCAG violations", async ({ page }) => {
@@ -3823,4 +3845,45 @@ test("P2-355 local test generator selects published lesson questions and stays o
   const reloaded = page.locator('[data-local-test-policy="local-test-generator-v1"]');
   await expect(reloaded.locator(".local-test-run")).toHaveCount(0);
   await expect(reloaded.locator("#local-test-level")).toHaveValue("");
+});
+
+test("P2-276 presents hypothetical practical paths without testimonial or outcome claims", async ({ page }) => {
+  const observedRequests: Array<{ url: string; method: string }> = [];
+  page.on("request", (request) => observedRequests.push({ url: request.url(), method: request.method() }));
+  await page.goto("/practice");
+  await waitForLearningReady(page);
+
+  const panel = page.locator('[data-illustrative-pathways-policy="illustrative-learning-pathways-v1"]');
+  await expect(panel).toBeVisible();
+  await expect(panel).toHaveAttribute("data-evidence-status", "authored-hypothetical-guidance-only");
+  await expect(panel).toHaveAttribute("data-outcome-claims", "none");
+  await expect(panel).toContainText("حالات افتراضية مؤلَّفة");
+  await expect(panel).toContainText("ليست شهادات متعلمين أو بيانات تجربة");
+  await expect(panel).toContainText("لا تعرض نتائج مقاسة أو مدة للوصول إلى مستوى أو اجتياز امتحان");
+
+  const cases = panel.locator("[data-illustrative-pathway]");
+  await expect(cases).toHaveCount(3);
+  await expect.poll(() => readActiveProfileId(page)).toBe("primary");
+  const evidenceBefore = await readLocalStateSnapshot(page);
+
+  for (let index = 0; index < 3; index += 1) {
+    const example = cases.nth(index);
+    await expect(example).toHaveAttribute("data-outcome-claim", "none");
+    await expect(example).toHaveAttribute("data-evidence-status", "authored-hypothetical-guidance-only");
+    const details = example.locator("details");
+    await details.locator("summary").click();
+    await expect(details).toHaveAttribute("open", "");
+    await expect(example.getByRole("link")).toHaveCount(3);
+    await expect(example).toContainText("سؤال للتخطيط");
+  }
+
+  const accessibility = await new AxeBuilder({ page }).include('[data-illustrative-pathways-policy="illustrative-learning-pathways-v1"]').analyze();
+  expect(accessibility.violations.map((violation) => violation.id)).toEqual([]);
+
+  const evidenceAfter = await readLocalStateSnapshot(page);
+  expect(evidenceAfter).toBe(evidenceBefore);
+
+  const origin = new URL(page.url()).origin;
+  expect(observedRequests.filter((request) => new URL(request.url).origin !== origin)).toEqual([]);
+  expect(observedRequests.filter((request) => !["GET", "HEAD"].includes(request.method))).toEqual([]);
 });

@@ -1,8 +1,8 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v182 · 2026-10-05 · P2-352 adds local waveform outlines only; no external sources, APIs, AI calls, or network origins are introduced.
+Sync batch: v183 · 2026-10-05 · P2-276 adds static, authored hypothetical guidance to `/practice`; no external sources, APIs, AI calls, analytics, or network origins are introduced. Offline active/staging caches are v183, with v182 retained for rollback.
 
-Batch follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. Offline cache/staging are v182 and the prior complete cache is v181; no source-freshness record changed.
+Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 
 Batch follow-up: `/practice/test-generator` uses only authored published mini-test templates and runs locally. It adds no remote model, external corpus, learner-state field, or source-freshness obligation; all five Offline packs include its route and statically bundled template banks.
 

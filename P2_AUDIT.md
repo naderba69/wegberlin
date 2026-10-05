@@ -1,10 +1,10 @@
 # P2 Implementation Audit
 
-Sync batch: v182 · 2026-10-05 · P2-352 closes the local educational waveform outline in Shadowing Studio; the comparison is visual/self-reflective only and does not make pronunciation or quality claims.
+Sync batch: v183 · 2026-10-05 · P2-276 adds `illustrative-learning-pathways-v1` to `/practice`: three authored hypothetical scenarios, explicitly not testimonials or measured outcomes, linked only to routes present in every Offline pack. No profile fields, persistence, score, or learner-state effect; active/staging caches are v183 with v182 retained for rollback. P2-352 remains unchanged.
 
-Batch follow-up: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. Offline active/staging caches are v182; v181 is retained for rollback. P2-355's authored mini-test generator remains in all five Offline packs.
+Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
-Last audited: 2026-10-05 · P2-352 closes after unit, code-boundary, and browser-flow tests; automated evidence does not replace pronunciation or device/accessibility review.
+Last updated: 2026-10-05 · P2-276 closes after the full local `npm run check` (1,355 tests/200 files, production build) and focused route/code-boundary checks; its E2E flow is added but has not yet run on a browser/remote CI. P2-352 automated evidence does not replace pronunciation or device/accessibility review.
 
 هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ142 في `IDEA_BACKLOG.md`. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
 
@@ -12,9 +12,9 @@ Last audited: 2026-10-05 · P2-352 closes after unit, code-boundary, and browser
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 131 |
+| implemented | 132 |
 | partial | 5 |
-| not-implemented | 6 |
+| not-implemented | 5 |
 | blocked | 0 |
 | **المجموع** | **142** |
 
@@ -113,7 +113,7 @@ Last audited: 2026-10-05 · P2-352 closes after unit, code-boundary, and browser
 | 273 | إضافة تأمل أسبوعي عن ما نجح وما أعاق التعلم. | `implemented` | `independent-weekly-reflection-v1` يحفظ ما نجح والعوائق وتعديلًا واحدًا من نموذج الأسبوع فقط دون نسخ Daily reflection. | — |
 | 274 | تجنب رسائل الذنب والمقارنة الاجتماعية. | `implemented` | `weekly-planned-actual-no-blame-v1` وGrace/Recovery تمنع الذنب والمقارنة. | — |
 | 275 | إضافة أهداف صغيرة عند العودة بعد انقطاع. | `implemented` | العودة تستخدم يوم سماح ومهمة تعافٍ واحدة داخل الميزانية لا تراكمًا مخيفًا. | — |
-| 276 | عرض قصص نجاح كإرشاد عملي لا وعود تسويقية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 276 | عرض قصص نجاح كإرشاد عملي لا وعود تسويقية. | `implemented` | `illustrative-learning-pathways-v1` يعرض ثلاث حالات افتراضية مؤلَّفة في `/practice` بإفصاح صريح أنها ليست شهادات أو بيانات تجربة ولا نتائج مقاسة/وعودًا زمنية؛ كل خطوة تصل لمسار موجود في جميع حزم Offline، دون حفظ اختيار أو تغيير دليل تعلم. اختبارات الوحدة تغطي حدود الادعاء والروابط والخصوصية، واختبار E2E يضم هذه التأكيدات لكنه لم يُشغّل بعد؛ تحقق المتصفح الفعلي مطلوب بعد Push. القرار: `docs/adr/ADR-113-illustrative-learning-pathways-not-testimonials.md`. | — |
 | 285 | توفير Timeline للتدخلات ونتائجها. | `implemented` | `derived-error-intervention-timeline-v1` يشتق تسلسل الظهور/فشل ونجاح العلاج/الجدولة/التأكيد/العيادة/مراجعة البطاقة من السجلات الحالية دون نص جواب أو تصحيح، وبحد صريح أن التسلسل لا يثبت السببية. | — |
 | 286 | إضافة تقرير «ماذا لو درست 30 دقيقة إضافية؟» محلي الحساب. | `implemented` | `local-extra-thirty-minutes-what-if-v1` يحسب محليًا فرق توزيع الوقت عند +30 دقيقة أسبوعيًا دون تغيير الخطة. | — |
 | 287 | فصل الأداء مع التلميحات عن الأداء المستقل. | `implemented` | السياسة نفسها تربط فقط Hint مباشرًا على item قبل commit بالمحاولة، وتعرض independent/assisted وtransferIndependent/transferAssisted منفصلة. الدعم بعد الالتزام أو على عنصر آخر لا يلوث الدليل، ولا تُنسخ إجابة المتعلم إلى السجل المشتق. | — |
@@ -167,7 +167,7 @@ Last audited: 2026-10-05 · P2-352 closes after unit, code-boundary, and browser
 
 ## ترتيب التنفيذ المقترح
 
-1. أُغلقت الدورة البرمجية لكل البنود الجزئية القابلة للإغلاق آليًا: 44 بندًا انتقلت إلى `implemented`.
+1. أُغلقت الدورة البرمجية لكل البنود الجزئية القابلة للإغلاق آليًا: 44 بندًا انتقلت إلى `implemented`، ثم أُغلق P2-276 في v183.
 2. يبقى P2-264 جزئيًا حتى اختبار WCAG 2.2 AA يدوي حقيقي بقارئات شاشة وأجهزة ممثلة في الجولة النهائية.
 3. يبقى P2-384 جزئيًا حتى مراجعة عربية مستقلة تشمل وضوح تونس وبقية العالم العربي.
-4. لا تُغلق الحدود البشرية بادعاء آلي؛ الأولوية البرمجية التالية تنتقل إلى بنود `not-implemented` في جولة مستقلة بعد استقرار هذه الدفعة.
+4. لا تُغلق الحدود البشرية بادعاء آلي؛ البنود البرمجية غير المنفذة المتبقية هي 349/350/357/359/360، ولكل منها قيود الأدلة أو الحقوق أو الخصوصية الموضحة في صفه.

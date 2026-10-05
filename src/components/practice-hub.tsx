@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft, AudioWaveform, Bot, BriefcaseBusiness, ClipboardCheck, FilePenLine, GitBranch, GraduationCap, Headphones, Languages, LibraryBig, Mic2, Network, NotebookTabs, Sparkles, GitCompareArrows, MapPinned } from "lucide-react";
 import { ContextAppropriatenessQuiz } from "./context-appropriateness-quiz";
+import { IllustrativePathways } from "./illustrative-pathways";
 
 const labs = [
   {href:"/practice/variants",icon:MapPinned,title:"وحدة التنوّع الألماني",de:"Semmel · Velo · Matura",copy:"اثنا عشر فرقًا عمليًّا بين النمسا وسويسرا وألمانيا مع الفخّ العملي لكل كلمة واختبار مواقف: تفهم ما تسمعه في فيينا وزيورخ دون ادّعاء إتقان لهجة.",status:"يعمل"},
@@ -20,4 +21,4 @@ const labs = [
   {href:"/tutor",icon:Bot,title:"المرشد الذكي",de:"Tutor",copy:"شرح مرتبط بالمنهج مع وضع محلي أو مزود اختياري.",status:"يعمل"},
   {href:"/exams",icon:GraduationCap,title:"مركز الامتحان",de:"Prüfung",copy:"افصل Goethe عن telc وتدرّب على أجزاء أصلية موثقة الصيغة.",status:"ملفان موثقان"},
 ];
-export function PracticeHub(){return <div className="wide-page"><header className="page-heading"><div><span className="eyebrow"><Sparkles size={15}/> مختبرات المهارة</span><h1>حوّل المعرفة إلى <em>أداء.</em></h1><p>الاختيارات وحدها لا تكفي. هنا تنتج اللغة، ترى أخطاءك، وتعيد المحاولة.</p></div></header><ContextAppropriatenessQuiz/><div className="hub-grid">{labs.map(({href,icon:Icon,title,de,copy,status})=><Link href={href} key={href} className="hub-card"><span><Icon size={23}/></span><small>{status}</small><h2>{title}</h2><strong lang="de" dir="ltr">{de}</strong><p>{copy}</p><footer>افتح المختبر <ArrowLeft size={16}/></footer></Link>)}</div></div>}
+export function PracticeHub(){return <div className="wide-page"><header className="page-heading"><div><span className="eyebrow"><Sparkles size={15}/> مختبرات المهارة</span><h1>حوّل المعرفة إلى <em>أداء.</em></h1><p>الاختيارات وحدها لا تكفي. هنا تنتج اللغة، ترى أخطاءك، وتعيد المحاولة.</p></div></header><IllustrativePathways/><ContextAppropriatenessQuiz/><div className="hub-grid">{labs.map(({href,icon:Icon,title,de,copy,status})=><Link href={href} key={href} className="hub-card"><span><Icon size={23}/></span><small>{status}</small><h2>{title}</h2><strong lang="de" dir="ltr">{de}</strong><p>{copy}</p><footer>افتح المختبر <ArrowLeft size={16}/></footer></Link>)}</div></div>}

@@ -1806,7 +1806,7 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   const dueError = page.locator(".personal-errors article").filter({ hasText: recordedExercise.explanationAr });
   await expect(dueError.getByText("التصحيح مخفي حتى المحاولة")).toBeVisible();
   await expect(dueError).toContainText("اختبار مؤجل");
-  await dueError.locator("input").fill(recordedExercise.options[recordedExercise.correctIndex]);
+  await dueError.getByRole("textbox", { name: /^تصحيح / }).fill(recordedExercise.options[recordedExercise.correctIndex]);
   await dueError.getByRole("button", { name: /تحقق من العلاج/ }).click();
   await expect(dueError).toHaveClass(/resolved/);
   await expect(dueError).toContainText(recordedExercise.options[recordedExercise.correctIndex]);

@@ -14,23 +14,12 @@
  * reports them as skipped instead of guessing. It is a regression gate for the
  * static pages, not a replacement for a real browser and screen reader pass.
  */
-import { readFileSync, readdirSync, statSync } from "node:fs";
-import { join, relative } from "node:path";
+import { readFileSync } from "node:fs";
 import { JSDOM } from "jsdom";
+import { discoverStaticContrastInputs } from "./lib/static-contrast-inputs.mjs";
 
 const ROOT = process.cwd();
-const APP_DIR = join(ROOT, ".next/server/app");
-const CSS_DIR = join(ROOT, ".next/static/css");
 const ONLY_PATHS = (process.env.STATIC_CONTRAST_PATHS ?? "").split(",").map((item) => item.trim()).filter(Boolean);
-
-function walk(dir, out = []) {
-  for (const entry of readdirSync(dir)) {
-    const path = join(dir, entry);
-    if (statSync(path).isDirectory()) walk(path, out);
-    else out.push(path);
-  }
-  return out;
-}
 
 export function parseColor(value) {
   if (!value) return null;
@@ -280,13 +269,16 @@ export function backgroundOf(resolve, element) {
 }
 
 if (process.env.STATIC_CONTRAST_LIB !== "1") {
-  const allPages = walk(APP_DIR).filter((path) => path.endsWith(".html"));
+  const inputs = await discoverStaticContrastInputs(ROOT);
+  const allPages = inputs.pages;
   const pages = ONLY_PATHS.length
-    ? allPages.filter((path) => ONLY_PATHS.includes(relative(APP_DIR, path).replace(/\.html$/, "").replace(/\/index$/, "") || "index"))
+    ? allPages.filter((page) => ONLY_PATHS.includes(page.key) || ONLY_PATHS.includes(page.route))
     : allPages;
-  const css = walk(CSS_DIR).filter((path) => path.endsWith(".css")).map((path) => readFileSync(path, "utf8")).join("\n");
-  if (!allPages.length || !css) {
-    console.error("Static contrast audit needs a production build first (.next/server/app + .next/static/css).");
+  const missingPaths = ONLY_PATHS.filter((requested) => !allPages.some((page) => page.key === requested || page.route === requested));
+  const css = inputs.cssFiles.map((path) => readFileSync(path, "utf8")).join("\n");
+  if (!allPages.length || !css || missingPaths.length) {
+    if (missingPaths.length) console.error(`Static contrast audit could not find requested built pages: ${missingPaths.join(", ")}.`);
+    else console.error(`Static contrast audit needs built static HTML and CSS (layout: ${inputs.kind}).`);
     process.exit(2);
   }
   const rules = loadRules(css);
@@ -302,7 +294,7 @@ if (process.env.STATIC_CONTRAST_LIB !== "1") {
   let unresolvedCount = 0;
   let auditedElements = 0;
   for (const page of pages) {
-    const dom = new JSDOM(readFileSync(page, "utf8"));
+    const dom = new JSDOM(readFileSync(page.file, "utf8"));
     const { document } = dom.window;
     const resolve = makeResolver(rules, index, customProperties);
     for (const element of document.querySelectorAll("body *")) {
@@ -367,7 +359,7 @@ if (process.env.STATIC_CONTRAST_LIB !== "1") {
       const minimum = large ? 3 : 4.5;
       if (ratio + 0.005 < minimum) {
         findings.push({
-          path: relative(APP_DIR, page).replace(/\.html$/, ""),
+          path: page.key,
           tag: element.tagName.toLowerCase(),
           className: String(element.className).slice(0, 80),
           text: (element.textContent ?? "").trim().slice(0, 48),

@@ -17,8 +17,8 @@ Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full pack
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v181؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ مولد الاختبار وقوالبه ضمن جميع الحزم. بناء v181: 325 صفحة static/323 صفحة تباين، full 5,997,469 gzip، البصمة `e308451232ff`.
-- آخر قياس بناء v181 (2026-10-05): fingerprint `e308451232ff` · full 5,997,469 gzip · JavaScript 128 chunks / 2,015,005 gzip / max 262,117؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,117,421 gzip، واحتياطي 15% باقٍ.
+- Offline cache: dwnb-full-pack-v181؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ مولد الاختبار وقوالبه ضمن جميع الحزم. بناء v181: 325 صفحة static/323 صفحة تباين، full 5,997,189 gzip، البصمة `1cb34d1c5b49`.
+- آخر قياس بناء v181 (2026-10-05): fingerprint `1cb34d1c5b49` · full 5,997,189 gzip · JavaScript 128 chunks / 2,015,005 gzip / max 262,117؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,117,421 gzip، واحتياطي 15% باقٍ.
 - Unit/Integrity tests: 1,345/1,345 in 199/199 files (`npm test`, measured 2026-10-05; no threshold softened or file disabled). Local Browser E2E remains unrun because Chromium/system libraries are absent and browser downloads are unavailable; listing 63 Playwright tests is not execution evidence.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.

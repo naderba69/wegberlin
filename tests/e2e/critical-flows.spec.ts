@@ -1769,7 +1769,8 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
   const personalError = page.locator(".personal-errors article").filter({ hasText: recordedExercise.explanationAr });
   await expect(personalError).toBeVisible();
   await expect(personalError.getByText("التصحيح مخفي حتى المحاولة")).toBeVisible();
-  await personalError.locator("input").fill(recordedExercise.options[recordedExercise.correctIndex]);
+  await personalError.getByRole("textbox", { name: /^تصحيح / }).fill(recordedExercise.options[recordedExercise.correctIndex]);
+  await personalError.getByRole("textbox", { name: "اكتب جملة جديدة تستعمل القاعدة" }).fill("Ich heiße Sami.");
   await personalError.getByRole("button", { name: /تحقق من العلاج/ }).click();
   await expect(personalError.locator(".repair-pending")).toBeVisible();
   await expect(personalError).not.toHaveClass(/resolved/);
@@ -2451,6 +2452,7 @@ test("high-confidence errors route through prerequisite repair into deduplicated
   await expect(error).toContainText("ثقة عالية + خطأ");
 
   const repair=error.getByRole("textbox",{name:`تصحيح ${wrong}`});
+  await error.getByRole("textbox",{name:"اكتب جملة جديدة تستعمل القاعدة"}).fill("Ich heiße Sami.");
   for(const failed of ["noch falsch","weiter falsch"]){await repair.fill(failed);await error.getByRole("button",{name:/تحقق من العلاج/}).click()}
   await expect(error.locator(".error-prerequisite")).toContainText("فشل العلاج 2 مرات");
   await error.getByRole("link",{name:"افتح شرح القاعدة"}).click();
@@ -2459,6 +2461,7 @@ test("high-confidence errors route through prerequisite repair into deduplicated
 
   await page.goto("/errors");
   let currentError=page.locator(".personal-errors article").filter({hasText:wrong});
+  await currentError.getByRole("textbox",{name:"اكتب جملة جديدة تستعمل القاعدة"}).fill("Ich heiße Sami.");
   await currentError.getByRole("textbox",{name:`تصحيح ${wrong}`}).fill(correct);
   await currentError.getByRole("button",{name:/تحقق من العلاج/}).click();
   await expect(currentError).toContainText("ينتظر اختبارًا مؤجلًا");
@@ -3123,7 +3126,7 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
       resetEvents: 1,
       policy: "reset-wizard-keeps-attempt-log-v1",
       cleared: 19,
-      preserved: 25,
+      preserved: 27,
       keptAttemptCount: 4,
     });
 });

@@ -7,6 +7,14 @@ import { dueSoonAt, earliestDueDay, staleAt } from "../helpers/source-verificati
 import { germanWords, matchExpectedGermanPhrase, matchExpectedGermanWords, normalizeGermanWord } from "@/core/pronunciation/word-matching";
 import { resampleLinear } from "@/core/pronunciation/audio-sample";
 import { analyzeMicrophoneSignal, waveformEnvelope } from "@/core/pronunciation/microphone-signal";
+import {
+  buildEducationalWaveformComparison,
+  EDUCATIONAL_WAVEFORM_COMPARISON_POLICY,
+  EDUCATIONAL_WAVEFORM_MAX_AUDIO_SECONDS,
+  EDUCATIONAL_WAVEFORM_MAX_COMPRESSED_BYTES,
+  extractAudioBufferWaveformInput,
+  isEducationalWaveformCompressedFileWithinLimit,
+} from "@/core/audio/waveform-comparison";
 
 class FakeCache {
   entries=new Map<string,Response>();
@@ -104,6 +112,44 @@ describe("standard local German word-matching pack",()=>{
     expect(waveformEnvelope(new Float32Array([0,.5,-1,.25]),12)).toHaveLength(12);
     expect(waveformEnvelope(new Float32Array(),2)).toHaveLength(8);
     expect(waveformEnvelope(new Float32Array(200),200)).toHaveLength(96);
+  });
+
+  it("extracts only 48 peak bins from decoded channels, not the PCM recording",()=>{
+    const left=Float32Array.from({length:96},(_,index)=>index<48?.25:.04);
+    const right=Float32Array.from({length:96},(_,index)=>index<48?.1:.12);
+    const buffer={duration:2,length:96,numberOfChannels:2,getChannelData:(channel:number)=>channel===0?left:right};
+    const input=extractAudioBufferWaveformInput(buffer);
+    expect(input.samples).toHaveLength(48);
+    expect(input.samples[0]).toBeCloseTo(.25);
+    expect(input.samples[47]).toBeCloseTo(.12);
+    expect(input.sampleRate).toBe(24);
+  });
+
+  it("shows unaligned amplitude outlines and normalizes each clip to its own peak, without a similarity score",()=>{
+    const reference=Float32Array.from({length:48},(_,index)=>index%8===0?.8:index%3===0?.2:.05);
+    const learner=Float32Array.from(reference,value=>value*.1);
+    const comparison=buildEducationalWaveformComparison({reference:{samples:reference,sampleRate:48},learner:{samples:learner,sampleRate:48}});
+    expect(comparison.policyVersion).toBe(EDUCATIONAL_WAVEFORM_COMPARISON_POLICY);
+    expect(comparison.reference.envelope).toHaveLength(48);
+    expect(comparison.reference.envelope).toEqual(comparison.learner.envelope);
+    expect(Math.max(...comparison.reference.envelope)).toBe(1);
+    expect(comparison.reference.scale).toBe("independent-peak-normalization");
+    expect(comparison.evidenceBoundary).toContain("no-time-alignment-similarity-pronunciation-or-quality-score");
+    expect(comparison).not.toHaveProperty("score");
+  });
+
+  it("keeps silence visually empty and rejects invalid, oversized, or overlong audio",()=>{
+    expect(isEducationalWaveformCompressedFileWithinLimit(1)).toBe(true);
+    expect(isEducationalWaveformCompressedFileWithinLimit(EDUCATIONAL_WAVEFORM_MAX_COMPRESSED_BYTES)).toBe(true);
+    expect(isEducationalWaveformCompressedFileWithinLimit(EDUCATIONAL_WAVEFORM_MAX_COMPRESSED_BYTES+1)).toBe(false);
+    expect(isEducationalWaveformCompressedFileWithinLimit(0)).toBe(false);
+    expect(isEducationalWaveformCompressedFileWithinLimit(Number.NaN)).toBe(false);
+    const silent=new Float32Array(48);
+    const comparison=buildEducationalWaveformComparison({reference:{samples:silent,sampleRate:48},learner:{samples:silent,sampleRate:48}});
+    expect(comparison.reference.envelope.every((value)=>value===0)).toBe(true);
+    expect(()=>buildEducationalWaveformComparison({reference:{samples:new Float32Array(48),sampleRate:0},learner:{samples:silent,sampleRate:48}})).toThrow("غير صالحة");
+    expect(()=>buildEducationalWaveformComparison({reference:{samples:new Float32Array(EDUCATIONAL_WAVEFORM_MAX_AUDIO_SECONDS+1),sampleRate:1},learner:{samples:silent,sampleRate:48}})).toThrow("لا يتجاوز");
+    expect(()=>extractAudioBufferWaveformInput({duration:EDUCATIONAL_WAVEFORM_MAX_AUDIO_SECONDS+1,length:61,numberOfChannels:1,getChannelData:()=>new Float32Array(61)})).toThrow("لا يتجاوز");
   });
 
   it("keeps install and inference inside a dedicated Worker, caches the pinned ORT bundle, and disables remote loading for transcription",()=>{

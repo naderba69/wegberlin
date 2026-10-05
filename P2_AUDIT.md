@@ -1,10 +1,10 @@
 # P2 Implementation Audit
 
-Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
+Sync batch: v182 · 2026-10-05 · P2-352 closes the local educational waveform outline in Shadowing Studio; the comparison is visual/self-reflective only and does not make pronunciation or quality claims.
 
-Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
+Batch follow-up: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. Offline active/staging caches are v182; v181 is retained for rollback. P2-355's authored mini-test generator remains in all five Offline packs.
 
-Last audited: 2026-10-05 · P2-355 closed in code after a local authored-template and privacy-boundary audit.
+Last audited: 2026-10-05 · P2-352 closes after unit, code-boundary, and browser-flow tests; automated evidence does not replace pronunciation or device/accessibility review.
 
 هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ142 في `IDEA_BACKLOG.md`. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
 
@@ -12,9 +12,9 @@ Last audited: 2026-10-05 · P2-355 closed in code after a local authored-templat
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 130 |
+| implemented | 131 |
 | partial | 5 |
-| not-implemented | 7 |
+| not-implemented | 6 |
 | blocked | 0 |
 | **المجموع** | **142** |
 
@@ -141,7 +141,7 @@ Last audited: 2026-10-05 · P2-355 closed in code after a local authored-templat
 | 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
 | 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
 | 351 | بناء نموذج صغير داخل المتصفح لتصنيف الأخطاء. | `implemented` | `learner-trained-local-error-classifier-v1` يدرب Naive Bayes مؤقتًا من أخطاء المتعلم ويقترح فئة بلا Mutation. | — |
-| 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `implemented` | `neutral-self-waveform-comparison-v1` في Shadowing Studio: بعد تسجيل المحاولة فقط وبطلب صريح، يفك المتصفح أصل النموذج المحلي وBlob المحاولة داخل الذاكرة (≤60 ثانية و≤4,000,000 بايت لكل ملف) ويعرض 48 ذروة لكل مقطع مع المدة. يُطبّع كل مسار إلى ذروته الخاصة؛ لا محاذاة زمنية أو تشابه أو درجة أو تحليل نطق/جودة، ولا إرسال/حفظ للرسم أو أثر في سجل التعلم. تغطي الوحدة حدود المدة والتطبيع والصمت، ويغطي Playwright عرض الرسمين وARIA وغياب طلبات الأصل الخارجي أو المحاولة المحفوظة. القرار: `docs/adr/ADR-112-neutral-waveform-self-comparison.md`. | — |
 | 353 | إنشاء وضع واقع عملي لسكن وعمل وإدارة في ألمانيا. | `implemented` | `multi-step-practical-day-mode-v1` يركب سكنًا أو عملًا أو إدارة في أربع خطوات مترابطة مع حد قانوني صريح. | — |
 | 354 | إضافة سيناريوهات محادثة متفرعة تعمل دون AI. | `implemented` | `offline-branching-conversation-v1` يقدم 8 أشجار أصلية بواقع سيناريوهين لكل A1–B2 في `/practice/conversation-paths`. الهدف التواصلي ظاهر قبل الاختيار، وكل رد ألماني يغير عاقبة الشريك ومسارًا من إكمال/إصلاح/إعادة؛ الوضع الموجه يظهر المقصد العربي، والتحدي يؤجله. المحرك حتمي محلي بلا `fetch` أو نص حر، ويحفظ `branchingConversationAttempts` معرفات الخيارات والنتيجة وفتح الدعم فقط في IndexedDB/DWNB/Merge دون AI أو شريك حي أو mastery/CEFR. | — |
 | 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` | `local-test-generator-v1` في `/practice/test-generator`: يختار المتعلم A1–B2 و5/10/15، ويأخذ سؤالًا واحدًا كحد أقصى من كل درس منشور، يخلط الأسئلة والخيارات مع حفظ مطابقة المفتاح، ويؤخر التفسير حتى تثبيت الجميع. **480 قالبًا/96 درسًا** مع فحص freshness؛ لا AI أو مصدر خارجي أو حفظ أو أثر على الإتقان/التقدم/الخطة/CEFR. أُصلح المشتت المكرر `a2-04-m5`. 10 اختبارات وحدة؛ وُسّع E2E ليغطي عدم تغير الحالة والعمل Offline، لكن المتصفح غير متاح محليًا. القرار: `docs/adr/ADR-111-local-authored-mini-test-practice-generator.md`. | تبقى مراجعة ألمانية/عربية/CEFR مستقلة لمحتوى الدروس الأصلية معلقة؛ الفحص البنيوي لا يثبتها. |

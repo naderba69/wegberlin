@@ -1,10 +1,12 @@
 # P0 Implementation Audit
 
-Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
+Sync batch: v182 · 2026-10-05 · P2-352 adds an opt-in local waveform outline in Shadowing, without pronunciation, quality, mastery, or CEFR judgments; P0 counts and boundaries are unchanged.
 
-Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
+Batch follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. Offline active/staging caches are v182; v181 is retained for rollback. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 
 Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دفعات المحتوى، وأرقام الجرد مُعاد تثبيتها من `reports/academic-content-audit.json` عند `v138`.
+
+مزامنة البوابة في v182 (2026-10-05): بقيت حالات P0 كما هي (115 منجزًا و9 جزئيًا من 124). تحققت صلة P2-352 بحدود P0-135 وP0-255: الرسم لا يقيّم النطق، والإتاحة الآلية لا تغلق مراجعة قارئ الشاشة/الجهاز الفعلية. تحقق مستقل للشجرة: `npm test` **1,352/1,352** في **199/199**؛ لا يتضمن هذا وحده أي إغلاق بشري.
 
 هذا التدقيق يطابق عناصر P0 الـ124 الواردة في `IDEA_BACKLOG.md` مع ما يوجد فعليًا في الشيفرة والاختبارات. كلمة «منجز» تعني أن مسارًا قابلًا للاستخدام ومعيار قبول آليًا موجودان؛ لا تعني مراجعة بشرية أكاديمية أو صوتية أو اعتمادًا رسميًا. تمت مزامنته مع بوابة الإنتاج الحالية دون تغيير حدود P0 البشرية أو البعيدة.
 

@@ -3,20 +3,20 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `b72051cdd87eb6a393841da4574b06f51838f5d12be136e7cd966b9fd9d0a42e`
+Content SHA-256: `d30a18b1e10c472969d7ebc7ec233aef599888c6507f3a2f1ce0751cb079a01f`
 
 ## Result
 
-`PASS` — 209 TSX files and 8011 opening JSX tags were scanned.
+`PASS` — 209 TSX files and 8032 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
 | Explicit German fragments (lang=de + dir=ltr) | 442 |
-| Explicit Arabic fragments (lang=ar + dir=rtl) | 9 |
-| LTR tags audited | 489 |
-| RTL tags audited | 9 |
+| Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
+| LTR tags audited | 490 |
+| RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
-| Technical/numeric/secret bidi scopes | 53 |
+| Technical/numeric/secret bidi scopes | 54 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
@@ -209,8 +209,8 @@ Content SHA-256: `b72051cdd87eb6a393841da4574b06f51838f5d12be136e7cd966b9fd9d0a4
 | src/components/settings-view.tsx:299 | يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpen | Arabic host + plaintext boundary |
 | src/components/settings-view.tsx:307 | لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية. | Arabic host + plaintext boundary |
 | src/components/settings-view.tsx:317 | المفتاح أو عنوان Ollama المؤقت | Arabic host + plaintext boundary |
-| src/components/shadowing-studio.tsx:149 | ملف MP3 متاح | Arabic host + plaintext boundary |
-| src/components/shadowing-studio.tsx:149 | للتقليد دون TTS | Arabic host + plaintext boundary |
+| src/components/shadowing-studio.tsx:221 | ملف MP3 متاح | Arabic host + plaintext boundary |
+| src/components/shadowing-studio.tsx:221 | للتقليد دون TTS | Arabic host + plaintext boundary |
 | src/components/skill-diagnostic-retest.tsx:7 | كل عينة تسأل سؤالًا واحدًا من A1 إلى B2 وتحفظ منفصلة. لا تستبدل تشخيصك العام ولا تفتح مستوى. | Arabic host + plaintext boundary |
 | src/components/speech-preferences-control.tsx:1 | Hörprobe · معاينة | Arabic host + plaintext boundary |
 | src/components/speech-preferences-control.tsx:1 | هذا TTS اصطناعي وليس صوت امتحان ولا تقييم نطق. الاختيار محفوظ في IndexedDB ولا يُرسل. | Arabic host + plaintext boundary |

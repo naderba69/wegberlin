@@ -19,7 +19,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v181";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v182";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -1518,6 +1518,43 @@ test("shadowing studio uses generated audio, speed controls, and delayed transcr
   await page.getByRole("button", { name: "B2", exact: true }).click();
   await expect(page.locator(".shadowing-picker select option")).toHaveCount(16);
   await expect(page.getByText(/لا يدّعي التطبيق قياس النطق/)).toBeVisible();
+});
+
+test("P2 waveform comparison is local, temporary, accessible, and score-free", async ({ page }) => {
+  await page.addInitScript(() => {
+    const fakeStream={getTracks:()=>[{stop(){}}]};
+    Object.defineProperty(navigator,"mediaDevices",{configurable:true,value:{getUserMedia:async()=>fakeStream}});
+    class FakeMediaRecorder {state="inactive";mimeType="audio/webm";stream=fakeStream;ondataavailable:((event:{data:Blob})=>void)|null=null;onstop:(()=>void)|null=null;start(){this.state="recording"}stop(){this.state="inactive";this.ondataavailable?.({data:new Blob(["temporary-shadowing-audio"],{type:this.mimeType})});this.onstop?.()}}
+    Object.defineProperty(window,"MediaRecorder",{configurable:true,value:FakeMediaRecorder});
+    class FakeAudioContext {
+      async decodeAudioData(){const samples=Float32Array.from({length:96},(_,index)=>index%12<3?.4:.05);return{duration:2,length:samples.length,numberOfChannels:1,sampleRate:48,getChannelData:()=>samples}}
+      async close(){}
+    }
+    Object.defineProperty(window,"AudioContext",{configurable:true,value:FakeAudioContext});
+  });
+  await page.goto("/shadowing");
+  await waitForLearningReady(page);
+  const appOrigin=await page.evaluate(()=>location.origin);
+  let offOriginRequests=0;
+  let uploadRequests=0;
+  page.on("request",request=>{
+    if(new URL(request.url()).origin!==appOrigin)offOriginRequests+=1;
+    if(!["GET","HEAD"].includes(request.method()))uploadRequests+=1;
+  });
+  const panel=page.locator('[data-waveform-comparison-policy="neutral-self-waveform-comparison-v1"]');
+  await expect(panel).toBeVisible();
+  await page.getByRole("button",{name:/ابدأ التسجيل/}).click();
+  await page.getByRole("button",{name:/أوقف التسجيل/}).click();
+  await page.getByRole("button",{name:/اعرض الرسمين محليًا/}).click();
+  await expect(panel.locator("figure[data-waveform-trace]")).toHaveCount(2);
+  await expect(panel.locator("figure[data-waveform-trace=reference] [role=img]")).toHaveAttribute("aria-label",/النموذج الاصطناعي/);
+  await expect(panel.locator("figure[data-waveform-trace=learner] [role=img]")).toHaveAttribute("aria-label",/محاولتك/);
+  await expect(panel.locator("figure .shadowing-waveform-bars i")).toHaveCount(96);
+  await expect(panel).toContainText("لا توجد محاذاة أو مقارنة آلية");
+  await expect(panel).toContainText("الرسم مؤقت ولا يُضاف إلى سجل المحاولات أو الإتقان");
+  await expect(page.locator(".shadowing-picker > small")).toContainText("0 محاولات محفوظة");
+  expect(offOriginRequests).toBe(0);
+  expect(uploadRequests).toBe(0);
 });
 
 test("a complete lesson run traverses all 14 stages and persists completion", async ({ page }) => {

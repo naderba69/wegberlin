@@ -1,6 +1,8 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v181 · 2026-10-05 · P2-355 adds no external sources or network origins; ADR-108/109 source re-verification and probe-policy records remain unchanged.
+Sync batch: v182 · 2026-10-05 · P2-352 adds local waveform outlines only; no external sources, APIs, AI calls, or network origins are introduced.
+
+Batch follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. Offline cache/staging are v182 and the prior complete cache is v181; no source-freshness record changed.
 
 Batch follow-up: `/practice/test-generator` uses only authored published mini-test templates and runs locally. It adds no remote model, external corpus, learner-state field, or source-freshness obligation; all five Offline packs include its route and statically bundled template banks.
 

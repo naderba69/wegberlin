@@ -4,13 +4,13 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 209,
-  "openingTagCount": 8011,
+  "openingTagCount": 8032,
   "germanTagCount": 442,
-  "arabicTagCount": 9,
-  "ltrTagCount": 489,
-  "rtlTagCount": 9,
+  "arabicTagCount": 11,
+  "ltrTagCount": 490,
+  "rtlTagCount": 11,
   "autoDirCount": 12,
-  "technicalScopeCount": 53,
+  "technicalScopeCount": 54,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
@@ -878,12 +878,12 @@
     },
     {
       "path": "src/components/shadowing-studio.tsx",
-      "line": 149,
+      "line": 221,
       "text": "ملف MP3 متاح"
     },
     {
       "path": "src/components/shadowing-studio.tsx",
-      "line": 149,
+      "line": 221,
       "text": "للتقليد دون TTS"
     },
     {
@@ -1059,5 +1059,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "b72051cdd87eb6a393841da4574b06f51838f5d12be136e7cd966b9fd9d0a42e"
+  "contentSha256": "d30a18b1e10c472969d7ebc7ec233aef599888c6507f3a2f1ce0751cb079a01f"
 }

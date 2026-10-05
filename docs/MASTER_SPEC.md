@@ -1,8 +1,8 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
+Sync batch: v182 · 2026-10-05 · P2-352 adds an opt-in, same-origin, in-browser waveform outline to Shadowing: 48 independently peak-normalized bins, separate duration, no alignment/score/upload/state effect.
 
-Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
+Batch follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. Offline active/staging caches are v182 with v181 retained for rollback, while the existing 320-route manifest and learner-state schema are unchanged. P2-355's authored generator remains included in every pack.
 
 ## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
 
@@ -17,12 +17,14 @@ Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full pack
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v181؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ مولد الاختبار وقوالبه ضمن جميع الحزم. بناء v181: 325 صفحة static/323 صفحة تباين، full 5,997,189 gzip، البصمة `1cb34d1c5b49`.
-- آخر قياس بناء v181 (2026-10-05): fingerprint `1cb34d1c5b49` · full 5,997,189 gzip · JavaScript 128 chunks / 2,015,005 gzip / max 262,117؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,117,421 gzip، واحتياطي 15% باقٍ.
-- Unit/Integrity tests: 1,349/1,349 in 199/199 files (`npm test`, measured 2026-10-05; no threshold softened or file disabled). Local Browser E2E remains unrun because Chromium/system libraries are absent and browser downloads are unavailable. Remote CI on PR #7 head `fb00af3`: check, desktop/mobile E2E (63/63 each), and Vercel Preview passed; Deployment Smoke was skipped by its guard, not production evidence.
+- P2-352 `neutral-self-waveform-comparison-v1`: Shadowing decodes same-origin model audio and the in-memory attempt locally, keeps 48 independently peak-normalized amplitude bins and duration only, and never aligns, scores, uploads, persists, or changes learning state; per-clip limits are 60 seconds/4 MB.
+- Offline cache: `dwnb-full-pack-v182` (staging v182; previous complete v181); the manifest remains 320/320 routes with pack counts 60/60/60/221/320. The new comparison changes shipped route assets, not route inventory or learner schema.
+- Build v182 measured 2026-10-05: full `npm run check` passed; 325/325 static pages; Offline fingerprint `072383e68604`, full 6,000,079 gzip; contrast audit 323 pages / 22,940 text elements / 0 failures (586 gradient/image-backdrop skips); JS 128 chunks / 2,017,731 gzip / max 262,117. Unit/Integrity suite passed 1,352/1,352 in 199/199 files. Audio/curriculum manifests remain 544 files / 52,943,843 bytes and curriculum source 1,117,421 gzip; curriculum version is dwnb-a1-b2-2026.10-v2. These are local build metrics, not browser E2E or remote CI results.
+- Unit/Integrity tests: 1,352/1,352 in 199/199 files (`npm test`, measured 2026-10-05; no threshold softened or file disabled); `npx tsc --noEmit` passes. The new browser test is in the suite; local E2E awaits Chromium availability and remote CI after Push.
+- Formal audits: P0 = 115 implemented / 9 partial / 0 missing / 0 blocked; P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked; P2 = 131 implemented / 5 partial / 6 not implemented / 0 blocked (142 rows). P2-352 is closed in code and tests, without closing any human-review boundary.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 130 implemented / 5 partial / 7 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 131 implemented / 5 partial / 6 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - مساحة Git الفعلية `/home/user/wegberlin` على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى فرع تاريخي ولا ادعاء دمج في `main` أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 

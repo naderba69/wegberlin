@@ -221,8 +221,8 @@ export function SettingsView() {
 
   return <div className="settings-page">
     <header className="page-heading"><div><span className="eyebrow"><ShieldCheck size={15} /> بياناتك ملكك</span><h1>الإعدادات <em>والنسخ المحلي</em></h1><p>تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية.</p></div></header>
-    {message && <StatusAnnouncement message={message} channel="settings" className="success-banner" icon={<CheckCircle2 size={18}/>}/>} 
-    {message && <StatusAnnouncement message={message} channel="settings" className="success-banner" icon={<CheckCircle2 size={18}/>}/>} 
+    {message && <StatusAnnouncement message={message} channel="settings" className="success-banner" icon={<CheckCircle2 size={18}/>}/>}
+
     <nav className="settings-nav" aria-label="أقسام الإعدادات">
       <a href="#settings-learning">تجربة التعلّم</a>
       <a href="#settings-content">محتواي وملاحظاتي</a>

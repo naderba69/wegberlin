@@ -1,9 +1,8 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
 
-
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
 
 ## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
 
@@ -18,14 +17,14 @@ Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS gu
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
-- last measured source build fingerprint: 7f88c59d52ea · full 5,757,698 · JavaScript 123 chunks / 1,878,081 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
-- Unit/Integrity tests: 1,185/1,185 in 172/172 files (measured after the repairs, not copied from a historical log). Browser verification is still being finalized; its final measured runs will be recorded here.
+- Offline cache: dwnb-full-pack-v181؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ مولد الاختبار وقوالبه ضمن جميع الحزم. بناء v181: 325 صفحة static/323 صفحة تباين، full 5,997,469 gzip، البصمة `e308451232ff`.
+- آخر قياس بناء v181 (2026-10-05): fingerprint `e308451232ff` · full 5,997,469 gzip · JavaScript 128 chunks / 2,015,005 gzip / max 262,117؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,117,421 gzip، واحتياطي 15% باقٍ.
+- Unit/Integrity tests: 1,345/1,345 in 199/199 files (`npm test`, measured 2026-10-05; no threshold softened or file disabled). Local Browser E2E remains unrun because Chromium/system libraries are absent and browser downloads are unavailable; listing 63 Playwright tests is not execution evidence.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 130 implemented / 5 partial / 7 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+- مساحة Git الفعلية `/home/user/wegberlin` على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى فرع تاريخي ولا ادعاء دمج في `main` أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 
 
 > Copy this entire specification into an agentic coding environment. It is the persistent source of truth for the product. The agent must save it as `AGENTS.md` or `docs/MASTER_SPEC.md`, create the companion documents required below, and keep them synchronized with the implementation.

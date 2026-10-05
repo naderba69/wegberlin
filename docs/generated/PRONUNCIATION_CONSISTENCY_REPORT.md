@@ -17,4 +17,3 @@ The check applies the German rule to the transcribed text itself: after a front 
 ## Issues
 
 None.
-

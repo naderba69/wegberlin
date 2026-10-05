@@ -5583,7 +5583,7 @@
         "prompt": "Richtige formelle Form اختر صيغة المخاطبة الرسمية الصحيحة:",
         "answer": "Kann ich Ihnen helfen?",
         "evidenceRef": "a2-04:miniTest:a2-04-m5:explanationAr",
-        "evidenceExcerpt": "المخاطبةُ الرسمية تُكتب Ihnen بحرفٍ كبير، بترتيبٍ سليم: «Kann ich Ihnen helfen?». وأمّا «Kann ich ihnen helfen?» بحرفٍ صغير فلمن نعرفه، والباقي يكسّر الترتيبَ. فحص ذاتي: لمن توجّه الجملة؟",
+        "evidenceExcerpt": "المخاطبة الرسمية «Ihnen» تُكتب بحرف كبير، والعبارة الصحيحة هي «Kann ich Ihnen helfen?». أمّا «ihnen» بحرف صغير فتعني لهم/لهن، و«Sie» هنا مفعول غير مناسب للفعل helfen؛ فحص ذاتي: هل تخاطب الشخص رسميًا أم تتحدث عنهم؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -73321,6 +73321,13 @@
             "stage": "mediation",
             "text": "Hallo, ich bin bis 18 Uhr bei der Arbeit. Könnten Sie bitte mein Paket annehmen? Ich hole es heute Abend ab. Vielen Dank, Wohnung 8.",
             "surface": "Hallo, ich bin bis 18 Uhr bei der Arbeit. Könnten Sie bitte mein Paket annehmen? Ich hole es heute Abend ab. Vielen Dank, Wohnung 8.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Kann ich ihnen mit dem Paket helfen?",
+            "surface": "Kann ich ihnen mit dem Paket helfen?",
             "strength": "context"
           },
           {
@@ -192189,7 +192196,8 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "ambiguous"
+          "ambiguous",
+          "dative"
         ],
         "anchorIds": [],
         "sources": [
@@ -192205,6 +192213,13 @@
             "stage": "vocabulary",
             "text": "Kannst du mir mit der Kiste helfen?",
             "surface": "Kannst du mir mit der Kiste helfen?",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Kann ich ihnen mit dem Paket helfen?",
+            "surface": "Kann ich ihnen mit dem Paket helfen?",
             "strength": "context"
           }
         ],
@@ -220695,5 +220710,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "7b4d2550278c2eec76453c11d205bbf10e5d68ebb5152f47ebc03da309acde78"
+  "contentSha256": "f22b8e182d5f9461d605827fb8f018c7764cfc50bd29f71e9dd3c689e7d519b6"
 }

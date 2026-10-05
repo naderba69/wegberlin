@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 207,
-  "openingTagCount": 7932,
-  "germanTagCount": 440,
-  "arabicTagCount": 7,
-  "ltrTagCount": 487,
-  "rtlTagCount": 7,
+  "tsxFiles": 209,
+  "openingTagCount": 8011,
+  "germanTagCount": 442,
+  "arabicTagCount": 9,
+  "ltrTagCount": 489,
+  "rtlTagCount": 9,
   "autoDirCount": 12,
   "technicalScopeCount": 53,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 207,
+  "mixedStaticCount": 208,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -465,6 +465,11 @@
       "path": "src/components/local-pronunciation-model-control.tsx",
       "line": 35,
       "text": "المطابقة تقول ما إذا استطاع ASR سماع الكلمات المتوقعة. فشل كلمة قد يكون من الضوضاء أو الميكروفون، وليس حكمًا قاطعًا على النطق. لا تنزيل تلقائي ولا إرسال صوت."
+    },
+    {
+      "path": "src/components/local-test-generator.tsx",
+      "line": 130,
+      "text": "هذه مراجعة لأسئلة الدروس التي اخترتها، وليست درجة CEFR أو حكمًا على إتقانك."
     },
     {
       "path": "src/components/motivation-preferences-control.tsx",
@@ -1054,5 +1059,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "145829bdcf4d3c38d4225bb832cd9e752bc81adbe0efdbf1ddf46146bc213435"
+  "contentSha256": "b72051cdd87eb6a393841da4574b06f51838f5d12be136e7cd966b9fd9d0a42e"
 }

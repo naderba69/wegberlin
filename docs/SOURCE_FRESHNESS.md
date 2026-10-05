@@ -1,9 +1,8 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v180 · 2026-10-04 · re-verified after the 2026-10-04 source re-verification (ADR-108) and the CI probe-policy update (ADR-109); the ADR-101 Vercel build-output compatibility fix remains verified.
+Sync batch: v181 · 2026-10-05 · P2-355 adds no external sources or network origins; ADR-108/109 source re-verification and probe-policy records remain unchanged.
 
-
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Batch follow-up: `/practice/test-generator` uses only authored published mini-test templates and runs locally. It adds no remote model, external corpus, learner-state field, or source-freshness obligation; all five Offline packs include its route and statically bundled template banks.
 
 Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
 

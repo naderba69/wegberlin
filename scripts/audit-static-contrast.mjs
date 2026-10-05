@@ -197,7 +197,6 @@ export function indexRules(rules) {
 
 export function makeResolver(rules, index, customProperties) {
   const cache = new Map();
-  const window = null;
   const candidates = (element) => {
     const out = new Set(index.universal);
     const tag = element.tagName.toLowerCase();

@@ -1,21 +1,20 @@
 # P2 Implementation Audit
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
 
+Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
 
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Last audited: 2026-10-05 · P2-355 closed in code after a local authored-template and privacy-boundary audit.
 
-Last audited: 2026-09-20 (أرقام `v138`)
-
-هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ140 في `IDEA_BACKLOG.md`، محدث بعد إغلاق P2-312 في دفعة Tags وChangelog وRollback المؤرخة 2026-09-12. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
+هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ142 في `IDEA_BACKLOG.md`. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
 
 ## الملخص
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 129 |
+| implemented | 130 |
 | partial | 5 |
-| not-implemented | 8 |
+| not-implemented | 7 |
 | blocked | 0 |
 | **المجموع** | **142** |
 
@@ -145,7 +144,7 @@ Last audited: 2026-09-20 (أرقام `v138`)
 | 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
 | 353 | إنشاء وضع واقع عملي لسكن وعمل وإدارة في ألمانيا. | `implemented` | `multi-step-practical-day-mode-v1` يركب سكنًا أو عملًا أو إدارة في أربع خطوات مترابطة مع حد قانوني صريح. | — |
 | 354 | إضافة سيناريوهات محادثة متفرعة تعمل دون AI. | `implemented` | `offline-branching-conversation-v1` يقدم 8 أشجار أصلية بواقع سيناريوهين لكل A1–B2 في `/practice/conversation-paths`. الهدف التواصلي ظاهر قبل الاختيار، وكل رد ألماني يغير عاقبة الشريك ومسارًا من إكمال/إصلاح/إعادة؛ الوضع الموجه يظهر المقصد العربي، والتحدي يؤجله. المحرك حتمي محلي بلا `fetch` أو نص حر، ويحفظ `branchingConversationAttempts` معرفات الخيارات والنتيجة وفتح الدعم فقط في IndexedDB/DWNB/Merge دون AI أو شريك حي أو mastery/CEFR. | — |
-| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` | `local-test-generator-v1` في `/practice/test-generator`: يختار المتعلم A1–B2 و5/10/15، ويأخذ سؤالًا واحدًا كحد أقصى من كل درس منشور، يخلط الأسئلة والخيارات مع حفظ مطابقة المفتاح، ويؤخر التفسير حتى تثبيت الجميع. **480 قالبًا/96 درسًا** مع فحص freshness؛ لا AI أو مصدر خارجي أو حفظ أو أثر على الإتقان/التقدم/الخطة/CEFR. أُصلح المشتت المكرر `a2-04-m5`. 10 اختبارات وحدة؛ وُسّع E2E ليغطي عدم تغير الحالة والعمل Offline، لكن المتصفح غير متاح محليًا. القرار: `docs/adr/ADR-111-local-authored-mini-test-practice-generator.md`. | تبقى مراجعة ألمانية/عربية/CEFR مستقلة لمحتوى الدروس الأصلية معلقة؛ الفحص البنيوي لا يثبتها. |
 | 356 | إضافة خرائط مفاهيم تفاعلية للقواعد والمفردات. | `implemented` | `interactive-grammar-vocabulary-concept-map-v1` يربط عقد القواعد وعائلات الكلمات عبر درس مشترك مع Level filter. | — |
 | 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
 | 358 | إضافة وضع مشاركة ملف تقرير فقط مع معلم مستقبلي دون حساب. | `implemented` | ICS/PDF/TSV/JSON/DWNB ملفات محلية قابلة للمشاركة دون حساب. | — |

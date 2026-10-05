@@ -20,6 +20,12 @@ const offlineControl = read("src/components/offline-pack-control.tsx");
 const offlineSizeGenerator = read("scripts/generate-offline-size-manifest.mjs");
 const offlineAdr = read("docs/adr/ADR-015-level-offline-packs-and-build-size-manifest.md");
 const e2e = read("tests/e2e/critical-flows.spec.ts");
+const localTestGeneratorSource = read("src/core/training/local-test-generator.ts");
+const localTestTemplateLoader = read("src/core/training/local-test-template-loader.ts");
+const localTestTemplateAudit = read("scripts/generate-local-test-templates.ts");
+const localTestGeneratorView = read("src/components/local-test-generator.tsx");
+const localTestGeneratorUnit = read("tests/unit/local-test-generator.test.ts");
+const localTestGeneratorAdr = read("docs/adr/ADR-111-local-authored-mini-test-practice-generator.md");
 const webgpuResolutionE2e = read("tests/e2e/webgpu-runtime-resolution.spec.ts");
 const packageJson = json("package.json");
 const offline = json("public/offline-routes.json");
@@ -431,14 +437,20 @@ const p2Rows = [...p2Audit.matchAll(/^\| (\d+) \|.*\| `(implemented|partial|not-
 if(p2Rows.length!==142||new Set(p2Rows.map((row)=>row.id)).size!==142)fail(`P2 audit has ${p2Rows.length} unique rows, expected 142`);
 if(JSON.stringify([...p2Rows.map((row)=>row.id)].sort((a,b)=>a-b))!==JSON.stringify([...p2BacklogIds].sort((a,b)=>a-b)))fail("P2 audit IDs do not exactly match the P2 backlog");
 const p2Counts=Object.fromEntries(["implemented","partial","not-implemented","blocked"].map((key)=>[key,p2Rows.filter((row)=>row.status===key).length]));
-if(JSON.stringify(p2Counts)!==JSON.stringify({implemented:129,partial:5,"not-implemented":8,blocked:0}))fail(`P2 audit counters drifted: ${JSON.stringify(p2Counts)}`);
-for(const text of["Total P2: 142","Implemented: 123","Partial: 2","Not implemented: 17","Blocked: 0","event-derived-mastery-v1","guided-independent-support-separation-v1","bounded-attempt-process-v1","explainable-plan-change-timeline-v1","learner-selected-intensity-presets-v1","P2-273 — Reflection أسبوعي"])requireText(prompt,text,"continuation prompt P2 counters");
-for(const text of["| implemented | 129 |","| partial | 5 |","| not-implemented | 8 |","| blocked | 0 |","## ترتيب التنفيذ المقترح"])requireText(p2Audit,text,"P2_AUDIT.md");
+if(JSON.stringify(p2Counts)!==JSON.stringify({implemented:130,partial:5,"not-implemented":7,blocked:0}))fail(`P2 audit counters drifted: ${JSON.stringify(p2Counts)}`);
+for(const text of["Total P2: 142","Implemented: 130","Partial: 5","Not implemented: 7","Blocked: 0","event-derived-mastery-v1","local-test-generator-v1","P2-355","guided-independent-support-separation-v1","bounded-attempt-process-v1","explainable-plan-change-timeline-v1","learner-selected-intensity-presets-v1","P2-273 — Reflection أسبوعي"])requireText(prompt,text,"continuation prompt P2 counters");
+for(const text of["| implemented | 130 |","| partial | 5 |","| not-implemented | 7 |","| blocked | 0 |","## ترتيب التنفيذ المقترح","| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` |","ADR-111-local-authored-mini-test-practice-generator.md"])requireText(p2Audit,text,"P2_AUDIT.md");
 const closedP2PartialSprintIds=[11,35,36,58,59,60,105,107,117,118,120,130,131,132,141,143,154,155,177,178,179,180,226,249,251,262,263,273,288,298,310,311,322,324,333,346,348,351,353,356,370,372,382,394];
 for(const id of closedP2PartialSprintIds)if(!p2Rows.some((row)=>row.id===id&&row.status==="implemented"))fail(`P2-${id} partial-closure sprint state drifted`);
 const dailyFocusClosedIds=[45,47,153,201,203,239,286,347];
 if(!p2Rows.some((row)=>row.id===142&&row.status==="implemented"))fail("P2-142 adaptive dictation state drifted");
 if(!p2Rows.some((row)=>row.id===354&&row.status==="implemented"))fail("P2-354 branching conversation state drifted");
+if(!p2Rows.some((row)=>row.id===355&&row.status==="implemented"))fail("P2-355 local test generator state drifted");
+for(const content of[localTestGeneratorSource,localTestTemplateAudit,localTestGeneratorView,localTestGeneratorUnit,localTestGeneratorAdr])requireText(content,"local-test-generator-v1","P2-355 local practice policy");
+for(const text of["LOCAL_TEST_SIZES = [5, 10, 15]","duplicate source lesson ids","correctIndex","sourceLessonId"])requireText(localTestGeneratorSource,text,"P2-355 generator engine");
+for(const text of["localTestTemplateBankA1","localTestTemplateBankA2","localTestTemplateBankB1","localTestTemplateBankB2"])requireText(localTestTemplateLoader,text,"P2-355 Offline template bundle");
+if(localTestTemplateLoader.includes("await import("))fail("P2-355 template banks must be statically available in Offline packs");
+for(const text of["P2-355 local test generator","/practice/test-generator","stateAfter","context.setOffline(true)"])requireText(e2e,text,"P2-355 browser and Offline boundaries");
 if(!p2Rows.some((row)=>row.id===108&&row.status==="implemented"))fail("P2-108 collocation network state drifted");
 if(!p2Rows.some((row)=>row.id===335&&row.status==="implemented"))fail("P2-335 property test state drifted");
 if(!p2Rows.some((row)=>row.id===310&&row.status==="implemented"))fail("P2-310 docs-only deployment state drifted");
@@ -473,16 +485,17 @@ for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCand
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
 for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,335/1,335", "198/198", "322 صفحة مفحوصة للتباين", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,335/1,335", "198/198", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
-for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
+for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,345/1,345", "199/199", "323 صفحة مفحوصة للتباين", "320/320"]) requireText(status, text, "PROJECT_STATUS.md");
+for (const text of ["1,345/1,345", "199/199", "130 منجزًا، 5 جزئيًا، 7 غير منجز"]) requireText(readme, text, "README.md");
+for(const text of["Formal P2 audit: 142/142 rows = 130 implemented / 5 partial / 7 not implemented / 0 blocked","event-derived-mastery-v1","local-test-generator-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
-if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
-const expectedPacks = { a1: 59, a2: 59, b1: 59, b2: 220, full: 319 };
+if (offline.version !== 2 || offline.routeCount !== 320 || offline.routes.length !== 320 || new Set(offline.routes).size !== 320) fail("offline route manifest is not v2 with exactly 320 unique routes");
+const expectedPacks = { a1: 60, a2: 60, b1: 60, b2: 221, full: 320 };
 if (offline.defaultPackId !== "full" || offline.packs?.length !== 5) fail("offline level-pack registry is incomplete");
 for (const [id, routeCount] of Object.entries(expectedPacks)) {
   const pack = offline.packs.find((item) => item.id === id);
   if (!pack || pack.routeCount !== routeCount || pack.routes.length !== routeCount || new Set(pack.routes).size !== routeCount) fail(`offline pack ${id} drifted`);
+  if (!pack.routes.includes("/practice/test-generator")) fail(`offline pack ${id} omits the P2-355 local test generator`);
 }
 if (offlineSize.format !== "dwnb-offline-size-manifest" || offlineSize.version !== 1 || offlineSize.compressionPolicy !== "gzip-level-9-estimate-v1" || !/^[a-f0-9]{64}$/.test(offlineSize.buildFingerprint) || offlineSize.packs?.length !== 5) fail("offline pre-download size manifest is invalid");
 for (const [id, routeCount] of Object.entries(expectedPacks)) {
@@ -492,7 +505,7 @@ for (const [id, routeCount] of Object.entries(expectedPacks)) {
 for (const text of ["A1", "A2", "B1", "B2 + Prüfung", "A1–B2 komplett", "Gzip مبني مسبقًا", "compressedPageByteSize"]) requireText(offlineControl, text, "level Offline pack UI");
 for (const text of ["gzip-level-9-estimate-v1", "routeGzipBytes", "nextAssetGzipBytes", "buildFingerprint", "decodeURIComponent(encodedRelative)", "Unsafe Next asset path", "discoverBuiltPayloads", "layout.sizeManifestOutputs"]) requireText(offlineSizeGenerator, text, "post-build Offline size generator");
 for (const text of ["51 routes", "200 routes", "gzip level-9 bytes", "regenerated after every production build", "%5BlessonId%5D", "rejects traversal"]) requireText(offlineAdr, text, "Offline pack ADR");
-for (const text of ["59/59/59/220/319", "offline-size-manifest", "Gzip للصفحات وNext قبل التنزيل"] ) requireText(prompt, text, "continuation prompt Offline packs");
+for (const text of ["60/60/60/221/320", "offline-size-manifest", "Gzip للصفحات وNext قبل التنزيل"] ) requireText(prompt, text, "continuation prompt Offline packs");
 if (partialIds.some((id) => [242, 243].includes(id))) fail("closed Offline pack P0 IDs returned to partial state");
 if (libraryAudio.assets.length !== 80 || libraryAudio.generatedAssetCount !== 80) fail("library audio count drifted");
 if (lessonAudio.assets.length !== 96 || lessonAudio.generatedAssetCount !== 96) fail("lesson audio count drifted");
@@ -518,7 +531,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v180" || stagingCacheName !== "dwnb-full-pack-staging-v179") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v181" || stagingCacheName !== "dwnb-full-pack-staging-v181") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -715,7 +728,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v180"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v181"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -898,10 +911,10 @@ for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
 // P1-19 adds the paired progress panel and the intake/four-week step labels; its German prompt remains isolated.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 207 || languageAudit.openingTagCount !== 7932 || languageAudit.germanTagCount !== 440 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 209 || languageAudit.openingTagCount !== 8011 || languageAudit.germanTagCount !== 442 || languageAudit.arabicTagCount !== 9 || languageAudit.technicalScopeCount !== 53 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 208 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:207", "openingTagCount:7932", "germanTagCount:440", "technicalScopeCount:53", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:209", "openingTagCount:8011", "germanTagCount:442", "technicalScopeCount:53", "mixedStaticCount:208"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

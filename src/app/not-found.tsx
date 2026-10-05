@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Compass, Home, Search } from "lucide-react";
+import { Compass, Home, Search } from "lucide-react";
 
 /**
  * صفحة 404 عربية. قبلها كان الرابط المكسور (مثل /lernen أو /assessment أو بتر رابط درس)

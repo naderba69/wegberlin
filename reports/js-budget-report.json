@@ -12,8 +12,8 @@
     "maxSingleChunkGzipBytes": 637500
   },
   "actual": {
-    "chunkCount": 127,
-    "totalChunkGzipBytes": 1946729,
+    "chunkCount": 128,
+    "totalChunkGzipBytes": 2015005,
     "maxSingleChunkGzipBytes": 262117
   },
   "issues": [],
@@ -29,9 +29,9 @@
       "gzipBytes": 177187
     },
     {
-      "path": ".next/static/chunks/curriculum-a2-c95eb50a696ddd41.js",
-      "rawBytes": 611166,
-      "gzipBytes": 167795
+      "path": ".next/static/chunks/curriculum-a2-bc6bd15536244dbf.js",
+      "rawBytes": 611240,
+      "gzipBytes": 167808
     },
     {
       "path": ".next/static/chunks/curriculum-a1-53c10510d0c7c5de.js",
@@ -44,6 +44,11 @@
       "gzipBytes": 100809
     },
     {
+      "path": ".next/static/chunks/app/practice/test-generator/page-c2c00edd7b893d19.js",
+      "rawBytes": 250591,
+      "gzipBytes": 68271
+    },
+    {
       "path": ".next/static/chunks/3794-83acfce05009cf38.js",
       "rawBytes": 241624,
       "gzipBytes": 65655
@@ -54,9 +59,9 @@
       "gzipBytes": 63160
     },
     {
-      "path": ".next/static/chunks/app/settings/page-17cd1394fb3827e2.js",
-      "rawBytes": 221473,
-      "gzipBytes": 62762
+      "path": ".next/static/chunks/app/settings/page-61e332e254491c93.js",
+      "rawBytes": 221366,
+      "gzipBytes": 62754
     },
     {
       "path": ".next/static/chunks/framework-666c53740fc261c8.js",
@@ -112,11 +117,6 @@
       "path": ".next/static/chunks/app/writing/page-72a50f0115a64b47.js",
       "rawBytes": 75156,
       "gzipBytes": 24286
-    },
-    {
-      "path": ".next/static/chunks/2004-5ab4708b9d7c3f31.js",
-      "rawBytes": 63884,
-      "gzipBytes": 20563
     }
   ],
   "boundary": "Built Next static chunk gzip envelope with a mandatory 15% reserve below hard limits; not network waterfall or device performance."

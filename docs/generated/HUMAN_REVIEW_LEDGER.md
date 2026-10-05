@@ -23,5 +23,3 @@ Boundary: reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer
 التطبيق لا يستطيع التحقق من هوية المراجع ولا من مؤهله؛ السجل يشهد بما سُجّل لا بما يُدّعى، ولذلك لا يمنح اعتمادًا ولا يغيّر حالة النشر تلقائيًا.
 
 The ledger is empty on purpose: nothing in this repository claims an independent human review of the content. `npm run review:packet` produces the signed sheets a named reviewer fills, and this ledger counts what comes back.
-
-

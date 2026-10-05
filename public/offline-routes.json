@@ -2,7 +2,7 @@
   "format": "dwnb-offline-routes",
   "version": 2,
   "defaultPackId": "full",
-  "routeCount": 319,
+  "routeCount": 320,
   "routes": [
     "/",
     "/assessment/a1",
@@ -312,6 +312,7 @@
     "/practice/dictation",
     "/practice/endurance",
     "/practice/practical-day",
+    "/practice/test-generator",
     "/privacy",
     "/progress",
     "/review",
@@ -377,6 +378,7 @@
         "/practice/dictation",
         "/practice/endurance",
         "/practice/practical-day",
+        "/practice/test-generator",
         "/privacy",
         "/progress",
         "/review",
@@ -389,7 +391,7 @@
         "/tutor",
         "/writing"
       ],
-      "routeCount": 59,
+      "routeCount": 60,
       "audioScope": "a1"
     },
     {
@@ -444,6 +446,7 @@
         "/practice/dictation",
         "/practice/endurance",
         "/practice/practical-day",
+        "/practice/test-generator",
         "/privacy",
         "/progress",
         "/review",
@@ -456,7 +459,7 @@
         "/tutor",
         "/writing"
       ],
-      "routeCount": 59,
+      "routeCount": 60,
       "audioScope": "a2"
     },
     {
@@ -511,6 +514,7 @@
         "/practice/dictation",
         "/practice/endurance",
         "/practice/practical-day",
+        "/practice/test-generator",
         "/privacy",
         "/progress",
         "/review",
@@ -523,7 +527,7 @@
         "/tutor",
         "/writing"
       ],
-      "routeCount": 59,
+      "routeCount": 60,
       "audioScope": "b1"
     },
     {
@@ -739,6 +743,7 @@
         "/practice/dictation",
         "/practice/endurance",
         "/practice/practical-day",
+        "/practice/test-generator",
         "/privacy",
         "/progress",
         "/review",
@@ -751,7 +756,7 @@
         "/tutor",
         "/writing"
       ],
-      "routeCount": 220,
+      "routeCount": 221,
       "audioScope": "b2"
     },
     {
@@ -1066,6 +1071,7 @@
         "/practice/dictation",
         "/practice/endurance",
         "/practice/practical-day",
+        "/practice/test-generator",
         "/privacy",
         "/progress",
         "/review",
@@ -1078,7 +1084,7 @@
         "/tutor",
         "/writing"
       ],
-      "routeCount": 319,
+      "routeCount": 320,
       "audioScope": "all"
     }
   ]

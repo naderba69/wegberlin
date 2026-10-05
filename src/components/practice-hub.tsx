@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, AudioWaveform, Bot, BriefcaseBusiness, FilePenLine, GitBranch, GraduationCap, Headphones, Languages, LibraryBig, Mic2, Network, NotebookTabs, Sparkles, GitCompareArrows, MapPinned } from "lucide-react";
+import { ArrowLeft, AudioWaveform, Bot, BriefcaseBusiness, ClipboardCheck, FilePenLine, GitBranch, GraduationCap, Headphones, Languages, LibraryBig, Mic2, Network, NotebookTabs, Sparkles, GitCompareArrows, MapPinned } from "lucide-react";
 import { ContextAppropriatenessQuiz } from "./context-appropriateness-quiz";
 
 const labs = [
@@ -8,6 +8,7 @@ const labs = [
   {href:"/practice/collocations",icon:Network,title:"شبكات التراكيب",de:"Kontext · Verbindung · Transfer",copy:"ست عشرة شبكة تربط الكلمة بأفعالها وسياقاتها، ثم تختبر المقصد بدل حفظ مرادفات معزولة.",status:"48 تركيبًا"},
   {href:"/practice/conversation-paths",icon:GitBranch,title:"مسارات المحادثة",de:"Verstehen · Entscheiden · Reparieren",copy:"ثمانية مواقف متفرعة دون AI؛ اختر ردًا، شاهد أثره، ثم أكمل الهدف أو أصلح المسار.",status:"8 سيناريوهات"},
   {href:"/practice/endurance",icon:Headphones,title:"الفهم والتحمل المتدرج",de:"Längere Texte · Verstehen · Übertragen",copy:"ثمانية سياقات أطول تدريجيًا للقراءة والاستماع من صوت الجهاز، دون ادعاء صوت بشري أو نتيجة امتحان.",status:"8 سياقات"},
+  {href:"/practice/test-generator",icon:ClipboardCheck,title:"اختبارات محلية من الدروس",de:"Mini-Tests · Neu mischen · Prüfen",copy:"اختر A1–B2 وولّد 5 أو 10 أو 15 سؤالًا من الاختبارات المصغّرة المنشورة، مع المراجعة بعد التثبيت. لا درجة مستوى ولا حفظ.",status:"5 · 10 · 15 سؤالًا"},
   {href:"/practice/dictation",icon:Headphones,title:"مختبر الإملاء المتكيف",de:"Hören · Schreiben · Vergleichen",copy:"إملاء جزئي للمبتدئ يتدرج إلى جمل كاملة، مع مقارنة موضعية وإعادة بلا عقوبة.",status:"16 مهمة"},
   {href:"/practice/practical-day",icon:BriefcaseBusiness,title:"اليوم العملي",de:"Wohnen · Arbeit · Verwaltung",copy:"سيناريو مترابط من أربع خطوات للسكن أو العمل أو الإدارة مع حدود قانونية صريحة.",status:"3 سيناريوهات"},
   {href:"/writing",icon:FilePenLine,title:"مختبر الكتابة",de:"Schreiben",copy:"مسودة، فحص، ملاحظات، ثم نسخة منقحة محفوظة محليًا.",status:"يعمل"},

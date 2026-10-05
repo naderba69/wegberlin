@@ -1,11 +1,12 @@
 # Architecture Decisions
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v181 · 2026-10-05 · P2-355 adds a published-mini-test practice generator; authored source only, local session, every Offline pack, no learner-state fields or network origins.
 
-
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Batch follow-up: `/practice/test-generator` is included in A1/A2/B1/B2/full packs. `PACK_CACHE` and `PACK_STAGING_CACHE` are v181, with v180 retained for rollback. The freshness gate checks 480 authored templates from 96 published lessons, including duplicate-choice rejection; no mastery, progress, CEFR, or daily-plan effect.
 
 Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
+
+Current P2-355 decision: `local-test-generator-v1` uses only published authored mini-tests, samples at most one item per lesson, reveals feedback after explicit submission, and never stores answers or changes learner evidence. The route and statically bundled banks are included in every Offline pack. Full rationale and review boundary: [ADR-111](docs/adr/ADR-111-local-authored-mini-test-practice-generator.md).
 
 ## ADR-001 — Local-first learner state
 IndexedDB is the canonical durable store. Vercel hosts the application but never stores learner progress.

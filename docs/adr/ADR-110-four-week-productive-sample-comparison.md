@@ -1,7 +1,8 @@
 # ADR-110: Pair the intake production sample with a four-week comparison
 
-**Status:** Accepted  
-**Date:** 2026-10-04  
+**Status:** Accepted
+
+**Date:** 2026-10-04
 **Priority item:** P1-19 in `CURRICULUM_METHOD_AUDIT_2026-10-04_AR.md`
 
 ## Context

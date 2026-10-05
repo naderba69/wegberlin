@@ -3,24 +3,24 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `145829bdcf4d3c38d4225bb832cd9e752bc81adbe0efdbf1ddf46146bc213435`
+Content SHA-256: `b72051cdd87eb6a393841da4574b06f51838f5d12be136e7cd966b9fd9d0a42e`
 
 ## Result
 
-`PASS` — 207 TSX files and 7932 opening JSX tags were scanned.
+`PASS` — 209 TSX files and 8011 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 440 |
-| Explicit Arabic fragments (lang=ar + dir=rtl) | 7 |
-| LTR tags audited | 487 |
-| RTL tags audited | 7 |
+| Explicit German fragments (lang=de + dir=ltr) | 442 |
+| Explicit Arabic fragments (lang=ar + dir=rtl) | 9 |
+| LTR tags audited | 489 |
+| RTL tags audited | 9 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 53 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 207 |
+| Static Arabic + Latin text nodes under plaintext host policy | 208 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -127,6 +127,7 @@ Content SHA-256: `145829bdcf4d3c38d4225bb832cd9e752bc81adbe0efdbf1ddf46146bc2134
 | src/components/local-pronunciation-model-control.tsx:25 | قد تختلف مساحة Cache الفعلية حسب المتصفح وملفات ONNX المطلوبة. | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:30 | يطلب المتصفح أوزانًا من Hugging Face ثم يحفظها محليًا. لا يُرسل اسمك أو تقدمك أو تسجيلاتك. | Arabic host + plaintext boundary |
 | src/components/local-pronunciation-model-control.tsx:35 | المطابقة تقول ما إذا استطاع ASR سماع الكلمات المتوقعة. فشل كلمة قد يكون من الضوضاء أو الميكروفون، وليس حكمًا ق | Arabic host + plaintext boundary |
+| src/components/local-test-generator.tsx:130 | هذه مراجعة لأسئلة الدروس التي اخترتها، وليست درجة CEFR أو حكمًا على إتقانك. | Arabic host + plaintext boundary |
 | src/components/motivation-preferences-control.tsx:21 | الإخفاء فوري ومحلي ولا يحذف الأدلة ولا يخفض الإتقان أو الاستمرارية الفعلية. لا عقوبة ولا Dark pattern لإعادة ا | Arabic host + plaintext boundary |
 | src/components/nursing-layer-panel.tsx:101 | مفردات B1+ تُحفظ وتُراجَع | Arabic host + plaintext boundary |
 | src/components/nursing-layer-panel.tsx:110 | الصيغة نفسها التي يقبلها «استيراد مفردات شخصية» في الإعدادات (German → Arabic → Example → Tags)؛ الطبقة لا تكت | Arabic host + plaintext boundary |

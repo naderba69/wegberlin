@@ -42,7 +42,7 @@ ${rows}
 
 ${cycle.completedWeeks === 0 ? "The zero is honest: on a fresh profile no rewrite exists yet, and the plan's Wednesday writing slot plus this gate are what make the cycle visible instead of optional.\n" : ""}
 `;
-const outputs: Array<[string, string]> = [["reports/weekly-writing-cycle.json", content], ["docs/generated/WEEKLY_WRITING_CYCLE.md", report]];
+const outputs: Array<[string, string]> = [["reports/weekly-writing-cycle.json", content], ["docs/generated/WEEKLY_WRITING_CYCLE.md", `${report.trimEnd()}\n`]];
 if (writeMode) {
   for (const [file, text] of outputs) { await mkdir(file.slice(0, file.lastIndexOf("/")), { recursive: true }); await writeFile(file, text); }
   console.log(`Weekly writing cycle written: ${cycle.completedWeeks}/${cycle.weeksMeasured} complete · current ${cycle.current.status}`);

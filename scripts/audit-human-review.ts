@@ -46,7 +46,7 @@ ${summary.boundaryAr}
 ${summary.reviewedLessons === 0 ? "The ledger is empty on purpose: nothing in this repository claims an independent human review of the content. `npm run review:packet` produces the signed sheets a named reviewer fills, and this ledger counts what comes back.\n" : ""}
 ${summary.invalidEntries.length ? `## Invalid entries\n\n${summary.invalidEntries.map((entry) => `- ${entry.lessonId}: ${entry.issuesAr.join(" · ")}`).join("\n")}\n` : ""}
 `;
-const outputs = [["reports/human-review-audit.json", content], ["docs/generated/HUMAN_REVIEW_LEDGER.md", report]];
+const outputs = [["reports/human-review-audit.json", content], ["docs/generated/HUMAN_REVIEW_LEDGER.md", `${report.trimEnd()}\n`]];
 if (writeMode) {
   for (const [file, text] of outputs) { await mkdir(file.slice(0, file.lastIndexOf("/")), { recursive: true }); await writeFile(file, text); }
   console.log(`Human review ledger written: ${summary.reviewedLessons}/${HUMAN_REVIEW_LESSON_TOTAL} reviewed · ${summary.lastMonthReviewed} this month (target ${summary.monthlyTarget}) · ${summary.invalidEntries.length} invalid entries`);

@@ -26,7 +26,7 @@ The check applies the German rule to the transcribed text itself: after a front 
 
 ${audit.issues.length ? `## Issues\n\n| Lesson | Word | Transcription | Kind | Expected |\n| --- | --- | --- | --- | --- |\n${rows}\n` : "## Issues\n\nNone.\n"}
 `;
-const outputs = [["reports/pronunciation-consistency-audit.json", content], ["docs/generated/PRONUNCIATION_CONSISTENCY_REPORT.md", report]];
+const outputs = [["reports/pronunciation-consistency-audit.json", content], ["docs/generated/PRONUNCIATION_CONSISTENCY_REPORT.md", `${report.trimEnd()}\n`]];
 if (writeMode) {
   for (const [file, text] of outputs) { await mkdir(file.slice(0, file.lastIndexOf("/")), { recursive: true }); await writeFile(file, text); }
   console.log(`Pronunciation consistency written: ${audit.alignedItems}/${audit.items} aligned items checked · ${audit.skippedItems} skipped · ${audit.issues.length} issues`);

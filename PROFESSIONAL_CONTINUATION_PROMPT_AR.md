@@ -1,12 +1,20 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v180 · 2026-10-04 · P1-19 four-week productive-sample comparison added without changing curriculum content; ADR-105 review-session dose, ADR-102 WebGPU ESM resolution, and ADR-101 Vercel output compatibility remain verified.
+Sync batch: v181 · 2026-10-05 · P2-355 local authored-mini-test practice (`local-test-generator-v1`): 480 templates/96 published lessons, explicit A1–B2 and 5/10/15 choices, no persistence or mastery effect, included in all Offline packs. P1-19's four-week comparison boundaries remain unchanged.
+
+## P2-355 — تدريب محلي من اختبارات الدروس المنشورة — 2026-10-05
+
+- المصدر حصريًا 480 قالب `miniTest` مؤلَّفًا داخل 96 درسًا منشورًا (120 لكل مستوى)، مع freshness check في `prebuild`. يختار المتعلّم A1–B2 و5/10/15 بنفسه؛ لا يتكرر الدرس المصدر داخل المجموعة، ويُخلط ترتيب الأسئلة والخيارات مع حفظ المفتاح. تُكشف الأجوبة والتفسيرات بعد إجابة المجموعة كاملة وتثبيتها.
+- يظهر عنوان الدرس المصدر بالألمانية والعربية. النتيجة جلسة مؤقتة: لا IndexedDB/DWNB، لا سجل محاولة، ولا أثر على mastery أو progress أو خطة اليوم أو CEFR؛ لا AI/محتوى خارجي/ميكروفون/مؤقّت. صحّحنا مشتتًا مكررًا في `a2-04-m5`، وبنك الخيارات يرفض التكرار الملتبس.
+- `/practice/test-generator` وبنوك المستويات الأربعة ضمن أصول Offline statically bundled. الحزم A1/A2/B1/B2/full = 60/60/60/221/320 route؛ الإجمالي 320/320، `PACK_CACHE` و`PACK_STAGING_CACHE` v181 ونسخة الرجوع v180. القرار: `docs/adr/ADR-111-local-authored-mini-test-practice-generator.md`.
+- التحقق الخاص بالميزة: 10 اختبارات وحدة ناجحة و`npm run local:test:templates` = 480/480. سيناريو E2E يشمل حدود الحالة واستخدام المسار دون اتصال بعد تثبيت الحزمة، كما يشمل Axe؛ لا يمكن تشغيل Chromium في هذه البيئة، فلا تُنسب نتيجة متصفح محلية.
+- التحقق النهائي: `npm run check` خروج 0؛ lint وTypeScript نظيفان، `npm test` **1,345/1,345** في **199/199**، وبوابات الأمن والمصادر وسير العمل والتسليم والبناء ناجحة. v181: بصمة Offline `e308451232ff`، full **5,997,469** gzip، 325 صفحة static/323 صفحة تباين (22,940 عنصرًا، 0 إخفاق)، JS 128 chunk / 2,015,005 gzip / max 262,117، والمنهج 1,117,421 gzip. اختبار المتصفح غير منفذ محليًا لغياب Chromium والمكتبات والتنزيل.
 
 ## P1-19 — خط أساس إنتاجي لكل مسارات التهيئة — 2026-10-04
 
 - السجل `LearningState.productiveSampleComparison` مستقل عن `diagnosticResult`. من يختار البدء من الصفر يحصل على «لا أستطيع بعد» و0 كلمة في وقت إنشاء الملف، دون كتابة ألمانية أو ميكروفون أو تشخيص؛ سائر المتعلمين يحصلون على المهمة الإنتاجية نفسها بعد التحديد الأولي.
 - بعد 28 يومًا كاملة، تعرض `/progress` عينة متابعة اختيارية بالمطالبة نفسها. نعرض عدد الكلمات ومدة التسجيل المتاح وتقييم المتعلّم الذاتي فقط: لا تصحيح لغوي أو CEFR أو إتقان أو ترقية. تدعم الحالة النسخ والدمج، وتبقى عند إعادة التهيئة، ويمكن حذف التسجيلات من الإعدادات.
-- القياس الحالي: `npm run check` خروج 0؛ `npm test` **1,335/1,335** في **198/198** ملفًا، و`tsc` نظيف؛ lint صفر أخطاء وتحذيران؛ المصدر 19/19، `language:audit` ‏207 TSX / 7,932 وسمًا / 0 مشكلة؛ اختبارات الوظيفة والأرشيف والحدود المستهدفة **65/65**. البناء: `84eeaa2f3bb0` · full 5,919,787 · JS 127/1,946,729 gzip · الصوت 544/52,943,843 bytes · المنهج 1,051,798 gzip · التباين 0/22,881 عنصرًا في 322 صفحة. فُعّلت تأكيدات E2E لمساري المبتدئ والمتابعة، لكن تشغيل Chromium محليًا متعذر لغياب المتصفح ومكتباته وعدم توافر تنزيله من هذه البيئة.
+- القياس الحالي: `npm run check` خروج 0؛ `npm test` **1,335/1,335** في **198/198** ملفًا، و`tsc` نظيف؛ lint صفر أخطاء وتحذيران؛ المصدر 19/19، `language:audit` ‏209 TSX / 8,012 وسمًا / 0 مشكلة؛ اختبارات الوظيفة والأرشيف والحدود المستهدفة **65/65**. البناء: `84eeaa2f3bb0` · full 5,919,787 · JS 127/1,946,729 gzip · الصوت 544/52,943,843 bytes · المنهج 1,051,798 gzip · التباين 0/22,881 عنصرًا في 322 صفحة. فُعّلت تأكيدات E2E لمساري المبتدئ والمتابعة، لكن تشغيل Chromium محليًا متعذر لغياب المتصفح ومكتباته وعدم توافر تنزيله من هذه البيئة.
 - المرجع التربوي: `CURRICULUM_METHOD_AUDIT_2026-10-04_AR.md`؛ القرار: `docs/adr/ADR-110-four-week-productive-sample-comparison.md`. لم تُعدّل درجات المقرر أو بواباته.
 
 ## معيار الدرس الواحد وإعادة تسمية «الاستقلال» — 2026-10-03 (ADR-106، م37)
@@ -66,14 +74,14 @@ Sync batch: v180 · 2026-10-04 · P1-19 four-week productive-sample comparison a
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
-- last measured source build fingerprint (2026-10-03, جيل ADR-106 مراحله A+B+C (عقد الدرس الثمانية، إعادة التسمية، توثيق عيادة الخطأ، وتأليف النقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
-- Unit/Integrity tests: 1,327/1,327 in 197/197 files (`npm test`, measured on this head for the learner/teacher audit fixes; the ADR-106 generation held 1,244/1,244 in 178/178 files with +8 contract tests, no threshold softened and no file disabled). Browser: CI re-measured the full desktop and mobile production suite on this head (PR #4, head 5b1fc79, run `37112362964`): `check` passed in 2m46s (`npm run check` 2m23s, which carries lint, typecheck, the 1,231 tests, the secret, freshness, workflow and handoff gates and the build) and `e2e` in 10m55s (build 0m59s, Playwright desktop + mobile suite 9m13s); Vercel passed, and `Deployment Smoke` reported skipping on the PR run by design, not by success. The docs-only head that preceded it (083fd38) had its run cancelled by the branch concurrency guard, so no browser number is attributed to it. Earlier generations, kept as measured: 95bfcfe (run `37110656051`) `check` 3m28s / `e2e` 16m46s (suite 14m17s); Stage A head 6fb5667 (run `37108553360`) `check` 4m26s / `e2e` 11m06s (suite 9m20s) — an earlier note had wrongly given both jobs 11m06s, read from a GraphQL job field instead of step timings; 65b6f03 (run `37105579225`) `check` 2m48s / `e2e` 16m28s, which is where the `review-session-dose-v1` browser assertions were first run; 076cd48 16m16s after two defects were fixed from real CI evidence (the stage-gate `reachLimit` freeze at stage one and a progress test counting the phantom mastery seed removed by ADR-103). Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so no browser number is ever taken from a local run. A prior generation (head 076cd48) measured 16m16s after two defects were fixed from real CI evidence — the stage-gate `reachLimit` freeze at stage one, and a progress test that counted the phantom mastery seed removed by ADR-103. Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so this number comes from Actions, not from here. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
+- Offline cache: dwnb-full-pack-v181؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى. بناء v181: 325 صفحة static، 323 صفحة تباين، full 5,997,469 gzip، fingerprint `e308451232ff`.
+- قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
+- Unit/Integrity tests: 1,345/1,345 in 199/199 files (`npm test`, measured 2026-10-05; no threshold softened or test file disabled). Browser E2E was not run locally because this sandbox lacks Chromium/system libraries and browser downloads are unavailable; `npx playwright test --list` lists 63 tests but is not execution evidence. Remote CI has not yet been re-measured for this head.
 - P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 130 implemented / 5 partial / 7 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- حالة Git الفعلية: مساحة العمل في `/home/user/wegberlin` على الفرع `arena/01a0febf-wegberlin`، وكل تعديل يمر عبر [PR #4](https://github.com/naderba69/wegberlin/pull/4) — لا رفع مباشر إلى `main`. أُدمج [PR #3](https://github.com/naderba69/wegberlin/pull/3) في `main` برأس دمج `eb9c061` عند 2026-10-02T21:23:59Z ونُشر إلى Production؛ وكان هذا السطر نفسه يقول سابقًا «الطلب ما زال مفتوحًا وفحوص check وe2e وVercel قيد التشغيل» — ذلك وصفٌ للحظة الفحص القديمة لا للحالة الحالية، وصحّحناه هنا بلا إعادة قياس. أمّا `docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json` فتبقى لقطة تاريخية كما قِيسَت (بما فيها حقل `branch` سُجّل باسم فرع خاطئ `arena/01a0fba1-wegberlin`)، ولا نعدّل الأرقام القديمة بحجة التجميل. فحص `Deployment Smoke` على الإنتاج لم يُعَد تشغيله بعد: تثبيت `DEPLOYMENT_SMOKE_PRODUCTION_URL` وإعادة التشغيل خطوتان للمالك.
+- حالة Git لهذا التسليم: مساحة العمل على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى أي فرع قديم، وجميع الرفع لهذا الفرع فقط. سجلات PR السابقة تاريخية وليست هذا الرأس. لا دمج في `main` أو نشر Production مُدّعى؛ E2E المتصفح محليًا غير منفذ لغياب Chromium.
 
 
 آخر تدقيق للتسليم: **2026-09-08 — Africa/Tunis**
@@ -233,7 +241,7 @@ telc-deutsch-b2
 - **الأمان المهني عادةٌ لا قائمة**: عناقيد الجرعة والطريقة والتوقيت وتأكيد الأمر المسموع والسؤال قبل الأمر المبهم تُبنى بأن **تُفشِل بيئةُ التمرين التخمينَ وتُنجِح التأكيد**، لا بقواعد تُحفظ وتُمتحَن؛ وكل وحدة تمريضية تحمل صراحةً: **«هذه صياغات لغوية لا إرشاد سريري»**.
 - **لا تجميل في الأرقام**: لا تخفيف سقف، ولا توسيع `normalizeGermanText`، ولا بدائل `acceptedAnswers` تختلف عن المفتاح بحرف كبير أو علامة ترقيم؛ البوابة التي تخرج 1 تُبلَّغ خروجَها 1، وبندٌ لم يُغلق بأخضر الاختبارات وحده لا يُنقل من `not-implemented`.
 
-**عقد التسليم والرفع (v153 · ADR-082) — أُضيف بعد خطأ وقع فعلاً:** الحزمة التسليمية **مسطّحة**: ملفات المشروع ومجلداته في جذر الـZIP مباشرةً (بلا مجلد ظرف `der-weg-nach-berlin/`)، لأن أداة الرفع الموثوقة في المستودع `TERMUX_REPLACE_REPO.sh` تُستخرج بالاسم المجرّد (`unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh`) وتكتشف جذر المشروع من `package.json`؛ مع جذر ظرف يفشل الاستخراج بـ`caution: filename not matched` (خروج 11، قِيس) فيلجأ المستخدم إلى أمر مرتجل فينتهي بدفع مجلّد الظرف كثيفةٍ وحيدة في `main`. والرفع يكون بالأمر الموثّق في `TERMUX_ONE_COMMAND.txt` (استنساخ المستودع الحالي، حذف ملفات المشروع مع الإبقاء على `.git`، نسخ الجذر المكتشف بما فيه الملفات المخفية، تنظيف المولَّد/الخاص،`audit-secrets`، دفع عادي بدون `--force`)؛ **ممنوع** ارتجال `git init` + `git add -A` من مجلد يحوي غلافًا، وممنوع تمرير PAT داخل رابط الدفع في الأمر الموصى به (وثيقة `TERMUX_GITHUB_UPLOAD.md` تنصّ على ذلك).
+**عقد التسليم والرفع (v153 · ADR-082) — أُضيف بعد خطأ وقع فعلاً:** الحزمة التسليمية **مسطّحة**: ملفات المشروع ومجلداته في جذر الـZIP مباشرةً (بلا مجلد ظرف `der-weg-nach-berlin/`)، لأن أداة الرفع الموثوقة في المستودع `TERMUX_REPLACE_REPO.sh` تُستخرج بالاسم المجرّد (`unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh`) وتكتشف جذر المشروع من `package.json`؛ مع جذر ظرف يفشل الاستخراج بـ`caution: filename not matched` (خروج 11، قِيس) فيلجأ المستخدم إلى أمر مرتجل فينتهي بدفع مجلّد الظرف كثيفةٍ وحيدة في `main`. والرفع يكون بالأمر الموثّق في `TERMUX_ONE_COMMAND.txt` (استنساخ المستودع الحالي، حذف ملفات المشروع مع الإبقاء على `.git`، نسخ الجذر المكتشف بما فيه الملفات المخفية، تنظيف المولَّد/الخاص،`audit-secrets`، دفع عادي بدون `--force`)؛ **ممنوع** ارتجال `git init` + `git add -A` من مجلد يحوي غلافًا، وممنوع تمرير PAT دا�جلد يحوي غلافًا، وممنوع تمرير PAT داخل رابط الدفع في الأمر الموصى به (وثيقة `TERMUX_GITHUB_UPLOAD.md` تنصّ على ذلك).
 
 ---
 
@@ -481,8 +489,7 @@ axe serious/critical on tested pages: 0
 - رفض archive مبتور وZip bomb وPath traversal.
 - Offline Manifest v2: حزم مستقلة A1/A2/B1/B2/full بعدد 58/58/58/219/318 مسارًا.
 - الصوت Opt-in ومفلتر حسب الحزمة: 40/48/48/131/267 ملفًا.
-- `offline-size-manifest` يولد بعد Build حجم Gzip للصفحات وNext قبل التنزيل وبصمة Build، مع بقاء القياس الفعلي بعد التثبيت.
-- حذف صوت الحزمة مع بقاء الصفحات والتقدم.
+- `offline-size-manifest` يولد بعد Build حجم Gzip للصفحات وNext قبل التنزيل وبصمة Build، مع بقاء القياس الفبقاء الصفحات والتقدم.
 
 ### الوصول
 
@@ -643,9 +650,9 @@ Blocked: 0
 
 ```text
 Total P2: 142
-Implemented: 123
-Partial: 2
-Not implemented: 17
+Implemented: 130
+Partial: 5
+Not implemented: 7
 Blocked: 0
 ```
 
@@ -2639,7 +2646,7 @@ offline ‏272715df140a وjs ‏107/1,662,356/610,785 · `media:budget` يمرّ
 
 **حادثة الحارس (بلا تجميل).** بعد التطبيق سقط `tests/unit/meaning-first-case.test.ts` لأن العدّاد `discoveredSignals.controlled` صار **21** بدل 20: قاعدته اللاتينية التقطت كلمة `Akkusativ` التي أضافها شرح `a1-10-e1` في تمرين **مُتحكَّم فيه** لم يكن نصّه القديم يحمل اسم حالة. لم يُحدَّث الرقم المتوقّع؛ أُعيدت صياغة الشرح بلا الاسم اللاتيني (187 ⇒ **169** حرفًا) عبر `a1e27-fix1.json` ⇒ العدّاد **20** والبصمة رجعت إلى **`167645dd621b`** بصفر فجوات والاختبار 6/6. القاعدة: لا يُضاف اسم حالة لاتيني إلى تمرين مُتحكَّم فيه، والأسماء العربية لا تُحتسب.
 
-**ملاحظة ثانية.** بوابة `lesson:quality:audit` ما زالت تخرج **1** بعلّةٍ واحدة: نسبة التمارين ذات الإجابة الواحدة **87.34%** (الحد 25%) = P1-398؛ وعدّادات P1 ثابتة 128/5/2. 
+**ملاحظة ثانية.** بوابة `lesson:quality:audit` ما زالت تخرج **1** بعلّةٍ واحدة: نسبة التمارين ذات الإجابة الواحدة **87.34%** (الحد 25%) = P1-398؛ وعدّادات P1 ثابتة 128/5/2.
 
 **فحص الاقتباسات.** المشروع: 1,733 شرحًا · **1,708** اقتباسًا ألمانيًّا · **0 misquote** · 62 مثالًا مصنوعًا. وفي A1: 432 شرحًا · **735** اقتباسًا · 0 misquote.
 
@@ -2674,4 +2681,6 @@ offline ‏272715df140a وjs ‏107/1,662,356/610,785 · `media:budget` يمرّ
 **البوابات (v175).** `npm run check` خروج **0**: lint 0 · tsc 0 · **1,050 اختبارًا في 160 ملفًا** (182.1 ث) · `handoff:check` 0 · بناء **321/321** صفحة (تجميع 28.7 ث، توليد 10.4 ث) · `offline:size` **`e6d22e55d026`** (a1 2,495,650 · a2 2,585,940 · b1 2,593,867 · b2 3,947,377 · **full 5,799,480**) · `js:budget` 110/1,778,207/250,914 · `media:budget` 544/52,943,843 والمنهاج **997,284** gzip · كاش `dwnb-full-pack-v175` (staging/previous v174) · 13 وثيقةً على `Sync batch: v175` · و`verify-generation-state` **no drift** 7/7.
 
 **المتصفح (v175).** `npm run test:e2e` على البناء المسلَّم: **43/43 سطح مكتب في 7.9 د** و**43/43 موبايل في 7.0 د** — المشروعان أخضران في جولة واحدة، وكنس Chromium بينهما وجد **0** عمليات معلّقة.
+
+� Chromium بينهما وجد **0** عمليات معلّقة.
 

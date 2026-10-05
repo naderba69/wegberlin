@@ -20,4 +20,3 @@ a submission without a changed rewrite never completes the week, and nothing her
 | 2026-09-28 → 2026-10-04 | not-started | 0 | 0 | 0 |
 
 The zero is honest: on a fresh profile no rewrite exists yet, and the plan's Wednesday writing slot plus this gate are what make the cycle visible instead of optional.
-

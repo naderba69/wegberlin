@@ -49,7 +49,7 @@ function levelFromLessonId(lessonId: string) {
   return lessonId.slice(0, 2).toLocaleUpperCase("en-US");
 }
 
-const ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL = { A1: 25, A2: 30, B1: 31, B2: 40 } as const;
+export const ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL = { A1: 25, A2: 30, B1: 31, B2: 40 } as const;
 const ORIGINAL_P099_QUALITY_SCOPE = "P0-99-original-126-quality-target";
 
 function isOriginalP099QualityTarget(entry: VerbPrepositionFrame) {
@@ -59,7 +59,7 @@ function isOriginalP099QualityTarget(entry: VerbPrepositionFrame) {
   return Number.isInteger(lessonNumber) && lessonNumber >= 1 && lessonNumber <= 20;
 }
 
-function frameTargetsByLevel(entries: readonly VerbPrepositionFrame[]) {
+export function frameTargetsByLevel(entries: readonly VerbPrepositionFrame[]) {
   const counts: Record<keyof typeof ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
   for (const entry of entries) {
     if (!isOriginalP099QualityTarget(entry)) continue;
@@ -67,6 +67,19 @@ function frameTargetsByLevel(entries: readonly VerbPrepositionFrame[]) {
     counts[level] += 1;
   }
   return counts;
+}
+
+export function assertOriginalP099QualityTargetDistribution(entries: readonly VerbPrepositionFrame[]) {
+  const actual = frameTargetsByLevel(entries);
+  const levels = Object.keys(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL) as (keyof typeof ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL)[];
+  const expectedTotal = levels.reduce((total, level) => total + ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL[level], 0);
+  const actualTotal = levels.reduce((total, level) => total + actual[level], 0);
+  const expectedDistribution = levels.map((level) => ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL[level]).join("/");
+  const actualDistribution = levels.map((level) => actual[level]).join("/");
+  if (expectedTotal !== 126 || actualTotal !== 126 || levels.some((level) => actual[level] !== ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL[level])) {
+    throw new Error(`Original P0-99 quality scope drifted (expected 126 / ${expectedDistribution}; found ${actualTotal} / ${actualDistribution}). Review the historical scope before regenerating the packet.`);
+  }
+  return actual;
 }
 
 function appendBlankReviewColumns(row: unknown[]) {
@@ -225,7 +238,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | حسم المرشحات غير المغطاة: هل تحتاج إلى سجل مؤلف أم هي إشارة سياقية/استخراج خاطئ؟ |
 | \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. تبقى جميعها pending حتى يوقّع مراجع مستقل. |
 
-افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md.
+افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` التوزيع المرجعي ويوقف إعادة التوليد عند الانحراف؛ وهذا فحص نطاق آلي لا مراجعة بشرية.
 
 ## بروتوكول التوقيع
 

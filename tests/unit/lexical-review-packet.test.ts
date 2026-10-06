@@ -1,7 +1,12 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
 import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
-import { buildLexicalReviewPacketArtifacts } from "@/core/content-validation/lexical-review-packet";
+import {
+  assertOriginalP099QualityTargetDistribution,
+  buildLexicalReviewPacketArtifacts,
+  frameTargetsByLevel,
+  ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
+} from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
 
 type CsvRow = string[];
@@ -98,6 +103,10 @@ describe("unsigned independent German lexical review packet", () => {
     expect(new Set(targetIds)).toEqual(new Set(expectedIds));
     expect(new Set(targetIds).size).toBe(126);
     expect(countsByLevel).toEqual({ A1: 25, A2: 30, B1: 31, B2: 40 });
+    expect(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL).toEqual({ A1: 25, A2: 30, B1: 31, B2: 40 });
+    expect(frameTargetsByLevel(verbPrepositionFrames)).toEqual({ A1: 25, A2: 30, B1: 31, B2: 40 });
+    expect(assertOriginalP099QualityTargetDistribution(verbPrepositionFrames)).toEqual({ A1: 25, A2: 30, B1: 31, B2: 40 });
+    expect(() => assertOriginalP099QualityTargetDistribution(verbPrepositionFrames.slice(1))).toThrow("Original P0-99 quality scope drifted");
     expect(targets.slice(1).every((row) => !/^b2-(2[1-4])-/u.test(row[1]))).toBe(true);
     assertBlankSignatures(targets);
   });
@@ -123,6 +132,7 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("frame-quality-targets.csv");
     expect(readme).toContain("مراجعة جودة صفوف");
     expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");
+    expect(readme).toContain("يحرس `content:audit` التوزيع المرجعي ويوقف إعادة التوليد عند الانحراف");
     expect(readme).toContain("test-content-sha256");
   });
 

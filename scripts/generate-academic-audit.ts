@@ -4,7 +4,10 @@ import path from "node:path";
 import { buildAnswerIntegrityAudit } from "../src/core/content-validation/answer-integrity";
 import { buildObjectiveCoverageReport } from "../src/core/content-validation/objective-coverage";
 import { buildLexicalTargetGapAudit } from "../src/core/content-validation/lexical-target-gap";
-import { buildLexicalReviewPacketArtifacts } from "../src/core/content-validation/lexical-review-packet";
+import {
+  assertOriginalP099QualityTargetDistribution,
+  buildLexicalReviewPacketArtifacts,
+} from "../src/core/content-validation/lexical-review-packet";
 import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
 
@@ -20,6 +23,7 @@ const lexical = buildLexicalTargetGapAudit();
 if (!answer.ok) throw new Error(`Answer integrity audit failed:\n${answer.issues.slice(0, 100).join("\n")}`);
 if (!coverage.ok) throw new Error(`Objective coverage audit failed:\n${coverage.issues.slice(0, 100).join("\n")}`);
 if (lexical.issues.length) throw new Error(`Lexical target decision audit failed:\n${lexical.issues.join("\n")}`);
+assertOriginalP099QualityTargetDistribution(verbPrepositionFrames);
 
 const payloadWithoutHash = {
   format: "dwnb-academic-audit",

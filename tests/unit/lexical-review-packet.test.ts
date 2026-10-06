@@ -143,6 +143,8 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("لا يغلق وجود هذه الحزمة P0-98 أو P0-99");
     expect(readme).toContain("ورقة عمل P0-98 للنطاق الأصلي");
     expect(readme).toContain("في P0-98، راجع سجلات الاسم الـ1,297");
+    expect(readme).toContain("يرفض `npm run content:audit:write` إعادة كتابة CSV");
+    expect(readme).toContain("هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة");
     expect(readme).toContain("frame-quality-targets.csv");
     expect(readme).toContain("مراجعة جودة صفوف");
     expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");

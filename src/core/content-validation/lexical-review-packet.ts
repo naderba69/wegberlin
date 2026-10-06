@@ -49,6 +49,26 @@ function levelFromLessonId(lessonId: string) {
   return lessonId.slice(0, 2).toLocaleUpperCase("en-US");
 }
 
+const ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL = { A1: 25, A2: 30, B1: 31, B2: 40 } as const;
+const ORIGINAL_P099_QUALITY_SCOPE = "P0-99-original-126-quality-target";
+
+function isOriginalP099QualityTarget(entry: VerbPrepositionFrame) {
+  const level = levelFromLessonId(entry.lessonId);
+  if (level !== "B2") return Object.hasOwn(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL, level);
+  const lessonNumber = Number(entry.lessonId.split("-")[1]);
+  return Number.isInteger(lessonNumber) && lessonNumber >= 1 && lessonNumber <= 20;
+}
+
+function frameTargetsByLevel(entries: readonly VerbPrepositionFrame[]) {
+  const counts: Record<keyof typeof ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
+  for (const entry of entries) {
+    if (!isOriginalP099QualityTarget(entry)) continue;
+    const level = levelFromLessonId(entry.lessonId) as keyof typeof ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL;
+    counts[level] += 1;
+  }
+  return counts;
+}
+
 function appendBlankReviewColumns(row: unknown[]) {
   return [...row, ...REVIEW_COLUMNS.map(() => "")];
 }
@@ -113,6 +133,31 @@ export function buildLexicalReviewPacketArtifacts(input: {
       reviewEvidence(sources, ["context"], 3),
     ]);
   });
+  const originalQualityTargetIds = new Set(verbFrames.filter(isOriginalP099QualityTarget).map((entry) => entry.id));
+  const qualityTargetCountsByLevel = frameTargetsByLevel(verbFrames);
+  const qualityTargetDistribution = [
+    qualityTargetCountsByLevel.A1,
+    qualityTargetCountsByLevel.A2,
+    qualityTargetCountsByLevel.B1,
+    qualityTargetCountsByLevel.B2,
+  ].join("/");
+  const originalQualityTargetDistribution = [
+    ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL.A1,
+    ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL.A2,
+    ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL.B1,
+    ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL.B2,
+  ].join("/");
+  const qualityFrameHeaders = ["reviewScope", ...frameHeaders];
+  const qualityLevelOrder = new Map(["A1", "A2", "B1", "B2"].map((level, index) => [level, index]));
+  const qualityFrameRows = frameRows
+    .filter((row) => originalQualityTargetIds.has(String(row[0])))
+    .sort((left, right) => {
+      const levelDifference = (qualityLevelOrder.get(String(left[1])) ?? Number.MAX_SAFE_INTEGER)
+        - (qualityLevelOrder.get(String(right[1])) ?? Number.MAX_SAFE_INTEGER);
+      const lessonDifference = Number(String(left[2]).split("-")[1]) - Number(String(right[2]).split("-")[1]);
+      return levelDifference || lessonDifference || String(left[0]).localeCompare(String(right[0]), "en-US");
+    })
+    .map((row) => [ORIGINAL_P099_QUALITY_SCOPE, ...row]);
 
   const nounCandidates = audit.nounRows
     .filter((row) => row.status === "pending-human")
@@ -175,11 +220,12 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | الملف | الصفوف (من دون الرأس) | الغرض |
 |---|---:|---|
 | \`noun-anchors.csv\` | ${nounRows.length} | مراجعة سجلات الاسم المؤلفة: أداة التعريف/الجنس، التصريف، الجمع، وسياق الاستخدام الظاهر. |
-| \`verb-frames.csv\` | ${frameRows.length} | مراجعة إطار الفعل/حرف الجر والحالة المكتوبة والمثال. عمود الإشارات الآلية قرينة جرد فقط، لا تصديق للحالة. |
+| \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
+| \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | حسم المرشحات غير المغطاة: هل تحتاج إلى سجل مؤلف أم هي إشارة سياقية/استخراج خاطئ؟ |
-| \`structural-exclusions.csv\` | ${exclusionRows.length} | مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. تبقى جميعها pending حتى يوقّع مراجع مستقل. |
+| \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. تبقى جميعها pending حتى يوقّع مراجع مستقل. |
 
-مصادر السياق مسارات ونصوص قصيرة مختارة آليًا من السجل؛ افتح الدرس/المصدر كاملًا عند المراجعة. لا تستخدم المطابقة الآلية بديلًا عن الحكم اللغوي، ولا تخترع صيغة أو حالة غير مثبتة. ملف الإطارات يعرض جميع المراجع المؤلفة الـ134؛ ولا يغيّر معيار P0-99 الأصلي: مراجعة جودة الإطارات الـ126 وقرار مستقل للاستبعادات الثمانية وفق P0_AUDIT.md.
+افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md.
 
 ## بروتوكول التوقيع
 
@@ -197,6 +243,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
     { path: "reports/lexical-review-packet/README.md", content: readme },
     { path: "reports/lexical-review-packet/noun-anchors.csv", content: csv(nounHeaders, nounRows) },
     { path: "reports/lexical-review-packet/verb-frames.csv", content: csv(frameHeaders, frameRows) },
+    { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: csv(qualityFrameHeaders, qualityFrameRows) },
     { path: "reports/lexical-review-packet/unresolved-candidates.csv", content: csv(candidateHeaders, [...nounCandidates, ...frameCandidates]) },
     { path: "reports/lexical-review-packet/structural-exclusions.csv", content: csv(exclusionHeaders, exclusionRows) },
   ];

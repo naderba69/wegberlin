@@ -129,6 +129,7 @@ const dailyFocusAdr=read("docs/adr/ADR-058-guidance-focus-tools-and-level-backup
 const offlineRecoveryAdr=read("docs/adr/ADR-049-partial-export-offline-resume-and-js-budgets.md");
 const lexicalTargetGapSource = read("src/core/content-validation/lexical-target-gap.ts");
 const lexicalTargetGapTest = read("tests/unit/lexical-target-gap.test.ts");
+const lexicalFrameQualityWorklist = read("reports/lexical-review-packet/frame-quality-targets.csv");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -717,6 +718,9 @@ const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1297 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
 if (lexicalGaps?.nounSummary?.totalCandidates !== 4873 || lexicalGaps?.nounSummary?.covered !== 1381 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3403) fail("noun target-gap counters drifted");
 if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1256 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 4 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1118 || lexicalGaps?.exclusionDecisionCount !== 8 || lexicalGaps?.pendingIndependentExclusionReview !== 8 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
+if (lexicalFrameQualityWorklistLines.length !== 127 || !lexicalFrameQualityWorklistLines[0].includes("reviewScope") || !lexicalFrameQualityWorklistLines.some((line) => line.includes("P0-99-original-126-quality-target"))) fail("P0-99 original 126-frame quality worklist drifted");
+if (!prompt.includes("frame-quality-targets.csv") || !prompt.includes("25/30/31/40")) fail("continuation handoff does not preserve the original 126-frame P0-99 scope");
 for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCoverageReport, lexicalTargetGapReport]) requireText(report, academicAudit.contentSha256, "generated academic report hash");
 for (const text of ["4,345", "2,805", "384", "389/389", "4,921", "1,382 covered", "89 pending-human", "3,450 context-only", "134 covered", "4 unclassified", "1,131 not-target"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["LEXICAL_TARGET_AUDIT_VERSION", "pending-human", "Sentence-initial capitalization alone is never used"]) requireText(lexicalTargetGapSource, text, "lexical target-gap source");

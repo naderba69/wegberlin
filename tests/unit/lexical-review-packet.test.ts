@@ -75,6 +75,33 @@ describe("unsigned independent German lexical review packet", () => {
     assertBlankSignatures(frameRows);
   });
 
+  it("separates the original 126-frame quality target worklist from 134 context references", () => {
+    const references = parseCsv(byPath.get("reports/lexical-review-packet/verb-frames.csv")!);
+    const targets = parseCsv(byPath.get("reports/lexical-review-packet/frame-quality-targets.csv")!);
+    const targetIds = targets.slice(1).map((row) => row[1]);
+    const expectedIds = verbPrepositionFrames
+      .filter((entry) => {
+        const level = entry.lessonId.slice(0, 2).toLocaleUpperCase("en-US");
+        const lessonNumber = Number(entry.lessonId.split("-")[1]);
+        return ["A1", "A2", "B1"].includes(level) || (level === "B2" && Number.isInteger(lessonNumber) && lessonNumber >= 1 && lessonNumber <= 20);
+      })
+      .map((entry) => entry.id);
+    const countsByLevel = Object.fromEntries(["A1", "A2", "B1", "B2"].map((level) => [
+      level,
+      targets.slice(1).filter((row) => row[2] === level).length,
+    ]));
+
+    expect(references).toHaveLength(135);
+    expect(targets).toHaveLength(127);
+    expect(targets[0][0]).toBe("reviewScope");
+    expect(targets.slice(1).every((row) => row[0] === "P0-99-original-126-quality-target")).toBe(true);
+    expect(new Set(targetIds)).toEqual(new Set(expectedIds));
+    expect(new Set(targetIds).size).toBe(126);
+    expect(countsByLevel).toEqual({ A1: 25, A2: 30, B1: 31, B2: 40 });
+    expect(targets.slice(1).every((row) => !/^b2-(2[1-4])-/u.test(row[1]))).toBe(true);
+    assertBlankSignatures(targets);
+  });
+
   it("exposes exactly the unresolved inventory and signed-pending exclusions without deciding them", () => {
     const candidates = parseCsv(byPath.get("reports/lexical-review-packet/unresolved-candidates.csv")!);
     const exclusions = parseCsv(byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!);
@@ -93,7 +120,9 @@ describe("unsigned independent German lexical review packet", () => {
     const readme = byPath.get("reports/lexical-review-packet/README.md")!;
     expect(readme).toContain("ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد");
     expect(readme).toContain("لا يغلق وجود هذه الحزمة P0-98 أو P0-99");
-    expect(readme).toContain("مراجعة جودة الإطارات الـ126");
+    expect(readme).toContain("frame-quality-targets.csv");
+    expect(readme).toContain("مراجعة جودة صفوف");
+    expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");
     expect(readme).toContain("test-content-sha256");
   });
 
@@ -105,7 +134,10 @@ describe("unsigned independent German lexical review packet", () => {
       contentHash: "test",
     });
     const rows = parseCsv(seeded.find((artifact) => artifact.path.endsWith("noun-anchors.csv"))!.content);
+    const emptyQualityTargets = parseCsv(seeded.find((artifact) => artifact.path.endsWith("frame-quality-targets.csv"))!.content);
     expect(rows[1][3]).toBe("'=1+1");
     expect(rows[1].length).toBe(rows[0].length);
+    expect(emptyQualityTargets).toHaveLength(1);
+    expect(emptyQualityTargets[0][0]).toBe("reviewScope");
   });
 });

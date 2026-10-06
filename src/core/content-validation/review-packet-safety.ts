@@ -10,6 +10,15 @@ const REVIEW_SIGNATURE_FIELDS = ["decision", "reviewerName", "reviewDate", "note
 const GENERATED_README_HEADER = "# حزمة المراجعة البشرية المستقلة — Der Weg nach Berlin";
 const GENERATED_B2_HEADER = "# قائمة فحص دروس B2 — يملؤها مراجع بشري مسمّى (لا يملؤها السكربت)";
 
+export function reviewCsvOverwriteBlocker(content: string, fields: readonly string[]) {
+  try {
+    return hasNonEmptyCsvFields(content, fields) ? "contains a decision, reviewer identity, date, or note" : null;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return `cannot be safely inspected (${message})`;
+  }
+}
+
 function refuseReplacement(reason: string): never {
   throw new Error(`Refusing to replace reports/review-packet: ${reason} Preserve reviewer work before regenerating.`);
 }
@@ -48,14 +57,8 @@ export function assertReviewPacketSafeToReplace(entries: readonly ExistingReview
     }
 
     if (/^review-sheet-\d+\.csv$/u.test(entry.name)) {
-      let hasReviewerInput: boolean;
-      try {
-        hasReviewerInput = hasNonEmptyCsvFields(entry.content, REVIEW_SIGNATURE_FIELDS);
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        refuseReplacement(`${entry.name} cannot be safely inspected (${message})`);
-      }
-      if (hasReviewerInput) refuseReplacement(`${entry.name} contains a decision, reviewer identity, date, or note`);
+      const blocker = reviewCsvOverwriteBlocker(entry.content, REVIEW_SIGNATURE_FIELDS);
+      if (blocker) refuseReplacement(`${entry.name} ${blocker}`);
       continue;
     }
 

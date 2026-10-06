@@ -129,6 +129,7 @@ const dailyFocusAdr=read("docs/adr/ADR-058-guidance-focus-tools-and-level-backup
 const offlineRecoveryAdr=read("docs/adr/ADR-049-partial-export-offline-resume-and-js-budgets.md");
 const lexicalTargetGapSource = read("src/core/content-validation/lexical-target-gap.ts");
 const lexicalTargetGapTest = read("tests/unit/lexical-target-gap.test.ts");
+const academicAuditGenerator = read("scripts/generate-academic-audit.ts");
 const lexicalFrameQualityWorklist = read("reports/lexical-review-packet/frame-quality-targets.csv");
 const lexicalNounReviewWorklist = read("reports/lexical-review-packet/noun-anchors.csv");
 const reviewPacketCsvGenerator = read("scripts/generate-human-review-packet.ts");
@@ -733,7 +734,10 @@ const reviewPacketPreflightPosition = reviewPacketCsvGenerator.indexOf("await pr
 const reviewPacketRemovalPosition = reviewPacketCsvGenerator.indexOf("await rm(OUT, { recursive: true, force: true })");
 if (!reviewPacketCsvGenerator.includes("assertReviewPacketSafeToReplace") || reviewPacketPreflightPosition < 0 || reviewPacketRemovalPosition <= reviewPacketPreflightPosition) fail("human-review packet must preserve reviewer inputs before destructive regeneration");
 for (const text of ["decision", "reviewerName", "reviewDate", "note", "expected 24 B2 checklist rows", "unrecognized file"]) requireText(reviewPacketSafetySource, text, "human-review packet overwrite protection");
-for (const text of ["signed review field", "filled B2 decision checklist", "unknown files", "incomplete checklist"]) requireText(reviewPacketSafetyTest, text, "human-review packet overwrite protection tests");
+for (const text of ["signed review field", "filled B2 decision checklist", "unknown files", "incomplete checklist", "blocks regeneration of the P0 lexical packet"]) requireText(reviewPacketSafetyTest, text, "human-review packet overwrite protection tests");
+const lexicalReviewPreflightPosition = academicAuditGenerator.indexOf("await protectLexicalReviewInputs()");
+const academicWritePosition = academicAuditGenerator.indexOf("for (const [file, content] of outputs)");
+if (!academicAuditGenerator.includes("reviewCsvOverwriteBlocker") || lexicalReviewPreflightPosition < 0 || academicWritePosition <= lexicalReviewPreflightPosition) fail("academic audit must preserve lexical reviewer inputs before writing generated packets");
 for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCoverageReport, lexicalTargetGapReport]) requireText(report, academicAudit.contentSha256, "generated academic report hash");
 for (const text of ["4,345", "2,805", "384", "389/389", "4,921", "1,382 covered", "89 pending-human", "3,450 context-only", "134 covered", "4 unclassified", "1,131 not-target"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["LEXICAL_TARGET_AUDIT_VERSION", "pending-human", "Sentence-initial capitalization alone is never used"]) requireText(lexicalTargetGapSource, text, "lexical target-gap source");

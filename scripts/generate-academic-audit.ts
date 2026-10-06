@@ -11,6 +11,7 @@ import {
 } from "../src/core/content-validation/lexical-review-packet";
 import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
+import { reviewCsvOverwriteBlocker } from "../src/core/content-validation/review-packet-safety";
 
 const AUDIT_VERSION = "academic-governance-v1";
 const AUDIT_DATE = "2026-09-05";
@@ -249,7 +250,26 @@ const outputs = new Map<string, string>([
   ...lexicalReviewPacketArtifacts.map(({ path: artifactPath, content }) => [artifactPath, content] as [string, string]),
 ]);
 
+async function protectLexicalReviewInputs() {
+  const signatureFields = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"];
+  for (const file of outputs.keys()) {
+    if (!file.startsWith("reports/lexical-review-packet/") || !file.endsWith(".csv")) continue;
+    let existing: string;
+    try {
+      existing = await readFile(file, "utf8");
+    } catch (error) {
+      if (error instanceof Error && "code" in error && error.code === "ENOENT") continue;
+      throw error;
+    }
+    const blocker = reviewCsvOverwriteBlocker(existing, signatureFields);
+    if (blocker) {
+      throw new Error(`Refusing to overwrite ${file}: ${blocker}. Preserve the reviewer copy before regenerating the unsigned packet.`);
+    }
+  }
+}
+
 if (writeMode) {
+  await protectLexicalReviewInputs();
   for (const [file, content] of outputs) {
     await mkdir(path.dirname(file), { recursive: true });
     await writeFile(file, content);

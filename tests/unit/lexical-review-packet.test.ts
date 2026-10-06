@@ -9,6 +9,7 @@ import {
   ORIGINAL_P098_NOUN_TARGET_COUNT,
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
+  P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
 } from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
 
@@ -132,6 +133,9 @@ describe("unsigned independent German lexical review packet", () => {
     expect(candidates.slice(1).filter((row) => row[1] === "verb-preposition-frame")).toHaveLength(4);
     expect(candidates.slice(1).every((row) => row[5] === "pending-human")).toBe(true);
     expect(exclusions).toHaveLength(9);
+    expect(exclusions[0]).toContain(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+    const evidenceNameIndex = exclusions[0].indexOf(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+    expect(exclusions.slice(1).every((row) => row[evidenceNameIndex] === "")).toBe(true);
     expect(exclusions.slice(1).every((row) => row[6] === "authored-review-pending")).toBe(true);
     assertBlankSignatures(candidates);
     assertBlankSignatures(exclusions);
@@ -149,6 +153,8 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("frame-quality-targets.csv");
     expect(readme).toContain("مراجعة جودة صفوف");
     expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");
+    expect(readme).toContain("reviewEvidenceName");
+    expect(readme).toContain("يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126");
     expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
   });

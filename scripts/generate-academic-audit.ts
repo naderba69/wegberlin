@@ -8,6 +8,7 @@ import {
   assertOriginalP098NounReviewScope,
   assertOriginalP099QualityTargetDistribution,
   buildLexicalReviewPacketArtifacts,
+  protectedLexicalReviewFields,
 } from "../src/core/content-validation/lexical-review-packet";
 import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
@@ -251,7 +252,6 @@ const outputs = new Map<string, string>([
 ]);
 
 async function protectLexicalReviewInputs() {
-  const signatureFields = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"];
   for (const file of outputs.keys()) {
     if (!file.startsWith("reports/lexical-review-packet/") || !file.endsWith(".csv")) continue;
     let existing: string;
@@ -261,7 +261,7 @@ async function protectLexicalReviewInputs() {
       if (error instanceof Error && "code" in error && error.code === "ENOENT") continue;
       throw error;
     }
-    const blocker = reviewCsvOverwriteBlocker(existing, signatureFields);
+    const blocker = reviewCsvOverwriteBlocker(existing, protectedLexicalReviewFields(file));
     if (blocker) {
       throw new Error(`Refusing to overwrite ${file}: ${blocker}. Preserve the reviewer copy before regenerating the unsigned packet.`);
     }

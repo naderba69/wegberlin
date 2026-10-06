@@ -7,6 +7,14 @@ type ReviewArtifact = { path: string; content: string };
 type EvidenceSource = { path: string; stage: string; surface: string; strength: "target" | "context" | "registry" };
 
 const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] as const;
+export const P099_EXCLUSION_EVIDENCE_NAME_COLUMN = "reviewEvidenceName";
+
+export function protectedLexicalReviewFields(artifactPath: string): readonly string[] {
+  if (artifactPath === "reports/lexical-review-packet/structural-exclusions.csv") {
+    return [P099_EXCLUSION_EVIDENCE_NAME_COLUMN, ...REVIEW_COLUMNS];
+  }
+  return REVIEW_COLUMNS;
+}
 
 function shortText(value: string, max = 220) {
   const normalized = value.replace(/\s+/g, " ").trim();
@@ -209,11 +217,11 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
   const exclusionHeaders = [
     "decisionId", "lessonId", "detectedInfinitive", "detectedPreposition", "authoredReason", "authoredExplanationAr",
-    "reviewStatus", "policyVersion", "detectorEvidence", ...REVIEW_COLUMNS,
+    "reviewStatus", "policyVersion", "detectorEvidence", P099_EXCLUSION_EVIDENCE_NAME_COLUMN, ...REVIEW_COLUMNS,
   ];
   const exclusionRows = audit.exclusionDecisions.map((decision) => {
     const evidence = audit.verbFrameRows.find((row) => row.exclusionDecision?.id === decision.id)?.sources ?? [];
-    return appendBlankReviewColumns([
+    return [
       decision.id,
       decision.lessonId,
       decision.normalizedVerb,
@@ -223,7 +231,9 @@ export function buildLexicalReviewPacketArtifacts(input: {
       decision.reviewStatus,
       decision.policyVersion,
       reviewEvidence(evidence, ["target", "context"], 5),
-    ]);
+      "",
+      ...REVIEW_COLUMNS.map(() => ""),
+    ];
   });
 
   const readme = `# حزمة تجهيز المراجعة الألمانية المستقلة — P0-98 / P0-99
@@ -238,15 +248,16 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |
-| \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. تبقى جميعها pending حتى يوقّع مراجع مستقل. |
+| \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. عمود \`reviewEvidenceName\` فارغ لتسمية دليل المراجع لكل استبعاد؛ تبقى جميعها pending حتى يوقّع مراجع مستقل. |
 
 افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. في P0-98، راجع سجلات الاسم الـ1,297 في \`noun-anchors.csv\` وفرز مرشحات الاسم الـ89 المنفصلة في \`unresolved-candidates.csv\`؛ حالة الفرز الآلية ليست قرارًا بشريًا. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99، ويوقف إعادة التوليد عند الانحراف؛ هذا فحص نطاق آلي لا مراجعة بشرية.
 
 ## بروتوكول التوقيع
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
+- في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
-- يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
+- يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
 - يجب أن يراجع شخص مستقل مؤهل في الألمانية البيانات والسياق، ويسجل اسمه وصفته/مؤهله وتاريخ المراجعة. فسّر أي تعديل أو استبعاد في الملاحظة.
 - لا يغلق وجود هذه الحزمة P0-98 أو P0-99. يظلان جزئيين حتى تُستكمل المراجعة المستقلة وتُسجّل قراراتها صراحةً في السجل الحاكم.
 

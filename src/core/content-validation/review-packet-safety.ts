@@ -12,7 +12,7 @@ const GENERATED_B2_HEADER = "# قائمة فحص دروس B2 — يملؤها م
 
 export function reviewCsvOverwriteBlocker(content: string, fields: readonly string[]) {
   try {
-    return hasNonEmptyCsvFields(content, fields) ? "contains a decision, reviewer identity, date, or note" : null;
+    return hasNonEmptyCsvFields(content, fields) ? "contains a decision, reviewer identity, named evidence, date, or note" : null;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     return `cannot be safely inspected (${message})`;

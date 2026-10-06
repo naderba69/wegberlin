@@ -2,9 +2,12 @@
 import { describe, expect, it } from "vitest";
 import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import {
+  assertOriginalP098NounReviewScope,
   assertOriginalP099QualityTargetDistribution,
   buildLexicalReviewPacketArtifacts,
   frameTargetsByLevel,
+  ORIGINAL_P098_NOUN_TARGET_COUNT,
+  ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
 } from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
@@ -69,13 +72,22 @@ describe("unsigned independent German lexical review packet", () => {
     const nounRows = parseCsv(byPath.get("reports/lexical-review-packet/noun-anchors.csv")!);
     const frameRows = parseCsv(byPath.get("reports/lexical-review-packet/verb-frames.csv")!);
 
+    const nounAnchorIndex = nounRows[0].indexOf("anchorId");
+    const targetReferenceIndex = nounRows[0].indexOf("targetOrRegistryReferences");
     expect(nounRows).toHaveLength(1298);
     expect(frameRows).toHaveLength(135);
-    expect(new Set(nounRows.slice(1).map((row) => row[0]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
+    expect(nounRows[0][0]).toBe("reviewScope");
+    expect(new Set(nounRows.slice(1).map((row) => row[0]))).toEqual(new Set(["P0-98-original-1297-noun-target"]));
+    expect(new Set(nounRows.slice(1).map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
     expect(new Set(frameRows.slice(1).map((row) => row[0]))).toEqual(new Set(verbPrepositionFrames.map((entry) => entry.id)));
     expect(nounRows[0]).toContain("targetOrRegistryReferences");
     expect(frameRows[0]).toContain("machineObservedCaseSignalsNotValidation");
-    expect(nounRows.slice(1).every((row) => row[13].length > 0)).toBe(true);
+    expect(nounRows.slice(1).every((row) => row[targetReferenceIndex].length > 0)).toBe(true);
+    expect(ORIGINAL_P098_NOUN_TARGET_COUNT).toBe(1297);
+    expect(ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT).toBe(89);
+    expect(assertOriginalP098NounReviewScope(nounGrammarEntries, 89)).toBeUndefined();
+    expect(() => assertOriginalP098NounReviewScope(nounGrammarEntries.slice(1), 89)).toThrow("Original P0-98 noun scope drifted");
+    expect(() => assertOriginalP098NounReviewScope(nounGrammarEntries, 88)).toThrow("Original P0-98 noun scope drifted");
     assertBlankSignatures(nounRows);
     assertBlankSignatures(frameRows);
   });
@@ -129,10 +141,12 @@ describe("unsigned independent German lexical review packet", () => {
     const readme = byPath.get("reports/lexical-review-packet/README.md")!;
     expect(readme).toContain("ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد");
     expect(readme).toContain("لا يغلق وجود هذه الحزمة P0-98 أو P0-99");
+    expect(readme).toContain("ورقة عمل P0-98 للنطاق الأصلي");
+    expect(readme).toContain("في P0-98، راجع سجلات الاسم الـ1,297");
     expect(readme).toContain("frame-quality-targets.csv");
     expect(readme).toContain("مراجعة جودة صفوف");
     expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");
-    expect(readme).toContain("يحرس `content:audit` التوزيع المرجعي ويوقف إعادة التوليد عند الانحراف");
+    expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
   });
 
@@ -145,7 +159,8 @@ describe("unsigned independent German lexical review packet", () => {
     });
     const rows = parseCsv(seeded.find((artifact) => artifact.path.endsWith("noun-anchors.csv"))!.content);
     const emptyQualityTargets = parseCsv(seeded.find((artifact) => artifact.path.endsWith("frame-quality-targets.csv"))!.content);
-    expect(rows[1][3]).toBe("'=1+1");
+    expect(rows[1][rows[0].indexOf("lemma")]).toBe("'=1+1");
+    expect(rows[1][0]).toBe("P0-98-original-1297-noun-target");
     expect(rows[1].length).toBe(rows[0].length);
     expect(emptyQualityTargets).toHaveLength(1);
     expect(emptyQualityTargets[0][0]).toBe("reviewScope");

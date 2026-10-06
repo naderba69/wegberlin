@@ -5,6 +5,7 @@ import { buildAnswerIntegrityAudit } from "../src/core/content-validation/answer
 import { buildObjectiveCoverageReport } from "../src/core/content-validation/objective-coverage";
 import { buildLexicalTargetGapAudit } from "../src/core/content-validation/lexical-target-gap";
 import {
+  assertOriginalP098NounReviewScope,
   assertOriginalP099QualityTargetDistribution,
   buildLexicalReviewPacketArtifacts,
 } from "../src/core/content-validation/lexical-review-packet";
@@ -23,6 +24,10 @@ const lexical = buildLexicalTargetGapAudit();
 if (!answer.ok) throw new Error(`Answer integrity audit failed:\n${answer.issues.slice(0, 100).join("\n")}`);
 if (!coverage.ok) throw new Error(`Objective coverage audit failed:\n${coverage.issues.slice(0, 100).join("\n")}`);
 if (lexical.issues.length) throw new Error(`Lexical target decision audit failed:\n${lexical.issues.join("\n")}`);
+assertOriginalP098NounReviewScope(
+  nounGrammarEntries,
+  lexical.nounRows.filter((row) => row.status === "pending-human").length,
+);
 assertOriginalP099QualityTargetDistribution(verbPrepositionFrames);
 
 const payloadWithoutHash = {

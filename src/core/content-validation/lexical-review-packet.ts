@@ -49,6 +49,16 @@ function levelFromLessonId(lessonId: string) {
   return lessonId.slice(0, 2).toLocaleUpperCase("en-US");
 }
 
+export const ORIGINAL_P098_NOUN_TARGET_COUNT = 1297;
+export const ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT = 89;
+const ORIGINAL_P098_NOUN_SCOPE = "P0-98-original-1297-noun-target";
+
+export function assertOriginalP098NounReviewScope(nounEntries: readonly NounGrammarEntry[], pendingCandidateCount: number) {
+  if (nounEntries.length !== ORIGINAL_P098_NOUN_TARGET_COUNT || pendingCandidateCount !== ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT) {
+    throw new Error(`Original P0-98 noun scope drifted (expected ${ORIGINAL_P098_NOUN_TARGET_COUNT} anchors / ${ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT} pending candidates; found ${nounEntries.length} / ${pendingCandidateCount}). Review the historical scope before regenerating the packet.`);
+  }
+}
+
 export const ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL = { A1: 25, A2: 30, B1: 31, B2: 40 } as const;
 const ORIGINAL_P099_QUALITY_SCOPE = "P0-99-original-126-quality-target";
 
@@ -99,12 +109,13 @@ export function buildLexicalReviewPacketArtifacts(input: {
   const { audit, nounEntries, verbFrames, contentHash } = input;
 
   const nounHeaders = [
-    "anchorId", "level", "lessonId", "lemma", "article", "gender", "nominative", "accusative", "dative", "genitive",
+    "reviewScope", "anchorId", "level", "lessonId", "lemma", "article", "gender", "nominative", "accusative", "dative", "genitive",
     "plural", "dativePlural", "sourceVersion", "targetOrRegistryReferences", "contextReferences", ...REVIEW_COLUMNS,
   ];
   const nounRows = nounEntries.map((entry) => {
     const sources = sourcesForAnchor(audit.nounRows, entry.id);
     return appendBlankReviewColumns([
+      ORIGINAL_P098_NOUN_SCOPE,
       entry.id,
       levelFromLessonId(entry.lessonId),
       entry.lessonId,
@@ -232,13 +243,13 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 | الملف | الصفوف (من دون الرأس) | الغرض |
 |---|---:|---|
-| \`noun-anchors.csv\` | ${nounRows.length} | مراجعة سجلات الاسم المؤلفة: أداة التعريف/الجنس، التصريف، الجمع، وسياق الاستخدام الظاهر. |
+| \`noun-anchors.csv\` | ${nounRows.length} | ورقة عمل P0-98 للنطاق الأصلي: سجلات الاسم المؤلفة الـ1,297؛ راجع أداة التعريف/الجنس، التصريف، الجمع، والسياق الظاهر. |
 | \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
-| \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | حسم المرشحات غير المغطاة: هل تحتاج إلى سجل مؤلف أم هي إشارة سياقية/استخراج خاطئ؟ |
+| \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |
 | \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. تبقى جميعها pending حتى يوقّع مراجع مستقل. |
 
-افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` التوزيع المرجعي ويوقف إعادة التوليد عند الانحراف؛ وهذا فحص نطاق آلي لا مراجعة بشرية.
+افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. في P0-98، راجع سجلات الاسم الـ1,297 في \`noun-anchors.csv\` وفرز مرشحات الاسم الـ89 المنفصلة في \`unresolved-candidates.csv\`؛ حالة الفرز الآلية ليست قرارًا بشريًا. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99، ويوقف إعادة التوليد عند الانحراف؛ هذا فحص نطاق آلي لا مراجعة بشرية.
 
 ## بروتوكول التوقيع
 

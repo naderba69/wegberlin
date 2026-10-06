@@ -1,11 +1,26 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { encodeCsvCell, encodeCsvRow, serializeCsv } from "@/core/content-validation/safe-csv";
+import { encodeCsvCell, encodeCsvRow, hasNonEmptyCsvFields, parseCsv, serializeCsv } from "@/core/content-validation/safe-csv";
 
 describe("spreadsheet-safe CSV serialization", () => {
   it("quotes delimiters, quotes, missing values, and embedded line breaks", () => {
     expect(encodeCsvRow([null, 'a,"b"', "first\nsecond\tcolumn"])).toBe('"","a,""b""","first second column"');
     expect(serializeCsv(["header"], [["value"]])).toBe('"header"\n"value"\n');
+  });
+
+  it("parses escaped quotes, CRLF rows, and quoted multiline cells", () => {
+    expect(parseCsv('"id","note"\r\n"1","He said ""ja""."\r\n"2","line one\nline two"\r\n')).toEqual([
+      ["id", "note"],
+      ["1", 'He said "ja".'],
+      ["2", "line one\nline two"],
+    ]);
+  });
+
+  it("detects reviewer data by named columns and rejects malformed rows", () => {
+    const headers = ["id", "decision", "reviewerName", "reviewDate", "note"];
+    expect(hasNonEmptyCsvFields(serializeCsv(headers, [["1", "", "", "", ""]]), ["decision", "reviewerName", "reviewDate", "note"])).toBe(false);
+    expect(hasNonEmptyCsvFields(serializeCsv(headers, [["1", "accept", "", "", ""]]), ["decision", "reviewerName", "reviewDate", "note"])).toBe(true);
+    expect(() => hasNonEmptyCsvFields('"id","decision"\n"1"\n', ["decision"])).toThrow("does not match the header width");
   });
 
   it("neutralizes formula prefixes, including control and Unicode whitespace prefixes", () => {

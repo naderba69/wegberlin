@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile, mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { encodeCsvRow } from "../src/core/content-validation/safe-csv";
+import { assertReviewPacketSafeToReplace } from "../src/core/content-validation/review-packet-safety";
 
 /**
  * Builds the human review packet: every governed content record with its actual text,
@@ -44,6 +45,21 @@ const flagsFor = (lessonId: string) => {
 const levelOf = (id: string) => (/^a1/.test(id) ? "A1" : /^a2/.test(id) ? "A2" : /^b1/.test(id) ? "B1" : /^b2/.test(id) ? "B2" : "");
 const csv = (cells: string[]) => encodeCsvRow(cells);
 
+async function protectExistingReviewPacket() {
+  const entries = await readdir(OUT, { withFileTypes: true }).catch((error: unknown) => {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") return null;
+    throw error;
+  });
+  if (!entries) return;
+  const existingFiles = await Promise.all(entries.map(async (entry) => ({
+    name: entry.name,
+    isFile: entry.isFile(),
+    content: entry.isFile() ? await readFile(join(OUT, entry.name), "utf8") : "",
+  })));
+  assertReviewPacketSafeToReplace(existingFiles);
+}
+
+await protectExistingReviewPacket();
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });
 
@@ -99,6 +115,7 @@ await writeFile(join(OUT, "README.md"), [
   "- عدد السجلات المحكومة: **3,277** موزّعة على `" + String(sheetCount) + "` أوراق CSV بـ" + SHEET_SIZE + " سطرًا (آخر ورقة أقصر).",
   "- حالة كل سجل اليوم: `automated-validated-independent-review-pending` — أي أن البوابات الآلية تحققت من البنية، ولم يوقّع إنسان على الوصف/المستوى/الحقوق.",
   "- أعمدة القرار (`decision`, `reviewerName`, `reviewDate`, `note`) **فارغة عمدًا**: لا يملؤها سكربت ولا نموذج، والمقبول الوحيد هو توقيع إنسان مسمّى.",
+  "- قبل إعادة التوليد، يرفض السكربت مسح أي قرار/هوية/تاريخ/ملاحظة في أوراق CSV، أو قرار في قائمة B2، أو ملف غير معروف؛ الحارس يمنع الفقد فقط ولا يثبت مراجعة.",
   "- الورقة `b2-lesson-checklist.md` تبدأ من حيث ينتهي القياس الآلي: 24 درس B2 مع أرقام النموذج/الهدف/الاستماع لكل درس.",
   "",
   `## التوزيع حسب النطاق`, "", "| النطاق | العدد |", "|---|---:|",

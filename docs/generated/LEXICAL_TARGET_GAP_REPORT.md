@@ -146,4 +146,4 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 
 All 8 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
 
-The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under `lexicalTargetGaps` in `reports/academic-content-audit.json`.
+The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under `lexicalTargetGaps` in `reports/academic-content-audit.json`. A deterministic unsigned reviewer packet (1,297 noun anchors, 134 frames, 93 unresolved candidates, 8 exclusions) is generated at `reports/lexical-review-packet/`; its blank signature fields are not evidence of review.

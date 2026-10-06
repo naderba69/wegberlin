@@ -1,6 +1,6 @@
 # Project Status
 
-Sync batch: v183 · 2026-10-05 · P2-276 adds three authored, explicitly hypothetical guidance paths to `/practice`; no testimonials, measured outcomes, profile fields, persistence, or learner-state changes. Active/staging caches are v183 with v182 retained for rollback. P2-276's local checks are recorded below. Quality Gate run 37377109271 on head 15e457c passed `check` and the full desktop/mobile E2E suite; Vercel Preview also passed.
+Sync batch: v183 · 2026-10-06 · Prepared an unsigned, deterministic human-review packet for P0-98/99 (1,297 noun anchors, 134 verb-frame records, 93 unresolved candidates, 8 exclusions); no review decision or P0 closure was recorded. This is maintainer/reviewer support only: no product, learner state, UI, or Offline cache changes; caches remain v183/rollback v182. P2-276 remains as recorded below. Latest Quality Gate run 37379026184 on head 975f991 passed `check`, full desktop/mobile E2E, and Vercel Preview; it predates this packet-only change.
 
 ## P2-276 — مسارات إرشادية افتراضية بلا شهادات — 2026-10-05
 
@@ -10,6 +10,13 @@ Sync batch: v183 · 2026-10-05 · P2-276 adds three authored, explicitly hypothe
 - Unit/Integrity tests: 1,355/1,355 in 200/200 files (`npm test`, local v183 run; no threshold softened or test file disabled).
 - **البناء المقاس**: 325/325 صفحة static؛ تدقيق تباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق (586 استثناء خلفية متدرجة/صورية)؛ JS 128 chunks / 2,017,731 gzip / max 262,117؛ صوت 544 ملفًا / 52,943,843 بايت؛ منهج 1,117,421 gzip.
 - **Offline**: يظل البيان 320/320 مسارًا، وكل رابط خطوة موجود في الحزم الخمس؛ ارتفع الكاش النشط/التجهيزي إلى v183 وحُفظ v182 للرجوع. بصمة الحزمة `5c3bfded5f54`، full 6,007,413 بايت gzip تقديري؛ أحجام الحزم a1/a2/b1/b2/full = 2,721,945 / 2,834,289 / 2,859,688 / 4,283,639 / 6,007,413. لا تعديل للمنهج أو الصوت أو مخطط حالة المتعلم.
+
+## تجهيز مراجعة P0-98/99 — 2026-10-06 (لا إغلاق بشري)
+
+- أنشأ `npm run content:audit:write` حزمة CSV حتمية في `reports/lexical-review-packet/`: 1,297 سجل اسم، 134 سجل إطار فعل/حرف جر، 89 مرشح اسم + 4 مرشحات إطار، و8 استبعادات بنيوية.
+- تتضمن الحقول المورفولوجية ومراجع سياق مقتطفة آليًا، مع حقول قرار/مراجع/تاريخ فارغة عمدًا. حارس CSV يعالج الاقتباس ويحيّد صيغ الجداول الحسابية. اختبارات الوحدة تتحقق من تغطية جميع المعرّفات، الأعداد، الفراغ، وحدود الادعاء؛ ويُفحص توليد الملفات ضمن `content:audit`.
+- **لا توجد مراجعة ألمانية فعلية أو توقيع أو تصحيح أو اعتماد**: يظل P0-98 وP0-99 جزئيين حتى مراجعة شخص مستقل مؤهل وتسجيل الاسم والتاريخ والقرارات وفق `P0_AUDIT.md`. الحزمة تجهيز فقط وليست دليلًا أو حالة تعلم.
+- لا تغيير لواجهة المتعلم أو بيانات المنهج أو الحزم/الكاش أو الحالة المخزنة. آخر Quality Gate سابق لهذه الدفعة: [37379026184](https://github.com/naderba69/wegberlin/actions/runs/37379026184) على `975f991`؛ فحص الدفعة الحالية محليًا: `npm run check` خرج 0 (ESLint وTypeScript، **1,359/1,359** اختبارًا عبر **201/201** ملفًا، فحوص السرية والمصادر وسير العمل والتسليم، وبناء الإنتاج). `npm run content:audit` و`npm run handoff:check` و4/4 اختبارات الحزمة المستهدفة نجحت. لا E2E محليًا: لم يتغير UX أو IndexedDB أو Offline؛ والاختبار البعيد للـhead الجديد ينتظر بعد Push.
 
 ## P2-352 — موجتا Shadowing للملاحظة الذاتية فقط — 2026-10-05 (v182، تاريخي)
 

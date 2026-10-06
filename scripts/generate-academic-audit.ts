@@ -4,6 +4,8 @@ import path from "node:path";
 import { buildAnswerIntegrityAudit } from "../src/core/content-validation/answer-integrity";
 import { buildObjectiveCoverageReport } from "../src/core/content-validation/objective-coverage";
 import { buildLexicalTargetGapAudit } from "../src/core/content-validation/lexical-target-gap";
+import { buildLexicalReviewPacketArtifacts } from "../src/core/content-validation/lexical-review-packet";
+import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
 
 const AUDIT_VERSION = "academic-governance-v1";
@@ -45,6 +47,12 @@ const payloadWithoutHash = {
 };
 const contentHash = createHash("sha256").update(JSON.stringify(payloadWithoutHash)).digest("hex");
 const machinePayload = { ...payloadWithoutHash, contentSha256: contentHash };
+const lexicalReviewPacketArtifacts = buildLexicalReviewPacketArtifacts({
+  audit: lexical,
+  nounEntries: nounGrammarEntries,
+  verbFrames: verbPrepositionFrames,
+  contentHash,
+});
 
 function md(value: string, max = 120) {
   const clean = value.replace(/\s+/g, " ").replaceAll("|", "\\|").trim();
@@ -220,7 +228,7 @@ ${frameExclusionRows}
 
 All ${lexical.pendingIndependentExclusionReview} exclusions remain \`authored-review-pending\`; zero unclassified rows does not mean independent German review is complete.
 
-The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under \`lexicalTargetGaps\` in \`reports/academic-content-audit.json\`.
+The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under \`lexicalTargetGaps\` in \`reports/academic-content-audit.json\`. A deterministic unsigned reviewer packet (1,297 noun anchors, 134 frames, 93 unresolved candidates, 8 exclusions) is generated at \`reports/lexical-review-packet/\`; its blank signature fields are not evidence of review.
 `;
 
 const outputs = new Map<string, string>([
@@ -229,6 +237,7 @@ const outputs = new Map<string, string>([
   ["docs/generated/OBJECTIVE_COVERAGE_REPORT.md", coverageReport],
   ["docs/generated/LEXICAL_TARGET_GAP_REPORT.md", lexicalReport],
   ["reports/academic-content-audit.json", `${JSON.stringify(machinePayload, null, 2)}\n`],
+  ...lexicalReviewPacketArtifacts.map(({ path: artifactPath, content }) => [artifactPath, content] as [string, string]),
 ]);
 
 if (writeMode) {

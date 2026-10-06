@@ -1,6 +1,7 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
 import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { serializeCsv } from "@/core/content-validation/safe-csv";
 import {
   assertOriginalP098NounReviewScope,
   assertOriginalP099QualityTargetDistribution,
@@ -10,6 +11,7 @@ import {
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
+  summarizeP099ExclusionEvidenceReferences,
 } from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
 
@@ -141,6 +143,54 @@ describe("unsigned independent German lexical review packet", () => {
     assertBlankSignatures(exclusions);
   });
 
+  it("summarizes reference-name presence without implying evidence verification or review", () => {
+    const artifactPath = "reports/lexical-review-packet/structural-exclusions.csv";
+    const csv = byPath.get(artifactPath)!;
+    const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
+    const blankInventory = summarizeP099ExclusionEvidenceReferences(csv, expectedDecisionIds);
+    expect(blankInventory).toEqual({
+      exclusionCount: 8,
+      namedReferenceCount: 0,
+      missingDecisionIds: expectedDecisionIds,
+      evidenceContentsInspected: false,
+      reviewDecisionCellsInspected: false,
+      p099ClosureAsserted: false,
+    });
+
+    const rows = parseCsv(csv);
+    const decisionIdIndex = rows[0].indexOf("decisionId");
+    const evidenceNameIndex = rows[0].indexOf(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+    const namedCsv = serializeCsv(rows[0], rows.slice(1).map((row, index) => {
+      const next = [...row];
+      next[evidenceNameIndex] = `test-only-reference-${index + 1}`;
+      return next;
+    }));
+    const namedInventory = summarizeP099ExclusionEvidenceReferences(namedCsv, expectedDecisionIds);
+    expect(namedInventory.namedReferenceCount).toBe(8);
+    expect(namedInventory.missingDecisionIds).toEqual([]);
+    expect(namedInventory.evidenceContentsInspected).toBe(false);
+    expect(namedInventory.reviewDecisionCellsInspected).toBe(false);
+    expect(namedInventory.p099ClosureAsserted).toBe(false);
+    expect(rows.slice(1).map((row) => row[decisionIdIndex])).toEqual(expectedDecisionIds);
+  });
+
+  it("fails closed if reference inventory rows or protected headings drift", () => {
+    const csv = byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!;
+    const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
+    const rows = parseCsv(csv);
+    const duplicatedEvidenceHeader = serializeCsv(
+      [...rows[0], P099_EXCLUSION_EVIDENCE_NAME_COLUMN],
+      rows.slice(1).map((row) => [...row, ""]),
+    );
+    const unknownDecisionId = serializeCsv(rows[0], rows.slice(1).map((row, index) => {
+      const next = [...row];
+      if (index === 0) next[0] = "unexpected-exclusion-id";
+      return next;
+    }));
+    expect(() => summarizeP099ExclusionEvidenceReferences(duplicatedEvidenceHeader, expectedDecisionIds)).toThrow("exactly one reviewEvidenceName column");
+    expect(() => summarizeP099ExclusionEvidenceReferences(unknownDecisionId, expectedDecisionIds)).toThrow("IDs do not match");
+  });
+
   it("states that the packet is unsigned and cannot close P0-98/P0-99", () => {
     const readme = byPath.get("reports/lexical-review-packet/README.md")!;
     expect(readme).toContain("ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد");
@@ -155,6 +205,8 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي");
     expect(readme).toContain("reviewEvidenceName");
     expect(readme).toContain("يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126");
+    expect(readme).toContain("npm run p099:evidence:status");
+    expect(readme).toContain("تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية");
     expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
   });

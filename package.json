@@ -20,6 +20,7 @@
     "secret:audit:history": "node scripts/audit-secrets.mjs --working-tree --history --require-history",
     "content:audit": "tsx scripts/generate-academic-audit.ts --check",
     "content:audit:write": "tsx scripts/generate-academic-audit.ts --write",
+    "p099:evidence:status": "tsx scripts/report-p099-exclusion-evidence-status.ts",
     "accepted:answers": "tsx scripts/generate-accepted-answer-hygiene-audit.ts --check",
     "accepted:answers:write": "tsx scripts/generate-accepted-answer-hygiene-audit.ts --write",
     "similarity:audit": "tsx scripts/generate-content-similarity-review-audit.ts --check",

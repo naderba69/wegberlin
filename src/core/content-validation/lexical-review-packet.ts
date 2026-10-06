@@ -1,6 +1,6 @@
 import type { NounGrammarEntry, VerbPrepositionFrame } from "@/types/lexical-grammar";
 import type { buildLexicalTargetGapAudit } from "./lexical-target-gap";
-import { serializeCsv } from "./safe-csv";
+import { parseCsv, serializeCsv } from "./safe-csv";
 
 type LexicalTargetAudit = ReturnType<typeof buildLexicalTargetGapAudit>;
 type ReviewArtifact = { path: string; content: string };
@@ -8,6 +8,63 @@ type EvidenceSource = { path: string; stage: string; surface: string; strength: 
 
 const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] as const;
 export const P099_EXCLUSION_EVIDENCE_NAME_COLUMN = "reviewEvidenceName";
+export const P099_STRUCTURAL_EXCLUSION_COUNT = 8;
+
+export type P099ExclusionEvidenceReferenceInventory = {
+  exclusionCount: number;
+  namedReferenceCount: number;
+  missingDecisionIds: string[];
+  evidenceContentsInspected: false;
+  reviewDecisionCellsInspected: false;
+  p099ClosureAsserted: false;
+};
+
+/** Counts named references only; it never verifies evidence or records a human review. */
+export function summarizeP099ExclusionEvidenceReferences(
+  content: string,
+  expectedDecisionIds: readonly string[],
+): P099ExclusionEvidenceReferenceInventory {
+  if (expectedDecisionIds.length !== P099_STRUCTURAL_EXCLUSION_COUNT || new Set(expectedDecisionIds).size !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 evidence inventory requires exactly ${P099_STRUCTURAL_EXCLUSION_COUNT} unique authored exclusion IDs.`);
+  }
+
+  const rows = parseCsv(content);
+  if (rows.length === 0) throw new Error("P0-99 evidence inventory CSV has no header row.");
+  const [header, ...dataRows] = rows;
+  const requiredColumnIndex = (columnName: string) => {
+    const indexes = header.flatMap((column, index) => column === columnName ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 evidence inventory requires exactly one ${columnName} column.`);
+    return indexes[0];
+  };
+  const decisionIdIndex = requiredColumnIndex("decisionId");
+  const evidenceNameIndex = requiredColumnIndex(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+  if (dataRows.length !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 evidence inventory expected ${expectedDecisionIds.length} exclusion rows; found ${dataRows.length}.`);
+  }
+  if (dataRows.some((row) => row.length !== header.length)) throw new Error("P0-99 evidence inventory contains a row with the wrong width.");
+
+  const referencesByDecision = new Map<string, string>();
+  for (const row of dataRows) {
+    const decisionId = row[decisionIdIndex].trim();
+    if (!decisionId || referencesByDecision.has(decisionId)) throw new Error("P0-99 evidence inventory contains a blank or duplicate exclusion ID.");
+    referencesByDecision.set(decisionId, row[evidenceNameIndex].trim());
+  }
+  const expectedIds = new Set(expectedDecisionIds);
+  if ([...referencesByDecision.keys()].some((decisionId) => !expectedIds.has(decisionId))
+    || expectedDecisionIds.some((decisionId) => !referencesByDecision.has(decisionId))) {
+    throw new Error("P0-99 evidence inventory IDs do not match the authored structural exclusions.");
+  }
+
+  const missingDecisionIds = expectedDecisionIds.filter((decisionId) => !referencesByDecision.get(decisionId));
+  return {
+    exclusionCount: expectedDecisionIds.length,
+    namedReferenceCount: expectedDecisionIds.length - missingDecisionIds.length,
+    missingDecisionIds,
+    evidenceContentsInspected: false,
+    reviewDecisionCellsInspected: false,
+    p099ClosureAsserted: false,
+  };
+}
 
 export function protectedLexicalReviewFields(artifactPath: string): readonly string[] {
   if (artifactPath === "reports/lexical-review-packet/structural-exclusions.csv") {
@@ -256,6 +313,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
 - يجب أن يراجع شخص مستقل مؤهل في الألمانية البيانات والسياق، ويسجل اسمه وصفته/مؤهله وتاريخ المراجعة. فسّر أي تعديل أو استبعاد في الملاحظة.

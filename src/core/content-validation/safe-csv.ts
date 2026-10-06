@@ -16,34 +16,72 @@ export function serializeCsv(headers: readonly unknown[], rows: readonly (readon
 }
 
 export function parseCsv(content: string) {
+  type State = "field-start" | "unquoted" | "quoted" | "after-quote";
+
   const rows: string[][] = [];
   let row: string[] = [];
   let cell = "";
-  let quoted = false;
+  let state: State = "field-start";
+
+  const finishField = () => {
+    row.push(cell);
+    cell = "";
+    state = "field-start";
+  };
+  const finishRow = () => {
+    finishField();
+    rows.push(row);
+    row = [];
+  };
 
   for (let index = 0; index < content.length; index += 1) {
     const character = content[index];
-    if (quoted && character === '"' && content[index + 1] === '"') {
-      cell += '"';
-      index += 1;
-    } else if (character === '"') {
-      quoted = !quoted;
-    } else if (!quoted && character === ",") {
-      row.push(cell);
-      cell = "";
-    } else if (!quoted && (character === "\n" || character === "\r")) {
-      row.push(cell);
-      rows.push(row);
-      row = [];
-      cell = "";
+    const isRecordBreak = character === "\n" || character === "\r";
+
+    if (state === "field-start") {
+      if (character === '"') {
+        state = "quoted";
+      } else if (character === ",") {
+        finishField();
+      } else if (isRecordBreak) {
+        finishRow();
+        if (character === "\r" && content[index + 1] === "\n") index += 1;
+      } else {
+        cell += character;
+        state = "unquoted";
+      }
+    } else if (state === "unquoted") {
+      if (character === '"') {
+        throw new Error("CSV is malformed: a quote appears inside an unquoted field.");
+      } else if (character === ",") {
+        finishField();
+      } else if (isRecordBreak) {
+        finishRow();
+        if (character === "\r" && content[index + 1] === "\n") index += 1;
+      } else {
+        cell += character;
+      }
+    } else if (state === "quoted") {
+      if (character === '"' && content[index + 1] === '"') {
+        cell += '"';
+        index += 1;
+      } else if (character === '"') {
+        state = "after-quote";
+      } else {
+        cell += character;
+      }
+    } else if (character === ",") {
+      finishField();
+    } else if (isRecordBreak) {
+      finishRow();
       if (character === "\r" && content[index + 1] === "\n") index += 1;
     } else {
-      cell += character;
+      throw new Error("CSV is malformed: unexpected content after a closing quote.");
     }
   }
 
-  if (quoted) throw new Error("CSV is malformed: an opening quote is not closed.");
-  if (cell.length || row.length) {
+  if (state === "quoted") throw new Error("CSV is malformed: an opening quote is not closed.");
+  if (state !== "field-start" || row.length > 0) {
     row.push(cell);
     rows.push(row);
   }
@@ -55,9 +93,11 @@ export function hasNonEmptyCsvFields(content: string, fieldNames: readonly strin
   if (rows.length === 0) throw new Error("CSV is malformed: the header row is missing.");
   const [header, ...dataRows] = rows;
   const fieldIndices = fieldNames.map((fieldName) => {
-    const index = header.indexOf(fieldName);
-    if (index < 0) throw new Error(`CSV is malformed: required field ${fieldName} is missing.`);
-    return index;
+    const indices = header.flatMap((column, index) => column === fieldName ? [index] : []);
+    if (indices.length !== 1) {
+      throw new Error(`CSV is malformed: required field ${fieldName} must appear exactly once.`);
+    }
+    return indices[0];
   });
   const malformedRow = dataRows.find((dataRow) => dataRow.length !== header.length);
   if (malformedRow) throw new Error("CSV is malformed: a data row does not match the header width.");

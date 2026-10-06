@@ -51,6 +51,21 @@ describe("review packet regeneration protection", () => {
     ])).toThrow("contains a decision, reviewer identity, date, or note");
   });
 
+  it("fails closed when malformed quoting or duplicate headers could hide reviewer input", () => {
+    const malformedQuotedCell = '"decision","reviewerName","reviewDate","note"\n"","Reviewer" trailing,"",""\n';
+    const duplicateReviewerHeader = serializeCsv(
+      ["decision", "reviewerName", "reviewerName", "reviewDate", "note"],
+      [["", "", "Reviewer", "", ""]],
+    );
+
+    for (const content of [malformedQuotedCell, duplicateReviewerHeader]) {
+      expect(reviewCsvOverwriteBlocker(content, signatureHeaders)).toContain("cannot be safely inspected");
+      expect(() => assertReviewPacketSafeToReplace([
+        { name: "review-sheet-01.csv", isFile: true, content },
+      ])).toThrow("cannot be safely inspected");
+    }
+  });
+
   it("refuses to overwrite a filled B2 decision checklist", () => {
     expect(() => assertReviewPacketSafeToReplace([
       { name: "b2-lesson-checklist.md", isFile: true, content: b2Checklist(4) },

@@ -14,6 +14,10 @@ describe("spreadsheet-safe CSV serialization", () => {
       ["1", 'He said "ja".'],
       ["2", "line one\nline two"],
     ]);
+    expect(parseCsv("id,note\n1,plain text\n")).toEqual([
+      ["id", "note"],
+      ["1", "plain text"],
+    ]);
   });
 
   it("detects reviewer data by named columns and rejects malformed rows", () => {
@@ -21,6 +25,23 @@ describe("spreadsheet-safe CSV serialization", () => {
     expect(hasNonEmptyCsvFields(serializeCsv(headers, [["1", "", "", "", ""]]), ["decision", "reviewerName", "reviewDate", "note"])).toBe(false);
     expect(hasNonEmptyCsvFields(serializeCsv(headers, [["1", "accept", "", "", ""]]), ["decision", "reviewerName", "reviewDate", "note"])).toBe(true);
     expect(() => hasNonEmptyCsvFields('"id","decision"\n"1"\n', ["decision"])).toThrow("does not match the header width");
+  });
+
+  it("rejects malformed quote placement instead of returning ambiguous fields", () => {
+    const malformedCsv = [
+      'id,note\n1,bad"quote\n',
+      'id,note\n1,"closed"trailing\n',
+      'id,note\n1,"never closed\n',
+    ];
+    for (const csv of malformedCsv) expect(() => parseCsv(csv)).toThrow("CSV is malformed");
+  });
+
+  it("requires each named review signature column to appear exactly once", () => {
+    const duplicateReviewerHeader = serializeCsv(
+      ["id", "reviewerName", "reviewerName"],
+      [["1", "", "Reviewer"]],
+    );
+    expect(() => hasNonEmptyCsvFields(duplicateReviewerHeader, ["reviewerName"])).toThrow("must appear exactly once");
   });
 
   it("neutralizes formula prefixes, including control and Unicode whitespace prefixes", () => {

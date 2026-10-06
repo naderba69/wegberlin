@@ -1,6 +1,6 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v183 · 2026-10-06 · P2-276 `illustrative-learning-pathways-v1` remains the latest product/cache batch: three authored hypothetical `/practice` scenarios with explicit no-testimonial/no-outcome disclosure and no saved choice or learning-state effect. Repository-only P0-98/99 preparation added a deterministic unsigned German-review packet (1,297 noun anchors, 134 verb-frame records, 93 candidates, 8 exclusions); no human decision, P0 closure, product/UI/state change, or Offline cache increment. Active/staging caches remain v183; previous complete cache v182.
+Sync batch: v183 · 2026-10-06 · P2-276 `illustrative-learning-pathways-v1` remains the latest product/cache batch: three authored hypothetical `/practice` scenarios with explicit no-testimonial/no-outcome disclosure and no saved choice or learning-state effect. Repository-only P0-98/99 preparation added a deterministic unsigned German-review packet (1,297 noun anchors, 134 verb-frame records, 93 candidates, 8 exclusions); no human decision, P0 closure, product/UI/state change, or Offline cache increment. Active/staging caches remain v183; previous complete cache v182. The code-bearing packet commit `2f34b38` passed [Quality Gate 37422617842](https://github.com/naderba69/wegberlin/actions/runs/37422617842): `check` 5m49s, full desktop/mobile E2E 17m57s, and Vercel Preview; [Deployment Smoke 37422882120](https://github.com/naderba69/wegberlin/actions/runs/37422882120) was skipped and is not Production evidence. PR #7 remains open.
 
 ## P2-352 — شكل الموجة للملاحظة الذاتية فقط — 2026-10-05 (v182، تاريخي)
 
@@ -90,10 +90,10 @@ Sync batch: v183 · 2026-10-06 · P2-276 `illustrative-learning-pathways-v1` rem
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
 - Formal P2 audit: 142/142 rows = 132 implemented / 5 partial / 5 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- حالة Git لهذه الدفعة: الفرع المثبّت `arena/01a106a4-wegberlin`؛ P2-276 ملتزمة ومدفوعة في `5b93341`؛ اجتاز head `15e457c` وظيفتي `check` وE2E في Quality Gate `37377109271`، واجتاز Vercel Preview. لا ادعاء بدمج `main` أو نشر Production؛ PR #7 ما زال مفتوحًا.
+- سجل Git التاريخي لدفعة P2-276: الفرع المثبّت `arena/01a106a4-wegberlin`؛ دفعة المنتج ملتزمة ومدفوعة في `5b93341`؛ اجتاز head `15e457c` وظيفتي `check` وE2E في Quality Gate `37377109271`، واجتاز Vercel Preview. الحالة الأحدث لدفعة حزمة المراجعة موضحة في ملخص المزامنة والقسم 11 أدناه؛ لا ادعاء بدمج `main` أو نشر Production، وPR #7 ما زال مفتوحًا.
 
 
-آخر تدقيق للتسليم: **2026-10-05 — Africa/Tunis**
+آخر تدقيق للتسليم: **2026-10-06 — Africa/Tunis**
 
 > **طريقة الاستخدام:** في جلسة Agent جديدة، أرفق `wegberlin-full.zip` مع ملف التحقق `wegberlin-full.zip.sha256`، ثم الصق هذا الملف كاملًا كأول رسالة. إذا تعذر إرفاق ZIP، أعطِ الوكيل رابط المستودع العام أدناه، مع التنبيه أن مساحة العمل الاحتياطية قد تكون أحدث من `main`. هذا الملف برومبت تشغيل وتسليم، بينما تبقى ملفات الحقيقة التفصيلية: `docs/MASTER_SPEC.md` و`PROJECT_STATUS.md` و`P0_AUDIT.md` و`P1_AUDIT.md` و`IDEA_BACKLOG.md` و`DECISIONS.md`.
 
@@ -534,7 +534,7 @@ Blocked by user credentials: 0
 124 مراجعة بشرية لدلالة اقتباسات القراءة
 135 السرعات 0.75×/1×/1.15× معممة آليًا؛ ينتظر فحص التشويه البشري
 255 جولة وصول يدوية وتقنيات مساعدة
-301 Vercel Preview وQuality Gate أخضران على PR #7 / 975f991؛ PR مفتوح حتى قرار المالك
+301 Vercel Preview وQuality Gate الكامل أخضران على code-bearing commit 2f34b38 (run 37422617842)؛ PR #7 مفتوح حتى قرار المالك
 373 توجد 17 ملاحظة تونسية فعلية مشروطة؛ كلها تنتظر مراجعة تونسية/فصحى مستقلة
 376 توجد 15 فئة فرق مؤثر مرتبطة بالنظرية؛ يلزم تدقيق التعميمات وتسجيل المراجع/التاريخ
 ```
@@ -543,7 +543,7 @@ Blocked by user credentials: 0
 
 ### P0 غير المنجز — 0
 
-لا توجد دورة P0 بلا تنفيذ الآن. الثمانية الباقية جزئية: سبعة تنتظر دليلًا بشريًا مستقلًا، وP0-301 ينتظر قرار المالك وإغلاق PR #7 رغم نجاح Preview وCI على أحدث رأس `975f991`. أُغلق P0-302 بتشغيل GitHub الأخضر `37335158220` على `b974c48` (64/64 لكل من Desktop وMobile).
+لا توجد دورة P0 بلا تنفيذ الآن. الثمانية الباقية جزئية: سبعة تنتظر دليلًا بشريًا مستقلًا، وP0-301 ينتظر قرار المالك وإغلاق PR #7 رغم نجاح Preview وQuality Gate الكامل على code-bearing commit `2f34b38` (run `37422617842`). أُغلق P0-302 بتشغيل GitHub الأخضر `37335158220` على `b974c48` (64/64 لكل من Desktop وMobile).
 
 أُغلق P0-160 عبر `content-grounded-follow-up-v1`: السؤال يعتمد على نص/تفريغ يكتبه المتعلم بعد الاستماع، لا على ادعاء فهم التسجيل. المحرك المحلي يعمل Offline، والمزود الاختياري يحتاج موافقة صريحة لكل إرسال، ولا يُرسل الصوت.
 
@@ -551,7 +551,7 @@ Blocked by user credentials: 0
 
 ### P0 المتوقف بالكامل — 0
 
-لا يوجد بند متوقف بالكامل. P0-302 أُغلق بعد CI بعيد أخضر؛ P0-301 جزئي لأن PR #7 مفتوح حتى قرار المالك، رغم نجاح Quality Gate وVercel Preview على الرأس الأحدث `975f991`.
+لا يوجد بند متوقف بالكامل. P0-302 أُغلق بعد CI بعيد أخضر؛ P0-301 جزئي لأن PR #7 مفتوح حتى قرار المالك، رغم نجاح Quality Gate وVercel Preview على code-bearing commit `2f34b38` (run `37422617842`).
 
 لا تغيّر تصنيف P0 إلا بعد تنفيذ معيار قبول واختباره وتحديث `P0_AUDIT.md`.
 
@@ -754,7 +754,7 @@ P2-384 يبقى للمراجعة العربية المستقلة في تونس �
 
 P2-276 أُنجز في v183 بحدوده المؤلَّفة والافتراضية؛ لا شهادات أو نتائج مقاسة أو حفظ اختيار أو أثر على تقدم المتعلم. الإضافة الحالية تجهيز مستودع فقط لأول بند P0 غير المغلق: `reports/lexical-review-packet/` يعرض 1,297 مرساة اسم، و134 سجل إطار، و93 مرشحًا و8 استبعادات للمراجعة الألمانية. حقول التوقيع فارغة، لذلك P0-98/99 ما زالا جزئيين ولا توجد مراجعة بشرية جديدة.
 
-**الخطوة التالية الحاكمة هي P0-98:** مراجعة ألمانية مستقلة مسمّاة لكل سجلات الاسم الـ1,297 وحسم المرشحات الـ89 وإشارات السياق وفق الحزمة؛ لا إغلاق بالاختبارات أو الجرد. وبعدها P0-99 يحتاج قرارات مستقلة موثقة للاستبعادات الثمانية ومراجعة جودة الإطارات الـ126 وفق معيار القبول الأصلي؛ ملف `verb-frames.csv` يعرض 134 مرجعًا مؤلفًا للمقارنة ولا يستبدل المراجعة. P0-301 أيضًا ينتظر قرار المالك وإغلاق PR #7. آخر Quality Gate كامل قبل هذه الدفعة هو [37379026184](https://github.com/naderba69/wegberlin/actions/runs/37379026184) على `975f991` (check وE2E desktop/mobile وVercel Preview ناجحة)؛ لا ادعاء بدمج PR أو نشر Production. محليًا اجتاز التغيير `npm run check` (ESLint وTypeScript، **1,359/1,359** اختبارًا في **201/201** ملفًا، فحوص السرية/المصادر/سير العمل/التسليم، وبناء الإنتاج)، و`content:audit` و`handoff:check` و4/4 اختبارات الحزمة المستهدفة. لم نشغّل E2E محليًا لأن الدفعة لا تمس UX أو IndexedDB أو Offline؛ يُنتظر Quality Gate البعيد على الرأس الجديد بعد Push.
+**الخطوة التالية الحاكمة هي P0-98:** مراجعة ألمانية مستقلة مسمّاة لكل سجلات الاسم الـ1,297 وحسم المرشحات الـ89 وإشارات السياق وفق الحزمة؛ لا إغلاق بالاختبارات أو الجرد. وبعدها P0-99 يحتاج قرارات مستقلة موثقة للاستبعادات الثمانية ومراجعة جودة الإطارات الـ126 وفق معيار القبول الأصلي؛ ملف `verb-frames.csv` يعرض 134 مرجعًا مؤلفًا للمقارنة ولا يستبدل المراجعة. P0-301 أيضًا ينتظر قرار المالك وإغلاق PR #7. Quality Gate الكامل للـcode-bearing commit `2f34b38` هو [37422617842](https://github.com/naderba69/wegberlin/actions/runs/37422617842): `check` في 5m49s وE2E desktop/mobile في 17m57s؛ Vercel Preview ناجح، بينما [Deployment Smoke 37422882120](https://github.com/naderba69/wegberlin/actions/runs/37422882120) متخطٍ ولا يثبت Production. لا ادعاء بدمج PR أو نشر Production. محليًا اجتاز التغيير `npm run check` (ESLint وTypeScript، **1,359/1,359** اختبارًا في **201/201** ملفًا، فحوص السرية/المصادر/سير العمل/التسليم، وبناء الإنتاج)، و`content:audit:write` و`handoff:check` و4/4 اختبارات الحزمة المستهدفة. لم نشغّل E2E محليًا لأن الدفعة لا تمس UX أو IndexedDB أو Offline؛ الاختبار الكامل نجح في CI عن بُعد.
 
 تبقى P2-349/350 مؤجلتين حتى يثبت كفاية الأدلة المحلية وحدود المنهج/الخصوصية، وP2-357 يحتاج تحقق حقوق وترخيص قبل اعتماد مصادر خارجية، وP2-359 مشروع تغليف منفصل لا يُبدأ بلا حاجة مثبتة. P2-360 لا يبدأ قبل مراجعة خصوصية مستقلة. الجزئيات `264/371/384/400/401` تتطلب أدلة يدوية/تجريبية معلنة ولا تُغلق آليًا. لا تتجاوز أي بوابة مراجعة بشرية أو حقوقية أو خصوصية لمجرد مواصلة التغيير البرمجي.
 
@@ -900,7 +900,7 @@ Offline cache: vX
 
 ## 16. أمر البدء للوكيل الجديد
 
-بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». الحالة الحالية: P0 = 116/124 منجز و8 جزئي؛ `P1_AUDIT.md` يصنف 135/135 (131 منجزًا و4 جزئيًا، بلا غير منجز)؛ `P2_AUDIT.md` يصنف 142/142: 132 منجزًا، 5 جزئية (`264/371/384/400/401`)، و5 غير منفذة (`349/350/357/359/360`). أُغلق P2-276 بإرشاد افتراضي لا شهادات أو وعود، وأُغلق P2-352 وP0-302. توجد الآن حزمة تجهيز مراجعة غير موقعة لـP0-98/99 في `reports/lexical-review-packet/`؛ لا تُعدّ إغلاقًا أو مراجعة بشرية. آخر Quality Gate كامل قبل دفعة الحزمة هو [37379026184](https://github.com/naderba69/wegberlin/actions/runs/37379026184) على `975f991` (check وE2E desktop/mobile وVercel Preview ناجحة). PR #7 ما زال مفتوحًا، فلا ادعاء بدمج أو نشر Production؛ P0-301 جزئي. ابدأ من متطلب P0-98 البشري، ولا تغلق المراجعات البشرية/الحقوق/الخصوصية أو تثبيت WebGPU على أجهزة ممثلة آليًا.
+بعد قراءة الملفات والتحقق من الأعداد، لا تطلب خطة جديدة إذا كان المطلوب «واصل». الحالة الحالية: P0 = 116/124 منجز و8 جزئي؛ `P1_AUDIT.md` يصنف 135/135 (131 منجزًا و4 جزئيًا، بلا غير منجز)؛ `P2_AUDIT.md` يصنف 142/142: 132 منجزًا، 5 جزئية (`264/371/384/400/401`)، و5 غير منفذة (`349/350/357/359/360`). أُغلق P2-276 بإرشاد افتراضي لا شهادات أو وعود، وأُغلق P2-352 وP0-302. توجد حزمة تجهيز مراجعة غير موقعة لـP0-98/99 في `reports/lexical-review-packet/`؛ لا تُعدّ إغلاقًا أو مراجعة بشرية. اجتاز code-bearing commit `2f34b38` Quality Gate الكامل [37422617842](https://github.com/naderba69/wegberlin/actions/runs/37422617842): `check` في 5m49s وE2E desktop/mobile في 17m57s، كما نجح Vercel Preview؛ [Deployment Smoke 37422882120](https://github.com/naderba69/wegberlin/actions/runs/37422882120) متخطٍ ولا يثبت Production. PR #7 ما زال مفتوحًا، فلا ادعاء بدمج أو نشر Production؛ P0-301 جزئي. ابدأ من متطلب P0-98 البشري، ولا تغلق المراجعات البشرية/الحقوق/الخصوصية أو تثبيت WebGPU على أجهزة ممثلة آليًا.
 
 ---
 

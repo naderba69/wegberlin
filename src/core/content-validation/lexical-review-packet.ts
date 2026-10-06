@@ -1,21 +1,12 @@
 import type { NounGrammarEntry, VerbPrepositionFrame } from "@/types/lexical-grammar";
 import type { buildLexicalTargetGapAudit } from "./lexical-target-gap";
+import { serializeCsv } from "./safe-csv";
 
 type LexicalTargetAudit = ReturnType<typeof buildLexicalTargetGapAudit>;
 type ReviewArtifact = { path: string; content: string };
 type EvidenceSource = { path: string; stage: string; surface: string; strength: "target" | "context" | "registry" };
 
 const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] as const;
-
-function csvCell(value: unknown) {
-  const normalized = String(value ?? "").replace(/[\r\n\t]+/g, " ");
-  const formulaSafe = /^[\u0000-\u0020]*[=+\-@]/u.test(normalized) ? `'${normalized}` : normalized;
-  return `"${formulaSafe.replace(/"/g, '""')}"`;
-}
-
-function csv(headers: string[], rows: unknown[][]) {
-  return [headers, ...rows].map((row) => row.map(csvCell).join(",")).join("\n") + "\n";
-}
 
 function shortText(value: string, max = 220) {
   const normalized = value.replace(/\s+/g, " ").trim();
@@ -265,10 +256,10 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
   return [
     { path: "reports/lexical-review-packet/README.md", content: readme },
-    { path: "reports/lexical-review-packet/noun-anchors.csv", content: csv(nounHeaders, nounRows) },
-    { path: "reports/lexical-review-packet/verb-frames.csv", content: csv(frameHeaders, frameRows) },
-    { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: csv(qualityFrameHeaders, qualityFrameRows) },
-    { path: "reports/lexical-review-packet/unresolved-candidates.csv", content: csv(candidateHeaders, [...nounCandidates, ...frameCandidates]) },
-    { path: "reports/lexical-review-packet/structural-exclusions.csv", content: csv(exclusionHeaders, exclusionRows) },
+    { path: "reports/lexical-review-packet/noun-anchors.csv", content: serializeCsv(nounHeaders, nounRows) },
+    { path: "reports/lexical-review-packet/verb-frames.csv", content: serializeCsv(frameHeaders, frameRows) },
+    { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: serializeCsv(qualityFrameHeaders, qualityFrameRows) },
+    { path: "reports/lexical-review-packet/unresolved-candidates.csv", content: serializeCsv(candidateHeaders, [...nounCandidates, ...frameCandidates]) },
+    { path: "reports/lexical-review-packet/structural-exclusions.csv", content: serializeCsv(exclusionHeaders, exclusionRows) },
   ];
 }

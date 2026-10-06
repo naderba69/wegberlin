@@ -1,5 +1,6 @@
 import { readFile, readdir, writeFile, mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
+import { encodeCsvRow } from "../src/core/content-validation/safe-csv";
 
 /**
  * Builds the human review packet: every governed content record with its actual text,
@@ -41,7 +42,7 @@ const flagsFor = (lessonId: string) => {
   return flags;
 };
 const levelOf = (id: string) => (/^a1/.test(id) ? "A1" : /^a2/.test(id) ? "A2" : /^b1/.test(id) ? "B1" : /^b2/.test(id) ? "B2" : "");
-const csv = (cells: string[]) => cells.map((cell) => `"${String(cell ?? "").replace(/"/g, '""')}"`).join(",");
+const csv = (cells: string[]) => encodeCsvRow(cells);
 
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });

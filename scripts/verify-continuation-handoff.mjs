@@ -131,6 +131,8 @@ const lexicalTargetGapSource = read("src/core/content-validation/lexical-target-
 const lexicalTargetGapTest = read("tests/unit/lexical-target-gap.test.ts");
 const lexicalFrameQualityWorklist = read("reports/lexical-review-packet/frame-quality-targets.csv");
 const lexicalNounReviewWorklist = read("reports/lexical-review-packet/noun-anchors.csv");
+const reviewPacketCsvGenerator = read("scripts/generate-human-review-packet.ts");
+const safeCsvSource = read("src/core/content-validation/safe-csv.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -724,6 +726,7 @@ if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklist
 const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalFrameQualityWorklistLines.length !== 127 || !lexicalFrameQualityWorklistLines[0].includes("reviewScope") || !lexicalFrameQualityWorklistLines.some((line) => line.includes("P0-99-original-126-quality-target"))) fail("P0-99 original 126-frame quality worklist drifted");
 if (!prompt.includes("1,297 P0-98 anchors") || !prompt.includes("1,297/89 counts") || !prompt.includes("frame-quality-targets.csv") || !prompt.includes("25/30/31/40")) fail("continuation handoff does not preserve original P0-98/99 worklist scope");
+if (!reviewPacketCsvGenerator.includes("encodeCsvRow") || !safeCsvSource.includes("SPREADSHEET_FORMULA_PREFIX")) fail("human-review CSV must use the formula-safe serializer");
 for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCoverageReport, lexicalTargetGapReport]) requireText(report, academicAudit.contentSha256, "generated academic report hash");
 for (const text of ["4,345", "2,805", "384", "389/389", "4,921", "1,382 covered", "89 pending-human", "3,450 context-only", "134 covered", "4 unclassified", "1,131 not-target"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["LEXICAL_TARGET_AUDIT_VERSION", "pending-human", "Sentence-initial capitalization alone is never used"]) requireText(lexicalTargetGapSource, text, "lexical target-gap source");

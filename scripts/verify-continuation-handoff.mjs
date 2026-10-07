@@ -136,6 +136,9 @@ const reviewPacketCsvGenerator = read("scripts/generate-human-review-packet.ts")
 const reviewPacketSafetySource = read("src/core/content-validation/review-packet-safety.ts");
 const reviewPacketSafetyTest = read("tests/unit/review-packet-safety.test.ts");
 const safeCsvSource = read("src/core/content-validation/safe-csv.ts");
+const humanReviewLedgerSource = read("src/data/human-review-ledger.ts");
+const humanReviewAudit = json("reports/human-review-audit.json");
+const humanReviewLedgerReport = read("docs/generated/HUMAN_REVIEW_LEDGER.md");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -1351,6 +1354,15 @@ if(p099ReadySlotTotal!==p099NamedReferenceTotal)fail("P0-99 review-slot readines
 if(p099ReadySlotCount>p099ReadySlotTotal)fail("P0-99 review-slot readiness exceeds the authored exclusions");
 if(p099ReadySlotCount>p099NamedReferenceCount)fail("P0-99 review-slot readiness exceeds the named evidence references");
 if(p099SignatureCellsFilled>0&&p099NamedReferenceCount===0)fail("P0-99 reports filled signature cells without a named evidence reference");
+const p099AuditSlots=humanReviewAudit.p099ExclusionSlots;
+if(!p099AuditSlots||p099AuditSlots.exclusionCount!==p099NamedReferenceTotal)fail("human-review audit P0-99 slot block disagrees with the authored exclusion count");
+if(p099AuditSlots.namedReferenceCount!==p099NamedReferenceCount||p099AuditSlots.placeholderReferenceCount!==p099PlaceholderCount||p099AuditSlots.signatureCellsFilled!==p099SignatureCellsFilled||p099AuditSlots.signatureCellsExpected!==p099SignatureCellsExpected||p099AuditSlots.readyForIndependentReviewCount!==p099ReadySlotCount)fail("human-review audit P0-99 slot block disagrees with p099:evidence:status");
+if(p099AuditSlots.missingReferenceCount+p099AuditSlots.placeholderReferenceCount+p099AuditSlots.namedReferenceCount!==p099NamedReferenceTotal)fail("human-review audit P0-99 slot states do not add up to the authored exclusions");
+if(p099AuditSlots.pendingDecisionIds?.length!==p099NamedReferenceTotal-p099NamedReferenceCount)fail("human-review audit P0-99 pending IDs disagree with the named-reference count");
+if(p099AuditSlots.evidenceContentsInspected!==false||p099AuditSlots.reviewDecisionContentsInterpreted!==false||p099AuditSlots.p099ClosureAsserted!==false)fail("human-review audit P0-99 slot block must keep evidence, decision, and closure boundaries closed");
+for(const text of ["P0-99 exclusion evidence slots (presence only)","does not open evidence","P0-99 closure asserted | no","Pending exclusion IDs:"])requireText(humanReviewLedgerReport,text,"human-review ledger P0-99 slot report");
+for(const text of ["summarizeP099ExclusionSlotsForHumanReview","HUMAN_REVIEW_P099_BOUNDARY_AR","evidenceContentsInspected: false","p099ClosureAsserted: false"])requireText(humanReviewLedgerSource,text,"human-review ledger P0-99 slot summary source");
+if(!humanReviewLedgerSource.includes("auditP099ExclusionReviewSlots"))fail("human-review P0-99 slot summary must reuse the presence-only slot reader");
 console.log(`- P0-99 evidence slots: ${p099NamedReferenceCount}/${p099NamedReferenceTotal} named, ${p099PlaceholderCount} placeholder-only, ${p099SignatureCellsFilled}/${p099SignatureCellsExpected} signature cells filed (presence only), ${p099ReadySlotCount} ready for independent review; evidence contents and decision contents unverified, closure not asserted`);
 console.log("Continuation handoff verified:");
 console.log(`- backlog: P0 ${expectedPriorities.P0}, P1 ${expectedPriorities.P1}, P2 ${expectedPriorities.P2}`);

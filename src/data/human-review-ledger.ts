@@ -7,6 +7,8 @@
  * هذا الملف هو السجل: يبدأ فارغًا بصدق، ويُملأ بصفحات CSV الجاهزة أو من داخل التطبيق،
  * وبوابة `human:review` تقرأه وتقول الرقم الحقيقي، ولا تجمّل صفرًا.
  */
+import { auditP099ExclusionReviewSlots, P099_STRUCTURAL_EXCLUSION_COUNT } from "@/core/content-validation/lexical-review-packet";
+
 export const HUMAN_REVIEW_POLICY = "human-review-ledger-v1" as const;
 export const HUMAN_REVIEW_BOUNDARY = "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer" as const;
 export const HUMAN_REVIEW_MONTHLY_TARGET = 8 as const;
@@ -126,5 +128,56 @@ export function summarizeHumanReviewLedger(entries: readonly HumanReviewEntry[],
     invalidEntries: invalidEntries.map((entry) => ({ lessonId: entry.lessonId, issuesAr: validateHumanReviewEntry(entry, learnerName).issuesAr })),
     duplicateReviews: [...byLesson.entries()].filter(([, list]) => list.length > 1).map(([lessonId]) => lessonId),
     boundaryAr: "التطبيق لا يستطيع التحقق من هوية المراجع ولا من مؤهله؛ السجل يشهد بما سُجّل لا بما يُدّعى، ولذلك لا يمنح اعتمادًا ولا يغيّر حالة النشر تلقائيًا.",
+  };
+}
+
+/**
+ * ملخّص خانات P0-99 داخل تدقيق المراجعة البشرية: حضور فقط.
+ * لا يُفتح دليل، ولا يُفسَّر محتوى قرار، ولا يُدّعى إغلاق؛ الاسم المسمّى خطوة فرز تبقى بعدها مراجعة بشرية مستقلة.
+ */
+export const HUMAN_REVIEW_P099_BOUNDARY_AR = "هذا الملخّص يعدّ حضور الخانات فقط: لا يحكم على كفاية الدليل ولا على محتوى قرار المراجع ولا يمنح اعتمادًا.";
+
+export type HumanReviewP099SlotSummary = {
+  boundary: typeof HUMAN_REVIEW_BOUNDARY;
+  boundaryAr: typeof HUMAN_REVIEW_P099_BOUNDARY_AR;
+  exclusionCount: number;
+  namedReferenceCount: number;
+  missingReferenceCount: number;
+  placeholderReferenceCount: number;
+  missingReferenceDecisionIds: string[];
+  placeholderDecisionIds: string[];
+  signatureCellsFilled: number;
+  signatureCellsExpected: number;
+  readyForIndependentReviewCount: number;
+  pendingDecisionIds: string[];
+  evidenceContentsInspected: false;
+  reviewDecisionContentsInterpreted: false;
+  p099ClosureAsserted: false;
+};
+
+export function summarizeP099ExclusionSlotsForHumanReview(
+  content: string,
+  expectedDecisionIds: readonly string[],
+): HumanReviewP099SlotSummary {
+  if (expectedDecisionIds.length !== P099_STRUCTURAL_EXCLUSION_COUNT) {
+    throw new Error(`P0-99 human-review summary requires exactly ${P099_STRUCTURAL_EXCLUSION_COUNT} authored exclusion IDs.`);
+  }
+  const slots = auditP099ExclusionReviewSlots(content, expectedDecisionIds);
+  return {
+    boundary: HUMAN_REVIEW_BOUNDARY,
+    boundaryAr: HUMAN_REVIEW_P099_BOUNDARY_AR,
+    exclusionCount: slots.exclusionCount,
+    namedReferenceCount: slots.namedReferenceCount,
+    missingReferenceCount: slots.missingReferenceCount,
+    placeholderReferenceCount: slots.placeholderReferenceCount,
+    missingReferenceDecisionIds: slots.missingReferenceDecisionIds,
+    placeholderDecisionIds: slots.placeholderDecisionIds,
+    signatureCellsFilled: slots.signatureCellsFilled,
+    signatureCellsExpected: slots.signatureCellsExpected,
+    readyForIndependentReviewCount: slots.readyForIndependentReviewCount,
+    pendingDecisionIds: slots.slots.filter((slot) => slot.evidenceReferenceState !== "named").map((slot) => slot.decisionId),
+    evidenceContentsInspected: false,
+    reviewDecisionContentsInterpreted: false,
+    p099ClosureAsserted: false,
   };
 }

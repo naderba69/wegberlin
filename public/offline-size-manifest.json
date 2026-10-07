@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "7798856d7d79134421742f84684bf9277e3ab4771c4f37ba2eefbcd17d0272d3",
+  "buildFingerprint": "d1355dd099686ad8e987a9df14ac573540456b1565249b3c9685923adcfc0889",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3946131,
-      "routeGzipBytes": 780688,
+      "routeGzipBytes": 780700,
       "nextAssetCount": 86,
       "nextAssetRawBytes": 6803842,
-      "nextAssetGzipBytes": 1929360,
+      "nextAssetGzipBytes": 1929245,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
       "totalRawBytes": 10817623,
-      "totalGzipBytes": 2722013,
+      "totalGzipBytes": 2721910,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -376,9 +376,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-61e332e254491c93.js",
+          "path": "/_next/static/chunks/app/settings/page-0f73448df91b3057.js",
           "rawBytes": 221366,
-          "gzipBytes": 62754
+          "gzipBytes": 62639
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-17f9ad7328b6813e.js",
@@ -457,14 +457,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4243179,
-      "routeGzipBytes": 893027,
+      "routeGzipBytes": 893029,
       "nextAssetCount": 86,
       "nextAssetRawBytes": 6803842,
-      "nextAssetGzipBytes": 1929359,
+      "nextAssetGzipBytes": 1929244,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
       "totalRawBytes": 11114671,
-      "totalGzipBytes": 2834351,
+      "totalGzipBytes": 2834238,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -822,9 +822,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-61e332e254491c93.js",
+          "path": "/_next/static/chunks/app/settings/page-0f73448df91b3057.js",
           "rawBytes": 221366,
-          "gzipBytes": 62754
+          "gzipBytes": 62639
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-17f9ad7328b6813e.js",
@@ -903,14 +903,14 @@
       "label": "B1",
       "routeCount": 60,
       "routeRawBytes": 4323439,
-      "routeGzipBytes": 918436,
+      "routeGzipBytes": 918434,
       "nextAssetCount": 86,
       "nextAssetRawBytes": 6803840,
-      "nextAssetGzipBytes": 1929358,
+      "nextAssetGzipBytes": 1929243,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
       "totalRawBytes": 11194929,
-      "totalGzipBytes": 2859759,
+      "totalGzipBytes": 2859642,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1268,9 +1268,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-61e332e254491c93.js",
+          "path": "/_next/static/chunks/app/settings/page-0f73448df91b3057.js",
           "rawBytes": 221366,
-          "gzipBytes": 62754
+          "gzipBytes": 62639
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-17f9ad7328b6813e.js",
@@ -1349,14 +1349,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10038584,
-      "routeGzipBytes": 2297841,
+      "routeGzipBytes": 2297808,
       "nextAssetCount": 90,
       "nextAssetRawBytes": 6947950,
-      "nextAssetGzipBytes": 1974095,
+      "nextAssetGzipBytes": 1973980,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
       "totalRawBytes": 17054184,
-      "totalGzipBytes": 4283901,
+      "totalGzipBytes": 4283753,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1734,9 +1734,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-61e332e254491c93.js",
+          "path": "/_next/static/chunks/app/settings/page-0f73448df91b3057.js",
           "rawBytes": 221366,
-          "gzipBytes": 62754
+          "gzipBytes": 62639
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-17f9ad7328b6813e.js",
@@ -1815,14 +1815,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 320,
       "routeRawBytes": 16685442,
-      "routeGzipBytes": 4017235,
+      "routeGzipBytes": 4017220,
       "nextAssetCount": 117,
       "nextAssetRawBytes": 6953138,
-      "nextAssetGzipBytes": 1978574,
+      "nextAssetGzipBytes": 1978459,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
       "totalRawBytes": 23706230,
-      "totalGzipBytes": 6007774,
+      "totalGzipBytes": 6007644,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -2335,9 +2335,9 @@
           "gzipBytes": 16802
         },
         {
-          "path": "/_next/static/chunks/app/settings/page-61e332e254491c93.js",
+          "path": "/_next/static/chunks/app/settings/page-0f73448df91b3057.js",
           "rawBytes": 221366,
-          "gzipBytes": 62754
+          "gzipBytes": 62639
         },
         {
           "path": "/_next/static/chunks/app/shadowing/page-17f9ad7328b6813e.js",

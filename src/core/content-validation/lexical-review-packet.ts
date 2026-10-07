@@ -401,7 +401,6 @@ export function buildP099ExclusionReviewDossier(input: {
   const statusIndex = column("reviewStatus");
   const evidenceIndex = column("detectorEvidence");
   const referenceIndex = column(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
-  const signatureIndexes = REVIEW_COLUMNS.map((name) => column(name));
 
   const decisionIds = rows.map((row) => row[decisionIdIndex].trim());
   const slots = auditP099ExclusionReviewSlots(serializeCsv(headers, rows), decisionIds);

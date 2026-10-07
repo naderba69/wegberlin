@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v183 · 2026-10-05 · P2-276 adds `illustrative-learning-pathways-v1` to `/practice`: three authored hypothetical scenarios, explicitly not testimonials or measured outcomes, linked only to routes present in every Offline pack. No profile fields, persistence, score, or learner-state effect; active/staging caches are v183 with v182 retained for rollback. P2-352 remains unchanged.
+Sync batch: v183 · 2026-10-07 · The handoff now reports the read-only P0-99 named-reference inventory (0/8) with explicit evidence/review/closure limits. No external service, AI call, analytics, product, learner-state, or Offline cache change; no new cost.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

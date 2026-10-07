@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v183 · 2026-10-05 · P2-276 adds `illustrative-learning-pathways-v1` to `/practice`: three authored hypothetical scenarios, explicitly not testimonials or measured outcomes, linked only to routes present in every Offline pack. No profile fields, persistence, score, or learner-state effect; active/staging caches are v183 with v182 retained for rollback. P2-352 remains unchanged.
+Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting now exposes the 0/8 named-reference inventory and its verification limits. No priority, backlog classification, review decision, product, learner-state, or Offline cache change; v183 remains active/staging and v182 rollback.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

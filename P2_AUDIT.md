@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v183 · 2026-10-05 · P2-276 adds `illustrative-learning-pathways-v1` to `/practice`: three authored hypothetical scenarios, explicitly not testimonials or measured outcomes, linked only to routes present in every Offline pack. No profile fields, persistence, score, or learner-state effect; active/staging caches are v183 with v182 retained for rollback. P2-352 remains unchanged.
+Sync batch: v183 · 2026-10-07 · This batch changes only the repository handoff report for P0-99; P2 rows and counts are unchanged. No product, learner-state, or Offline cache change; active/staging remain v183, rollback v182.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

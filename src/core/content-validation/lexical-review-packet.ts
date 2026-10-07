@@ -10,6 +10,7 @@ const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification
 export const P099_EXCLUSION_EVIDENCE_NAME_COLUMN = "reviewEvidenceName";
 export const P099_EXCLUSION_REVIEW_DOSSIER_PATH = "docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md";
 export const P099_QUALITY_TARGET_REVIEW_SCOPE = "P0-99-original-126-quality-target";
+export const P099_QUALITY_TARGET_WORKLIST_PATH = "docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md";
 export const P099_ORIGINAL_QUALITY_TARGET_COUNT = 126;
 const P099_REASON_LABELS_AR: Record<string, string> = {
   "locative-adjunct": "ظرف مكان لا يحكمه الفعل",
@@ -281,7 +282,7 @@ export function assertOriginalP099QualityTargetDistribution(entries: readonly Ve
   return actual;
 }
 
-function appendBlankReviewColumns(row: unknown[]) {
+function appendBlankReviewColumns(row: readonly string[]): string[] {
   return [...row, ...REVIEW_COLUMNS.map(() => "")];
 }
 
@@ -484,6 +485,82 @@ export function auditP099QualityTargetReviewSlots(
 }
 
 /**
+ * يبني ورقة عمل مقروءة للأهداف الـ126 من الصفوف نفسها (لا نسخة ثانية من الحقيقة).
+ * حضور فقط: لا يطبع محتوى أي خلية توقيع، ولا يمنح مراجعة، ولا يفتح المرحلة الثانية قبل أدلة الاستبعادات الثمانية.
+ */
+export function buildP099QualityTargetReviewWorklist(input: {
+  headers: readonly string[];
+  rows: readonly (readonly string[])[];
+  contentHash: string;
+  stageOneNamedReferenceCount: number;
+}): string {
+  const { headers, rows, contentHash, stageOneNamedReferenceCount } = input;
+  const slots = auditP099QualityTargetReviewSlots(serializeCsv(headers, rows), stageOneNamedReferenceCount);
+  if (slots.targetCount !== P099_ORIGINAL_QUALITY_TARGET_COUNT) {
+    throw new Error(`P0-99 worklist requires exactly ${P099_ORIGINAL_QUALITY_TARGET_COUNT} targets; found ${slots.targetCount}.`);
+  }
+  const column = (name: string) => {
+    const indexes = headers.flatMap((header, index) => header === name ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 worklist requires exactly one ${name} column.`);
+    return indexes[0];
+  };
+  const targetIdIndex = column("anchorId");
+  const levelIndex = column("level");
+  const lessonIndex = column("lessonId");
+  const infinitiveIndex = column("infinitive");
+  const prepositionIndex = column("preposition");
+  const caseIndex = column("authoredGovernedCase");
+  const chunkIndex = column("chunkDe");
+  const exampleIndex = column("exampleDe");
+
+  const stageOneOpen = stageOneNamedReferenceCount === P099_STRUCTURAL_EXCLUSION_COUNT;
+  const lines: string[] = [
+    "# ورقة عمل مراجعة الأهداف اللغوية الـ126 — P0-99 (المرحلة الثانية)",
+    "",
+    `قراءة فقط: هذه الورقة ليست مراجعة ولا توقيعًا ولا اعتمادًا، ولا تغلق P0-99. بُنيت من صفوف \`reports/lexical-review-packet/frame-quality-targets.csv\` نفسها، وبصمة المحتوى المؤلَّف: \`${contentHash}\`.`,
+    "",
+    `- نطاق المراجعة \`${P099_QUALITY_TARGET_REVIEW_SCOPE}\`، والعدد **${slots.targetCount}**، والتوزيع A1/A2/B1/B2 = ${Object.entries(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL).map(([, count]) => `${count}`).join("/")}.`,
+    stageOneOpen
+      ? "- بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الثمانية. تبقى المراجعة المستقلة مطلوبة، وتسجيل الأسماء وحده ليس مراجعة."
+      : `- بوابة المرحلة الأولى ما زالت مغلقة: أسماء أدلة الاستبعادات **${stageOneNamedReferenceCount}/${P099_STRUCTURAL_EXCLUSION_COUNT}**. لا تبدأ مراجعة الجودة قبل تسميتها كلها، ولا يقبل الفاحص أي توقيع هنا قبل ذلك.`,
+    `- خلايا التوقيع الممتلئة في هذه الورقة حتى الآن: **${slots.signatureCellsFilled}/${slots.signatureCellsExpected}** (حضور فقط، لا يُطبع محتواها).`,
+    "- في كل صف: تحقّق من صحة الحالة المحكومة والتركيب والمثال، وأن المقطع طبيعي وقابل للاستعمال، وأنه لا يوجد إطار مكرر أو ملتبس. الفحص الآلي للحالة (`machineObserved…`) إشارة لا حكم.",
+    "- لا يُسجَّل قرار في هذه الورقة المولَّدة: انسخها لورقة مراجع، ثم يُنقل القرار المسمّى والمؤرخ إلى السجل المعتمد بقرار المالك، ويرفض الحارس الكتابة فوق أي إدخال محفوظ.",
+    "",
+  ];
+
+  for (const level of Object.keys(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL)) {
+    const levelRows = rows.filter((row) => row[levelIndex].trim() === level);
+    const expected = ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL[level as keyof typeof ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL];
+    lines.push(`## المستوى ${level} — ${levelRows.length}/${expected} هدفًا`, "");
+    lines.push("| # | الدرس | الهدف | الفعل + الحرف | الحالة المحكومة | المقطع | مثال |", "|---:|---|---|---|---|---|---|");
+    levelRows.forEach((row, index) => {
+      const cell = (value: string) => value.replace(/\|/gu, "\\|").replace(/\s+/gu, " ").trim();
+      lines.push(`| ${index + 1} | \`${cell(row[lessonIndex])}\` | \`${cell(row[targetIdIndex])}\` | ${cell(row[infinitiveIndex])} + ${cell(row[prepositionIndex])} | ${cell(row[caseIndex])} | ${cell(row[chunkIndex])} | ${cell(row[exampleIndex])} |`);
+    });
+    lines.push("");
+  }
+
+  lines.push(
+    "## قائمة تحقق المراجع (لكل صف)",
+    "",
+    "1. الحالة المحكومة صحيحة (Dativ / Akkusativ / Genitiv) ومطابقة لما يعلّمه الدرس فعلًا.",
+    "2. المقطع `chunkDe` تعبير طبيعي يستعمله الناطقون، لا تركيبًا مصنوعًا لإظهار الحرف.",
+    "3. المثال يحتمل الحالة وحدها، ولا يصلح مع حالة أخرى بلا سياق ملبِس.",
+    "4. لا يوجد إطار مكرر أو أقرب إلى إطار آخر في القائمة؛ إن وُجد، يُشرح في الملاحظة.",
+    "5. إن ظهرت إشارة آلية (machine-observed) لا تطابق ما تراه، فسّرها في الملاحظة بدل تجاهلها.",
+    "",
+    "## حدود صريحة",
+    "",
+    `- هذه الورقة لا تغلق P0-99، ولا تُعدّ إتمام المرحلة الأولى، ولا تحلّ محل مراجعة بشرية مستقلة مسمّاة ومؤرخة.`,
+    "- لا يوجد فيها قرار مُسبق ولا نتيجة قياس لغوي ولا ضمان أن الإشارات الآلية فُسرت صحيحًا. الصف بدون توقيع يعني «لم يُراجَع بعد»، لا «مقبول».",
+    "- ملفات القياس المرجعية: `reports/lexical-review-packet/frame-quality-targets.csv` (الصفوف)، و`npm run p099:evidence:status` (حضور الخانات)، و`npm run p099:evidence:validate` (فحص ورقة مراجعة عائدة).",
+    "",
+  );
+  return lines.join("\n");
+}
+
+/**
  * يبني ملف قراءة للاستبعادات الثمانية من صفوف CSV نفسها (لا نسخة ثانية من الحقيقة).
  * حضور فقط: لا يفتح دليلًا، ولا يطبع محتوى خلايا التوقيع، ولا يعلن إغلاقًا.
  */
@@ -578,6 +655,8 @@ export function buildLexicalReviewPacketArtifacts(input: {
   nounEntries: readonly NounGrammarEntry[];
   verbFrames: readonly VerbPrepositionFrame[];
   contentHash: string;
+  /** عدد أسماء أدلة الاستبعادات المسجَّلة فعلًا في الورقة المحفوظة؛ 0 افتراضيًا. لا يمنح مراجعة. */
+  stageOneNamedReferenceCount?: number;
 }): ReviewArtifact[] {
   const { audit, nounEntries, verbFrames, contentHash } = input;
 
@@ -730,7 +809,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
-- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- عند عودة ورقة من مراجع، يفحصها \`npm run p099:evidence:validate -- <ملف>\` بنيويًا: العدد والترتيب واسم الدليل واكتمال الحقول الخمسة وصيغة التاريخ؛ لا يثبت هوية المراجع ولا يفتح الدليل ولا يحكم على كفاية القرار ولا يغلق P0-99.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- عند عودة ورقة من مراجع، يفحصها \`npm run p099:evidence:validate -- <ملف>\` بنيويًا: العدد والترتيب واسم الدليل واكتمال الحقول الخمسة وصيغة التاريخ؛ لا يثبت هوية المراجع ولا يفتح الدليل ولا يحكم على كفاية القرار ولا يغلق P0-99.\n- ورقة العمل المقروءة للمرحلة الثانية في \`docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md\`: 126 هدفًا بترتيب المستوى والدرس مع الحالة المحكومة والمقطع والمثال، وبوابة المرحلة الأولى مكتوبة فيها.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
 - يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
@@ -743,10 +822,17 @@ export function buildLexicalReviewPacketArtifacts(input: {
 `;
 
   const dossier = buildP099ExclusionReviewDossier({ headers: exclusionHeaders, rows: exclusionRows, contentHash });
+  const qualityWorklist = buildP099QualityTargetReviewWorklist({
+    headers: qualityFrameHeaders,
+    rows: qualityFrameRows,
+    contentHash,
+    stageOneNamedReferenceCount: input.stageOneNamedReferenceCount ?? 0,
+  });
 
   return [
     { path: "reports/lexical-review-packet/README.md", content: readme },
     { path: P099_EXCLUSION_REVIEW_DOSSIER_PATH, content: dossier },
+    { path: P099_QUALITY_TARGET_WORKLIST_PATH, content: qualityWorklist },
     { path: "reports/lexical-review-packet/noun-anchors.csv", content: serializeCsv(nounHeaders, nounRows) },
     { path: "reports/lexical-review-packet/verb-frames.csv", content: serializeCsv(frameHeaders, frameRows) },
     { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: serializeCsv(qualityFrameHeaders, qualityFrameRows) },

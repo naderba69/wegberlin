@@ -8,6 +8,7 @@ import {
   assertOriginalP098NounReviewScope,
   assertOriginalP099QualityTargetDistribution,
   buildLexicalReviewPacketArtifacts,
+  summarizeP099ExclusionEvidenceReferences,
   protectedLexicalReviewFields,
 } from "../src/core/content-validation/lexical-review-packet";
 import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
@@ -58,11 +59,22 @@ const payloadWithoutHash = {
 };
 const contentHash = createHash("sha256").update(JSON.stringify(payloadWithoutHash)).digest("hex");
 const machinePayload = { ...payloadWithoutHash, contentSha256: contentHash };
+let stageOneNamedReferenceCount = 0;
+try {
+  const existingExclusions = await readFile("reports/lexical-review-packet/structural-exclusions.csv", "utf8");
+  stageOneNamedReferenceCount = summarizeP099ExclusionEvidenceReferences(
+    existingExclusions,
+    lexical.exclusionDecisions.map((decision) => decision.id),
+  ).namedReferenceCount;
+} catch (error) {
+  if (!(error instanceof Error && "code" in error && error.code === "ENOENT")) throw error;
+}
 const lexicalReviewPacketArtifacts = buildLexicalReviewPacketArtifacts({
   audit: lexical,
   nounEntries: nounGrammarEntries,
   verbFrames: verbPrepositionFrames,
   contentHash,
+  stageOneNamedReferenceCount,
 });
 
 function md(value: string, max = 120) {

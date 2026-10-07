@@ -12,11 +12,14 @@ import {
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
   auditP099QualityTargetReviewSlots,
+  buildP099QualityTargetReviewWorklist,
   buildP099ExclusionReviewDossier,
   isP099PlaceholderEvidenceReference,
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
   P099_EXCLUSION_REVIEW_DOSSIER_PATH,
   P099_ORIGINAL_QUALITY_TARGET_COUNT,
+  P099_QUALITY_TARGET_REVIEW_SCOPE,
+  P099_QUALITY_TARGET_WORKLIST_PATH,
   validateP099RetainedExclusionDecisions,
   summarizeP099ExclusionEvidenceReferences,
 } from "@/core/content-validation/lexical-review-packet";
@@ -449,19 +452,48 @@ describe("unsigned independent German lexical review packet", () => {
     expect(() => validateP099RetainedExclusionDecisions(shortened, expectedDecisionIds)).toThrow("expected 8 rows");
   });
 
+  it("ships a readable 126-target worklist in sheet order with an honest stage-1 gate", () => {
+    const worklist = byPath.get(P099_QUALITY_TARGET_WORKLIST_PATH)!;
+    expect(byPath.has(P099_QUALITY_TARGET_WORKLIST_PATH)).toBe(true);
+    const rows = [...worklist.matchAll(/^\| \d+ \| `([^`]+)` \| `([^`]+)` \|/gmu)];
+    expect(rows).toHaveLength(126);
+    const sheet = parseCsv(byPath.get("reports/lexical-review-packet/frame-quality-targets.csv")!);
+    const sheetIds = sheet.slice(1).map((row) => row[1]);
+    expect(rows.map((match) => match[2])).toEqual(sheetIds);
+    for (const [level, expected] of [["A1", 25], ["A2", 30], ["B1", 31], ["B2", 40]] as const) {
+      expect(worklist).toContain(`## المستوى ${level} — ${expected}/${expected} هدفًا`);
+    }
+    expect(worklist).toContain("ليست مراجعة ولا توقيعًا ولا اعتمادًا");
+    expect(worklist).toContain("بوابة المرحلة الأولى ما زالت مغلقة");
+    expect(worklist).toContain("**0/8**");
+    expect(worklist).toContain("**0/630**");
+    expect(worklist).toContain("انسخها لورقة مراجع");
+    expect(worklist).not.toContain("accept");
+
+    const headers = sheet[0];
+    const closed = buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1), contentHash: "test-content-sha256", stageOneNamedReferenceCount: 0 });
+    expect(closed).toContain("بوابة المرحلة الأولى ما زالت مغلقة");
+    const open = buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1), contentHash: "test-content-sha256", stageOneNamedReferenceCount: 8 });
+    expect(open).toContain("بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الثمانية");
+    expect(open).toContain("تسجيل الأسماء وحده ليس مراجعة");
+    expect(() => buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1, 40), contentHash: "test", stageOneNamedReferenceCount: 0 }))
+      .toThrow("expected 126 rows");
+  });
+
   it("quotes CSV fields and neutralizes spreadsheet formulas in authored text", () => {
     const seeded = buildLexicalReviewPacketArtifacts({
       audit,
       nounEntries: [{ ...nounGrammarEntries[0], lemma: "=1+1" }],
-      verbFrames: [],
+      verbFrames: verbPrepositionFrames,
       contentHash: "test",
     });
     const rows = parseCsv(seeded.find((artifact) => artifact.path.endsWith("noun-anchors.csv"))!.content);
-    const emptyQualityTargets = parseCsv(seeded.find((artifact) => artifact.path.endsWith("frame-quality-targets.csv"))!.content);
+    const seededQualityTargets = parseCsv(seeded.find((artifact) => artifact.path.endsWith("frame-quality-targets.csv"))!.content);
     expect(rows[1][rows[0].indexOf("lemma")]).toBe("'=1+1");
     expect(rows[1][0]).toBe("P0-98-original-1297-noun-target");
     expect(rows[1].length).toBe(rows[0].length);
-    expect(emptyQualityTargets).toHaveLength(1);
-    expect(emptyQualityTargets[0][0]).toBe("reviewScope");
+    expect(seededQualityTargets).toHaveLength(127);
+    expect(seededQualityTargets[0][0]).toBe("reviewScope");
+    expect(seededQualityTargets.slice(1).every((row) => row[0] === P099_QUALITY_TARGET_REVIEW_SCOPE)).toBe(true);
   });
 });

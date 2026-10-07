@@ -142,16 +142,9 @@ const humanReviewAudit = json("reports/human-review-audit.json");
 const humanReviewLedgerReport = read("docs/generated/HUMAN_REVIEW_LEDGER.md");
 const humanReviewReviewScript = read("scripts/audit-human-review.ts");
 const p099Dossier = read("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
+const p099Worklist = read("docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md");
 const p099StatusScript = read("scripts/report-p099-exclusion-evidence-status.ts");
 const humanReviewPresenceSource = read("src/core/content-validation/human-review-presence.ts");
-const generatedReviewArtifacts = [
-  { path: "reports/lexical-review-packet/structural-exclusions.csv", columns: ["reviewEvidenceName", "reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
-  { path: "reports/lexical-review-packet/frame-quality-targets.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
-  { path: "reports/lexical-review-packet/noun-anchors.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
-  { path: "reports/lexical-review-packet/verb-frames.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
-  { path: "reports/lexical-review-packet/unresolved-candidates.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
-  ...Array.from({ length: 17 }, (_, index) => ({ path: `reports/review-packet/review-sheet-${String(index + 1).padStart(2, "0")}.csv`, columns: ["decision", "reviewerName", "reviewDate", "note"] })),
-].map((artifact) => ({ ...artifact, content: read(artifact.path) }));
 const p099RetainedValidator = read("scripts/validate-p099-retained-decision.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
@@ -1423,6 +1416,25 @@ for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
  if(Number(match[2])!==expected)fail(`P0-99 stage-2 ${level} total disagrees with the original distribution`);
  if(Number(match[1])>Number(match[2]))fail(`P0-99 stage-2 ${level} signed rows exceed its total`);
 }
+const worklistRows=[...p099Worklist.matchAll(/^\| \d+ \| `([^`]+)` \| `([^`]+)` \|/gmu)];
+if(worklistRows.length!==lexicalFrameQualityWorklistLines.length-1)fail(`P0-99 worklist must carry one row per target; found ${worklistRows.length}`);
+const worklistTargetIds=worklistRows.map((match)=>match[2]);
+const stageTwoSheetIds=[...lexicalFrameQualityWorklist.matchAll(/^"[^"]+","((?:a[12]|b[12])-[a-z0-9-]+)"/gmu)].map((match)=>match[1]);
+if(stageTwoSheetIds.length!==worklistTargetIds.length)fail("P0-99 worklist target list disagrees with the stage-2 sheet length");
+if(stageTwoSheetIds.join("|")!==worklistTargetIds.join("|"))fail("P0-99 worklist rows must follow the stage-2 sheet order");
+for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
+ const heading=p099Worklist.match(new RegExp(`^## المستوى ${level} — (\\d+)/(\\d+) هدفًا$`,"mu"));
+ if(!heading)fail(`P0-99 worklist has no ${level} section heading`);
+ if(Number(heading[1])!==expected||Number(heading[2])!==expected)fail(`P0-99 worklist ${level} section count drifted`);
+}
+if(worklistTargetIds.length!==126)fail(`P0-99 worklist must list 126 targets; found ${worklistTargetIds.length}`);
+for(const text of["ورقة عمل مراجعة الأهداف اللغوية الـ126","ليست مراجعة ولا توقيعًا ولا اعتمادًا","قائمة تحقق المراجع","حدود صريحة","frame-quality-targets.csv"])requireText(p099Worklist,text,"P0-99 stage-2 worklist boundaries");
+if(p099NamedReferenceCount<p099NamedReferenceTotal){
+ if(!/بوابة المرحلة الأولى ما زالت مغلقة/u.test(p099Worklist))fail("P0-99 worklist must state that stage 1 is still closed while exclusions lack named evidence");
+ if(!p099Worklist.includes(`**${p099NamedReferenceCount}/${p099NamedReferenceTotal}**`))fail("P0-99 worklist stage-1 counter disagrees with the named-reference count");
+}else if(!/بوابة المرحلة الأولى: أُسميت أدلة الاستعbادات الثمانية/u.test(p099Worklist)&&!/بوابة المرحلة الأولى: أُسميت/u.test(p099Worklist))fail("P0-99 worklist must state the stage-1 gate is open once all eight names exist");
+if(!p099Worklist.includes("انسخها لورقة مراجع"))fail("P0-99 worklist must point reviewer decisions outside the generated file");
+
 const p099DossierIds=[...p099Dossier.matchAll(/^## (\d+)\. `([^`]+)`$/gmu)];
 if(p099DossierIds.length!==p099NamedReferenceTotal)fail(`P0-99 dossier must carry one section per authored exclusion; found ${p099DossierIds.length}`);
 if(p099DossierIds.some((match,index)=>Number(match[1])!==index+1))fail("P0-99 dossier sections are not numbered in order");

@@ -66,6 +66,130 @@ export function summarizeP099ExclusionEvidenceReferences(
   };
 }
 
+/** Values that look like a filed reference but carry no evidence name; they never count as named. */
+export const P099_EXCLUSION_PLACEHOLDER_REFERENCES = [
+  "-", "--", "?", "tba", "tbd", "to be decided", "to be added", "todo", "none", "unknown", "pending",
+  "n/a", "na", "x", "xx", "غير محدد", "لا يوجد", "قيد الانتظار",
+] as const;
+
+const P099_PLACEHOLDER_VALUES = new Set<string>(P099_EXCLUSION_PLACEHOLDER_REFERENCES);
+const P099_PLACEHOLDER_SYMBOLS = /^(?:x+|[-—?]+)$/u;
+
+/** True only for a non-blank filler value; a blank cell is reported as missing, not as a placeholder. */
+export function isP099PlaceholderEvidenceReference(value: string) {
+  const normalized = value.trim().replace(/\s+/gu, " ").toLowerCase();
+  if (!normalized) return false;
+  // A fully wrapped cell is an unfilled template marker such as <evidence> or [دليل], not an evidence name.
+  if (/^[<[{].*[>\]}]$/u.test(normalized)) return true;
+  const unwrapped = normalized.replace(/^[<[{("'«]+/u, "").replace(/[>\]})"'»]+$/u, "").trim();
+  return P099_PLACEHOLDER_VALUES.has(normalized) || P099_PLACEHOLDER_VALUES.has(unwrapped) || P099_PLACEHOLDER_SYMBOLS.test(unwrapped);
+}
+
+export type P099ExclusionReviewSlot = {
+  decisionId: string;
+  evidenceReferenceState: "missing" | "placeholder" | "named";
+  reviewStatus: string;
+  signatureCellsFilled: number;
+  signatureCellsExpected: number;
+  readyForIndependentReview: boolean;
+};
+
+export type P099ExclusionReviewSlotReport = {
+  exclusionCount: number;
+  namedReferenceCount: number;
+  missingReferenceCount: number;
+  placeholderReferenceCount: number;
+  missingReferenceDecisionIds: string[];
+  placeholderDecisionIds: string[];
+  signatureCellsExpected: number;
+  signatureCellsFilled: number;
+  readyForIndependentReviewCount: number;
+  slots: P099ExclusionReviewSlot[];
+  evidenceContentsInspected: false;
+  reviewDecisionContentsInterpreted: false;
+  p099ClosureAsserted: false;
+};
+
+/**
+ * Presence-only inventory of the eight P0-99 exclusion slots.
+ * It never opens evidence, never interprets a decision/reviewer identity, and never asserts closure:
+ * a filled name or signature cell is a filing step that still requires independent human review.
+ */
+export function auditP099ExclusionReviewSlots(
+  content: string,
+  expectedDecisionIds: readonly string[],
+): P099ExclusionReviewSlotReport {
+  if (expectedDecisionIds.length !== P099_STRUCTURAL_EXCLUSION_COUNT || new Set(expectedDecisionIds).size !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 exclusion slots require exactly ${P099_STRUCTURAL_EXCLUSION_COUNT} unique authored exclusion IDs.`);
+  }
+
+  const rows = parseCsv(content);
+  if (rows.length === 0) throw new Error("P0-99 exclusion slots CSV has no header row.");
+  const [header, ...dataRows] = rows;
+  const requiredColumnIndex = (columnName: string) => {
+    const indexes = header.flatMap((column, index) => column === columnName ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 exclusion slots require exactly one ${columnName} column.`);
+    return indexes[0];
+  };
+  const decisionIdIndex = requiredColumnIndex("decisionId");
+  const evidenceNameIndex = requiredColumnIndex(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+  const reviewStatusIndex = requiredColumnIndex("reviewStatus");
+  const signatureIndexes = REVIEW_COLUMNS.map((column) => requiredColumnIndex(column));
+  if (dataRows.length !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 exclusion slots expected ${expectedDecisionIds.length} rows; found ${dataRows.length}.`);
+  }
+  if (dataRows.some((row) => row.length !== header.length)) throw new Error("P0-99 exclusion slots contain a row with the wrong width.");
+
+  const slots: P099ExclusionReviewSlot[] = [];
+  const seen = new Set<string>();
+  for (const row of dataRows) {
+    const decisionId = row[decisionIdIndex].trim();
+    if (!decisionId || seen.has(decisionId)) throw new Error("P0-99 exclusion slots contain a blank or duplicate exclusion ID.");
+    if (!expectedDecisionIds.includes(decisionId)) throw new Error("P0-99 exclusion slot IDs do not match the authored structural exclusions.");
+    seen.add(decisionId);
+
+    const reference = row[evidenceNameIndex].trim();
+    const evidenceReferenceState = !reference ? "missing" : isP099PlaceholderEvidenceReference(reference) ? "placeholder" : "named";
+    const reviewStatus = row[reviewStatusIndex].trim();
+    const signatureCellsFilled = signatureIndexes.filter((index) => row[index].trim()).length;
+    if (signatureCellsFilled > 0 && evidenceReferenceState !== "named") {
+      throw new Error(`P0-99 exclusion ${decisionId} carries signature cells without a named evidence reference.`);
+    }
+    if (signatureCellsFilled > 0 && reviewStatus === "authored-review-pending") {
+      throw new Error(`P0-99 exclusion ${decisionId} carries signature cells while still marked ${reviewStatus}; the reviewer record and its status must be updated together.`);
+    }
+    slots.push({
+      decisionId,
+      evidenceReferenceState,
+      reviewStatus,
+      signatureCellsFilled,
+      signatureCellsExpected: REVIEW_COLUMNS.length,
+      readyForIndependentReview: evidenceReferenceState === "named" && reviewStatus === "authored-review-pending",
+    });
+  }
+  if (expectedDecisionIds.some((decisionId) => !seen.has(decisionId))) {
+    throw new Error("P0-99 exclusion slots omitted an authored structural exclusion.");
+  }
+
+  const missingReferenceDecisionIds = slots.filter((slot) => slot.evidenceReferenceState === "missing").map((slot) => slot.decisionId);
+  const placeholderDecisionIds = slots.filter((slot) => slot.evidenceReferenceState === "placeholder").map((slot) => slot.decisionId);
+  return {
+    exclusionCount: slots.length,
+    namedReferenceCount: slots.filter((slot) => slot.evidenceReferenceState === "named").length,
+    missingReferenceCount: missingReferenceDecisionIds.length,
+    placeholderReferenceCount: placeholderDecisionIds.length,
+    missingReferenceDecisionIds,
+    placeholderDecisionIds,
+    signatureCellsExpected: slots.length * REVIEW_COLUMNS.length,
+    signatureCellsFilled: slots.reduce((total, slot) => total + slot.signatureCellsFilled, 0),
+    readyForIndependentReviewCount: slots.filter((slot) => slot.readyForIndependentReview).length,
+    slots,
+    evidenceContentsInspected: false,
+    reviewDecisionContentsInterpreted: false,
+    p099ClosureAsserted: false,
+  };
+}
+
 export function protectedLexicalReviewFields(artifactPath: string): readonly string[] {
   if (artifactPath === "reports/lexical-review-packet/structural-exclusions.csv") {
     return [P099_EXCLUSION_EVIDENCE_NAME_COLUMN, ...REVIEW_COLUMNS];
@@ -314,6 +438,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
 - يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.
+- يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
 - يجب أن يراجع شخص مستقل مؤهل في الألمانية البيانات والسياق، ويسجل اسمه وصفته/مؤهله وتاريخ المراجعة. فسّر أي تعديل أو استبعاد في الملاحظة.

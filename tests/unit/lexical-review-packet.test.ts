@@ -4,12 +4,14 @@ import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-gramma
 import { serializeCsv } from "@/core/content-validation/safe-csv";
 import {
   assertOriginalP098NounReviewScope,
+  auditP099ExclusionReviewSlots,
   assertOriginalP099QualityTargetDistribution,
   buildLexicalReviewPacketArtifacts,
   frameTargetsByLevel,
   ORIGINAL_P098_NOUN_TARGET_COUNT,
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
+  isP099PlaceholderEvidenceReference,
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
   summarizeP099ExclusionEvidenceReferences,
 } from "@/core/content-validation/lexical-review-packet";
@@ -191,6 +193,81 @@ describe("unsigned independent German lexical review packet", () => {
     expect(() => summarizeP099ExclusionEvidenceReferences(unknownDecisionId, expectedDecisionIds)).toThrow("IDs do not match");
   });
 
+  it("separates missing, placeholder, and named P0-99 evidence slots without asserting review", () => {
+    const csv = byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!;
+    const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
+    const blank = auditP099ExclusionReviewSlots(csv, expectedDecisionIds);
+    expect(blank.namedReferenceCount).toBe(0);
+    expect(blank.missingReferenceCount).toBe(8);
+    expect(blank.placeholderReferenceCount).toBe(0);
+    expect(blank.signatureCellsExpected).toBe(40);
+    expect(blank.signatureCellsFilled).toBe(0);
+    expect(blank.readyForIndependentReviewCount).toBe(0);
+    expect(blank.missingReferenceDecisionIds).toEqual(expectedDecisionIds);
+    expect(blank.slots.every((slot) => slot.evidenceReferenceState === "missing"
+      && slot.reviewStatus === "authored-review-pending"
+      && slot.signatureCellsFilled === 0
+      && !slot.readyForIndependentReview)).toBe(true);
+    expect(blank.evidenceContentsInspected).toBe(false);
+    expect(blank.reviewDecisionContentsInterpreted).toBe(false);
+    expect(blank.p099ClosureAsserted).toBe(false);
+
+    const rows = parseCsv(csv);
+    const decisionIdIndex = rows[0].indexOf("decisionId");
+    const evidenceNameIndex = rows[0].indexOf(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+    const statusIndex = rows[0].indexOf("reviewStatus");
+    const reviewerNameIndex = rows[0].indexOf("reviewerName");
+    const rewrite = (headers: CsvRow, dataRows: CsvRow[]) => serializeCsv(headers, dataRows);
+    const fillEveryRow = (mutate: (row: CsvRow, index: number) => void) => {
+      const nextRows = rows.slice(1).map((row, index) => {
+        const next = [...row];
+        mutate(next, index);
+        return next;
+      });
+      return rewrite(rows[0], nextRows);
+    };
+
+    const placeholderCsv = fillEveryRow((row) => { row[evidenceNameIndex] = "TODO"; });
+    const placeholders = auditP099ExclusionReviewSlots(placeholderCsv, expectedDecisionIds);
+    expect(placeholders.placeholderReferenceCount).toBe(8);
+    expect(placeholders.namedReferenceCount).toBe(0);
+    expect(placeholders.missingReferenceCount).toBe(0);
+    expect(placeholders.placeholderDecisionIds).toEqual(expectedDecisionIds);
+    expect(placeholders.readyForIndependentReviewCount).toBe(0);
+    expect(isP099PlaceholderEvidenceReference("")).toBe(false);
+    expect(isP099PlaceholderEvidenceReference("n/a")).toBe(true);
+    expect(isP099PlaceholderEvidenceReference("<دليل المراجعة>")).toBe(true);
+    expect(isP099PlaceholderEvidenceReference("قيد الانتظار")).toBe(true);
+    expect(isP099PlaceholderEvidenceReference("reports/evidence/p099-a1-21-review.pdf")).toBe(false);
+
+    const namedCsv = fillEveryRow((row) => { row[evidenceNameIndex] = "reports/evidence/p099-a1-21-review.pdf"; });
+    const named = auditP099ExclusionReviewSlots(namedCsv, expectedDecisionIds);
+    expect(named.namedReferenceCount).toBe(8);
+    expect(named.missingReferenceCount).toBe(0);
+    expect(named.readyForIndependentReviewCount).toBe(8);
+    expect(named.p099ClosureAsserted).toBe(false);
+
+    const signedWhilePending = parseCsv(namedCsv);
+    signedWhilePending[1][reviewerNameIndex] = "test-reviewer";
+    expect(() => auditP099ExclusionReviewSlots(rewrite(signedWhilePending[0], signedWhilePending.slice(1)), expectedDecisionIds))
+      .toThrow("while still marked authored-review-pending");
+
+    const statusChanged = parseCsv(namedCsv);
+    statusChanged[1][statusIndex] = "review-complete";
+    statusChanged[1][reviewerNameIndex] = "test-reviewer";
+    const filed = auditP099ExclusionReviewSlots(rewrite(statusChanged[0], statusChanged.slice(1)), expectedDecisionIds);
+    expect(filed.signatureCellsFilled).toBe(1);
+    expect(filed.readyForIndependentReviewCount).toBe(7);
+    expect(rows.slice(1).map((row) => row[decisionIdIndex])).toEqual(expectedDecisionIds);
+
+    const signatureWithoutName = parseCsv(namedCsv);
+    signatureWithoutName[1][evidenceNameIndex] = "";
+    signatureWithoutName[1][statusIndex] = "review-complete";
+    signatureWithoutName[1][reviewerNameIndex] = "test-reviewer";
+    expect(() => auditP099ExclusionReviewSlots(rewrite(signatureWithoutName[0], signatureWithoutName.slice(1)), expectedDecisionIds))
+      .toThrow("without a named evidence reference");
+  });
+
   it("states that the packet is unsigned and cannot close P0-98/P0-99", () => {
     const readme = byPath.get("reports/lexical-review-packet/README.md")!;
     expect(readme).toContain("ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد");
@@ -207,6 +284,8 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126");
     expect(readme).toContain("npm run p099:evidence:status");
     expect(readme).toContain("تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية");
+    expect(readme).toContain("يفصل الفاحص نفسه بين غياب الاسم واسم نائب");
+    expect(readme).toContain("يوقف الفاحص بدل أن يُقرأ كإغلاق");
     expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
   });

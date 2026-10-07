@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting displays 0/8 names and disclaims evidence/review verification and closure. No external source, API, network origin, product, or Offline cache changed. Latest Quality Gate `37583515211` passed on `b5d48e4`; predecessor E2E had one retried flake. Deployment Smoke skipped, no Production claim.
+Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting displays 0/8 names and disclaims evidence/review verification and closure. No external source, API, network origin, product, or Offline cache changed. Quality Gate `37584870889` passed on `25534ff`; desktop/mobile E2E 65/65 each. A predecessor gate had one retried flake. Deployment Smoke skipped, no Production claim.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

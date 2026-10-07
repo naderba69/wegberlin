@@ -1,6 +1,6 @@
 # Content Completeness and Empty-Asset Audit
 
-Sync batch: v183 · 2026-10-07 · Added only a handoff display for the read-only P0-99 0/8 inventory and its non-verification boundary. No curriculum item, review decision, audio asset, learner-state schema, or Offline cache changed; the separate 126-target scope and `reviewScope` remain unchanged. Latest Quality Gate `37583515211` passed on `b5d48e4`; a predecessor E2E run had one retried IndexedDB flake; Deployment Smoke skipped, no Production claim.
+Sync batch: v183 · 2026-10-07 · Added only a handoff display for the read-only P0-99 0/8 inventory and its non-verification boundary. No curriculum item, review decision, audio asset, learner-state schema, or Offline cache changed; the separate 126-target scope and `reviewScope` remain unchanged. Quality Gate `37584870889` passed on `25534ff` (desktop/mobile E2E 65/65 each); a predecessor run had one retried IndexedDB flake; Deployment Smoke skipped, no Production claim.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

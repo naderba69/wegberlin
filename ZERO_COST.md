@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v183 · 2026-10-07 · The handoff reports the read-only P0-99 inventory (0/8) with explicit evidence/review/closure limits. Latest Quality Gate `37583515211` and Vercel Preview passed; a predecessor E2E run had one flaky IndexedDB retry; Deployment Smoke was skipped. No external service, AI call, analytics, product, learner-state, or Offline cache change; no new cost or Production claim.
+Sync batch: v183 · 2026-10-07 · The handoff reports the read-only P0-99 inventory (0/8) with explicit evidence/review/closure limits. Quality Gate `37584870889` and Vercel Preview passed; desktop/mobile E2E were 65/65 each. An earlier E2E run had one flaky IndexedDB retry; latest run reported none. Deployment Smoke was skipped. No external service, AI call, analytics, product, learner-state, or Offline cache change; no new cost or Production claim.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

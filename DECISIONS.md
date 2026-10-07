@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v183 · 2026-10-07 · Operational handoff verification displays the read-only P0-99 inventory (0/8) and disclaims evidence inspection, human-review verification, and closure. No architectural/product decision changed; the 126-target scope and `reviewScope` remain unchanged; no cache increment. Latest Quality Gate `37583515211` passed on `b5d48e4`; E2E and Vercel Preview passed. A predecessor E2E run had one flaky IndexedDB attempt that passed on retry; Deployment Smoke skipped, no Production claim.
+Sync batch: v183 · 2026-10-07 · Operational handoff verification displays the read-only P0-99 inventory (0/8) and disclaims evidence inspection, human-review verification, and closure. No architectural/product decision changed; the 126-target scope and `reviewScope` remain unchanged; no cache increment. Quality Gate `37584870889` passed on `25534ff`; desktop/mobile E2E 65/65 each and Vercel Preview passed. An earlier E2E run had one flaky IndexedDB attempt that passed on retry; Deployment Smoke skipped, no Production claim.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

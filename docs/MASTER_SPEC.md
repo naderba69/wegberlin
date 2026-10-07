@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting now displays the 0/8 named-reference inventory and explicitly does not verify evidence, human decisions, or closure. Product behavior, learner state, the independent 126-target scope, and Offline packs are unchanged.
+Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting displays the 0/8 named-reference inventory and explicitly does not verify evidence, human decisions, or closure. Product behavior, learner state, the independent 126-target scope, and Offline packs are unchanged. Quality Gate `37579942867` passed on `a78c58a`; Deployment Smoke skipped, no Production claim.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

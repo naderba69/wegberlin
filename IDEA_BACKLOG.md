@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting now exposes the 0/8 named-reference inventory and its verification limits. No priority, backlog classification, review decision, product, learner-state, or Offline cache change; v183 remains active/staging and v182 rollback.
+Sync batch: v183 · 2026-10-07 · Repository-only P0-99 handoff reporting exposes the 0/8 named-reference inventory and limits. No priority, backlog classification, review decision, product, learner-state, or Offline cache change. Quality Gate `37579942867` passed on `a78c58a`; Vercel Preview passed; Deployment Smoke skipped, no Production claim. v183 remains active/staging; v182 rollback.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v183 · 2026-10-07 · Repository-only handoff now displays the P0-99 named-reference inventory as 0/8 while explicitly not verifying evidence or human review. No audio asset, production status, audio claim, product, or Offline cache changed.
+Sync batch: v183 · 2026-10-07 · Repository-only handoff displays the P0-99 named-reference inventory as 0/8 and does not verify evidence or human review. No audio asset, production status, audio claim, product, or Offline cache changed. Quality Gate `37579942867` and Vercel Preview passed; Deployment Smoke skipped, no Production claim.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

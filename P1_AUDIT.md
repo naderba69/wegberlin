@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v183 · 2026-10-07 · This batch changes only the repository handoff report for P0-99; P1 rows, counts, and human-review boundaries are unchanged. No product, learner-state, or Offline cache change; active/staging remain v183, rollback v182.
+Sync batch: v183 · 2026-10-07 · This batch changes only repository handoff reporting for P0-99; P1 rows, counts, and human-review boundaries are unchanged. Quality Gate `37579942867` and Vercel Preview passed on `a78c58a`; Deployment Smoke was skipped and no Production deployment is claimed. No product, learner-state, or Offline cache change; v183 active/staging, v182 rollback.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

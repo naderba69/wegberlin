@@ -9,6 +9,7 @@ type EvidenceSource = { path: string; stage: string; surface: string; strength: 
 const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] as const;
 export const P099_EXCLUSION_EVIDENCE_NAME_COLUMN = "reviewEvidenceName";
 export const P099_EXCLUSION_REVIEW_DOSSIER_PATH = "docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md";
+export const P099_QUALITY_TARGET_REVIEW_SCOPE = "P0-99-original-126-quality-target";
 export const P099_ORIGINAL_QUALITY_TARGET_COUNT = 126;
 const P099_REASON_LABELS_AR: Record<string, string> = {
   "locative-adjunct": "ظرف مكان لا يحكمه الفعل",
@@ -289,6 +290,91 @@ function appendBlankReviewColumns(row: unknown[]) {
  * Nothing in this output records a review decision or changes audit status.
  */
 /**
+ * جرد حضور خانات التوقيع في ورقة الأهداف الـ126 (المرحلة الثانية) — قراءة فقط.
+ * لا يفتح محتوى قرار ولا يفسّره ولا يعلن إغلاقًا. يوقف الفحصَ أي توقيع مسجَّل قبل
+ * تسمية أدلة الاستبعادات الثمانية: الترتيب جزء من المتطلب، لا تفضيل.
+ */
+export type P099QualityTargetSlotReport = {
+  targetCount: number;
+  signedRowCount: number;
+  signatureCellsFilled: number;
+  signatureCellsExpected: number;
+  signedTargetIds: string[];
+  byLevel: Record<string, { total: number; signed: number }>;
+  stageOneNamedReferenceCount: number;
+  blockedByStageOne: boolean;
+  evidenceContentsInspected: false;
+  reviewDecisionContentsInterpreted: false;
+  p099ClosureAsserted: false;
+};
+
+export function auditP099QualityTargetReviewSlots(
+  content: string,
+  stageOneNamedReferenceCount: number,
+): P099QualityTargetSlotReport {
+  if (!Number.isInteger(stageOneNamedReferenceCount) || stageOneNamedReferenceCount < 0 || stageOneNamedReferenceCount > P099_STRUCTURAL_EXCLUSION_COUNT) {
+    throw new Error(`P0-99 quality-target slots require a stage-1 named-reference count between 0 and ${P099_STRUCTURAL_EXCLUSION_COUNT}.`);
+  }
+
+  const rows = parseCsv(content);
+  if (rows.length === 0) throw new Error("P0-99 quality-target slots CSV has no header row.");
+  const [header, ...dataRows] = rows;
+  const requiredColumnIndex = (columnName: string) => {
+    const indexes = header.flatMap((column, index) => column === columnName ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 quality-target slots require exactly one ${columnName} column.`);
+    return indexes[0];
+  };
+  const scopeIndex = requiredColumnIndex("reviewScope");
+  const targetIdIndex = requiredColumnIndex("anchorId");
+  const levelIndex = requiredColumnIndex("level");
+  const signatureIndexes = REVIEW_COLUMNS.map((column) => requiredColumnIndex(column));
+  if (dataRows.length !== P099_ORIGINAL_QUALITY_TARGET_COUNT) {
+    throw new Error(`P0-99 quality-target slots expected ${P099_ORIGINAL_QUALITY_TARGET_COUNT} rows; found ${dataRows.length}.`);
+  }
+  if (dataRows.some((row) => row.length !== header.length)) throw new Error("P0-99 quality-target slots contain a row with the wrong width.");
+
+  const byLevel: Record<string, { total: number; signed: number }> = {};
+  const signedTargetIds: string[] = [];
+  const seen = new Set<string>();
+  let signatureCellsFilled = 0;
+  for (const row of dataRows) {
+    const scope = row[scopeIndex].trim();
+    if (scope !== ORIGINAL_P099_QUALITY_SCOPE) throw new Error(`P0-99 quality-target slots contain a row outside the original scope (${scope || "empty"}).`);
+    const targetId = row[targetIdIndex].trim();
+    if (!targetId || seen.has(targetId)) throw new Error("P0-99 quality-target slots contain a blank or duplicate anchor ID.");
+    seen.add(targetId);
+    const level = row[levelIndex].trim();
+    if (!Object.hasOwn(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL, level)) throw new Error(`P0-99 quality-target slots contain an unknown level (${level || "empty"}).`);
+    const cellsFilled = signatureIndexes.filter((index) => row[index].trim()).length;
+    byLevel[level] = { total: (byLevel[level]?.total ?? 0) + 1, signed: (byLevel[level]?.signed ?? 0) + (cellsFilled > 0 ? 1 : 0) };
+    signatureCellsFilled += cellsFilled;
+    if (cellsFilled > 0) signedTargetIds.push(targetId);
+  }
+  for (const [level, expected] of Object.entries(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL)) {
+    if (byLevel[level]?.total !== expected) throw new Error(`P0-99 quality-target slots disagree with the original distribution for ${level}: expected ${expected}, found ${byLevel[level]?.total ?? 0}.`);
+  }
+
+  const blockedByStageOne = signedTargetIds.length > 0 && stageOneNamedReferenceCount < P099_STRUCTURAL_EXCLUSION_COUNT;
+  if (blockedByStageOne) {
+    throw new Error(`P0-99 quality-target signatures are recorded (${signedTargetIds.length} row(s)) before the eight exclusion evidence references are named (${stageOneNamedReferenceCount}/${P099_STRUCTURAL_EXCLUSION_COUNT}). The exclusion evidence comes first.`);
+  }
+
+  return {
+    targetCount: dataRows.length,
+    signedRowCount: signedTargetIds.length,
+    signatureCellsFilled,
+    signatureCellsExpected: dataRows.length * REVIEW_COLUMNS.length,
+    signedTargetIds,
+    byLevel,
+    stageOneNamedReferenceCount,
+    blockedByStageOne,
+    evidenceContentsInspected: false,
+    reviewDecisionContentsInterpreted: false,
+    p099ClosureAsserted: false,
+  };
+}
+
+/**
  * يبني ملف قراءة للاستبعادات الثمانية من صفوف CSV نفسها (لا نسخة ثانية من الحقيقة).
  * حضور فقط: لا يفتح دليلًا، ولا يطبع محتوى خلايا التوقيع، ولا يعلن إغلاقًا.
  */
@@ -536,7 +622,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
-- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
 - يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.

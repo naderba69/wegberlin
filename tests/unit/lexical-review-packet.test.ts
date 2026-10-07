@@ -11,6 +11,7 @@ import {
   ORIGINAL_P098_NOUN_TARGET_COUNT,
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
+  auditP099QualityTargetReviewSlots,
   buildP099ExclusionReviewDossier,
   isP099PlaceholderEvidenceReference,
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
@@ -292,6 +293,51 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("يوقف الفاحص بدل أن يُقرأ كإغلاق");
     expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
+  });
+
+  it("reads the 126-target sheet as presence only and refuses signatures before the eight names", () => {
+    const csv = byPath.get("reports/lexical-review-packet/frame-quality-targets.csv")!;
+    const blank = auditP099QualityTargetReviewSlots(csv, 0);
+    expect(blank.targetCount).toBe(126);
+    expect(blank.signedRowCount).toBe(0);
+    expect(blank.signatureCellsFilled).toBe(0);
+    expect(blank.signatureCellsExpected).toBe(630);
+    expect(blank.signedTargetIds).toEqual([]);
+    expect(blank.byLevel).toEqual({ A1: { total: 25, signed: 0 }, A2: { total: 30, signed: 0 }, B1: { total: 31, signed: 0 }, B2: { total: 40, signed: 0 } });
+    expect(blank.blockedByStageOne).toBe(false);
+    expect(blank.evidenceContentsInspected).toBe(false);
+    expect(blank.reviewDecisionContentsInterpreted).toBe(false);
+    expect(blank.p099ClosureAsserted).toBe(false);
+
+    const rows = parseCsv(csv);
+    const decisionIndex = rows[0].indexOf("reviewDecision");
+    const reviewerIndex = rows[0].indexOf("reviewerName");
+    const scopeIndex = rows[0].indexOf("reviewScope");
+    const targetIdIndex = rows[0].indexOf("anchorId");
+    const mutate = (index: number, patch: (row: CsvRow) => void) => serializeCsv(rows[0], rows.slice(1).map((row, rowIndex) => {
+      const next = [...row];
+      if (rowIndex === index) patch(next);
+      return next;
+    }));
+
+    const prematureSignature = mutate(0, (row) => { row[decisionIndex] = "accept"; row[reviewerIndex] = "test-reviewer"; });
+    expect(() => auditP099QualityTargetReviewSlots(prematureSignature, 0)).toThrow("before the eight exclusion evidence references are named");
+    expect(() => auditP099QualityTargetReviewSlots(prematureSignature, 7)).toThrow("The exclusion evidence comes first.");
+
+    const allowed = auditP099QualityTargetReviewSlots(prematureSignature, 8);
+    expect(allowed.signedRowCount).toBe(1);
+    expect(allowed.signatureCellsFilled).toBe(2);
+    expect(allowed.signedTargetIds).toEqual([rows[1][targetIdIndex]]);
+    expect(allowed.byLevel.A1).toEqual({ total: 25, signed: 1 });
+    expect(allowed.blockedByStageOne).toBe(false);
+    expect(allowed.p099ClosureAsserted).toBe(false);
+
+    const outOfScope = mutate(0, (row) => { row[scopeIndex] = "some-other-scope"; });
+    expect(() => auditP099QualityTargetReviewSlots(outOfScope, 0)).toThrow("outside the original scope");
+    const shortSheet = serializeCsv(rows[0], rows.slice(2));
+    expect(() => auditP099QualityTargetReviewSlots(shortSheet, 0)).toThrow("expected 126 rows");
+    expect(() => auditP099QualityTargetReviewSlots(csv, 9)).toThrow("stage-1 named-reference count");
+    expect(rows.slice(1).every((row) => row[decisionIndex] === "" && row[reviewerIndex] === "")).toBe(true);
   });
 
   it("ships a readable per-exclusion dossier built from the same rows and bounded to presence", () => {

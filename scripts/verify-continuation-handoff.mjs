@@ -140,6 +140,7 @@ const humanReviewLedgerSource = read("src/data/human-review-ledger.ts");
 const humanReviewAudit = json("reports/human-review-audit.json");
 const humanReviewLedgerReport = read("docs/generated/HUMAN_REVIEW_LEDGER.md");
 const p099Dossier = read("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
+const p099StatusScript = read("scripts/report-p099-exclusion-evidence-status.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -1369,6 +1370,27 @@ if(p099NamedReferenceCount<p099NamedReferenceTotal){
   if(!p099StageTwo[2].includes(`${p099NamedReferenceCount}/${p099NamedReferenceTotal}`))fail("P0-99 stage-2 line disagrees with the named-reference count");
 }else if(!p099StageTwo[2].startsWith("ready to start: names recorded only"))fail("P0-99 stage 2 may only be described as names recorded, never as reviewed");
 requireText(p099EvidenceStatusOutput,"docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md","P0-99 status dossier pointer");
+for(const text of["auditP099ExclusionReviewSlots","auditP099QualityTargetReviewSlots","contents not interpreted"])requireText(p099StatusScript,text,"P0-99 status script wiring");
+const p099StageTwoRows=p099EvidenceStatusOutput.match(/Stage 2 rows with a recorded signature \(presence only; contents not interpreted\): (\d+)\/(\d+)/u);
+if(!p099StageTwoRows)fail("P0-99 status did not report stage-2 signed rows");
+const p099StageTwoSigned=Number(p099StageTwoRows[1]);
+const p099StageTwoTotal=Number(p099StageTwoRows[2]);
+if(p099StageTwoTotal!==lexicalFrameQualityWorklistLines.length-1)fail("P0-99 stage-2 row count disagrees with the independent frame-quality worklist");
+if(p099StageTwoSigned>p099StageTwoTotal)fail("P0-99 stage-2 signed rows exceed the original 126-target scope");
+const p099StageTwoCells=p099EvidenceStatusOutput.match(/Stage 2 signature cells filled: (\d+)\/(\d+)/u);
+if(!p099StageTwoCells)fail("P0-99 status did not report stage-2 signature cells");
+const p099StageTwoCellsFilled=Number(p099StageTwoCells[1]);
+const p099StageTwoCellsExpected=Number(p099StageTwoCells[2]);
+if(p099StageTwoCellsExpected!==p099StageTwoTotal*5)fail("P0-99 stage-2 signature-cell denominator disagrees with the 126 targets and their five signature columns");
+if(p099StageTwoCellsFilled>p099StageTwoCellsExpected)fail("P0-99 stage-2 signature cells exceed the authored slots");
+if((p099StageTwoCellsFilled===0)!==(p099StageTwoSigned===0))fail("P0-99 stage-2 signed-row and signature-cell counts disagree");
+if(p099StageTwoCellsFilled>0&&p099NamedReferenceCount<p099NamedReferenceTotal)fail("P0-99 stage-2 signatures must not be recorded before the eight exclusion references are named");
+for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
+ const match=p099EvidenceStatusOutput.match(new RegExp(`^- ${level}: (\\d+)/(\\d+) rows with a recorded signature$`,"mu"));
+ if(!match)fail(`P0-99 status did not report stage-2 progress for ${level}`);
+ if(Number(match[2])!==expected)fail(`P0-99 stage-2 ${level} total disagrees with the original distribution`);
+ if(Number(match[1])>Number(match[2]))fail(`P0-99 stage-2 ${level} signed rows exceed its total`);
+}
 const p099DossierIds=[...p099Dossier.matchAll(/^## (\d+)\. `([^`]+)`$/gmu)];
 if(p099DossierIds.length!==p099NamedReferenceTotal)fail(`P0-99 dossier must carry one section per authored exclusion; found ${p099DossierIds.length}`);
 if(p099DossierIds.some((match,index)=>Number(match[1])!==index+1))fail("P0-99 dossier sections are not numbered in order");

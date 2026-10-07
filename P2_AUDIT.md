@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v183 · 2026-10-07 · This batch changes only repository handoff reporting for P0-99; P2 rows and counts are unchanged. Quality Gate `37579942867` and Vercel Preview passed on `a78c58a`; Deployment Smoke was skipped and no Production deployment is claimed. No product, learner-state, or Offline cache change; v183 active/staging, v182 rollback.
+Sync batch: v183 · 2026-10-07 · This batch changes only repository handoff reporting for P0-99; P2 rows and counts are unchanged. Quality Gate `37581667793` and Vercel Preview passed on `0ceb127`; E2E had one flaky IndexedDB test attempt that passed on retry. Deployment Smoke was skipped; no Production deployment is claimed. No product, learner-state, or Offline cache change; v183 active/staging, v182 rollback.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

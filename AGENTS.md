@@ -8,7 +8,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-Sync batch: v183 · 2026-10-07 · Repository-only handoff improvement: `handoff:check` now prints the read-only P0-99 named-evidence-reference count and explicit non-verification boundaries. Quality Gate `37579942867` passed on `a78c58a`; Vercel Preview passed. Deployment Smoke was skipped; no Production claim. No product, learner-state, audio, or Offline cache change; active/staging remain v183 and rollback v182.
+Sync batch: v183 · 2026-10-07 · Repository-only handoff improvement: `handoff:check` prints the read-only P0-99 named-evidence-reference count and explicit non-verification boundaries. Quality Gate `37581667793` passed on `0ceb127`; Vercel Preview passed. Deployment Smoke `37580160723` was skipped; no Production claim. No product, learner-state, audio, or Offline cache change; active/staging v183, rollback v182.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

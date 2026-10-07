@@ -51,6 +51,121 @@
   "reviewDecisionContentsInterpreted": false,
   "p099ClosureAsserted": false
  },
+ "reviewPacketPresence": {
+  "sheetCount": 17,
+  "rowCount": 3277,
+  "fullySignedRowCount": 0,
+  "unsignedRowCount": 3277,
+  "signedSignatureCells": 0,
+  "signatureCellsExpected": 13108,
+  "sheets": [
+   {
+    "name": "review-sheet-01.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-02.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-03.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-04.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-05.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-06.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-07.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-08.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-09.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-10.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-11.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-12.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-13.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-14.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-15.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-16.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-17.csv",
+    "rows": 77,
+    "fullySignedRows": 0,
+    "unsignedRows": 77
+   }
+  ],
+  "evidenceContentsInspected": false,
+  "reviewDecisionContentsInterpreted": false,
+  "humanReviewClosureAsserted": false
+ },
  "policyVersion": "human-review-ledger-v1",
  "boundary": "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer",
  "totalEntries": 0,

@@ -1,3 +1,4 @@
+import { REVIEW_PACKET_SIGNATURE_FIELDS as REVIEW_SIGNATURE_FIELDS } from "./human-review-presence";
 import { hasNonEmptyCsvFields } from "./safe-csv";
 
 export type ExistingReviewPacketEntry = {
@@ -6,7 +7,6 @@ export type ExistingReviewPacketEntry = {
   content: string;
 };
 
-const REVIEW_SIGNATURE_FIELDS = ["decision", "reviewerName", "reviewDate", "note"] as const;
 const GENERATED_README_HEADER = "# حزمة المراجعة البشرية المستقلة — Der Weg nach Berlin";
 const GENERATED_B2_HEADER = "# قائمة فحص دروس B2 — يملؤها مراجع بشري مسمّى (لا يملؤها السكربت)";
 

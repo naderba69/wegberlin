@@ -1,6 +1,6 @@
 # Human Review Ledger Audit
 
-Policy `human-review-ledger-v1`. Content SHA-256: `e4b175df04a1423e4c817a3f45005be5974da524daba467735833d8b05df19ab`
+Policy `human-review-ledger-v1`. Content SHA-256: `409660dff74cfe598a9bfaca22381298ba0b983dfda903d00785b1ea962ab687`
 
 Boundary: reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer
 
@@ -17,6 +17,23 @@ Boundary: reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer
 | Month | Reviewed lessons | Target |
 | --- | --- | --- |
 | — | 0 | below target |
+
+## Governed-record review sheets (presence only)
+
+Policy `reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer`. Counts filled cells only: it does not open a decision, does not read a reviewer note, and does not close P0-9.
+
+| Metric | Value |
+| --- | --- |
+| Sheets | 17 |
+| Governed rows | 3277 |
+| Fully signed rows | 0 |
+| Unsigned rows | 3277 |
+| Signature cells filled | 0/13108 |
+| Evidence contents inspected | no |
+| Review decision contents interpreted | no |
+| Human review closure asserted | no |
+
+Every governed row is unsigned on purpose: the sheets count what comes back from named reviewers, and a partial signature stops the audit instead of being read as a finished review.
 
 ## P0-99 exclusion evidence slots (presence only)
 

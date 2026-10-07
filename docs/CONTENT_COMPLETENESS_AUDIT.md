@@ -1,6 +1,6 @@
 # Content Completeness and Empty-Asset Audit
 
-Sync batch: v183 · 2026-10-07 · Added only a signature-free invariant scan over the generated review artifacts. No curriculum item, review decision, audio asset, learner-state schema, or Offline cache changed; `reviewScope` and the 126-target list remain unchanged. Local `npm run check` passed 1,386/1,386 tests in 204 files with build fingerprint `3cf5c6d6be67`; no Production claim.
+Sync batch: v183 · 2026-10-07 · Added only a signature-free invariant scan over the generated review artifacts. No curriculum item, review decision, audio asset, learner-state schema, or Offline cache changed; `reviewScope` and the 126-target list remain unchanged. Local `npm run check` passed 1,386/1,386 tests in 204 files with build fingerprint `3cf5c6d6be67`. Quality Gate `37664737685` passed on `3e2fb07`: `check` 6m12s and E2E 21m17s. The Vercel preview for this revision hit the external project quota again (`upgradeToPro=build-rate-limit`); the previously recorded successful preview on `d121da0` still stands as the last built one. No Production claim and no merge claim; PR #7 remains open.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

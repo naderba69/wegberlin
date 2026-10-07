@@ -2,7 +2,7 @@
 
 Generated: 2026-09-08  
 Version: `learning-architecture-audit-v1`  
-Content SHA-256: `05d4a08faf3e7453c04cb5bdbcfa74557cb29b3972efbf4a4e4f3b3b2efdaa4a`
+Content SHA-256: `867363eff848b3d3894304b67f5f3c885d39b409aaab1b38a6fb215baed861fc`
 
 ## Result
 
@@ -48,10 +48,10 @@ Every one of 288 reading and 288 listening questions has exactly one function la
 | Level | Total | Gist | Detail | Stance | Inference | Structure | Detail share |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | A1 | 144 | 24 | 95 | 6 | 14 | 5 | 66% |
-| A2 | 144 | 24 | 82 | 6 | 21 | 11 | 57% |
-| B1 | 144 | 24 | 83 | 9 | 18 | 10 | 58% |
-| B2 | 144 | 24 | 57 | 13 | 28 | 22 | 40% |
-| **Total** | **576** | **96** | **317** | **34** | **81** | **48** | — |
+| A2 | 144 | 24 | 81 | 7 | 21 | 11 | 56% |
+| B1 | 144 | 24 | 81 | 11 | 18 | 10 | 56% |
+| B2 | 144 | 24 | 55 | 12 | 29 | 24 | 38% |
+| **Total** | **576** | **96** | **312** | **36** | **82** | **50** | — |
 
 Balance gates require all five functions in every level, keep details at or below 72%, and keep gist between 12% and 30%. Labels guide strategy only and never change correctness, score, mastery, or CEFR.
 

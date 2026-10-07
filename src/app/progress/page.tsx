@@ -10,6 +10,8 @@ import { LearningOutcomePanel } from "@/components/learning-outcome-panel";
 import { DelayedTransferPanel } from "@/components/delayed-transfer-panel";
 import { SupplementaryUnitPanel } from "@/components/supplementary-unit-panel";
 import { masteryDerivationSummary } from "@/core/evidence/event-derived-mastery";
+import { TimeBudgetPanel } from "@/components/time-budget-panel";
+import { ProductiveSampleComparisonPanel } from "@/components/productive-sample-comparison";
 
 const confidenceAr = { none: "لا دليل", low: "عينة أولية", medium: "عينة متوسطة", high: "عينة كبيرة؛ ليست معايرة" };
 
@@ -32,6 +34,9 @@ export default function ProgressPage() {
       <article><span><Goal size={20}/></span><small>أدلة الأداء</small><strong>{evidence}</strong></article>
       <article><span><RotateCcw size={20}/></span><small>مراجعات مستحقة</small><strong>{report.dueReviews}</strong></article>
     </div>
+
+    <TimeBudgetPanel />
+    <ProductiveSampleComparisonPanel />
 
     <LearningOutcomePanel />
     <DelayedTransferPanel />

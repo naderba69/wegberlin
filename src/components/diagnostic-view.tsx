@@ -15,6 +15,7 @@ import { ResilientAudioPlayer } from "./resilient-audio-player";
 import { StatusAnnouncement } from "./status-announcement";
 import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import { DiagnosticProductiveSampleStep } from "./diagnostic-productive-sample";
+import { buildProductiveSampleComparison, productiveSampleComparisonFor } from "@/core/diagnostic/productive-sample";
 import { SkillDiagnosticRetest } from "./skill-diagnostic-retest";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
@@ -59,20 +60,26 @@ export function DiagnosticView() {
 
   function finish(sample: DiagnosticProductiveSample) {
     if (!pendingEvaluation) return;
+    const priorComparison = state.productiveSampleComparison ?? productiveSampleComparisonFor(state.diagnosticResult);
+    const comparison = priorComparison ?? buildProductiveSampleComparison(sample);
     const result: DiagnosticResult = { ...pendingEvaluation.result, productiveSample: sample, completedAt: sample.submittedAt };
-    update((current) => ({
-      ...current,
-      diagnosticResult: result,
-      diagnosticSessionDraft:null,
-      profile: current.profile ? { ...current.profile, currentLevel: result.estimatedLevel } : null,
-      errors: [...current.errors.filter((error) => !error.id.startsWith("diagnostic-")), ...pendingEvaluation.errors],
-      mastery: { ...current.mastery, diagnostic: Math.round((result.score / Math.max(result.maxScore, 1)) * 100) },
-      studyHistory: [...current.studyHistory, {
-        date: studyDayKey(),
-        minutes: Math.max(5, Math.ceil((result.questionsAnswered ?? result.maxScore) * 0.75) + (sample.mode === "not-yet" ? 1 : 2)),
-        evidenceCount: result.questionsAnswered ?? result.maxScore,
-      }],
-    }));
+    update((current) => {
+      const preservedComparison = current.productiveSampleComparison ?? productiveSampleComparisonFor(current.diagnosticResult) ?? comparison;
+      return {
+        ...current,
+        diagnosticResult: result,
+        productiveSampleComparison: preservedComparison,
+        diagnosticSessionDraft:null,
+        profile: current.profile ? { ...current.profile, currentLevel: result.estimatedLevel } : null,
+        errors: [...current.errors.filter((error) => !error.id.startsWith("diagnostic-")), ...pendingEvaluation.errors],
+        mastery: { ...current.mastery, diagnostic: Math.round((result.score / Math.max(result.maxScore, 1)) * 100) },
+        studyHistory: [...current.studyHistory, {
+          date: studyDayKey(),
+          minutes: Math.max(5, Math.ceil((result.questionsAnswered ?? result.maxScore) * 0.75) + (sample.mode === "not-yet" ? 1 : 2)),
+          evidenceCount: result.questionsAnswered ?? result.maxScore,
+        }],
+      };
+    });
     setFinalResult(result);
     setPendingEvaluation(null);
   }

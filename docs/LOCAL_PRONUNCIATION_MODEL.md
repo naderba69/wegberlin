@@ -68,3 +68,22 @@ The result is never mastery evidence and is not persisted in the learner record.
 - completion of the seven pronunciation pairs still pending in P1-380.
 
 Automated Worker mocks prove the software lifecycle but do not prove acoustic accuracy or physical WebGPU performance.
+
+## المصدر المحلي أولًا (بديل تعطّل Hugging Face)
+
+المشكلة المقيسة: عند حجب `huggingface.co` — أو عند وسيط TLS في شبكة مؤسسة — يفشل تنزيل
+حزمة مطابقة الكلمات برسالة إنجليزية (`Service unavailable error occurred while trying to
+load file: …onnx/encoder_model_quantized.onnx`) ويظن المتعلّم أن التطبيق معطوب.
+
+العلاج ثلاث طبقات:
+
+1. **النسخة المستضافة داخل التطبيق**: إن وُجد `public/vendor/pronunciation/manifest.json`
+   يفضّلها عامل التشغيل تلقائيًا (`env.remoteHost` إلى أصل التطبيق) ولا يلمس الشبكة الخارجية.
+2. **أمر استضافة مرة واحدة**: `npm run pronunciation:materialize` ينزّل أوزان Whisper المثبّتة
+   (`Whisper`, 16 kHz, q8) إلى شكل مسارات Hugging Face نفسه ويكتب بصمات SHA-256.
+   وللتحقق لاحقًا بلا تنزيل: `npm run pronunciation:materialize -- --check`.
+3. **رسائل عربية قابلة للتنفيذ**: يُترجم فشل الشبكة إلى `MODEL_SOURCE_UNREACHABLE` وإلى
+   إرشاد عملي (إعادة المحاولة · الاستضافة المحلية · متابعة الاستعمال بدون تصحيح نطق).
+
+الحدّ الصادق كما هو: المطابقة كلمات متوقّعة لا تحليل فونيمي، ولا درجة لهجة أو طلاقة أو نتيجة
+امتحان، وتبقى المراجعة البشرية للنطق مطلوبة (P1-380).

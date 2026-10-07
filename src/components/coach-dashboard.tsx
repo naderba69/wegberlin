@@ -17,6 +17,7 @@ import { LearningContractSummary } from "./learning-contract-summary";
 import { TodayOfflineReadiness } from "./today-offline-readiness";
 import { buildTodayOfflineRequirements } from "@/core/offline/today-readiness";
 import { PlanChangeTimeline } from "./plan-change-timeline";
+import { SessionBlocksStrip } from "./session-blocks-strip";
 import { planningPresetMinutes } from "@/core/coach/intensity-presets";
 import { WeeklyReflection } from "./weekly-reflection";
 import { buildStartingGoalReport } from "@/core/coach/starting-goal-report";
@@ -199,6 +200,7 @@ export function CoachDashboard() {
           })}
         </div>
 
+        <SessionBlocksStrip />
         <section className="weekly-plan-card">
           <header><div><span className="eyebrow"><CalendarCheck2 size={14}/> خطة الأسبوع</span><h2>وقت موزع، لا ديون تتضاعف.</h2><p>ستة أيام دراسة ويوم راحة، ومعهما يوم سماح واحد ظاهر أسبوعيًا. يوم السماح لا يصنع دليلًا ولا يضاعف حمل العودة.</p></div><div><strong>{weeklyBudgetLabel(weeklyPlan.plannedMinutes)}</strong><small>{weeklyPlan.weekStart} → {weeklyPlan.weekEnd}</small></div></header>
           <div className={weeklyPlan.graceDayDate?"continuity-policy applied":"continuity-policy"}><CalendarCheck2 size={15}/><p><b>سياسة الاستمرارية · weekly-grace-v1:</b> {weeklyPlan.graceDayDate?`استُخدم يوم السماح في ${weeklyPlan.graceDayDate}. عد من الخطة الحالية دون تعويضه.`:"يوم سماح واحد متاح هذا الأسبوع؛ لا تحتاج إلى سلسلة مثالية حتى تحافظ على العودة."}</p></div>

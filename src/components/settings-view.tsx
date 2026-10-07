@@ -35,6 +35,7 @@ import { SpeechPreferencesControl } from "./speech-preferences-control";
 import { AIProviderCapabilityMatrix } from "./ai-provider-capability-matrix";
 import { PartialStudyExport } from "./partial-study-export";
 import { ContentGovernanceSummary } from "./content-governance-summary";
+import { HumanReviewLedgerPanel } from "./human-review-ledger-panel";
 import { probeLiveProviderCapabilities, type LiveCapabilityProbe } from "@/core/ai/live-capability-probe";
 
 type PrivacyAction = "recordings" | "tutor-history" | "support-history" | "practice-process" | "writing-history";
@@ -63,6 +64,8 @@ export function SettingsView() {
   const importPreview = pendingImport ? previewImport(state, pendingImport.state, pendingImport.media.length) : null;
   const linkedMediaIds = [...new Set([
     ...(state.diagnosticResult?.productiveSample?.speakingMediaId ? [state.diagnosticResult.productiveSample.speakingMediaId] : []),
+    ...(state.productiveSampleComparison?.baseline.speakingMediaId ? [state.productiveSampleComparison.baseline.speakingMediaId] : []),
+    ...(state.productiveSampleComparison?.followUp?.speakingMediaId ? [state.productiveSampleComparison.followUp.speakingMediaId] : []),
     ...state.speakingAttempts.flatMap((attempt) => attempt.mediaId ? [attempt.mediaId] : []),
     ...Object.values(state.examSessions).flatMap((session) => Object.values(session.taskDrafts).flatMap((draft) => typeof draft.payload.mediaId === "string" ? [draft.payload.mediaId] : [])),
   ])];
@@ -175,6 +178,11 @@ export function SettingsView() {
         update((current) => ({
           ...current,
           diagnosticResult: current.diagnosticResult?.productiveSample ? { ...current.diagnosticResult, productiveSample: { ...current.diagnosticResult.productiveSample, speakingMediaId: undefined } } : current.diagnosticResult,
+          productiveSampleComparison: current.productiveSampleComparison ? {
+            ...current.productiveSampleComparison,
+            baseline: { ...current.productiveSampleComparison.baseline, speakingMediaId: undefined },
+            ...(current.productiveSampleComparison.followUp ? { followUp: { ...current.productiveSampleComparison.followUp, speakingMediaId: undefined } } : {}),
+          } : current.productiveSampleComparison,
           speakingAttempts: current.speakingAttempts.map((attempt) => ({
             ...attempt,
             mediaId: undefined,
@@ -213,27 +221,57 @@ export function SettingsView() {
 
   return <div className="settings-page">
     <header className="page-heading"><div><span className="eyebrow"><ShieldCheck size={15} /> بياناتك ملكك</span><h1>الإعدادات <em>والنسخ المحلي</em></h1><p>تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية.</p></div></header>
-    {message && <StatusAnnouncement message={message} channel="settings" className="success-banner" icon={<CheckCircle2 size={18}/>}/>} 
+    {message && <StatusAnnouncement message={message} channel="settings" className="success-banner" icon={<CheckCircle2 size={18}/>}/>}
+
+    <nav className="settings-nav" aria-label="أقسام الإعدادات">
+      <a href="#settings-learning">تجربة التعلّم</a>
+      <a href="#settings-content">محتواي وملاحظاتي</a>
+      <a href="#settings-ai">الذكاء المحلي والتنزيلات</a>
+      <a href="#settings-backup">النسخ والحفظ</a>
+      <a href="#settings-tutor">المعلم الذكي الاختياري</a>
+      <a href="#settings-privacy">الخصوصية والحذف</a>
+    </nav>
     <div className="settings-grid">
+      <section className="settings-group" id="settings-learning" aria-labelledby="settings-learning-title">
+        <header className="settings-group-head"><h2 id="settings-learning-title">تجربة التعلّم</h2><p>كيف يظهر التطبيق، وكيف يُخطَّط يومك وتذكيراتك وسلوك الصوت والتقارير.</p></header>
+        <div className="settings-group-grid">
       <AccessibilityPreferencesControl />
       <MotivationPreferencesControl />
-      <ContentNotesManager />
-      <LearnerAlignmentPanel />
-      <LanguageHistoryPanel />
-      <PersonalVocabularyImport />
-      <ContentErrorReportsManager />
       <PlanningPreferencesControl />
       <ReviewReminderControl />
       <SessionRitualPreferencesControl />
       <DataUsagePreferencesControl />
       <SpeechPreferencesControl />
+        </div>
+      </section>
+      <section className="settings-group" id="settings-content" aria-labelledby="settings-content-title">
+        <header className="settings-group-head"><h2 id="settings-content-title">محتواي وملاحظاتي</h2><p>ملاحظاتك ومفرداتك وبلاغات الأخطاء وسجلّ توافقك مع الخطة.</p></header>
+        <div className="settings-group-grid">
+      <ContentNotesManager />
+      <PersonalVocabularyImport />
+      <ContentErrorReportsManager />
+      <LanguageHistoryPanel />
+      <LearnerAlignmentPanel />
+        </div>
+      </section>
+      <section className="settings-group" id="settings-ai" aria-labelledby="settings-ai-title">
+        <header className="settings-group-head"><h2 id="settings-ai-title">الذكاء المحلي والتنزيلات</h2><p>ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج.</p></header>
+        <div className="settings-group-grid">
+      <WebGPUModelControl />
+      <LocalPronunciationModelControl />
       <ContentGovernanceSummary />
+      <HumanReviewLedgerPanel />
+      <OfflinePackControl />
+      <GuestSessionPanel />
+        </div>
+      </section>
+      <section className="settings-group" id="settings-backup" aria-labelledby="settings-backup-title">
+        <header className="settings-group-head"><h2 id="settings-backup-title">النسخ والحفظ</h2><p>تصدير قابل للتحقق، واستيراد آمن، وملف كتابة مستقل.</p></header>
+        <div className="settings-group-grid">
       <StudyExportControl />
       <PartialStudyExport />
       <RawDataExport />
       <section className="settings-card privacy-policy-link"><div className="settings-title"><span><Pencil size={20}/></span><div><h2>ملف الأعمال الكتابية</h2><p>تقرير محلي قابل للطباعة يجمع أحدث النسخ والفروق ومعدل الأنماط المحدودة لكل 100 كلمة.</p></div></div><Link className="secondary-button" href="/portfolio/writing">افتح ملف الكتابة</Link></section>
-      <section className="settings-card privacy-policy-link"><div className="settings-title"><span><CheckCircle2 size={20}/></span><div><h2>حالة التسليم</h2><p>لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية.</p></div></div><Link className="secondary-button" href="/status">افتح لوحة الحالة</Link></section>
-      <section className="settings-card privacy-policy-link"><div className="settings-title"><span><ShieldCheck size={20}/></span><div><h2>سياسة الخصوصية العربية</h2><p>صفحة مستقلة قابلة للرابط والطباعة تشرح التخزين والإرسال والحذف بلا لغة قانونية معقدة.</p></div></div><Link className="secondary-button" href="/privacy">اقرأ سياسة الخصوصية</Link></section>
       <section className="settings-card">
         <div className="settings-title"><span><HardDrive size={20} /></span><div><h2>الحفظ والنسخة الاحتياطية</h2><p>ملف محمول قابل للتحقق بـSHA-256.</p></div></div>
         <div className="profile-switcher"><strong>الملفات المحلية</strong>{profiles.map((profile) => <div className={profile.id === activeProfileId ? "profile-row active" : "profile-row"} key={profile.id}><button className="profile-open" disabled={profile.id === activeProfileId || busy} onClick={() => void switchProfile(profile.id)}><span>{profile.name}</span><small>{profileExamLabel(profile.targetExam)} · {profile.id === activeProfileId ? "نشط" : "فتح"}</small></button><button aria-label={`إعادة تسمية ${profile.name}`} onClick={() => void renameLocal(profile.id, profile.name)}><Pencil size={13} /></button><button aria-label={`حذف ${profile.name}`} disabled={profile.id === activeProfileId} onClick={() => void deleteLocal(profile.id, profile.name)}><Trash2 size={13} /></button></div>)}</div>
@@ -245,7 +283,11 @@ export function SettingsView() {
         <div className="dwnb-support-policy" data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"><strong>دعم نسخ DWNB القديمة</strong><p>v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على الأقل حتى 2027-09-30. لا تُرفض نسخة مدعومة بصمت.</p></div>
         {pendingImport && importPreview && <div className={pendingImport.compatibility.lifecycle==="deprecated-supported"?"import-preview deprecated":"import-preview"}><strong>معاينة النسخة قبل التنفيذ</strong><small>{pendingImport.encrypted ? "مشفرة" : "غير مشفرة"} · DWNB v{pendingImport.formatVersion} · App {pendingImport.manifestAppVersion} · Curriculum {pendingImport.manifestCurriculumVersion} · الملف: {importPreview.profileName}</small>{pendingImport.compatibility.warningAr&&<p className="import-compatibility-warning" role="status">{pendingImport.compatibility.warningAr}</p>}<div><span>دروس جديدة <b>{importPreview.newLessons}</b></span><span>محاولات <b>{importPreview.newExercises}</b></span><span>كتابات <b>{importPreview.newWriting}</b></span><span>وساطة <b>{importPreview.newMediation}</b></span><span>محادثات <b>{importPreview.newSpeaking}</b></span><span>أحداث إتقان <b>{importPreview.masteryEvents}</b></span><span>تسجيلات <b>{importPreview.media}</b></span></div><div className="import-mode"><button className={importMode === "merge" ? "active" : ""} onClick={() => setImportMode("merge")}><b>دمج</b><small>اتحاد الأدلة، الأحدث للقيم المتعارضة</small></button><button className={importMode === "replace" ? "active danger" : "danger"} onClick={() => setImportMode("replace")}><b>استبدال</b><small>استبدال حالة التعلم بالكامل</small></button><button className={importMode === "new-profile" ? "active" : ""} onClick={() => setImportMode("new-profile")}><b>ملف جديد</b><small>استيراد مستقل مع عزل التسجيلات</small></button></div><footer><button className="secondary-button" onClick={() => setPendingImport(null)}>إلغاء</button><button className="primary-button" disabled={busy} onClick={() => void confirmImport()}>تأكيد {importMode === "merge" ? "الدمج" : importMode === "replace" ? "الاستبدال" : "إنشاء الملف"}</button></footer></div>}
       </section>
-
+        </div>
+      </section>
+      <section className="settings-group" id="settings-tutor" aria-labelledby="settings-tutor-title">
+        <header className="settings-group-head"><h2 id="settings-tutor-title">المعلم الذكي الاختياري</h2><p>مزوّد خارجي لا يعمل إلا بموافقتك الصريحة قبل كل نص، مع حارس تكلفة.</p></header>
+        <div className="settings-group-grid">
       <section className="settings-card">
         <div className="settings-title"><span><Bot size={20} /></span><div><h2>المعلم الذكي الاختياري</h2><p>المعلم المحلي والمنهج يعملان من دونه.</p></div></div>
         <label>المزوّد<select value={provider} onChange={(event) => setProvider(event.target.value as AIProvider)}><option value="disabled">معطّل — الوضع المحلي المدمج</option><option value="gemini">Gemini BYOK</option><option value="openrouter">OpenRouter Free-only</option><option value="local">Local / Ollama</option></select></label>
@@ -256,9 +298,14 @@ export function SettingsView() {
         <div className="privacy-note" role="status"><ShieldCheck size={17} /><p><strong>حارس التكلفة: {aiCostDecision.allowed ? "0 USD مسموح" : "الإرسال محظور"}</strong><br />{aiCostDecision.reasonAr}{aiCostDecision.verifiedAt ? ` آخر تحقق: ${aiCostDecision.verifiedAt}.` : ""}</p></div>
         <div className="privacy-note"><ShieldCheck size={17} /><p>يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback.</p></div>
       </section>
-
       <AIProviderCapabilityMatrix provider={provider} model={model} hasSessionCredential={Boolean(key)} />
-
+        </div>
+      </section>
+      <section className="settings-group" id="settings-privacy" aria-labelledby="settings-privacy-title">
+        <header className="settings-group-head"><h2 id="settings-privacy-title">الخصوصية والحذف</h2><p>حالة التسليم، وسياسة الخصوصية، والحذف الفوري، وإعادة التهيئة.</p></header>
+        <div className="settings-group-grid">
+      <section className="settings-card privacy-policy-link"><div className="settings-title"><span><CheckCircle2 size={20}/></span><div><h2>حالة التسليم</h2><p>لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية.</p></div></div><Link className="secondary-button" href="/status">افتح لوحة الحالة</Link></section>
+      <section className="settings-card privacy-policy-link"><div className="settings-title"><span><ShieldCheck size={20}/></span><div><h2>سياسة الخصوصية العربية</h2><p>صفحة مستقلة قابلة للرابط والطباعة تشرح التخزين والإرسال والحذف بلا لغة قانونية معقدة.</p></div></div><Link className="secondary-button" href="/privacy">اقرأ سياسة الخصوصية</Link></section>
       <section className="settings-card privacy-control-card">
         <div className="settings-title"><span><ShieldCheck size={20} /></span><div><h2>الحذف والخصوصية الفورية</h2><p>احذف كل فئة دون حذف تقدم الدروس بالكامل.</p></div></div>
         <div className="privacy-delete-list">
@@ -270,12 +317,9 @@ export function SettingsView() {
           <article><div><strong>المفتاح أو عنوان Ollama المؤقت</strong><small>{key ? "موجود في Session Storage الآن" : sessionChecked ? "لا توجد قيمة مخزنة في الجلسة" : "جارٍ التحقق من الجلسة"}</small></div><button disabled={!key} onClick={() => { setSecret(""); setMessage("حُذف المفتاح أو العنوان فورًا من Session Storage."); }}><KeyRound size={15} /> حذف المفتاح الآن</button></article>
         </div>
       </section>
-
-      <LocalPronunciationModelControl />
-      <WebGPUModelControl />
-      <OfflinePackControl />
-      <GuestSessionPanel />
       <ResetWizard />
+        </div>
+      </section>
     </div>
 
     {privacyAction && <AccessibleDialog labelledBy="privacy-confirm-title" describedBy="privacy-confirm-description" onClose={() => setPrivacyAction(null)}><span><Trash2 size={24} /></span><h2 id="privacy-confirm-title">{privacyAction === "recordings" ? "حذف التسجيلات ونصوص المتابعة الآن؟" : privacyAction === "tutor-history" ? "حذف سجل المرشد الآن؟" : privacyAction === "practice-process" ? "حذف سجل التدريب السمعي الآن؟" : privacyAction === "writing-history" ? "حذف الكتابة وعلاجها الآن؟" : "حذف سجل استعمال الدعم الآن؟"}</h2><p id="privacy-confirm-description">{privacyAction === "recordings" ? `سيُحذف ${linkedMediaIds.length} ملفًا صوتيًا و${followUpExcerptCount} مقتطفات نصية مرتبطة بالملف النشط. ستبقى المدة والسؤال والبصمة والتقييم الذاتي دون الصوت أو نص الجواب.` : privacyAction === "tutor-history" ? `سيُحذف ${state.tutorInteractions.length} سؤالًا وجوابًا مع بيانات المزود والنموذج. لن يتغير تقدم الدروس أو دفتر الأخطاء.` : privacyAction === "practice-process" ? `سيُحذف ${state.listeningProcessEvents.length + state.pronunciationContrastAttempts.length} سجلًا يصف اختيار هدف الاستماع وبدء التشغيل ومطابقة عينة TTS. ستبقى إجابات الأسئلة، ولن يتغير الإتقان.` : privacyAction === "writing-history" ? `سيُحذف ${state.writingSubmissions.length} نسخة كتابة و${state.writingRepairAttempts.length} محاولة علاج و${state.writingAIReviews.length} مراجعة Gemini. لن تبقى النصوص أو أجوبة العلاج أو مقتطفات المراجعة، وقد تنخفض جاهزية بوابة الإنتاج.` : `سيُحذف ${state.supportUsageEvents.length} سجلًا يصف فتح التلميحات والترجمات والنصوص والنماذج. لن تتغير الإجابات أو الدرجات أو الإتقان.`}</p><div><button className="secondary-button" onClick={() => setPrivacyAction(null)}>إلغاء</button><button className="danger-button" onClick={() => void confirmPrivacyAction()}>{privacyAction === "recordings" ? "نعم، احذف الصوت والنص" : privacyAction === "tutor-history" ? "نعم، احذف سجل المرشد" : privacyAction === "practice-process" ? "نعم، احذف سجل التدريب" : privacyAction === "writing-history" ? "نعم، احذف الكتابة والعلاج" : "نعم، احذف سجل الدعم"}</button></div></AccessibleDialog>}

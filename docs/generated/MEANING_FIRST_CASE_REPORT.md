@@ -3,13 +3,13 @@
 Generated: 2026-09-05  
 Version: `meaning-first-case-audit-v1`  
 Policy: `meaning-first-case-v1`  
-Content SHA-256: `c585e919993f365a534e8b16f6b30b931947433c5c34a54aab9dce045ab0e4d5`
+Content SHA-256: `0233482c36b1464bd2454a7e23d4e3ea63b6028b1b381a79ff729b72d9bdcc6a`
 
 ## Result
 
 `PASS` — **19 case-teaching contracts in 19 lessons** render the fixed sequence **Bedeutung → Rolle → Form** before controlled practice. They map **23 theory blocks**, **57 controlled exercises**, and **44 Mini-Test items**.
 
-Explicit case-name discovery found 20 theory, 20 controlled, and 22 assessment signals; every discovered ID is owned by one lesson contract.
+Explicit case-name discovery found 20 theory, 21 controlled, and 25 assessment signals; every discovered ID is owned by one lesson contract.
 
 | Level | Contracts |
 |---|---:|

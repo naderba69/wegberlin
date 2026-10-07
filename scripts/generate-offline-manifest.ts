@@ -11,6 +11,7 @@ const commonRoutes = [
   "/diagnostic",
   "/review",
   "/practice",
+  "/practice/test-generator",
   "/practice/collocations",
   "/practice/conversation-paths",
   "/practice/dictation", "/practice/endurance",

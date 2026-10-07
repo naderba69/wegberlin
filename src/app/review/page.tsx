@@ -5,6 +5,8 @@ import { useDeviceValue, useDeviceEpoch } from "@/components/device-value";
 import Link from "next/link";
 import { BrainCircuit, CalendarCheck, Check, RotateCcw, Sparkles } from "lucide-react";
 import { useLearning } from "@/components/learning-provider";
+import { REVIEW_GRADE_POLICY, REVIEW_GRADE_DESCRIPTORS, gradeDescriptor, selfRatingBias } from "@/core/srs/grade-descriptors";
+import { CHUNK_PROMPT_POLICY, chunkPromptFor } from "@/core/srs/chunk-prompts";
 import { newReviewItem } from "@/core/srs/sm2";
 import { buildDueReviewQueue, nextScheduledReviewDate } from "@/core/srs/review-queue";
 import { applyReviewGrade, retentionEvidence } from "@/core/srs/review-session";
@@ -42,6 +44,7 @@ export default function ReviewPage() {
   const nextScheduled = useMemo(() => nextScheduledReviewDate(state, reviewNow), [state, reviewNow]);
   const queued = dose.visible.find((item)=>!deferredCardIds.includes(item.card.id));
   const card = queued?.card;
+  const chunkPrompt = useMemo(() => (card ? chunkPromptFor(card) : null), [card]);
   const personalErrorCard = Boolean(card?.tags.includes("personal-error"));
   const reviewState = card ? queued.review ?? newReviewItem(card.id) : null;
   const retention = useMemo(() => retentionEvidence(state), [state]);
@@ -92,12 +95,19 @@ export default function ReviewPage() {
     </section> : card && reviewState ? <div className="flashcard-zone">
       <div className="review-card-meta"><span>{card.tags[0]}</span><strong>{reviewContextLabel(card.tags)}</strong><small>{personalErrorCard ? (queued.isNew ? "بطاقة علاج شخصية جديدة · بلا mastery" : `علاج شخصي مستحق: ${new Date(queued.dueAt).toLocaleDateString("ar-TN")} · بلا mastery`) : queued.isNew ? "بطاقة درس جديدة" : `كانت مستحقة: ${new Date(queued.dueAt).toLocaleDateString("ar-TN")}`}</small></div>
       {card.tags.includes("pronunciation")?<section className="pronunciation-review-card"><header><span><BrainCircuit size={22}/></span><div><small>بطاقة نطق مستحقة</small><h2 lang="de" dir="ltr">{card.front}</h2><p>{card.back}</p></div></header><PhrasePronunciationCheck key={card.id} phrase={card.front} onPlayModel={playReviewModel} onAttempt={(_,complete)=>{if(complete)grade(4)}}/><button type="button" className="secondary-button" onClick={deferCurrentCard}>راجع بطاقة أخرى الآن</button><footer>التأجيل لا يمنح نجاحًا ولا يلغي البطاقة؛ تبقى مستحقة حتى تتأكد جميع كلماتها.</footer></section>:<><button className={flipped ? "flashcard flipped" : "flashcard"} aria-keyshortcuts="Space" onClick={() => setFlipped(!flipped)}>
-        <span><BrainCircuit size={22}/>{flipped ? "الإجابة والتريك" : "استرجاع نشط"}</span>
-        <h2 lang={flipped ? "ar" : "de"} dir={flipped ? "rtl" : "ltr"}>{flipped ? card.back : card.front}</h2>
-        <p>{flipped ? card.hint : "قل المعنى والاستعمال قبل النقر"}</p>
-        <small>{flipped ? "قيّم الاسترجاع بصدق" : "انقر لكشف الجواب"}</small>
+        <span><BrainCircuit size={22}/>{flipped ? (chunkPrompt ? "التركيب والجواب" : "الإجابة والتريك") : chunkPrompt ? "استرجاع التركيب" : "استرجاع نشط"}</span>
+        {chunkPrompt ? <>
+          <h2 lang="de" dir="ltr">{flipped ? chunkPrompt.chunkDe : chunkPrompt.gappedDe}</h2>
+          <p>{flipped ? card.back : chunkPrompt.askAr}</p>
+          {flipped && chunkPrompt.evidenceAr && <small className="chunk-evidence" data-chunk-prompt={CHUNK_PROMPT_POLICY}>{chunkPrompt.evidenceAr}</small>}
+          <small>{flipped ? `الجواب: ${chunkPrompt.answerDe} · قيّم الاسترجاع بصدق` : "أكمل الفراغ بالكلمة المستهدفة ثم انقر للكشف"}</small>
+        </> : <>
+          <h2 lang={flipped ? "ar" : "de"} dir={flipped ? "rtl" : "ltr"}>{flipped ? card.back : card.front}</h2>
+          <p>{flipped ? card.hint : "قل المعنى والاستعمال قبل النقر"}</p>
+          <small>{flipped ? "قيّم الاسترجاع بصدق" : "انقر لكشف الجواب"}</small>
+        </>}
       </button>
-      {flipped && <div className="grade-grid"><button aria-keyshortcuts="1" onClick={() => grade(1)}><span>1</span>نسيت</button><button aria-keyshortcuts="3" onClick={() => grade(3)}><span>3</span>بصعوبة</button><button aria-keyshortcuts="4" onClick={() => grade(4)} className="good"><span>4</span>جيد</button><button aria-keyshortcuts="5" onClick={() => grade(5)} className="easy"><Check size={15}/>سهل</button></div>}</>}
+      {flipped && <div className="grade-block" data-review-grade-policy={REVIEW_GRADE_POLICY}><div className="grade-grid"><button aria-keyshortcuts="1" onClick={() => grade(1)} data-grade-descriptor="1"><span>1</span>{REVIEW_GRADE_DESCRIPTORS[1].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[1].behaviourAr}</small></button><button aria-keyshortcuts="3" onClick={() => grade(3)} data-grade-descriptor="3"><span>3</span>{REVIEW_GRADE_DESCRIPTORS[3].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[3].behaviourAr}</small></button><button aria-keyshortcuts="4" onClick={() => grade(4)} className="good" data-grade-descriptor="4"><span>4</span>{REVIEW_GRADE_DESCRIPTORS[4].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[4].behaviourAr}</small></button><button aria-keyshortcuts="5" onClick={() => grade(5)} className="easy" data-grade-descriptor="5"><Check size={15}/>{REVIEW_GRADE_DESCRIPTORS[5].labelAr}<small>{REVIEW_GRADE_DESCRIPTORS[5].behaviourAr}</small></button></div><details className="grade-calibration"><summary>كيف تقدّر بسلوك لا بمزاج؟</summary>{([1,3,4,5] as const).map((value)=>{const descriptor=gradeDescriptor(value);return descriptor?<p key={value}><b>{value} · {descriptor.labelAr}</b> {descriptor.exampleAr} <em>{descriptor.avoidAr}</em></p>:null})}<small>{selfRatingBias(state.reviewEvents).noteAr} التقدير الذاتي يعاير الجدولة فقط؛ ليس نتيجة تقييم ولا دليل إتقان.</small></details></div>}</>}
       <div className="review-tip"><Sparkles size={18}/><p><b>التريك الخاص بهذه البطاقة:</b> {card.hint}</p></div>
     </div> : <section className="review-empty-state">
       <span><CalendarCheck size={28}/></span>

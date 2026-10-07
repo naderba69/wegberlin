@@ -21,7 +21,7 @@ describe("P0 exhaustive language and Bidi boundaries",()=>{
   });
 
   it("audits every TSX opening tag with zero pairing or control-character issues",()=>{
-    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:195,openingTagCount:7441,germanTagCount:422,technicalScopeCount:51,adaptiveConsumerCount:7,mixedStaticCount:201,issues:[]}); // +1 وسم و−1 مختلط ثابت: سطر خطة التفريغ في /review (ADR-107)
+    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:210,openingTagCount:8066,germanTagCount:442,arabicTagCount:11,technicalScopeCount:54,adaptiveConsumerCount:7,mixedStaticCount:208,issues:[]}); // refreshed from the tracked TSX tree and committed audit artifacts
     expect(report.ltrTagCount).toBeGreaterThanOrEqual(report.germanTagCount);
   });
 

@@ -1,0 +1,13 @@
+{
+ "format": "dwnb-pronunciation-test-audit",
+ "version": "pronunciation-test-audit-v1",
+ "generatedAt": "2026-10-04",
+ "ok": true,
+ "policyVersion": "lesson-pronunciation-item-v1",
+ "boundary": "ipa-discrimination-item-no-acoustic-verification-of-the-learner",
+ "lessons": 96,
+ "withDerivedItem": 96,
+ "withAuthoredItem": 0,
+ "missing": [],
+ "masteryWeighted": true
+}

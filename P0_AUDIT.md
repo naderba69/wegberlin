@@ -1,11 +1,12 @@
 # P0 Implementation Audit
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v183 · 2026-10-07 · P0 classification is unchanged: 0/96 lessons, 0/3,277 governed records, and 0/8 exclusion evidence references remain independently unreviewed, and 0/126 quality targets are signed. Repository-only P0-99 stage-2 worklist: the packet now also generates `docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md` from the same 126 rows — per-level sections (A1 25 / A2 30 / B1 31 / B2 40) with lesson, target, verb+preposition, authored governed case, chunk, and example, plus a five-point reviewer checklist and explicit boundaries. Its stage-1 gate line is derived from the retained exclusion sheet at generation time, so it says `بوابة المرحلة الأولى ما زالت مغلقة: … 0/8` today and flips to the names-recorded wording only when all eight names exist; the header restates that a recorded name is still not a review. `handoff:check` validates 126 rows in the exact stage-2 sheet order, the per-level counts, the boundary texts, and a stage-1 counter that matches `p099:evidence:status` (verified by a negative test: forcing `1/8` into the file stops the handoff). Nothing in the generated worklist carries a decision; reviewer work is copied out and recorded by the owner. Local `npm run check` passed: 1,387/1,387 tests in 204 files, lint/typecheck/audits clean (0 warnings), 323 statically built HTML pages; build fingerprint `3b6321cd4b6e` (full 6,007,837 gzip), JS 128 / 2,017,616 gzip / max 262,117, media 544 / 52,943,843 bytes, curriculum 1,118,105 gzip, contrast 323 pages / 22,960 elements / 0 failures; regenerated tracked `public/offline-size-manifest.json`, `reports/js-budget-report.json`, `reports/media-pack-budget-report.json`, `reports/human-review-audit.json`, `docs/generated/HUMAN_REVIEW_LEDGER.md`, and `reports/lexical-review-packet/README.md`. No cache generation change (v183 active/staging; v182 rollback). Quality Gate `37674386640` passed on `98a70f9` (`check` 7m40s, E2E 19m5s) and Quality Gate `37680220802` passed on the record head `68ca634` (`check` 4m39s, E2E 19m53s; a first queued E2E was cancelled externally, so the run was re-triggered by closing and reopening PR #7 rather than by pushing a new commit). The docs-only record head `9096c97` also passed the same gate (Quality Gate `37682799231`: `check` 4m48s, E2E 20m17s) and its Vercel preview built successfully (Preview deployment `6920273976`), so the external build-rate limit has cleared. Any further docs-only markdown commit changes no code tree and is expected to be re-verified by the same gate and is not re-recorded here. The Vercel preview for this revision hit the external project quota again (`upgradeToPro=build-rate-limit`); the last successfully built preview remains the one on `d121da0`. No Production claim and no merge claim; PR #7 remains open.
 
-
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 
 Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دفعات المحتوى، وأرقام الجرد مُعاد تثبيتها من `reports/academic-content-audit.json` عند `v138`.
+
+مزامنة البوابة في v182 (2026-10-05): صارت حالات P0 **116 منجزًا و8 جزئية من 124** بعد استيفاء P0-302 بتشغيل GitHub أخضر على `b974c48` (run `37335158220`). تحقق Vercel Preview الفعلي على PR #7 والرأس نفسه؛ يبقى P0-301 جزئيًا لأن PR لم يُغلق. تحققت صلة P2-352 بحدود P0-135 وP0-255: الرسم لا يقيّم النطق، والإتاحة الآلية لا تغلق مراجعة قارئ الشاشة/الجهاز الفعلية. تحقق الشجرة عند v182 (تاريخي): `npm test` **1,352/1,352** في **199/199**؛ التشغيل البعيد السابق تضمّن 64/64 لاختبارات E2E على كل من سطح المكتب والهاتف، لكنه يسبق P2-276 ولا يثبتها.
 
 هذا التدقيق يطابق عناصر P0 الـ124 الواردة في `IDEA_BACKLOG.md` مع ما يوجد فعليًا في الشيفرة والاختبارات. كلمة «منجز» تعني أن مسارًا قابلًا للاستخدام ومعيار قبول آليًا موجودان؛ لا تعني مراجعة بشرية أكاديمية أو صوتية أو اعتمادًا رسميًا. تمت مزامنته مع بوابة الإنتاج الحالية دون تغيير حدود P0 البشرية أو البعيدة.
 
@@ -13,31 +14,32 @@ Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دف
 
 | الحالة | العدد | المعنى |
 |---|---:|---|
-| منجز في المنتج | 115 | يعمل فعليًا وله دليل شيفرة/اختبار مناسب لحجمه |
-| منجز جزئيًا | 9 | توجد بنية مفيدة، لكن جزءًا من معيار الفكرة ما زال ناقصًا |
+| منجز في المنتج | 116 | يعمل فعليًا وله دليل شيفرة/اختبار مناسب لحجمه |
+| منجز جزئيًا | 8 | توجد بنية مفيدة، لكن جزءًا من معيار الفكرة ما زال ناقصًا |
 | غير منجز | 0 | اكتملت كل دورات P0 القابلة للبناء آليًا؛ بقيت البنود الجزئية البشرية/البعيدة |
-| متوقف على صلاحية المستخدم | 0 | لا يوجد بند متوقف بالكامل؛ اختبار PR Preview ما زال يحتاج إجراءً على حساب المستخدم |
+| متوقف على صلاحية المستخدم | 0 | لا يوجد بند متوقف بالكامل؛ PR #7 مفتوح بعد نجاح المعاينة، ويظل P0-301 جزئيًا حتى إغلاقه |
 | **المجموع** | **124** | جميع عناصر P0 مصنفة، بلا إسقاط |
 
-خط الأساس الآلي المشترك بعد دفعة 2026-09-13 هو 978/978 اختبار وحدة/تكامل عبر 149/149 ملفًا، وآخر خط أساس Browser كامل موثق 82/82 Desktop/Mobile؛ هذا لا يغيّر البنود البشرية التسعة ولا يساوي اختبار جهاز أو قارئ شاشة فعليًا.
+خط الأساس الآلي المشترك بعد دفعة 2026-09-13 هو 978/978 اختبار وحدة/تكامل عبر 149/149 ملفًا، وآخر خط أساس Browser كامل موثق 82/82 Desktop/Mobile؛ هذا لا يغيّر البنود الجزئية الثمانية ولا يساوي اختبار جهاز أو قارئ شاشة فعليًا.
 
 ## P0 المنجز جزئيًا — ما ينقص تحديدًا
 
 | ID | الموجود الآن | الجزء المتبقي قبل الإغلاق |
 |---:|---|---|
-| 98 | اكتمل الجرد البنيوي: 1,297 مرساة اسم، و4,802 إشارة = 1,380 covered / 89 pending-human / 3,333 context-only عبر A1–B2. تستعمل الصيغ المصرفة Lemmas أساس ولا تُنشئ جمعًا مزيفًا | مراجعة ألمانية مستقلة للسجلات الـ1,297 وحسم 89 مرشحًا اسميًا وقرارات الاستبعاد السياقية قبل تحويل البند إلى منجز؛ لا صفر آليًا ولا اعتمادًا لغويًا |
-| 99 | توجد 134 إطار فعل/حرف جر مع 1,090 إشارة = 134 covered / 4 unclassified / 952 context-only؛ أعادت الدروس `b2-21`…`b2-24` فتح الطابور بأربعة مرشحات جديدة، تُركت معلنة ولم تُغلق آليًا. ثمانية False positives لها استبعادات إصدارية معللة: موضع مكاني، `vorliegen/ausreichen` كأفعال منفصلة، `bei Bedarf` ظرف شرط، و`um … zu` غاية | مراجعة ألمانية مستقلة للاستبعادات الثمانية وتحويل `authored-review-pending` إلى دليل مراجعة مسمى؛ ثم مراجعة جودة الإطارات الـ126 قبل الإغلاق النهائي |
+| 98 | اكتمل الجرد البنيوي: 1,297 مرساة اسم، و4,873 إشارة = 1,381 covered / 89 pending-human / 3,403 context-only عبر A1–B2. الصيغ المصرفة تُطوى على Lemmas؛ حزمة `reports/lexical-review-packet/` تميّز ورقة نطاق P0-98 ذات 1,297 سجلًا عن 89 مرشح اسم مستقلًا، و`content:audit` يحرس العددين قبل إعادة التوليد. حقول التوقيع فارغة عمدًا | مراجعة ألمانية مستقلة للسجلات الـ1,297 وحسم 89 مرشحًا اسميًا وقرارات الاستبعاد السياقية قبل تحويل البند إلى منجز؛ الحزمة تهيئة فقط وليست مراجعة ولا اعتمادًا لغويًا |
+| 99 | الجرد الحالي يحوي 134 مرجع إطار؛ حزمة `reports/lexical-review-packet/frame-quality-targets.csv` تثبّت نطاق الجودة الأصلي عند 126 هدفًا بتوزيع A1/A2/B1/B2 = 25/30/31/40 (إطارات B2-21…B2-24 الثمانية تبقى مراجع سياقية خارجه). `content:audit` يرفض انحراف عدّ النطاق أو توزيعه قبل إعادة التوليد. توجد 1,256 إشارة آلية = 134 covered / 4 pending-human / 1,118 context-only. وثمانية استبعادات بنيوية معللة ما زالت `authored-review-pending`؛ أضيف عمود `reviewEvidenceName` فارغ لكل منها لتسجيل اسم/مرجع الدليل البشري لاحقًا، لا باعتباره دليلًا حاضرًا؛ `npm run p099:evidence:status` يعدّ الأسماء فقط ولا يفحص الدليل أو المراجعة | دليل مراجعة مستقل مسمّى للاستبعادات الثمانية أولًا؛ ثم مراجعة جودة بشرية للإطارات الـ126 المحددة في worklist قبل الإغلاق النهائي. لا تُعدّ حقول التوقيع الفارغة أو الجرد أو عمود الدليل الفارغ مراجعة |
 | 124 | كل جواب قراءة يعرض الآن بعد الالتزام جملة حرفية من النص تختارها مطابقة كلمات السؤال والخيار الصحيح | تحويل الاقتباسات الآلية إلى مواضع دليل مؤلفة/مراجعة بشريًا لكل سؤال حتى لا يختار التطابق اللفظي جملة صحيحة شكليًا وضعيفة دلاليًا |
 | 135 | `learning-playback-speed-v1` يوفّر 0.75×/1×/1.15× في جميع أسطح الاستماع المؤلف: التهيئة/التشخيص، الدرس، المكتبة، التدريب الامتحاني الموجّه، وShadowing. يطلب `preservesPitch=true`، ويطابق TTS، ويثبت البروفة الزمنية المتصلة على 1× | جولة استماع بشرية على أجهزة ومتصفحات وأصوات TTS ممثلة للتحقق من التشويه والوضوح والأرقام والأسماء؛ طلب الحفاظ على النبرة لا يساوي دليلًا صوتيًا |
 | 255 | Skip link، Focus visible، مراحل الدرس، والحوارات مختبرة بلوحة المفاتيح؛ ومسار WebGPU يملك Capability/Mock آليًا | جولة يدوية كاملة لكل عنصر تحكم مع VoiceOver/NVDA/Switch Control ومتصفحات غير Chromium، وتثبيت نموذجي MiniLM 118 MB وWhisper المحلي 70–90 MB فعليًا على أجهزة GPU ممثلة وقياس الذاكرة/الحرارة/السرعة والانهيار |
-| 301 | `main` العام محدث عند `be56463e`، Vercel أعاد Deployment success، و`https://wegberlin.vercel.app/today` يعمل | إنشاء Pull Request فعلي والتحقق من Preview URL ثم إغلاقه |
-| 302 | Workflow المحلي المحدّث يشغّل مشروعَي Playwright كاملين Desktop+Mobile مع Retry واحد فقط في CI، وActions v5؛ المجموعة المحلية 82/82 (41 سطح مكتب + 41 موبايل) | دفع التعديل والحصول على GitHub Actions run أخضر؛ التشغيل السابق `be56463e` فشل في e2e المكتبي رغم نجاح Build و`npm run check` |
+| 301 | `main` العام محدث وPR #7 مفتوح؛ Quality Gate الكامل وVercel Preview على commit الحزمة الحامل للكود `2f34b38` اجتازا الفحص (run `37422617842`) | إغلاق PR #7 بقرار المالك؛ لا يُغلق البند بمجرد Preview أو CI أخضر |
 | 373 | صار خيار `tunisian-supported` يغيّر مرحلة القاعدة فعليًا: 17 ملاحظة اختيارية في 17 درسًا، موزعة A1/A2/B1/B2 = 6/5/4/2. كل ملاحظة تفصل جسر الفصحى عن التقريب التونسي والمرساة الألمانية، ولا تظهر في وضعي الفصحى أو العربي المحدود | مراجعة تونسية/فصحى مستقلة لكل الملاحظات الـ17 وتسجيل اسم المراجع وتاريخه؛ كلها الآن `authored-review-pending` بوضوح، لذلك لا يُغلق البند آليًا |
 | 376 | يغطي `tunisian-support-v1` خمسة عشر نوع فرق مؤثر، منها ترتيب السؤال وV2 والحالة وPerfekt والروابط والنفي المودالي والموصول والمبني للمجهول ونسبة الخبر والنسب المئوية. كل سجل يشرح أثر الفرق على الفهم بدل ترجمة كلمة بكلمة | التحقق اللغوي المستقل من دقة الفروق ومن تمثيل التنوع داخل تونس، وتعديل أو حذف أي تعميم قبل تحويل الحالة إلى `independently-reviewed` |
 
+أُغلق P0-302 بعد Push فعلي: Quality Gate `37335158220` على `b974c48` اجتاز `check` (6m11s) واختبارات E2E كاملةً **64/64 Desktop + 64/64 Mobile** (17m59s). فحص Vercel Preview على PR #7 أخضر. تشغيل Deployment Smoke تخطّى شرطه ولا يمثل دليل Production؛ لا يُدّعى نشر جديد أو دمج.
+
 ## P0 غير المنجز
 
-لا يوجد بند P0 بلا دورة استخدام الآن. بقيت تسعة بنود جزئية لا تُغلق إلا بدليل بشري مستقل أو تشغيل GitHub/Vercel بعيد فعلي.
+لا يوجد بند P0 بلا دورة استخدام الآن. بقيت ثمانية بنود جزئية: سبعة تنتظر دليلًا بشريًا مستقلًا، وP0-301 ينتظر إغلاق PR بعد نجاح Preview وCI.
 
 أُغلق البندان `194` و`364` في 2026-09-03 عبر سجل مركزي توسع الآن إلى 18 مصدرًا رسميًا بمهلة 30 يومًا، تنبيه Runtime لصيغة الامتحان، حارس 0 USD يمنع AI البعيد قبل `fetch` عند تقادم المصدر أو غموض الموديل، وفحص Build صارم. يشغّل Workflow شهري فحص التاريخ والوصول ويفتح/يحدّث Issue للمراجعة البشرية. نجاح HTTP لا يُعد تحققًا دلاليًا.
 
@@ -73,11 +75,11 @@ Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دف
 
 في 2026-09-04 تحقق Push عام فعلي إلى `be56463e27ae676e82289c6b348b97c5161d7051`، وظهرت الملفات الجديدة عبر Raw GitHub، وأعاد Vercel حالة `success` مع Production حي على `https://wegberlin.vercel.app`. نُقل P0-301 من «متوقف» إلى «جزئي»؛ المتبقي هو PR Preview فعلي.
 
-تشغيل Quality Gate رقم 3 أكمل بحالة `failure`: Job `check` وBuild نجحا، بينما فشل Job e2e المكتبي. لأن Production suite الأحدث نجحت محليًا 66/66، عُدّل Workflow ليشغّل Desktop+Mobile مع Retry واحد في CI فقط، ورُفعت GitHub actions من v4 إلى v5. يبقى P0-302 جزئيًا حتى ينجح التشغيل البعيد بعد Push.
+تشغيل Quality Gate رقم 3 كان تاريخيًا `failure`: Job `check` وBuild نجحا، بينما فشل Job e2e المكتبي. عُدّل Workflow ليشغّل Desktop+Mobile مع Retry واحد في CI فقط، ورُفعت GitHub Actions إلى v5. **الدليل الحالي الذي يحسمه**: التشغيل البعيد بعد Push `37335158220` على `b974c48` أخضر بالكامل؛ لذلك أُغلق P0-302. هذا لا يُحوّل نجاح الأتمتة إلى اختبار أجهزة فعلي أو إغلاق P0-255.
 
 ## P0 المتوقف على صلاحية المستخدم
 
-لا توجد الآن عناصر P0 متوقفة بالكامل. البند 301 انتقل إلى «جزئي» بعد تحقق GitHub `main` وVercel Production؛ يبقى اختبار PR Preview فعليًا عبر حساب المستخدم.
+لا توجد عناصر P0 متوقفة بالكامل. P0-302 أُغلق بالدليل البعيد الحالي. P0-301 ما زال جزئيًا لأن PR #7 مفتوح، رغم نجاح Vercel Preview.
 
 ## عناصر P0 المنجزة
 
@@ -108,7 +110,7 @@ Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دف
 253, 254, 256,
 265, 266, 267, 268,
 277, 278, 279, 280,
-289, 290, 291, 292, 303, 304,
+289, 290, 291, 292, 302, 303, 304,
 313, 314, 315, 316,
 325, 326, 327, 328,
 361, 362, 363, 364,
@@ -127,13 +129,12 @@ Last audited: 2026-09-20 — الحالات أدناه لا تتغير مع دف
 5. اختبار أجهزة فعلية: iOS Safari وFirefox وSamsung Internet وVoiceOver وTalkBack وNVDA.
 6. شريك محادثة حي أو تقييم نطق/طلاقة صوتي صالح؛ غير موجود ولا يُدعى.
 7. Browser lockdown أو مراقبة امتحان رسمية؛ غير موجودة ولا يمكن ادعاؤها.
-8. GitHub `main` وVercel Production يعملان علنًا؛ PR Preview لم يُختبر بعد، ولا يزال النشر يحتاج مراجعة بشرية للمحتوى والحقوق قبل وصفه نهائيًا.
+8. GitHub `main` وVercel Production يعملان علنًا، وVercel PR Preview على PR #7 / `b974c48` اجتاز الفحص؛ PR ما زال مفتوحًا، كما تبقى مراجعة المحتوى والحقوق البشرية مطلوبة قبل وصف الإصدار بأنه نهائي.
 
 ## ترتيب الإغلاق المقترح المتبقي
 
 قرار المالك هو إكمال البناء والاختبارات الآلية أولًا، ثم جمع الاختبارات اليدوية والمراجعات البشرية في جولة نهائية واحدة. لذلك الترتيب الحالي:
 
-1. `302`: بعد Push المستخدم، لا يُغلق إلا بتشغيل GitHub Actions جديد أخضر.
-2. `301`: أنشئ PR فعليًا، تحقق من Vercel Preview URL، ثم أغلق PR؛ Production وحده لا يكفي.
-3. أنشئ `P1_AUDIT.md` بندًا بندًا قبل ادعاء أي نسبة P1، ثم نفّذ أعلى فجوة آلية القيمة.
-4. الجولة البشرية النهائية: `98 + 99` للمراجعة الألمانية المستقلة، `124` لدلالة اقتباسات القراءة، `135` لتشويه السرعات، `255` للأجهزة والتقنيات المساعدة، و`373 + 376` للمراجعة التونسية/الفصحى. لا يُغلق أي منها آليًا.
+1. `301`: تم التحقق من Vercel Preview على PR #7 / `b974c48`؛ البند باقٍ جزئيًا حتى يُغلق PR بعد قرار المالك.
+2. لا يُغلق أي بند بشري (ومنها P0-98/99 و124 و135 و255 و373 و376) بالأتمتة؛ تبقى المراجعة النهائية المستقلة كما هي.
+3. الجولة البشرية النهائية: `98 + 99` للمراجعة الألمانية المستقلة، `124` لدلالة اقتباسات القراءة، `135` لتشويه السرعات، `255` للأجهزة والتقنيات المساعدة، و`373 + 376` للمراجعة التونسية/الفصحى. لا يُغلق أي منها آليًا.

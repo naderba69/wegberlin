@@ -5,17 +5,17 @@
   "version": "accepted-answer-hygiene-v1",
   "policy": "A listed accepted answer is padding when it normalizes onto another listed answer: students cannot type it distinctly, the grader cannot reward it, and counting it widens the claimed answer breadth without widening acceptance.",
   "productiveExercises": 387,
-  "multiVariantExercises": 49,
+  "multiVariantExercises": 50,
   "noOpVariantCount": 0,
   "exercisesWithNoOpVariants": 0,
-  "acceptsExactlyOneString": 338,
-  "acceptsExactlyOneStringPct": 87.3,
-  "broadenedExercises": 49,
+  "acceptsExactlyOneString": 337,
+  "acceptsExactlyOneStringPct": 87.1,
+  "broadenedExercises": 50,
   "byLevel": {
     "A1": {
       "productiveExercises": 96,
-      "acceptsExactlyOneString": 89,
-      "acceptsExactlyOneStringPct": 92.7,
+      "acceptsExactlyOneString": 88,
+      "acceptsExactlyOneStringPct": 91.7,
       "noOpVariantCount": 0
     },
     "A2": {
@@ -38,5 +38,5 @@
     }
   },
   "offenders": [],
-  "contentSha256": "41900f725fe0056a640e21be19675642f1a7b5abbe108a11a6fb5e8cfe2630bf"
+  "contentSha256": "fcfee47bc91604a74a45c59d84d91eb4af4d3dbc9d3fde862d76db6835616009"
 }

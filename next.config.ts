@@ -29,13 +29,23 @@ function splitCurriculumByLevel(config: Parameters<NonNullable<NextConfig["webpa
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  allowedDevOrigins: ["*.e2b.app"],
+  // التطوير المحلي يجب أن يعمل على المضيفين العاديين لا على نطاق المعاينة وحده: تشغيل Chromium
+  // محليًا على 127.0.0.1 كان يُحجب فيه /_next/hmr ولا تهدرِد الصفحة، فيبدو التطبيق معطّلًا.
+  allowedDevOrigins: ["*.e2b.app", "localhost", "127.0.0.1", "0.0.0.0"],
   async headers() {
     // Production stays non-embeddable. Arena's development preview is an explicit,
     // origin-bounded exception. Webpack dev source maps also need development-only
     // unsafe-eval; the production directive registry never permits generic eval.
     const headers=process.env.NODE_ENV==="development"?securityHeaders.filter(header=>header.key.toLowerCase()!=="x-frame-options").map(header=>header.key.toLowerCase()==="content-security-policy"?{...header,value:header.value.replace("frame-ancestors 'none'", "frame-ancestors 'self' https://arena.ai https://*.arena.ai").replace("script-src 'self'", "script-src 'self' 'unsafe-eval'")}:header):[...securityHeaders];
     return [{ source: "/(.*)", headers }];
+  },
+  async redirects() {
+    // روابط فهرس يحاول المتعلّم كتابتها يدويًا (أو يأتي بها رابط مقطوع) بدل أن تسقط على 404.
+    return [
+      { source: "/lernen", destination: "/path", permanent: false },
+      { source: "/assessment", destination: "/exams", permanent: false },
+      { source: "/portfolio", destination: "/progress", permanent: false },
+    ];
   },
   webpack: (config) => splitCurriculumByLevel(config),
 };

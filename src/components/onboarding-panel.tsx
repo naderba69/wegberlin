@@ -7,6 +7,7 @@ import type { ArabicSupportMode, DeviceCapabilityStatus, DeviceReadiness, ExamPr
 import { listeningLibrary } from "@/data/library-registry";
 import { libraryAudioAssetByItemId } from "@/data/library-audio-assets";
 import { ResilientAudioPlayer } from "./resilient-audio-player";
+import { buildDiagnosticProductiveSample, buildProductiveSampleComparison, productiveSampleComparisonFor } from "@/core/diagnostic/productive-sample";
 
 const goalOptions: Array<{ id: LearnerGoal; label: string; detail: string; icon: typeof GraduationCap }> = [
   { id: "exam", label: "النجاح في B2", detail: "أولوية لصيغة الامتحان وإدارة الوقت", icon: GraduationCap },
@@ -84,12 +85,19 @@ export function OnboardingPanel() {
 
   function start() {
     if (!name.trim() || goals.length === 0) return;
-    update((state) => ({ ...state, profile: {
-      name: name.trim(), targetExam: exam, targetDate: targetDate || undefined,
-      dailyMinutes: minutes, arabicSupport, currentLevel: "A1", goals, deviceReadiness, priorExperience,
-      onboardingContext:{policyVersion:"prior-experience-context-v1",priorLearningSources,concerns,...(priorCourseOrBookNote.trim()?{priorCourseOrBookNote:priorCourseOrBookNote.trim().slice(0,160)}:{}),evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery"},
-      createdAt: new Date().toISOString(),
-    }}));
+    const createdAt = new Date().toISOString();
+    update((state) => {
+      const existingComparison = state.productiveSampleComparison ?? productiveSampleComparisonFor(state.diagnosticResult);
+      const productiveSampleComparison = existingComparison ?? (priorExperience === "none"
+        ? buildProductiveSampleComparison(buildDiagnosticProductiveSample({ writingText:"", selfAssessment:"not-yet", submittedAt:createdAt }))
+        : null);
+      return { ...state, productiveSampleComparison, profile: {
+        name: name.trim(), targetExam: exam, targetDate: targetDate || undefined,
+        dailyMinutes: minutes, arabicSupport, currentLevel: "A1", goals, deviceReadiness, priorExperience,
+        onboardingContext:{policyVersion:"prior-experience-context-v1",priorLearningSources,concerns,...(priorCourseOrBookNote.trim()?{priorCourseOrBookNote:priorCourseOrBookNote.trim().slice(0,160)}:{}),evidenceBoundary:"learner-stated-planning-context-no-level-or-mastery"},
+        createdAt,
+      }};
+    });
   }
 
   return (
@@ -109,7 +117,7 @@ export function OnboardingPanel() {
             <button type="button" aria-pressed={priorExperience==="some"} className={priorExperience==="some"?"selected":""} onClick={()=>setPriorExperience("some")}><strong>أعرف بعض الأساسيات</strong><small>أفهم كلمات أو درست سابقًا — اقترح تشخيصًا قصيرًا.</small></button>
             <button type="button" aria-pressed={priorExperience==="unsure"} className={priorExperience==="unsure"?"selected":""} onClick={()=>setPriorExperience("unsure")}><strong>لست متأكدًا</strong><small>دع التشخيص يختار نقطة بداية محافظة.</small></button>
           </div>
-          <p>{priorExperience==="none"?"سنفتح الدرس A1-01 من البداية. لن نطلب كتابة ألمانية أو اختبار فهم قبل أن تتعلم أولى العبارات.":"بعد إنشاء الخطة يظهر تشخيص متكيف من أربعة أسئلة في كل مستوى ويتوقف مبكرًا عند الحد."}</p>
+          <p>{priorExperience==="none"?"سنفتح الدرس A1-01 من البداية. لا كتابة ألمانية أو اختبار فهم قبل تعلم أولى العبارات؛ اختيار الصفر يحفظ خط أساس ذاتيًا «لا أستطيع بعد» بلا اختبار أو صوت، للمقارنة الاختيارية بعد أربعة أسابيع.":"بعد إنشاء الخطة يظهر تشخيص متكيف من أربعة أسئلة في كل مستوى ويتوقف مبكرًا عند الحد، ثم يطلب عينة إنتاجية تأسيسية بلا درجة لغوية."}</p>
         </fieldset>
         <details className="onboarding-context">
           <summary><span><strong>خبرتك السابقة وما يقلقك</strong><small>اختياري — يساعدنا على توجيه الخطة، ولا يحدد مستواك.</small></span><b>فتح</b></summary>

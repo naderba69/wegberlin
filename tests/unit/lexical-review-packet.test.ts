@@ -11,8 +11,11 @@ import {
   ORIGINAL_P098_NOUN_TARGET_COUNT,
   ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT,
   ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL,
+  buildP099ExclusionReviewDossier,
   isP099PlaceholderEvidenceReference,
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
+  P099_EXCLUSION_REVIEW_DOSSIER_PATH,
+  P099_ORIGINAL_QUALITY_TARGET_COUNT,
   summarizeP099ExclusionEvidenceReferences,
 } from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
@@ -285,9 +288,49 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("npm run p099:evidence:status");
     expect(readme).toContain("تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية");
     expect(readme).toContain("يفصل الفاحص نفسه بين غياب الاسم واسم نائب");
+    expect(readme).toContain("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
     expect(readme).toContain("يوقف الفاحص بدل أن يُقرأ كإغلاق");
     expect(readme).toContain("يحرس `content:audit` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99");
     expect(readme).toContain("test-content-sha256");
+  });
+
+  it("ships a readable per-exclusion dossier built from the same rows and bounded to presence", () => {
+    const artifactPath = "reports/lexical-review-packet/structural-exclusions.csv";
+    const csv = byPath.get(artifactPath)!;
+    const dossier = byPath.get(P099_EXCLUSION_REVIEW_DOSSIER_PATH)!;
+    expect(byPath.has(P099_EXCLUSION_REVIEW_DOSSIER_PATH)).toBe(true);
+
+    const rows = parseCsv(csv);
+    const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
+    const sections = [...dossier.matchAll(/^## (\d+)\. `([^`]+)`$/gmu)];
+    expect(sections.map((match) => match[2])).toEqual(expectedDecisionIds);
+    expect(sections.map((match) => Number(match[1]))).toEqual(expectedDecisionIds.map((_, index) => index + 1));
+    const dossierRows = sections.map((match) => match[2]);
+    expect(dossierRows).toEqual(rows.slice(1).map((row) => row[0]));
+
+    expect(dossier).toContain("لا يمنح اعتمادًا ولا يغلق P0-99");
+    expect(dossier).toContain("لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع");
+    expect(dossier).toContain(`الأهداف الـ${P099_ORIGINAL_QUALITY_TARGET_COUNT}`);
+    expect(dossier).toContain("لا يوجد في هذا الملف قرار بشري");
+    expect(dossier).toContain("**0/8**");
+    expect(dossier).toContain("**0/40**");
+    expect(dossier).toContain("بوابة المرحلة الثانية: مغلقة");
+    for (const decision of audit.exclusionDecisions) expect(dossier).toContain(decision.explanationAr);
+
+    const namedCsv = serializeCsv(rows[0], rows.slice(1).map((row) => {
+      const next = [...row];
+      next[rows[0].indexOf(P099_EXCLUSION_EVIDENCE_NAME_COLUMN)] = "reports/evidence/p099-review.pdf";
+      next[0] = next[0];
+      return next;
+    }));
+    const namedRows = parseCsv(namedCsv);
+    const namedDossier = buildP099ExclusionReviewDossier({ headers: namedRows[0], rows: namedRows.slice(1), contentHash: "test-content-sha256" });
+    expect(namedDossier).toContain("**8/8**");
+    expect(namedDossier).toContain("بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الثمانية");
+    expect(namedDossier).toContain("reports/evidence/p099-review.pdf");
+    expect(namedDossier).not.toContain("test-reviewer");
+    expect(() => buildP099ExclusionReviewDossier({ headers: namedRows[0], rows: namedRows.slice(2), contentHash: "test" }))
+      .toThrow("requires exactly 8 exclusion rows");
   });
 
   it("quotes CSV fields and neutralizes spreadsheet formulas in authored text", () => {

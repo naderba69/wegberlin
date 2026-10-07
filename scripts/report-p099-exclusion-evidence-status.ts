@@ -2,6 +2,8 @@ import { readFile } from "node:fs/promises";
 import { buildLexicalTargetGapAudit } from "../src/core/content-validation/lexical-target-gap";
 import {
   auditP099ExclusionReviewSlots,
+  P099_EXCLUSION_REVIEW_DOSSIER_PATH,
+  P099_ORIGINAL_QUALITY_TARGET_COUNT,
   summarizeP099ExclusionEvidenceReferences,
 } from "../src/core/content-validation/lexical-review-packet";
 
@@ -29,6 +31,11 @@ for (const slot of slots.slots) {
   const remaining = slot.signatureCellsExpected - slot.signatureCellsFilled;
   console.log(`- ${slot.decisionId}: reference ${slot.evidenceReferenceState}; status ${slot.reviewStatus}; signature cells remaining ${remaining}`);
 }
+const stageTwoOpen = slots.namedReferenceCount === slots.exclusionCount;
+console.log(stageTwoOpen
+  ? `Stage 2 (${P099_ORIGINAL_QUALITY_TARGET_COUNT} quality targets) ready to start: names recorded only; independent human review still required`
+  : `Stage 2 (${P099_ORIGINAL_QUALITY_TARGET_COUNT} quality targets) ready: no (named references ${slots.namedReferenceCount}/${slots.exclusionCount}; all eight must be named first)`);
+console.log(`Readable per-exclusion dossier (generated, not evidence): ${P099_EXCLUSION_REVIEW_DOSSIER_PATH}`);
 console.log(`Evidence contents inspected: ${inventory.evidenceContentsInspected ? "yes" : "no"}`);
 console.log(`Review decision contents interpreted: ${slots.reviewDecisionContentsInterpreted ? "yes" : "no"}`);
 console.log(`P0-99 closure asserted: ${slots.p099ClosureAsserted ? "yes" : "no"}`);

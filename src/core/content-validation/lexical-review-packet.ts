@@ -8,6 +8,14 @@ type EvidenceSource = { path: string; stage: string; surface: string; strength: 
 
 const REVIEW_COLUMNS = ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] as const;
 export const P099_EXCLUSION_EVIDENCE_NAME_COLUMN = "reviewEvidenceName";
+export const P099_EXCLUSION_REVIEW_DOSSIER_PATH = "docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md";
+export const P099_ORIGINAL_QUALITY_TARGET_COUNT = 126;
+const P099_REASON_LABELS_AR: Record<string, string> = {
+  "locative-adjunct": "ظرف مكان لا يحكمه الفعل",
+  "separable-particle": "بادئة فعل منفصل",
+  "condition-adjunct": "ظرف شرط",
+  "purpose-clause": "جملة غاية (um … zu)",
+};
 export const P099_STRUCTURAL_EXCLUSION_COUNT = 8;
 
 export type P099ExclusionEvidenceReferenceInventory = {
@@ -280,6 +288,97 @@ function appendBlankReviewColumns(row: unknown[]) {
  * Builds a deterministic, unsigned packet for an independent German reviewer.
  * Nothing in this output records a review decision or changes audit status.
  */
+/**
+ * يبني ملف قراءة للاستبعادات الثمانية من صفوف CSV نفسها (لا نسخة ثانية من الحقيقة).
+ * حضور فقط: لا يفتح دليلًا، ولا يطبع محتوى خلايا التوقيع، ولا يعلن إغلاقًا.
+ */
+export function buildP099ExclusionReviewDossier(input: {
+  headers: readonly string[];
+  rows: readonly (readonly string[])[];
+  contentHash: string;
+}): string {
+  const { headers, rows, contentHash } = input;
+  if (rows.length !== P099_STRUCTURAL_EXCLUSION_COUNT) {
+    throw new Error(`P0-99 dossier requires exactly ${P099_STRUCTURAL_EXCLUSION_COUNT} exclusion rows; found ${rows.length}.`);
+  }
+  const column = (name: string) => {
+    const indexes = headers.flatMap((header, index) => header === name ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 dossier requires exactly one ${name} column.`);
+    return indexes[0];
+  };
+  const decisionIdIndex = column("decisionId");
+  const lessonIndex = column("lessonId");
+  const verbIndex = column("detectedInfinitive");
+  const prepositionIndex = column("detectedPreposition");
+  const reasonIndex = column("authoredReason");
+  const explanationIndex = column("authoredExplanationAr");
+  const statusIndex = column("reviewStatus");
+  const evidenceIndex = column("detectorEvidence");
+  const referenceIndex = column(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+  const signatureIndexes = REVIEW_COLUMNS.map((name) => column(name));
+
+  const decisionIds = rows.map((row) => row[decisionIdIndex].trim());
+  const slots = auditP099ExclusionReviewSlots(serializeCsv(headers, rows), decisionIds);
+  const slotByDecision = new Map(slots.slots.map((slot) => [slot.decisionId, slot]));
+  const allNamed = slots.namedReferenceCount === slots.exclusionCount;
+
+  const lines: string[] = [
+    "# ملف قراءة الاستبعادات البنيوية الثمانية — P0-99",
+    "",
+    `قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف \`reports/lexical-review-packet/structural-exclusions.csv\` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: \`${contentHash}\`.`,
+    "",
+    `- عدد الاستبعادات: **${slots.exclusionCount}** · أسماء أدلة مسمّاة: **${slots.namedReferenceCount}/${slots.exclusionCount}** · أسماء نائبة: **${slots.placeholderReferenceCount}** · خلايا توقيع ممتلئة (حضور فقط): **${slots.signatureCellsFilled}/${slots.signatureCellsExpected}** · خانات جاهزة لمراجعة مستقلة: **${slots.readyForIndependentReviewCount}**.`,
+    "- يُطبع هنا حضور الخلايا فقط: لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع، ولا يُفسَّر حكم. اسم دليل مسجّل لا يثبت وجود الدليل ولا كفايته.",
+    allNamed
+      ? `- بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الثمانية، ومراجعة صفوف الأهداف الـ${P099_ORIGINAL_QUALITY_TARGET_COUNT} تبقى بشرية مستقلة.`
+      : `- بوابة المرحلة الثانية: مغلقة حتى تُسمّى أدلة الاستبعادات الثمانية كلها (المسجَّل الآن ${slots.namedReferenceCount}/${slots.exclusionCount}).`,
+    "",
+  ];
+
+  rows.forEach((row, index) => {
+    const decisionId = row[decisionIdIndex].trim();
+    const slot = slotByDecision.get(decisionId);
+    if (!slot) throw new Error(`P0-99 dossier slot state missing for ${decisionId}.`);
+    const reference = row[referenceIndex].trim();
+    const reason = row[reasonIndex].trim();
+    const referenceStateAr = slot.evidenceReferenceState === "named"
+      ? `مسمّى: ${reference}`
+      : slot.evidenceReferenceState === "placeholder"
+        ? "اسم نائب لا يُحتسب تسمية"
+        : "لم يُسمَّ بعد";
+    lines.push(
+      `## ${index + 1}. \`${decisionId}\``,
+      "",
+      `- الدرس: \`${row[lessonIndex].trim()}\` · الفعل/الحرف الملتقط: \`${row[verbIndex].trim()} + ${row[prepositionIndex].trim()}\` · نوع الاستبعاد: ${P099_REASON_LABELS_AR[reason] ?? reason} (\`${reason}\`)`,
+      `- سبب التأليف بالعربية: ${row[explanationIndex].trim()}`,
+      `- حالة الخانة: ${referenceStateAr} · حالة المراجعة: \`${row[statusIndex].trim()}\` · خلايا توقيع ممتلئة: ${slot.signatureCellsFilled}/${slot.signatureCellsExpected} (المحتوى غير مطبوع وغير مفسَّر)`,
+      `- دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): ${row[evidenceIndex].trim() || "—"}`,
+      "",
+      `### ما يلزم لإغلاق خانة \`${decisionId}\``,
+      "",
+      "1. يتأكد مراجع ألماني مستقل ومؤهل من أن الاستبعاد البنيوي صحيح فعلًا (ليس إطارًا محكومًا بحرف جر).",
+      "2. يسجّل اسم دليل المراجعة في عمود `reviewEvidenceName` للصف نفسه (اسم ملف/رابط يمكن التحقق منه).",
+      "3. يكتب اسمه وصفته/مؤهله وتاريخ المراجعة، ويشرح في الملاحظة أي تعديل أو استبعاد — في السجل المعتمد لا في ملف مولَّد.",
+      "4. لا يُعدّ تسجيل الاسم إغلاقًا: يبقى P0-99 جزئيًا حتى تُراجَع الأهداف الـ126 مراجعة بشرية مستقلة.",
+      "",
+    );
+  });
+
+  lines.push(
+    "## بروتوكول الوصول إلى المرحلة الثانية",
+    "",
+    `- ترتيب العمل ثابت: الاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها ${P099_ORIGINAL_QUALITY_TARGET_COUNT} (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 = 40).`,
+    "- هذا الملف مولَّد: لا يُعدَّل يدويًا، ولا يُقبل فيه اسم دليل أو توقيع. التعديل يكون في ورقة المراجع ثم في السجل المعتمد، والحارس `npm run content:audit:write` يرفض الكتابة فوق أي اسم أو قرار محفوظ.",
+    "- لا يغلق وجود هذا الملف P0-98 أو P0-99، ولا يستبدل المراجعة المستقلة التي يوقّعها إنسان باسمه ومؤهله وتاريخه.",
+    "",
+    "## حدود صريحة",
+    "",
+    "لا يوجد في هذا الملف قرار بشري مُسبق، ولا نتيجة قياس لغوي، ولا ضمان أن كل إشارة سياقية فُسرت آليًا على نحو صحيح. غياب اسم الدليل يعني أن الخانة ما زالت فارغة، لا أن الاستبعاد مرفوض.",
+    "",
+  );
+  return lines.join("\n");
+}
+
 export function buildLexicalReviewPacketArtifacts(input: {
   audit: LexicalTargetAudit;
   nounEntries: readonly NounGrammarEntry[];
@@ -437,7 +536,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
-- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.
 - يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.
@@ -449,8 +548,11 @@ export function buildLexicalReviewPacketArtifacts(input: {
 الملفات تشمل حقولًا آلية ومرشحات لتوجيه المراجع فقط. لا يوجد فيها قرار مراجعة بشري مُسبق، ولا نتيجة صفية/لغوية مُقاسة، ولا ضمان أن كل إشارة سياقية فُسرت تلقائيًا على نحو صحيح.
 `;
 
+  const dossier = buildP099ExclusionReviewDossier({ headers: exclusionHeaders, rows: exclusionRows, contentHash });
+
   return [
     { path: "reports/lexical-review-packet/README.md", content: readme },
+    { path: P099_EXCLUSION_REVIEW_DOSSIER_PATH, content: dossier },
     { path: "reports/lexical-review-packet/noun-anchors.csv", content: serializeCsv(nounHeaders, nounRows) },
     { path: "reports/lexical-review-packet/verb-frames.csv", content: serializeCsv(frameHeaders, frameRows) },
     { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: serializeCsv(qualityFrameHeaders, qualityFrameRows) },

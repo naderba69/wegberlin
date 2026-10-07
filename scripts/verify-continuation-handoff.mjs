@@ -144,6 +144,14 @@ const humanReviewReviewScript = read("scripts/audit-human-review.ts");
 const p099Dossier = read("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
 const p099StatusScript = read("scripts/report-p099-exclusion-evidence-status.ts");
 const humanReviewPresenceSource = read("src/core/content-validation/human-review-presence.ts");
+const generatedReviewArtifacts = [
+  { path: "reports/lexical-review-packet/structural-exclusions.csv", columns: ["reviewEvidenceName", "reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
+  { path: "reports/lexical-review-packet/frame-quality-targets.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
+  { path: "reports/lexical-review-packet/noun-anchors.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
+  { path: "reports/lexical-review-packet/verb-frames.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
+  { path: "reports/lexical-review-packet/unresolved-candidates.csv", columns: ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"] },
+  ...Array.from({ length: 17 }, (_, index) => ({ path: `reports/review-packet/review-sheet-${String(index + 1).padStart(2, "0")}.csv`, columns: ["decision", "reviewerName", "reviewDate", "note"] })),
+].map((artifact) => ({ ...artifact, content: read(artifact.path) }));
 const p099RetainedValidator = read("scripts/validate-p099-retained-decision.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
@@ -1377,6 +1385,24 @@ if(p099NamedReferenceCount<p099NamedReferenceTotal){
 }else if(!p099StageTwo[2].startsWith("ready to start: names recorded only"))fail("P0-99 stage 2 may only be described as names recorded, never as reviewed");
 requireText(p099EvidenceStatusOutput,"docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md","P0-99 status dossier pointer");
 for(const text of["auditP099ExclusionReviewSlots","auditP099QualityTargetReviewSlots","contents not interpreted"])requireText(p099StatusScript,text,"P0-99 status script wiring");
+let generatedSignatureOutput;
+try {
+ generatedSignatureOutput=execFileSync("npm",["run","review:signatures"],{encoding:"utf8",timeout:120000});
+} catch(error) {
+ fail(`generated-artifact signature scan failed: ${error instanceof Error ? error.message : String(error)}`);
+}
+const generatedSignatureLine=generatedSignatureOutput.match(/Generated review artifacts: (\d+) files \/ (\d+) rows \/ (\d+) reviewer-input cells filled of (\d+)/u);
+if(!generatedSignatureLine)fail("generated-artifact signature scan did not report its counts");
+const generatedArtifactCount=Number(generatedSignatureLine[1]);
+const generatedRowCount=Number(generatedSignatureLine[2]);
+const generatedFilledCells=Number(generatedSignatureLine[3]);
+const generatedExpectedCells=Number(generatedSignatureLine[4]);
+if(generatedArtifactCount!==22)fail(`generated-artifact signature scan must cover 22 committed review artifacts; found ${generatedArtifactCount}`);
+if(generatedRowCount!==4935)fail(`generated-artifact signature scan must cover 4,935 rows; found ${generatedRowCount}`);
+if(generatedExpectedCells!==21406)fail(`generated-artifact signature scan cell denominator drifted to ${generatedExpectedCells}`);
+if(generatedFilledCells!==0)fail(`generated artifacts must stay free of reviewer input; found ${generatedFilledCells} filled cell(s). Keep reviewer work outside the generated files and record the owner's decision in the approved record`);
+requireText(generatedSignatureOutput,"reviewer work stays outside generated files","generated-artifact signature scan boundary");
+console.log(`- generated review artifacts: ${generatedArtifactCount} files / ${generatedRowCount} rows / ${generatedFilledCells} reviewer-input cells filled of ${generatedExpectedCells} (reviewer work stays outside generated files)`);
 const p099StageTwoRows=p099EvidenceStatusOutput.match(/Stage 2 rows with a recorded signature \(presence only; contents not interpreted\): (\d+)\/(\d+)/u);
 if(!p099StageTwoRows)fail("P0-99 status did not report stage-2 signed rows");
 const p099StageTwoSigned=Number(p099StageTwoRows[1]);

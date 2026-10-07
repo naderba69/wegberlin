@@ -92,7 +92,8 @@
     "writing:cycle:write": "tsx scripts/audit-weekly-writing.ts --write",
     "pronunciation:test": "tsx scripts/audit-pronunciation-test.ts",
     "pronunciation:test:write": "tsx scripts/audit-pronunciation-test.ts --write",
-    "p099:evidence:validate": "tsx scripts/validate-p099-retained-decision.ts"
+    "p099:evidence:validate": "tsx scripts/validate-p099-retained-decision.ts",
+    "review:signatures": "tsx scripts/report-generated-artifact-signatures.ts"
   },
   "dependencies": {
     "fflate": "^0.8.3",

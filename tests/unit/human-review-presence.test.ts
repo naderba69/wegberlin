@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { encodeCsvRow } from "@/core/content-validation/safe-csv";
 import {
+  auditGeneratedArtifactSignatures,
   auditReviewPacketDecisionPresence,
   REVIEW_PACKET_SIGNATURE_FIELDS,
 } from "@/core/content-validation/human-review-presence";
@@ -74,6 +75,44 @@ describe("review packet decision presence", () => {
       .toContain("expected 5 governed rows");
     expect(errors(() => auditReviewPacketDecisionPresence([sheet(2, ["a"])], { expectedRowCount: 1 })))
       .toContain("not numbered contiguously");
+  });
+
+  it("refuses any reviewer input inside generated artifacts and reports zero across the committed set", () => {
+    const lexical = ["structural-exclusions", "frame-quality-targets", "noun-anchors", "verb-frames", "unresolved-candidates"];
+    const files = [
+      ...lexical.map((name) => ({
+        path: `reports/lexical-review-packet/${name}.csv`,
+        content: readFileSync(`reports/lexical-review-packet/${name}.csv`, "utf8"),
+        columns: name === "structural-exclusions"
+          ? ["reviewEvidenceName", "reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"]
+          : ["reviewDecision", "reviewerName", "reviewerQualification", "reviewDate", "reviewerNote"],
+      })),
+      ...Array.from({ length: 17 }, (_, index) => {
+        const name = `review-sheet-${String(index + 1).padStart(2, "0")}.csv`;
+        return { path: `reports/review-packet/${name}`, content: readFileSync(`reports/review-packet/${name}`, "utf8"), columns: ["decision", "reviewerName", "reviewDate", "note"] };
+      }),
+    ];
+    const report = auditGeneratedArtifactSignatures(files);
+    expect(report.artifactCount).toBe(22);
+    expect(report.rowCount).toBe(4935);
+    expect(report.expectedCellCount).toBe(21406);
+    expect(report.filledCellCount).toBe(0);
+    expect(report.artifacts.every((artifact) => artifact.filledCells === 0 && artifact.filledRowIds.length === 0)).toBe(true);
+    expect(report.humanReviewClosureAsserted).toBe(false);
+
+    const header = ["sheet", "row", "contentId", "scope", "level", "artifactOwner", "sourceFile", "contentToRead", "qualityFlags", "decision", "reviewerName", "reviewDate", "note"];
+    const synthetic = [{
+      path: "reports/review-packet/review-sheet-01.csv",
+      content: [header, ["sheet-1", "1", "synthetic-row", "lesson", "A1", "owner", "src/data/lessons-a1-module1.ts", "اقرأ النص", "", "accept", "", "", ""]]
+        .map((row) => row.map((cell) => `"${cell}"`).join(",")).join("\n") + "\n",
+      columns: ["decision", "reviewerName", "reviewDate", "note"],
+    }];
+    const withSignature = auditGeneratedArtifactSignatures(synthetic);
+    expect(withSignature.filledCellCount).toBe(1);
+    expect(withSignature.artifacts[0].filledRowIds).toEqual(["synthetic-row"]);
+    expect(errors(() => auditGeneratedArtifactSignatures(files.map((file) => ({ ...file, columns: [...file.columns, "missingColumn"] })))))
+      .toContain("exactly one missingColumn column");
+    expect(errors(() => auditGeneratedArtifactSignatures([]))).toContain("at least one artifact");
   });
 
   it("reads the committed packet as 3,277 unsigned rows across 17 sheets", () => {

@@ -115,3 +115,60 @@ export function auditReviewPacketDecisionPresence(
     humanReviewClosureAsserted: false,
   };
 }
+
+export type GeneratedArtifactSignatureScan = {
+  path: string;
+  rows: number;
+  columns: readonly string[];
+  filledCells: number;
+  filledRowIds: string[];
+};
+
+export type GeneratedArtifactSignatureReport = {
+  artifactCount: number;
+  rowCount: number;
+  filledCellCount: number;
+  expectedCellCount: number;
+  artifacts: GeneratedArtifactSignatureScan[];
+  humanReviewClosureAsserted: false;
+};
+
+/**
+ * يتحقق أن الملفات المولَّدة ما زالت خالية تمامًا من أي إدخال مراجع (اسم دليل أو قرار أو هوية أو تاريخ أو ملاحظة).
+ * عمل المراجع يبقى في نسخة محفوظة خارج الملفات المولَّدة، ثم يُسجَّل في السجل المعتمد بقرار صريح من المالك.
+ */
+export function auditGeneratedArtifactSignatures(
+  files: readonly { path: string; content: string; columns: readonly string[] }[],
+): GeneratedArtifactSignatureReport {
+  if (files.length === 0) throw new Error("Generated-artifact signature scan requires at least one artifact.");
+
+  const artifacts: GeneratedArtifactSignatureScan[] = files.map((file) => {
+    const rows = parseCsv(file.content);
+    if (rows.length === 0) throw new Error(`Generated artifact ${file.path} has no header row.`);
+    const [header, ...dataRows] = rows;
+    if (dataRows.some((row) => row.length !== header.length)) throw new Error(`Generated artifact ${file.path} contains a row with the wrong width.`);
+    const idIndex = header.indexOf("contentId") >= 0 ? header.indexOf("contentId") : header.indexOf("decisionId") >= 0 ? header.indexOf("decisionId") : header.indexOf("anchorId") >= 0 ? header.indexOf("anchorId") : 0;
+    const indexes = file.columns.map((column) => {
+      const found = header.flatMap((name, index) => name === column ? [index] : []);
+      if (found.length !== 1) throw new Error(`Generated artifact ${file.path} requires exactly one ${column} column.`);
+      return found[0];
+    });
+    const filledRowIds: string[] = [];
+    let filledCells = 0;
+    for (const row of dataRows) {
+      const filled = indexes.filter((index) => row[index].trim()).length;
+      filledCells += filled;
+      if (filled > 0) filledRowIds.push(row[idIndex]?.trim() || "unknown-row");
+    }
+    return { path: file.path, rows: dataRows.length, columns: file.columns, filledCells, filledRowIds };
+  });
+
+  return {
+    artifactCount: artifacts.length,
+    rowCount: artifacts.reduce((total, artifact) => total + artifact.rows, 0),
+    filledCellCount: artifacts.reduce((total, artifact) => total + artifact.filledCells, 0),
+    expectedCellCount: artifacts.reduce((total, artifact) => total + artifact.rows * artifact.columns.length, 0),
+    artifacts,
+    humanReviewClosureAsserted: false,
+  };
+}

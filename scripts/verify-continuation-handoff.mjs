@@ -131,6 +131,7 @@ const lexicalTargetGapSource = read("src/core/content-validation/lexical-target-
 const lexicalTargetGapTest = read("tests/unit/lexical-target-gap.test.ts");
 const academicAuditGenerator = read("scripts/generate-academic-audit.ts");
 const lexicalFrameQualityWorklist = read("reports/lexical-review-packet/frame-quality-targets.csv");
+const lexicalReviewPacketSource = read("src/core/content-validation/lexical-review-packet.ts");
 const lexicalNounReviewWorklist = read("reports/lexical-review-packet/noun-anchors.csv");
 const reviewPacketCsvGenerator = read("scripts/generate-human-review-packet.ts");
 const reviewPacketSafetySource = read("src/core/content-validation/review-packet-safety.ts");
@@ -143,6 +144,7 @@ const humanReviewReviewScript = read("scripts/audit-human-review.ts");
 const p099Dossier = read("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
 const p099StatusScript = read("scripts/report-p099-exclusion-evidence-status.ts");
 const humanReviewPresenceSource = read("src/core/content-validation/human-review-presence.ts");
+const p099RetainedValidator = read("scripts/validate-p099-retained-decision.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -1403,6 +1405,10 @@ const p099AuthoredOrderIds=[...p099EvidenceStatusOutput.matchAll(/^- ([a-z0-9-]+
 if(p099AuthoredOrderIds.length!==p099NamedReferenceTotal)fail("P0-99 status did not list every exclusion slot");
 if(p099DossierOrderedIds.join("|")!==p099AuthoredOrderIds.join("|"))fail("P0-99 dossier order disagrees with the authored exclusion order");
 for(const text of["لا يمنح اعتمادًا ولا يغلق P0-99","لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع","بوابة المرحلة الثانية","لا يغلق وجود هذا الملف P0-98 أو P0-99","reviewEvidenceName","frame-quality-targets.csv","لا يوجد في هذا الملف قرار بشري"])requireText(p099Dossier,text,"P0-99 readable dossier boundaries");
+if(!packageJson.scripts["p099:evidence:validate"]||!packageJson.scripts["p099:evidence:validate"].includes("validate-p099-retained-decision"))fail("P0-99 retained-decision validator script is missing");
+for(const text of["validateP099RetainedExclusionDecisions","--require-complete","Reviewer identity authenticated","P0-99 closure asserted","no file is written"])requireText(p099RetainedValidator,text,"P0-99 retained-decision validator");
+for(const text of["validateP099RetainedExclusionDecisions","reviewerIdentityAuthenticated: false","p099ClosureAsserted: false","must keep the authored exclusion order"])requireText(lexicalReviewPacketSource,text,"P0-99 retained-decision core validation");
+if(!lexicalReviewPacketSource.includes("auditP099ExclusionReviewSlots(content, expectedDecisionIds)"))fail("P0-99 retained-decision validation must reuse the presence-only slot reader");
 const p099DossierSlotState=p099Dossier.match(/خلايا توقيع ممتلئة \(حضور فقط\): \*\*(\d+)\/(\d+)\*\*/u);
 if(!p099DossierSlotState)fail("P0-99 dossier did not report the signature-cell presence");
 if(Number(p099DossierSlotState[1])!==p099SignatureCellsFilled||Number(p099DossierSlotState[2])!==p099SignatureCellsExpected)fail("P0-99 dossier signature-cell presence disagrees with p099:evidence:status");

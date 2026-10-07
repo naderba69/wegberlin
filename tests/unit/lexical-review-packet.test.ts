@@ -17,6 +17,7 @@ import {
   P099_EXCLUSION_EVIDENCE_NAME_COLUMN,
   P099_EXCLUSION_REVIEW_DOSSIER_PATH,
   P099_ORIGINAL_QUALITY_TARGET_COUNT,
+  validateP099RetainedExclusionDecisions,
   summarizeP099ExclusionEvidenceReferences,
 } from "@/core/content-validation/lexical-review-packet";
 import { buildLexicalTargetGapAudit } from "@/core/content-validation/lexical-target-gap";
@@ -377,6 +378,75 @@ describe("unsigned independent German lexical review packet", () => {
     expect(namedDossier).not.toContain("test-reviewer");
     expect(() => buildP099ExclusionReviewDossier({ headers: namedRows[0], rows: namedRows.slice(2), contentHash: "test" }))
       .toThrow("requires exactly 8 exclusion rows");
+  });
+
+  it("validates a returned reviewer sheet structurally and never authenticates or closes anything", () => {
+    const csv = byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!;
+    const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
+    const blank = validateP099RetainedExclusionDecisions(csv, expectedDecisionIds);
+    expect(blank.exclusionCount).toBe(8);
+    expect(blank.completeRowCount).toBe(0);
+    expect(blank.incompleteRowCount).toBe(8);
+    expect(blank.signatureCellsFilled).toBe(0);
+    expect(blank.signatureCellsExpected).toBe(40);
+    expect(blank.signatureFieldsExpectedPerRow).toBe(5);
+    expect(blank.rows.every((row) => row.missingSignatureFields.length === 5 && row.evidenceReferenceState === "missing")).toBe(true);
+    expect(blank.reviewerIdentityAuthenticated).toBe(false);
+    expect(blank.evidenceContentsInspected).toBe(false);
+    expect(blank.reviewDecisionContentsInterpreted).toBe(false);
+    expect(blank.p099ClosureAsserted).toBe(false);
+
+    const rows = parseCsv(csv);
+    const index = (name: string) => rows[0].indexOf(name);
+    const rewrite = (patch: (row: CsvRow, rowIndex: number) => void) => serializeCsv(rows[0], rows.slice(1).map((row, rowIndex) => {
+      const next = [...row];
+      patch(next, rowIndex);
+      return next;
+    }));
+    const completeRow = (row: CsvRow) => {
+      row[index(P099_EXCLUSION_EVIDENCE_NAME_COLUMN)] = "reports/evidence/p099-review.pdf";
+      row[index("reviewStatus")] = "independent-review-recorded";
+      row[index("reviewDecision")] = "accept";
+      row[index("reviewerName")] = "مراجع مستقل";
+      row[index("reviewerQualification")] = "مدرّس ألمانية معتمد";
+      row[index("reviewDate")] = "2026-10-07";
+      row[index("reviewerNote")] = "راجعت الجمل والسياق كاملًا.";
+    };
+
+    const oneComplete = validateP099RetainedExclusionDecisions(rewrite((row, rowIndex) => { if (rowIndex === 0) completeRow(row); }), expectedDecisionIds);
+    expect(oneComplete.completeRowCount).toBe(1);
+    expect(oneComplete.incompleteRowCount).toBe(7);
+    expect(oneComplete.rows[0].complete).toBe(true);
+    expect(oneComplete.signatureCellsFilled).toBe(5);
+    expect(oneComplete.p099ClosureAsserted).toBe(false);
+
+    const badDate = validateP099RetainedExclusionDecisions(rewrite((row, rowIndex) => {
+      if (rowIndex !== 0) return;
+      completeRow(row);
+      row[index("reviewDate")] = "07.10.2026";
+    }), expectedDecisionIds);
+    expect(badDate.rows[0].complete).toBe(false);
+    expect(badDate.rows[0].malformedSignatureFields).toEqual(["reviewDate"]);
+
+    const placeholderName = validateP099RetainedExclusionDecisions(rewrite((row, rowIndex) => {
+      if (rowIndex !== 0) return;
+      completeRow(row);
+      row[index("reviewerName")] = "TODO";
+    }), expectedDecisionIds);
+    expect(placeholderName.rows[0].complete).toBe(false);
+    expect(placeholderName.rows[0].placeholderSignatureFields).toEqual(["reviewerName"]);
+
+    const partial = rewrite((row, rowIndex) => {
+      if (rowIndex !== 0) return;
+      row[index(P099_EXCLUSION_EVIDENCE_NAME_COLUMN)] = "reports/evidence/p099-review.pdf";
+      row[index("reviewDecision")] = "accept";
+    });
+    expect(() => validateP099RetainedExclusionDecisions(partial, expectedDecisionIds)).toThrow("while still marked authored-review-pending");
+
+    const reordered = serializeCsv(rows[0], [rows[2], rows[1], ...rows.slice(3)]);
+    expect(() => validateP099RetainedExclusionDecisions(reordered, expectedDecisionIds)).toThrow("must keep the authored exclusion order");
+    const shortened = serializeCsv(rows[0], rows.slice(1, 8));
+    expect(() => validateP099RetainedExclusionDecisions(shortened, expectedDecisionIds)).toThrow("expected 8 rows");
   });
 
   it("quotes CSV fields and neutralizes spreadsheet formulas in authored text", () => {

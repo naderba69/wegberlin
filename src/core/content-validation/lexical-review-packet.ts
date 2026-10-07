@@ -294,6 +294,115 @@ function appendBlankReviewColumns(row: unknown[]) {
  * لا يفتح محتوى قرار ولا يفسّره ولا يعلن إغلاقًا. يوقف الفحصَ أي توقيع مسجَّل قبل
  * تسمية أدلة الاستبعادات الثمانية: الترتيب جزء من المتطلب، لا تفضيل.
  */
+export type P099RetainedDecisionRow = {
+  decisionId: string;
+  complete: boolean;
+  missingSignatureFields: string[];
+  placeholderSignatureFields: string[];
+  malformedSignatureFields: string[];
+  evidenceReferenceState: "missing" | "placeholder" | "named";
+  retainedReviewStatus: string;
+};
+
+export type P099RetainedDecisionReport = {
+  exclusionCount: number;
+  completeRowCount: number;
+  incompleteRowCount: number;
+  signatureCellsFilled: number;
+  signatureCellsExpected: number;
+  rows: P099RetainedDecisionRow[];
+  signatureFieldsExpectedPerRow: number;
+  reviewerIdentityAuthenticated: false;
+  evidenceContentsInspected: false;
+  reviewDecisionContentsInterpreted: false;
+  p099ClosureAsserted: false;
+};
+
+/**
+ * يفحص ورقة مرجعة من مراجع (نسخة محفوظة خارج المستودع) بنيويًا: العدد، والترتيب، واكتمال التوقيع، وصيغة التاريخ.
+ * لا يكتب شيئًا، ولا يتحقق من هوية المراجع، ولا يفتح محتوى الدليل، ولا يحكم على كفاية القرار، ولا يعلن إغلاقًا.
+ */
+export function validateP099RetainedExclusionDecisions(
+  content: string,
+  expectedDecisionIds: readonly string[],
+): P099RetainedDecisionReport {
+  if (expectedDecisionIds.length !== P099_STRUCTURAL_EXCLUSION_COUNT || new Set(expectedDecisionIds).size !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 retained decisions require exactly ${P099_STRUCTURAL_EXCLUSION_COUNT} unique authored exclusion IDs.`);
+  }
+
+  const rows = parseCsv(content);
+  if (rows.length === 0) throw new Error("P0-99 retained decisions CSV has no header row.");
+  const [header, ...dataRows] = rows;
+  const requiredColumnIndex = (columnName: string) => {
+    const indexes = header.flatMap((column, index) => column === columnName ? [index] : []);
+    if (indexes.length !== 1) throw new Error(`P0-99 retained decisions require exactly one ${columnName} column.`);
+    return indexes[0];
+  };
+  const decisionIdIndex = requiredColumnIndex("decisionId");
+  const evidenceNameIndex = requiredColumnIndex(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
+  const reviewStatusIndex = requiredColumnIndex("reviewStatus");
+  const signatureIndexes = REVIEW_COLUMNS.map((column) => ({ column, index: requiredColumnIndex(column) }));
+  if (dataRows.length !== expectedDecisionIds.length) {
+    throw new Error(`P0-99 retained decisions expected ${expectedDecisionIds.length} rows; found ${dataRows.length}.`);
+  }
+  if (dataRows.some((row) => row.length !== header.length)) throw new Error("P0-99 retained decisions contain a row with the wrong width.");
+
+  const seen = new Set<string>();
+  const orderedIds = dataRows.map((row) => row[decisionIdIndex].trim());
+  for (const decisionId of orderedIds) {
+    if (!decisionId || !expectedDecisionIds.includes(decisionId)) throw new Error("P0-99 retained decision IDs do not match the authored structural exclusions.");
+    if (seen.has(decisionId)) throw new Error("P0-99 retained decisions contain a duplicate exclusion ID.");
+    seen.add(decisionId);
+  }
+  if (orderedIds.join("|") !== expectedDecisionIds.join("|")) {
+    throw new Error("P0-99 retained decisions must keep the authored exclusion order.");
+  }
+
+  // The presence-only reader enforces the filing rules: a named reference is required before any signature cell,
+  // and a signature cell is never valid while the row is still marked authored-review-pending.
+  auditP099ExclusionReviewSlots(content, expectedDecisionIds);
+
+  const rowsReport: P099RetainedDecisionRow[] = dataRows.map((row, index) => {
+    const missingSignatureFields: string[] = [];
+    const placeholderSignatureFields: string[] = [];
+    const malformedSignatureFields: string[] = [];
+    for (const { column, index: cellIndex } of signatureIndexes) {
+      const value = row[cellIndex].trim();
+      if (!value) { missingSignatureFields.push(column); continue; }
+      if (column === "reviewDate") {
+        if (!/^\d{4}-\d{2}-\d{2}$/u.test(value)) malformedSignatureFields.push(column);
+        continue;
+      }
+      if (isP099PlaceholderEvidenceReference(value)) placeholderSignatureFields.push(column);
+    }
+    const reference = row[evidenceNameIndex].trim();
+    const evidenceReferenceState = !reference ? "missing" : isP099PlaceholderEvidenceReference(reference) ? "placeholder" : "named";
+    return {
+      decisionId: orderedIds[index],
+      complete: missingSignatureFields.length === 0 && placeholderSignatureFields.length === 0 && malformedSignatureFields.length === 0 && evidenceReferenceState === "named",
+      missingSignatureFields,
+      placeholderSignatureFields,
+      malformedSignatureFields,
+      evidenceReferenceState,
+      retainedReviewStatus: row[reviewStatusIndex].trim(),
+    };
+  });
+
+  return {
+    exclusionCount: rowsReport.length,
+    completeRowCount: rowsReport.filter((row) => row.complete).length,
+    incompleteRowCount: rowsReport.filter((row) => !row.complete).length,
+    signatureCellsFilled: rowsReport.reduce((total, row) => total + (REVIEW_COLUMNS.length - row.missingSignatureFields.length), 0),
+    signatureCellsExpected: rowsReport.length * REVIEW_COLUMNS.length,
+    rows: rowsReport,
+    signatureFieldsExpectedPerRow: REVIEW_COLUMNS.length,
+    reviewerIdentityAuthenticated: false,
+    evidenceContentsInspected: false,
+    reviewDecisionContentsInterpreted: false,
+    p099ClosureAsserted: false,
+  };
+}
+
 export type P099QualityTargetSlotReport = {
   targetCount: number;
   signedRowCount: number;
@@ -621,7 +730,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
 - في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
-- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- عند عودة ورقة من مراجع، يفحصها \`npm run p099:evidence:validate -- <ملف>\` بنيويًا: العدد والترتيب واسم الدليل واكتمال الحقول الخمسة وصيغة التاريخ؛ لا يثبت هوية المراجع ولا يفتح الدليل ولا يحكم على كفاية القرار ولا يغلق P0-99.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
 - يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.

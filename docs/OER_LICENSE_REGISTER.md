@@ -11,6 +11,9 @@
 | OER-03 | Deutsch im Blick، Zsuzsanna Abrams، COERLL / UT Austin | https://coerll.utexas.edu/coerll/materials/language/german/ | CC-BY | 2026-10-08 | Zsuzsanna Abrams، Deutsch im Blick، COERLL / UT Austin، مع رابط الترخيص | مسجّل، غير مستورد |
 | OER-04 | Wiktionary (نصوص المداخل) | https://en.wiktionary.org/wiki/Wiktionary:Copyrights | CC BY-SA 4.0 و GFDL 1.1 (بلا أقسام ثابتة) | 2026-10-08 | اسم المساهمين وتاريخ التعديل ورابط الترخيص، مع ترخيص المشتق نفسه (ShareAlike) | مسجّل، غير مستورد |
 | OER-05 | Grenzenlos Deutsch | https://oercommons.org/browse?f.keyword=german-language (قائمة؛ لم تُفتح صفحته الفردية) | CC BY-NC-SA (من قائمة OER Commons) | 2026-10-08 | غير مستورد: ترخيص غير تجاري | مستبعد افتراضيًا (NC) |
+| OER-06 | German 101 وGerman 102، Rebecca Linem | https://nku.libguides.com/c.php?g=1241432&p=10871937 (قائمة؛ لم تُفتح صفحة المصدر الفردية) | CC BY (من قائمة LibGuide؛ الإصدار غير مُثبت) | 2026-10-08 | Rebecca Linem، German 101/102، مع رابط الترخيص | مسجّل، غير مستورد؛ الإصدار غير مُثبت |
+| OER-07 | Let's Chat German، Crandall وآخرون | https://oercommons.org/browse?f.keyword=german (قائمة) | CC BY-NC-SA (من قائمة OER Commons) | 2026-10-08 | غير مستورد: ترخيص غير تجاري | مستبعد (NC) |
+| OER-08 | Kennlernenphrasen auf Deutsch | https://oercommons.org/browse?f.keyword=german (قائمة) | CC BY-SA (من قائمة OER Commons؛ المؤلف والناشر غير مُثبتين) | 2026-10-08 | المؤلف والناشر غير مُثبتين؛ ShareAlike يحتاج قبولًا صريحًا | مسجّل، غير مستورد؛ المؤلف غير مُثبت |
 
 ## بوابة الترخيص (قرار آلي، لا استيراد)
 
@@ -19,6 +22,9 @@
 - OER-01 · OER-02 · OER-03: **مرفوضة** — `license-version-unverified:CC-BY` حتى يُثبت إصدار CC من صفحة المصدر.
 - OER-04: **مرفوضة افتراضيًا** — يلزمها قبول ShareAlike صريح من المالك (`share-alike-not-accepted`)؛ عند قبوله تصبح مؤهلة لمراجعة الاستيراد فقط.
 - OER-05: **مرفوضة** — `non-commercial-license`.
+- OER-06: **مرفوضة** — `license-version-unverified:CC-BY`.
+- OER-07: **مرفوضة** — `non-commercial-license` (مستبعد).
+- OER-08: **مرفوضة افتراضيًا** — `share-alike-not-accepted`؛ والمؤلف غير مُثبت.
 
 «مؤهل للمراجعة» لا يعني مستورَدًا ولا مرخّصًا قانونيًا؛ الحكم القانوني النهائي بشري. اختبارات الوحدة في `tests/unit/oer-import-policy.test.ts`.
 

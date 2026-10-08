@@ -112,7 +112,7 @@ function nextAction(status: WeeklyWritingStatus): { labelAr: string; href: strin
     case "awaiting-rewrite":
       return { labelAr: "أعد الكتابة إلزاميًّا: اكتب نسخة منقحة تستعمل الملاحظات، ثم قارن الفرق مع الأصل.", href: "/writing" };
     case "cycle-complete":
-      return { labelAr: "أتممت الدورة: مسودة ← تحليل ← إعادة كتابة ← مقارنة. الأسبوع القادم مهمة جديدة.", href: "/writing/portfolio" };
+      return { labelAr: "أتممت الدورة: مسودة ← تحليل ← إعادة كتابة ← مقارنة. الأسبوع القادم مهمة جديدة.", href: "/portfolio/writing" };
   }
 }
 

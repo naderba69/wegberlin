@@ -1,6 +1,6 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v190 · 2026-10-08 · build ID now content-derived (offline fingerprint df90cb0a54db, stable across rebuilds); pack cache v190 (staging v189, previous v189). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint d4d160e738fd; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
 ## P2-401 — تصحيح خمسة وسوم لتطابق المعاجم — 2026-10-08 (v189)
 
@@ -13,7 +13,7 @@ Sync batch: v190 · 2026-10-08 · build ID now content-derived (offline fingerpr
 - **ما نُفِّذ:** تحقّقت من الوسوم النحوية عبر de.wiktionary (wikitext) وDWDS وDuden؛ في هذه الدفعة سُجّلت ستة أسماء مُتحقَّقًا منها أولًا، ثم تسعة صفات/ظروف وثلاثة أسماء وثلاث تعبيرات. السجل **57 من 64** مُتحقَّقًا، و**7** بلا تحقق مع سبب مسجّل لكل منها: أربعة تُناقض فيها الفئة النحوية في الوسم القاموسَين (nachträglich، zwangsläufig، pauschal، bar)، وتعبيران لم يُثبتا في المصدر (in der Nähe، nach Absprache)، واسم واحد لا يوجد له إلا توليد آلي (Nutzungssituation). **لم يُغيَّر أي نص وسم في الكود**؛ تصحيح الوسوم المتناقضة قرار محتوى يحتاج دفعة مستقلة وبوابة كاش.
 - **الحدود:** التحقق آلي من مصدر مفتوح للصيغة النحوية فقط؛ لا يعني مراجعة بشرية ولا CEFR ولا امتحانًا.
 - **الكاش:** `PACK_CACHE` و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v187** (تُحدَّث المواضع السبعة المثبَّتة معًا؛ الأصول تغيّرت بعد وسوم الأسماء).
-- **البناء:** `offline:size` **df90cb0a54db**. النتائج في فقرة البناء أعلاه.
+- **البناء:** `offline:size` **d4d160e738fd**. النتائج في فقرة البناء أعلاه.
 
 ## P2-401 — نموذج D: مدخل رابع لكل مستوى — 2026-10-08 (v187)
 
@@ -22,8 +22,8 @@ Sync batch: v190 · 2026-10-08 · build ID now content-derived (offline fingerpr
 - **المسرد:** أُضيفت وسوم نحوية لـ16 headword جديدة في `extended-comprehension-grammar.ts` (المجموع 64 headword ووسمًا). اختبار التغطية يحرس العدد.
 - **الحدود:** الدرجات والتقدم والإتقان لا تتغير؛ المادة تدريب إضافي لا امتحان. لم يُضَف أي مرجع أو CEFR أو ادعاء امتحان. P2-401 يبقى **جزئيًا**: القاموس الصرفي الكامل، والصوت البشري، ومراجعة الملاءمة والحقوق المستقلة لم تُنجز.
 - **الكاش:** `PACK_CACHE` = **v189**، و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v188**. المسارات 320/320.
-- **الوثائق:** الوثائق الثلاث عشرة الدائمة على `Sync batch: v190` (ADR-079).
-- **البناء:** Offline `df90cb0a54db`، full 6,017,919 gzip (A1 2,733,105 · A2 2,845,456 · B1 2,870,853 · B2 4,294,358)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **الوثائق:** الوثائق الثلاث عشرة الدائمة على `Sync batch: v191` (ADR-079).
+- **البناء:** Offline `d4d160e738fd`، full 6,018,246 gzip (A1 2,733,426 · A2 2,845,777 · B1 2,871,170 · B2 4,294,692)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
 - **التحقق المحلي:** `npm run check` خروج **0**: اختبارات الوحدة **1,407/1,407** في **205** ملفًا، وlint وtypecheck وفحوص السرية والمصادر وسير العمل وhandoff والبناء، والتباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق.
 - **E2E:** لم يُشغَّل Playwright محليًا؛ المتصفح غير مثبّت ولا يمكن تنزيله هنا.
 
@@ -228,7 +228,7 @@ Sync batch: v190 · 2026-10-08 · build ID now content-derived (offline fingerpr
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v190 (staging v189; previous complete v189)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
+- Offline cache: dwnb-full-pack-v191 (staging v190; previous complete v190)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
 - قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
 - Unit/Integrity tests: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium launch is unavailable; remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.

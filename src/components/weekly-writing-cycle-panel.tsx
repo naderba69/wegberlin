@@ -44,7 +44,7 @@ export function WeeklyWritingCyclePanel() {
         <p className="boundary-line">{cycle.boundaryAr}</p>
         <div className="weekly-writing-actions">
           <Link className="primary-button" href={cycle.current.href}><FilePenLine size={15} /> {status === "cycle-complete" ? "افتح ملف الأعمال" : "اذهب إلى مهمة الكتابة"}</Link>
-          <Link className="secondary-button" href="/writing/portfolio">الفروق بين النسخ</Link>
+          <Link className="secondary-button" href="/portfolio/writing">الفروق بين النسخ</Link>
         </div>
       </footer>
     </section>

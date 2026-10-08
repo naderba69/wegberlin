@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 54 von 64 Labels mit Quelle verifiziert، 10 غير مُتحقق منها بعد.
+Stand 2026-10-08: 57 von 64 Labels mit Quelle verifiziert، 7 غير مُتحقق منها بعد.
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -25,14 +25,14 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | zur Verfügung stehen | Wendung · Verb stehen | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | nach Absprache | Wendung · mit Dativ | nicht verifiziert | de.wiktionary: Wendung im Eintrag Absprache nicht belegt |
 | bereitstellen | Verb · trennbar · Partizip II: bereitgestellt | verifiziert | de.wiktionary (Wikitext-API) |
-| das Erfolgskriterium | das · Pl. die Erfolgskriterien | nicht verifiziert | — |
+| das Erfolgskriterium | das · Pl. die Erfolgskriterien | verifiziert | DWDS (Wörterbucheintrag) |
 | die Fahrgemeinschaft | die · Pl. die Fahrgemeinschaften | verifiziert | de.wiktionary (Wikitext-API) |
-| der Zeitpuffer | der · Pl. die Zeitpuffer | nicht verifiziert | — |
+| der Zeitpuffer | der · Pl. die Zeitpuffer | verifiziert | DWDS (Wörterbucheintrag) |
 | in Aussicht stellen | Wendung · etwas in Aussicht stellen | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | vergleichbar | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | abgrenzen | Verb · trennbar · Partizip II: abgegrenzt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Erprobung | die · Pl. die Erprobungen | verifiziert | de.wiktionary (Wikitext-API) |
-| die Nutzungssituation | die · Pl. die Nutzungssituationen | nicht verifiziert | — |
+| die Nutzungssituation | die · Pl. die Nutzungssituationen | nicht verifiziert | DWDS: nur maschinell generierte Angaben, kein Lexikoneintrag |
 | nachträglich | Adverb | nicht verifiziert | de.wiktionary: nur Adjektiv; Label Adverb nicht belegt |
 | die Belastung | die · Pl. die Belastungen | verifiziert | de.wiktionary (Wikitext-API) |
 | ausschließlich | Adverb | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
@@ -40,7 +40,7 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | verdecken | Verb · Partizip II: verdeckt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Halsschmerzen | nur Plural | verifiziert | de.wiktionary (Wikitext-API) |
 | der Husten | der · meist nur Singular | verifiziert | de.wiktionary (Wikitext-API) |
-| die Versichertenkarte | die · Pl. die Versichertenkarten | nicht verifiziert | — |
+| die Versichertenkarte | die · Pl. die Versichertenkarten | verifiziert | DWDS (Wörterbucheintrag) |
 | das Wartezimmer | das · Pl. die Wartezimmer | verifiziert | de.wiktionary (Wikitext-API) |
 | die Heizung | die · Pl. die Heizungen | verifiziert | de.wiktionary (Wikitext-API) |
 | der Vermieter | der · Pl. die Vermieter | verifiziert | de.wiktionary (Wikitext-API) |

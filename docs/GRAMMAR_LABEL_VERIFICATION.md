@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 36 von 64 Labels mit Quelle verifiziert، 28 غير مُتحقق منها بعد.
+Stand 2026-10-08: 42 von 64 Labels mit Quelle verifiziert، 22 غير مُتحقق منها بعد.
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -48,11 +48,11 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | empfindlich | Adjektiv | nicht verifiziert | — |
 | pendeln | Verb · Partizip II: gependelt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Befragung | die · Pl. die Befragungen | verifiziert | de.wiktionary (Wikitext-API) |
-| der Anwohner | der · Pl. die Anwohner | nicht verifiziert | — |
+| der Anwohner | der · Pl. die Anwohner | verifiziert | de.wiktionary (Wikitext-API) |
 | abgetrennt | Adjektiv | nicht verifiziert | — |
 | pauschal | Adjektiv / Adverb | nicht verifiziert | — |
-| die Ablenkung | die · Pl. die Ablenkungen | nicht verifiziert | — |
-| die Schulkonferenz | die · Pl. die Schulkonferenzen | nicht verifiziert | — |
+| die Ablenkung | die · Pl. die Ablenkungen | verifiziert | de.wiktionary (Wikitext-API) |
+| die Schulkonferenz | die · Pl. die Schulkonferenzen | verifiziert | de.wiktionary (Wikitext-API) |
 | benachteiligen | Verb · Partizip II: benachteiligt | verifiziert | de.wiktionary (Wikitext-API) |
 | der Markt | der · Pl. die Märkte | verifiziert | de.wiktionary (Wikitext-API) |
 | billig | Adjektiv | nicht verifiziert | — |
@@ -62,11 +62,11 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | quietschen | Verb · Partizip II: gequietscht | verifiziert | de.wiktionary (Wikitext-API) |
 | der Verleih | der · Pl. die Verleihe | verifiziert | DWDS / Duden / de.wiktionary |
 | begleiten | Verb · Partizip II: begleitet | verifiziert | de.wiktionary (Wikitext-API) |
-| die Umgestaltung | die · Pl. die Umgestaltungen | nicht verifiziert | — |
+| die Umgestaltung | die · Pl. die Umgestaltungen | verifiziert | de.wiktionary (Wikitext-API) |
 | die Umfrage | die · Pl. die Umfragen | verifiziert | de.wiktionary (Wikitext-API) |
 | bescheiden | Adjektiv | nicht verifiziert | — |
 | das Gartenamt | das · Pl. die Gartenämter | verifiziert | DWDS / Duden / de.wiktionary |
-| die Förderung | die · Pl. die Förderungen | nicht verifiziert | — |
-| die Spielzeit | die · Pl. die Spielzeiten | nicht verifiziert | — |
+| die Förderung | die · Pl. die Förderungen | verifiziert | de.wiktionary (Wikitext-API) |
+| die Spielzeit | die · Pl. die Spielzeiten | verifiziert | de.wiktionary (Wikitext-API) |
 | zwangsläufig | Adverb | nicht verifiziert | — |
 | der Übergang | der · Pl. die Übergänge | verifiziert | de.wiktionary (Wikitext-API) |

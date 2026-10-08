@@ -26,6 +26,6 @@
 
 ## بنود لم تُفحص بعد (40)
 
-البقية: art-neuter-ein، akk-fem-eine، akk-masc-den، dat-in-der، dat-mit-dem، nom-das-kind، neg-keinen، poss-meine، prep-in-berlin، prep-aus، verb-trinken، sein-ist، haben-haben، modal-kann، modal-moechte، perf-habe، perf-gelesen، sep-faehrt، neg-keine، neg-nicht، w-wie، w-wo، w-woher، w-was-kostet، num-12-8، num-3x4، time-halb-drei، time-viertel-nach-acht، weekday-after-montag، month-after-januar، adj-gross-haus، adj-kaltes-wasser، dat-auf-dem-tisch، imp-sie، pron-sie-akk، pron-mir، pron-ihn، conj-weil، verb-geht-ihr، formal-ihnen (مُسقط من الدفعة)، و**verb-arbeitet** (مدرج بالاسم في البنك).
+art-neuter-ein، akk-fem-eine، akk-masc-den، dat-in-der، dat-mit-dem، nom-das-kind، neg-keinen، poss-meine، prep-in-berlin، prep-aus، verb-arbeitet، verb-trinken، sein-ist، haben-haben، modal-kann، modal-moechte، perf-habe، perf-gelesen، sep-faehrt، neg-keine، neg-nicht، w-wie، w-wo، w-woher، w-was-kostet، num-12-8، num-3x4، time-halb-drei، time-viertel-nach-acht، weekday-after-montag، month-after-januar، adj-gross-haus، adj-kaltes-wasser، dat-auf-dem-tisch، imp-sie، pron-sie-akk، pron-mir، pron-ihn، conj-weil، verb-geht-ihr
 
-> ملاحظة: حسب `items[:50]` في مولّد الدفعة، المعرّفات الفعلية في الملف هي 50 بندًا. القائمة أعلاه تضم معرّفات تحتاج التحقق من الملف مباشرة قبل أي اعتماد.
+التحقق من الأعداد: 50 في الملف = ۷ + ۳ + 40.

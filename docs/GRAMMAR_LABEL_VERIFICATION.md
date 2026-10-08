@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 62 von 64 Labels mit Quelle verifiziert، 2 غير مُتحقق منها بعد.
+Stand 2026-10-08: 63 von 64 Labels mit Quelle verifiziert، 1 غير مُتحقق منها بعد (Nutzungssituation: keine Quelle vorhanden).
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -23,7 +23,7 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | die Kräuter | nur Plural · Sg. das Kraut | verifiziert | de.wiktionary (Wikitext-API): Kräuter ist Pl. von Kraut; „nur Plural“ beschreibt den Gebrauch als Sammelbegriff |
 | der Anschluss | der · Pl. die Anschlüsse | verifiziert | de.wiktionary (Wikitext-API) |
 | zur Verfügung stehen | Wendung · Verb stehen | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
-| nach Absprache | Wendung · mit Dativ | nicht verifiziert | Wiktionary (Absprache): Wendung nicht belegt |
+| nach Absprache | Wendung · mit Dativ | verifiziert | de.wiktionary «nach» (Präposition, Bedeutung mit „mit Dativ“, z. B. „nach dem Regen“); die Wendung selbst ist kein Eintrag |
 | bereitstellen | Verb · trennbar · Partizip II: bereitgestellt | verifiziert | de.wiktionary (Wikitext-API) |
 | das Erfolgskriterium | das · Pl. die Erfolgskriterien | verifiziert | DWDS (Wörterbucheintrag) |
 | die Fahrgemeinschaft | die · Pl. die Fahrgemeinschaften | verifiziert | de.wiktionary (Wikitext-API) |

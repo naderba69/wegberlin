@@ -1,10 +1,10 @@
 # Project Status
 
-Sync batch: v189 · 2026-10-08 · P2-401 grammar labels: 62/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 2 open (nach Absprache, Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v189 · 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
 ## P2-401 — تصحيح خمسة وسوم لتطابق المعاجم — 2026-10-08 (v189)
 
-- **ما نُفّذ**: صُحِّحت خمسة وسوم في `src/data/extended-comprehension-grammar.ts` لتطابق Wiktionary وDuden: nachträglich وzwangsläufig وpauschal = Adjektiv؛ bar = Adjektiv / Präposition؛ in der Nähe = Wendung · mit Genitiv. السجل **62 من 64**؛ يبقى nach Absprache وNutzungssituation.
+- **ما نُفّذ**: صُحِّحت خمسة وسوم في `src/data/extended-comprehension-grammar.ts` لتطابق Wiktionary وDuden: nachträglich وzwangsläufig وpauschal = Adjektiv؛ bar = Adjektiv / Präposition؛ in der Nähe = Wendung · mit Genitiv. السجل **63 من 64**؛ يبقى Nutzungssituation.
 - **الحدود**: تحقق آلي من مراجع نحوية؛ لا مراجعة بشرية ولا CEFR ولا امتحان.
 - **الكاش**: `PACK_CACHE` = **v189**، `PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v188**.
 

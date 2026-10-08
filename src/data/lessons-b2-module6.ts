@@ -1948,15 +1948,15 @@ export const b2Module6Lessons: FullLesson[] = [
  type: "word-ordering",
  promptAr: "رتّب نعتًا موسّعًا صحيحًا:",
  words: ["Der", "von der Behörde", "innerhalb von zwei Wochen", "geprüfte", "Antrag", "wurde angenommen."],
- acceptedAnswers: ["Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.", "Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen."],
- explanationAr: "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». تفريقها على جمل صحيح لكنه يغيّر النبرة، و geprüfte بعد Antrag يكسر البنية.",
+ acceptedAnswers: ["Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen."],
+ explanationAr: "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». قطع الحلقة إلى جملة مستقلة يغيّر المعنى البنيوي للنعت، و geprüfte بعد Antrag يكسر البنية.",
  },
  {
  id: "b2-22-e5",
  type: "error-correction",
  promptAr: "صحّح النعت:",
  sentence: "der von der Kommission beschlossenes Verfahren",
- acceptedAnswers: ["der von der Kommission beschlossene Verfahren", "das von der Kommission beschlossene Verfahren"],
+ acceptedAnswers: ["das von der Kommission beschlossene Verfahren"],
  explanationAr: "الأداة السابقة تتكفّل بالعلامة، فيأخذ النعت النهاية الضعيفة e: «das von der Kommission beschlossene Verfahren». تكرار نهاية قوية بعد أداة يُثقل الكلمة دون أن يضيف معلومة تُقرأ.",
  },
  {

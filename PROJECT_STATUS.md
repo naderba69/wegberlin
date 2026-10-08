@@ -1,6 +1,6 @@
 # Project Status
 
-Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint d4d160e738fd; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
 ## إصلاحات الواجهة بعد اختبار التلميذ — 2026-10-08 (v191)
 
@@ -12,7 +12,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 ## إصلاح بصمة البناء — 2026-10-08 (v190)
 
 - **ما نُفّذ**: `next.config.ts` يولّد `generateBuildId` من محتوى المدخلات (`src/`، `public/`، الإعدادات، lockfile)، مع استبعاد `public/offline-size-manifest.json`. كان Next يختار معرّفًا عشوائيًا فيتغيّر حجم الصفحات ويتغيّر `buildFingerprint` في كل بناء دون تغيير مصدري.
-- **الدليل**: بناءان متتاليان بلا تغيير أعطيا البصمة نفسها `d4d160e738fd`، ونجح `npm run check` مرة أخرى بعد البناء الداخلي.
+- **الدليل**: بناءان متتاليان بلا تغيير أعطيا البصمة نفسها `31681e45f1f0`، ونجح `npm run check` مرة أخرى بعد البناء الداخلي.
 - **الكاش**: `PACK_CACHE` = **v190**، و`PACK_STAGING_CACHE` = **v189**، والرجوع `previous` = **v189**. مسارات الأصول 117/117 دون تغيير، لكن محتوى HTML للصفحات تغيّر، فرُفع الكاش حسب القاعدة.
 - **الحدود**: تحقق آلي من البناء فقط؛ لا مراجعة بشرية ولا CEFR ولا امتحان.
 
@@ -27,7 +27,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **ما نُفّذ**: تحقّق من الوسوم عبر de.wiktionary وDWDS وDuden، وسُجِّلت في `docs/GRAMMAR_LABEL_VERIFICATION.md`. السجل **57 من 64**، و**7** بلا تحقق مع سبب لكل منها (أربعة تناقض فيها الفئة النحوية القاموسين، وتعبيران غير مُثبتين، واسم واحد بتوليد آلي فقط). لم يُغيَّر أي نص وسم.
 - **الحدود**: تحقق آلي من مصدر مفتوح للصيغة النحوية فقط؛ لا مراجعة بشرية ولا CEFR ولا امتحان.
 - **الكاش**: `PACK_CACHE` و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v187**. المسارات 320/320.
-- **بصمة البناء**: `offline:size` **d4d160e738fd**.
+- **بصمة البناء**: `offline:size` **31681e45f1f0**.
 
 ## P2-401 — نموذج D: مدخل رابع لكل مستوى — 2026-10-08 (v187)
 
@@ -37,7 +37,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **الحدود**: الدرجات والتقدم لا تتغير؛ لا مرجع ولا CEFR ولا امتحان. P2-401 يبقى **جزئيًا**.
 - **الكاش**: `PACK_CACHE` = **v189**، و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v188**. المسارات 320/320.
 - **الوثائق**: الوثائق الثلاث عشرة الدائمة على `Sync batch: v191` (ADR-079).
-- **بصمة البناء**: Offline `d4d160e738fd`، full 6,018,246 gzip (A1 2,733,426 · A2 2,845,777 · B1 2,871,170 · B2 4,294,692)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **بصمة البناء**: Offline `31681e45f1f0`، full 6,018,167 gzip (A1 2,733,434 · A2 2,845,778 · B1 2,871,182 · B2 4,294,643)؛ JS 128 / **2,029,043** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,068 وسمًا / 443 ألمانيًا / 0 مشكلات.
 - **التحقق المحلي:** `npm run check` خروج **0**: اختبارات الوحدة **1,407/1,407** في **205** ملفًا، وlint وtypecheck وفحوص السرية والمصادر وسير العمل وhandoff والبناء، والتباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق.
 - **E2E**: لم يُشغَّل Playwright محليًا؛ المتصفح غير مثبّت ولا يمكن تنزيله هنا.
 
@@ -50,7 +50,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **E2E**: لم يُشغَّل Playwright محليًا؛ المتصفح غير مثبّت ولا يمكن تنزيله هنا. يُختبر تغيير العرض عبر Quality Gate بعد الدفع.
 - **الكاش**: `PACK_CACHE` و`PACK_STAGING_CACHE` = **v186**، والرجوع `previous` = **v185**. المسارات 320/320.
 - **الوثائق**: الوثائق الثلاث عشرة الدائمة على `Sync batch: v186` (ADR-079).
-- **بصمة البناء**: Offline `d300c7546747`، full 6,014,597 gzip (A1 2,728,307 · A2 2,840,613 · B1 2,866,014 · B2 4,290,603)؛ JS 128 / **2,023,887** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,124,389** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **بصمة البناء**: Offline `d300c7546747`، full 6,014,597 gzip (A1 2,728,307 · A2 2,840,613 · B1 2,866,014 · B2 4,290,603)؛ JS 128 / **2,023,887** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,124,389** gzip؛ تدقيق اللغة 210 TSX / 8,068 وسمًا / 443 ألمانيًا / 0 مشكلات.
 
 ## P2-401 — حارس مسرد المدخلات الطويلة — 2026-10-08 (v185)
 

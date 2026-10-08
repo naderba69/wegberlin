@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "d4d160e738fd5e27f9682bae42e50b7195aa7589036a0524a9f162aa8d4d3ad1",
+  "buildFingerprint": "31681e45f1f08375655ef4dd22173576468081798a0c7078b60b96c56d994c54",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3946076,
-      "routeGzipBytes": 780494,
+      "routeGzipBytes": 780482,
       "nextAssetCount": 86,
-      "nextAssetRawBytes": 6838021,
-      "nextAssetGzipBytes": 1940967,
+      "nextAssetRawBytes": 6838112,
+      "nextAssetGzipBytes": 1940987,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 10851747,
-      "totalGzipBytes": 2733426,
+      "totalRawBytes": 10851838,
+      "totalGzipBytes": 2733434,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -131,9 +131,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-46f1aaee83c40752.js",
-          "rawBytes": 18254,
-          "gzipBytes": 7231
+          "path": "/_next/static/chunks/6043-08f7e26cc15ab5e8.js",
+          "rawBytes": 18345,
+          "gzipBytes": 7251
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -457,14 +457,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4243124,
-      "routeGzipBytes": 892846,
+      "routeGzipBytes": 892827,
       "nextAssetCount": 86,
-      "nextAssetRawBytes": 6838021,
-      "nextAssetGzipBytes": 1940966,
+      "nextAssetRawBytes": 6838112,
+      "nextAssetGzipBytes": 1940986,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11148795,
-      "totalGzipBytes": 2845777,
+      "totalRawBytes": 11148886,
+      "totalGzipBytes": 2845778,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -577,9 +577,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-46f1aaee83c40752.js",
-          "rawBytes": 18254,
-          "gzipBytes": 7231
+          "path": "/_next/static/chunks/6043-08f7e26cc15ab5e8.js",
+          "rawBytes": 18345,
+          "gzipBytes": 7251
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -903,14 +903,14 @@
       "label": "B1",
       "routeCount": 60,
       "routeRawBytes": 4323384,
-      "routeGzipBytes": 918240,
+      "routeGzipBytes": 918232,
       "nextAssetCount": 86,
-      "nextAssetRawBytes": 6838019,
-      "nextAssetGzipBytes": 1940965,
+      "nextAssetRawBytes": 6838110,
+      "nextAssetGzipBytes": 1940985,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11229053,
-      "totalGzipBytes": 2871170,
+      "totalRawBytes": 11229144,
+      "totalGzipBytes": 2871182,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1023,9 +1023,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-46f1aaee83c40752.js",
-          "rawBytes": 18254,
-          "gzipBytes": 7231
+          "path": "/_next/static/chunks/6043-08f7e26cc15ab5e8.js",
+          "rawBytes": 18345,
+          "gzipBytes": 7251
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -1349,14 +1349,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10038368,
-      "routeGzipBytes": 2297025,
+      "routeGzipBytes": 2296956,
       "nextAssetCount": 90,
-      "nextAssetRawBytes": 6982129,
-      "nextAssetGzipBytes": 1985702,
+      "nextAssetRawBytes": 6982220,
+      "nextAssetGzipBytes": 1985722,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17088147,
-      "totalGzipBytes": 4294692,
+      "totalRawBytes": 17088238,
+      "totalGzipBytes": 4294643,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1474,9 +1474,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-46f1aaee83c40752.js",
-          "rawBytes": 18254,
-          "gzipBytes": 7231
+          "path": "/_next/static/chunks/6043-08f7e26cc15ab5e8.js",
+          "rawBytes": 18345,
+          "gzipBytes": 7251
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",
@@ -1815,14 +1815,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 320,
       "routeRawBytes": 16685127,
-      "routeGzipBytes": 4016100,
+      "routeGzipBytes": 4016001,
       "nextAssetCount": 117,
-      "nextAssetRawBytes": 6987317,
-      "nextAssetGzipBytes": 1990181,
+      "nextAssetRawBytes": 6987408,
+      "nextAssetGzipBytes": 1990201,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 23740094,
-      "totalGzipBytes": 6018246,
+      "totalRawBytes": 23740185,
+      "totalGzipBytes": 6018167,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1940,9 +1940,9 @@
           "gzipBytes": 17915
         },
         {
-          "path": "/_next/static/chunks/6043-46f1aaee83c40752.js",
-          "rawBytes": 18254,
-          "gzipBytes": 7231
+          "path": "/_next/static/chunks/6043-08f7e26cc15ab5e8.js",
+          "rawBytes": 18345,
+          "gzipBytes": 7251
         },
         {
           "path": "/_next/static/chunks/6175-8d4bae8a32f4534f.js",

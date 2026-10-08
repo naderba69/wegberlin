@@ -1,6 +1,6 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint d4d160e738fd; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
 ## P2-401 — تصحيح خمسة وسوم لتطابق المعاجم — 2026-10-08 (v189)
 
@@ -13,7 +13,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **ما نُفِّذ:** تحقّقت من الوسوم النحوية عبر de.wiktionary (wikitext) وDWDS وDuden؛ في هذه الدفعة سُجّلت ستة أسماء مُتحقَّقًا منها أولًا، ثم تسعة صفات/ظروف وثلاثة أسماء وثلاث تعبيرات. السجل **57 من 64** مُتحقَّقًا، و**7** بلا تحقق مع سبب مسجّل لكل منها: أربعة تُناقض فيها الفئة النحوية في الوسم القاموسَين (nachträglich، zwangsläufig، pauschal، bar)، وتعبيران لم يُثبتا في المصدر (in der Nähe، nach Absprache)، واسم واحد لا يوجد له إلا توليد آلي (Nutzungssituation). **لم يُغيَّر أي نص وسم في الكود**؛ تصحيح الوسوم المتناقضة قرار محتوى يحتاج دفعة مستقلة وبوابة كاش.
 - **الحدود:** التحقق آلي من مصدر مفتوح للصيغة النحوية فقط؛ لا يعني مراجعة بشرية ولا CEFR ولا امتحانًا.
 - **الكاش:** `PACK_CACHE` و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v187** (تُحدَّث المواضع السبعة المثبَّتة معًا؛ الأصول تغيّرت بعد وسوم الأسماء).
-- **البناء:** `offline:size` **d4d160e738fd**. النتائج في فقرة البناء أعلاه.
+- **البناء:** `offline:size` **31681e45f1f0**. النتائج في فقرة البناء أعلاه.
 
 ## P2-401 — نموذج D: مدخل رابع لكل مستوى — 2026-10-08 (v187)
 
@@ -23,7 +23,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **الحدود:** الدرجات والتقدم والإتقان لا تتغير؛ المادة تدريب إضافي لا امتحان. لم يُضَف أي مرجع أو CEFR أو ادعاء امتحان. P2-401 يبقى **جزئيًا**: القاموس الصرفي الكامل، والصوت البشري، ومراجعة الملاءمة والحقوق المستقلة لم تُنجز.
 - **الكاش:** `PACK_CACHE` = **v189**، و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v188**. المسارات 320/320.
 - **الوثائق:** الوثائق الثلاث عشرة الدائمة على `Sync batch: v191` (ADR-079).
-- **البناء:** Offline `d4d160e738fd`، full 6,018,246 gzip (A1 2,733,426 · A2 2,845,777 · B1 2,871,170 · B2 4,294,692)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **البناء:** Offline `31681e45f1f0`، full 6,018,167 gzip (A1 2,733,434 · A2 2,845,778 · B1 2,871,182 · B2 4,294,643)؛ JS 128 / **2,029,043** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,068 وسمًا / 443 ألمانيًا / 0 مشكلات.
 - **التحقق المحلي:** `npm run check` خروج **0**: اختبارات الوحدة **1,407/1,407** في **205** ملفًا، وlint وtypecheck وفحوص السرية والمصادر وسير العمل وhandoff والبناء، والتباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق.
 - **E2E:** لم يُشغَّل Playwright محليًا؛ المتصفح غير مثبّت ولا يمكن تنزيله هنا.
 
@@ -35,7 +35,7 @@ Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link
 - **التحقق المحلي:** `npm run check` خروج **0**: اختبارات الوحدة **1,403/1,403** في **205** ملفًا، وlint وtypecheck وفحوص السرية والمصادر وسير العمل وhandoff والبناء، والتباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق. (تطلّب تحديث عدّادات تدقيق اللغة من 8,066/442 إلى 8,067/443 في الاختبار وفاحص الاستمرارية.)
 - **E2E:** لم يُشغَّل Playwright محليًا (المتصفح غير مثبّت ولا يمكن تنزيله من هذه البيئة)؛ تغيير العرض يُختبر بـ Quality Gate بعد الدفع.
 - **الكاش:** `PACK_CACHE` و`PACK_STAGING_CACHE` = **v186**، والرجوع `previous` = **v185**. المسارات 320/320.
-- **البناء:** Offline `d300c7546747`، full 6,014,597 gzip (A1 2,728,307 · A2 2,840,613 · B1 2,866,014 · B2 4,290,603)؛ JS 128 / **2,023,887** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,124,389** gzip؛ التباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **البناء:** Offline `d300c7546747`، full 6,014,597 gzip (A1 2,728,307 · A2 2,840,613 · B1 2,866,014 · B2 4,290,603)؛ JS 128 / **2,023,887** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,124,389** gzip؛ التباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق؛ تدقيق اللغة 210 TSX / 8,068 وسمًا / 443 ألمانيًا / 0 مشكلات.
 
 ## P2-401 — حارس مسرد المدخلات الطويلة — 2026-10-08 (v185)
 

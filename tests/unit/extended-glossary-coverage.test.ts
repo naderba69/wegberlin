@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { extendedComprehensionTasks, extendedTaskText } from "@/data/extended-comprehension";
+import { extendedGlossaryGrammar } from "@/data/extended-comprehension-grammar";
 
 // Glossary headwords in the endurance-lab long inputs must be findable in the lesson text
 // they support. Verb forms that are separable (abholen → holt … ab) or irregular (verschieben →
@@ -44,6 +45,21 @@ describe("endurance-lab long input glossary coverage", () => {
     for (const task of extendedComprehensionTasks) {
       const headwords = task.glossary.map((entry) => entry.de);
       expect(new Set(headwords).size, task.id).toBe(headwords.length);
+    }
+  });
+
+  it("gives every glossary headword a grammar label and no stale labels", () => {
+    const headwords = new Set(extendedComprehensionTasks.flatMap((task) => task.glossary.map((entry) => entry.de)));
+    expect([...headwords].filter((headword) => !extendedGlossaryGrammar[headword])).toEqual([]);
+    expect(Object.keys(extendedGlossaryGrammar).filter((headword) => !headwords.has(headword))).toEqual([]);
+    expect(headwords.size).toBe(48);
+  });
+
+  it("keeps noun labels in article and plural form", () => {
+    for (const [headword, label] of Object.entries(extendedGlossaryGrammar)) {
+      if (/^(der|die|das) /.test(headword) && !label.startsWith("nur ")) {
+        expect(label, headword).toMatch(/^(der|die|das) · (Pl\. die \S+|meist nur Singular)$/);
+      }
     }
   });
 });

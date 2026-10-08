@@ -3,17 +3,17 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `12738b305c0e68dd12f3297af8984e9a80d11351f98b99275306507eca461ee3`
+Content SHA-256: `32a75bc2051f737ab7580a1229c8bb3632fd8f8b09996b8118b7e16fb1f746be`
 
 ## Result
 
-`PASS` — 210 TSX files and 8066 opening JSX tags were scanned.
+`PASS` — 210 TSX files and 8067 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 442 |
+| Explicit German fragments (lang=de + dir=ltr) | 443 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 490 |
+| LTR tags audited | 491 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 54 |
@@ -98,7 +98,7 @@ Content SHA-256: `12738b305c0e68dd12f3297af8984e9a80d11351f98b99275306507eca461e
 | src/components/dictation-lab.tsx:151 | استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكام | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |
-| src/components/endurance-lab.tsx:58 | اثنا عشر سياقًا أصليًا من A1 إلى B2، ثلاثة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمي | Arabic host + plaintext boundary |
+| src/components/endurance-lab.tsx:59 | اثنا عشر سياقًا أصليًا من A1 إلى B2، ثلاثة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمي | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:117 | دخلت بطاقة علاج شخصية إلى SRS. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:117 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:118 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |

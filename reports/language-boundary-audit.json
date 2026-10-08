@@ -4,10 +4,10 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 210,
-  "openingTagCount": 8066,
-  "germanTagCount": 442,
+  "openingTagCount": 8067,
+  "germanTagCount": 443,
   "arabicTagCount": 11,
-  "ltrTagCount": 490,
+  "ltrTagCount": 491,
   "rtlTagCount": 11,
   "autoDirCount": 12,
   "technicalScopeCount": 54,
@@ -323,7 +323,7 @@
     },
     {
       "path": "src/components/endurance-lab.tsx",
-      "line": 58,
+      "line": 59,
       "text": "اثنا عشر سياقًا أصليًا من A1 إلى B2، ثلاثة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
     },
     {
@@ -1059,5 +1059,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "12738b305c0e68dd12f3297af8984e9a80d11351f98b99275306507eca461ee3"
+  "contentSha256": "32a75bc2051f737ab7580a1229c8bb3632fd8f8b09996b8118b7e16fb1f746be"
 }

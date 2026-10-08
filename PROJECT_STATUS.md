@@ -1,6 +1,13 @@
 # Project Status
 
-Sync batch: v189 · 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v190 · 2026-10-08 · build ID now content-derived (offline fingerprint df90cb0a54db, stable across rebuilds); pack cache v190 (staging v189, previous v189). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+
+## إصلاح بصمة البناء — 2026-10-08 (v190)
+
+- **ما نُفّذ**: `next.config.ts` يولّد `generateBuildId` من محتوى المدخلات (`src/`، `public/`، الإعدادات، lockfile)، مع استبعاد `public/offline-size-manifest.json`. كان Next يختار معرّفًا عشوائيًا فيتغيّر حجم الصفحات ويتغيّر `buildFingerprint` في كل بناء دون تغيير مصدري.
+- **الدليل**: بناءان متتاليان بلا تغيير أعطيا البصمة نفسها `df90cb0a54db`، ونجح `npm run check` مرة أخرى بعد البناء الداخلي.
+- **الكاش**: `PACK_CACHE` = **v190**، و`PACK_STAGING_CACHE` = **v189**، والرجوع `previous` = **v189**. مسارات الأصول 117/117 دون تغيير، لكن محتوى HTML للصفحات تغيّر، فرُفع الكاش حسب القاعدة.
+- **الحدود**: تحقق آلي من البناء فقط؛ لا مراجعة بشرية ولا CEFR ولا امتحان.
 
 ## P2-401 — تصحيح خمسة وسوم لتطابق المعاجم — 2026-10-08 (v189)
 
@@ -13,7 +20,7 @@ Sync batch: v189 · 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (W
 - **ما نُفّذ**: تحقّق من الوسوم عبر de.wiktionary وDWDS وDuden، وسُجِّلت في `docs/GRAMMAR_LABEL_VERIFICATION.md`. السجل **57 من 64**، و**7** بلا تحقق مع سبب لكل منها (أربعة تناقض فيها الفئة النحوية القاموسين، وتعبيران غير مُثبتين، واسم واحد بتوليد آلي فقط). لم يُغيَّر أي نص وسم.
 - **الحدود**: تحقق آلي من مصدر مفتوح للصيغة النحوية فقط؛ لا مراجعة بشرية ولا CEFR ولا امتحان.
 - **الكاش**: `PACK_CACHE` و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v187**. المسارات 320/320.
-- **بصمة البناء**: `offline:size` **f0e39d8067f7**.
+- **بصمة البناء**: `offline:size` **df90cb0a54db**.
 
 ## P2-401 — نموذج D: مدخل رابع لكل مستوى — 2026-10-08 (v187)
 
@@ -22,8 +29,8 @@ Sync batch: v189 · 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (W
 - **المسرد**: وسوم نحوية لـ16 headword إضافية؛ المجموع 64 headword ووسمًا، وتحرسه الاختبارات.
 - **الحدود**: الدرجات والتقدم لا تتغير؛ لا مرجع ولا CEFR ولا امتحان. P2-401 يبقى **جزئيًا**.
 - **الكاش**: `PACK_CACHE` = **v189**، و`PACK_STAGING_CACHE` = **v188**، والرجوع `previous` = **v188**. المسارات 320/320.
-- **الوثائق**: الوثائق الثلاث عشرة الدائمة على `Sync batch: v189` (ADR-079).
-- **بصمة البناء**: Offline `f0e39d8067f7`، full 6,020,131 gzip (A1 2,733,523 · A2 2,845,855 · B1 2,871,235 · B2 4,296,007)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
+- **الوثائق**: الوثائق الثلاث عشرة الدائمة على `Sync batch: v190` (ADR-079).
+- **بصمة البناء**: Offline `df90cb0a54db`، full 6,017,919 gzip (A1 2,733,105 · A2 2,845,456 · B1 2,870,853 · B2 4,294,358)؛ JS 128 / **2,029,012** gzip / أقصى 262,117؛ الصوت 544 ملفًا / 52,943,843 بايت؛ المنهج **1,129,444** gzip؛ تدقيق اللغة 210 TSX / 8,067 وسمًا / 443 ألمانيًا / 0 مشكلات.
 - **التحقق المحلي:** `npm run check` خروج **0**: اختبارات الوحدة **1,407/1,407** في **205** ملفًا، وlint وtypecheck وفحوص السرية والمصادر وسير العمل وhandoff والبناء، والتباين 323 صفحة / 22,960 عنصرًا / 0 إخفاق.
 - **E2E**: لم يُشغَّل Playwright محليًا؛ المتصفح غير مثبّت ولا يمكن تنزيله هنا.
 

@@ -1,10 +1,10 @@
 # فحص مصدري لبنك A1 الأصلي (`src/data/a1-original-exercise-bank.ts`)
 
-الحالة بتاريخ 2026-10-08. الفحص **مصدري جزئي** وليس مراجعة بشرية، ولم يكتمل بعد.
+الحالة بتاريخ 2026-10-08. الفحص **مصدري جزئي** وليس مراجعة بشرية، كل البنود فُحصت مرة واحدة على الأقل، و15 منها مؤكد جزئيًا فقط.
 
-المصدر: Duden Rechtschreibung (duden.de/rechtschreibung/…). الصفحات التي فُتحت وقُرئت: sprechen، helfen، Apfel، gehen، Kind، Bäckerei، Fahrkarte، abfahren، mögen، können، trinken، Dienstag، weil، Februar، haben_Vollverb، Tisch، kennen، sehen، fahren، arbeiten، wohnen، oeffnen، Zug_Kolonne، Schwester، Stadt، Tasche، Bus، Hund، zwanzig، zwölf، woher، wohin، Lehrerin، Wasser، Haus، Buch، Zeit، mir، ihn، aus_Praeposition، lesen_dozieren، spielen، halb_zur_Haelfte_teilweise، Film، sein_Hilfsverb، sein_Verb_Vollverb، sie، Frau. الصفحات غير الموجودة (404): lesen، gefallen، Mann، halb، Viertel، heißen، kosten، Zug، wo، wie، was، aus، nicht، wie_Adverb، nicht_Adverb، was_Pronomen.
+المصدر: Duden Rechtschreibung (duden.de/rechtschreibung/…). الصفحات التي فُتحت وقُرئت: sprechen، helfen، Apfel، gehen، Kind، Bäckerei، Fahrkarte، abfahren، mögen، können، trinken، Dienstag، weil، Februar، haben_Vollverb، Tisch، kennen، sehen، fahren، arbeiten، wohnen، oeffnen، Zug_Kolonne، Schwester، Stadt، Tasche، Bus، Hund، zwanzig، zwölf، woher، wohin، Lehrerin، Wasser، Haus، Buch، Zeit، mir، ihn، aus_Praeposition، lesen_dozieren، spielen، halb_zur_Haelfte_teilweise، Film، sein_Hilfsverb، sein_Verb_Vollverb، sie، Frau. مصدر إضافي DWDS (wb/nicht، wb/was، wb/Viertel، wb/wie). الصفحات غير الموجودة في Duden (404): lesen، gefallen، Mann، halb، Viertel، heißen، kosten، Zug، wo، wie، was، aus، nicht، wie_Adverb، nicht_Adverb، was_Pronomen.
 
-## بنود تحققت من مدخل مصدري واضح (33)
+## بنود تحققت من مدخل مصدري واضح (35)
 
 | المعرّف | ما تأكد من المصدر |
 | --- | --- |
@@ -39,13 +39,17 @@
 | pron-ihn | ihn: Akkusativ von er؛ Film: der Film (مذكر) |
 | sein-ist | sein: Gleichsetzung 3. Person Singular («das ist die Hauptsache») |
 | pron-sie-akk | sie: Akkusativ Femininum Singular («ich werde sie benachrichtigen»)؛ Frau: die Frau (مؤنث) |
+| time-viertel-nach-acht | Viertel: «es ist (ein) Viertel nach, vor zehn (Uhr)» (DWDS، Viertelstunde) |
+| w-wie | wie: Fragewort «wie heißen Sie?» (DWDS) |
 | haben-haben | haben: «wir haben Sonntag»، و«Zeit, Muße haben» |
 | dat-auf-dem-tisch | Tisch: der (مذكر)، و«das Essen steht auf dem Tisch» (auf + Dativ للمكان) |
 
-## بنود تحقق جزء منها فقط (13)
+## بنود تحقق جزء منها فقط (15)
 
 | المعرّف | الجزء المؤكد / غير المؤكد |
 | --- | --- |
+| neg-nicht | nicht: Adverb (DWDS)؛ قاعدة نفي الصفة بـnicht غير مذكورة في المدخل |
+| w-was-kostet | was: Fragepronomen في الجمل الاستفهامية («was ist das?» DWDS)؛ «was kostet das» غير مذكورة |
 | w-wo | woher/wohin: Duden unterscheidet «von welchem Ort» و«an welchen Ort»؛ مدخل «wo» (404) غير مفحوص |
 | perf-habe | spielen: «Fußball spielen» (معنى الفعل مؤكد)؛ Perfekt mit haben غير مذكور في المدخل |
 | verb-geht-ihr | gehen: «geht, ging, ist gegangen» (الصيغة الأساسية للمفرد)؛ صيغة ihr غير مذكورة صراحة |
@@ -60,8 +64,8 @@
 | prep-ins-kino | حركة مع Akkusativ («ins Ausland gehen»)؛ «Kino» غير مذكورة |
 | verb-trinken | trinken: «Kaffee trinken»؛ صيغة wir (= المصدر) غير مذكورة صراحة |
 
-## بنود لم تُفحص بعد (4)
+## بنود لم تُفحص بعد (0)
 
-neg-nicht، w-wie، w-was-kostet، time-viertel-nach-acht
 
-التحقق من الأعداد: 50 في الملف = 33 + 13 + 4.
+
+التحقق من الأعداد: 50 في الملف = 35 + 15 + 0.

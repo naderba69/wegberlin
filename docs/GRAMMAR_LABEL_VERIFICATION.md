@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 51 von 64 Labels mit Quelle verifiziert، 13 غير مُتحقق منها بعد.
+Stand 2026-10-08: 54 von 64 Labels mit Quelle verifiziert، 10 غير مُتحقق منها بعد.
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -13,22 +13,22 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | die Rückfahrt | die · Pl. die Rückfahrten | verifiziert | de.wiktionary (Wikitext-API) |
 | der Eintritt | der · Pl. die Eintritte | verifiziert | de.wiktionary (Wikitext-API) |
 | abholen | Verb · trennbar · Partizip II: abgeholt | verifiziert | de.wiktionary (Wikitext-API) |
-| in der Nähe | Wendung · mit Dativ | nicht verifiziert | — |
+| in der Nähe | Wendung · mit Dativ | nicht verifiziert | de.wiktionary: kein Wendungseintrag; Beispiele im Eintrag Nähe mit Genitiv, Dativ nicht belegt |
 | verschieben | Verb · unregelmäßig · Partizip II: verschoben | verifiziert | de.wiktionary (Wikitext-API) |
 | die Bestätigung | die · Pl. die Bestätigungen | verifiziert | de.wiktionary (Wikitext-API) |
 | enttäuscht | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
-| in Eile | Wendung · in Eile sein | nicht verifiziert | — |
+| in Eile | Wendung · in Eile sein | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | pflegen | Verb · Partizip II: gepflegt | verifiziert | de.wiktionary (Wikitext-API) |
 | gießen | Verb · unregelmäßig · Partizip II: gegossen | verifiziert | de.wiktionary (Wikitext-API) |
 | die Kräuter | nur Plural · Sg. das Kraut | verifiziert | de.wiktionary (Wikitext-API): Kräuter ist Pl. von Kraut; „nur Plural“ beschreibt den Gebrauch als Sammelbegriff |
 | der Anschluss | der · Pl. die Anschlüsse | verifiziert | de.wiktionary (Wikitext-API) |
-| zur Verfügung stehen | Wendung · Verb stehen | nicht verifiziert | — |
-| nach Absprache | Wendung · mit Dativ | nicht verifiziert | — |
+| zur Verfügung stehen | Wendung · Verb stehen | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
+| nach Absprache | Wendung · mit Dativ | nicht verifiziert | de.wiktionary: Wendung im Eintrag Absprache nicht belegt |
 | bereitstellen | Verb · trennbar · Partizip II: bereitgestellt | verifiziert | de.wiktionary (Wikitext-API) |
 | das Erfolgskriterium | das · Pl. die Erfolgskriterien | nicht verifiziert | — |
 | die Fahrgemeinschaft | die · Pl. die Fahrgemeinschaften | verifiziert | de.wiktionary (Wikitext-API) |
 | der Zeitpuffer | der · Pl. die Zeitpuffer | nicht verifiziert | — |
-| in Aussicht stellen | Wendung · etwas in Aussicht stellen | nicht verifiziert | — |
+| in Aussicht stellen | Wendung · etwas in Aussicht stellen | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | vergleichbar | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | abgrenzen | Verb · trennbar · Partizip II: abgegrenzt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Erprobung | die · Pl. die Erprobungen | verifiziert | de.wiktionary (Wikitext-API) |

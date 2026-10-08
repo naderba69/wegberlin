@@ -52,7 +52,7 @@ describe("endurance-lab long input glossary coverage", () => {
     const headwords = new Set(extendedComprehensionTasks.flatMap((task) => task.glossary.map((entry) => entry.de)));
     expect([...headwords].filter((headword) => !extendedGlossaryGrammar[headword])).toEqual([]);
     expect(Object.keys(extendedGlossaryGrammar).filter((headword) => !headwords.has(headword))).toEqual([]);
-    expect(headwords.size).toBe(48);
+    expect(headwords.size).toBe(64);
   });
 
   it("keeps noun labels in article and plural form", () => {

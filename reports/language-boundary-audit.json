@@ -324,7 +324,7 @@
     {
       "path": "src/components/endurance-lab.tsx",
       "line": 59,
-      "text": "اثنا عشر سياقًا أصليًا من A1 إلى B2، ثلاثة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
+      "text": "ستة عشر سياقًا أصليًا من A1 إلى B2، أربعة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
     },
     {
       "path": "src/components/error-notebook.tsx",
@@ -1059,5 +1059,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "32a75bc2051f737ab7580a1229c8bb3632fd8f8b09996b8118b7e16fb1f746be"
+  "contentSha256": "b2ffecaa87545fbcfeb81f9255487be8b32b61e7213da4e44a22f035c91b2ef5"
 }

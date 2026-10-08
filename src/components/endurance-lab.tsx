@@ -56,7 +56,7 @@ export function EnduranceLab() {
   }
 
   return <div className="wide-page endurance-lab" data-endurance-policy="graded-long-input-v1">
-    <header className="page-heading"><div><span className="eyebrow">مدخلات أطول تدريجيًا</span><h1>ابنِ التحمل <em>مع الفهم</em></h1><p>اثنا عشر سياقًا أصليًا من A1 إلى B2، ثلاثة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة.</p></div></header>
+    <header className="page-heading"><div><span className="eyebrow">مدخلات أطول تدريجيًا</span><h1>ابنِ التحمل <em>مع الفهم</em></h1><p>ستة عشر سياقًا أصليًا من A1 إلى B2، أربعة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة.</p></div></header>
     <section className="assessment-warning"><p>الصوت هنا اصطناعي من جهازك. اختلاف أصوات الجهاز اختياري؛ التسجيل البشري وتدقيق التنوع الصوتي والمراجعة اللغوية المستقلة ما زالت معلقة.</p><p>لا نقيس النطق أو الطلاقة ولا نستخدم جودة صوت الجهاز للحكم على لغتك. نجاح القراءة بعد سماع النص نفسه ليس عينة جديدة مستقلة.</p></section>
     <div className="endurance-controls"><label>السياق<select value={taskId} onChange={event=>reset(event.target.value)}>{extendedComprehensionTasks.map(item=><option key={item.id} value={item.id}>{item.level} · {item.titleAr}</option>)}</select></label><label>نوع التدريب<select value={mode} onChange={event=>reset(taskId,event.target.value as "reading"|"listening")}><option value="reading">قراءة</option><option value="listening">استماع دون نص</option></select></label></div>
     <section className="endurance-task"><header><span>{task.level} · {wordCount} كلمة</span><h2 lang="de" dir="ltr">{task.titleDe}</h2><p>{task.titleAr}</p></header>

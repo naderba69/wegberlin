@@ -964,7 +964,7 @@ export interface ExerciseAttempt {
   answerChangeCount?:number;
   uncertaintyKind?:AttemptUncertaintyKind;
   processPolicyVersion?:"bounded-attempt-process-v1";
-  evidenceContext?: { policyVersion: "independent-assessment-v1"; kind: "level-check" | "placement-challenge" | "endurance"; level: CEFRLevel; formId: "A" | "B" | "C"; runId: string; independent: boolean; expectedItems: number };
+  evidenceContext?: { policyVersion: "independent-assessment-v1"; kind: "level-check" | "placement-challenge" | "endurance"; level: CEFRLevel; formId: "A" | "B" | "C" | "D"; runId: string; independent: boolean; expectedItems: number };
   createdAt: string;
 }
 

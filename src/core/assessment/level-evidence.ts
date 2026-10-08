@@ -16,13 +16,13 @@ export function completedAssessmentRuns(state: LearningState, level: CEFRLevel):
   const groups = new Map<string, ExerciseAttempt[]>();
   for (const attempt of state.exerciseAttempts) {
     const context = attempt.evidenceContext;
-    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance" || context.formId === "C") continue;
+    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance" || (context.formId === "C" || context.formId === "D")) continue;
     groups.set(context.runId, [...(groups.get(context.runId) ?? []), attempt]);
   }
   const runs: AssessmentRun[] = [];
   for (const [id, attempts] of groups) {
     const context = attempts[0].evidenceContext!;
-    if (context.formId === "C") continue;
+    if (context.formId === "C" || context.formId === "D") continue;
     const formId: AssessmentFormId = context.formId;
     const questions = levelAssessmentQuestions(level, formId);
     const expectedIds = new Set(questions.map((item) => item.id));

@@ -1562,7 +1562,7 @@ export const b2Module6Lessons: FullLesson[] = [
  type: "error-correction",
  promptAr: "أزل التطابق الشكلي:",
  sentence: "Die Teilnehmenden sagten, sie wissen das Ergebnis.",
- acceptedAnswers: ["Die Teilnehmenden sagten, sie wüssten das Ergebnis.", "Die Teilnehmenden sagten, sie würden das Ergebnis wissen.", "Die Teilnehmenden sagten, dass sie das Ergebnis wissen."],
+ acceptedAnswers: ["Die Teilnehmenden sagten, sie wüssten das Ergebnis.", "Die Teilnehmenden sagten, sie würden das Ergebnis wissen."],
  explanationAr: "صيغة لا تُفصل عن الإخبار لا تحمل قيمة النقل، فننتقل إلى البديل.",
  },
  {
@@ -2353,7 +2353,7 @@ export const b2Module6Lessons: FullLesson[] = [
  type: "error-correction",
  promptAr: "صحّح الفصل الخطأ:",
  sentence: "Bitte senden Sie das Prüfungs Zeugnis an die Studien Beratung.",
- acceptedAnswers: ["Bitte senden Sie das Prüfungszeugnis an die Studienberatung.", "Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung."],
+ acceptedAnswers: ["Bitte senden Sie das Prüfungszeugnis an die Studienberatung.", "Bitte schicken Sie das Prüfungszeugnis an die Studienberatung."],
  explanationAr: "المركّبان متّصلان؛ الشرطة لا تُغني عن الاتصال في Studienberatung.",
  },
  {
@@ -2361,7 +2361,7 @@ export const b2Module6Lessons: FullLesson[] = [
  type: "error-correction",
  promptAr: "أزل اللبس في السلسلة:",
  sentence: "Die Prüfung des Kandidaten war lang.",
- acceptedAnswers: ["Die Prüfung des Kandidaten durch die Kommission war lang.", "Die Kommission prüfte den Kandidaten; das dauerte lang."],
+ acceptedAnswers: ["Die Prüfung des Kandidaten durch die Kommission war lang.", "Die Kommission prüfte den Kandidaten; das dauerte lange."],
  explanationAr: "سلسلة الإضافة بلا وسيط تُبقي السؤال مفتوحًا: من فحص من؟ الجواب بإضافة durch die Prüfung أو بتفكيكها: «Die Kommission prüfte den Kandidaten; das dauerte lang». الوضوح يختار البنية لا الحلية.",
  },
  {

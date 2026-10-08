@@ -1070,10 +1070,10 @@
         "id": "a1-06-e4",
         "scope": "lesson-controlled",
         "kind": "error-correction",
-        "prompt": "صحح تقديم المهنة: Ich bin ein Koch.",
-        "answer": "Ich bin Koch",
+        "prompt": "صحح تقديم المهنة: Ich arbeite Koch.",
+        "answer": "Ich arbeite als Koch",
         "evidenceRef": "a1-06:controlled:a1-06-e4:explanationAr",
-        "evidenceExcerpt": "عند تقديم المهنة بعد sein لا نستخدم أداة غالبًا. نستعمل als قبل الدور أو المهنة: Ich arbeite als Koch.",
+        "evidenceExcerpt": "بعد arbeiten نستعمل als قبل المهنة: Ich arbeite als Koch. أما بعد sein فنقدم المهنة غالبًا بلا أداة: Ich bin Koch.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -2039,7 +2039,7 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Ich ___ ein Kilo Tomaten. أكمل الطلب المهذب:",
-        "answer": "möchte | mochte",
+        "answer": "möchte",
         "evidenceRef": "a1-11:controlled:a1-11-e2:explanationAr",
         "evidenceExcerpt": "möchte تعبر عن الطلب المهذب؛ الكتابة القياسية تحتوي ö. möchte صيغة شائعة ومهذبة للطلب: Ich möchte ein Kilo Tomaten.",
         "visibilityPolicy": "hidden-target",
@@ -5647,7 +5647,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " man يتصرف مثل:",
-        "answer": "er/sie المفرد",
+        "answer": "er/sie",
         "evidenceRef": "a2-05:controlled:a2-05-e6:explanationAr",
         "evidenceExcerpt": "الضمير العام man يتصرّف مثل المفرد الغائب: «Man muss den Müll trennen». التصريف مع ich أو wir يجعله خاصًّا بك، ومع du يخاطب السامع فيسقط العموم — فرقٌ في التعليمات لا في الأسلوب. فحص ذاتي: هل الجملة عامّة؟",
         "visibilityPolicy": "authorized-option-bank",
@@ -18332,7 +18332,7 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "أزل التطابق الشكلي: Die Teilnehmenden sagten, sie wissen das Ergebnis.",
-        "answer": "Die Teilnehmenden sagten, sie wüssten das Ergebnis. | Die Teilnehmenden sagten, sie würden das Ergebnis wissen. | Die Teilnehmenden sagten, dass sie das Ergebnis wissen.",
+        "answer": "Die Teilnehmenden sagten, sie wüssten das Ergebnis. | Die Teilnehmenden sagten, sie würden das Ergebnis wissen.",
         "evidenceRef": "b2-21:controlled:b2-21-e6:explanationAr",
         "evidenceExcerpt": "صيغة لا تُفصل عن الإخبار لا تحمل قيمة النقل، فننتقل إلى البديل.",
         "visibilityPolicy": "hidden-target",
@@ -18519,9 +18519,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب نعتًا موسّعًا صحيحًا:",
-        "answer": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen. | Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen.",
+        "answer": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
         "evidenceRef": "b2-22:controlled:b2-22-e4:explanationAr",
-        "evidenceExcerpt": "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». تفريقها على جمل صحيح لكنه يغيّر النبرة، و geprüfte بعد Antrag يكسر البنية.",
+        "evidenceExcerpt": "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». قطع الحلقة إلى جملة مستقلة يغيّر المعنى البنيوي للنعت، و geprüfte بعد Antrag يكسر البنية.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -18530,7 +18530,7 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحّح النعت: der von der Kommission beschlossenes Verfahren",
-        "answer": "der von der Kommission beschlossene Verfahren | das von der Kommission beschlossene Verfahren",
+        "answer": "das von der Kommission beschlossene Verfahren",
         "evidenceRef": "b2-22:controlled:b2-22-e5:explanationAr",
         "evidenceExcerpt": "الأداة السابقة تتكفّل بالعلامة، فيأخذ النعت النهاية الضعيفة e: «das von der Kommission beschlossene Verfahren». تكرار نهاية قوية بعد أداة يُثقل الكلمة دون أن يضيف معلومة تُقرأ.",
         "visibilityPolicy": "hidden-target",
@@ -18739,7 +18739,7 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحّح الفصل الخطأ: Bitte senden Sie das Prüfungs Zeugnis an die Studien Beratung.",
-        "answer": "Bitte senden Sie das Prüfungszeugnis an die Studienberatung. | Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung.",
+        "answer": "Bitte senden Sie das Prüfungszeugnis an die Studienberatung. | Bitte schicken Sie das Prüfungszeugnis an die Studienberatung.",
         "evidenceRef": "b2-23:controlled:b2-23-e5:explanationAr",
         "evidenceExcerpt": "المركّبان متّصلان؛ الشرطة لا تُغني عن الاتصال في Studienberatung.",
         "visibilityPolicy": "hidden-target",
@@ -18750,7 +18750,7 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "أزل اللبس في السلسلة: Die Prüfung des Kandidaten war lang.",
-        "answer": "Die Prüfung des Kandidaten durch die Kommission war lang. | Die Kommission prüfte den Kandidaten; das dauerte lang.",
+        "answer": "Die Prüfung des Kandidaten durch die Kommission war lang. | Die Kommission prüfte den Kandidaten; das dauerte lange.",
         "evidenceRef": "b2-23:controlled:b2-23-e6:explanationAr",
         "evidenceExcerpt": "سلسلة الإضافة بلا وسيط تُبقي السؤال مفتوحًا: من فحص من؟ الجواب بإضافة durch die Prüfung أو بتفكيكها: «Die Kommission prüfte den Kandidaten; das dauerte lang». الوضوح يختار البنية لا الحلية.",
         "visibilityPolicy": "hidden-target",
@@ -51116,17 +51116,17 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4873,
-      "covered": 1381,
+      "totalCandidates": 4895,
+      "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3403,
-      "authoredTargets": 1470,
+      "contextualNotTarget": 3422,
+      "authoredTargets": 1473,
       "byLevel": {
         "A1": {
-          "totalCandidates": 570,
+          "totalCandidates": 569,
           "covered": 298,
           "pendingHuman": 0,
-          "contextualNotTarget": 272
+          "contextualNotTarget": 271
         },
         "A2": {
           "totalCandidates": 883,
@@ -51135,24 +51135,24 @@
           "contextualNotTarget": 591
         },
         "B1": {
-          "totalCandidates": 1222,
+          "totalCandidates": 1231,
           "covered": 338,
           "pendingHuman": 0,
-          "contextualNotTarget": 884
+          "contextualNotTarget": 893
         },
         "B2": {
-          "totalCandidates": 2198,
-          "covered": 453,
+          "totalCandidates": 2212,
+          "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1656
+          "contextualNotTarget": 1667
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1256,
+      "totalCandidates": 1260,
       "covered": 134,
       "pendingHuman": 4,
-      "contextualNotTarget": 1118,
+      "contextualNotTarget": 1122,
       "authoredTargets": 138,
       "byLevel": {
         "A1": {
@@ -51168,16 +51168,16 @@
           "contextualNotTarget": 174
         },
         "B1": {
-          "totalCandidates": 317,
+          "totalCandidates": 318,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 286
+          "contextualNotTarget": 287
         },
         "B2": {
-          "totalCandidates": 629,
+          "totalCandidates": 632,
           "covered": 48,
           "pendingHuman": 4,
-          "contextualNotTarget": 577
+          "contextualNotTarget": 580
         }
       }
     },
@@ -54716,25 +54716,6 @@
           }
         ],
         "id": "lex-n-a1-06-be86abd4"
-      },
-      {
-        "lessonId": "a1-06",
-        "level": "A1",
-        "lemmaCandidate": "Koch",
-        "normalizedLemma": "koch",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[3].sentence",
-            "stage": "controlled",
-            "text": "Ich bin ein Koch.",
-            "surface": "Ich bin ein Koch.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-06-162c28d1"
       },
       {
         "lessonId": "a1-06",
@@ -68790,8 +68771,8 @@
           {
             "path": "listening.questions[1].options[1]",
             "stage": "listening",
-            "text": "Vor dem Schlafen فقط",
-            "surface": "Vor dem Schlafen فقط",
+            "text": "Vor dem Schlafen",
+            "surface": "Vor dem Schlafen",
             "strength": "context"
           }
         ],
@@ -88920,8 +88901,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Bei der Aussprache لكل شيء",
-            "surface": "Bei der Aussprache لكل شيء",
+            "text": "Bei der Aussprache",
+            "surface": "Bei der Aussprache",
             "strength": "context"
           }
         ],
@@ -97276,6 +97257,25 @@
       {
         "lessonId": "b1-02",
         "level": "B1",
+        "lemmaCandidate": "Eindruck",
+        "normalizedLemma": "eindruck",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Nur der erste Eindruck",
+            "surface": "Nur der erste Eindruck",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-02-b6ef0464"
+      },
+      {
+        "lessonId": "b1-02",
+        "level": "B1",
         "lemmaCandidate": "Einkommen",
         "normalizedLemma": "einkommen",
         "role": "context-only",
@@ -102774,8 +102774,8 @@
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Was macht die Firma? وهو واضح",
-            "surface": "Was macht die Firma? وهو واضح",
+            "text": "Was macht die Firma?",
+            "surface": "Was macht die Firma?",
             "strength": "context"
           }
         ],
@@ -107628,6 +107628,25 @@
       {
         "lessonId": "b1-09",
         "level": "B1",
+        "lemmaCandidate": "Meinung",
+        "normalizedLemma": "meinung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Nur die Meinung der Planer",
+            "surface": "Nur die Meinung der Planer",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-09-949337b7"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
         "lemmaCandidate": "Messung",
         "normalizedLemma": "messung",
         "role": "context-only",
@@ -107788,6 +107807,25 @@
           }
         ],
         "id": "lex-n-b1-09-4394296c"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
+        "lemmaCandidate": "Planer",
+        "normalizedLemma": "planer",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Nur die Meinung der Planer",
+            "surface": "Nur die Meinung der Planer",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-09-aea2796c"
       },
       {
         "lessonId": "b1-09",
@@ -108028,6 +108066,25 @@
           }
         ],
         "id": "lex-n-b1-09-f0dad5d3"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
+        "lemmaCandidate": "Seite",
+        "normalizedLemma": "seite",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[2].options[2]",
+            "stage": "test",
+            "text": "Nur eine Seite",
+            "surface": "Nur eine Seite",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-09-92982768"
       },
       {
         "lessonId": "b1-09",
@@ -108378,6 +108435,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "miniTest[2].options[0]",
+            "stage": "test",
+            "text": "Eine endgültige Entscheidung im Namen eines Versuchs",
+            "surface": "Eine endgültige Entscheidung im Namen eines Versuchs",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -109638,6 +109702,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Nur der Rabatt",
+            "surface": "Nur der Rabatt",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Mein vier Jahre alter Laptop funktioniert noch, wird aber langsam. Statt sofort ein neues Gerät zu kaufen, möchte ich zuerst die Ursache prüfen lassen. Ich vergleiche drei Optionen: Akku austauschen, Speicher erweitern oder ein neues Gerät kaufen. Das neue Modell ist im Angebot, aber der Kaufpreis ist nicht das einzige Kriterium. Ich berechne auch Strom, Garantie, Reparaturmöglichkeit und erwartete Lebensdauer. Ohne diese Kosten zu vergleichen, wäre der Rabatt wenig aussagekräftig. Wenn Akku und Speicher für weniger als 200 Euro verbessert werden können und der Laptop noch zwei Jahre hält, wähle ich die Reparatur. Falls wichtige Teile nicht verfügbar sind, prüfe ich ein gebrauchtes Gerät mit Garantie. Erst nach dem technischen Bericht treffe ich die Entscheidung. Der Verkäufer nennt zwei Jahre Garantie auf das neue Gerät, für den Akku aber nur sechs Monate. In Foren lese ich, dass genau dieses Modell nach vier Jahren häufig Lüfterprobleme bekommt, was die Reparatur attraktiver macht. Ein gebrauchtes Gerät würde 350 Euro kosten, jedoch ohne Restgarantie und mit unbekannter Vorbenutzung. Nach dem Bericht rechne ich alle Zahlen in einer Tabelle zusammen und entscheide am selben Abend.",
@@ -110138,6 +110209,13 @@
             "stage": "listening",
             "text": "Projektleiterin: Unsere Testwoche zeigt, dass die durchschnittliche Fahrtzeit um acht Minuten gesunken ist. — Mitarbeiter: Gilt das für alle Gruppen? — Projektleiterin: Nein. Personen mit direkter Bahnverbindung sparen deutlich mehr. Bei zwei Nachtschichten ist die Fahrt sogar länger geworden. — Mitarbeiterin: Dann reicht der Durchschnitt nicht. Wir sollten Ergebnisse nach Arbeitszeit und Wohnort trennen. — Projektleiterin: Einverstanden. Außerdem ist der Stress gesunken, dadurch dass einige Teams morgens flexibel starten. — Mitarbeiter: Können wir die Testphase verlängern, um mehr Daten zu bekommen? — Projektleiterin: Ja, aber wir definieren vorher, welche Kriterien über eine Fortsetzung entscheiden.",
             "surface": "Projektleiterin: Unsere Testwoche zeigt, dass die durchschnittliche Fahrtzeit um acht Minuten gesunken ist. — Mitarbeiter: Gilt das für alle Gruppen? — Projektleiterin: Nein. Personen mit direkter Bahnverbindung sparen deutlich mehr. Bei zwei Nachtschichten ist die Fahrt sogar länger geworden. — Mitarbeiterin: Dann reicht der Durchschnitt nicht. Wir sollten Ergebnisse nach Arbeitszeit und Wohnort trennen. — Projektleiterin: Einverstanden. Außerdem ist der Stress gesunken, dadurch dass einige Teams morgens flexibel starten. — Mitarbeiter: Können wir die Testphase verlängern, um mehr Daten zu bekommen? — Projektleiterin: Ja, aber wir definieren vorher, welche Kriterien über eine Fortsetzung entscheiden.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Nur der Durchschnitt",
+            "surface": "Nur der Durchschnitt",
             "strength": "context"
           },
           {
@@ -112972,6 +113050,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Die App ist mit Sicherheit der einzige Grund.",
+            "surface": "Die App ist mit Sicherheit der einzige Grund.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[3].options[1]",
             "stage": "test",
             "text": "Nur die App war sicher der Grund.",
@@ -114947,6 +115032,25 @@
       {
         "lessonId": "b1-14",
         "level": "B1",
+        "lemmaCandidate": "Werbung",
+        "normalizedLemma": "werbung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Sagt die Werbung, dass es ausgezeichnet ist?",
+            "surface": "Sagt die Werbung, dass es ausgezeichnet ist?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-14-94f90dee"
+      },
+      {
+        "lessonId": "b1-14",
+        "level": "B1",
         "lemmaCandidate": "Zeit",
         "normalizedLemma": "zeit",
         "role": "context-only",
@@ -115013,6 +115117,13 @@
             "stage": "listening",
             "text": "Berater: Wofür brauchen Sie die Weiterbildung? — Karim: Ich möchte mich intern auf eine technische Stelle bewerben. — Berater: Dann fragen Sie zuerst die Personalabteilung, welche Nachweise sie akzeptiert. — Karim: Der Kursanbieter sagt, das Zertifikat sei anerkannt. — Berater: Von wem und für welchen Zweck? Lassen Sie sich das schriftlich erklären. Prüfen Sie außerdem, ob praktische Aufgaben bewertet werden. — Karim: Der Kurs kostet 700 Euro und findet samstags statt. — Berater: Rechnen Sie auch Selbststudium und Prüfungsgebühr ein. Vielleicht kann Ihr Arbeitgeber einen Teil fördern. — Karim: Dann lasse ich zuerst Anforderungen und Förderung prüfen.",
             "surface": "Berater: Wofür brauchen Sie die Weiterbildung? — Karim: Ich möchte mich intern auf eine technische Stelle bewerben. — Berater: Dann fragen Sie zuerst die Personalabteilung, welche Nachweise sie akzeptiert. — Karim: Der Kursanbieter sagt, das Zertifikat sei anerkannt. — Berater: Von wem und für welchen Zweck? Lassen Sie sich das schriftlich erklären. Prüfen Sie außerdem, ob praktische Aufgaben bewertet werden. — Karim: Der Kurs kostet 700 Euro und findet samstags statt. — Berater: Rechnen Sie auch Selbststudium und Prüfungsgebühr ein. Vielleicht kann Ihr Arbeitgeber einen Teil fördern. — Karim: Dann lasse ich zuerst Anforderungen und Förderung prüfen.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Nur das Zertifikat",
+            "surface": "Nur das Zertifikat",
             "strength": "context"
           },
           {
@@ -118774,8 +118885,8 @@
           {
             "path": "exercises[0].options[0]",
             "stage": "controlled",
-            "text": "die erzählende Geschichte دائمًا",
-            "surface": "die erzählende Geschichte دائمًا",
+            "text": "die erzählende Geschichte",
+            "surface": "die erzählende Geschichte",
             "strength": "context"
           },
           {
@@ -118795,8 +118906,8 @@
           {
             "path": "exercises[0].options[3]",
             "stage": "controlled",
-            "text": "die Geschichte erzählt ist قبل الاسم",
-            "surface": "die Geschichte erzählt ist قبل الاسم",
+            "text": "die Geschichte erzählt ist",
+            "surface": "die Geschichte erzählt ist",
             "strength": "context"
           },
           {
@@ -118809,8 +118920,8 @@
           {
             "path": "miniTest[0].options[1]",
             "stage": "test",
-            "text": "die erzählend Geschichte بدون نهاية",
-            "surface": "die erzählend Geschichte بدون نهاية",
+            "text": "die erzählend Geschichte",
+            "surface": "die erzählend Geschichte",
             "strength": "context"
           },
           {
@@ -119963,6 +120074,13 @@
             "strength": "registry"
           },
           {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Mag ich das Ergebnis?",
+            "surface": "Mag ich das Ergebnis?",
+            "strength": "context"
+          },
+          {
             "path": "phrases[8].de",
             "stage": "vocabulary",
             "text": "ein Ergebnis messen",
@@ -120792,6 +120910,25 @@
           }
         ],
         "id": "lex-n-b1-18-d38a3ce1"
+      },
+      {
+        "lessonId": "b1-18",
+        "level": "B1",
+        "lemmaCandidate": "Titel",
+        "normalizedLemma": "titel",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Ist der Titel schön?",
+            "surface": "Ist der Titel schön?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-18-f4a8e946"
       },
       {
         "lessonId": "b1-18",
@@ -124762,6 +124899,25 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Prozentwert",
+        "normalizedLemma": "prozentwert",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Nur ein Prozentwert",
+            "surface": "Nur ein Prozentwert",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-4d0eb110"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Schritt",
         "normalizedLemma": "schritt",
         "role": "anchor",
@@ -125207,6 +125363,25 @@
           }
         ],
         "id": "lex-n-b1-21-c9b62e13"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Wartezeit",
+        "normalizedLemma": "wartezeit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Wir verbergen die Wartezeit.",
+            "surface": "Wir verbergen die Wartezeit.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-82945ff3"
       },
       {
         "lessonId": "b1-21",
@@ -127249,6 +127424,25 @@
           }
         ],
         "id": "lex-n-b1-23-53a13e42"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Eigenschaften",
+        "normalizedLemma": "eigenschaften",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Nur die Eigenschaften",
+            "surface": "Nur die Eigenschaften",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-0da08328"
       },
       {
         "lessonId": "b1-23",
@@ -132751,6 +132945,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "miniTest[3].options[1]",
+            "stage": "test",
+            "text": "Nur der Durchschnitt",
+            "surface": "Nur der Durchschnitt",
+            "strength": "context"
+          },
+          {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
             "text": "Warum war der stabile Durchschnitt unvollständig?",
@@ -132952,6 +133153,25 @@
       {
         "lessonId": "b2-03",
         "level": "B2",
+        "lemmaCandidate": "Meinung",
+        "normalizedLemma": "meinung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Nur die Meinung",
+            "surface": "Nur die Meinung",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-03-393185f2"
+      },
+      {
+        "lessonId": "b2-03",
+        "level": "B2",
         "lemmaCandidate": "Modell",
         "normalizedLemma": "modell",
         "role": "anchor",
@@ -133148,6 +133368,32 @@
           }
         ],
         "id": "lex-n-b2-03-08f34503"
+      },
+      {
+        "lessonId": "b2-03",
+        "level": "B2",
+        "lemmaCandidate": "Produktion",
+        "normalizedLemma": "produktion",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Nur die Produktion.",
+            "surface": "Nur die Produktion.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Nur die Produktion",
+            "surface": "Nur die Produktion",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-03-16b4dce0"
       },
       {
         "lessonId": "b2-03",
@@ -133599,6 +133845,27 @@
       {
         "lessonId": "b2-04",
         "level": "B2",
+        "lemmaCandidate": "Alternativen",
+        "normalizedLemma": "alternativen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-04-noun-6"
+        ],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Wir bieten keine Alternativen an.",
+            "surface": "Wir bieten keine Alternativen an.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-04-17c6ecff"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
         "lemmaCandidate": "Analyse",
         "normalizedLemma": "analyse",
         "role": "context-only",
@@ -134013,8 +134280,8 @@
           {
             "path": "exercises[0].options[0]",
             "stage": "controlled",
-            "text": "angesichts der Frist كسبب",
-            "surface": "angesichts der Frist كسبب",
+            "text": "angesichts der Frist",
+            "surface": "angesichts der Frist",
             "strength": "context"
           },
           {
@@ -134793,6 +135060,25 @@
       {
         "lessonId": "b2-04",
         "level": "B2",
+        "lemmaCandidate": "Problem",
+        "normalizedLemma": "problem",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Wenn Sie nicht zustimmen, sind Sie das Problem.",
+            "surface": "Wenn Sie nicht zustimmen, sind Sie das Problem.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-04-6c72a62f"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
         "lemmaCandidate": "Projektleitungen",
         "normalizedLemma": "projektleitungen",
         "role": "context-only",
@@ -135042,8 +135328,8 @@
           {
             "path": "miniTest[1].options[0]",
             "stage": "test",
-            "text": "hinsichtlich des Risikos فقط كموضوع",
-            "surface": "hinsichtlich des Risikos فقط كموضوع",
+            "text": "hinsichtlich des Risikos",
+            "surface": "hinsichtlich des Risikos",
             "strength": "context"
           },
           {
@@ -139165,6 +139451,25 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
+        "lemmaCandidate": "Überschrift",
+        "normalizedLemma": "überschrift",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Nur eine spannende Überschrift",
+            "surface": "Nur eine spannende Überschrift",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-06-f5a4e3b8"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
         "lemmaCandidate": "Uhrzeit",
         "normalizedLemma": "uhrzeit",
         "role": "context-only",
@@ -139476,6 +139781,25 @@
           }
         ],
         "id": "lex-n-b2-06-134c35b9"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
+        "lemmaCandidate": "Wort",
+        "normalizedLemma": "wort",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[0].options[1]",
+            "stage": "test",
+            "text": "Sample ist nur ein anderes Wort.",
+            "surface": "Sample ist nur ein anderes Wort.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-06-30b42cf6"
       },
       {
         "lessonId": "b2-06",
@@ -145954,6 +146278,27 @@
       {
         "lessonId": "b2-09",
         "level": "B2",
+        "lemmaCandidate": "Gruppen",
+        "normalizedLemma": "gruppen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-09-noun-34"
+        ],
+        "sources": [
+          {
+            "path": "miniTest[1].options[3]",
+            "stage": "test",
+            "text": "Es gibt keine Unterschiede innerhalb der Gruppen.",
+            "surface": "Es gibt keine Unterschiede innerhalb der Gruppen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-09-5a9e2a7c"
+      },
+      {
+        "lessonId": "b2-09",
+        "level": "B2",
         "lemmaCandidate": "Handlung",
         "normalizedLemma": "handlung",
         "role": "anchor",
@@ -146378,6 +146723,25 @@
           }
         ],
         "id": "lex-n-b2-09-11075a92"
+      },
+      {
+        "lessonId": "b2-09",
+        "level": "B2",
+        "lemmaCandidate": "Landes",
+        "normalizedLemma": "landes",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[1].options[1]",
+            "stage": "test",
+            "text": "Alle Angehörigen eines Landes sind gleich.",
+            "surface": "Alle Angehörigen eines Landes sind gleich.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-09-2a54b340"
       },
       {
         "lessonId": "b2-09",
@@ -147457,6 +147821,27 @@
       {
         "lessonId": "b2-09",
         "level": "B2",
+        "lemmaCandidate": "Unterschiede",
+        "normalizedLemma": "unterschiede",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-09-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "miniTest[1].options[3]",
+            "stage": "test",
+            "text": "Es gibt keine Unterschiede innerhalb der Gruppen.",
+            "surface": "Es gibt keine Unterschiede innerhalb der Gruppen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-09-b13f79b4"
+      },
+      {
+        "lessonId": "b2-09",
+        "level": "B2",
         "lemmaCandidate": "Veranstaltung",
         "normalizedLemma": "veranstaltung",
         "role": "context-only",
@@ -148224,6 +148609,13 @@
             "strength": "registry"
           },
           {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Ich streiche die Grenzen der Ergänzung.",
+            "surface": "Ich streiche die Grenzen der Ergänzung.",
+            "strength": "context"
+          },
+          {
             "path": "phrases[15].de",
             "stage": "vocabulary",
             "text": "eine Ergänzung kennzeichnen",
@@ -148492,6 +148884,25 @@
       {
         "lessonId": "b2-10",
         "level": "B2",
+        "lemmaCandidate": "Geforderte",
+        "normalizedLemma": "geforderte",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Alle Wörter in ihrer Reihenfolge, auch wenn das Geforderte fehlt",
+            "surface": "Alle Wörter in ihrer Reihenfolge, auch wenn das Geforderte fehlt",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-d466a9ba"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
         "lemmaCandidate": "Gerät",
         "normalizedLemma": "gerät",
         "role": "context-only",
@@ -148552,6 +148963,25 @@
           }
         ],
         "id": "lex-n-b2-10-3d2a1648"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "lemmaCandidate": "Grenzen",
+        "normalizedLemma": "grenzen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Ich streiche die Grenzen der Ergänzung.",
+            "surface": "Ich streiche die Grenzen der Ergänzung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-6f40ddd2"
       },
       {
         "lessonId": "b2-10",
@@ -148960,6 +149390,13 @@
             "text": "Geschichte der Organisation, Design, Nebendetails, dann Frist",
             "surface": "Geschichte der Organisation, Design, Nebendetails, dann Frist",
             "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Der gesamte Hintergrund der Organisation",
+            "surface": "Der gesamte Hintergrund der Organisation",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-10-00b94d05"
@@ -149008,6 +149445,25 @@
           }
         ],
         "id": "lex-n-b2-10-26b0cbda"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "lemmaCandidate": "Pflicht",
+        "normalizedLemma": "pflicht",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[1].options[3]",
+            "stage": "test",
+            "text": "Eine Möglichkeit in eine Pflicht verwandeln",
+            "surface": "Eine Möglichkeit in eine Pflicht verwandeln",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-e7834aff"
       },
       {
         "lessonId": "b2-10",
@@ -149117,6 +149573,25 @@
           }
         ],
         "id": "lex-n-b2-10-69a5ca12"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "lemmaCandidate": "Reihenfolge",
+        "normalizedLemma": "reihenfolge",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Alle Wörter in ihrer Reihenfolge, auch wenn das Geforderte fehlt",
+            "surface": "Alle Wörter in ihrer Reihenfolge, auch wenn das Geforderte fehlt",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-f845b8dd"
       },
       {
         "lessonId": "b2-10",
@@ -149250,6 +149725,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "surface": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
@@ -149426,6 +149908,25 @@
       {
         "lessonId": "b2-10",
         "level": "B2",
+        "lemmaCandidate": "Vermittlers",
+        "normalizedLemma": "vermittlers",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Die nicht angegebene Meinung des Vermittlers",
+            "surface": "Die nicht angegebene Meinung des Vermittlers",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-095070c2"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
         "lemmaCandidate": "Vermittlung",
         "normalizedLemma": "vermittlung",
         "role": "anchor",
@@ -149449,6 +149950,25 @@
           }
         ],
         "id": "lex-n-b2-10-47b4eee2"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "lemmaCandidate": "Vermutung",
+        "normalizedLemma": "vermutung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Ich präsentiere meine Vermutung als Tatsache.",
+            "surface": "Ich präsentiere meine Vermutung als Tatsache.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-cb68a4a6"
       },
       {
         "lessonId": "b2-10",
@@ -179781,13 +180301,6 @@
             "strength": "context"
           },
           {
-            "path": "exercises[5].acceptedAnswers[2]",
-            "stage": "controlled",
-            "text": "Die Teilnehmenden sagten, dass sie das Ergebnis wissen.",
-            "surface": "Die Teilnehmenden sagten, dass sie das Ergebnis wissen.",
-            "strength": "context"
-          },
-          {
             "path": "exercises[5].sentence",
             "stage": "controlled",
             "text": "Die Teilnehmenden sagten, sie wissen das Ergebnis.",
@@ -181976,13 +182489,6 @@
             "strength": "context"
           },
           {
-            "path": "exercises[3].acceptedAnswers[1]",
-            "stage": "controlled",
-            "text": "Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen.",
-            "surface": "Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen.",
-            "strength": "context"
-          },
-          {
             "path": "exercises[3].words[1]",
             "stage": "controlled",
             "text": "von der Behörde",
@@ -182746,13 +183252,6 @@
         "sources": [
           {
             "path": "exercises[4].acceptedAnswers[0]",
-            "stage": "controlled",
-            "text": "der von der Kommission beschlossene Verfahren",
-            "surface": "der von der Kommission beschlossene Verfahren",
-            "strength": "context"
-          },
-          {
-            "path": "exercises[4].acceptedAnswers[1]",
             "stage": "controlled",
             "text": "das von der Kommission beschlossene Verfahren",
             "surface": "das von der Kommission beschlossene Verfahren",
@@ -185505,8 +186004,8 @@
           {
             "path": "exercises[5].acceptedAnswers[1]",
             "stage": "controlled",
-            "text": "Die Kommission prüfte den Kandidaten; das dauerte lang.",
-            "surface": "Die Kommission prüfte den Kandidaten; das dauerte lang.",
+            "text": "Die Kommission prüfte den Kandidaten; das dauerte lange.",
+            "surface": "Die Kommission prüfte den Kandidaten; das dauerte lange.",
             "strength": "context"
           },
           {
@@ -186209,8 +186708,8 @@
           {
             "path": "exercises[4].acceptedAnswers[1]",
             "stage": "controlled",
-            "text": "Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung.",
-            "surface": "Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung.",
+            "text": "Bitte schicken Sie das Prüfungszeugnis an die Studienberatung.",
+            "surface": "Bitte schicken Sie das Prüfungszeugnis an die Studienberatung.",
             "strength": "context"
           }
         ],
@@ -186553,25 +187052,6 @@
       {
         "lessonId": "b2-23",
         "level": "B2",
-        "lemmaCandidate": "Studien-Beratung",
-        "normalizedLemma": "studien-beratung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[4].acceptedAnswers[1]",
-            "stage": "controlled",
-            "text": "Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung.",
-            "surface": "Bitte senden Sie das Prüfungszeugnis an die Studien-Beratung.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-23-f1e5fb0c"
-      },
-      {
-        "lessonId": "b2-23",
-        "level": "B2",
         "lemmaCandidate": "Studienberatung",
         "normalizedLemma": "studienberatung",
         "role": "context-only",
@@ -186583,6 +187063,13 @@
             "stage": "controlled",
             "text": "Bitte senden Sie das Prüfungszeugnis an die Studienberatung.",
             "surface": "Bitte senden Sie das Prüfungszeugnis an die Studienberatung.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[4].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Bitte schicken Sie das Prüfungszeugnis an die Studienberatung.",
+            "surface": "Bitte schicken Sie das Prüfungszeugnis an die Studienberatung.",
             "strength": "context"
           }
         ],
@@ -199982,6 +200469,29 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "infinitiveCandidate": "angenommen",
+        "normalizedVerb": "angenommen",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Erfolg für alle angenommen",
+            "surface": "Erfolg für alle angenommen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-38544a7a"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "infinitiveCandidate": "berichteten",
         "normalizedVerb": "berichteten",
         "preposition": "mit",
@@ -207214,6 +207724,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Wir bieten keine Alternativen an.",
+            "surface": "Wir bieten keine Alternativen an.",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Sehr geehrte Frau Keller, hinsichtlich Ihrer Anfrage, die vollständige Lieferung bereits am Montag bereitzustellen, haben wir Umfang, Kapazität und Qualitätssicherung geprüft. Angesichts der verkürzten Frist können wir den ursprünglich vereinbarten Leistungsumfang nicht bei unveränderter Qualität garantieren, da für die verbleibenden Prüfungen zwei von fünf Testtagen fehlen. Unter Berücksichtigung Ihrer Prioritäten bieten wir zwei Optionen an. Option A: Wir liefern den Kernumfang inklusive Abrechnung und Berichte am Montag und die restlichen Funktionen am Donnerstag. Die Qualitätssicherung bleibt dabei vollständig bestehen, und der Unterstützungsaufwand in der ersten Woche steigt nach unserer Einschätzung nur leicht. Option B: Wir liefern am Montag eine reduzierte Gesamtversion, in der die Lasttests entfallen; dabei steigt jedoch das Risiko unvollständiger Tests, und Nachbesserungen würden etwa sechs zusätzliche Personentage kosten. Im Hinblick auf Qualität und Folgekosten empfehlen wir Option A, weil sie den von Ihnen genannten Abnahmetermin schützt und technische Schulden vermeidet. Sollte Option B für Sie zwingend sein, benötigen wir Ihre schriftliche Bestätigung, dass die Lasttests bis Ende nächster Woche nachgeliefert werden. Bitte teilen Sie uns bis Dienstag um 12 Uhr mit, welche drei Funktionen für Montag Priorität haben. Falls bis dahin keine Einigung möglich ist, legen wir beide Optionen mit Kosten, Risiken und Abhängigkeiten den Projektleitungen zur Entscheidung vor; das verstehen wir als Planungsschutz, nicht als Druckmittel. Nach Ihrer Bestätigung halten wir Umfang, Termine und Prüfkriterien schriftlich fest. Mit freundlichen Grüßen",
@@ -211413,6 +211930,52 @@
       {
         "lessonId": "b2-10",
         "level": "B2",
+        "infinitiveCandidate": "streichen",
+        "normalizedVerb": "streichen",
+        "preposition": "um",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "surface": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-10-05961d46"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "infinitiveCandidate": "streichen",
+        "normalizedVerb": "streichen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "surface": "Bedingung und Ausnahme streichen, um den Text zu kürzen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-10-1da17c01"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
         "infinitiveCandidate": "übernommen",
         "normalizedVerb": "übernommen",
         "preposition": "in",
@@ -211478,6 +212041,29 @@
           }
         ],
         "id": "lex-v-b2-10-85ff90c1"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "infinitiveCandidate": "verwandeln",
+        "normalizedVerb": "verwandeln",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[1].options[3]",
+            "stage": "test",
+            "text": "Eine Möglichkeit in eine Pflicht verwandeln",
+            "surface": "Eine Möglichkeit in eine Pflicht verwandeln",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-10-107e7176"
       },
       {
         "lessonId": "b2-10",
@@ -219377,13 +219963,6 @@
             "text": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
             "surface": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
             "strength": "context"
-          },
-          {
-            "path": "exercises[3].acceptedAnswers[1]",
-            "stage": "controlled",
-            "text": "Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen.",
-            "surface": "Der Antrag wurde von der Behörde innerhalb von zwei Wochen geprüft und angenommen.",
-            "strength": "context"
           }
         ],
         "id": "lex-v-b2-22-2597cb86"
@@ -220710,5 +221289,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "f22b8e182d5f9461d605827fb8f018c7764cfc50bd29f71e9dd3c689e7d519b6"
+  "contentSha256": "d3c8b2c3c4260cc26417ba7e64e176bba2ffc9b9f10fc033d25c39571ee5e176"
 }

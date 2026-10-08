@@ -4,8 +4,6 @@
 
 المصدر: Duden Rechtschreibung (duden.de/rechtschreibung/…). الصفحات التي فُتحت وقُرئت: sprechen، helfen، Apfel، gehen، Kind، Bäckerei، Fahrkarte، abfahren، mögen، können، trinken، Dienstag، weil، Februar، haben_Vollverb، Tisch، kennen، sehen، fahren، arbeiten، wohnen، oeffnen، Zug_Kolonne، Schwester، Stadt، Tasche، Bus، Hund، zwanzig، zwölf، woher، wohin، Lehrerin، Wasser، Haus، Buch، Zeit، mir، ihn، aus_Praeposition، lesen_dozieren، spielen، halb_zur_Haelfte_teilweise، Film، sein_Hilfsverb، sein_Verb_Vollverb، sie، Frau. الصفحات غير الموجودة (404): lesen، gefallen، Mann، halb، Viertel، heißen، kosten، Zug، wo، wie، was، aus، nicht، wie_Adverb، nicht_Adverb، was_Pronomen.
 
-صفحات لم تُفتح بالمعرّف الصحيح في Duden: lesen (lesen، lesen_Vollverb)، gefallen، Mann، halb (halb، halb_Adjektiv)، Viertel، heißen، kosten، Zug (Zug؛ Zug_Kolonne مفحوصة).
-
 ## بنود تحققت من مدخل مصدري واضح (33)
 
 | المعرّف | ما تأكد من المصدر |

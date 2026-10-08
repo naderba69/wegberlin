@@ -27,7 +27,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "haben Präteritum",
         "promptAr": "اختر الصيغة الصحيحة لحالة «haben Präteritum»:",
         "options": [
-          "habe gehabt فقط",
+          "habe gehabt",
           "hatte",
           "habte",
           "war haben"
@@ -41,8 +41,8 @@ export const localTestTemplateBankB1 = [
         "promptAr": "أي خيار يحقّق «können Präteritum» في هذا السياق؟",
         "options": [
           "kannte",
-          "gekonnt hat دائمًا",
-          "könnte للماضي الواقعي",
+          "gekonnt hat",
+          "könnte",
           "konnte"
         ],
         "correctIndex": 3,
@@ -140,10 +140,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Gute Entscheidung",
         "promptAr": "الأفضل:",
         "options": [
-          "أول إحساس فقط",
+          "Nur der erste Eindruck",
           "Kriterien, Risiko und Prüftermin",
-          "لا معلومات جديدة",
-          "قرار بلا بديل"
+          "Keine neuen Informationen",
+          "Eine Entscheidung ohne Alternative"
         ],
         "correctIndex": 1,
         "explanationAr": "معايير وخطر ومراجعة. نستعمل würde + مصدر للتحدث عن قرار غير واقع أو مشروط: Wenn ich wählen müsste, würde ich die flexiblere Stelle nehmen."
@@ -176,7 +176,7 @@ export const localTestTemplateBankB1 = [
         "promptAr": "اختر التعبير المطابق لـ«Bewegung»:",
         "options": [
           "Der Zug hatte abgefahren.",
-          "Der Zug ist abgefahren كان سابقًا بلا سياق",
+          "Der Zug ist abgefahren",
           "Der Zug war abfahren.",
           "Der Zug war abgefahren."
         ],
@@ -215,9 +215,9 @@ export const localTestTemplateBankB1 = [
         "promptAr": "أي خيار يحقّق «Zeitfolge» في هذا السياق؟",
         "options": [
           "Vorbereitung im Plusquamperfekt, Wendepunkt im Erzähltempus",
-          "كل الأحداث Plusquamperfekt",
-          "لا روابط زمنية",
-          "seitdem للحدث السابق المنتهي"
+          "Alle Ereignisse im Plusquamperfekt",
+          "Keine zeitlichen Verbindungen",
+          "seitdem"
         ],
         "correctIndex": 0,
         "explanationAr": "فصل الطبقات الزمنية: الحدث الأسبق من نقطة التحول يُروى في Plusquamperfekt، ونقطة التحول نفسها في زمن القصّ Präteritum، فيعرف القارئ ما وقع قبل وما وقع بعد."
@@ -262,8 +262,8 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Agens",
         "promptAr": "أي خيار يحقّق «Agens» في هذا السياق؟",
         "options": [
-          "mit Mara تفيد أداة",
-          "für Mara دائمًا",
+          "mit Mara",
+          "für Mara",
           "von Mara",
           "zu Mara"
         ],
@@ -387,7 +387,7 @@ export const localTestTemplateBankB1 = [
           "Situation",
           "Handlung",
           "Aufgabe",
-          "Ergebnis فقط"
+          "Ergebnis"
         ],
         "correctIndex": 1,
         "explanationAr": "Handlung. يبني نموذج STAR جوابًا واضحًا: Situation تعطي السياق، Aufgabe تحدد مسؤوليتك، Handlung تشرح ما فعلته أنت، Ergebnis يوضح النتيجة أو التعلم."
@@ -425,7 +425,7 @@ export const localTestTemplateBankB1 = [
         "options": [
           "Spontane Präsentationen sind schwierig; ich übe wöchentlich.",
           "Ich habe keine Schwächen.",
-          "Perfektionismus فقط.",
+          "Perfektionismus",
           "Alles ist schwierig."
         ],
         "correctIndex": 0,
@@ -437,7 +437,7 @@ export const localTestTemplateBankB1 = [
         "promptAr": "اختر التعبير المطابق لـ«Rückfrage»:",
         "options": [
           "Woran wird Erfolg gemessen?",
-          "Was macht die Firma? وهو واضح",
+          "Was macht die Firma?",
           "Ist die Arbeit leicht?",
           "Bekomme ich sicher die Stelle?"
         ],
@@ -573,8 +573,8 @@ export const localTestTemplateBankB1 = [
         "options": [
           "seit Montag zweimal, morgens 15 Grad",
           "immer kalt",
-          "sehr schlecht فقط",
-          "كارثة"
+          "sehr schlecht",
+          "Eine Katastrophe"
         ],
         "correctIndex": 0,
         "explanationAr": "محدد وقابل للتحقق. سجل مكان العيب ووقت بدايته وتكراره وأثره ومحاولات التواصل، وأرفق دليلًا مناسبًا دون بيانات زائدة."
@@ -632,9 +632,9 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Pilot",
         "promptAr": "الأفضل:",
         "options": [
-          "قرار نهائي باسم تجربة",
-          "بلا قياس",
-          "طرف واحد",
+          "Eine endgültige Entscheidung im Namen eines Versuchs",
+          "Ohne Messung",
+          "Nur eine Seite",
           "Dauer, Daten, Kriterien und Anpassung"
         ],
         "correctIndex": 3,
@@ -658,10 +658,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Perspektiven",
         "promptAr": "الأفضل:",
         "options": [
-          "رأي المخطط فقط",
-          "الأغلبية دون أثر",
+          "Nur die Meinung der Planer",
+          "Die Mehrheit ohne Wirkung",
           "Anwohner, Geschäfte, Verkehr und Barrierefreiheit",
-          "لا مخاطر"
+          "Keine Risiken"
         ],
         "correctIndex": 2,
         "explanationAr": "فئات وتأثيرات متعددة. تستعمل indem للإجابة عن كيف يتحقق شيء: Wir erhöhen die Sicherheit, indem wir einen Radweg bauen."
@@ -719,10 +719,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Gesamtkosten",
         "promptAr": "تشمل:",
         "options": [
-          "Kauf فقط",
+          "Kauf",
           "Kauf, Nutzung, Wartung und Reparatur",
-          "الخصم فقط",
-          "الإعلان"
+          "Nur der Rabatt",
+          "Die Werbung"
         ],
         "correctIndex": 1,
         "explanationAr": "تكلفة دورة الاستخدام. قارن الحاجة والعمر المتوقع والإصلاح والطاقة والضمان وإعادة البيع والتخلص."
@@ -793,10 +793,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Daten",
         "promptAr": "الأفضل:",
         "options": [
-          "المتوسط فقط",
-          "لا مؤشرات",
+          "Nur der Durchschnitt",
+          "Keine Hinweise",
           "Durchschnitt plus Gruppenunterschiede",
-          "النجاح للجميع افتراضًا"
+          "Erfolg für alle angenommen"
         ],
         "correctIndex": 2,
         "explanationAr": "تقسيم النتائج: Durchschnitt plus Gruppenunterschiede. المتوسط وحده يخفي اختلاف المجموعات، فقد يتحسن المتوسط ويبقى ضعف في مجموعة بعينها؛ اعرض الاثنين معًا."
@@ -1017,8 +1017,8 @@ export const localTestTemplateBankB1 = [
         "options": [
           "Wer erkennt den Abschluss für welchen Zweck an?",
           "Ist es stark?",
-          "هل هو جميل؟",
-          "هل الإعلان يقول ممتاز؟"
+          "Ist er schön?",
+          "Sagt die Werbung, dass es ausgezeichnet ist?"
         ],
         "correctIndex": 0,
         "explanationAr": "جهة وغرض. قد تكون وثيقة مفيدة للتعلم لكنها غير كافية لوظيفة أو جهة معينة."
@@ -1028,9 +1028,9 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Gesamtaufwand",
         "promptAr": "يشمل:",
         "options": [
-          "Gebühr فقط",
-          "الشعار",
-          "الشهادة فقط",
+          "Gebühr",
+          "Das Logo",
+          "Nur das Zertifikat",
           "Geld, Unterricht, Selbststudium, Fahrt und Prüfung"
         ],
         "correctIndex": 3,
@@ -1178,7 +1178,7 @@ export const localTestTemplateBankB1 = [
         "options": [
           "sondern auch",
           "aber nur",
-          "weder noch دائمًا",
+          "weder noch",
           "als ob"
         ],
         "correctIndex": 0,
@@ -1199,7 +1199,7 @@ export const localTestTemplateBankB1 = [
         "promptAr": "اختر الصيغة الصحيحة لحالة «Partizip II»:",
         "options": [
           "die erzählen Geschichte",
-          "die erzählend Geschichte بدون نهاية",
+          "die erzählend Geschichte",
           "die Geschichte geerzählt",
           "die erzählte Geschichte"
         ],
@@ -1324,10 +1324,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Reichweite",
         "promptAr": "السؤال الأفضل:",
         "options": [
-          "هل العنوان جميل؟",
+          "Ist der Titel schön?",
           "Wer wurde womit und wie lange getestet?",
-          "كم مشاركة؟ فقط",
-          "هل أحب النتيجة؟"
+          "Nur wie viele Teilnehmende?",
+          "Mag ich das Ergebnis?"
         ],
         "correctIndex": 1,
         "explanationAr": "عينة ومهمة ومدة: Wer wurde womit und wie lange getestet? السؤال يطلب وصف المجموعة والأداة والمدة، وهي شروط قراءة النتيجة وتقدير حدود التعميم."
@@ -1398,7 +1398,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Korrektur",
         "promptAr": "اختر التعبير المطابق لـ«Korrektur»:",
         "options": [
-          "nicht Freitag, aber Donnerstag دائمًا",
+          "nicht Freitag, aber Donnerstag",
           "weder Freitag sondern",
           "nicht Freitag, sondern Donnerstag",
           "Freitag nicht Donnerstag"
@@ -1533,10 +1533,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Status",
         "promptAr": "الأفضل:",
         "options": [
-          "نسبة فقط",
-          "نعمل عليه",
+          "Nur ein Prozentwert",
+          "Wir arbeiten daran.",
           "Ergebnis, Hindernis, Hilfe, nächster Schritt",
-          "لا موعد"
+          "Kein Termin"
         ],
         "correctIndex": 2,
         "explanationAr": "حقول قرار. تستعمل wer لجملة عامة عن أي شخص يحقق الشرط: Wer die Aufgabe übernimmt, der informiert das Team."
@@ -1546,10 +1546,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Abhängigkeit",
         "promptAr": "أي خيار يحقّق «Abhängigkeit» في هذا السياق؟",
         "options": [
-          "كل مهمة مستقلة دائمًا.",
+          "Jede Aufgabe ist immer unabhängig.",
           "Namenskarten starten nach Teilnehmerliste.",
-          "نخفي الانتظار.",
-          "لا بديل."
+          "Wir verbergen die Wartezeit.",
+          "Keine Alternative."
         ],
         "correctIndex": 1,
         "explanationAr": "توضح العلاقة: Namenskarten starten nach Teilnehmerliste — الترتيب يبيّن الاعتماد بين المهمتين، وحذفه يجعل الجدول غامضًا للقارئ."
@@ -1668,7 +1668,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Person",
         "promptAr": "اختر التعبير المطابق لـ«Person» في درس «التقنية في الحياة اليومية»:",
         "options": [
-          "Womit arbeitest du? إذا المقصود شخص",
+          "Womit arbeitest du?",
           "Damit Person.",
           "Wofür Sara?",
           "Mit wem arbeitest du?"
@@ -1694,10 +1694,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Pilot",
         "promptAr": "الأفضل:",
         "options": [
-          "كل البيانات فورًا",
-          "لا بديل",
+          "Alle Daten sofort",
+          "Keine Alternative",
           "Testdaten, Offline, Export, Plan B",
-          "الخصائص فقط"
+          "Nur die Eigenschaften"
         ],
         "correctIndex": 2,
         "explanationAr": "تجربة محدودة قابلة للرجوع. ابدأ بالمشكلة والهدف، ثم افحص المستخدمين والتوافق والوصول والبيانات والتكلفة والعمل دون اتصال والتصدير."
@@ -1755,9 +1755,9 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Begrenztes Ergebnis",
         "promptAr": "أي خيار يحقّق «Begrenztes Ergebnis» في هذا السياق؟",
         "options": [
-          "نجح للجميع.",
-          "أفضل بلا أرقام.",
-          "لا حدود.",
+          "Erfolg für alle.",
+          "Besser, ohne Zahlen.",
+          "Keine Grenzen.",
           "Von 18 auf 10 Minuten bei 20 Personen in 4 Wochen."
         ],
         "correctIndex": 3,
@@ -1768,10 +1768,10 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Nächster Schritt",
         "promptAr": "اختر التعبير المطابق لـ«Nächster Schritt»:",
         "options": [
-          "تعميم فوري",
-          "حذف البيانات",
+          "Sofortige Verallgemeinerung",
+          "Daten löschen",
           "Größerer Test mit Geräten und Barrierefreiheit",
-          "لا مراجعة"
+          "Keine Überprüfung"
         ],
         "correctIndex": 2,
         "explanationAr": "يعالج حدود العينة: Größerer Test mit Geräten und Barrierefreiheit. إذا كانت العينة صغيرة أو المهمة واحدة، فالخطوة توسيع الأجهزة والوصول لا تعميم النتيجة على الجميع."

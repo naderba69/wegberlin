@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "d45bdef5e62f2dfd9ab343ac65f2fbdeeea7957feec0f574042f74c58a08cde8",
+  "contentSha256": "9011d5233fb641148ac7a37c82e9d4a882ff913fe89b216c3482920adb7ffaaf",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,

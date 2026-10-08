@@ -585,7 +585,7 @@ export const localTestTemplateBankA2 = [
         "promptAr": "أي خيار يحقّق «Bewerbungsunterlagen» في هذا السياق؟",
         "options": [
           "Anschreiben und Lebenslauf",
-          "Fahrkarte und Passfoto فقط",
+          "Fahrkarte und Passfoto",
           "Mietvertrag",
           "Speisekarte"
         ],
@@ -881,7 +881,7 @@ export const localTestTemplateBankA2 = [
         "promptAr": "اختر دليل الحجز:",
         "options": [
           "Speisekarte",
-          "Fahrplan بدون صلة",
+          "Fahrplan",
           "Buchungsbestätigung",
           "Wetterbericht"
         ],
@@ -916,7 +916,7 @@ export const localTestTemplateBankA2 = [
         "promptAr": "اختر الضمير:",
         "options": [
           "sich",
-          "mir دائمًا",
+          "mir",
           "mich",
           "dich"
         ],
@@ -1177,9 +1177,9 @@ export const localTestTemplateBankA2 = [
         "promptAr": "أي مجموعة؟",
         "options": [
           "schön, schlecht, toll",
-          "teuer, billig فقط",
+          "teuer, billig",
           "Wer, was, wann, wo",
-          "ja oder nein فقط"
+          "ja oder nein"
         ],
         "correctIndex": 2,
         "explanationAr": "شبكةُ الخبر تُبنى على أسئلةٍ تُغطّي الحدث: «Wer, was, wann, wo». وأمّا الصفاتُ العامة (schön, schlecht, toll) والأسئلةُ التي تُجاب بنعم أو لا فلا تُنتج خبرًا. فحص ذاتي: أيُّ سؤالٍ يبقى بلا جواب في مسودتك؟"
@@ -1311,7 +1311,7 @@ export const localTestTemplateBankA2 = [
         "promptDe": "Abwägung",
         "promptAr": "أي خيار يحقّق «Abwägung» في سياق درس «التعبير عن رأي»؟",
         "options": [
-          "weil … deshalb داخل نفس البنية دائمًا",
+          "weil … deshalb",
           "ob … wenn",
           "um … dass",
           "zwar … aber"

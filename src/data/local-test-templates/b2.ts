@@ -190,8 +190,8 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Gleiche Regel kann unterschiedliche Wirkungen haben.",
           "Gleiche Regel ist immer gerecht.",
-          "المتوسط يكفي.",
-          "الاستثناء دائمًا ظلم."
+          "Der Durchschnitt reicht.",
+          "Eine Ausnahme ist immer ungerecht."
         ],
         "correctIndex": 0,
         "explanationAr": "الأثر يعتمد على الظروف. تستعمل sofern بمعنى «بشرط أن/ما دام» في سياق رسمي نسبيًا: Homeoffice ist möglich, sofern die Aufgabe dafür geeignet ist."
@@ -202,9 +202,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "اختر الصيغة الصحيحة لحالة «Verteilungsanalyse»:",
         "options": [
           "Rolle, Schicht, Weg, Betreuung und Ausstattung",
-          "المتوسط فقط",
-          "الإنتاج فقط",
-          "الرأي فقط"
+          "Nur der Durchschnitt",
+          "Nur die Produktion",
+          "Nur die Meinung"
         ],
         "correctIndex": 0,
         "explanationAr": "أبعاد التوزيع. تستعمل je nachdem عندما تعتمد النتيجة على حالة متغيرة: Je nachdem, ob Kundentermine stattfinden, arbeitet das Team vor Ort."
@@ -214,10 +214,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Pilotentscheidung",
         "promptAr": "الأفضل:",
         "options": [
-          "دائمًا للجميع.",
-          "لا قياس إضافي.",
+          "Immer für alle.",
+          "Keine zusätzliche Messung.",
           "Fortsetzen nur bei klaren Belastungs- und Zugangskriterien.",
-          "إخفاء العمل العفوي."
+          "Die spontane Arbeit verbergen."
         ],
         "correctIndex": 2,
         "explanationAr": "شرط قرار واضح: Fortsetzen nur bei klaren Belastungs- und Zugangskriterien. استمرار المشروع مشروط بمعايير قابلة للقياس، لا بقرار شامل دائم ولا بإخفاء النتائج."
@@ -249,7 +249,7 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Grund/Lage",
         "promptAr": "اختر التعبير المطابق لـ«Grund/Lage»:",
         "options": [
-          "hinsichtlich des Risikos فقط كموضوع",
+          "hinsichtlich des Risikos",
           "im Hinblick auf",
           "wohingegen",
           "angesichts des Risikos"
@@ -289,9 +289,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "الأفضل:",
         "options": [
           "Optionen und Risiken bis Frist vorlegen, dann Leitung entscheiden lassen.",
-          "تهديد شخصي.",
-          "لا بدائل.",
-          "رفع فوري بلا معلومات."
+          "Eine persönliche Drohung.",
+          "Keine Alternativen.",
+          "Sofortige Eskalation ohne Informationen."
         ],
         "correctIndex": 0,
         "explanationAr": "مسار قرار موضوعي. حدد الطلب الأساسي والقيد والآثار، ثم قدم بدائل قابلة للمقارنة."
@@ -385,9 +385,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "اختر التعبير المطابق لـ«Adressatengerechte Definition»:",
         "options": [
           "Stichprobe ist Stichprobe.",
-          "Sample يعني sample فقط.",
+          "Sample ist nur ein anderes Wort.",
           "Unter einer Stichprobe versteht man den untersuchten Teil einer größeren Gruppe.",
-          "لا حاجة لتعريف أو مثال."
+          "Keine Definition oder Beispiel nötig."
         ],
         "correctIndex": 2,
         "explanationAr": "تعريف قصير يؤدي وظيفة المصطلح. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا."
@@ -423,9 +423,9 @@ export const localTestTemplateBankB2 = [
         "promptDe": "wobei",
         "promptAr": "أي وظيفة؟",
         "options": [
-          "سببية مؤكدة",
-          "حذف النتيجة",
-          "تعميم على الجميع",
+          "Ein gesicherter Ursache-Wirkung-Zusammenhang",
+          "Das Ergebnis streichen",
+          "Verallgemeinerung auf alle",
           "Eine relevante Einschränkung direkt ergänzen"
         ],
         "correctIndex": 3,
@@ -436,10 +436,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Wissenschaft vermitteln",
         "promptAr": "ما البنية الأمينة؟",
         "options": [
-          "عنوان مثير فقط",
-          "نتيجة بلا طريقة",
+          "Nur eine spannende Überschrift",
+          "Ein Ergebnis ohne Methode",
           "Frage, Methode, Ergebnis, Grenze und Bedeutung",
-          "مصطلحات بلا أمثلة"
+          "Fachbegriffe ohne Beispiele"
         ],
         "correctIndex": 2,
         "explanationAr": "تحفظ الدليل والحد والمعنى. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا."
@@ -620,9 +620,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "اختر الصيغة الصحيحة لحالة «Präzise kulturelle Aussage»:",
         "options": [
           "In manchen Teams wird Kritik direkter formuliert; Rolle und Situation variieren.",
-          "كل أفراد البلد متطابقون.",
-          "الجنسية تشرح كل صمت.",
-          "لا توجد اختلافات داخل المجموعات."
+          "Alle Angehörigen eines Landes sind gleich.",
+          "Die Nationalität erklärt jedes Schweigen.",
+          "Es gibt keine Unterschiede innerhalb der Gruppen."
         ],
         "correctIndex": 0,
         "explanationAr": "تحدد الميل والسياق والتنوع. يمكن للسياق الثقافي أن يؤثر، لكنه ليس متغيرًا وحيدًا ولا يحدد كل فرد."
@@ -658,10 +658,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Perspektivenvergleich",
         "promptAr": "ما الخلاصة الجيدة؟",
         "options": [
-          "اختيار الجنسية الصحيحة",
+          "Die richtige Nationalität auswählen",
           "Deutungen am Gegenstand belegen und die eigene Position mitreflektieren",
-          "قبول كل قول بلا دليل",
-          "إلغاء السياق الفردي"
+          "Jede Aussage ohne Beleg akzeptieren",
+          "Den individuellen Kontext streichen"
         ],
         "correctIndex": 1,
         "explanationAr": "يجمع تعدد المنظور مع معيار الدليل: Deutungen am Gegenstand belegen und die eigene Position mitreflektieren. لا يكفي قبول كل قول، ولا إلغاء السياق الفردي."
@@ -693,10 +693,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "es sei denn",
         "promptAr": "ما وظيفته؟",
         "options": [
-          "تأكيد السبب",
-          "إلغاء كل شرط",
+          "Den Grund bestätigen",
+          "Jede Bedingung aufheben",
           "Eine Ausnahme zur Regel einführen",
-          "تحويل الإمكانية إلى إلزام"
+          "Eine Möglichkeit in eine Pflicht verwandeln"
         ],
         "correctIndex": 2,
         "explanationAr": "يقدم الحالة المستثناة من القاعدة. sofern/vorausgesetzt, dass يحددان شرط سريان القاعدة."
@@ -720,9 +720,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "ما الذي يأتي أولًا؟",
         "options": [
           "Handlung, Frist und entscheidungsrelevante Bedingungen",
-          "زخرفة النص",
-          "كل خلفية المؤسسة",
-          "رأي الوسيط غير المعلن"
+          "Den Text ausschmücken",
+          "Der gesamte Hintergrund der Organisation",
+          "Die nicht angegebene Meinung des Vermittlers"
         ],
         "correctIndex": 0,
         "explanationAr": "المتلقي يحتاج الفعل وما يغيره أولًا: Handlung, Frist und entscheidungsrelevante Bedingungen. لا تُغرق النص بخلفية المؤسسة قبل أن تعرف المطلوب وموعده."
@@ -732,9 +732,9 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Eigene Ergänzung",
         "promptAr": "أفضل صياغة:",
         "options": [
-          "المصدر وعد بهذا رغم أنه لم يفعل.",
-          "أحذف حدود الإضافة.",
-          "أقدم تخميني كحقيقة.",
+          "Die Quelle hat das versprochen, obwohl sie es nicht getan hat.",
+          "Ich streiche die Grenzen der Ergänzung.",
+          "Ich präsentiere meine Vermutung als Tatsache.",
           "Zur Erklärung ergänze ich …; das ist keine Zusage der Quelle."
         ],
         "correctIndex": 3,
@@ -1460,7 +1460,7 @@ export const localTestTemplateBankB2 = [
         "promptAr": "أين المعلومة الجديدة؟",
         "options": [
           "nach „sondern auch“.",
-          "قبل „nicht nur“.",
+          "vor „nicht nur“.",
           "im ersten Hauptsatz.",
           "im Nebensatz nach „je“."
         ],

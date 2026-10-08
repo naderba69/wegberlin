@@ -16,13 +16,15 @@ export function completedAssessmentRuns(state: LearningState, level: CEFRLevel):
   const groups = new Map<string, ExerciseAttempt[]>();
   for (const attempt of state.exerciseAttempts) {
     const context = attempt.evidenceContext;
-    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance") continue;
+    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance" || context.formId === "C") continue;
     groups.set(context.runId, [...(groups.get(context.runId) ?? []), attempt]);
   }
   const runs: AssessmentRun[] = [];
   for (const [id, attempts] of groups) {
     const context = attempts[0].evidenceContext!;
-    const questions = levelAssessmentQuestions(level, context.formId);
+    if (context.formId === "C") continue;
+    const formId: AssessmentFormId = context.formId;
+    const questions = levelAssessmentQuestions(level, formId);
     const expectedIds = new Set(questions.map((item) => item.id));
     if (attempts.length !== questions.length || new Set(attempts.map((item) => item.exerciseId)).size !== questions.length || attempts.some((item) => !expectedIds.has(item.exerciseId) || item.evidenceContext?.expectedItems !== questions.length || item.evidenceContext.formId !== context.formId || item.evidenceContext.kind !== context.kind)) continue;
     const byQuestion = new Map(attempts.map((attempt) => [attempt.exerciseId, attempt]));
@@ -42,7 +44,7 @@ export function completedAssessmentRuns(state: LearningState, level: CEFRLevel):
     const previousTimes=state.exerciseAttempts.filter(attempt=>attempt.evidenceContext?.level===level&&attempt.evidenceContext.formId===context.formId&&attempt.evidenceContext.runId!==id&&Date.parse(attempt.createdAt)<runTime).map(attempt=>Date.parse(attempt.createdAt));
     const delayedRetake=!novel&&previousTimes.length>0&&runTime-Math.max(...previousTimes)>=3*86_400_000;
     const required = Math.ceil(questions.length * LEVEL_KNOWLEDGE_SHARE);
-    runs.push({ id, level, formId: context.formId, kind: context.kind as AssessmentRun["kind"], completedAt: attempts.map((attempt) => attempt.createdAt).sort().at(-1)!, score, total: questions.length, required, independent, novel, delayedRetake, passed: independent && (novel||delayedRetake) && score >= required && Object.values(domainScores).every((domain) => domain.correct >= Math.ceil(domain.total * .6)), domainScores });
+    runs.push({ id, level, formId, kind: context.kind as AssessmentRun["kind"], completedAt: attempts.map((attempt) => attempt.createdAt).sort().at(-1)!, score, total: questions.length, required, independent, novel, delayedRetake, passed: independent && (novel||delayedRetake) && score >= required && Object.values(domainScores).every((domain) => domain.correct >= Math.ceil(domain.total * .6)), domainScores });
   }
   return runs.sort((left, right) => Date.parse(right.completedAt) - Date.parse(left.completedAt));
 }

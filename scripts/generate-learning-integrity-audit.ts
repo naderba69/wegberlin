@@ -49,4 +49,4 @@ if(write){await writeFile(REPORT,json);await writeFile(MD,markdown);console.log(
   if(await readFile(REPORT,"utf8").catch(()=>"")!==json||await readFile(MD,"utf8").catch(()=>"")!==markdown)throw new Error("Learning integrity artifacts are stale; regenerate from source, never edit counts.");
 }
 if(issues.length)throw new Error(issues.join("\n"));
-console.log(`Learning integrity: ${bank.length} template instances · 8 x 48 forms · B2 6 x 4 · ${independentProductionTasks.length} production tasks · 8 longer inputs · 0 contract issues; human review pending.`);
+console.log(`Learning integrity: ${bank.length} template instances · 8 x 48 forms · B2 6 x 4 · ${independentProductionTasks.length} production tasks · ${extended.length} longer inputs · 0 contract issues; human review pending.`);

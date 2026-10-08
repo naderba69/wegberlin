@@ -3,7 +3,7 @@
   "version": "learning-integrity-v1",
   "definitionDate": "2026-10-02",
   "ok": true,
-  "sourceSha256": "06a306d21b66e0822e3e7d9c7eaf4dc12a45ae81561bc968acc7e5f305379941",
+  "sourceSha256": "8cfbfb21953aa321093be9a40d055e699b9ea1541c587193ece43da4cf7c93df",
   "assessmentBankVersion": "authored-parallel-level-check-v1",
   "assessmentTemplateInstances": 384,
   "competencyFamilies": 24,
@@ -199,6 +199,38 @@
       "id": "endurance-b2-B",
       "level": "B2",
       "words": 473,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-a1-C",
+      "level": "A1",
+      "words": 126,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-a2-C",
+      "level": "A2",
+      "words": 203,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b1-C",
+      "level": "B1",
+      "words": 289,
+      "questions": 4,
+      "audioStatus": "device-tts-only-human-audio-pending",
+      "reviewStatus": "authored-independent-review-pending"
+    },
+    {
+      "id": "endurance-b2-C",
+      "level": "B2",
+      "words": 363,
       "questions": 4,
       "audioStatus": "device-tts-only-human-audio-pending",
       "reviewStatus": "authored-independent-review-pending"

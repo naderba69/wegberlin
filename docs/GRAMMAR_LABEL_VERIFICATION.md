@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 57 von 64 Labels mit Quelle verifiziert، 7 غير مُتحقق منها بعد.
+Stand 2026-10-08: 62 von 64 Labels mit Quelle verifiziert، 2 غير مُتحقق منها بعد.
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -13,7 +13,7 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | die Rückfahrt | die · Pl. die Rückfahrten | verifiziert | de.wiktionary (Wikitext-API) |
 | der Eintritt | der · Pl. die Eintritte | verifiziert | de.wiktionary (Wikitext-API) |
 | abholen | Verb · trennbar · Partizip II: abgeholt | verifiziert | de.wiktionary (Wikitext-API) |
-| in der Nähe | Wendung · mit Dativ | nicht verifiziert | Wiktionary (kein Wendungseintrag) und Duden (Nähe): Beispiele mit Genitiv; Dativ nicht belegt |
+| in der Nähe | Wendung · mit Genitiv | verifiziert | de.wiktionary (Nähe-Beispiele) und Duden (Nähe): Beispiele mit Genitiv |
 | verschieben | Verb · unregelmäßig · Partizip II: verschoben | verifiziert | de.wiktionary (Wikitext-API) |
 | die Bestätigung | die · Pl. die Bestätigungen | verifiziert | de.wiktionary (Wikitext-API) |
 | enttäuscht | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
@@ -33,7 +33,7 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | abgrenzen | Verb · trennbar · Partizip II: abgegrenzt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Erprobung | die · Pl. die Erprobungen | verifiziert | de.wiktionary (Wikitext-API) |
 | die Nutzungssituation | die · Pl. die Nutzungssituationen | nicht verifiziert | DWDS: nur maschinell generierte Angaben, kein Lexikoneintrag |
-| nachträglich | Adverb | nicht verifiziert | Wiktionary und Duden: nur Adjektiv; Label Adverb widerspricht beiden |
+| nachträglich | Adjektiv | verifiziert | de.wiktionary und Duden: Adjektiv |
 | die Belastung | die · Pl. die Belastungen | verifiziert | de.wiktionary (Wikitext-API) |
 | ausschließlich | Adverb | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | der Vorgang | der · Pl. die Vorgänge | verifiziert | de.wiktionary (Wikitext-API) |
@@ -50,14 +50,14 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | die Befragung | die · Pl. die Befragungen | verifiziert | de.wiktionary (Wikitext-API) |
 | der Anwohner | der · Pl. die Anwohner | verifiziert | de.wiktionary (Wikitext-API) |
 | abgetrennt | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
-| pauschal | Adjektiv / Adverb | nicht verifiziert | Wiktionary und Duden: nur Adjektiv; Adverb-Anteil im Label nicht belegt |
+| pauschal | Adjektiv | verifiziert | de.wiktionary und Duden: Adjektiv |
 | die Ablenkung | die · Pl. die Ablenkungen | verifiziert | de.wiktionary (Wikitext-API) |
 | die Schulkonferenz | die · Pl. die Schulkonferenzen | verifiziert | de.wiktionary (Wikitext-API) |
 | benachteiligen | Verb · Partizip II: benachteiligt | verifiziert | de.wiktionary (Wikitext-API) |
 | der Markt | der · Pl. die Märkte | verifiziert | de.wiktionary (Wikitext-API) |
 | billig | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, Abschnitt 1) |
 | die Tüte | die · Pl. die Tüten | verifiziert | DWDS / Duden / de.wiktionary |
-| bar | Adjektiv / Adverb | nicht verifiziert | Wiktionary: Adjektiv und Präposition (mit Genitiv); Adverb-Anteil im Label nicht belegt |
+| bar | Adjektiv / Präposition | verifiziert | de.wiktionary: Adjektiv und Präposition |
 | die Gebühr | die · Pl. die Gebühren | verifiziert | de.wiktionary (Wikitext-API) |
 | quietschen | Verb · Partizip II: gequietscht | verifiziert | de.wiktionary (Wikitext-API) |
 | der Verleih | der · Pl. die Verleihe | verifiziert | DWDS / Duden / de.wiktionary |
@@ -68,5 +68,5 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | das Gartenamt | das · Pl. die Gartenämter | verifiziert | DWDS / Duden / de.wiktionary |
 | die Förderung | die · Pl. die Förderungen | verifiziert | de.wiktionary (Wikitext-API) |
 | die Spielzeit | die · Pl. die Spielzeiten | verifiziert | de.wiktionary (Wikitext-API) |
-| zwangsläufig | Adverb | nicht verifiziert | Wiktionary und Duden: nur Adjektiv; Label Adverb widerspricht beiden |
+| zwangsläufig | Adjektiv | verifiziert | de.wiktionary und Duden: Adjektiv |
 | der Übergang | der · Pl. die Übergänge | verifiziert | de.wiktionary (Wikitext-API) |

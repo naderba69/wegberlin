@@ -22,6 +22,6 @@ describe("P1 Today Offline readiness",()=>{
 
   it("checks completed and shell caches through the controlling worker and never auto-downloads",async()=>{
     const worker=await readFile("public/sw.js","utf8");const handler=worker.slice(worker.indexOf('if (type === "DWNB_TODAY_READINESS_CHECK")'),worker.indexOf('if (type === "DWNB_OFFLINE_PACK_STATUS")'));
-    expect(worker).toContain('const PACK_CACHE = "dwnb-full-pack-v188"');expect(worker).toContain('const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v187"');expect(worker).toContain("async function checkTodayReadiness");expect(worker).toContain("caches.open(SHELL_CACHE)");expect(worker).toContain("caches.open(PACK_CACHE)");expect(handler).toContain("checkTodayReadiness");expect(handler).not.toContain("downloadSelectedPack");
+    expect(worker).toContain('const PACK_CACHE = "dwnb-full-pack-v189"');expect(worker).toContain('const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v188"');expect(worker).toContain("async function checkTodayReadiness");expect(worker).toContain("caches.open(SHELL_CACHE)");expect(worker).toContain("caches.open(PACK_CACHE)");expect(handler).toContain("checkTodayReadiness");expect(handler).not.toContain("downloadSelectedPack");
   });
 });

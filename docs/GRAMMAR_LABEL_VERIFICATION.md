@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 31 von 64 Labels mit Quelle verifiziert، 33 غير مُتحقق منها بعد.
+Stand 2026-10-08: 36 von 64 Labels mit Quelle verifiziert، 28 غير مُتحقق منها بعد.
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -20,7 +20,7 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | in Eile | Wendung · in Eile sein | nicht verifiziert | — |
 | pflegen | Verb · Partizip II: gepflegt | verifiziert | de.wiktionary (Wikitext-API) |
 | gießen | Verb · unregelmäßig · Partizip II: gegossen | verifiziert | de.wiktionary (Wikitext-API) |
-| die Kräuter | nur Plural · Sg. das Kraut | nicht verifiziert | — |
+| die Kräuter | nur Plural · Sg. das Kraut | verifiziert | de.wiktionary (Wikitext-API): Kräuter ist Pl. von Kraut; „nur Plural“ beschreibt den Gebrauch als Sammelbegriff |
 | der Anschluss | der · Pl. die Anschlüsse | verifiziert | de.wiktionary (Wikitext-API) |
 | zur Verfügung stehen | Wendung · Verb stehen | nicht verifiziert | — |
 | nach Absprache | Wendung · mit Dativ | nicht verifiziert | — |
@@ -38,13 +38,13 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | ausschließlich | Adverb | nicht verifiziert | — |
 | der Vorgang | der · Pl. die Vorgänge | verifiziert | de.wiktionary (Wikitext-API) |
 | verdecken | Verb · Partizip II: verdeckt | verifiziert | de.wiktionary (Wikitext-API) |
-| die Halsschmerzen | nur Plural | nicht verifiziert | — |
-| der Husten | der · meist nur Singular | nicht verifiziert | — |
+| die Halsschmerzen | nur Plural | verifiziert | de.wiktionary (Wikitext-API) |
+| der Husten | der · meist nur Singular | verifiziert | de.wiktionary (Wikitext-API) |
 | die Versichertenkarte | die · Pl. die Versichertenkarten | nicht verifiziert | — |
 | das Wartezimmer | das · Pl. die Wartezimmer | verifiziert | de.wiktionary (Wikitext-API) |
 | die Heizung | die · Pl. die Heizungen | verifiziert | de.wiktionary (Wikitext-API) |
-| der Vermieter | der · Pl. die Vermieter | nicht verifiziert | — |
-| der Handwerker | der · Pl. die Handwerker | nicht verifiziert | — |
+| der Vermieter | der · Pl. die Vermieter | verifiziert | de.wiktionary (Wikitext-API) |
+| der Handwerker | der · Pl. die Handwerker | verifiziert | de.wiktionary (Wikitext-API) |
 | empfindlich | Adjektiv | nicht verifiziert | — |
 | pendeln | Verb · Partizip II: gependelt | verifiziert | de.wiktionary (Wikitext-API) |
 | die Befragung | die · Pl. die Befragungen | verifiziert | de.wiktionary (Wikitext-API) |

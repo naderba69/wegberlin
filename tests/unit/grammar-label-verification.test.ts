@@ -27,6 +27,6 @@ describe("grammar label verification record (P2-401)", () => {
   });
 
   it("keeps the verified count at the recorded figure until a new check is written down", () => {
-    expect(rows.filter(([, , status]) => status === "verifiziert")).toHaveLength(31);
+    expect(rows.filter(([, , status]) => status === "verifiziert")).toHaveLength(36);
   });
 });

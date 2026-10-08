@@ -6,7 +6,7 @@
 
 صفحات لم تُفتح بالمعرّف الصحيح في Duden: lesen، gefallen، Mann، haben، sein (Vollverb).
 
-## بنود تحققت من مدخل مصدري واضح (13)
+## بنود تحققت من مدخل مصدري واضح (14)
 
 | المعرّف | ما تأكد من المصدر |
 | --- | --- |
@@ -23,6 +23,7 @@
 | weekday-after-montag | Dienstag: «zweiter Tag der mit Montag beginnenden Woche» |
 | month-after-januar | Februar: «zweiter Monat im Jahr» |
 | conj-weil | weil: Konjunktion für Gliedsätze |
+| dat-auf-dem-tisch | Tisch: der (مذكر)، و«das Essen steht auf dem Tisch» (auf + Dativ للمكان) |
 
 ## بنود تحقق جزء منها فقط (4)
 
@@ -33,8 +34,8 @@
 | prep-ins-kino | حركة مع Akkusativ («ins Ausland gehen»)؛ «Kino» غير مذكورة |
 | verb-trinken | trinken: «Kaffee trinken»؛ صيغة wir (= المصدر) غير مذكورة صراحة |
 
-## بنود لم تُفحص بعد (33)
+## بنود لم تُفحص بعد (32)
 
-art-neuter-ein، akk-fem-eine، akk-masc-den، dat-in-der، dat-mit-dem، nom-das-kind، neg-keinen، poss-meine، prep-in-berlin، prep-aus، verb-arbeitet، sein-ist، haben-haben، perf-habe، perf-gelesen، neg-keine، neg-nicht، w-wie، w-wo، w-woher، w-was-kostet، num-12-8، num-3x4، time-halb-drei، time-viertel-nach-acht، adj-gross-haus، adj-kaltes-wasser، dat-auf-dem-tisch، imp-sie، pron-sie-akk، pron-mir، pron-ihn، verb-geht-ihr
+art-neuter-ein، akk-fem-eine، akk-masc-den، dat-in-der، dat-mit-dem، nom-das-kind، neg-keinen، poss-meine، prep-in-berlin، prep-aus، verb-arbeitet، sein-ist، haben-haben، perf-habe، perf-gelesen، neg-keine، neg-nicht، w-wie، w-wo، w-woher، w-was-kostet، num-12-8، num-3x4، time-halb-drei، time-viertel-nach-acht، adj-gross-haus، adj-kaltes-wasser، imp-sie، pron-sie-akk، pron-mir، pron-ihn، verb-geht-ihr
 
-التحقق من الأعداد: 50 في الملف = 13 + 4 + 33.
+التحقق من الأعداد: 50 في الملف = 14 + 4 + 32.

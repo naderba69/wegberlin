@@ -1,6 +1,13 @@
 # Project Status
 
-Sync batch: v191 · 2026-10-09 · content-only P1-398 reviewed variants (+80 productive exercises; one-string 337 ⇒ 257) and four rewrite items converted to writing (b1-06-e4, b1-12-e4, b2-12-e4, b2-19-e4); offline fingerprint abdacdeb8e61; pack cache v191 (staging v190, previous v190). Previous batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v191 · 2026-10-09 · content-only P1-398 reviewed variants (+122 productive exercises over two batches; one-string 337 ⇒ 215) and four rewrite items converted to writing (b1-06-e4, b1-12-e4, b2-12-e4, b2-19-e4); offline fingerprint aca6b31e64e8; pack cache v191 (staging v190, previous v190). Previous batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+
+## P1-398 — الدفعة الثانية: 42 بديلًا مراجَعًا إضافيًا — 2026-10-09 (بلا وسم)
+
+- **المنفَّذ (محتوى فقط).** أُضيف بديل مقبول مراجَع إلى **42** تمرينًا: 16 فراغًا، و4 تصحيحات، و22 ترتيبًا. كل بديل مدوَّن في `explanationAr` بعبارة «ويُقبل أيضًا». لم يُخفَّف المقارِن.
+- **المراجعة.** فُحصت الـ257 المتبقية واحدةً واحدة؛ أُضيف البديل فقط حيث يكون صحيحًا نحويًا ومعنويًا في الجملة نفسها (مثل `Obgleich` ⇔ `obwohl`، و`Gern würde ich kommen` مع إبقاء الكلمات نفسها). بقيت بنود لا يصح فيها بديل واحد دون تغيير المعنى أو الهدف النحوي، ومنها `b2-15-e2` (`Damit` مقابل `Wenn` يغيّر المعنى)، و`b1-18-e2` (`Angeblich` لا يقابله بديل محايد)، و`b2-23-e4` (ترتيب عنوان ثابت).
+- **الأرقام.** الإجابات بعنصر واحد: 257 ⇒ **215** من 387 (55.6%)؛ الموسَّعة: 130 ⇒ **172**؛ no-op = 0.
+- **البوابات.** `lesson:quality` 0 مشكلات · `accepted:answers` 0 · `content:audit` 0 · `learning:integrity:audit` 0 · `local:test:templates` 0 · `lesson:contract:audit` 0 · `language:audit` 0 · `handoff:check` 0 · `tsc` 0. اختبارات الإجابات المقبولة: 6/6. بناء 321 صفحة، بصمة الأوفلاين `aca6b31e64e8`.
 
 ## P1-398 — مرادفات مراجعة وتحويل أربعة بنود إلى كتابة — 2026-10-09 (بلا وسم)
 
@@ -873,7 +880,7 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
   vitest **1,027/1,027 في 156/156** · `handoff:check` **0** · `content:audit` تحرّك إلى
   **`6b5b28eb3104…`** · `learning-architecture` بلا حركة `9b57e06047aa` · `case:audit` 0 فجوات عند
   `167645dd621b…`. **إعادةُ بناءٍ كاملةٍ خروج 0** (Compiled 34.8s، 321/321 صفحة في 9.8s) بصمة
-  `offline:size` **`abdacdeb8e61`** مع **full 6,022,922** (a1 2,735,840 · a2 2,847,916 · b1 2,873,424 ·
+  `offline:size` **`aca6b31e64e8`** مع **full 6,025,195** (a1 2,736,928 · a2 2,849,118 · b1 2,874,373 ·
   b2 4,296,842) · `js:budget` ‏110/1,739,688/251,309 · `media:budget` ‏544/52,943,843/المنهاج 958,946 —
   والبناءُ مرّ بعد إعادةِ تفعيل المقايضة (`/home/user/.swapfile` انمحى مع صندوق اللقطة فعادت صفرًا).
   **وتراجعٌ جزئيٌّ ثامنٌ وسطَ الدور** (سابعُه المسَّ أرشيفَ التسليم سابقًا): `node_modules` صفرًا

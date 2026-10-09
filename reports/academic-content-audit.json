@@ -79,9 +79,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح الجملة: Ich bin heißen Ali.",
-        "answer": "Ich heiße Ali",
+        "answer": "Ich heiße Ali | Ich bin Ali",
         "evidenceRef": "a1-01:controlled:a1-01-e4:explanationAr",
-        "evidenceExcerpt": "heißen فعل مستقل ولا يحتاج bin. الفعل heißen يعني أن الشخص يحمل اسمًا معينًا.",
+        "evidenceExcerpt": "heißen فعل مستقل ولا يحتاج bin. الفعل heißen يعني أن الشخص يحمل اسمًا معينًا. ويُقبل أيضًا: «Ich bin Ali».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -268,9 +268,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الجملة:",
-        "answer": "Ich komme aus Tunesien",
+        "answer": "Ich komme aus Tunesien | Aus Tunesien komme ich",
         "evidenceRef": "a1-02:controlled:a1-02-e3:explanationAr",
-        "evidenceExcerpt": "الفاعل ثم الفعل في الموقع الثاني ثم aus + البلد. Woher يسأل عن جهة القدوم أو الأصل، والجواب الشائع يبدأ بـaus: Ich komme aus Tunesien.",
+        "evidenceExcerpt": "الفاعل ثم الفعل في الموقع الثاني ثم aus + البلد. Woher يسأل عن جهة القدوم أو الأصل، والجواب الشائع يبدأ بـaus: Ich komme aus Tunesien. ويُقبل أيضًا: «Aus Tunesien komme ich».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -510,9 +510,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Meine ___ ist 0157 28 493. أكمل:",
-        "answer": "Telefonnummer",
+        "answer": "Telefonnummer | Nummer",
         "evidenceRef": "a1-03:controlled:a1-03-e7:explanationAr",
-        "evidenceExcerpt": "Telefonnummer هي رقم الهاتف، واسم مؤنث ولذلك meine: Meine Telefonnummer ist 0157 28 493. الأسماء الألمانية تُكتب بحرف كبير، والأرقام تُقرأ مجموعات متتابعة عند الإملاء.",
+        "evidenceExcerpt": "Telefonnummer هي رقم الهاتف، واسم مؤنث ولذلك meine: Meine Telefonnummer ist 0157 28 493. الأسماء الألمانية تُكتب بحرف كبير، والأرقام تُقرأ مجموعات متتابعة عند الإملاء. ويُقبل أيضًا: «Nummer».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -1049,9 +1049,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Ich arbeite ___ einer Firma. أكمل مع جهة العمل:",
-        "answer": "bei",
+        "answer": "bei | in",
         "evidenceRef": "a1-06:controlled:a1-06-e2:explanationAr",
-        "evidenceExcerpt": "bei تعبر عن صاحب العمل أو المؤسسة: Ich arbeite bei einer Firma. أما in فللمكان أو المجال، وals تأتي مع المهنة نفسها مثل Ich arbeite als Koch.",
+        "evidenceExcerpt": "bei تعبر عن صاحب العمل أو المؤسسة: Ich arbeite bei einer Firma. أما in فللمكان أو المجال، وals تأتي مع المهنة نفسها مثل Ich arbeite als Koch. ويُقبل أيضًا: «in».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -1071,9 +1071,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح تقديم المهنة: Ich arbeite Koch.",
-        "answer": "Ich arbeite als Koch",
+        "answer": "Ich arbeite als Koch | Ich bin Koch",
         "evidenceRef": "a1-06:controlled:a1-06-e4:explanationAr",
-        "evidenceExcerpt": "بعد arbeiten نستعمل als قبل المهنة: Ich arbeite als Koch. أما بعد sein فنقدم المهنة غالبًا بلا أداة: Ich bin Koch.",
+        "evidenceExcerpt": "بعد arbeiten نستعمل als قبل المهنة: Ich arbeite als Koch. أما بعد sein فنقدم المهنة غالبًا بلا أداة: Ich bin Koch. ويُقبل أيضًا: «Ich bin Koch».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -2446,9 +2446,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الجملة:",
-        "answer": "Es gibt drei Zimmer",
+        "answer": "Es gibt drei Zimmer | Drei Zimmer gibt es",
         "evidenceRef": "a1-13:controlled:a1-13-e3:explanationAr",
-        "evidenceExcerpt": "التركيب الثابت Es gibt ثم الاسم. نستعمل es gibt عندما نريد القول إن شيئًا موجود: Es gibt drei Zimmer.",
+        "evidenceExcerpt": "التركيب الثابت Es gibt ثم الاسم. نستعمل es gibt عندما نريد القول إن شيئًا موجود: Es gibt drei Zimmer. ويُقبل أيضًا: «Drei Zimmer gibt es».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -3425,9 +3425,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Es ___ 18 Grad. أكمل درجات الحرارة:",
-        "answer": "sind",
+        "answer": "sind | ist",
         "evidenceRef": "a1-18:controlled:a1-18-e2:explanationAr",
-        "evidenceExcerpt": "18 جمع، لذلك sind. تستعمل جمل الطقس الألمانية es حتى عندما لا يشير إلى شيء محدد: Es regnet، Es ist sonnig، Es schneit.",
+        "evidenceExcerpt": "18 جمع، لذلك sind. تستعمل جمل الطقس الألمانية es حتى عندما لا يشير إلى شيء محدد: Es regnet، Es ist sonnig، Es schneit. ويُقبل أيضًا: «ist».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -3480,9 +3480,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Die Sonne ___. أكمل:",
-        "answer": "scheint",
+        "answer": "scheint | leuchtet",
         "evidenceRef": "a1-18:controlled:a1-18-e7:explanationAr",
-        "evidenceExcerpt": "التعبير الثابت: Die Sonne scheint. تربط deshalb السبب بالنتيجة.",
+        "evidenceExcerpt": "التعبير الثابت: Die Sonne scheint. تربط deshalb السبب بالنتيجة. ويُقبل أيضًا: «leuchtet».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -3832,9 +3832,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب التعليمة:",
-        "answer": "Nehmen Sie die erste Straße",
+        "answer": "Nehmen Sie die erste Straße | Die erste Straße nehmen Sie",
         "evidenceRef": "a1-20:controlled:a1-20-e3:explanationAr",
-        "evidenceExcerpt": "الفعل ثم Sie ثم المفعول. لإعطاء تعليمات لشخص نخاطبه رسميًا نستعمل الفعل في المصدر تقريبًا ثم Sie: Gehen Sie، Fahren Sie، Nehmen Sie.",
+        "evidenceExcerpt": "الفعل ثم Sie ثم المفعول. لإعطاء تعليمات لشخص نخاطبه رسميًا نستعمل الفعل في المصدر تقريبًا ثم Sie: Gehen Sie، Fahren Sie، Nehmen Sie. ويُقبل أيضًا: «Die erste Straße nehmen Sie».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -4426,9 +4426,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب التوصية:",
-        "answer": "Sie sollen zu Hause bleiben",
+        "answer": "Sie sollen zu Hause bleiben | Zu Hause sollen Sie bleiben",
         "evidenceRef": "a1-23:controlled:a1-23-e3:explanationAr",
-        "evidenceExcerpt": "sollen في الموقع الثاني والمصدر في النهاية. نستعمل sollen لنقل ما يُنصح به أو ما يطلبه شخص آخر: Sie sollen viel trinken.",
+        "evidenceExcerpt": "sollen في الموقع الثاني والمصدر في النهاية. نستعمل sollen لنقل ما يُنصح به أو ما يطلبه شخص آخر: Sie sollen viel trinken. ويُقبل أيضًا: «Zu Hause sollen Sie bleiben».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -4624,9 +4624,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب التعليمة:",
-        "answer": "Bringen Sie eine Kopie mit",
+        "answer": "Bringen Sie eine Kopie mit | Eine Kopie bringen Sie mit",
         "evidenceRef": "a1-24:controlled:a1-24-e3:explanationAr",
-        "evidenceExcerpt": "الفعل ثم Sie والمفعول والبادئة. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit.",
+        "evidenceExcerpt": "الفعل ثم Sie والمفعول والبادئة. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit. ويُقبل أيضًا: «Eine Kopie bringen Sie mit».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -5812,9 +5812,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب شرط الحل:",
-        "answer": "Wenn jeder mithilft, sind wir schnell fertig",
+        "answer": "Wenn jeder mithilft, sind wir schnell fertig | Wir sind schnell fertig, wenn jeder mithilft",
         "evidenceRef": "a2-06:controlled:a2-06-e3:explanationAr",
-        "evidenceExcerpt": "فعل الشرط في النهاية ثم فعل النتيجة. تستعمل wenn لربط شرط بنتيجة: Wenn jeder mithilft, ist die Küche schnell sauber.",
+        "evidenceExcerpt": "فعل الشرط في النهاية ثم فعل النتيجة. تستعمل wenn لربط شرط بنتيجة: Wenn jeder mithilft, ist die Küche schnell sauber. ويُقبل أيضًا: «Wir sind schnell fertig, wenn jeder mithilft».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -6010,9 +6010,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الإجراء:",
-        "answer": "Wenn ein Kunde anruft, notiere ich den Namen",
+        "answer": "Wenn ein Kunde anruft, notiere ich den Namen | Ich notiere den Namen, wenn ein Kunde anruft",
         "evidenceRef": "a2-07:controlled:a2-07-e3:explanationAr",
-        "evidenceExcerpt": "جملة wenn تحمل فعلها إلى آخرها ثم تنقلب الرئيسية بعد الفاصلة: «Wenn ein Kunde anruft, notiere ich den Namen». تقديم notiere داخل التابعة يجعلها سؤالًا لا شرطًا. فحص ذاتي: هل انتهى الشرط بفعله؟",
+        "evidenceExcerpt": "جملة wenn تحمل فعلها إلى آخرها ثم تنقلب الرئيسية بعد الفاصلة: «Wenn ein Kunde anruft, notiere ich den Namen». تقديم notiere داخل التابعة يجعلها سؤالًا لا شرطًا. فحص ذاتي: هل انتهى الشرط بفعله؟ ويُقبل أيضًا: «Ich notiere…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -6604,9 +6604,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الجملة:",
-        "answer": "Der Bus ist am günstigsten",
+        "answer": "Der Bus ist am günstigsten | Am günstigsten ist der Bus",
         "evidenceRef": "a2-10:controlled:a2-10-e3:explanationAr",
-        "evidenceExcerpt": "التفضيل الأقصى بين عدة خيارات: am مع الصفة العليا، والفعل في مكانه المعتاد: «Der Bus ist am günstigsten». تقديم am günstigsten على ist يترك الخبر معلّقًا، وحذف am ينقص الصفة.",
+        "evidenceExcerpt": "التفضيل الأقصى بين عدة خيارات: am مع الصفة العليا، والفعل في مكانه المعتاد: «Der Bus ist am günstigsten». تقديم am günstigsten على ist يترك الخبر معلّقًا، وحذف am ينقص الصفة. ويُقبل أيضًا: «Am günstigsten ist der Bus».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -7440,9 +7440,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Gute ___. أكمل التمني:",
-        "answer": "Besserung",
+        "answer": "Besserung | Genesung",
         "evidenceRef": "a2-14:controlled:a2-14-e7:explanationAr",
-        "evidenceExcerpt": "Gute Besserung تُقال للمريض وحده: «Gute Besserung». gute Reise تُقال للمسافر، و gute Nacht قبل النوم؛ فلا تُوجَّه واحدة منهما إلى مريض إلا إن كان مسافرًا ليلًا. فحص ذاتي: ما حالة المخاطَب الآن؟",
+        "evidenceExcerpt": "Gute Besserung تُقال للمريض وحده: «Gute Besserung». gute Reise تُقال للمسافر، و gute Nacht قبل النوم؛ فلا تُوجَّه واحدة منهما إلى مريض إلا إن كان مسافرًا ليلًا. فحص ذاتي: ما حالة المخاطَب الآن؟ ويُقبل أيضًا: «Genesung».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7792,9 +7792,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الجملة المحايدة:",
-        "answer": "Im Text steht, dass zwei Linien ausfallen",
+        "answer": "Im Text steht, dass zwei Linien ausfallen | Dass zwei Linien ausfallen, steht im Text",
         "evidenceRef": "a2-16:controlled:a2-16-e3:explanationAr",
-        "evidenceExcerpt": "نقل ما في النص يُبنى بـ dass مع فعل في النهاية: «Im Text steht, dass zwei Linien ausfallen». تقديم ausfallen على الاسم يحوّل النقل تعليقًا، والفاصلة قبل dass تفصل التابع عن أصله.",
+        "evidenceExcerpt": "نقل ما في النص يُبنى بـ dass مع فعل في النهاية: «Im Text steht, dass zwei Linien ausfallen». تقديم ausfallen على الاسم يحوّل النقل تعليقًا، والفاصلة قبل dass تفصل التابع عن أصله. ويُقبل أيضًا: «Dass zwei Linien ausfalle…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -8190,9 +8190,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الموازنة:",
-        "answer": "Das Handy ist zwar nützlich, aber es lenkt oft ab",
+        "answer": "Das Handy ist zwar nützlich, aber es lenkt oft ab | Zwar ist das Handy nützlich, aber es lenkt oft ab",
         "evidenceRef": "a2-18:controlled:a2-18-e3:explanationAr",
-        "evidenceExcerpt": "زوج الروابط «zwar … aber» يعترف ثم يوازن: «Das Handy ist zwar nützlich, aber es lenkt oft ab». بسقوط zwar يبدو الرأي عنادًا، وبسقوط aber يصير التقدير تسليمًا كاملًا. فحص ذاتي: هل ذكرتُ الطرفين؟",
+        "evidenceExcerpt": "زوج الروابط «zwar … aber» يعترف ثم يوازن: «Das Handy ist zwar nützlich, aber es lenkt oft ab». بسقوط zwar يبدو الرأي عنادًا، وبسقوط aber يصير التقدير تسليمًا كاملًا. فحص ذاتي: هل ذكرتُ الطرفين؟ ويُقبل أيضًا: «Zwar ist d…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -8377,9 +8377,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ ich ein Wort vergesse, wiederhole ich es. أكمل شرط التعلم:",
-        "answer": "Wenn",
+        "answer": "Wenn | Falls",
         "evidenceRef": "a2-19:controlled:a2-19-e2:explanationAr",
-        "evidenceExcerpt": "Wenn تدخل على الشرط المتكرر وتؤخّر فعله: «Wenn ich ein Wort vergesse, wiederhole ich es». als للماضي الواقع مرة واحدة، ولا وجود لـ wenn mal؛ فلا يُخلط بين المتكرر والمنقضي. فحص ذاتي: هل الشرط يتكرر فعلًا؟",
+        "evidenceExcerpt": "Wenn تدخل على الشرط المتكرر وتؤخّر فعله: «Wenn ich ein Wort vergesse, wiederhole ich es». als للماضي الواقع مرة واحدة، ولا وجود لـ wenn mal؛ فلا يُخلط بين المتكرر والمنقضي. فحص ذاتي: هل الشرط يتكرر فعلًا؟ ويُقبل أيضًا: …",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8630,9 +8630,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Bitte beachten Sie die ___. أكمل الموعد النهائي:",
-        "answer": "Frist",
+        "answer": "Frist | Fristen",
         "evidenceRef": "a2-20:controlled:a2-20-e7:explanationAr",
-        "evidenceExcerpt": "beachten يعني يراعي، والمطلوب معه المهلة: «Bitte beachten Sie die Frist». كلمة Urlaub تحوّل الجملة إلى إجازة، و Termin موعدٌ لا آخر أجل، و Zusage ردّ بالموافقة. فحص ذاتي: هل أكملتُ بمدّة تُراعى لا بحدث يقع؟",
+        "evidenceExcerpt": "beachten يعني يراعي، والمطلوب معه المهلة: «Bitte beachten Sie die Frist». كلمة Urlaub تحوّل الجملة إلى إجازة، و Termin موعدٌ لا آخر أجل، و Zusage ردّ بالموافقة. فحص ذاتي: هل أكملتُ بمدّة تُراعى لا بحدث يقع؟ ويُقبل أيضًا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8982,9 +8982,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب قبول الدعوة:",
-        "answer": "Ich würde gern kommen",
+        "answer": "Ich würde gern kommen | Gern würde ich kommen",
         "evidenceRef": "a2-22:controlled:a2-22-e3:explanationAr",
-        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. «Ich komme gern würde» يضع المُعينَ في غير مكانه. فحص ذاتي: هل انفرد المصدر بالآخر؟",
+        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. «Ich komme gern würde» يضع المُعينَ في غير مكانه. فحص ذاتي: هل انفرد المصدر بالآخر؟ ويُقبل أيضًا: «Gern wür…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -8993,9 +8993,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح التعميم: Alle Deutschen feiern Geburtstage gleich.",
-        "answer": "In vielen Familien ist das unterschiedlich",
+        "answer": "In vielen Familien ist das unterschiedlich | Nicht alle Deutschen feiern Geburtstage gleich",
         "evidenceRef": "a2-22:controlled:a2-22-e4:explanationAr",
-        "evidenceExcerpt": "التعميم على شعب كامل لا يُدحَض: «Alle Deutschen feiern Geburtstage gleich.» الأصحّ إسنادُها إلى ما رأيت: «In vielen Familien ist das unterschiedlich» — حكمٌ قابل للمراجعة. فحص ذاتي: هل أستطيع إثبات ما قلت؟",
+        "evidenceExcerpt": "التعميم على شعب كامل لا يُدحَض: «Alle Deutschen feiern Geburtstage gleich.» الأصحّ إسنادُها إلى ما رأيت: «In vielen Familien ist das unterschiedlich» — حكمٌ قابل للمراجعة. فحص ذاتي: هل أستطيع إثبات ما قلت؟ ويُقبل أيضًا:…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -10357,9 +10357,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ er geschrieben hatte, blieb die Information unklar. أكمل الجملة الفرعية:",
-        "answer": "Obwohl",
+        "answer": "Obwohl | Obgleich",
         "evidenceRef": "b1-05:controlled:b1-05-e2:explanationAr",
-        "evidenceExcerpt": "جزء يطابق التوقّع ثم يخالفه يحتاج obwohl مع فعل في النهاية: «Obwohl er geschrieben hatte, blieb die Information unklar». weil تعلّل ولا تخالف، و nachdem تُرتّب زمنيًا. فحص ذاتي: هل النتيجة عكس المتوقّع؟",
+        "evidenceExcerpt": "جزء يطابق التوقّع ثم يخالفه يحتاج obwohl مع فعل في النهاية: «Obwohl er geschrieben hatte, blieb die Information unklar». weil تعلّل ولا تخالف، و nachdem تُرتّب زمنيًا. فحص ذاتي: هل النتيجة عكس المتوقّع؟ ويُقبل أيضًا: «O…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -11798,9 +11798,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Nach dem Projekt werden die Ergebnisse ___. أكمل التقييم:",
-        "answer": "ausgewertet",
+        "answer": "ausgewertet | analysiert",
         "evidenceRef": "b1-12:controlled:b1-12-e7:explanationAr",
-        "evidenceExcerpt": "في المبني للمجهول يأتي Partizip II في النهاية مع werden المصروف: «werden die Ergebnisse ausgewertet». المصدر يترك البنية بلا تصريف مفعولي، و werden يوافق الجمع. فحص ذاتي: هل المُقيِّم مجهول أو غير مهم؟",
+        "evidenceExcerpt": "في المبني للمجهول يأتي Partizip II في النهاية مع werden المصروف: «werden die Ergebnisse ausgewertet». المصدر يترك البنية بلا تصريف مفعولي، و werden يوافق الجمع. فحص ذاتي: هل المُقيِّم مجهول أو غير مهم؟ ويُقبل أيضًا: «an…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -11941,9 +11941,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ regelmäßige Übung spreche ich flüssiger. أكمل الوسيلة:",
-        "answer": "Durch",
+        "answer": "Durch | Mit",
         "evidenceRef": "b1-13:controlled:b1-13-e2:explanationAr",
-        "evidenceExcerpt": "الوسيلة تُقدَّم بـ Durch ويتها الاسم بعدها بلا أداة: Durch regelmäßige Übung spreche ich flüssiger. «Von» تسأل عن المصدر لا عن الوسيلة، ولا تُبنى جملة جانبية بعد حرف جر. فحص ذاتي: هل يصلح «Mit»؟",
+        "evidenceExcerpt": "الوسيلة تُقدَّم بـ Durch ويتها الاسم بعدها بلا أداة: Durch regelmäßige Übung spreche ich flüssiger. «Von» تسأل عن المصدر لا عن الوسيلة، ولا تُبنى جملة جانبية بعد حرف جر. فحص ذاتي: هل يصلح «Mit»؟ ويُقبل أيضًا: «Mit».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12392,9 +12392,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Vielen Dank für Ihre ___. أكمل الخاتمة:",
-        "answer": "Aufmerksamkeit",
+        "answer": "Aufmerksamkeit | Mühe | Unterstützung",
         "evidenceRef": "b1-15:controlled:b1-15-e7:explanationAr",
-        "evidenceExcerpt": "ختمة العرض محفوظة بصيغة Sie: «Vielen Dank für Ihre Aufmerksamkeit». صيغة الـ du لا تناسب سياقًا رُفع فيه الخطاب إلى Sie، وأي اسم آخر يكسر عبارة محفوظة. فحص ذاتي: هل خاطبت الحضور بصيغة Sie؟",
+        "evidenceExcerpt": "ختمة العرض محفوظة بصيغة Sie: «Vielen Dank für Ihre Aufmerksamkeit». صيغة الـ du لا تناسب سياقًا رُفع فيه الخطاب إلى Sie، وأي اسم آخر يكسر عبارة محفوظة. فحص ذاتي: هل خاطبت الحضور بصيغة Sie؟ ويُقبل أيضًا: «Mühe»، «Unterst…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -13536,9 +13536,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب was:",
-        "answer": "Was wir entscheiden, das dokumentieren wir",
+        "answer": "Was wir entscheiden, das dokumentieren wir | Was wir entscheiden, dokumentieren wir",
         "evidenceRef": "b1-21:controlled:b1-21-e3:explanationAr",
-        "evidenceExcerpt": "جملة was تحمل مضمونها ثم يأتي das ليلخّصه في الجملة الرئيسية: «Was wir entscheiden, das dokumentieren wir». حذف das يترك الإشارة مفقودة، وتقديمها على المضمون يقلب البنية. فحص ذاتي: هل يمكن وضع es مكان das؟",
+        "evidenceExcerpt": "جملة was تحمل مضمونها ثم يأتي das ليلخّصه في الجملة الرئيسية: «Was wir entscheiden, das dokumentieren wir». حذف das يترك الإشارة مفقودة، وتقديمها على المضمون يقلب البنية. فحص ذاتي: هل يمكن وضع es مكان das؟ ويُقبل أيضًا:…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14328,9 +14328,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الاستنتاج المحدود:",
-        "answer": "Daraus lässt sich kein allgemeines Verbot ableiten",
+        "answer": "Daraus lässt sich kein allgemeines Verbot ableiten | Kein allgemeines Verbot lässt sich daraus ableiten",
         "evidenceRef": "b2-01:controlled:b2-01-e3:explanationAr",
-        "evidenceExcerpt": "sich lassen تبني ما يمكن استنتاجه بلا فاعل مذكور: «Daraus lässt sich kein allgemeines Verbot ableiten» مع المصدر في النهاية. حذف kein يحوّل نتيجة محدودة إلى منع عام لا يحمله الدليل.",
+        "evidenceExcerpt": "sich lassen تبني ما يمكن استنتاجه بلا فاعل مذكور: «Daraus lässt sich kein allgemeines Verbot ableiten» مع المصدر في النهاية. حذف kein يحوّل نتيجة محدودة إلى منع عام لا يحمله الدليل. ويُقبل أيضًا: «Kein allgemeines Verbo…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14526,9 +14526,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب المقابلة:",
-        "answer": "Büros sind flexibel, wohingegen Kliniken eine Besetzung brauchen",
+        "answer": "Büros sind flexibel, wohingegen Kliniken eine Besetzung brauchen | Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind",
         "evidenceRef": "b2-02:controlled:b2-02-e3:explanationAr",
-        "evidenceExcerpt": "wohingegen تقابل بين حالتين: فعلها يذهب إلى نهاية الجزء التابع، والفاصلة قبلها تفصل المتقابلين فلا تختلط المقارنة بالنتيجة.",
+        "evidenceExcerpt": "wohingegen تقابل بين حالتين: فعلها يذهب إلى نهاية الجزء التابع، والفاصلة قبلها تفصل المتقابلين فلا تختلط المقارنة بالنتيجة. ويُقبل أيضًا: «Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14724,9 +14724,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب المتغير:",
-        "answer": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort",
+        "answer": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort | Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
         "evidenceRef": "b2-03:controlled:b2-03-e3:explanationAr",
-        "evidenceExcerpt": "je nachdem يفتح تعليقًا مشروطًا ويتلوه الجزء التابع بـ ob بفعل في نهايته، ويُفصل الجزء التابع بفواصل كما في كل جملة جانبية تسبق الرئيسي.",
+        "evidenceExcerpt": "je nachdem يفتح تعليقًا مشروطًا ويتلوه الجزء التابع بـ ob بفعل في نهايته، ويُفصل الجزء التابع بفواصل كما في كل جملة جانبية تسبق الرئيسي. ويُقبل أيضًا: «Wir arbeiten vor Ort, je nachdem, ob Kunden kommen».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -15109,9 +15109,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Daraus lässt sich nicht ___, dass das Programm die Ursache ist. أكمل حد الاستنتاج:",
-        "answer": "schließen",
+        "answer": "schließen | folgern | ableiten",
         "evidenceRef": "b2-05:controlled:b2-05-e2:explanationAr",
-        "evidenceExcerpt": "الصيغة الثابتة للاستنتاج المسوَّر: «Daraus lässt sich nicht schließen, dass…». المصدر يأخذه lassen بلا zu، و schließt المُصرَّفة قبل dass تترك التابعة بلا فعل. استبدال المصدر بـ sagen يُلغي الفعل العقلي.",
+        "evidenceExcerpt": "الصيغة الثابتة للاستنتاج المسوَّر: «Daraus lässt sich nicht schließen, dass…». المصدر يأخذه lassen بلا zu، و schließt المُصرَّفة قبل dass تترك التابعة بلا فعل. استبدال المصدر بـ sagen يُلغي الفعل العقلي. ويُقبل أيضًا: «…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -15120,9 +15120,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب المقارنة:",
-        "answer": "Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich",
+        "answer": "Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich | In Gruppe B stieg der Wert deutlich, während Gruppe A stabil blieb",
         "evidenceRef": "b2-05:controlled:b2-05-e3:explanationAr",
-        "evidenceExcerpt": "während تفتح فرعية يبقى فعلها في النهاية، ثم تبدأ الرئيسية بفعلها مباشرة: «Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich». تقديم der Wert على stieg يعطي ترتيبًا بلا رابط ويُبطئ المقارنة.",
+        "evidenceExcerpt": "während تفتح فرعية يبقى فعلها في النهاية، ثم تبدأ الرئيسية بفعلها مباشرة: «Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich». تقديم der Wert على stieg يعطي ترتيبًا بلا رابط ويُبطئ المقارنة. ويُقبل أيضً…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -15516,9 +15516,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب آلية الثقة:",
-        "answer": "Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet",
+        "answer": "Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet | Dadurch, dass die Leitung jede Entscheidung begründet, entsteht Vertrauen",
         "evidenceRef": "b2-07:controlled:b2-07-e3:explanationAr",
-        "evidenceExcerpt": "الآلية تُسمّى بـ dadurch, dass: «Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet». حذف dass يترك الفاعل بلا رابط، وتصريف begründet في غير النهاية يفسد التابعة كلها.",
+        "evidenceExcerpt": "الآلية تُسمّى بـ dadurch, dass: «Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet». حذف dass يترك الفاعل بلا رابط، وتصريف begründet في غير النهاية يفسد التابعة كلها. ويُقبل أيضًا: «Dadurch, dass …",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -15758,9 +15758,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Nach eigenen ___ habe das Unternehmen alle Rohdaten veröffentlicht. أكمل صيغة المسافة:",
-        "answer": "Angaben",
+        "answer": "Angaben | Aussagen",
         "evidenceRef": "b2-08:controlled:b2-08-e7:explanationAr",
-        "evidenceExcerpt": "صيغة النسبة الثابتة nach eigenen Angaben تُبقي المعلومة منسوبة إلى صاحبها فلا تصير حقيقة مُتحقَّقًا منها. حذف Angaben أو استبدالها برأي يُغيّر النوع: بيان منقول لا حكم.",
+        "evidenceExcerpt": "صيغة النسبة الثابتة nach eigenen Angaben تُبقي المعلومة منسوبة إلى صاحبها فلا تصير حقيقة مُتحقَّقًا منها. حذف Angaben أو استبدالها برأي يُغيّر النوع: بيان منقول لا حكم. ويُقبل أيضًا: «Aussagen».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -16110,9 +16110,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتب الشرط:",
-        "answer": "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird",
+        "answer": "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird | Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
         "evidenceRef": "b2-10:controlled:b2-10-e3:explanationAr",
-        "evidenceExcerpt": "الجزء بشرط sofern يأتي بعد الجزء الرئيسي بفعل في نهايته، والفاصلة تفصلهما؛ الترتيب الصحيح يبدأ بالنتيجة ثم الشرط لا العكس.",
+        "evidenceExcerpt": "الجزء بشرط sofern يأتي بعد الجزء الرئيسي بفعل في نهايته، والفاصلة تفصلهما؛ الترتيب الصحيح يبدأ بالنتيجة ثم الشرط لا العكس. ويُقبل أيضًا: «Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -16154,9 +16154,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Zur ___ ergänze ich: Diese Formulierung bedeutet keine Garantie. أكمل تمييز الإضافة:",
-        "answer": "Erklärung",
+        "answer": "Erklärung | Klarstellung",
         "evidenceRef": "b2-10:controlled:b2-10-e7:explanationAr",
-        "evidenceExcerpt": "zur Erklärung تضيف طبقة تفسّر ما قيل دون تغييره، وهي الصيغة المناسبة لدفع تضمين غير مقصود؛ zur Ergänzung تضيف معلومة جديدة فلا تدفع اللبس.",
+        "evidenceExcerpt": "zur Erklärung تضيف طبقة تفسّر ما قيل دون تغييره، وهي الصيغة المناسبة لدفع تضمين غير مقصود؛ zur Ergänzung تضيف معلومة جديدة فلا تدفع اللبس. ويُقبل أيضًا: «Klarstellung».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17298,9 +17298,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب نقدًا ذاتيًا بصيغة التخفيف:",
-        "answer": "Ich hätte die Rückfrage früher stellen sollen",
+        "answer": "Ich hätte die Rückfrage früher stellen sollen | Früher hätte ich die Rückfrage stellen sollen",
         "evidenceRef": "b2-16:controlled:b2-16-e3:explanationAr",
-        "evidenceExcerpt": "المساعد ثانيًا، ثم المفعول، وفي الآخر التصريف ثم مصدر الفعل الناقص.",
+        "evidenceExcerpt": "المساعد ثانيًا، ثم المفعول، وفي الآخر التصريف ثم مصدر الفعل الناقص. ويُقبل أيضًا: «Früher hätte ich die Rückfrage stellen sollen».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -17309,9 +17309,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "حوّل الانطباع إلى صيغة صحيحة: Er tat so, als ob er die Frist gar nicht kennt.",
-        "answer": "Er tat so, als ob er die Frist gar nicht gekannt hätte.",
+        "answer": "Er tat so, als ob er die Frist gar nicht gekannt hätte. | Er tat so, als hätte er die Frist gar nicht gekannt",
         "evidenceRef": "b2-16:controlled:b2-16-e4:explanationAr",
-        "evidenceExcerpt": "als ob تضع الفعل في النهاية بصيغة Konjunktiv II مع زمن مناسب: gekannt hätte تُبيّن أن المعرفة سابقة على الظهور؛ الصيغة البسيطة تُخلط التوقيت وتُبقي الاتهام قائمًا.",
+        "evidenceExcerpt": "als ob تضع الفعل في النهاية بصيغة Konjunktiv II مع زمن مناسب: gekannt hätte تُبيّن أن المعرفة سابقة على الظهور؛ الصيغة البسيطة تُخلط التوقيت وتُبقي الاتهام قائمًا. ويُقبل أيضًا: «Er tat so, als hätte er die Frist gar ni…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17496,9 +17496,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب مطالبة تُسمّي الجهة:",
-        "answer": "Der Bescheid ist von der Stelle zu korrigieren",
+        "answer": "Der Bescheid ist von der Stelle zu korrigieren | Von der Stelle ist der Bescheid zu korrigieren",
         "evidenceRef": "b2-17:controlled:b2-17-e3:explanationAr",
-        "evidenceExcerpt": "صيغة sein … zu مع المصدر تُوجب عملًا بلا ذكر مُلزِم: «Der Bescheid ist von der Stelle zu korrigieren» — الفعل المسند في مكانه والمصدر في آخر الجملة. تقديم zu على المصدر يفصل الصيغة فيسقط الالتزام.",
+        "evidenceExcerpt": "صيغة sein … zu مع المصدر تُوجب عملًا بلا ذكر مُلزِم: «Der Bescheid ist von der Stelle zu korrigieren» — الفعل المسند في مكانه والمصدر في آخر الجملة. تقديم zu على المصدر يفصل الصيغة فيسقط الالتزام. ويُقبل أيضًا: «Von der…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -17694,9 +17694,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب الجملة بإتمام مقصود للإجراء:",
-        "answer": "Der Widerspruch wurde innerhalb einer Woche zum Abschluss gebracht",
+        "answer": "Der Widerspruch wurde innerhalb einer Woche zum Abschluss gebracht | Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht",
         "evidenceRef": "b2-18:controlled:b2-18-e3:explanationAr",
-        "evidenceExcerpt": "الفعل الخفيف في الموضع الثاني، والتركيب كله في الأخير مع ظرف المدة قبله.",
+        "evidenceExcerpt": "الفعل الخفيف في الموضع الثاني، والتركيب كله في الأخير مع ظرف المدة قبله. ويُقبل أيضًا: «Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -17881,9 +17881,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Das wissen Sie ___, ich brauche es nicht noch einmal zu erklären. أكمل الأداة التي تقول إنّ الأمر معلوم عند الطرفين:",
-        "answer": "ja",
+        "answer": "ja | doch",
         "evidenceRef": "b2-19:controlled:b2-19-e2:explanationAr",
-        "evidenceExcerpt": "«ja» تُحيل إلى علم مشترك؛ ومعها تصير الجملة تذكيرًا لا تعليمًا.",
+        "evidenceExcerpt": "«ja» تُحيل إلى علم مشترك؛ ومعها تصير الجملة تذكيرًا لا تعليمًا. ويُقبل أيضًا: «doch».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17892,9 +17892,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب جملة تحمل اعتراضًا خفيفًا على ظنٍّ:",
-        "answer": "Ich habe Ihnen den Bescheid doch schon geschickt",
+        "answer": "Ich habe Ihnen den Bescheid doch schon geschickt | Den Bescheid habe ich Ihnen doch schon geschickt",
         "evidenceRef": "b2-19:controlled:b2-19-e3:explanationAr",
-        "evidenceExcerpt": "الأداة خفيفة تقع في الوسط لا في الموضع الأول، وبعد المفعول به المباشر هنا.",
+        "evidenceExcerpt": "الأداة خفيفة تقع في الوسط لا في الموضع الأول، وبعد المفعول به المباشر هنا. ويُقبل أيضًا: «Den Bescheid habe ich Ihnen doch schon geschickt».",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -17925,9 +17925,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Haben Sie die Unterlagen ___ übersehen, oder war die Post unterwegs? أكمل أداة تجعل السؤال شكًّا مهذّبًا لا اتّهامًا:",
-        "answer": "etwa",
+        "answer": "etwa | vielleicht",
         "evidenceRef": "b2-19:controlled:b2-19-e6:explanationAr",
-        "evidenceExcerpt": "«etwa» تضع الاحتمال موضع السؤال؛ من دونها يُقرأ السؤال نسبة تقصير.",
+        "evidenceExcerpt": "«etwa» تضع الاحتمال موضع السؤال؛ من دونها يُقرأ السؤال نسبة تقصير. ويُقبل أيضًا: «vielleicht».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -76419,6 +76419,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Ich notiere den Namen, wenn ein Kunde anruft",
+            "surface": "Ich notiere den Namen, wenn ein Kunde anruft",
+            "strength": "context"
+          },
+          {
             "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "Wenn ein Kunde",
@@ -76581,6 +76588,13 @@
             "stage": "controlled",
             "text": "Wenn ein Kunde anruft, notiere ich den Namen",
             "surface": "Wenn ein Kunde anruft, notiere ich den Namen",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Ich notiere den Namen, wenn ein Kunde anruft",
+            "surface": "Ich notiere den Namen, wenn ein Kunde anruft",
             "strength": "context"
           },
           {
@@ -79171,6 +79185,13 @@
             "stage": "controlled",
             "text": "Der frühe Zug ist so günstig ___ der Bus.",
             "surface": "Der frühe Zug ist so günstig ___ der Bus.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Am günstigsten ist der Bus",
+            "surface": "Am günstigsten ist der Bus",
             "strength": "context"
           },
           {
@@ -88345,6 +88366,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Zwar ist das Handy nützlich, aber es lenkt oft ab",
+            "surface": "Zwar ist das Handy nützlich, aber es lenkt oft ab",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
@@ -131515,6 +131543,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind",
+            "surface": "Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind",
+            "strength": "context"
+          },
+          {
             "path": "exercises[2].words[1]",
             "stage": "controlled",
             "text": "Kliniken eine Besetzung brauchen",
@@ -137636,6 +137671,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "In Gruppe B stieg der Wert deutlich, während Gruppe A stabil blieb",
+            "surface": "In Gruppe B stieg der Wert deutlich, während Gruppe A stabil blieb",
+            "strength": "context"
+          },
+          {
             "path": "exercises[2].words[1]",
             "stage": "controlled",
             "text": "stieg der Wert",
@@ -140914,6 +140956,13 @@
             "stage": "controlled",
             "text": "Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet",
             "surface": "Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Dadurch, dass die Leitung jede Entscheidung begründet, entsteht Vertrauen",
+            "surface": "Dadurch, dass die Leitung jede Entscheidung begründet, entsteht Vertrauen",
             "strength": "context"
           },
           {
@@ -149858,6 +149907,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
+            "surface": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
+            "strength": "context"
+          },
+          {
             "path": "theory[0].examples[0].de",
             "stage": "rule",
             "text": "Bestätigen Sie die Teilnahme bis Montag.",
@@ -150304,6 +150360,13 @@
             "stage": "controlled",
             "text": "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird",
             "surface": "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
+            "surface": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
             "strength": "context"
           },
           {
@@ -164961,6 +165024,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Er tat so, als hätte er die Frist gar nicht gekannt",
+            "surface": "Er tat so, als hätte er die Frist gar nicht gekannt",
+            "strength": "context"
+          },
+          {
             "path": "exercises[3].sentence",
             "stage": "controlled",
             "text": "Er tat so, als ob er die Frist gar nicht kennt.",
@@ -165971,6 +166041,13 @@
             "stage": "controlled",
             "text": "Ich hätte die Rückfrage früher stellen sollen",
             "surface": "Ich hätte die Rückfrage früher stellen sollen",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Früher hätte ich die Rückfrage stellen sollen",
+            "surface": "Früher hätte ich die Rückfrage stellen sollen",
             "strength": "context"
           },
           {
@@ -167678,6 +167755,13 @@
           "b2-17-noun-3"
         ],
         "sources": [
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Von der Stelle ist der Bescheid zu korrigieren",
+            "surface": "Von der Stelle ist der Bescheid zu korrigieren",
+            "strength": "context"
+          },
           {
             "path": "exercises[4].pairs[3].right",
             "stage": "controlled",
@@ -169552,6 +169636,13 @@
             "stage": "controlled",
             "text": "Der Bescheid ist von der Stelle zu korrigieren",
             "surface": "Der Bescheid ist von der Stelle zu korrigieren",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Von der Stelle ist der Bescheid zu korrigieren",
+            "surface": "Von der Stelle ist der Bescheid zu korrigieren",
             "strength": "context"
           },
           {
@@ -173002,6 +173093,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht",
+            "surface": "Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht",
+            "strength": "context"
+          },
+          {
             "path": "listening.questions[1].options[0]",
             "stage": "listening",
             "text": "„Wir nehmen eine Prüfung der Fristen vor.“ und „Wir treffen eine Entscheidung über den Widerspruch.“",
@@ -173051,6 +173149,13 @@
             "stage": "controlled",
             "text": "Der Widerspruch wurde innerhalb einer Woche zum Abschluss gebracht",
             "surface": "Der Widerspruch wurde innerhalb einer Woche zum Abschluss gebracht",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht",
+            "surface": "Innerhalb einer Woche wurde der Widerspruch zum Abschluss gebracht",
             "strength": "context"
           }
         ],
@@ -207153,6 +207258,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
+            "surface": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
+            "strength": "context"
+          },
+          {
             "path": "exercises[2].words[2]",
             "stage": "controlled",
             "text": "arbeiten wir vor Ort",
@@ -207516,6 +207628,13 @@
             "stage": "controlled",
             "text": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort",
             "surface": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[2].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
+            "surface": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
             "strength": "context"
           },
           {
@@ -221427,5 +221546,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "c1bb2a3c7894c2e60a6ee8208d8315c960327bcd7ef4d03a448fc4ddce01a0a5"
+  "contentSha256": "854e45b754b4e2e681a46e4006d26736857cf8f492c32ed44c5e744d684ef7ab"
 }

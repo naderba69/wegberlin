@@ -16693,9 +16693,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Daraus lässt sich kein kausaler Effekt ___ , weil die Gruppen sich im Niveau unterschieden. أكمل الربط السببي الحذر:",
-        "answer": "ableiten",
+        "answer": "ableiten | herleiten",
         "evidenceRef": "b2-13:controlled:b2-13-e2:explanationAr",
-        "evidenceExcerpt": "keinen kausalen Effekt ableiten تُبقي الاستنتاج معلّقًا لأن المجموعات اختلفت في المستوى؛ لو استُعملت beweisen لصار النص جازمًا بما نفاه القيد المذكور في السبب.",
+        "evidenceExcerpt": "keinen kausalen Effekt ableiten تُبقي الاستنتاج معلّقًا لأن المجموعات اختلفت في المستوى؛ لو استُعملت beweisen لصار النص جازمًا بما نفاه القيد المذكور في السبب. ويُقبل أيضًا: «herleiten»، لأنه يعني استخلاص الاستنتاج من ا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -18519,9 +18519,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب نعتًا موسّعًا صحيحًا:",
-        "answer": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
+        "answer": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen. | Der innerhalb von zwei Wochen von der Behörde geprüfte Antrag wurde angenommen.",
         "evidenceRef": "b2-22:controlled:b2-22-e4:explanationAr",
-        "evidenceExcerpt": "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». قطع الحلقة إلى جملة مستقلة يغيّر المعنى البنيوي للنعت، و geprüfte بعد Antrag يكسر البنية.",
+        "evidenceExcerpt": "الحلقة الوصفية كلها تسبق الاسم الذي تُحدّده: «Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen». قطع الحلقة إلى جملة مستقلة يغيّر المعنى البنيوي للنعت، و geprüfte بعد Antrag يكسر البنية. وي…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -182799,6 +182799,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Der innerhalb von zwei Wochen von der Behörde geprüfte Antrag wurde angenommen.",
+            "surface": "Der innerhalb von zwei Wochen von der Behörde geprüfte Antrag wurde angenommen.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[3].words[1]",
             "stage": "controlled",
             "text": "von der Behörde",
@@ -220245,6 +220252,7 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
+          "ambiguous",
           "unknown"
         ],
         "anchorIds": [],
@@ -220254,6 +220262,13 @@
             "stage": "controlled",
             "text": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
             "surface": "Der von der Behörde innerhalb von zwei Wochen geprüfte Antrag wurde angenommen.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Der innerhalb von zwei Wochen von der Behörde geprüfte Antrag wurde angenommen.",
+            "surface": "Der innerhalb von zwei Wochen von der Behörde geprüfte Antrag wurde angenommen.",
             "strength": "context"
           }
         ],
@@ -221641,5 +221656,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "80bf49e50815195ed91560616eb261f6ec3c0fe3b0ca98285eb1c24a529e11e7"
+  "contentSha256": "4a00f26b9d8d270c123dd57f509e5fd9f18053e1103f1377a703d5ddd489cabb"
 }

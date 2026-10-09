@@ -53,8 +53,8 @@ describe("accepted-answer hygiene", () => {
     expect(summary.productiveExercises).toBe(387);
     expect(summary.noOpVariantCount).toBe(0);
     expect(summary.offenders).toEqual([]);
-    expect(summary.acceptsExactlyOneString).toBe(204);
-    expect(summary.broadenedExercises).toBe(183);
+    expect(summary.acceptsExactlyOneString).toBe(202);
+    expect(summary.broadenedExercises).toBe(185);
     expect(summary.acceptsExactlyOneString + summary.broadenedExercises).toBe(summary.productiveExercises);
     for (const level of ["A1", "A2", "B1", "B2"]) expect(summary.byLevel[level]?.productiveExercises).toBeGreaterThan(0);
   });

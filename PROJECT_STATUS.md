@@ -1,6 +1,15 @@
 # Project Status
 
-Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v191 · 2026-10-09 · content-only P1-398 reviewed variants (+80 productive exercises; one-string 337 ⇒ 257) and four rewrite items converted to writing (b1-06-e4, b1-12-e4, b2-12-e4, b2-19-e4); offline fingerprint abdacdeb8e61; pack cache v191 (staging v190, previous v190). Previous batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+
+## P1-398 — مرادفات مراجعة وتحويل أربعة بنود إلى كتابة — 2026-10-09 (بلا وسم)
+
+- **المنفَّذ (محتوى فقط).** أُضيف إلى **80** تمرينًا إنتاجيًا متغيرٌ مقبولٌ مراجَع: 30 فراغًا (fill-blank)، و15 تصحيح أخطاء (error-correction)، و35 ترتيب كلمات. كل متغيّر مدوَّن في `explanationAr` بعبارة «ويُقبل أيضًا». لم يُخفَّف المقارِن، والمضاف مراجَع فقط.
+- **التحويل إلى كتابة.** البنود `b1-06-e4` و`b1-12-e4` و`b2-12-e4` و`b2-19-e4` صارت مهام تصحيح بنيوية (الماضي المركب مع trennbare Verben، وzu بعد Ziel ist، وsofern مع الفعل في النهاية، وإزالة eben من جملة الموعد)، وأُعيدت كتابة الجملة والإجابة المقبولة وpromptAr وexplanationAr.
+- **الأثر على الفجوات المعجمية.** ثلاثة مرشحات سياقية فقط سقطت لأن جملها المصدرية استُبدلت: `Zweiminutenvortrag` (b2-12)، و`eingehalten` مع حرف الجر mit (b1-06)، و`abgelaufen` مع حرف الجر vor (b2-19). العدادات المعجمية الآن: الأسماء 4,894 / 3,421 سياقيًا، والأفعال 1,258 / 1,120 سياقيًا.
+- **الإجابات بعنصر واحد.** 337 ⇒ **257** من 387 تمرينًا إنتاجيًا (66.4%)، والبنود الموسَّعة 50 ⇒ **130**؛ المجموع 387 كما يجب، ولا متغيرات بلا أثر (no-op = 0). بقيت 257 بعنصر واحد لأنها لم تكن ضمن الدفعة المراجَعة، وليس لأنها ثبتت كشرط؛ تحتاج دفعات مراجعة لاحقة.
+- **السياسة.** لم يتغير حد الاتساع P1-11 (أرضية 50): القيمة الحالية 130 فوقها، ولم يُخفَّض شيء.
+- **البوابات.** lesson:quality · lesson:contract:audit · content:audit · accepted:answers · language:audit · learning:integrity:audit · local:test:templates · source:audit --strict · secret:audit · workflows:check · learning-architecture · study-modes · practical-context · similarity · case · lexical-strategy · tunisian · meaning-translation · governance · security · contrast · feature:gate · lint · typecheck · build (321 صفحة، offline `abdacdeb8e61`) · handoff:check: كلها خروج 0. اختبارات الوحدة: تحديث القيم المثبّتة في اختباري الفجوات والإجابات وفي سكربت التسليم بقيم القياس الجديدة.
 
 ## إصلاحات الواجهة بعد اختبار التلميذ — 2026-10-08 (v191)
 
@@ -864,8 +873,8 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
   vitest **1,027/1,027 في 156/156** · `handoff:check` **0** · `content:audit` تحرّك إلى
   **`6b5b28eb3104…`** · `learning-architecture` بلا حركة `9b57e06047aa` · `case:audit` 0 فجوات عند
   `167645dd621b…`. **إعادةُ بناءٍ كاملةٍ خروج 0** (Compiled 34.8s، 321/321 صفحة في 9.8s) بصمة
-  `offline:size` **`e4ebb0f19b3e`** مع **full 6,017,975** (a1 2,733,601 · a2 2,845,627 · b1 2,870,956 ·
-  b2 4,294,769) · `js:budget` ‏110/1,739,688/251,309 · `media:budget` ‏544/52,943,843/المنهاج 958,946 —
+  `offline:size` **`abdacdeb8e61`** مع **full 6,022,922** (a1 2,735,840 · a2 2,847,916 · b1 2,873,424 ·
+  b2 4,296,842) · `js:budget` ‏110/1,739,688/251,309 · `media:budget` ‏544/52,943,843/المنهاج 958,946 —
   والبناءُ مرّ بعد إعادةِ تفعيل المقايضة (`/home/user/.swapfile` انمحى مع صندوق اللقطة فعادت صفرًا).
   **وتراجعٌ جزئيٌّ ثامنٌ وسطَ الدور** (سابعُه المسَّ أرشيفَ التسليم سابقًا): `node_modules` صفرًا
   (→`npm ci`) وملفاتُ b1/b2 السبعة رجعَت إلى المشتتات القديمة (→إعادةُ 12 حمولة قرينة ⇒ نفس 113

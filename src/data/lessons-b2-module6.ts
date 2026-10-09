@@ -2136,9 +2136,9 @@ export const b2Module6Lessons: FullLesson[] = [
  },
  mistakes: [
  { wrong: "der von der Kommission beschlossenes Verfahren", correct: "das von der Kommission beschlossene Verfahren", whyAr: "إعراب النعت يتبع الأداة، لا الفعل.", trickAr: "انظر إلى الأداة قبل الصيغة." },
- { wrong: "Nach Hause gekommen, wurde die Tür geschlossen.", correct: "Nachdem alle nach Hause gekommen waren, wurde die Tür geschlossen.", whyAr: "نعتٌ بلا فاعل صحيح: الفاعل في الجملة الرئيسية ليس من قام بالفعل.", trickAr: "اسأل: هل فاعل الجملة الرئيسية هو من قام بالنعت؟ إن لم يكن فاجعلها جملة زمنية: nachdem alle gekommen waren." },
+ { wrong: "Nach Hause gekommen, wurde die Tür geschlossen.", correct: "Nachdem alle nach Hause gekommen waren, wurde die Tür geschlossen.", whyAr: "عبارة الاسم المفعول (Partizip) تفترض أن فاعلها هو فاعل الجملة الرئيسية؛ هنا «die Tür» هي الفاعل، ولا يمكنها أن تكون من عاد إلى البيت.", trickAr: "اسأل: هل فاعل الجملة الرئيسية هو من قام بالنعت؟ إن لم يكن فاجعلها جملة زمنية: nachdem alle gekommen waren." },
  { wrong: "die zu veröffentlichende Studie wurde bereits veröffentlicht worden.", correct: "die veröffentlichte Studie lag vor.", whyAr: "الإلزام والتمام لا يجتمعان في الوصف نفسه.", trickAr: "zu + Partizip I = «يجب أن يقع»؛ إن وقع الأمر فاحذف zu: die veröffentlichte Studie lag vor." },
- { wrong: "Der Antrag, dass geprüft wurde, wurde abgelehnt.", correct: "Der Antrag, der geprüft worden war, wurde abgelehnt.", whyAr: "جملة موصولة بفاعل الاسم تحتاج der + صيغة المناسبة.", trickAr: "الضمير يطابق الاسم لا الحدث." },
+ { wrong: "Der Antrag, dass geprüft wurde, wurde abgelehnt.", correct: "Der Antrag, der geprüft worden war, wurde abgelehnt.", whyAr: "dass ليس اسمًا موصولًا؛ الجملة الموصولة تبدأ بـ der/die/das وتطابق الاسم الذي تصفه (Antrag: مذكر مفرد فيكون der)، والفعل في Plusquamperfekt-Passiv: geprüft worden war.", trickAr: "الضمير يطابق الاسم لا الحدث." },
  { wrong: "Die von der Aufsicht notierte Beschwerde. Wurde ignoriert.", correct: "Die von der Aufsicht notierte Beschwerde wurde ignoriert.", whyAr: "قطعتَ الجملة عند النعت فتركتها بلا إسناد.", trickAr: "لا نقطة قبل الفعل المسند." },
  ],
  miniTest: [

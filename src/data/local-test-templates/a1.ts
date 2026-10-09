@@ -1016,7 +1016,7 @@ export const localTestTemplateBankA1 = [
         "promptAr": "اختر:",
         "options": [
           "hängt",
-          "steht immer",
+          "fliegt",
           "liegt",
           "wohnt"
         ],

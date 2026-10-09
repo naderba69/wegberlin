@@ -51151,9 +51151,9 @@
     "verbFrameSummary": {
       "totalCandidates": 1258,
       "covered": 134,
-      "pendingHuman": 4,
-      "contextualNotTarget": 1120,
-      "authoredTargets": 138,
+      "pendingHuman": 1,
+      "contextualNotTarget": 1123,
+      "authoredTargets": 135,
       "byLevel": {
         "A1": {
           "totalCandidates": 106,
@@ -51176,8 +51176,8 @@
         "B2": {
           "totalCandidates": 631,
           "covered": 48,
-          "pendingHuman": 4,
-          "contextualNotTarget": 579
+          "pendingHuman": 1,
+          "contextualNotTarget": 582
         }
       }
     },
@@ -221045,8 +221045,8 @@
         "infinitiveCandidate": "bitten",
         "normalizedVerb": "bitten",
         "preposition": "zu",
-        "role": "authored-target",
-        "status": "pending-human",
+        "role": "reviewed-exclusion",
+        "status": "not-target",
         "observedCases": [
           "accusative",
           "ambiguous",
@@ -221139,6 +221139,16 @@
             "strength": "context"
           }
         ],
+        "exclusionDecision": {
+          "lessonId": "b2-24",
+          "normalizedVerb": "bitten",
+          "preposition": "zu",
+          "reason": "infinitive-zu-marker",
+          "explanationAr": "zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten darum, …» تقدّم مفعول الطلب بالحرف «darum»، لا إطارًا بحرف جر بعد bitten.",
+          "id": "b2-24-bitten-zu-frame-exclusion",
+          "reviewStatus": "authored-review-pending",
+          "policyVersion": "lexical-frame-exclusions-v1"
+        },
         "id": "lex-v-b2-24-6e1439bd"
       },
       {
@@ -221170,8 +221180,8 @@
         "infinitiveCandidate": "einreichen",
         "normalizedVerb": "einreichen",
         "preposition": "zu",
-        "role": "authored-target",
-        "status": "pending-human",
+        "role": "reviewed-exclusion",
+        "status": "not-target",
         "observedCases": [
           "unknown"
         ],
@@ -221185,6 +221195,16 @@
             "strength": "target"
           }
         ],
+        "exclusionDecision": {
+          "lessonId": "b2-24",
+          "normalizedVerb": "einreichen",
+          "preposition": "zu",
+          "reason": "infinitive-zu-marker",
+          "explanationAr": "zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأخذ einreichen هنا أي حرف جر.",
+          "id": "b2-24-einreichen-zu-frame-exclusion",
+          "reviewStatus": "authored-review-pending",
+          "policyVersion": "lexical-frame-exclusions-v1"
+        },
         "id": "lex-v-b2-24-5f033ff3"
       },
       {
@@ -221285,8 +221305,8 @@
         "infinitiveCandidate": "konnten",
         "normalizedVerb": "konnten",
         "preposition": "zu",
-        "role": "authored-target",
-        "status": "pending-human",
+        "role": "reviewed-exclusion",
+        "status": "not-target",
         "observedCases": [
           "unknown"
         ],
@@ -221300,6 +221320,16 @@
             "strength": "target"
           }
         ],
+        "exclusionDecision": {
+          "lessonId": "b2-24",
+          "normalizedVerb": "konnten",
+          "preposition": "zu",
+          "reason": "infinitive-zu-marker",
+          "explanationAr": "zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر؛ الإطار كاذب لا يُلزم بحالة.",
+          "id": "b2-24-konnten-zu-frame-exclusion",
+          "reviewStatus": "authored-review-pending",
+          "policyVersion": "lexical-frame-exclusions-v1"
+        },
         "id": "lex-v-b2-24-97864110"
       },
       {
@@ -221494,8 +221524,8 @@
         "id": "lex-v-b2-24-b3da9110"
       }
     ],
-    "exclusionDecisionCount": 8,
-    "pendingIndependentExclusionReview": 8,
+    "exclusionDecisionCount": 11,
+    "pendingIndependentExclusionReview": 11,
     "exclusionDecisions": [
       {
         "lessonId": "a1-21",
@@ -221576,10 +221606,40 @@
         "id": "b2-18-kommen-in-frame-exclusion",
         "reviewStatus": "authored-review-pending",
         "policyVersion": "lexical-frame-exclusions-v1"
+      },
+      {
+        "lessonId": "b2-24",
+        "normalizedVerb": "bitten",
+        "preposition": "zu",
+        "reason": "infinitive-zu-marker",
+        "explanationAr": "zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten darum, …» تقدّم مفعول الطلب بالحرف «darum»، لا إطارًا بحرف جر بعد bitten.",
+        "id": "b2-24-bitten-zu-frame-exclusion",
+        "reviewStatus": "authored-review-pending",
+        "policyVersion": "lexical-frame-exclusions-v1"
+      },
+      {
+        "lessonId": "b2-24",
+        "normalizedVerb": "einreichen",
+        "preposition": "zu",
+        "reason": "infinitive-zu-marker",
+        "explanationAr": "zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأخذ einreichen هنا أي حرف جر.",
+        "id": "b2-24-einreichen-zu-frame-exclusion",
+        "reviewStatus": "authored-review-pending",
+        "policyVersion": "lexical-frame-exclusions-v1"
+      },
+      {
+        "lessonId": "b2-24",
+        "normalizedVerb": "konnten",
+        "preposition": "zu",
+        "reason": "infinitive-zu-marker",
+        "explanationAr": "zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر؛ الإطار كاذب لا يُلزم بحالة.",
+        "id": "b2-24-konnten-zu-frame-exclusion",
+        "reviewStatus": "authored-review-pending",
+        "policyVersion": "lexical-frame-exclusions-v1"
       }
     ],
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "2feae07104cc57bb11a32b6ed8bba1fb46c61783bb582f35cfe13b218168e4fb"
+  "contentSha256": "80bf49e50815195ed91560616eb261f6ec3c0fe3b0ca98285eb1c24a529e11e7"
 }

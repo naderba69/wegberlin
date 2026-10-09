@@ -1,6 +1,6 @@
 export const LEXICAL_FRAME_EXCLUSION_POLICY = "lexical-frame-exclusions-v1" as const;
 
-export type LexicalFrameExclusionReason = "locative-adjunct" | "separable-particle" | "condition-adjunct" | "purpose-clause";
+export type LexicalFrameExclusionReason = "locative-adjunct" | "separable-particle" | "condition-adjunct" | "purpose-clause" | "infinitive-zu-marker";
 
 export type LexicalFrameExclusionDecision = {
   id: string;
@@ -29,6 +29,9 @@ export const lexicalFrameExclusionDecisions: LexicalFrameExclusionDecision[] = [
   decision({ lessonId:"b2-01",normalizedVerb:"reichen",preposition:"um",reason:"purpose-clause",explanationAr:"um يفتتح جملة الغاية um … zu ولا تحكمه صيغة ausreichen السابقة." }),
   decision({ lessonId:"b2-18",normalizedVerb:"ziehen",preposition:"in",reason:"locative-adjunct",explanationAr:"في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht ziehen» و«das kommt nicht in Betracht» — فلو كان in محكومًا بالفعل لتبدّل مع تبدّله؛ وهو هنا ظرف ثابت مع اسم بلا مقال، ولا حالة تُلاحَظ لأن المقال غائب." }),
   decision({ lessonId:"b2-18",normalizedVerb:"kommen",preposition:"in",reason:"locative-adjunct",explanationAr:"في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» و«in Frage kommen») والجارّة تبقى كما هي، فلا إطار «kommen + in» يُلزَم بحالة." }),
+  decision({ lessonId:"b2-24",normalizedVerb:"bitten",preposition:"zu",reason:"infinitive-zu-marker",explanationAr:"zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten darum, …» تقدّم مفعول الطلب بالحرف «darum»، لا إطارًا بحرف جر بعد bitten." }),
+  decision({ lessonId:"b2-24",normalizedVerb:"einreichen",preposition:"zu",reason:"infinitive-zu-marker",explanationAr:"zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأخذ einreichen هنا أي حرف جر." }),
+  decision({ lessonId:"b2-24",normalizedVerb:"konnten",preposition:"zu",reason:"infinitive-zu-marker",explanationAr:"zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر؛ الإطار كاذب لا يُلزم بحالة." }),
 ];
 
 export function lexicalFrameExclusionFor(lessonId: string, normalizedVerb: string, preposition: string) {

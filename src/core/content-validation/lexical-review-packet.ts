@@ -18,7 +18,7 @@ const P099_REASON_LABELS_AR: Record<string, string> = {
   "condition-adjunct": "ظرف شرط",
   "purpose-clause": "جملة غاية (um … zu)",
 };
-export const P099_STRUCTURAL_EXCLUSION_COUNT = 8;
+export const P099_STRUCTURAL_EXCLUSION_COUNT = 11;
 
 export type P099ExclusionEvidenceReferenceInventory = {
   exclusionCount: number;
@@ -121,7 +121,7 @@ export type P099ExclusionReviewSlotReport = {
 };
 
 /**
- * Presence-only inventory of the eight P0-99 exclusion slots.
+ * Presence-only inventory of the eleven P0-99 exclusion slots.
  * It never opens evidence, never interprets a decision/reviewer identity, and never asserts closure:
  * a filled name or signature cell is a filing step that still requires independent human review.
  */
@@ -293,7 +293,7 @@ function appendBlankReviewColumns(row: readonly string[]): string[] {
 /**
  * جرد حضور خانات التوقيع في ورقة الأهداف الـ126 (المرحلة الثانية) — قراءة فقط.
  * لا يفتح محتوى قرار ولا يفسّره ولا يعلن إغلاقًا. يوقف الفحصَ أي توقيع مسجَّل قبل
- * تسمية أدلة الاستبعادات الثمانية: الترتيب جزء من المتطلب، لا تفضيل.
+ * تسمية أدلة الاستبعادات الأحد عشر: الترتيب جزء من المتطلب، لا تفضيل.
  */
 export type P099RetainedDecisionRow = {
   decisionId: string;
@@ -466,7 +466,7 @@ export function auditP099QualityTargetReviewSlots(
 
   const blockedByStageOne = signedTargetIds.length > 0 && stageOneNamedReferenceCount < P099_STRUCTURAL_EXCLUSION_COUNT;
   if (blockedByStageOne) {
-    throw new Error(`P0-99 quality-target signatures are recorded (${signedTargetIds.length} row(s)) before the eight exclusion evidence references are named (${stageOneNamedReferenceCount}/${P099_STRUCTURAL_EXCLUSION_COUNT}). The exclusion evidence comes first.`);
+    throw new Error(`P0-99 quality-target signatures are recorded (${signedTargetIds.length} row(s)) before the eleven exclusion evidence references are named (${stageOneNamedReferenceCount}/${P099_STRUCTURAL_EXCLUSION_COUNT}). The exclusion evidence comes first.`);
   }
 
   return {
@@ -486,7 +486,7 @@ export function auditP099QualityTargetReviewSlots(
 
 /**
  * يبني ورقة عمل مقروءة للأهداف الـ126 من الصفوف نفسها (لا نسخة ثانية من الحقيقة).
- * حضور فقط: لا يطبع محتوى أي خلية توقيع، ولا يمنح مراجعة، ولا يفتح المرحلة الثانية قبل أدلة الاستبعادات الثمانية.
+ * حضور فقط: لا يطبع محتوى أي خلية توقيع، ولا يمنح مراجعة، ولا يفتح المرحلة الثانية قبل أدلة الاستبعادات الأحد عشر.
  */
 export function buildP099QualityTargetReviewWorklist(input: {
   headers: readonly string[];
@@ -521,7 +521,7 @@ export function buildP099QualityTargetReviewWorklist(input: {
     "",
     `- نطاق المراجعة \`${P099_QUALITY_TARGET_REVIEW_SCOPE}\`، والعدد **${slots.targetCount}**، والتوزيع A1/A2/B1/B2 = ${Object.entries(ORIGINAL_P099_QUALITY_TARGETS_BY_LEVEL).map(([, count]) => `${count}`).join("/")}.`,
     stageOneOpen
-      ? "- بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الثمانية. تبقى المراجعة المستقلة مطلوبة، وتسجيل الأسماء وحده ليس مراجعة."
+      ? "- بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الأحد عشر. تبقى المراجعة المستقلة مطلوبة، وتسجيل الأسماء وحده ليس مراجعة."
       : `- بوابة المرحلة الأولى ما زالت مغلقة: أسماء أدلة الاستبعادات **${stageOneNamedReferenceCount}/${P099_STRUCTURAL_EXCLUSION_COUNT}**. لا تبدأ مراجعة الجودة قبل تسميتها كلها، ولا يقبل الفاحص أي توقيع هنا قبل ذلك.`,
     `- خلايا التوقيع الممتلئة في هذه الورقة حتى الآن: **${slots.signatureCellsFilled}/${slots.signatureCellsExpected}** (حضور فقط، لا يُطبع محتواها).`,
     "- في كل صف: تحقّق من صحة الحالة المحكومة والتركيب والمثال، وأن المقطع طبيعي وقابل للاستعمال، وأنه لا يوجد إطار مكرر أو ملتبس. الفحص الآلي للحالة (`machineObserved…`) إشارة لا حكم.",
@@ -561,7 +561,7 @@ export function buildP099QualityTargetReviewWorklist(input: {
 }
 
 /**
- * يبني ملف قراءة للاستبعادات الثمانية من صفوف CSV نفسها (لا نسخة ثانية من الحقيقة).
+ * يبني ملف قراءة للاستبعادات الأحد عشر من صفوف CSV نفسها (لا نسخة ثانية من الحقيقة).
  * حضور فقط: لا يفتح دليلًا، ولا يطبع محتوى خلايا التوقيع، ولا يعلن إغلاقًا.
  */
 export function buildP099ExclusionReviewDossier(input: {
@@ -594,15 +594,15 @@ export function buildP099ExclusionReviewDossier(input: {
   const allNamed = slots.namedReferenceCount === slots.exclusionCount;
 
   const lines: string[] = [
-    "# ملف قراءة الاستبعادات البنيوية الثمانية — P0-99",
+    "# ملف قراءة الاستبعادات البنيوية الأحد عشر — P0-99",
     "",
     `قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف \`reports/lexical-review-packet/structural-exclusions.csv\` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: \`${contentHash}\`.`,
     "",
     `- عدد الاستبعادات: **${slots.exclusionCount}** · أسماء أدلة مسمّاة: **${slots.namedReferenceCount}/${slots.exclusionCount}** · أسماء نائبة: **${slots.placeholderReferenceCount}** · خلايا توقيع ممتلئة (حضور فقط): **${slots.signatureCellsFilled}/${slots.signatureCellsExpected}** · خانات جاهزة لمراجعة مستقلة: **${slots.readyForIndependentReviewCount}**.`,
     "- يُطبع هنا حضور الخلايا فقط: لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع، ولا يُفسَّر حكم. اسم دليل مسجّل لا يثبت وجود الدليل ولا كفايته.",
     allNamed
-      ? `- بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الثمانية، ومراجعة صفوف الأهداف الـ${P099_ORIGINAL_QUALITY_TARGET_COUNT} تبقى بشرية مستقلة.`
-      : `- بوابة المرحلة الثانية: مغلقة حتى تُسمّى أدلة الاستبعادات الثمانية كلها (المسجَّل الآن ${slots.namedReferenceCount}/${slots.exclusionCount}).`,
+      ? `- بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الأحد عشر، ومراجعة صفوف الأهداف الـ${P099_ORIGINAL_QUALITY_TARGET_COUNT} تبقى بشرية مستقلة.`
+      : `- بوابة المرحلة الثانية: مغلقة حتى تُسمّى أدلة الاستبعادات الأحد عشر كلها (المسجَّل الآن ${slots.namedReferenceCount}/${slots.exclusionCount}).`,
     "",
   ];
 
@@ -638,7 +638,7 @@ export function buildP099ExclusionReviewDossier(input: {
   lines.push(
     "## بروتوكول الوصول إلى المرحلة الثانية",
     "",
-    `- ترتيب العمل ثابت: الاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها ${P099_ORIGINAL_QUALITY_TARGET_COUNT} (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 = 40).`,
+    `- ترتيب العمل ثابت: الاستبعادات الأحد عشر أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها ${P099_ORIGINAL_QUALITY_TARGET_COUNT} (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 = 40).`,
     "- هذا الملف مولَّد: لا يُعدَّل يدويًا، ولا يُقبل فيه اسم دليل أو توقيع. التعديل يكون في ورقة المراجع ثم في السجل المعتمد، والحارس `npm run content:audit:write` يرفض الكتابة فوق أي اسم أو قرار محفوظ.",
     "- لا يغلق وجود هذا الملف P0-98 أو P0-99، ولا يستبدل المراجعة المستقلة التي يوقّعها إنسان باسمه ومؤهله وتاريخه.",
     "",
@@ -803,13 +803,13 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |
 | \`structural-exclusions.csv\` | ${exclusionRows.length} | المرحلة الأولى لـP0-99: مراجعة الاستبعادات البنيوية المؤلفة وأسبابها وسياق الإشارة. عمود \`reviewEvidenceName\` فارغ لتسمية دليل المراجع لكل استبعاد؛ تبقى جميعها pending حتى يوقّع مراجع مستقل. |
 
-افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. في P0-98، راجع سجلات الاسم الـ1,297 في \`noun-anchors.csv\` وفرز مرشحات الاسم الـ89 المنفصلة في \`unresolved-candidates.csv\`؛ حالة الفرز الآلية ليست قرارًا بشريًا. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الثمانية أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99، ويوقف إعادة التوليد عند الانحراف؛ هذا فحص نطاق آلي لا مراجعة بشرية.
+افتح الدرس/المصدر كاملًا عند المراجعة؛ مقتطفات السياق آلية ولا تحل محل الحكم اللغوي. في P0-98، راجع سجلات الاسم الـ1,297 في \`noun-anchors.csv\` وفرز مرشحات الاسم الـ89 المنفصلة في \`unresolved-candidates.csv\`؛ حالة الفرز الآلية ليست قرارًا بشريًا. ترتيب P0-99 ثابت: دليل مراجعة مسمّى للاستبعادات الأحد عشر أولًا، ثم مراجعة جودة صفوف \`frame-quality-targets.csv\` وعددها 126. يتبع هذا النطاق الأصلي (A1 25 + A2 30 + B1 31 + B2 دروس 01–20 عددها 40). ملف \`verb-frames.csv\` يسرد جميع المراجع المؤلفة الـ134؛ الإطارات الثمانية في B2-21…B2-24 مراجع سياقية خارج هدف الجودة الأصلي، ولا تجعل 134 عددًا للإطارات المطلوب مراجعتها. لا تسجل قرارًا قبل مراجعة بشرية فعلية وفق P0_AUDIT.md. يحرس \`content:audit\` نطاق P0-98 (1,297 سجلًا و89 مرشح اسم) وتوزيع P0-99، ويوقف إعادة التوليد عند الانحراف؛ هذا فحص نطاق آلي لا مراجعة بشرية.
 
 ## بروتوكول التوقيع
 
 - أعمدة \`reviewDecision\`, \`reviewerName\`, \`reviewerQualification\`, \`reviewDate\`, و\`reviewerNote\` فارغة عمدًا ومحمية باختبارات؛ لا يملؤها مولّد أو نموذج.
-- في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الثمانية؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
-- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- عند عودة ورقة من مراجع، يفحصها \`npm run p099:evidence:validate -- <ملف>\` بنيويًا: العدد والترتيب واسم الدليل واكتمال الحقول الخمسة وصيغة التاريخ؛ لا يثبت هوية المراجع ولا يفتح الدليل ولا يحكم على كفاية القرار ولا يغلق P0-99.\n- ورقة العمل المقروءة للمرحلة الثانية في \`docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md\`: 126 هدفًا بترتيب المستوى والدرس مع الحالة المحكومة والمقطع والمثال، وبوابة المرحلة الأولى مكتوبة فيها.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الثمانية توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
+- في \`structural-exclusions.csv\`، عمود \`reviewEvidenceName\` فارغ لتسجيل اسم دليل المراجعة لكل استبعاد من الأحد عشر؛ يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126. لا تعدّ المراجع الآلية أو وجود هذا الحقل دليلًا بشريًا.
+- يعرض \`npm run p099:evidence:status\` عدد أسماء المراجع الناقصة فقط، ولا يفتح دليلًا أو يتحقق من محتواه؛ تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الأحد عشر.\n- لكل استبعاد صفحة قراءة في \`docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md\` مولَّدة من الصفوف نفسها: تعرض السبب ودليل الكشف وحالة الخانة، ولا تطبع محتوى قرار ولا تمنح اعتمادًا.\n- عند عودة ورقة من مراجع، يفحصها \`npm run p099:evidence:validate -- <ملف>\` بنيويًا: العدد والترتيب واسم الدليل واكتمال الحقول الخمسة وصيغة التاريخ؛ لا يثبت هوية المراجع ولا يفتح الدليل ولا يحكم على كفاية القرار ولا يغلق P0-99.\n- ورقة العمل المقروءة للمرحلة الثانية في \`docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md\`: 126 هدفًا بترتيب المستوى والدرس مع الحالة المحكومة والمقطع والمثال، وبوابة المرحلة الأولى مكتوبة فيها.\n- تُقرأ ورقة الأهداف الـ126 حضورًا فقط: أي خلية توقيع مسجَّلة فيها قبل تسمية أدلة الاستبعادات الأحد عشر توقف الفاحص (ترتيب إلزامي)، ولا يُفسَّر محتوى أي قرار ولا يُعلن إغلاق.
 - يفصل الفاحص نفسه بين غياب الاسم واسم نائب (TODO / n/a / <دليل>) وبين خلايا التوقيع: الاسم النائب لا يُعدّ تسمية، ووجود أي خلية توقيع في صف ما زال \`authored-review-pending\` يوقف الفاحص بدل أن يُقرأ كإغلاق. لا يُفتح محتوى الدليل ولا يُفسَّر محتوى القرار.
 - لا تعدّل الملفات المولدة في هذا المجلد بوصفها توقيعًا. انسخ ورقة العمل لاستقبال ملاحظات المراجع، ثم تُنقل القرارات المسمّاة والمؤرخة إلى سجل المراجعة المعتمد بعد مراجعة المالك.
 - يرفض \`npm run content:audit:write\` إعادة كتابة CSV إذا امتلأ أي حقل قرار/هوية/صفة/اسم دليل/تاريخ/ملاحظة أو تعذّر فحصه بأمان (اقتباس غير سليم، صف بعرض مختلف، أو عمود توقيع مطلوب مفقود أو مكرر)؛ انسخ المدخلات الموقعة واحفظها في السجل المعتمد. هذا الحارس يمنع فقد البيانات فقط ولا يثبت مراجعة.

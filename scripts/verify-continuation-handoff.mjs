@@ -733,7 +733,7 @@ if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planni
 const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1297 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
 if (lexicalGaps?.nounSummary?.totalCandidates !== 4894 || lexicalGaps?.nounSummary?.covered !== 1384 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3421) fail("noun target-gap counters drifted");
-if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1258 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 4 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1120 || lexicalGaps?.exclusionDecisionCount !== 8 || lexicalGaps?.pendingIndependentExclusionReview !== 8 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1258 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1123 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
 const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");
 const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
@@ -754,7 +754,7 @@ for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCove
 for (const text of ["4,345", "2,805", "384", "389/389", "4,921", "1,382 covered", "89 pending-human", "3,450 context-only", "134 covered", "4 unclassified", "1,131 not-target"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["LEXICAL_TARGET_AUDIT_VERSION", "pending-human", "Sentence-initial capitalization alone is never used"]) requireText(lexicalTargetGapSource, text, "lexical target-gap source");
 for (const text of ["0", "pendingHuman: 89", "exclusionDecisionCount", "byLevel.A1.pendingHuman", "byLevel.A2.pendingHuman", "does not treat sentence-initial capitalization alone"]) requireText(lexicalTargetGapTest, text, "lexical target-gap test");
-for (const text of ["REVIEW REQUIRED", "89 noun candidates", "4 unclassified verb-frame candidates", "Explicit structural frame exclusions (8)", "authored-review-pending"]) requireText(lexicalTargetGapReport, text, "lexical target-gap report");
+for (const text of ["REVIEW REQUIRED", "89 noun candidates", "1 unclassified verb-frame candidates", "Explicit structural frame exclusions (11)", "authored-review-pending"]) requireText(lexicalTargetGapReport, text, "lexical target-gap report");
 for (const text of ["lexical-frame-exclusions-v1", "locative-adjunct", "separable-particle", "condition-adjunct", "purpose-clause", "authored-review-pending"]) requireText(lexicalFrameDecisions, text, "lexical frame exclusion decisions");
 for (const text of ["NOVEL_TRANSFER_WEIGHT = 1.5", "NOVEL_PRACTICE_WEIGHT = 1", "SAME_ITEM_RETRY_WEIGHT = 0.25"]) requireText(masteryWeighting, text, "mastery novelty weights");
 for (const text of ["sm2-v2-calendar", "review-calendar-v1", "calendarPartsAt"]) requireText(sm2, text, "zoned SM-2 contract");
@@ -1353,7 +1353,7 @@ const p099SignatureCells=p099EvidenceStatusOutput.match(/Signature cells filled 
 if(!p099SignatureCells)fail("P0-99 named-reference inventory did not report signature-cell presence");
 const p099SignatureCellsFilled=Number(p099SignatureCells[1]);
 const p099SignatureCellsExpected=Number(p099SignatureCells[2]);
-if(p099SignatureCellsExpected!==p099NamedReferenceTotal*5)fail("P0-99 signature-cell denominator disagrees with the eight exclusions and their five signature columns");
+if(p099SignatureCellsExpected!==p099NamedReferenceTotal*5)fail("P0-99 signature-cell denominator disagrees with the eleven exclusions and their five signature columns");
 if(p099SignatureCellsFilled>p099SignatureCellsExpected)fail("P0-99 signature-cell presence exceeds the authored slots");
 const p099ReadySlots=p099EvidenceStatusOutput.match(/Slots ready for independent review: (\d+)\/(\d+)/u);
 if(!p099ReadySlots)fail("P0-99 named-reference inventory did not report review-slot readiness");
@@ -1392,7 +1392,7 @@ const generatedFilledCells=Number(generatedSignatureLine[3]);
 const generatedExpectedCells=Number(generatedSignatureLine[4]);
 if(generatedArtifactCount!==22)fail(`generated-artifact signature scan must cover 22 committed review artifacts; found ${generatedArtifactCount}`);
 if(generatedRowCount!==4935)fail(`generated-artifact signature scan must cover 4,935 rows; found ${generatedRowCount}`);
-if(generatedExpectedCells!==21406)fail(`generated-artifact signature scan cell denominator drifted to ${generatedExpectedCells}`);
+if(generatedExpectedCells!==21409)fail(`generated-artifact signature scan cell denominator drifted to ${generatedExpectedCells}`);
 if(generatedFilledCells!==0)fail(`generated artifacts must stay free of reviewer input; found ${generatedFilledCells} filled cell(s). Keep reviewer work outside the generated files and record the owner's decision in the approved record`);
 requireText(generatedSignatureOutput,"reviewer work stays outside generated files","generated-artifact signature scan boundary");
 console.log(`- generated review artifacts: ${generatedArtifactCount} files / ${generatedRowCount} rows / ${generatedFilledCells} reviewer-input cells filled of ${generatedExpectedCells} (reviewer work stays outside generated files)`);
@@ -1409,7 +1409,7 @@ const p099StageTwoCellsExpected=Number(p099StageTwoCells[2]);
 if(p099StageTwoCellsExpected!==p099StageTwoTotal*5)fail("P0-99 stage-2 signature-cell denominator disagrees with the 126 targets and their five signature columns");
 if(p099StageTwoCellsFilled>p099StageTwoCellsExpected)fail("P0-99 stage-2 signature cells exceed the authored slots");
 if((p099StageTwoCellsFilled===0)!==(p099StageTwoSigned===0))fail("P0-99 stage-2 signed-row and signature-cell counts disagree");
-if(p099StageTwoCellsFilled>0&&p099NamedReferenceCount<p099NamedReferenceTotal)fail("P0-99 stage-2 signatures must not be recorded before the eight exclusion references are named");
+if(p099StageTwoCellsFilled>0&&p099NamedReferenceCount<p099NamedReferenceTotal)fail("P0-99 stage-2 signatures must not be recorded before the eleven exclusion references are named");
 for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
  const match=p099EvidenceStatusOutput.match(new RegExp(`^- ${level}: (\\d+)/(\\d+) rows with a recorded signature$`,"mu"));
  if(!match)fail(`P0-99 status did not report stage-2 progress for ${level}`);
@@ -1432,7 +1432,7 @@ for(const text of["ورقة عمل مراجعة الأهداف اللغوية ا
 if(p099NamedReferenceCount<p099NamedReferenceTotal){
  if(!/بوابة المرحلة الأولى ما زالت مغلقة/u.test(p099Worklist))fail("P0-99 worklist must state that stage 1 is still closed while exclusions lack named evidence");
  if(!p099Worklist.includes(`**${p099NamedReferenceCount}/${p099NamedReferenceTotal}**`))fail("P0-99 worklist stage-1 counter disagrees with the named-reference count");
-}else if(!/بوابة المرحلة الأولى: أُسميت أدلة الاستعbادات الثمانية/u.test(p099Worklist)&&!/بوابة المرحلة الأولى: أُسميت/u.test(p099Worklist))fail("P0-99 worklist must state the stage-1 gate is open once all eight names exist");
+}else if(!/بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الأحد عشر/u.test(p099Worklist)&&!/بوابة المرحلة الأولى: أُسميت/u.test(p099Worklist))fail("P0-99 worklist must state the stage-1 gate is open once all eleven names exist");
 if(!p099Worklist.includes("انسخها لورقة مراجع"))fail("P0-99 worklist must point reviewer decisions outside the generated file");
 
 const p099DossierIds=[...p099Dossier.matchAll(/^## (\d+)\. `([^`]+)`$/gmu)];

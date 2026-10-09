@@ -1,6 +1,6 @@
 # Human Review Ledger Audit
 
-Policy `human-review-ledger-v1`. Content SHA-256: `409660dff74cfe598a9bfaca22381298ba0b983dfda903d00785b1ea962ab687`
+Policy `human-review-ledger-v1`. Content SHA-256: `15c312a90ec825a812a626d6a474bf6c3a028162190b854bf09f8edd29003c66`
 
 Boundary: reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer
 
@@ -41,17 +41,17 @@ Policy `reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer`. This b
 
 | Metric | Value |
 | --- | --- |
-| Structural exclusions | 8 |
-| Named evidence references | 0/8 |
-| Missing references | 8 |
+| Structural exclusions | 11 |
+| Named evidence references | 0/11 |
+| Missing references | 11 |
 | Placeholder-only references | 0 |
-| Signature cells filled | 0/40 |
+| Signature cells filled | 0/55 |
 | Slots ready for independent review | 0 |
 | Evidence contents inspected | no |
 | Review decision contents interpreted | no |
 | P0-99 closure asserted | no |
 
-Pending exclusion IDs: a1-21-umsteigen-in-frame-exclusion, b1-15-liegen-vor-frame-exclusion, b1-22-nachsteuern-bei-frame-exclusion, b1-23-liegen-vor-frame-exclusion, b2-01-reichen-aus-frame-exclusion, b2-01-reichen-um-frame-exclusion, b2-18-ziehen-in-frame-exclusion, b2-18-kommen-in-frame-exclusion
+Pending exclusion IDs: a1-21-umsteigen-in-frame-exclusion, b1-15-liegen-vor-frame-exclusion, b1-22-nachsteuern-bei-frame-exclusion, b1-23-liegen-vor-frame-exclusion, b2-01-reichen-aus-frame-exclusion, b2-01-reichen-um-frame-exclusion, b2-18-ziehen-in-frame-exclusion, b2-18-kommen-in-frame-exclusion, b2-24-bitten-zu-frame-exclusion, b2-24-einreichen-zu-frame-exclusion, b2-24-konnten-zu-frame-exclusion
 
 هذا الملخّص يعدّ حضور الخانات فقط: لا يحكم على كفاية الدليل ولا على محتوى قرار المراجع ولا يمنح اعتمادًا.
 Every exclusion still lacks a named evidence reference; the eight slots are unfilled on purpose and no review has been recorded.

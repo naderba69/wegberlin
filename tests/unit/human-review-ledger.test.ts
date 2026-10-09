@@ -16,7 +16,7 @@ import {
 } from "@/data/human-review-ledger";
 
 const structuralExclusionsCsv = readFileSync("reports/lexical-review-packet/structural-exclusions.csv", "utf8");
-const exclusionDecisionIds = ["a1-21-umsteigen-in-frame-exclusion", "b1-15-liegen-vor-frame-exclusion", "b1-22-nachsteuern-bei-frame-exclusion", "b1-23-liegen-vor-frame-exclusion", "b2-01-reichen-aus-frame-exclusion", "b2-01-reichen-um-frame-exclusion", "b2-18-ziehen-in-frame-exclusion", "b2-18-kommen-in-frame-exclusion"];
+const exclusionDecisionIds = ["a1-21-umsteigen-in-frame-exclusion", "b1-15-liegen-vor-frame-exclusion", "b1-22-nachsteuern-bei-frame-exclusion", "b1-23-liegen-vor-frame-exclusion", "b2-01-reichen-aus-frame-exclusion", "b2-01-reichen-um-frame-exclusion", "b2-18-ziehen-in-frame-exclusion", "b2-18-kommen-in-frame-exclusion", "b2-24-bitten-zu-frame-exclusion", "b2-24-einreichen-zu-frame-exclusion", "b2-24-konnten-zu-frame-exclusion"];
 
 function fullChecklist(value = true): Record<HumanReviewChecklistId, boolean> {
   return Object.fromEntries(HUMAN_REVIEW_CHECKLIST.map((item) => [item.id, value])) as Record<HumanReviewChecklistId, boolean>;
@@ -96,14 +96,14 @@ describe("human review ledger", () => {
     expect(summary.invalidEntries[0].lessonId).toBe("b1-06");
   });
 
-  it("reports the eight P0-99 exclusion slots as presence only and refuses to read them as review", () => {
+  it("reports the eleven P0-99 exclusion slots as presence only and refuses to read them as review", () => {
     const summary = summarizeP099ExclusionSlotsForHumanReview(structuralExclusionsCsv, exclusionDecisionIds);
-    expect(summary.exclusionCount).toBe(8);
+    expect(summary.exclusionCount).toBe(11);
     expect(summary.namedReferenceCount).toBe(0);
-    expect(summary.missingReferenceCount).toBe(8);
+    expect(summary.missingReferenceCount).toBe(11);
     expect(summary.placeholderReferenceCount).toBe(0);
     expect(summary.signatureCellsFilled).toBe(0);
-    expect(summary.signatureCellsExpected).toBe(40);
+    expect(summary.signatureCellsExpected).toBe(55);
     expect(summary.readyForIndependentReviewCount).toBe(0);
     expect(summary.pendingDecisionIds).toEqual(exclusionDecisionIds);
     expect(summary.evidenceContentsInspected).toBe(false);
@@ -111,7 +111,7 @@ describe("human review ledger", () => {
     expect(summary.p099ClosureAsserted).toBe(false);
     expect(summary.boundaryAr).toContain("لا يحكم على كفاية الدليل");
     expect(() => summarizeP099ExclusionSlotsForHumanReview(structuralExclusionsCsv, exclusionDecisionIds.slice(1)))
-      .toThrow("requires exactly 8 authored exclusion IDs");
+      .toThrow("requires exactly 11 authored exclusion IDs");
   });
 
   it("is recorded in a committed audit and reachable from the settings page", () => {

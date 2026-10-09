@@ -2,11 +2,11 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `2feae07104cc57bb11a32b6ed8bba1fb46c61783bb582f35cfe13b218168e4fb`
+Content SHA-256: `80bf49e50815195ed91560616eb261f6ec3c0fe3b0ca98285eb1c24a529e11e7`
 
 ## Honest result
 
-`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1297 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **4 unclassified verb-frame candidates**. It also records **8 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
+`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1297 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **1 unclassified verb-frame candidates**. It also records **11 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
 
 The audit does **not** create grammatical facts. A pending noun row must receive a verified record or independent exclusion. A structural frame exclusion can remove a false-positive detector row from the unclassified queue, but its `authored-review-pending` state remains visible until final review.
 
@@ -15,8 +15,8 @@ The audit does **not** create grammatical facts. A pending noun row must receive
 | A1 | 569 | 298 | 0 | 271 | 106 | 25 | 0 | 81 |
 | A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
 | B1 | 1231 | 338 | 0 | 893 | 317 | 31 | 0 | 286 |
-| B2 | 2211 | 456 | 89 | 1666 | 631 | 48 | 4 | 579 |
-| **Total** | **4894** | **1384** | **89** | **3421** | **1258** | **134** | **4** | **1120** |
+| B2 | 2211 | 456 | 89 | 1666 | 631 | 48 | 1 | 582 |
+| **Total** | **4894** | **1384** | **89** | **3421** | **1258** | **134** | **1** | **1123** |
 
 ## Classification contract
 
@@ -122,16 +122,13 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-24-04c42c8f` | B2 | `b2-24` | Vertreter | `phrases[6].de`: Herr Weber, der Vertreter der Kommission, stimmte zu. |
 | `lex-n-b2-24-3080e951` | B2 | `b2-24` | Zurückstellung | `flashcards[8].frontDe`: die Zurückstellung |
 
-## Pending verb/preposition decisions (4)
+## Pending verb/preposition decisions (1)
 
 | Stable row | Level | Lesson | Infinitive candidate | Prep. | Observed case evidence | Target evidence |
 |---|---|---|---|---|---|---|
 | `lex-v-b2-21-f2fa1775` | B2 | `b2-21` | sich erinnern | an | accusative | `phrases[13].de`: Die Zeugin sagte aus, sie könne sich an das Datum nicht erinnern. |
-| `lex-v-b2-24-6e1439bd` | B2 | `b2-24` | bitten | zu | accusative, ambiguous, unknown | `phrases[1].de`: Wir bitten darum, den Bescheid zu überprüfen. |
-| `lex-v-b2-24-5f033ff3` | B2 | `b2-24` | einreichen | zu | unknown | `phrases[3].de`: Ohne die Frist zu versäumen, konnten wir einreichen. |
-| `lex-v-b2-24-97864110` | B2 | `b2-24` | konnten | zu | unknown | `phrases[3].de`: Ohne die Frist zu versäumen, konnten wir einreichen. |
 
-## Explicit structural frame exclusions (8)
+## Explicit structural frame exclusions (11)
 
 | Decision | Lesson | Detected pair | Reason | Authored explanation | Review status |
 |---|---|---|---|---|---|
@@ -143,7 +140,10 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `b2-01-reichen-um-frame-exclusion` | `b2-01` | reichen + um | `purpose-clause` | um يفتتح جملة الغاية um … zu ولا تحكمه صيغة ausreichen السابقة. | `authored-review-pending` |
 | `b2-18-ziehen-in-frame-exclusion` | `b2-18` | ziehen + in | `locative-adjunct` | في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht zie… | `authored-review-pending` |
 | `b2-18-kommen-in-frame-exclusion` | `b2-18` | kommen + in | `locative-adjunct` | في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» … | `authored-review-pending` |
+| `b2-24-bitten-zu-frame-exclusion` | `b2-24` | bitten + zu | `infinitive-zu-marker` | zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten da… | `authored-review-pending` |
+| `b2-24-einreichen-zu-frame-exclusion` | `b2-24` | einreichen + zu | `infinitive-zu-marker` | zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأ… | `authored-review-pending` |
+| `b2-24-konnten-zu-frame-exclusion` | `b2-24` | konnten + zu | `infinitive-zu-marker` | zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر… | `authored-review-pending` |
 
-All 8 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
+All 11 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
 
 The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under `lexicalTargetGaps` in `reports/academic-content-audit.json`. A deterministic unsigned reviewer packet (1,297 noun anchors, 134 frames, 93 unresolved candidates, 8 exclusions) is generated at `reports/lexical-review-packet/`; its blank signature fields are not evidence of review.

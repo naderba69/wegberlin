@@ -140,11 +140,11 @@ describe("unsigned independent German lexical review packet", () => {
     const candidates = parseCsv(byPath.get("reports/lexical-review-packet/unresolved-candidates.csv")!);
     const exclusions = parseCsv(byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!);
 
-    expect(candidates).toHaveLength(94);
+    expect(candidates).toHaveLength(91);
     expect(candidates.slice(1).filter((row) => row[1] === "noun")).toHaveLength(89);
-    expect(candidates.slice(1).filter((row) => row[1] === "verb-preposition-frame")).toHaveLength(4);
+    expect(candidates.slice(1).filter((row) => row[1] === "verb-preposition-frame")).toHaveLength(1);
     expect(candidates.slice(1).every((row) => row[5] === "pending-human")).toBe(true);
-    expect(exclusions).toHaveLength(9);
+    expect(exclusions).toHaveLength(12);
     expect(exclusions[0]).toContain(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
     const evidenceNameIndex = exclusions[0].indexOf(P099_EXCLUSION_EVIDENCE_NAME_COLUMN);
     expect(exclusions.slice(1).every((row) => row[evidenceNameIndex] === "")).toBe(true);
@@ -159,7 +159,7 @@ describe("unsigned independent German lexical review packet", () => {
     const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
     const blankInventory = summarizeP099ExclusionEvidenceReferences(csv, expectedDecisionIds);
     expect(blankInventory).toEqual({
-      exclusionCount: 8,
+      exclusionCount: 11,
       namedReferenceCount: 0,
       missingDecisionIds: expectedDecisionIds,
       evidenceContentsInspected: false,
@@ -176,7 +176,7 @@ describe("unsigned independent German lexical review packet", () => {
       return next;
     }));
     const namedInventory = summarizeP099ExclusionEvidenceReferences(namedCsv, expectedDecisionIds);
-    expect(namedInventory.namedReferenceCount).toBe(8);
+    expect(namedInventory.namedReferenceCount).toBe(11);
     expect(namedInventory.missingDecisionIds).toEqual([]);
     expect(namedInventory.evidenceContentsInspected).toBe(false);
     expect(namedInventory.reviewDecisionCellsInspected).toBe(false);
@@ -206,9 +206,9 @@ describe("unsigned independent German lexical review packet", () => {
     const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
     const blank = auditP099ExclusionReviewSlots(csv, expectedDecisionIds);
     expect(blank.namedReferenceCount).toBe(0);
-    expect(blank.missingReferenceCount).toBe(8);
+    expect(blank.missingReferenceCount).toBe(11);
     expect(blank.placeholderReferenceCount).toBe(0);
-    expect(blank.signatureCellsExpected).toBe(40);
+    expect(blank.signatureCellsExpected).toBe(55);
     expect(blank.signatureCellsFilled).toBe(0);
     expect(blank.readyForIndependentReviewCount).toBe(0);
     expect(blank.missingReferenceDecisionIds).toEqual(expectedDecisionIds);
@@ -237,7 +237,7 @@ describe("unsigned independent German lexical review packet", () => {
 
     const placeholderCsv = fillEveryRow((row) => { row[evidenceNameIndex] = "TODO"; });
     const placeholders = auditP099ExclusionReviewSlots(placeholderCsv, expectedDecisionIds);
-    expect(placeholders.placeholderReferenceCount).toBe(8);
+    expect(placeholders.placeholderReferenceCount).toBe(11);
     expect(placeholders.namedReferenceCount).toBe(0);
     expect(placeholders.missingReferenceCount).toBe(0);
     expect(placeholders.placeholderDecisionIds).toEqual(expectedDecisionIds);
@@ -250,9 +250,9 @@ describe("unsigned independent German lexical review packet", () => {
 
     const namedCsv = fillEveryRow((row) => { row[evidenceNameIndex] = "reports/evidence/p099-a1-21-review.pdf"; });
     const named = auditP099ExclusionReviewSlots(namedCsv, expectedDecisionIds);
-    expect(named.namedReferenceCount).toBe(8);
+    expect(named.namedReferenceCount).toBe(11);
     expect(named.missingReferenceCount).toBe(0);
-    expect(named.readyForIndependentReviewCount).toBe(8);
+    expect(named.readyForIndependentReviewCount).toBe(11);
     expect(named.p099ClosureAsserted).toBe(false);
 
     const signedWhilePending = parseCsv(namedCsv);
@@ -265,7 +265,7 @@ describe("unsigned independent German lexical review packet", () => {
     statusChanged[1][reviewerNameIndex] = "test-reviewer";
     const filed = auditP099ExclusionReviewSlots(rewrite(statusChanged[0], statusChanged.slice(1)), expectedDecisionIds);
     expect(filed.signatureCellsFilled).toBe(1);
-    expect(filed.readyForIndependentReviewCount).toBe(7);
+    expect(filed.readyForIndependentReviewCount).toBe(10);
     expect(rows.slice(1).map((row) => row[decisionIdIndex])).toEqual(expectedDecisionIds);
 
     const signatureWithoutName = parseCsv(namedCsv);
@@ -291,7 +291,7 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("reviewEvidenceName");
     expect(readme).toContain("يجب تسمية الدليل والتحقق منه قبل الانتقال إلى مراجعة جودة الأهداف الـ126");
     expect(readme).toContain("npm run p099:evidence:status");
-    expect(readme).toContain("تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الثمانية");
+    expect(readme).toContain("تبقى المراجعة المستقلة مطلوبة حتى لو امتلأت الأسماء الأحد عشر");
     expect(readme).toContain("يفصل الفاحص نفسه بين غياب الاسم واسم نائب");
     expect(readme).toContain("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
     expect(readme).toContain("يوقف الفاحص بدل أن يُقرأ كإغلاق");
@@ -299,7 +299,7 @@ describe("unsigned independent German lexical review packet", () => {
     expect(readme).toContain("test-content-sha256");
   });
 
-  it("reads the 126-target sheet as presence only and refuses signatures before the eight names", () => {
+  it("reads the 126-target sheet as presence only and refuses signatures before the eleven names", () => {
     const csv = byPath.get("reports/lexical-review-packet/frame-quality-targets.csv")!;
     const blank = auditP099QualityTargetReviewSlots(csv, 0);
     expect(blank.targetCount).toBe(126);
@@ -325,10 +325,10 @@ describe("unsigned independent German lexical review packet", () => {
     }));
 
     const prematureSignature = mutate(0, (row) => { row[decisionIndex] = "accept"; row[reviewerIndex] = "test-reviewer"; });
-    expect(() => auditP099QualityTargetReviewSlots(prematureSignature, 0)).toThrow("before the eight exclusion evidence references are named");
+    expect(() => auditP099QualityTargetReviewSlots(prematureSignature, 0)).toThrow("before the eleven exclusion evidence references are named");
     expect(() => auditP099QualityTargetReviewSlots(prematureSignature, 7)).toThrow("The exclusion evidence comes first.");
 
-    const allowed = auditP099QualityTargetReviewSlots(prematureSignature, 8);
+    const allowed = auditP099QualityTargetReviewSlots(prematureSignature, 11);
     expect(allowed.signedRowCount).toBe(1);
     expect(allowed.signatureCellsFilled).toBe(2);
     expect(allowed.signedTargetIds).toEqual([rows[1][targetIdIndex]]);
@@ -340,7 +340,7 @@ describe("unsigned independent German lexical review packet", () => {
     expect(() => auditP099QualityTargetReviewSlots(outOfScope, 0)).toThrow("outside the original scope");
     const shortSheet = serializeCsv(rows[0], rows.slice(2));
     expect(() => auditP099QualityTargetReviewSlots(shortSheet, 0)).toThrow("expected 126 rows");
-    expect(() => auditP099QualityTargetReviewSlots(csv, 9)).toThrow("stage-1 named-reference count");
+    expect(() => auditP099QualityTargetReviewSlots(csv, 12)).toThrow("stage-1 named-reference count");
     expect(rows.slice(1).every((row) => row[decisionIndex] === "" && row[reviewerIndex] === "")).toBe(true);
   });
 
@@ -362,8 +362,8 @@ describe("unsigned independent German lexical review packet", () => {
     expect(dossier).toContain("لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع");
     expect(dossier).toContain(`الأهداف الـ${P099_ORIGINAL_QUALITY_TARGET_COUNT}`);
     expect(dossier).toContain("لا يوجد في هذا الملف قرار بشري");
-    expect(dossier).toContain("**0/8**");
-    expect(dossier).toContain("**0/40**");
+    expect(dossier).toContain("**0/11**");
+    expect(dossier).toContain("**0/55**");
     expect(dossier).toContain("بوابة المرحلة الثانية: مغلقة");
     for (const decision of audit.exclusionDecisions) expect(dossier).toContain(decision.explanationAr);
 
@@ -375,23 +375,23 @@ describe("unsigned independent German lexical review packet", () => {
     }));
     const namedRows = parseCsv(namedCsv);
     const namedDossier = buildP099ExclusionReviewDossier({ headers: namedRows[0], rows: namedRows.slice(1), contentHash: "test-content-sha256" });
-    expect(namedDossier).toContain("**8/8**");
-    expect(namedDossier).toContain("بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الثمانية");
+    expect(namedDossier).toContain("**11/11**");
+    expect(namedDossier).toContain("بوابة المرحلة الثانية: تُفتح بعد تسجيل الأسماء الأحد عشر");
     expect(namedDossier).toContain("reports/evidence/p099-review.pdf");
     expect(namedDossier).not.toContain("test-reviewer");
     expect(() => buildP099ExclusionReviewDossier({ headers: namedRows[0], rows: namedRows.slice(2), contentHash: "test" }))
-      .toThrow("requires exactly 8 exclusion rows");
+      .toThrow("requires exactly 11 exclusion rows");
   });
 
   it("validates a returned reviewer sheet structurally and never authenticates or closes anything", () => {
     const csv = byPath.get("reports/lexical-review-packet/structural-exclusions.csv")!;
     const expectedDecisionIds = audit.exclusionDecisions.map((decision) => decision.id);
     const blank = validateP099RetainedExclusionDecisions(csv, expectedDecisionIds);
-    expect(blank.exclusionCount).toBe(8);
+    expect(blank.exclusionCount).toBe(11);
     expect(blank.completeRowCount).toBe(0);
-    expect(blank.incompleteRowCount).toBe(8);
+    expect(blank.incompleteRowCount).toBe(11);
     expect(blank.signatureCellsFilled).toBe(0);
-    expect(blank.signatureCellsExpected).toBe(40);
+    expect(blank.signatureCellsExpected).toBe(55);
     expect(blank.signatureFieldsExpectedPerRow).toBe(5);
     expect(blank.rows.every((row) => row.missingSignatureFields.length === 5 && row.evidenceReferenceState === "missing")).toBe(true);
     expect(blank.reviewerIdentityAuthenticated).toBe(false);
@@ -418,7 +418,7 @@ describe("unsigned independent German lexical review packet", () => {
 
     const oneComplete = validateP099RetainedExclusionDecisions(rewrite((row, rowIndex) => { if (rowIndex === 0) completeRow(row); }), expectedDecisionIds);
     expect(oneComplete.completeRowCount).toBe(1);
-    expect(oneComplete.incompleteRowCount).toBe(7);
+    expect(oneComplete.incompleteRowCount).toBe(10);
     expect(oneComplete.rows[0].complete).toBe(true);
     expect(oneComplete.signatureCellsFilled).toBe(5);
     expect(oneComplete.p099ClosureAsserted).toBe(false);
@@ -449,7 +449,7 @@ describe("unsigned independent German lexical review packet", () => {
     const reordered = serializeCsv(rows[0], [rows[2], rows[1], ...rows.slice(3)]);
     expect(() => validateP099RetainedExclusionDecisions(reordered, expectedDecisionIds)).toThrow("must keep the authored exclusion order");
     const shortened = serializeCsv(rows[0], rows.slice(1, 8));
-    expect(() => validateP099RetainedExclusionDecisions(shortened, expectedDecisionIds)).toThrow("expected 8 rows");
+    expect(() => validateP099RetainedExclusionDecisions(shortened, expectedDecisionIds)).toThrow("expected 11 rows");
   });
 
   it("ships a readable 126-target worklist in sheet order with an honest stage-1 gate", () => {
@@ -465,7 +465,7 @@ describe("unsigned independent German lexical review packet", () => {
     }
     expect(worklist).toContain("ليست مراجعة ولا توقيعًا ولا اعتمادًا");
     expect(worklist).toContain("بوابة المرحلة الأولى ما زالت مغلقة");
-    expect(worklist).toContain("**0/8**");
+    expect(worklist).toContain("**0/11**");
     expect(worklist).toContain("**0/630**");
     expect(worklist).toContain("انسخها لورقة مراجع");
     expect(worklist).not.toContain("accept");
@@ -473,8 +473,8 @@ describe("unsigned independent German lexical review packet", () => {
     const headers = sheet[0];
     const closed = buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1), contentHash: "test-content-sha256", stageOneNamedReferenceCount: 0 });
     expect(closed).toContain("بوابة المرحلة الأولى ما زالت مغلقة");
-    const open = buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1), contentHash: "test-content-sha256", stageOneNamedReferenceCount: 8 });
-    expect(open).toContain("بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الثمانية");
+    const open = buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1), contentHash: "test-content-sha256", stageOneNamedReferenceCount: 11 });
+    expect(open).toContain("بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الأحد عشر");
     expect(open).toContain("تسجيل الأسماء وحده ليس مراجعة");
     expect(() => buildP099QualityTargetReviewWorklist({ headers, rows: sheet.slice(1, 40), contentHash: "test", stageOneNamedReferenceCount: 0 }))
       .toThrow("expected 126 rows");

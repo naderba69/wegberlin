@@ -95,7 +95,7 @@ describe("review packet decision presence", () => {
     const report = auditGeneratedArtifactSignatures(files);
     expect(report.artifactCount).toBe(22);
     expect(report.rowCount).toBe(4935);
-    expect(report.expectedCellCount).toBe(21406);
+    expect(report.expectedCellCount).toBe(21409);
     expect(report.filledCellCount).toBe(0);
     expect(report.artifacts.every((artifact) => artifact.filledCells === 0 && artifact.filledRowIds.length === 0)).toBe(true);
     expect(report.humanReviewClosureAsserted).toBe(false);

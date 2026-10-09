@@ -19,9 +19,9 @@
  "p099ExclusionSlots": {
   "boundary": "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer",
   "boundaryAr": "هذا الملخّص يعدّ حضور الخانات فقط: لا يحكم على كفاية الدليل ولا على محتوى قرار المراجع ولا يمنح اعتمادًا.",
-  "exclusionCount": 8,
+  "exclusionCount": 11,
   "namedReferenceCount": 0,
-  "missingReferenceCount": 8,
+  "missingReferenceCount": 11,
   "placeholderReferenceCount": 0,
   "missingReferenceDecisionIds": [
    "a1-21-umsteigen-in-frame-exclusion",
@@ -31,11 +31,14 @@
    "b2-01-reichen-aus-frame-exclusion",
    "b2-01-reichen-um-frame-exclusion",
    "b2-18-ziehen-in-frame-exclusion",
-   "b2-18-kommen-in-frame-exclusion"
+   "b2-18-kommen-in-frame-exclusion",
+   "b2-24-bitten-zu-frame-exclusion",
+   "b2-24-einreichen-zu-frame-exclusion",
+   "b2-24-konnten-zu-frame-exclusion"
   ],
   "placeholderDecisionIds": [],
   "signatureCellsFilled": 0,
-  "signatureCellsExpected": 40,
+  "signatureCellsExpected": 55,
   "readyForIndependentReviewCount": 0,
   "pendingDecisionIds": [
    "a1-21-umsteigen-in-frame-exclusion",
@@ -45,7 +48,10 @@
    "b2-01-reichen-aus-frame-exclusion",
    "b2-01-reichen-um-frame-exclusion",
    "b2-18-ziehen-in-frame-exclusion",
-   "b2-18-kommen-in-frame-exclusion"
+   "b2-18-kommen-in-frame-exclusion",
+   "b2-24-bitten-zu-frame-exclusion",
+   "b2-24-einreichen-zu-frame-exclusion",
+   "b2-24-konnten-zu-frame-exclusion"
   ],
   "evidenceContentsInspected": false,
   "reviewDecisionContentsInterpreted": false,

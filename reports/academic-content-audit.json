@@ -4635,9 +4635,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح الأمر: Unterschreiben hier Sie.",
-        "answer": "Unterschreiben Sie hier",
+        "answer": "Unterschreiben Sie hier | Hier unterschreiben Sie",
         "evidenceRef": "a1-24:controlled:a1-24-e4:explanationAr",
-        "evidenceExcerpt": "في الأمر الرسمي يأتي الفعل ثم Sie. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit.",
+        "evidenceExcerpt": "في الأمر الرسمي يأتي الفعل ثم Sie. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit. ويُقبل أيضًا: «Hier unterschreiben Sie»، إذ يتقدم الظرف hier دون أن يتغير موضع الفعل قبل Sie.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -5856,9 +5856,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Wir machen das ___. أكمل التناوب:",
-        "answer": "abwechselnd",
+        "answer": "abwechselnd | wechselweise",
         "evidenceRef": "a2-06:controlled:a2-06-e7:explanationAr",
-        "evidenceExcerpt": "abwechselnd تصف عملًا بالتناوب: «Wir machen das abwechselnd». zufällig تصف العشوائية و gemeinsam تصف المشاركة، فلا واحدة منهما تجعل لكل شخص دوره في الوقت نفسه. فحص ذاتي: هل يتناوب شخصان على المهمة؟",
+        "evidenceExcerpt": "abwechselnd تصف عملًا بالتناوب: «Wir machen das abwechselnd». zufällig تصف العشوائية و gemeinsam تصف المشاركة، فلا واحدة منهما تجعل لكل شخص دوره في الوقت نفسه. فحص ذاتي: هل يتناوب شخصان على المهمة؟ ويُقبل أيضًا: wechsel…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12788,9 +12788,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Im ___ steht eine junge Familie. تلخيص بلا حرق:",
-        "answer": "Mittelpunkt",
+        "answer": "Mittelpunkt | Zentrum",
         "evidenceRef": "b1-17:controlled:b1-17-e7:explanationAr",
-        "evidenceExcerpt": "العبارة المحفوظة للتقديم الوصفي: «Im Mittelpunkt steht eine junge Familie» أي أنها ما يراه المشاهد مباشرة. كلمة Rand أو Ende تعكس الدلالة، والفعل steht يبقى في النهاية لأنه بعد ظرف مكان.",
+        "evidenceExcerpt": "العبارة المحفوظة للتقديم الوصفي: «Im Mittelpunkt steht eine junge Familie» أي أنها ما يراه المشاهد مباشرة. كلمة Rand أو Ende تعكس الدلالة، والفعل steht يبقى في النهاية لأنه بعد ظرف مكان. ويُقبل أيضًا: «Im Zentrum steht …",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -221581,5 +221581,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "9ce6feedd235540080f44e30921860eb946337d3fa5b461b43a59ec41ae1ec60"
+  "contentSha256": "2feae07104cc57bb11a32b6ed8bba1fb46c61783bb582f35cfe13b218168e4fb"
 }

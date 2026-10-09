@@ -5,29 +5,29 @@
   "version": "accepted-answer-hygiene-v1",
   "policy": "A listed accepted answer is padding when it normalizes onto another listed answer: students cannot type it distinctly, the grader cannot reward it, and counting it widens the claimed answer breadth without widening acceptance.",
   "productiveExercises": 387,
-  "multiVariantExercises": 180,
+  "multiVariantExercises": 183,
   "noOpVariantCount": 0,
   "exercisesWithNoOpVariants": 0,
-  "acceptsExactlyOneString": 207,
-  "acceptsExactlyOneStringPct": 53.5,
-  "broadenedExercises": 180,
+  "acceptsExactlyOneString": 204,
+  "acceptsExactlyOneStringPct": 52.7,
+  "broadenedExercises": 183,
   "byLevel": {
     "A1": {
       "productiveExercises": 96,
-      "acceptsExactlyOneString": 54,
-      "acceptsExactlyOneStringPct": 56.3,
+      "acceptsExactlyOneString": 53,
+      "acceptsExactlyOneStringPct": 55.2,
       "noOpVariantCount": 0
     },
     "A2": {
       "productiveExercises": 96,
-      "acceptsExactlyOneString": 58,
-      "acceptsExactlyOneStringPct": 60.4,
+      "acceptsExactlyOneString": 57,
+      "acceptsExactlyOneStringPct": 59.4,
       "noOpVariantCount": 0
     },
     "B1": {
       "productiveExercises": 96,
-      "acceptsExactlyOneString": 51,
-      "acceptsExactlyOneStringPct": 53.1,
+      "acceptsExactlyOneString": 50,
+      "acceptsExactlyOneStringPct": 52.1,
       "noOpVariantCount": 0
     },
     "B2": {
@@ -38,5 +38,5 @@
     }
   },
   "offenders": [],
-  "contentSha256": "ff1e22c8f49a6269b0e4f922fad5a361582e4a8502499f8e72c42bacb7a22a12"
+  "contentSha256": "a203f23a4ced820e09ccdc112539b101521de34e21f9831fae5303fb8700356e"
 }

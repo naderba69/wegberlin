@@ -21,7 +21,7 @@ describe("accepted-answer breadth (P1-11)", () => {
         expect(new Set(normalized).size, `${exercise.id} lists answers that normalize onto each other`).toBe(answers.length);
       }
     }
-    expect(multi).toBeGreaterThanOrEqual(47);
+    expect(multi).toBeGreaterThanOrEqual(50);
   });
 
   it("carries the newly broadened a1-21 variant with its authored justification", () => {
@@ -46,8 +46,8 @@ describe("accepted-answer breadth (P1-11)", () => {
     expect(worklist).toContain("تحتاج قرار مؤلِّف");
     const report = JSON.parse(readFileSync("reports/accepted-answer-hygiene-audit.json", "utf8")) as { productiveExercises: number; acceptsExactlyOneString: number; multiVariantExercises: number; noOpVariantCount: number };
     expect(report.productiveExercises).toBe(387);
-    expect(report.acceptsExactlyOneString).toBeLessThanOrEqual(340);
-    expect(report.multiVariantExercises).toBeGreaterThanOrEqual(47);
+    expect(report.acceptsExactlyOneString).toBeLessThanOrEqual(337);
+    expect(report.multiVariantExercises).toBeGreaterThanOrEqual(50);
     expect(report.noOpVariantCount).toBe(0);
   });
 });

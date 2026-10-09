@@ -2,11 +2,11 @@
 
 Generated: 2026-09-23  
 Version: `accepted-answer-hygiene-v1`  
-Content SHA-256: `ef774b95c0be6051c974aa7dcfe6cac32e359ba34ab5cce3d576350ebd50af8c`
+Content SHA-256: `b88f4787d5e22a0264d224f800a1256bf76ad04a8b16e0a7dfae795d48a0a670`
 
 ## Result
 
-`PASS` — **387** productive exercises, of which **340** (87.9%) accept exactly one normalized string and **47** accept more than one. Unreachable accepted variants listed in the tree: **0**.
+`PASS` — **387** productive exercises, of which **337** (87.1%) accept exactly one normalized string and **50** accept more than one. Unreachable accepted variants listed in the tree: **0**.
 
 ## Policy
 
@@ -18,9 +18,9 @@ Breadth is therefore counted on distinct normalized forms. `normalizeGermanText`
 
 | Level | Productive exercises | One accepted string | Share | Unreachable variants |
 |---|---:|---:|---:|---:|
-| A1 | 96 | 89 | 92.7% | 0 |
+| A1 | 96 | 87 | 90.6% | 0 |
 | A2 | 96 | 92 | 95.8% | 0 |
-| B1 | 96 | 82 | 85.4% | 0 |
+| B1 | 96 | 81 | 84.4% | 0 |
 | B2 | 99 | 77 | 77.8% | 0 |
 
 ## Unreachable variants

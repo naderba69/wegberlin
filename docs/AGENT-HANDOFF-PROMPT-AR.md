@@ -139,7 +139,7 @@
 ```
 content SHA-256      5ef5c1d16037156cee60b6ba93cb9b12c8ef8c476bc30a7ca3375a9e13816567  (البصمة تشمل صفوف الفجوات المعجمية
 delivery layout        البناء بـ`npm run archive:delivery` (يرفض مجلد الظرف ويجبر package.json+src/app+public/sw.js في الجذر؛ قِيس v155: 1,756 ملفًا + 161 مدخلًا = 1,917، 134 تحت src/app)؛ الرفع بـ`TERMUX_ONE_COMMAND.txt` و`TERMUX_REPLACE_REPO.sh` فقط (ADR-082 + حارس 2026-09-21)
-offline fingerprint  21c65836acaa   (packs gzip: a1 2,733,166 · a2 2,845,339 · b1 2,870,611 · b2 4,294,086 · full 6,016,896 — قِيس بعد إعادة البناء الكاملة في v156.2: 321/321 صفحة، Compiled 30.2s، SSG 10.4s)
+offline fingerprint  e4cb6b981c22   (packs gzip: a1 2,733,445 · a2 2,845,453 · b1 2,870,773 · b2 4,294,197 · full 6,017,265 — قِيس بعد إعادة البناء الكاملة في v156.2: 321/321 صفحة، Compiled 30.2s، SSG 10.4s)
 js:budget            110 مقاطع / 1,739,688 gzip / أكبر ملف 251,309
 media:budget         544 ملفًا / 52,943,843 بايت تحت 59,500,000 (سقف ADR 70,000,000) · `curriculumSourceGzipBytes` 958,946 gzip · 318 مسارًا و5 حُزَم (58/58/58/219/318)
 quality              under60 **1,130** من 1,733 · under40 **923** · `allMedianChars` **33** · وسيط الشرح **27** · جماعة الوسيط **991 من 1,250** والمسافة **366 ⇒ 16 دفعة** · القرينة **39.28%** (مقيسةٌ بعد استعادة v156 والدفعات العشر)

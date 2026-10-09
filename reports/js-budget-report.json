@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 128,
-    "totalChunkGzipBytes": 2028943,
+    "totalChunkGzipBytes": 2029029,
     "maxSingleChunkGzipBytes": 262192
   },
   "issues": [],
@@ -24,9 +24,9 @@
       "gzipBytes": 262192
     },
     {
-      "path": ".next/static/chunks/curriculum-b1-b0987086bfa792f5.js",
-      "rawBytes": 648551,
-      "gzipBytes": 177112
+      "path": ".next/static/chunks/curriculum-b1-9caca8f915c65de8.js",
+      "rawBytes": 648639,
+      "gzipBytes": 177131
     },
     {
       "path": ".next/static/chunks/curriculum-a2-055cee1524ba4b6e.js",
@@ -34,9 +34,9 @@
       "gzipBytes": 167757
     },
     {
-      "path": ".next/static/chunks/curriculum-a1-5e51d28dc61eabfe.js",
-      "rawBytes": 465468,
-      "gzipBytes": 117370
+      "path": ".next/static/chunks/curriculum-a1-d5da12a82720b173.js",
+      "rawBytes": 465707,
+      "gzipBytes": 117437
     },
     {
       "path": ".next/static/chunks/1269-5a7ba5e82b59f8a4.js",

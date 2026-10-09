@@ -2,7 +2,7 @@
 
 Definition: 2026-10-02 · learning-integrity-v1
 
-Source SHA-256: `e039ce3256c6dbfec60bcc6313be57e0fd7867ffb3ca37b1595d2f4bfdd59c04`
+Source SHA-256: `eb28aa4a0d81d6d18df42c8201c8d0e471d9598dc1ad04a6a67d1850e8175536`
 
 Result: **PASS** — 0 contract issues. This is not academic or acoustic certification.
 

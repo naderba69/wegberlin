@@ -97,14 +97,19 @@ A green `accepted:answers` run means "no listed variant is unreachable"; it does
 accept every correct answer a learner might type, that the grader is lenient enough, or that the
 exercises were reviewed by a teacher. No human review happened, and P1-398 is not closed.
 
-## Update 2026-10-09 (teacher audit, B2 accepted-answer fixes)
+## Update 2026-10-09 (teacher audit: wrong accepted variants removed, honest variants authored)
 
-Removing wrong accepted variants is grade-correct and moves the honest counts: one accepted string
-**340/387 = 87.9%**, broadened exercises **47** (was 50). The three fewer broadened exercises are the
-padded or wrong variants removed in `d5e7789`; they were never reachable distinctly, so the drop is not
-a loss of learner acceptance. The P1-11 target of 50 broadened exercises is therefore **open**: it can be
-restored only by authoring three new distinct, correct variants, not by re-adding padding.
+Removing wrong or padded accepted variants moved the counts to 340/387 single-string, 47 broadened.
+The P1-11 target of 50 is restored by authoring **three distinct, correct variants**, not by re-adding padding:
+`a1-09-e4` + `Am Dienstag kann ich nicht kommen`, `a1-16-e4` + `Ich lese Bücher gern`, and
+`b1-15-e4` + `Danach zeige ich die Daten`. Each variant is also named in its `explanationAr`, as the policy requires.
+Current counts: **337/387 = 87.1%** single-string, broadened **50**, unreachable variants **0**.
+
 Also in this batch: `b2-21-e6` no longer accepts the indicative `dass sie das Ergebnis wissen`
 (it is the very error the item teaches), `b2-23-e5` no longer accepts the hyphenated `Studien-Beratung`
 (contradicts its own explanation; `schicken` is added as a genuine synonym), and `b2-23-e6` uses
 `dauerte lange` instead of the ungrammatical `dauerte lang`.
+
+Not claimed: this does not close P1-398. Rewrite-style items (e.g. `b1-06-e4`, `b1-12-e4`, `b2-12-e4`,
+`b2-19-e4`) are graded by a single-string comparator although they ask for a free rewrite; they need a
+product decision (a non-comparator grader or a writing task), not more accepted strings.

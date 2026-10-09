@@ -112,9 +112,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Danke, ___. أكمل الرد:",
-        "answer": "gut",
+        "answer": "gut | super",
         "evidenceRef": "a1-01:controlled:a1-01-e7:explanationAr",
-        "evidenceExcerpt": "Danke, gut جواب قصير طبيعي عن الحال: السؤال Wie geht es dir? أو Wie geht es Ihnen? يُجاب عنه بـDanke, gut، ثم يُبادل السائل بالمثل: Und dir? أو Und Ihnen?",
+        "evidenceExcerpt": "Danke, gut جواب قصير طبيعي عن الحال: السؤال Wie geht es dir? أو Wie geht es Ihnen? يُجاب عنه بـDanke, gut، ثم يُبادل السائل بالمثل: Und dir? أو Und Ihnen? ويُقبل أيضًا: super، وهو رد غير رسمي شائع بالمعنى نفسه.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -5658,9 +5658,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Können Sie die Musik bitte ___ machen? طلب خفض الصوت:",
-        "answer": "leiser",
+        "answer": "leiser | leise",
         "evidenceRef": "a2-05:controlled:a2-05-e7:explanationAr",
-        "evidenceExcerpt": "طلب خفض الصوت يصف الكيفية بالمقارنة: «Können Sie die Musik bitte leiser machen?». lauter تعكس الطلب، و viel لا تُستعمل صفة مقارنة هنا، و schnell تصف السرعة لا مستوى الصوت. فحص ذاتي: هل حدّدتُ الاتجاه لا المجاملة؟",
+        "evidenceExcerpt": "طلب خفض الصوت يصف الكيفية بالمقارنة: «Können Sie die Musik bitte leiser machen?». lauter تعكس الطلب، و viel لا تُستعمل صفة مقارنة هنا، و schnell تصف السرعة لا مستوى الصوت. فحص ذاتي: هل حدّدتُ الاتجاه لا المجاملة؟ ويُقبل…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -5823,9 +5823,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح ترتيب obwohl: Obwohl er ist müde, räumt er auf.",
-        "answer": "Obwohl er müde ist, räumt er auf",
+        "answer": "Obwohl er müde ist, räumt er auf | Er räumt auf, obwohl er müde ist",
         "evidenceRef": "a2-06:controlled:a2-06-e4:explanationAr",
-        "evidenceExcerpt": "جملة obwohl الجانبية تحمل فعلها في آخرها: «Obwohl er müde ist, räumt er auf». تقديم is يحوّلها سؤالًا، وترك الترتيب الخاطئ يُبقي أداة الربط بلا فعل مُصرَّف في مكانها. فحص ذاتي: هل يُنهي الجزءَ التابع فعلُه؟",
+        "evidenceExcerpt": "جملة obwohl الجانبية تحمل فعلها في آخرها: «Obwohl er müde ist, räumt er auf». تقديم is يحوّلها سؤالًا، وترك الترتيب الخاطئ يُبقي أداة الربط بلا فعل مُصرَّف في مكانها. فحص ذاتي: هل يُنهي الجزءَ التابع فعلُه؟ ويُقبل أيضًا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8179,9 +8179,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ Beispiel nutze ich ein Wörterbuch. قدم مثالًا:",
-        "answer": "Zum",
+        "answer": "Zum | Als",
         "evidenceRef": "a2-18:controlled:a2-18-e2:explanationAr",
-        "evidenceExcerpt": "المثال يُقدَّم بـ Zum Beispiel ثم جملة كاملة: «Zum Beispiel nutze ich ein Wörterbuch». zu بلا اسم يُبقي العبارة مقطوعة، و Für Beispiel نقل حرفي لا يقبله النص الألماني.",
+        "evidenceExcerpt": "المثال يُقدَّم بـ Zum Beispiel ثم جملة كاملة: «Zum Beispiel nutze ich ein Wörterbuch». zu بلا اسم يُبقي العبارة مقطوعة، و Für Beispiel نقل حرفي لا يقبله النص الألماني. ويُقبل أيضًا: Als Beispiel، بالمعنى نفسه.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8597,9 +8597,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح ترتيب الجملة: Bevor der Kurs beginnt, ich mache einen Test.",
-        "answer": "Bevor der Kurs beginnt, mache ich einen Test",
+        "answer": "Bevor der Kurs beginnt, mache ich einen Test | Ich mache einen Test, bevor der Kurs beginnt",
         "evidenceRef": "a2-20:controlled:a2-20-e4:explanationAr",
-        "evidenceExcerpt": "بعد جملة bevor يأتي فعل الجملة الرئيسية. تقدم bevor حدثًا يقع قبل حدث آخر: Bevor ich mich anmelde, lese ich die Bedingungen.",
+        "evidenceExcerpt": "بعد جملة bevor يأتي فعل الجملة الرئيسية. تقدم bevor حدثًا يقع قبل حدث آخر: Bevor ich mich anmelde, lese ich die Bedingungen. ويُقبل أيضًا: Ich mache einen Test, bevor der Kurs beginnt؛ الجملة الرئيسية أولًا ثم التابعة م…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12755,9 +12755,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "صحح المعنى: Der Film ist überzeugt. (الفيلم مقنع)",
-        "answer": "Der Film ist überzeugend",
+        "answer": "Der Film ist überzeugend | Der Film überzeugt",
         "evidenceRef": "b1-17:controlled:b1-17-e4:explanationAr",
-        "evidenceExcerpt": "الصفة التي تصف ما يسبّب الاقتناع تحمل -end: «Der Film ist überzeugend». الصيغة الأخرى تصف حالة المشاهد، فوضعها هنا ينسب الاقتناع إلى الفيلم لا إليه. فحص ذاتي: من الذي يقتنع؟",
+        "evidenceExcerpt": "الصفة التي تصف ما يسبّب الاقتناع تحمل -end: «Der Film ist überzeugend». الصيغة الأخرى تصف حالة المشاهد، فوضعها هنا ينسب الاقتناع إلى الفيلم لا إليه. فحص ذاتي: من الذي يقتنع؟ ويُقبل أيضًا: Der Film überzeugt، بالمعنى نفس…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -14339,9 +14339,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "قيّد الاستنتاج: Zwei Kurse waren erfolgreicher, also funktioniert die Regel für alle Lernenden.",
-        "answer": "Die Ergebnisse deuten für diese zwei Kurse auf einen Vorteil hin, lassen sich aber nicht auf alle Lernenden verallgemeinern",
+        "answer": "Die Ergebnisse deuten für diese zwei Kurse auf einen Vorteil hin, lassen sich aber nicht auf alle Lernenden verallgemeinern | Zwei Kurse waren erfolgreicher, doch daraus folgt nicht, dass die Regel für alle Lernenden gilt",
         "evidenceRef": "b2-01:controlled:b2-01-e4:explanationAr",
-        "evidenceExcerpt": "عينة من دورين لا تحمل تعميمًا على كل المتعلمين: صيغة deuten auf … hin تُبقي الاستنتاج قابلًا للمراجعة وتسمّي حدوده في الجملة نفسها.",
+        "evidenceExcerpt": "عينة من دورين لا تحمل تعميمًا على كل المتعلمين: صيغة deuten auf … hin تُبقي الاستنتاج قابلًا للمراجعة وتسمّي حدوده في الجملة نفسها. ويُقبل أيضًا: Zwei Kurse waren erfolgreicher, doch daraus folgt nicht, dass die Regel f…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -16913,9 +16913,9 @@
         "scope": "lesson-controlled",
         "kind": "error-correction",
         "prompt": "خفّف سلسلة الأسماء: Die Durchführung der Überprüfung der Einhaltung der Fristen ist erforderlich.",
-        "answer": "Wir prüfen, ob die Fristen eingehalten werden; das ist erforderlich",
+        "answer": "Wir prüfen, ob die Fristen eingehalten werden; das ist erforderlich | Es ist erforderlich, die Einhaltung der Fristen zu prüfen",
         "evidenceRef": "b2-14:controlled:b2-14-e4:explanationAr",
-        "evidenceExcerpt": "سلسلة الإضافات الاسمية تُجبر القارئ على تفكيكها قبل الفهم: تحويلها إلى فعل مع جملة جانبية يجعل الفاعل والمحمول واضحين دون فقدان الدقة.",
+        "evidenceExcerpt": "سلسلة الإضافات الاسمية تُجبر القارئ على تفكيكها قبل الفهم: تحويلها إلى فعل مع جملة جانبية يجعل الفاعل والمحمول واضحين دون فقدان الدقة. ويُقبل أيضًا: Es ist erforderlich, die Einhaltung der Fristen zu prüfen، وهو تعبير ا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -90550,6 +90550,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Ich mache einen Test, bevor der Kurs beginnt",
+            "surface": "Ich mache einen Test, bevor der Kurs beginnt",
+            "strength": "context"
+          },
+          {
             "path": "exercises[3].sentence",
             "stage": "controlled",
             "text": "Bevor der Kurs beginnt, ich mache einen Test.",
@@ -91210,6 +91217,13 @@
             "stage": "controlled",
             "text": "Bevor der Kurs beginnt, mache ich einen Test",
             "surface": "Bevor der Kurs beginnt, mache ich einen Test",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Ich mache einen Test, bevor der Kurs beginnt",
+            "surface": "Ich mache einen Test, bevor der Kurs beginnt",
             "strength": "context"
           },
           {
@@ -130670,6 +130684,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Zwei Kurse waren erfolgreicher, doch daraus folgt nicht, dass die Regel für alle Lernenden gilt",
+            "surface": "Zwei Kurse waren erfolgreicher, doch daraus folgt nicht, dass die Regel für alle Lernenden gilt",
+            "strength": "context"
+          },
+          {
             "path": "exercises[3].sentence",
             "stage": "controlled",
             "text": "Zwei Kurse waren erfolgreicher, also funktioniert die Regel für alle Lernenden.",
@@ -159080,6 +159101,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Es ist erforderlich, die Einhaltung der Fristen zu prüfen",
+            "surface": "Es ist erforderlich, die Einhaltung der Fristen zu prüfen",
+            "strength": "context"
+          },
+          {
             "path": "exercises[3].sentence",
             "stage": "controlled",
             "text": "Die Durchführung der Überprüfung der Einhaltung der Fristen ist erforderlich.",
@@ -159351,6 +159379,13 @@
             "stage": "controlled",
             "text": "Wir prüfen, ob die Fristen eingehalten werden; das ist erforderlich",
             "surface": "Wir prüfen, ob die Fristen eingehalten werden; das ist erforderlich",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[3].acceptedAnswers[1]",
+            "stage": "controlled",
+            "text": "Es ist erforderlich, die Einhaltung der Fristen zu prüfen",
+            "surface": "Es ist erforderlich, die Einhaltung der Fristen zu prüfen",
             "strength": "context"
           },
           {
@@ -221546,5 +221581,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "854e45b754b4e2e681a46e4006d26736857cf8f492c32ed44c5e744d684ef7ab"
+  "contentSha256": "9ce6feedd235540080f44e30921860eb946337d3fa5b461b43a59ec41ae1ec60"
 }

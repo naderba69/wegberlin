@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `4a00f26b9d8d270c123dd57f509e5fd9f18053e1103f1377a703d5ddd489cabb`
+Content SHA-256: `e8a8a9402777e3fe50e63c9dbd87f31bc30a9ec50093e6ccbe85ea9919ff699e`
 
 ## Result
 
@@ -72,7 +72,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching includes entry
 | `a1-11-objective-4` | Ich kann einen einfachen Einkaufsdialog führen. | أجري حوار تسوق بسيطًا. | 5 · `a1-11:entry`, `a1-11:vocabulary` | 17 | 5 · `a1-11-m1` | covered |
 | `a1-12-objective-1` | Ich kann eine einfache Speisekarte verstehen. | أفهم قائمة طعام بسيطة. | 5 · `a1-12:entry`, `a1-12:vocabulary` | 17 | 5 · `a1-12-m1` | covered |
 | `a1-12-objective-2` | Ich kann höflich Essen und Getränke bestellen. | أطلب الطعام والشراب بلباقة. | 5 · `a1-12:entry`, `a1-12:vocabulary` | 17 | 5 · `a1-12-m1` | covered |
-| `a1-12-objective-3` | Ich kann Wünsche mit mit und ohne ausdrücken. | أحدد الطلب مع مكوّن أو دونه. | 5 · `a1-12:entry`, `a1-12:vocabulary` | 17 | 5 · `a1-12-m1` | covered |
+| `a1-12-objective-3` | Ich kann Wünsche mit und ohne ausdrücken. | أحدد الطلب مع مكوّن أو دونه. | 5 · `a1-12:entry`, `a1-12:vocabulary` | 17 | 5 · `a1-12-m1` | covered |
 | `a1-12-objective-4` | Ich kann um die Rechnung bitten und ein Problem nennen. | أطلب الحساب وأشرح مشكلة بسيطة. | 5 · `a1-12:entry`, `a1-12:vocabulary` | 17 | 5 · `a1-12-m1` | covered |
 | `a1-13-objective-1` | Ich kann Zimmer und Wohnräume nennen. | أسمي الغرف وأجزاء المسكن. | 5 · `a1-13:entry`, `a1-13:vocabulary` | 17 | 5 · `a1-13-m1` | covered |
 | `a1-13-objective-2` | Ich kann eine Wohnung einfach beschreiben. | أصف مسكنًا بجمل بسيطة. | 5 · `a1-13:entry`, `a1-13:vocabulary` | 17 | 5 · `a1-13-m1` | covered |
@@ -100,7 +100,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching includes entry
 | `a1-18-objective-4` | Ich kann einen Grund mit deshalb ausdrücken. | أعبر عن نتيجة باستعمال deshalb. | 5 · `a1-18:entry`, `a1-18:vocabulary` | 17 | 5 · `a1-18-m1` | covered |
 | `a1-19-objective-1` | Ich kann Verkehrsmittel nennen. | أسمي وسائل النقل. | 5 · `a1-19:entry`, `a1-19:vocabulary` | 17 | 5 · `a1-19-m1` | covered |
 | `a1-19-objective-2` | Ich kann sagen, wie ich fahre. | أقول كيف أتنقل. | 5 · `a1-19:entry`, `a1-19:vocabulary` | 17 | 5 · `a1-19-m1` | covered |
-| `a1-19-objective-3` | Ich benutze mit mit dem Dativ. | أستعمل mit مع Dativ. | 5 · `a1-19:entry`, `a1-19:vocabulary` | 17 | 5 · `a1-19-m1` | covered |
+| `a1-19-objective-3` | Ich benutze mit dem Dativ. | أستعمل mit مع Dativ. | 5 · `a1-19:entry`, `a1-19:vocabulary` | 17 | 5 · `a1-19-m1` | covered |
 | `a1-19-objective-4` | Ich kann einfache Fahrkarteninformationen verstehen. | أفهم معلومات تذكرة بسيطة. | 5 · `a1-19:entry`, `a1-19:vocabulary` | 17 | 5 · `a1-19-m1` | covered |
 | `a1-20-objective-1` | Ich kann nach dem Weg fragen. | أسأل عن الطريق. | 5 · `a1-20:entry`, `a1-20:vocabulary` | 17 | 5 · `a1-20-m1` | covered |
 | `a1-20-objective-2` | Ich kann einfache Wegbeschreibungen verstehen. | أفهم وصفًا بسيطًا للطريق. | 5 · `a1-20:entry`, `a1-20:vocabulary` | 17 | 5 · `a1-20-m1` | covered |

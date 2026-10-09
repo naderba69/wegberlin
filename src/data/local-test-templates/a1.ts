@@ -59,7 +59,7 @@ export const localTestTemplateBankA1 = [
           "Auf Wiedersehen!"
         ],
         "correctIndex": 2,
-        "explanationAr": "يمكن الرد بالتحية نفسها: Guten Abend! تُقال مساءً ويُجاب عنها بـGuten Abend! أو Guten Abend, wie geht es Ihnen?. أما Guten Morgen! فتحية صباحية، وGute Nacht! وAuf Wiedersehen! تقالان عند الوداع والنوم."
+        "explanationAr": "يمكن الرد بالتحية نفسها: Guten Abend! تُقال مساءً ويُجاب عنها بـGuten Abend! أو Guten Abend, wie geht es Ihnen? أما Guten Morgen! فتحية صباحية، وGute Nacht! وAuf Wiedersehen! تقالان عند الوداع والنوم."
       },
       {
         "id": "a1-01-m5",
@@ -1587,7 +1587,7 @@ export const localTestTemplateBankA1 = [
           "tun"
         ],
         "correctIndex": 3,
-        "explanationAr": "Beine جمع: tun. الخطأ الشائع إبقاء tut مع الجمع: „Meine Beine tut weh” غير صحيحة."
+        "explanationAr": "Beine جمع: tun. الخطأ الشائع إبقاء tut مع الجمع: „Meine Beine tut weh“ غير صحيحة."
       },
       {
         "id": "a1-22-m3",

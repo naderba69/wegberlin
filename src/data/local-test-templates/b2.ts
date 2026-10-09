@@ -869,7 +869,7 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Gemeinsame B2-Kompetenzen intern üben, offizielle Anbieterformate danach strikt trennen",
           "Beide Anbieterformate von Anfang an gemeinsam trainieren, damit die Prüfung vertraut wird",
-          "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Mocks zu lösen",
+          "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Probeprüfungen zu lösen",
           "Die Goethe-Formate intern üben und dabei alle telc-Aufgaben komplett weglassen"
         ],
         "correctIndex": 0,

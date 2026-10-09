@@ -134,7 +134,7 @@ export const dictationBank: DictationItem[] = [
     ...common, id: "dict-b2-flexibility", level: "B2", mode: "full",
     titleDe: "Flexible Arbeitszeit", titleAr: "وقت العمل المرن", situationAr: "تقييم مشروط لفائدة تنظيم عمل مرن.",
     instructionDe: "Hören Sie. Rekonstruieren Sie den vollständigen Satz.", instructionAr: "أعد بناء الجملة كاملة مع الشرط والقيد، لا الكلمات المفتاحية فقط.",
-    focusAr: "راقب العبارة Under bestimmten Voraussetzungen وبنية ohne … einzuschränken.",
+    focusAr: "راقب العبارة Unter bestimmten Voraussetzungen وبنية ohne … einzuschränken.",
     canonicalText: "Unter bestimmten Voraussetzungen kann eine flexible Arbeitszeit die Zufriedenheit erhöhen, ohne die Erreichbarkeit einzuschränken.",
   },
   {

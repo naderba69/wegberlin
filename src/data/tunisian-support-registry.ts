@@ -84,7 +84,7 @@ export const tunisianSupportNotes: TunisianSupportNote[] = [
   }),
   note({
     lessonId: "a2-08", level: "A2", theoryIds: ["a2-08-t2"], category: "subordinate-clause",
-    titleDe: "dass und Verbende", titleAr: "الجملة التابعة والفعل في النهاية",
+    titleDe: "dass-Satz und Verbendstellung", titleAr: "الجملة التابعة والفعل في النهاية",
     msaBridgeAr: "الرابط العربي الذي يقدم مضمون القول لا يفرض ترتيبًا مطابقًا لترتيب الجملة التابعة الألمانية.",
     tunisianNoteAr: "تنجم تقول «نظن اللي الخدمة تناسب» من غير ما يمشي الفعل للآخر. بعد الرابط الألماني، الفعل المصرف يمشي إلى نهاية الجملة التابعة.",
     differenceImpactAr: "النقل الحرفي يبقي الفعل الألماني قرب بداية الجملة التابعة بدل موضعه الأخير.",

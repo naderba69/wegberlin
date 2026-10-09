@@ -1569,3 +1569,6 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 @media(max-width:980px){.illustrative-pathways-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.illustrative-pathways{padding:13px}.illustrative-pathways-grid{grid-template-columns:1fr}.illustrative-pathway-card{padding:12px}}
 @media(prefers-reduced-motion:reduce){.illustrative-pathway-card summary svg{transition:none}}
+/* Audit round 2: lesson step 5 on phones. Long German formulas wrap inside the card instead of widening the page. */
+.theory-card,.theory-stack>*,.lesson-section-block{min-width:0;max-width:100%}
+.theory-card>code{width:auto;max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}

@@ -11,6 +11,7 @@ const APPLIED_FILES = [
   "exam-bank-language-elements-b2-explanations.draft.json",
   "exam-bank-choice-reading-b2-explanations.draft.json",
   "exam-bank-choice-language-elements-b2-explanations.draft.json",
+  "exam-bank-gap-rewrites-2026-10-10.draft.json",
 ];
 const NOT_DRAFTED_FILE = "exam-bank-not-drafted-2026-10-10.json";
 const APPLIED_STATUS = "applied-owner-approved-2026-10-10";
@@ -68,8 +69,8 @@ describe("exam bank explanation drafts", () => {
     const all = [...applied, ...flaggedIds];
 
     expect(new Set(all).size).toBe(all.length);
-    expect(applied.length).toBe(514);
-    expect(flaggedIds.length).toBe(12);
+    expect(applied.length).toBe(524);
+    expect(flaggedIds.length).toBe(2);
     expect(all.length).toBe(526);
     // البنود القصيرة المتبقية في البيانات الحية هي بالضبط المُعلَّمة
     expect([...shortItemIds].sort()).toEqual([...flaggedIds].sort());

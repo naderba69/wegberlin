@@ -20,8 +20,8 @@ function normalize(text: string): string {
 const draft = JSON.parse(readFileSync(DRAFT, "utf8")) as Draft;
 
 describe("gap rewrites draft (Sprachbausteine 36/37)", () => {
-  it("is still pending owner approval", () => {
-    expect(draft.status).toBe("draft-owner-approval-required");
+  it("is marked applied after owner approval", () => {
+    expect(draft.status).toBe("applied-owner-approved-2026-10-10");
   });
 
   it("covers the ten flagged gap items, two per text", () => {
@@ -46,11 +46,11 @@ describe("gap rewrites draft (Sprachbausteine 36/37)", () => {
     }
   });
 
-  it("is not applied to the live exam data yet", () => {
+  it("is applied to the live exam data (new texts in place)", () => {
     const live = new Map<string, string>();
     for (const task of allPublishedExamTasks as unknown as { id: string; texts?: { id: string; textDe?: string }[] }[]) {
       for (const tx of task.texts ?? []) live.set(tx.id, tx.textDe ?? "");
     }
-    for (const t of draft.texts) expect(live.get(t.id), t.id).toBe(t.oldTextDe);
+    for (const t of draft.texts) expect(live.get(t.id), t.id).toBe(t.newTextDe);
   });
 });

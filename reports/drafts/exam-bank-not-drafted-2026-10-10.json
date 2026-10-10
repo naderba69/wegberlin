@@ -2,50 +2,10 @@
   "status": "not-drafted-owner-decision-required",
   "policy": "owner-approval-required-before-apply",
   "generated": "2026-10-10",
-  "scope": "بنود قصيرة لم تُكتب لها مسودة: 12 بندًا بمفتاح مشكوك فيه فقط. هي الآن البنود القصيرة الوحيدة المتبقية في البيانات.",
+  "scope": "بنود قصيرة لم تُكتب لها مسودة: بندان بمفتاح مشكوك فيه (تمرينان في القراءة). الفجوات 36 و37 في t2-t6 أُعيدت صياغتها وطُبّقت في 2026-10-10.",
   "flagged": {
-    "reason": "doubtful keyed answer: the keyed option does not fit the gap sentence (gaps 36 and 37 in t2-t6, and g5-r2-q1, g6-r2-q5)",
+    "reason": "doubtful keyed answer: the keyed option does not fit the gap sentence (g5-r2-q1, g6-r2-q5). The 10 gap-36/37 items in t2-t6 were rewritten and applied on 2026-10-10 (see exam-bank-gap-rewrites-2026-10-10.draft.json).",
     "items": [
-      {
-        "taskId": "telc-b2-full-02-language-02",
-        "id": "t2-l2-q6"
-      },
-      {
-        "taskId": "telc-b2-full-02-language-02",
-        "id": "t2-l2-q7"
-      },
-      {
-        "taskId": "telc-b2-full-03-language-02",
-        "id": "t3-l2-q6"
-      },
-      {
-        "taskId": "telc-b2-full-03-language-02",
-        "id": "t3-l2-q7"
-      },
-      {
-        "taskId": "telc-b2-full-04-language-02",
-        "id": "t4-l2-q6"
-      },
-      {
-        "taskId": "telc-b2-full-04-language-02",
-        "id": "t4-l2-q7"
-      },
-      {
-        "taskId": "telc-b2-full-05-language-02",
-        "id": "t5-l2-q6"
-      },
-      {
-        "taskId": "telc-b2-full-05-language-02",
-        "id": "t5-l2-q7"
-      },
-      {
-        "taskId": "telc-b2-full-06-language-02",
-        "id": "t6-l2-q6"
-      },
-      {
-        "taskId": "telc-b2-full-06-language-02",
-        "id": "t6-l2-q7"
-      },
       {
         "taskId": "goethe-b2-full-05-reading-02",
         "id": "g5-r2-q1"

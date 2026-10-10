@@ -1,6 +1,6 @@
 {
-  "status": "draft-owner-approval-required",
-  "policy": "owner-approval-required-before-apply",
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approved-2026-10-10-applied",
   "generated": "2026-10-10",
   "scope": "إعادة صياغة جملتين في كل نص من نصوص Sprachbausteine (t2 إلى t6)، لبنود الفجوتين 36 و37 (10 بنود). المفاتيح تبقى كما هي: allerdings وwenn.",
   "rule": "the new text keeps the gap markers [31]..[40] in order; each explanation quotes a verbatim fragment from the NEW text (markers removed), inside «…». Not applied until the owner approves.",

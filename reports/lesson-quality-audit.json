@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "fa9a860b1736518e366cdb948d0f652c2c43eba5cca7c2b5a4be548ec64e79ea",
+  "contentSha256": "1e7702bb70f60f2fb0f90002ebac3940e1de3b66eaa5570dff36f7f8f53ca255",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -1994,29 +1994,6 @@
         ]
       },
       {
-        "lessonId": "b2-20",
-        "level": "B2",
-        "pct": 32.2,
-        "unknown": [
-          "studienrates",
-          "dieselbe",
-          "enthielt",
-          "einzigen",
-          "endet",
-          "studierende",
-          "schichtarbeit",
-          "kommission",
-          "erstberatung",
-          "angebote",
-          "kostenfrei",
-          "datenschutz",
-          "raumfrage",
-          "ungeklaert",
-          "geblieben",
-          "anmerkung"
-        ]
-      },
-      {
         "lessonId": "a1-23",
         "level": "A1",
         "pct": 32,
@@ -2083,6 +2060,29 @@
           "fremde",
           "kursleiter",
           "pech"
+        ]
+      },
+      {
+        "lessonId": "b2-20",
+        "level": "B2",
+        "pct": 31.6,
+        "unknown": [
+          "studienrates",
+          "dieselbe",
+          "enthielt",
+          "einzigen",
+          "endet",
+          "studierende",
+          "schichtarbeit",
+          "kommission",
+          "erstberatung",
+          "angebote",
+          "kostenfrei",
+          "datenschutz",
+          "raumfrage",
+          "ungeklaert",
+          "geblieben",
+          "anmerkung"
         ]
       },
       {

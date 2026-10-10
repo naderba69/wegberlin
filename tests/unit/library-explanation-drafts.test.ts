@@ -23,6 +23,16 @@ describe("library explanation drafts", () => {
     expect(DRAFT_FILES.length).toBeGreaterThan(0);
   });
 
+  it("covers every library question exactly once", () => {
+    const drafted: string[] = [];
+    for (const file of DRAFT_FILES) {
+      const draft = JSON.parse(readFileSync(join(DRAFT_DIR, file), "utf8"));
+      for (const entry of draft.items as { id: string }[]) drafted.push(entry.id);
+    }
+    expect(new Set(drafted).size).toBe(drafted.length);
+    expect([...new Set(drafted)].sort()).toEqual([...textById.keys()].sort());
+  });
+
   for (const file of DRAFT_FILES) {
     describe(file, () => {
       const draft = JSON.parse(readFileSync(join(DRAFT_DIR, file), "utf8"));

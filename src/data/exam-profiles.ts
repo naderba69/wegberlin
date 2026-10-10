@@ -78,7 +78,7 @@ export const examProfiles: Record<ExamProfile["id"], ExamProfile> = {
       { id: "sprechen", titleDe: "Mündlicher Ausdruck", titleAr: "التعبير الشفهي", parts: 3, minutes: 15, maxPoints: 75, noteAr: "عادةً ثنائي؛ 20 دقيقة تحضير. قد تمتد إلى نحو 25 دقيقة مع ثلاثة مشاركين." },
     ],
     structureAr: "قسم كتابي: قراءة وعناصر لغوية واستماع وكتابة؛ وقسم شفهي من ثلاثة أجزاء.",
-    passingRuleAr: "وفق النموذج الرسمي المرتبط حاليًا: 225 نقطة للكتابي و75 للشفهي؛ يلزم 135 كتابيًا و45 شفهيًا. التطبيق لا يمنح نتيجة رسمية.",
+    passingRuleAr: "أرقام النجاح (225 نقطة للكتابي و75 للشفهي؛ يلزم 135 كتابيًا و45 شفهيًا) مأخوذة من مواقع تحضير غير رسمية، ولم تؤكّدها telc. التطبيق لا يمنح نتيجة رسمية.",
     separationWarningAr: "لا تطبق قاعدة 60/100 لكل وحدة الخاصة ب Goethe؛ telc يفصل مجموع الكتابي عن مجموع الشفهي.",
     sourceRefs: ["telc-b2-overview-2026", "telc-b2-mock-2019-current-link"],
   },

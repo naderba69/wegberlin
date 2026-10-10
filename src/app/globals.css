@@ -1582,3 +1582,5 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .lesson-review-status.pending{background:#fff4e0;color:#7a5520;border:1px solid #ecd6a8}
 .lesson-review-status.reviewed{background:#edf6f0;color:#2f6a4f;border:1px solid #cfe3d7}
 .stage-lock-hint{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:#f4f1ea;color:#5f5440;font-size:var(--fs-12);line-height:1.6}
+.diagnostic-review{margin:16px 0;display:grid;gap:10px}
+.diagnostic-review article{padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12)}

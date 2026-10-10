@@ -12,6 +12,8 @@ export type DiagnosticQuestion = {
   options: [string, string, string, string];
   correctIndex: 0 | 1 | 2 | 3;
   explanation: string;
+  /** شرح عربي؛ يُضاف بعد اعتماد المسودات (قرار مراجعة). */
+  explanationAr?: string;
   error?: Omit<ErrorRecord, "id" | "occurrences" | "lastSeenAt">;
 };
 

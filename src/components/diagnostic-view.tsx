@@ -17,6 +17,7 @@ import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import { DiagnosticProductiveSampleStep } from "./diagnostic-productive-sample";
 import { buildProductiveSampleComparison, productiveSampleComparisonFor } from "@/core/diagnostic/productive-sample";
 import { SkillDiagnosticRetest } from "./skill-diagnostic-retest";
+import { diagnosticReviewItems } from "@/core/diagnostic/review";
 
 const skillLabels: Record<DiagnosticSkill, string> = {
   grammar: "القواعد والاستعمال",
@@ -108,6 +109,7 @@ export function DiagnosticView() {
   if (finalResult) {
     const result = finalResult;
     const confidence = result.confidence ?? "low";
+    const reviewItems = diagnosticReviewItems(questions, answers);
     return <div className="diagnostic-result">
       <span className="result-orb"><Gauge size={29}/></span>
       <small>تقدير أولي متكيف · الصيغة {result.formId} · ليس شهادة رسمية</small>
@@ -124,6 +126,7 @@ export function DiagnosticView() {
         return <article key={skill}><span>{skillLabels[skill]}</span><strong>{evidence.correct}/{evidence.attempted}</strong></article>;
       })}</div><p>لا توجد مهمة إملاء كتابية هنا، لذلك لا يساوي التشخيص بين خطأ الإملاء وضعف الفهم.</p></section>}
       {result.productiveSample&&<section className="diagnostic-productive-summary"><h2>Produktionsprobe · العينة الإنتاجية</h2><div><span><b>{result.productiveSample.mode==="not-yet"?"لم تُنتج بعد":result.productiveSample.mode.includes("writing")?`${result.productiveSample.writingWordCount} كلمات مكتوبة`:"تسجيل شفهي"}</b><small>{result.productiveSample.speakingDurationSeconds?` · ${result.productiveSample.speakingDurationSeconds} ثانية صوت محلي`:""}</small></span><strong>{result.productiveSample.selfAssessment==="independent"?"دون مساعدة":result.productiveSample.selfAssessment==="with-help"?"بمساعدة أو تردد":"لا أستطيع بعد"}</strong></div><p>محفوظة كدليل ذاتي بلا تصحيح أو درجة لغة، ولم تغيّر نتيجة القواعد أو المفردات أو القراءة أو الاستماع.</p></section>}
+      {reviewItems.length > 0 && <section className="diagnostic-review" data-diagnostic-review="after-test"><h2>راجع إجاباتك الخاطئة</h2>{reviewItems.map((item) => <article key={item.id}><p>{item.promptAr}</p><p>إجابتك: <span lang="de" dir="ltr">{item.chosenDe}</span></p><p>الصحيح: <span lang="de" dir="ltr">{item.correctDe}</span></p><p><small>شرح بالألمانية</small> <span lang="de" dir="ltr">{item.explanationDe}</span></p>{item.explanationAr && <p>{item.explanationAr}</p>}</article>)}</section>}
       <div className="result-actions"><Link className="primary-button" href="/today">ابنِ مهمتي التالية <ArrowLeft size={17}/></Link><Link className="secondary-button" href="/errors">شاهد الفجوات المكتشفة</Link></div>
     </div>;
   }

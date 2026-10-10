@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "4a1f120bb555055c5b4bdb03052e36d04aa14072e131ca12794c36d0bab9622e",
+  "buildFingerprint": "646d41764c3e29cc48c5693014d9e93adeddd5f4451cf318c062a34d218ed98a",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3955701,
-      "routeGzipBytes": 782398,
+      "routeGzipBytes": 782407,
       "nextAssetCount": 88,
-      "nextAssetRawBytes": 7008629,
-      "nextAssetGzipBytes": 1978002,
+      "nextAssetRawBytes": 7016410,
+      "nextAssetGzipBytes": 1979963,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11031980,
-      "totalGzipBytes": 2772365,
+      "totalRawBytes": 11039761,
+      "totalGzipBytes": 2774335,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -241,9 +241,9 @@
           "gzipBytes": 293
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d73798e7ca878096.js",
-          "rawBytes": 48660,
-          "gzipBytes": 16480
+          "path": "/_next/static/chunks/app/diagnostic/page-296dac8bfa764b2e.js",
+          "rawBytes": 56441,
+          "gzipBytes": 18441
         },
         {
           "path": "/_next/static/chunks/app/errors/page-800da2b693c3874a.js",
@@ -467,14 +467,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4252891,
-      "routeGzipBytes": 894703,
+      "routeGzipBytes": 894702,
       "nextAssetCount": 88,
-      "nextAssetRawBytes": 7008637,
-      "nextAssetGzipBytes": 1978005,
+      "nextAssetRawBytes": 7016418,
+      "nextAssetGzipBytes": 1979966,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11329178,
-      "totalGzipBytes": 2884673,
+      "totalRawBytes": 11336959,
+      "totalGzipBytes": 2886633,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -697,9 +697,9 @@
           "gzipBytes": 296
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d73798e7ca878096.js",
-          "rawBytes": 48660,
-          "gzipBytes": 16480
+          "path": "/_next/static/chunks/app/diagnostic/page-296dac8bfa764b2e.js",
+          "rawBytes": 56441,
+          "gzipBytes": 18441
         },
         {
           "path": "/_next/static/chunks/app/errors/page-800da2b693c3874a.js",
@@ -923,14 +923,14 @@
       "label": "B1",
       "routeCount": 60,
       "routeRawBytes": 4330539,
-      "routeGzipBytes": 919706,
+      "routeGzipBytes": 919704,
       "nextAssetCount": 88,
-      "nextAssetRawBytes": 7008635,
-      "nextAssetGzipBytes": 1978008,
+      "nextAssetRawBytes": 7016416,
+      "nextAssetGzipBytes": 1979969,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11406824,
-      "totalGzipBytes": 2909679,
+      "totalRawBytes": 11414605,
+      "totalGzipBytes": 2911638,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1153,9 +1153,9 @@
           "gzipBytes": 298
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d73798e7ca878096.js",
-          "rawBytes": 48660,
-          "gzipBytes": 16480
+          "path": "/_next/static/chunks/app/diagnostic/page-296dac8bfa764b2e.js",
+          "rawBytes": 56441,
+          "gzipBytes": 18441
         },
         {
           "path": "/_next/static/chunks/app/errors/page-800da2b693c3874a.js",
@@ -1379,14 +1379,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10137297,
-      "routeGzipBytes": 2322346,
+      "routeGzipBytes": 2322316,
       "nextAssetCount": 92,
-      "nextAssetRawBytes": 7153062,
-      "nextAssetGzipBytes": 2022993,
+      "nextAssetRawBytes": 7160843,
+      "nextAssetGzipBytes": 2024954,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17358009,
-      "totalGzipBytes": 4357304,
+      "totalRawBytes": 17365790,
+      "totalGzipBytes": 4359235,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1624,9 +1624,9 @@
           "gzipBytes": 298
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d73798e7ca878096.js",
-          "rawBytes": 48660,
-          "gzipBytes": 16480
+          "path": "/_next/static/chunks/app/diagnostic/page-296dac8bfa764b2e.js",
+          "rawBytes": 56441,
+          "gzipBytes": 18441
         },
         {
           "path": "/_next/static/chunks/app/errors/page-800da2b693c3874a.js",
@@ -1855,14 +1855,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 320,
       "routeRawBytes": 16809988,
-      "routeGzipBytes": 4046810,
+      "routeGzipBytes": 4046762,
       "nextAssetCount": 119,
-      "nextAssetRawBytes": 7158242,
-      "nextAssetGzipBytes": 2027481,
+      "nextAssetRawBytes": 7166023,
+      "nextAssetGzipBytes": 2029442,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24035880,
-      "totalGzipBytes": 6086256,
+      "totalRawBytes": 24043661,
+      "totalGzipBytes": 6088169,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -2115,9 +2115,9 @@
           "gzipBytes": 298
         },
         {
-          "path": "/_next/static/chunks/app/diagnostic/page-d73798e7ca878096.js",
-          "rawBytes": 48660,
-          "gzipBytes": 16480
+          "path": "/_next/static/chunks/app/diagnostic/page-296dac8bfa764b2e.js",
+          "rawBytes": 56441,
+          "gzipBytes": 18441
         },
         {
           "path": "/_next/static/chunks/app/errors/page-800da2b693c3874a.js",

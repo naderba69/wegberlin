@@ -83,7 +83,7 @@ const formA: DiagnosticQuestion[] = [
   question("A", "B1", "vocabulary", {
     prompt: "اختر التعبير الأكثر طبيعية:",
     options: ["eine Entscheidung machen", "eine Entscheidung treffen", "eine Entscheidung tun", "eine Entscheidung bauen"], correctIndex: 1,
-    explanation: "eine Entscheidung treffen تركيب ثابت.", explanationAr: "التعبير الثابت في الألمانية هو «eine Entscheidung treffen» ومعناه اتخاذ قرار. machen وtun وbauen لا تكوّن هذا التعبير.",
+    explanation: "eine Entscheidung treffen تركيب ثابت.", explanationAr: "التعبير الثابت في الألمانية هو «eine Entscheidung treffen» ومعناه اتخاذ قرار. machen و tun و bauen لا تكوّن هذا التعبير.",
   }),
   question("A", "B1", "reading", {
     prompt: "متى ستقترح المجموعة خطة بديلة؟",
@@ -126,7 +126,7 @@ const formB: DiagnosticQuestion[] = [
   question("B", "A1", "grammar", {
     prompt: "___ kommst du? — Aus Tunesien.",
     options: ["Wie", "Wo", "Woher", "Was"], correctIndex: 2,
-    explanation: "Woher تسأل عن الأصل أو جهة القدوم.", explanationAr: "الجواب «Woher» لأنه يسأل عن المكان أو البلد الذي يأتي منه الشخص. Wo تسأل عن المكان الحالي، وWie عن الحال، وWas عن الشيء.",
+    explanation: "Woher تسأل عن الأصل أو جهة القدوم.", explanationAr: "الجواب «Woher» لأنه يسأل عن المكان أو البلد الذي يأتي منه الشخص. Wo تسأل عن المكان الحالي، و Wie عن الحال، و Was عن الشيء.",
   }),
   question("B", "A1", "vocabulary", {
     prompt: "أي سؤال مناسب لمعرفة السعر؟",
@@ -149,7 +149,7 @@ const formB: DiagnosticQuestion[] = [
   question("B", "A2", "grammar", {
     prompt: "Ich bleibe zu Hause, ___ ich krank bin.",
     options: ["denn", "weil", "aber", "oder"], correctIndex: 1,
-    explanation: "weil ترسل الفعل المصرف إلى نهاية الجملة الثانوية.", explanationAr: "«weil» تبيّن السبب، وتُرسل الفعل bin إلى آخر الجملة الثانوية. denn تربط سببًا أيضًا لكنها لا تغيّر ترتيب الكلمات، وaber تعني تناقضًا، وoder تعني خيارًا.",
+    explanation: "weil ترسل الفعل المصرف إلى نهاية الجملة الثانوية.", explanationAr: "«weil» تبيّن السبب، وتُرسل الفعل bin إلى آخر الجملة الثانوية. denn تربط سببًا أيضًا لكنها لا تغيّر ترتيب الكلمات، و aber تعني تناقضًا، و oder تعني خيارًا.",
     error: { type: "word-order", wrong: "weil ich bin krank", correct: "weil ich krank bin", explanationAr: "بعد weil يأتي الفعل المصرف في نهاية الجملة الثانوية." },
   }),
   question("B", "A2", "vocabulary", {
@@ -173,7 +173,7 @@ const formB: DiagnosticQuestion[] = [
   question("B", "B1", "grammar", {
     prompt: "Wenn ich mehr Zeit hätte, ___ ich öfter Deutsch lernen.",
     options: ["werde", "würde", "wurde", "will"], correctIndex: 1,
-    explanation: "Konjunktiv II: würde + Infinitiv.", explanationAr: "في الجملة الشرطية «Wenn ich mehr Zeit hätte» نستعمل würde مع الفعل في آخر الجملة. werde للمستقبل العادي، وwurde للماضي، وwill تعني أريد.",
+    explanation: "Konjunktiv II: würde + Infinitiv.", explanationAr: "في الجملة الشرطية «Wenn ich mehr Zeit hätte» نستعمل würde مع الفعل في آخر الجملة. werde للمستقبل العادي، و wurde للماضي، و will تعني أريد.",
   }),
   question("B", "B1", "vocabulary", {
     prompt: "أي تركيب يعني أن خيارًا يستحق الدراسة؟",
@@ -196,7 +196,7 @@ const formB: DiagnosticQuestion[] = [
   question("B", "B2", "grammar", {
     prompt: "Die Maßnahme wurde eingeführt, ___ die Kosten zu senken.",
     options: ["damit", "um", "ohne", "anstatt"], correctIndex: 1,
-    explanation: "um … zu عند تطابق الفاعل للتعبير عن الهدف.", explanationAr: "الجواب «um» لأن الهدف «die Kosten zu senken» ليس له فاعل جديد. damit تحتاج جملة كاملة بفاعل، أما ohne وanstatt فلا تعبّران عن الهدف.",
+    explanation: "um … zu عند تطابق الفاعل للتعبير عن الهدف.", explanationAr: "الجواب «um» لأن الهدف «die Kosten zu senken» ليس له فاعل جديد. damit تحتاج جملة كاملة بفاعل، أما ohne و anstatt فلا تعبّران عن الهدف.",
   }),
   question("B", "B2", "vocabulary", {
     prompt: "أي رابط يقابل اتجاهين مباشرةً؟",

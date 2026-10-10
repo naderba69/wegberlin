@@ -87,7 +87,7 @@
       "level": "B1",
       "skill": "vocabulary",
       "correctOption": "eine Entscheidung treffen",
-      "explanationAr": "التعبير الثابت في الألمانية هو «eine Entscheidung treffen» ومعناه اتخاذ قرار. machen وtun وbauen لا تكوّن هذا التعبير."
+      "explanationAr": "التعبير الثابت في الألمانية هو «eine Entscheidung treffen» ومعناه اتخاذ قرار. machen و tun و bauen لا تكوّن هذا التعبير."
     },
     {
       "id": "diag-a-b1-reading",
@@ -147,7 +147,7 @@
       "level": "A1",
       "skill": "grammar",
       "correctOption": "Woher",
-      "explanationAr": "الجواب «Woher» لأنه يسأل عن المكان أو البلد الذي يأتي منه الشخص. Wo تسأل عن المكان الحالي، وWie عن الحال، وWas عن الشيء."
+      "explanationAr": "الجواب «Woher» لأنه يسأل عن المكان أو البلد الذي يأتي منه الشخص. Wo تسأل عن المكان الحالي، و Wie عن الحال، و Was عن الشيء."
     },
     {
       "id": "diag-b-a1-vocabulary",
@@ -181,7 +181,7 @@
       "level": "A2",
       "skill": "grammar",
       "correctOption": "weil",
-      "explanationAr": "«weil» تبيّن السبب، وتُرسل الفعل bin إلى آخر الجملة الثانوية. denn تربط سببًا أيضًا لكنها لا تغيّر ترتيب الكلمات، وaber تعني تناقضًا، وoder تعني خيارًا."
+      "explanationAr": "«weil» تبيّن السبب، وتُرسل الفعل bin إلى آخر الجملة الثانوية. denn تربط سببًا أيضًا لكنها لا تغيّر ترتيب الكلمات، و aber تعني تناقضًا، و oder تعني خيارًا."
     },
     {
       "id": "diag-b-a2-vocabulary",
@@ -215,7 +215,7 @@
       "level": "B1",
       "skill": "grammar",
       "correctOption": "würde",
-      "explanationAr": "في الجملة الشرطية «Wenn ich mehr Zeit hätte» نستعمل würde مع الفعل في آخر الجملة. werde للمستقبل العادي، وwurde للماضي، وwill تعني أريد."
+      "explanationAr": "في الجملة الشرطية «Wenn ich mehr Zeit hätte» نستعمل würde مع الفعل في آخر الجملة. werde للمستقبل العادي، و wurde للماضي، و will تعني أريد."
     },
     {
       "id": "diag-b-b1-vocabulary",
@@ -249,7 +249,7 @@
       "level": "B2",
       "skill": "grammar",
       "correctOption": "um",
-      "explanationAr": "الجواب «um» لأن الهدف «die Kosten zu senken» ليس له فاعل جديد. damit تحتاج جملة كاملة بفاعل، أما ohne وanstatt فلا تعبّران عن الهدف."
+      "explanationAr": "الجواب «um» لأن الهدف «die Kosten zu senken» ليس له فاعل جديد. damit تحتاج جملة كاملة بفاعل، أما ohne و anstatt فلا تعبّران عن الهدف."
     },
     {
       "id": "diag-b-b2-vocabulary",

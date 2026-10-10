@@ -78,6 +78,7 @@
     "lesson:contract": "tsx scripts/generate-lesson-contract-audit.ts --write",
     "lesson:contract:audit": "tsx scripts/generate-lesson-contract-audit.ts --strict --check",
     "contrast:audit": "node scripts/audit-static-contrast.mjs",
+    "a11y:browser": "node scripts/audit-browser-accessibility.mjs",
     "pronunciation:materialize": "node scripts/materialize-pronunciation-model.mjs",
     "production:mix": "tsx scripts/generate-production-mix-audit.ts",
     "production:mix:write": "tsx scripts/generate-production-mix-audit.ts --write",

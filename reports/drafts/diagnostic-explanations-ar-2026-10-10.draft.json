@@ -1,6 +1,6 @@
 {
-  "status": "draft-not-applied",
-  "policy": "owner-review-required-before-apply",
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approved-2026-10-10-applied",
   "generated": "2026-10-10",
   "scope": "شروح عربية لـ32 بندًا تشخيصيًا (نموذجان × 4 مستويات × 4 مهارات). تُعرض بعد انتهاء الاختبار للإجابات الخاطئة فقط.",
   "rule": "كل اقتباس بين «…» يرد حرفيًا في نص البند نفسه: السؤال، السياق، الخيارات، أو نص المقطع الصوتي.",

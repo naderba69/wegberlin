@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import * as diagnostic from "@/data/diagnostic";
 
-/** مسودة الشروح العربية للتشخيص (32 بندًا). تبقى مسودة حتى يعتمدها المالك. */
+/** الشروح العربية للتشخيص (32 بندًا)، معتمدة من المالك ومطبّقة في src/data/diagnostic.ts. */
 const DRAFT = join(process.cwd(), "reports", "drafts", "diagnostic-explanations-ar-2026-10-10.draft.json");
 
 type DraftItem = {
@@ -25,9 +25,16 @@ const liveItems = Object.values(diagnostic as Record<string, unknown>)
 /** يطابق المصدر بعد توحيد المسافات. */
 const norm = (s: string) => s.replace(/\s+/g, " ").trim();
 
-describe("diagnostic explanation drafts (Arabic, review only)", () => {
-  it("is still a draft awaiting owner approval", () => {
-    expect(draft.status).toBe("draft-not-applied");
+describe("diagnostic explanations (Arabic)", () => {
+  it("is marked applied after owner approval", () => {
+    expect(draft.status).toBe("applied-owner-approved-2026-10-10");
+  });
+
+  it("is applied to the live diagnostic items word for word", () => {
+    for (const item of draft.items) {
+      const live = liveItems.find((l) => l.id === item.id)!;
+      expect(live.explanationAr, item.id).toBe(item.explanationAr);
+    }
   });
 
   it("covers every diagnostic item exactly once", () => {

@@ -33,18 +33,18 @@ async function waitForLearningReady(page: Page) {
 
 // Reaching the rule stage differs per project: the 14-stage sidebar is display:none below 850px,
 // so on mobile the real learner path is the footer "أكملت هذه الخطوة" button. Both paths stay asserted.
+// The nursing layer is hidden by default (approved decision, 2026-10-10: no professional review yet), so this
+// helper only reaches the rule stage. Callers reveal the layer explicitly with the «أظهر الطبقة الاختيارية» button.
 async function reachRuleStage(page: Page) {
-  const panel = page.locator('[data-nursing-policy="nursing-layer-v1"]');
+  const heading = page.getByRole("heading", { level: 1, name: /القاعدة والمقارنة/ });
   const jump = page.getByRole("button", { name: /القاعدة والمقارنة/ });
   if (await jump.isVisible()) {
     await jump.click();
   } else {
     const next = page.getByRole("button", { name: /أكملت هذه الخطوة/ });
-    for (let step = 0; step < 14 && !(await panel.isVisible()); step += 1) await next.click();
+    for (let step = 0; step < 14 && !(await heading.isVisible()); step += 1) await next.click();
   }
-  await expect(page.getByRole("heading", { level: 1, name: /القاعدة والمقارنة/ })).toBeVisible({ timeout: 20_000 });
-  await expect(panel).toBeVisible();
-  return panel;
+  await expect(heading).toBeVisible({ timeout: 20_000 });
 }
 
 async function assertLanguageBoundaries(page: Page, label: string) {
@@ -3058,6 +3058,7 @@ test("nursing layer reframes level language, fails guessing, and stays out of ga
   await page.goto("/lernen/b1-04");
   await waitForLearningReady(page);
   await reachRuleStage(page);
+  await page.getByRole("button", { name: /أظهر الطبقة الاختيارية/ }).click();
   const b1Panel = page.locator('[data-nursing-policy="nursing-layer-v1"]');
   await expect(b1Panel).toHaveAttribute("data-nursing-track", "zweiter-teller");
   const b1Unit = b1Panel.locator('[data-nursing-unit="b1-04-nurse"]');

@@ -3015,7 +3015,10 @@ test("nursing layer reframes level language, fails guessing, and stays out of ga
   // succeed the language act, and it must state on the card that this is language, not clinical advice.
   await page.goto("/lernen/a1-22");
   await waitForLearningReady(page);
-  const panel = await reachRuleStage(page);
+  await reachRuleStage(page);
+  // The layer is hidden by default until a professional reviews it; the learner opts in explicitly.
+  await page.getByRole("button", { name: /أظهر الطبقة الاختيارية/ }).click();
+  const panel = page.locator('[data-nursing-policy="nursing-layer-v1"]');
   await expect(panel).toHaveAttribute("data-nursing-track", "gewuerz");
   const unit = panel.locator('[data-nursing-unit="a1-22-nurse"]');
   await expect(unit).toHaveAttribute("data-nursing-cluster", "recognition");

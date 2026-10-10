@@ -16233,7 +16233,7 @@
         "prompt": "Modalität ما النقل الصحيح؟",
         "answer": "kann = Möglichkeit",
         "evidenceRef": "b2-10:miniTest:b2-10-m1:explanationAr",
-        "evidenceExcerpt": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، ومuss إلزامًا.",
+        "evidenceExcerpt": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، و muss إلزامًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221502,5 +221502,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "6acefeb0e82fad1816c3dd06823dde0d0cef9f83b564b0e384e16c25df6e1ad1"
+  "contentSha256": "feae4dea80e83fb17c8632d768af5342da55400e761a7ed20ef8feac572cc48e"
 }

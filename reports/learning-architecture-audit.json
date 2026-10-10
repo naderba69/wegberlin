@@ -941,7 +941,7 @@
         "لا تحول النقل غير المباشر إلى اقتباس حرفي بلا علامات ومصدر."
       ],
       "exceptionsAr": [
-        "عندما تكون صيغة Konjunktiv I مطابقة للIndikativ قد يُستعمل Konjunktiv II أو würde لتوضيح المسافة حسب السياق."
+        "عندما تكون صيغة Konjunktiv I مطابقة لل Indikativ قد يُستعمل Konjunktiv II أو würde لتوضيح المسافة حسب السياق."
       ],
       "semanticAlignmentAr": "التدريب يحول قولًا إلى نقل، ثم تكتب تحليل مصدر يفصل الادعاء والدليل وحكمك.",
       "evidenceBoundary": "curriculum-navigation-and-alignment-no-automatic-mastery-or-cefr"
@@ -9051,5 +9051,5 @@
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     }
   ],
-  "contentSha256": "d6366a9678ca7eb6cb60380500550f1b467570e4cc25dc53b82d720e9fb5ea12"
+  "contentSha256": "5c7333955eba7d04ab2172f4e93b39234c4c33acaecec9d9117875f50c08e796"
 }

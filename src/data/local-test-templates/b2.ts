@@ -686,7 +686,7 @@ export const localTestTemplateBankB2 = [
           "muss = freie Wahl"
         ],
         "correctIndex": 1,
-        "explanationAr": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، ومuss إلزامًا."
+        "explanationAr": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، و muss إلزامًا."
       },
       {
         "id": "b2-10-m2",

@@ -1,40 +1,136 @@
 {
-  "status": "draft-not-applied",
+  "status": "applied-owner-approved-2026-10-10",
   "policy": "owner-approval-required-before-apply",
   "scope": "lib-l-a1-* listening questions (32), replacing answer-only explanationAr; quotes are from transcriptDe",
   "rule": "each explanation quotes a verbatim sentence fragment from the item's transcriptDe, inside «…», then states why the keyed option follows",
   "items": [
-    { "id": "lib-l-a1-01-q1", "explanationAr": "النص: «Morgen öffnen wir erst um zehn Uhr» المتجر يفتح غدًا في العاشرة، فالجواب: Um zehn." },
-    { "id": "lib-l-a1-01-q2", "explanationAr": "النص: «Sonntag bleibt der Laden geschlossen.» يبقى المتجر مغلقًا يوم الأحد، فالجواب: Sonntag." },
-    { "id": "lib-l-a1-02-q1", "explanationAr": "النص: «bis zur roten Tür» الباب الذي يُطلب الوصول إليه أحمر، فالجواب: Rot." },
-    { "id": "lib-l-a1-02-q2", "explanationAr": "النص: «Raum zweihundertdrei» الغرفة المذكورة هي 203 (zweihundertdrei)، فالجواب: Raum 203." },
-    { "id": "lib-l-a1-03-q1", "explanationAr": "النص: «Die Milch finden Sie im Gang drei» الحليب في الممر الثالث، فالجواب: Gang drei." },
-    { "id": "lib-l-a1-03-q2", "explanationAr": "النص: «nur für Kartenzahlung geöffnet» الصندوق القريب من المدخل مفتوح للدفع بالبطاقة فقط، فالجواب: Nur mit Karte." },
-    { "id": "lib-l-a1-04-q1", "explanationAr": "النص: «Der Bus zwölf fährt in fünf Minuten» الحافلة رقم 12 هي التي تنطلق أولًا، فالجواب: Linie zwölf." },
-    { "id": "lib-l-a1-04-q2", "explanationAr": "النص: «Fahren Sie vier Stationen bis zum Markt» ثم يكون التبديل عند السوق حيث تنتقل إلى الخط 6، فالجواب: Am Markt." },
-    { "id": "lib-l-a1-05-q1", "explanationAr": "النص: «Es ist zu klein.» تقول الزبونة إن القميص صغير عليها، فالجواب: Es ist zu klein." },
-    { "id": "lib-l-a1-05-q2", "explanationAr": "النص: «Haben Sie den Kassenbon? Kundin: Ja.» تؤكد الزبونة أن معها إيصال الصندوق، فالجواب: الإيصال." },
-    { "id": "lib-l-a1-06-q1", "explanationAr": "النص: «Fahren Sie in den dritten Stock.» يُطلب الصعود إلى الطابق الثالث، فالجواب: Im dritten." },
-    { "id": "lib-l-a1-06-q2", "explanationAr": "النص: «Das Büro ist Zimmer drei null acht» رقم الغرفة 308 (drei null acht)، فالجواب: 308." },
-    { "id": "lib-l-a1-07-q1", "explanationAr": "النص: «zwei Kilo Äpfel» يطلب الزبون كيلوغرامين من التفاح، فالجواب: Zwei Kilo." },
-    { "id": "lib-l-a1-07-q2", "explanationAr": "النص: «Ich hole alles morgen um zehn Uhr ab.» يستلم الزبون الطلب غدًا في العاشرة، فالجواب: Morgen zehn Uhr." },
-    { "id": "lib-l-a1-08-q1", "explanationAr": "النص: «Die Temperatur steigt auf vierundzwanzig Grad.» ترتفع الحرارة إلى أربع وعشرين درجة يوم السبت، فالجواب: 24 Grad." },
-    { "id": "lib-l-a1-08-q2", "explanationAr": "النص: «Am Vormittag regnet es, am Nachmittag bleibt es trocken.» المطر يهطل صباح الأحد وليس بعد الظهر، فالجواب: Sonntagvormittag." },
-    { "id": "lib-l-a1-09-q1", "explanationAr": "النص: «bestellen Sie bitte heute bis zwanzig Uhr ein Frühstückspaket» يجب الطلب اليوم حتى الساعة 20، فالجواب: Heute 20 Uhr." },
-    { "id": "lib-l-a1-09-q2", "explanationAr": "النص: «an der Rezeption abholen» يُستلم الطرد من الاستقبال، فالجواب: An der Rezeption." },
-    { "id": "lib-l-a1-10-q1", "explanationAr": "النص: «Der Kurs ist morgen in Raum acht, nicht in Raum zwölf.» الدرس غدًا في الغرفة 8 وليس 12، فالجواب: Raum acht." },
-    { "id": "lib-l-a1-10-q2", "explanationAr": "النص: «Bringen Sie bitte das Arbeitsblatt mit.» المطلوب إحضار ورقة العمل، فالجواب: Das Arbeitsblatt." },
-    { "id": "lib-l-a1-11-q1", "explanationAr": "النص: «Der Abendkurs ist montags und donnerstags» الدورة المسائية يومي الاثنين والخميس، فالجواب: Montag und Donnerstag." },
-    { "id": "lib-l-a1-11-q2", "explanationAr": "النص: «Das Buch kaufen Sie extra.» الكتاب يُشترى بشكل منفصل، فالجواب: Das Buch." },
-    { "id": "lib-l-a1-12-q1", "explanationAr": "النص: «Der Park schließt um zweiundzwanzig Uhr.» يغلق الحديقة في الساعة 22، فالجواب: Um zweiundzwanzig Uhr." },
-    { "id": "lib-l-a1-12-q2", "explanationAr": "النص: «Grillen ist auf der markierten Wiese erlaubt.» الشواء مسموح على المرج المحدد فقط، فالجواب: Auf der markierten Wiese." },
-    { "id": "lib-l-a1-13-q1", "explanationAr": "النص: «Die Schließfächer sind neben Gleis eins.» الخزائن بجانب الرصيف الأول، فالجواب: Neben Gleis eins." },
-    { "id": "lib-l-a1-13-q2", "explanationAr": "النص: «Ein großes Fach kostet fünf Euro.» الخزانة الكبيرة تكلف خمسة يورو، فالجواب: Fünf Euro." },
-    { "id": "lib-l-a1-14-q1", "explanationAr": "النص: «Der Musikverein trifft sich Mittwoch um neunzehn Uhr.» يجتمع النادي الموسيقي يوم الأربعاء في الساعة 19، فالجواب: Mittwoch 19 Uhr." },
-    { "id": "lib-l-a1-14-q2", "explanationAr": "النص: «Bitte bringen Sie Ihr eigenes Notenheft mit.» المطلوب إحضار دفتر النوتات الخاص، فالجواب: Ein Notenheft." },
-    { "id": "lib-l-a1-15-q1", "explanationAr": "النص: «Bremsen und Licht funktionieren.» المكابح والإضاءة تعملان، فالجواب: Bremsen und Licht." },
-    { "id": "lib-l-a1-15-q2", "explanationAr": "النص: «Sie können das Fahrrad heute bis siebzehn Uhr oder morgen ab neun Uhr abholen.» يمكن استلام الدراجة اليوم حتى الساعة 17، فالجواب: Bis siebzehn Uhr." },
-    { "id": "lib-l-a1-16-q1", "explanationAr": "النص: «Wir essen Freitag um neunzehn Uhr bei uns.» العشاء يوم الجمعة الساعة 19، فالجواب: Freitag 19 Uhr." },
-    { "id": "lib-l-a1-16-q2", "explanationAr": "النص: «schreib bitte eine Nachricht» عند التأخر يُطلب كتابة رسالة، فالجواب: يكتب رسالة." }
+    {
+      "id": "lib-l-a1-01-q1",
+      "explanationAr": "النص: «Morgen öffnen wir erst um zehn Uhr» المتجر يفتح غدًا في العاشرة، فالجواب: Um zehn."
+    },
+    {
+      "id": "lib-l-a1-01-q2",
+      "explanationAr": "النص: «Sonntag bleibt der Laden geschlossen.» يبقى المتجر مغلقًا يوم الأحد، فالجواب: Sonntag."
+    },
+    {
+      "id": "lib-l-a1-02-q1",
+      "explanationAr": "النص: «bis zur roten Tür» الباب الذي يُطلب الوصول إليه أحمر، فالجواب: Rot."
+    },
+    {
+      "id": "lib-l-a1-02-q2",
+      "explanationAr": "النص: «Raum zweihundertdrei» الغرفة المذكورة هي 203 (zweihundertdrei)، فالجواب: Raum 203."
+    },
+    {
+      "id": "lib-l-a1-03-q1",
+      "explanationAr": "النص: «Die Milch finden Sie im Gang drei» الحليب في الممر الثالث، فالجواب: Gang drei."
+    },
+    {
+      "id": "lib-l-a1-03-q2",
+      "explanationAr": "النص: «nur für Kartenzahlung geöffnet» الصندوق القريب من المدخل مفتوح للدفع بالبطاقة فقط، فالجواب: Nur mit Karte."
+    },
+    {
+      "id": "lib-l-a1-04-q1",
+      "explanationAr": "النص: «Der Bus zwölf fährt in fünf Minuten» الحافلة رقم 12 هي التي تنطلق أولًا، فالجواب: Linie zwölf."
+    },
+    {
+      "id": "lib-l-a1-04-q2",
+      "explanationAr": "النص: «Fahren Sie vier Stationen bis zum Markt» ثم يكون التبديل عند السوق حيث تنتقل إلى الخط 6، فالجواب: Am Markt."
+    },
+    {
+      "id": "lib-l-a1-05-q1",
+      "explanationAr": "النص: «Es ist zu klein.» تقول الزبونة إن القميص صغير عليها، فالجواب: Es ist zu klein."
+    },
+    {
+      "id": "lib-l-a1-05-q2",
+      "explanationAr": "النص: «Haben Sie den Kassenbon? Kundin: Ja.» تؤكد الزبونة أن معها إيصال الصندوق، فالجواب: الإيصال."
+    },
+    {
+      "id": "lib-l-a1-06-q1",
+      "explanationAr": "النص: «Fahren Sie in den dritten Stock.» يُطلب الصعود إلى الطابق الثالث، فالجواب: Im dritten."
+    },
+    {
+      "id": "lib-l-a1-06-q2",
+      "explanationAr": "النص: «Das Büro ist Zimmer drei null acht» رقم الغرفة 308 (drei null acht)، فالجواب: 308."
+    },
+    {
+      "id": "lib-l-a1-07-q1",
+      "explanationAr": "النص: «zwei Kilo Äpfel» يطلب الزبون كيلوغرامين من التفاح، فالجواب: Zwei Kilo."
+    },
+    {
+      "id": "lib-l-a1-07-q2",
+      "explanationAr": "النص: «Ich hole alles morgen um zehn Uhr ab.» يستلم الزبون الطلب غدًا في العاشرة، فالجواب: Morgen zehn Uhr."
+    },
+    {
+      "id": "lib-l-a1-08-q1",
+      "explanationAr": "النص: «Die Temperatur steigt auf vierundzwanzig Grad.» ترتفع الحرارة إلى أربع وعشرين درجة يوم السبت، فالجواب: 24 Grad."
+    },
+    {
+      "id": "lib-l-a1-08-q2",
+      "explanationAr": "النص: «Am Vormittag regnet es, am Nachmittag bleibt es trocken.» المطر يهطل صباح الأحد وليس بعد الظهر، فالجواب: Sonntagvormittag."
+    },
+    {
+      "id": "lib-l-a1-09-q1",
+      "explanationAr": "النص: «bestellen Sie bitte heute bis zwanzig Uhr ein Frühstückspaket» يجب الطلب اليوم حتى الساعة 20، فالجواب: Heute 20 Uhr."
+    },
+    {
+      "id": "lib-l-a1-09-q2",
+      "explanationAr": "النص: «an der Rezeption abholen» يُستلم الطرد من الاستقبال، فالجواب: An der Rezeption."
+    },
+    {
+      "id": "lib-l-a1-10-q1",
+      "explanationAr": "النص: «Der Kurs ist morgen in Raum acht, nicht in Raum zwölf.» الدرس غدًا في الغرفة 8 وليس 12، فالجواب: Raum acht."
+    },
+    {
+      "id": "lib-l-a1-10-q2",
+      "explanationAr": "النص: «Bringen Sie bitte das Arbeitsblatt mit.» المطلوب إحضار ورقة العمل، فالجواب: Das Arbeitsblatt."
+    },
+    {
+      "id": "lib-l-a1-11-q1",
+      "explanationAr": "النص: «Der Abendkurs ist montags und donnerstags» الدورة المسائية يومي الاثنين والخميس، فالجواب: Montag und Donnerstag."
+    },
+    {
+      "id": "lib-l-a1-11-q2",
+      "explanationAr": "النص: «Das Buch kaufen Sie extra.» الكتاب يُشترى بشكل منفصل، فالجواب: Das Buch."
+    },
+    {
+      "id": "lib-l-a1-12-q1",
+      "explanationAr": "النص: «Der Park schließt um zweiundzwanzig Uhr.» يغلق الحديقة في الساعة 22، فالجواب: Um zweiundzwanzig Uhr."
+    },
+    {
+      "id": "lib-l-a1-12-q2",
+      "explanationAr": "النص: «Grillen ist auf der markierten Wiese erlaubt.» الشواء مسموح على المرج المحدد فقط، فالجواب: Auf der markierten Wiese."
+    },
+    {
+      "id": "lib-l-a1-13-q1",
+      "explanationAr": "النص: «Die Schließfächer sind neben Gleis eins.» الخزائن بجانب الرصيف الأول، فالجواب: Neben Gleis eins."
+    },
+    {
+      "id": "lib-l-a1-13-q2",
+      "explanationAr": "النص: «Ein großes Fach kostet fünf Euro.» الخزانة الكبيرة تكلف خمسة يورو، فالجواب: Fünf Euro."
+    },
+    {
+      "id": "lib-l-a1-14-q1",
+      "explanationAr": "النص: «Der Musikverein trifft sich Mittwoch um neunzehn Uhr.» يجتمع النادي الموسيقي يوم الأربعاء في الساعة 19، فالجواب: Mittwoch 19 Uhr."
+    },
+    {
+      "id": "lib-l-a1-14-q2",
+      "explanationAr": "النص: «Bitte bringen Sie Ihr eigenes Notenheft mit.» المطلوب إحضار دفتر النوتات الخاص، فالجواب: Ein Notenheft."
+    },
+    {
+      "id": "lib-l-a1-15-q1",
+      "explanationAr": "النص: «Bremsen und Licht funktionieren.» المكابح والإضاءة تعملان، فالجواب: Bremsen und Licht."
+    },
+    {
+      "id": "lib-l-a1-15-q2",
+      "explanationAr": "النص: «Sie können das Fahrrad heute bis siebzehn Uhr oder morgen ab neun Uhr abholen.» يمكن استلام الدراجة اليوم حتى الساعة 17، فالجواب: Bis siebzehn Uhr."
+    },
+    {
+      "id": "lib-l-a1-16-q1",
+      "explanationAr": "النص: «Wir essen Freitag um neunzehn Uhr bei uns.» العشاء يوم الجمعة الساعة 19، فالجواب: Freitag 19 Uhr."
+    },
+    {
+      "id": "lib-l-a1-16-q2",
+      "explanationAr": "النص: «schreib bitte eine Nachricht» عند التأخر يُطلب كتابة رسالة، فالجواب: يكتب رسالة."
+    }
   ]
 }

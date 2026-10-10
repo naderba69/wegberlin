@@ -1,56 +1,200 @@
 {
-  "status": "draft-not-applied",
+  "status": "applied-owner-approved-2026-10-10",
   "policy": "owner-approval-required-before-apply",
   "scope": "lib-r-b1-* reading questions (48), replacing answer-only explanationAr",
   "rule": "each explanation quotes a verbatim sentence fragment from the item's textDe, inside «…», then states why the keyed option follows",
   "items": [
-    { "id": "lib-r-b1-01-q1", "explanationAr": "النص: «Viele wussten einfach nicht, was gerade nötig war.» كثيرون لم يعرفوا ما المطلوب في حينه، فالجواب: Viele kannten nötige Aufgaben nicht." },
-    { "id": "lib-r-b1-01-q2", "explanationAr": "النص: «ob auch Menschen mit Schichtarbeit passende Aufgaben finden» المنظمة تواصل التحقق من إيجاد مهام مناسبة لأصحاب العمل بالمناوبة، فالجواب: Ob Schichtarbeitende passende Aufgaben finden." },
-    { "id": "lib-r-b1-02-q1", "explanationAr": "النص: «Trotzdem zeigte die Auswertung Unterschiede» بقي المتوسط مستقرًا لكنه أخفى الفروق بين الأدوار، فالجواب: Unterschiede zwischen Rollen." },
-    { "id": "lib-r-b1-02-q2", "explanationAr": "النص: «Teams dokumentieren nun auch spontane Präsenzarbeit» أصبح الحضور العفوي يُوثَّق الآن، فالجواب: Spontane Präsenzarbeit." },
-    { "id": "lib-r-b1-03-q1", "explanationAr": "النص: «Sie versprechen keine erfolgreiche Reparatur» المبادرة لا تضمن نجاح كل إصلاح، فالجواب: Jede Reparatur erfolgreich abzuschließen." },
-    { "id": "lib-r-b1-03-q2", "explanationAr": "النص: «sichere Weiterempfehlungen und vermiedene Fehlkäufe» تُحسب إلى جانب الإصلاحات التوصيات الآمنة وتجنب الشراء الخاطئ، فالجواب: Sichere Empfehlungen und vermiedene Fehlkäufe." },
-    { "id": "lib-r-b1-04-q1", "explanationAr": "النص: «Bewohner der Randviertel mussten weit zur nächsten Station fahren» سكان الأحياء الطرفية يقطعون مسافة بعيدة إلى أقرب محطة، فالجواب: Lange Wege zur Station." },
-    { "id": "lib-r-b1-04-q2", "explanationAr": "النص: «die Fahrzeuge wurden häufiger für notwendige Wege am Abend gebucht» رغم قلة الاستخدام الإجمالي حُجزت السيارات أكثر لرحلات مسائية ضرورية، فالجواب: Fahrzeuge dienten notwendigen Abendwegen." },
-    { "id": "lib-r-b1-05-q1", "explanationAr": "النص: «nur verschlossene Verpackungen, sichtbares Mindesthaltbarkeitsdatum und keine kühlpflichtigen Produkte» المسموح عبوات مغلقة مع تاريخ ظاهر، فالجواب: Verschlossene haltbare Produkte mit Datum." },
-    { "id": "lib-r-b1-05-q2", "explanationAr": "النص: «verspricht dennoch keine feste Versorgung» المبادرة لا تَعِد بتوفير ثابت، فالجواب: Eine feste Versorgung." },
-    { "id": "lib-r-b1-06-q1", "explanationAr": "النص: «weil während ihrer Kurse keine Vertretung eingeplant war» فرق المناوبة كانت تفتقر إلى من يغطي عملها أثناء الدورة، فالجواب: Eine Vertretung fehlte." },
-    { "id": "lib-r-b1-06-q2", "explanationAr": "النص: «ob ein Lernziel erreicht und später im Arbeitsalltag angewendet wurde» يُقاس تحقيق الهدف وتطبيقه لاحقًا في العمل، فالجواب: Zielerreichung und Anwendung." },
-    { "id": "lib-r-b1-07-q1", "explanationAr": "النص: «Anfangs wurden Paare nur nach Abteilung gebildet.» كانت الأقسام وحدها تحدد الثنائيات، فالجواب: Nur die Abteilung bestimmte die Paare." },
-    { "id": "lib-r-b1-07-q2", "explanationAr": "النص: «gelöste Fragen und selbstständige nächste Schritte» يُقاس إلى جانب اللقاءات الأسئلة المحلولة والخطوات المستقلة، فالجواب: Gelöste Fragen und selbstständige Schritte." },
-    { "id": "lib-r-b1-08-q1", "explanationAr": "النص: «Feste Zeitfenster verbesserten den Ablauf.» المواعيد المحددة هي التي حسّنت الانتظار، فالجواب: Feste Zeitfenster." },
-    { "id": "lib-r-b1-08-q2", "explanationAr": "النص: «Zwei Läden konnten die digitale Buchung zunächst nicht bedienen» أضيفت الحجز الهاتفي لأن محلين لم يستطيعا الحجز الرقمي، فالجواب: Zwei Läden konnten digital nicht buchen." },
-    { "id": "lib-r-b1-09-q1", "explanationAr": "النص: «der zeitliche Kontext war falsch» الصورة لم تكن معدّلة تقنيًا، لكن زمنها كان خاطئًا، فالجواب: Der zeitliche Kontext war falsch." },
-    { "id": "lib-r-b1-09-q2", "explanationAr": "النص: «Eine umgekehrte Bildsuche führte jedoch zu einem Artikel von vor vier Jahren» تحقق الجواب من السنة بالبحث العكسي عن الصورة ومقال سابق، فالجواب: Durch eine Bildsuche und früheren Artikel." },
-    { "id": "lib-r-b1-10-q1", "explanationAr": "النص: «Besonders Berufstätige und Studierende nutzten die neue Zeit.» استفاد من الساعات المسائية العاملون والطلاب بالخصوص، فالجواب: Berufstätige und Studierende." },
-    { "id": "lib-r-b1-10-q2", "explanationAr": "النص: «verlängert den Pilot nur dienstags und donnerstags und führt einen festen Vertretungsplan ein» يستمر التجريب يومي الثلاثاء والخميس فقط مع خطة بدلاء، فالجواب: Nur Dienstag und Donnerstag mit Vertretungsplan." },
-    { "id": "lib-r-b1-11-q1", "explanationAr": "النص: «die Übergabe keine verantwortliche Person und keine Frist enthielt» سبب المشكلة أن التسليم لم يحدد شخصًا مسؤولًا ولا موعدًا، فالجواب: Unklare Verantwortung und Frist." },
-    { "id": "lib-r-b1-11-q2", "explanationAr": "النص: «Nun erhält jede Anfrage einen Namen, einen nächsten Schritt und einen Termin.» كل طلب يحصل الآن على اسم وخطوة تالية وموعد، فالجواب: Name, Schritt und Termin." },
-    { "id": "lib-r-b1-12-q1", "explanationAr": "النص: «Bei großen Geräten vereinbart der Händler eine Abholung.» في الأجهزة الكبيرة يتفق التاجر على الاستلام من المنزل، فالجواب: Eine Abholung wird vereinbart." },
-    { "id": "lib-r-b1-12-q2", "explanationAr": "النص: «damit Kunden wissen, wann sie mit einer Rückmeldung rechnen können» نشر متوسط مدة المعالجة يساعد الزبون على توقع موعد الرد، فالجواب: Für realistische Erwartung der Rückmeldung." },
-    { "id": "lib-r-b1-13-q1", "explanationAr": "النص: «weil manche Haushalte tagsüber kaum zu Hause waren» كان الاستهلاك مختلفًا لأن بعض الأسر تكون خارج البيت أغلب النهار، فالجواب: Haushalte nutzten tagsüber unterschiedlich viel." },
-    { "id": "lib-r-b1-13-q2", "explanationAr": "النص: «dass Teilnahme und Datenfreigabe freiwillig bleiben» المشاركة ومشاركة البيانات تبقيان اختياريتين، فالجواب: Teilnahme und Datenfreigabe." },
-    { "id": "lib-r-b1-14-q1", "explanationAr": "النص: «direkt am betroffenen Feld erklärt, welches Format erwartet wird» بعد الخطأ يشرح الحقل المعني الصيغة المطلوبة، فالجواب: Das betroffene Feld erklärt das Format." },
-    { "id": "lib-r-b1-14-q2", "explanationAr": "النص: «brachen Menschen mit älteren Geräten den Vorgang häufiger ab» أصحاب الأجهزة القديمة كانوا يتوقفون عن الإجراء أكثر، فالجواب: Menschen mit älteren Geräten." },
-    { "id": "lib-r-b1-15-q1", "explanationAr": "النص: «Besucher verloren dadurch die Orientierung.» لأن النصوص الصوتية كانت طويلة فقد الزوار توجههم، فلذلك اختُصرت، فالجواب: Besucher verloren bei langen Texten die Orientierung." },
-    { "id": "lib-r-b1-15-q2", "explanationAr": "النص: «bleiben nur bei betreuten Terminen verfügbar» النماذج اللمسية متاحة في المواعيد المرافَقة فقط، فالجواب: Nur bei betreuten Terminen." },
-    { "id": "lib-r-b1-16-q1", "explanationAr": "النص: «Maschinen bleiben nur unter Aufsicht zugänglich» الآلات لا يمكن استعمالها إلا تحت الإشراف، فالجواب: Nur unter Aufsicht." },
-    { "id": "lib-r-b1-16-q2", "explanationAr": "النص: «Projektdaten werden nachts von den lokalen Computern gelöscht.» تُحذف بيانات المشاريع ليلًا من الحواسيب المحلية، لذلك يُنصح بالنسخ، فالجواب: Lokale Daten werden nachts gelöscht." },
-    { "id": "lib-r-b1-17-q1", "explanationAr": "النص: «Die Zahl kurzfristiger Tauschvorgänge sank» انخفض عدد عمليات التبديل القصيرة الأجل، فالجواب: Kurzfristige Tauschvorgänge." },
-    { "id": "lib-r-b1-17-q2", "explanationAr": "النص: «Mindestbesetzung und ein transparentes Prioritätssystem vorab veröffentlicht» تُنشر الحد الأدنى للتغطية ونظام الأولوية مسبقًا، فالجواب: Prioritätssystem und Mindestbesetzung." },
-    { "id": "lib-r-b1-18-q1", "explanationAr": "النص: «Jeder Termin muss nun auf der Seite der veranstaltenden Organisation bestätigt werden.» يجب تأكيد كل موعد من صفحة الجهة المنظمة، فالجواب: Bei der veranstaltenden Organisation." },
-    { "id": "lib-r-b1-18-q2", "explanationAr": "النص: «erscheint sie nicht als Tatsache, sondern als offene Angabe mit Quelle» المعلومة غير المؤكدة تُعرض معلومة مفتوحة مع مصدرها، فالجواب: Als offene Angabe mit Quelle." },
-    { "id": "lib-r-b1-19-q1", "explanationAr": "النص: «Besonders Menschen mit Nachtarbeit und Eltern kleiner Kinder fehlten.» غاب خصوصًا العاملون ليلًا وآباء الأطفال الصغار، فالجواب: Nachtarbeitende und Eltern kleiner Kinder." },
-    { "id": "lib-r-b1-19-q2", "explanationAr": "النص: «Die endgültigen Entscheidungen trifft weiterhin der Bezirksrat.» القرار النهائي يبقى لمجلس المنطقة، فالجواب: Der Bezirksrat." },
-    { "id": "lib-r-b1-20-q1", "explanationAr": "النص: «Status wird vorher schriftlich aktualisiert» تُحدَّث الحالة كتابيًا قبل الاجتماع، فالجواب: Der Status." },
-    { "id": "lib-r-b1-20-q2", "explanationAr": "النص: «behält dennoch einmal im Monat mehr Zeit für grundsätzliche Fragen» يبقى وقت أطول شهريًا للأسئلة الجوهرية، فالجواب: Für grundsätzliche Fragen." },
-    { "id": "lib-r-b1-21-q1", "explanationAr": "النص: «Vor der ersten Ausleihe ist eine zwanzigminütige Einführung nötig.» قبل أول استعارة يلزم تعريف مدته عشرون دقيقة، فالجواب: Eine Einführung." },
-    { "id": "lib-r-b1-21-q2", "explanationAr": "النص: «Eine Verlängerung ist möglich, sofern niemand wartet.» التمديد ممكن بشرط ألا ينتظر أحد، فالجواب: Wenn niemand wartet." },
-    { "id": "lib-r-b1-22-q1", "explanationAr": "النص: «ob Räume stufenlos erreichbar oder Trinkwasserstellen vorhanden waren» لم تكن الخريطة الأولى تذكر الوصول بلا درج ولا نقاط الماء، فالجواب: Angaben zu Zugang und Trinkwasser." },
-    { "id": "lib-r-b1-22-q2", "explanationAr": "النص: «eine Telefonnummer für Menschen ohne Internet» أضيف رقم هاتف لمن لا يملك إنترنت، فالجواب: Für Menschen ohne Internet." },
-    { "id": "lib-r-b1-23-q1", "explanationAr": "النص: «Das Mikrofon am Tisch übertrug Gespräche schlecht» المشكلة التقنية كانت ميكروفون الطاولة، فالجواب: Das Tischmikrofon." },
-    { "id": "lib-r-b1-23-q2", "explanationAr": "النص: «wie viele Beiträge aus jeder Gruppe kamen und ob Fragen beantwortet wurden» يُقيَّم عدد المساهمات من كل مجموعة وهل أُجيب عن الأسئلة، فالجواب: Beiträge je Gruppe und beantwortete Fragen." },
-    { "id": "lib-r-b1-24-q1", "explanationAr": "النص: «weil Schichtteams keine Vertretung hatten» لم تكن لدى فرق المناوبة تغطية، فالجواب: Keine Vertretung." },
-    { "id": "lib-r-b1-24-q2", "explanationAr": "النص: «Das Unternehmen wollte die Teilnahme nicht verpflichtend machen.» الشركة لم تُرد جعل المشاركة إلزامية، فالجواب: Nein، تبقى اختيارية." }
+    {
+      "id": "lib-r-b1-01-q1",
+      "explanationAr": "النص: «Viele wussten einfach nicht, was gerade nötig war.» كثيرون لم يعرفوا ما المطلوب في حينه، فالجواب: Viele kannten nötige Aufgaben nicht."
+    },
+    {
+      "id": "lib-r-b1-01-q2",
+      "explanationAr": "النص: «ob auch Menschen mit Schichtarbeit passende Aufgaben finden» المنظمة تواصل التحقق من إيجاد مهام مناسبة لأصحاب العمل بالمناوبة، فالجواب: Ob Schichtarbeitende passende Aufgaben finden."
+    },
+    {
+      "id": "lib-r-b1-02-q1",
+      "explanationAr": "النص: «Trotzdem zeigte die Auswertung Unterschiede» بقي المتوسط مستقرًا لكنه أخفى الفروق بين الأدوار، فالجواب: Unterschiede zwischen Rollen."
+    },
+    {
+      "id": "lib-r-b1-02-q2",
+      "explanationAr": "النص: «Teams dokumentieren nun auch spontane Präsenzarbeit» أصبح الحضور العفوي يُوثَّق الآن، فالجواب: Spontane Präsenzarbeit."
+    },
+    {
+      "id": "lib-r-b1-03-q1",
+      "explanationAr": "النص: «Sie versprechen keine erfolgreiche Reparatur» المبادرة لا تضمن نجاح كل إصلاح، فالجواب: Jede Reparatur erfolgreich abzuschließen."
+    },
+    {
+      "id": "lib-r-b1-03-q2",
+      "explanationAr": "النص: «sichere Weiterempfehlungen und vermiedene Fehlkäufe» تُحسب إلى جانب الإصلاحات التوصيات الآمنة وتجنب الشراء الخاطئ، فالجواب: Sichere Empfehlungen und vermiedene Fehlkäufe."
+    },
+    {
+      "id": "lib-r-b1-04-q1",
+      "explanationAr": "النص: «Bewohner der Randviertel mussten weit zur nächsten Station fahren» سكان الأحياء الطرفية يقطعون مسافة بعيدة إلى أقرب محطة، فالجواب: Lange Wege zur Station."
+    },
+    {
+      "id": "lib-r-b1-04-q2",
+      "explanationAr": "النص: «die Fahrzeuge wurden häufiger für notwendige Wege am Abend gebucht» رغم قلة الاستخدام الإجمالي حُجزت السيارات أكثر لرحلات مسائية ضرورية، فالجواب: Fahrzeuge dienten notwendigen Abendwegen."
+    },
+    {
+      "id": "lib-r-b1-05-q1",
+      "explanationAr": "النص: «nur verschlossene Verpackungen, sichtbares Mindesthaltbarkeitsdatum und keine kühlpflichtigen Produkte» المسموح عبوات مغلقة مع تاريخ ظاهر، فالجواب: Verschlossene haltbare Produkte mit Datum."
+    },
+    {
+      "id": "lib-r-b1-05-q2",
+      "explanationAr": "النص: «verspricht dennoch keine feste Versorgung» المبادرة لا تَعِد بتوفير ثابت، فالجواب: Eine feste Versorgung."
+    },
+    {
+      "id": "lib-r-b1-06-q1",
+      "explanationAr": "النص: «weil während ihrer Kurse keine Vertretung eingeplant war» فرق المناوبة كانت تفتقر إلى من يغطي عملها أثناء الدورة، فالجواب: Eine Vertretung fehlte."
+    },
+    {
+      "id": "lib-r-b1-06-q2",
+      "explanationAr": "النص: «ob ein Lernziel erreicht und später im Arbeitsalltag angewendet wurde» يُقاس تحقيق الهدف وتطبيقه لاحقًا في العمل، فالجواب: Zielerreichung und Anwendung."
+    },
+    {
+      "id": "lib-r-b1-07-q1",
+      "explanationAr": "النص: «Anfangs wurden Paare nur nach Abteilung gebildet.» كانت الأقسام وحدها تحدد الثنائيات، فالجواب: Nur die Abteilung bestimmte die Paare."
+    },
+    {
+      "id": "lib-r-b1-07-q2",
+      "explanationAr": "النص: «gelöste Fragen und selbstständige nächste Schritte» يُقاس إلى جانب اللقاءات الأسئلة المحلولة والخطوات المستقلة، فالجواب: Gelöste Fragen und selbstständige Schritte."
+    },
+    {
+      "id": "lib-r-b1-08-q1",
+      "explanationAr": "النص: «Feste Zeitfenster verbesserten den Ablauf.» المواعيد المحددة هي التي حسّنت الانتظار، فالجواب: Feste Zeitfenster."
+    },
+    {
+      "id": "lib-r-b1-08-q2",
+      "explanationAr": "النص: «Zwei Läden konnten die digitale Buchung zunächst nicht bedienen» أضيفت الحجز الهاتفي لأن محلين لم يستطيعا الحجز الرقمي، فالجواب: Zwei Läden konnten digital nicht buchen."
+    },
+    {
+      "id": "lib-r-b1-09-q1",
+      "explanationAr": "النص: «der zeitliche Kontext war falsch» الصورة لم تكن معدّلة تقنيًا، لكن زمنها كان خاطئًا، فالجواب: Der zeitliche Kontext war falsch."
+    },
+    {
+      "id": "lib-r-b1-09-q2",
+      "explanationAr": "النص: «Eine umgekehrte Bildsuche führte jedoch zu einem Artikel von vor vier Jahren» تحقق الجواب من السنة بالبحث العكسي عن الصورة ومقال سابق، فالجواب: Durch eine Bildsuche und früheren Artikel."
+    },
+    {
+      "id": "lib-r-b1-10-q1",
+      "explanationAr": "النص: «Besonders Berufstätige und Studierende nutzten die neue Zeit.» استفاد من الساعات المسائية العاملون والطلاب بالخصوص، فالجواب: Berufstätige und Studierende."
+    },
+    {
+      "id": "lib-r-b1-10-q2",
+      "explanationAr": "النص: «verlängert den Pilot nur dienstags und donnerstags und führt einen festen Vertretungsplan ein» يستمر التجريب يومي الثلاثاء والخميس فقط مع خطة بدلاء، فالجواب: Nur Dienstag und Donnerstag mit Vertretungsplan."
+    },
+    {
+      "id": "lib-r-b1-11-q1",
+      "explanationAr": "النص: «die Übergabe keine verantwortliche Person und keine Frist enthielt» سبب المشكلة أن التسليم لم يحدد شخصًا مسؤولًا ولا موعدًا، فالجواب: Unklare Verantwortung und Frist."
+    },
+    {
+      "id": "lib-r-b1-11-q2",
+      "explanationAr": "النص: «Nun erhält jede Anfrage einen Namen, einen nächsten Schritt und einen Termin.» كل طلب يحصل الآن على اسم وخطوة تالية وموعد، فالجواب: Name, Schritt und Termin."
+    },
+    {
+      "id": "lib-r-b1-12-q1",
+      "explanationAr": "النص: «Bei großen Geräten vereinbart der Händler eine Abholung.» في الأجهزة الكبيرة يتفق التاجر على الاستلام من المنزل، فالجواب: Eine Abholung wird vereinbart."
+    },
+    {
+      "id": "lib-r-b1-12-q2",
+      "explanationAr": "النص: «damit Kunden wissen, wann sie mit einer Rückmeldung rechnen können» نشر متوسط مدة المعالجة يساعد الزبون على توقع موعد الرد، فالجواب: Für realistische Erwartung der Rückmeldung."
+    },
+    {
+      "id": "lib-r-b1-13-q1",
+      "explanationAr": "النص: «weil manche Haushalte tagsüber kaum zu Hause waren» كان الاستهلاك مختلفًا لأن بعض الأسر تكون خارج البيت أغلب النهار، فالجواب: Haushalte nutzten tagsüber unterschiedlich viel."
+    },
+    {
+      "id": "lib-r-b1-13-q2",
+      "explanationAr": "النص: «dass Teilnahme und Datenfreigabe freiwillig bleiben» المشاركة ومشاركة البيانات تبقيان اختياريتين، فالجواب: Teilnahme und Datenfreigabe."
+    },
+    {
+      "id": "lib-r-b1-14-q1",
+      "explanationAr": "النص: «direkt am betroffenen Feld erklärt, welches Format erwartet wird» بعد الخطأ يشرح الحقل المعني الصيغة المطلوبة، فالجواب: Das betroffene Feld erklärt das Format."
+    },
+    {
+      "id": "lib-r-b1-14-q2",
+      "explanationAr": "النص: «brachen Menschen mit älteren Geräten den Vorgang häufiger ab» أصحاب الأجهزة القديمة كانوا يتوقفون عن الإجراء أكثر، فالجواب: Menschen mit älteren Geräten."
+    },
+    {
+      "id": "lib-r-b1-15-q1",
+      "explanationAr": "النص: «Besucher verloren dadurch die Orientierung.» لأن النصوص الصوتية كانت طويلة فقد الزوار توجههم، فلذلك اختُصرت، فالجواب: Besucher verloren bei langen Texten die Orientierung."
+    },
+    {
+      "id": "lib-r-b1-15-q2",
+      "explanationAr": "النص: «bleiben nur bei betreuten Terminen verfügbar» النماذج اللمسية متاحة في المواعيد المرافَقة فقط، فالجواب: Nur bei betreuten Terminen."
+    },
+    {
+      "id": "lib-r-b1-16-q1",
+      "explanationAr": "النص: «Maschinen bleiben nur unter Aufsicht zugänglich» الآلات لا يمكن استعمالها إلا تحت الإشراف، فالجواب: Nur unter Aufsicht."
+    },
+    {
+      "id": "lib-r-b1-16-q2",
+      "explanationAr": "النص: «Projektdaten werden nachts von den lokalen Computern gelöscht.» تُحذف بيانات المشاريع ليلًا من الحواسيب المحلية، لذلك يُنصح بالنسخ، فالجواب: Lokale Daten werden nachts gelöscht."
+    },
+    {
+      "id": "lib-r-b1-17-q1",
+      "explanationAr": "النص: «Die Zahl kurzfristiger Tauschvorgänge sank» انخفض عدد عمليات التبديل القصيرة الأجل، فالجواب: Kurzfristige Tauschvorgänge."
+    },
+    {
+      "id": "lib-r-b1-17-q2",
+      "explanationAr": "النص: «Mindestbesetzung und ein transparentes Prioritätssystem vorab veröffentlicht» تُنشر الحد الأدنى للتغطية ونظام الأولوية مسبقًا، فالجواب: Prioritätssystem und Mindestbesetzung."
+    },
+    {
+      "id": "lib-r-b1-18-q1",
+      "explanationAr": "النص: «Jeder Termin muss nun auf der Seite der veranstaltenden Organisation bestätigt werden.» يجب تأكيد كل موعد من صفحة الجهة المنظمة، فالجواب: Bei der veranstaltenden Organisation."
+    },
+    {
+      "id": "lib-r-b1-18-q2",
+      "explanationAr": "النص: «erscheint sie nicht als Tatsache, sondern als offene Angabe mit Quelle» المعلومة غير المؤكدة تُعرض معلومة مفتوحة مع مصدرها، فالجواب: Als offene Angabe mit Quelle."
+    },
+    {
+      "id": "lib-r-b1-19-q1",
+      "explanationAr": "النص: «Besonders Menschen mit Nachtarbeit und Eltern kleiner Kinder fehlten.» غاب خصوصًا العاملون ليلًا وآباء الأطفال الصغار، فالجواب: Nachtarbeitende und Eltern kleiner Kinder."
+    },
+    {
+      "id": "lib-r-b1-19-q2",
+      "explanationAr": "النص: «Die endgültigen Entscheidungen trifft weiterhin der Bezirksrat.» القرار النهائي يبقى لمجلس المنطقة، فالجواب: Der Bezirksrat."
+    },
+    {
+      "id": "lib-r-b1-20-q1",
+      "explanationAr": "النص: «Status wird vorher schriftlich aktualisiert» تُحدَّث الحالة كتابيًا قبل الاجتماع، فالجواب: Der Status."
+    },
+    {
+      "id": "lib-r-b1-20-q2",
+      "explanationAr": "النص: «behält dennoch einmal im Monat mehr Zeit für grundsätzliche Fragen» يبقى وقت أطول شهريًا للأسئلة الجوهرية، فالجواب: Für grundsätzliche Fragen."
+    },
+    {
+      "id": "lib-r-b1-21-q1",
+      "explanationAr": "النص: «Vor der ersten Ausleihe ist eine zwanzigminütige Einführung nötig.» قبل أول استعارة يلزم تعريف مدته عشرون دقيقة، فالجواب: Eine Einführung."
+    },
+    {
+      "id": "lib-r-b1-21-q2",
+      "explanationAr": "النص: «Eine Verlängerung ist möglich, sofern niemand wartet.» التمديد ممكن بشرط ألا ينتظر أحد، فالجواب: Wenn niemand wartet."
+    },
+    {
+      "id": "lib-r-b1-22-q1",
+      "explanationAr": "النص: «ob Räume stufenlos erreichbar oder Trinkwasserstellen vorhanden waren» لم تكن الخريطة الأولى تذكر الوصول بلا درج ولا نقاط الماء، فالجواب: Angaben zu Zugang und Trinkwasser."
+    },
+    {
+      "id": "lib-r-b1-22-q2",
+      "explanationAr": "النص: «eine Telefonnummer für Menschen ohne Internet» أضيف رقم هاتف لمن لا يملك إنترنت، فالجواب: Für Menschen ohne Internet."
+    },
+    {
+      "id": "lib-r-b1-23-q1",
+      "explanationAr": "النص: «Das Mikrofon am Tisch übertrug Gespräche schlecht» المشكلة التقنية كانت ميكروفون الطاولة، فالجواب: Das Tischmikrofon."
+    },
+    {
+      "id": "lib-r-b1-23-q2",
+      "explanationAr": "النص: «wie viele Beiträge aus jeder Gruppe kamen und ob Fragen beantwortet wurden» يُقيَّم عدد المساهمات من كل مجموعة وهل أُجيب عن الأسئلة، فالجواب: Beiträge je Gruppe und beantwortete Fragen."
+    },
+    {
+      "id": "lib-r-b1-24-q1",
+      "explanationAr": "النص: «weil Schichtteams keine Vertretung hatten» لم تكن لدى فرق المناوبة تغطية، فالجواب: Keine Vertretung."
+    },
+    {
+      "id": "lib-r-b1-24-q2",
+      "explanationAr": "النص: «Das Unternehmen wollte die Teilnahme nicht verpflichtend machen.» الشركة لم تُرد جعل المشاركة إلزامية، فالجواب: Nein، تبقى اختيارية."
+    }
   ]
 }

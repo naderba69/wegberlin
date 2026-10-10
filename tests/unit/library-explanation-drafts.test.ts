@@ -5,18 +5,24 @@ import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 
 const DRAFT_DIR = join(process.cwd(), "reports", "drafts");
 const DRAFT_FILES = readdirSync(DRAFT_DIR).filter((f) => /^library-.*-explanations\.draft\.json$/.test(f));
+/** حالة الملفات بعد موافقة المالك على تطبيق المسودات (2026-10-10). */
+const APPLIED_STATUS = "applied-owner-approved-2026-10-10";
 
-/** المسودات لا تُطبَّق قبل موافقة المالك، لكن كل اقتباس فيها يجب أن يرد حرفيًا في نص بنده. */
+/** كل اقتباس في الشرح يجب أن يرد حرفيًا في نص بنده، وكل بند مكتبة له شرح واحد معتمد. */
 describe("library explanation drafts", () => {
   const textById = new Map<string, string>();
+  const explanationById = new Map<string, string>();
   // Reading items carry textDe; listening items carry the same text as transcriptDe.
   for (const item of [...readingLibrary, ...listeningLibrary] as {
     textDe?: string;
     transcriptDe?: string;
-    questions: { id: string }[];
+    questions: { id: string; explanationAr: string }[];
   }[]) {
     const text = item.textDe ?? item.transcriptDe ?? "";
-    for (const q of item.questions) textById.set(q.id, text);
+    for (const q of item.questions) {
+      textById.set(q.id, text);
+      explanationById.set(q.id, q.explanationAr);
+    }
   }
 
   it("has draft files to check", () => {
@@ -37,8 +43,8 @@ describe("library explanation drafts", () => {
     describe(file, () => {
       const draft = JSON.parse(readFileSync(join(DRAFT_DIR, file), "utf8"));
 
-      it("is marked as not applied", () => {
-        expect(draft.status).toBe("draft-not-applied");
+      it("is marked as applied by the owner", () => {
+        expect(draft.status).toBe(APPLIED_STATUS);
       });
 
       it("quotes only verbatim text from its own item", () => {
@@ -48,6 +54,12 @@ describe("library explanation drafts", () => {
           const quotes = [...entry.explanationAr.matchAll(/«([^»]+)»/g)].map((m) => m[1]);
           expect(quotes.length, entry.id).toBeGreaterThan(0);
           for (const quote of quotes) expect(text!.includes(quote), `${entry.id}: ${quote}`).toBe(true);
+        }
+      });
+
+      it("the live data carries the approved explanation", () => {
+        for (const entry of draft.items as { id: string; explanationAr: string }[]) {
+          expect(explanationById.get(entry.id), entry.id).toBe(entry.explanationAr);
         }
       });
     });

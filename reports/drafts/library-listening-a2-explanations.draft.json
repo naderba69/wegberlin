@@ -1,56 +1,200 @@
 {
-  "status": "draft-not-applied",
+  "status": "applied-owner-approved-2026-10-10",
   "policy": "owner-approval-required-before-apply",
   "scope": "lib-l-a2-* listening questions (48), replacing answer-only explanationAr; quotes are from transcriptDe",
   "rule": "each explanation quotes a verbatim sentence fragment from the item's transcriptDe, inside «…», then states why the keyed option follows",
   "items": [
-    { "id": "lib-l-a2-01-q1", "explanationAr": "النص: «Ihr Beratungstermin am Dienstag um fünfzehn Uhr muss leider verschoben werden.» موعد الثلاثاء الساعة 15 هو الذي يتأجل، فالجواب: Dienstag 15 Uhr." },
-    { "id": "lib-l-a2-01-q2", "explanationAr": "النص: «Bitte antworten Sie bis morgen Mittag.» يُطلب الرد حتى ظهر الغد، فالجواب: Morgen Mittag." },
-    { "id": "lib-l-a2-02-q1", "explanationAr": "النص: «In meinem Zimmer funktioniert die Heizung nicht.» الزبون يشكو أن التدفئة في غرفته لا تعمل، فالجواب: Die Heizung." },
-    { "id": "lib-l-a2-02-q2", "explanationAr": "النص: «können wir Ihnen ein anderes Zimmer im dritten Stock geben» تعرض الاستقبال فورًا غرفة أخرى في الطابق الثالث، فالجواب: Ein anderes Zimmer." },
-    { "id": "lib-l-a2-03-q1", "explanationAr": "النص: «Dann hole ich Samstagmorgen die Tische.» عمر هو من يحضر الطاولات صباح السبت، فالجواب: Omar." },
-    { "id": "lib-l-a2-03-q2", "explanationAr": "النص: «den Schlüssel müssen wir schon am Donnerstag abholen» يجب استلام المفتاح يوم الخميس، فالجواب: Donnerstag." },
-    { "id": "lib-l-a2-04-q1", "explanationAr": "النص: «Der neue Reifen war nicht im ersten Preis enthalten und kostet zusätzlich zwanzig Euro.» الإطار الجديد يُدفع عليه إضافيًا عشرون يورو، فالجواب: Der Reifen." },
-    { "id": "lib-l-a2-04-q2", "explanationAr": "النص: «morgen ab neun Uhr abholen» يمكن استلام الدراجة غدًا من التاسعة، فالجواب: Ab neun Uhr." },
-    { "id": "lib-l-a2-05-q1", "explanationAr": "النص: «Regionalzüge sind nicht enthalten.» تذاكر القطارات الإقليمية غير مشمولة، فالجواب: Regionalzüge." },
-    { "id": "lib-l-a2-05-q2", "explanationAr": "النص: «Von Montag bis Freitag ist das erst nach neun Uhr möglich.» من الاثنين إلى الجمعة لا يمكن أخذ الدراجة مجانًا إلا بعد التاسعة، فالجواب: Nach neun Uhr." },
-    { "id": "lib-l-a2-06-q1", "explanationAr": "النص: «Wir treffen uns zur gleichen Uhrzeit online.» الوقت لا يتغير رغم الانتقال إلى الإنترنت، فالجواب: Die Uhrzeit." },
-    { "id": "lib-l-a2-06-q2", "explanationAr": "النص: «Nächste Woche sind wir wieder im Lernzentrum.» الدورة تعود إلى مركز التعلّم الأسبوع القادم، فالجواب: Nächste Woche." },
-    { "id": "lib-l-a2-07-q1", "explanationAr": "النص: «Uns fehlt noch Ihr aktuelles Zeugnis.» الوثيقة الناقصة هي الشهادة الحديثة، فالجواب: Das aktuelle Zeugnis." },
-    { "id": "lib-l-a2-07-q2", "explanationAr": "النص: «Das Gespräch bleibt am Montag um zehn Uhr.» المقابلة يوم الاثنين الساعة 10، فالجواب: Montag zehn Uhr." },
-    { "id": "lib-l-a2-08-q1", "explanationAr": "النص: «Unser Zug am Samstag fällt aus.» القطار هو الذي ألغي يوم السبت، فالجواب: Der Zug." },
-    { "id": "lib-l-a2-08-q2", "explanationAr": "النص: «die Führung am Nachmittag beginnt weiter um fünfzehn Uhr» تبدأ الجولة بعد الظهر في الساعة 15، فالجواب: Fünfzehn Uhr." },
-    { "id": "lib-l-a2-09-q1", "explanationAr": "النص: «Treffen Sie die Vermieterin nicht am Haupteingang, sondern im Hof.» نقطة اللقاء في الفناء وليس المدخل الرئيسي، فالجواب: Im Hof." },
-    { "id": "lib-l-a2-09-q2", "explanationAr": "النص: «Eine Entscheidung fällt erst nächste Woche.» القرار يُتخذ الأسبوع القادم، فالجواب: Nächste Woche." },
-    { "id": "lib-l-a2-10-q1", "explanationAr": "النص: «Für Ihre Kursanmeldung fehlt noch die unterschriebene Seite zwei.» الناقص هو الصفحة الثانية الموقّعة، فالجواب: Die unterschriebene Seite zwei." },
-    { "id": "lib-l-a2-10-q2", "explanationAr": "النص: «Der Kurs beginnt wie geplant am Montag um neun Uhr.» الدورة تبدأ الاثنين في التاسعة، فالجواب: Montag um neun." },
-    { "id": "lib-l-a2-11-q1", "explanationAr": "النص: «Die Musik im Hof war gestern nach zweiundzwanzig Uhr noch laut.» كانت الموسيقى عالية بعد الساعة 22، فالجواب: Nach zweiundzwanzig Uhr." },
-    { "id": "lib-l-a2-11-q2", "explanationAr": "النص: «gehen wir ab zehn Uhr in den Gemeinschaftsraum» الحل أنهم سينتقلون إلى قاعة المجتمع بعد العاشرة، فالجواب: Sie gehen in den Gemeinschaftsraum." },
-    { "id": "lib-l-a2-12-q1", "explanationAr": "النص: «einen Tisch für sechs Personen reservieren» الحجز لستة أشخاص، فالجواب: Sechs." },
-    { "id": "lib-l-a2-12-q2", "explanationAr": "النص: «Wir reservieren den Tisch am stufenlosen Eingang.» الطاولة تُحجز عند المدخل بلا درج، فالجواب: Am stufenlosen Eingang." },
-    { "id": "lib-l-a2-13-q1", "explanationAr": "النص: «Helm und Schloss sind dabei.» الخوذة والقفل مشمولان، فالجواب: Helm und Schloss." },
-    { "id": "lib-l-a2-13-q2", "explanationAr": "النص: «Bitte holen Sie das Rad zwischen acht und neun Uhr ab.» يُستلم الدراجة بين الثامنة والتاسعة، فالجواب: Zwischen acht und neun." },
-    { "id": "lib-l-a2-14-q1", "explanationAr": "النص: «beginnt Sonntag um vierzehn Uhr und endet um siebzehn Uhr» مدة اليوم المعلوماتي ثلاث ساعات (من 14 إلى 17)، فالجواب: Drei Stunden." },
-    { "id": "lib-l-a2-14-q2", "explanationAr": "النص: «Der Eintritt ist frei.» الدخول مجاني للجميع، فالجواب: Nichts." },
-    { "id": "lib-l-a2-15-q1", "explanationAr": "النص: «Ben übernimmt den Kundentermin um zehn Uhr.» بن يتولى موعد العميل، فالجواب: Ben." },
-    { "id": "lib-l-a2-15-q2", "explanationAr": "النص: «Die Unterlagen liegen im gemeinsamen Ordner.» الوثائق موجودة في المجلد المشترك، فالجواب: Im gemeinsamen Ordner." },
-    { "id": "lib-l-a2-16-q1", "explanationAr": "النص: «Bringen Sie den Abholcode und Ihren Ausweis mit.» المطلوب رمز الاستلام والهوية، فالجواب: Code und Ausweis." },
-    { "id": "lib-l-a2-16-q2", "explanationAr": "النص: «Nach sieben Tagen wird das Paket zurückgeschickt.» بعد سبعة أيام يُعاد الطرد، فالجواب: Nach sieben Tagen." },
-    { "id": "lib-l-a2-17-q1", "explanationAr": "النص: «Familie Yilmaz kommt wegen des Zugausfalls erst Samstag.» تصل العائلة يوم السبت، فالجواب: Samstag." },
-    { "id": "lib-l-a2-17-q2", "explanationAr": "النص: «Die Abreise bleibt am Dienstag.» موعد المغادرة يبقى الثلاثاء، فالجواب: Die Abreise." },
-    { "id": "lib-l-a2-18-q1", "explanationAr": "النص: «Nachmittags begleiten Freiwillige Kindergruppen.» بعد الظهر يرافق المتطوعون مجموعات الأطفال، فالجواب: Kindergruppen begleiten." },
-    { "id": "lib-l-a2-18-q2", "explanationAr": "النص: «Fahrtkosten können nach vorheriger Absprache teilweise übernommen werden.» التغطية جزئية وممكنة فقط بعد الاتفاق، فالجواب: Nein، ممكن جزئيًا فقط." },
-    { "id": "lib-l-a2-19-q1", "explanationAr": "النص: «sondern in der Bahnhofshalle statt» السوق يُقام في قاعة المحطة بسبب الريح، فالجواب: In der Bahnhofshalle." },
-    { "id": "lib-l-a2-19-q2", "explanationAr": "النص: «Er beginnt wie geplant um sechzehn Uhr.» بداية السوق لم تتغير وهي الساعة 16، فالجواب: Die Startzeit." },
-    { "id": "lib-l-a2-20-q1", "explanationAr": "النص: «mindestens acht von zehn Terminen besuchen» الحد الأدنى ثمانية مواعيد من عشرة، فالجواب: Acht." },
-    { "id": "lib-l-a2-20-q2", "explanationAr": "النص: «Wir schicken die Bescheinigung eine Woche nach Kursende per E-Mail.» تُرسل الشهادة بالبريد الإلكتروني، فالجواب: Per E-Mail." },
-    { "id": "lib-l-a2-21-q1", "explanationAr": "النص: «Die zweite kostet weniger» الشقة الثانية أرخص، فالجواب: Die zweite." },
-    { "id": "lib-l-a2-21-q2", "explanationAr": "النص: «der Bus fährt abends nur stündlich» عيب الشقة الأرخص أن الحافلة في المساء كل ساعة، فالجواب: Seltener Abendbus." },
-    { "id": "lib-l-a2-22-q1", "explanationAr": "النص: «Ihr Termin im Bürgerbüro ist Mittwoch um elf Uhr.» الموعد الأربعاء الساعة 11، فالجواب: Mittwoch elf." },
-    { "id": "lib-l-a2-22-q2", "explanationAr": "النص: «bringen Sie ein aktuelles Foto mit» المطلوب صورة حديثة، فالجواب: Ein aktuelles Foto." },
-    { "id": "lib-l-a2-23-q1", "explanationAr": "النص: «Ich habe Fotos vom Paket, Etikett und Produkt geschickt.» الزبون أرسل صورًا كدليل، فالجواب: Fotos." },
-    { "id": "lib-l-a2-23-q2", "explanationAr": "النص: «Bitte senden Sie Ersatz, es ist ein Geschenk.» الزبون يختار البديل لأن الفنجان هدية، فالجواب: Ersatz." },
-    { "id": "lib-l-a2-24-q1", "explanationAr": "النص: «Der Zug fährt um acht Uhr zehn.» القطار يتحرك في 8:10، فالجواب: 8:10." },
-    { "id": "lib-l-a2-24-q2", "explanationAr": "النص: «schreibe ich bis sieben Uhr eine Nachricht in den Kurschat» عند إلغاء القطار تُكتب الرسالة في دردشة الدورة، فالجواب: Im Kurschat." }
+    {
+      "id": "lib-l-a2-01-q1",
+      "explanationAr": "النص: «Ihr Beratungstermin am Dienstag um fünfzehn Uhr muss leider verschoben werden.» موعد الثلاثاء الساعة 15 هو الذي يتأجل، فالجواب: Dienstag 15 Uhr."
+    },
+    {
+      "id": "lib-l-a2-01-q2",
+      "explanationAr": "النص: «Bitte antworten Sie bis morgen Mittag.» يُطلب الرد حتى ظهر الغد، فالجواب: Morgen Mittag."
+    },
+    {
+      "id": "lib-l-a2-02-q1",
+      "explanationAr": "النص: «In meinem Zimmer funktioniert die Heizung nicht.» الزبون يشكو أن التدفئة في غرفته لا تعمل، فالجواب: Die Heizung."
+    },
+    {
+      "id": "lib-l-a2-02-q2",
+      "explanationAr": "النص: «können wir Ihnen ein anderes Zimmer im dritten Stock geben» تعرض الاستقبال فورًا غرفة أخرى في الطابق الثالث، فالجواب: Ein anderes Zimmer."
+    },
+    {
+      "id": "lib-l-a2-03-q1",
+      "explanationAr": "النص: «Dann hole ich Samstagmorgen die Tische.» عمر هو من يحضر الطاولات صباح السبت، فالجواب: Omar."
+    },
+    {
+      "id": "lib-l-a2-03-q2",
+      "explanationAr": "النص: «den Schlüssel müssen wir schon am Donnerstag abholen» يجب استلام المفتاح يوم الخميس، فالجواب: Donnerstag."
+    },
+    {
+      "id": "lib-l-a2-04-q1",
+      "explanationAr": "النص: «Der neue Reifen war nicht im ersten Preis enthalten und kostet zusätzlich zwanzig Euro.» الإطار الجديد يُدفع عليه إضافيًا عشرون يورو، فالجواب: Der Reifen."
+    },
+    {
+      "id": "lib-l-a2-04-q2",
+      "explanationAr": "النص: «morgen ab neun Uhr abholen» يمكن استلام الدراجة غدًا من التاسعة، فالجواب: Ab neun Uhr."
+    },
+    {
+      "id": "lib-l-a2-05-q1",
+      "explanationAr": "النص: «Regionalzüge sind nicht enthalten.» تذاكر القطارات الإقليمية غير مشمولة، فالجواب: Regionalzüge."
+    },
+    {
+      "id": "lib-l-a2-05-q2",
+      "explanationAr": "النص: «Von Montag bis Freitag ist das erst nach neun Uhr möglich.» من الاثنين إلى الجمعة لا يمكن أخذ الدراجة مجانًا إلا بعد التاسعة، فالجواب: Nach neun Uhr."
+    },
+    {
+      "id": "lib-l-a2-06-q1",
+      "explanationAr": "النص: «Wir treffen uns zur gleichen Uhrzeit online.» الوقت لا يتغير رغم الانتقال إلى الإنترنت، فالجواب: Die Uhrzeit."
+    },
+    {
+      "id": "lib-l-a2-06-q2",
+      "explanationAr": "النص: «Nächste Woche sind wir wieder im Lernzentrum.» الدورة تعود إلى مركز التعلّم الأسبوع القادم، فالجواب: Nächste Woche."
+    },
+    {
+      "id": "lib-l-a2-07-q1",
+      "explanationAr": "النص: «Uns fehlt noch Ihr aktuelles Zeugnis.» الوثيقة الناقصة هي الشهادة الحديثة، فالجواب: Das aktuelle Zeugnis."
+    },
+    {
+      "id": "lib-l-a2-07-q2",
+      "explanationAr": "النص: «Das Gespräch bleibt am Montag um zehn Uhr.» المقابلة يوم الاثنين الساعة 10، فالجواب: Montag zehn Uhr."
+    },
+    {
+      "id": "lib-l-a2-08-q1",
+      "explanationAr": "النص: «Unser Zug am Samstag fällt aus.» القطار هو الذي ألغي يوم السبت، فالجواب: Der Zug."
+    },
+    {
+      "id": "lib-l-a2-08-q2",
+      "explanationAr": "النص: «die Führung am Nachmittag beginnt weiter um fünfzehn Uhr» تبدأ الجولة بعد الظهر في الساعة 15، فالجواب: Fünfzehn Uhr."
+    },
+    {
+      "id": "lib-l-a2-09-q1",
+      "explanationAr": "النص: «Treffen Sie die Vermieterin nicht am Haupteingang, sondern im Hof.» نقطة اللقاء في الفناء وليس المدخل الرئيسي، فالجواب: Im Hof."
+    },
+    {
+      "id": "lib-l-a2-09-q2",
+      "explanationAr": "النص: «Eine Entscheidung fällt erst nächste Woche.» القرار يُتخذ الأسبوع القادم، فالجواب: Nächste Woche."
+    },
+    {
+      "id": "lib-l-a2-10-q1",
+      "explanationAr": "النص: «Für Ihre Kursanmeldung fehlt noch die unterschriebene Seite zwei.» الناقص هو الصفحة الثانية الموقّعة، فالجواب: Die unterschriebene Seite zwei."
+    },
+    {
+      "id": "lib-l-a2-10-q2",
+      "explanationAr": "النص: «Der Kurs beginnt wie geplant am Montag um neun Uhr.» الدورة تبدأ الاثنين في التاسعة، فالجواب: Montag um neun."
+    },
+    {
+      "id": "lib-l-a2-11-q1",
+      "explanationAr": "النص: «Die Musik im Hof war gestern nach zweiundzwanzig Uhr noch laut.» كانت الموسيقى عالية بعد الساعة 22، فالجواب: Nach zweiundzwanzig Uhr."
+    },
+    {
+      "id": "lib-l-a2-11-q2",
+      "explanationAr": "النص: «gehen wir ab zehn Uhr in den Gemeinschaftsraum» الحل أنهم سينتقلون إلى قاعة المجتمع بعد العاشرة، فالجواب: Sie gehen in den Gemeinschaftsraum."
+    },
+    {
+      "id": "lib-l-a2-12-q1",
+      "explanationAr": "النص: «einen Tisch für sechs Personen reservieren» الحجز لستة أشخاص، فالجواب: Sechs."
+    },
+    {
+      "id": "lib-l-a2-12-q2",
+      "explanationAr": "النص: «Wir reservieren den Tisch am stufenlosen Eingang.» الطاولة تُحجز عند المدخل بلا درج، فالجواب: Am stufenlosen Eingang."
+    },
+    {
+      "id": "lib-l-a2-13-q1",
+      "explanationAr": "النص: «Helm und Schloss sind dabei.» الخوذة والقفل مشمولان، فالجواب: Helm und Schloss."
+    },
+    {
+      "id": "lib-l-a2-13-q2",
+      "explanationAr": "النص: «Bitte holen Sie das Rad zwischen acht und neun Uhr ab.» يُستلم الدراجة بين الثامنة والتاسعة، فالجواب: Zwischen acht und neun."
+    },
+    {
+      "id": "lib-l-a2-14-q1",
+      "explanationAr": "النص: «beginnt Sonntag um vierzehn Uhr und endet um siebzehn Uhr» مدة اليوم المعلوماتي ثلاث ساعات (من 14 إلى 17)، فالجواب: Drei Stunden."
+    },
+    {
+      "id": "lib-l-a2-14-q2",
+      "explanationAr": "النص: «Der Eintritt ist frei.» الدخول مجاني للجميع، فالجواب: Nichts."
+    },
+    {
+      "id": "lib-l-a2-15-q1",
+      "explanationAr": "النص: «Ben übernimmt den Kundentermin um zehn Uhr.» بن يتولى موعد العميل، فالجواب: Ben."
+    },
+    {
+      "id": "lib-l-a2-15-q2",
+      "explanationAr": "النص: «Die Unterlagen liegen im gemeinsamen Ordner.» الوثائق موجودة في المجلد المشترك، فالجواب: Im gemeinsamen Ordner."
+    },
+    {
+      "id": "lib-l-a2-16-q1",
+      "explanationAr": "النص: «Bringen Sie den Abholcode und Ihren Ausweis mit.» المطلوب رمز الاستلام والهوية، فالجواب: Code und Ausweis."
+    },
+    {
+      "id": "lib-l-a2-16-q2",
+      "explanationAr": "النص: «Nach sieben Tagen wird das Paket zurückgeschickt.» بعد سبعة أيام يُعاد الطرد، فالجواب: Nach sieben Tagen."
+    },
+    {
+      "id": "lib-l-a2-17-q1",
+      "explanationAr": "النص: «Familie Yilmaz kommt wegen des Zugausfalls erst Samstag.» تصل العائلة يوم السبت، فالجواب: Samstag."
+    },
+    {
+      "id": "lib-l-a2-17-q2",
+      "explanationAr": "النص: «Die Abreise bleibt am Dienstag.» موعد المغادرة يبقى الثلاثاء، فالجواب: Die Abreise."
+    },
+    {
+      "id": "lib-l-a2-18-q1",
+      "explanationAr": "النص: «Nachmittags begleiten Freiwillige Kindergruppen.» بعد الظهر يرافق المتطوعون مجموعات الأطفال، فالجواب: Kindergruppen begleiten."
+    },
+    {
+      "id": "lib-l-a2-18-q2",
+      "explanationAr": "النص: «Fahrtkosten können nach vorheriger Absprache teilweise übernommen werden.» التغطية جزئية وممكنة فقط بعد الاتفاق، فالجواب: Nein، ممكن جزئيًا فقط."
+    },
+    {
+      "id": "lib-l-a2-19-q1",
+      "explanationAr": "النص: «sondern in der Bahnhofshalle statt» السوق يُقام في قاعة المحطة بسبب الريح، فالجواب: In der Bahnhofshalle."
+    },
+    {
+      "id": "lib-l-a2-19-q2",
+      "explanationAr": "النص: «Er beginnt wie geplant um sechzehn Uhr.» بداية السوق لم تتغير وهي الساعة 16، فالجواب: Die Startzeit."
+    },
+    {
+      "id": "lib-l-a2-20-q1",
+      "explanationAr": "النص: «mindestens acht von zehn Terminen besuchen» الحد الأدنى ثمانية مواعيد من عشرة، فالجواب: Acht."
+    },
+    {
+      "id": "lib-l-a2-20-q2",
+      "explanationAr": "النص: «Wir schicken die Bescheinigung eine Woche nach Kursende per E-Mail.» تُرسل الشهادة بالبريد الإلكتروني، فالجواب: Per E-Mail."
+    },
+    {
+      "id": "lib-l-a2-21-q1",
+      "explanationAr": "النص: «Die zweite kostet weniger» الشقة الثانية أرخص، فالجواب: Die zweite."
+    },
+    {
+      "id": "lib-l-a2-21-q2",
+      "explanationAr": "النص: «der Bus fährt abends nur stündlich» عيب الشقة الأرخص أن الحافلة في المساء كل ساعة، فالجواب: Seltener Abendbus."
+    },
+    {
+      "id": "lib-l-a2-22-q1",
+      "explanationAr": "النص: «Ihr Termin im Bürgerbüro ist Mittwoch um elf Uhr.» الموعد الأربعاء الساعة 11، فالجواب: Mittwoch elf."
+    },
+    {
+      "id": "lib-l-a2-22-q2",
+      "explanationAr": "النص: «bringen Sie ein aktuelles Foto mit» المطلوب صورة حديثة، فالجواب: Ein aktuelles Foto."
+    },
+    {
+      "id": "lib-l-a2-23-q1",
+      "explanationAr": "النص: «Ich habe Fotos vom Paket, Etikett und Produkt geschickt.» الزبون أرسل صورًا كدليل، فالجواب: Fotos."
+    },
+    {
+      "id": "lib-l-a2-23-q2",
+      "explanationAr": "النص: «Bitte senden Sie Ersatz, es ist ein Geschenk.» الزبون يختار البديل لأن الفنجان هدية، فالجواب: Ersatz."
+    },
+    {
+      "id": "lib-l-a2-24-q1",
+      "explanationAr": "النص: «Der Zug fährt um acht Uhr zehn.» القطار يتحرك في 8:10، فالجواب: 8:10."
+    },
+    {
+      "id": "lib-l-a2-24-q2",
+      "explanationAr": "النص: «schreibe ich bis sieben Uhr eine Nachricht in den Kurs-Chat» عند إلغاء القطار تُكتب الرسالة في دردشة الدورة، فالجواب: Im Kurs-Chat."
+    }
   ]
 }

@@ -1,0 +1,281 @@
+{
+  "status": "draft-not-applied",
+  "policy": "owner-review-required-before-apply",
+  "generated": "2026-10-10",
+  "scope": "شروح عربية لـ32 بندًا تشخيصيًا (نموذجان × 4 مستويات × 4 مهارات). تُعرض بعد انتهاء الاختبار للإجابات الخاطئة فقط.",
+  "rule": "كل اقتباس بين «…» يرد حرفيًا في نص البند نفسه: السؤال، السياق، الخيارات، أو نص المقطع الصوتي.",
+  "items": [
+    {
+      "id": "diag-a-a1-grammar",
+      "formId": "A",
+      "level": "A1",
+      "skill": "grammar",
+      "correctOption": "Ich heiße Ali.",
+      "explanationAr": "الجملة الصحيحة هي «Ich heiße Ali.». مع ich نقول heiße، و«Ich Name Ali.» ناقصة لأنها بلا فعل، و«Ich heißt Ali.» فيها فعل بصيغة غير صحيحة لـ ich."
+    },
+    {
+      "id": "diag-a-a1-vocabulary",
+      "formId": "A",
+      "level": "A1",
+      "skill": "vocabulary",
+      "correctOption": "Guten Morgen!",
+      "explanationAr": "الرد الصحيح هو «Guten Morgen!»، لأن التحية الصباحية تُرَدّ بالتحية نفسها. «Gute Nacht!» تُقال قبل النوم، ولا تصلح ردًا على التحية الصباحية."
+    },
+    {
+      "id": "diag-a-a1-reading",
+      "formId": "A",
+      "level": "A1",
+      "skill": "reading",
+      "correctOption": "Montag und Mittwoch",
+      "explanationAr": "النص يقول: «Mina arbeitet am Montag und am Mittwoch» أي أنها تعمل يوم الاثنين والأربعاء. و«Am Freitag hat sie frei» أي أنها في عطلة يوم الجمعة."
+    },
+    {
+      "id": "diag-a-a1-listening",
+      "formId": "A",
+      "level": "A1",
+      "skill": "listening",
+      "correctOption": "Um zehn",
+      "explanationAr": "المقطع يقول: «Morgen öffnen wir erst um zehn Uhr»، أي أن المتجر يفتح غدًا في الساعة العاشرة.",
+      "audioItemId": "lib-l-a1-01",
+      "audioTranscriptDe": "Guten Tag. Unser Laden ist heute bis achtzehn Uhr geöffnet. Morgen öffnen wir erst um zehn Uhr, weil wir am Morgen neue Waren bekommen. Am Samstag sind wir von neun bis vierzehn Uhr da. Sonntag bleibt der Laden geschlossen."
+    },
+    {
+      "id": "diag-a-a2-grammar",
+      "formId": "A",
+      "level": "A2",
+      "skill": "grammar",
+      "correctOption": "habe",
+      "explanationAr": "الفعل arbeiten يكوّن الماضي المركّب مع haben، لذلك نقول habe مع ich. bin تُستعمل مع أفعال الحركة أو التغيير، و werde للمستقبل، و hat لـ er أو sie."
+    },
+    {
+      "id": "diag-a-a2-vocabulary",
+      "formId": "A",
+      "level": "A2",
+      "skill": "vocabulary",
+      "correctOption": "Ich möchte den Termin verschieben.",
+      "explanationAr": "الجواب هو «Ich möchte den Termin verschieben.» ومعناها أريد تأجيل الموعد. الخيارات الأخرى تعني كسر الموعد أو فقدانه أو إلغاءه، وهذا ليس تأجيلًا."
+    },
+    {
+      "id": "diag-a-a2-reading",
+      "formId": "A",
+      "level": "A2",
+      "skill": "reading",
+      "correctOption": "Das Arbeitsbuch",
+      "explanationAr": "النص يقول: «Bitte bringen Sie das Arbeitsbuch mit.» أي يجب إحضار كتاب العمل. أما «Stifte liegen im Raum bereit» فتعني أن الأقلام موجودة في القاعة، فلا يحتاج المشارك إلى إحضارها."
+    },
+    {
+      "id": "diag-a-a2-listening",
+      "formId": "A",
+      "level": "A2",
+      "skill": "listening",
+      "correctOption": "Dienstag 15 Uhr",
+      "explanationAr": "الموعد الملغى هو «Ihr Beratungstermin am Dienstag um fünfzehn Uhr»، أي موعد الثلاثاء الساعة الثالثة بعد الظهر. المقطع يقترح موعدًا بديلًا يوم الأربعاء أو الخميس.",
+      "audioItemId": "lib-l-a2-01",
+      "audioTranscriptDe": "Hallo Herr Weber, Ihr Beratungstermin am Dienstag um fünfzehn Uhr muss leider verschoben werden. Wir können Ihnen Mittwoch um zehn Uhr oder Donnerstag um sechzehn Uhr anbieten. Bitte antworten Sie bis morgen Mittag. Wenn keiner der Termine passt, rufen Sie uns an."
+    },
+    {
+      "id": "diag-a-b1-grammar",
+      "formId": "A",
+      "level": "B1",
+      "skill": "grammar",
+      "correctOption": "der",
+      "explanationAr": "الضمير يعود إلى «der Kollege»، وهو مذكر، وهو فاعل في الجملة الثانوية، لذلك نستعمل der. den مفعول به، و dem مفعول غير مباشر، و dessen تفيد الملكية."
+    },
+    {
+      "id": "diag-a-b1-vocabulary",
+      "formId": "A",
+      "level": "B1",
+      "skill": "vocabulary",
+      "correctOption": "eine Entscheidung treffen",
+      "explanationAr": "التعبير الثابت في الألمانية هو «eine Entscheidung treffen» ومعناه اتخاذ قرار. machen وtun وbauen لا تكوّن هذا التعبير."
+    },
+    {
+      "id": "diag-a-b1-reading",
+      "formId": "A",
+      "level": "B1",
+      "skill": "reading",
+      "correctOption": "Wenn bis Donnerstag keine Antwort kommt",
+      "explanationAr": "النص يقول: «Falls bis dahin keine Antwort kommt» أي إذا لم يصل رد حتى ذلك الوقت، فإن المجموعة تحجز قاعة أصغر. الخطة البديلة مرتبطة بشرط عدم وصول الرد حتى الخميس."
+    },
+    {
+      "id": "diag-a-b1-listening",
+      "formId": "A",
+      "level": "B1",
+      "skill": "listening",
+      "correctOption": "Kein sicherer Abstellplatz",
+      "explanationAr": "بن يقول: «Problematisch ist der fehlende sichere Abstellplatz»، أي أن المشكلة هي غياب مكان آمن لركن الدراجة، وليس الوقت أو الطريق.",
+      "audioItemId": "lib-l-b1-01",
+      "audioTranscriptDe": "Moderatorin: Sie fahren seit einem Monat mit dem Rad zur Arbeit. Wie läuft es? Ben: Bei gutem Wetter sehr gut. Ich bin wacher und brauche kaum länger als mit dem Bus. Problematisch ist der fehlende sichere Abstellplatz. Deshalb nehme ich dienstags, wenn ich spät arbeite, weiterhin den Bus. Mein Ziel ist nicht, das Auto immer zu vermeiden, sondern für jeden Tag eine passende Alternative zu haben."
+    },
+    {
+      "id": "diag-a-b2-grammar",
+      "formId": "A",
+      "level": "B2",
+      "skill": "grammar",
+      "correctOption": "Obwohl die Frist kurz ist, schaffen wir es.",
+      "explanationAr": "الجملة الصحيحة تستعمل «Obwohl» ثم تضع الفعل في نهاية الجملة الثانوية. «Trotzdem» ظرف لا يربط جملتين، و«Trotz» تحتاج اسمًا لا جملة، لذلك تبقى الجملة الثانية الصحيحة هي الجواب."
+    },
+    {
+      "id": "diag-a-b2-vocabulary",
+      "formId": "A",
+      "level": "B2",
+      "skill": "vocabulary",
+      "correctOption": "allerdings",
+      "explanationAr": "allerdings تقيّد الفكرة السابقة أو تقابلها. einerseits تبدأ عرض جانب واحد، و infolgedessen تعني نتيجة، و beispielsweise تعني مثالًا."
+    },
+    {
+      "id": "diag-a-b2-reading",
+      "formId": "A",
+      "level": "B2",
+      "skill": "reading",
+      "correctOption": "Weil Selbstwahl und zusätzliche Übung die Werte beeinflussen können",
+      "explanationAr": "النص يقول: «Sie übten jedoch auch häufiger außerhalb des Kurses» أي أن المشاركين تدربوا أكثر خارج الدورة. ولأن المشاركين «Die freiwilligen Teilnehmenden» اختاروا بأنفسهم، لا يمكن نسب الفرق إلى التطبيق وحده."
+    },
+    {
+      "id": "diag-a-b2-listening",
+      "formId": "A",
+      "level": "B2",
+      "skill": "listening",
+      "correctOption": "Die Teilnehmenden wählten selbst",
+      "explanationAr": "المتحدثة تقول: «Die Teilnehmenden wählten selbst, ob sie die App nutzten.» أي أن المشاركين اختاروا بأنفسهم، فلا يمكن الجزم بأن التطبيق وحده هو سبب الفرق.",
+      "audioItemId": "lib-l-b2-01",
+      "audioTranscriptDe": "Moderator: Die App-Gruppe erzielte sechs Punkte mehr. Beweist das die Wirkung? Forscherin: Nein. Die Teilnehmenden wählten selbst, ob sie die App nutzten. Motivation könnte sowohl die Nutzung als auch das Ergebnis beeinflusst haben. Wir sehen einen Zusammenhang in dieser Stichprobe. Für einen stärkeren Kausalnachweis bräuchten wir zufällige Zuteilung, Angaben zur zusätzlichen Übungszeit und eine längere Beobachtung."
+    },
+    {
+      "id": "diag-b-a1-grammar",
+      "formId": "B",
+      "level": "A1",
+      "skill": "grammar",
+      "correctOption": "Woher",
+      "explanationAr": "الجواب «Woher» لأنه يسأل عن المكان أو البلد الذي يأتي منه الشخص. Wo تسأل عن المكان الحالي، وWie عن الحال، وWas عن الشيء."
+    },
+    {
+      "id": "diag-b-a1-vocabulary",
+      "formId": "B",
+      "level": "A1",
+      "skill": "vocabulary",
+      "correctOption": "Wie viel kostet das?",
+      "explanationAr": "سؤال السعر هو «Wie viel kostet das?». «Wie spät ist das?» تسأل عن الساعة، و«Wer heißt das?» تسأل عن الاسم."
+    },
+    {
+      "id": "diag-b-a1-reading",
+      "formId": "B",
+      "level": "A1",
+      "skill": "reading",
+      "correctOption": "Freitag",
+      "explanationAr": "النص يقول: «Am Freitag bleibt es geschlossen» أي أن المكتب مغلق يوم الجمعة. الأيام الأخرى المذكورة مفتوحة أو لا تعنيها الإجابة."
+    },
+    {
+      "id": "diag-b-a1-listening",
+      "formId": "B",
+      "level": "A1",
+      "skill": "listening",
+      "correctOption": "Rot",
+      "explanationAr": "المقطع يقول: «bis zur roten Tür»، أي أن الباب أحمر، فالجواب Rot.",
+      "audioItemId": "lib-l-a1-02",
+      "audioTranscriptDe": "Der Deutschkurs ist nicht im Hauptgebäude. Gehen Sie am Café links und dann geradeaus bis zur roten Tür. Der Kurs ist im zweiten Stock, Raum zweihundertdrei. Der Aufzug ist neben der Treppe."
+    },
+    {
+      "id": "diag-b-a2-grammar",
+      "formId": "B",
+      "level": "A2",
+      "skill": "grammar",
+      "correctOption": "weil",
+      "explanationAr": "«weil» تبيّن السبب، وتُرسل الفعل bin إلى آخر الجملة الثانوية. denn تربط سببًا أيضًا لكنها لا تغيّر ترتيب الكلمات، وaber تعني تناقضًا، وoder تعني خيارًا."
+    },
+    {
+      "id": "diag-b-a2-vocabulary",
+      "formId": "B",
+      "level": "A2",
+      "skill": "vocabulary",
+      "correctOption": "Geben Sie mir bitte Bescheid.",
+      "explanationAr": "العبارة الطبيعية هي «Geben Sie mir bitte Bescheid.»، ومعناها أبلغني بالقرار أو أعطني خبرًا. الجمل الأخرى غير طبيعية أو لا تعني الإبلاغ."
+    },
+    {
+      "id": "diag-b-a2-reading",
+      "formId": "B",
+      "level": "A2",
+      "skill": "reading",
+      "correctOption": "Ein Heizlüfter",
+      "explanationAr": "النص يقول: «stellt die Vermieterin einen kleinen Heizlüfter bereit» أي أن المؤجرة تضع مدفأة صغيرة حتى يُصلَح الجهاز. فالحل المؤقت هو المدفأة الصغيرة."
+    },
+    {
+      "id": "diag-b-a2-listening",
+      "formId": "B",
+      "level": "A2",
+      "skill": "listening",
+      "correctOption": "Die Heizung",
+      "explanationAr": "المتحدث يقول: «In meinem Zimmer funktioniert die Heizung nicht.» أي أن التدفئة في الغرفة لا تعمل، فالجواب Die Heizung.",
+      "audioItemId": "lib-l-a2-02",
+      "audioTranscriptDe": "Gast: In meinem Zimmer funktioniert die Heizung nicht. Rezeption: Es tut mir leid. Unser Techniker kommt um siebzehn Uhr. Bis dahin können wir Ihnen ein anderes Zimmer im dritten Stock geben. Gast: Hat es einen Aufzug? Rezeption: Ja, und wir bringen Ihr Gepäck hoch."
+    },
+    {
+      "id": "diag-b-b1-grammar",
+      "formId": "B",
+      "level": "B1",
+      "skill": "grammar",
+      "correctOption": "würde",
+      "explanationAr": "في الجملة الشرطية «Wenn ich mehr Zeit hätte» نستعمل würde مع الفعل في آخر الجملة. werde للمستقبل العادي، وwurde للماضي، وwill تعني أريد."
+    },
+    {
+      "id": "diag-b-b1-vocabulary",
+      "formId": "B",
+      "level": "B1",
+      "skill": "vocabulary",
+      "correctOption": "etwas in Betracht ziehen",
+      "explanationAr": "العبارة «etwas in Betracht ziehen» تعني أن نأخذ شيئًا بعين الاعتبار أو نعتبره خيارًا. الخيارات الأخرى تركيبات غير صحيحة."
+    },
+    {
+      "id": "diag-b-b1-reading",
+      "formId": "B",
+      "level": "B1",
+      "skill": "reading",
+      "correctOption": "Der Liefertermin",
+      "explanationAr": "النص يقول: «Unklar bleibt der Liefertermin» أي أن موعد التسليم غير واضح. أما البيانات التقنية فقد «sind bereits geprüft» أي تم فحصها، لذلك ليست هي الخطر غير المحسوم."
+    },
+    {
+      "id": "diag-b-b1-listening",
+      "formId": "B",
+      "level": "B1",
+      "skill": "listening",
+      "correctOption": "Kosten",
+      "explanationAr": "المتحدثة تقول: «die Kosten fehlen noch» أي أن التكلفة لم تصل بعد. أما «Die technischen Daten sind geprüft» فهي موجودة ومفحوصة.",
+      "audioItemId": "lib-l-b1-02",
+      "audioTranscriptDe": "Leitung: Wo steht die Kundenanfrage? Sara: Die technischen Daten sind geprüft, aber die Kosten fehlen noch. Malik berechnet sie bis Mittwochmittag. Danach formuliere ich den Entwurf. Leitung: Gibt es ein Risiko? Sara: Der Liefertermin ist noch nicht bestätigt. Wenn bis Donnerstag keine Antwort kommt, müssen wir zwei Varianten anbieten."
+    },
+    {
+      "id": "diag-b-b2-grammar",
+      "formId": "B",
+      "level": "B2",
+      "skill": "grammar",
+      "correctOption": "um",
+      "explanationAr": "الجواب «um» لأن الهدف «die Kosten zu senken» ليس له فاعل جديد. damit تحتاج جملة كاملة بفاعل، أما ohne وanstatt فلا تعبّران عن الهدف."
+    },
+    {
+      "id": "diag-b-b2-vocabulary",
+      "formId": "B",
+      "level": "B2",
+      "skill": "vocabulary",
+      "correctOption": "hingegen",
+      "explanationAr": "«hingegen» تُبرز المقابلة بين حالتين أو اتجاهين. folglich تعني نتيجة، و zum Beispiel تعني مثالًا، و darüber hinaus تعني إضافة."
+    },
+    {
+      "id": "diag-b-b2-reading",
+      "formId": "B",
+      "level": "B2",
+      "skill": "reading",
+      "correctOption": "Gesamtwert und verteilte Auswirkungen",
+      "explanationAr": "النص يقول: «nicht nur den Gesamtwert, sondern auch Zugang, Ort und betroffene Gruppen ausweisen» أي أن التقييم العادل يذكر المعدل العام وتوزيع الأثر. المتوسط وحده يخفي أن الانتظار زاد في «In zwei Außenvierteln stieg sie jedoch»."
+    },
+    {
+      "id": "diag-b-b2-listening",
+      "formId": "B",
+      "level": "B2",
+      "skill": "listening",
+      "correctOption": "Telefon und spontane Plätze",
+      "explanationAr": "المتحدثة تقول: «Telefontermine und zwei spontane Plätze pro Stunde» أي تبقى المواعيد الهاتفية ومقعدان عفويان في كل ساعة. الخيار «Nur E-Mail» لا يطابق ما ذُكر.",
+      "audioItemId": "lib-l-b2-02",
+      "audioTranscriptDe": "Planerin: Die Onlinebuchung verkürzt die Wartezeit. Vertreter: Für viele, ja. Menschen ohne stabiles Internet verlieren aber den Zugang. Planerin: Wir behalten deshalb Telefontermine und zwei spontane Plätze pro Stunde. Vertreter: Dann muss gemessen werden, wer welchen Weg nutzt und wer trotzdem abgewiesen wird. Ein guter Durchschnitt reicht nicht, wenn eine kleine Gruppe systematisch keinen Termin erhält."
+    }
+  ]
+}

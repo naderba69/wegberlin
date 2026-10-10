@@ -1572,3 +1572,7 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 /* Audit round 2: lesson step 5 on phones. Long German formulas wrap inside the card instead of widening the page. */
 .theory-card,.theory-stack>*,.lesson-section-block{min-width:0;max-width:100%}
 .theory-card>code{width:auto;max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* Audit round 2 (2026-10-10): long German compounds (e.g. Arbeitsunfähigkeitsbescheinigung) must wrap inside 2-column phrase cards at 412px. */
+.phrase-grid>*,.phrase-card{min-width:0}
+.phrase-card{overflow-wrap:anywhere}

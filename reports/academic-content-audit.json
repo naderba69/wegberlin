@@ -22512,9 +22512,9 @@
         "scope": "library-listening",
         "kind": "multiple-choice",
         "prompt": "Wo kommt eine Nachricht bei Ausfall? أين الرسالة؟",
-        "answer": "Im Kurschat",
+        "answer": "Im Kurs-Chat",
         "evidenceRef": "lib-l-a2-24:transcriptDe",
-        "evidenceExcerpt": "Wenn er ausfällt, schreibe ich bis sieben Uhr eine Nachricht in den Kurschat.",
+        "evidenceExcerpt": "Wenn er ausfällt, schreibe ich bis sieben Uhr eine Nachricht in den Kurs-Chat.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221502,5 +221502,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "cdcf22d69bb47bdb8ae59d3a6b581f8caed02fdbb81b4687314d95a350bb9538"
+  "contentSha256": "49b1c184789f9f54e8271f0c5b3e6d4135bb4346624a2c9919e90e39af586b79"
 }

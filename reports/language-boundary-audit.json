@@ -238,7 +238,7 @@
     },
     {
       "path": "src/components/context-appropriateness-quiz.tsx",
-      "line": 27,
+      "line": 28,
       "text": "اختر الصيغة الأنسب للموقف، ثم اقرأ سبب الملاءمة. لا تُمنح mastery من هذا المختبر."
     },
     {
@@ -293,17 +293,17 @@
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 119,
+      "line": 120,
       "text": "الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا."
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 128,
+      "line": 129,
       "text": "Produktionsprobe · العينة الإنتاجية"
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 140,
+      "line": 141,
       "text": "استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني."
     },
     {
@@ -328,17 +328,17 @@
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 117,
+      "line": 118,
       "text": "دخلت بطاقة علاج شخصية إلى SRS."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 117,
+      "line": 118,
       "text": "تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 118,
+      "line": 119,
       "text": "يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط."
     },
     {
@@ -373,27 +373,27 @@
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 32,
+      "line": 33,
       "text": "ليس تقييم مدرس رسميًا ولا حكم CEFR."
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 33,
+      "line": 34,
       "text": "للاستعانة بـGemini عند الشك، اختر Gemini BYOK من"
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "مراجعة Gemini استشارية"
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "لم يُرجع Gemini مشكلة محددة بعقده؛ لا يعني ذلك أن النص خالٍ من الأخطاء."
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "لا درجة رسمية، لا mastery، ولا بديل مضمون عن مدرس بشري للحالات المعقدة."
     },
     {
@@ -428,12 +428,12 @@
     },
     {
       "path": "src/components/library-view.tsx",
-      "line": 9,
+      "line": 10,
       "text": "من A1 إلى B2"
     },
     {
       "path": "src/components/library-view.tsx",
-      "line": 13,
+      "line": 14,
       "text": "Prüfungslesen: المساعدات والمعنى والاستراتيجية مخفية."
     },
     {
@@ -468,7 +468,7 @@
     },
     {
       "path": "src/components/local-test-generator.tsx",
-      "line": 130,
+      "line": 131,
       "text": "هذه مراجعة لأسئلة الدروس التي اخترتها، وليست درجة CEFR أو حكمًا على إتقانك."
     },
     {
@@ -923,12 +923,12 @@
     },
     {
       "path": "src/components/targeted-choice-simulation.tsx",
-      "line": 78,
+      "line": 79,
       "text": "هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe."
     },
     {
       "path": "src/components/targeted-listening-simulation.tsx",
-      "line": 202,
+      "line": 203,
       "text": "TTS بديل"
     },
     {
@@ -943,22 +943,22 @@
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 231,
+      "line": 232,
       "text": "Zum letzten Antwort · متابعة آخر جواب"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 240,
+      "line": 241,
       "text": "Ich heiße أم Ich bin؟"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 241,
+      "line": 242,
       "text": "مكان الفعل بعد weil"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 242,
+      "line": 243,
       "text": "Dativ مع mit"
     },
     {
@@ -1033,31 +1033,31 @@
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 20,
+      "line": 21,
       "text": "محلية وحتمية: لا يُرسل نصك إلى AI، ولا يظهر التصحيح قبل تثبيت محاولة."
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 30,
+      "line": 31,
       "text": "Ihre Korrektur · تصحيحك"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 31,
+      "line": 32,
       "text": "Prüfen · تحقق"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 31,
+      "line": 32,
       "text": "Noch einmal · أعد"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 32,
+      "line": 33,
       "text": "هذا علاج شخصي ولا يرفع mastery أو بوابة المستوى."
     }
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "7d8cf6dc6f89ec9f7c14f1ce709257ca5667add61df220ca1c1979ae84eac755"
+  "contentSha256": "f0536e6b69ae27f0931393c2877928168e1b830dce58be94aa2bc3f4a131e4a2"
 }

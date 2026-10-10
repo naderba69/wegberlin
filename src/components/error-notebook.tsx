@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useState } from "react";
 import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
@@ -102,7 +103,7 @@ export function ErrorNotebook() {
       return <article key={error.id} className={`${error.resolved ? "resolved " : ""}${classification}${(error.highConfidenceWrongCount??0)>0?" high-confidence-wrong":""}${error.sensitiveInPrint?" sensitive-in-print":""}`.trim()}>
         <span className="error-type"><AlertTriangle size={16}/><span data-error-kind-ar={error.type}>{feedbackGuidanceFor(error.type).labelAr}</span><b className={`pattern-${classification}`}>{pattern.title}</b>{(error.highConfidenceWrongCount??0)>0&&<em>ثقة عالية + خطأ</em>}{error.learnerContextTags?.includes("knows-rule-under-time-pressure")&&<em className="time-pressure-tag"><Clock3 size={12}/> أفهمها دون ضغط</em>}</span>
         <div className="error-lines" lang="de" dir="ltr"><del>{error.wrong}</del>{error.resolved || waiting || isRevealed ? <strong>{error.correct}</strong> : <span className="hidden-correction">التصحيح مخفي حتى المحاولة</span>}</div>
-        <p>{error.explanationAr}</p>
+        <p>{learnerExplanation(error.explanationAr)}</p>
         <div className="error-pattern-explanation"><strong>{pattern.title}</strong><p>{pattern.detail}</p><small>السياسة `error-pattern-classification-v1` · التكرار {error.occurrences} · فشل العلاج {error.failedRepairCount??0} · أخطاء بثقة عالية {error.highConfidenceWrongCount??0}</small></div>
         {retrySoon && <div className="repair-retry-soon" data-relearn-ladder="spaced-mastery-two-spaced-successes-v1"><RotateCcw size={17}/><div><strong>لم ينجح العلاج — رجوع قصير مقصود</strong><p>الخطأ يعود بعد فترة أقصر بدل تركه للطابور العادي: 10 دقائق، ثم يوم، ثم 3 أيام. لا يُغلق الخطأ قبل نجاح متأخّر.</p></div></div>}
         {waiting && !retrySoon && <div className="repair-pending"><CalendarCheck size={17}/><div><strong>علاج أولي ناجح — ينتظر اختبارًا مؤجلًا</strong><p>سيُخفى التصحيح من جديد في {new Date(error.nextReviewAt!).toLocaleDateString("ar-TN")}؛ لا يُعتبر الخطأ مستقرًا قبل نجاح الاسترجاع الثاني.</p></div></div>}

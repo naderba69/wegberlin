@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, Check, CircleAlert, ClipboardCheck, LoaderCircle, RotateCcw, Sparkles } from "lucide-react";
@@ -115,7 +116,7 @@ export function LocalTestGenerator() {
                     );
                   })}
                 </div>
-                {submitted && <div className={answers[questionIndex] === item.correctIndex ? "local-test-feedback is-correct" : "local-test-feedback is-wrong"} role="status"><strong>{answers[questionIndex] === item.correctIndex ? "إجابة صحيحة في هذا السؤال" : "راجع الإجابة الصحيحة أعلاه"}</strong><p {...fragmentLanguageAttributes(item.explanationAr)}>{item.explanationAr}</p></div>}
+                {submitted && <div className={answers[questionIndex] === item.correctIndex ? "local-test-feedback is-correct" : "local-test-feedback is-wrong"} role="status"><strong>{answers[questionIndex] === item.correctIndex ? "إجابة صحيحة في هذا السؤال" : "راجع الإجابة الصحيحة أعلاه"}</strong><p {...fragmentLanguageAttributes(learnerExplanation(item.explanationAr))}>{learnerExplanation(item.explanationAr)}</p></div>}
               </fieldset>
             ))}
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useState } from "react";
 import { Check, Ear, Volume2, X } from "lucide-react";
 import { derivePronunciationTestCase } from "@/core/lessons/pronunciation-test";
@@ -51,7 +52,7 @@ export function LessonPronunciationTest({ lesson, onAttempt }: { lesson: FullLes
       {checked ? (
         <div className={correct ? "exercise-feedback ok" : "exercise-feedback bad"} role="status" aria-live="polite">
           <span>{correct ? <Check size={16} /> : <X size={16} />}</span>
-          <p><b>{correct ? "تمييز صحيح" : "راجع الرمز"}</b>{item.explanationAr}</p>
+          <p><b>{correct ? "تمييز صحيح" : "راجع الرمز"}</b>{learnerExplanation(item.explanationAr)}</p>
         </div>
       ) : null}
     </article>

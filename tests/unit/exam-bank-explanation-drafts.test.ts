@@ -10,8 +10,8 @@ const DRAFT_FILES = [
   "exam-bank-language-elements-b2-explanations.draft.json",
 ];
 const NOT_DRAFTED_FILE = "exam-bank-not-drafted-2026-10-10.json";
-/** حالة المسودات قبل موافقة المالك. عند الموافقة تُحدَّث الحالة وتُطبَّق الشروح. */
-const PENDING_STATUS = "draft-owner-approval-required";
+/** حالة المسودات بعد موافقة المالك على تطبيقها (2026-10-10). */
+const APPLIED_STATUS = "applied-owner-approved-2026-10-10";
 /** حد الشرح القصير المستخدم في التدقيق. */
 const SHORT_LIMIT = 20;
 
@@ -54,16 +54,23 @@ function readJson(file: string) {
 describe("exam bank explanation drafts", () => {
   const notDrafted = readJson(NOT_DRAFTED_FILE);
 
-  it("covers every short exam explanation exactly once (drafted or listed as not drafted)", () => {
-    const covered: string[] = [];
+  it("covers every exam item exactly once: applied drafts, or listed as not drafted", () => {
+    const drafted: string[] = [];
     for (const file of DRAFT_FILES) {
-      for (const entry of readJson(file).items as { id: string }[]) covered.push(entry.id);
+      for (const entry of readJson(file).items as { id: string }[]) drafted.push(entry.id);
     }
-    for (const entry of notDrafted.blocked.items as { id: string }[]) covered.push(entry.id);
-    for (const entry of notDrafted.flagged.items as { id: string }[]) covered.push(entry.id);
+    const notDraftedIds = [
+      ...(notDrafted.blocked.items as { id: string }[]),
+      ...(notDrafted.flagged.items as { id: string }[]),
+    ].map((e) => e.id);
 
-    expect(new Set(covered).size).toBe(covered.length);
-    expect([...new Set(covered)].sort()).toEqual([...shortItemIds].sort());
+    expect(new Set(drafted).size).toBe(drafted.length);
+    expect(new Set(notDraftedIds).size).toBe(notDraftedIds.length);
+    // لا يتداخل المكتوب مع غير المكتوب
+    for (const id of notDraftedIds) expect(drafted.includes(id), id).toBe(false);
+    // البنود القصيرة المتبقية في البيانات الحية هي بالضبط غير المكتوبة
+    expect([...shortItemIds].sort()).toEqual([...notDraftedIds].sort());
+    expect(drafted.length + notDraftedIds.length).toBe(526);
   });
 
   it("keeps the not-drafted list in explicit reason groups", () => {
@@ -77,13 +84,19 @@ describe("exam bank explanation drafts", () => {
     describe(file, () => {
       const draft = readJson(file);
 
-      it("is still pending owner approval", () => {
-        expect(draft.status).toBe(PENDING_STATUS);
+      it("is marked as applied by the owner", () => {
+        expect(draft.status).toBe(APPLIED_STATUS);
       });
 
       it("points each entry at a live item in the registry", () => {
         for (const entry of draft.items as { id: string }[]) {
           expect(itemById.has(entry.id), entry.id).toBe(true);
+        }
+      });
+
+      it("the live data carries the approved explanation", () => {
+        for (const entry of draft.items as { id: string; explanationAr: string }[]) {
+          expect(itemById.get(entry.id)?.item.explanationAr, entry.id).toBe(entry.explanationAr);
         }
       });
 

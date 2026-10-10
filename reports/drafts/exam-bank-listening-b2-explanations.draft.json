@@ -1,8 +1,8 @@
 {
-  "status": "draft-owner-approval-required",
+  "status": "applied-owner-approved-2026-10-10",
   "policy": "owner-approval-required-before-apply",
   "scope": "الاستماع (listening) في بنوك الامتحانات المنشورة، 229 بندًا قصيرًا (B2)",
-  "rule": "each explanation quotes a verbatim sentence fragment from the item's own task text (texts[].textDe or clips[].transcriptDe, with [Lücke N] and [NN] markers removed), inside «…», then states why the keyed option follows. Not applied to any .ts file until the owner approves.",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's own task text (texts[].textDe or clips[].transcriptDe, with [Lücke N] and [NN] markers removed), inside «…», then states why the keyed option follows. Applied to the data files after the owner approved (2026-10-10).",
   "generated": "2026-10-10",
   "items": [
     {

@@ -20,11 +20,25 @@ function walk(dir: string, out: string[] = []): string[] {
 const PREFIX_GLUE = /(?<![\u0600-\u06FF\w])[\u0648\u0628\u0644\u0643\u0641](?=[A-Z][A-Za-z]{1,})/gu;
 const ARABIC_LATIN_RUN = /[\u0621-\u063A\u0641-\u064A]{2,}[A-Za-z]{2,}/gu;
 
+// كلمة عربية من حرفين فأكثر مُلتصقة برقم («الغرفة203»)؛ التدقيق سجّل 81 حالة قبل إصلاح e889b88.
+const ARABIC_DIGIT_GLUE = /[\u0621-\u063A\u0641-\u064A]{2,}[0-9]|[0-9][\u0621-\u063A\u0641-\u064A]{2,}/gu;
+
 describe("Arabic/Latin glue in content data", () => {
   const files = walk(join(process.cwd(), "src", "data"));
 
   it("scans a non-trivial corpus", () => {
     expect(files.length).toBeGreaterThan(20);
+  });
+
+  it("has no Arabic word glued to a digit", () => {
+    const hits: string[] = [];
+    for (const file of files) {
+      const text = readFileSync(file, "utf8");
+      ARABIC_DIGIT_GLUE.lastIndex = 0;
+      let match: RegExpExecArray | null;
+      while ((match = ARABIC_DIGIT_GLUE.exec(text))) hits.push(`${file.split("src/data/")[1]}: ${match[0]}`);
+    }
+    expect(hits).toEqual([]);
   });
 
   it("has no Arabic letter glued to a Latin word", () => {

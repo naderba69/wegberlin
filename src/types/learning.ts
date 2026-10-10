@@ -564,6 +564,8 @@ export interface DiagnosticResult {
   stoppedEarly?: boolean;
   confidence?: "low" | "medium" | "high";
   productiveSample?: DiagnosticProductiveSample;
+  /** إجابات خاطئة فقط (معرّف السؤال → رقم الخيار المختار)، لعرض المراجعة بعد إعادة التحميل. */
+  reviewAnswers?: { formId: "A" | "B"; wrong: Record<string, number> };
   completedAt: string;
 }
 

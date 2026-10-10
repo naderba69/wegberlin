@@ -66,7 +66,7 @@ const productiveSampleComparisonSchema = z.object({
   }
 });
 
-const diagnosticSchema = z.object({
+export const diagnosticSchema = z.object({
   estimatedLevel: z.enum(["A1", "A2", "B1", "B2"]),
   score: z.number().int().nonnegative(),
   maxScore: z.number().int().positive(),
@@ -83,6 +83,7 @@ const diagnosticSchema = z.object({
   stoppedEarly: z.boolean().optional(),
   confidence: z.enum(["low", "medium", "high"]).optional(),
   productiveSample: diagnosticProductiveSampleSchema.optional(),
+  reviewAnswers: z.object({ formId: z.enum(["A", "B"]), wrong: z.record(z.string(), z.number().int().nonnegative()) }).optional(),
   completedAt: z.string(),
 });
 

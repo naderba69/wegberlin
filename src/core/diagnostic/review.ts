@@ -1,4 +1,4 @@
-import type { DiagnosticQuestion } from "@/data/diagnostic";
+import { diagnosticForms, type DiagnosticQuestion } from "@/data/diagnostic";
 
 /**
  * مراجعة ما بعد التشخيص: الأسئلة التي أجاب عنها المتعلّم خطأً فقط.
@@ -27,4 +27,19 @@ export function diagnosticReviewItems(questions: readonly DiagnosticQuestion[], 
       explanationAr: question.explanationAr,
     }];
   });
+}
+
+/** الإجابات الخاطئة فقط بصيغة قابلة للحفظ: معرّف السؤال → الخيار المختار. */
+export function diagnosticWrongAnswers(questions: readonly DiagnosticQuestion[], answers: Record<string, number>): Record<string, number> {
+  const wrong: Record<string, number> = {};
+  for (const question of questions) {
+    const chosen = answers[question.id];
+    if (chosen !== undefined && chosen !== question.correctIndex) wrong[question.id] = chosen;
+  }
+  return wrong;
+}
+
+/** إعادة بناء المراجعة من البيانات المحفوظة، بمحتوى الصيغة الحالي. */
+export function diagnosticReviewItemsFromStored(formId: "A" | "B", wrong: Record<string, number>): DiagnosticReviewItem[] {
+  return diagnosticReviewItems(diagnosticForms[formId], wrong);
 }

@@ -1,6 +1,6 @@
 # ملف قراءة الاستبعادات البنيوية الأحد عشر — P0-99
 
-قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف `reports/lexical-review-packet/structural-exclusions.csv` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: `e8a8a9402777e3fe50e63c9dbd87f31bc30a9ec50093e6ccbe85ea9919ff699e`.
+قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف `reports/lexical-review-packet/structural-exclusions.csv` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: `6acefeb0e82fad1816c3dd06823dde0d0cef9f83b564b0e384e16c25df6e1ad1`.
 
 - عدد الاستبعادات: **11** · أسماء أدلة مسمّاة: **0/11** · أسماء نائبة: **0** · خلايا توقيع ممتلئة (حضور فقط): **0/55** · خانات جاهزة لمراجعة مستقلة: **0**.
 - يُطبع هنا حضور الخلايا فقط: لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع، ولا يُفسَّر حكم. اسم دليل مسجّل لا يثبت وجود الدليل ولا كفايته.
@@ -93,7 +93,7 @@
 ## 7. `b2-18-ziehen-in-frame-exclusion`
 
 - الدرس: `b2-18` · الفعل/الحرف الملتقط: `ziehen + in` · نوع الاستبعاد: ظرف مكان لا يحكمه الفعل (`locative-adjunct`)
-- سبب التأليف بالعربية: في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht ziehen» و«das kommt nicht in Betracht» — فلو كان in محكومًا بالفعل لتبدّل مع تبدّله؛ وهو هنا ظرف ثابت مع اسم بلا مقال، ولا حالة تُلاحَظ لأن المقال غائب.
+- سبب التأليف بالعربية: في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht ziehen» و «das kommt nicht in Betracht» — فلو كان in محكومًا بالفعل لتبدّل مع تبدّله؛ وهو هنا ظرف ثابت مع اسم بلا مقال، ولا حالة تُلاحَظ لأن المقال غائب.
 - حالة الخانة: لم يُسمَّ بعد · حالة المراجعة: `authored-review-pending` · خلايا توقيع ممتلئة: 0/5 (المحتوى غير مطبوع وغير مفسَّر)
 - دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): [target/vocabulary] phrases[3].de: in Betracht ziehen || [context/listening] listening.questions[1].options[1]: „Wir stellen einen Antrag auf Verlängerung.“ und „Wir ziehen zwei Termine in Betracht.“ || [context/listening] listening.transcriptDe: Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antr… || [context/test] miniTest[1].options[2]: Wir ziehen zwei Termine in Betracht. || [context/rule] theory[1].examples[1].de: Wir ziehen derzeit zwei Termine in Betracht, haben aber noch nicht entschieden.
 
@@ -107,7 +107,7 @@
 ## 8. `b2-18-kommen-in-frame-exclusion`
 
 - الدرس: `b2-18` · الفعل/الحرف الملتقط: `kommen + in` · نوع الاستبعاد: ظرف مكان لا يحكمه الفعل (`locative-adjunct`)
-- سبب التأليف بالعربية: في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» و«in Frage kommen») والجارّة تبقى كما هي، فلا إطار «kommen + in» يُلزَم بحالة.
+- سبب التأليف بالعربية: في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» و «in Frage kommen») والجارّة تبقى كما هي، فلا إطار «kommen + in» يُلزَم بحالة.
 - حالة الخانة: لم يُسمَّ بعد · حالة المراجعة: `authored-review-pending` · خلايا توقيع ممتلئة: 0/5 (المحتوى غير مطبوع وغير مفسَّر)
 - دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): [target/vocabulary] phrases[10].de: in Frage kommen || [context/rule] theory[2].examples[2].de: Für eine mündliche Verhandlung kommen nur zwei Termine in Frage.
 
@@ -149,7 +149,7 @@
 ## 11. `b2-24-konnten-zu-frame-exclusion`
 
 - الدرس: `b2-24` · الفعل/الحرف الملتقط: `konnten + zu` · نوع الاستبعاد: infinitive-zu-marker (`infinitive-zu-marker`)
-- سبب التأليف بالعربية: zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر؛ الإطار كاذب لا يُلزم بحالة.
+- سبب التأليف بالعربية: zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، و konnten فعل مساعد للإمكان لا يحكم حرف جر؛ الإطار كاذب لا يُلزم بحالة.
 - حالة الخانة: لم يُسمَّ بعد · حالة المراجعة: `authored-review-pending` · خلايا توقيع ممتلئة: 0/5 (المحتوى غير مطبوع وغير مفسَّر)
 - دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): [target/vocabulary] phrases[3].de: Ohne die Frist zu versäumen, konnten wir einreichen.
 

@@ -64,7 +64,7 @@ export const b2Module3Lessons: FullLesson[] = [
  ],
  questionsAr: [
  "لماذا 40% إلى 30% ليست انخفاضًا بعشر بالمئة؟",
- "ما الفرق بين Mittelwert وVerteilung؟",
+ "ما الفرق بين Mittelwert و Verteilung؟",
  "أي تصميم إضافي نحتاجه لادعاء سببي أقوى؟",
  ],
  },
@@ -73,7 +73,7 @@ export const b2Module3Lessons: FullLesson[] = [
  id: "b2-05-t1",
  titleDe: "Absolut, relativ und Ausgangswert",
  titleAr: "المطلق والنسبي وخط الأساس",
- explanationAr: "إذا ارتفعت نسبة من 20% إلى 30% فالتغير المطلق عشر نقاط مئوية، أما التغير النسبي فهو 50% قياسًا إلى 20. عبارة um zehn Prozent تعني نسبيًا، وum zehn Prozentpunkte تعني الفرق بين نسبتين. اذكر دائمًا القيمة الأولى والثانية كي لا يصنع العنوان أثرًا أكبر من البيانات.",
+ explanationAr: "إذا ارتفعت نسبة من 20% إلى 30% فالتغير المطلق عشر نقاط مئوية، أما التغير النسبي فهو 50% قياسًا إلى 20. عبارة um zehn Prozent تعني نسبيًا، و um zehn Prozentpunkte تعني الفرق بين نسبتين. اذكر دائمًا القيمة الأولى والثانية كي لا يصنع العنوان أثرًا أكبر من البيانات.",
  contrastAr: "في العربية اليومية تُستعمل «بالمئة» أحيانًا للمعنيين. في التعليق الألماني الدقيق افصل Prozent عن Prozentpunkte وسمِّ Ausgangswert.",
  formula: "neu − alt = Prozentpunkte | (neu − alt) ÷ alt × 100 = relative Änderung",
  examples: [
@@ -91,7 +91,7 @@ export const b2Module3Lessons: FullLesson[] = [
  titleDe: "Korrelation ist keine Kausalität",
  titleAr: "الارتباط لا يثبت السببية",
  explanationAr: "قد يتحرك متغيران معًا بسبب متغير ثالث أو اختيار المشاركين لأنفسهم أو اتجاه سببي معاكس. صف أولًا: X ging mit Y einher أو zwischen X und Y bestand ein Zusammenhang. ثم ضع الحد: Daraus lässt sich nicht schließen, dass X Y verursacht. يقوى الادعاء السببي بالمقارنة المناسبة والتوزيع العشوائي وضبط العوامل، لكنه لا يصبح مطلقًا.",
- contrastAr: "الرابط اللغوي weil يحوّل الملاحظة سريعًا إلى سبب. استعمل während أو wohingegen للمقارنة، وim Zusammenhang mit للعلاقة، ولا تنتقل إلى weil دون دليل تصميمي.",
+ contrastAr: "الرابط اللغوي weil يحوّل الملاحظة سريعًا إلى سبب. استعمل während أو wohingegen للمقارنة، و im Zusammenhang mit للعلاقة، ولا تنتقل إلى weil دون دليل تصميمي.",
  formula: "Beobachtung → mögliche Alternativen → Design → begrenzte Schlussfolgerung",
  examples: [
  { de: "Mehr Übung ging mit höheren Werten einher.", ar: "ارتبط التدريب الأكثر بقيم أعلى." },
@@ -118,7 +118,7 @@ export const b2Module3Lessons: FullLesson[] = [
  { de: "Die Ergebnisse gelten zunächst für diesen Standort.", ar: "تنطبق أولًا على هذا الموقع." },
  { de: "Weitere Messungen sind nötig.", ar: "نحتاج قياسات أخرى." },
  ],
- trickAr: "لا تكتب المتوسط وحده: أضف جملة تبدأ بـAllerdings عن التشتت أو العينة أو المدة.",
+ trickAr: "لا تكتب المتوسط وحده: أضف جملة تبدأ ب Allerdings عن التشتت أو العينة أو المدة.",
  },
  ],
  exercises: [
@@ -182,7 +182,7 @@ export const b2Module3Lessons: FullLesson[] = [
  promptDe: "Schreiben Sie 220–250 Wörter: Beschreiben Sie Ausgangswerte, absolute und relative Veränderung, Gruppenunterschiede, Stichprobe, mögliche Erklärungen, Unsicherheit und eine begrenzte Schlussfolgerung.",
  promptAr: "اكتب 220–250 كلمة: خط الأساس والتغير المطلق والنسبي وفروق الفئات والعينة والتفسيرات الممكنة وعدم اليقين وخلاصة محدودة.",
  checklistAr: [
- "ذكرت من كم إلى كم ولم تخلط Prozent وProzentpunkte.",
+ "ذكرت من كم إلى كم ولم تخلط Prozent و Prozentpunkte.",
  "فصلت المتوسط عن التوزيع أو الفئات.",
  "لم تحول الارتباط إلى سببية.",
  "حددت العينة والخطوة التي تقوي الاستنتاج.",
@@ -204,7 +204,7 @@ export const b2Module3Lessons: FullLesson[] = [
  },
  mistakes: [
  { wrong: "von 20 auf 30 Prozent = plus zehn Prozent", correct: "von 20 auf 30 Prozent = plus zehn Prozentpunkte beziehungsweise relativ plus fünfzig Prozent", whyAr: "النقاط تقيس الفرق المباشر، والنسبة تقيس الفرق نسبة إلى الأساس.", trickAr: "من؟ إلى؟ نقاط أم نسبة إلى الأصل؟" },
- { wrong: "X und Y steigen, weil X Y verursacht", correct: "X ging mit Y einher; eine Ursache ist damit nicht nachgewiesen.", whyAr: "التزامن لا يستبعد سببًا ثالثًا أو اتجاهًا عكسيًا.", trickAr: "استبدل weil أولًا بـging mit … einher." },
+ { wrong: "X und Y steigen, weil X Y verursacht", correct: "X ging mit Y einher; eine Ursache ist damit nicht nachgewiesen.", whyAr: "التزامن لا يستبعد سببًا ثالثًا أو اتجاهًا عكسيًا.", trickAr: "استبدل weil أولًا ب ging mit … einher." },
  { wrong: "Der Durchschnitt stieg, also profitierten alle.", correct: "Der Durchschnitt stieg; die Verteilung zeigt jedoch unterschiedliche Verläufe.", whyAr: "المتوسط لا يصف كل قيمة فردية.", trickAr: "بعد Mittelwert اسأل عن Streuung." },
  { wrong: "80 Freiwillige beweisen den Effekt für alle.", correct: "Die freiwillige Stichprobe begrenzt die Übertragbarkeit.", whyAr: "حجم العينة وحده لا يصلح طريقة اختيارها.", trickAr: "ليس كم شخصًا فقط، بل من اختارهم وكيف؟" },
  ],
@@ -309,7 +309,7 @@ export const b2Module3Lessons: FullLesson[] = [
  id: "b2-06-t2",
  titleDe: "Nominalstil, Aktiv und Passiv",
  titleAr: "الأسلوب الاسمي والفعل والمبني للمجهول",
- explanationAr: "التقارير تكثر من أسماء مثل Durchführung وAuswertung. للتوضيح أعد الفعل والفاعل: Das Team wertete die Daten aus. استعمل Passiv عندما تكون العملية أهم أو الفاعل معروفًا من السياق: Die Daten wurden anonymisiert. ويمكن استعمال man أو صيغة انعكاسية: Dabei misst man… / Die Werte lassen sich vergleichen.",
+ explanationAr: "التقارير تكثر من أسماء مثل Durchführung و Auswertung. للتوضيح أعد الفعل والفاعل: Das Team wertete die Daten aus. استعمل Passiv عندما تكون العملية أهم أو الفاعل معروفًا من السياق: Die Daten wurden anonymisiert. ويمكن استعمال man أو صيغة انعكاسية: Dabei misst man… / Die Werte lassen sich vergleichen.",
  contrastAr: "المصدر والاسم في العربية الرسمية قد يخفيان الفاعل أيضًا. الوضوح ليس تحويل كل شيء إلى Aktiv؛ بل اختيار منظور يبيّن العملية والمسؤولية دون تكرار.",
  formula: "Nominalisierung → Wer? + Verb | Prozessfokus → werden + Partizip II",
  examples: [
@@ -342,7 +342,7 @@ export const b2Module3Lessons: FullLesson[] = [
  ],
  exercises: [
  { id: "b2-06-e1", type: "multiple-choice", promptAr: "أي شرح للمصطلح أفضل لجمهور عام؟", options: ["Fernerkundung ist Fernerkundung.", "Remote Sensing, Punkt.", "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.", "Ein kompliziertes wissenschaftliches Verfahren ohne Beispiel."], correctIndex: 2, explanationAr: "الشرح لجمهور عام يسمّي الفعل والوسيلة ومثالًا واحدًا: Informationen aus der Entfernung sammeln مع مثال الأقمار الصناعية؛ تكرار المصطلح أو إبقاؤه بالإنجليزية لا يشرح شيئًا." },
- { id: "b2-06-e2", type: "fill-blank", promptAr: "أدخل قيدًا بـwobei:", template: "Die Flächen waren kühler, ___ nur die Oberfläche gemessen wurde.", acceptedAnswers: ["wobei"], explanationAr: "wobei تلحق جملة جانبية تُقيّد ما سبقها مع فعل في النهاية: «…, wobei nur die Oberfläche gemessen wurde». und مع فعل مُصرَّف تصنع مستقلة فتضيع علاقة القيد بالنتيجة." },
+ { id: "b2-06-e2", type: "fill-blank", promptAr: "أدخل الرابط الذي يُقيّد الجملة السابقة:", template: "Die Flächen waren kühler, ___ nur die Oberfläche gemessen wurde.", acceptedAnswers: ["wobei"], explanationAr: "wobei تلحق جملة جانبية تُقيّد ما سبقها مع فعل في النهاية: «…, wobei nur die Oberfläche gemessen wurde». und مع فعل مُصرَّف تصنع مستقلة فتضيع علاقة القيد بالنتيجة." },
  { id: "b2-06-e3", type: "word-ordering", promptAr: "حوّل الاسمية إلى جملة فعلية:", words: ["Das Team", "wertete", "die Messdaten", "aus"], acceptedAnswers: ["Das Team wertete die Messdaten aus","Die Messdaten wertete das Team aus"], explanationAr: "الفعلية تسمّي الفاعل والفعل بدل تجميدهما في اسم الحدث: Das Team wertete die Messdaten aus، مع بقاء الجزء المنفصل aus في النهاية لأنه فعل قابل للفصل. ويُقبل أيضًا: «Die Messdaten wertete das Team aus»." },
  { id: "b2-06-e4", type: "error-correction", promptAr: "صحح Passiv:", sentence: "Die Temperaturen wurden an zwölf Orten messen.", acceptedAnswers: ["Die Temperaturen wurden an zwölf Orten gemessen"], explanationAr: "المجهول في الماضي يحتاج wurden مع Partizip II: «Die Temperaturen wurden an zwölf Orten gemessen». الإبقاء على messen يترك البناء بلا جزء مُتمّم، وتصريفه يُسقط المجهول ويُرجع الفاعل." },
  { id: "b2-06-e5", type: "matching", promptAr: "طابق جزء الشرح بوظيفته:", pairs: [{ left: "Methode", right: "Wie wurden die Daten erhoben?" }, { left: "Ergebnis", right: "Was wurde beobachtet?" }, { left: "Grenze", right: "Was darf man nicht daraus ableiten?" }], explanationAr: "لكل جزء من شرح البحث سؤاله: Methode تُجيب كيف جُمعت البيانات، و Ergebnis ماذا رُصد فعلًا، و Grenze ما لا يجوز استنتاجه. هذه البنية تمنع اختزال دراسة في عنوانها." },
@@ -406,7 +406,7 @@ export const b2Module3Lessons: FullLesson[] = [
  strategyAr: "ابن خريطة الاستماع: تعريف، طريقة، نمط، قيدان، ثم فائدة عملية لا تتجاوز الدليل.",
  questions: [
  { id: "b2-06-lq1", promptDe: "Wie erklärt der Forscher Feinstaub?", promptAr: "كيف يشرح الباحث الجسيمات الدقيقة؟", options: ["Als Lufttemperatur", "Als Verkehrsmenge", "Als Satellitenbild", "Als sehr kleine Teilchen in der Luft"], correctIndex: 3, explanationAr: "تعريف قصير مباشر. والجزء المرتبط بالسؤال من المقطع: «— Forscher: Feinstaub nennt man sehr kleine Teilchen in der Luft». قِس كل خيار على هذا الجزء: «Als sehr kleine Teilchen in der Luft» هو الذي يحقق شرط سؤال «كيف يشرح الباحث الجسيمات الدقيقة؟»." },
- { id: "b2-06-lq2", promptDe: "Welche Faktoren können die Messung beeinflussen?", promptAr: "ما العوامل المؤثرة في القياس؟", options: ["Nur die Uhrzeit", "Nur die Straßennamen", "Wetter und Gerätequalität", "Die Zahl der Moderatorinnen"], correctIndex: 2, explanationAr: "ذكر الطقس وجودة الأجهزة. ومن المقطع هذا الجزء: «Die Werte waren an stark befahrenen Straßen häufig höher, wobei Wetter und Gerätequalität die Messung beeinflussen können». هذا موضع الجواب، و«Wetter und Gerätequalität» يطابق سؤال «ما العوامل المؤثرة في القياس؟» بلا استنتاج بعيد." },
+ { id: "b2-06-lq2", promptDe: "Welche Faktoren können die Messung beeinflussen?", promptAr: "ما العوامل المؤثرة في القياس؟", options: ["Nur die Uhrzeit", "Nur die Straßennamen", "Wetter und Gerätequalität", "Die Zahl der Moderatorinnen"], correctIndex: 2, explanationAr: "ذكر الطقس وجودة الأجهزة. ومن المقطع هذا الجزء: «Die Werte waren an stark befahrenen Straßen häufig höher, wobei Wetter und Gerätequalität die Messung beeinflussen können». هذا موضع الجواب، و «Wetter und Gerätequalität» يطابق سؤال «ما العوامل المؤثرة في القياس؟» بلا استنتاج بعيد." },
  { id: "b2-06-lq3", promptDe: "Welchen Nutzen hat das Projekt?", promptAr: "ما فائدة المشروع؟", options: ["Es beweist eine einzige Ursache.", "Es zeigt mögliche Schwerpunkte für genauere Fachmessungen.", "Es ersetzt Referenzgeräte vollständig.", "Es sagt das Wetter voraus."], correctIndex: 1, explanationAr: "فائدة المشروع أنه „macht mögliche Belastungsschwerpunkte sichtbar und zeigt, wo Fachleute genauer messen sollten“ — يرشد إلى مواضع القياس الدقيق لا يحل محله." },
  ],
  },
@@ -439,7 +439,7 @@ export const b2Module3Lessons: FullLesson[] = [
  speaking: {
  titleAr: "اشرح بحثًا لجمهور عام",
  promptDe: "Erklären Sie etwa drei Minuten lang eine Untersuchung: Frage, Fachbegriff, anschauliches Beispiel, Methode, Ergebnis, wobei-Grenze, Bedeutung und offene Frage.",
- promptAr: "اشرح قرابة ثلاث دقائق سؤال البحث ومصطلحًا ومثالًا والطريقة والنتيجة وقيدًا بـwobei والمعنى والسؤال المفتوح.",
+ promptAr: "اشرح قرابة ثلاث دقائق سؤال البحث ومصطلحًا ومثالًا والطريقة والنتيجة وقيدًا ب wobei والمعنى والسؤال المفتوح.",
  usefulPhrases: ["Unter … versteht man …", "Das bedeutet konkret …", "Die Forschenden untersuchten …", "Dabei ist zu beachten, dass …"],
  successCriteriaAr: ["فهم المستمع المصطلح من تعريف ومثال.", "ذكرت الطريقة والنتيجة دون غرق في التفاصيل.", "حافظت على قيدين ودرجة اليقين والمعنى العملي."],
  },
@@ -456,9 +456,9 @@ export const b2Module3Lessons: FullLesson[] = [
  { wrong: "التبسيط يعني حذف القيود", correct: "الشرح الأقصر يحفظ الطريقة والنتيجة والحد الأساسي.", whyAr: "حذف القيد قد يحول الارتباط المحدود إلى حقيقة عامة أو سبب مؤكد.", trickAr: "ضع قيد wobei مباشرة بعد النتيجة." },
  ],
  miniTest: [
- { id: "b2-06-m1", promptDe: "Adressatengerechte Definition", promptAr: "اختر التعبير المطابق لـ«Adressatengerechte Definition»:", options: ["Stichprobe ist Stichprobe.", "Sample ist nur ein anderes Wort.", "Unter einer Stichprobe versteht man den untersuchten Teil einer größeren Gruppe.", "Keine Definition oder Beispiel nötig."], correctIndex: 2, explanationAr: "تعريف قصير يؤدي وظيفة المصطلح. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا." },
- { id: "b2-06-m2", promptDe: "Passiv Präteritum", promptAr: "اختر الصيغة الصحيحة لحالة «Passiv Präteritum»:", options: ["Die Werte wurden gemessen.", "Die Werte wurden messen.", "Die Werte worden gemesst.", "Die Werte werden gestern messen."], correctIndex: 0, explanationAr: "wurden + Partizip II. التقارير تكثر من أسماء مثل Durchführung وAuswertung." },
- { id: "b2-06-m3", promptDe: "Klare Verbform", promptAr: "الأوضح:", options: ["Die Durchführung der Datenauswertung erfolgte.", "Das Team wertete die Daten aus.", "Auswertung Durchführung Daten.", "Es erfolgte die Vollziehung der Durchführung."], correctIndex: 1, explanationAr: "فاعل وفعل واضحان. التقارير تكثر من أسماء مثل Durchführung وAuswertung." },
+ { id: "b2-06-m1", promptDe: "Adressatengerechte Definition", promptAr: "اختر التعبير المطابق ل «Adressatengerechte Definition»:", options: ["Stichprobe ist Stichprobe.", "Sample ist nur ein anderes Wort.", "Unter einer Stichprobe versteht man den untersuchten Teil einer größeren Gruppe.", "Keine Definition oder Beispiel nötig."], correctIndex: 2, explanationAr: "تعريف قصير يؤدي وظيفة المصطلح. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا." },
+ { id: "b2-06-m2", promptDe: "Passiv Präteritum", promptAr: "اختر الصيغة الصحيحة لحالة «Passiv Präteritum»:", options: ["Die Werte wurden gemessen.", "Die Werte wurden messen.", "Die Werte worden gemesst.", "Die Werte werden gestern messen."], correctIndex: 0, explanationAr: "wurden + Partizip II. التقارير تكثر من أسماء مثل Durchführung و Auswertung." },
+ { id: "b2-06-m3", promptDe: "Klare Verbform", promptAr: "الأوضح:", options: ["Die Durchführung der Datenauswertung erfolgte.", "Das Team wertete die Daten aus.", "Auswertung Durchführung Daten.", "Es erfolgte die Vollziehung der Durchführung."], correctIndex: 1, explanationAr: "فاعل وفعل واضحان. التقارير تكثر من أسماء مثل Durchführung و Auswertung." },
  { id: "b2-06-m4", promptDe: "wobei", promptAr: "أي وظيفة؟", options: ["Ein gesicherter Ursache-Wirkung-Zusammenhang", "Das Ergebnis streichen", "Verallgemeinerung auf alle", "Eine relevante Einschränkung direkt ergänzen"], correctIndex: 3, explanationAr: "تلحق تفصيلًا أو قيدًا مرتبطًا. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا." },
  { id: "b2-06-m5", promptDe: "Wissenschaft vermitteln", promptAr: "ما البنية الأمينة؟", options: ["Nur eine spannende Überschrift", "Ein Ergebnis ohne Methode", "Frage, Methode, Ergebnis, Grenze und Bedeutung", "Fachbegriffe ohne Beispiele"], correctIndex: 2, explanationAr: "تحفظ الدليل والحد والمعنى. لا تستبدل المصطلح دائمًا؛ قد يحتاجه المتلقي لاحقًا." },
  ],

@@ -71,7 +71,7 @@ export const examProfiles: Record<ExamProfile["id"], ExamProfile> = {
     verifiedAt: "2026-10-04",
     status: "verified",
     modules: [
-      { id: "lesen", titleDe: "Leseverstehen", titleAr: "فهم القراءة", parts: 3, minutes: 90, maxPoints: 75, noteAr: "القراءة وSprachbausteine يشتركان في كتلة 90 دقيقة بلا فاصل." },
+      { id: "lesen", titleDe: "Leseverstehen", titleAr: "فهم القراءة", parts: 3, minutes: 90, maxPoints: 75, noteAr: "القراءة و Sprachbausteine يشتركان في كتلة 90 دقيقة بلا فاصل." },
       { id: "sprachbausteine", titleDe: "Sprachbausteine", titleAr: "العناصر اللغوية", parts: 2, minutes: 90, maxPoints: 30, noteAr: "الـ90 دقيقة مشتركة مع القراءة وليست 90 دقيقة إضافية." },
       { id: "hoeren", titleDe: "Hörverstehen", titleAr: "فهم الاستماع", parts: 3, minutes: 20, maxPoints: 75, noteAr: "حوالي 20 دقيقة." },
       { id: "schreiben", titleDe: "Schriftlicher Ausdruck", titleAr: "التعبير الكتابي", parts: 1, minutes: 30, maxPoints: 45, noteAr: "رسالة إلكترونية شبه رسمية وفق مدخل محدد." },
@@ -79,7 +79,7 @@ export const examProfiles: Record<ExamProfile["id"], ExamProfile> = {
     ],
     structureAr: "قسم كتابي: قراءة وعناصر لغوية واستماع وكتابة؛ وقسم شفهي من ثلاثة أجزاء.",
     passingRuleAr: "وفق النموذج الرسمي المرتبط حاليًا: 225 نقطة للكتابي و75 للشفهي؛ يلزم 135 كتابيًا و45 شفهيًا. التطبيق لا يمنح نتيجة رسمية.",
-    separationWarningAr: "لا تطبق قاعدة 60/100 لكل وحدة الخاصة بـGoethe؛ telc يفصل مجموع الكتابي عن مجموع الشفهي.",
+    separationWarningAr: "لا تطبق قاعدة 60/100 لكل وحدة الخاصة ب Goethe؛ telc يفصل مجموع الكتابي عن مجموع الشفهي.",
     sourceRefs: ["telc-b2-overview-2026", "telc-b2-mock-2019-current-link"],
   },
 };

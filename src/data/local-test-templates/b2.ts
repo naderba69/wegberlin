@@ -38,7 +38,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-01-m3",
         "promptDe": "Konzession",
-        "promptAr": "اختر التعبير المطابق لـ«Konzession»:",
+        "promptAr": "اختر التعبير المطابق ل «Konzession»:",
         "options": [
           "Nachrichten stören beim Lernen überhaupt nicht, also brauchen wir keine Regel.",
           "Der Einwand ist völlig unzutreffend und kann ignoriert werden.",
@@ -46,7 +46,7 @@ export const localTestTemplateBankB2 = [
           "Zwar lenken Nachrichten ab, jedoch sind nicht alle Nutzungen gleich."
         ],
         "correctIndex": 3,
-        "explanationAr": "اعتراف وتحديد. تسمح zwar … jedoch/aber وallerdings بالاعتراف بجزء من الحجة المقابلة دون التخلي عن موقفك: Zwar lenken Nachrichten ab, jedoch sind nicht alle Nutzungen gleich."
+        "explanationAr": "اعتراف وتحديد. تسمح zwar … jedoch/aber و allerdings بالاعتراف بجزء من الحجة المقابلة دون التخلي عن موقفك: Zwar lenken Nachrichten ab, jedoch sind nicht alle Nutzungen gleich."
       },
       {
         "id": "b2-01-m4",
@@ -112,7 +112,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-02-m3",
         "promptDe": "wohingegen",
-        "promptAr": "اختر التعبير المطابق لـ«wohingegen»:",
+        "promptAr": "اختر التعبير المطابق ل «wohingegen»:",
         "options": [
           "Büros flexibel sind, wohingegen Kliniken Schichten brauchen.",
           "Wohingegen Kliniken Schichten brauchen, Büros sind flexibel.",
@@ -173,7 +173,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-03-m2",
         "promptDe": "je nachdem",
-        "promptAr": "اختر التعبير المطابق لـ«je nachdem»:",
+        "promptAr": "اختر التعبير المطابق ل «je nachdem»:",
         "options": [
           "Je nachdem, welche Rolle hat jemand …",
           "Je nachdem, welche Rolle jemand hat …",
@@ -242,12 +242,12 @@ export const localTestTemplateBankB2 = [
           "selbst wenn"
         ],
         "correctIndex": 0,
-        "explanationAr": "hinsichtlich للموضوع: hinsichtlich der Frist يعني «فيما يخص الموعد»، وتُستعمل مع اسم مجرور في Genitiv. أما angesichts فللظرف أو السبب، وunter Berücksichtigung تركيب آخر."
+        "explanationAr": "hinsichtlich للموضوع: hinsichtlich der Frist يعني «فيما يخص الموعد»، وتُستعمل مع اسم مجرور في Genitiv. أما angesichts فللظرف أو السبب، و unter Berücksichtigung تركيب آخر."
       },
       {
         "id": "b2-04-m2",
         "promptDe": "Grund/Lage",
-        "promptAr": "اختر التعبير المطابق لـ«Grund/Lage»:",
+        "promptAr": "اختر التعبير المطابق ل «Grund/Lage»:",
         "options": [
           "hinsichtlich des Risikos",
           "im Hinblick auf",
@@ -255,7 +255,7 @@ export const localTestTemplateBankB2 = [
           "angesichts des Risikos"
         ],
         "correctIndex": 3,
-        "explanationAr": "angesichts للظرف أو السبب: angesichts des Risikos تعني «في ضوء الخطر». الصيغة تأخذ Genitiv، وim Hinblick auf تأخذ Akkusativ وتبرز الاتجاه أو الهدف."
+        "explanationAr": "angesichts للظرف أو السبب: angesichts des Risikos تعني «في ضوء الخطر». الصيغة تأخذ Genitiv، و im Hinblick auf تأخذ Akkusativ وتبرز الاتجاه أو الهدف."
       },
       {
         "id": "b2-04-m3",
@@ -382,7 +382,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-06-m1",
         "promptDe": "Adressatengerechte Definition",
-        "promptAr": "اختر التعبير المطابق لـ«Adressatengerechte Definition»:",
+        "promptAr": "اختر التعبير المطابق ل «Adressatengerechte Definition»:",
         "options": [
           "Stichprobe ist Stichprobe.",
           "Sample ist nur ein anderes Wort.",
@@ -403,7 +403,7 @@ export const localTestTemplateBankB2 = [
           "Die Werte werden gestern messen."
         ],
         "correctIndex": 0,
-        "explanationAr": "wurden + Partizip II. التقارير تكثر من أسماء مثل Durchführung وAuswertung."
+        "explanationAr": "wurden + Partizip II. التقارير تكثر من أسماء مثل Durchführung و Auswertung."
       },
       {
         "id": "b2-06-m3",
@@ -416,7 +416,7 @@ export const localTestTemplateBankB2 = [
           "Es erfolgte die Vollziehung der Durchführung."
         ],
         "correctIndex": 1,
-        "explanationAr": "فاعل وفعل واضحان. التقارير تكثر من أسماء مثل Durchführung وAuswertung."
+        "explanationAr": "فاعل وفعل واضحان. التقارير تكثر من أسماء مثل Durchführung و Auswertung."
       },
       {
         "id": "b2-06-m4",
@@ -604,7 +604,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-09-m1",
         "promptDe": "Beobachtung",
-        "promptAr": "اختر التعبير المطابق لـ«Beobachtung» في درس «وجهات النظر الثقافية»:",
+        "promptAr": "اختر التعبير المطابق ل «Beobachtung» في درس «وجهات النظر الثقافية»:",
         "options": [
           "Er war arrogant.",
           "Er wollte die Gruppe beleidigen.",
@@ -686,7 +686,7 @@ export const localTestTemplateBankB2 = [
           "muss = freie Wahl"
         ],
         "correctIndex": 1,
-        "explanationAr": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، وsollte نصيحة، ومuss إلزامًا."
+        "explanationAr": "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، ومuss إلزامًا."
       },
       {
         "id": "b2-10-m2",
@@ -791,7 +791,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-11-m4",
         "promptDe": "Sprechreparatur",
-        "promptAr": "اختر التعبير المطابق لـ«Sprechreparatur»:",
+        "promptAr": "اختر التعبير المطابق ل «Sprechreparatur»:",
         "options": [
           "Ich korrigiere mich: zwölf statt zehn Prozent.",
           "Ich beginne den ganzen Vortrag einfach noch einmal von vorn",
@@ -1074,7 +1074,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-15-m3",
         "promptDe": "Wortstellung",
-        "promptAr": "أين الفعل في جملة بدأت بـ«Bevor»؟",
+        "promptAr": "أين الفعل في جملة بدأت ب «Bevor»؟",
         "options": [
           "nach dem Subjekt",
           "am Anfang",
@@ -1143,7 +1143,7 @@ export const localTestTemplateBankB2 = [
           "… als ob die Mahnung ihm ist."
         ],
         "correctIndex": 1,
-        "explanationAr": "المنفي الواقع يأخذ التصريف مع المساند المؤجَّل. «als ob» و«als wenn» تصفان انطباعًا يشبه حالة لا تؤكَّدها: الفعل مؤجَّل إلى الآخر ويأتي في صيغة الشرط، وفي الماضي مركّبًا («als ob er die Frist gekannt hätte»)."
+        "explanationAr": "المنفي الواقع يأخذ التصريف مع المساند المؤجَّل. «als ob» و «als wenn» تصفان انطباعًا يشبه حالة لا تؤكَّدها: الفعل مؤجَّل إلى الآخر ويأتي في صيغة الشرط، وفي الماضي مركّبًا («als ob er die Frist gekannt hätte»)."
       },
       {
         "id": "b2-16-m3",
@@ -1204,7 +1204,7 @@ export const localTestTemplateBankB2 = [
           "Wir fügen die Belege selbst bei."
         ],
         "correctIndex": 1,
-        "explanationAr": "«sind … beizufügen» إلزام، و«lassen sich» إمكان، والصفة تقييم."
+        "explanationAr": "«sind … beizufügen» إلزام، و «lassen sich» إمكان، والصفة تقييم."
       },
       {
         "id": "b2-17-m2",
@@ -1217,7 +1217,7 @@ export const localTestTemplateBankB2 = [
           "einreichen zu"
         ],
         "correctIndex": 0,
-        "explanationAr": "مع البادئة المنفصلة تنزل zu بين الجزأين: ein + zu + reichen = einzureichen. البادئة ein في البداية وzu داخل الفعل قبل الجزء الأساسي."
+        "explanationAr": "مع البادئة المنفصلة تنزل zu بين الجزأين: ein + zu + reichen = einzureichen. البادئة ein في البداية و zu داخل الفعل قبل الجزء الأساسي."
       },
       {
         "id": "b2-17-m3",
@@ -1243,7 +1243,7 @@ export const localTestTemplateBankB2 = [
           "Das zweite ist ein Werturteil, das erste eine schlichte Feststellung."
         ],
         "correctIndex": 1,
-        "explanationAr": "«un-» يعترض، و«nicht» ينفي الواقع. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به."
+        "explanationAr": "«un-» يعترض، و «nicht» ينفي الواقع. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به."
       },
       {
         "id": "b2-17-m5",
@@ -1256,7 +1256,7 @@ export const localTestTemplateBankB2 = [
           "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin ließe sich kurzfristig vereinbaren, und eine schriftliche Auskunft wäre in jedem Fall zumutbar."
         ],
         "correctIndex": 0,
-        "explanationAr": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل بـ«sein + zu» تُقرأ أوامر مغلقة، وثلاث بـ«sich lassen» تُقرأ تبريًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا."
+        "explanationAr": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل ب «sein + zu» تُقرأ أوامر مغلقة، وثلاث ب «sich lassen» تُقرأ تبريًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا."
       }
     ]
   },
@@ -1352,7 +1352,7 @@ export const localTestTemplateBankB2 = [
           "Doch, am Montag schicke ich sie ab."
         ],
         "correctIndex": 2,
-        "explanationAr": "الإثبات بعد سؤال منفيّ بـ«Doch»؛ «Ja» توافق على النفي. لـ«doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du das nicht bekommen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch gesagt»; (3) ظرف منبور قابل للتقديم يعني «jedoch/alles in allem» — «Es ist ein Versuch, doch kein Beweis»."
+        "explanationAr": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du das nicht bekommen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch gesagt»; (3) ظرف منبور قابل للتقديم يعني «jedoch/alles in allem» — «Es ist ein Versuch, doch kein Beweis»."
       },
       {
         "id": "b2-19-m2",
@@ -1465,7 +1465,7 @@ export const localTestTemplateBankB2 = [
           "im Nebensatz nach „je“."
         ],
         "correctIndex": 0,
-        "explanationAr": "الثقل بعد «sondern». «nicht nur …, sondern auch» يجعل الجديد بعد «sondern»؛ و«weder … noch» يوزّع النفي على الطرفين فيمنع فهمًا ناقصًا؛ و«zwar …, aber» يعترف ثم يعترض."
+        "explanationAr": "الثقل بعد «sondern». «nicht nur …, sondern auch» يجعل الجديد بعد «sondern»؛ و «weder … noch» يوزّع النفي على الطرفين فيمنع فهمًا ناقصًا؛ و «zwar …, aber» يعترف ثم يعترض."
       },
       {
         "id": "b2-20-m5",
@@ -1478,7 +1478,7 @@ export const localTestTemplateBankB2 = [
           "Ihr wart wohl wieder zu spät, ne?"
         ],
         "correctIndex": 2,
-        "explanationAr": "اعتراف + طلب مؤرَّخ بلا نبرة. «nicht nur …, sondern auch» يجعل الجديد بعد «sondern»؛ و«weder … noch» يوزّع النفي على الطرفين فيمنع فهمًا ناقصًا؛ و«zwar …, aber» يعترف ثم يعترض."
+        "explanationAr": "اعتراف + طلب مؤرَّخ بلا نبرة. «nicht nur …, sondern auch» يجعل الجديد بعد «sondern»؛ و «weder … noch» يوزّع النفي على الطرفين فيمنع فهمًا ناقصًا؛ و «zwar …, aber» يعترف ثم يعترض."
       }
     ]
   },

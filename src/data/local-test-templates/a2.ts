@@ -20,7 +20,7 @@ export const localTestTemplateBankA2 = [
           "werde"
         ],
         "correctIndex": 0,
-        "explanationAr": "فعلُ arbeiten لا ينتقل ولا يُغيّر حالة، فيأخذ haben في الماضي: «habe». أمّا bin فأداةُ sein لانتقالٍ كالذهاب، وwerde تبني المستقبل. فحص ذاتي: هل كان الحدثُ عملًا أم انتقالًا؟"
+        "explanationAr": "فعلُ arbeiten لا ينتقل ولا يُغيّر حالة، فيأخذ haben في الماضي: «habe». أمّا bin فأداةُ sein لانتقالٍ كالذهاب، و werde تبني المستقبل. فحص ذاتي: هل كان الحدثُ عملًا أم انتقالًا؟"
       },
       {
         "id": "a2-01-m2",
@@ -33,7 +33,7 @@ export const localTestTemplateBankA2 = [
           "habt"
         ],
         "correctIndex": 1,
-        "explanationAr": "الفعل kommen انتقالٌ، وفي Perfekt يُسند إلى sein لا haben: «Sie ist gekommen». لذلك تُرفض hat وhabt لأنّهما مع haben، أمّا wird فتبني Futur لا الماضي. فحص ذاتي: هل كان الحدثُ انتقالًا أو تغيّرَ حالة؟"
+        "explanationAr": "الفعل kommen انتقالٌ، وفي Perfekt يُسند إلى sein لا haben: «Sie ist gekommen». لذلك تُرفض hat و habt لأنّهما مع haben، أمّا wird فتبني Futur لا الماضي. فحص ذاتي: هل كان الحدثُ انتقالًا أو تغيّرَ حالة؟"
       },
       {
         "id": "a2-01-m3",
@@ -46,7 +46,7 @@ export const localTestTemplateBankA2 = [
           "telefoniert"
         ],
         "correctIndex": 3,
-        "explanationAr": "الأفعال على -ieren تأخذ Partizip II بلا ge-: telefonieren ⇒ telefoniert. فـ«getelefoniert» تزيد ge-، و«telefonieren gehabt» تضيف فعلًا، و«geteleft» تُبدّل الجذر. فحص ذاتي: هل بدأتَ ge- بلا سبب؟"
+        "explanationAr": "الأفعال على -ieren تأخذ Partizip II بلا ge-: telefonieren ⇒ telefoniert. ف «getelefoniert» تزيد ge-، و «telefonieren gehabt» تضيف فعلًا، و «geteleft» تُبدّل الجذر. فحص ذاتي: هل بدأتَ ge- بلا سبب؟"
       },
       {
         "id": "a2-01-m4",
@@ -59,12 +59,12 @@ export const localTestTemplateBankA2 = [
           "eingekaufen"
         ],
         "correctIndex": 2,
-        "explanationAr": "الفعلُ einkaufen منفصلُ البادئة، والـPartizip II يحصر الجذر بين ein وge-: «eingekauft». أمّا geeinkauft فتكرّر ge، وeinkaufen تبقى مصدرًا، وeingekaufen تقلب الترتيب. فحص ذاتي: أين وقع الجذرُ بين ein وge؟"
+        "explanationAr": "الفعلُ einkaufen منفصلُ البادئة، والـPartizip II يحصر الجذر بين ein و ge-: «eingekauft». أمّا geeinkauft فتكرّر ge، و einkaufen تبقى مصدرًا، و eingekaufen تقلب الترتيب. فحص ذاتي: أين وقع الجذرُ بين ein و ge؟"
       },
       {
         "id": "a2-01-m5",
         "promptDe": "Wortstellung",
-        "promptAr": "اختر التعبير المطابق لـ«Wortstellung» في درس «أمس»:",
+        "promptAr": "اختر التعبير المطابق ل «Wortstellung» في درس «أمس»:",
         "options": [
           "Ich gestern habe gelernt.",
           "Ich habe gestern gelernt.",
@@ -72,7 +72,7 @@ export const localTestTemplateBankA2 = [
           "Gestern ich habe gelernt."
         ],
         "correctIndex": 1,
-        "explanationAr": "المساعد ثانيًا وPartizip أخيرًا. يُستعمل Perfekt كثيرًا في الحديث عن أحداث مكتملة."
+        "explanationAr": "المساعد ثانيًا و Partizip أخيرًا. يُستعمل Perfekt كثيرًا في الحديث عن أحداث مكتملة."
       }
     ]
   },
@@ -94,7 +94,7 @@ export const localTestTemplateBankA2 = [
           "angeruft"
         ],
         "correctIndex": 0,
-        "explanationAr": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين الأُفّ والجذر: «an-ge-rufen». فـ«geanrufen» تخطئ موضعَ ge، و«anruft» مضارعٌ لا Partizip، و«angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟"
+        "explanationAr": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين الأُفّ والجذر: «an-ge-rufen». ف «geanrufen» تخطئ موضعَ ge، و «anruft» مضارعٌ لا Partizip، و «angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟"
       },
       {
         "id": "a2-02-m2",
@@ -107,7 +107,7 @@ export const localTestTemplateBankA2 = [
           "Ich gewesen müde."
         ],
         "correctIndex": 1,
-        "explanationAr": "الحالةُ في الماضي تُروى بـPräteritum لا بـPerfekt: «Ich war müde.». وأمّا «Ich habe müde.» و«Ich bin müde gehabt.» فيبنيان Perfekt مع صفةٍ لا مع فعل. فحص ذاتي: هل وصفتَ حالةً أم حدثًا؟"
+        "explanationAr": "الحالةُ في الماضي تُروى ب Präteritum لا ب Perfekt: «Ich war müde.». وأمّا «Ich habe müde.» و «Ich bin müde gehabt.» فيبنيان Perfekt مع صفةٍ لا مع فعل. فحص ذاتي: هل وصفتَ حالةً أم حدثًا؟"
       },
       {
         "id": "a2-02-m3",
@@ -120,7 +120,7 @@ export const localTestTemplateBankA2 = [
           "Seitdem"
         ],
         "correctIndex": 1,
-        "explanationAr": "رابطُ المفاجأة في سرد الماضي هو «Plötzlich»: يقطع التوقّع فجأة. أمّا Zuerst فيفتح تسلسلًا عاديًّا، وAm Ende يختم السرد، وSeitdem يربط بدايةً بمدةٍ ممتدة. فحص ذاتي: هل جاء الحدثُ مفاجئًا؟"
+        "explanationAr": "رابطُ المفاجأة في سرد الماضي هو «Plötzlich»: يقطع التوقّع فجأة. أمّا Zuerst فيفتح تسلسلًا عاديًّا، و Am Ende يختم السرد، و Seitdem يربط بدايةً بمدةٍ ممتدة. فحص ذاتي: هل جاء الحدثُ مفاجئًا؟"
       },
       {
         "id": "a2-02-m4",
@@ -133,12 +133,12 @@ export const localTestTemplateBankA2 = [
           "genommenmit"
         ],
         "correctIndex": 0,
-        "explanationAr": "mitnehmen فعلٌ منفصل، وفي Partizip II تُدمج البادئة مع الجذر: «mitgenommen». و«gemitnimmt» تُبدّل الجذرَ نفسه، و«mitgenehmt» تُخطئ في حرفه، أمّا «genommenmit» فيُبقي البادئةَ مفصولة. فحص ذاتي: أين استقرّت ge-؟"
+        "explanationAr": "mitnehmen فعلٌ منفصل، وفي Partizip II تُدمج البادئة مع الجذر: «mitgenommen». و «gemitnimmt» تُبدّل الجذرَ نفسه، و «mitgenehmt» تُخطئ في حرفه، أمّا «genommenmit» فيُبقي البادئةَ مفصولة. فحص ذاتي: أين استقرّت ge-؟"
       },
       {
         "id": "a2-02-m5",
         "promptDe": "Wortstellung",
-        "promptAr": "اختر التعبير المطابق لـ«Wortstellung» في درس «قصة»:",
+        "promptAr": "اختر التعبير المطابق ل «Wortstellung» في درس «قصة»:",
         "options": [
           "Plötzlich die Tasche war weg.",
           "Plötzlich war die Tasche weg.",
@@ -168,7 +168,7 @@ export const localTestTemplateBankA2 = [
           "Seit"
         ],
         "correctIndex": 2,
-        "explanationAr": "الحدثُ الفريد في الماضي يُربط بـals وحده: «ich angekommen bin, war es spät» بعد الفراغ. أمّا Wenn فللتكرار أو الشرط، وDeshalb وSeit لا تربطان حدثين متتاليين. فحص ذاتي: حدثٌ مرةً واحدة أم عادة؟"
+        "explanationAr": "الحدثُ الفريد في الماضي يُربط ب als وحده: «ich angekommen bin, war es spät» بعد الفراغ. أمّا Wenn فللتكرار أو الشرط، و Deshalb و Seit لا تربطان حدثين متتاليين. فحص ذاتي: حدثٌ مرةً واحدة أم عادة؟"
       },
       {
         "id": "a2-03-m2",
@@ -181,7 +181,7 @@ export const localTestTemplateBankA2 = [
           "weil ich den Weg nicht kannte"
         ],
         "correctIndex": 3,
-        "explanationAr": "في جملة السبب بـweil ينتقل الفعلُ المصرَّف إلى النهاية: «weil ich den Weg nicht kannte». فالترتيب المباشر يقلب الجملة، وحشوُ الفاعل بين den Weg وkannte يكسر القاعدة؛ فحص ذاتي: أين وقف الفعلُ في جملتك؟"
+        "explanationAr": "في جملة السبب ب weil ينتقل الفعلُ المصرَّف إلى النهاية: «weil ich den Weg nicht kannte». فالترتيب المباشر يقلب الجملة، وحشوُ الفاعل بين den Weg و kannte يكسر القاعدة؛ فحص ذاتي: أين وقف الفعلُ في جملتك؟"
       },
       {
         "id": "a2-03-m3",
@@ -247,7 +247,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-04-m2",
         "promptDe": "helfen + du",
-        "promptAr": "اختر التعبير المطابق لـ«helfen + du»:",
+        "promptAr": "اختر التعبير المطابق ل «helfen + du»:",
         "options": [
           "dich",
           "dir",
@@ -255,7 +255,7 @@ export const localTestTemplateBankA2 = [
           "du"
         ],
         "correctIndex": 1,
-        "explanationAr": "الفعل «helfen» يطلبُ Dativ كما في الحوار: «Kann ich Ihnen mit den Kisten helfen?». فـ«dich» Akkusativ، و«dein» صفةُ ملكٍ لا ضميرُ حالة، و«du» رفعٌ لا يلي الفعلَ مباشرةً. فحص ذاتي: أيّ حالةٍ يطلبُ helfen؟"
+        "explanationAr": "الفعل «helfen» يطلبُ Dativ كما في الحوار: «Kann ich Ihnen mit den Kisten helfen?». ف «dich» Akkusativ، و «dein» صفةُ ملكٍ لا ضميرُ حالة، و «du» رفعٌ لا يلي الفعلَ مباشرةً. فحص ذاتي: أيّ حالةٍ يطلبُ helfen؟"
       },
       {
         "id": "a2-04-m3",
@@ -268,7 +268,7 @@ export const localTestTemplateBankA2 = [
           "Ich gebe dir den Schlüssel."
         ],
         "correctIndex": 3,
-        "explanationAr": "الفعل geben يأخذ مفعولين بحالتين: الشخص في Dativ والشيء في Akkusativ، فتصير «Ich gebe dir den Schlüssel». وأمّا dich وdu فلا تصلحان للشخص هنا؛ فحص ذاتي: أيّ ضميرٍ لمَن يأخذ الشيء؟"
+        "explanationAr": "الفعل geben يأخذ مفعولين بحالتين: الشخص في Dativ والشيء في Akkusativ، فتصير «Ich gebe dir den Schlüssel». وأمّا dich و du فلا تصلحان للشخص هنا؛ فحص ذاتي: أيّ ضميرٍ لمَن يأخذ الشيء؟"
       },
       {
         "id": "a2-04-m4",
@@ -294,7 +294,7 @@ export const localTestTemplateBankA2 = [
           "Kann ich Ihnen helfen?"
         ],
         "correctIndex": 3,
-        "explanationAr": "المخاطبة الرسمية «Ihnen» تُكتب بحرف كبير، والعبارة الصحيحة هي «Kann ich Ihnen helfen?». أمّا «ihnen» بحرف صغير فتعني لهم/لهن، و«Sie» هنا مفعول غير مناسب للفعل helfen؛ فحص ذاتي: هل تخاطب الشخص رسميًا أم تتحدث عنهم؟"
+        "explanationAr": "المخاطبة الرسمية «Ihnen» تُكتب بحرف كبير، والعبارة الصحيحة هي «Kann ich Ihnen helfen?». أمّا «ihnen» بحرف صغير فتعني لهم/لهن، و «Sie» هنا مفعول غير مناسب للفعل helfen؛ فحص ذاتي: هل تخاطب الشخص رسميًا أم تتحدث عنهم؟"
       }
     ]
   },
@@ -316,12 +316,12 @@ export const localTestTemplateBankA2 = [
           "Man kann nicht müssen."
         ],
         "correctIndex": 1,
-        "explanationAr": "الواجبُ في نظام المبنى بصيغة müssen: «Den Müll muss man in vier Tonnen trennen». أمّا darf فتُبيح ولا تلزم، وwill تُبدي رغبةً فقط. فحص ذاتي: هل فرّقتَ بين الإلزام والإباحة؟"
+        "explanationAr": "الواجبُ في نظام المبنى بصيغة müssen: «Den Müll muss man in vier Tonnen trennen». أمّا darf فتُبيح ولا تلزم، و will تُبدي رغبةً فقط. فحص ذاتي: هل فرّقتَ بين الإلزام والإباحة؟"
       },
       {
         "id": "a2-05-m2",
         "promptDe": "Verbot",
-        "promptAr": "اختر التعبير المطابق لـ«Verbot»:",
+        "promptAr": "اختر التعبير المطابق ل «Verbot»:",
         "options": [
           "Man muss nicht rauchen.",
           "Man kann rauchen.",
@@ -329,7 +329,7 @@ export const localTestTemplateBankA2 = [
           "Man darf nicht rauchen."
         ],
         "correctIndex": 3,
-        "explanationAr": "المنعُ يُصاغ بـdürfen مع nicht: «Man darf nicht rauchen.». وأمّا «Man muss nicht rauchen.» فتعني أنّ التدخين غيرُ مطلوب (إباحة)، و«Man kann rauchen.» تُبيحه صراحةً. فحص ذاتي: هل منعتَ أم أبيحتَ؟"
+        "explanationAr": "المنعُ يُصاغ ب dürfen مع nicht: «Man darf nicht rauchen.». وأمّا «Man muss nicht rauchen.» فتعني أنّ التدخين غيرُ مطلوب (إباحة)، و «Man kann rauchen.» تُبيحه صراحةً. فحص ذاتي: هل منعتَ أم أبيحتَ؟"
       },
       {
         "id": "a2-05-m3",
@@ -355,7 +355,7 @@ export const localTestTemplateBankA2 = [
           "Garten erlaubt man darf ist."
         ],
         "correctIndex": 1,
-        "explanationAr": "الإباحةُ بـ dürfen: «Man darf den Garten benutzen» حتى الواحدة والعشرين مساءً. أمّا muss فتُلزم، و«Man dürfen Garten» يخالف تصريفَ المفرد. فحص ذاتي: هل أبحتَ أم ألزمتَ؟"
+        "explanationAr": "الإباحةُ بـ dürfen: «Man darf den Garten benutzen» حتى الواحدة والعشرين مساءً. أمّا muss فتُلزم، و «Man dürfen Garten» يخالف تصريفَ المفرد. فحص ذاتي: هل أبحتَ أم ألزمتَ؟"
       },
       {
         "id": "a2-05-m5",
@@ -368,7 +368,7 @@ export const localTestTemplateBankA2 = [
           "Musik aus jetzt."
         ],
         "correctIndex": 2,
-        "explanationAr": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: «Könnten Sie die Musik bitte leiser machen?». أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و«Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟"
+        "explanationAr": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: «Könnten Sie die Musik bitte leiser machen?». أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و «Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟"
       }
     ]
   },
@@ -382,7 +382,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-06-m1",
         "promptDe": "Höfliche Bitte",
-        "promptAr": "اختر التعبير المطابق لـ«Höfliche Bitte»:",
+        "promptAr": "اختر التعبير المطابق ل «Höfliche Bitte»:",
         "options": [
           "Räum sofort auf!",
           "Du aufräumen jetzt.",
@@ -390,7 +390,7 @@ export const localTestTemplateBankA2 = [
           "Könntest du bitte aufräumen?"
         ],
         "correctIndex": 3,
-        "explanationAr": "الطلبُ المهذّب يبدأ بـ«Könntest du bitte aufräumen?» فيبقى الفعلُ في النهاية. وأمّا «Räum sofort auf!» فأمرٌ جافّ، و«Können du räumt?» و«Du aufräumen jetzt.» فجملتان مكسورتان. فحص ذاتي: هل بقي طلبُك مؤدّبًا؟"
+        "explanationAr": "الطلبُ المهذّب يبدأ ب «Könntest du bitte aufräumen?» فيبقى الفعلُ في النهاية. وأمّا «Räum sofort auf!» فأمرٌ جافّ، و «Können du räumt?» و «Du aufräumen jetzt.» فجملتان مكسورتان. فحص ذاتي: هل بقي طلبُك مؤدّبًا؟"
       },
       {
         "id": "a2-06-m2",
@@ -429,7 +429,7 @@ export const localTestTemplateBankA2 = [
           "Damit bin ich einverstanden."
         ],
         "correctIndex": 3,
-        "explanationAr": "الموافقةُ على حلٍّ وسط جملةٌ كاملة: «Damit bin ich einverstanden.». وأمّا «Das stört ich.» و«Kompromiss nicht passt alle.» فبلا فاعلٍ صحيح وبترتيبٍ عربيٍّ بالكلمات الألمانية. فحص ذاتي: هل جملتُك مبنيّة؟"
+        "explanationAr": "الموافقةُ على حلٍّ وسط جملةٌ كاملة: «Damit bin ich einverstanden.». وأمّا «Das stört ich.» و «Kompromiss nicht passt alle.» فبلا فاعلٍ صحيح وبترتيبٍ عربيٍّ بالكلمات الألمانية. فحص ذاتي: هل جملتُك مبنيّة؟"
       },
       {
         "id": "a2-06-m5",
@@ -482,7 +482,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-07-m3",
         "promptDe": "wenn",
-        "promptAr": "اختر التعبير المطابق لـ«wenn»:",
+        "promptAr": "اختر التعبير المطابق ل «wenn»:",
         "options": [
           "Wenn ein Kunde ruft an, ich notiere.",
           "Wenn anruft ein Kunde, ich notiere.",
@@ -516,7 +516,7 @@ export const localTestTemplateBankA2 = [
           "beantworten für Kundenanfrage"
         ],
         "correctIndex": 1,
-        "explanationAr": "التركيبُ الألماني يجمع الاسمَ في مركّب واحد ثم يأتي بالفعل: «Kundenanfragen beantworten». فـ«Kunden antworten Anfrage machen» تكرّر فعلين بلا مركّب. فحص ذاتي: هل نسخت تركيبَ الألمان؟"
+        "explanationAr": "التركيبُ الألماني يجمع الاسمَ في مركّب واحد ثم يأتي بالفعل: «Kundenanfragen beantworten». ف «Kunden antworten Anfrage machen» تكرّر فعلين بلا مركّب. فحص ذاتي: هل نسخت تركيبَ الألمان؟"
       }
     ]
   },
@@ -538,7 +538,7 @@ export const localTestTemplateBankA2 = [
           "dass die Stelle passen"
         ],
         "correctIndex": 2,
-        "explanationAr": "بعد «dass» يبقى الفعلُ في النهاية: «dass die Stelle gut passt». فـ«dass gut die Stelle passt sie» خطأ، و«dass die Stelle passen» فقدت «sie»، و«passt sie» فعلانِ متجاوران. فحص ذاتي: أين فعلُ الجملة الفرعية؟"
+        "explanationAr": "بعد «dass» يبقى الفعلُ في النهاية: «dass die Stelle gut passt». ف «dass gut die Stelle passt sie» خطأ، و «dass die Stelle passen» فقدت «sie»، و «passt sie» فعلانِ متجاوران. فحص ذاتي: أين فعلُ الجملة الفرعية؟"
       },
       {
         "id": "a2-08-m2",
@@ -551,12 +551,12 @@ export const localTestTemplateBankA2 = [
           "mit"
         ],
         "correctIndex": 1,
-        "explanationAr": "الفعل sich interessieren يطلب حرف الجرّ «für»: ich interessiere mich für Deutsch. وأمّا an وum وmit فلا يفتحها هذا الفعل بهذا المعنى؛ فحص ذاتي: أيّ حرفٍ يحفظه المعجم مع هذا الفعل؟"
+        "explanationAr": "الفعل sich interessieren يطلب حرف الجرّ «für»: ich interessiere mich für Deutsch. وأمّا an و um و mit فلا يفتحها هذا الفعل بهذا المعنى؛ فحص ذاتي: أيّ حرفٍ يحفظه المعجم مع هذا الفعل؟"
       },
       {
         "id": "a2-08-m3",
         "promptDe": "weil",
-        "promptAr": "اختر التعبير المطابق لـ«weil»:",
+        "promptAr": "اختر التعبير المطابق ل «weil»:",
         "options": [
           "weil ich Erfahrung habe",
           "weil ich habe Erfahrung",
@@ -564,7 +564,7 @@ export const localTestTemplateBankA2 = [
           "weil habe ich Erfahrung"
         ],
         "correctIndex": 0,
-        "explanationAr": "«weil» جملةُ سببٍ فيختتم الفعلُ: «weil ich Erfahrung habe». فـ«weil ich habe Erfahrung» ترتيبُ الاستقلال، و«weil habe ich» انعكاسٌ، و«weil Erfahrung ich habe es» على غير مَحَلٍّ. فحص ذاتي: أين الفعلُ بعدَ weil؟"
+        "explanationAr": "«weil» جملةُ سببٍ فيختتم الفعلُ: «weil ich Erfahrung habe». ف «weil ich habe Erfahrung» ترتيبُ الاستقلال، و «weil habe ich» انعكاسٌ، و «weil Erfahrung ich habe es» على غير مَحَلٍّ. فحص ذاتي: أين الفعلُ بعدَ weil؟"
       },
       {
         "id": "a2-08-m4",
@@ -577,7 +577,7 @@ export const localTestTemplateBankA2 = [
           "Mit freundlichen Grüßen"
         ],
         "correctIndex": 3,
-        "explanationAr": "«Mit freundlichen Grüßen» خاتمةٌ رسمية للرسالة المهنية، أمّا Tschüs و Hallo Leute فودّيتانِ لا تُناسبانِ طلبًا أو بلاغًا، و«Bis später» تُستعمل لموعدٍ متَّفق عليه. فحص ذاتي: هل كان السياقُ رسميًا؟"
+        "explanationAr": "«Mit freundlichen Grüßen» خاتمةٌ رسمية للرسالة المهنية، أمّا Tschüs و Hallo Leute فودّيتانِ لا تُناسبانِ طلبًا أو بلاغًا، و «Bis später» تُستعمل لموعدٍ متَّفق عليه. فحص ذاتي: هل كان السياقُ رسميًا؟"
       },
       {
         "id": "a2-08-m5",
@@ -604,7 +604,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-09-m1",
         "promptDe": "Indirekte Frage",
-        "promptAr": "اختر التعبير المطابق لـ«Indirekte Frage»:",
+        "promptAr": "اختر التعبير المطابق ل «Indirekte Frage»:",
         "options": [
           "ob ist Frau Keller da",
           "wenn Frau Keller ist da",
@@ -612,7 +612,7 @@ export const localTestTemplateBankA2 = [
           "ob Frau Keller da ist"
         ],
         "correctIndex": 3,
-        "explanationAr": "السؤالُ غيرُ المباشرِ بـ«ob»: الفعلُ في النهاية: «ob Frau Keller da ist». فـ«ob ist Frau Keller da» سؤالٌ مباشر، و«wenn» لا تصلحُ هنا، و«ob Frau Keller ist da sie» تُقحم ضميرًا زائدًا. فحص ذاتي: أين فعلُ ob؟"
+        "explanationAr": "السؤالُ غيرُ المباشرِ ب «ob»: الفعلُ في النهاية: «ob Frau Keller da ist». ف «ob ist Frau Keller da» سؤالٌ مباشر، و «wenn» لا تصلحُ هنا، و «ob Frau Keller ist da sie» تُقحم ضميرًا زائدًا. فحص ذاتي: أين فعلُ ob؟"
       },
       {
         "id": "a2-09-m2",
@@ -625,7 +625,7 @@ export const localTestTemplateBankA2 = [
           "Wer bin Telefon Sami."
         ],
         "correctIndex": 0,
-        "explanationAr": "التعريفُ على الهاتف كما في المكالمة: «Hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و«Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟"
+        "explanationAr": "التعريفُ على الهاتف كما في المكالمة: «Hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و «Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟"
       },
       {
         "id": "a2-09-m3",
@@ -638,12 +638,12 @@ export const localTestTemplateBankA2 = [
           "Zurück sie rufen sollt."
         ],
         "correctIndex": 2,
-        "explanationAr": "الطلبُ المنقول بـ sollen يُبقي المصدرَ في النهاية: «Sie soll zurückrufen.». فـ«Sie soll ruft zurück.» تصرّف الفعلَ بعد sollen فيصير فعلين. فحص ذاتي: كم فعلًا صرّفتَ؟"
+        "explanationAr": "الطلبُ المنقول بـ sollen يُبقي المصدرَ في النهاية: «Sie soll zurückrufen.». ف «Sie soll ruft zurück.» تصرّف الفعلَ بعد sollen فيصير فعلين. فحص ذاتي: كم فعلًا صرّفتَ؟"
       },
       {
         "id": "a2-09-m4",
         "promptDe": "Gespräch beenden",
-        "promptAr": "اختر التعبير المطابق لـ«Gespräch beenden»:",
+        "promptAr": "اختر التعبير المطابق ل «Gespräch beenden»:",
         "options": [
           "Auf Wiedersehen im Telefon.",
           "Tschau Leute Firma.",
@@ -651,7 +651,7 @@ export const localTestTemplateBankA2 = [
           "Auf Wiederhören."
         ],
         "correctIndex": 3,
-        "explanationAr": "في المكالمة تُختم بـ«Auf Wiederhören» لأنها تُسمع لا تُرى، و«Auf Wiedersehen» عند اللقاء الحضوري. وصيغٌ مثل «Ende jetzt» ليست ألمانية؛ فحص ذاتي: هل تُنهي مكالمةً أم لقاءً؟"
+        "explanationAr": "في المكالمة تُختم ب «Auf Wiederhören» لأنها تُسمع لا تُرى، و «Auf Wiedersehen» عند اللقاء الحضوري. وصيغٌ مثل «Ende jetzt» ليست ألمانية؛ فحص ذاتي: هل تُنهي مكالمةً أم لقاءً؟"
       },
       {
         "id": "a2-09-m5",
@@ -686,7 +686,7 @@ export const localTestTemplateBankA2 = [
           "schneller als"
         ],
         "correctIndex": 3,
-        "explanationAr": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: «Diese Verbindung ist schneller als die Bahn». so … wie للمساواة، و«am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟"
+        "explanationAr": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: «Diese Verbindung ist schneller als die Bahn». so … wie للمساواة، و «am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟"
       },
       {
         "id": "a2-10-m2",
@@ -699,7 +699,7 @@ export const localTestTemplateBankA2 = [
           "am günstig wie"
         ],
         "correctIndex": 0,
-        "explanationAr": "المساواةُ بـ so + الصفة كما هي + wie: «Diese Verbindung ist so günstig wie die andere». أمّا -er فتقارن وتحتاج als، و«günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟"
+        "explanationAr": "المساواةُ بـ so + الصفة كما هي + wie: «Diese Verbindung ist so günstig wie die andere». أمّا -er فتقارن وتحتاج als، و «günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟"
       },
       {
         "id": "a2-10-m3",
@@ -712,12 +712,12 @@ export const localTestTemplateBankA2 = [
           "günstiger"
         ],
         "correctIndex": 2,
-        "explanationAr": "لصفة gut مقارنةٌ شاذّة: besser، ثم am besten في التفضيل الأقصى. و«guter» تُطبّق اللاحقةَ المنتظمة على صفةٍ لا تقبلها، و«mehr gut» ترجمةٌ حرفية، و günstiger صفةٌ أخرى لا شكلٌ لـ gut. فحص ذاتي: هل تذكّرتَ الشذوذ؟"
+        "explanationAr": "لصفة gut مقارنةٌ شاذّة: besser، ثم am besten في التفضيل الأقصى. و «guter» تُطبّق اللاحقةَ المنتظمة على صفةٍ لا تقبلها، و «mehr gut» ترجمةٌ حرفية، و günstiger صفةٌ أخرى لا شكلٌ لـ gut. فحص ذاتي: هل تذكّرتَ الشذوذ؟"
       },
       {
         "id": "a2-10-m4",
         "promptDe": "Superlativ günstig",
-        "promptAr": "اختر التعبير المطابق لـ«Superlativ günstig»:",
+        "promptAr": "اختر التعبير المطابق ل «Superlativ günstig»:",
         "options": [
           "am günstiger",
           "der mehr günstig",
@@ -725,7 +725,7 @@ export const localTestTemplateBankA2 = [
           "am günstigsten"
         ],
         "correctIndex": 3,
-        "explanationAr": "الأقصى في المقارنة بصيغة am …sten: «am günstigsten». فـ«am günstiger» تخلط الدرجتين، و«der mehr günstig» ترجمةٌ حرفية، و«so günstigsten» للمساواة. فحص ذاتي: أيّ درجتين التقيتَ؟"
+        "explanationAr": "الأقصى في المقارنة بصيغة am …sten: «am günstigsten». ف «am günstiger» تخلط الدرجتين، و «der mehr günstig» ترجمةٌ حرفية، و «so günstigsten» للمساواة. فحص ذاتي: أيّ درجتين التقيتَ؟"
       },
       {
         "id": "a2-10-m5",
@@ -738,7 +738,7 @@ export const localTestTemplateBankA2 = [
           "am kurz"
         ],
         "correctIndex": 2,
-        "explanationAr": "الصفةُ قصيرةُ المقطع تُعتلّ مع اللاحقة: kurz ⇒ kürzer. فـ«kurzer» تنسى الاعتلال، و«mehr kurz» ترجمةٌ حرفية، و«am kurz» تُبقي الأصلَ حيث تُطلب المقارنة. فحص ذاتي: هل تحرّك حرفُ العلّة؟"
+        "explanationAr": "الصفةُ قصيرةُ المقطع تُعتلّ مع اللاحقة: kurz ⇒ kürzer. ف «kurzer» تنسى الاعتلال، و «mehr kurz» ترجمةٌ حرفية، و «am kurz» تُبقي الأصلَ حيث تُطلب المقارنة. فحص ذاتي: هل تحرّك حرفُ العلّة؟"
       }
     ]
   },
@@ -760,7 +760,7 @@ export const localTestTemplateBankA2 = [
           "Ich würde gern buchen."
         ],
         "correctIndex": 3,
-        "explanationAr": "لطلبٍ مهذَّبٍ: «würde gern» + المصدر: «Ich würde gern buchen». فـ«Ich will Zimmer» جَفاءٌ وكلمةٌ ناقصة، و«Buchen du mir» أمرٌ بلا ترتيب، و«Ich bin Buchung» خلطٌ بين «bin» واسم. فحص ذاتي: أيّ صيغةٍ تلطّفُ الطلبَ؟"
+        "explanationAr": "لطلبٍ مهذَّبٍ: «würde gern» + المصدر: «Ich würde gern buchen». ف «Ich will Zimmer» جَفاءٌ وكلمةٌ ناقصة، و «Buchen du mir» أمرٌ بلا ترتيب، و «Ich bin Buchung» خلطٌ بين «bin» واسم. فحص ذاتي: أيّ صيغةٍ تلطّفُ الطلبَ؟"
       },
       {
         "id": "a2-11-m2",
@@ -773,12 +773,12 @@ export const localTestTemplateBankA2 = [
           "wir würden gern bleibt"
         ],
         "correctIndex": 0,
-        "explanationAr": "صيغةُ التمنّي تُصرَّف مع الفاعل: wir würden. و«wir würde» تُبقي صيغةَ المفرد، و«wir wurdet» تخلط الماضي بالافتراض. الفكرةُ مجاملةٌ مشروطة: würde ثم المصدر في الآخر. فحص ذاتي: هل انفرد المصدر بالنهاية؟"
+        "explanationAr": "صيغةُ التمنّي تُصرَّف مع الفاعل: wir würden. و «wir würde» تُبقي صيغةَ المفرد، و «wir wurdet» تخلط الماضي بالافتراض. الفكرةُ مجاملةٌ مشروطة: würde ثم المصدر في الآخر. فحص ذاتي: هل انفرد المصدر بالنهاية؟"
       },
       {
         "id": "a2-11-m3",
         "promptDe": "ob",
-        "promptAr": "اختر التعبير المطابق لـ«ob»:",
+        "promptAr": "اختر التعبير المطابق ل «ob»:",
         "options": [
           "ob ist Frühstück inklusive",
           "ob Frühstück ist inklusive es",
@@ -786,7 +786,7 @@ export const localTestTemplateBankA2 = [
           "ob Frühstück inklusive ist"
         ],
         "correctIndex": 3,
-        "explanationAr": "بعد «ob» يختتمُ الفعلُ: «ob Frühstück inklusive ist». فـ«ob ist Frühstück inklusive» سؤالٌ مباشر، و«Frühstück ist inklusive es» ضميرٌ زائد، و«ob inklusive Frühstück» بلا فعلٍ أصلًا. فحص ذاتي: أين يقع الفعلُ؟"
+        "explanationAr": "بعد «ob» يختتمُ الفعلُ: «ob Frühstück inklusive ist». ف «ob ist Frühstück inklusive» سؤالٌ مباشر، و «Frühstück ist inklusive es» ضميرٌ زائد، و «ob inklusive Frühstück» بلا فعلٍ أصلًا. فحص ذاتي: أين يقع الفعلُ؟"
       },
       {
         "id": "a2-11-m4",
@@ -812,7 +812,7 @@ export const localTestTemplateBankA2 = [
           "Stornieren kostet wo?"
         ],
         "correctIndex": 1,
-        "explanationAr": "السؤالُ يبدأ بـ«Kann man» ويُختم بالمصدر: «Kann man kostenlos stornieren?». و«Storno wie?» بلا فعلٍ مصرَّف، و«Kann kostenlos man storniert?» يخلط موضع الفعل؛ فحص ذاتي: أين وقف فعلك؟"
+        "explanationAr": "السؤالُ يبدأ ب «Kann man» ويُختم بالمصدر: «Kann man kostenlos stornieren?». و «Storno wie?» بلا فعلٍ مصرَّف، و «Kann kostenlos man storniert?» يخلط موضع الفعل؛ فحص ذاتي: أين وقف فعلك؟"
       }
     ]
   },
@@ -834,7 +834,7 @@ export const localTestTemplateBankA2 = [
           "Es gibt ein Problem mit meinem Zimmer."
         ],
         "correctIndex": 3,
-        "explanationAr": "الشكوى الموضوعية تُسمّي المشكلة: «Es gibt ein Problem mit meinem Zimmer». أمّا «Alles ist furchtbar!» فحكمٌ عامٌّ، و«Geld jetzt!» أمرٌ جافّ بلا توضيح. فحص ذاتي: هل وصفتَ الوقائع لا الانفعال؟"
+        "explanationAr": "الشكوى الموضوعية تُسمّي المشكلة: «Es gibt ein Problem mit meinem Zimmer». أمّا «Alles ist furchtbar!» فحكمٌ عامٌّ، و «Geld jetzt!» أمرٌ جافّ بلا توضيح. فحص ذاتي: هل وصفتَ الوقائع لا الانفعال؟"
       },
       {
         "id": "a2-12-m2",
@@ -852,7 +852,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-12-m3",
         "promptDe": "deshalb",
-        "promptAr": "اختر التعبير المطابق لـ«deshalb»:",
+        "promptAr": "اختر التعبير المطابق ل «deshalb»:",
         "options": [
           "Deshalb ich brauche Lösung.",
           "Ich deshalb eine Lösung brauche.",
@@ -860,7 +860,7 @@ export const localTestTemplateBankA2 = [
           "Brauche deshalb ich."
         ],
         "correctIndex": 2,
-        "explanationAr": "الرابط deshalb يُقدَّم فيأتي الفعلُ مباشرةً بعده: «Deshalb brauche ich eine Lösung.». فـ«Deshalb ich brauche Lösung.» تُبقي ترتيبَ الجملة العادية فتفقد أثرَ الرابط. فحص ذاتي: هل جاء الفعل بعد الرابط مباشرة؟"
+        "explanationAr": "الرابط deshalb يُقدَّم فيأتي الفعلُ مباشرةً بعده: «Deshalb brauche ich eine Lösung.». ف «Deshalb ich brauche Lösung.» تُبقي ترتيبَ الجملة العادية فتفقد أثرَ الرابط. فحص ذاتي: هل جاء الفعل بعد الرابط مباشرة؟"
       },
       {
         "id": "a2-12-m4",
@@ -873,7 +873,7 @@ export const localTestTemplateBankA2 = [
           "Zimmer schlecht Sie."
         ],
         "correctIndex": 1,
-        "explanationAr": "طلبُ الحلّ مع الاحترام: «Könnten Sie mir ein anderes Zimmer geben?». أمّا «Geben Zimmer sofort!» فأمرٌ بلا مُرسِل مهذَّب، و«Ich will alles Geld» تهديدٌ لا طلب. فحص ذاتي: هل بقي طلبُك مهذّبًا؟"
+        "explanationAr": "طلبُ الحلّ مع الاحترام: «Könnten Sie mir ein anderes Zimmer geben?». أمّا «Geben Zimmer sofort!» فأمرٌ بلا مُرسِل مهذَّب، و «Ich will alles Geld» تهديدٌ لا طلب. فحص ذاتي: هل بقي طلبُك مهذّبًا؟"
       },
       {
         "id": "a2-12-m5",
@@ -908,7 +908,7 @@ export const localTestTemplateBankA2 = [
           "Du bist sollte Schlaf."
         ],
         "correctIndex": 2,
-        "explanationAr": "النصيحةُ بـ«solltest» ثم الفعلُ في النهاية: «Du solltest mehr schlafen». فـ«Du sollte» فقدت سَها، و«Du mehr schlafen soll» فعلٌ في الوسط، و«Du bist sollte Schlaf» ليس جملةً أصلًا. فحص ذاتي: أين يقعُ المصدر؟"
+        "explanationAr": "النصيحةُ ب «solltest» ثم الفعلُ في النهاية: «Du solltest mehr schlafen». ف «Du sollte» فقدت سَها، و «Du mehr schlafen soll» فعلٌ في الوسط، و «Du bist sollte Schlaf» ليس جملةً أصلًا. فحص ذاتي: أين يقعُ المصدر؟"
       },
       {
         "id": "a2-13-m2",
@@ -921,12 +921,12 @@ export const localTestTemplateBankA2 = [
           "dich"
         ],
         "correctIndex": 2,
-        "explanationAr": "الفعلُ الانعكاسي مع ich يأخذ الضميرَ «mich»: ich entspanne mich. وأمّا sich فللغائب، وdich للمخاطَب، وmir ضميرُ جرٍّ لا يطلبه هذا الفعل. فحص ذاتي: مَن الفاعل ومَن الضمير العائد إليه؟"
+        "explanationAr": "الفعلُ الانعكاسي مع ich يأخذ الضميرَ «mich»: ich entspanne mich. وأمّا sich فللغائب، و dich للمخاطَب، و mir ضميرُ جرٍّ لا يطلبه هذا الفعل. فحص ذاتي: مَن الفاعل ومَن الضمير العائد إليه؟"
       },
       {
         "id": "a2-13-m3",
         "promptDe": "wir",
-        "promptAr": "اختر التعبير المطابق لـ«wir»:",
+        "promptAr": "اختر التعبير المطابق ل «wir»:",
         "options": [
           "Wir bewegen sich.",
           "Wir bewegen uns.",
@@ -934,7 +934,7 @@ export const localTestTemplateBankA2 = [
           "Wir uns bewegen im Hauptsatz."
         ],
         "correctIndex": 1,
-        "explanationAr": "الفعلُ المنعكس يرجع إلى فاعله، ومع wir يكون الضمير uns: «Wir bewegen uns jeden Tag». sich للغيبة و euch لـ ihr، فـ«Wir bewegen sich» يترك الفاعلَ بلا رجوعٍ صحيح. فحص ذاتي: هل رجع إلى فاعله؟"
+        "explanationAr": "الفعلُ المنعكس يرجع إلى فاعله، ومع wir يكون الضمير uns: «Wir bewegen uns jeden Tag». sich للغيبة و euch لـ ihr، ف «Wir bewegen sich» يترك الفاعلَ بلا رجوعٍ صحيح. فحص ذاتي: هل رجع إلى فاعله؟"
       },
       {
         "id": "a2-13-m4",
@@ -987,7 +987,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-14-m2",
         "promptDe": "dass",
-        "promptAr": "اختر التعبير المطابق لـ«dass»:",
+        "promptAr": "اختر التعبير المطابق ل «dass»:",
         "options": [
           "dass kann ich heute nicht kommen",
           "dass ich kann nicht kommen heute",
@@ -995,7 +995,7 @@ export const localTestTemplateBankA2 = [
           "dass heute kann kommen nicht"
         ],
         "correctIndex": 2,
-        "explanationAr": "بعد «dass» الفعلُ في النهاية: «dass ich heute nicht kommen kann». فـ«kann ich» ترتيبُ سؤالٍ بعدَ الأداة، و«ich kann nicht kommen heute» فعلٌ في الوسط، و«heute kann kommen nicht» بلا ترتيب. فحص ذاتي: أين الفعلُ؟"
+        "explanationAr": "بعد «dass» الفعلُ في النهاية: «dass ich heute nicht kommen kann». ف «kann ich» ترتيبُ سؤالٍ بعدَ الأداة، و «ich kann nicht kommen heute» فعلٌ في الوسط، و «heute kann kommen nicht» بلا ترتيب. فحص ذاتي: أين الفعلُ؟"
       },
       {
         "id": "a2-14-m3",
@@ -1008,7 +1008,7 @@ export const localTestTemplateBankA2 = [
           "ob ich morgen arbeiten kann"
         ],
         "correctIndex": 3,
-        "explanationAr": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «… ob ich morgen arbeiten kann». فـ«ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟"
+        "explanationAr": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «… ob ich morgen arbeiten kann». ف «ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟"
       },
       {
         "id": "a2-14-m4",
@@ -1056,7 +1056,7 @@ export const localTestTemplateBankA2 = [
           "fünf Tage"
         ],
         "correctIndex": 0,
-        "explanationAr": "المطلوب تكرارُ الجرعة لا كمّيتها: «zweimal täglich» يحدّد عدد المرات في اليوم. وأمّا «eine Tablette» فالكمية، و«nach dem Essen» الوقت، و«fünf Tage» المدة؛ فحص ذاتي: أيُّ لفظٍ يجيب عن «كم مرة»؟"
+        "explanationAr": "المطلوب تكرارُ الجرعة لا كمّيتها: «zweimal täglich» يحدّد عدد المرات في اليوم. وأمّا «eine Tablette» فالكمية، و «nach dem Essen» الوقت، و «fünf Tage» المدة؛ فحص ذاتي: أيُّ لفظٍ يجيب عن «كم مرة»؟"
       },
       {
         "id": "a2-15-m2",
@@ -1069,12 +1069,12 @@ export const localTestTemplateBankA2 = [
           "nach dem Essen"
         ],
         "correctIndex": 3,
-        "explanationAr": "السؤالُ عن Zeitpunkt يسأل عن وقت تناول القرص: «nach dem Essen». وأمّا zwei Tabletten فالكمية، وfünf Tage مدةُ الاستعمال، وmit Wasser طريقةُ البلع. فحص ذاتي: أتجيب عن وقتٍ أم عن كمية؟"
+        "explanationAr": "السؤالُ عن Zeitpunkt يسأل عن وقت تناول القرص: «nach dem Essen». وأمّا zwei Tabletten فالكمية، و fünf Tage مدةُ الاستعمال، و mit Wasser طريقةُ البلع. فحص ذاتي: أتجيب عن وقتٍ أم عن كمية؟"
       },
       {
         "id": "a2-15-m3",
         "promptDe": "sollen",
-        "promptAr": "اختر التعبير المطابق لـ«sollen»:",
+        "promptAr": "اختر التعبير المطابق ل «sollen»:",
         "options": [
           "Ich soll die Tablette nehmen.",
           "Ich soll nehme die Tablette.",
@@ -1082,7 +1082,7 @@ export const localTestTemplateBankA2 = [
           "Soll ich genommen Tablette."
         ],
         "correctIndex": 0,
-        "explanationAr": "sollen تنقل توصيةَ الطبيب وتُبقي المصدرَ في النهاية: «Ich soll die Tablette nehmen.». فـ«Ich soll nehme die Tablette.» تصرّف الفعلَ بعد sollen. فحص ذاتي: هل بقي الفعل مصدرًا؟"
+        "explanationAr": "sollen تنقل توصيةَ الطبيب وتُبقي المصدرَ في النهاية: «Ich soll die Tablette nehmen.». ف «Ich soll nehme die Tablette.» تصرّف الفعلَ بعد sollen. فحص ذاتي: هل بقي الفعل مصدرًا؟"
       },
       {
         "id": "a2-15-m4",
@@ -1095,7 +1095,7 @@ export const localTestTemplateBankA2 = [
           "Nehmen Sie das mit Wasser."
         ],
         "correctIndex": 3,
-        "explanationAr": "الأمرُ مع صيغة الاحترام يبدأ بالفعل ثم Sie: «Nehmen Sie das mit Wasser». و«Sie nehmen das!» جملةٌ خبرية، و«Nimmst Sie» تخلط تصريفَ المفرد غير الرسمي مع Sie. فحص ذاتي: مَن يقصد الحديثُ رسميًا؟"
+        "explanationAr": "الأمرُ مع صيغة الاحترام يبدأ بالفعل ثم Sie: «Nehmen Sie das mit Wasser». و «Sie nehmen das!» جملةٌ خبرية، و «Nimmst Sie» تخلط تصريفَ المفرد غير الرسمي مع Sie. فحص ذاتي: مَن يقصد الحديثُ رسميًا؟"
       },
       {
         "id": "a2-15-m5",
@@ -1122,7 +1122,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-16-m1",
         "promptDe": "Tatsache",
-        "promptAr": "اختر التعبير المطابق لـ«Tatsache»:",
+        "promptAr": "اختر التعبير المطابق ل «Tatsache»:",
         "options": [
           "Das ist eine schlechte Idee.",
           "Ich finde den Plan langweilig.",
@@ -1130,7 +1130,7 @@ export const localTestTemplateBankA2 = [
           "Das Projekt ist wunderbar."
         ],
         "correctIndex": 2,
-        "explanationAr": "الخبرُ واقعةٌ قابلة للتحقق: «Der Zug fällt um 18 Uhr aus» تحمل وقتًا يمكن التأكد منه. وأمّا «eine schlechte Idee» و«wunderbar» فأحكامٌ تقييمية؛ فحص ذاتي: هل يمكن التحقق من جملتك؟"
+        "explanationAr": "الخبرُ واقعةٌ قابلة للتحقق: «Der Zug fällt um 18 Uhr aus» تحمل وقتًا يمكن التأكد منه. وأمّا «eine schlechte Idee» و «wunderbar» فأحكامٌ تقييمية؛ فحص ذاتي: هل يمكن التحقق من جملتك؟"
       },
       {
         "id": "a2-16-m2",
@@ -1196,7 +1196,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-17-m1",
         "promptDe": "Gleicher Handelnder",
-        "promptAr": "اختر التعبير المطابق لـ«Gleicher Handelnder»:",
+        "promptAr": "اختر التعبير المطابق ل «Gleicher Handelnder»:",
         "options": [
           "Ich lese, damit informiert zu bleiben.",
           "Um ich informiert bleibe.",
@@ -1217,7 +1217,7 @@ export const localTestTemplateBankA2 = [
           "Ich sende, damit lesen du."
         ],
         "correctIndex": 1,
-        "explanationAr": "لمّا اختلف الفاعلان لم يصلح um … zu فجاء damit: «Ich sende es, damit du es liest.». فـ«Ich sende es, um du es liest.» تُبقي um مع فاعلٍ ثانٍ. فحص ذاتي: هل اتّحد الفاعلان أم اختلفا؟"
+        "explanationAr": "لمّا اختلف الفاعلان لم يصلح um … zu فجاء damit: «Ich sende es, damit du es liest.». ف «Ich sende es, um du es liest.» تُبقي um مع فاعلٍ ثانٍ. فحص ذاتي: هل اتّحد الفاعلان أم اختلفا؟"
       },
       {
         "id": "a2-17-m3",
@@ -1230,7 +1230,7 @@ export const localTestTemplateBankA2 = [
           "angezumelden"
         ],
         "correctIndex": 1,
-        "explanationAr": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. فـ«zu anmelden» تُبقي الأُفّ مفصولًا، و«anmelden zu» بلا حركةٍ للفعل، و«angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟"
+        "explanationAr": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تُبقي الأُفّ مفصولًا، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟"
       },
       {
         "id": "a2-17-m4",
@@ -1256,7 +1256,7 @@ export const localTestTemplateBankA2 = [
           "damit alle entscheiden können"
         ],
         "correctIndex": 3,
-        "explanationAr": "الرابط damit يفتح جملةَ غايةٍ ويُبقي الفعلَ المُصرَّف في النهاية: «damit alle entscheiden können». فـ«damit können alle entscheiden» تُقدّم الفعل بعد الرابط مباشرة. فحص ذاتي: أين انتهى الفعل في جملتك؟"
+        "explanationAr": "الرابط damit يفتح جملةَ غايةٍ ويُبقي الفعلَ المُصرَّف في النهاية: «damit alle entscheiden können». ف «damit können alle entscheiden» تُقدّم الفعل بعد الرابط مباشرة. فحص ذاتي: أين انتهى الفعل في جملتك؟"
       }
     ]
   },
@@ -1270,7 +1270,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-18-m1",
         "promptDe": "Meinung mit dass",
-        "promptAr": "اختر التعبير المطابق لـ«Meinung mit dass»:",
+        "promptAr": "اختر التعبير المطابق ل «Meinung mit dass»:",
         "options": [
           "Ich finde, dass sind Handys nützlich.",
           "Ich finde, dass Handys nützlich sind.",
@@ -1278,7 +1278,7 @@ export const localTestTemplateBankA2 = [
           "Ich finde Handys dass."
         ],
         "correctIndex": 1,
-        "explanationAr": "صيغةُ الرأي تبدأ بـ finde ثم dass وفعلُها المساعد في النهاية: «Ich finde, dass Handys nützlich sind.». فـ«dass sind Handys nützlich» تقلب ترتيب الجملة التابعة. فحص ذاتي: هل بقي الفعل في آخر الجملة؟"
+        "explanationAr": "صيغةُ الرأي تبدأ بـ finde ثم dass وفعلُها المساعد في النهاية: «Ich finde, dass Handys nützlich sind.». ف «dass sind Handys nützlich» تقلب ترتيب الجملة التابعة. فحص ذاتي: هل بقي الفعل في آخر الجملة؟"
       },
       {
         "id": "a2-18-m2",
@@ -1291,7 +1291,7 @@ export const localTestTemplateBankA2 = [
           "Obwohl …"
         ],
         "correctIndex": 2,
-        "explanationAr": "المثالُ يُقدَّم بـ«Zum Beispiel …» ثم يأتي الشرحُ بعده. و Meiner Meinung nach يُبدي رأيًا، و Trotzdem يُقابل أمرًا سابقًا، و Obwohl يقدّم تناقضًا — لا واحد منها يُورِد مثالًا. فحص ذاتي: هل طلب السياقُ مثالًا؟"
+        "explanationAr": "المثالُ يُقدَّم ب «Zum Beispiel …» ثم يأتي الشرحُ بعده. و Meiner Meinung nach يُبدي رأيًا، و Trotzdem يُقابل أمرًا سابقًا، و Obwohl يقدّم تناقضًا — لا واحد منها يُورِد مثالًا. فحص ذاتي: هل طلب السياقُ مثالًا؟"
       },
       {
         "id": "a2-18-m3",
@@ -1317,12 +1317,12 @@ export const localTestTemplateBankA2 = [
           "zwar … aber"
         ],
         "correctIndex": 3,
-        "explanationAr": "الموازنةُ تُبنى على رابطين متقابلين: «zwar … aber» يذكر وجهًا ثم يقابله بآخر. وأمّا «um … dass» فقد رُكِّبا خطأً، و«weil … deshalb» يجمع سببيْن؛ فحص ذاتي: أيّ رابطين يوازنان؟"
+        "explanationAr": "الموازنةُ تُبنى على رابطين متقابلين: «zwar … aber» يذكر وجهًا ثم يقابله بآخر. وأمّا «um … dass» فقد رُكِّبا خطأً، و «weil … deshalb» يجمع سببيْن؛ فحص ذاتي: أيّ رابطين يوازنان؟"
       },
       {
         "id": "a2-18-m5",
         "promptDe": "Respektvoll widersprechen",
-        "promptAr": "اختر التعبير المطابق لـ«Respektvoll widersprechen»:",
+        "promptAr": "اختر التعبير المطابق ل «Respektvoll widersprechen»:",
         "options": [
           "Du verstehst nichts.",
           "Das ist dumm.",
@@ -1330,7 +1330,7 @@ export const localTestTemplateBankA2 = [
           "Ich sehe das etwas anders."
         ],
         "correctIndex": 3,
-        "explanationAr": "الاعتراض المهنيّ يبقى في نطاق الرأي: «Ich sehe das etwas anders» ينفي الاتفاق لا الشخص. وأمّا «Das ist dumm» و«Nur ich habe recht» فتهاجم المخاطَب؛ فحص ذاتي: هل اعترضتَ على الفكرة أم على صاحبها؟"
+        "explanationAr": "الاعتراض المهنيّ يبقى في نطاق الرأي: «Ich sehe das etwas anders» ينفي الاتفاق لا الشخص. وأمّا «Das ist dumm» و «Nur ich habe recht» فتهاجم المخاطَب؛ فحص ذاتي: هل اعترضتَ على الفكرة أم على صاحبها؟"
       }
     ]
   },
@@ -1370,7 +1370,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-19-m3",
         "promptDe": "Zweck",
-        "promptAr": "اختر التعبير المطابق لـ«Zweck»:",
+        "promptAr": "اختر التعبير المطابق ل «Zweck»:",
         "options": [
           "um besser zu sprechen",
           "damit besser zu sprechen",
@@ -1378,7 +1378,7 @@ export const localTestTemplateBankA2 = [
           "zu um sprechen"
         ],
         "correctIndex": 0,
-        "explanationAr": "الغايةُ مع نفس الفاعل بـ um … zu والمصدر في الآخر: «Ich übe jeden Tag, um besser zu sprechen». damit تأخذ فاعلًا مختلفًا وجملةً مُصرَّفة، و«damit … zu» يمزج الأداتين. فحص ذاتي: مَن الفاعل هنا؟"
+        "explanationAr": "الغايةُ مع نفس الفاعل بـ um … zu والمصدر في الآخر: «Ich übe jeden Tag, um besser zu sprechen». damit تأخذ فاعلًا مختلفًا وجملةً مُصرَّفة، و «damit … zu» يمزج الأداتين. فحص ذاتي: مَن الفاعل هنا؟"
       },
       {
         "id": "a2-19-m4",
@@ -1391,7 +1391,7 @@ export const localTestTemplateBankA2 = [
           "immer motiviert sein"
         ],
         "correctIndex": 1,
-        "explanationAr": "الهدفُ القابل للقياس يحمل عددًا ومدةً معًا: «zehn Karten fünf Tage testen». أمّا «viel lernen» و«alles verstehen» فعامّان لا يتحقّق منهما شيء. فحص ذاتي: هل في هدفك رقمٌ وتاريخ؟"
+        "explanationAr": "الهدفُ القابل للقياس يحمل عددًا ومدةً معًا: «zehn Karten fünf Tage testen». أمّا «viel lernen» و «alles verstehen» فعامّان لا يتحقّق منهما شيء. فحص ذاتي: هل في هدفك رقمٌ وتاريخ؟"
       },
       {
         "id": "a2-19-m5",
@@ -1431,7 +1431,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-20-m2",
         "promptDe": "Nach vorangestelltem Nebensatz",
-        "promptAr": "اختر التعبير المطابق لـ«Nach vorangestelltem Nebensatz»:",
+        "promptAr": "اختر التعبير المطابق ل «Nach vorangestelltem Nebensatz»:",
         "options": [
           "Bevor der Kurs beginnt, mache ich einen Test.",
           "Bevor der Kurs beginnt, ich mache einen Test.",
@@ -1478,7 +1478,7 @@ export const localTestTemplateBankA2 = [
           "ob es eine Prüfung gibt"
         ],
         "correctIndex": 3,
-        "explanationAr": "السؤالُ غير المباشر يبدأ بـ ob ويُبقي الفعلَ في النهاية: «ob es eine Prüfung gibt». فـ«ob gibt es eine Prüfung» تنقل ترتيبَ السؤال المباشر إلى التابعة. فحص ذاتي: هل حرّكت الفعل بعد ob؟"
+        "explanationAr": "السؤالُ غير المباشر يبدأ بـ ob ويُبقي الفعلَ في النهاية: «ob es eine Prüfung gibt». ف «ob gibt es eine Prüfung» تنقل ترتيبَ السؤال المباشر إلى التابعة. فحص ذاتي: هل حرّكت الفعل بعد ob؟"
       }
     ]
   },
@@ -1500,12 +1500,12 @@ export const localTestTemplateBankA2 = [
           "Ich habe zu vor."
         ],
         "correctIndex": 0,
-        "explanationAr": "الفعل vorhaben يطلب المصدرَ مع zu في الآخر: «Ich habe vor, mehr zu lernen». و«Ich habe vor, ich lerne» يُصرّف الجملةَ بعد الأداة، و«Ich habe zu vor» يفصل zu عن مصدرها. فحص ذاتي: هل جاء zu قبل المصدر؟"
+        "explanationAr": "الفعل vorhaben يطلب المصدرَ مع zu في الآخر: «Ich habe vor, mehr zu lernen». و «Ich habe vor, ich lerne» يُصرّف الجملةَ بعد الأداة، و «Ich habe zu vor» يفصل zu عن مصدرها. فحص ذاتي: هل جاء zu قبل المصدر؟"
       },
       {
         "id": "a2-21-m2",
         "promptDe": "aufstehen mit zu",
-        "promptAr": "اختر التعبير المطابق لـ«aufstehen mit zu»:",
+        "promptAr": "اختر التعبير المطابق ل «aufstehen mit zu»:",
         "options": [
           "zu aufstehen",
           "aufstehen zu",
@@ -1513,7 +1513,7 @@ export const localTestTemplateBankA2 = [
           "aufzustehen"
         ],
         "correctIndex": 3,
-        "explanationAr": "مع الأفعال المنفصلة تدخل zu بين البادئة والمصدر: auf + zu + stehen ⇒ «aufzustehen». و«zu aufstehen» تضع الأداةَ أمام البادئة، و«aufgestanden zu» تأتي بتصريف الماضي حيث يُطلب المصدر. فحص ذاتي: أين استقرّت zu؟"
+        "explanationAr": "مع الأفعال المنفصلة تدخل zu بين البادئة والمصدر: auf + zu + stehen ⇒ «aufzustehen». و «zu aufstehen» تضع الأداةَ أمام البادئة، و «aufgestanden zu» تأتي بتصريف الماضي حيث يُطلب المصدر. فحص ذاتي: أين استقرّت zu؟"
       },
       {
         "id": "a2-21-m3",
@@ -1526,7 +1526,7 @@ export const localTestTemplateBankA2 = [
           "Ich prüfen werde Plan."
         ],
         "correctIndex": 2,
-        "explanationAr": "المستقبل يُصاغ بـwerden ثانيًا والمصدر في النهاية: «Ich werde den Plan prüfen». فلا يُصرَّف الفعلُ الأصلي ولا يُنتزَع المصدرُ من آخره؛ فحص ذاتي: أين وقف prüfen في جملتك؟"
+        "explanationAr": "المستقبل يُصاغ ب werden ثانيًا والمصدر في النهاية: «Ich werde den Plan prüfen». فلا يُصرَّف الفعلُ الأصلي ولا يُنتزَع المصدرُ من آخره؛ فحص ذاتي: أين وقف prüfen في جملتك؟"
       },
       {
         "id": "a2-21-m4",
@@ -1544,7 +1544,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-21-m5",
         "promptDe": "Gutes Ziel",
-        "promptAr": "اختر التعبير المطابق لـ«Gutes Ziel»:",
+        "promptAr": "اختر التعبير المطابق ل «Gutes Ziel»:",
         "options": [
           "Viermal pro Woche 45 Minuten mit Wochenkontrolle.",
           "Mehr Deutsch bald.",
@@ -1552,7 +1552,7 @@ export const localTestTemplateBankA2 = [
           "Motivation immer."
         ],
         "correctIndex": 0,
-        "explanationAr": "الهدفُ الجيد يحدّد المقدارَ والزمنَ والمراقبة معًا: «Viermal pro Woche 45 Minuten mit Wochenkontrolle». وأمّا «Mehr Deutsch bald» و«Alles perfekt» فعباراتٌ عامة؛ فحص ذاتي: كيف تعرف أنك تقدّمت؟"
+        "explanationAr": "الهدفُ الجيد يحدّد المقدارَ والزمنَ والمراقبة معًا: «Viermal pro Woche 45 Minuten mit Wochenkontrolle». وأمّا «Mehr Deutsch bald» و «Alles perfekt» فعباراتٌ عامة؛ فحص ذاتي: كيف تعرف أنك تقدّمت؟"
       }
     ]
   },
@@ -1574,7 +1574,7 @@ export const localTestTemplateBankA2 = [
           "Wenn wir feiern …"
         ],
         "correctIndex": 3,
-        "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و«Wenn ich gestern … wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟"
+        "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern … wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟"
       },
       {
         "id": "a2-22-m2",
@@ -1592,7 +1592,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-22-m3",
         "promptDe": "Zusage",
-        "promptAr": "اختر التعبير المطابق لـ«Zusage»:",
+        "promptAr": "اختر التعبير المطابق ل «Zusage»:",
         "options": [
           "Ich absage ja.",
           "Ich würde gern kommen.",
@@ -1600,7 +1600,7 @@ export const localTestTemplateBankA2 = [
           "Kommen ich Einladung."
         ],
         "correctIndex": 1,
-        "explanationAr": "القبولُ المؤدَّب يتمنّى ولا يقطع: «Ich würde gern kommen». و«Ich absage ja» يجمع إثباتًا ورفضًا، و«Vielleicht sicher nein» تناقض، و«Kommen ich Einladung» بلا تصريف. فحص ذاتي: هل بقي البابُ مفتوحًا؟"
+        "explanationAr": "القبولُ المؤدَّب يتمنّى ولا يقطع: «Ich würde gern kommen». و «Ich absage ja» يجمع إثباتًا ورفضًا، و «Vielleicht sicher nein» تناقض، و «Kommen ich Einladung» بلا تصريف. فحص ذاتي: هل بقي البابُ مفتوحًا؟"
       },
       {
         "id": "a2-22-m4",
@@ -1613,7 +1613,7 @@ export const localTestTemplateBankA2 = [
           "Absage bin."
         ],
         "correctIndex": 0,
-        "explanationAr": "الاعتذارُ المؤدَّب جملةٌ كاملة مع kann: «Leider kann ich nicht teilnehmen». أمّا «Nein Feier» و«Absage bin» فبلا تصريفٍ ومعنىً ناقص، و«Ich komme nicht, schlecht» جافّةٌ لا مجاملة. فحص ذاتي: هل بقي الرفضُ مهذّبًا؟"
+        "explanationAr": "الاعتذارُ المؤدَّب جملةٌ كاملة مع kann: «Leider kann ich nicht teilnehmen». أمّا «Nein Feier» و «Absage bin» فبلا تصريفٍ ومعنىً ناقص، و «Ich komme nicht, schlecht» جافّةٌ لا مجاملة. فحص ذاتي: هل بقي الرفضُ مهذّبًا؟"
       },
       {
         "id": "a2-22-m5",
@@ -1626,7 +1626,7 @@ export const localTestTemplateBankA2 = [
           "Diese Kultur ist so."
         ],
         "correctIndex": 2,
-        "explanationAr": "الصياغة الحذرة تحصر الحكم في تجربتك: «In meiner Familie …» خبرٌ عن نطاقٍ تعرفه. وأمّا «Alle Menschen dort» و«Diese Kultur ist so» فتعميمٌ بلا دليل؛ فحص ذاتي: هل تحدّثت عن معرفتك أم عن «كلّ» الناس؟"
+        "explanationAr": "الصياغة الحذرة تحصر الحكم في تجربتك: «In meiner Familie …» خبرٌ عن نطاقٍ تعرفه. وأمّا «Alle Menschen dort» و «Diese Kultur ist so» فتعميمٌ بلا دليل؛ فحص ذاتي: هل تحدّثت عن معرفتك أم عن «كلّ» الناس؟"
       }
     ]
   },
@@ -1648,12 +1648,12 @@ export const localTestTemplateBankA2 = [
           "den"
         ],
         "correctIndex": 0,
-        "explanationAr": "الاسمُ «der Helfer» مذكّر، فيأخذ في Nominativ الأداةَ «der». وأمّا «die» فللمؤنث، و«das» للمحايد، و«den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟"
+        "explanationAr": "الاسمُ «der Helfer» مذكّر، فيأخذ في Nominativ الأداةَ «der». وأمّا «die» فللمؤنث، و «das» للمحايد، و «den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟"
       },
       {
         "id": "a2-23-m2",
         "promptDe": "die Initiative",
-        "promptAr": "اختر التعبير المطابق لـ«die Initiative»:",
+        "promptAr": "اختر التعبير المطابق ل «die Initiative»:",
         "options": [
           "der",
           "die",
@@ -1661,7 +1661,7 @@ export const localTestTemplateBankA2 = [
           "den"
         ],
         "correctIndex": 1,
-        "explanationAr": "الأسماءُ المنتهية بـ -tion مؤنّثة: die Initiative، مثل die Station و die Information. der و das تُخطئان الجنس، و«den» لا يكون أداةً للمبتدأ — يبقى المعنى وتَسقط الفصاحة. فحص ذاتي: هل حفظتَ الاسمَ بأداته؟"
+        "explanationAr": "الأسماءُ المنتهية بـ -tion مؤنّثة: die Initiative، مثل die Station و die Information. der و das تُخطئان الجنس، و «den» لا يكون أداةً للمبتدأ — يبقى المعنى وتَسقط الفصاحة. فحص ذاتي: هل حفظتَ الاسمَ بأداته؟"
       },
       {
         "id": "a2-23-m3",
@@ -1687,12 +1687,12 @@ export const localTestTemplateBankA2 = [
           "den"
         ],
         "correctIndex": 2,
-        "explanationAr": "الفاعلُ المعرّف في الجمع يأخذ die في Nominativ، وهو «die» في هذا التمرين. وأمّا der وdas فمفرد، وden تُستعمل في الجمع المنصوب (Akkusativ). فحص ذاتي: أهو فاعلٌ أم مفعولٌ في جملتك؟"
+        "explanationAr": "الفاعلُ المعرّف في الجمع يأخذ die في Nominativ، وهو «die» في هذا التمرين. وأمّا der و das فمفرد، و den تُستعمل في الجمع المنصوب (Akkusativ). فحص ذاتي: أهو فاعلٌ أم مفعولٌ في جملتك؟"
       },
       {
         "id": "a2-23-m5",
         "promptDe": "Realistisch",
-        "promptAr": "اختر التعبير المطابق لـ«Realistisch»:",
+        "promptAr": "اختر التعبير المطابق ل «Realistisch»:",
         "options": [
           "Alle Aufgaben immer übernehmen.",
           "Vier Wochen je eine Stunde ausprobieren.",
@@ -1722,7 +1722,7 @@ export const localTestTemplateBankA2 = [
           "zwar … weil"
         ],
         "correctIndex": 1,
-        "explanationAr": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Entweder gehen wir jetzt oder wir bleiben». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و«zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟"
+        "explanationAr": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Entweder gehen wir jetzt oder wir bleiben». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و «zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟"
       },
       {
         "id": "a2-24-m2",
@@ -1735,12 +1735,12 @@ export const localTestTemplateBankA2 = [
           "um … zu"
         ],
         "correctIndex": 0,
-        "explanationAr": "نفيُ شيئين معًا بـ«weder … noch»: «Weder kalt noch hungrig». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيءًا يبقى بعد الرابط؟"
+        "explanationAr": "نفيُ شيئين معًا ب «weder … noch»: «Weder kalt noch hungrig». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيءًا يبقى بعد الرابط؟"
       },
       {
         "id": "a2-24-m3",
         "promptDe": "Beide Eigenschaften",
-        "promptAr": "اختر التعبير المطابق لـ«Beide Eigenschaften»:",
+        "promptAr": "اختر التعبير المطابق ل «Beide Eigenschaften»:",
         "options": [
           "weder … noch",
           "sowohl … als auch",
@@ -1748,7 +1748,7 @@ export const localTestTemplateBankA2 = [
           "ob … wenn"
         ],
         "correctIndex": 1,
-        "explanationAr": "الجمعُ بين صفتين إثباتًا بـ«sowohl … als auch»: «sowohl schnell als auch günstig». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و«ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟"
+        "explanationAr": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl schnell als auch günstig». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟"
       },
       {
         "id": "a2-24-m4",
@@ -1761,7 +1761,7 @@ export const localTestTemplateBankA2 = [
           "kein Zeit und noch"
         ],
         "correctIndex": 2,
-        "explanationAr": "النفيُ المزدوج بـ weder … noch بلا نفيٍ زائد: «weder Zeit noch Geld». فـ«weder keine Zeit noch kein Geld» يُضيف kein مرّتين، و«nicht weder Zeit» يترك أحدَ الطرفين. فحص ذاتي: كم نفيًا تكفي الجملة؟"
+        "explanationAr": "النفيُ المزدوج بـ weder … noch بلا نفيٍ زائد: «weder Zeit noch Geld». ف «weder keine Zeit noch kein Geld» يُضيف kein مرّتين، و «nicht weder Zeit» يترك أحدَ الطرفين. فحص ذاتي: كم نفيًا تكفي الجملة؟"
       },
       {
         "id": "a2-24-m5",

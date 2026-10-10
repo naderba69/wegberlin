@@ -4,7 +4,7 @@
 
 This page records which structural numbers the app teaches and which pinned official excerpt backs each one. A successful match means "the app agrees with the pinned snapshot, collected on the recorded date" — it never means an exam format is unchanged, and it never makes the app's content official or approved.
 
-Snapshot collected: 2026-09-15. Fingerprint: `6d24aabcd1a1`.
+Snapshot collected: 2026-09-15. Fingerprint: `95f56feb8e2b`.
 
 Profiles: 2. Snapshot sources: 3. Pinned facts: 35 (24 cross-checked, 11 informational). Evidence issues: 0. Profile mismatches: 0. Declared open gaps: 2.
 

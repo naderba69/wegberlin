@@ -3,7 +3,7 @@
 Generated: 2026-09-05  
 Version: `meaning-first-case-audit-v1`  
 Policy: `meaning-first-case-v1`  
-Content SHA-256: `0233482c36b1464bd2454a7e23d4e3ea63b6028b1b381a79ff729b72d9bdcc6a`
+Content SHA-256: `7812cf68bbe53e10263f450f4ea254a4fae39708bdfaac6ff73f7b4064ea9b94`
 
 ## Result
 

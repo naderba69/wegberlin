@@ -122,7 +122,7 @@ const frameSeeds: Record<string, FrameSeed> = {
 };
 
 const additionalFrameSeeds: Partial<Record<string, readonly FrameSeed[]>> = {
-  "b1-02": [{ infinitive: "sich entscheiden", preposition: "gegen", governedCase: "accusative", chunkDe: "sich gegen eine Möglichkeit entscheiden", meaningAr: "يقرر رفض خيار", exampleDe: "Sie entscheidet sich gegen die riskante Möglichkeit.", contrastAr: "الخيار المرفوض يأتي بعد gegen + Akkusativ؛ قارن ذلك بـfür للخيار المختار." }],
+  "b1-02": [{ infinitive: "sich entscheiden", preposition: "gegen", governedCase: "accusative", chunkDe: "sich gegen eine Möglichkeit entscheiden", meaningAr: "يقرر رفض خيار", exampleDe: "Sie entscheidet sich gegen die riskante Möglichkeit.", contrastAr: "الخيار المرفوض يأتي بعد gegen + Akkusativ؛ قارن ذلك ب für للخيار المختار." }],
   "b1-03": [{ infinitive: "lernen", preposition: "aus", governedCase: "dative", chunkDe: "aus einer Erfahrung lernen", meaningAr: "يتعلم من تجربة", exampleDe: "Ich habe aus dieser Erfahrung gelernt.", contrastAr: "مصدر الدرس أو الخبرة يأتي بعد aus + Dativ." }],
   "b1-06": [{ infinitive: "lernen", preposition: "aus", governedCase: "dative", chunkDe: "aus einem Fehler lernen", meaningAr: "يتعلم من خطأ", exampleDe: "Im Gespräch habe ich aus einem Fehler gelernt.", contrastAr: "الخطأ الذي نستخلص منه درسًا يأتي بعد aus + Dativ." }],
   "b1-08": [{ infinitive: "bitten", preposition: "um", governedCase: "accusative", chunkDe: "um eine Reparatur bitten", meaningAr: "يطلب إصلاحًا", exampleDe: "Die Mieterin bittet den Vermieter um eine Reparatur.", contrastAr: "الشيء المطلوب يأتي بعد bitten um مع Akkusativ." }],

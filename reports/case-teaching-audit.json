@@ -207,7 +207,7 @@
       "governedCases": [
         "dative"
       ],
-      "formRuleAr": "zu وgegenüber يأخذان Dativ هنا؛ بعد اختيار الوظيفة كوّن zur Post أو gegenüber dem Hotel.",
+      "formRuleAr": "zu و gegenüber يأخذان Dativ هنا؛ بعد اختيار الوظيفة كوّن zur Post أو gegenüber dem Hotel.",
       "theoryIds": [
         "a1-20-t2"
       ],
@@ -280,7 +280,7 @@
       "governedCases": [
         "accusative"
       ],
-      "formRuleAr": "für وum يأخذان Akkusativ هنا؛ بعد تحديد المهمة افحص تركيب zuständig für أو sich kümmern um.",
+      "formRuleAr": "für و um يأخذان Akkusativ هنا؛ بعد تحديد المهمة افحص تركيب zuständig für أو sich kümmern um.",
       "theoryIds": [
         "a2-07-t1",
         "a2-07-t2"
@@ -384,7 +384,7 @@
       "governedCases": [
         "accusative"
       ],
-      "formRuleAr": "für وgegen يطلبان Akkusativ؛ افهم اتجاه القرار أولًا ثم كوّن الأداة أو الضمير الانعكاسي.",
+      "formRuleAr": "für و gegen يطلبان Akkusativ؛ افهم اتجاه القرار أولًا ثم كوّن الأداة أو الضمير الانعكاسي.",
       "theoryIds": [
         "b1-02-t1"
       ],
@@ -417,7 +417,7 @@
       "governedCases": [
         "dative"
       ],
-      "formRuleAr": "عند ذكر المنفذ بعد von استخدم Dativ؛ لا تبدأ بـdem/der قبل تقرير أن هذا الاسم هو المنفذ.",
+      "formRuleAr": "عند ذكر المنفذ بعد von استخدم Dativ؛ لا تبدأ ب dem/der قبل تقرير أن هذا الاسم هو المنفذ.",
       "theoryIds": [
         "b1-04-t1"
       ],
@@ -675,5 +675,5 @@
     }
   ],
   "boundary": "The audit proves authored sequencing and complete ownership of explicit case-name signals. It does not replace an independent linguistic judgment of every explanation or learner interpretation.",
-  "contentSha256": "0233482c36b1464bd2454a7e23d4e3ea63b6028b1b381a79ff729b72d9bdcc6a"
+  "contentSha256": "7812cf68bbe53e10263f450f4ea254a4fae39708bdfaac6ff73f7b4064ea9b94"
 }

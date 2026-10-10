@@ -16,11 +16,11 @@ export const b2Module4Lessons: FullLesson[] = [
  titleDe: "Teilhabe",
  titleAr: "المشاركة المجتمعية",
  estimatedMinutes: 90,
- descriptionAr: "تحلل من يستطيع المشاركة فعلًا، وتميز الاستشارة من القرار المشترك والتمثيل من الحضور الرمزي، وتصوغ آليات وصول قابلة للفحص بـindem وdadurch, dass.",
+ descriptionAr: "تحلل من يستطيع المشاركة فعلًا، وتميز الاستشارة من القرار المشترك والتمثيل من الحضور الرمزي، وتصوغ آليات وصول قابلة للفحص ب indem و dadurch, dass.",
  objectives: [
  { de: "Ich kann formale und tatsächliche Teilhabe unterscheiden.", ar: "أميز المشاركة الشكلية من الفعلية." },
  { de: "Ich kann Zugangsbarrieren und betroffene Gruppen systematisch analysieren.", ar: "أحلل حواجز الوصول والفئات المتأثرة." },
- { de: "Ich kann Mechanismen mit indem und dadurch, dass erklären.", ar: "أشرح آليات التأثير بـindem وdadurch, dass." },
+ { de: "Ich kann Mechanismen mit indem und dadurch, dass erklären.", ar: "أشرح آليات التأثير ب indem و dadurch, dass." },
  { de: "Ich kann ein Beteiligungsverfahren mit Rückmeldung entwerfen.", ar: "أصمم مسار مشاركة يتضمن تغذية راجعة." },
  ],
  entry: {
@@ -65,7 +65,7 @@ export const b2Module4Lessons: FullLesson[] = [
  questionsAr: [
  "هل الدعوة وحدها تثبت الوصول؟",
  "من يمتلك القرار النهائي في المثال الأخير؟",
- "ما الفرق التركيبي بين indem وdadurch, dass؟",
+ "ما الفرق التركيبي بين indem و dadurch, dass؟",
  ],
  },
  theory: [
@@ -180,7 +180,7 @@ export const b2Module4Lessons: FullLesson[] = [
  writing: {
  titleAr: "تصميم مسار مشاركة عادل",
  promptDe: "Schreiben Sie 220–250 Wörter: Ausgangsproblem, betroffene und fehlende Gruppen, Zugangsbarrieren, drei indem-Mechanismen, Einflussstufen, Auswahl der Vertretung, Entscheidungskriterien, Rückmeldung und Evaluation.",
- promptAr: "اكتب 220–250 كلمة عن المشكلة والفئات والغائبين والعوائق وثلاث آليات بـindem ودرجات التأثير واختيار الممثلين والمعايير والرد والتقييم.",
+ promptAr: "اكتب 220–250 كلمة عن المشكلة والفئات والغائبين والعوائق وثلاث آليات ب indem ودرجات التأثير واختيار الممثلين والمعايير والرد والتقييم.",
  checklistAr: [
  "فرقت بين الدعوة والوصول والتأثير والقرار.",
  "سميت الفئات الغائبة دون افتراض أن ممثلًا واحدًا يتحدث باسم الجميع.",
@@ -199,7 +199,7 @@ export const b2Module4Lessons: FullLesson[] = [
  mediation: {
  scenarioAr: "فريق عربي يظن أن الاجتماع ممثل لأن الدعوة كانت عامة.",
  sourceDe: "74 Anwesende; überwiegend über 50. Kaum Jugendliche, Schichtarbeitende oder Eltern kleiner Kinder. Nur Treppenzugang. Entscheidung beim Bezirksrat. Zweite Phase: mehrere Termine, mobile Befragung, Betreuung, gelostes Gremium, begründete Antworten.",
- taskAr: "صحح الاستنتاج بالعربية، وانقل حدود التأثير، ثم اكتب جملة ألمانية بـindem وأخرى بـinsofern, als.",
+ taskAr: "صحح الاستنتاج بالعربية، وانقل حدود التأثير، ثم اكتب جملة ألمانية ب indem وأخرى ب insofern, als.",
  suggestedAr: "عمومية الدعوة لا تجعل الحضور ممثلًا؛ غابت فئات متأثرة ووجد عائق مكاني وزمني. المجلس المختار يرجح المعايير ويوصي، لكن القرار النهائي للمجلس البلدي مع رد معلل. Der Bezirk erweitert den Zugang, indem er mehrere Wege anbietet. Das Verfahren ist insofern transparent, als die Entscheidungsgrenze vorab veröffentlicht wird.",
  },
  mistakes: [
@@ -235,11 +235,11 @@ export const b2Module4Lessons: FullLesson[] = [
  titleDe: "Medienkritik",
  titleAr: "نقد الإعلام",
  estimatedMinutes: 90,
- descriptionAr: "تتبع الادعاء إلى مصدره الأولي، وتفصل الخبر والدليل والتفسير، وتنقل الأقوال بـKonjunktiv I دون تبنٍ أو تشكيك غير مبرر.",
+ descriptionAr: "تتبع الادعاء إلى مصدره الأولي، وتفصل الخبر والدليل والتفسير، وتنقل الأقوال ب Konjunktiv I دون تبنٍ أو تشكيك غير مبرر.",
  objectives: [
  { de: "Ich kann Behauptung, Beleg und Interpretation trennen.", ar: "أفصل الادعاء والدليل والتفسير." },
  { de: "Ich kann eine Quelle entlang ihrer Belegkette prüfen.", ar: "أفحص المصدر عبر سلسلة الاستدلال." },
- { de: "Ich kann fremde Aussagen mit Konjunktiv I distanziert wiedergeben.", ar: "أنقل قول الغير بـKonjunktiv I بمسافة تحريرية." },
+ { de: "Ich kann fremde Aussagen mit Konjunktiv I distanziert wiedergeben.", ar: "أنقل قول الغير ب Konjunktiv I بمسافة تحريرية." },
  { de: "Ich kann Framing, Auslassungen und Korrekturen bewerten.", ar: "أقيّم التأطير والحذف وسياسة التصحيح." },
  ],
  entry: {
@@ -343,7 +343,7 @@ export const b2Module4Lessons: FullLesson[] = [
  exercises: [
  { id: "b2-08-e1", type: "multiple-choice", promptAr: "أي جملة تفرق القياس عن العنوان؟", options: ["Die Befragung zeigt, dass alle Teilnehmenden ihre Kompetenz inzwischen als sehr hoch einschätzen.", "Erhoben wurde eine Selbsteinschätzung; eine objektive Leistungsmessung fehlt.", "Die Studie beweist damit eine objektive Verbesserung der Kompetenzwerte im gesamten Programm.", "Es fehlen Zahlen, daher ist jede Aussage zur Wirkung unmöglich und wertlos."], correctIndex: 1, explanationAr: "الفرق بين القياس والعنوان: Selbsteinschätzung تقرير ذاتي لا يعادل قياس أداء موضوعي، وعدد البوابات الإخبارية لا يضيف أدلة مستقلة." },
  { id: "b2-08-e2", type: "fill-blank", promptAr: "أكمل Konjunktiv I:", template: "Der Anbieter erklärt, die Untersuchung ___ unabhängig.", acceptedAnswers: ["sei"], explanationAr: "المنقول عن مصدر يحتمل النفي يُروى بـ Konjunktiv I: صيغة sei من sein تبيّن أن الكلام منقول لا مؤيَّد، فيفرّق القارئ بين الادعاء والتحقيق." },
- { id: "b2-08-e3", type: "word-ordering", promptAr: "رتب النقل بـzufolge:", words: ["Der Pressemitteilung zufolge", "nahmen", "400 Freiwillige", "teil"], acceptedAnswers: ["Der Pressemitteilung zufolge nahmen 400 Freiwillige teil","400 Freiwillige nahmen der Pressemitteilung zufolge teil"], explanationAr: "zufolge تأتي بعد المصدر المرفوع وتعني «بحسب»، فيبقى المصدر قبلها والجزء الرئيسي بفعله المساند بعدها؛ تقديمها على الاسم يُسقط حالة الرفع التي يطلبها التركيب. ويُقبل أيضًا: «400 Freiwillige nahmen der Pressemitteilung zufolge teil»." },
+ { id: "b2-08-e3", type: "word-ordering", promptAr: "رتب النقل ب zufolge:", words: ["Der Pressemitteilung zufolge", "nahmen", "400 Freiwillige", "teil"], acceptedAnswers: ["Der Pressemitteilung zufolge nahmen 400 Freiwillige teil","400 Freiwillige nahmen der Pressemitteilung zufolge teil"], explanationAr: "zufolge تأتي بعد المصدر المرفوع وتعني «بحسب»، فيبقى المصدر قبلها والجزء الرئيسي بفعله المساند بعدها؛ تقديمها على الاسم يُسقط حالة الرفع التي يطلبها التركيب. ويُقبل أيضًا: «400 Freiwillige nahmen der Pressemitteilung zufolge teil»." },
  { id: "b2-08-e4", type: "error-correction", promptAr: "حوّل الاقتباس إلى نقل غير مباشر:", sentence: "Der Sprecher sagt, die Studie ist unabhängig.", acceptedAnswers: ["Der Sprecher sagt, die Studie sei unabhängig"], explanationAr: "النقل غير المباشر بـ Konjunktiv I يفصل كلام المتحدث عن تأييد الكاتب: sei تُبقي القول منقولًا؛ ومع ist يصير الاقتباس مُسَلَّمًا به في النص نفسه." },
  { id: "b2-08-e5", type: "matching", promptAr: "طابق العنصر بسؤال الفحص:", pairs: [{ left: "Primärquelle", right: "Woher stammt die Information ursprünglich?" }, { left: "Messgröße", right: "Was wurde tatsächlich erhoben?" }, { left: "Korrekturspur", right: "Was wurde wann und warum geändert?" }], explanationAr: "لكل عنصر سؤال فحص مختلف: المصدر الأصلي يسأل عن المنبع، والقياس عن الكمية المرفوعة، وأثر التصحيح عمّا غُيِّر ومتى ولماذا؛ سؤال واحد عن الثلاثة يُبقي الضبابية كما هي." },
  { id: "b2-08-e6", type: "multiple-choice", promptAr: "ما الاستنتاج المتوازن عن تمويل الشركة؟", options: ["Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Gefördete nur zustimmend antworten.", "Weil ein Unternehmen die Studie bezahlt hat, sind alle ihre Ergebnisse automatisch wertlos.", "Die Finanzierung ist für die Bewertung unwichtig, weil am Ende allein die Methodik zählt.", "Finanzierung ist ein möglicher Interessenkonflikt, der offengelegt und methodisch geprüft werden muss."], correctIndex: 3, explanationAr: "التمويل مصلحة تُعلَن وتُفحَص، لا دليل تزوير ولا حجة إبطال: «Finanzierung ist ein möglicher Interessenkonflikt, der offengelegt und methodisch geprüft werden muss». الجزم بأحد الطرفين يسبق النص." },
@@ -417,7 +417,7 @@ export const b2Module4Lessons: FullLesson[] = [
  mediation: {
  scenarioAr: "وصل لفريقك العربي عنوان ألماني يقول إن دراسة أثبتت تدمير الانتباه.",
  sourceDe: "Quelle: Pressemitteilung eines App-Anbieters. 400 freiwillig online Befragte. 62 Prozent berichten geringere Konzentration. Kein Leistungstest, keine Vergleichsgruppe, keine Vorher-nachher-Messung. Finanzierung in drei Artikeln nicht genannt.",
- taskAr: "انقل ما يقوله المصدر وما يثبته فعلًا وما يبقى مفتوحًا، ثم صغ جملة ألمانية بـKonjunktiv I.",
+ taskAr: "انقل ما يقوله المصدر وما يثبته فعلًا وما يبقى مفتوحًا، ثم صغ جملة ألمانية ب Konjunktiv I.",
  suggestedAr: "يقول بيان شركة تطبيق إن 62% من 400 متطوع أبلغوا ذاتيًا تركيزًا أقل. لم يُجر اختبار أداء أو مقارنة أو قياس قبل وبعد، لذلك يثبت الانطباع في هذه العينة لا التدمير أو السببية. Der Anbieter erklärt, die Befragten hätten nach kurzen Videos geringere Konzentration wahrgenommen.",
  },
  mistakes: [

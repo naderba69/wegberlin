@@ -55,8 +55,9 @@ describe("accepted-answer hygiene", () => {
     expect(summary.offenders).toEqual([]);
     // Audit round 2 (2026-10-10): 22 word-ordering items lost alternates that were not reachable from their chunks;
     // with no reachable alternate left they are single-string items again (202 -> 224; broadened 185 -> 163).
-    expect(summary.acceptsExactlyOneString).toBe(224);
-    expect(summary.broadenedExercises).toBe(163);
+    // Same round: cosmetic variants Fuss (for Fuß) and Koennten (for Könnten) removed (224 -> 226; broadened 163 -> 161).
+    expect(summary.acceptsExactlyOneString).toBe(226);
+    expect(summary.broadenedExercises).toBe(161);
     expect(summary.acceptsExactlyOneString + summary.broadenedExercises).toBe(summary.productiveExercises);
     for (const level of ["A1", "A2", "B1", "B2"]) expect(summary.byLevel[level]?.productiveExercises).toBeGreaterThan(0);
   });

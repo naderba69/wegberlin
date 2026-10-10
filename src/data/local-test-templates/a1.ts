@@ -20,7 +20,7 @@ export const localTestTemplateBankA1 = [
           "Wer"
         ],
         "correctIndex": 2,
-        "explanationAr": "السؤال عن الاسم هو Wie heißt du?: أداة الاستفهام Wie ثم الفعل heißt ثم الفاعل du. لا يُسأل عن الاسم بـWas أو Wo، لأن Was للسؤال عن شيء وWo للمكان."
+        "explanationAr": "السؤال عن الاسم هو Wie heißt du?: أداة الاستفهام Wie ثم الفعل heißt ثم الفاعل du. لا يُسأل عن الاسم ب Was أو Wo، لأن Was للسؤال عن شيء و Wo للمكان."
       },
       {
         "id": "a1-01-m2",
@@ -33,7 +33,7 @@ export const localTestTemplateBankA1 = [
           "heiße"
         ],
         "correctIndex": 3,
-        "explanationAr": "مع ich: heiße. وheißen يدل على الاسم الذي يعرّف به الشخص نفسه: Ich heiße …"
+        "explanationAr": "مع ich: heiße. و heißen يدل على الاسم الذي يعرّف به الشخص نفسه: Ich heiße …"
       },
       {
         "id": "a1-01-m3",
@@ -59,7 +59,7 @@ export const localTestTemplateBankA1 = [
           "Auf Wiedersehen!"
         ],
         "correctIndex": 2,
-        "explanationAr": "يمكن الرد بالتحية نفسها: Guten Abend! تُقال مساءً ويُجاب عنها بـGuten Abend! أو Guten Abend, wie geht es Ihnen? أما Guten Morgen! فتحية صباحية، وGute Nacht! وAuf Wiedersehen! تقالان عند الوداع والنوم."
+        "explanationAr": "يمكن الرد بالتحية نفسها: Guten Abend! تُقال مساءً ويُجاب عنها ب Guten Abend! أو Guten Abend, wie geht es Ihnen? أما Guten Morgen! فتحية صباحية، و Gute Nacht! و Auf Wiedersehen! تقالان عند الوداع والنوم."
       },
       {
         "id": "a1-01-m5",
@@ -94,7 +94,7 @@ export const localTestTemplateBankA1 = [
           "Welche"
         ],
         "correctIndex": 1,
-        "explanationAr": "السؤال عن الأصل Woher. والسؤال Woher عن الأصل، والجواب يبدأ بـaus: Ich komme aus Sfax."
+        "explanationAr": "السؤال عن الأصل Woher. والسؤال Woher عن الأصل، والجواب يبدأ ب aus: Ich komme aus Sfax."
       },
       {
         "id": "a1-02-m2",
@@ -120,7 +120,7 @@ export const localTestTemplateBankA1 = [
           "spricht"
         ],
         "correctIndex": 3,
-        "explanationAr": "مع er تأتي الصيغة spricht: Er spricht Deutsch. er فاعل مفرد غائب ولذلك يحمل الفعل نهاية t، بخلاف ich spreche وdu sprichst وwir sprechen."
+        "explanationAr": "مع er تأتي الصيغة spricht: Er spricht Deutsch. er فاعل مفرد غائب ولذلك يحمل الفعل نهاية t، بخلاف ich spreche و du sprichst و wir sprechen."
       },
       {
         "id": "a1-02-m4",
@@ -220,7 +220,7 @@ export const localTestTemplateBankA1 = [
           "meine Telefonnummer"
         ],
         "correctIndex": 3,
-        "explanationAr": "الاسم مؤنث: die Telefonnummer، ولذلك يظهر ضمير الملكية meine. mein للمذكر والمحايد، وmeine للمؤنث والجمع، والملكية تتبع جنس الاسم لا جنس صاحبه."
+        "explanationAr": "الاسم مؤنث: die Telefonnummer، ولذلك يظهر ضمير الملكية meine. mein للمذكر والمحايد، و meine للمؤنث والجمع، والملكية تتبع جنس الاسم لا جنس صاحبه."
       }
     ]
   },
@@ -329,7 +329,7 @@ export const localTestTemplateBankA1 = [
           "heiße"
         ],
         "correctIndex": 2,
-        "explanationAr": "العمر مع bin. مع wir وsie يصير sind: Wir sind zwanzig Jahre alt."
+        "explanationAr": "العمر مع bin. مع wir و sie يصير sind: Wir sind zwanzig Jahre alt."
       },
       {
         "id": "a1-05-m3",
@@ -368,7 +368,7 @@ export const localTestTemplateBankA1 = [
           "Sondern nicht 70."
         ],
         "correctIndex": 2,
-        "explanationAr": "Nicht X, sondern Y نمط واضح للتصحيح: Nicht 17, sondern 70. الجزء الأول ينفي القيمة الخطأ، وsondern تعني «بل» فتُصلحها، ولا تُستعمل aber في هذا القالب."
+        "explanationAr": "Nicht X, sondern Y نمط واضح للتصحيح: Nicht 17, sondern 70. الجزء الأول ينفي القيمة الخطأ، و sondern تعني «بل» فتُصلحها، ولا تُستعمل aber في هذا القالب."
       }
     ]
   },
@@ -390,7 +390,7 @@ export const localTestTemplateBankA1 = [
           "aus"
         ],
         "correctIndex": 2,
-        "explanationAr": "als للمهنة: Ich arbeite als Koch بمعنى «بصفتي طاهيًا»، وهي غير wie التي تعني «مثلما». وbei مع جهة العمل، وin مع المكان أو المجال."
+        "explanationAr": "als للمهنة: Ich arbeite als Koch بمعنى «بصفتي طاهيًا»، وهي غير wie التي تعني «مثلما». و bei مع جهة العمل، و in مع المكان أو المجال."
       },
       {
         "id": "a1-06-m2",
@@ -564,7 +564,7 @@ export const localTestTemplateBankA1 = [
           "Heute ich kaufe ein."
         ],
         "correctIndex": 1,
-        "explanationAr": "kaufe في الموقع الثاني وein في النهاية. والبادئة المنفصلة تنزل إلى آخر الجملة: Ich kaufe am Abend ein."
+        "explanationAr": "kaufe في الموقع الثاني و ein في النهاية. والبادئة المنفصلة تنزل إلى آخر الجملة: Ich kaufe am Abend ein."
       },
       {
         "id": "a1-08-m4",
@@ -625,7 +625,7 @@ export const localTestTemplateBankA1 = [
           "Bei"
         ],
         "correctIndex": 0,
-        "explanationAr": "الساعة مع um: um sechs Uhr. ومع اليوم يصيران معًا: am Montag um zehn Uhr — am لليوم وum للساعة. لا تُستعمل In أو Bei في تحديد وقت الساعة."
+        "explanationAr": "الساعة مع um: um sechs Uhr. ومع اليوم يصيران معًا: am Montag um zehn Uhr — am لليوم و um للساعة. لا تُستعمل In أو Bei في تحديد وقت الساعة."
       },
       {
         "id": "a1-09-m3",
@@ -664,7 +664,7 @@ export const localTestTemplateBankA1 = [
           "Wo Mittwoch du?"
         ],
         "correctIndex": 1,
-        "explanationAr": "Wie wäre es am Mittwoch? صيغة اقتراح مهذبة: wäre هي Konjunktiv II من sein، وتُستعمل لعرض بديل. يُجاب عنها بـJa, gern أو Das passt mir leider nicht."
+        "explanationAr": "Wie wäre es am Mittwoch? صيغة اقتراح مهذبة: wäre هي Konjunktiv II من sein، وتُستعمل لعرض بديل. يُجاب عنها ب Ja, gern أو Das passt mir leider nicht."
       }
     ]
   },
@@ -699,7 +699,7 @@ export const localTestTemplateBankA1 = [
           "nicht eine"
         ],
         "correctIndex": 2,
-        "explanationAr": "Milch مؤنث: keine. وgern بعد الفعل تصف ما نحب: Ich trinke gern Kaffee."
+        "explanationAr": "Milch مؤنث: keine. و gern بعد الفعل تصف ما نحب: Ich trinke gern Kaffee."
       },
       {
         "id": "a1-10-m3",
@@ -712,7 +712,7 @@ export const localTestTemplateBankA1 = [
           "Ich esse gern Brot."
         ],
         "correctIndex": 3,
-        "explanationAr": "gern يأتي مع فعل مصرف صحيح. وفي Ich esse einen Apfel يكون المتكلم فاعلًا، وeinen Apfel مفعولًا منصوبًا."
+        "explanationAr": "gern يأتي مع فعل مصرف صحيح. وفي Ich esse einen Apfel يكون المتكلم فاعلًا، و einen Apfel مفعولًا منصوبًا."
       },
       {
         "id": "a1-10-m4",
@@ -773,7 +773,7 @@ export const localTestTemplateBankA1 = [
           "koste"
         ],
         "correctIndex": 2,
-        "explanationAr": "Brot مفرد: kostet. وmöchte تجعل الطلب مهذبًا: Ich möchte ein Brot, bitte."
+        "explanationAr": "Brot مفرد: kostet. و möchte تجعل الطلب مهذبًا: Ich möchte ein Brot, bitte."
       },
       {
         "id": "a1-11-m3",
@@ -799,12 +799,12 @@ export const localTestTemplateBankA1 = [
           "Ich bin Tomaten."
         ],
         "correctIndex": 1,
-        "explanationAr": "Ich möchte … صيغة طلب مناسبة. وmöchte صيغة مهذبة معناها «أرغب في»: Ich möchte ein Kilo Reis."
+        "explanationAr": "Ich möchte … صيغة طلب مناسبة. و möchte صيغة مهذبة معناها «أرغب في»: Ich möchte ein Kilo Reis."
       },
       {
         "id": "a1-11-m5",
         "promptDe": "Einkauf beenden",
-        "promptAr": "اختر التعبير المطابق لـ«Einkauf beenden»:",
+        "promptAr": "اختر التعبير المطابق ل «Einkauf beenden»:",
         "options": [
           "Alles nicht.",
           "Ich komme Ende.",
@@ -847,7 +847,7 @@ export const localTestTemplateBankA1 = [
           "aus"
         ],
         "correctIndex": 1,
-        "explanationAr": "ohne = دون. نستعمل mit لإضافة مكوّن وohne لاستبعاده: mit Reis، ohne Zwiebeln."
+        "explanationAr": "ohne = دون. نستعمل mit لإضافة مكوّن و ohne لاستبعاده: mit Reis، ohne Zwiebeln."
       },
       {
         "id": "a1-12-m3",
@@ -860,7 +860,7 @@ export const localTestTemplateBankA1 = [
           "Kein bestelle."
         ],
         "correctIndex": 2,
-        "explanationAr": "جملة واضحة لشرح الطبق الخطأ. نستعمل mit لإضافة مكوّن وohne لاستبعاده: mit Reis، ohne Zwiebeln."
+        "explanationAr": "جملة واضحة لشرح الطبق الخطأ. نستعمل mit لإضافة مكوّن و ohne لاستبعاده: mit Reis، ohne Zwiebeln."
       },
       {
         "id": "a1-12-m4",
@@ -921,7 +921,7 @@ export const localTestTemplateBankA1 = [
           "Es nicht gibt Aufzug."
         ],
         "correctIndex": 2,
-        "explanationAr": "keinen للمذكر في Akkusativ. ومع وجود شيء نبدأ بـes gibt: Es gibt keine Garage."
+        "explanationAr": "keinen للمذكر في Akkusativ. ومع وجود شيء نبدأ ب es gibt: Es gibt keine Garage."
       },
       {
         "id": "a1-13-m3",
@@ -934,12 +934,12 @@ export const localTestTemplateBankA1 = [
           "Drei Zimmer gibt sind."
         ],
         "correctIndex": 0,
-        "explanationAr": "Zimmer جمعها دون s هنا. وes gibt تركيب ثابت للإخبار بالوجود: Es gibt viel Licht in der Wohnung."
+        "explanationAr": "Zimmer جمعها دون s هنا. و es gibt تركيب ثابت للإخبار بالوجود: Es gibt viel Licht in der Wohnung."
       },
       {
         "id": "a1-13-m4",
         "promptDe": "Adjektiv nach sein",
-        "promptAr": "اختر التعبير المطابق لـ«Adjektiv nach sein»:",
+        "promptAr": "اختر التعبير المطابق ل «Adjektiv nach sein»:",
         "options": [
           "Die Wohnung ist ruhige.",
           "Die Wohnung ist ruhig.",
@@ -1056,12 +1056,12 @@ export const localTestTemplateBankA1 = [
           "Wie groß ist die Wohnung?"
         ],
         "correctIndex": 3,
-        "explanationAr": "Wie groß …? للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
+        "explanationAr": "Wie groß …? للسؤال نقول Wie groß ist die Wohnung? و Wie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
       },
       {
         "id": "a1-15-m2",
         "promptDe": "Frage nach der Miete",
-        "promptAr": "اختر التعبير المطابق لـ«Frage nach der Miete»:",
+        "promptAr": "اختر التعبير المطابق ل «Frage nach der Miete»:",
         "options": [
           "Wie hoch ist die Miete?",
           "Wie groß kostet Miete?",
@@ -1069,7 +1069,7 @@ export const localTestTemplateBankA1 = [
           "Welche Euro ist?"
         ],
         "correctIndex": 0,
-        "explanationAr": "Wie hoch ist die Miete? للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
+        "explanationAr": "Wie hoch ist die Miete? للسؤال نقول Wie groß ist die Wohnung? و Wie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
       },
       {
         "id": "a1-15-m3",
@@ -1095,7 +1095,7 @@ export const localTestTemplateBankA1 = [
           "Wann kann ich die Wohnung besichtigen?"
         ],
         "correctIndex": 3,
-        "explanationAr": "الفعل الناقص بعد Wann والمصدر في النهاية. للسؤال نقول Wie groß ist die Wohnung? وWie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
+        "explanationAr": "الفعل الناقص بعد Wann والمصدر في النهاية. للسؤال نقول Wie groß ist die Wohnung? و Wie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو العنوان أولًا حتى يعرف الطرف الآخر موضوع المكالمة."
       },
       {
         "id": "a1-15-m5",
@@ -1130,7 +1130,7 @@ export const localTestTemplateBankA1 = [
           "gut"
         ],
         "correctIndex": 0,
-        "explanationAr": "عند المقارنة نستعمل lieber. وgern بعد الفعل تعني أن النشاط محبوب: Ich koche gern."
+        "explanationAr": "عند المقارنة نستعمل lieber. و gern بعد الفعل تعني أن النشاط محبوب: Ich koche gern."
       },
       {
         "id": "a1-16-m2",
@@ -1174,7 +1174,7 @@ export const localTestTemplateBankA1 = [
       {
         "id": "a1-16-m5",
         "promptDe": "Richtige Wortstellung",
-        "promptAr": "اختر التعبير المطابق لـ«Richtige Wortstellung»:",
+        "promptAr": "اختر التعبير المطابق ل «Richtige Wortstellung»:",
         "options": [
           "Ich gern lese.",
           "Ich lese gern.",
@@ -1182,7 +1182,7 @@ export const localTestTemplateBankA1 = [
           "Ich lesen gern."
         ],
         "correctIndex": 1,
-        "explanationAr": "الفعل المصرف في الموقع الثاني. وgern تنقل الرضا عن النشاط: Ich tanze gern."
+        "explanationAr": "الفعل المصرف في الموقع الثاني. و gern تنقل الرضا عن النشاط: Ich tanze gern."
       }
     ]
   },
@@ -1291,7 +1291,7 @@ export const localTestTemplateBankA1 = [
           "Sie werden Grad."
         ],
         "correctIndex": 2,
-        "explanationAr": "العدد جمع: sind. والطقس يُوصف بـes: Es ist warm، Es regnet، Es schneit."
+        "explanationAr": "العدد جمع: sind. والطقس يُوصف ب es: Es ist warm، Es regnet، Es schneit."
       },
       {
         "id": "a1-18-m3",
@@ -1317,7 +1317,7 @@ export const localTestTemplateBankA1 = [
           "Sonne macht hellen."
         ],
         "correctIndex": 0,
-        "explanationAr": "Die Sonne scheint تصف الطقس وصفًا صحيحًا: الفعل scheinen يأتي مع الشمس، وSonne مؤنث فتأخذ die. أما الأحوال العامة فتُبنى غالبًا بـes مثل Es regnet."
+        "explanationAr": "Die Sonne scheint تصف الطقس وصفًا صحيحًا: الفعل scheinen يأتي مع الشمس، و Sonne مؤنث فتأخذ die. أما الأحوال العامة فتُبنى غالبًا ب es مثل Es regnet."
       },
       {
         "id": "a1-18-m5",
@@ -1391,7 +1391,7 @@ export const localTestTemplateBankA1 = [
           "fahren"
         ],
         "correctIndex": 0,
-        "explanationAr": "du fährst: الفعل fahren يتغير مع الفاعل، فـdu يأخذ نهاية -st وer/sie/es يأخذ fährt. ويُقال في وصف الوسيلة Ich fahre mit dem Bus."
+        "explanationAr": "du fährst: الفعل fahren يتغير مع الفاعل، ف du يأخذ نهاية -st و er/sie/es يأخذ fährt. ويُقال في وصف الوسيلة Ich fahre mit dem Bus."
       },
       {
         "id": "a1-19-m5",
@@ -1431,7 +1431,7 @@ export const localTestTemplateBankA1 = [
       {
         "id": "a1-20-m2",
         "promptDe": "abbiegen",
-        "promptAr": "اختر التعبير المطابق لـ«abbiegen»:",
+        "promptAr": "اختر التعبير المطابق ل «abbiegen»:",
         "options": [
           "Ab Sie biegen links.",
           "Sie abbiegen links.",
@@ -1478,7 +1478,7 @@ export const localTestTemplateBankA1 = [
           "zurück"
         ],
         "correctIndex": 1,
-        "explanationAr": "links = يسارًا. والأمر الرسمي يبدأ بالفعل ويختم بـSie: Nehmen Sie die Linie 4."
+        "explanationAr": "links = يسارًا. والأمر الرسمي يبدأ بالفعل ويختم ب Sie: Nehmen Sie die Linie 4."
       }
     ]
   },
@@ -1500,7 +1500,7 @@ export const localTestTemplateBankA1 = [
           "in"
         ],
         "correctIndex": 1,
-        "explanationAr": "الوجهة مدينة: nach. نستعمل von لذكر نقطة الانطلاق وnach مع معظم أسماء المدن والبلدان دون أداة: von Berlin nach Hamburg، von Tunis nach München."
+        "explanationAr": "الوجهة مدينة: nach. نستعمل von لذكر نقطة الانطلاق و nach مع معظم أسماء المدن والبلدان دون أداة: von Berlin nach Hamburg، von Tunis nach München."
       },
       {
         "id": "a1-21-m2",
@@ -1526,7 +1526,7 @@ export const localTestTemplateBankA1 = [
           "musst"
         ],
         "correctIndex": 3,
-        "explanationAr": "مع du تصبح müssen ← musst: Du musst umsteigen. وmüssen تنقل الإلزام، ويأتي المصدر في نهاية الجملة، ثم بقية التفاصيل مثل وسيلة النقل."
+        "explanationAr": "مع du تصبح müssen ← musst: Du musst umsteigen. و müssen تنقل الإلزام، ويأتي المصدر في نهاية الجملة، ثم بقية التفاصيل مثل وسيلة النقل."
       },
       {
         "id": "a1-21-m4",
@@ -1613,12 +1613,12 @@ export const localTestTemplateBankA1 = [
           "Ich bin einen Schwindel."
         ],
         "correctIndex": 1,
-        "explanationAr": "Mir ist schwindelig: المصاب يُذكر مجرورًا مع ist، لا فاعل مع haben أو tun. هذا النمط ثابت في وصف الأحوال مثل Mir ist kalt وMir ist schlecht."
+        "explanationAr": "Mir ist schwindelig: المصاب يُذكر مجرورًا مع ist، لا فاعل مع haben أو tun. هذا النمط ثابت في وصف الأحوال مثل Mir ist kalt و Mir ist schlecht."
       },
       {
         "id": "a1-22-m5",
         "promptDe": "Fieber",
-        "promptAr": "اختر التعبير المطابق لـ«Fieber»:",
+        "promptAr": "اختر التعبير المطابق ل «Fieber»:",
         "options": [
           "Ich habe Fieber.",
           "Ich bin Fieber.",
@@ -1674,7 +1674,7 @@ export const localTestTemplateBankA1 = [
           "sollte Sie"
         ],
         "correctIndex": 1,
-        "explanationAr": "du sollst. وsollen تنقل نصيحة أو طلبًا من غيرك: Sie sollen sich ausruhen."
+        "explanationAr": "du sollst. و sollen تنقل نصيحة أو طلبًا من غيرك: Sie sollen sich ausruhen."
       },
       {
         "id": "a1-23-m4",
@@ -1722,7 +1722,7 @@ export const localTestTemplateBankA1 = [
           "Nachname"
         ],
         "correctIndex": 3,
-        "explanationAr": "حقول النماذج أسماء مركبة تُقرأ من الآخر إلى الأول: Geburtsdatum تاريخُ الميلاد وGeburtsort مكانُه، فلا تخلط بينهما. وفي الاستمارة يُكتب اللقب أولًا عادةً: Nachname, Vorname."
+        "explanationAr": "حقول النماذج أسماء مركبة تُقرأ من الآخر إلى الأول: Geburtsdatum تاريخُ الميلاد و Geburtsort مكانُه، فلا تخلط بينهما. وفي الاستمارة يُكتب اللقب أولًا عادةً: Nachname, Vorname."
       },
       {
         "id": "a1-24-m2",
@@ -1748,7 +1748,7 @@ export const localTestTemplateBankA1 = [
           "Sie Formular füllt aus."
         ],
         "correctIndex": 2,
-        "explanationAr": "صيغة الأمر مع فعل منفصل. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit."
+        "explanationAr": "صيغة الأمر مع فعل منفصل. في الأمر الرسمي نقول Füllen Sie … aus و Bringen Sie … mit."
       },
       {
         "id": "a1-24-m4",
@@ -1774,7 +1774,7 @@ export const localTestTemplateBankA1 = [
           "Hier Sie unterschreibt."
         ],
         "correctIndex": 0,
-        "explanationAr": "الفعل ثم Sie ثم المكان. في الأمر الرسمي نقول Füllen Sie … aus وBringen Sie … mit."
+        "explanationAr": "الفعل ثم Sie ثم المكان. في الأمر الرسمي نقول Füllen Sie … aus و Bringen Sie … mit."
       }
     ]
   }

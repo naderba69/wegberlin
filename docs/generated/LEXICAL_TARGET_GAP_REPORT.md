@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `e8a8a9402777e3fe50e63c9dbd87f31bc30a9ec50093e6ccbe85ea9919ff699e`
+Content SHA-256: `6acefeb0e82fad1816c3dd06823dde0d0cef9f83b564b0e384e16c25df6e1ad1`
 
 ## Honest result
 
@@ -142,7 +142,7 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `b2-18-kommen-in-frame-exclusion` | `b2-18` | kommen + in | `locative-adjunct` | في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» … | `authored-review-pending` |
 | `b2-24-bitten-zu-frame-exclusion` | `b2-24` | bitten + zu | `infinitive-zu-marker` | zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten da… | `authored-review-pending` |
 | `b2-24-einreichen-zu-frame-exclusion` | `b2-24` | einreichen + zu | `infinitive-zu-marker` | zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأ… | `authored-review-pending` |
-| `b2-24-konnten-zu-frame-exclusion` | `b2-24` | konnten + zu | `infinitive-zu-marker` | zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، وkonnten فعل مساعد للإمكان لا يحكم حرف جر… | `authored-review-pending` |
+| `b2-24-konnten-zu-frame-exclusion` | `b2-24` | konnten + zu | `infinitive-zu-marker` | zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، و konnten فعل مساعد للإمكان لا يحكم حرف ج… | `authored-review-pending` |
 
 All 11 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
 

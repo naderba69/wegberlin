@@ -12,7 +12,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-01-m1",
         "promptDe": "werden Präteritum",
-        "promptAr": "اختر التعبير المطابق لـ«werden Präteritum»:",
+        "promptAr": "اختر التعبير المطابق ل «werden Präteritum»:",
         "options": [
           "wurde",
           "hat geworden",
@@ -33,7 +33,7 @@ export const localTestTemplateBankB1 = [
           "war haben"
         ],
         "correctIndex": 1,
-        "explanationAr": "hatte. تستعمل war وhatte وkonnte وmusste وwollte كثيرًا في الكلام والكتابة: Er war jung، hatte wenig Geld، musste arbeiten، konnte nicht reisen."
+        "explanationAr": "hatte. تستعمل war و hatte و konnte و musste و wollte كثيرًا في الكلام والكتابة: Er war jung، hatte wenig Geld، musste arbeiten، konnte nicht reisen."
       },
       {
         "id": "b1-01-m3",
@@ -46,12 +46,12 @@ export const localTestTemplateBankB1 = [
           "konnte"
         ],
         "correctIndex": 3,
-        "explanationAr": "konnte. تستعمل war وhatte وkonnte وmusste وwollte كثيرًا في الكلام والكتابة: Er war jung، hatte wenig Geld، musste arbeiten، konnte nicht reisen."
+        "explanationAr": "konnte. تستعمل war و hatte و konnte و musste و wollte كثيرًا في الكلام والكتابة: Er war jung، hatte wenig Geld، musste arbeiten، konnte nicht reisen."
       },
       {
         "id": "b1-01-m4",
         "promptDe": "Zeitstruktur",
-        "promptAr": "اختر التعبير المطابق لـ«Zeitstruktur»:",
+        "promptAr": "اختر التعبير المطابق ل «Zeitstruktur»:",
         "options": [
           "Während des Studiums er arbeitete.",
           "Während arbeitete Studium er.",
@@ -112,7 +112,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-02-m3",
         "promptDe": "Hypothese",
-        "promptAr": "اختر التعبير المطابق لـ«Hypothese»:",
+        "promptAr": "اختر التعبير المطابق ل «Hypothese»:",
         "options": [
           "Wenn ich würde wählen, ich umziehe.",
           "Wenn wähle ich, würde umziehen.",
@@ -120,7 +120,7 @@ export const localTestTemplateBankB1 = [
           "Wenn ich wählen müsste, würde ich umziehen."
         ],
         "correctIndex": 3,
-        "explanationAr": "شرط Konjunktiv II وwürde في الرئيسية. نستعمل würde + مصدر للتحدث عن قرار غير واقع أو مشروط: Wenn ich wählen müsste, würde ich die flexiblere Stelle nehmen."
+        "explanationAr": "شرط Konjunktiv II و würde في الرئيسية. نستعمل würde + مصدر للتحدث عن قرار غير واقع أو مشروط: Wenn ich wählen müsste, würde ich die flexiblere Stelle nehmen."
       },
       {
         "id": "b1-02-m4",
@@ -173,7 +173,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-03-m2",
         "promptDe": "Bewegung",
-        "promptAr": "اختر التعبير المطابق لـ«Bewegung»:",
+        "promptAr": "اختر التعبير المطابق ل «Bewegung»:",
         "options": [
           "Der Zug hatte abgefahren.",
           "Der Zug ist abgefahren",
@@ -234,7 +234,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-04-m1",
         "promptDe": "Passiv",
-        "promptAr": "اختر التعبير المطابق لـ«Passiv»:",
+        "promptAr": "اختر التعبير المطابق ل «Passiv»:",
         "options": [
           "Der Plan wird erstellt.",
           "Der Plan wird erstellen.",
@@ -242,7 +242,7 @@ export const localTestTemplateBankB1 = [
           "Der Plan ist erstellen."
         ],
         "correctIndex": 0,
-        "explanationAr": "werden + Partizip. يتكون Passiv الإجرائي في الحاضر من werden مصرفًا وPartizip II في النهاية: Die Texte werden geprüft."
+        "explanationAr": "werden + Partizip. يتكون Passiv الإجرائي في الحاضر من werden مصرفًا و Partizip II في النهاية: Die Texte werden geprüft."
       },
       {
         "id": "b1-04-m2",
@@ -255,7 +255,7 @@ export const localTestTemplateBankB1 = [
           "Die Texte sind prüfen."
         ],
         "correctIndex": 1,
-        "explanationAr": "Plural: werden. يتكون Passiv الإجرائي في الحاضر من werden مصرفًا وPartizip II في النهاية: Die Texte werden geprüft."
+        "explanationAr": "Plural: werden. يتكون Passiv الإجرائي في الحاضر من werden مصرفًا و Partizip II في النهاية: Die Texte werden geprüft."
       },
       {
         "id": "b1-04-m3",
@@ -308,7 +308,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-05-m1",
         "promptDe": "Beobachtung",
-        "promptAr": "اختر التعبير المطابق لـ«Beobachtung» في درس «الخلافات»:",
+        "promptAr": "اختر التعبير المطابق ل «Beobachtung» في درس «الخلافات»:",
         "options": [
           "Die Datei kam am Freitag.",
           "Du warst unpünktlich.",
@@ -347,7 +347,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-05-m4",
         "promptDe": "Vorschlag",
-        "promptAr": "اختر التعبير المطابق لـ«Vorschlag»:",
+        "promptAr": "اختر التعبير المطابق ل «Vorschlag»:",
         "options": [
           "Wir müssen die Änderung sofort bestätigen.",
           "Wir könnten direkt bestätigen.",
@@ -403,7 +403,7 @@ export const localTestTemplateBankB1 = [
           "Alle sagen das."
         ],
         "correctIndex": 2,
-        "explanationAr": "فعل ونتيجة: Ich koordinierte fünf Termine und hielt alle Fristen ein. الفعل المحدد والعدد يثبتان القدرة. لا تكتفِ بـIch bin organisiert لأنها دعوى بلا دليل."
+        "explanationAr": "فعل ونتيجة: Ich koordinierte fünf Termine und hielt alle Fristen ein. الفعل المحدد والعدد يثبتان القدرة. لا تكتفِ ب Ich bin organisiert لأنها دعوى بلا دليل."
       },
       {
         "id": "b1-06-m3",
@@ -434,7 +434,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-06-m5",
         "promptDe": "Rückfrage",
-        "promptAr": "اختر التعبير المطابق لـ«Rückfrage»:",
+        "promptAr": "اختر التعبير المطابق ل «Rückfrage»:",
         "options": [
           "Woran wird Erfolg gemessen?",
           "Was macht die Firma?",
@@ -482,7 +482,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-07-m3",
         "promptDe": "Kontrast",
-        "promptAr": "اختر التعبير المطابق لـ«Kontrast»:",
+        "promptAr": "اختر التعبير المطابق ل «Kontrast»:",
         "options": [
           "Die Miete ist niedriger; dafür ist der Weg länger.",
           "Die Miete niedriger während der Weg",
@@ -530,7 +530,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-08-m1",
         "promptDe": "Nominativ",
-        "promptAr": "اختر التعبير المطابق لـ«Nominativ»:",
+        "promptAr": "اختر التعبير المطابق ل «Nominativ»:",
         "options": [
           "der Techniker, den kommt",
           "der Techniker, der kommt",
@@ -582,7 +582,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-08-m5",
         "promptDe": "Reparaturbitte",
-        "promptAr": "اختر التعبير المطابق لـ«Reparaturbitte»:",
+        "promptAr": "اختر التعبير المطابق ل «Reparaturbitte»:",
         "options": [
           "Alles sofort!",
           "Sie kennen das Gesetz sicher.",
@@ -678,7 +678,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-10-m1",
         "promptDe": "statt",
-        "promptAr": "اختر التعبير المطابق لـ«statt»:",
+        "promptAr": "اختر التعبير المطابق ل «statt»:",
         "options": [
           "statt neu zu kaufen",
           "statt ich neu kaufe",
@@ -752,7 +752,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-11-m1",
         "promptDe": "dadurch, dass",
-        "promptAr": "اختر التعبير المطابق لـ«dadurch, dass»:",
+        "promptAr": "اختر التعبير المطابق ل «dadurch, dass»:",
         "options": [
           "dadurch, dass fahren weniger Autos",
           "dadurch indem Autos",
@@ -760,7 +760,7 @@ export const localTestTemplateBankB1 = [
           "dadurch, dass weniger Autos fahren"
         ],
         "correctIndex": 3,
-        "explanationAr": "التركيب „dadurch, dass weniger Autos fahren“ صحيح: dass تفتح جملة فرعية يذهب فعلها fahren إلى النهاية. والخيارات الأخرى تخلط بين dadurch وindem أو تقدّم الفعل قبل الفاعل."
+        "explanationAr": "التركيب „dadurch, dass weniger Autos fahren“ صحيح: dass تفتح جملة فرعية يذهب فعلها fahren إلى النهاية. والخيارات الأخرى تخلط بين dadurch و indem أو تقدّم الفعل قبل الفاعل."
       },
       {
         "id": "b1-11-m2",
@@ -773,7 +773,7 @@ export const localTestTemplateBankB1 = [
           "wir indem Wege"
         ],
         "correctIndex": 2,
-        "explanationAr": "الترتيب الصحيح „indem wir Wege kombinieren“: indem في الموقع الأول ثم الفاعل wir ثم المفعول ثم الفعل kombinieren في النهاية، وindem تربط الوسيلة بالنتيجة."
+        "explanationAr": "الترتيب الصحيح „indem wir Wege kombinieren“: indem في الموقع الأول ثم الفاعل wir ثم المفعول ثم الفعل kombinieren في النهاية، و indem تربط الوسيلة بالنتيجة."
       },
       {
         "id": "b1-11-m3",
@@ -834,12 +834,12 @@ export const localTestTemplateBankB1 = [
           "Die Termine verschieben"
         ],
         "correctIndex": 0,
-        "explanationAr": "هذا نشاط: Tauschmarkt organisieren. ابدأ بمشكلة محددة وفئة متأثرة، فالنشاط إجراء ملموس. أما Bewohner فوصف للفئة، وdie Termine verschieben لا يعالج المشكلة."
+        "explanationAr": "هذا نشاط: Tauschmarkt organisieren. ابدأ بمشكلة محددة وفئة متأثرة، فالنشاط إجراء ملموس. أما Bewohner فوصف للفئة، و die Termine verschieben لا يعالج المشكلة."
       },
       {
         "id": "b1-12-m2",
         "promptDe": "Indikator",
-        "promptAr": "اختر التعبير المطابق لـ«Indikator»:",
+        "promptAr": "اختر التعبير المطابق ل «Indikator»:",
         "options": [
           "Gute Idee",
           "Schöne Zukunft für alle",
@@ -939,7 +939,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-13-m4",
         "promptDe": "Ursache vorsichtig",
-        "promptAr": "اختر التعبير المطابق لـ«Ursache vorsichtig»:",
+        "promptAr": "اختر التعبير المطابق ل «Ursache vorsichtig»:",
         "options": [
           "Das könnte an mehreren Faktoren liegen.",
           "Nur die App war sicher der Grund.",
@@ -1000,7 +1000,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-14-m3",
         "promptDe": "Perfekt",
-        "promptAr": "اختر التعبير المطابق لـ«Perfekt»:",
+        "promptAr": "اختر التعبير المطابق ل «Perfekt»:",
         "options": [
           "Ich habe prüfen gelassen den Vertrag.",
           "Ich ließ geprüft hat.",
@@ -1074,7 +1074,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-15-m3",
         "promptDe": "Grenze",
-        "promptAr": "اختر التعبير المطابق لـ«Grenze» في درس «تقديم عرض»:",
+        "promptAr": "اختر التعبير المطابق ل «Grenze» في درس «تقديم عرض»:",
         "options": [
           "Die Methode gilt für alle Gruppen gleichermaßen.",
           "Eine Einschränkung ist die kleine Gruppe.",
@@ -1135,7 +1135,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-16-m2",
         "promptDe": "Verschiedene Subjekte",
-        "promptAr": "اختر التعبير المطابق لـ«Verschiedene Subjekte»:",
+        "promptAr": "اختر التعبير المطابق ل «Verschiedene Subjekte»:",
         "options": [
           "Statt dass die App entscheidet, wähle ich selbst",
           "Statt die App entscheidet alles",
@@ -1182,7 +1182,7 @@ export const localTestTemplateBankB1 = [
           "als ob"
         ],
         "correctIndex": 0,
-        "explanationAr": "nicht nur … sondern auch: الإطار يقدّم طرفين معطوفين، فالتكملة الصحيحة sondern auch. أما aber nur وweder noch فتقلبان المعنى إلى استدراك أو نفي مزدوج."
+        "explanationAr": "nicht nur … sondern auch: الإطار يقدّم طرفين معطوفين، فالتكملة الصحيحة sondern auch. أما aber nur و weder noch فتقلبان المعنى إلى استدراك أو نفي مزدوج."
       }
     ]
   },
@@ -1270,7 +1270,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-18-m1",
         "promptDe": "Distanz",
-        "promptAr": "اختر التعبير المطابق لـ«Distanz»:",
+        "promptAr": "اختر التعبير المطابق ل «Distanz»:",
         "options": [
           "Die Methode soll helfen.",
           "Die Methode hilft sicher.",
@@ -1344,7 +1344,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-19-m1",
         "promptDe": "Person",
-        "promptAr": "اختر التعبير المطابق لـ«Person» في درس «سوء الفهم»:",
+        "promptAr": "اختر التعبير المطابق ل «Person» في درس «سوء الفهم»:",
         "options": [
           "Was bedeutest du?",
           "Was meinst du?",
@@ -1396,7 +1396,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-19-m5",
         "promptDe": "Korrektur",
-        "promptAr": "اختر التعبير المطابق لـ«Korrektur»:",
+        "promptAr": "اختر التعبير المطابق ل «Korrektur»:",
         "options": [
           "nicht Freitag, aber Donnerstag",
           "weder Freitag sondern",
@@ -1426,7 +1426,7 @@ export const localTestTemplateBankB1 = [
           "An deiner Stelle würde ich nachfragen."
         ],
         "correctIndex": 3,
-        "explanationAr": "نصيحة افتراضية. نستعمل An deiner Stelle würde ich … وDu könntest … وEine Möglichkeit wäre … لعرض خيارات."
+        "explanationAr": "نصيحة افتراضية. نستعمل An deiner Stelle würde ich … و Du könntest … و Eine Möglichkeit wäre … لعرض خيارات."
       },
       {
         "id": "b1-20-m2",
@@ -1439,7 +1439,7 @@ export const localTestTemplateBankB1 = [
           "Du Möglichkeit."
         ],
         "correctIndex": 2,
-        "explanationAr": "صيغة خيار. نستعمل An deiner Stelle würde ich … وDu könntest … وEine Möglichkeit wäre … لعرض خيارات."
+        "explanationAr": "صيغة خيار. نستعمل An deiner Stelle würde ich … و Du könntest … و Eine Möglichkeit wäre … لعرض خيارات."
       },
       {
         "id": "b1-20-m3",
@@ -1457,7 +1457,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-20-m4",
         "promptDe": "Grenze",
-        "promptAr": "اختر التعبير المطابق لـ«Grenze» في درس «النصائح»:",
+        "promptAr": "اختر التعبير المطابق ل «Grenze» في درس «النصائح»:",
         "options": [
           "Das müsste ein Fachberater prüfen.",
           "Ich weiß sicher alles darüber und brauche keine Hilfe",
@@ -1505,7 +1505,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-21-m2",
         "promptDe": "wer … der",
-        "promptAr": "اختر التعبير المطابق لـ«wer … der»:",
+        "promptAr": "اختر التعبير المطابق ل «wer … der»:",
         "options": [
           "Wer entscheidet der, Verantwortung übernimmt.",
           "Wer der entscheidet übernimmt.",
@@ -1566,7 +1566,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-22-m1",
         "promptDe": "Gleiches Subjekt",
-        "promptAr": "اختر التعبير المطابق لـ«Gleiches Subjekt»:",
+        "promptAr": "اختر التعبير المطابق ل «Gleiches Subjekt»:",
         "options": [
           "ohne dass mich zu überfordern",
           "ohne ich überfordere",
@@ -1605,7 +1605,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-22-m4",
         "promptDe": "Ergebnisindikator",
-        "promptAr": "اختر التعبير المطابق لـ«Ergebnisindikator»:",
+        "promptAr": "اختر التعبير المطابق ل «Ergebnisindikator»:",
         "options": [
           "Die App jeden Morgen kurz und langsam öffnen",
           "Die Zahl der Klicker",
@@ -1648,7 +1648,7 @@ export const localTestTemplateBankB1 = [
           "Woran? Damit."
         ],
         "correctIndex": 2,
-        "explanationAr": "wofür/dafür. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال وda- للجواب: Wofür? Dafür."
+        "explanationAr": "wofür/dafür. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال و da- للجواب: Wofür? Dafür."
       },
       {
         "id": "b1-23-m2",
@@ -1661,12 +1661,12 @@ export const localTestTemplateBankB1 = [
           "Worüber? Damit."
         ],
         "correctIndex": 2,
-        "explanationAr": "womit/damit. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال وda- للجواب: Wofür? Dafür."
+        "explanationAr": "womit/damit. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال و da- للجواب: Wofür? Dafür."
       },
       {
         "id": "b1-23-m3",
         "promptDe": "Person",
-        "promptAr": "اختر التعبير المطابق لـ«Person» في درس «التقنية في الحياة اليومية»:",
+        "promptAr": "اختر التعبير المطابق ل «Person» في درس «التقنية في الحياة اليومية»:",
         "options": [
           "Womit arbeitest du?",
           "Damit Person.",
@@ -1674,7 +1674,7 @@ export const localTestTemplateBankB1 = [
           "Mit wem arbeitest du?"
         ],
         "correctIndex": 3,
-        "explanationAr": "mit wem للأشخاص. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال وda- للجواب: Wofür? Dafür."
+        "explanationAr": "mit wem للأشخاص. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال و da- للجواب: Wofür? Dafür."
       },
       {
         "id": "b1-23-m4",
@@ -1687,7 +1687,7 @@ export const localTestTemplateBankB1 = [
           "woran / daran"
         ],
         "correctIndex": 3,
-        "explanationAr": "r قبل حرف يبدأ بحركة. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال وda- للجواب: Wofür? Dafür."
+        "explanationAr": "r قبل حرف يبدأ بحركة. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال و da- للجواب: Wofür? Dafür."
       },
       {
         "id": "b1-23-m5",
@@ -1722,12 +1722,12 @@ export const localTestTemplateBankB1 = [
           "worüber/darüber"
         ],
         "correctIndex": 2,
-        "explanationAr": "auf. نستعمل worauf/darauf مع sich konzentrieren auf، وwovon/davon مع abhängen von، وwodurch/dadurch مع تغير بسبب وسيلة، وworüber/darüber مع berichten über."
+        "explanationAr": "auf. نستعمل worauf/darauf مع sich konzentrieren auf، و wovon/davon مع abhängen von، و wodurch/dadurch مع تغير بسبب وسيلة، و worüber/darüber مع berichten über."
       },
       {
         "id": "b1-24-m2",
         "promptDe": "abhängen von",
-        "promptAr": "اختر التعبير المطابق لـ«abhängen von»:",
+        "promptAr": "اختر التعبير المطابق ل «abhängen von»:",
         "options": [
           "wovon/davon",
           "worauf/darauf",
@@ -1735,7 +1735,7 @@ export const localTestTemplateBankB1 = [
           "wofür/dafür"
         ],
         "correctIndex": 0,
-        "explanationAr": "von. نستعمل worauf/darauf مع sich konzentrieren auf، وwovon/davon مع abhängen von، وwodurch/dadurch مع تغير بسبب وسيلة، وworüber/darüber مع berichten über."
+        "explanationAr": "von. نستعمل worauf/darauf مع sich konzentrieren auf، و wovon/davon مع abhängen von، و wodurch/dadurch مع تغير بسبب وسيلة، و worüber/darüber مع berichten über."
       },
       {
         "id": "b1-24-m3",
@@ -1748,7 +1748,7 @@ export const localTestTemplateBankB1 = [
           "worüber/darüber"
         ],
         "correctIndex": 3,
-        "explanationAr": "über. نستعمل worauf/darauf مع sich konzentrieren auf، وwovon/davon مع abhängen von، وwodurch/dadurch مع تغير بسبب وسيلة، وworüber/darüber مع berichten über."
+        "explanationAr": "über. نستعمل worauf/darauf مع sich konzentrieren auf، و wovon/davon مع abhängen von، و wodurch/dadurch مع تغير بسبب وسيلة، و worüber/darüber مع berichten über."
       },
       {
         "id": "b1-24-m4",
@@ -1766,7 +1766,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-24-m5",
         "promptDe": "Nächster Schritt",
-        "promptAr": "اختر التعبير المطابق لـ«Nächster Schritt»:",
+        "promptAr": "اختر التعبير المطابق ل «Nächster Schritt»:",
         "options": [
           "Sofortige Verallgemeinerung",
           "Daten löschen",

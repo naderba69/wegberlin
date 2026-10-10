@@ -106,7 +106,7 @@ export const b2Module5Lessons: FullLesson[] = [
  {
  id: "b2-09-t3",
  titleDe: "Partizipialattribute entschlüsseln",
- titleAr: "فك الصفات المبنية بـPartizip I وII",
+ titleAr: "فك الصفات المبنية ب Partizip I و II",
  explanationAr: "Partizip I يصف فعلًا جاريًا أو فاعلًا: die wartenden Gäste = die Gäste, die warten. Partizip II يصف غالبًا نتيجة أو معنى مجهولًا: der übersetzte Text = der Text, der übersetzt wurde. يمكن توسيع الصفة: die in Berlin aufgewachsene Autorin. تأخذ النهاية مثل الصفة العادية وفق الجنس والحالة والأداة.",
  contrastAr: "العربية غالبًا تفك التركيب إلى جملة موصولية. افعل الشيء نفسه ذهنيًا قبل تحديد من قام بالفعل ومن وقع عليه.",
  formula: "Partizip I: Verb + d + Endung | Partizip II + Adjektivendung → Relativsatz",
@@ -123,7 +123,7 @@ export const b2Module5Lessons: FullLesson[] = [
  ],
  exercises: [
  { id: "b2-09-e1", type: "multiple-choice", promptAr: "أي جملة ملاحظة لا تفسير؟", options: ["Sie war desinteressiert.", "Sie sprach in der Runde zweimal.", "Sie wollte niemanden respektieren.", "Ihre Kultur verbietet Widerspruch."], correctIndex: 1, explanationAr: "الملاحظة ما يُسجَّل لا ما يُفسَّر: عدد المرات المرئية ملاحظة، أما desinteressiert أو «ثقافته تمنع المعارضة» فتفسير يحتاج دليلًا مستقلًا عن سلوك اللحظة." },
- { id: "b2-09-e2", type: "fill-blank", promptAr: "خفف التعميم:", template: "In ___ beruflichen Kontexten wird direkte Rückmeldung erwartet.", acceptedAnswers: ["manchen", "einigen"], explanationAr: "manchen وeinigen يقيّدان التعميم: الصفة تُعرّف جزءًا من السياق لا كله، وتُبقي الجملة قابلة للنقض بوحدة مضادة؛ الصيغة المطلقة alle لا تحتاج هذا القيد لكنها تُعمّم." },
+ { id: "b2-09-e2", type: "fill-blank", promptAr: "خفف التعميم:", template: "In ___ beruflichen Kontexten wird direkte Rückmeldung erwartet.", acceptedAnswers: ["manchen", "einigen"], explanationAr: "manchen و einigen يقيّدان التعميم: الصفة تُعرّف جزءًا من السياق لا كله، وتُبقي الجملة قابلة للنقض بوحدة مضادة؛ الصيغة المطلقة alle لا تحتاج هذا القيد لكنها تُعمّم." },
  { id: "b2-09-e3", type: "word-ordering", promptAr: "رتب الصفة المركبة:", words: ["die", "als distanziert", "wahrgenommene", "Antwort"], acceptedAnswers: ["die als distanziert wahrgenommene Antwort"], explanationAr: "صفة موسّعة بحلقة مقارنة: als distanziert تُحاط بفواصل قبل الاسم، ويبقى wahrgenommene خاتمة الحلقة، فلا تُقرأ الحلقة جملة مستقلة." },
  { id: "b2-09-e4", type: "error-correction", promptAr: "صحح نهاية الصفة:", sentence: "Mit der neu hinzugekommen Kollege sprach das Team zuerst einzeln.", acceptedAnswers: ["Mit dem neu hinzugekommenen Kollegen sprach das Team zuerst einzeln"], explanationAr: "ثلاث نهايات تحمل هذه العبارة: الأداة بعد mit تأخذ -em، و Kollege من الأسماء التي تجرّ -n في وسط الكلام، والصفة بينهما تنتهي بـ -en. كتابة «der neu hinzugekommen Kollege» تُسقط العلامات الثلاث." },
  { id: "b2-09-e5", type: "matching", promptAr: "طابق العبارة بطبقتها:", pairs: [{ left: "Er unterbrach sie zweimal.", right: "Beobachtung" }, { left: "Er hielt das Thema vielleicht für dringend.", right: "Interpretation" }, { left: "Sein Verhalten war respektlos.", right: "Bewertung" }], explanationAr: "الفصل بين الطبقات يمنع تقديم الحكم واقعةً: Beobachtung ما يُرى ويُعَدّ، و Interpretation قراءة محتملة له، و Bewertung حكم قيمي. من يخلطها يُناقش خصمه بدل أن يصف سلوكًا يمكن الاتفاق عليه." },
@@ -263,7 +263,7 @@ export const b2Module5Lessons: FullLesson[] = [
  { wrong: "كل المنظورات صحيحة بنفس الدرجة دون دليل", correct: "نسمح بتعدد القراءات ونطلب تبرير كل قراءة من النص أو الحدث.", whyAr: "تعدد الموقع لا يلغي معايير الاستدلال.", trickAr: "Perspektive plus Beleg." },
  ],
  miniTest: [
- { id: "b2-09-m1", promptDe: "Beobachtung", promptAr: "اختر التعبير المطابق لـ«Beobachtung» في درس «وجهات النظر الثقافية»:", options: ["Er war arrogant.", "Er wollte die Gruppe beleidigen.", "Er sprach zweimal und verließ um zehn Uhr den Raum.", "Seine Kultur erklärt sein Verhalten."], correctIndex: 2, explanationAr: "أفعال وزمن قابلان للملاحظة. الملاحظة تصف ما يمكن سماعه أو رؤيته: من تكلم وكم ومتى." },
+ { id: "b2-09-m1", promptDe: "Beobachtung", promptAr: "اختر التعبير المطابق ل «Beobachtung» في درس «وجهات النظر الثقافية»:", options: ["Er war arrogant.", "Er wollte die Gruppe beleidigen.", "Er sprach zweimal und verließ um zehn Uhr den Raum.", "Seine Kultur erklärt sein Verhalten."], correctIndex: 2, explanationAr: "أفعال وزمن قابلان للملاحظة. الملاحظة تصف ما يمكن سماعه أو رؤيته: من تكلم وكم ومتى." },
  { id: "b2-09-m2", promptDe: "Präzise kulturelle Aussage", promptAr: "اختر الصيغة الصحيحة لحالة «Präzise kulturelle Aussage»:", options: ["In manchen Teams wird Kritik direkter formuliert; Rolle und Situation variieren.", "Alle Angehörigen eines Landes sind gleich.", "Die Nationalität erklärt jedes Schweigen.", "Es gibt keine Unterschiede innerhalb der Gruppen."], correctIndex: 0, explanationAr: "تحدد الميل والسياق والتنوع. يمكن للسياق الثقافي أن يؤثر، لكنه ليس متغيرًا وحيدًا ولا يحدد كل فرد." },
  { id: "b2-09-m3", promptDe: "Partizip I", promptAr: "أي تركيب صحيح؟", options: ["die gewartete Gäste", "die warten Gäste", "die wartend Gästen", "die wartenden Gäste"], correctIndex: 3, explanationAr: "warten + d + en. Partizip I يصف فعلًا جاريًا أو فاعلًا: die wartenden Gäste = die Gäste, die warten." },
  { id: "b2-09-m4", promptDe: "Partizip II als Attribut", promptAr: "أي خيار يحقّق «Partizip II als Attribut» في هذا السياق؟", options: ["der mehrsprachig verfassen Bericht", "der verfasst mehrsprachige Bericht", "der mehrsprachig verfasste Bericht", "dem verfasste Bericht"], correctIndex: 2, explanationAr: "Partizip II مع نهاية الصفة قبل الاسم. Partizip I يصف فعلًا جاريًا أو فاعلًا: die wartenden Gäste = die Gäste, die warten." },
@@ -293,7 +293,7 @@ export const b2Module5Lessons: FullLesson[] = [
  objectives: [
  { de: "Ich kann Informationen nach Zweck und Adressat auswählen.", ar: "أختار المعلومات وفق الغرض والجمهور." },
  { de: "Ich kann Muss-, Soll- und Kann-Aussagen präzise vermitteln.", ar: "أنقل درجات الإلزام بدقة." },
- { de: "Ich kann Bedingungen und Ausnahmen mit sofern und es sei denn bewahren.", ar: "أحفظ الشروط والاستثناءات بـsofern وes sei denn." },
+ { de: "Ich kann Bedingungen und Ausnahmen mit sofern und es sei denn bewahren.", ar: "أحفظ الشروط والاستثناءات ب sofern و es sei denn." },
  { de: "Ich kann Ergänzungen und Unsicherheiten transparent kennzeichnen.", ar: "أعلّم الإضافات وعدم اليقين بوضوح." },
  ],
  entry: {
@@ -363,7 +363,7 @@ export const b2Module5Lessons: FullLesson[] = [
  id: "b2-10-t2",
  titleDe: "Modalität bewahren",
  titleAr: "حفظ درجة الإلزام واليقين",
- explanationAr: "müssen وist erforderlich تدلان على إلزام؛ sollen/ist empfohlen على توصية أو نقل تكليف حسب السياق؛ können/dürfen على إمكانية أو سماح. لا تحول kann erstattet werden إلى wird erstattet. احفظ كذلك درجات اليقين: bestätigt، wahrscheinlich، möglicherweise، nach Angaben. إذا كان المصدر غامضًا، انقل الغموض واطلب توضيحًا.",
+ explanationAr: "müssen و ist erforderlich تدلان على إلزام؛ sollen/ist empfohlen على توصية أو نقل تكليف حسب السياق؛ können/dürfen على إمكانية أو سماح. لا تحول kann erstattet werden إلى wird erstattet. احفظ كذلك درجات اليقين: bestätigt، wahrscheinlich، möglicherweise، nach Angaben. إذا كان المصدر غامضًا، انقل الغموض واطلب توضيحًا.",
  contrastAr: "قد تتحول «يمكن» في الخلاصة بسرعة إلى «سيتم». هذه الزيادة تغير قرار المتلقي وقد تنشئ توقعًا غير موجود.",
  formula: "muss = Pflicht | sollte = Empfehlung | kann = Möglichkeit | darf = Erlaubnis",
  examples: [
@@ -391,11 +391,11 @@ export const b2Module5Lessons: FullLesson[] = [
  { de: "Der Quelle zufolge ist die Prüfung noch offen.", ar: "وفق المصدر الفحص مفتوح." },
  { de: "Zur Erklärung ergänze ich: Gemeint ist keine Garantie.", ar: "أضيف للتوضيح: لا ضمان." },
  ],
- trickAr: "ضع خطًا أحمر تحت كل sofern وes sei denn؛ يجب أن يصل معناهما إلى النسخة الجديدة ولو تغير ترتيب الجمل.",
+ trickAr: "ضع خطًا أحمر تحت كل sofern و es sei denn؛ يجب أن يصل معناهما إلى النسخة الجديدة ولو تغير ترتيب الجمل.",
  },
  ],
  exercises: [
- { id: "b2-10-e1", type: "multiple-choice", promptAr: "ما النقل الأمين لـKosten können erstattet werden؟", options: ["Die Kosten werden garantiert erstattet.", "Die Kosten müssen erstattet werden.", "Niemand darf Kosten beantragen.", "Eine Erstattung ist möglich, aber nicht garantiert."], correctIndex: 3, explanationAr: "können وحدها تُفيد إتاحة لا إلزامًا: النقل الأمين Eine Erstattung ist möglich, aber nicht garantiert. مع müssen تصير واجبًا، ومع garantiert تُضاف ثقة ليست في الأصل. فحص ذاتي: هل يُلزِم النص أم يفتح بابًا؟" },
+ { id: "b2-10-e1", type: "multiple-choice", promptAr: "ما النقل الأمين ل Kosten können erstattet werden؟", options: ["Die Kosten werden garantiert erstattet.", "Die Kosten müssen erstattet werden.", "Niemand darf Kosten beantragen.", "Eine Erstattung ist möglich, aber nicht garantiert."], correctIndex: 3, explanationAr: "können وحدها تُفيد إتاحة لا إلزامًا: النقل الأمين Eine Erstattung ist möglich, aber nicht garantiert. مع müssen تصير واجبًا، ومع garantiert تُضاف ثقة ليست في الأصل. فحص ذاتي: هل يُلزِم النص أم يفتح بابًا؟" },
  { id: "b2-10-e2", type: "fill-blank", promptAr: "أكمل الاستثناء:", template: "Die Sitzung findet statt, ___, die Mindestzahl wird nicht erreicht.", acceptedAnswers: ["es sei denn"], explanationAr: "es sei denn تُدخل استثناءً يليها فعل في المركز الثاني من الجزء الثاني بلا dass؛ أدوات مثل obwohl أو falls تحوّل العلاقة من الاستثناء إلى القيد، فتُغيّر المطلوب." },
  { id: "b2-10-e3", type: "word-ordering", promptAr: "رتب الشرط:", words: ["Die Teilnahme ist kostenlos", "sofern die Zusage", "bis Montag bestätigt wird"], acceptedAnswers: ["Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird"], explanationAr: "الجزء بشرط sofern يأتي بعد الجزء الرئيسي بفعل في نهايته، والفاصلة تفصلهما؛ الترتيب الصحيح يبدأ بالنتيجة ثم الشرط لا العكس. ويُقبل أيضًا: «Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos»." },
  { id: "b2-10-e4", type: "error-correction", promptAr: "صحح رفع درجة اليقين:", sentence: "Im Original steht: Fahrtkosten können übernommen werden. Also werden alle Fahrtkosten bezahlt.", acceptedAnswers: ["Im Original steht: Fahrtkosten können übernommen werden. Eine Übernahme ist also möglich, aber nicht garantiert"], explanationAr: "النص الأصلي يقول können أي أن التغطية ممكنة، فلا تُرفَع إلى garantiert؛ الصيغة الدقيقة تُبقي الاحتمال وتصرّح بأنه غير مضمون، وإلا صار اليقين مستعارًا من صيغة المصدر." },
@@ -481,7 +481,7 @@ export const b2Module5Lessons: FullLesson[] = [
  { wrong: "إضافة تفسيري كأنه من المصدر", correct: "Zur Erklärung ergänze ich …; diese Aussage steht nicht als Zusage im Original.", whyAr: "خلط الصوتين يمنح الإضافة سلطة لا تملكها.", trickAr: "Quelle | eigene Hilfe." },
  ],
  miniTest: [
- { id: "b2-10-m1", promptDe: "Modalität", promptAr: "ما النقل الصحيح؟", options: ["kann = Garantie", "kann = Möglichkeit", "sollte = striktes Verbot", "muss = freie Wahl"], correctIndex: 1, explanationAr: "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، وsollte نصيحة، ومuss إلزامًا." },
+ { id: "b2-10-m1", promptDe: "Modalität", promptAr: "ما النقل الصحيح؟", options: ["kann = Garantie", "kann = Möglichkeit", "sollte = striktes Verbot", "muss = freie Wahl"], correctIndex: 1, explanationAr: "kann تعبر عن الإمكانية لا اليقين: kann = Möglichkeit. أما Garantie فتحتاج مؤشرًا أقوى مثل versprechen، و sollte نصيحة، ومuss إلزامًا." },
  { id: "b2-10-m2", promptDe: "es sei denn", promptAr: "ما وظيفته؟", options: ["Den Grund bestätigen", "Jede Bedingung aufheben", "Eine Ausnahme zur Regel einführen", "Eine Möglichkeit in eine Pflicht verwandeln"], correctIndex: 2, explanationAr: "يقدم الحالة المستثناة من القاعدة. sofern/vorausgesetzt, dass يحددان شرط سريان القاعدة." },
  { id: "b2-10-m3", promptDe: "sofern", promptAr: "اختر الصحيح:", options: ["Die Zusage gilt, sofern wird sie bestätigt.", "Sofern sie wird bestätigt, gilt.", "Die Zusage sofern Bestätigung.", "Die Zusage gilt, sofern sie bestätigt wird."], correctIndex: 3, explanationAr: "الفعل في نهاية جملة الشرط. sofern/vorausgesetzt, dass يحددان شرط سريان القاعدة." },
  { id: "b2-10-m4", promptDe: "Adressatengerechte Auswahl", promptAr: "ما الذي يأتي أولًا؟", options: ["Handlung, Frist und entscheidungsrelevante Bedingungen", "Den Text ausschmücken", "Der gesamte Hintergrund der Organisation", "Die nicht angegebene Meinung des Vermittlers"], correctIndex: 0, explanationAr: "المتلقي يحتاج الفعل وما يغيره أولًا: Handlung, Frist und entscheidungsrelevante Bedingungen. لا تُغرق النص بخلفية المؤسسة قبل أن تعرف المطلوب وموعده." },

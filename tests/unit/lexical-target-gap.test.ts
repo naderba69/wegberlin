@@ -24,18 +24,18 @@ describe("lexical target-gap inventory", () => {
 
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4874,
-      covered: 1381,
+      totalCandidates: 4894,
+      covered: 1384,
       pendingHuman: 89,
-      contextualNotTarget: 3404,
-      authoredTargets: 1470,
+      contextualNotTarget: 3421,
+      authoredTargets: 1473,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1257,
+      totalCandidates: 1258,
       covered: 134,
-      pendingHuman: 4,
-      contextualNotTarget: 1119,
-      authoredTargets: 138,
+      pendingHuman: 1,
+      contextualNotTarget: 1123,
+      authoredTargets: 135,
     });
   });
 
@@ -87,8 +87,8 @@ describe("lexical target-gap inventory", () => {
     expect(reviewedPaymentFrame?.anchorIds).toEqual(["a1-11-verb-frame-2"]);
     const locativeExclusion = audit.verbFrameRows.find((row) => row.lessonId === "a1-21" && row.normalizedVerb === "umsteigen" && row.preposition === "in");
     expect(locativeExclusion).toMatchObject({status:"not-target",role:"reviewed-exclusion",exclusionDecision:{reason:"locative-adjunct",reviewStatus:"authored-review-pending"}});
-    expect(audit.exclusionDecisionCount).toBe(8);
-    expect(audit.pendingIndependentExclusionReview).toBe(8);
+    expect(audit.exclusionDecisionCount).toBe(11);
+    expect(audit.pendingIndependentExclusionReview).toBe(11);
     const reviewedFrame = audit.verbFrameRows.find((row) => row.lessonId === "b2-09" && row.normalizedVerb === "abhängen" && row.preposition === "von");
     expect(reviewedFrame?.status).toBe("covered");
     expect(reviewedFrame?.anchorIds).toEqual(["b2-09-verb-frame-2"]);

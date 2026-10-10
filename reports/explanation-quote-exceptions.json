@@ -1,0 +1,1017 @@
+{
+  "policy": "explanation-quote-exceptions-v1",
+  "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an unreviewed exception",
+  "count": 202,
+  "entries": [
+    {
+      "lessonId": "a1-01",
+      "quote": "Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller.“",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a1-03",
+      "quote": "Dazwischen ist ein Leerzeichen. Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a1-05",
+      "quote": "Ich 22 Jahre",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a1-17",
+      "quote": "zu sehen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a1-23",
+      "quote": "soll er nach …",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-01",
+      "quote": "Eine Stunde lang hat sie Deutsch gelernt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-01",
+      "quote": "Um zehn",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-01",
+      "quote": "Sie ist gekommen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-02",
+      "quote": "Plötzlich ging das Licht aus.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-02",
+      "quote": "Sein Chef hat ihn nicht gefunden, aber seine Schwester hat ihn gefunden",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-02",
+      "quote": "an-ge-rufen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-03",
+      "quote": "Als ich klein war, wohnte ich in Sfax",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-03",
+      "quote": "Ich melde mich",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-03",
+      "quote": "Ich erinnere mich an den Termin",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-04",
+      "quote": "Er hilft mir",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-04",
+      "quote": "Hilfst du mir?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-04",
+      "quote": "Kann ich ... mitbringen؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-04",
+      "quote": "Abends holt sie das Paket ab",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-05",
+      "quote": "Können Sie die Musik bitte leiser machen?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-06",
+      "quote": "Aufräumen sofort!",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-06",
+      "quote": "Könnten Sie die Musik bitte leiser machen?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-06",
+      "quote": "Wir sind schnell fertig, wenn jeder mithilft",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-06",
+      "quote": "Wir machen das abwechselnd",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-06",
+      "quote": "im Wechsel",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "für die Termine",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Ich notiere den Namen, wenn ein Kunde anruft",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "ich kümmere dich",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Wer ist dafür zuständig؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Wer zuständig für das ist؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Für wer das zuständig؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Wir kümmern uns um die Daten",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Sara kümmert sich um die Räume",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Heute macht das die Referentin, morgen David",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "nur der Teamleiter",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "nur online",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-07",
+      "quote": "Ich kümmere mich um Termine",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-09",
+      "quote": "Ich möchte wissen, ob Frau Keller da ist.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-09",
+      "quote": "ob ruft sie heute zurück",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-09",
+      "quote": "…weil seine Bestellung noch nicht angekommen ist",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-09",
+      "quote": "Hier spricht Nabil Osman von der Firma Meditex",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-10",
+      "quote": "Der frühe Zug ist so günstig wie der Bus",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-10",
+      "quote": "Für die erste Verbindung zahlen Sie 58 Euro",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-10",
+      "quote": "Diese Verbindung ist schneller als die Bahn",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-10",
+      "quote": "Diese Verbindung ist so günstig wie die andere",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-11",
+      "quote": "72 Euro pro Nacht, inklusive Frühstück",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-12",
+      "quote": "Die Heizung ist kaputt. Deshalb brauche ich ein anderes Zimmer",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-12",
+      "quote": "Könnten Sie mir ein anderes Zimmer geben؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-13",
+      "quote": "zu wenig Schlaf → früher ins Bett",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-13",
+      "quote": "wenig Bewegung → dreimal spazieren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-13",
+      "quote": "Sieben Tage weniger Ablenkung",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-14",
+      "quote": "Ich sage später, ob ich morgen kommen kann.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-14",
+      "quote": "Nach dem Termin meldet sie sich wieder",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-14",
+      "quote": "nur wenn Ben anruft",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-14",
+      "quote": "in einer Woche",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-14",
+      "quote": "… ob ich morgen arbeiten kann",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-15",
+      "quote": "Nehmen Sie das nach dem Essen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-15",
+      "quote": "Ich soll die Tablette mit Wasser nehmen.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-15",
+      "quote": "Sie nehmen … bitte!",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-15",
+      "quote": "Verträgt sich das mit meinem Medikament؟",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-15",
+      "quote": "Ist alles gut?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-16",
+      "quote": "Laut der Meldung bleibt die Straße geschlossen.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-16",
+      "quote": "Dass zwei Linien ausfallen, steht im Text",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-16",
+      "quote": "Meiner Meinung nach ist das zu teuer",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-17",
+      "quote": "Die Lehrerin schickt den Link, damit wir üben können",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-17",
+      "quote": "… damit alle entscheiden können",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-17",
+      "quote": "… ändere ich trotzdem mein Passwort und aktiviere die Zwei-Faktor-Anmeldung",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-18",
+      "quote": "Zwar ist das Handy nützlich, aber es lenkt oft ab",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-18",
+      "quote": "Ich verstehe deinen Punkt, لكنّي أراه خلافًا.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-18",
+      "quote": "...weil ich den Arbeitsweg spare",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "Wenn ich ein Wort vergesse, wiederhole ich es",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "Ich teste mich selbst",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "Fünf Wörter pro Tag lerne ich",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "pro Tag / täglich",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "Ich übe jeden Tag, um besser zu sprechen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-19",
+      "quote": "damit … zu",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-20",
+      "quote": "Bevor ich bezahle, prüfe ich die Kursziele",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-20",
+      "quote": "Bitte beachten Sie die Frist",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-21",
+      "quote": "Wir werden das Ergebnis am Sonntag vergleichen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-21",
+      "quote": "Im Oktober macht sie den A2-Kurs fertig",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-22",
+      "quote": "Ich komme gern würde",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-22",
+      "quote": "Gern würde ich kommen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-22",
+      "quote": "Vielleicht bringe ich ein Getränk mit",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-22",
+      "quote": "Den Kuchen habe ich schon",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-22",
+      "quote": "Wenn ich gestern … wurde",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-23",
+      "quote": "Der Helfer kommt um acht.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-23",
+      "quote": "Das Projekt, das Kinder unterstützt…",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-23",
+      "quote": "Die Personen, die mitmachen, treffen sich heute",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-23",
+      "quote": "eine erfahrene Person",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-24",
+      "quote": "Sowohl günstig als auch zentral ist der Ort",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-24",
+      "quote": "Entweder gehen wir jetzt oder wir bleiben",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-24",
+      "quote": "Weder kalt noch hungrig",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "a2-24",
+      "quote": "sowohl schnell als auch günstig",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-01",
+      "quote": "wurde … geboren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-01",
+      "quote": "damals",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-01",
+      "quote": "Er konnte schon früh gut programmieren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-02",
+      "quote": "Wir entscheiden uns für Plan B",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-02",
+      "quote": "Ich habe mich entschieden",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-02",
+      "quote": "Ich würde den Kurs wählen, wenn ich Zeit hätte",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-02",
+      "quote": "An deiner Stelle würde ich zuerst nachfragen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-03",
+      "quote": "Sie bekam ein Angebot, nachdem sie den Kurs beendet hatte",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-04",
+      "quote": "ist erstellt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-04",
+      "quote": "die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-05",
+      "quote": "Obwohl er geschrieben hatte, blieb die Information unklar",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-05",
+      "quote": "Wir fanden trotzdem eine Lösung",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-05",
+      "quote": "Ich würde vorschlagen, dass wir den Plan testen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-05",
+      "quote": "Ich schlage vor",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-06",
+      "quote": "Das Ergebnis war, dass die Veranstaltung pünktlich begann",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-06",
+      "quote": "Morgen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-07",
+      "quote": "…, während das Land ruhiger ist",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-07",
+      "quote": "für meine aktuelle Situation … weil ich kein Auto habe",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-08",
+      "quote": "der Techniker, den ich angerufen habe",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-08",
+      "quote": "die Vermieterin, der ich geschrieben habe, antwortet",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-08",
+      "quote": "Die Nachbarn, denen ich geholfen habe",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-09",
+      "quote": "…, indem wir den Radweg schützen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-09",
+      "quote": "Wir reduzieren Lärm, indem wir den Verkehr begrenzen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-09",
+      "quote": "…, indem sie die Stufen entfernt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-09",
+      "quote": "Die Ergebnisse werden öffentlich gemacht",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-10",
+      "quote": "Sie bestellt, ohne die Preise zu vergleichen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-10",
+      "quote": "werfen zu weg",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-10",
+      "quote": "Statt seltene Geräte zu kaufen, kann man sie leihen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-11",
+      "quote": "…dadurch, dass die Wege sicherer werden",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-12",
+      "quote": "Wir verschieben den Termin, falls der Raum nicht frei ist",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-12",
+      "quote": "werden die Ergebnisse ausgewertet",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-13",
+      "quote": "Ich mache beim Schreiben weniger Fehler",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-13",
+      "quote": "Woran erkennst du den Fortschritt?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-14",
+      "quote": "Ihr lasst euch beraten",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-14",
+      "quote": "versucht zu übersetzen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-14",
+      "quote": "Ich möchte den Abschluss anerkennen lassen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-15",
+      "quote": "Zuletzt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-16",
+      "quote": "Statt dass … zu antworten",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-16",
+      "quote": "Statt dass die App automatisch abspielt, wähle ich selbst",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-16",
+      "quote": "nicht nur die Zeit, sondern auch die Unterbrechungen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-17",
+      "quote": "empfehlenswert für Menschen, die ruhige Dramen mögen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-17",
+      "quote": "Im Mittelpunkt steht eine junge Familie",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-17",
+      "quote": "Im Zentrum steht eine junge Familie",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-18",
+      "quote": "Angeblich verdoppelt die App den Lernerfolg",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-18",
+      "quote": "24 Personen nahmen laut der Studie teil",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-18",
+      "quote": "Die Aussage ist nur teilweise richtig",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-19",
+      "quote": "Was bedeutet dieses Zeichen?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-19",
+      "quote": "Nicht Freitagabend, sondern Donnerstagabend",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-20",
+      "quote": "An deiner Stelle würde ich zuerst nachfragen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-20",
+      "quote": "Du musst … abbrechen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-20",
+      "quote": "Eine Möglichkeit wäre, die Stunden zu reduzieren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-21",
+      "quote": "Was noch fehlt, ist eine klare Frist",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-21",
+      "quote": "Eine klare Frist fehlt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-22",
+      "quote": "ohne dass ich mich überfordere",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-22",
+      "quote": "ohne dass Daten verloren gehen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-22",
+      "quote": "ohne … zu verlieren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-22",
+      "quote": "einen Zeitpuffer einplanen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-23",
+      "quote": "Wofür brauchen wir die App? – Dafür, doppelte Eingaben zu vermeiden",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-23",
+      "quote": "Womit funktioniert die App?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-23",
+      "quote": "mit dem Tablet",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-24",
+      "quote": "Worauf konzentrierst du dich? – Darauf, die Links zu prüfen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-24",
+      "quote": "von den Links",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b1-24",
+      "quote": "Es hängt davon ab, ob die Links aktuell sind",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-01",
+      "quote": "Kein allgemeines Verbot lässt sich daraus ableiten",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-02",
+      "quote": "Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-03",
+      "quote": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-04",
+      "quote": "Wir bieten unter Berücksichtigung Ihrer Prioritäten zwei Optionen an",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-05",
+      "quote": "Daraus lässt sich nicht schließen, dass…",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-05",
+      "quote": "In Gruppe B stieg der Wert deutlich, während Gruppe A stabil blieb",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-05",
+      "quote": "Der Mittelwert stieg, wohingegen die Werte in der kleinen Gruppe stark streuten",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-06",
+      "quote": "…, wobei nur die Oberfläche gemessen wurde",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-07",
+      "quote": "Dadurch, dass die Leitung jede Entscheidung begründet, entsteht Vertrauen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-07",
+      "quote": "Das Verfahren ist insofern offen, als alle Beiträge dokumentiert werden",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-10",
+      "quote": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-10",
+      "quote": "Fragt das Zentrum vor der Bewerbung, falls ihr auf Kostenübernahme angewiesen seid. Zusätzlich erklärte die Vermittlerin, dass „Einzelfallprüfung“ keine automatische Ablehnung bedeute, kennzeichnete dies aber ausdrücklich als sprachliche Erläuterung und nicht als Zusage des Zentrums.",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-12",
+      "quote": "Dagegen wird im Gespräch auf die Personalkosten hingewiesen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-14",
+      "quote": "…außerdem sind die Kosten gesunken",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-15",
+      "quote": "Damit ich die Kontrollphase nicht streiche, steht sie am Anfang",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-15",
+      "quote": "Er verschenkte neunzig Minuten, nachdem er überflogen hatte",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "hätte gelesen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "wäre gekommen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "wäre nach Berlin gefahren",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "Hätte ich die Frist gekannt, …",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "als ob er die Frist gekannt hätte",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "als ich ankam",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "als ob ich ankäme",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "hätte … sollen/wollen/müssen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "hätte … gesollt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "geLESEN hätte",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-16",
+      "quote": "STELLen sollen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "Das lässt sich belegen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "Die Nachreichung ist zumutbar",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "ist … zu + المصدر",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "wir können",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "beibringen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "Das Formular ließ sich damals nicht online ausfüllen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-17",
+      "quote": "sind … beizufügen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-18",
+      "quote": "Ab-schluss",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-18",
+      "quote": "BerückSICHTigung",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "Sie haben die Frist übersehen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "Sie haben die Frist doch übersehen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "Hast du das nicht bekommen?",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "Das habe ich dir doch gesagt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "jedoch/alles in allem",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-19",
+      "quote": "Das wird schon klappen",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-20",
+      "quote": "Zwar fehlt uns die Rückmeldung, aber die Frist ist dokumentiert",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-21",
+      "quote": "Die Sprecherin sagte, die Lage sei angespannt",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-22",
+      "quote": "Danach formulierte sie neu: „Das Prüfungsamt hält die Entscheidung vom 4. März aufrecht.“",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-23",
+      "quote": "die Überprüfung der Zahlungen durch die Verwaltung",
+      "status": "unreviewed"
+    },
+    {
+      "lessonId": "b2-24",
+      "quote": "Senden Sie uns die Bestätigung, bevor die Frist abläuft",
+      "status": "unreviewed"
+    }
+  ]
+}

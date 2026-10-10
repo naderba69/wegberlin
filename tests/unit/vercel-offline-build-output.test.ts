@@ -7,6 +7,7 @@ import { gzipSync } from "node:zlib";
 import { generateOfflineSizeManifest } from "../../scripts/generate-offline-size-manifest.mjs";
 import { auditJavaScriptBudgets } from "../../scripts/audit-js-budgets.mjs";
 import { discoverBuiltPayloads } from "../../scripts/lib/built-payloads.mjs";
+import { discoverStaticContrastInputs } from "../../scripts/lib/static-contrast-inputs.mjs";
 
 const temporary: string[] = [];
 afterEach(async () => { await Promise.all(temporary.splice(0).map(root => rm(root, { recursive: true, force: true }))); });
@@ -48,6 +49,34 @@ async function fixture(kind: "local" | "adapter" | "cli" = "local") {
 }
 
 describe("postbuild Offline measurement after a Vercel Next adapter", () => {
+  it("discovers static contrast inputs in a normal Next build", async () => {
+    const { root, statics } = await fixture();
+    const inputs = await discoverStaticContrastInputs(root);
+    expect(inputs.kind).toBe("next-server-app");
+    expect(inputs.pages.map((page) => page.key)).toEqual(["index", "lernen/a1-01"]);
+    expect(inputs.cssFiles).toEqual([path.join(root, statics, "css/styles.css")]);
+  });
+  it.each(["adapter", "cli"] as const)("discovers prerendered contrast inputs in the %s Build Output API layout", async (kind) => {
+    const { root, prefix, statics } = await fixture(kind);
+    const inputs = await discoverStaticContrastInputs(root);
+    expect(inputs.kind).toBe("build-output-api-v3");
+    expect(inputs.pages.map((page) => page.key)).toEqual(["index", "lernen/a1-01"]);
+    expect(inputs.pages.every((page) => page.file.startsWith(`${path.join(root, prefix, "functions")}${path.sep}`))).toBe(true);
+    expect(inputs.cssFiles).toEqual([path.join(root, statics, "css/styles.css")]);
+  });
+  it("discovers static HTML contrast pages declared only by Build Output API overrides", async () => {
+    const { root, prefix } = await fixture("adapter");
+    await rm(path.join(root, prefix, "functions/index.prerender-config.json"));
+    await rm(path.join(root, prefix, "functions/lernen/a1-01.prerender-config.json"));
+    await put(root, `${prefix}/config.json`, JSON.stringify({ version: 3, overrides: { ".html": { path: "/" }, "lernen/a1-01.html": { path: "lernen/a1-01" } } }));
+    await put(root, `${prefix}/static/.html`, html);
+    await put(root, `${prefix}/static/lernen/a1-01.html`, html);
+
+    const inputs = await discoverStaticContrastInputs(root);
+    expect(inputs.pages.map((page) => page.key)).toEqual(["index", "lernen/a1-01"]);
+    expect(inputs.pages.find((page) => page.key === "index")?.file).toBe(path.join(root, prefix, "static/.html"));
+    expect(inputs.pages.find((page) => page.key === "lernen/a1-01")?.file).toBe(path.join(root, prefix, "static/lernen/a1-01.html"));
+  });
   it("preserves the normal Next server/app build and exact gzip accounting", async () => {
     const { root } = await fixture(); const result = await generateOfflineSizeManifest({ projectRoot: root });
     expect(result.packs[0].routeRawBytes).toBe(html.length * 2 + webmanifest.length);

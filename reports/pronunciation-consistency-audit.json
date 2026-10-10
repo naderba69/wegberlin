@@ -1,0 +1,13 @@
+{
+ "format": "dwnb-pronunciation-consistency-audit",
+ "version": "pronunciation-consistency-audit-v1",
+ "generatedAt": "2026-10-04",
+ "policyVersion": "ch-grapheme-ipa-consistency-v1",
+ "boundary": "grapheme-to-transcription-spot-check-no-acoustic-verification-of-tabulated-ipa",
+ "ok": true,
+ "lessons": 96,
+ "items": 576,
+ "alignedItems": 350,
+ "skippedItems": 226,
+ "issues": []
+}

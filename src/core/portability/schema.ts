@@ -2,6 +2,7 @@ import { z } from "zod";
 import { DEFAULT_ACCESSIBILITY_PREFERENCES } from "@/core/accessibility/preferences";
 import { DEFAULT_MOTIVATION_PREFERENCES } from "@/core/coach/motivation-preferences";
 import { CURRENT_CURRICULUM_VERSION, SUPPORTED_CURRICULUM_VERSIONS } from "@/config/curriculum-version";
+import { DIAGNOSTIC_PRODUCTIVE_PROMPT_ID, DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION, PRODUCTIVE_SAMPLE_COMPARISON_BOUNDARY, PRODUCTIVE_SAMPLE_COMPARISON_POLICY, PRODUCTIVE_SAMPLE_FOLLOW_UP_MS } from "@/core/diagnostic/productive-sample";
 
 const onboardingLearningContextSchema=z.object({
   policyVersion:z.literal("prior-experience-context-v1"),
@@ -32,7 +33,40 @@ const profileSchema = z.object({
   createdAt: z.string(),
 });
 
-const diagnosticSchema = z.object({
+const diagnosticProductiveSampleSchema = z.object({
+  policyVersion: z.literal(DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION),
+  promptId: z.literal(DIAGNOSTIC_PRODUCTIVE_PROMPT_ID),
+  mode: z.enum(["writing", "speaking", "writing-and-speaking", "not-yet"]),
+  writingText: z.string().optional(),
+  writingWordCount: z.number().int().nonnegative(),
+  speakingMediaId: z.string().optional(),
+  speakingDurationSeconds: z.number().int().positive().optional(),
+  selfAssessment: z.enum(["independent", "with-help", "not-yet"]),
+  evaluationBoundary: z.literal("self-evidence-no-automated-language-score"),
+  submittedAt: z.string(),
+}).strict();
+
+const productiveSampleComparisonSchema = z.object({
+  policyVersion: z.literal(PRODUCTIVE_SAMPLE_COMPARISON_POLICY),
+  baseline: diagnosticProductiveSampleSchema,
+  followUpDueAt: z.string(),
+  followUp: diagnosticProductiveSampleSchema.optional(),
+  evidenceBoundary: z.literal(PRODUCTIVE_SAMPLE_COMPARISON_BOUNDARY),
+}).strict().superRefine((comparison, context) => {
+  const baselineAt = Date.parse(comparison.baseline.submittedAt);
+  const dueAt = Date.parse(comparison.followUpDueAt);
+  if (!Number.isFinite(baselineAt) || !Number.isFinite(dueAt) || dueAt !== baselineAt + PRODUCTIVE_SAMPLE_FOLLOW_UP_MS) {
+    context.addIssue({ code:"custom", message:"Productive comparison must schedule the same intake baseline exactly 28 days later." });
+  }
+  if (comparison.followUp) {
+    const followUpAt = Date.parse(comparison.followUp.submittedAt);
+    if (comparison.followUp.promptId !== comparison.baseline.promptId || !Number.isFinite(followUpAt) || !Number.isFinite(dueAt) || followUpAt < dueAt) {
+      context.addIssue({ code:"custom", message:"Productive follow-up must use the baseline prompt and be submitted no earlier than its four-week due time." });
+    }
+  }
+});
+
+export const diagnosticSchema = z.object({
   estimatedLevel: z.enum(["A1", "A2", "B1", "B2"]),
   score: z.number().int().nonnegative(),
   maxScore: z.number().int().positive(),
@@ -48,18 +82,8 @@ const diagnosticSchema = z.object({
   questionsAnswered: z.number().int().positive().optional(),
   stoppedEarly: z.boolean().optional(),
   confidence: z.enum(["low", "medium", "high"]).optional(),
-  productiveSample: z.object({
-    policyVersion: z.literal("diagnostic-productive-sample-v1"),
-    promptId: z.literal("diagnostic-self-introduction-v1"),
-    mode: z.enum(["writing", "speaking", "writing-and-speaking", "not-yet"]),
-    writingText: z.string().optional(),
-    writingWordCount: z.number().int().nonnegative(),
-    speakingMediaId: z.string().optional(),
-    speakingDurationSeconds: z.number().int().positive().optional(),
-    selfAssessment: z.enum(["independent", "with-help", "not-yet"]),
-    evaluationBoundary: z.literal("self-evidence-no-automated-language-score"),
-    submittedAt: z.string(),
-  }).optional(),
+  productiveSample: diagnosticProductiveSampleSchema.optional(),
+  reviewAnswers: z.object({ formId: z.enum(["A", "B"]), wrong: z.record(z.string(), z.number().int().nonnegative()) }).optional(),
   completedAt: z.string(),
 });
 
@@ -153,6 +177,7 @@ export const learningStateSchema = z.object({
   curriculumVersion: z.enum(SUPPORTED_CURRICULUM_VERSIONS).default(CURRENT_CURRICULUM_VERSION),
   profile: profileSchema.nullable(),
   diagnosticResult: diagnosticSchema.nullable(),
+  productiveSampleComparison: productiveSampleComparisonSchema.nullable().default(null),
   diagnosticSessionDraft:z.object({policyVersion:z.literal("fatigue-pause-resume-diagnostic-v1"),formId:z.enum(["A","B"]),questionIds:z.array(z.string()).min(1).max(16),index:z.number().int().min(0).max(15),answers:z.record(z.string(),z.number().int().min(0).max(3)),status:z.enum(["paused","active"]),pauseReason:z.literal("learner-fatigue"),evidenceBoundary:z.literal("resume-process-only-no-score-mastery-or-fatigue-diagnosis"),updatedAt:z.string()}).strict().nullable().default(null),
   skillDiagnosticAttempts: z.array(z.object({id:z.string(),policyVersion:z.literal("single-skill-diagnostic-v1"),skill:z.enum(["grammar","vocabulary","reading","listening"]),formId:z.enum(["A","B"]),questionIds:z.array(z.string()).length(4),correctByLevel:z.object({A1:z.boolean(),A2:z.boolean(),B1:z.boolean(),B2:z.boolean()}),correctCount:z.number().int().min(0).max(4),attemptedCount:z.literal(4),recommendedFocusLevel:z.enum(["A1","A2","B1","B2"]),priorDiagnosticCompletedAt:z.string(),evidenceBoundary:z.literal("skill-sample-planning-only-no-level-change"),createdAt:z.string()})).default([]),
   learningContracts: z.array(z.object({id:z.string(),policyVersion:z.literal("fourteen-day-learning-contract-v1"),revision:z.number().int().positive(),previousContractId:z.string().optional(),startsOn:z.string(),endsOn:z.string(),goal:z.enum(["exam","work","study","daily-life","settlement"]),dailyMinutes:z.union([z.literal(10),z.literal(20),z.literal(30),z.literal(45),z.literal(60),z.literal(90)]),studyWeekdays:z.array(z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5),z.literal(6),z.literal(7)])).min(1),evidenceBoundary:z.literal("planning-commitment-no-mastery-or-gate"),createdAt:z.string()})).default([]),
@@ -171,7 +196,7 @@ export const learningStateSchema = z.object({
   currentLessonId: z.string(),
   currentStage: z.number().int().min(0).max(13),
   lessonProgress: z.record(z.string(), z.number().int().min(0).max(13)),
-  exerciseAttempts: z.array(z.object({ id:z.string(), lessonId:z.string(), exerciseId:z.string(), answer:z.string(), correct:z.boolean(), confidence:z.enum(["low","medium","high"]).optional(), answerIndex:z.number().int().nonnegative().optional(), shuffleSeed:z.string().optional(), shuffleVersion:z.literal("lesson-shuffle-v1").optional(), responseTimeMs:z.number().int().min(0).max(1_800_000).optional(), answerChangeCount:z.number().int().min(0).max(100).optional(), uncertaintyKind:z.enum(["knowledge-recall","guess","instruction-unclear"]).optional(), processPolicyVersion:z.literal("bounded-attempt-process-v1").optional(), evidenceContext:z.object({policyVersion:z.literal("independent-assessment-v1"),kind:z.enum(["level-check","placement-challenge","endurance"]),level:z.enum(["A1","A2","B1","B2"]),formId:z.enum(["A","B"]),runId:z.string().min(1),independent:z.boolean(),expectedItems:z.number().int().min(1).max(100)}).strict().optional(), createdAt:z.string() }).strict().superRefine((attempt,context)=>{const hasProcess=attempt.responseTimeMs!==undefined||attempt.answerChangeCount!==undefined||attempt.uncertaintyKind!==undefined;if(hasProcess&&!attempt.processPolicyVersion)context.addIssue({code:"custom",message:"Attempt process metadata requires its policy version."});})),
+  exerciseAttempts: z.array(z.object({ id:z.string(), lessonId:z.string(), exerciseId:z.string(), answer:z.string(), correct:z.boolean(), confidence:z.enum(["low","medium","high"]).optional(), answerIndex:z.number().int().nonnegative().optional(), shuffleSeed:z.string().optional(), shuffleVersion:z.literal("lesson-shuffle-v1").optional(), responseTimeMs:z.number().int().min(0).max(1_800_000).optional(), answerChangeCount:z.number().int().min(0).max(100).optional(), uncertaintyKind:z.enum(["knowledge-recall","guess","instruction-unclear"]).optional(), processPolicyVersion:z.literal("bounded-attempt-process-v1").optional(), evidenceContext:z.object({policyVersion:z.literal("independent-assessment-v1"),kind:z.enum(["level-check","placement-challenge","endurance"]),level:z.enum(["A1","A2","B1","B2"]),formId:z.enum(["A","B","C","D"]),runId:z.string().min(1),independent:z.boolean(),expectedItems:z.number().int().min(1).max(100)}).strict().optional(), createdAt:z.string() }).strict().superRefine((attempt,context)=>{const hasProcess=attempt.responseTimeMs!==undefined||attempt.answerChangeCount!==undefined||attempt.uncertaintyKind!==undefined;if(hasProcess&&!attempt.processPolicyVersion)context.addIssue({code:"custom",message:"Attempt process metadata requires its policy version."});})),
   dueReviews: z.number().int().nonnegative(),
   mastery: z.record(z.string(), z.number().min(0).max(100)),
   masteryEvidenceEvents:z.array(z.object({id:z.string().min(1).max(500),policyVersion:z.literal("event-derived-mastery-v1"),key:z.string().min(1).max(240),operation:z.enum(["set","increment","delete"]),value:z.number().min(-100).max(100).optional(),previousValue:z.number().min(0).max(100).optional(),resultingValue:z.number().min(0).max(100).optional(),source:z.enum(["diagnostic-assessment","lesson-evidence","module-assessment","level-assessment","targeted-exam","full-exam-workflow","other-learning-evidence"]),evidenceRefs:z.array(z.string().min(1).max(500)).max(64),evidenceBoundary:z.literal("event-log-authoritative-for-new-mutations-legacy-snapshot-fallback-explicit"),createdAt:z.string()}).strict().superRefine((event,context)=>{if(event.operation==="delete"&&event.value!==undefined)context.addIssue({code:"custom",message:"Delete mastery event must omit value."});if(event.operation!=="delete"&&event.value===undefined)context.addIssue({code:"custom",message:"Set/increment mastery event requires value."});if(event.operation==="delete"&&event.resultingValue!==undefined)context.addIssue({code:"custom",message:"Delete mastery event must omit resultingValue."});})).default([]),
@@ -318,6 +343,7 @@ export const learningStateSchema = z.object({
   dictationAttempts:z.array(z.object({id:z.string(),policyVersion:z.literal("adaptive-partial-full-dictation-v1"),itemId:z.string().min(1).max(120),level:z.enum(["A1","A2","B1","B2"]),mode:z.enum(["partial","full"]),exact:z.boolean(),wordAccuracyPercent:z.number().int().min(0).max(100),errorCount:z.number().int().nonnegative(),playbackCount:z.number().int().positive(),retryOf:z.string().optional(),evidenceBoundary:z.literal("local-form-summary-no-answer-text-cefr-mastery-or-exam-score"),createdAt:z.string()}).strict().superRefine((attempt,context)=>{if(attempt.exact!==(attempt.errorCount===0&&attempt.wordAccuracyPercent===100))context.addIssue({code:"custom",message:"Dictation exactness must match its bounded summary."});})).default([]),
   branchingConversationAttempts:z.array(z.object({id:z.string(),policyVersion:z.literal("offline-branching-conversation-v1"),scenarioId:z.string().min(1).max(120),level:z.enum(["A1","A2","B1","B2"]),mode:z.enum(["guided","challenge"]),choiceIds:z.array(z.string().min(1).max(160)).min(1).max(3),outcome:z.enum(["goal-reached","partial","restart-recommended"]),completedTurns:z.number().int().min(1).max(3),supportOpenCount:z.number().int().min(0).max(12),engine:z.literal("deterministic-local-tree"),evidenceBoundary:z.literal("structured-local-simulation-no-free-text-ai-live-partner-mastery-or-cefr"),createdAt:z.string()}).strict().superRefine((attempt,context)=>{if(attempt.completedTurns!==attempt.choiceIds.length)context.addIssue({code:"custom",message:"Conversation turn count must match choice provenance."});})).default([]),
   collocationNetworkAttempts:z.array(z.object({id:z.string(),policyVersion:z.literal("contextual-collocation-network-v1"),networkId:z.string().min(1).max(120),level:z.enum(["A1","A2","B1","B2"]),mode:z.enum(["guided","challenge"]),visitedNodeIds:z.array(z.string().min(1).max(160)).length(3),targetNodeIds:z.array(z.string().min(1).max(160)).length(3),selectedNodeIds:z.array(z.string().min(1).max(160)).length(3),correctCount:z.number().int().min(0).max(3),total:z.literal(3),engine:z.literal("deterministic-context-match"),evidenceBoundary:z.literal("structured-context-practice-no-free-text-ai-mastery-or-cefr"),createdAt:z.string()}).strict().superRefine((attempt,context)=>{if(new Set(attempt.visitedNodeIds).size!==3||new Set(attempt.targetNodeIds).size!==3)context.addIssue({code:"custom",message:"Collocation attempt requires three unique explored targets."});if(attempt.correctCount!==attempt.targetNodeIds.filter((id,index)=>id===attempt.selectedNodeIds[index]).length)context.addIssue({code:"custom",message:"Collocation correctness must match selected target IDs."});})).default([]),
+  cohesionRewriteAttempts:z.array(z.object({id:z.string(),policyVersion:z.literal("cohesion-unit-v1"),itemId:z.string().min(1).max(80),connectorDe:z.string().min(1).max(40),level:z.enum(["A2","B1"]),ruleKind:z.enum(["verb-second","verb-final","element-connector"]),text:z.string().min(1).max(600),ok:z.boolean(),checkFlags:z.object({connectorPresent:z.boolean(),verbFinal:z.boolean(),verbSecond:z.boolean(),bothClausesPresent:z.boolean()}),issuesAr:z.array(z.string().max(240)).max(8),engine:z.literal("deterministic-rule-check"),evidenceBoundary:z.literal("rule-based-rewrite-check-not-style-or-fluency-assessment"),createdAt:z.string()})).default([]),
   supportUsageEvents: z.array(z.object({
     id:z.string(),policyVersion:z.literal("support-usage-v1"),kind:z.enum(["hint","reading-translation","listening-transcript","writing-model","mediation-model","library-transcript","shadowing-transcript"]),surface:z.enum(["lesson","writing-lab","mediation-lab","library","shadowing"]),contentId:z.string().min(1),lessonId:z.string().optional(),supportLevel:z.union([z.literal(1),z.literal(2)]).optional(),afterCommit:z.boolean(),evidenceBoundary:z.literal("support-context-no-correctness-or-mastery"),createdAt:z.string(),
   })).default([]),

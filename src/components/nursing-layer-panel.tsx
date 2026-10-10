@@ -25,7 +25,7 @@ export function NursingLayerPanel({ lessonId, level, onSpeak }: { lessonId: stri
   const units = nursingUnitsForLesson(lessonId);
   const [chosenIndex, setChosenIndex] = useState<Record<string, number>>({});
   const [copied, setCopied] = useState(false);
-  const [hidden,setHidden]=useState(false);
+  const [hidden,setHidden]=useState(true); // مخفية افتراضيًا: لا مراجعة مهنية بعد (تدقيق 2026-10-10)
   const [practiceSeconds,setPracticeSeconds]=useState(0);
   const [practiceStarted,setPracticeStarted]=useState(false);
   const maximumMinutes=level==="A1"||level==="A2"?2:5;
@@ -33,7 +33,7 @@ export function NursingLayerPanel({ lessonId, level, onSpeak }: { lessonId: stri
   if (!units.length) return null;
 
   const track = units[0].track;
-  if(hidden)return <aside className="nursing-layer-panel"><p>{NURSING_LAYER_DISCLAIMER_AR}. أخفيت الطبقة؛ المنهج العام والأدلة محفوظان دون تغيير.</p><button className="secondary-button" onClick={()=>setHidden(false)}>أظهر الطبقة الاختيارية</button></aside>;
+  if(hidden)return <aside className="nursing-layer-panel"><p>{NURSING_LAYER_DISCLAIMER_AR}. الطبقة الاختيارية مخفية حتى تراجعها مختصة في التمريض؛ المنهج العام والأدلة محفوظان دون تغيير.</p><button className="secondary-button" onClick={()=>setHidden(false)}>أظهر الطبقة الاختيارية (بانتظار المراجعة المهنية)</button></aside>;
   const tsv = nursingReviewTsvForLesson(lessonId);
   const copyTsv = async () => {
     if (!tsv) return;

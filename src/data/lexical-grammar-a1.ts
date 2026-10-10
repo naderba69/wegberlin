@@ -64,7 +64,7 @@ const nounSeeds: Record<string, readonly NounSeed[]> = {
 
 const additionalNounSeeds: Partial<Record<string, readonly NounSeed[]>> = {
   "a1-01": [["Karte", "feminine", "Karten", "البطاقة"]],
-  "a1-02": [["Geste", "feminine", "Gesten", "الإشارة / الحركة"], ["Muttersprache", "feminine", "Muttersprachen", "اللغة الأم"], ["Pause", "feminine", "Pausen", "الاستراحة"], ["Deutsch", "neuter", null, "اللغة الألمانية؛ تأتي غالبًا دون أداة مع sprechen وlernen"]],
+  "a1-02": [["Geste", "feminine", "Gesten", "الإشارة / الحركة"], ["Muttersprache", "feminine", "Muttersprachen", "اللغة الأم"], ["Pause", "feminine", "Pausen", "الاستراحة"], ["Deutsch", "neuter", null, "اللغة الألمانية؛ تأتي غالبًا دون أداة مع sprechen و lernen"]],
   "a1-03": [["Adresse", "feminine", "Adressen", "العنوان"], ["Fehler", "masculine", "Fehler", "الخطأ"], ["Formular", "neuter", "Formulare", "الاستمارة"], ["Leerzeichen", "neuter", "Leerzeichen", "الفراغ بين الكلمات"], ["Nachname", "masculine", "Nachnamen", "اسم العائلة", "Nachnamen"], ["Vorname", "masculine", "Vornamen", "الاسم الأول", "Vornamen"]],
   "a1-04": [["Bruder", "masculine", "Brüder", "الأخ"], ["Eltern", "plural-only", "Eltern", "الوالدان / الأهل"], ["Mitte", "feminine", null, "الوسط"], ["Nähe", "feminine", null, "المكان القريب / الجوار"], ["Schwester", "feminine", "Schwestern", "الأخت"], ["Sohn", "masculine", "Söhne", "الابن"], ["Sonntag", "masculine", "Sonntage", "يوم الأحد"], ["Tochter", "feminine", "Töchter", "الابنة"]],
   "a1-05": [["E-Mail-Adresse", "feminine", "E-Mail-Adressen", "عنوان البريد الإلكتروني"], ["Gruppe", "feminine", "Gruppen", "المجموعة"], ["Kontaktdaten", "plural-only", "Kontaktdaten", "بيانات الاتصال"], ["Liste", "feminine", "Listen", "القائمة"], ["Sportverein", "masculine", "Sportvereine", "النادي الرياضي"], ["Telefonnummer", "feminine", "Telefonnummern", "رقم الهاتف"], ["Übungsdaten", "plural-only", "Übungsdaten", "بيانات التمرين"]],
@@ -113,7 +113,7 @@ const frameSeeds: Record<string, FrameSeed> = {
   "a1-21": { infinitive: "warten", preposition: "auf", governedCase: "accusative", chunkDe: "auf den Zug warten", meaningAr: "ينتظر القطار", exampleDe: "Wir warten auf den Zug.", contrastAr: "warten auf يطلب Akkusativ: auf den Zug." },
   "a1-22": { infinitive: "leiden", preposition: "an", governedCase: "dative", chunkDe: "an Rückenschmerzen leiden", meaningAr: "يعاني من آلام الظهر", exampleDe: "Er leidet an Rückenschmerzen.", contrastAr: "leiden an يأتي مع Dativ في هذا المعنى." },
   "a1-23": { infinitive: "sprechen", preposition: "mit", governedCase: "dative", chunkDe: "mit dem Arzt sprechen", meaningAr: "يتحدث مع الطبيب", exampleDe: "Ich spreche mit dem Arzt.", contrastAr: "الشخص بعد mit يأتي في Dativ: mit dem Arzt." },
-  "a1-24": { infinitive: "helfen", preposition: "bei", governedCase: "dative", chunkDe: "bei einem Formular helfen", meaningAr: "يساعد في استمارة", exampleDe: "Sie hilft bei einem Formular.", contrastAr: "helfen bei يربط المساعدة بالمهمة، وbei يطلب Dativ." },
+  "a1-24": { infinitive: "helfen", preposition: "bei", governedCase: "dative", chunkDe: "bei einem Formular helfen", meaningAr: "يساعد في استمارة", exampleDe: "Sie hilft bei einem Formular.", contrastAr: "helfen bei يربط المساعدة بالمهمة، و bei يطلب Dativ." },
 };
 
 const additionalFrameSeeds: Partial<Record<string, readonly FrameSeed[]>> = {

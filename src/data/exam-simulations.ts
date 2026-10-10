@@ -68,7 +68,7 @@ export const targetedExamSimulations: TargetedExamSimulation[] = [
     titleAr: "خدمات جديدة في الحي",
     descriptionAr: "تدريب أصلي على مطابقة خمسة نصوص بعشرة عناوين. يحاكي نوع مهمة telc Leseverstehen Teil 1 فقط، وليس القسم الكتابي الكامل.",
     practiceMinutes: 15,
-    timingNoteAr: "15 دقيقة هدف تدريبي داخل التطبيق، وليست مدة رسمية مستقلة. في telc تُدار القراءة وSprachbausteine داخل كتلة مشتركة مدتها 90 دقيقة.",
+    timingNoteAr: "15 دقيقة هدف تدريبي داخل التطبيق، وليست مدة رسمية مستقلة. في telc تُدار القراءة و Sprachbausteine داخل كتلة مشتركة مدتها 90 دقيقة.",
     instructionsDe: "Lesen Sie zuerst die zehn Überschriften. Lesen Sie dann die fünf Texte und entscheiden Sie, welche Überschrift am besten zu welchem Text passt. Jede Überschrift kann nur einmal gewählt werden.",
     instructionsAr: "اقرأ العناوين العشرة ثم النصوص الخمسة، واختر أفضل عنوان لكل نص. لا تستعمل العنوان نفسه مرتين.",
     texts: [
@@ -175,7 +175,7 @@ export const targetedExamSimulations: TargetedExamSimulation[] = [
     titleAr: "دعوة إلى ورشة إصلاح",
     descriptionAr: "رسالة أصلية بعشر فجوات وبنك من 15 كلمة، منها خمس زائدة. تحاكي نوع telc Sprachbausteine Teil 2 فقط.",
     practiceMinutes: 15,
-    timingNoteAr: "15 دقيقة هدف تدريبي داخلي؛ القراءة وSprachbausteine يشتركان رسميًا في كتلة 90 دقيقة.",
+    timingNoteAr: "15 دقيقة هدف تدريبي داخلي؛ القراءة و Sprachbausteine يشتركان رسميًا في كتلة 90 دقيقة.",
     instructionsDe: "Lesen Sie den Text. Wählen Sie für die Lücken 31 bis 40 die passende Lösung aus a bis o. Jede Lösung kann nur einmal verwendet werden; fünf Lösungen bleiben übrig.",
     instructionsAr: "اقرأ الرسالة واختر لكل فجوة كلمة من a إلى o. لا تكرر الكلمة، وتبقى خمس كلمات زائدة.",
     texts: [
@@ -274,7 +274,7 @@ export const targetedExamSimulations: TargetedExamSimulation[] = [
     titleAr: "العثور على العرض المناسب",
     descriptionAr: "عشر حالات واثنا عشر إعلانًا أصليًا، منها إعلانان لا يُستعملان. يحاكي telc Leseverstehen Teil 3.",
     practiceMinutes: 25,
-    timingNoteAr: "25 دقيقة هدف تدريبي داخلي؛ القراءة وSprachbausteine يشتركان رسميًا في كتلة 90 دقيقة.",
+    timingNoteAr: "25 دقيقة هدف تدريبي داخلي؛ القراءة و Sprachbausteine يشتركان رسميًا في كتلة 90 دقيقة.",
     instructionsDe: "Lesen Sie die Situationen 1 bis 10 und die Anzeigen a bis l. Welche Anzeige passt zu welcher Situation? Jede Anzeige kann nur einmal verwendet werden; zwei Anzeigen bleiben übrig.",
     instructionsAr: "اقرأ الحالات العشرة والإعلانات الاثني عشر. اختر إعلانًا واحدًا لكل حالة دون تكرار؛ يبقى إعلانان زائدان.",
     texts: [

@@ -1,9 +1,8 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint ac82338f0809; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
-
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 
 ## الحالة الحاكمة — إصلاحات التعلّم، 2026-10-02
 
@@ -18,14 +17,16 @@ Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS gu
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v180؛ الحزم 59/59/59/220/319، و319/319 مسارًا، 322 generated static/SSG pages.
-- last measured source build fingerprint: 7f88c59d52ea · full 5,757,698 · JavaScript 123 chunks / 1,878,081 gzip / max 266,168؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,033,335 gzip، احتياطي 15% باقٍ.
-- Unit/Integrity tests: 1,185/1,185 in 172/172 files (measured after the repairs, not copied from a historical log). Browser verification is still being finalized; its final measured runs will be recorded here.
-- P0 = 115 implemented / 9 partial / 0 missing / 0 blocked.
+- P2-352 `neutral-self-waveform-comparison-v1`: Shadowing decodes same-origin model audio and the in-memory attempt locally, keeps 48 independently peak-normalized amplitude bins and duration only, and never aligns, scores, uploads, persists, or changes learning state; per-clip limits are 60 seconds/4 MB.
+- Offline cache: `dwnb-full-pack-v189` (staging v188; previous complete v188); the manifest remains 320/320 routes with pack counts 60/60/60/221/320. P2-276 adds hypothetical guidance on `/practice` without changing route inventory or learner schema; P2-352 local waveform comparison remains available.
+- Historical build v182 measured 2026-10-05: full `npm run check` passed; 325/325 static pages; Offline fingerprint `072383e68604`, full 6,000,079 gzip; contrast audit 323 pages / 22,940 text elements / 0 failures (586 gradient/image-backdrop skips); JS 128 chunks / 2,017,731 gzip / max 262,117. Unit/Integrity suite passed 1,352/1,352 in 199/199 files. Audio/curriculum manifests remain 544 files / 52,943,843 bytes and curriculum source 1,117,421 gzip; curriculum version is dwnb-a1-b2-2026.10-v2. These are local build metrics, not browser E2E or remote CI results.
+- Current v183 `npm run check` passed locally: lint/typecheck, `npm test` 1,355/1,355 in 200/200 files, secret/source/workflow/handoff gates, and production build. Build fingerprint `5c3bfded5f54`, Offline full 6,007,413 gzip; 325/325 static pages; contrast 323 pages / 22,960 elements / 0 failures; JS 128 / 2,017,731 gzip / max 262,117. Audio/curriculum totals are unchanged. The P2-276 Playwright test is included and the full desktop/mobile E2E job passed remotely in Quality Gate `37377109271` on head `15e457c`. Local E2E could not launch because Chromium is absent. Both Quality Gate jobs and Vercel Preview passed; Production deployment remains unclaimed.
+- Formal audits: P0 = 116 implemented / 8 partial / 0 missing / 0 blocked; P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked; P2 = 132 implemented / 5 partial / 5 not implemented / 0 blocked (142 rows). P2-276 and P2-352 are implemented without closing human-review boundaries or claiming learner outcomes.
+- P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 132 implemented / 5 partial / 5 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
-- هذه مساحة Git فعلية في `/home/user/wegberlin` على فرع Arena الحالي؛ لم يحدث Push أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
+- مساحة Git الفعلية `/home/user/wegberlin` على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى فرع تاريخي ولا ادعاء دمج في `main` أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 
 
 > Copy this entire specification into an agentic coding environment. It is the persistent source of truth for the product. The agent must save it as `AGENTS.md` or `docs/MASTER_SPEC.md`, create the companion documents required below, and keep them synchronized with the implementation.

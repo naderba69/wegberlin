@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useEffect, useRef, useState } from "react";
 import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
@@ -172,7 +173,7 @@ export function TargetedListeningSimulationView({ simulation }: { simulation: Ta
                   <strong lang="de" dir="ltr">{item.promptDe}</strong>
                   <small>إجابتك: <b {...fragmentLanguageAttributes(item.options[answers[item.id]])}>{item.options[answers[item.id]]}</b></small>
                   {!correct && <small>الصحيح: <b {...fragmentLanguageAttributes(item.options[item.correctIndex])}>{item.options[item.correctIndex]}</b></small>}
-                  <p>{item.explanationAr}</p>
+                  <p>{learnerExplanation(item.explanationAr)}</p>
                 </div>
               </article>
             );

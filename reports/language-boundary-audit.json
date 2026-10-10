@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 195,
-  "openingTagCount": 7441,
-  "germanTagCount": 422,
-  "arabicTagCount": 7,
-  "ltrTagCount": 467,
-  "rtlTagCount": 7,
+  "tsxFiles": 211,
+  "openingTagCount": 8085,
+  "germanTagCount": 446,
+  "arabicTagCount": 11,
+  "ltrTagCount": 494,
+  "rtlTagCount": 11,
   "autoDirCount": 12,
-  "technicalScopeCount": 51,
+  "technicalScopeCount": 54,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 201,
+  "mixedStaticCount": 208,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -73,47 +73,47 @@
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 27,
+      "line": 29,
       "text": "كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مستوى CEFR رسمي."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 48,
+      "line": 53,
       "text": "القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 49,
+      "line": 54,
       "text": "مفاتيح قديمة بلا Event بعد"
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 61,
+      "line": 66,
       "text": "لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يصبح درجة ذكاء أو CEFR أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 63,
+      "line": 68,
       "text": "الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف الدرس بأنه يملك عينة احتفاظ. هذا ليس إتقانًا دائمًا. سياسة `weekly-grace-v1` تسمح بفاصل يوم واحد بين يومي دراسة دون اختلاق دليل لذلك اليوم أو تصفير العودة. معدل الخطأ يحسب كل تحقق مسجل، بما فيه الإعادة، ولا يدّعي تحليل أخطاء لكل 100 كلمة من الكتابة الحرة."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 68,
+      "line": 73,
       "text": "تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 73,
+      "line": 78,
       "text": "ليس حكم CEFR"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 80,
+      "line": 83,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 82,
+      "line": 85,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -163,13 +163,23 @@
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 204,
+      "line": 206,
       "text": "سياسة الاستمرارية · weekly-grace-v1:"
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 212,
+      "line": 214,
       "text": "تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery."
+    },
+    {
+      "path": "src/components/cohesion-lab.tsx",
+      "line": 73,
+      "text": "وحدة تماسك مستقلة قبل B1"
+    },
+    {
+      "path": "src/components/cohesion-lab.tsx",
+      "line": 137,
+      "text": "الفعل المصرف في موضعه: بعد deshalb/trotzdem، وفي نهاية الجملة الفرعية بعد obwohl/damit/nachdem/bevor."
     },
     {
       "path": "src/components/collocation-network-lab.tsx",
@@ -228,7 +238,7 @@
     },
     {
       "path": "src/components/context-appropriateness-quiz.tsx",
-      "line": 27,
+      "line": 28,
       "text": "اختر الصيغة الأنسب للموقف، ثم اقرأ سبب الملاءمة. لا تُمنح mastery من هذا المختبر."
     },
     {
@@ -263,37 +273,37 @@
     },
     {
       "path": "src/components/diagnostic-productive-sample.tsx",
-      "line": 101,
+      "line": 111,
       "text": "Kurze Schreibprobe · عينة كتابة قصيرة"
     },
     {
       "path": "src/components/diagnostic-productive-sample.tsx",
-      "line": 102,
+      "line": 112,
       "text": "Kurze Sprechprobe · عينة كلام اختيارية"
     },
     {
       "path": "src/components/diagnostic-productive-sample.tsx",
-      "line": 104,
+      "line": 114,
       "text": "Wie selbstständig war das? · كيف كان إنتاجك؟"
     },
     {
       "path": "src/components/diagnostic-productive-sample.tsx",
-      "line": 107,
+      "line": 117,
       "text": "لا يوجد تصحيح أو تقدير CEFR لهذه العينة."
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 110,
+      "line": 124,
       "text": "الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا."
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 119,
+      "line": 133,
       "text": "Produktionsprobe · العينة الإنتاجية"
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 130,
+      "line": 145,
       "text": "استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني."
     },
     {
@@ -313,22 +323,22 @@
     },
     {
       "path": "src/components/endurance-lab.tsx",
-      "line": 58,
-      "text": "ثمانية سياقات أصلية من A1 إلى B2. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
+      "line": 59,
+      "text": "ستة عشر سياقًا أصليًا من A1 إلى B2، أربعة لكل مستوى. الطول والسجل يتدرجان، وهذه تدريبات إضافية لا محاكاة رسمية ولا شهادة."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 111,
+      "line": 118,
       "text": "دخلت بطاقة علاج شخصية إلى SRS."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 111,
+      "line": 118,
       "text": "تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها."
     },
     {
       "path": "src/components/error-notebook.tsx",
-      "line": 112,
+      "line": 119,
       "text": "يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط."
     },
     {
@@ -363,27 +373,27 @@
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 32,
+      "line": 33,
       "text": "ليس تقييم مدرس رسميًا ولا حكم CEFR."
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 33,
+      "line": 34,
       "text": "للاستعانة بـGemini عند الشك، اختر Gemini BYOK من"
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "مراجعة Gemini استشارية"
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "لم يُرجع Gemini مشكلة محددة بعقده؛ لا يعني ذلك أن النص خالٍ من الأخطاء."
     },
     {
       "path": "src/components/hybrid-writing-review.tsx",
-      "line": 34,
+      "line": 35,
       "text": "لا درجة رسمية، لا mastery، ولا بديل مضمون عن مدرس بشري للحالات المعقدة."
     },
     {
@@ -418,12 +428,12 @@
     },
     {
       "path": "src/components/library-view.tsx",
-      "line": 9,
+      "line": 10,
       "text": "من A1 إلى B2"
     },
     {
       "path": "src/components/library-view.tsx",
-      "line": 13,
+      "line": 14,
       "text": "Prüfungslesen: المساعدات والمعنى والاستراتيجية مخفية."
     },
     {
@@ -448,11 +458,6 @@
     },
     {
       "path": "src/components/local-pronunciation-model-control.tsx",
-      "line": 26,
-      "text": "إصدار ONNX مثبت، والتنزيل الجديد يُحظر عند تقادم التحقق."
-    },
-    {
-      "path": "src/components/local-pronunciation-model-control.tsx",
       "line": 30,
       "text": "يطلب المتصفح أوزانًا من Hugging Face ثم يحفظها محليًا. لا يُرسل اسمك أو تقدمك أو تسجيلاتك."
     },
@@ -460,6 +465,11 @@
       "path": "src/components/local-pronunciation-model-control.tsx",
       "line": 35,
       "text": "المطابقة تقول ما إذا استطاع ASR سماع الكلمات المتوقعة. فشل كلمة قد يكون من الضوضاء أو الميكروفون، وليس حكمًا قاطعًا على النطق. لا تنزيل تلقائي ولا إرسال صوت."
+    },
+    {
+      "path": "src/components/local-test-generator.tsx",
+      "line": 131,
+      "text": "هذه مراجعة لأسئلة الدروس التي اخترتها، وليست درجة CEFR أو حكمًا على إتقانك."
     },
     {
       "path": "src/components/motivation-preferences-control.tsx",
@@ -727,6 +737,16 @@
       "text": "يحفظ السجل السيناريو والخطوات وأطوال الرد فقط، لا نص المعاملة. لا إرسال ولا نتيجة لغوية ولا mastery."
     },
     {
+      "path": "src/components/productive-sample-comparison.tsx",
+      "line": 129,
+      "text": "هذه مقارنة ذاتية وصفية: عدد كلمات، مدة تسجيل، وتقدير تختاره أنت. لا نفحص صحة النص أو النطق، ولا نستنتج طلاقة أو مستوى CEFR أو إتقانًا."
+    },
+    {
+      "path": "src/components/productive-sample-comparison.tsx",
+      "line": 137,
+      "text": "التقدير الإنتاجي يقارن حجم ما اخترت إنتاجه وتقييمك الذاتي فقط. لا يصحح التطبيق الكتابة أو الكلام، ولا ينتج درجة لغة أو CEFR."
+    },
+    {
       "path": "src/components/pronunciation-articulation-lab.tsx",
       "line": 34,
       "text": "vereinfachte Lernskizze · رسم تعليمي مبسط"
@@ -788,77 +808,82 @@
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 215,
+      "line": 223,
       "text": "تقدمك في IndexedDB. مفتاح AI أو عنوان Ollama يبقى في Session Storage ويُستبعد من النسخ الاحتياطية."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 235,
-      "text": "لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية."
+      "line": 258,
+      "text": "ما يُنزَّل إلى جهازك مرة واحدة (Whisper وWebGPU)، وما يعمل بلا إنترنت، وحدود كل نموذج."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 238,
+      "line": 276,
       "text": "ملف محمول قابل للتحقق بـSHA-256."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 240,
+      "line": 278,
       "text": "التسجيلات الصوتية محفوظة في Media Store منفصل."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 243,
+      "line": 281,
       "text": "تصدير .dwnb"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 244,
+      "line": 282,
       "text": "يشمل التقدم والخطة والأخطاء والكتابة وسجل المرشد المنظم، ويمكن تضمين التسجيلات وتشفير الحمولة بـAES-GCM. عبارة المرور ومفتاح API مستبعدان دائمًا."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 245,
+      "line": 283,
       "text": "دعم نسخ DWNB القديمة"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 245,
+      "line": 283,
       "text": "v1 قديم ومدعوم للاستيراد حتى 2027-03-31 مع تحذير واضح. v2 غير مشفر وv3 مشفر صيغتان حاليتان، ومضمون دعمهما على الأقل حتى 2027-09-30. لا تُرفض نسخة مدعومة بصمت."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 252,
+      "line": 294,
       "text": "عنوان Ollama المحلي"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 252,
+      "line": 294,
       "text": "مفتاح API"
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 255,
+      "line": 297,
       "text": "طلب Descriptor واحد بموافقتك، بلا محتوى تعليمي. unknown تعني أن الوصف لم يصرّح، ولا نخمّن من الاسم."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 257,
+      "line": 299,
       "text": "يسأل المرشد موافقتك قبل كل نص يُرسل إلى Gemini أو OpenRouter أو Ollama. Gemini مقيد بالموديلات المتحققة، وOpenRouter يقبل فقط `openrouter/free` أو معرّفًا ينتهي بـ`:free`، ولا يوجد Paid fallback."
     },
     {
       "path": "src/components/settings-view.tsx",
-      "line": 270,
+      "line": 307,
+      "text": "لوحة واحدة للمكتمل والناقص والفاشل في المحتوى والصوت وقدرات Runtime الحالية."
+    },
+    {
+      "path": "src/components/settings-view.tsx",
+      "line": 317,
       "text": "المفتاح أو عنوان Ollama المؤقت"
     },
     {
       "path": "src/components/shadowing-studio.tsx",
-      "line": 149,
+      "line": 221,
       "text": "ملف MP3 متاح"
     },
     {
       "path": "src/components/shadowing-studio.tsx",
-      "line": 149,
+      "line": 221,
       "text": "للتقليد دون TTS"
     },
     {
@@ -898,12 +923,12 @@
     },
     {
       "path": "src/components/targeted-choice-simulation.tsx",
-      "line": 78,
+      "line": 79,
       "text": "هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe."
     },
     {
       "path": "src/components/targeted-listening-simulation.tsx",
-      "line": 202,
+      "line": 203,
       "text": "TTS بديل"
     },
     {
@@ -918,22 +943,22 @@
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 231,
+      "line": 232,
       "text": "Zum letzten Antwort · متابعة آخر جواب"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 240,
+      "line": 241,
       "text": "Ich heiße أم Ich bin؟"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 241,
+      "line": 242,
       "text": "مكان الفعل بعد weil"
     },
     {
       "path": "src/components/tutor-view.tsx",
-      "line": 242,
+      "line": 243,
       "text": "Dativ مع mit"
     },
     {
@@ -945,6 +970,16 @@
       "path": "src/components/unified-concept-map.tsx",
       "line": 49,
       "text": "Wortschatz · المفردات"
+    },
+    {
+      "path": "src/components/variants-lab.tsx",
+      "line": 37,
+      "text": "وحدة تنوّع ألماني قبل B1"
+    },
+    {
+      "path": "src/components/variants-lab.tsx",
+      "line": 38,
+      "text": "نفس الشيء بثلاث كلمات: Semmel · Brötchen · Brötli"
     },
     {
       "path": "src/components/webgpu-model-control.tsx",
@@ -998,31 +1033,31 @@
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 20,
+      "line": 21,
       "text": "محلية وحتمية: لا يُرسل نصك إلى AI، ولا يظهر التصحيح قبل تثبيت محاولة."
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 30,
+      "line": 31,
       "text": "Ihre Korrektur · تصحيحك"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 31,
+      "line": 32,
       "text": "Prüfen · تحقق"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 31,
+      "line": 32,
       "text": "Noch einmal · أعد"
     },
     {
       "path": "src/components/writing-repair-practice.tsx",
-      "line": 32,
+      "line": 33,
       "text": "هذا علاج شخصي ولا يرفع mastery أو بوابة المستوى."
     }
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "3eb2f72b3e7c1cc36cbb1aec6a86507d2f7c824e40d470956596c5bf848aace6"
+  "contentSha256": "d4fc4e414abbbf102b7cef2c79679b60278b8c49c19faff249c8f8dd9bf64b61"
 }

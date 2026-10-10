@@ -2,7 +2,7 @@
 
 Definition: 2026-10-02 · learning-integrity-v1
 
-Source SHA-256: `4d74a680f131c28b17bbf1d9bd1e61bbe8f0fa0bef32fa3f3cc98625bfd17a2a`
+Source SHA-256: `ea8bb51b0f4cde7a7ab54831f3b862449c428dfa572a403a48522fe110343e22`
 
 Result: **PASS** — 0 contract issues. This is not academic or acoustic certification.
 
@@ -22,6 +22,14 @@ Result: **PASS** — 0 contract issues. This is not academic or acoustic certifi
 | endurance-b1-B | B1 | 335 | device TTS only; human audio pending |
 | endurance-b2-A | B2 | 454 | device TTS only; human audio pending |
 | endurance-b2-B | B2 | 473 | device TTS only; human audio pending |
+| endurance-a1-C | A1 | 126 | device TTS only; human audio pending |
+| endurance-a2-C | A2 | 203 | device TTS only; human audio pending |
+| endurance-b1-C | B1 | 289 | device TTS only; human audio pending |
+| endurance-b2-C | B2 | 363 | device TTS only; human audio pending |
+| endurance-a1-D | A1 | 124 | device TTS only; human audio pending |
+| endurance-a2-D | A2 | 217 | device TTS only; human audio pending |
+| endurance-b1-D | B1 | 268 | device TTS only; human audio pending |
+| endurance-b2-D | B2 | 352 | device TTS only; human audio pending |
 
 ## Boundaries
 

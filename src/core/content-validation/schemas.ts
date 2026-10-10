@@ -207,6 +207,7 @@ export const diagnosticQuestionSchema = z.object({
   options: fourOptions,
   correctIndex: fourIndex,
   explanation: text,
+  explanationAr: text.optional(),
   error: diagnosticErrorSchema.optional(),
 }).strict();
 

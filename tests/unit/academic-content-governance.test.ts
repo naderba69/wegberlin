@@ -111,11 +111,11 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(lexicalReport).toContain(machine.contentSha256);
     expect(machine.answerIntegrity.rows).toHaveLength(2805);
     expect(machine.objectiveCoverage.rows).toHaveLength(389);
-    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1381);
+    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1384);
     expect(machine.lexicalTargetGaps.nounSummary.pendingHuman).toBe(89);
     expect(machine.lexicalTargetGaps.verbFrameSummary.covered).toBe(134);
-    expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).toBe(4);
-    expect(machine.lexicalTargetGaps.exclusionDecisionCount).toBe(8);
-    expect(machine.lexicalTargetGaps.pendingIndependentExclusionReview).toBe(8);
+    expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).toBe(1);
+    expect(machine.lexicalTargetGaps.exclusionDecisionCount).toBe(11);
+    expect(machine.lexicalTargetGaps.pendingIndependentExclusionReview).toBe(11);
   });
 });

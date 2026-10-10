@@ -114,14 +114,14 @@ describe("language history enrichment — إثراء اختياري موثّق (
     expect(moduleSource).toContain("no-grading-no-mastery-no-network");
   });
 
-  it("survives reset as a learner preference and keeps the classification complete (66 fields)", () => {
+  it("survives reset as a learner preference and keeps the classification complete (68 fields)", () => {
     const row = RESET_FIELD_POLICIES.find((entry) => String(entry.field) === "languageHistoryPreferences")!;
     expect(row.bucket).toBe("settings");
     const coverage = classifyResetCoverage(defaultState);
-    expect(coverage.totalClassified).toBe(66);
+    expect(coverage.totalClassified).toBe(68);
     expect(coverage.unclassifiedFields).toEqual([]);
     expect({ cleared: coverage.progressCleared, evidence: coverage.evidencePreserved, settings: coverage.settingsPreserved, identity: coverage.identityPreserved })
-      .toEqual({ cleared: 19, evidence: 25, settings: 12, identity: 10 });
+      .toEqual({ cleared: 19, evidence: 27, settings: 12, identity: 10 });
   });
 
   it("parses a legacy state written before this field existed", async () => {

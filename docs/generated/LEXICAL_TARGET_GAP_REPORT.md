@@ -2,21 +2,21 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98c6`
+Content SHA-256: `20ca2aceda9084a78b5b6daf48a93d470cf0823402dd33db008813f054036ffc`
 
 ## Honest result
 
-`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1297 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **4 unclassified verb-frame candidates**. It also records **8 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
+`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1297 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **1 unclassified verb-frame candidates**. It also records **11 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
 
 The audit does **not** create grammatical facts. A pending noun row must receive a verified record or independent exclusion. A structural frame exclusion can remove a false-positive detector row from the unclassified queue, but its `authored-review-pending` state remains visible until final review.
 
 | Level | Noun signals | Covered | Pending human | Context only | Verb signals | Covered | Pending human | Context only |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| A1 | 570 | 298 | 0 | 272 | 106 | 25 | 0 | 81 |
+| A1 | 569 | 298 | 0 | 271 | 106 | 25 | 0 | 81 |
 | A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
-| B1 | 1222 | 338 | 0 | 884 | 318 | 31 | 0 | 287 |
-| B2 | 2199 | 453 | 89 | 1657 | 629 | 48 | 4 | 577 |
-| **Total** | **4874** | **1381** | **89** | **3404** | **1257** | **134** | **4** | **1119** |
+| B1 | 1231 | 338 | 0 | 893 | 317 | 31 | 0 | 286 |
+| B2 | 2211 | 456 | 89 | 1666 | 631 | 48 | 1 | 582 |
+| **Total** | **4894** | **1384** | **89** | **3421** | **1258** | **134** | **1** | **1123** |
 
 ## Classification contract
 
@@ -54,10 +54,10 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-22-9c301c2e` | B2 | `b2-22` | Begründung | `phrases[7].de`: die nicht nachvollziehbare Begründung |
 | `lex-n-b2-22-241d586c` | B2 | `b2-22` | Behörde | `phrases[2].de`: der von der Behörde geprüfte Bescheid |
 | `lex-n-b2-22-0e913452` | B2 | `b2-22` | Berücksichtigung | `phrases[6].de`: ein unter Berücksichtigung der Lage getroffener Beschluss |
-| `lex-n-b2-22-7b4682df` | B2 | `b2-22` | Beschlusslage | `phrases[8].de`: der an die Beschlusslage angrenzende Hinweis |
 | `lex-n-b2-22-ecea19c1` | B2 | `b2-22` | Fall | `phrases[4].de`: der zu prüfende Fall |
 | `lex-n-b2-22-b6aa3172` | B2 | `b2-22` | Freitag | `phrases[14].de`: die bis Freitag zu liefernde Stellungnahme |
 | `lex-n-b2-22-c1d330ac` | B2 | `b2-22` | Frist | `phrases[10].de`: ein die Frist wahrender Einspruch<br>`phrases[5].de`: die derzeit geltende Frist |
+| `lex-n-b2-22-ccaa086b` | B2 | `b2-22` | Hinweis | `phrases[8].de`: der Hinweis zur Beschlusslage |
 | `lex-n-b2-22-0745839f` | B2 | `b2-22` | Lage | `phrases[6].de`: ein unter Berücksichtigung der Lage getroffener Beschluss |
 | `lex-n-b2-22-32c52d12` | B2 | `b2-22` | Montag | `phrases[3].de`: die am Montag eingegangene Beschwerde |
 | `lex-n-b2-22-e5088bd6` | B2 | `b2-22` | Nachbesserung | `phrases[16].de`: die mehrfach angemahnte Nachbesserung |
@@ -68,7 +68,7 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-22-65af7197` | B2 | `b2-22` | Sachverhalt | `phrases[15].de`: ein den Sachverhalt klärendes Gespräch |
 | `lex-n-b2-22-10412086` | B2 | `b2-22` | Seiten | `phrases[9].de`: die von allen Seiten geteilte Einschätzung |
 | `lex-n-b2-22-6d78bdc4` | B2 | `b2-22` | Vermerk | `flashcards[5].frontDe`: der Vermerk |
-| `lex-n-b2-22-40224550` | B2 | `b2-22` | Verstoß | `phrases[13].de`: ein kaum zu übersehender Verstoß |
+| `lex-n-b2-22-40224550` | B2 | `b2-22` | Verstoß | `phrases[13].de`: ein offensichtlicher Verstoß |
 | `lex-n-b2-23-8bf63695` | B2 | `b2-23` | Ablehnung | `phrases[15].de`: ein Einspruch gegen die Ablehnung |
 | `lex-n-b2-23-b14ddf94` | B2 | `b2-23` | Antrag | `phrases[1].de`: der Antrag auf Erlass der Nachforderung |
 | `lex-n-b2-23-049778a5` | B2 | `b2-23` | Antrags | `phrases[14].de`: die Bearbeitungsdauer des Antrags |
@@ -122,16 +122,13 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-24-04c42c8f` | B2 | `b2-24` | Vertreter | `phrases[6].de`: Herr Weber, der Vertreter der Kommission, stimmte zu. |
 | `lex-n-b2-24-3080e951` | B2 | `b2-24` | Zurückstellung | `flashcards[8].frontDe`: die Zurückstellung |
 
-## Pending verb/preposition decisions (4)
+## Pending verb/preposition decisions (1)
 
 | Stable row | Level | Lesson | Infinitive candidate | Prep. | Observed case evidence | Target evidence |
 |---|---|---|---|---|---|---|
 | `lex-v-b2-21-f2fa1775` | B2 | `b2-21` | sich erinnern | an | accusative | `phrases[13].de`: Die Zeugin sagte aus, sie könne sich an das Datum nicht erinnern. |
-| `lex-v-b2-24-6e1439bd` | B2 | `b2-24` | bitten | zu | accusative, ambiguous, unknown | `phrases[1].de`: Wir bitten darum, den Bescheid zu überprüfen. |
-| `lex-v-b2-24-5f033ff3` | B2 | `b2-24` | einreichen | zu | unknown | `phrases[3].de`: Ohne die Frist zu versäumen, konnten wir einreichen. |
-| `lex-v-b2-24-97864110` | B2 | `b2-24` | konnten | zu | unknown | `phrases[3].de`: Ohne die Frist zu versäumen, konnten wir einreichen. |
 
-## Explicit structural frame exclusions (8)
+## Explicit structural frame exclusions (11)
 
 | Decision | Lesson | Detected pair | Reason | Authored explanation | Review status |
 |---|---|---|---|---|---|
@@ -143,7 +140,10 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `b2-01-reichen-um-frame-exclusion` | `b2-01` | reichen + um | `purpose-clause` | um يفتتح جملة الغاية um … zu ولا تحكمه صيغة ausreichen السابقة. | `authored-review-pending` |
 | `b2-18-ziehen-in-frame-exclusion` | `b2-18` | ziehen + in | `locative-adjunct` | في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht zie… | `authored-review-pending` |
 | `b2-18-kommen-in-frame-exclusion` | `b2-18` | kommen + in | `locative-adjunct` | في «in Frage kommen» العبارة ظرفية ثابتة مثل «in Betracht»: الفعل يتبدّل («etwas in Frage stellen» … | `authored-review-pending` |
+| `b2-24-bitten-zu-frame-exclusion` | `b2-24` | bitten + zu | `infinitive-zu-marker` | zu في «den Bescheid zu überprüfen» علامة المصدر لا حرف جر يحكمه الفعل bitten؛ الجملة «Wir bitten da… | `authored-review-pending` |
+| `b2-24-einreichen-zu-frame-exclusion` | `b2-24` | einreichen + zu | `infinitive-zu-marker` | zu في «Ohne die Frist zu versäumen» علامة مصدر تتبع «ohne»، لا حرف جر يحكمه الفعل einreichen؛ لا يأ… | `authored-review-pending` |
+| `b2-24-konnten-zu-frame-exclusion` | `b2-24` | konnten + zu | `infinitive-zu-marker` | zu في الجملة نفسها علامة المصدر في «ohne … zu versäumen»، و konnten فعل مساعد للإمكان لا يحكم حرف ج… | `authored-review-pending` |
 
-All 8 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
+All 11 exclusions remain `authored-review-pending`; zero unclassified rows does not mean independent German review is complete.
 
-The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under `lexicalTargetGaps` in `reports/academic-content-audit.json`.
+The complete covered/pending/context inventory, every source path, matched anchor ID, and exclusion decision are stored under `lexicalTargetGaps` in `reports/academic-content-audit.json`. A deterministic unsigned reviewer packet (1,297 noun anchors, 134 frames, 93 unresolved candidates, 8 exclusions) is generated at `reports/lexical-review-packet/`; its blank signature fields are not evidence of review.

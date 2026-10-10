@@ -1,11 +1,16 @@
 # Architecture Decisions
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v191 · 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint ac82338f0809; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
+Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+P2-355 remains intact: `/practice/test-generator` and its 480 authored templates from 96 published lessons are included in all five Offline packs; feedback is session-only with no mastery, progress, CEFR, or daily-plan effect.
 
 Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/time guarantees. Read docs/LEARNING_REPAIRS_AR.md and the current QA block in PROJECT_STATUS.md; historical measurements below are not current source evidence.
+
+Current P2-352 decision: `neutral-self-waveform-comparison-v1` provides a temporary, same-origin/on-device visual outline from 48 amplitude peaks per clip, independently normalized to each clip's own peak, with no alignment, similarity/pronunciation/quality score, upload, persistence, or evidence effect. Limits: 60 seconds and 4 MB per clip. Full rationale: [ADR-112](docs/adr/ADR-112-neutral-waveform-self-comparison.md).
+
+Prior P2-355 decision: `local-test-generator-v1` uses only published authored mini-tests, samples at most one item per lesson, reveals feedback after explicit submission, and never stores answers or changes learner evidence. The route and statically bundled banks are included in every Offline pack. Full rationale and review boundary: [ADR-111](docs/adr/ADR-111-local-authored-mini-test-practice-generator.md).
 
 ## ADR-001 — Local-first learner state
 IndexedDB is the canonical durable store. Vercel hosts the application but never stores learner progress.
@@ -893,3 +898,13 @@ unzip -jo wegberlin-full.zip TERMUX_REPLACE_REPO.sh -d "$HOME/wegberlin-upload-t
 **البدائل المرفوضة.** (أ) تمارينُ تمريضية داخل `lessons-*.ts` ⇒ تلوّث عدّادات المحتوى وتجعل الحذف جراحة؛ (ب) قائمةُ قواعد سلامةٍ تُحفظ ⇒ يخالف نصّ العقد («عادة لا قاعدة»)؛ (ج) مرشدُ AI سريري ⇒ يخرق صفرَ التكلفة ويفتح باب ادّعاء معرفة سريرية؛ (د) إغلاقُ البند بنجاح الفحوص ⇒ مرفوع؛ يبقى `pending-nursing-professional` مع 0 مراجعة باسم ممرّض أو مدرّب.
 
 **العواقب.** السطر «هذه صياغات لغوية لا إرشاد سريري» على كل وحدة، وفشلُ التدقيق إن غاب من واحدة؛ و**دَينُ المراجعة البشرية يزيد** بـ14 وحدة معلّقة، ولا يُستخدم لإثبات تدريب مهني أو تأهيل أو اعتماد. الطبقةُ لا تلمس بوابات المستويات ولا الامتحانات ولا الإتقان، واختبار المتصفح يقيس ذلك من الحالة المخزّنة لا من النصّ.
+
+## 2026-10-09 — telc point distribution: a second official source corroborates the per-part values; the open fact stays open
+
+The telc.net B2 page links two official PDFs: the 2019 Handbuch and the 2020 `Deutsch_B2_tipps_zur_Pruefungsvorbereitung.pdf` (6. Auflage, © 2020 telc gGmbH). The tips booklet states the per-task scores in its task descriptions: Leseverstehen 1 = 5 × 5 (25), Leseverstehen 2 = 5 × 5 (25), Leseverstehen 3 = 10 × 2.5 (25), Sprachbausteine 1 = 10 × 1.5 (15), Sprachbausteine 2 = 10 × 1.5 (15), Hörverstehen 1 = 5 × 5 (25), Hörverstehen 2 = 10 × 2.5 (25), Hörverstehen 3 = 5 × 5 (25), and Schriftlicher Ausdruck = 45 (criteria A/B/C/D worth 5/3/1/0 each, summed and multiplied by 3). These match the figures already pinned from the 2019 mock (Teilergebnis I 225, Sprachbausteine 15/15). They do not establish the 2026 edition: the booklet is dated 2020, and the oral section (chapter 7, which contains the 75-point scoring and the 135/45 pass rule) was not in the text the tools could read.
+
+Decision: `telc-b2-point-distribution` stays an open fact, unchanged in `src/config/exam-format-evidence.json`. What is now corroborated is the written structure across two official telc editions (2019 mock and 2020 tips). What remains open is the currency for 2026, which still needs a telc-dated 2026 score table, a written confirmation from a licensed centre, or the queued human review. No app behaviour changed.
+
+## 2026-10-09 — telc point distribution: owner decision on the working basis
+
+The owner reviewed the evidence above and chose to use the official 2019 mock values and the 2020 tips booklet as the working basis for telc Deutsch B2 (225 written with Lesen 75, Sprachbausteine 30, Hören 75, Schreiben 45; 75 oral; pass at 135 and 45). This is a usage decision, not a currency verification: the 2026 edition is still not confirmed by a telc-dated source. `telc-b2-point-distribution` stays an open fact in `src/config/exam-format-evidence.json` and in the official-format audit, and the gap is labelled in the app as unverified for 2026.

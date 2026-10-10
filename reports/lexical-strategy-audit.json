@@ -20,7 +20,7 @@
         ],
         "anchorDe": "wohnen",
         "titleAr": "السكن ومكانه",
-        "relationNoteAr": "Wohnung وWohnort مشتقان أو مركبان حول مجال wohnen.",
+        "relationNoteAr": "Wohnung و Wohnort مشتقان أو مركبان حول مجال wohnen.",
         "cautionAr": "Wohnung اسم مؤنث، ولا يعني كل مركب أنه اشتقاق مباشر من الفعل.",
         "members": [
           {
@@ -188,7 +188,7 @@
         ],
         "anchorDe": "kaufen",
         "titleAr": "الشراء والاستهلاك",
-        "relationNoteAr": "Einkauf وKäufer يرتبطان بالفعل، والمركب يحدد المكان.",
+        "relationNoteAr": "Einkauf و Käufer يرتبطان بالفعل، والمركب يحدد المكان.",
         "cautionAr": "Einkauf لا يعني دائمًا الشيء المشترى؛ قد يعني عملية التسوق.",
         "members": [
           {
@@ -273,7 +273,7 @@
         ],
         "anchorDe": "sprechen",
         "titleAr": "الكلام واللغة والمحادثة",
-        "relationNoteAr": "تجمع جذر sprechen مع Sprache وGespräch ضمن شبكة استعمال.",
+        "relationNoteAr": "تجمع جذر sprechen مع Sprache و Gespräch ضمن شبكة استعمال.",
         "cautionAr": "Gespräch قريب دلاليًا وصرفيًا، لكن لا تستبدله بالفعل في الجملة.",
         "members": [
           {
@@ -316,7 +316,7 @@
         "anchorDe": "gesund",
         "titleAr": "الصحة والمرض",
         "relationNoteAr": "تجمع الصفة وأسماء الحالة ومركبات الصحة.",
-        "cautionAr": "gesund وkrank متضادان دلاليًا، وليسا اشتقاقين من الجذر نفسه.",
+        "cautionAr": "gesund و krank متضادان دلاليًا، وليسا اشتقاقين من الجذر نفسه.",
         "members": [
           {
             "formDe": "gesund",
@@ -401,7 +401,7 @@
         "anchorDe": "sich bewerben",
         "titleAr": "التقديم للعمل",
         "relationNoteAr": "تجمع الفعل الانعكاسي وأسماء الطلب والمتقدم.",
-        "cautionAr": "Bewerbung اسم الطلب، وBewerber هو الشخص؛ لا تحذف sich من الفعل.",
+        "cautionAr": "Bewerbung اسم الطلب، و Bewerber هو الشخص؛ لا تحذف sich من الفعل.",
         "members": [
           {
             "formDe": "sich bewerben",
@@ -657,7 +657,7 @@
         ],
         "anchorDe": "regeln",
         "titleAr": "القواعد وتنظيمها",
-        "relationNoteAr": "تفرق بين Regel الاسم وregeln الفعل ومركبات السكن.",
+        "relationNoteAr": "تفرق بين Regel الاسم و regeln الفعل ومركبات السكن.",
         "cautionAr": "die Regel والقانون الرسمي ليسا مترادفين دائمًا.",
         "members": [
           {
@@ -787,7 +787,7 @@
         "anchorDe": "bilden",
         "titleAr": "التعليم والتكوين",
         "relationNoteAr": "تجمع جذر bilden مع Bildung ومركبات المسار.",
-        "cautionAr": "Bildung أوسع من دورة واحدة، وAusbildung غالبًا تكوين مهني.",
+        "cautionAr": "Bildung أوسع من دورة واحدة، و Ausbildung غالبًا تكوين مهني.",
         "members": [
           {
             "formDe": "bilden",
@@ -958,7 +958,7 @@
         ],
         "anchorDe": "beraten",
         "titleAr": "النصيحة والاستشارة",
-        "relationNoteAr": "تفرق بين Rat العام وBeratung المنظمة.",
+        "relationNoteAr": "تفرق بين Rat العام و Beratung المنظمة.",
         "cautionAr": "Beratung لا تضمن قرارًا صحيحًا، وقد تحتاج مختصًا.",
         "members": [
           {
@@ -1848,7 +1848,7 @@
         "contrastAr": "أتلقى فاتورة — أصبح متعبًا.",
         "source": "english-mediation",
         "riskAr": "الخلط يغيّر الحدث كله.",
-        "strategyAr": "احفظ bekommen مع شيئًا يصل إليك، وwerden مع تغير الحالة.",
+        "strategyAr": "احفظ bekommen مع شيئًا يصل إليك، و werden مع تغير الحالة.",
         "notUniversal": true
       },
       {
@@ -1863,7 +1863,7 @@
         "contrastAr": "مديري في المكتب، والطاهي في المطبخ.",
         "source": "french-mediation",
         "riskAr": "الفرنسية والإنجليزية قد تقودان إلى مهنة خاطئة.",
-        "strategyAr": "اربط Chef بالمسؤولية وKoch بالمطبخ.",
+        "strategyAr": "اربط Chef بالمسؤولية و Koch بالمطبخ.",
         "notUniversal": true
       },
       {
@@ -1878,7 +1878,7 @@
         "contrastAr": "السُّم خطير، والهدية للينا.",
         "source": "english-mediation",
         "riskAr": "الخطأ قد يكون خطيرًا في سياق صحي.",
-        "strategyAr": "احفظ Gift مع Gefahr، وGeschenk مع Geburtstag.",
+        "strategyAr": "احفظ Gift مع Gefahr، و Geschenk مع Geburtstag.",
         "notUniversal": true
       },
       {
@@ -1908,7 +1908,7 @@
         "contrastAr": "أتعلم الألمانية، وأختي تدرس الطب في الجامعة.",
         "source": "arabic-transfer",
         "riskAr": "studieren ليس بديلًا عامًا لكل تعلم.",
-        "strategyAr": "اربط studieren بجامعة أو تخصص، وlernen بمهارة أو مادة.",
+        "strategyAr": "اربط studieren بجامعة أو تخصص، و lernen بمهارة أو مادة.",
         "notUniversal": true
       },
       {
@@ -3284,5 +3284,5 @@
       ]
     }
   ],
-  "contentSha256": "30552a823e15ee22a1a6ed1dce822c28f8724ba96852adba66ea38056dd12aa2"
+  "contentSha256": "8ba9ceeb57ddb1f16a7418e4f2578beefec3f9b992f5429720f205d50607de51"
 }

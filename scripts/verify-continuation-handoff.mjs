@@ -20,6 +20,16 @@ const offlineControl = read("src/components/offline-pack-control.tsx");
 const offlineSizeGenerator = read("scripts/generate-offline-size-manifest.mjs");
 const offlineAdr = read("docs/adr/ADR-015-level-offline-packs-and-build-size-manifest.md");
 const e2e = read("tests/e2e/critical-flows.spec.ts");
+const localTestGeneratorSource = read("src/core/training/local-test-generator.ts");
+const localTestTemplateLoader = read("src/core/training/local-test-template-loader.ts");
+const localTestTemplateAudit = read("scripts/generate-local-test-templates.ts");
+const localTestGeneratorView = read("src/components/local-test-generator.tsx");
+const localTestGeneratorUnit = read("tests/unit/local-test-generator.test.ts");
+const localTestGeneratorAdr = read("docs/adr/ADR-111-local-authored-mini-test-practice-generator.md");
+const illustrativePathwaysData = read("src/core/planning/illustrative-pathways.ts");
+const illustrativePathwaysView = read("src/components/illustrative-pathways.tsx");
+const illustrativePathwaysUnit = read("tests/unit/illustrative-pathways.test.ts");
+const illustrativePathwaysAdr = read("docs/adr/ADR-113-illustrative-learning-pathways-not-testimonials.md");
 const webgpuResolutionE2e = read("tests/e2e/webgpu-runtime-resolution.spec.ts");
 const packageJson = json("package.json");
 const offline = json("public/offline-routes.json");
@@ -119,6 +129,23 @@ const dailyFocusAdr=read("docs/adr/ADR-058-guidance-focus-tools-and-level-backup
 const offlineRecoveryAdr=read("docs/adr/ADR-049-partial-export-offline-resume-and-js-budgets.md");
 const lexicalTargetGapSource = read("src/core/content-validation/lexical-target-gap.ts");
 const lexicalTargetGapTest = read("tests/unit/lexical-target-gap.test.ts");
+const academicAuditGenerator = read("scripts/generate-academic-audit.ts");
+const lexicalFrameQualityWorklist = read("reports/lexical-review-packet/frame-quality-targets.csv");
+const lexicalReviewPacketSource = read("src/core/content-validation/lexical-review-packet.ts");
+const lexicalNounReviewWorklist = read("reports/lexical-review-packet/noun-anchors.csv");
+const reviewPacketCsvGenerator = read("scripts/generate-human-review-packet.ts");
+const reviewPacketSafetySource = read("src/core/content-validation/review-packet-safety.ts");
+const reviewPacketSafetyTest = read("tests/unit/review-packet-safety.test.ts");
+const safeCsvSource = read("src/core/content-validation/safe-csv.ts");
+const humanReviewLedgerSource = read("src/data/human-review-ledger.ts");
+const humanReviewAudit = json("reports/human-review-audit.json");
+const humanReviewLedgerReport = read("docs/generated/HUMAN_REVIEW_LEDGER.md");
+const humanReviewReviewScript = read("scripts/audit-human-review.ts");
+const p099Dossier = read("docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md");
+const p099Worklist = read("docs/generated/P099_QUALITY_TARGET_REVIEW_WORKLIST.md");
+const p099StatusScript = read("scripts/report-p099-exclusion-evidence-status.ts");
+const humanReviewPresenceSource = read("src/core/content-validation/human-review-presence.ts");
+const p099RetainedValidator = read("scripts/validate-p099-retained-decision.ts");
 const lexicalFrameDecisions = read("src/data/lexical-target-decisions.ts");
 const masteryWeighting = read("src/core/evidence/mastery-weighting.ts");
 const sm2 = read("src/core/srs/sm2.ts");
@@ -239,6 +266,10 @@ const diagnosticProductive = read("src/core/diagnostic/productive-sample.ts");
 const diagnosticProductiveView = read("src/components/diagnostic-productive-sample.tsx");
 const diagnosticProductiveTest = read("tests/unit/diagnostic-productive-sample.test.ts");
 const diagnosticProductiveAdr = read("docs/adr/ADR-017-diagnostic-productive-sample-without-score.md");
+const productiveComparisonAdr = read("docs/adr/ADR-110-four-week-productive-sample-comparison.md");
+const productiveComparisonPanel = read("src/components/productive-sample-comparison.tsx");
+const productiveComparisonTest = read("tests/unit/productive-sample-comparison.test.ts");
+const diagnosticProductiveE2E = read("tests/e2e/critical-flows.spec.ts");
 const caseAudit = json("reports/case-teaching-audit.json");
 const acceptedAnswerAudit = json("reports/accepted-answer-hygiene-audit.json");
 const nursingAudit = json("reports/nursing-layer-audit.json");
@@ -411,30 +442,47 @@ const auditSectionIds = (start, end) => {
 const partialIds = auditSectionIds("## P0 المنجز جزئيًا", "## P0 غير المنجز");
 const missingIds = auditSectionIds("## P0 غير المنجز", "## P0 المتوقف");
 const blockedIds = auditSectionIds("## P0 المتوقف", "## عناصر P0");
-if (partialIds.length !== 9) fail(`P0 partial table has ${partialIds.length} rows`);
+if (partialIds.length !== 8) fail(`P0 partial table has ${partialIds.length} rows`);
 if (missingIds.length !== 0) fail(`P0 missing section has ${missingIds.length} rows`);
 if (blockedIds.length !== 0) fail(`P0 blocked section has ${blockedIds.length} rows`);
+for (const text of ["| منجز في المنتج | 116 |", "| منجز جزئيًا | 8 |", "P0-302", "37335158220", "b974c48"]) requireText(p0Audit, text, "P0_AUDIT.md current counters and remote closure evidence");
 const p1BacklogIds = [...ideas.matchAll(/^(\d+)\. \*\*\[P1\]\*\*/gm)].map((match) => Number(match[1]));
 const p1Rows = [...p1Audit.matchAll(/^\| (\d+) \|.*\| `(implemented|partial|not-implemented|blocked)` \|/gm)].map((match) => ({ id:Number(match[1]),status:match[2] }));
 if (p1Rows.length !== 135 || new Set(p1Rows.map((row)=>row.id)).size !== 135) fail(`P1 audit has ${p1Rows.length} unique rows, expected 135`);
 if (JSON.stringify([...p1Rows.map((row)=>row.id)].sort((a,b)=>a-b)) !== JSON.stringify([...p1BacklogIds].sort((a,b)=>a-b))) fail("P1 audit IDs do not exactly match the P1 backlog");
 const p1Counts = Object.fromEntries(["implemented","partial","not-implemented","blocked"].map((key)=>[key,p1Rows.filter((row)=>row.status===key).length]));
 if (JSON.stringify(p1Counts) !== JSON.stringify({implemented:131,partial:4,"not-implemented":0,blocked:0})) fail(`P1 audit counters drifted: ${JSON.stringify(p1Counts)}`);
-for (const text of ["Total P1: 135", "Implemented: 130", "Partial: 4", "Not implemented: 1", "Blocked: 0"]) requireText(prompt,text,"continuation prompt P1 counters");
+for (const text of ["Total P1: 135", "Implemented: 131", "Partial: 4", "Not implemented: 0", "Blocked: 0"]) requireText(prompt,text,"continuation prompt P1 counters");
 for (const text of ["| implemented | 131 |", "| partial | 4 |", "| not-implemented | 0 |", "| blocked | 0 |", "ai-resilient-fallback-v1", "tutor-follow-up-command-v1", "ai-provider-capability-matrix-v1", "three-pass-listening-sequence-v1", "articulation-contrast-practice-v1", "writing-error-micro-practice-v1", "practice-law-language-boundary-v1", "evidence-derived-achievement-v1", "gamification-visibility-v1", "review-keyboard-shortcuts-v1", "local-content-note-v1", "personal-vocabulary-import-v1", "local-content-error-report-v1", "prior-experience-context-v1", "equivalent-mission-alternative-v1", "automatic-load-reduction-offer-v1", "today-session-offline-readiness-v1", "module-recycling-ratio-v1", "lexical-strategy-registry-v1", "lexical-strategy-audit-v1", "grammar-progression-map-v1", "comprehension-question-taxonomy-v1", "learning-architecture-audit-v1", "easy-vs-exam-reading-v1", "unknown-word-and-compound-strategy-v1", "unified-listening-usage-evidence-v1", "prosody-rhythm-progression-v1", "learner-attributed-language-vs-device-v1", "local-rms-pause-estimate-v1", "central-redemittel-function-register-v1", "visible-writing-version-diff-v1", "practical-context-registry-v1", "training-interaction-log-v1", "partial-study-sections-export-v1", "offline-recovery-page-v1", "js-budget-v1", "weekly-planned-actual-no-blame-v1", "evidence-velocity-readiness-range-v1", "vercel-csp-headers-v1", "dwnb-deprecation-policy-v1", "independent-curriculum-version-v1", "content-accountability-lifecycle-v1", "general-consular-legal-claims-v1", "arabic-learner-pronunciation-inventory-v1"]) requireText(p1Audit,text,"P1_AUDIT.md");
 const p2BacklogIds = [...ideas.matchAll(/^(\d+)\. \*\*\[P2\]\*\*/gm)].map((match) => Number(match[1]));
 const p2Rows = [...p2Audit.matchAll(/^\| (\d+) \|.*\| `(implemented|partial|not-implemented|blocked)` \|/gm)].map((match) => ({ id:Number(match[1]),status:match[2] }));
 if(p2Rows.length!==142||new Set(p2Rows.map((row)=>row.id)).size!==142)fail(`P2 audit has ${p2Rows.length} unique rows, expected 142`);
 if(JSON.stringify([...p2Rows.map((row)=>row.id)].sort((a,b)=>a-b))!==JSON.stringify([...p2BacklogIds].sort((a,b)=>a-b)))fail("P2 audit IDs do not exactly match the P2 backlog");
 const p2Counts=Object.fromEntries(["implemented","partial","not-implemented","blocked"].map((key)=>[key,p2Rows.filter((row)=>row.status===key).length]));
-if(JSON.stringify(p2Counts)!==JSON.stringify({implemented:129,partial:5,"not-implemented":8,blocked:0}))fail(`P2 audit counters drifted: ${JSON.stringify(p2Counts)}`);
-for(const text of["Total P2: 142","Implemented: 123","Partial: 2","Not implemented: 17","Blocked: 0","event-derived-mastery-v1","guided-independent-support-separation-v1","bounded-attempt-process-v1","explainable-plan-change-timeline-v1","learner-selected-intensity-presets-v1","P2-273 — Reflection أسبوعي"])requireText(prompt,text,"continuation prompt P2 counters");
-for(const text of["| implemented | 129 |","| partial | 5 |","| not-implemented | 8 |","| blocked | 0 |","## ترتيب التنفيذ المقترح"])requireText(p2Audit,text,"P2_AUDIT.md");
+if(JSON.stringify(p2Counts)!==JSON.stringify({implemented:132,partial:5,"not-implemented":5,blocked:0}))fail(`P2 audit counters drifted: ${JSON.stringify(p2Counts)}`);
+for(const text of["Total P2: 142","Implemented: 132","Partial: 5","Not implemented: 5","Blocked: 0","event-derived-mastery-v1","local-test-generator-v1","P2-355","neutral-self-waveform-comparison-v1","P2-352","illustrative-learning-pathways-v1","P2-276","ADR-113-illustrative-learning-pathways-not-testimonials.md","guided-independent-support-separation-v1","bounded-attempt-process-v1","explainable-plan-change-timeline-v1","learner-selected-intensity-presets-v1","P2-273 — Reflection أسبوعي"])requireText(prompt,text,"continuation prompt P2 counters");
+for(const text of["| implemented | 132 |","| partial | 5 |","| not-implemented | 5 |","| blocked | 0 |","## ترتيب التنفيذ المقترح","| 276 | عرض قصص نجاح كإرشاد عملي لا وعود تسويقية. | `implemented` |","illustrative-learning-pathways-v1","ADR-113-illustrative-learning-pathways-not-testimonials.md","| 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `implemented` |","neutral-self-waveform-comparison-v1","ADR-112-neutral-waveform-self-comparison.md","| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` |","ADR-111-local-authored-mini-test-practice-generator.md"])requireText(p2Audit,text,"P2_AUDIT.md");
 const closedP2PartialSprintIds=[11,35,36,58,59,60,105,107,117,118,120,130,131,132,141,143,154,155,177,178,179,180,226,249,251,262,263,273,288,298,310,311,322,324,333,346,348,351,353,356,370,372,382,394];
 for(const id of closedP2PartialSprintIds)if(!p2Rows.some((row)=>row.id===id&&row.status==="implemented"))fail(`P2-${id} partial-closure sprint state drifted`);
 const dailyFocusClosedIds=[45,47,153,201,203,239,286,347];
 if(!p2Rows.some((row)=>row.id===142&&row.status==="implemented"))fail("P2-142 adaptive dictation state drifted");
 if(!p2Rows.some((row)=>row.id===354&&row.status==="implemented"))fail("P2-354 branching conversation state drifted");
+if(!p2Rows.some((row)=>row.id===355&&row.status==="implemented"))fail("P2-355 local test generator state drifted");
+if(!p2Rows.some((row)=>row.id===352&&row.status==="implemented"))fail("P2-352 neutral local waveform comparison state drifted");
+if(!p2Rows.some((row)=>row.id===276&&row.status==="implemented"))fail("P2-276 illustrative pathway state drifted");
+for(const content of[illustrativePathwaysData,illustrativePathwaysUnit,illustrativePathwaysAdr,p2Audit,prompt])requireText(content,"illustrative-learning-pathways-v1","P2-276 hypothetical pathway policy");
+for(const text of["ILLUSTRATIVE_PATHWAYS_POLICY_VERSION","data-illustrative-pathways-policy","data-evidence-status","data-outcome-claims","<details>"])requireText(illustrativePathwaysView,text,"P2-276 static component contract");
+for(const text of["authored-hypothetical-guidance-only","ليست شهادات متعلمين","لا تعرض نتائج مقاسة","outcomeClaim: false"])requireText(illustrativePathwaysView+illustrativePathwaysData,text,"P2-276 non-testimonial disclosure and outcome boundary");
+for(const text of["P2-276 presents hypothetical practical paths without testimonial or outcome claims","data-illustrative-pathways-policy","data-evidence-status","data-outcome-claims","AxeBuilder","new URL(request.url).origin !== origin","request.method","indexedDB"])requireText(e2e,text,"P2-276 E2E privacy and accessibility contract");
+for(const text of["every current Offline pack","no profile fields","change to mastery/progress/CEFR","not learner testimonials or trial data"])requireText(illustrativePathwaysAdr,text,"P2-276 decision boundaries");
+for(const text of["neutral-self-waveform-comparison-v1","EDUCATIONAL_WAVEFORM_BAR_COUNT","EDUCATIONAL_WAVEFORM_MAX_AUDIO_SECONDS","EDUCATIONAL_WAVEFORM_MAX_COMPRESSED_BYTES","isEducationalWaveformCompressedFileWithinLimit"])requireText(read("src/core/audio/waveform-comparison.ts"),text,"P2-352 waveform core");
+for(const text of["P2 waveform comparison is local, temporary, accessible, and score-free","offOriginRequests","uploadRequests","0 محاولات محفوظة"])requireText(e2e,text,"P2-352 browser privacy and accessibility boundary");
+for(const text of["redirect: \"error\"","same-origin","decodeAudioData","لا توجد محاذاة أو مقارنة آلية","الرسم مؤقت ولا يُضاف إلى سجل المحاولات أو الإتقان"])requireText(read("src/components/shadowing-studio.tsx"),text,"P2-352 Shadowing UI boundary");
+for(const content of[localTestGeneratorSource,localTestTemplateAudit,localTestGeneratorView,localTestGeneratorUnit,localTestGeneratorAdr])requireText(content,"local-test-generator-v1","P2-355 local practice policy");
+for(const text of["LOCAL_TEST_SIZES = [5, 10, 15]","duplicate source lesson ids","correctIndex","sourceLessonId"])requireText(localTestGeneratorSource,text,"P2-355 generator engine");
+for(const text of["localTestTemplateBankA1","localTestTemplateBankA2","localTestTemplateBankB1","localTestTemplateBankB2"])requireText(localTestTemplateLoader,text,"P2-355 Offline template bundle");
+if(localTestTemplateLoader.includes("await import("))fail("P2-355 template banks must be statically available in Offline packs");
+for(const text of["P2-355 local test generator","/practice/test-generator","stateAfter","context.setOffline(true)"])requireText(e2e,text,"P2-355 browser and Offline boundaries");
 if(!p2Rows.some((row)=>row.id===108&&row.status==="implemented"))fail("P2-108 collocation network state drifted");
 if(!p2Rows.some((row)=>row.id===335&&row.status==="implemented"))fail("P2-335 property test state drifted");
 if(!p2Rows.some((row)=>row.id===310&&row.status==="implemented"))fail("P2-310 docs-only deployment state drifted");
@@ -468,17 +516,21 @@ if(vercelConfig.ignoreCommand!=="node scripts/vercel-ignore-docs-only.mjs"||verc
 for(const content of[releaseCandidateWorkflow,releaseCandidateScript,releaseCandidateTest,releaseCandidateAdr,p2Audit,prompt])requireText(content,"pre-production-release-candidate-v1","release candidate evidence");
 for(const text of["npm run secret:audit:history","npm run check","npm run test:e2e","actions/upload-artifact@v4","no deployment or production-promotion step"])requireText(releaseCandidateWorkflow,text,"release candidate workflow");
 for(const policy of["adaptive-partial-full-dictation-v1","offline-branching-conversation-v1","contextual-collocation-network-v1","deterministic-generative-properties-v1","vercel-docs-only-build-skip-v1","independent-weekly-reflection-v1","target-date-workload-risk-v1","fatigue-pause-resume-diagnostic-v1","optional-opus-with-mp3-fallback-v1","raw-indexeddb-store-export-v1","adversarial-sensitive-field-redaction-v1","supported-pairwise-migration-matrix-v1","previous-complete-curriculum-pack-rollback-v1","interactive-grammar-vocabulary-concept-map-v1","meaning-not-word-order-translation-audit-v1"])requireText(p2Audit,policy,"P2 partial-closure evidence");
-for (const text of ["Implemented: 115", "Partial: 9", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
-for (const text of ["P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "1,244/1,244", "178/178", "322 generated static/SSG pages", "319/319"]) requireText(status, text, "PROJECT_STATUS.md");
-for (const text of ["1,244/1,244", "178/178", "129 منجزًا، 5 جزئيًا، 8 غير منجز"]) requireText(readme, text, "README.md");
-for(const text of["Formal P2 audit: 142/142 rows = 129 implemented / 5 partial / 8 not implemented / 0 blocked","event-derived-mastery-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
+for (const text of ["Implemented: 116", "Partial: 8", "Not implemented: 0", "Blocked by user credentials: 0"]) requireText(prompt, text, "continuation prompt P0 counters");
+for (const text of ["P0 = 116 implemented / 8 partial / 0 missing / 0 blocked", "1,352/1,352", "199/199", "323 صفحة مفحوصة للتباين", "320/320", "37335158220", "64/64 Desktop", "64/64 Mobile"]) requireText(status, text, "PROJECT_STATUS.md");
+if (partialIds.includes(302)) fail("P0-302 must be closed only after a pushed GitHub run passes");
+if (JSON.stringify([...partialIds].sort((a,b)=>a-b)) !== JSON.stringify([98,99,124,135,255,301,373,376])) fail(`P0 partial rows drifted: ${JSON.stringify(partialIds)}`);
+for (const text of ["P0-302", "37335158220", "b974c48", "64/64 Desktop", "64/64 Mobile"]) requireText(p0Audit, text, "P0-302 remote closure evidence");
+for (const text of ["1,355/1,355", "200/200", "132 منجزًا، 5 جزئيًا، 5 غير منجز"]) requireText(readme, text, "README.md");
+for(const text of["Formal P2 audit: 142/142 rows = 132 implemented / 5 partial / 5 not implemented / 0 blocked","event-derived-mastery-v1","local-test-generator-v1","neutral-self-waveform-comparison-v1","illustrative-learning-pathways-v1"])requireText(status,text,"PROJECT_STATUS.md P2 audit");
 
-if (offline.version !== 2 || offline.routeCount !== 319 || offline.routes.length !== 319 || new Set(offline.routes).size !== 319) fail("offline route manifest is not v2 with exactly 319 unique routes");
-const expectedPacks = { a1: 59, a2: 59, b1: 59, b2: 220, full: 319 };
+if (offline.version !== 2 || offline.routeCount !== 320 || offline.routes.length !== 320 || new Set(offline.routes).size !== 320) fail("offline route manifest is not v2 with exactly 320 unique routes");
+const expectedPacks = { a1: 60, a2: 60, b1: 60, b2: 221, full: 320 };
 if (offline.defaultPackId !== "full" || offline.packs?.length !== 5) fail("offline level-pack registry is incomplete");
 for (const [id, routeCount] of Object.entries(expectedPacks)) {
   const pack = offline.packs.find((item) => item.id === id);
   if (!pack || pack.routeCount !== routeCount || pack.routes.length !== routeCount || new Set(pack.routes).size !== routeCount) fail(`offline pack ${id} drifted`);
+  if (!pack.routes.includes("/practice/test-generator")) fail(`offline pack ${id} omits the P2-355 local test generator`);
 }
 if (offlineSize.format !== "dwnb-offline-size-manifest" || offlineSize.version !== 1 || offlineSize.compressionPolicy !== "gzip-level-9-estimate-v1" || !/^[a-f0-9]{64}$/.test(offlineSize.buildFingerprint) || offlineSize.packs?.length !== 5) fail("offline pre-download size manifest is invalid");
 for (const [id, routeCount] of Object.entries(expectedPacks)) {
@@ -488,7 +540,7 @@ for (const [id, routeCount] of Object.entries(expectedPacks)) {
 for (const text of ["A1", "A2", "B1", "B2 + Prüfung", "A1–B2 komplett", "Gzip مبني مسبقًا", "compressedPageByteSize"]) requireText(offlineControl, text, "level Offline pack UI");
 for (const text of ["gzip-level-9-estimate-v1", "routeGzipBytes", "nextAssetGzipBytes", "buildFingerprint", "decodeURIComponent(encodedRelative)", "Unsafe Next asset path", "discoverBuiltPayloads", "layout.sizeManifestOutputs"]) requireText(offlineSizeGenerator, text, "post-build Offline size generator");
 for (const text of ["51 routes", "200 routes", "gzip level-9 bytes", "regenerated after every production build", "%5BlessonId%5D", "rejects traversal"]) requireText(offlineAdr, text, "Offline pack ADR");
-for (const text of ["59/59/59/220/319", "offline-size-manifest", "Gzip للصفحات وNext قبل التنزيل"] ) requireText(prompt, text, "continuation prompt Offline packs");
+for (const text of ["60/60/60/221/320", "offline-size-manifest", "Gzip للصفحات وNext قبل التنزيل"] ) requireText(prompt, text, "continuation prompt Offline packs");
 if (partialIds.some((id) => [242, 243].includes(id))) fail("closed Offline pack P0 IDs returned to partial state");
 if (libraryAudio.assets.length !== 80 || libraryAudio.generatedAssetCount !== 80) fail("library audio count drifted");
 if (lessonAudio.assets.length !== 96 || lessonAudio.generatedAssetCount !== 96) fail("lesson audio count drifted");
@@ -514,7 +566,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v180" || stagingCacheName !== "dwnb-full-pack-staging-v179") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v191" || stagingCacheName !== "dwnb-full-pack-staging-v190") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -680,13 +732,29 @@ for(const text of["P2-57","Light","Balanced","Intensive","never activate automat
 if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planning intensity state drifted");
 const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1297 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
-if (lexicalGaps?.nounSummary?.totalCandidates !== 4874 || lexicalGaps?.nounSummary?.covered !== 1381 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3404) fail("noun target-gap counters drifted");
-if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1257 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 4 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1119 || lexicalGaps?.exclusionDecisionCount !== 8 || lexicalGaps?.pendingIndependentExclusionReview !== 8 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+if (lexicalGaps?.nounSummary?.totalCandidates !== 4894 || lexicalGaps?.nounSummary?.covered !== 1384 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3421) fail("noun target-gap counters drifted");
+if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1258 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1123 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
+if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");
+const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
+if (lexicalFrameQualityWorklistLines.length !== 127 || !lexicalFrameQualityWorklistLines[0].includes("reviewScope") || !lexicalFrameQualityWorklistLines.some((line) => line.includes("P0-99-original-126-quality-target"))) fail("P0-99 original 126-frame quality worklist drifted");
+if (!prompt.includes("1,297 P0-98 anchors") || !prompt.includes("1,297/89 counts") || !prompt.includes("frame-quality-targets.csv") || !prompt.includes("25/30/31/40")) fail("continuation handoff does not preserve original P0-98/99 worklist scope");
+if (!reviewPacketCsvGenerator.includes("encodeCsvRow") || !safeCsvSource.includes("SPREADSHEET_FORMULA_PREFIX")) fail("human-review CSV must use the formula-safe serializer");
+const reviewPacketPreflightPosition = reviewPacketCsvGenerator.indexOf("await protectExistingReviewPacket()");
+const reviewPacketRemovalPosition = reviewPacketCsvGenerator.indexOf("await rm(OUT, { recursive: true, force: true })");
+for (const text of ["حضور التوقيع في هذه الأوراق", "يوقف التدقيق بدل أن يُقرأ كمراجعة مكتملة"]) requireText(reviewPacketCsvGenerator, text, "review-packet presence note");
+if (!reviewPacketCsvGenerator.includes("assertReviewPacketSafeToReplace") || reviewPacketPreflightPosition < 0 || reviewPacketRemovalPosition <= reviewPacketPreflightPosition) fail("human-review packet must preserve reviewer inputs before destructive regeneration");
+for (const text of ["expected 24 B2 checklist rows", "unrecognized file", "REVIEW_SIGNATURE_FIELDS"]) requireText(reviewPacketSafetySource, text, "human-review packet overwrite protection");
+for (const text of ["\"decision\"", "\"reviewerName\"", "\"reviewDate\"", "\"note\""]) requireText(humanReviewPresenceSource, text, "review-packet signature-field source");
+for (const text of ["signed review field", "filled B2 decision checklist", "unknown files", "incomplete checklist", "blocks regeneration of the P0 lexical packet"]) requireText(reviewPacketSafetyTest, text, "human-review packet overwrite protection tests");
+const lexicalReviewPreflightPosition = academicAuditGenerator.indexOf("await protectLexicalReviewInputs()");
+const academicWritePosition = academicAuditGenerator.indexOf("for (const [file, content] of outputs)");
+if (!academicAuditGenerator.includes("reviewCsvOverwriteBlocker") || lexicalReviewPreflightPosition < 0 || academicWritePosition <= lexicalReviewPreflightPosition) fail("academic audit must preserve lexical reviewer inputs before writing generated packets");
 for (const report of [academicSchemaReport, answerIntegrityReport, objectiveCoverageReport, lexicalTargetGapReport]) requireText(report, academicAudit.contentSha256, "generated academic report hash");
 for (const text of ["4,345", "2,805", "384", "389/389", "4,921", "1,382 covered", "89 pending-human", "3,450 context-only", "134 covered", "4 unclassified", "1,131 not-target"]) requireText(prompt, text, "continuation prompt academic audit");
 for (const text of ["LEXICAL_TARGET_AUDIT_VERSION", "pending-human", "Sentence-initial capitalization alone is never used"]) requireText(lexicalTargetGapSource, text, "lexical target-gap source");
 for (const text of ["0", "pendingHuman: 89", "exclusionDecisionCount", "byLevel.A1.pendingHuman", "byLevel.A2.pendingHuman", "does not treat sentence-initial capitalization alone"]) requireText(lexicalTargetGapTest, text, "lexical target-gap test");
-for (const text of ["REVIEW REQUIRED", "89 noun candidates", "4 unclassified verb-frame candidates", "Explicit structural frame exclusions (8)", "authored-review-pending"]) requireText(lexicalTargetGapReport, text, "lexical target-gap report");
+for (const text of ["REVIEW REQUIRED", "89 noun candidates", "1 unclassified verb-frame candidates", "Explicit structural frame exclusions (11)", "authored-review-pending"]) requireText(lexicalTargetGapReport, text, "lexical target-gap report");
 for (const text of ["lexical-frame-exclusions-v1", "locative-adjunct", "separable-particle", "condition-adjunct", "purpose-clause", "authored-review-pending"]) requireText(lexicalFrameDecisions, text, "lexical frame exclusion decisions");
 for (const text of ["NOVEL_TRANSFER_WEIGHT = 1.5", "NOVEL_PRACTICE_WEIGHT = 1", "SAME_ITEM_RETRY_WEIGHT = 0.25"]) requireText(masteryWeighting, text, "mastery novelty weights");
 for (const text of ["sm2-v2-calendar", "review-calendar-v1", "calendarPartsAt"]) requireText(sm2, text, "zoned SM-2 contract");
@@ -711,7 +779,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v180"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v191"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -830,10 +898,15 @@ for (const text of ["status-announcement-v1", "role=\"status\"", "aria-live=\"po
 for (const text of ["deduplicates unchanged rerenders", "requiredResultSurfaces", "data-announcement-sequence", "existing exercise contract"]) requireText(statusAnnouncementTest, text, "status announcement tests");
 for (const text of ["diagnostic/gate/lab/repair/exam", "physical assistive-technology review remains separate", "P0-255"]) requireText(statusAnnouncementAdr, text, "status announcement ADR");
 if (partialIds.includes(256)) fail("P0-256 returned to partial after shared status policy acceptance");
-for (const text of ["diagnostic-productive-sample-v1", "self-evidence-no-automated-language-score", "canSubmitDiagnosticProductiveSample", "not-yet"]) requireText(diagnosticProductive, text, "diagnostic productive contract");
-for (const text of ["Produktionsprobe ohne Note", "Stellen Sie sich in ein bis drei Sätzen vor", "45_000", "لا يوجد تصحيح أو تقدير CEFR"]) requireText(diagnosticProductiveView, text, "diagnostic productive UI");
-for (const text of ["without a language score", "supports local speaking or mixed evidence", "namespaces diagnostic audio", "not.toHaveProperty(\"score\")"]) requireText(diagnosticProductiveTest, text, "diagnostic productive tests");
+for (const text of ["diagnostic-productive-sample-v1", "self-evidence-no-automated-language-score", "canSubmitDiagnosticProductiveSample", "not-yet", "Stellen Sie sich in ein bis drei Sätzen vor"]) requireText(diagnosticProductive, text, "diagnostic productive contract");
+for (const text of ["Produktionsprobe ohne Note", "DIAGNOSTIC_PRODUCTIVE_PROMPT_DE", "45_000", "لا يوجد تصحيح أو تقدير CEFR"]) requireText(diagnosticProductiveView, text, "diagnostic productive UI");
+for (const text of ["without a language score", "supports local speaking or mixed evidence", "namespaces both recordings in the paired comparison", "not.toHaveProperty(\"score\")"]) requireText(diagnosticProductiveTest, text, "diagnostic productive tests");
 for (const text of ["absolute-beginner onboarding test still bypasses diagnostic", "never changes the receptive diagnostic result", "local 3–45 second sample"]) requireText(diagnosticProductiveAdr, text, "diagnostic productive ADR");
+for (const text of ["four-week-productive-sample-comparison-v1", "PRODUCTIVE_SAMPLE_FOLLOW_UP_DAYS = 28", "recordProductiveSampleFollowUp", "mergeProductiveSampleComparisons"]) requireText(diagnosticProductive, text, "four-week productive comparison policy");
+for (const text of ["data-follow-up-state", "حجم الكتابة", "لا نفحص صحة النص أو النطق", "ابدأ عينة الأسبوع الرابع"]) requireText(productiveComparisonPanel, text, "four-week productive comparison UI");
+for (const text of ["opens exactly 28 days", "rejects a duplicate follow-up", "preserves a completed comparison", "validates the timeline in portable schema-v3 data"]) requireText(productiveComparisonTest, text, "four-week productive comparison tests");
+for (const text of ["exactly 28 elapsed days", "not a learning-gain estimate", "DWNB/schema-v3 round trips", "LearningState.productiveSampleComparison", "start from zero", "No German production"]) requireText(productiveComparisonAdr, text, "four-week productive comparison decision");
+for (const text of ["P1-19 captures a four-week follow-up", "productiveSampleComparison:{policyVersion:\"four-week-productive-sample-comparison-v1\"", "baseline:{ mode:\"not-yet\""]) requireText(diagnosticProductiveE2E, text, "productive intake and follow-up browser assertions");
 if (partialIds.includes(26)) fail("P0-26 returned to partial after no-score productive sample acceptance");
 // Woven nursing layer (owner contract v152 / ADR-080): three rules, rollback breaker, zero gate coupling.
 if (nursingAudit.format !== "dwnb-nursing-layer-audit" || nursingAudit.version !== "nursing-layer-audit-v1" || nursingAudit.policyVersion !== "nursing-layer-v1" || nursingAudit.ok !== true) fail("nursing-layer audit identity drifted");
@@ -854,12 +927,12 @@ if (!packageJson.scripts["nursing:layer:write"].includes("generate-nursing-layer
 for (const text of ["data-nursing-policy", "data-nursing-verdict", "a1-22-nurse", "b1-04-nurse", "zweiter-teller"]) requireText(e2e, text, "nursing-layer browser flow");
 // P1-398 basis (ADR-084): breadth is counted on distinct normalized forms, and padding is gated at 0.
 if (acceptedAnswerAudit.format !== "dwnb-accepted-answer-hygiene-audit" || acceptedAnswerAudit.version !== "accepted-answer-hygiene-v1" || acceptedAnswerAudit.ok !== true) fail("accepted-answer hygiene audit identity drifted");
-if (acceptedAnswerAudit.productiveExercises !== 387 || acceptedAnswerAudit.acceptsExactlyOneString !== 338 || acceptedAnswerAudit.acceptsExactlyOneStringPct !== 87.3 || acceptedAnswerAudit.broadenedExercises !== 49 || acceptedAnswerAudit.noOpVariantCount !== 0 || acceptedAnswerAudit.exercisesWithNoOpVariants !== 0 || acceptedAnswerAudit.offenders.length !== 0) fail("accepted-answer breadth basis drifted");
-if (lessonQualityAudit.productive?.acceptedAnswerHygieneVersion !== "accepted-answer-hygiene-v1" || lessonQualityAudit.productive?.noOpVariants !== 0 || lessonQualityAudit.productive?.singleAcceptedString !== 338 || lessonQualityAudit.productive?.sharePct !== 87.34) fail("lesson-quality accepted-answer basis drifted");
-for (const text of [acceptedAnswerAudit.contentSha256, "accepted-answer-hygiene-v1", "Unreachable accepted variants listed in the tree: **0**", "338"]) requireText(acceptedAnswerReport, text, "accepted-answer hygiene report");
+if (acceptedAnswerAudit.productiveExercises !== 387 || acceptedAnswerAudit.acceptsExactlyOneString !== 226 || acceptedAnswerAudit.acceptsExactlyOneStringPct !== 58.4 || acceptedAnswerAudit.broadenedExercises !== 161 || acceptedAnswerAudit.noOpVariantCount !== 0 || acceptedAnswerAudit.exercisesWithNoOpVariants !== 0 || acceptedAnswerAudit.offenders.length !== 0) fail("accepted-answer breadth basis drifted");
+if (lessonQualityAudit.productive?.acceptedAnswerHygieneVersion !== "accepted-answer-hygiene-v1" || lessonQualityAudit.productive?.noOpVariants !== 0 || lessonQualityAudit.productive?.singleAcceptedString !== 226 || lessonQualityAudit.productive?.sharePct !== 58.4) fail("lesson-quality accepted-answer basis drifted");
+for (const text of [acceptedAnswerAudit.contentSha256, "accepted-answer-hygiene-v1", "Unreachable accepted variants listed in the tree: **0**", "226"]) requireText(acceptedAnswerReport, text, "accepted-answer hygiene report");
 for (const text of ["ACCEPTED_ANSWER_HYGIENE_VERSION", "NO_OP_VARIANT_POLICY", "distinctAcceptedForms", "noOpAcceptedVariants", "acceptsExactlyOneString"]) requireText(acceptedAnswerSource, text, "accepted-answer hygiene source");
-for (const text of ["keeps the documented removal grade-neutral", "heisst", "reports the whole tree with no unreachable variant left", "338", "49"]) requireText(acceptedAnswerTest, text, "accepted-answer hygiene test");
-for (const text of ["ADR-084", "87.3%", "150 unreachable", "grade-neutral"]) requireText(acceptedAnswerAdr, text, "accepted-answer hygiene ADR");
+for (const text of ["keeps the documented removal grade-neutral", "heisst", "reports the whole tree with no unreachable variant left", "202", "185"]) requireText(acceptedAnswerTest, text, "accepted-answer hygiene test");
+for (const text of ["ADR-084", "87.3%", "150 unreachable", "grade-neutral", "87.1%", "a1-21-e4"]) requireText(acceptedAnswerAdr, text, "accepted-answer hygiene ADR (dated figures plus the 2026-10-04 broadened variant)");
 if (!packageJson.scripts.prebuild.includes("accepted:answers")) fail("accepted-answer hygiene audit missing from prebuild");
 if (!packageJson.scripts["accepted:answers:write"].includes("generate-accepted-answer-hygiene-audit")) fail("accepted-answer hygiene writer missing");
 if (caseAudit.format !== "dwnb-meaning-first-case-audit" || caseAudit.version !== "meaning-first-case-audit-v1" || !caseAudit.ok || caseAudit.contractCount !== 19 || caseAudit.lessonCount !== 19 || caseAudit.theoryReferenceCount !== 23 || caseAudit.controlledReferenceCount !== 57 || caseAudit.assessmentReferenceCount !== 44 || caseAudit.issues.length !== 0) fail("meaning-first case audit counters drifted");
@@ -885,15 +958,14 @@ const examFormatReport = read("reports/official-exam-formats-audit.json");
 const examFormatDoc = read("docs/generated/OFFICIAL-EXAM-FORMAT-VERIFICATION.md");
 for (const text of ["dwnb-official-exam-format-evidence-v1", "excerptSha256", "allowedHostSuffixes", "openFacts"]) requireText(examFormatEvidence, text, "exam-format evidence config");
 for (const text of ["dwnb-official-exam-format-verification-v1", "buildExamFormatReport", "async function runLive", "claimsFormatUnchanged: false", "npm run exam:formats:verify:write"]) requireText(examFormatScript, text, "exam-format verification script");
-for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "6d24aabcd1a1"']) requireText(examFormatReport, text, "exam-format verification artifact");
+for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval": false', '"fingerprint": "44f220c70d65"']) requireText(examFormatReport, text, "exam-format verification artifact");
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
-// أُعيد توليد العدّادَين 7440→7441 و202→201 في جيل ADR-107 (سطر خطة تفريغ الكومة في /review):
-// وسم افتتاحي زائد، وفقرة انتقلت من «mixed static» إلى داخل عنصر مُوسَّم.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 195 || languageAudit.openingTagCount !== 7441 || languageAudit.germanTagCount !== 422 || languageAudit.arabicTagCount !== 7 || languageAudit.technicalScopeCount !== 51 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 201 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+// P1-19 adds the paired progress panel and the intake/four-week step labels; its German prompt remains isolated.
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 211 || languageAudit.openingTagCount !== 8085 || languageAudit.germanTagCount !== 446 || languageAudit.arabicTagCount !== 11 || languageAudit.technicalScopeCount !== 54 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 208 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:195", "openingTagCount:7441", "germanTagCount:422", "technicalScopeCount:51", "mixedStaticCount:201"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:211", "openingTagCount:8085", "germanTagCount:446", "arabicTagCount:11", "technicalScopeCount:54", "mixedStaticCount:208"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");
@@ -1142,10 +1214,10 @@ for (const text of ["real-task-comprehensibility-check-v1","listener-judged-real
 for (const text of ["data-comprehensibility-policy","data-comprehensibility-listener-question","data-comprehensibility-answer-key","data-comprehensibility-record","data-comprehensibility-summary","data-comprehensibility-no-effect","data-comprehensibility-honest-note"]) requireText(comprehensibilityPanel, text, "comprehensibility panel");
 for (const text of ["تقرير ذاتي لا يُعدّ تحقّقًا خارجيًا","المعلومة التي يجب أن تصل","لا تُمنح هنا درجة نطقٍ أو طلاقة"]) requireText(comprehensibilityPanel, text, "comprehensibility honesty copy");
 if (/\bfetch\(|localStorage|sessionStorage|indexedDB|navigator\./.test(comprehensibilityCore)) fail("comprehensibility core must stay network-free and storage-free");
-for (const text of ["8","3","66"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
+for (const text of ["8","3","68"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
 requireText(comprehensibilityAdr, "٨ مهام", "comprehensibility ADR inventory");
 requireText(comprehensibilityAdr, "self-report-no-external-verification", "comprehensibility ADR self-report label");
-requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count");
+requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count (historical record of the field count at that time)");
 requireText(read("src/components/shadowing-studio.tsx"), "<ComprehensibilityTaskPanel level={selected.level}/>", "comprehensibility panel mounted");
 if (!p2Rows.some((row) => row.id === 156 && row.status === "implemented")) fail("P2-156 comprehensibility state drifted");
 // ADR-098 (P2-165): محاكاة شريك الامتحان بسرعات وشخصيات — بنكٌ مؤلَّف، بلا سماعٍ ولا STT ولا درجة ولا نسبة رسمية.
@@ -1240,7 +1312,7 @@ for (const text of ["b2-lexical-grammar-v1", "\"b2-01\"", "\"b2-12\""]) requireT
 for (const text of ["a1NounGrammarEntries", "a2NounGrammarEntries", "b1NounGrammarEntries", "b2NounGrammarEntries", "lexicalGrammarCoverage"]) requireText(lexicalRegistry, text, "combined lexical grammar registry");
 for (const text of ["Nomen mit Artikel, Plural und Kasus", "Verb + Präposition + Kasus", "اكتملت A1–B2"]) requireText(lexicalPanel, text, "A1–B2 lexical grammar panel");
 for (const text of ["1,297 سجل اسم", "126 إطارات فعل/حرف جر", "1,376 covered / 89 pending-human / 3,220 context-only", "134 covered / 4 pending-human / 1,042 not-target", "A1/A2/B1/B2 noun pending = 0/0/0/89", "Weitere Zielnomen"]) requireText(prompt, text, "continuation prompt A1–B2 lexical anchor contract");
-for (const text of ["2026-09-08 — Africa/Tunis", "wegberlin-full.zip.sha256", "TERMUX_REPLACE_REPO.sh", "sha256sum -c wegberlin-full.zip.sha256", "دون Force", "P1_AUDIT.md", "ai-resilient-fallback-v1", "tutor-follow-up-command-v1", "ai-provider-capability-matrix-v1", "three-pass-listening-sequence-v1", "articulation-contrast-practice-v1", "writing-error-micro-practice-v1", "practice-law-language-boundary-v1", "evidence-derived-achievement-v1", "gamification-visibility-v1", "review-keyboard-shortcuts-v1", "local-content-note-v1", "personal-vocabulary-import-v1", "local-content-error-report-v1", "prior-experience-context-v1", "equivalent-mission-alternative-v1", "automatic-load-reduction-offer-v1", "today-session-offline-readiness-v1", "module-recycling-ratio-v1", "lexical-strategy-registry-v1", "lexical-strategy-audit-v1", "grammar-progression-map-v1", "comprehension-question-taxonomy-v1", "learning-architecture-audit-v1", "easy-vs-exam-reading-v1", "unknown-word-and-compound-strategy-v1", "unified-listening-usage-evidence-v1", "prosody-rhythm-progression-v1", "local-rms-pause-estimate-v1", "learner-attributed-language-vs-device-v1", "central-redemittel-function-register-v1", "hybrid-writing-review-v1", "writing-review-v1", "المعلّم الذاتي الأساسي والصادق", "fourteen-day-learning-contract-v1", "single-skill-diagnostic-v1", "quiet-hours-local-v1", "local-study-exports-v1", "browser-webgpu-model-v1", "content-grounded-follow-up-v1", "content-near-duplicate-v1", "content-review-state-v1", "accessibility-preferences-v1", "support-usage-v1", "evidence-freshness-v1", "error-pattern-classification-v1", "confirmed-error-srs-v1", "typed-transcript", "لا يُرسل Blob الصوت", "src/config/webgpu-model-registry.ts", "P0 = 115 implemented / 9 partial / 0 missing / 0 blocked", "P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked", "weekly-planned-actual-no-blame-v1", "evidence-velocity-readiness-range-v1", "vercel-csp-headers-v1", "dwnb-deprecation-policy-v1", "P2: 118/140 منجز، 2 جزئي، 20 غير منجز، 0 متوقف وفق P2_AUDIT.md"]) requireText(prompt, text, "continuation prompt recovery handoff");
+for (const text of ["2026-10-07 — Africa/Tunis", "wegberlin-full.zip.sha256", "TERMUX_REPLACE_REPO.sh", "sha256sum -c wegberlin-full.zip.sha256", "دون Force", "P1_AUDIT.md", "ai-resilient-fallback-v1", "tutor-follow-up-command-v1", "ai-provider-capability-matrix-v1", "three-pass-listening-sequence-v1", "articulation-contrast-practice-v1", "writing-error-micro-practice-v1", "practice-law-language-boundary-v1", "evidence-derived-achievement-v1", "gamification-visibility-v1", "review-keyboard-shortcuts-v1", "local-content-note-v1", "personal-vocabulary-import-v1", "local-content-error-report-v1", "prior-experience-context-v1", "equivalent-mission-alternative-v1", "automatic-load-reduction-offer-v1", "today-session-offline-readiness-v1", "module-recycling-ratio-v1", "lexical-strategy-registry-v1", "lexical-strategy-audit-v1", "grammar-progression-map-v1", "comprehension-question-taxonomy-v1", "learning-architecture-audit-v1", "easy-vs-exam-reading-v1", "unknown-word-and-compound-strategy-v1", "unified-listening-usage-evidence-v1", "prosody-rhythm-progression-v1", "local-rms-pause-estimate-v1", "learner-attributed-language-vs-device-v1", "central-redemittel-function-register-v1", "hybrid-writing-review-v1", "writing-review-v1", "المعلّم الذاتي الأساسي والصادق", "fourteen-day-learning-contract-v1", "single-skill-diagnostic-v1", "quiet-hours-local-v1", "local-study-exports-v1", "browser-webgpu-model-v1", "content-grounded-follow-up-v1", "content-near-duplicate-v1", "content-review-state-v1", "accessibility-preferences-v1", "support-usage-v1", "evidence-freshness-v1", "error-pattern-classification-v1", "confirmed-error-srs-v1", "typed-transcript", "لا يُرسل Blob الصوت", "src/config/webgpu-model-registry.ts", "P0 = 116 implemented / 8 partial / 0 missing / 0 blocked", "P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked", "weekly-planned-actual-no-blame-v1", "evidence-velocity-readiness-range-v1", "vercel-csp-headers-v1", "dwnb-deprecation-policy-v1", "P2: 132/142 منجز، 5 جزئي، 5 غير منجز، 0 متوقف وفق P2_AUDIT.md"]) requireText(prompt, text, "continuation prompt recovery handoff");
 if (prompt.includes("P0 98 + 99 — مراجعة فجوات التغطية المستخرجة") || prompt.includes("نفّذ P0-160 أولًا") || prompt.includes("ابدأ P0-219 بتقييم وتنفيذ") || prompt.includes("نفّذ P1-7/8") || prompt.includes("P1-18 + P1-126 —") || prompt.includes("P1-18 — معايرة سرعة الكتابة") || prompt.includes("P1-19 + P1-258 — تفضيلات الوصول المرئية والدائمة") || prompt.includes("P1-65 + P1-66 — سجل استعمال الدعم وتقادم الأدلة") || prompt.includes("P1-77 إلى P1-80 — علاج الأخطاء المؤكدة وربطها بالمراجعة") || prompt.includes("P1-92 + P1-293 + P1-295 — التشابه وحالات المراجعة المنفصلة") || prompt.includes("P1-53 + P1-281 + P1-339 + P1-340 — صادرات الدراسة المحلية") || prompt.includes("P1-20 + P1-32 + P1-54 — عقد 14 يومًا وإعادة مهارة وساعات هدوء") || prompt.includes("P1-223 + P1-330 — fallback حتمي عند فشل AI البعيد") || prompt.includes("نفّذ P1-210/222/224") || prompt.includes("نفّذ P1-139/150/151") || prompt.includes("نفّذ P1-175/186") || prompt.includes("نفّذ P1-271/272") || prompt.includes("نفّذ P1-338/341") || prompt.includes("نفّذ P1-344/366") || prompt.includes("P1-17 + P1-41 + P1-43 + P1-44 — توجيه البداية والحمل وOffline") || prompt.includes("P1-91 + P1-101 + P1-102 + P1-103 — Recycling والمعجم الوظيفي للعرب") || prompt.includes("P1-113 + P1-114 + P1-115 + P1-125 — حدود القاعدة وخريطة المتطلبات والتدرج الدلالي") || prompt.includes("P1-127 + P1-128 + P1-137 + P1-138 — أوضاع القراءة واستراتيجيات المجهول وأدلة الاستماع والنبر")) fail("continuation prompt still points to an obsolete priority instead of P1-173/185/187/200 / remote deployment proof");
 for (const text of ["storage/downloads/wegberlin-full.zip", "gh api user --jq .login", "git push origin main", "GIT_ASKPASS", "core.hooksPath .githooks", "audit-secrets.mjs --working-tree --history --require-history"] ) requireText(termuxReplace, text, "Termux clean-replacement script");
 for (const forbidden of ["git push -f", "gh auth login", "@github.com/${GITHUB_PAT}"]) if (termuxReplace.includes(forbidden)) fail(`Termux replacement script contains forbidden pattern ${forbidden}`);
@@ -1261,9 +1333,143 @@ for(const command of ["lesson:quality:audit","lesson:contract:audit","learning:i
  if(!packageJson.scripts.prebuild.includes(command))fail(`${command} is missing from the build gate`);
  try{execFileSync("npm",["run",command],{stdio:"pipe",timeout:120000});}catch(error){fail(`${command} fresh-source verification failed: ${error.message}`);}
 }
+let p099EvidenceStatusOutput;
+try {
+ p099EvidenceStatusOutput=execFileSync("npm",["run","p099:evidence:status"],{encoding:"utf8",timeout:120000});
+} catch(error) {
+ fail(`P0-99 named-reference status failed: ${error instanceof Error ? error.message : String(error)}`);
+}
+const p099NamedReferences=p099EvidenceStatusOutput.match(/Exclusion references named: (\d+)\/(\d+)/u);
+if(!p099NamedReferences)fail("P0-99 named-reference status did not report a count");
+const p099NamedReferenceCount=Number(p099NamedReferences[1]);
+const p099NamedReferenceTotal=Number(p099NamedReferences[2]);
+if(p099NamedReferenceTotal!==lexicalGaps.pendingIndependentExclusionReview||p099NamedReferenceCount>p099NamedReferenceTotal)fail("P0-99 named-reference inventory disagrees with authored exclusions");
+for(const text of["Evidence contents inspected: no","Review decision contents interpreted: no","P0-99 closure asserted: no"])requireText(p099EvidenceStatusOutput,text,"P0-99 named-reference inventory boundary");
+const p099Placeholders=p099EvidenceStatusOutput.match(/Placeholder-only references \(not counted as named\): (\d+)/u);
+if(!p099Placeholders)fail("P0-99 named-reference inventory did not report placeholder-only references");
+const p099PlaceholderCount=Number(p099Placeholders[1]);
+if(p099PlaceholderCount>p099NamedReferenceTotal)fail("P0-99 placeholder-only references exceed the authored exclusions");
+const p099SignatureCells=p099EvidenceStatusOutput.match(/Signature cells filled \(presence only, contents not interpreted\): (\d+)\/(\d+)/u);
+if(!p099SignatureCells)fail("P0-99 named-reference inventory did not report signature-cell presence");
+const p099SignatureCellsFilled=Number(p099SignatureCells[1]);
+const p099SignatureCellsExpected=Number(p099SignatureCells[2]);
+if(p099SignatureCellsExpected!==p099NamedReferenceTotal*5)fail("P0-99 signature-cell denominator disagrees with the eleven exclusions and their five signature columns");
+if(p099SignatureCellsFilled>p099SignatureCellsExpected)fail("P0-99 signature-cell presence exceeds the authored slots");
+const p099ReadySlots=p099EvidenceStatusOutput.match(/Slots ready for independent review: (\d+)\/(\d+)/u);
+if(!p099ReadySlots)fail("P0-99 named-reference inventory did not report review-slot readiness");
+const p099ReadySlotCount=Number(p099ReadySlots[1]);
+const p099ReadySlotTotal=Number(p099ReadySlots[2]);
+if(p099ReadySlotTotal!==p099NamedReferenceTotal)fail("P0-99 review-slot readiness denominator disagrees with the authored exclusions");
+if(p099ReadySlotCount>p099ReadySlotTotal)fail("P0-99 review-slot readiness exceeds the authored exclusions");
+if(p099ReadySlotCount>p099NamedReferenceCount)fail("P0-99 review-slot readiness exceeds the named evidence references");
+if(p099SignatureCellsFilled>0&&p099NamedReferenceCount===0)fail("P0-99 reports filled signature cells without a named evidence reference");
+const p099AuditSlots=humanReviewAudit.p099ExclusionSlots;
+if(!p099AuditSlots||p099AuditSlots.exclusionCount!==p099NamedReferenceTotal)fail("human-review audit P0-99 slot block disagrees with the authored exclusion count");
+if(p099AuditSlots.namedReferenceCount!==p099NamedReferenceCount||p099AuditSlots.placeholderReferenceCount!==p099PlaceholderCount||p099AuditSlots.signatureCellsFilled!==p099SignatureCellsFilled||p099AuditSlots.signatureCellsExpected!==p099SignatureCellsExpected||p099AuditSlots.readyForIndependentReviewCount!==p099ReadySlotCount)fail("human-review audit P0-99 slot block disagrees with p099:evidence:status");
+if(p099AuditSlots.missingReferenceCount+p099AuditSlots.placeholderReferenceCount+p099AuditSlots.namedReferenceCount!==p099NamedReferenceTotal)fail("human-review audit P0-99 slot states do not add up to the authored exclusions");
+if(p099AuditSlots.pendingDecisionIds?.length!==p099NamedReferenceTotal-p099NamedReferenceCount)fail("human-review audit P0-99 pending IDs disagree with the named-reference count");
+if(p099AuditSlots.evidenceContentsInspected!==false||p099AuditSlots.reviewDecisionContentsInterpreted!==false||p099AuditSlots.p099ClosureAsserted!==false)fail("human-review audit P0-99 slot block must keep evidence, decision, and closure boundaries closed");
+const p099StageTwo=p099EvidenceStatusOutput.match(/Stage 2 \((\d+) quality targets\) ([^\n]+)/u);
+if(!p099StageTwo)fail("P0-99 status did not report the stage-2 prerequisite");
+if(Number(p099StageTwo[1])!==lexicalFrameQualityWorklistLines.length-1)fail("P0-99 stage-2 target count disagrees with the independent frame-quality worklist");
+if(p099NamedReferenceCount<p099NamedReferenceTotal){
+  if(!p099StageTwo[2].startsWith("ready: no"))fail("P0-99 stage 2 must stay closed while an exclusion lacks a named evidence reference");
+  if(!p099StageTwo[2].includes(`${p099NamedReferenceCount}/${p099NamedReferenceTotal}`))fail("P0-99 stage-2 line disagrees with the named-reference count");
+}else if(!p099StageTwo[2].startsWith("ready to start: names recorded only"))fail("P0-99 stage 2 may only be described as names recorded, never as reviewed");
+requireText(p099EvidenceStatusOutput,"docs/generated/P099_EXCLUSION_REVIEW_DOSSIER.md","P0-99 status dossier pointer");
+for(const text of["auditP099ExclusionReviewSlots","auditP099QualityTargetReviewSlots","contents not interpreted"])requireText(p099StatusScript,text,"P0-99 status script wiring");
+let generatedSignatureOutput;
+try {
+ generatedSignatureOutput=execFileSync("npm",["run","review:signatures"],{encoding:"utf8",timeout:120000});
+} catch(error) {
+ fail(`generated-artifact signature scan failed: ${error instanceof Error ? error.message : String(error)}`);
+}
+const generatedSignatureLine=generatedSignatureOutput.match(/Generated review artifacts: (\d+) files \/ (\d+) rows \/ (\d+) reviewer-input cells filled of (\d+)/u);
+if(!generatedSignatureLine)fail("generated-artifact signature scan did not report its counts");
+const generatedArtifactCount=Number(generatedSignatureLine[1]);
+const generatedRowCount=Number(generatedSignatureLine[2]);
+const generatedFilledCells=Number(generatedSignatureLine[3]);
+const generatedExpectedCells=Number(generatedSignatureLine[4]);
+if(generatedArtifactCount!==22)fail(`generated-artifact signature scan must cover 22 committed review artifacts; found ${generatedArtifactCount}`);
+if(generatedRowCount!==4935)fail(`generated-artifact signature scan must cover 4,935 rows; found ${generatedRowCount}`);
+if(generatedExpectedCells!==21409)fail(`generated-artifact signature scan cell denominator drifted to ${generatedExpectedCells}`);
+if(generatedFilledCells!==0)fail(`generated artifacts must stay free of reviewer input; found ${generatedFilledCells} filled cell(s). Keep reviewer work outside the generated files and record the owner's decision in the approved record`);
+requireText(generatedSignatureOutput,"reviewer work stays outside generated files","generated-artifact signature scan boundary");
+console.log(`- generated review artifacts: ${generatedArtifactCount} files / ${generatedRowCount} rows / ${generatedFilledCells} reviewer-input cells filled of ${generatedExpectedCells} (reviewer work stays outside generated files)`);
+const p099StageTwoRows=p099EvidenceStatusOutput.match(/Stage 2 rows with a recorded signature \(presence only; contents not interpreted\): (\d+)\/(\d+)/u);
+if(!p099StageTwoRows)fail("P0-99 status did not report stage-2 signed rows");
+const p099StageTwoSigned=Number(p099StageTwoRows[1]);
+const p099StageTwoTotal=Number(p099StageTwoRows[2]);
+if(p099StageTwoTotal!==lexicalFrameQualityWorklistLines.length-1)fail("P0-99 stage-2 row count disagrees with the independent frame-quality worklist");
+if(p099StageTwoSigned>p099StageTwoTotal)fail("P0-99 stage-2 signed rows exceed the original 126-target scope");
+const p099StageTwoCells=p099EvidenceStatusOutput.match(/Stage 2 signature cells filled: (\d+)\/(\d+)/u);
+if(!p099StageTwoCells)fail("P0-99 status did not report stage-2 signature cells");
+const p099StageTwoCellsFilled=Number(p099StageTwoCells[1]);
+const p099StageTwoCellsExpected=Number(p099StageTwoCells[2]);
+if(p099StageTwoCellsExpected!==p099StageTwoTotal*5)fail("P0-99 stage-2 signature-cell denominator disagrees with the 126 targets and their five signature columns");
+if(p099StageTwoCellsFilled>p099StageTwoCellsExpected)fail("P0-99 stage-2 signature cells exceed the authored slots");
+if((p099StageTwoCellsFilled===0)!==(p099StageTwoSigned===0))fail("P0-99 stage-2 signed-row and signature-cell counts disagree");
+if(p099StageTwoCellsFilled>0&&p099NamedReferenceCount<p099NamedReferenceTotal)fail("P0-99 stage-2 signatures must not be recorded before the eleven exclusion references are named");
+for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
+ const match=p099EvidenceStatusOutput.match(new RegExp(`^- ${level}: (\\d+)/(\\d+) rows with a recorded signature$`,"mu"));
+ if(!match)fail(`P0-99 status did not report stage-2 progress for ${level}`);
+ if(Number(match[2])!==expected)fail(`P0-99 stage-2 ${level} total disagrees with the original distribution`);
+ if(Number(match[1])>Number(match[2]))fail(`P0-99 stage-2 ${level} signed rows exceed its total`);
+}
+const worklistRows=[...p099Worklist.matchAll(/^\| \d+ \| `([^`]+)` \| `([^`]+)` \|/gmu)];
+if(worklistRows.length!==lexicalFrameQualityWorklistLines.length-1)fail(`P0-99 worklist must carry one row per target; found ${worklistRows.length}`);
+const worklistTargetIds=worklistRows.map((match)=>match[2]);
+const stageTwoSheetIds=[...lexicalFrameQualityWorklist.matchAll(/^"[^"]+","((?:a[12]|b[12])-[a-z0-9-]+)"/gmu)].map((match)=>match[1]);
+if(stageTwoSheetIds.length!==worklistTargetIds.length)fail("P0-99 worklist target list disagrees with the stage-2 sheet length");
+if(stageTwoSheetIds.join("|")!==worklistTargetIds.join("|"))fail("P0-99 worklist rows must follow the stage-2 sheet order");
+for(const [level,expected] of [["A1",25],["A2",30],["B1",31],["B2",40]]){
+ const heading=p099Worklist.match(new RegExp(`^## المستوى ${level} — (\\d+)/(\\d+) هدفًا$`,"mu"));
+ if(!heading)fail(`P0-99 worklist has no ${level} section heading`);
+ if(Number(heading[1])!==expected||Number(heading[2])!==expected)fail(`P0-99 worklist ${level} section count drifted`);
+}
+if(worklistTargetIds.length!==126)fail(`P0-99 worklist must list 126 targets; found ${worklistTargetIds.length}`);
+for(const text of["ورقة عمل مراجعة الأهداف اللغوية الـ126","ليست مراجعة ولا توقيعًا ولا اعتمادًا","قائمة تحقق المراجع","حدود صريحة","frame-quality-targets.csv"])requireText(p099Worklist,text,"P0-99 stage-2 worklist boundaries");
+if(p099NamedReferenceCount<p099NamedReferenceTotal){
+ if(!/بوابة المرحلة الأولى ما زالت مغلقة/u.test(p099Worklist))fail("P0-99 worklist must state that stage 1 is still closed while exclusions lack named evidence");
+ if(!p099Worklist.includes(`**${p099NamedReferenceCount}/${p099NamedReferenceTotal}**`))fail("P0-99 worklist stage-1 counter disagrees with the named-reference count");
+}else if(!/بوابة المرحلة الأولى: أُسميت أدلة الاستبعادات الأحد عشر/u.test(p099Worklist)&&!/بوابة المرحلة الأولى: أُسميت/u.test(p099Worklist))fail("P0-99 worklist must state the stage-1 gate is open once all eleven names exist");
+if(!p099Worklist.includes("انسخها لورقة مراجع"))fail("P0-99 worklist must point reviewer decisions outside the generated file");
+
+const p099DossierIds=[...p099Dossier.matchAll(/^## (\d+)\. `([^`]+)`$/gmu)];
+if(p099DossierIds.length!==p099NamedReferenceTotal)fail(`P0-99 dossier must carry one section per authored exclusion; found ${p099DossierIds.length}`);
+if(p099DossierIds.some((match,index)=>Number(match[1])!==index+1))fail("P0-99 dossier sections are not numbered in order");
+const p099DossierOrderedIds=p099DossierIds.map((match)=>match[2]);
+const p099AuthoredOrderIds=[...p099EvidenceStatusOutput.matchAll(/^- ([a-z0-9-]+-frame-exclusion): reference /gmu)].map((match)=>match[1]);
+if(p099AuthoredOrderIds.length!==p099NamedReferenceTotal)fail("P0-99 status did not list every exclusion slot");
+if(p099DossierOrderedIds.join("|")!==p099AuthoredOrderIds.join("|"))fail("P0-99 dossier order disagrees with the authored exclusion order");
+for(const text of["لا يمنح اعتمادًا ولا يغلق P0-99","لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع","بوابة المرحلة الثانية","لا يغلق وجود هذا الملف P0-98 أو P0-99","reviewEvidenceName","frame-quality-targets.csv","لا يوجد في هذا الملف قرار بشري"])requireText(p099Dossier,text,"P0-99 readable dossier boundaries");
+if(!packageJson.scripts["p099:evidence:validate"]||!packageJson.scripts["p099:evidence:validate"].includes("validate-p099-retained-decision"))fail("P0-99 retained-decision validator script is missing");
+for(const text of["validateP099RetainedExclusionDecisions","--require-complete","Reviewer identity authenticated","P0-99 closure asserted","no file is written"])requireText(p099RetainedValidator,text,"P0-99 retained-decision validator");
+for(const text of["validateP099RetainedExclusionDecisions","reviewerIdentityAuthenticated: false","p099ClosureAsserted: false","must keep the authored exclusion order"])requireText(lexicalReviewPacketSource,text,"P0-99 retained-decision core validation");
+if(!lexicalReviewPacketSource.includes("auditP099ExclusionReviewSlots(content, expectedDecisionIds)"))fail("P0-99 retained-decision validation must reuse the presence-only slot reader");
+const p099DossierSlotState=p099Dossier.match(/خلايا توقيع ممتلئة \(حضور فقط\): \*\*(\d+)\/(\d+)\*\*/u);
+if(!p099DossierSlotState)fail("P0-99 dossier did not report the signature-cell presence");
+if(Number(p099DossierSlotState[1])!==p099SignatureCellsFilled||Number(p099DossierSlotState[2])!==p099SignatureCellsExpected)fail("P0-99 dossier signature-cell presence disagrees with p099:evidence:status");
+if(p099NamedReferenceCount===0&&!/لا يوجد في هذا الملف قرار بشري/u.test(p099Dossier))fail("P0-99 dossier must state its human-decision boundary");
+for(const text of ["P0-99 exclusion evidence slots (presence only)","does not open evidence","P0-99 closure asserted | no","Pending exclusion IDs:"])requireText(humanReviewLedgerReport,text,"human-review ledger P0-99 slot report");
+const packetPresence=humanReviewAudit.reviewPacketPresence;
+if(!packetPresence)fail("human-review audit is missing the governed-record sheet presence block");
+if(packetPresence.rowCount!==similarityReviewAudit.reviewState.rowCount)fail("review-packet presence disagrees with the governed-record review state");
+if(packetPresence.sheetCount!==17||packetPresence.sheets?.length!==17)fail("review-packet presence sheet count drifted from the committed packet");
+if(packetPresence.signatureCellsExpected!==packetPresence.rowCount*4||packetPresence.signedSignatureCells!==0)fail("review-packet signature-cell accounting drifted");
+if(packetPresence.fullySignedRowCount!==0||packetPresence.unsignedRowCount!==packetPresence.rowCount)fail("review-packet presence must report zero signed rows while no reviewer has signed");
+if(packetPresence.sheets.some((sheet)=>sheet.fullySignedRows!==0||sheet.unsignedRows!==sheet.rows))fail("review-packet presence sheet rows disagree with the zero-signed baseline");
+if(packetPresence.sheets.reduce((total,sheet)=>total+sheet.rows,0)!==packetPresence.rowCount)fail("review-packet presence sheet rows do not add up to the governed total");
+if(packetPresence.evidenceContentsInspected!==false||packetPresence.reviewDecisionContentsInterpreted!==false||packetPresence.humanReviewClosureAsserted!==false)fail("review-packet presence must keep evidence, decision, and closure boundaries closed");
+for(const text of ["Governed-record review sheets (presence only)","does not open a decision","Human review closure asserted | no","a partial signature stops the audit"])requireText(humanReviewLedgerReport,text,"human-review ledger packet presence report");
+for(const text of ["auditReviewPacketDecisionPresence","partial signature","duplicate content ID","humanReviewClosureAsserted: false"])requireText(humanReviewPresenceSource,text,"review-packet presence reader");
+if(!humanReviewReviewScript.includes("auditReviewPacketDecisionPresence"))fail("human review audit must reuse the presence-only packet reader");
+for(const text of ["summarizeP099ExclusionSlotsForHumanReview","HUMAN_REVIEW_P099_BOUNDARY_AR","evidenceContentsInspected: false","p099ClosureAsserted: false"])requireText(humanReviewLedgerSource,text,"human-review ledger P0-99 slot summary source");
+if(!humanReviewLedgerSource.includes("auditP099ExclusionReviewSlots"))fail("human-review P0-99 slot summary must reuse the presence-only slot reader");
+console.log(`- P0-99 evidence slots: ${p099NamedReferenceCount}/${p099NamedReferenceTotal} named, ${p099PlaceholderCount} placeholder-only, ${p099SignatureCellsFilled}/${p099SignatureCellsExpected} signature cells filed (presence only), ${p099ReadySlotCount} ready for independent review; evidence contents and decision contents unverified, closure not asserted`);
 console.log("Continuation handoff verified:");
 console.log(`- backlog: P0 ${expectedPriorities.P0}, P1 ${expectedPriorities.P1}, P2 ${expectedPriorities.P2}`);
-console.log(`- P0 state: 115 implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
+console.log(`- P0 state: ${124 - partialIds.length - missingIds.length - blockedIds.length} implemented, ${partialIds.length} partial, ${missingIds.length} missing, ${blockedIds.length} blocked`);
 console.log(`- P1 state: ${p1Counts.implemented} implemented, ${p1Counts.partial} partial, ${p1Counts["not-implemented"]} missing, ${p1Counts.blocked} blocked across ${p1Rows.length} audited rows`);
 console.log(`- P2 state: ${p2Counts.implemented} implemented, ${p2Counts.partial} partial, ${p2Counts["not-implemented"]} missing, ${p2Counts.blocked} blocked across ${p2Rows.length} audited rows`);
 console.log(`curriculum/audio: ${academicAudit.schema.counts.lessons} lessons, ${libraryAudio.assets.length} library MP3, ${lessonAudio.assets.length} lesson MP3 + ${lessonAudio.opusAssetCount} lesson Opus, ${examAudio.assets.length} exam files / ${examAudio.coveredClipCount} clips`);
@@ -1302,15 +1508,17 @@ console.log(`- intensity: learner-selected-intensity-presets-v1 keeps Light/Bala
 console.log(`- security: secret-audit-v1 working tree + required full-history CI + versioned pre-commit hook`);
 console.log(`- Offline: packs ${Object.entries(expectedPacks).map(([id,count])=>`${id}:${count}`).join(", ")}; gzip fingerprint ${offlineSize.buildFingerprint.slice(0,12)}`);
 console.log(`- accessibility: accessibility-preferences-v1 large text/high contrast/reduced motion + status-announcement-v1; P0-255 physical review pending`);
-console.log(`- diagnostic production: diagnostic-productive-sample-v1, self-evidence only, no automated language score`);
+console.log(`- diagnostic production: four-week-productive-sample-comparison-v1 at 28 days across all onboarding paths (beginner not-yet, top-level state); paired volume/self-report only, no language score`);
 console.log(`- case teaching: ${caseAudit.contractCount} meaning→role→form contracts / ${caseAudit.controlledReferenceCount} controlled / ${caseAudit.assessmentReferenceCount} assessment`);
 console.log(`- language/Bidi: ${languageAudit.tsxFiles} TSX / ${languageAudit.openingTagCount} tags / ${languageAudit.germanTagCount} German / 0 issues`);
 console.log(`- Tunisian support: ${tunisianAudit.noteCount} optional notes / ${tunisianAudit.lessonCount} lessons / ${tunisianAudit.pendingReview} pending independent review`);
 console.log(`- listening speed: learning-playback-speed-v1 across 5 authored surfaces; human distortion review pending`);
 console.log(`- speaking follow-up: content-grounded-follow-up-v1, typed-transcript only, local default, explicit consent for optional AI, no STT/audio claim`);
 console.log(`- browser model: browser-webgpu-model-v1, pinned q8 MiniLM ranking in a Worker, opt-in cache/delete, no silent WASM/paid fallback`);
-// يقاس آخر سطر حاكم لا أولها: أقسام PROJECT_STATUS التاريخية تحتفظ بأعداد جيلها، فالأول يقرأ رقمًا منتهٍى كأنه الحالي.
-const gateTests = (status.match(/Unit\/Integrity tests:\s*([\d,]+)\/[\d,]+\s+in\s+([\d,]+)\/[\d,]+\s+files/gi) ?? []).slice(-1)[0]?.match(/Unit\/Integrity tests:\s*([\d,]+)\/[\d,]+\s+in\s+([\d,]+)\/[\d,]+\s+files/i) ?? null;
+// Read the current product/P0 status, excluding the historical P2-352+ snapshots below it.
+const currentStatus = status.split("\n## P2-352")[0];
+const gateTestMatches = [...currentStatus.matchAll(/Unit\/Integrity tests:\s*([\d,]+)\/[\d,]+\s+in\s+([\d,]+)\/[\d,]+\s+files/gi)];
+const gateTests = gateTestMatches.at(-1) ?? null;
 const browserBullet = status.match(/- \*\*Browser \(v\d+\)\.\*\*([^\n]*)/);
 const browserRuns = [...(browserBullet?.[1] ?? "").matchAll(/(\d+\/\d+) (desktop|mobile) in ([\d.]+) min/g)].map((m) => `${m[1]} ${m[2]} in ${m[3]} min`);
 const browserSummary = browserRuns.length

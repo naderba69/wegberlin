@@ -1,0 +1,169 @@
+{
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approval-required-before-apply",
+  "scope": "عناصر اللغة matching|language-elements، 40 بندًا قابلًا للتحقق (B2)",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's own task text (texts[].textDe or clips[].transcriptDe, with [Lücke N] and [NN] markers removed), inside «…», then states why the keyed option follows. Applied to the data files after the owner approved (2026-10-10).",
+  "generated": "2026-10-10",
+  "items": [
+    {
+      "id": "t2-l2-q1",
+      "explanationAr": "النص: «das Festival in zwei Wochen beginnt» الجملة الثانوية الزمنية/السببية تبدأ بـ da وتكون بعدها الفعل في آخر الجملة، والجواب da."
+    },
+    {
+      "id": "t2-l2-q2",
+      "explanationAr": "النص: «eure Schicht korrekt eingetragen ist» بعد الفعل prüft تأتي جملة غير مباشرة بالترتيب الأخير، وهي تحقق من الصحة، لذلك الجواب ob."
+    },
+    {
+      "id": "t2-l2-q3",
+      "explanationAr": "النص: «Änderungen sind» و«Freitag möglich» في هذه المهمة الكلمة المطلوبة هي bis، فتصبح الجملة bis Freitag möglich أي حتى يوم الجمعة، لذلك الجواب bis."
+    },
+    {
+      "id": "t2-l2-q4",
+      "explanationAr": "النص: «Personen, Technik betreuen, treffen sich früher» الكلمة die ضمير موصول للجمع يعود على Personen، لذلك الجواب die."
+    },
+    {
+      "id": "t2-l2-q5",
+      "explanationAr": "النص: «Warteschlangen kürzer werden» الجملة تذكر الهدف من فتح المدخلين، لذلك الجواب damit (لكي)."
+    },
+    {
+      "id": "t2-l2-q8",
+      "explanationAr": "النص: «an die Koordination wenden» الفعل sich wenden an يتطلب الضمير المنعكس sich، لذلك الجواب sich."
+    },
+    {
+      "id": "t2-l2-q9",
+      "explanationAr": "النص: «Fotos entstehen nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم حرف الجر mit، لذلك الجواب mit."
+    },
+    {
+      "id": "t2-l2-q10",
+      "explanationAr": "النص: «Meldet euch» و«ihr kurzfristig ausfallt» الشرط الاحتمالي (إذا تغيبتم) يُعبَّر عنه بـ falls، لذلك الجواب falls."
+    },
+    {
+      "id": "t3-l2-q1",
+      "explanationAr": "النص: «wir länger öffnen, ändern sich Dienste» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+    },
+    {
+      "id": "t3-l2-q2",
+      "explanationAr": "النص: «Ihr Termin stimmt» بعد Prüfen Sie تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+    },
+    {
+      "id": "t3-l2-q3",
+      "explanationAr": "النص: «Änderungen bis» و«möglich» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+    },
+    {
+      "id": "t3-l2-q4",
+      "explanationAr": "النص: «beraten, tragen Namensschilder» ضمير الموصول die للجمع يعود على Personen، لذلك الجواب die."
+    },
+    {
+      "id": "t3-l2-q5",
+      "explanationAr": "النص: «Wege kürzer werden» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+    },
+    {
+      "id": "t3-l2-q8",
+      "explanationAr": "النص: «Bei Fragen wenden Sie» و«an uns» الفعل sich wenden an يتطلب sich، لذلك الجواب sich."
+    },
+    {
+      "id": "t3-l2-q9",
+      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+    },
+    {
+      "id": "t3-l2-q10",
+      "explanationAr": "النص: «Melden Sie sich» و«Sie Hilfe brauchen» الشرط (إذا احتجتم) يُعبَّر عنه بـ falls، لذلك الجواب falls."
+    },
+    {
+      "id": "t4-l2-q1",
+      "explanationAr": "النص: «die Woche bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+    },
+    {
+      "id": "t4-l2-q2",
+      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+    },
+    {
+      "id": "t4-l2-q3",
+      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+    },
+    {
+      "id": "t4-l2-q4",
+      "explanationAr": "النص: «Technik betreuen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+    },
+    {
+      "id": "t4-l2-q5",
+      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+    },
+    {
+      "id": "t4-l2-q8",
+      "explanationAr": "النص: «Wendet» و«bei Fragen an uns» الفعل sich wenden يتطلب الضمير المنعكس الجمع euch، لذلك الجواب euch."
+    },
+    {
+      "id": "t4-l2-q9",
+      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+    },
+    {
+      "id": "t4-l2-q10",
+      "explanationAr": "النص: «Meldet euch» و«ihr ausfallt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+    },
+    {
+      "id": "t5-l2-q1",
+      "explanationAr": "النص: «das Fest bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+    },
+    {
+      "id": "t5-l2-q2",
+      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+    },
+    {
+      "id": "t5-l2-q3",
+      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+    },
+    {
+      "id": "t5-l2-q4",
+      "explanationAr": "النص: «Technik machen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+    },
+    {
+      "id": "t5-l2-q5",
+      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+    },
+    {
+      "id": "t5-l2-q8",
+      "explanationAr": "النص: «Wendet» و«an uns» الفعل sich wenden يتطلب الضمير المنعكس euch، لذلك الجواب euch."
+    },
+    {
+      "id": "t5-l2-q9",
+      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+    },
+    {
+      "id": "t5-l2-q10",
+      "explanationAr": "النص: «Meldet euch» و«ihr fehlt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+    },
+    {
+      "id": "t6-l2-q1",
+      "explanationAr": "النص: «der Tag bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+    },
+    {
+      "id": "t6-l2-q2",
+      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+    },
+    {
+      "id": "t6-l2-q3",
+      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+    },
+    {
+      "id": "t6-l2-q4",
+      "explanationAr": "النص: «Technik betreuen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+    },
+    {
+      "id": "t6-l2-q5",
+      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+    },
+    {
+      "id": "t6-l2-q8",
+      "explanationAr": "النص: «Wendet» و«an uns» الفعل sich wenden يتطلب الضمير المنعكس euch، لذلك الجواب euch."
+    },
+    {
+      "id": "t6-l2-q9",
+      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+    },
+    {
+      "id": "t6-l2-q10",
+      "explanationAr": "النص: «Meldet euch» و«ihr ausfallt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+    }
+  ]
+}

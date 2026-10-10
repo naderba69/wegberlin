@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useState } from "react";
 import { ExternalPromptPackPanel } from "@/components/external-prompt-pack-panel";
 import Link from "next/link";
@@ -217,7 +218,7 @@ export function TutorView() {
           <span>{message.role === "assistant" ? <Sparkles size={17} /> : <UserRound size={17} />}</span>
           {message.role === "assistant" && message.answer ? <div className="structured-tutor-answer">
             <section><small><Lightbulb size={13} /> التلميح أولًا</small><p>{message.answer.hintAr}</p></section>
-            <section><small><CheckCircle2 size={13} /> الشرح</small><p>{message.answer.explanationAr}</p></section>
+            <section><small><CheckCircle2 size={13} /> الشرح</small><p>{learnerExplanation(message.answer.explanationAr)}</p></section>
             <section><small>أمثلة ألمانية</small>{message.answer.examplesDe.map((example) => <code key={example} lang="de" dir="ltr">{example}</code>)}</section>
             <section className="tutor-micro-exercise"><small>جرّب الآن</small><p>{message.answer.microExerciseAr}</p></section>
             <footer>{providerLabel[message.answer.provider]} · {message.answer.model} · {message.answer.promptVersion}</footer>

@@ -10,8 +10,8 @@
   "assessmentReferenceCount": 44,
   "discoveredSignals": {
     "theory": 20,
-    "controlled": 20,
-    "assessment": 22
+    "controlled": 21,
+    "assessment": 25
   },
   "byLevel": {
     "A1": 6,
@@ -207,7 +207,7 @@
       "governedCases": [
         "dative"
       ],
-      "formRuleAr": "zu وgegenüber يأخذان Dativ هنا؛ بعد اختيار الوظيفة كوّن zur Post أو gegenüber dem Hotel.",
+      "formRuleAr": "zu و gegenüber يأخذان Dativ هنا؛ بعد اختيار الوظيفة كوّن zur Post أو gegenüber dem Hotel.",
       "theoryIds": [
         "a1-20-t2"
       ],
@@ -280,7 +280,7 @@
       "governedCases": [
         "accusative"
       ],
-      "formRuleAr": "für وum يأخذان Akkusativ هنا؛ بعد تحديد المهمة افحص تركيب zuständig für أو sich kümmern um.",
+      "formRuleAr": "für و um يأخذان Akkusativ هنا؛ بعد تحديد المهمة افحص تركيب zuständig für أو sich kümmern um.",
       "theoryIds": [
         "a2-07-t1",
         "a2-07-t2"
@@ -384,7 +384,7 @@
       "governedCases": [
         "accusative"
       ],
-      "formRuleAr": "für وgegen يطلبان Akkusativ؛ افهم اتجاه القرار أولًا ثم كوّن الأداة أو الضمير الانعكاسي.",
+      "formRuleAr": "für و gegen يطلبان Akkusativ؛ افهم اتجاه القرار أولًا ثم كوّن الأداة أو الضمير الانعكاسي.",
       "theoryIds": [
         "b1-02-t1"
       ],
@@ -417,7 +417,7 @@
       "governedCases": [
         "dative"
       ],
-      "formRuleAr": "عند ذكر المنفذ بعد von استخدم Dativ؛ لا تبدأ بـdem/der قبل تقرير أن هذا الاسم هو المنفذ.",
+      "formRuleAr": "عند ذكر المنفذ بعد von استخدم Dativ؛ لا تبدأ ب dem/der قبل تقرير أن هذا الاسم هو المنفذ.",
       "theoryIds": [
         "b1-04-t1"
       ],
@@ -675,5 +675,5 @@
     }
   ],
   "boundary": "The audit proves authored sequencing and complete ownership of explicit case-name signals. It does not replace an independent linguistic judgment of every explanation or learner interpretation.",
-  "contentSha256": "c585e919993f365a534e8b16f6b30b931947433c5c34a54aab9dce045ab0e4d5"
+  "contentSha256": "7812cf68bbe53e10263f450f4ea254a4fae39708bdfaac6ff73f7b4064ea9b94"
 }

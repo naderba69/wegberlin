@@ -137,14 +137,14 @@
 ## 4) بصمات الحالة الحالية (أعِد قياسها قبل أي ادّعاء)
 
 ```
-content SHA-256      5ef5c1d16037156cee60b6ba93cb9b12c8ef8c476bc30a7ca3375a9e13816567  (البصمة تشمل صفوف الفجوات المعجمية
+content SHA-256      4a00f26b9d8d270c123dd57f509e5fd9f18053e1103f1377a703d5ddd489cabb  (البصمة تشمل صفوف الفجوات المعجمية
 delivery layout        البناء بـ`npm run archive:delivery` (يرفض مجلد الظرف ويجبر package.json+src/app+public/sw.js في الجذر؛ قِيس v155: 1,756 ملفًا + 161 مدخلًا = 1,917، 134 تحت src/app)؛ الرفع بـ`TERMUX_ONE_COMMAND.txt` و`TERMUX_REPLACE_REPO.sh` فقط (ADR-082 + حارس 2026-09-21)
-offline fingerprint  7da00fe019e4   (packs gzip: a1 2,411,734 · a2 2,523,037 · b1 2,555,064 · b2 3,908,700 · full 5,692,793 — قِيس بعد إعادة البناء الكاملة في v156.2: 321/321 صفحة، Compiled 30.2s، SSG 10.4s)
+offline fingerprint  873ab1588978   (packs gzip: a1 2,737,750 · a2 2,850,106 · b1 2,875,103 · b2 4,299,649 · full 6,027,431 — بعد بديلَي P1-398 الدفعة الخامسة (شكل الحزمة تغيّر بنص الشرح) — قِيس بعد إعادة البناء الكاملة في v156.2: 321/321 صفحة، Compiled 30.2s، SSG 10.4s)
 js:budget            110 مقاطع / 1,739,688 gzip / أكبر ملف 251,309
 media:budget         544 ملفًا / 52,943,843 بايت تحت 59,500,000 (سقف ADR 70,000,000) · `curriculumSourceGzipBytes` 958,946 gzip · 318 مسارًا و5 حُزَم (58/58/58/219/318)
 quality              under60 **1,130** من 1,733 · under40 **923** · `allMedianChars` **33** · وسيط الشرح **27** · جماعة الوسيط **991 من 1,250** والمسافة **366 ⇒ 16 دفعة** · القرينة **39.28%** (مقيسةٌ بعد استعادة v156 والدفعات العشر)
 gate                 `tsc` 0 · `lint` 0 · `vitest run tests/unit` **1,027 من 1,027** في **156 من 156** ملفًا · `handoff:check` **0** · `case:audit` 0 فجوات (19/23/57/44) · `lesson:quality:audit` خروج 1 بالملاحظتين (الإنتاجية 50.9% مقابل 25%، ووسيط 26 مقابل 60) — **وهذا هو الطابور لا عطلٌ**
-audit sha            content:audit **5ef5c1d16037** (تحرّك مع استعادة المشتتات ثم مع الدفعة العاشرة — بصمتُه يشمل الشرح) · learning-architecture **9b57e06047aa** (بلا حركة: بصمتُها تبني على الهيكل لا على نصوص التمارين) · case 167645dd621b · similarity efdb019376f3 · language 9da1a2e19f1e · lexical-strategy 439956b453f0 · study-modes 1645b5caa1b0 · practical-context c935b0f4ef8b · tunisian 769c3276791f · governance cd507293b939
+audit sha            content:audit **9ce6feedd235** (تحرّك مع إضافة المتغيرات المراجعة وتحويل أربعة بنود إلى كتابة — بصمتُه يشمل الشرح) · learning-architecture **9b57e06047aa** (بلا حركة: بصمتُها تبني على الهيكل لا على نصوص التمارين) · case 167645dd621b · similarity efdb019376f3 · language 9da1a2e19f1e · lexical-strategy 439956b453f0 · study-modes 1645b5caa1b0 · practical-context c935b0f4ef8b · tunisian 769c3276791f · governance cd507293b939
 similarity sha       efdb019376f3…  · exam evidence 2026-09-15 (fingerprint 1e61862c8a97)
 cache              dwnb-full-pack-**v156** (staging/previous **v155**) · shell dwnb-shell-v4 · رُفع بـ`python3 scripts/bump-pack-generation.py --from v155 --to v156 --write` (15 موضعًا في 7 ملفات، ويرفض إن بقيت حرفيةٌ قديمة) · وثلاثةَ عشرَ وثيقةً على `Sync batch: v156` (بوابة ADR-079)
 data state         العدادات المعجمية **مُستعادةٌ ومطابقة**: الأسماء **4,874 / 1,381 covered / 89 pending-human /

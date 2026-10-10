@@ -9,15 +9,11 @@ const APPLIED_FILES = [
   "exam-bank-listening-b2-explanations.draft.json",
   "exam-bank-reading-b2-explanations.draft.json",
   "exam-bank-language-elements-b2-explanations.draft.json",
-];
-/** مسودات بانتظار موافقة المالك، ولم تُطبَّق بعد. */
-const PENDING_FILES = [
   "exam-bank-choice-reading-b2-explanations.draft.json",
   "exam-bank-choice-language-elements-b2-explanations.draft.json",
 ];
 const NOT_DRAFTED_FILE = "exam-bank-not-drafted-2026-10-10.json";
 const APPLIED_STATUS = "applied-owner-approved-2026-10-10";
-const PENDING_STATUS = "draft-owner-approval-required";
 /** حد الشرح القصير المستخدم في التدقيق. */
 const SHORT_LIMIT = 20;
 
@@ -64,24 +60,19 @@ describe("exam bank explanation drafts", () => {
   const notDrafted = readJson(NOT_DRAFTED_FILE);
   const flaggedIds = (notDrafted.flagged.items as { id: string }[]).map((e) => e.id);
 
-  it("covers every exam item exactly once: applied, pending, or flagged", () => {
+  it("covers every exam item exactly once: applied or flagged", () => {
     const applied: string[] = [];
     for (const file of APPLIED_FILES) {
       for (const entry of readJson(file).items as { id: string }[]) applied.push(entry.id);
     }
-    const pending: string[] = [];
-    for (const file of PENDING_FILES) {
-      for (const entry of readJson(file).items as { id: string }[]) pending.push(entry.id);
-    }
-    const all = [...applied, ...pending, ...flaggedIds];
+    const all = [...applied, ...flaggedIds];
 
     expect(new Set(all).size).toBe(all.length);
-    expect(applied.length).toBe(424);
-    expect(pending.length).toBe(90);
+    expect(applied.length).toBe(514);
     expect(flaggedIds.length).toBe(12);
     expect(all.length).toBe(526);
-    // البنود القصيرة المتبقية في البيانات الحية هي بالضبط المعلّقة والمُعلَّمة
-    expect([...shortItemIds].sort()).toEqual([...pending, ...flaggedIds].sort());
+    // البنود القصيرة المتبقية في البيانات الحية هي بالضبط المُعلَّمة
+    expect([...shortItemIds].sort()).toEqual([...flaggedIds].sort());
   });
 
   it("keeps the flagged list in an explicit reason group", () => {
@@ -99,32 +90,6 @@ describe("exam bank explanation drafts", () => {
       it("the live data carries the approved explanation", () => {
         for (const entry of draft.items as { id: string; explanationAr: string }[]) {
           expect(itemById.get(entry.id)?.item.explanationAr, entry.id).toBe(entry.explanationAr);
-        }
-      });
-
-      it("quotes only verbatim text from the item's own task", () => {
-        for (const entry of draft.items as { id: string; explanationAr: string }[]) {
-          const ref = itemById.get(entry.id);
-          expect(ref, entry.id).toBeDefined();
-          const source = sourceByTaskId.get(ref!.task.id) ?? "";
-          const quotes = [...entry.explanationAr.matchAll(/«([^»]+)»/g)].map((m) => m[1]);
-          expect(quotes.length, entry.id).toBeGreaterThan(0);
-          for (const quote of quotes) {
-            expect(source.includes(normalize(quote)), `${entry.id}: ${quote}`).toBe(true);
-          }
-        }
-      });
-    });
-  }
-
-  for (const file of PENDING_FILES) {
-    describe(file, () => {
-      const draft = readJson(file);
-
-      it("is still pending owner approval, and not applied to the data", () => {
-        expect(draft.status).toBe(PENDING_STATUS);
-        for (const entry of draft.items as { id: string; explanationAr: string }[]) {
-          expect(itemById.get(entry.id)?.item.explanationAr, entry.id).not.toBe(entry.explanationAr);
         }
       });
 

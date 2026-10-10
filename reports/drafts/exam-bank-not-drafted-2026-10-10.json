@@ -2,7 +2,7 @@
   "status": "not-drafted-owner-decision-required",
   "policy": "owner-approval-required-before-apply",
   "generated": "2026-10-10",
-  "scope": "بنود قصيرة لم تُكتب لها مسودة: 12 بندًا بمفتاح مشكوك فيه فقط. (البنود الـ90 السابقة المحجوبة صار لها مسودات في ملفات choice، بانتظار الموافقة.)",
+  "scope": "بنود قصيرة لم تُكتب لها مسودة: 12 بندًا بمفتاح مشكوك فيه فقط. هي الآن البنود القصيرة الوحيدة المتبقية في البيانات.",
   "flagged": {
     "reason": "doubtful keyed answer: the keyed option does not fit the gap sentence (gaps 36 and 37 in t2-t6, and g5-r2-q1, g6-r2-q5)",
     "items": [

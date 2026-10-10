@@ -1576,3 +1576,9 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 /* Audit round 2 (2026-10-10): long German compounds (e.g. Arbeitsunfähigkeitsbescheinigung) must wrap inside 2-column phrase cards at 412px. */
 .phrase-grid>*,.phrase-card{min-width:0}
 .phrase-card{overflow-wrap:anywhere}
+
+/* Audit round 4 (2026-10-10): learner-visible review status and the stage-lock hint. */
+.lesson-review-status{margin:8px 0 0;padding:8px 10px;border-radius:10px;font-size:var(--fs-12);line-height:1.6}
+.lesson-review-status.pending{background:#fff4e0;color:#7a5520;border:1px solid #ecd6a8}
+.lesson-review-status.reviewed{background:#edf6f0;color:#2f6a4f;border:1px solid #cfe3d7}
+.stage-lock-hint{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:#f4f1ea;color:#5f5440;font-size:var(--fs-12);line-height:1.6}

@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `f0536e6b69ae27f0931393c2877928168e1b830dce58be94aa2bc3f4a131e4a2`
+Content SHA-256: `d4fc4e414abbbf102b7cef2c79679b60278b8c49c19faff249c8f8dd9bf64b61`
 
 ## Result
 
-`PASS` — 211 TSX files and 8084 opening JSX tags were scanned.
+`PASS` — 211 TSX files and 8085 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -92,9 +92,9 @@ Content SHA-256: `f0536e6b69ae27f0931393c2877928168e1b830dce58be94aa2bc3f4a131e4
 | src/components/diagnostic-productive-sample.tsx:112 | Kurze Sprechprobe · عينة كلام اختيارية | Arabic host + plaintext boundary |
 | src/components/diagnostic-productive-sample.tsx:114 | Wie selbstständig war das? · كيف كان إنتاجك؟ | Arabic host + plaintext boundary |
 | src/components/diagnostic-productive-sample.tsx:117 | لا يوجد تصحيح أو تقدير CEFR لهذه العينة. | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:120 | الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا. | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:129 | Produktionsprobe · العينة الإنتاجية | Arabic host + plaintext boundary |
-| src/components/diagnostic-view.tsx:141 | استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني. | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:124 | الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا. | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:133 | Produktionsprobe · العينة الإنتاجية | Arabic host + plaintext boundary |
+| src/components/diagnostic-view.tsx:145 | استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني. | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:151 | استمع أولًا، اكتب قدر المستوى، ثم قارن موضع الخطأ وأعد المحاولة. يبدأ A1 بفراغات محددة ويتدرج حتى جمل B2 الكام | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:155 | 4 لكل مستوى · دون AI أو شبكة من المنصة | Arabic host + plaintext boundary |
 | src/components/dictation-lab.tsx:232 | هذا تدريب إملائي محلي القواعد، وليس اختبار CEFR أو درجة استماع رسمية. لا يرسل التطبيق النص أو الصوت إلى Gemini | Arabic host + plaintext boundary |

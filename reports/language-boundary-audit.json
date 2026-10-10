@@ -4,7 +4,7 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 211,
-  "openingTagCount": 8084,
+  "openingTagCount": 8085,
   "germanTagCount": 446,
   "arabicTagCount": 11,
   "ltrTagCount": 494,
@@ -293,17 +293,17 @@
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 120,
+      "line": 124,
       "text": "الثقة تخص هذه العينة فقط، ولا تساوي حكم CEFR رسميًا."
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 129,
+      "line": 133,
       "text": "Produktionsprobe · العينة الإنتاجية"
     },
     {
       "path": "src/components/diagnostic-view.tsx",
-      "line": 141,
+      "line": 145,
       "text": "استمع دون فتح النص. إن رفض جهازك MP3 يظهر بديل صوت المتصفح تلقائيًا؛ كلاهما تدريبي وغير امتحاني."
     },
     {
@@ -1059,5 +1059,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "f0536e6b69ae27f0931393c2877928168e1b830dce58be94aa2bc3f4a131e4a2"
+  "contentSha256": "d4fc4e414abbbf102b7cef2c79679b60278b8c49c19faff249c8f8dd9bf64b61"
 }

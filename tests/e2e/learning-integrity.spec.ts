@@ -7,6 +7,7 @@ import type { LearningState } from "../../src/types/learning";
 const learner:LearningState={...defaultState,profile:{name:"QA learner",targetExam:"telc-deutsch-b2",dailyMinutes:90,arabicSupport:"modern-standard-arabic",currentLevel:"A1",priorExperience:"none",createdAt:"2026-10-01T09:00:00Z"}};
 async function seed(page:Page,state:LearningState){
   await page.goto("/today");
+  await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready","true",{timeout:30_000});
   await page.evaluate(async value=>{
     const database=await new Promise<IDBDatabase>((resolve,reject)=>{const request=indexedDB.open("der-weg-nach-berlin",4);request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});
     await new Promise<void>((resolve,reject)=>{const transaction=database.transaction("learning-state","readwrite");transaction.objectStore("learning-state").put(value,"primary");transaction.oncomplete=()=>resolve();transaction.onerror=()=>reject(transaction.error);});database.close();

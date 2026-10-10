@@ -9,8 +9,14 @@ const DRAFT_FILES = readdirSync(DRAFT_DIR).filter((f) => /^library-.*-explanatio
 /** المسودات لا تُطبَّق قبل موافقة المالك، لكن كل اقتباس فيها يجب أن يرد حرفيًا في نص بنده. */
 describe("library explanation drafts", () => {
   const textById = new Map<string, string>();
-  for (const item of [...readingLibrary, ...listeningLibrary] as { textDe: string; questions: { id: string }[] }[]) {
-    for (const q of item.questions) textById.set(q.id, item.textDe);
+  // Reading items carry textDe; listening items carry the same text as transcriptDe.
+  for (const item of [...readingLibrary, ...listeningLibrary] as {
+    textDe?: string;
+    transcriptDe?: string;
+    questions: { id: string }[];
+  }[]) {
+    const text = item.textDe ?? item.transcriptDe ?? "";
+    for (const q of item.questions) textById.set(q.id, text);
   }
 
   it("has draft files to check", () => {

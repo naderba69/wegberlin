@@ -1,0 +1,178 @@
+{
+  "status": "draft-owner-approval-required",
+  "policy": "owner-approval-required-before-apply",
+  "scope": "choice|reading (الاختيار من متعدد للقراءة)، 42 بندًا قصيرًا (B2)",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's own task text (the task-level textDe, with [NN] gap markers removed), inside «…», then states why the keyed option follows. Not applied to any .ts file until the owner approves.",
+  "generated": "2026-10-10",
+  "note": "كانت هذه البنود مُعلَّمة محجوبة بخطأ: نص المهمة موجود في الحقل textDe على مستوى المهمة، والتحقق من الاقتباس يتم عليه.",
+  "items": [
+    {
+      "id": "t2-r2-q1",
+      "explanationAr": "النص: «der lange Weg für Menschen ohne Auto» السبب هو الطرق الطويلة لمن لا سيارة لهم، لذلك الجواب Weite Wege ohne Auto."
+    },
+    {
+      "id": "g3-r3-q2",
+      "explanationAr": "النص: «aber keine Namen» الموجود في النص أن الاسم لم يُحفظ، لذلك الجواب Namen."
+    },
+    {
+      "id": "g3-r3-q4",
+      "explanationAr": "النص: «in einem Park waren die Handywerte dagegen durch Wind verzerrt» مشكلة المتنزه أن الرياح شوّهت القياسات، لذلك الجواب Wind أثّر في ميكروفونات الهواتف."
+    },
+    {
+      "id": "g3-r3-q5",
+      "explanationAr": "النص: «zeitlich begrenzte Verkehrsversuche an zwei Kreuzungen» تخطط المدينة لتجارب مرورية في تقاطعين، لذلك الجواب An zwei Kreuzungen."
+    },
+    {
+      "id": "g3-r3-q6",
+      "explanationAr": "النص: «wie Bürgerdaten Fragen sichtbar machen können, ohne amtliche Messungen zu ersetzen» دور بيانات المواطنين هو إظهار الأسئلة لا الإثبات أو الاستبدال، لذلك الجواب تجعل أسئلة التدقيق مرئية."
+    },
+    {
+      "id": "t3-r2-q1",
+      "explanationAr": "النص: «Ziel war, teure Geräte gemeinsam zu nutzen» الهدف الرئيسي استخدام الأجهزة المكلفة بشكل مشترك، لذلك الجواب Geräte gemeinsam nutzen."
+    },
+    {
+      "id": "t3-r2-q2",
+      "explanationAr": "النص: «zwei Nachmittage bleiben für kurzfristige Buchungen frei» يبقى يومان بعد الظهر مرنين للحجز القصير، لذلك الجواب Zwei Nachmittage."
+    },
+    {
+      "id": "t3-r2-q3",
+      "explanationAr": "النص: «Konflikte, weil Materiallisten nicht aktualisiert wurden» المشكلة المبكرة أن قوائم المواد لم تكن محدّثة، لذلك الجواب Listen nicht aktuell."
+    },
+    {
+      "id": "t3-r2-q4",
+      "explanationAr": "النص: «da ihr Transport fehlte» انخفض استخدام المدارس الصغيرة لأن النقل لم يكن متوفرًا، لذلك الجواب Transport fehlte."
+    },
+    {
+      "id": "t3-r2-q5",
+      "explanationAr": "النص: «keine Erweiterung, bevor geprüft ist, ob dadurch die Nutzung dieser Schulen steigt» لا توسعة قبل معرفة أثر الحافلة، لذلك الجواب Nach Wirkung des Busses."
+    },
+    {
+      "id": "g4-r3-q1",
+      "explanationAr": "النص: «Ziel war nicht, die Hälfte der Fläche sofort abzugeben, sondern unterschiedliche Nutzung zu messen» الهدف كان قياس الاستخدام المختلف للأماكن، لذلك الجواب Nutzung verschiedener Plätze messen."
+    },
+    {
+      "id": "g4-r3-q2",
+      "explanationAr": "النص: «Einige Teams verloren Zeit, weil Bildschirme und Stühle täglich neu eingestellt wurden» مشكلة الفرق أن إعداد الشاشات والكراسي يتكرر يوميًا، لذلك الجواب Tägliche Neueinstellung kostete Zeit."
+    },
+    {
+      "id": "g4-r3-q3",
+      "explanationAr": "النص: «persönliche Schließfächer, identische Technik und Teamzonen» أُدخلت خزائن شخصية وتقنية متماثلة ومناطق للفرق، لذلك الجواب Schließfächer, gleiche Technik und Teamzonen."
+    },
+    {
+      "id": "g4-r3-q4",
+      "explanationAr": "النص: «Beschäftigte mit spontanen Betreuungspflichten stornierten häufiger» الذين ألغوا الحجز أكثر هم أصحاب مسؤوليات الرعاية المفاجئة، لذلك الجواب Menschen mit spontanen Betreuungspflichten."
+    },
+    {
+      "id": "g4-r3-q5",
+      "explanationAr": "النص: «zehn nicht reservierbare Plätze freigehalten» الاحتياطي هو عشرة أماكن لا تُحجز، لذلك الجواب Zehn Plätze ohne Reservierung."
+    },
+    {
+      "id": "t4-r2-q1",
+      "explanationAr": "النص: «Ziel sind weniger Lieferwagen, nicht weniger Lieferungen» الهدف تقليل الشاحنات لا تقليل الطلبات، لذلك الجواب تقليل الشاحنات الكبيرة."
+    },
+    {
+      "id": "t4-r2-q2",
+      "explanationAr": "النص: «Lastenräder übernehmen die letzte Strecke» الدراجات الشحن تحمل المرحلة الأخيرة، لذلك الجواب Lastenräder."
+    },
+    {
+      "id": "t4-r2-q3",
+      "explanationAr": "النص: «an einem Depot entstanden morgens Warteschlangen» المشكلة المبكرة طوابير صباحية، لذلك الجواب Warteschlangen."
+    },
+    {
+      "id": "t4-r2-q4",
+      "explanationAr": "النص: «Eine telefonische Möglichkeit wurde ergänzt» بعد انتقاد الحجز المعقد أُضيف الهاتف، لذلك الجواب Telefonische Buchung."
+    },
+    {
+      "id": "t4-r2-q5",
+      "explanationAr": "النص: «gemessen werden Fahrten, Verspätungen, Kosten und Zugang kleiner Betriebe» القياس يشمل الرحلات والتأخير والتكلفة والوصول، لذلك الجواب Fahrten, Zeit, Kosten, Zugang."
+    },
+    {
+      "id": "g5-r3-q1",
+      "explanationAr": "النص: «Ziel war, Selbstständigen ohne eigenes Büro einen bezahlbaren Arbeitsort zu bieten» الفئة المستهدفة هي الأشخاص المستقلون بلا مكتب، لذلك الجواب Selbstständige ohne Büro."
+    },
+    {
+      "id": "g5-r3-q2",
+      "explanationAr": "النص: «leise Gespräche und kurze Videokonferenzen in zwei Kabinen» تسمح الكبائن بمكالمات الفيديو القصيرة، لذلك الجواب Videokonferenzen."
+    },
+    {
+      "id": "g5-r3-q3",
+      "explanationAr": "النص: «Eine Befragung zeigte, dass viele Nutzer nicht wussten, wo Gespräche erlaubt waren» الغموض كان حول الأماكن المسموح فيها بالحديث، لذلك الجواب Wo Gespräche erlaubt sind."
+    },
+    {
+      "id": "g5-r3-q4",
+      "explanationAr": "النص: «schriftliche Hinweise und eine kurze Einführung verbesserten die Orientierung» الذي أضاف الوضوح هو الإرشادات المكتوبة والتعريف القصير، لذلك الجواب Schriftliche Hinweise und Einführung."
+    },
+    {
+      "id": "g5-r3-q5",
+      "explanationAr": "النص: «Reservierungen verfallen nun nach zwanzig Minuten» تنتهي صلاحية الحجز بعد 20 دقيقة، لذلك الجواب Nach 20 Minuten."
+    },
+    {
+      "id": "g5-r3-q6",
+      "explanationAr": "النص: «Lärm, wiederholte Nutzung und Zugang ohne App getrennt messen» تُقاس الضوضاء وتكرار الاستخدام والوصول بلا تطبيق بشكل منفصل، لذلك الجواب Lärm, Wiederkehr, Zugang ohne App."
+    },
+    {
+      "id": "t5-r2-q1",
+      "explanationAr": "النص: «Ziel ist gemeinsames Nutzen, nicht Konkurrenz zu Fachgeschäften» الهدف هو الاستخدام المشترك، لذلك الجواب Gemeinsam nutzen."
+    },
+    {
+      "id": "t5-r2-q2",
+      "explanationAr": "النص: «Reservierungen laufen online und telefonisch» الحجز يتم عبر الإنترنت والهاتف، لذلك الجواب Online und Telefon."
+    },
+    {
+      "id": "t5-r2-q3",
+      "explanationAr": "النص: «Anfangs wurden viele Geräte verspätet zurückgebracht» المشكلة المبكرة هي تأخر الإرجاع، لذلك الجواب Verspätete Rückgabe."
+    },
+    {
+      "id": "t5-r2-q4",
+      "explanationAr": "النص: «Erinnerungen am Vortag und klare Zeitfenster verbesserten die Rückgabe» الحل كان تذكيرًا في اليوم السابق وأوقاتًا واضحة، لذلك الجواب Erinnerung und Zeitfenster."
+    },
+    {
+      "id": "t5-r2-q5",
+      "explanationAr": "النص: «künftig misst das Team Ausleihe, Wartungszeit und abgelehnte Anfragen» القياس القادم يشمل الاستعارة ووقت الصيانة والطلبات المرفوضة، لذلك الجواب Ausleihe, Wartung, Ablehnung."
+    },
+    {
+      "id": "g6-r3-q1",
+      "explanationAr": "النص: «Oberflächentemperaturen wurden an fünf heißen Tagen gemessen» و«Gemessen wurde jedoch nicht die Lufttemperatur» الذي قيس هو حرارة السطح لا الهواء، لذلك الجواب Oberflächentemperatur."
+    },
+    {
+      "id": "g6-r3-q2",
+      "explanationAr": "النص: «Bäume boten weniger sofortigen Schatten» أي أن الأشرعة توفر ظلًا فوريًا أكبر، لذلك الجواب Sofortiger Schatten."
+    },
+    {
+      "id": "g6-r3-q3",
+      "explanationAr": "النص: «verbesserten aber langfristig Aufenthaltsqualität und Regenaufnahme» ميزة الأشجار طويلة الأمد في جودة المكان وامتصاص المطر، لذلك الجواب الجودة طويلة الأمد وامتصاص المياه."
+    },
+    {
+      "id": "g6-r3-q4",
+      "explanationAr": "النص: «benötigten jedoch tägliche Sicherheitskontrollen bei Wind» خطر الأشرعة يتطلب فحوص أمان يومية عند الرياح، لذلك الجواب Windkontrolle nötig."
+    },
+    {
+      "id": "g6-r3-q5",
+      "explanationAr": "النص: «Schülerinnen nutzten beschattete Sitzbereiche häufiger, während Sportflächen kaum anders genutzt wurden» مناطق الجلوس المظللة كانت أكثر استخدامًا، لذلك الجواب Beschattete Sitzbereiche."
+    },
+    {
+      "id": "g6-r3-q6",
+      "explanationAr": "النص: «Der Bericht empfiehlt eine Kombination und längere Messungen über verschiedene Jahreszeiten» التوصية هي الجمع بين الحلين وقياس أطول، لذلك الجواب Kombination und längere Messung."
+    },
+    {
+      "id": "t6-r2-q1",
+      "explanationAr": "النص: «keine vollständigen Abschlüsse» الحافلة لا تقدم شهادات كاملة، لذلك الجواب Vollständige Abschlüsse."
+    },
+    {
+      "id": "t6-r2-q2",
+      "explanationAr": "النص: «Termine sind online, telefonisch oder spontan möglich» توجد ثلاث طرق للحجز، لذلك الجواب Drei Wege."
+    },
+    {
+      "id": "t6-r2-q3",
+      "explanationAr": "النص: «Anfangs waren Nachmittage voll und Abende leer» المشكلة المبكرة هي المساءات الفارغة، لذلك الجواب Abende leer."
+    },
+    {
+      "id": "t6-r2-q4",
+      "explanationAr": "النص: «Aushänge und Kooperation mit Betrieben verbesserten die Abendnutzung» ما ساعد هو الإعلانات والتعاون مع الشركات، لذلك الجواب Aushänge und Betriebe."
+    },
+    {
+      "id": "t6-r2-q5",
+      "explanationAr": "النص: «gemessen werden Wiederkehr, nicht erfüllte Anliegen und Wege zur Haltestelle» القياس يشمل العودة والطلبات غير المحلولة والطرق إلى المحطة، لذلك الجواب Wiederkehr, offene Anliegen, Wege."
+    }
+  ]
+}

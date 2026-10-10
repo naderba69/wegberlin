@@ -1,0 +1,202 @@
+{
+  "status": "draft-owner-approval-required",
+  "policy": "owner-approval-required-before-apply",
+  "scope": "choice|language-elements (Sprachbausteine)، 48 بندًا قصيرًا (B2)",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's own task text (the task-level textDe, with [NN] gap markers removed), inside «…», then states why the keyed option follows. Not applied to any .ts file until the owner approves.",
+  "generated": "2026-10-10",
+  "note": "كانت هذه البنود مُعلَّمة محجوبة بخطأ: نص المهمة موجود في الحقل textDe على مستوى المهمة، والتحقق من الاقتباس يتم عليه.",
+  "items": [
+    {
+      "id": "t2-l1-q1",
+      "explanationAr": "النص: «unser Lernfestival im Vorjahr gut besucht war» الجملة سببية، وتبدأ بـ Da، لذلك الجواب Da."
+    },
+    {
+      "id": "t2-l1-q2",
+      "explanationAr": "النص: «Gesucht werden Personen,» و«kurze Workshops anbieten» الضمير الموصول die للجمع يعود على Personen، لذلك الجواب die."
+    },
+    {
+      "id": "t2-l1-q3",
+      "explanationAr": "النص: «Wir wissen noch nicht,» و«alle Räume verfügbar sein werden» جملة غير مباشرة عن سؤال نعم/لا، لذلك الجواب ob."
+    },
+    {
+      "id": "t2-l1-q4",
+      "explanationAr": "النص: «Es gibt mehr Anmeldungen,» و«wir erwartet hatten» المقارنة بعد mehr تكون بـ als، لذلك الجواب als."
+    },
+    {
+      "id": "t2-l1-q5",
+      "explanationAr": "النص: «Die Gruppen bleiben klein,» و«alle aktiv üben können» الجملة تعبّر عن الهدف، لذلك الجواب damit."
+    },
+    {
+      "id": "t2-l1-q6",
+      "explanationAr": "النص: «Teilnehmende probieren aus,» و«nur zuzuhören» statt مع zu-Infinitiv تعني بدلًا من، لذلك الجواب statt."
+    },
+    {
+      "id": "t2-l1-q7",
+      "explanationAr": "النص: «Helfer treffen sich früher,» و«die Technik zu prüfen» um مع zu-Infinitiv تعبّر عن الغاية، لذلك الجواب um."
+    },
+    {
+      "id": "t2-l1-q9",
+      "explanationAr": "النص: «Kosten werden» و«dem Vereinsbudget bezahlt» حرف الجر aus مع Dativ يعني من المصدر، لذلك الجواب aus."
+    },
+    {
+      "id": "t3-l1-q1",
+      "explanationAr": "النص: «die Nachfrage stieg» السبب ارتفاع الطلب، والجملة تبدأ بـ Da، لذلك الجواب Da."
+    },
+    {
+      "id": "t3-l1-q2",
+      "explanationAr": "النص: «Gesucht wurden Helfer,» و«abends unterstützen» الضمير die للجمع يعود على Helfer، لذلك الجواب die."
+    },
+    {
+      "id": "t3-l1-q3",
+      "explanationAr": "النص: «Unklar war,» و«genug Personal käme» جملة غير مباشرة عن سؤال نعم/لا، لذلك الجواب ob."
+    },
+    {
+      "id": "t3-l1-q4",
+      "explanationAr": "النص: «Es kamen mehr,» و«erwartet» المقارنة بعد mehr بـ als، لذلك الجواب als."
+    },
+    {
+      "id": "t3-l1-q5",
+      "explanationAr": "النص: «Die Türen öffnen länger,» و«Berufstätige kommen können» الجملة تعبّر عن الغاية، لذلك الجواب damit."
+    },
+    {
+      "id": "t3-l1-q6",
+      "explanationAr": "النص: «Man reserviert,» و«lange zu warten» ohne مع zu-Infinitiv يعني دون، لذلك الجواب ohne."
+    },
+    {
+      "id": "t3-l1-q7",
+      "explanationAr": "النص: «Das Team trifft sich,» و«Abläufe zu prüfen» um مع zu-Infinitiv تعبّر عن الغاية، لذلك الجواب um."
+    },
+    {
+      "id": "t3-l1-q8",
+      "explanationAr": "النص: «Es gibt nicht nur Bücher,» و«auch Geräte» الصيغة nicht nur ... sondern auch، لذلك الجواب sondern."
+    },
+    {
+      "id": "t3-l1-q9",
+      "explanationAr": "النص: «Kosten kommen» و«dem Budget» حرف الجر aus مع Dativ يعني من المصدر، لذلك الجواب aus."
+    },
+    {
+      "id": "t3-l1-q10",
+      "explanationAr": "النص: «Alles muss dokumentiert» الصيغة هي dokumentiert werden في المبني للمجهول، لذلك الجواب werden."
+    },
+    {
+      "id": "t4-l1-q1",
+      "explanationAr": "النص: «viele Gruppen teilnahmen, wird die Kulturwoche wiederholt» الجملة سببية تبدأ بـ Da، لذلك الجواب Da."
+    },
+    {
+      "id": "t4-l1-q2",
+      "explanationAr": "النص: «Gesucht sind Menschen,» و«Workshops leiten» الضمير die للجمع يعود على Menschen، لذلك الجواب die."
+    },
+    {
+      "id": "t4-l1-q3",
+      "explanationAr": "النص: «Unklar ist,» و«Räume reichen» جملة غير مباشرة عن سؤال نعم/لا، لذلك الجواب ob."
+    },
+    {
+      "id": "t4-l1-q4",
+      "explanationAr": "النص: «Es kommen mehr,» و«erwartet» المقارنة بعد mehr بـ als، لذلك الجواب als."
+    },
+    {
+      "id": "t4-l1-q5",
+      "explanationAr": "النص: «Wir planen Schichten,» و«alle Pausen haben» الجملة تعبّر عن الغاية، لذلك الجواب damit."
+    },
+    {
+      "id": "t4-l1-q6",
+      "explanationAr": "النص: «Gäste helfen,» و«nur zuzusehen» statt مع zu-Infinitiv تعني بدلًا من، لذلك الجواب statt."
+    },
+    {
+      "id": "t4-l1-q7",
+      "explanationAr": "النص: «Teams treffen sich,» و«Aufgaben zu teilen» um مع zu-Infinitiv تعبّر عن الغاية، لذلك الجواب um."
+    },
+    {
+      "id": "t4-l1-q8",
+      "explanationAr": "النص: «Es gibt nicht nur Musik,» و«auch Theater» الصيغة nicht nur ... sondern auch، لذلك الجواب sondern."
+    },
+    {
+      "id": "t4-l1-q9",
+      "explanationAr": "النص: «Kosten kommen» و«Spenden» حرف الجر aus مع Dativ يعني من المصدر، لذلك الجواب aus."
+    },
+    {
+      "id": "t4-l1-q10",
+      "explanationAr": "النص: «Alles soll geprüft» الصيغة هي geprüft werden في المبني للمجهول، لذلك الجواب werden."
+    },
+    {
+      "id": "t5-l1-q1",
+      "explanationAr": "النص: «das Fest beliebt war, findet es erneut statt» الجملة سببية تبدأ بـ Da، لذلك الجواب Da."
+    },
+    {
+      "id": "t5-l1-q2",
+      "explanationAr": "النص: «Gesucht sind Menschen,» و«helfen» الضمير die للجمع يعود على Menschen، لذلك الجواب die."
+    },
+    {
+      "id": "t5-l1-q3",
+      "explanationAr": "النص: «Unklar ist,» و«Räume reichen» جملة غير مباشرة عن سؤال نعم/لا، لذلك الجواب ob."
+    },
+    {
+      "id": "t5-l1-q4",
+      "explanationAr": "النص: «Mehr kommen,» و«erwartet» المقارنة بعد mehr بـ als، لذلك الجواب als."
+    },
+    {
+      "id": "t5-l1-q5",
+      "explanationAr": "النص: «Wir planen Schichten,» و«Pausen möglich sind» الجملة تعبّر عن الغاية، لذلك الجواب damit."
+    },
+    {
+      "id": "t5-l1-q6",
+      "explanationAr": "النص: «Gäste machen mit,» و«nur zuzusehen» statt مع zu-Infinitiv تعني بدلًا من، لذلك الجواب statt."
+    },
+    {
+      "id": "t5-l1-q7",
+      "explanationAr": "النص: «Teams treffen sich,» و«Aufgaben zu teilen» um مع zu-Infinitiv تعبّر عن الغاية، لذلك الجواب um."
+    },
+    {
+      "id": "t5-l1-q8",
+      "explanationAr": "النص: «Nicht nur Musik,» و«auch Spiele» الصيغة nicht nur ... sondern auch، لذلك الجواب sondern."
+    },
+    {
+      "id": "t5-l1-q9",
+      "explanationAr": "النص: «Kosten kommen» و«Spenden» حرف الجر aus مع Dativ يعني من المصدر، لذلك الجواب aus."
+    },
+    {
+      "id": "t5-l1-q10",
+      "explanationAr": "النص: «Alles soll dokumentiert» الصيغة هي dokumentiert werden في المبني للمجهول، لذلك الجواب werden."
+    },
+    {
+      "id": "t6-l1-q1",
+      "explanationAr": "النص: «der Lerntag erfolgreich war, wird er wiederholt» الجملة سببية تبدأ بـ Da، لذلك الجواب Da."
+    },
+    {
+      "id": "t6-l1-q2",
+      "explanationAr": "النص: «Gesucht sind Personen,» و«helfen» الضمير die للجمع يعود على Personen، لذلك الجواب die."
+    },
+    {
+      "id": "t6-l1-q3",
+      "explanationAr": "النص: «Unklar ist,» و«Räume reichen» جملة غير مباشرة عن سؤال نعم/لا، لذلك الجواب ob."
+    },
+    {
+      "id": "t6-l1-q4",
+      "explanationAr": "النص: «Mehr kommen,» و«erwartet» المقارنة بعد mehr بـ als، لذلك الجواب als."
+    },
+    {
+      "id": "t6-l1-q5",
+      "explanationAr": "النص: «Schichten helfen,» و«Pausen möglich sind» الجملة تعبّر عن الغاية، لذلك الجواب damit."
+    },
+    {
+      "id": "t6-l1-q6",
+      "explanationAr": "النص: «Gäste üben,» و«nur zuzuhören» statt مع zu-Infinitiv تعني بدلًا من، لذلك الجواب statt."
+    },
+    {
+      "id": "t6-l1-q7",
+      "explanationAr": "النص: «Teams treffen sich,» و«zu planen» um مع zu-Infinitiv تعبّر عن الغاية، لذلك الجواب um."
+    },
+    {
+      "id": "t6-l1-q8",
+      "explanationAr": "النص: «Nicht nur Sprachen,» و«auch Technik» الصيغة nicht nur ... sondern auch، لذلك الجواب sondern."
+    },
+    {
+      "id": "t6-l1-q9",
+      "explanationAr": "النص: «Kosten kommen» و«Spenden» حرف الجر aus مع Dativ يعني من المصدر، لذلك الجواب aus."
+    },
+    {
+      "id": "t6-l1-q10",
+      "explanationAr": "النص: «Alles soll geprüft» الصيغة هي geprüft werden في المبني للمجهول، لذلك الجواب werden."
+    }
+  ]
+}

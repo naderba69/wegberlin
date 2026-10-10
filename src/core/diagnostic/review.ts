@@ -3,7 +3,7 @@ import { diagnosticForms, type DiagnosticQuestion } from "@/data/diagnostic";
 /**
  * مراجعة ما بعد التشخيص: الأسئلة التي أجاب عنها المتعلّم خطأً فقط.
  * تُعرض بعد انتهاء الاختبار، لا أثناءه، حتى لا يكشف الجواب قبل اكتمال القياس.
- * شرح بالألمانية هو الموجود الآن؛ الشرح العربي (explanationAr) يُضاف عند اعتماد المسودات.
+ * الشرح الألماني (explanationDe) موجود لكل سؤال؛ والشرح العربي (explanationAr) مُعتمد ومطبّق على الأسئلة الـ32 (انظر AUDIT_FIX_RESULTS §16).
  */
 export type DiagnosticReviewItem = {
   id: string;

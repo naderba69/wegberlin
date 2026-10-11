@@ -3,24 +3,24 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `903098ccdd8bc01c399251544307efd70785d7d476aeff33dd89aa27a21a3cd5`
+Content SHA-256: `34085e41ae7aa89be44dd6de45de5e46c296061a6ee4fcd23ce5c8d3e576fd72`
 
 ## Result
 
-`PASS` — 211 TSX files and 8085 opening JSX tags were scanned.
+`PASS` — 212 TSX files and 8120 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 445 |
+| Explicit German fragments (lang=de + dir=ltr) | 446 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 493 |
+| LTR tags audited | 494 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 54 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 208 |
+| Static Arabic + Latin text nodes under plaintext host policy | 209 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -66,8 +66,8 @@ Content SHA-256: `903098ccdd8bc01c399251544307efd70785d7d476aeff33dd89aa27a21a3c
 | src/components/branching-conversation-lab.tsx:105 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:125 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:153 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:206 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:214 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
+| src/components/coach-dashboard.tsx:207 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
+| src/components/coach-dashboard.tsx:215 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
 | src/components/cohesion-lab.tsx:73 | وحدة تماسك مستقلة قبل B1 | Arabic host + plaintext boundary |
 | src/components/cohesion-lab.tsx:137 | الفعل المصرف في موضعه: بعد deshalb/trotzdem، وفي نهاية الجملة الفرعية بعد obwohl/damit/nachdem/bevor. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:37 | محلي ودون AI | Arabic host + plaintext boundary |
@@ -214,10 +214,11 @@ Content SHA-256: `903098ccdd8bc01c399251544307efd70785d7d476aeff33dd89aa27a21a3c
 | src/components/skill-diagnostic-retest.tsx:7 | كل عينة تسأل سؤالًا واحدًا من A1 إلى B2 وتحفظ منفصلة. لا تستبدل تشخيصك العام ولا تفتح مستوى. | Arabic host + plaintext boundary |
 | src/components/speech-preferences-control.tsx:1 | Hörprobe · معاينة | Arabic host + plaintext boundary |
 | src/components/speech-preferences-control.tsx:1 | هذا TTS اصطناعي وليس صوت امتحان ولا تقييم نطق. الاختيار محفوظ في IndexedDB ولا يُرسل. | Arabic host + plaintext boundary |
-| src/components/study-export-control.tsx:29 | تقويم ICS، تقرير أسبوعي قابل للطباعة/PDF، وبطاقات Anki TSV دون خادم. | Arabic host + plaintext boundary |
-| src/components/study-export-control.tsx:31 | لا تسجيلات · لا API keys · لا كتابة أو محادثة حرة · DWNB وحده قابل للاستعادة | Arabic host + plaintext boundary |
-| src/components/study-export-control.tsx:32 | تنزيل ICS | Arabic host + plaintext boundary |
-| src/components/study-export-control.tsx:33 | الاسم اختياري، ولا تدخل الوسائط أو مفاتيح AI أو النصوص الحرة. TSV للدراسة فقط ولا يستعيد التقدم؛ استخدم `.dwnb | Arabic host + plaintext boundary |
+| src/components/study-export-control.tsx:32 | تقويم ICS، تقرير أسبوعي قابل للطباعة/PDF، وبطاقات Anki TSV دون خادم. | Arabic host + plaintext boundary |
+| src/components/study-export-control.tsx:34 | لا تسجيلات · لا API keys · لا كتابة أو محادثة حرة · DWNB وحده قابل للاستعادة | Arabic host + plaintext boundary |
+| src/components/study-export-control.tsx:35 | تنزيل ICS | Arabic host + plaintext boundary |
+| src/components/study-export-control.tsx:36 | تنزيل ملف للمدرّب (Markdown) | Arabic host + plaintext boundary |
+| src/components/study-export-control.tsx:37 | الاسم اختياري، ولا تدخل الوسائط أو مفاتيح AI أو النصوص الحرة. TSV للدراسة فقط ولا يستعيد التقدم؛ استخدم `.dwnb | Arabic host + plaintext boundary |
 | src/components/targeted-choice-simulation.tsx:79 | هذا تدريب جزئي أصلي. النتيجة لا تمثل مجموع telc الكتابي ولا تُدمج مع نظام نقاط Goethe. | Arabic host + plaintext boundary |
 | src/components/targeted-listening-simulation.tsx:203 | TTS بديل | Arabic host + plaintext boundary |
 | src/components/targeted-writing-simulation.tsx:122 | راجع النص بنفسك وفق النقاط قبل إنشاء نسخة ثانية. لا تعرض المنصة درجة Goethe أو telc اعتمادًا على عد الكلمات وا | Arabic host + plaintext boundary |

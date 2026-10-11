@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 211,
-  "openingTagCount": 8085,
-  "germanTagCount": 445,
+  "tsxFiles": 212,
+  "openingTagCount": 8120,
+  "germanTagCount": 446,
   "arabicTagCount": 11,
-  "ltrTagCount": 493,
+  "ltrTagCount": 494,
   "rtlTagCount": 11,
   "autoDirCount": 12,
   "technicalScopeCount": 54,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 208,
+  "mixedStaticCount": 209,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -163,12 +163,12 @@
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 206,
+      "line": 207,
       "text": "سياسة الاستمرارية · weekly-grace-v1:"
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 214,
+      "line": 215,
       "text": "تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery."
     },
     {
@@ -903,22 +903,27 @@
     },
     {
       "path": "src/components/study-export-control.tsx",
-      "line": 29,
+      "line": 32,
       "text": "تقويم ICS، تقرير أسبوعي قابل للطباعة/PDF، وبطاقات Anki TSV دون خادم."
     },
     {
       "path": "src/components/study-export-control.tsx",
-      "line": 31,
+      "line": 34,
       "text": "لا تسجيلات · لا API keys · لا كتابة أو محادثة حرة · DWNB وحده قابل للاستعادة"
     },
     {
       "path": "src/components/study-export-control.tsx",
-      "line": 32,
+      "line": 35,
       "text": "تنزيل ICS"
     },
     {
       "path": "src/components/study-export-control.tsx",
-      "line": 33,
+      "line": 36,
+      "text": "تنزيل ملف للمدرّب (Markdown)"
+    },
+    {
+      "path": "src/components/study-export-control.tsx",
+      "line": 37,
       "text": "الاسم اختياري، ولا تدخل الوسائط أو مفاتيح AI أو النصوص الحرة. TSV للدراسة فقط ولا يستعيد التقدم؛ استخدم `.dwnb` للاستعادة."
     },
     {
@@ -1059,5 +1064,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "903098ccdd8bc01c399251544307efd70785d7d476aeff33dd89aa27a21a3cd5"
+  "contentSha256": "34085e41ae7aa89be44dd6de45de5e46c296061a6ee4fcd23ce5c8d3e576fd72"
 }

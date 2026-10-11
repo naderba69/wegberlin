@@ -12,8 +12,8 @@
     "maxSingleChunkGzipBytes": 637500
   },
   "actual": {
-    "chunkCount": 130,
-    "totalChunkGzipBytes": 2068098,
+    "chunkCount": 131,
+    "totalChunkGzipBytes": 2068121,
     "maxSingleChunkGzipBytes": 263111
   },
   "issues": [],
@@ -64,14 +64,14 @@
       "gzipBytes": 63160
     },
     {
-      "path": ".next/static/chunks/app/settings/page-90138a42ddedf468.js",
-      "rawBytes": 213854,
-      "gzipBytes": 59940
-    },
-    {
       "path": ".next/static/chunks/framework-666c53740fc261c8.js",
       "rawBytes": 189686,
       "gzipBytes": 59766
+    },
+    {
+      "path": ".next/static/chunks/app/settings/page-8f250c09ec0c337b.js",
+      "rawBytes": 207790,
+      "gzipBytes": 57556
     },
     {
       "path": ".next/static/chunks/app/lernen/[lessonId]/page-3a1795e0a052dc46.js",
@@ -89,11 +89,6 @@
       "gzipBytes": 39520
     },
     {
-      "path": ".next/static/chunks/app/today/page-690d9c0b0be7bf51.js",
-      "rawBytes": 102307,
-      "gzipBytes": 31218
-    },
-    {
       "path": ".next/static/chunks/8836-e690b2cd74ad9360.js",
       "rawBytes": 131464,
       "gzipBytes": 31047
@@ -102,6 +97,11 @@
       "path": ".next/static/chunks/app/practice/endurance/page-6535b415838b58fa.js",
       "rawBytes": 77385,
       "gzipBytes": 28847
+    },
+    {
+      "path": ".next/static/chunks/app/today/page-2edd489275fa3ce7.js",
+      "rawBytes": 92416,
+      "gzipBytes": 27880
     },
     {
       "path": ".next/static/chunks/6850-04f73d390437a719.js",

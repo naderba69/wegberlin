@@ -3,7 +3,7 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `d4fc4e414abbbf102b7cef2c79679b60278b8c49c19faff249c8f8dd9bf64b61`
+Content SHA-256: `903098ccdd8bc01c399251544307efd70785d7d476aeff33dd89aa27a21a3cd5`
 
 ## Result
 
@@ -11,9 +11,9 @@ Content SHA-256: `d4fc4e414abbbf102b7cef2c79679b60278b8c49c19faff249c8f8dd9bf64b
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 446 |
+| Explicit German fragments (lang=de + dir=ltr) | 445 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 494 |
+| LTR tags audited | 493 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 54 |

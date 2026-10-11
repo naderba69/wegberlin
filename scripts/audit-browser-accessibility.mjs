@@ -15,7 +15,9 @@
 // Exit code 1 when any page has a serious or critical axe violation, a console
 // error, or an uncaught page error, or when a page fails to load.
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { spawn } from "node:child_process";
+import http from "node:http";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -25,7 +27,9 @@ const require = createRequire(import.meta.url);
 const { chromium } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
-const BASE = process.env.BASE_URL || "http://127.0.0.1:3000";
+const OWN_PORT = Number(process.env.A11Y_PORT || 3217);
+const EXTERNAL_BASE = process.env.BASE_URL || "";
+let BASE = EXTERNAL_BASE || `http://127.0.0.1:${OWN_PORT}`;
 const VIEWPORTS = {
   desktop: { width: 1280, height: 900 },
   mobile: { width: 412, height: 915 },
@@ -82,7 +86,43 @@ async function auditPage(browser, route, viewportName) {
   return record;
 }
 
+function waitForHttp(url, timeoutMs) {
+  const started = Date.now();
+  return new Promise((resolve, reject) => {
+    const attempt = () => {
+      const req = http.get(url, (res) => { res.resume(); resolve(); });
+      req.on("error", () => {
+        if (Date.now() - started > timeoutMs) reject(new Error(`server did not answer at ${url} within ${timeoutMs} ms`));
+        else setTimeout(attempt, 500);
+      });
+      req.setTimeout(5000, () => req.destroy());
+    };
+    attempt();
+  });
+}
+
+async function startOwnServer() {
+  if (!existsSync(resolve(root, ".next/prerender-manifest.json"))) {
+    throw new Error("No production build found. Run `npm run build` first.");
+  }
+  const child = spawn("node", [resolve(root, "node_modules/next/dist/bin/next"), "start", "-H", "127.0.0.1", "-p", String(OWN_PORT)], { cwd: root, detached: true, stdio: "ignore" });
+  child.unref();
+  await waitForHttp(`${BASE}/today`, 120_000);
+  return child;
+}
+
 async function main() {
+  const ownServer = EXTERNAL_BASE ? null : await startOwnServer();
+  try {
+    await runAudit();
+  } finally {
+    if (ownServer) {
+      try { process.kill(-ownServer.pid, "SIGTERM"); } catch { /* already gone */ }
+    }
+  }
+}
+
+async function runAudit() {
   const routes = pageRoutes();
   const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined });
   const jobs = [];
@@ -127,7 +167,7 @@ async function main() {
   console.log(`Report: ${OUT}`);
   if (summary.failingChecks > 0) {
     console.error("Browser accessibility audit failed. See the report's `failing` list.");
-    process.exit(1);
+    process.exitCode = 1;
   }
 }
 

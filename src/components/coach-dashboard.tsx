@@ -23,6 +23,7 @@ import { WeeklyReflection } from "./weekly-reflection";
 import { buildStartingGoalReport } from "@/core/coach/starting-goal-report";
 import { buildExamTargetForecast } from "@/core/coach/exam-target-forecast";
 import { DailyFocusTools } from "./daily-focus-tools";
+import { WeeklyEvidenceSummary } from "./weekly-evidence-summary";
 
 const kindIcons = { diagnostic: ClipboardCheck, "check-in": Sparkles, review: RotateCcw, warmup: BrainCircuit, lesson: BrainCircuit, reading: BookOpenCheck, writing: FilePenLine, practice: Target, production: Mic2, reflection: CalendarCheck2, exam: Target };
 const ratingValues = [1, 2, 3, 4, 5] as const;
@@ -235,6 +236,7 @@ export function CoachDashboard() {
           <div className="stat-pair"><div className="gamification-surface"><Flame size={18}/><span><strong>{report.studyStreakDays}</strong><small>أيام دراسة مستمرة</small></span></div><div><Clock3 size={18}/><span><strong>{doneMinutes}</strong><small>دقيقة خطة اليوم</small></span></div></div>
           {gamificationVisible&&report.graceDayDate&&<p className="grace-return-note gamification-surface">{behavioralPraise("grace-return")} <small>{report.graceDayDate}</small></p>}
         </div>
+        <WeeklyEvidenceSummary />
         <div className="risk-card"><CircleAlert size={20}/><div><strong>{primaryRisk?.titleAr ?? (report.overallScore===null?"الجاهزية لا تُقاس بعد":"لا يوجد خطر آلي مرتفع")}</strong><p>{primaryRisk?.reasonAr ?? (report.overallScore===null?"نحتاج أدلة من ثلاث مهارات على الأقل قبل حساب مؤشر متوازن.":`مؤشر الأدلة الحالي ${report.overallScore}% بعينة ${report.overallConfidence==="high"?"قوية":"ما زالت بحاجة للتوسيع"}.`)}</p></div></div>
       </aside>
     </div>

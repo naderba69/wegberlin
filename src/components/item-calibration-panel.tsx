@@ -46,6 +46,7 @@ export function ItemCalibrationPanel() {
         </ul>
       )}
       {results && (
+        <div className="item-calibration-scroll">
         <table>
           <caption>{results.length} عنصر</caption>
           <thead><tr><th scope="col">العنصر</th><th scope="col">الإجابات</th><th scope="col">نسبة الصحيح</th><th scope="col">الملاحظة</th></tr></thead>
@@ -60,6 +61,7 @@ export function ItemCalibrationPanel() {
             ))}
           </tbody>
         </table>
+        </div>
       )}
     </section>
   );

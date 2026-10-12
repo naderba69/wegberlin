@@ -1584,3 +1584,9 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .stage-lock-hint{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:#f4f1ea;color:#5f5440;font-size:var(--fs-12);line-height:1.6}
 .diagnostic-review{margin:16px 0;display:grid;gap:10px}
 .diagnostic-review article{padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.12)}
+
+/* P2-350 calibration table: scrolls inside its own box so a long item id cannot widen the page */
+.item-calibration-scroll{max-width:100%;overflow-x:auto}
+.item-calibration code{overflow-wrap:anywhere}
+.item-calibration input[type="file"]{max-width:100%}
+.item-calibration label{display:grid;gap:8px;max-width:100%}

@@ -12,9 +12,9 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 132 |
-| partial | 5 |
-| not-implemented | 5 |
+| implemented | 133 |
+| partial | 7 |
+| not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
 
@@ -138,7 +138,7 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 346 | إضافة زر نسخ مثال مع اتجاه النص الصحيح. | `implemented` | `all-visible-german-examples-copy-v1` يعزز كل German leaf ظاهر بزر Copy LTR مع Clipboard fallback. | — |
 | 347 | إنشاء Quick Practice من خمس دقائق حسب أضعف هدف. | `implemented` | `weakest-target-five-minute-practice-v1` يركب أربع خطوات مجموعها خمس دقائق من الخطأ أو المراجعة أو هدف المدرب الحالي. | — |
 | 348 | إتاحة تخصيص أصوات ونغمات محلية دون تتبع. | `implemented` | `local-synthetic-voice-preferences-v1` يحفظ voiceURI وpitch ويطبقه على كل أسطح Browser TTS دون تتبع. | — |
-| 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `implemented` | وحدة `src/core/evidence/knowledge-tracing.ts` (Bayesian Knowledge Tracing بمعاملات ثابتة بسياسة `bkt-local-v1`، لا تُعاير على بيانات المستخدم)، وتعرض تقديرًا لكل درس فقط بعد 5 محاولات تمرين على الأقل، وتستبعد محاولات التقييم المستقل، وتعرض حدّ الادعاء "ليس توقعًا لنتيجة امتحان ولا مستوى CEFR". اللوحة على `/progress` (`knowledge-tracing-panel.tsx`). اختبارات: `tests/unit/knowledge-tracing.test.ts` (7 اختبارات). | لا شيء مفتوح من جهة الهندسة؛ أي معايرة للمعاملات تحتاج بيانات كافية وموافقة جديدة. |
 | 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `partial` | `anonymous-item-calibration-v1` (`src/core/assessment/item-calibration.ts`) يقرأ ملف CSV محليًا بعمودين فقط (`itemId,correct`) ويرفض أي عمود إضافي، ويحسب نسبة الصحيح لكل عنصر بحد أدنى 30 إجابة، ويعلّم السهل جدًا والصعب جدًا للمراجعة فقط. اللوحة في الإعدادات (`item-calibration-panel.tsx`) تعرض النتيجة ولا تحفظ شيئًا ولا تغيّر أي سؤال أو درجة. اختبارات الوحدة والـE2E. | جمع بيانات مجهولة بموافقة صريحة (opt-in) لم يُبنَ، ويحتاج قرارًا بشريًا ومراجعة خصوصية؛ لا تُعدّل الصعوبة من هذه النتائج. |
 | 351 | بناء نموذج صغير داخل المتصفح لتصنيف الأخطاء. | `implemented` | `learner-trained-local-error-classifier-v1` يدرب Naive Bayes مؤقتًا من أخطاء المتعلم ويقترح فئة بلا Mutation. | — |
 | 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `implemented` | `neutral-self-waveform-comparison-v1` في Shadowing Studio: بعد تسجيل المحاولة فقط وبطلب صريح، يفك المتصفح أصل النموذج المحلي وBlob المحاولة داخل الذاكرة (≤60 ثانية و≤4,000,000 بايت لكل ملف) ويعرض 48 ذروة لكل مقطع مع المدة. يُطبّع كل مسار إلى ذروته الخاصة؛ لا محاذاة زمنية أو تشابه أو درجة أو تحليل نطق/جودة، ولا إرسال/حفظ للرسم أو أثر في سجل التعلم. تغطي الوحدة حدود المدة والتطبيع والصمت، ويغطي Playwright عرض الرسمين وARIA وغياب طلبات الأصل الخارجي أو المحاولة المحفوظة. القرار: `docs/adr/ADR-112-neutral-waveform-self-comparison.md`. | — |
@@ -148,8 +148,8 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 356 | إضافة خرائط مفاهيم تفاعلية للقواعد والمفردات. | `implemented` | `interactive-grammar-vocabulary-concept-map-v1` يربط عقد القواعد وعائلات الكلمات عبر درس مشترك مع Level filter. | — |
 | 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `partial` | `oer-review-queue-attribution-v1` (`src/core/oer/attribution.ts`) يشغّل بوابة الترخيص (`import-policy.ts`) على سجلات بيانات وصفية فقط، ويكتب سطر الإسناد للسجلات المؤهلة للمراجعة فقط، ولا يضيف أي محتوى ولا يسم شيئًا بأنه مستورد. السجلات الثمانية في `docs/OER_LICENSE_REGISTER.md` كلها مرفوضة كما يقرر السجل (`tests/unit/oer-attribution.test.ts`). | لا يوجد مصدر مرخّص مؤهل بعد: إصدار CC لبعض المصادر غير مُثبت، والمؤلف غير مُثبت لبعضها، وبعضها NC. الاستيراد الفعلي يحتاج مراجعة بشرية لكل مادة. |
 | 358 | إضافة وضع مشاركة ملف تقرير فقط مع معلم مستقبلي دون حساب. | `implemented` | ICS/PDF/TSV/JSON/DWNB ملفات محلية قابلة للمشاركة دون حساب. | — |
-| 359 | إنشاء حزمة Desktop اختيارية حول PWA إذا احتاج الصوت المحلي. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
-| 360 | تجربة Federated analytics اختيارية فقط بعد تدقيق خصوصية مستقل. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 359 | إنشاء حزمة Desktop اختيارية حول PWA إذا احتاج الصوت المحلي. | `not-implemented` | محاولة فعلية: تبيّن أن Electron لا يمكن تنزيل ثنائيّه من هذه البيئة لأن المضيف `objects.githubusercontent.com` غير مسموح (GitHub نفسه متاح). لذلك لا يمكن بناء الحزمة أو تشغيلها للتحقق، ولم يُضَف كود غير مختبر. كذلك لم يثبت أن الصوت المحلي يحتاج الحزمة: نسخة PWA تعمل دون اتصال عبر الحزمة الأوفلاين. | بناء الحزمة على جهاز يملك وصولًا كاملًا إلى مستودعات الثنائيات، أو قرار من المالك بإغلاق البند كغير مطلوب. |
+| 360 | تجربة Federated analytics اختيارية فقط بعد تدقيق خصوصية مستقل. | `not-implemented` | مراجع مجمعة في `docs/FEDERATED_ANALYTICS_REFERENCES.md` (Google Research، Prio، WP216، EDPB). لا يوجد أي تنفيذ أو جمع بيانات، وهذا مطابق للشرط. | تدقيق خصوصية مستقل من جهة خارجية قبل أي تجربة؛ هذا لا يمكن أن تنجزه الأتمتة. |
 | 369 | إضافة Release candidate قبل تحديث كل المستخدمين. | `implemented` | `pre-production-release-candidate-v1`: Workflow يدوي يشغل History secrets وcheck وDesktop/Mobile E2E ثم ينشئ Attestation مرتبطة بـ40-char commit ويرفع Artifact 14 يومًا؛ لا يحتوي أي Deploy/Production step والترقية تحتاج فعلًا بشريًا منفصلًا. | — |
 | 370 | الحفاظ على إمكانية الرجوع إلى آخر حزمة منهج سليمة. | `implemented` | `previous-complete-curriculum-pack-rollback-v1` يحفظ الحزمة الكاملة السابقة قبل Promotion ويبدلها ذريًا بزر. | — |
 | 371 | قياس قيمة الميزة على التعلم قبل توسيعها. | `partial` | local-learning-outcome-observation-v1 يعرض أول محاولة مستقلة/مدعومة وإعادات واحتفاظًا مؤجلًا ومقامات فعلية محليًا بلا تتبع خارجي أو دعوى سببية. | تجربة متعلمين منضبطة لتقييم أثر الميزة لم تنفذ. |

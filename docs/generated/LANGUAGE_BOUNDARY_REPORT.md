@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `2cf143177e08a24e198e71b10a0f892ebd1f109128d7c80c108260f1d1a42068`
+Content SHA-256: `5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def33`
 
 ## Result
 
-`PASS` — 214 TSX files and 8177 opening JSX tags were scanned.
+`PASS` — 215 TSX files and 8193 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -48,13 +48,13 @@ Content SHA-256: `2cf143177e08a24e198e71b10a0f892ebd1f109128d7c80c108260f1d1a420
 | src/app/privacy/page.tsx:3 | فقط عندما تختار مزودًا شبكيًا وتوافق صراحة على السؤال أو نص الكتابة الحالي. Gemini وOpenRouter وOllama قد يستق | Arabic host + plaintext boundary |
 | src/app/privacy/page.tsx:3 | استخدم `.dwnb` للاستعادة، ويمكن تشفيره بعبارة مرور. JSON الخام أو الصادرات الجزئية للقراءة والتحليل وليست للاس | Arabic host + plaintext boundary |
 | src/app/privacy/page.tsx:3 | حزمة Whisper الاختيارية تطابق كلمات التسجيل محليًا فقط؛ لا نرسل Blob الصوت إلى AI ولا نحسب درجة نطق أو لهجة. | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:29 | كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مست | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:53 | القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد. | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:54 | مفاتيح قديمة بلا Event بعد | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:66 | لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يص | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:68 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:73 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:78 | ليس حكم CEFR | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:30 | كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مست | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:55 | القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد. | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:56 | مفاتيح قديمة بلا Event بعد | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:68 | لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يص | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:70 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:75 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:80 | ليس حكم CEFR | Arabic host + plaintext boundary |
 | src/app/review/page.tsx:83 | مراجعة SM-2 | Arabic host + plaintext boundary |
 | src/app/review/page.tsx:85 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |

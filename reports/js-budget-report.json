@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2071084,
+    "totalChunkGzipBytes": 2072307,
     "maxSingleChunkGzipBytes": 263111
   },
   "issues": [],
@@ -114,9 +114,9 @@
       "gzipBytes": 26506
     },
     {
-      "path": ".next/static/chunks/app/writing/page-d9862454e3ecd567.js",
-      "rawBytes": 80907,
-      "gzipBytes": 25908
+      "path": ".next/static/chunks/app/progress/page-5eda45718e636f8c.js",
+      "rawBytes": 86449,
+      "gzipBytes": 26481
     }
   ],
   "boundary": "Built Next static chunk gzip envelope with a mandatory 15% reserve below hard limits; not network waterfall or device performance."

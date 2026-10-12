@@ -1,6 +1,6 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v192 · 2026-10-11 · ملخص أسبوعي من الأدلة المحلية (أرقام فقط بلا درجة) وملف متابعة للمدرّب (Markdown، بلا نصوص حرة افتراضيًا)؛ 2026-10-10 · تدقيق التلميذ والأستاذ: شروح الامتحانات والتشخيص والفجوات، وتنظيف الترميز؛ offline fingerprint 9ba281ca8e93 (full 6,090,621 gzip)؛ pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0. Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
+Sync batch: v192 · 2026-10-12 · P2-349 تتبّع المعرفة المحلي (BKT، بعد 5 محاولات لكل درس، بلا توقع امتحان)؛ P2-359 مغلق بقيد البيئة (Electron لا يُنزَّل هنا)؛ P2-360 مراجع فقط بانتظار تدقيق مستقل؛ P2 = 133/7/2. 2026-10-11 · ملخص أسبوعي من الأدلة المحلية (أرقام فقط بلا درجة) وملف متابعة للمدرّب (Markdown، بلا نصوص حرة افتراضيًا)؛ 2026-10-10 · تدقيق التلميذ والأستاذ: شروح الامتحانات والتشخيص والفجوات، وتنظيف الترميز؛ offline fingerprint 122f7b3745b0 (full 6,092,770 gzip)؛ pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint 31681e45f1f0. Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
 ## P2-401 — تصحيح خمسة وسوم لتطابق المعاجم — 2026-10-08 (v189)
 
@@ -233,7 +233,7 @@ Sync batch: v192 · 2026-10-11 · ملخص أسبوعي من الأدلة الم
 - Unit/Integrity tests: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium launch is unavailable; remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 132 implemented / 7 partial / 3 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 133 implemented / 7 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - سجل Git التاريخي لدفعة P2-276: الفرع المثبّت `arena/01a106a4-wegberlin`؛ دفعة المنتج ملتزمة ومدفوعة في `5b93341`؛ اجتاز head `15e457c` وظيفتي `check` وE2E في Quality Gate `37377109271`، واجتاز Vercel Preview. الحالة الأحدث لدفعة حزمة المراجعة موضحة في ملخص المزامنة والقسم 11 أدناه؛ لا ادعاء بدمج `main` أو نشر Production، وPR #7 ما زال مفتوحًا.
 
@@ -807,9 +807,9 @@ Blocked: 0
 
 ```text
 Total P2: 142
-Implemented: 132
-Partial: 5
-Not implemented: 5
+Implemented: 133
+Partial: 7
+Not implemented: 2
 Blocked: 0
 ```
 
@@ -1023,7 +1023,7 @@ npx playwright install --with-deps chromium && npm run test:e2e
 ### تقدم الأولويات
 P0: 116/124 منجز، 8 جزئي، 0 غير منجز، 0 متوقف وفق P0_AUDIT.md
 P1: 131/135 منجز، 4 جزئي، 0 غير منجز، 0 متوقف وفق P1_AUDIT.md
-P2: 132/142 منجز، 7 جزئي، 3 غير منجز، 0 متوقف وفق P2_AUDIT.md
+P2: 133/142 منجز، 7 جزئي، 2 غير منجز، 0 متوقف وفق P2_AUDIT.md
 
 ### الجودة
 Unit/Integrity: N/N

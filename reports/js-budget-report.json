@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2069752,
+    "totalChunkGzipBytes": 2071084,
     "maxSingleChunkGzipBytes": 263111
   },
   "issues": [],
@@ -69,9 +69,9 @@
       "gzipBytes": 59766
     },
     {
-      "path": ".next/static/chunks/app/settings/page-8f250c09ec0c337b.js",
-      "rawBytes": 207790,
-      "gzipBytes": 57556
+      "path": ".next/static/chunks/app/settings/page-fff460aa73d49e2a.js",
+      "rawBytes": 211340,
+      "gzipBytes": 58820
     },
     {
       "path": ".next/static/chunks/app/lernen/[lessonId]/page-3a1795e0a052dc46.js",

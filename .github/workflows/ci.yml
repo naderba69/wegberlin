@@ -21,6 +21,8 @@ jobs:
       - run: npm ci
       - name: Scan working tree and complete Git history for secrets
         run: npm run secret:audit:history
+      - name: Install Chromium for the browser accessibility audit inside npm run check
+        run: npx playwright install --with-deps chromium
       - run: npm run check
       - name: Learner-zone full suite (TZ=Asia/Tunis) and extreme-zone guards (ADR-106 · م40/م41)
         run: |

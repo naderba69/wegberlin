@@ -23,6 +23,8 @@ jobs:
       - run: npm ci
       - name: Scan the complete repository history for secrets
         run: npm run secret:audit:history
+      - name: Install Chromium for the browser accessibility audit inside npm run check
+        run: npx playwright install --with-deps chromium
       - name: Run the complete production quality gate
         run: npm run check
       - name: Find the previous immutable semantic tag

@@ -3,24 +3,24 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `34085e41ae7aa89be44dd6de45de5e46c296061a6ee4fcd23ce5c8d3e576fd72`
+Content SHA-256: `79a8858d3fccbd95ed0857738c1817ec944e0080e2da648efd0b93f1884003d1`
 
 ## Result
 
-`PASS` — 212 TSX files and 8120 opening JSX tags were scanned.
+`PASS` — 213 TSX files and 8144 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 446 |
+| Explicit German fragments (lang=de + dir=ltr) | 448 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 494 |
+| LTR tags audited | 496 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 54 |
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 209 |
+| Static Arabic + Latin text nodes under plaintext host policy | 210 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -223,6 +223,7 @@ Content SHA-256: `34085e41ae7aa89be44dd6de45de5e46c296061a6ee4fcd23ce5c8d3e576fd
 | src/components/targeted-listening-simulation.tsx:203 | TTS بديل | Arabic host + plaintext boundary |
 | src/components/targeted-writing-simulation.tsx:122 | راجع النص بنفسك وفق النقاط قبل إنشاء نسخة ثانية. لا تعرض المنصة درجة Goethe أو telc اعتمادًا على عد الكلمات وا | Arabic host + plaintext boundary |
 | src/components/targeted-writing-simulation.tsx:151 | اختر المهمة A أو B أولًا | Arabic host + plaintext boundary |
+| src/components/telc-criteria-self-assessment.tsx:37 | تقييم ذاتي بمعايير telc | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:232 | Zum letzten Antwort · متابعة آخر جواب | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:241 | Ich heiße أم Ich bin؟ | Arabic host + plaintext boundary |
 | src/components/tutor-view.tsx:242 | مكان الفعل بعد weil | Arabic host + plaintext boundary |

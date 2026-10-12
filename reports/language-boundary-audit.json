@@ -3,18 +3,18 @@
   "version": "language-boundary-audit-v1",
   "generatedAt": "2026-09-07",
   "ok": true,
-  "tsxFiles": 212,
-  "openingTagCount": 8120,
-  "germanTagCount": 446,
+  "tsxFiles": 213,
+  "openingTagCount": 8144,
+  "germanTagCount": 448,
   "arabicTagCount": 11,
-  "ltrTagCount": 494,
+  "ltrTagCount": 496,
   "rtlTagCount": 11,
   "autoDirCount": 12,
   "technicalScopeCount": 54,
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 209,
+  "mixedStaticCount": 210,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -947,6 +947,11 @@
       "text": "اختر المهمة A أو B أولًا"
     },
     {
+      "path": "src/components/telc-criteria-self-assessment.tsx",
+      "line": 37,
+      "text": "تقييم ذاتي بمعايير telc"
+    },
+    {
       "path": "src/components/tutor-view.tsx",
       "line": 232,
       "text": "Zum letzten Antwort · متابعة آخر جواب"
@@ -1064,5 +1069,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "34085e41ae7aa89be44dd6de45de5e46c296061a6ee4fcd23ce5c8d3e576fd72"
+  "contentSha256": "79a8858d3fccbd95ed0857738c1817ec944e0080e2da648efd0b93f1884003d1"
 }

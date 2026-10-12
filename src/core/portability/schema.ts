@@ -226,6 +226,15 @@ export const learningStateSchema = z.object({
     plan: z.object({ audience:z.string(),purpose:z.string(),points:z.array(z.string()) }).optional(),
     selfChecklist: z.array(z.string()).optional(),
     dimensions: z.array(z.object({ key:z.enum(["task-achievement","coherence","vocabulary","grammar","register"]),labelAr:z.string(),passed:z.boolean(),detailAr:z.string(),evidenceQuote:z.string().optional() })).optional(),
+    telcSelfAssessment: z.object({
+      policyVersion: z.literal("telc-criteria-self-assessment-v1"),
+      assessedAt: z.string().datetime(),
+      levels: z.object({
+        "aufgabenbewaeltigung": z.enum(["A", "B", "C", "D"]),
+        "kommunikative-gestaltung": z.enum(["A", "B", "C", "D"]),
+        "formale-richtigkeit": z.enum(["A", "B", "C", "D"]),
+      }).strict(),
+    }).strict().optional(),
     sourceVersion: z.number().int().positive().optional(),
     createdAt: z.string(), updatedAt: z.string(),
   })),

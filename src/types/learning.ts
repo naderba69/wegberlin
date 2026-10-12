@@ -625,6 +625,8 @@ export interface WritingSubmission {
   plan?: WritingPlan;
   selfChecklist?: string[];
   dimensions?: WritingDimensionEvidence[];
+  /** تقييم ذاتي بمعايير telc؛ لا يُجمع في درجة، والحكم النهائي للمراجع البشري. */
+  telcSelfAssessment?: { policyVersion: "telc-criteria-self-assessment-v1"; assessedAt: string; levels: Record<"aufgabenbewaeltigung" | "kommunikative-gestaltung" | "formale-richtigkeit", "A" | "B" | "C" | "D"> };
   sourceVersion?: number;
   createdAt: string;
   updatedAt: string;

@@ -1941,6 +1941,23 @@ resolve({cardId:event.cardId,kind:event.evidenceKind,delta:event.masteryDelta,ma
   }))).toEqual({kind:"delayed",delta:0,mastery:masteryBeforeFirstReview,masteryOperation:"set",masterySource:"lesson-evidence"});
 });
 
+test("item calibration reads an anonymous two-column file locally and rejects extra columns", async ({ page }) => {
+  test.setTimeout(60_000);
+  await page.goto("/settings");
+  await waitForLearningReady(page);
+  const panel = page.locator(".item-calibration");
+  await expect(panel).toBeVisible();
+  const rows = ["itemId,correct", ...Array.from({ length: 30 }, () => "b1-07-q2,1"), ...Array.from({ length: 10 }, () => "b1-07-q2,0")].join("\n");
+  await panel.locator('input[type="file"]').setInputFiles({ name: "answers.csv", mimeType: "text/csv", buffer: Buffer.from(rows) });
+  await expect(panel.locator("tbody tr")).toHaveCount(1);
+  await expect(panel).toContainText("b1-07-q2");
+  await expect(panel).toContainText("75%");
+  await expect(panel).not.toContainText(/درجة امتحان|مستوى الامتحان|نجاح|معايرة رسمية معتمدة/);
+  await panel.locator('input[type="file"]').setInputFiles({ name: "bad.csv", mimeType: "text/csv", buffer: Buffer.from("itemId,correct,learner\nx,1,abc") });
+  await expect(panel.getByRole("alert")).toContainText("header-must-be-exactly-itemId,correct");
+  await expect(panel.locator("tbody tr")).toHaveCount(0);
+});
+
 test("settings exports an encrypted DWNB archive and imports it as an isolated profile", async ({ page }) => {
   test.setTimeout(60_000);
   await page.goto("/settings");

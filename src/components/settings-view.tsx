@@ -26,6 +26,7 @@ import { LanguageHistoryPanel } from "./language-history-panel";
 import { PersonalVocabularyImport } from "./personal-vocabulary-import";
 import { ContentErrorReportsManager } from "./content-error-reports-manager";
 import { StudyExportControl } from "./study-export-control";
+import { ItemCalibrationPanel } from "./item-calibration-panel";
 import { PlanningPreferencesControl } from "./planning-preferences-control";
 import { ReviewReminderControl } from "./review-reminder-control";
 import { SessionRitualPreferencesControl } from "./session-ritual-preferences-control";
@@ -269,6 +270,7 @@ export function SettingsView() {
         <header className="settings-group-head"><h2 id="settings-backup-title">النسخ والحفظ</h2><p>تصدير قابل للتحقق، واستيراد آمن، وملف كتابة مستقل.</p></header>
         <div className="settings-group-grid">
       <StudyExportControl />
+      <ItemCalibrationPanel />
       <PartialStudyExport />
       <RawDataExport />
       <section className="settings-card privacy-policy-link"><div className="settings-title"><span><Pencil size={20}/></span><div><h2>ملف الأعمال الكتابية</h2><p>تقرير محلي قابل للطباعة يجمع أحدث النسخ والفروق ومعدل الأنماط المحدودة لكل 100 كلمة.</p></div></div><Link className="secondary-button" href="/portfolio/writing">افتح ملف الكتابة</Link></section>

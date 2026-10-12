@@ -8,6 +8,7 @@ import { buildEvidenceReport } from "@/core/evidence/report";
 import { EvidenceAchievements } from "@/components/evidence-achievements";
 import { LearningOutcomePanel } from "@/components/learning-outcome-panel";
 import { DelayedTransferPanel } from "@/components/delayed-transfer-panel";
+import { KnowledgeTracingPanel } from "@/components/knowledge-tracing-panel";
 import { SupplementaryUnitPanel } from "@/components/supplementary-unit-panel";
 import { masteryDerivationSummary } from "@/core/evidence/event-derived-mastery";
 import { TimeBudgetPanel } from "@/components/time-budget-panel";
@@ -40,6 +41,7 @@ export default function ProgressPage() {
 
     <LearningOutcomePanel />
     <DelayedTransferPanel />
+    <KnowledgeTracingPanel />
 
     <SupplementaryUnitPanel />
 

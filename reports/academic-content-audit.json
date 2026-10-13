@@ -4998,7 +4998,7 @@
         "prompt": " مفاجأة في القصة:",
         "answer": "Plötzlich",
         "evidenceRef": "a2-02:controlled:a2-02-e1:explanationAr",
-        "evidenceExcerpt": "المفاجأة تُدخل بـ plötzlich لأنها تصف لحظة انقلبت فيها القصة: «Plötzlich ging das Licht aus.» zuerst بداية، و am Ende خاتمة، و seitdem يمتدّ من ماضٍ إلى الآن. فحص ذاتي: هل سقط الحدث دفعةً واحدة؟",
+        "evidenceExcerpt": "المفاجأة تُدخل بـ plötzlich لأنها تصف لحظة انقلبت فيها القصة: Plötzlich ging das Licht aus. zuerst بداية، و am Ende خاتمة، و seitdem يمتدّ من ماضٍ إلى الآن. فحص ذاتي: هل سقط الحدث دفعةً واحدة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5438,7 +5438,7 @@
         "prompt": "طابق الشخص بضمير Dativ:",
         "answer": "ich → mir | du → dir | Sie (formell) → Ihnen",
         "evidenceRef": "a2-04:controlled:a2-04-e5:explanationAr",
-        "evidenceExcerpt": "ضمير المُتلقّي يتغيّر بتغيّر الشخص: ich يعطي mir، و du يعطي dir، و Sie الرسمية تعطي Ihnen. حفظ القائمة مفصولًا لا يُثبّتها؛ أثبِتها داخل «Hilfst du mir?». فحص ذاتي: هل تسأل وتُجيب بنفس الضمير؟",
+        "evidenceExcerpt": "ضمير المُتلقّي يتغيّر بتغيّر الشخص: ich يعطي mir، و du يعطي dir، و Sie الرسمية تعطي Ihnen. حفظ القائمة مفصولًا لا يُثبّتها؛ أثبِتها داخل Hilfst du mir?. فحص ذاتي: هل تسأل وتُجيب بنفس الضمير؟",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -5790,7 +5790,7 @@
         "prompt": " اختر الطلب الأكثر تهذيبًا:",
         "answer": "Könntest du bitte aufräumen?",
         "evidenceRef": "a2-06:controlled:a2-06-e1:explanationAr",
-        "evidenceExcerpt": "الطلب المخفَّف يبني صيغة الودّ مع Konjunktiv II و bitte: «Könntest du bitte aufräumen?». «Räum jetzt auf!» أمر صريح، و «Aufräumen sofort!» برقيّ بلا مخاطَب. فحص ذاتي: هل خفّفت الفعل لا الصوت فقط؟",
+        "evidenceExcerpt": "الطلب المخفَّف يبني صيغة الودّ مع Konjunktiv II و bitte: «Könntest du bitte aufräumen?». «Räum jetzt auf!» أمر صريح، و «Aufräumen sofort.» برقيّ بلا مخاطَب. فحص ذاتي: هل خفّفت الفعل لا الصوت فقط؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6043,7 +6043,7 @@
         "prompt": " اختر السؤال الصحيح:",
         "answer": "Wer ist dafür zuständig?",
         "evidenceRef": "a2-07:controlled:a2-07-e6:explanationAr",
-        "evidenceExcerpt": "السؤال الصحيح يبقي الفعل المُصرَّف بعد Wer: «Wer ist dafür zuständig؟». «Wer zuständig für das ist؟» إجابة رُتّبت كسؤال، و «Für wer das zuständig؟» فقدت الفعل. فحص ذاتي: هل الفعل بعد الضمير؟",
+        "evidenceExcerpt": "السؤال الصحيح يبقي الفعل المُصرَّف بعد Wer: «Wer ist dafür zuständig?». «Wer zuständig für das ist?» إجابة رُتّبت كسؤال، و «Für wer das zuständig?» فقدت الفعل. فحص ذاتي: هل الفعل بعد الضمير؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "b65320adf43882426b403ca51bd7f7ea1ac530460ac55b38921eb2df82c01ae0"
+  "contentSha256": "0a6f82561a6e294f2632dedda1b01d4cb51ae0f9b0517dac93bd5554a5b3026e"
 }

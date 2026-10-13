@@ -1,18 +1,8 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 196,
+  "count": 188,
   "entries": [
-    {
-      "lessonId": "a1-01",
-      "quote": "Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller.“",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a1-03",
-      "quote": "Dazwischen ist ein Leerzeichen. Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de.",
-      "status": "unreviewed"
-    },
     {
       "lessonId": "a1-05",
       "quote": "Ich 22 Jahre",
@@ -43,11 +33,6 @@
     },
     {
       "lessonId": "a2-02",
-      "quote": "Plötzlich ging das Licht aus.",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-02",
       "quote": "Sein Chef hat ihn nicht gefunden, aber seine Schwester hat ihn gefunden",
       "status": "unreviewed"
     },
@@ -65,22 +50,12 @@
     },
     {
       "lessonId": "a2-04",
-      "quote": "Hilfst du mir?",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-04",
       "quote": "Kann ich ... mitbringen؟",
       "status": "unreviewed"
     },
     {
       "lessonId": "a2-04",
       "quote": "Abends holt sie das Paket ab",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-06",
-      "quote": "Aufräumen sofort!",
       "status": "unreviewed"
     },
     {
@@ -104,37 +79,26 @@
     {
       "lessonId": "a2-07",
       "quote": "für die Termine",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. جواب ناقص بعد الفراغ في شرح حرف الجر (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",
       "quote": "Ich notiere den Namen, wenn ein Kunde anruft",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. بديل مقبول معلن بالترتيب الآخر (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",
       "quote": "ich kümmere dich",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-07",
-      "quote": "Wer ist dafür zuständig؟",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-07",
-      "quote": "Wer zuständig für das ist؟",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-07",
-      "quote": "Für wer das zuständig؟",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود معلن في الشرح (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",
       "quote": "Wir kümmern uns um die Daten",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. جواب كامل بعد ملء الفراغ (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",

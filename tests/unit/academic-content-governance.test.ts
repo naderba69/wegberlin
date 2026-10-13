@@ -57,7 +57,7 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(answers.ok, answers.issues.join("\n")).toBe(true);
     expect(answers.rows).toHaveLength(2805);
     expect(answers.failures).toHaveLength(0);
-    expect(answers.exemptions.map((row) => row.id)).toEqual(["a1-01-m4", "a2-16-e4", "diag-a-a1-vocabulary"]);
+    expect(answers.exemptions.map((row) => row.id)).toEqual(["a2-16-e4", "diag-a-a1-vocabulary"]);
     expect(answers.rows.every((row) => row.answer.trim() && row.evidenceRef.trim() && row.evidenceExcerpt.trim())).toBe(true);
   });
 

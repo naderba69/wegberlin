@@ -29,7 +29,7 @@
     "closedAnswerItems": 2805,
     "productiveTasks": 384,
     "failures": 0,
-    "exemptions": 3,
+    "exemptions": 2,
     "byScope": {
       "diagnostic": 32,
       "exam": 720,
@@ -221,14 +221,12 @@
         "id": "a1-01-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Guten Abend! أي ردّ طبيعي على تحية المساء؟",
+        "prompt": "Am Abend begrüßt dich jemand. Was antwortest du? أي ردّ طبيعي على تحية المساء؟",
         "answer": "Guten Abend!",
         "evidenceRef": "a1-01:miniTest:a1-01-m4:explanationAr",
         "evidenceExcerpt": "يمكن الرد بالتحية نفسها: Guten Abend! تُقال مساءً ويُجاب عنها ب Guten Abend! أو Guten Abend, wie geht es Ihnen? أما Guten Morgen! فتحية صباحية، و Gute Nacht! و Auf Wiedersehen! تقالان عند الوداع والنوم.",
         "visibilityPolicy": "authorized-option-bank",
-        "status": "exempt",
-        "leakMatch": "guten abend",
-        "exemptionReason": "A greeting can be answered by repeating the same greeting; the prompt is a communicative stimulus, not a displayed answer key."
+        "status": "pass"
       },
       {
         "id": "a1-01-m5",
@@ -28731,7 +28729,7 @@
         "prompt": "Häufiger Fehler? خطأ شائع؟",
         "answer": "Möglichkeit wird Garantie",
         "evidenceRef": "goethe-b2-full-05-listening-02:clips:g5-h2",
-        "evidenceExcerpt": "Leiterin: Aus kann wird wird; eine Möglichkeit klingt dann wie eine Garantie.",
+        "evidenceExcerpt": "Leiterin: Aus „kann“ wird „wird“; eine Möglichkeit klingt dann wie eine Garantie.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -51116,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4894,
+      "totalCandidates": 4895,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3421,
+      "contextualNotTarget": 3422,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51141,10 +51139,10 @@
           "contextualNotTarget": 893
         },
         "B2": {
-          "totalCandidates": 2211,
+          "totalCandidates": 2212,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1666
+          "contextualNotTarget": 1667
         }
       }
     },
@@ -73337,13 +73335,6 @@
             "stage": "mediation",
             "text": "Hallo, ich bin bis 18 Uhr bei der Arbeit. Könnten Sie bitte mein Paket annehmen? Ich hole es heute Abend ab. Vielen Dank, Wohnung 8.",
             "surface": "Hallo, ich bin bis 18 Uhr bei der Arbeit. Könnten Sie bitte mein Paket annehmen? Ich hole es heute Abend ab. Vielen Dank, Wohnung 8.",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[4].options[0]",
-            "stage": "test",
-            "text": "Kann ich ihnen mit dem Paket helfen?",
-            "surface": "Kann ich ihnen mit dem Paket helfen?",
             "strength": "context"
           },
           {
@@ -186618,6 +186609,25 @@
       {
         "lessonId": "b2-23",
         "level": "B2",
+        "lemmaCandidate": "Nachfordrung",
+        "normalizedLemma": "nachfordrung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[1].options[3]",
+            "stage": "controlled",
+            "text": "die Nachfordrung",
+            "surface": "die Nachfordrung",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-23-4fdda58c"
+      },
+      {
+        "lessonId": "b2-23",
+        "level": "B2",
         "lemmaCandidate": "Nachfrist",
         "normalizedLemma": "nachfrist",
         "role": "authored-target",
@@ -192874,8 +192884,7 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "ambiguous",
-          "dative"
+          "ambiguous"
         ],
         "anchorIds": [],
         "sources": [
@@ -192891,13 +192900,6 @@
             "stage": "vocabulary",
             "text": "Kannst du mir mit der Kiste helfen?",
             "surface": "Kannst du mir mit der Kiste helfen?",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[4].options[0]",
-            "stage": "test",
-            "text": "Kann ich ihnen mit dem Paket helfen?",
-            "surface": "Kann ich ihnen mit dem Paket helfen?",
             "strength": "context"
           }
         ],
@@ -221502,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "20ca2aceda9084a78b5b6daf48a93d470cf0823402dd33db008813f054036ffc"
+  "contentSha256": "9fcec0813fad973e34bb934b4dbfa95469970a07dcbc5683d5e3e373e79fecdd"
 }

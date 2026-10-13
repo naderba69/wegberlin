@@ -1,6 +1,6 @@
 {
   "policy": "explanation-quote-exceptions-v1",
-  "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an unreviewed exception",
+  "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
   "count": 196,
   "entries": [
     {
@@ -16,12 +16,14 @@
     {
       "lessonId": "a1-05",
       "quote": "Ich 22 Jahre",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a1-17",
       "quote": "zu sehen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-01",
@@ -36,7 +38,8 @@
     {
       "lessonId": "a2-01",
       "quote": "Sie ist gekommen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-02",
@@ -51,12 +54,14 @@
     {
       "lessonId": "a2-02",
       "quote": "an-ge-rufen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-03",
       "quote": "Als ich klein war, wohnte ich in Sfax",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-04",
@@ -81,17 +86,20 @@
     {
       "lessonId": "a2-06",
       "quote": "Wir sind schnell fertig, wenn jeder mithilft",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-06",
       "quote": "Wir machen das abwechselnd",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-06",
       "quote": "im Wechsel",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",

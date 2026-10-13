@@ -8,7 +8,7 @@ import { findUnquotedExplanationQuotes } from "@/core/content-validation/explana
  * في reports/explanation-quote-exceptions.json. لا يُضاف استثناء جديد دون قرار مراجع بشري،
  * ولا يبقى استثناء بعد إصلاحه (فالقائمة تتقلّص فقط).
  */
-type ExceptionFile = { policy: string; count: number; entries: { lessonId: string; quote: string; status: string }[] };
+type ExceptionFile = { policy: string; count: number; entries: { lessonId: string; quote: string; status: string; decision?: string }[] };
 
 const file = JSON.parse(readFileSync("reports/explanation-quote-exceptions.json", "utf8")) as ExceptionFile;
 const key = (lessonId: string, quote: string) => `${lessonId}\u0000${quote}`;
@@ -21,7 +21,14 @@ describe("explanation German-quote gate", () => {
   it("records the policy and a count that matches its entries", () => {
     expect(file.policy).toBe("explanation-quote-exceptions-v1");
     expect(file.count).toBe(file.entries.length);
-    expect(file.entries.every((entry) => entry.status === "unreviewed")).toBe(true);
+    // unreviewed = لم يُقرَّر بعد؛ human-kept = قرار مراجع بشري مُسجَّل مع سببه (لا يُقبل دونه)
+    expect(
+      file.entries.every(
+        (entry) =>
+          entry.status === "unreviewed" ||
+          (entry.status === "human-kept" && typeof entry.decision === "string" && entry.decision.length > 0),
+      ),
+    ).toBe(true);
   });
 
   it("has no new unlisted quote that is absent from its lesson", () => {

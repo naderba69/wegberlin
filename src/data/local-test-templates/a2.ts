@@ -288,7 +288,7 @@ export const localTestTemplateBankA2 = [
         "promptDe": "Richtige formelle Form",
         "promptAr": "اختر صيغة المخاطبة الرسمية الصحيحة:",
         "options": [
-          "Kann ich ihnen mit dem Paket helfen?",
+          "Kann mir Ihnen helfen?",
           "Kann Ihnen ich helfen?",
           "Kann ich Sie helfen?",
           "Kann ich Ihnen helfen?"

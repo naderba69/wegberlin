@@ -50,7 +50,7 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-01-m4",
-        "promptDe": "Guten Abend!",
+        "promptDe": "Am Abend begrüßt dich jemand. Was antwortest du?",
         "promptAr": "أي ردّ طبيعي على تحية المساء؟",
         "options": [
           "Guten Morgen!",

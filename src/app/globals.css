@@ -1590,3 +1590,20 @@ body:has(.app-frame[data-high-contrast="true"]){background:#fff;color:#102b26}
 .item-calibration code{overflow-wrap:anywhere}
 .item-calibration input[type="file"]{max-width:100%}
 .item-calibration label{display:grid;gap:8px;max-width:100%}
+
+/* UX simplification: collapsible secondary groups (same palette and card shape as the existing cards). */
+.today-secondary,.progress-group{margin-top:14px;border:1px solid #d8e1dc;border-radius:15px;background:var(--white);overflow:hidden}
+.today-secondary>summary,.progress-group>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;cursor:pointer;list-style:none}
+.today-secondary>summary::-webkit-details-marker,.progress-group>summary::-webkit-details-marker{display:none}
+.today-secondary>summary>span,.progress-group>summary>span{display:grid;gap:2px}
+.today-secondary>summary small,.progress-group>summary small{color:#42534a;font-size:.8rem}
+.today-secondary>summary strong,.progress-group>summary strong{font-size:1rem}
+.today-secondary>summary b,.progress-group>summary b{font-size:.85rem;border:1px solid #cbdad2;border-radius:999px;padding:4px 12px;white-space:nowrap}
+.today-secondary[open]>summary b,.progress-group[open]>summary b{display:none}
+.today-secondary-body,.progress-group-body{display:grid;gap:12px;padding:0 14px 14px}
+.progress-groups{display:grid;gap:10px}
+.progress-group.technical{border-style:dashed}
+.onboarding-step{display:grid;gap:12px;margin-bottom:6px}
+.onboarding-step-title{display:flex;align-items:center;gap:10px;margin:8px 0 0;font-size:1.02rem}
+.onboarding-step-title span{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink-2);color:#fff;font-size:.85rem}
+.onboarding-step.optional{padding-top:6px;border-top:1px dashed #cbdad2}

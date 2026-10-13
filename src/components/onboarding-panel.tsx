@@ -109,6 +109,8 @@ export function OnboardingPanel() {
         <div className="trust-row"><span><ShieldCheck size={16}/> حفظ محلي</span><span><Clock3 size={16}/> خطة حسب وقتك</span><span><CalendarDays size={16}/> هدف امتحاني</span></div>
       </div>
       <div className="onboarding-form">
+        <div className="onboarding-step" data-onboarding-step="1">
+          <h3 className="onboarding-step-title"><span>1</span> من أنت وما هدفك</h3>
         <label>كيف نناديك؟<input value={name} onChange={(event) => setName(event.target.value)} placeholder="اكتب اسمك" autoFocus /></label>
         <fieldset className="onboarding-experience">
           <legend>ما خبرتك بالألمانية الآن؟</legend>
@@ -119,23 +121,6 @@ export function OnboardingPanel() {
           </div>
           <p>{priorExperience==="none"?"سنفتح الدرس A1-01 من البداية. لا كتابة ألمانية أو اختبار فهم قبل تعلم أولى العبارات؛ اختيار الصفر يحفظ خط أساس ذاتيًا «لا أستطيع بعد» بلا اختبار أو صوت، للمقارنة الاختيارية بعد أربعة أسابيع.":"بعد إنشاء الخطة يظهر تشخيص متكيف من أربعة أسئلة في كل مستوى ويتوقف مبكرًا عند الحد، ثم يطلب عينة إنتاجية تأسيسية بلا درجة لغوية."}</p>
         </fieldset>
-        <details className="onboarding-context">
-          <summary><span><strong>خبرتك السابقة وما يقلقك</strong><small>اختياري — يساعدنا على توجيه الخطة، ولا يحدد مستواك.</small></span><b>فتح</b></summary>
-          <div>
-            <fieldset><legend>هل تعلمت سابقًا بإحدى هذه الطرق؟</legend><div className="context-choice-grid">{priorSourceOptions.map((option)=><button type="button" key={option.id} aria-pressed={priorLearningSources.includes(option.id)} className={priorLearningSources.includes(option.id)?"selected":""} onClick={()=>togglePriorSource(option.id)}>{option.label}</button>)}</div></fieldset>
-            <label><span>اسم كتاب أو دورة إن أردت</span><input value={priorCourseOrBookNote} maxLength={160} onChange={(event)=>setPriorCourseOrBookNote(event.target.value)} placeholder="يمكنك الكتابة بالعربية أو تركه فارغًا"/><small>{priorCourseOrBookNote.length}/160 · لن نستنتج مستواك من الاسم.</small></label>
-            <fieldset><legend>ما الذي تخشى أن يعيقك؟ <small>اختر ما ينطبق أو لا تختر شيئًا</small></legend><div className="context-choice-grid concern-grid">{concernOptions.map((option)=><button type="button" key={option.id} aria-pressed={concerns.includes(option.id)} className={concerns.includes(option.id)?"selected":""} onClick={()=>toggleConcern(option.id)}>{option.label}</button>)}</div></fieldset>
-            <p>هذه إجابات تخطيط محلية فقط. لا تمنح مستوى أو إتقانًا، ولا تطلب منك كتابة كلمة ألمانية.</p>
-          </div>
-        </details>
-        <label>الامتحان المستهدف<select value={exam} onChange={(event) => setExam(event.target.value as ExamProvider)}><option value="goethe-b2">Goethe-Zertifikat B2</option><option value="telc-deutsch-b2">telc Deutsch B2</option></select></label>
-        <div className="form-row">
-          <label>وقت الدراسة<select value={minutes} onChange={(event) => setMinutes(Number(event.target.value) as LearnerProfile["dailyMinutes"])}>{[10,20,30,45,60,90].map((value) => <option key={value} value={value}>{value} دقيقة</option>)}</select></label>
-          <label>تاريخ الهدف<input type="date" value={targetDate} onChange={(event) => setTargetDate(event.target.value)} /></label>
-        </div>
-        <label>الدعم العربي<select value={arabicSupport} onChange={(event) => setArabicSupport(event.target.value as ArabicSupportMode)}><option value="modern-standard-arabic">العربية الفصحى</option><option value="tunisian-supported">فصحى مع دعم تونسي</option><option value="minimal-arabic">عربي عند الحاجة فقط</option></select></label>
-        <p className="arabic-support-choice" data-arabic-support={arabicSupport}>{arabicSupport === "tunisian-supported" ? "ستبقى الفصحى المرجع، وتظهر في نقاط الفرق المهمة ملاحظة تونسية قصيرة منفصلة بوضوح." : arabicSupport === "minimal-arabic" ? "ستظهر المساندة العربية عند الحاجة، من دون تغيير الأسئلة الألمانية أو قواعدها." : "ستُعرض الشروح العربية بالفصحى بوصفها المرجع الأساسي."}</p>
-
         <fieldset className="onboarding-goals">
           <legend>لماذا تتعلم الألمانية؟ <small>اختر هدفًا واحدًا على الأقل</small></legend>
           <div>{goalOptions.map((goal) => {
@@ -145,16 +130,40 @@ export function OnboardingPanel() {
           })}</div>
           {goals.length === 0 && <p role="alert">اختر هدفًا واحدًا حتى يعرف المدرب سياق مهام الإنتاج.</p>}
         </fieldset>
-
+        </div>
+        <div className="onboarding-step" data-onboarding-step="2">
+          <h3 className="onboarding-step-title"><span>2</span> خطتك</h3>
+        <label>الامتحان المستهدف<select value={exam} onChange={(event) => setExam(event.target.value as ExamProvider)}><option value="goethe-b2">Goethe-Zertifikat B2</option><option value="telc-deutsch-b2">telc Deutsch B2</option></select></label>
+        <div className="form-row">
+          <label>وقت الدراسة<select value={minutes} onChange={(event) => setMinutes(Number(event.target.value) as LearnerProfile["dailyMinutes"])}>{[10,20,30,45,60,90].map((value) => <option key={value} value={value}>{value} دقيقة</option>)}</select></label>
+          <label>تاريخ الهدف<input type="date" value={targetDate} onChange={(event) => setTargetDate(event.target.value)} /></label>
+        </div>
+        <label>الدعم العربي<select value={arabicSupport} onChange={(event) => setArabicSupport(event.target.value as ArabicSupportMode)}><option value="modern-standard-arabic">العربية الفصحى</option><option value="tunisian-supported">فصحى مع دعم تونسي</option><option value="minimal-arabic">عربي عند الحاجة فقط</option></select></label>
+        <p className="arabic-support-choice" data-arabic-support={arabicSupport}>{arabicSupport === "tunisian-supported" ? "ستبقى الفصحى المرجع، وتظهر في نقاط الفرق المهمة ملاحظة تونسية قصيرة منفصلة بوضوح." : arabicSupport === "minimal-arabic" ? "ستظهر المساندة العربية عند الحاجة، من دون تغيير الأسئلة الألمانية أو قواعدها." : "ستُعرض الشروح العربية بالفصحى بوصفها المرجع الأساسي."}</p>
+        </div>
+        <div className="onboarding-step optional" data-onboarding-step="3">
+          <h3 className="onboarding-step-title"><span>3</span> اختياري قبل البدء</h3>
+        <details className="onboarding-context">
+          <summary><span><strong>خبرتك السابقة وما يقلقك</strong><small>اختياري — يساعدنا على توجيه الخطة، ولا يحدد مستواك.</small></span><b>فتح</b></summary>
+          <div>
+            <fieldset><legend>هل تعلمت سابقًا بإحدى هذه الطرق؟</legend><div className="context-choice-grid">{priorSourceOptions.map((option)=><button type="button" key={option.id} aria-pressed={priorLearningSources.includes(option.id)} className={priorLearningSources.includes(option.id)?"selected":""} onClick={()=>togglePriorSource(option.id)}>{option.label}</button>)}</div></fieldset>
+            <label><span>اسم كتاب أو دورة إن أردت</span><input value={priorCourseOrBookNote} maxLength={160} onChange={(event)=>setPriorCourseOrBookNote(event.target.value)} placeholder="يمكنك الكتابة بالعربية أو تركه فارغًا"/><small>{priorCourseOrBookNote.length}/160 · لن نستنتج مستواك من الاسم.</small></label>
+            <fieldset><legend>ما الذي تخشى أن يعيقك؟ <small>اختر ما ينطبق أو لا تختر شيئًا</small></legend><div className="context-choice-grid concern-grid">{concernOptions.map((option)=><button type="button" key={option.id} aria-pressed={concerns.includes(option.id)} className={concerns.includes(option.id)?"selected":""} onClick={()=>toggleConcern(option.id)}>{option.label}</button>)}</div></fieldset>
+            <p>هذه إجابات تخطيط محلية فقط. لا تمنح مستوى أو إتقانًا، ولا تطلب منك كتابة كلمة ألمانية.</p>
+          </div>
+        </details>
         <section className="device-readiness" aria-label="فحص الصوت والميكروفون">
           <header><div><Headphones size={17}/><span><strong>جاهزية الصوت والتسجيل</strong><small>فحص اختياري قبل بدء الطريق</small></span></div><div><b>الصوت: {readinessLabels[deviceReadiness.audio]}</b><b>الميكروفون: {readinessLabels[deviceReadiness.microphone]}</b></div></header>
           {sampleAudioAsset && <ResilientAudioPlayer src={sampleAudioAsset.path} transcriptDe={sampleAudioItem.transcriptDe} expectedDurationMs={sampleAudioAsset.durationMs} label="عينة فحص الصوت الألماني" listeningSurface="onboarding" listeningContentId={sampleAudioItem.id}/>}
           <div className="device-check-actions"><button type="button" onClick={() => void checkDevices()} disabled={checkingDevices}><Mic2 size={15}/>{checkingDevices ? "جارٍ الفحص…" : "افحص الجهاز"}</button><button type="button" onClick={skipDeviceCheck}><SkipForward size={15}/> تخطَّ الفحص</button></div>
           <p>{deviceMessage}</p>
         </section>
-
+        </div>
         <button className="primary-button" onClick={start} disabled={!name.trim() || goals.length === 0}>{priorExperience==="none"?"ابدأ معي من الصفر":"أنشئ خطتي ثم شخّص مستواي"} <ArrowLeft size={18}/></button>
         <small>لا نحتاج حسابًا. تُحفظ أهدافك ونتيجة فحص الجهاز محليًا، ويمكنك تصديرها أو حذفها متى شئت.</small>
+
+
+
       </div>
     </section>
   );

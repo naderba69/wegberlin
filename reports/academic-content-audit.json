@@ -5251,7 +5251,7 @@
         "prompt": "Ich erinnere ___ an den Tag. اختر الضمير الانعكاسي:",
         "answer": "mich",
         "evidenceRef": "a2-03:controlled:a2-03-e6:explanationAr",
-        "evidenceExcerpt": "الفعل هنا يعود على المتكلم فيأخذ mich: «Ich melde mich». mir لما يُوجَّه إليك لا لما يقع عليك، و dich تخاطب غيرك، و sich تعود على غائب. فحص ذاتي: هل عادت الكلمة إلى قائلها؟",
+        "evidenceExcerpt": "الفعل هنا يعود على المتكلم فيأخذ mich: Ich melde mich. mir لما يُوجَّه إليك لا لما يقع عليك، و dich تخاطب غيرك، و sich تعود على غائب. فحص ذاتي: هل عادت الكلمة إلى قائلها؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5372,7 +5372,7 @@
         "prompt": "sich erinnern مع ich:",
         "answer": "Ich erinnere mich.",
         "evidenceRef": "a2-03:miniTest:a2-03-m4:explanationAr",
-        "evidenceExcerpt": "erinnern فعلٌ منعكس، ومع ich يكون الضمير mich: «Ich erinnere mich an den Termin». mir تعني «لي» فتقلب المعنى، و sich مع غائب، وتقديمُ mich على الفعل لا يليق بالجملة الرئيسية. فحص ذاتي: هل رجع الضميرُ إلى ich؟",
+        "evidenceExcerpt": "erinnern فعلٌ منعكس، ومع ich يكون الضمير mich: Ich erinnere mich an den Termin. mir تعني «لي» فتقلب المعنى، و sich مع غائب، وتقديمُ mich على الفعل لا يليق بالجملة الرئيسية. فحص ذاتي: هل رجع الضميرُ إلى ich؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5394,7 +5394,7 @@
         "prompt": "Kannst du ___ helfen? (ich) اختر ضمير Dativ:",
         "answer": "mir",
         "evidenceRef": "a2-04:controlled:a2-04-e1:explanationAr",
-        "evidenceExcerpt": "helpen يعني يساعد، ومن يُساعد يُذكر بالمفعول غير المباشر: «Er hilft mir». mich و dich تعودان على المتكلم أو المخاطَب، و mein ملكية، و ich فاعل؛ فلا واحدة منها تُجيب عن لمن؟. فحص ذاتي: هل الجواب عن لمن وُضع؟",
+        "evidenceExcerpt": "helpen يعني يساعد، ومن يُساعد يُذكر بالمفعول غير المباشر: Er hilft mir. mich و dich تعودان على المتكلم أو المخاطَب، و mein ملكية، و ich فاعل؛ فلا واحدة منها تُجيب عن لمن؟. فحص ذاتي: هل الجواب عن لمن وُضع؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5658,7 +5658,7 @@
         "prompt": "Können Sie die Musik bitte ___ machen? طلب خفض الصوت:",
         "answer": "leiser | leise",
         "evidenceRef": "a2-05:controlled:a2-05-e7:explanationAr",
-        "evidenceExcerpt": "طلب خفض الصوت يصف الكيفية بالمقارنة: «Können Sie die Musik bitte leiser machen?». lauter تعكس الطلب، و viel لا تُستعمل صفة مقارنة هنا، و schnell تصف السرعة لا مستوى الصوت. فحص ذاتي: هل حدّدتُ الاتجاه لا المجاملة؟ ويُقبل…",
+        "evidenceExcerpt": "طلب خفض الصوت يصف الكيفية بالمقارنة: Können Sie die Musik bitte leiser machen? lauter تعكس الطلب، و viel لا تُستعمل صفة مقارنة هنا، و schnell تصف السرعة لا مستوى الصوت. فحص ذاتي: هل حدّدتُ الاتجاه لا المجاملة؟ ويُقبل أي…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -5779,7 +5779,7 @@
         "prompt": "Höfliche Bitte أي خيار يحقّق «Höfliche Bitte» في هذا السياق؟",
         "answer": "Könnten Sie die Musik bitte leiser machen?",
         "evidenceRef": "a2-05:miniTest:a2-05-m5:explanationAr",
-        "evidenceExcerpt": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: «Könnten Sie die Musik bitte leiser machen?». أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و «Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟",
+        "evidenceExcerpt": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: Könnten Sie die Musik bitte leiser machen? أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و «Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5801,7 +5801,7 @@
         "prompt": "___ Sie die Musik bitte leiser machen? أكمل الطلب الرسمي:",
         "answer": "Könnten",
         "evidenceRef": "a2-06:controlled:a2-06-e2:explanationAr",
-        "evidenceExcerpt": "الطلب الرسمي المهذّب يبدأ بفعل الودّ ثم الضمير الرسمي: «Könnten Sie die Musik bitte leiser machen?» können بلا صيغة ودّ أقلّ تلطيفًا، و möchtest لا تُبنى لهذا الغرض. فحص ذاتي: هل خفّفت بصيغة الفعل لا بنبرة الصوت؟",
+        "evidenceExcerpt": "الطلب الرسمي المهذّب يبدأ بفعل الودّ ثم الضمير الرسمي: Könnten Sie die Musik bitte leiser machen? können بلا صيغة ودّ أقلّ تلطيفًا، و möchtest لا تُبنى لهذا الغرض. فحص ذاتي: هل خفّفت بصيغة الفعل لا بنبرة الصوت؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "9fcec0813fad973e34bb934b4dbfa95469970a07dcbc5683d5e3e373e79fecdd"
+  "contentSha256": "b65320adf43882426b403ca51bd7f7ea1ac530460ac55b38921eb2df82c01ae0"
 }

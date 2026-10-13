@@ -207,7 +207,7 @@ export const localTestTemplateBankA2 = [
           "Ich mich erinnere im Hauptsatz."
         ],
         "correctIndex": 1,
-        "explanationAr": "erinnern فعلٌ منعكس، ومع ich يكون الضمير mich: «Ich erinnere mich an den Termin». mir تعني «لي» فتقلب المعنى، و sich مع غائب، وتقديمُ mich على الفعل لا يليق بالجملة الرئيسية. فحص ذاتي: هل رجع الضميرُ إلى ich؟"
+        "explanationAr": "erinnern فعلٌ منعكس، ومع ich يكون الضمير mich: Ich erinnere mich an den Termin. mir تعني «لي» فتقلب المعنى، و sich مع غائب، وتقديمُ mich على الفعل لا يليق بالجملة الرئيسية. فحص ذاتي: هل رجع الضميرُ إلى ich؟"
       },
       {
         "id": "a2-03-m5",
@@ -368,7 +368,7 @@ export const localTestTemplateBankA2 = [
           "Musik aus jetzt."
         ],
         "correctIndex": 2,
-        "explanationAr": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: «Könnten Sie die Musik bitte leiser machen?». أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و «Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟"
+        "explanationAr": "الطلبُ المهذّب مع الاحترام في Konjunktiv II: Könnten Sie die Musik bitte leiser machen? أمّا «Sei leise!» فأمرٌ مباشر غير رسمي، و «Musik aus jetzt» بلا تصريف. فحص ذاتي: هل بقي الأسلوبُ لاطفًا؟"
       }
     ]
   },

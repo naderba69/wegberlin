@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an unreviewed exception",
-  "count": 201,
+  "count": 196,
   "entries": [
     {
       "lessonId": "a1-01",
@@ -59,21 +59,6 @@
       "status": "unreviewed"
     },
     {
-      "lessonId": "a2-03",
-      "quote": "Ich melde mich",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-03",
-      "quote": "Ich erinnere mich an den Termin",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-04",
-      "quote": "Er hilft mir",
-      "status": "unreviewed"
-    },
-    {
       "lessonId": "a2-04",
       "quote": "Hilfst du mir?",
       "status": "unreviewed"
@@ -89,18 +74,8 @@
       "status": "unreviewed"
     },
     {
-      "lessonId": "a2-05",
-      "quote": "Können Sie die Musik bitte leiser machen?",
-      "status": "unreviewed"
-    },
-    {
       "lessonId": "a2-06",
       "quote": "Aufräumen sofort!",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-06",
-      "quote": "Könnten Sie die Musik bitte leiser machen?",
       "status": "unreviewed"
     },
     {

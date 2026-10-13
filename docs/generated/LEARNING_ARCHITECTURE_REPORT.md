@@ -2,7 +2,7 @@
 
 Generated: 2026-09-08  
 Version: `learning-architecture-audit-v1`  
-Content SHA-256: `5c7333955eba7d04ab2172f4e93b39234c4c33acaecec9d9117875f50c08e796`
+Content SHA-256: `cd90f0e8ef1259b92a133973ab76a102493d2373a7003f2d549c44bf0544024c`
 
 ## Result
 
@@ -50,8 +50,8 @@ Every one of 288 reading and 288 listening questions has exactly one function la
 | A1 | 144 | 24 | 95 | 6 | 14 | 5 | 66% |
 | A2 | 144 | 24 | 81 | 7 | 21 | 11 | 56% |
 | B1 | 144 | 24 | 81 | 11 | 18 | 10 | 56% |
-| B2 | 144 | 24 | 55 | 12 | 29 | 24 | 38% |
-| **Total** | **576** | **96** | **312** | **36** | **82** | **50** | — |
+| B2 | 144 | 24 | 55 | 13 | 28 | 24 | 38% |
+| **Total** | **576** | **96** | **312** | **37** | **81** | **50** | — |
 
 Balance gates require all five functions in every level, keep details at or below 72%, and keep gist between 12% and 30%. Labels guide strategy only and never change correctness, score, mastery, or CEFR.
 

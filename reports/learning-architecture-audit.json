@@ -64,8 +64,8 @@
       "counts": {
         "gist": 24,
         "detail": 55,
-        "stance": 12,
-        "inference": 29,
+        "stance": 13,
+        "inference": 28,
         "structure": 24
       },
       "detailPercent": 38,
@@ -75,8 +75,8 @@
   "questionCategoryCounts": {
     "gist": 96,
     "detail": 312,
-    "stance": 36,
-    "inference": 82,
+    "stance": 37,
+    "inference": 81,
     "structure": 50
   },
   "classificationBasisCounts": {
@@ -8567,11 +8567,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-19-rq2",
-      "category": "inference",
-      "labelDe": "Schlussfolgern",
-      "labelAr": "استنتاج",
+      "category": "stance",
+      "labelDe": "Haltung",
+      "labelAr": "الموقف",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "reason-or-conclusion",
+      "matchedSignal": "speaker-stance-or-evaluation",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -9051,5 +9051,5 @@
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     }
   ],
-  "contentSha256": "5c7333955eba7d04ab2172f4e93b39234c4c33acaecec9d9117875f50c08e796"
+  "contentSha256": "cd90f0e8ef1259b92a133973ab76a102493d2373a7003f2d549c44bf0544024c"
 }

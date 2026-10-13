@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an unreviewed exception",
-  "count": 202,
+  "count": 201,
   "entries": [
     {
       "lessonId": "a1-01",
@@ -21,11 +21,6 @@
     {
       "lessonId": "a1-17",
       "quote": "zu sehen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a1-23",
-      "quote": "soll er nach …",
       "status": "unreviewed"
     },
     {

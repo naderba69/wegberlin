@@ -12,6 +12,10 @@ import { verifiedThrough } from "../helpers/verified-learning-state";
 import { CURRENT_CURRICULUM_VERSION } from "../../src/config/curriculum-version";
 import { defaultState } from "../../src/core/portability/db";
 import { diagnosticForms } from "../../src/data/diagnostic";
+
+async function openSecondaryGroup(page: Page, selector: string) {
+  await page.locator(selector).evaluateAll((nodes) => nodes.forEach((node) => { (node as HTMLDetailsElement).open = true; }));
+}
 import { buildDiagnosticProductiveSample, buildProductiveSampleComparison } from "../../src/core/diagnostic/productive-sample";
 import { unknownWordChallenge } from "../../src/core/reading/unknown-word";
 import { examProfiles } from "../../src/data/exam-profiles";
@@ -585,6 +589,7 @@ test("P1-19 captures a four-week follow-up beside the unchanged productive basel
   await waitForLearningReady(page);
 
   const panel = page.locator('[data-productive-comparison-policy="four-week-productive-sample-comparison-v1"]');
+  await openSecondaryGroup(page, '[data-progress-group="time-and-practice"]');
   await expect(panel).toHaveAttribute("data-follow-up-state", "due");
   await expect(panel).toContainText("خط البداية المحفوظ");
   await panel.getByRole("button", { name: "ابدأ عينة الأسبوع الرابع" }).click();
@@ -800,6 +805,7 @@ test("P0 daily check-in rebalances load and reflection stores tomorrow's decisio
   }), structuredClone(defaultState));
   await page.reload();
   await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-today-secondary="true"]');
   const todayOffline=page.locator('[data-offline-readiness-policy="today-session-offline-readiness-v1"]');
   await expect(todayOffline).toBeVisible();
   await expect(todayOffline).toContainText(/لن ندّعي الجاهزية|تحقق Service Worker/,{timeout:15_000});
@@ -810,7 +816,7 @@ test("P0 daily check-in rebalances load and reflection stores tomorrow's decisio
   await expect(warmup).toContainText("Sagen Sie die deutsche Wendung.");
   for(let item=0;item<3;item+=1){await warmup.getByRole("button",{name:"اكشف بعد محاولة الاسترجاع"}).click();await expect(warmup.locator(".warmup-prompt > p")).toBeVisible();await warmup.getByRole("button",{name:item===1?"تذكرتها قبل الكشف":"أحتاج إعادتها"}).click()}
   await expect(warmup.getByRole("status")).toContainText("حاولت استرجاع ثلاث عبارات");
-  await expect(page.locator(".continuity-policy")).toContainText("weekly-grace-v1");
+  await expect(page.locator(".continuity-policy")).toHaveAttribute("data-continuity-policy","weekly-grace-v1");
   await expect(page.locator(".continuity-policy")).toContainText("يوم السماح");
 
   const checkIn = page.locator(".session-signal-card").filter({ hasText:"تهيئة سريعة" });
@@ -884,6 +890,7 @@ test("P2 partial-closure guidance surfaces persist bounded local decisions",asyn
   await page.goto("/today");await waitForLearningReady(page);
   await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const state=structuredClone(baseState);state.profile={name:"Nadia",targetExam:"goethe-b2",targetDate:"2027-09-10",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",priorExperience:"none",createdAt:"2026-09-01T00:00:00Z"};state.diagnosticResult={estimatedLevel:"A1",score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},completedAt:"2026-09-01T00:00:00Z"};const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)};}),structuredClone(defaultState));
   await page.reload();await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-today-secondary="true"]');
   const focusTools=page.locator('[data-focus-tools-policy="guidance-focus-tools-v1"]');await expect(focusTools).toBeVisible();await expect(focusTools.locator('[data-quick-practice-policy="weakest-target-five-minute-practice-v1"]')).toContainText("5 د");await focusTools.getByRole("button",{name:/صباح سريع/}).click();await expect(focusTools.locator(".routine-mode-action")).toContainText("ابدأ خمس دقائق");await focusTools.getByRole("button",{name:/ثبّت المهمة/}).click();await expect(focusTools.locator('[data-pinned-task-policy="learner-pinned-task-v1"]')).toContainText("التثبيت لا يستبدل توصية المدرب");await expect(focusTools.locator('[data-exam-countdown-policy="exam-countdown-12-8-4-1-v1"]')).toBeVisible();await expect(focusTools.locator('[data-extra-time-policy="local-extra-thirty-minutes-what-if-v1"]')).toContainText("30 دقيقة إضافية");
   const rescue=page.locator('[data-rescue-day-policy="save-my-day-ten-minute-v1"]');await expect(rescue).toBeVisible();await rescue.getByRole("button",{name:/فعّل جلسة الإنقاذ/}).click();await expect(page.getByText("نحو 10 دقيقة")).toBeVisible();
   const weekly=page.locator('[data-weekly-reflection-policy="independent-weekly-reflection-v1"]');await expect(weekly).toBeVisible();await weekly.getByText("الاسترجاع",{exact:true}).click();await weekly.getByText("الوقت",{exact:true}).click();await weekly.getByRole("combobox").selectOption("lighter-plan");await weekly.getByRole("textbox").fill("أثبت وقتًا أقصر في الأسبوع القادم.");await weekly.getByRole("button",{name:/احفظ تأمل الأسبوع/}).click();await expect(weekly.getByRole("status")).toContainText("لم ننسخ ملاحظة الإغلاق اليومية");
@@ -2423,15 +2430,17 @@ test("progress and daily coach derive metrics, risks, dates, and streaks from ev
   await expect(achievements).toBeVisible();
   await expect(achievements.locator('[data-achievement="writing-revision"]')).toHaveClass(/unlocked/);
   await expect(achievements).toContainText("1/6");
+  await openSecondaryGroup(page, '[data-progress-group="technical"]');
   const masteryDerivation=page.locator('[data-mastery-derivation-policy="event-derived-mastery-v1"]');
   await expect(masteryDerivation).toBeVisible();
-  await expect(masteryDerivation).toContainText("3 مفاتيح قديمة بلا Event بعد");
-  await expect(masteryDerivation).toContainText("لا يأخذ أعلى رقم تلقائيًا");
+  await expect(masteryDerivation).toContainText("3 مؤشرًا قديمًا لم يُسجَّل له حدث بعد");
+  await expect(masteryDerivation).toContainText("لا نأخذ أعلى رقم تلقائيًا");
 
   await page.goto("/today");
   await waitForLearningReady(page);
   await expect(page.locator(".coach-note")).toContainText("الاستماع");
   await expect(page.locator(".stat-pair").first()).toContainText("2");
+  await openSecondaryGroup(page, '[data-today-secondary="true"]');
   const timeComparison=page.locator('[data-time-comparison-policy="weekly-planned-actual-no-blame-v1"]');
   await expect(timeComparison).toBeVisible();
   await expect(timeComparison).toContainText("المخطط والمسجل — بلا لوم");
@@ -2638,6 +2647,7 @@ test("support use is logged without penalty and old evidence lowers confidence w
   await expect(supportCard).toContainText("2");
   await expect(supportCard).toContainText("1 تلميحات");
   await expect(supportCard).toContainText("1 ترجمات قراءة");
+  await openSecondaryGroup(page, '[data-progress-group="attempts-and-support"]');
   const separationCard=page.locator('[data-assistance-separation-policy="guided-independent-support-separation-v1"]');
   await expect(separationCard).toContainText("1 تدريب موجّه");
   await expect(separationCard).toContainText("15 نقل مستقل");
@@ -2665,6 +2675,7 @@ test("fourteen-day contract, quiet hours, and one-skill diagnostic stay planning
   await page.goto("/settings");await waitForLearningReady(page);
   await page.evaluate((baseState)=>new Promise<void>((resolve,reject)=>{const state=structuredClone(baseState);state.profile={name:"Nadia",targetExam:"goethe-b2",dailyMinutes:45,arabicSupport:"modern-standard-arabic",currentLevel:"A1",goals:["work"],createdAt:"2026-08-01T00:00:00Z"};state.diagnosticResult={estimatedLevel:"A1",score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},formId:"A",completedAt:"2026-09-01T10:00:00Z"};const open=indexedDB.open("der-weg-nach-berlin",4);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const tx=open.result.transaction("learning-state","readwrite");tx.objectStore("learning-state").put(state,"primary");tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error)}}),structuredClone(defaultState));
   await page.reload();await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-today-secondary="true"]');
   const planning=page.locator('[data-contract-policy="fourteen-day-learning-contract-v1"]');
   await planning.getByLabel("الهدف").selectOption("work");await planning.getByLabel("دقائق يوم الدراسة").selectOption("20");await planning.getByRole("button",{name:"أنشئ العقد"}).click();
   await expect(planning).toContainText("2026-09-07 إلى 2026-09-20");
@@ -3277,6 +3288,7 @@ test("P2 delayed transfer tasks are scheduled from real production and recorded 
 
   await page.goto("/progress");
   await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-progress-group="review-and-transfer"]');
   const panel = page.locator('[data-transfer-policy="delayed-transfer-task-v1"]');
   await expect(panel).toBeVisible();
   await expect(panel).toContainText("الدرس يُثبَّت بإنتاجٍ جديد");
@@ -3305,6 +3317,7 @@ test("P2 delayed transfer tasks are scheduled from real production and recorded 
   }));
   await page.reload();
   await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-progress-group="review-and-transfer"]');
   await expect(panel.locator("[data-transfer-status]").first()).toHaveAttribute("data-transfer-status", "due");
   const answer = "Heute bewerbe ich mich erneut und erkläre, warum mein Zeitplan anders aussieht als im letzten Monat und was ich zuerst üben will.";
   await panel.locator('textarea[data-transfer-answer]').first().fill(answer);
@@ -3531,6 +3544,7 @@ test("P2 alignment map needs the learner's own acknowledgement and never stores 
 test("P2 supplementary units close uncovered level goals without stuffing an existing lesson", async ({ page }) => {
   await page.goto("/progress");
   await waitForLearningReady(page);
+  await openSecondaryGroup(page, '[data-progress-group="time-and-practice"]');
   const panel = page.locator('[data-supplementary-policy="gap-driven-supplementary-unit-v1"]');
   await expect(panel).toBeVisible();
 

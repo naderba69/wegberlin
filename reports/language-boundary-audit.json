@@ -4,7 +4,7 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 215,
-  "openingTagCount": 8193,
+  "openingTagCount": 8243,
   "germanTagCount": 448,
   "arabicTagCount": 11,
   "ltrTagCount": 499,
@@ -14,7 +14,7 @@
   "dynamicPairCount": 4,
   "bdiCount": 21,
   "adaptiveConsumerCount": 7,
-  "mixedStaticCount": 210,
+  "mixedStaticCount": 207,
   "mixedStatic": [
     {
       "path": "src/app/offline/page.tsx",
@@ -78,33 +78,23 @@
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 55,
-      "text": "القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد."
+      "line": 47,
+      "text": "ليس حكم CEFR"
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 56,
-      "text": "مفاتيح قديمة بلا Event بعد"
-    },
-    {
-      "path": "src/app/progress/page.tsx",
-      "line": 68,
+      "line": 96,
       "text": "لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يصبح درجة ذكاء أو CEFR أو mastery."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 70,
+      "line": 98,
       "text": "الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف الدرس بأنه يملك عينة احتفاظ. هذا ليس إتقانًا دائمًا. سياسة `weekly-grace-v1` تسمح بفاصل يوم واحد بين يومي دراسة دون اختلاق دليل لذلك اليوم أو تصفير العودة. معدل الخطأ يحسب كل تحقق مسجل، بما فيه الإعادة، ولا يدّعي تحليل أخطاء لكل 100 كلمة من الكتابة الحرة."
     },
     {
       "path": "src/app/progress/page.tsx",
-      "line": 75,
+      "line": 103,
       "text": "تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery."
-    },
-    {
-      "path": "src/app/progress/page.tsx",
-      "line": 80,
-      "text": "ليس حكم CEFR"
     },
     {
       "path": "src/app/review/page.tsx",
@@ -163,12 +153,7 @@
     },
     {
       "path": "src/components/coach-dashboard.tsx",
-      "line": 207,
-      "text": "سياسة الاستمرارية · weekly-grace-v1:"
-    },
-    {
-      "path": "src/components/coach-dashboard.tsx",
-      "line": 215,
+      "line": 218,
       "text": "تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery."
     },
     {
@@ -1069,5 +1054,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def33"
+  "contentSha256": "4437f5e4812169a1cbe548dbfeb0d82e5e14d6279aca50edefe68b17c106912d"
 }

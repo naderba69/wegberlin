@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def33`
+Content SHA-256: `4437f5e4812169a1cbe548dbfeb0d82e5e14d6279aca50edefe68b17c106912d`
 
 ## Result
 
-`PASS` — 215 TSX files and 8193 opening JSX tags were scanned.
+`PASS` — 215 TSX files and 8243 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -20,7 +20,7 @@ Content SHA-256: `5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def
 | Paired dynamic lang/dir expressions | 4 |
 | bdi elements | 21 |
 | Adaptive answer-bank consumers | 7 |
-| Static Arabic + Latin text nodes under plaintext host policy | 210 |
+| Static Arabic + Latin text nodes under plaintext host policy | 207 |
 | **Issues** | **0** |
 
 ## Enforced rules
@@ -49,12 +49,10 @@ Content SHA-256: `5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def
 | src/app/privacy/page.tsx:3 | استخدم `.dwnb` للاستعادة، ويمكن تشفيره بعبارة مرور. JSON الخام أو الصادرات الجزئية للقراءة والتحليل وليست للاس | Arabic host + plaintext boundary |
 | src/app/privacy/page.tsx:3 | حزمة Whisper الاختيارية تطابق كلمات التسجيل محليًا فقط؛ لا نرسل Blob الصوت إلى AI ولا نحسب درجة نطق أو لهجة. | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:30 | كل مؤشر أدناه مشتق من محاولاتك الفريدة وتغطية الدروس وحداثة الدليل. لا نعرض قيم بداية ثابتة ولا نحولها إلى مست | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:55 | القيمة المعروضة Cache مشتق، وسجل الأحداث هو المرجع الجديد. | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:56 | مفاتيح قديمة بلا Event بعد | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:68 | لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يص | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:70 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:75 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
-| src/app/progress/page.tsx:80 | ليس حكم CEFR | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:47 | ليس حكم CEFR | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:96 | لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يص | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:98 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
+| src/app/progress/page.tsx:103 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
 | src/app/review/page.tsx:83 | مراجعة SM-2 | Arabic host + plaintext boundary |
 | src/app/review/page.tsx:85 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
@@ -66,8 +64,7 @@ Content SHA-256: `5c45beb73eb45cb6d5a4e7811dbac592d93d7618255e8c278b7b903f131def
 | src/components/branching-conversation-lab.tsx:105 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:125 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:153 | نحفظ معرفات الخيارات والنتيجة وعدد فتحات الدعم فقط. لا نص حر، لا شبكة، لا AI، لا شريك حي، ولا mastery. | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:207 | سياسة الاستمرارية · weekly-grace-v1: | Arabic host + plaintext boundary |
-| src/components/coach-dashboard.tsx:215 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
+| src/components/coach-dashboard.tsx:218 | تقدير تخطيط شفاف للدروس والبوابات وعينات الجهة المختارة؛ ليس احتمال نجاح أو نتيجة رسمية ولا يغيّر mastery. | Arabic host + plaintext boundary |
 | src/components/cohesion-lab.tsx:73 | وحدة تماسك مستقلة قبل B1 | Arabic host + plaintext boundary |
 | src/components/cohesion-lab.tsx:137 | الفعل المصرف في موضعه: بعد deshalb/trotzdem، وفي نهاية الجملة الفرعية بعد obwohl/damit/nachdem/bevor. | Arabic host + plaintext boundary |
 | src/components/collocation-network-lab.tsx:37 | محلي ودون AI | Arabic host + plaintext boundary |

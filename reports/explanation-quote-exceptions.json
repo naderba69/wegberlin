@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 123,
+  "count": 115,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -173,93 +173,63 @@
     },
     {
       "lessonId": "b1-01",
-      "quote": "wurde … geboren",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-01",
       "quote": "damals",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. كلمة يقترحها الفحص الذاتي ليجرّب بها المتعلم القاعدة، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-01",
       "quote": "Er konnte schon früh gut programmieren",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-02",
-      "quote": "Wir entscheiden uns für Plan B",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-02",
-      "quote": "Ich habe mich entschieden",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-02",
       "quote": "An deiner Stelle würde ich zuerst nachfragen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-04",
       "quote": "ist erstellt",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-04",
-      "quote": "die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. صيغة Zustandspassiv يذكرها الشرح للمقارنة بالجواب (نتيجة لا إجراء)، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-05",
       "quote": "Obwohl er geschrieben hatte, blieb die Information unklar",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-05",
       "quote": "Ich würde vorschlagen, dass wir den Plan testen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-05",
       "quote": "Ich schlage vor",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. صيغة صحيحة يذكرها الشرح للمقارنة بالجواب، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-06",
       "quote": "Das Ergebnis war, dass die Veranstaltung pünktlich begann",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-06",
       "quote": "Morgen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-07",
-      "quote": "…, während das Land ruhiger ist",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-07",
-      "quote": "für meine aktuelle Situation … weil ich kein Auto habe",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-08",
-      "quote": "der Techniker, den ich angerufen habe",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-08",
-      "quote": "die Vermieterin, der ich geschrieben habe, antwortet",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. كلمة يقترحها الفحص الذاتي ليجرّب بها المتعلم القاعدة، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-08",
       "quote": "Die Nachbarn, denen ich geholfen habe",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-09",

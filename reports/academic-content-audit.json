@@ -9554,7 +9554,7 @@
         "prompt": " اختر Präteritum من werden:",
         "answer": "wurde",
         "evidenceRef": "b1-01:controlled:b1-01-e1:explanationAr",
-        "evidenceExcerpt": "المضي من werden للمفرد الغائب هو wurde، وهو ما يُروى به تحوّل داخل سيرة منتهية: «wurde … geboren». «ist geworden» زمن آخر، و «werdete» غير مُستعمَل، و «wird» حاضر لا ماضٍ. فحص ذاتي: هل تحكي تاريخًا لا حالة؟",
+        "evidenceExcerpt": "المضي من werden للمفرد الغائب هو wurde، وبه تُروى وقائع السيرة، كما في الدرس: «Er wurde 1995 geboren». «ist geworden» زمن آخر (Perfekt)، و «werdete» غير موجود، و «wird» حاضر لا ماضٍ. فحص ذاتي: هل تحكي تاريخًا لا حالة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9752,7 +9752,7 @@
         "prompt": "Ich entscheide mich ___ den Kurs. اختر حرف القرار المؤيد:",
         "answer": "für",
         "evidenceRef": "b1-02:controlled:b1-02-e1:explanationAr",
-        "evidenceExcerpt": "الفعل sich entscheiden يأخذ für مع ما يُؤخَذ به: «Wir entscheiden uns für Plan B». أما zu و mit و bei فلا يُسند إليهما الاختيار، فتبقى الجملة بلا متّجه. فحص ذاتي: هل يأتي اسم البديل بعد الحرف مباشرة؟",
+        "evidenceExcerpt": "الفعل sich entscheiden يأخذ für مع ما يُختار: «Ich entscheide mich für den Kurs». أما zu و mit و bei فلا يُسند إليها الاختيار، فتبقى الجملة بلا متّجه. فحص ذاتي: هل يأتي اسم البديل بعد الحرف مباشرة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9763,7 +9763,7 @@
         "prompt": "Wir haben ___ für Plan B entschieden. أكمل الضمير:",
         "answer": "uns",
         "evidenceRef": "b1-02:controlled:b1-02-e2:explanationAr",
-        "evidenceExcerpt": "الفعل entscheidet يرجع إلى الفاعل مع für: wir ⇒ uns، فيصير «Wir haben uns für Plan B entschieden». ضمير منفصل أو اسم مملوك يفسدان الرجوع. فحص ذاتي: حوّلها إلى «Ich habe mich entschieden».",
+        "evidenceExcerpt": "sich entscheiden فعل انعكاسي، والضمير يطابق الفاعل: wir ⇒ uns، فيصير «Wir haben uns für Plan B entschieden». ضمير منفصل أو اسم مملوك يفسدان الرجوع. فحص ذاتي: حوّلها إلى ich: «Ich habe mich für … entschieden».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -10203,7 +10203,7 @@
         "prompt": " اختر ملاحظة بناءة:",
         "answer": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
         "evidenceRef": "b1-04:controlled:b1-04-e6:explanationAr",
-        "evidenceExcerpt": "الملاحظة البناءة تصف سلوكًا وتبيّن أثره وتقترح خطوة: «die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher». الأحكام على الشخص لا تعطي ما يُنفَّذ.",
+        "evidenceExcerpt": "الملاحظة البناءة تصف سلوكًا وتبيّن أثره وتقترح خطوة: «Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher». الأحكام على الشخص لا تعطي ما يُنفَّذ.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10742,7 +10742,7 @@
         "prompt": " اختر ترتيب während:",
         "answer": "Die Stadt ist lebendig, während das Land ruhiger ist.",
         "evidenceRef": "b1-07:controlled:b1-07-e1:explanationAr",
-        "evidenceExcerpt": "während تُقابل بين حالتين وتأتي بفعلها في نهاية الجزء: «…, während das Land ruhiger ist». تقديم ist على الفاعل يعطي ترتيب جملة رئيسية داخل جزء تابع، وجزء بلا فعل يبقى معلقًا. فحص ذاتي: هل الحالتان في زمان واحد؟",
+        "evidenceExcerpt": "während تُقابل بين حالتين وتأتي بفعلها في نهاية الجزء: «während das Land ruhiger ist». تقديم ist على الفاعل يعطي ترتيب جملة رئيسية داخل جزء تابع، وجزء بلا فعل يبقى معلقًا. فحص ذاتي: هل الحالتان في زمان واحد؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10797,7 +10797,7 @@
         "prompt": " اختر رأيًا مشروطًا:",
         "answer": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
         "evidenceRef": "b1-07:controlled:b1-07-e6:explanationAr",
-        "evidenceExcerpt": "الرأي المشروط يربط الحكم بحال ويسوّغها: «für meine aktuelle Situation … weil ich kein Auto habe». أما «für alle besser» و «immer gestresst» فيزيلان الشرط. فحص ذاتي: هل يمكنك ذكر حالة يسقط فيها رأيك؟",
+        "evidenceExcerpt": "الرأي المشروط يربط الحكم بحال ويسوّغها: «Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe». أما «für alle besser» و «immer gestresst» فيزيلان الشرط. فحص ذاتي: هل يمكنك ذكر حالة يسقط فيها ر…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10951,7 +10951,7 @@
         "prompt": "Der Techniker, ___ ich angerufen habe … الضمير مفعول مذكر:",
         "answer": "den",
         "evidenceRef": "b1-08:controlled:b1-08-e2:explanationAr",
-        "evidenceExcerpt": "الضمير في الجملة الموصولة يأخذ شكل ما يطلبه فعلُها: anrufen يحتاج مفعولًا مباشرًا، فيصير «der Techniker, den ich angerufen habe». die للمؤنث والجمع، و dem لمن تُوجَّه إليه الرسالة.",
+        "evidenceExcerpt": "الضمير في الجملة الموصولة يأخذ شكل ما يطلبه فعلُها: anrufen يحتاج مفعولًا مباشرًا، فيصير «Der Techniker, den ich angerufen habe». die للمؤنث والجمع، و dem لمن تُوجَّه إليه الرسالة.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -10973,7 +10973,7 @@
         "prompt": "صحح الضمير: Die Vermieterin, die ich geschrieben habe, antwortet.",
         "answer": "Die Vermieterin, der ich geschrieben habe, antwortet",
         "evidenceRef": "b1-08:controlled:b1-08-e4:explanationAr",
-        "evidenceExcerpt": "schreiben يحتاج من تُوجَّه إليه الرسالة، فالعودة على «Die Vermieterin» تكون بـ der: «die Vermieterin, der ich geschrieben habe, antwortet». الصيغة الأخرى تجعلها مكتوبًا إليها لا كاتبًا.",
+        "evidenceExcerpt": "schreiben يحتاج من تُوجَّه إليه الرسالة (Dativ)، فالعودة على «Die Vermieterin» تكون بـ der: «Die Vermieterin, der ich geschrieben habe, antwortet». أما die (Akkusativ) فتجعلها الشيء المكتوب نفسه، لا مَن كُتب إليها.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "69f94e0ada48ae61442a50e646998c4affe21f37b97709c4fe3b0b145cf69581"
+  "contentSha256": "8dd0f082ce1b58da0f1955c490c3efb337da604251bb3f2affa9ec71db4fae8f"
 }

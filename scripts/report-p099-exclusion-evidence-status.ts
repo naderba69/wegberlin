@@ -42,7 +42,7 @@ for (const [level, counts] of Object.entries(qualityTargetSlots.byLevel)) {
 const stageTwoOpen = slots.namedReferenceCount === slots.exclusionCount;
 console.log(stageTwoOpen
   ? `Stage 2 (${P099_ORIGINAL_QUALITY_TARGET_COUNT} quality targets) ready to start: names recorded only; independent human review still required`
-  : `Stage 2 (${P099_ORIGINAL_QUALITY_TARGET_COUNT} quality targets) ready: no (named references ${slots.namedReferenceCount}/${slots.exclusionCount}; all eight must be named first)`);
+  : `Stage 2 (${P099_ORIGINAL_QUALITY_TARGET_COUNT} quality targets) ready: no (named references ${slots.namedReferenceCount}/${slots.exclusionCount}; all ${slots.exclusionCount} must be named first)`);
 console.log(`Readable per-exclusion dossier (generated, not evidence): ${P099_EXCLUSION_REVIEW_DOSSIER_PATH}`);
 console.log(`Evidence contents inspected: ${inventory.evidenceContentsInspected ? "yes" : "no"}`);
 console.log(`Review decision contents interpreted: ${slots.reviewDecisionContentsInterpreted ? "yes" : "no"}`);

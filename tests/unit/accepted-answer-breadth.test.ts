@@ -24,6 +24,29 @@ describe("accepted-answer breadth (P1-11)", () => {
     expect(multi).toBeGreaterThanOrEqual(50);
   });
 
+  it("never promises an alternate in the Arabic explanation that the grader rejects", () => {
+    // Measured 2026-10-14: 22 word-ordering explanations said «ويُقبل أيضًا: …» while acceptedAnswers
+    // listed one string only, so a learner who typed the promised sentence was marked wrong. None of the
+    // 22 could be assembled from the displayed blocks, so the promise was removed rather than the variant added.
+    let quoted = 0;
+    const broken: string[] = [];
+    for (const lesson of academicLessonList) {
+      for (const exercise of lesson.exercises) {
+        if (!("acceptedAnswers" in exercise)) continue;
+        const accepted = new Set(exercise.acceptedAnswers.map((answer) => normalizeGermanText(answer)));
+        const filled = exercise.type === "fill-blank" ? exercise.acceptedAnswers.map((answer) => normalizeGermanText(exercise.template.replace("___", answer))) : [];
+        if (exercise.explanationAr.includes("يُقبل أيضًا") && accepted.size < 2) broken.push(`${exercise.id}: promises an alternate but accepts one string`);
+        for (const match of exercise.explanationAr.matchAll(/ويُقبل أيضًا: «([^»]+)»/gu)) {
+          quoted += 1;
+          const form = normalizeGermanText(match[1]);
+          if (!accepted.has(form) && !filled.includes(form)) broken.push(`${exercise.id}: «${match[1]}» is not an accepted answer`);
+        }
+      }
+    }
+    expect(broken).toEqual([]);
+    expect(quoted).toBeGreaterThanOrEqual(80);
+  });
+
   it("carries the newly broadened a1-21 variant with its authored justification", () => {
     const exercise = academicLessonList.flatMap((lesson) => lesson.exercises).find((item) => item.id === "a1-21-e4")!;
     const answers = "acceptedAnswers" in exercise ? exercise.acceptedAnswers ?? [] : [];

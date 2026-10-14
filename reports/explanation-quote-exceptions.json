@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 171,
+  "count": 150,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -60,12 +60,6 @@
     },
     {
       "lessonId": "a2-06",
-      "quote": "Wir sind schnell fertig, wenn jeder mithilft",
-      "status": "human-kept",
-      "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
-    },
-    {
-      "lessonId": "a2-06",
       "quote": "Wir machen das abwechselnd",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
@@ -81,12 +75,6 @@
       "quote": "für die Termine",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. جواب ناقص بعد الفراغ في شرح حرف الجر (المحادثة، 2026-10-13)"
-    },
-    {
-      "lessonId": "a2-07",
-      "quote": "Ich notiere den Namen, wenn ein Kunde anruft",
-      "status": "human-kept",
-      "decision": "قرار مراجع بشري: يُبقى كما هو. بديل مقبول معلن بالترتيب الآخر (المحادثة، 2026-10-13)"
     },
     {
       "lessonId": "a2-07",
@@ -172,11 +160,6 @@
     },
     {
       "lessonId": "a2-16",
-      "quote": "Dass zwei Linien ausfallen, steht im Text",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-16",
       "quote": "Meiner Meinung nach ist das zu teuer",
       "status": "unreviewed"
     },
@@ -193,11 +176,6 @@
     {
       "lessonId": "a2-17",
       "quote": "… ändere ich trotzdem mein Passwort und aktiviere die Zwei-Faktor-Anmeldung",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-18",
-      "quote": "Zwar ist das Handy nützlich, aber es lenkt oft ab",
       "status": "unreviewed"
     },
     {
@@ -267,11 +245,6 @@
     },
     {
       "lessonId": "a2-22",
-      "quote": "Gern würde ich kommen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-22",
       "quote": "Vielleicht bringe ich ein Getränk mit",
       "status": "unreviewed"
     },
@@ -303,11 +276,6 @@
     {
       "lessonId": "a2-23",
       "quote": "eine erfahrene Person",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-24",
-      "quote": "Sowohl günstig als auch zentral ist der Ort",
       "status": "unreviewed"
     },
     {
@@ -352,17 +320,7 @@
     },
     {
       "lessonId": "b1-02",
-      "quote": "Ich würde den Kurs wählen, wenn ich Zeit hätte",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-02",
       "quote": "An deiner Stelle würde ich zuerst nachfragen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-03",
-      "quote": "Sie bekam ein Angebot, nachdem sie den Kurs beendet hatte",
       "status": "unreviewed"
     },
     {
@@ -378,11 +336,6 @@
     {
       "lessonId": "b1-05",
       "quote": "Obwohl er geschrieben hatte, blieb die Information unklar",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-05",
-      "quote": "Wir fanden trotzdem eine Lösung",
       "status": "unreviewed"
     },
     {
@@ -472,17 +425,7 @@
     },
     {
       "lessonId": "b1-12",
-      "quote": "Wir verschieben den Termin, falls der Raum nicht frei ist",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-12",
       "quote": "werden die Ergebnisse ausgewertet",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-13",
-      "quote": "Ich mache beim Schreiben weniger Fehler",
       "status": "unreviewed"
     },
     {
@@ -543,11 +486,6 @@
     {
       "lessonId": "b1-18",
       "quote": "Angeblich verdoppelt die App den Lernerfolg",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-18",
-      "quote": "24 Personen nahmen laut der Studie teil",
       "status": "unreviewed"
     },
     {
@@ -636,38 +574,8 @@
       "status": "unreviewed"
     },
     {
-      "lessonId": "b1-24",
-      "quote": "Es hängt davon ab, ob die Links aktuell sind",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-01",
-      "quote": "Kein allgemeines Verbot lässt sich daraus ableiten",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-02",
-      "quote": "Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-03",
-      "quote": "Wir arbeiten vor Ort, je nachdem, ob Kunden kommen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-04",
-      "quote": "Wir bieten unter Berücksichtigung Ihrer Prioritäten zwei Optionen an",
-      "status": "unreviewed"
-    },
-    {
       "lessonId": "b2-05",
       "quote": "Daraus lässt sich nicht schließen, dass…",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-05",
-      "quote": "In Gruppe B stieg der Wert deutlich, während Gruppe A stabil blieb",
       "status": "unreviewed"
     },
     {
@@ -682,27 +590,12 @@
     },
     {
       "lessonId": "b2-07",
-      "quote": "Dadurch, dass die Leitung jede Entscheidung begründet, entsteht Vertrauen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-07",
       "quote": "Das Verfahren ist insofern offen, als alle Beiträge dokumentiert werden",
       "status": "unreviewed"
     },
     {
       "lessonId": "b2-10",
-      "quote": "Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-10",
       "quote": "Fragt das Zentrum vor der Bewerbung, falls ihr auf Kostenübernahme angewiesen seid. Zusätzlich erklärte die Vermittlerin, dass „Einzelfallprüfung“ keine automatische Ablehnung bedeute, kennzeichnete dies aber ausdrücklich als sprachliche Erläuterung und nicht als Zusage des Zentrums.",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b2-12",
-      "quote": "Dagegen wird im Gespräch auf die Personalkosten hingewiesen",
       "status": "unreviewed"
     },
     {

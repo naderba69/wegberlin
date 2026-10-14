@@ -5812,7 +5812,7 @@
         "prompt": "رتب شرط الحل:",
         "answer": "Wenn jeder mithilft, sind wir schnell fertig",
         "evidenceRef": "a2-06:controlled:a2-06-e3:explanationAr",
-        "evidenceExcerpt": "فعل الشرط في النهاية ثم فعل النتيجة. تستعمل wenn لربط شرط بنتيجة: Wenn jeder mithilft, ist die Küche schnell sauber. ويُقبل أيضًا: «Wir sind schnell fertig, wenn jeder mithilft».",
+        "evidenceExcerpt": "فعل الشرط في النهاية ثم فعل النتيجة. تستعمل wenn لربط شرط بنتيجة: Wenn jeder mithilft, ist die Küche schnell sauber.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -6010,7 +6010,7 @@
         "prompt": "رتب الإجراء:",
         "answer": "Wenn ein Kunde anruft, notiere ich den Namen",
         "evidenceRef": "a2-07:controlled:a2-07-e3:explanationAr",
-        "evidenceExcerpt": "جملة wenn تحمل فعلها إلى آخرها ثم تنقلب الرئيسية بعد الفاصلة: «Wenn ein Kunde anruft, notiere ich den Namen». تقديم notiere داخل التابعة يجعلها سؤالًا لا شرطًا. فحص ذاتي: هل انتهى الشرط بفعله؟ ويُقبل أيضًا: «Ich notiere…",
+        "evidenceExcerpt": "جملة wenn تحمل فعلها إلى آخرها ثم تنقلب الرئيسية بعد الفاصلة: «Wenn ein Kunde anruft, notiere ich den Namen». تقديم notiere داخل التابعة يجعلها سؤالًا لا شرطًا. فحص ذاتي: هل انتهى الشرط بفعله؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -7792,7 +7792,7 @@
         "prompt": "رتب الجملة المحايدة:",
         "answer": "Im Text steht, dass zwei Linien ausfallen",
         "evidenceRef": "a2-16:controlled:a2-16-e3:explanationAr",
-        "evidenceExcerpt": "نقل ما في النص يُبنى بـ dass مع فعل في النهاية: «Im Text steht, dass zwei Linien ausfallen». تقديم ausfallen على الاسم يحوّل النقل تعليقًا، والفاصلة قبل dass تفصل التابع عن أصله. ويُقبل أيضًا: «Dass zwei Linien ausfalle…",
+        "evidenceExcerpt": "نقل ما في النص يُبنى بـ dass مع فعل في النهاية: «Im Text steht, dass zwei Linien ausfallen». تقديم ausfallen على الاسم يحوّل النقل تعليقًا، والفاصلة قبل dass تفصل التابع عن أصله.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -8190,7 +8190,7 @@
         "prompt": "رتب الموازنة:",
         "answer": "Das Handy ist zwar nützlich, aber es lenkt oft ab",
         "evidenceRef": "a2-18:controlled:a2-18-e3:explanationAr",
-        "evidenceExcerpt": "زوج الروابط «zwar … aber» يعترف ثم يوازن: «Das Handy ist zwar nützlich, aber es lenkt oft ab». بسقوط zwar يبدو الرأي عنادًا، وبسقوط aber يصير التقدير تسليمًا كاملًا. فحص ذاتي: هل ذكرتُ الطرفين؟ ويُقبل أيضًا: «Zwar ist d…",
+        "evidenceExcerpt": "زوج الروابط «zwar … aber» يعترف ثم يوازن: «Das Handy ist zwar nützlich, aber es lenkt oft ab». بسقوط zwar يبدو الرأي عنادًا، وبسقوط aber يصير التقدير تسليمًا كاملًا. فحص ذاتي: هل ذكرتُ الطرفين؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -8982,7 +8982,7 @@
         "prompt": "رتب قبول الدعوة:",
         "answer": "Ich würde gern kommen",
         "evidenceRef": "a2-22:controlled:a2-22-e3:explanationAr",
-        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. «Ich komme gern würde» يضع المُعينَ في غير مكانه. فحص ذاتي: هل انفرد المصدر بالآخر؟ ويُقبل أيضًا: «Gern wür…",
+        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. «Ich komme gern würde» يضع المُعينَ في غير مكانه. فحص ذاتي: هل انفرد المصدر بالآخر؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -9378,7 +9378,7 @@
         "prompt": "رتب جمع الميزتين:",
         "answer": "Der Ort ist sowohl günstig als auch zentral",
         "evidenceRef": "a2-24:controlled:a2-24-e3:explanationAr",
-        "evidenceExcerpt": "الجمع بين ميزتين يُبقي الصفتين في سياق الخبر: «Der Ort ist sowohl günstig als auch zentral». تقديم auch على zentral يترك القارئ ينتظر ما يُكمل الزوج، وأدوات العطف لا تؤدّي الغرض نفسه. ويُقبل أيضًا: «Sowohl günstig als a…",
+        "evidenceExcerpt": "الجمع بين ميزتين يُبقي الصفتين في سياق الخبر: «Der Ort ist sowohl günstig als auch zentral». تقديم auch على zentral يترك القارئ ينتظر ما يُكمل الزوج، وأدوات العطف لا تؤدّي الغرض نفسه.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -9774,7 +9774,7 @@
         "prompt": "رتب الافتراض:",
         "answer": "Wenn ich Zeit hätte, würde ich den Kurs wählen",
         "evidenceRef": "b1-02:controlled:b1-02-e3:explanationAr",
-        "evidenceExcerpt": "في الشرط غير المحقق يذهب فعل wenn إلى النهاية ويأتي würde مع مصدر في الجزء الرئيسي: «Wenn ich Zeit hätte, würde ich den Kurs wählen». تقديم hätte يحوّل الشرط إلى سؤال ويترك المصدر معلقًا. ويُقبل أيضًا: «Ich würde den Ku…",
+        "evidenceExcerpt": "في الشرط غير المحقق يذهب فعل wenn إلى النهاية ويأتي würde مع مصدر في الجزء الرئيسي: «Wenn ich Zeit hätte, würde ich den Kurs wählen». تقديم hätte يحوّل الشرط إلى سؤال ويترك المصدر معلقًا.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -9972,7 +9972,7 @@
         "prompt": "رتب التسلسل:",
         "answer": "Nachdem sie den Kurs beendet hatte, bekam sie ein Angebot",
         "evidenceRef": "b1-03:controlled:b1-03-e3:explanationAr",
-        "evidenceExcerpt": "يُفتتح الجزء بـ بعدم مع الماضي السابق ثم يأتي الحدث اللاحق: «Nachdem sie den Kurs beendet hatte, bekam sie ein Angebot». عكس الترتيب يجعل العقد سابقًا لإنهاء الدورة، فيضيع سبب القرار. ويُقبل أيضًا: «Sie bekam ein Angebo…",
+        "evidenceExcerpt": "يُفتتح الجزء بـ بعدم مع الماضي السابق ثم يأتي الحدث اللاحق: «Nachdem sie den Kurs beendet hatte, bekam sie ein Angebot». عكس الترتيب يجعل العقد سابقًا لإنهاء الدورة، فيضيع سبب القرار.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -10368,7 +10368,7 @@
         "prompt": "رتب الجملة الرئيسية:",
         "answer": "Trotzdem fanden wir eine Lösung",
         "evidenceRef": "b1-05:controlled:b1-05-e3:explanationAr",
-        "evidenceExcerpt": "trotzdem رابط يفتح جملة رئيسية، فيأتي الفعل قبل الفاعل: «Trotzdem fanden wir eine Lösung». تقديم الفاعل يعطي ترتيب جملة جانبية، وحذف الرابط يترك التناقض معلقًا. فحص ذاتي: هل يصلح الجزء وقوفه وحده جملة؟ ويُقبل أيضًا: «Wi…",
+        "evidenceExcerpt": "trotzdem رابط يفتح جملة رئيسية، فيأتي الفعل قبل الفاعل: «Trotzdem fanden wir eine Lösung». تقديم الفاعل يعطي ترتيب جملة جانبية، وحذف الرابط يترك التناقض معلقًا. فحص ذاتي: هل يصلح الجزء وقوفه وحده جملة؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -11754,7 +11754,7 @@
         "prompt": "رتب جملة falls:",
         "answer": "Falls der Raum nicht frei ist, verschieben wir den Termin",
         "evidenceRef": "b1-12:controlled:b1-12-e3:explanationAr",
-        "evidenceExcerpt": "شرط falls محتمل التحقق، فيُفتتح به مع فعل في النهاية ثم تأتي النتيجة: «Falls der Raum nicht frei ist, verschieben wir den Termin». تقديم ist على الفاعل يعطي ترتيب الجملة الرئيسية داخل الشرط. ويُقبل أيضًا: «Wir verschieb…",
+        "evidenceExcerpt": "شرط falls محتمل التحقق، فيُفتتح به مع فعل في النهاية ثم تأتي النتيجة: «Falls der Raum nicht frei ist, verschieben wir den Termin». تقديم ist على الفاعل يعطي ترتيب الجملة الرئيسية داخل الشرط.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -11952,7 +11952,7 @@
         "prompt": "رتب دليل التقدم:",
         "answer": "Beim Schreiben mache ich weniger Fehler",
         "evidenceRef": "b1-13:controlled:b1-13-e3:explanationAr",
-        "evidenceExcerpt": "beim مع اسم المصدر يصنع ظرف حال: «Beim Schreiben mache ich weniger Fehler». تقديم الفعل على الظرف يترك الدليل بلا زمن، وكتابة schreiben صغيرة تحوّلها إلى مصدر بلا أداة. فحص ذاتي: هل الخطأ يُرى أثناء الكتابة؟ ويُقبل أيضً…",
+        "evidenceExcerpt": "beim مع اسم المصدر يصنع ظرف حال: «Beim Schreiben mache ich weniger Fehler». تقديم الفعل على الظرف يترك الدليل بلا زمن، وكتابة schreiben صغيرة تحوّلها إلى مصدر بلا أداة. فحص ذاتي: هل الخطأ يُرى أثناء الكتابة؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -12942,7 +12942,7 @@
         "prompt": "انسب للمصدر:",
         "answer": "Laut der Studie nahmen 24 Personen teil",
         "evidenceRef": "b1-18:controlled:b1-18-e3:explanationAr",
-        "evidenceExcerpt": "الفعل teilnehmen ينفصل: «nahmen 24 Personen teil»، ويأتي المصدر في البداية. بدون «Laut der Studie» تُنسب النتيجة إليك لا إلى الدراسة، وبدون teil يبقى الفعل ناقصًا. فحص ذاتي: هل البادئة في نهاية الجملة؟ ويُقبل أيضًا: «24…",
+        "evidenceExcerpt": "الفعل teilnehmen ينفصل: «nahmen 24 Personen teil»، ويأتي المصدر في البداية. بدون «Laut der Studie» تُنسب النتيجة إليك لا إلى الدراسة، وبدون teil يبقى الفعل ناقصًا. فحص ذاتي: هل البادئة في نهاية الجملة؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -13536,7 +13536,7 @@
         "prompt": "رتب was:",
         "answer": "Was wir entscheiden, das dokumentieren wir",
         "evidenceRef": "b1-21:controlled:b1-21-e3:explanationAr",
-        "evidenceExcerpt": "جملة was تحمل مضمونها ثم يأتي das ليلخّصه في الجملة الرئيسية: «Was wir entscheiden, das dokumentieren wir». حذف das يترك الإشارة مفقودة، وتقديمها على المضمون يقلب البنية. فحص ذاتي: هل يمكن وضع es مكان das؟ ويُقبل أيضًا:…",
+        "evidenceExcerpt": "جملة was تحمل مضمونها ثم يأتي das ليلخّصه في الجملة الرئيسية: «Was wir entscheiden, das dokumentieren wir». حذف das يترك الإشارة مفقودة، وتقديمها على المضمون يقلب البنية. فحص ذاتي: هل يمكن وضع es مكان das؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14130,7 +14130,7 @@
         "prompt": "رتب الجواب:",
         "answer": "Davon hängt es ab, ob die Links aktuell sind",
         "evidenceRef": "b1-24:controlled:b1-24-e3:explanationAr",
-        "evidenceExcerpt": "الضمير التقديمي يسبق الفعل في الجملة الرئيسية ثم يأتي ob-Teil: «Davon hängt es ab, ob die Links aktuell sind». تقديم ob يترك الفعل بلا مرجع يسمّي ما يعتمد عليه. فحص ذاتي: هل يعرف القارئ ما الذي يتعلق؟ ويُقبل أيضًا: «Es …",
+        "evidenceExcerpt": "الضمير التقديمي يسبق الفعل في الجملة الرئيسية ثم يأتي ob-Teil: «Davon hängt es ab, ob die Links aktuell sind». تقديم ob يترك الفعل بلا مرجع يسمّي ما يعتمد عليه. فحص ذاتي: هل يعرف القارئ ما الذي يتعلق؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14328,7 +14328,7 @@
         "prompt": "رتب الاستنتاج المحدود:",
         "answer": "Daraus lässt sich kein allgemeines Verbot ableiten",
         "evidenceRef": "b2-01:controlled:b2-01-e3:explanationAr",
-        "evidenceExcerpt": "sich lassen تبني ما يمكن استنتاجه بلا فاعل مذكور: «Daraus lässt sich kein allgemeines Verbot ableiten» مع المصدر في النهاية. حذف kein يحوّل نتيجة محدودة إلى منع عام لا يحمله الدليل. ويُقبل أيضًا: «Kein allgemeines Verbo…",
+        "evidenceExcerpt": "sich lassen تبني ما يمكن استنتاجه بلا فاعل مذكور: «Daraus lässt sich kein allgemeines Verbot ableiten» مع المصدر في النهاية. حذف kein يحوّل نتيجة محدودة إلى منع عام لا يحمله الدليل.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14526,7 +14526,7 @@
         "prompt": "رتب المقابلة:",
         "answer": "Büros sind flexibel, wohingegen Kliniken eine Besetzung brauchen",
         "evidenceRef": "b2-02:controlled:b2-02-e3:explanationAr",
-        "evidenceExcerpt": "wohingegen تقابل بين حالتين: فعلها يذهب إلى نهاية الجزء التابع، والفاصلة قبلها تفصل المتقابلين فلا تختلط المقارنة بالنتيجة. ويُقبل أيضًا: «Kliniken brauchen eine Besetzung, wohingegen Büros flexibel sind».",
+        "evidenceExcerpt": "wohingegen تقابل بين حالتين: فعلها يذهب إلى نهاية الجزء التابع، والفاصلة قبلها تفصل المتقابلين فلا تختلط المقارنة بالنتيجة.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14724,7 +14724,7 @@
         "prompt": "رتب المتغير:",
         "answer": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort",
         "evidenceRef": "b2-03:controlled:b2-03-e3:explanationAr",
-        "evidenceExcerpt": "je nachdem يفتح تعليقًا مشروطًا ويتلوه الجزء التابع بـ ob بفعل في نهايته، ويُفصل الجزء التابع بفواصل كما في كل جملة جانبية تسبق الرئيسي. ويُقبل أيضًا: «Wir arbeiten vor Ort, je nachdem, ob Kunden kommen».",
+        "evidenceExcerpt": "je nachdem يفتح تعليقًا مشروطًا ويتلوه الجزء التابع بـ ob بفعل في نهايته، ويُفصل الجزء التابع بفواصل كما في كل جملة جانبية تسبق الرئيسي.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -14922,7 +14922,7 @@
         "prompt": "رتب المراعاة:",
         "answer": "Unter Berücksichtigung Ihrer Prioritäten bieten wir zwei Optionen an",
         "evidenceRef": "b2-04:controlled:b2-04-e3:explanationAr",
-        "evidenceExcerpt": "التركيب الاسمي Unter Berücksichtigung مع Genitiv يأتي أولًا ثم يليه فعل الجزء الرئيسي مباشرة، فيبقى الفاعل والمفعول واضحين بعد الإضافة الطويلة. ويُقبل أيضًا: «Wir bieten unter Berücksichtigung Ihrer Prioritäten zwei Opt…",
+        "evidenceExcerpt": "التركيب الاسمي Unter Berücksichtigung مع Genitiv يأتي أولًا ثم يليه فعل الجزء الرئيسي مباشرة، فيبقى الفاعل والمفعول واضحين بعد الإضافة الطويلة.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -15120,7 +15120,7 @@
         "prompt": "رتب المقارنة:",
         "answer": "Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich",
         "evidenceRef": "b2-05:controlled:b2-05-e3:explanationAr",
-        "evidenceExcerpt": "während تفتح فرعية يبقى فعلها في النهاية، ثم تبدأ الرئيسية بفعلها مباشرة: «Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich». تقديم der Wert على stieg يعطي ترتيبًا بلا رابط ويُبطئ المقارنة. ويُقبل أيضً…",
+        "evidenceExcerpt": "während تفتح فرعية يبقى فعلها في النهاية، ثم تبدأ الرئيسية بفعلها مباشرة: «Während Gruppe A stabil blieb, stieg der Wert in Gruppe B deutlich». تقديم der Wert على stieg يعطي ترتيبًا بلا رابط ويُبطئ المقارنة.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -15516,7 +15516,7 @@
         "prompt": "رتب آلية الثقة:",
         "answer": "Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet",
         "evidenceRef": "b2-07:controlled:b2-07-e3:explanationAr",
-        "evidenceExcerpt": "الآلية تُسمّى بـ dadurch, dass: «Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet». حذف dass يترك الفاعل بلا رابط، وتصريف begründet في غير النهاية يفسد التابعة كلها. ويُقبل أيضًا: «Dadurch, dass …",
+        "evidenceExcerpt": "الآلية تُسمّى بـ dadurch, dass: «Vertrauen entsteht dadurch, dass die Leitung jede Entscheidung begründet». حذف dass يترك الفاعل بلا رابط، وتصريف begründet في غير النهاية يفسد التابعة كلها.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -16110,7 +16110,7 @@
         "prompt": "رتب الشرط:",
         "answer": "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird",
         "evidenceRef": "b2-10:controlled:b2-10-e3:explanationAr",
-        "evidenceExcerpt": "الجزء بشرط sofern يأتي بعد الجزء الرئيسي بفعل في نهايته، والفاصلة تفصلهما؛ الترتيب الصحيح يبدأ بالنتيجة ثم الشرط لا العكس. ويُقبل أيضًا: «Sofern die Zusage bis Montag bestätigt wird, ist die Teilnahme kostenlos».",
+        "evidenceExcerpt": "الجزء بشرط sofern يأتي بعد الجزء الرئيسي بفعل في نهايته، والفاصلة تفصلهما؛ الترتيب الصحيح يبدأ بالنتيجة ثم الشرط لا العكس.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -16506,7 +16506,7 @@
         "prompt": "رتب نسبة الاعتراض:",
         "answer": "Im Gespräch wird dagegen auf die Personalkosten hingewiesen",
         "evidenceRef": "b2-12:controlled:b2-12-e3:explanationAr",
-        "evidenceExcerpt": "dagegen هنا ظرف اعتراض لا أداة ربط: يبقى داخل الجزء الرئيسي ولا يسحب الفعل المساند، لذا تحتضن wird … hingewiesen الاعتراض بين جزأيها دون أن ينفصل القوس. ويُقبل أيضًا: «Dagegen wird im Gespräch auf die Personalkosten hin…",
+        "evidenceExcerpt": "dagegen هنا ظرف اعتراض لا أداة ربط: يبقى داخل الجزء الرئيسي ولا يسحب الفعل المساند، لذا تحتضن wird … hingewiesen الاعتراض بين جزأيها دون أن ينفصل القوس.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "097c3897737be0b31cd0d314a8b3d09392d7eedfa72141fee81b0dcc5afeb5d9"
+  "contentSha256": "11711463770657ab7c2b2a6ab6054ee9f4e73651d84ac76b0102e807ef73d86b"
 }

@@ -12777,7 +12777,7 @@
         "prompt": " أي توصية أدق؟",
         "answer": "Empfehlenswert für Menschen, die ruhige Dramen mögen.",
         "evidenceRef": "b1-17:controlled:b1-17-e6:explanationAr",
-        "evidenceExcerpt": "التوصية الأدق تحدّد الفئة وذوقها: «empfehlenswert für Menschen, die ruhige Dramen mögen». «للجميع» و«الأفضل بلا مثال» لا يصفان أحدًا، وذمّ القارئ يهاجم الشخص لا العمل. فحص ذاتي: هل يعرف القارئ موقعه؟",
+        "evidenceExcerpt": "التوصية الأدق تحدّد الفئة وذوقها: «Empfehlenswert für Menschen, die ruhige Dramen mögen». «للجميع» و«الأفضل بلا مثال» لا يصفان أحدًا، وذمّ القارئ يهاجم الشخص لا العمل. فحص ذاتي: هل يعرف القارئ موقعه؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12788,7 +12788,7 @@
         "prompt": "Im ___ steht eine junge Familie. تلخيص بلا حرق:",
         "answer": "Mittelpunkt | Zentrum",
         "evidenceRef": "b1-17:controlled:b1-17-e7:explanationAr",
-        "evidenceExcerpt": "العبارة المحفوظة للتقديم الوصفي: «Im Mittelpunkt steht eine junge Familie» أي أنها ما يراه المشاهد مباشرة. كلمة Rand أو Ende تعكس الدلالة، والفعل steht يبقى في النهاية لأنه بعد ظرف مكان. ويُقبل أيضًا: «Im Zentrum steht …",
+        "evidenceExcerpt": "العبارة المحفوظة للتقديم الوصفي: «Im Mittelpunkt steht eine junge Familie» أي أنها محور القصة. كلمة Rand أو Ende تعكس الدلالة. والفعل steht في الموضع الثاني بعد العبارة المكانية، ثم يأتي الفاعل eine junge Familie. ويُقب…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12986,7 +12986,7 @@
         "prompt": "Die Aussage ist nur teilweise ___. أكمل الحكم:",
         "answer": "richtig | korrekt",
         "evidenceRef": "b1-18:controlled:b1-18-e7:explanationAr",
-        "evidenceExcerpt": "التقييد بـ nur teilweise يحتاج خبرًا قابلًا للدراسة: «Die Aussage ist nur teilweise richtig». الحكم بالتعميم إلى falsch أو إلى bewiesen يتجاوز ما تحمله عينة من 28 شخصًا. فحص ذاتي: أي جزء من الادعاء يصحّ؟ ويُقبل أيضًا: «…",
+        "evidenceExcerpt": "التقييد بـ nur teilweise يحتاج حكمًا يقبل التدرّج: «Die Aussage ist nur teilweise richtig». الحكم بالتعميم إلى falsch أو إلى bewiesen يتجاوز ما تحمله عينة من 28 شخصًا. فحص ذاتي: أي جزء من الادعاء يصحّ؟ ويُقبل أيضًا: «ko…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -13129,7 +13129,7 @@
         "prompt": "Was ___ dieses Zeichen? تسأل عن معنى رمز:",
         "answer": "bedeutet | heißt",
         "evidenceRef": "b1-19:controlled:b1-19-e2:explanationAr",
-        "evidenceExcerpt": "لمعنى رمز أو كلمة نستعمل bedeuten مع الشيء: «Was bedeutet dieses Zeichen?». heißen تسأل عن الاسم، و meinen عن قصد الشخص. فحص ذاتي: هل الجواب تعريف للرمز لا ترجمته فقط؟ ويُقبل أيضًا: «heißt».",
+        "evidenceExcerpt": "لمعنى رمز أو كلمة نستعمل bedeuten مع الشيء: «Was bedeutet dieses Zeichen?». و heißt تصلح هنا أيضًا بمعنى «ماذا يعني»، أما meinen فتسأل عن قصد الشخص. فحص ذاتي: هل الجواب تعريف للرمز لا ترجمته فقط؟ ويُقبل أيضًا: «heißt».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -13349,7 +13349,7 @@
         "prompt": "حوّل الأمر إلى نصيحة: Du musst den Kurs sofort abbrechen!",
         "answer": "Du könntest zuerst mit der Lehrkraft sprechen | An deiner Stelle würde ich zuerst mit der Lehrkraft sprechen",
         "evidenceRef": "b1-20:controlled:b1-20-e4:explanationAr",
-        "evidenceExcerpt": "الأمر «Du musst … abbrechen» يسلب القرار، أما النصيحة فتعرض خطوة قابلة للاختبار: «An deiner Stelle würde ich zuerst mit der Lehrkraft sprechen». Konjunktiv II يلطّف ويبقي المسؤولية عند صاحبه.",
+        "evidenceExcerpt": "الأمر «Du musst den Kurs sofort abbrechen!» يسلب القرار، أما النصيحة فتعرض خطوة قابلة للاختبار: «An deiner Stelle würde ich zuerst mit der Lehrkraft sprechen». Konjunktiv II يلطّف ويبقي المسؤولية عند صاحبه.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -13723,7 +13723,7 @@
         "prompt": "Der Plan ändert sich, ohne ___ Daten verloren gehen. فاعل مختلف:",
         "answer": "dass",
         "evidenceRef": "b1-22:controlled:b1-22-e2:explanationAr",
-        "evidenceExcerpt": "فاعل الجزء المسند هنا Daten لا der Plan، فلا يكفي مصدر بل جملة جانبية بـ dass: «ohne dass Daten verloren gehen». مع فاعل واحد كان يكفي «ohne … zu verlieren». فحص ذاتي: كم فاعلًا في الجزءين؟",
+        "evidenceExcerpt": "فاعل الجزء المسند هنا Daten لا der Plan، فلا يكفي مصدر بل جملة جانبية بـ dass: «ohne dass Daten verloren gehen». مع فاعل واحد كان يكفي ohne … zu مع المصدر. فحص ذاتي: كم فاعلًا في الجزءين؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -13910,7 +13910,7 @@
         "prompt": " اختر زوج السؤال والجواب الصحيحين مع الحرف الجر für:",
         "answer": "Wofür? Dafür.",
         "evidenceRef": "b1-23:controlled:b1-23-e1:explanationAr",
-        "evidenceExcerpt": "لِشيء نسأل بـ Wofür ونجيب بـ dafür: «Wofür brauchen wir die App? – Dafür, doppelte Eingaben zu vermeiden». وللأشخاص für wen، فلا يصلح زوج يستعمله مع معنى الشيء.",
+        "evidenceExcerpt": "لِشيء نسأل بـ Wofür ونجيب بـ dafür، كما في الدرس: «Wofür ist die App? Dafür, Termine zu planen». وللأشخاص für wen، فـ «Für wen? Dafür Person.» يخلط سؤالًا عن شخص بجواب عن شيء. أما «Womit? Darüber.» و «Woran? Damit.» فحر…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -14108,7 +14108,7 @@
         "prompt": " sich konzentrieren auf:",
         "answer": "Worauf? Darauf.",
         "evidenceRef": "b1-24:controlled:b1-24-e1:explanationAr",
-        "evidenceExcerpt": "sich konzentrieren على يسأل عنه بدمج wo و auf: «Worauf konzentrierst du dich? – Darauf, die Links zu prüfen». مع أشخاص نقول auf wen. فحص ذاتي: هل يمكن أن يبدأ ردّك بـ «auf …»؟",
+        "evidenceExcerpt": "sich konzentrieren auf يُسأل عنه بدمج wo و auf ويُجاب بـ darauf، كما في الدرس: «Worauf konzentrieren wir uns?» – «Darauf, dass neue Lernende Informationen schneller finden». ومع أشخاص نقول auf wen. أما Wovon و Womit و W…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -14119,7 +14119,7 @@
         "prompt": "___ hängt der Erfolg ab? abhängen von:",
         "answer": "Wovon",
         "evidenceRef": "b1-24:controlled:b1-24-e2:explanationAr",
-        "evidenceExcerpt": "الفعل abhängen von يسأل عنه بدمج wo مع von: Wovon hängt der Erfolg ab؟. للأشخاص نقول Von wem، ولا تأتي was منفردة مع حرف جر. فحص ذاتي: هل يمكن أن يبدأ الرد بـ «von den Links»؟",
+        "evidenceExcerpt": "الفعل abhängen von يسأل عنه بدمج wo مع von: Wovon hängt der Erfolg ab?. للأشخاص نقول Von wem، ولا تأتي was منفردة مع حرف جر. فحص ذاتي: هل يمكن أن يبدأ الرد بـ «von den Links»؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "7220a5ee5cf1c16cf864d9dcea58bb9be19c144f765623be19012b6e70da09ba"
+  "contentSha256": "faa0f83c811428f6ee8b2b7e5d257df9f94a4391b88087acba2973c747b40e8b"
 }

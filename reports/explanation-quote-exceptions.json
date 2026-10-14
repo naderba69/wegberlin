@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 109,
+  "count": 104,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -299,108 +299,99 @@
     },
     {
       "lessonId": "b1-17",
-      "quote": "empfehlenswert für Menschen, die ruhige Dramen mögen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-17",
       "quote": "Im Mittelpunkt steht eine junge Familie",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم. (وصُحّح الشرح في v198: steht في الموضع الثاني لا في النهاية)."
     },
     {
       "lessonId": "b1-17",
       "quote": "Im Zentrum steht eine junge Familie",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. الجواب البديل المقبول فعلًا بعد ملء الفراغ («ويُقبل أيضًا»)، يعرض الجملة كاملة."
     },
     {
       "lessonId": "b1-18",
       "quote": "Angeblich verdoppelt die App den Lernerfolg",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-18",
       "quote": "Die Aussage ist nur teilweise richtig",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-19",
       "quote": "Was bedeutet dieses Zeichen?",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم. (وصُحّح الشرح في v198: لم يعد يناقض قبول heißt)."
     },
     {
       "lessonId": "b1-19",
       "quote": "Nicht Freitagabend, sondern Donnerstagabend",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-20",
       "quote": "An deiner Stelle würde ich zuerst nachfragen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-20",
-      "quote": "Du musst … abbrechen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-20",
       "quote": "Eine Möglichkeit wäre, die Stunden zu reduzieren",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-21",
       "quote": "Was noch fehlt, ist eine klare Frist",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-21",
       "quote": "Eine klare Frist fehlt",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جملة أو عبارة يقترحها الفحص الذاتي ليجرّب بها المتعلم القاعدة، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-22",
       "quote": "ohne dass ich mich überfordere",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. صيغة dass يقارن بها الشرح ليبيّن متى يلزم فعل مُصرَّف وفاعل ظاهر، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-22",
       "quote": "ohne dass Daten verloren gehen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-22",
-      "quote": "ohne … zu verlieren",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جزء من الجواب الكامل بعد ملء الفراغ، يعرض موضع القاعدة في الجملة الصحيحة."
     },
     {
       "lessonId": "b1-22",
       "quote": "einen Zeitpuffer einplanen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-23",
-      "quote": "Wofür brauchen wir die App? – Dafür, doppelte Eingaben zu vermeiden",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. صيغة المصدر المعجمية للتعبير الذي يملؤه الفراغ (ترد في نص الدرس مصرَّفة: «plant … einen Zeitpuffer ein»)."
     },
     {
       "lessonId": "b1-23",
       "quote": "Womit funktioniert die App?",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-23",
       "quote": "mit dem Tablet",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "b1-24",
-      "quote": "Worauf konzentrierst du dich? – Darauf, die Links zu prüfen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جملة أو عبارة يقترحها الفحص الذاتي ليجرّب بها المتعلم القاعدة، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b1-24",
       "quote": "von den Links",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جملة أو عبارة يقترحها الفحص الذاتي ليجرّب بها المتعلم القاعدة، لا تُنسب إلى نص الدرس."
     },
     {
       "lessonId": "b2-05",

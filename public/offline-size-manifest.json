@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "70cef5e44acfcd138706ba4f2229e8aa148382a923c1985bbe64a97b005fa015",
+  "buildFingerprint": "a63fee74a5d43e06ec4d0486716a4ebdd2bd6bd67aab842df586b0dddbfb9c37",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3964009,
-      "routeGzipBytes": 783520,
+      "routeGzipBytes": 783442,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7032356,
-      "nextAssetGzipBytes": 1984699,
+      "nextAssetRawBytes": 7032690,
+      "nextAssetGzipBytes": 1984764,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11064015,
-      "totalGzipBytes": 2780184,
+      "totalRawBytes": 11064349,
+      "totalGzipBytes": 2780171,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -436,9 +436,9 @@
           "gzipBytes": 168112
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-          "rawBytes": 650553,
-          "gzipBytes": 177530
+          "path": "/_next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+          "rawBytes": 650887,
+          "gzipBytes": 177595
         },
         {
           "path": "/_next/static/chunks/curriculum-b2-11062a49749ba40a.js",
@@ -472,14 +472,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4260911,
-      "routeGzipBytes": 895186,
+      "routeGzipBytes": 895111,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7032356,
-      "nextAssetGzipBytes": 1984698,
+      "nextAssetRawBytes": 7032690,
+      "nextAssetGzipBytes": 1984763,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11360917,
-      "totalGzipBytes": 2891849,
+      "totalRawBytes": 11361251,
+      "totalGzipBytes": 2891839,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -897,9 +897,9 @@
           "gzipBytes": 168112
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-          "rawBytes": 650553,
-          "gzipBytes": 177530
+          "path": "/_next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+          "rawBytes": 650887,
+          "gzipBytes": 177595
         },
         {
           "path": "/_next/static/chunks/curriculum-b2-11062a49749ba40a.js",
@@ -932,15 +932,15 @@
       "id": "b1",
       "label": "B1",
       "routeCount": 60,
-      "routeRawBytes": 4337571,
-      "routeGzipBytes": 920594,
+      "routeRawBytes": 4338251,
+      "routeGzipBytes": 920628,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7032354,
-      "nextAssetGzipBytes": 1984697,
+      "nextAssetRawBytes": 7032688,
+      "nextAssetGzipBytes": 1984762,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11437575,
-      "totalGzipBytes": 2917256,
+      "totalRawBytes": 11438589,
+      "totalGzipBytes": 2917355,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1358,9 +1358,9 @@
           "gzipBytes": 168112
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-          "rawBytes": 650553,
-          "gzipBytes": 177530
+          "path": "/_next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+          "rawBytes": 650887,
+          "gzipBytes": 177595
         },
         {
           "path": "/_next/static/chunks/curriculum-b2-11062a49749ba40a.js",
@@ -1394,14 +1394,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10152452,
-      "routeGzipBytes": 2322556,
+      "routeGzipBytes": 2322278,
       "nextAssetCount": 93,
-      "nextAssetRawBytes": 7176777,
-      "nextAssetGzipBytes": 2029679,
+      "nextAssetRawBytes": 7177111,
+      "nextAssetGzipBytes": 2029744,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17396879,
-      "totalGzipBytes": 4364200,
+      "totalRawBytes": 17397213,
+      "totalGzipBytes": 4363987,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -1839,9 +1839,9 @@
           "gzipBytes": 168112
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-          "rawBytes": 650553,
-          "gzipBytes": 177530
+          "path": "/_next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+          "rawBytes": 650887,
+          "gzipBytes": 177595
         },
         {
           "path": "/_next/static/chunks/curriculum-b2-11062a49749ba40a.js",
@@ -1874,15 +1874,15 @@
       "id": "full",
       "label": "A1–B2 komplett",
       "routeCount": 320,
-      "routeRawBytes": 16829720,
-      "routeGzipBytes": 4046393,
+      "routeRawBytes": 16830400,
+      "routeGzipBytes": 4046080,
       "nextAssetCount": 120,
-      "nextAssetRawBytes": 7181965,
-      "nextAssetGzipBytes": 2034158,
+      "nextAssetRawBytes": 7182299,
+      "nextAssetGzipBytes": 2034223,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24079335,
-      "totalGzipBytes": 6092516,
+      "totalRawBytes": 24080349,
+      "totalGzipBytes": 6092268,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bbe49afac5dba91c.js",
@@ -2455,9 +2455,9 @@
           "gzipBytes": 168112
         },
         {
-          "path": "/_next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-          "rawBytes": 650553,
-          "gzipBytes": 177530
+          "path": "/_next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+          "rawBytes": 650887,
+          "gzipBytes": 177595
         },
         {
           "path": "/_next/static/chunks/curriculum-b2-11062a49749ba40a.js",

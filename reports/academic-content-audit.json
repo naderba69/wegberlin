@@ -11138,7 +11138,7 @@
         "prompt": " اختر indem الصحيح:",
         "answer": "Wir erhöhen die Sicherheit, indem wir den Radweg schützen.",
         "evidenceRef": "b1-09:controlled:b1-09-e1:explanationAr",
-        "evidenceExcerpt": "indem تربط الوسيلة بفعلها في نهاية الجملة الجانبية: «…, indem wir den Radweg schützen». تقديم الفعل بعد indem يجعلها جملة رئيسية، وحذف الفاعل يترك الوسيلة بلا من ينفّذها. فحص ذاتي: أين الفعل بعد indem؟",
+        "evidenceExcerpt": "indem تربط الوسيلة بفعلها في نهاية الجملة الجانبية: «indem wir den Radweg schützen». تقديم الفعل بعد indem يجعلها جملة رئيسية، وحذف الفاعل يترك الوسيلة بلا من ينفّذها. فحص ذاتي: أين الفعل بعد indem؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -11171,7 +11171,7 @@
         "prompt": "صحح ترتيب الطريقة: Die Stadt verbessert den Zugang, indem sie entfernt die Stufen.",
         "answer": "Die Stadt verbessert den Zugang, indem sie die Stufen entfernt",
         "evidenceRef": "b1-09:controlled:b1-09-e4:explanationAr",
-        "evidenceExcerpt": "في جملة indem يذهب الفعل إلى النهاية بعد الفاعل والمفعول: «…, indem sie die Stufen entfernt». بقاء entfernt قبل المفعول يعطي ترتيب جملة رئيسية داخل جزء تابع. فحص ذاتي: احذف indem وأعد الفعل إلى جملة مستقلة.",
+        "evidenceExcerpt": "في جملة indem يذهب الفعل إلى النهاية بعد الفاعل والمفعول: «indem sie die Stufen entfernt». بقاء entfernt قبل المفعول يعطي ترتيب جملة رئيسية داخل جزء تابع. فحص ذاتي: احذف indem وأعد الفعل إلى جملة مستقلة.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -11358,7 +11358,7 @@
         "prompt": "الفعل المنفصل:",
         "answer": "statt das Gerät wegzuwerfen",
         "evidenceRef": "b1-10:controlled:b1-10-e3:explanationAr",
-        "evidenceExcerpt": "بعد «statt» يأتي المصدر مع zu، وفي الفعل المنفصل تُدرَج zu بين البادئة والجذر: weg + zu + werfen. كتابة «wegzuwerfen» بلا فاصل أو «werfen zu weg» تفصل البادئة عن جذرها. فحص ذاتي: هل zu ملتصقة بالجذر؟",
+        "evidenceExcerpt": "بعد statt يأتي المصدر مع zu في آخر الجزء. وفي الفعل المنفصل تدخل zu بين البادئة والجذر وتُكتب الكلمة متصلة: weg + zu + werfen = wegzuwerfen، فيصير «statt das Gerät wegzuwerfen». أما وضع zu قبل الفعل كله (zu wegwerfen) أ…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -11600,7 +11600,7 @@
         "prompt": "Die Nutzung steigt ___, dass die Wege sicherer werden. أكمل النتيجة:",
         "answer": "dadurch",
         "evidenceRef": "b1-11:controlled:b1-11-e7:explanationAr",
-        "evidenceExcerpt": "السبب هنا يأتي بـ dadurch مع dass، فينتقل الفعل إلى نهاية الجملة الجانبية: «…dadurch, dass die Wege sicherer werden». بدونه تبقى النتيجة بلا سبب، ومع indem تسقط dass لأن الوسيلة تحتاج فاعلًا ينفّذها.",
+        "evidenceExcerpt": "السبب هنا يأتي بـ dadurch مع dass، فينتقل الفعل إلى نهاية الجملة الجانبية، كما في الدرس: «Die Nutzung steigt dadurch, dass Wege sicherer sind». ترك الفراغ يقطع الصلة بين النتيجة وسببها، ولا تجتمع indem مع dass؛ فـ indem…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12139,7 +12139,7 @@
         "prompt": "Wir lassen ___ beraten. أكمل الاستشارة الانعكاسية:",
         "answer": "uns",
         "evidenceRef": "b1-14:controlled:b1-14-e2:explanationAr",
-        "evidenceExcerpt": "الفعل lassen يرجع إلى الفاعل نفسه، وضمير wir في صيغة المفعول هو uns: «Wir lassen uns beraten». أما «wir» أو «unser» فيقطعان الرجوع. فحص ذاتي: قل «Ihr lasst euch beraten» وقارن البنية.",
+        "evidenceExcerpt": "في sich beraten lassen يعود الضمير الانعكاسي على الفاعل، وضمير wir في صيغة المفعول هو uns: «Wir lassen uns beraten». أما «wir» أو «unser» فيقطعان الرجوع. فحص ذاتي: قارنها بـ «Ich lasse mich beraten»؛ هل تغيّر الضمير مع …",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12524,7 +12524,7 @@
         "prompt": " الفاعل نفسه:",
         "answer": "Statt sofort zu antworten, sammle ich Nachrichten.",
         "evidenceRef": "b1-16:controlled:b1-16-e1:explanationAr",
-        "evidenceExcerpt": "فاعل واحد ومصدر مع zu يكفيان: «Statt sofort zu antworten, sammle ich Nachrichten». «Statt dass … zu antworten» يضاعف الرابط، و «Statt ich antworte» يبني جملة رئيسية بلا أن. فحص ذاتي: هل الفاعل واحد في الجزءين؟",
+        "evidenceExcerpt": "فاعل واحد ومصدر مع zu يكفيان: «Statt sofort zu antworten, sammle ich Nachrichten». «Statt dass ich sofort zu antworten, sammle ich Notizen» يضاعف الرابط، و «Statt ich antworte» يبني جملة رئيسية بلا أن. فحص ذاتي: هل الفا…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12590,7 +12590,7 @@
         "prompt": "Ich messe nicht nur die Zeit, ___ auch die Unterbrechungen. أكمل التركيب:",
         "answer": "sondern",
         "evidenceRef": "b1-16:controlled:b1-16-e7:explanationAr",
-        "evidenceExcerpt": "بعد nicht nur يأتي المقابل بـ auch: «nicht nur die Zeit, sondern auch die Unterbrechungen». aber تنفي ولا تقابل، و oder تترك خيارًا، و und تجمع بلا مقابل. فحص ذاتي: هل ما بعد sondern من نوع ما قبله؟",
+        "evidenceExcerpt": "بعد nicht nur يأتي المقابل بـ sondern auch: «nicht nur die Zeit, sondern auch die Unterbrechungen». أما aber فلا تأتي بعد nicht nur في الألمانية المعيارية، و oder تترك خيارًا، و und تجمع بلا مقابل. فحص ذاتي: هل ما بعد s…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "8dd0f082ce1b58da0f1955c490c3efb337da604251bb3f2affa9ec71db4fae8f"
+  "contentSha256": "7220a5ee5cf1c16cf864d9dcea58bb9be19c144f765623be19012b6e70da09ba"
 }

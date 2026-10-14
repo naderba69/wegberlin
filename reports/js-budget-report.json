@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2072338,
+    "totalChunkGzipBytes": 2072403,
     "maxSingleChunkGzipBytes": 263023
   },
   "issues": [],
@@ -24,9 +24,9 @@
       "gzipBytes": 263023
     },
     {
-      "path": ".next/static/chunks/curriculum-b1-8b8ada7943b99461.js",
-      "rawBytes": 650553,
-      "gzipBytes": 177530
+      "path": ".next/static/chunks/curriculum-b1-c35c8c42278fabab.js",
+      "rawBytes": 650887,
+      "gzipBytes": 177595
     },
     {
       "path": ".next/static/chunks/curriculum-a2-6e770813cb486179.js",

@@ -1008,7 +1008,7 @@ export const localTestTemplateBankA2 = [
           "ob ich morgen arbeiten kann"
         ],
         "correctIndex": 3,
-        "explanationAr": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «… ob ich morgen arbeiten kann». ف «ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟"
+        "explanationAr": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «ob ich morgen arbeiten kann». ف «ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟"
       },
       {
         "id": "a2-14-m4",

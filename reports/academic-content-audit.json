@@ -7000,7 +7000,7 @@
         "prompt": "رتب الطلب:",
         "answer": "Könnten Sie mir ein anderes Zimmer geben",
         "evidenceRef": "a2-12:controlled:a2-12-e3:explanationAr",
-        "evidenceExcerpt": "الطلب المؤدَّب يبدأ بالفعل فالفاعل فالمخاطَب فالمطلوب، ويُختم بالفعل الرئيسي: «Könnten Sie mir ein anderes Zimmer geben؟». توزيع الكلمات العاري يترك الطلب بلا فعل مُصرَّف في صدره. فحص ذاتي: هل سألتَ بـ Könnten؟",
+        "evidenceExcerpt": "الطلب المؤدَّب يبدأ بالفعل فالفاعل فالمخاطَب فالمطلوب، ويُختم بالفعل الرئيسي: «Könnten Sie mir ein anderes Zimmer geben?». توزيع الكلمات العاري يترك الطلب بلا فعل مُصرَّف في صدره. فحص ذاتي: هل سألتَ بـ Könnten؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -7220,7 +7220,7 @@
         "prompt": "طابق الهدف بالتغيير:",
         "answer": "zu wenig Schlaf → früher ins Bett | zu viel Zucker → weniger Süßes | wenig Bewegung → dreimal spazieren",
         "evidenceRef": "a2-13:controlled:a2-13-e5:explanationAr",
-        "evidenceExcerpt": "الهدف يقابَل بتغيير يُعَدّ لا بوصفة: «zu wenig Schlaf → früher ins Bett» و «wenig Bewegung → dreimal spazieren». أمّا الجرعة والتوقيت فليسا من هذا الدرس ولا من حقّ التطبيق. فحص ذاتي: هل خطّتي عادةٌ لا وصفة؟",
+        "evidenceExcerpt": "الهدف يقابَل بتغيير يُعَدّ لا بوصفة: «zu wenig Schlaf» und «früher ins Bett» و «wenig Bewegung» und «dreimal spazieren». أمّا الجرعة والتوقيت فليسا من هذا الدرس ولا من حقّ التطبيق. فحص ذاتي: هل خطّتي عادةٌ لا وصفة؟",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -7407,7 +7407,7 @@
         "prompt": "صحح الترتيب: Ich sage später, ob kann ich morgen kommen.",
         "answer": "Ich sage später, ob ich morgen kommen kann",
         "evidenceRef": "a2-14:controlled:a2-14-e4:explanationAr",
-        "evidenceExcerpt": "في الجملة الجانبية بـ ob يذهب الفعل المُصرَّف إلى آخرها: «Ich sage später, ob ich morgen kommen kann.» تقديم kann يجعلها سؤالًا مباشرًا داخل تابعة، فتبقى الإجابة معلَّقة. فحص ذاتي: هل كان kann آخر كلمة؟",
+        "evidenceExcerpt": "في الجملة الجانبية بـ ob يذهب الفعل المُصرَّف إلى آخرها: «Ich sage später, ob ich morgen kommen kann» تقديم kann يجعلها سؤالًا مباشرًا داخل تابعة، فتبقى الإجابة معلَّقة. فحص ذاتي: هل كان kann آخر كلمة؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7539,7 +7539,7 @@
         "prompt": "ob اختر الصيغة الصحيحة لحالة «ob»:",
         "answer": "ob ich morgen arbeiten kann",
         "evidenceRef": "a2-14:miniTest:a2-14-m3:explanationAr",
-        "evidenceExcerpt": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «… ob ich morgen arbeiten kann». ف «ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟",
+        "evidenceExcerpt": "جملةُ ob الجانبية تُبقي الفعلَ المُصرَّف في الآخر: «ob ich morgen arbeiten kann». ف «ob kann ich morgen arbeiten» تبدأ بالفعل كأنّها سؤالٌ مستقلّ. فحص ذاتي: أين انتهى الفعلُ في جملتك؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "8ef7507e4ce035c02b1a8280bb94f8bfd52259159f12e79b5c0f59d3942e07b0"
+  "contentSha256": "097c3897737be0b31cd0d314a8b3d09392d7eedfa72141fee81b0dcc5afeb5d9"
 }

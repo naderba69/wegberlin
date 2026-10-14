@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 150,
+  "count": 141,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -131,92 +131,56 @@
     {
       "lessonId": "a2-15",
       "quote": "Nehmen Sie das nach dem Essen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-15",
-      "quote": "Ich soll die Tablette mit Wasser nehmen.",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-15",
-      "quote": "Sie nehmen … bitte!",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-15",
-      "quote": "Verträgt sich das mit meinem Medikament؟",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-15",
       "quote": "Ist alles gut?",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. مثال مؤلَّف قصير يوضّح القاعدة، لا يُنسب إلى نص الدرس."
     },
     {
       "lessonId": "a2-16",
       "quote": "Laut der Meldung bleibt die Straße geschlossen.",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-16",
       "quote": "Meiner Meinung nach ist das zu teuer",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. مثال مؤلَّف يوضّح بنية الرأي، لا يُنسب إلى نص الدرس."
     },
     {
       "lessonId": "a2-17",
       "quote": "Die Lehrerin schickt den Link, damit wir üben können",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-17",
-      "quote": "… damit alle entscheiden können",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-17",
-      "quote": "… ändere ich trotzdem mein Passwort und aktiviere die Zwei-Faktor-Anmeldung",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-18",
-      "quote": "Ich verstehe deinen Punkt, لكنّي أراه خلافًا.",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-18",
-      "quote": "...weil ich den Arbeitsweg spare",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-19",
       "quote": "Wenn ich ein Wort vergesse, wiederhole ich es",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-19",
       "quote": "Ich teste mich selbst",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-19",
-      "quote": "Fünf Wörter pro Tag lerne ich",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-19",
-      "quote": "pro Tag / täglich",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-19",
       "quote": "Ich übe jeden Tag, um besser zu sprechen",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. مثال مؤلَّف يوضّح um … zu، لا يُنسب إلى نص الدرس."
     },
     {
       "lessonId": "a2-19",
       "quote": "damit … zu",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. إشارة معلنة إلى خلط خاطئ شائع يحذّر منه الشرح، وليست اقتباسًا من الدرس."
     },
     {
       "lessonId": "a2-20",

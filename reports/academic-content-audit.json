@@ -7594,7 +7594,7 @@
         "prompt": "رتب نقل التعليمات:",
         "answer": "Ich soll die Tablette mit Wasser nehmen | Mit Wasser soll ich die Tablette nehmen",
         "evidenceRef": "a2-15:controlled:a2-15-e3:explanationAr",
-        "evidenceExcerpt": "ما أُمِرتَ بنقله يُروى بـ soll في مكانه والمصدر في النهاية: «Ich soll die Tablette mit Wasser nehmen.» تقديمُ nehmen يحوّل الخبر إلى أمر موجَّه إليك. فحص ذاتي: هل نُقل الأمر بصيغة الواصف لا الآمر؟ ويُقبل أيضًا: «Mit Was…",
+        "evidenceExcerpt": "ما أُمِرتَ بنقله يُروى بـ soll في مكانه والمصدر في النهاية: «Ich soll die Tablette mit Wasser nehmen». تقديمُ nehmen يحوّل الخبر إلى أمر موجَّه إليك. فحص ذاتي: هل نُقل الأمر بصيغة الواصف لا الآمر؟ ويُقبل أيضًا: «Mit Was…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -7605,7 +7605,7 @@
         "prompt": "صحح الأمر الرسمي: Sie nehmen die Tablette bitte!",
         "answer": "Nehmen Sie bitte die Tablette | Nehmen Sie die Tablette bitte",
         "evidenceRef": "a2-15:controlled:a2-15-e4:explanationAr",
-        "evidenceExcerpt": "الأمر الرسمي يبدأ بالفعل ثم الضمير: «Nehmen Sie bitte die Tablette». صيغة الخبر «Sie nehmen … bitte!» تُبقي الطلب خبرًا لا توجيهًا — فرقٌ في تعليمات الدواء لا يُحتمَل. فحص ذاتي: هل فعل الطلب في الصدارة؟ ويُقبل أيضًا: «N…",
+        "evidenceExcerpt": "الأمر الرسمي يبدأ بالفعل ثم الضمير: «Nehmen Sie bitte die Tablette». صيغة الخبر «Sie nehmen die Tablette bitte!» تُبقي الطلب خبرًا لا توجيهًا — فرقٌ في تعليمات الدواء لا يُحتمَل. فحص ذاتي: هل فعل الطلب في الصدارة؟ ويُقب…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7627,7 +7627,7 @@
         "prompt": " لديك دواء آخر؛ اختر السؤال الآمن:",
         "answer": "Verträgt sich das mit meinem Medikament?",
         "evidenceRef": "a2-15:controlled:a2-15-e6:explanationAr",
-        "evidenceExcerpt": "الدواء الآخر يحتاج تحققًا عند المختص: «Verträgt sich das mit meinem Medikament؟». الجمع بين الحبتين يترك التفاعل قائمًا، والاطمئنان السريع ليس معلومة. فحص ذاتي: هل سألتُ سؤالًا يجيبه الصيدلي؟",
+        "evidenceExcerpt": "الدواء الآخر يحتاج تحققًا عند المختص: «Verträgt sich das mit meinem Medikament?». الجمع بين الحبتين يترك التفاعل قائمًا، والاطمئنان السريع ليس معلومة. فحص ذاتي: هل سألتُ سؤالًا يجيبه الصيدلي؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8003,7 +8003,7 @@
         "prompt": "صحح جملة damit: Ich schicke das Foto privat, damit können alle entscheiden.",
         "answer": "Ich schicke das Foto privat, damit alle entscheiden können",
         "evidenceRef": "a2-17:controlled:a2-17-e4:explanationAr",
-        "evidenceExcerpt": "جملة damit تحمل فعلها المُصرَّف إلى آخرها: «… damit alle entscheiden können». تقديم können يجعلها سؤالًا أو رئيسيةً داخل رابطة، فيضيع الغرضُ الذي أُرسِلت الصورة من أجله. فحص ذاتي: هل أنهُتَ التابعة فعلَها؟",
+        "evidenceExcerpt": "جملة damit تحمل فعلها المُصرَّف إلى آخرها: «damit alle entscheiden können». تقديم können يجعلها سؤالًا أو رئيسيةً داخل رابطة، فيضيع الغرضُ الذي أُرسِلت الصورة من أجله. فحص ذاتي: هل أنهُتَ التابعة فعلَها؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8223,7 +8223,7 @@
         "prompt": " اختر اعتراضًا محترمًا:",
         "answer": "Ich verstehe deinen Punkt, aber ich sehe das anders.",
         "evidenceRef": "a2-18:controlled:a2-18-e6:explanationAr",
-        "evidenceExcerpt": "الاعتراض المحترم يُثبت فهم النقطة ثم يُعلن الخلاف: «Ich verstehe deinen Punkt, لكنّي أراه خلافًا.» «Das ist falsch!» تُغلق النقاش، و «Du verstehst nichts» هجومٌ على الشخص. فحص ذاتي: هل تركتُ باب الردّ مفتوحًا؟",
+        "evidenceExcerpt": "الاعتراض المحترم يُثبت فهم النقطة ثم يُعلن الخلاف: «Ich verstehe deinen Punkt, aber ich sehe das anders.» «Das ist falsch!» تُغلق النقاش، و «Du verstehst nichts» هجومٌ على الشخص. فحص ذاتي: هل تركتُ باب الردّ مفتوحًا؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "11711463770657ab7c2b2a6ab6054ee9f4e73651d84ac76b0102e807ef73d86b"
+  "contentSha256": "2bdb91a6d1dda1fb172a71615cd27e96362141a825e3dbc10e310b8a2c9b80d6"
 }

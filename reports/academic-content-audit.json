@@ -6538,7 +6538,7 @@
         "prompt": "Telefonische Vorstellung اختر الصيغة الصحيحة لحالة «Telefonische Vorstellung»:",
         "answer": "Hier spricht Sami Mansour.",
         "evidenceRef": "a2-09:miniTest:a2-09-m2:explanationAr",
-        "evidenceExcerpt": "التعريفُ على الهاتف كما في المكالمة: «Hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و «Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟",
+        "evidenceExcerpt": "التعريفُ على الهاتف كما في المكالمة: «Guten Tag, hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و «Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -7352,7 +7352,7 @@
         "prompt": "weniger المعنى:",
         "answer": "أقل",
         "evidenceRef": "a2-13:miniTest:a2-13-m4:explanationAr",
-        "evidenceExcerpt": "weniger تفيد التقليل، كما في عنوان النصّ: «Sieben Tage weniger Ablenkung» أي تشتيتٌ أقلّ. أمّا mehr فتزيد، und genug للكفاية، و immer للدوام. فحص ذاتي: هل زاد الشيءُ أم نقص؟",
+        "evidenceExcerpt": "weniger تفيد التقليل، كما في الدرس: «weniger Zucker essen» أي سكرًا أقل. أما mehr فتزيد، و genug للكفاية، و immer للدوام. فحص ذاتي: هل زاد الشيءُ أم نقص؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8575,7 +8575,7 @@
         "prompt": "___ ich bezahle, prüfe ich die Kursziele. أكمل الخطوة السابقة:",
         "answer": "Bevor | Ehe",
         "evidenceRef": "a2-20:controlled:a2-20-e2:explanationAr",
-        "evidenceExcerpt": "ما يسبق حدثًا آخر يُفتتح بـ bevor مع فعل في نهاية التابع: «Bevor ich bezahle, prüfe ich die Kursziele». بعد بعدها تنقلب الترتيب، و wenn تترك الشرط محايدًا بلا أسبقية. فحص ذاتي: أيّ الخطوتَيْن قبل؟ ويُقبل أيضًا: «Ehe».",
+        "evidenceExcerpt": "ما يسبق حدثًا آخر يُفتتح بـ bevor مع فعل في نهاية التابع: «Bevor ich bezahle, prüfe ich die Kursziele». أما nachdem فتقلب الترتيب، و wenn تترك الشرط محايدًا بلا أسبقية. فحص ذاتي: أيّ الخطوتَيْن قبل؟ ويُقبل أيضًا: «Ehe».",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8982,7 +8982,7 @@
         "prompt": "رتب قبول الدعوة:",
         "answer": "Ich würde gern kommen",
         "evidenceRef": "a2-22:controlled:a2-22-e3:explanationAr",
-        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. «Ich komme gern würde» يضع المُعينَ في غير مكانه. فحص ذاتي: هل انفرد المصدر بالآخر؟",
+        "evidenceExcerpt": "القبول المؤدَّب يتمنّى لا يقطع: «Ich würde gern kommen» — würde مع الفاعل، و gern في الوسط، والمصدر في النهاية. أما تقديم kommen على gern فيكسر قاعدة المصدر في الآخر. فحص ذاتي: هل انفرد المصدر بالآخر؟",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -9103,7 +9103,7 @@
         "prompt": "Wiederholt اختر الصيغة الصحيحة لحالة «Wiederholt»:",
         "answer": "Wenn wir feiern …",
         "evidenceRef": "a2-22:miniTest:a2-22-m1:explanationAr",
-        "evidenceExcerpt": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern … wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟",
+        "evidenceExcerpt": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern 18 wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9158,7 +9158,7 @@
         "prompt": "Der Helfer, ___ Gäste begrüßt … اسم مذكر وفاعل:",
         "answer": "der",
         "evidenceRef": "a2-23:controlled:a2-23-e1:explanationAr",
-        "evidenceExcerpt": "«der Helfer» اسم مذكر، وإن كان فاعلًا جاءت أداته في صورة الرفع: «Der Helfer kommt um acht.» den تَسنده إلى مفعول به، و das تُشير إلى شيء لا إلى شخص. فحص ذاتي: هل الاسم هو مَن يفعل؟",
+        "evidenceExcerpt": "Helfer اسم مذكر مفرد، وضمير الوصل هنا فاعل في الجملة التابعة (المساعد هو مَن يحيّي الضيوف)، فيأتي der: «der Helfer, der Gäste begrüßt». den للمفعول به، و das للمحايد، و die للمؤنث أو الجمع. فحص ذاتي: هل الاسم هو مَن يفع…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9169,7 +9169,7 @@
         "prompt": "Das Projekt, ___ Kinder unterstützt … اسم محايد:",
         "answer": "das",
         "evidenceRef": "a2-23:controlled:a2-23-e2:explanationAr",
-        "evidenceExcerpt": "ضمير الوصف يتّبع الاسم المذكور: «Das Projekt, das Kinder unterstützt…» لأن Projekt مفرد محايد. صيغة الجمع أو المذكر هنا تقطعان الربط فيصير الجزء المعلَّق بلا مرجع يفسّره.",
+        "evidenceExcerpt": "ضمير الوصف يتّبع الاسم المذكور: «das Projekt, das Kinder unterstützt» لأن Projekt مفرد محايد. صيغة الجمع أو المذكر هنا تقطعان الربط فيصير الجزء المعلَّق بلا مرجع يفسّره.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -9499,7 +9499,7 @@
         "prompt": "Alternative اختر الصيغة الصحيحة لحالة «Alternative»:",
         "answer": "entweder … oder",
         "evidenceRef": "a2-24:miniTest:a2-24-m1:explanationAr",
-        "evidenceExcerpt": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Entweder gehen wir jetzt oder wir bleiben». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و «zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟",
+        "evidenceExcerpt": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Wir wählen entweder Plan A oder Plan B». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و «zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9510,7 +9510,7 @@
         "prompt": "Negation von zwei Dingen أي خيار يحقّق «Negation von zwei Dingen» في هذا السياق؟",
         "answer": "weder … noch",
         "evidenceRef": "a2-24:miniTest:a2-24-m2:explanationAr",
-        "evidenceExcerpt": "نفيُ شيئين معًا ب «weder … noch»: «Weder kalt noch hungrig». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيءًا يبقى بعد الرابط؟",
+        "evidenceExcerpt": "نفيُ شيئين معًا ب «weder … noch»، كما في التسجيل: «weder auf Freitag noch auf Montag». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيئًا يبقى بعد ا…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9521,7 +9521,7 @@
         "prompt": "Beide Eigenschaften اختر التعبير المطابق ل «Beide Eigenschaften»:",
         "answer": "sowohl … als auch",
         "evidenceRef": "a2-24:miniTest:a2-24-m3:explanationAr",
-        "evidenceExcerpt": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl schnell als auch günstig». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟",
+        "evidenceExcerpt": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl günstig als auch zentral». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "2bdb91a6d1dda1fb172a71615cd27e96362141a825e3dbc10e310b8a2c9b80d6"
+  "contentSha256": "69f94e0ada48ae61442a50e646998c4affe21f37b97709c4fe3b0b145cf69581"
 }

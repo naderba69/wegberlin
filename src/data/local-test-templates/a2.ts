@@ -625,7 +625,7 @@ export const localTestTemplateBankA2 = [
           "Wer bin Telefon Sami."
         ],
         "correctIndex": 0,
-        "explanationAr": "التعريفُ على الهاتف كما في المكالمة: «Hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و «Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟"
+        "explanationAr": "التعريفُ على الهاتف كما في المكالمة: «Guten Tag, hier spricht Nabil Osman von der Firma Meditex». أمّا «Ich hier bin Sami» فيُقدّم الظرفَ على الضمير، و «Sami spricht mich» يقلب المعنى. فحص ذاتي: هل الترتيبُ ألماني؟"
       },
       {
         "id": "a2-09-m3",
@@ -947,7 +947,7 @@ export const localTestTemplateBankA2 = [
           "دائمًا"
         ],
         "correctIndex": 0,
-        "explanationAr": "weniger تفيد التقليل، كما في عنوان النصّ: «Sieben Tage weniger Ablenkung» أي تشتيتٌ أقلّ. أمّا mehr فتزيد، und genug للكفاية، و immer للدوام. فحص ذاتي: هل زاد الشيءُ أم نقص؟"
+        "explanationAr": "weniger تفيد التقليل، كما في الدرس: «weniger Zucker essen» أي سكرًا أقل. أما mehr فتزيد، و genug للكفاية، و immer للدوام. فحص ذاتي: هل زاد الشيءُ أم نقص؟"
       },
       {
         "id": "a2-13-m5",
@@ -1574,7 +1574,7 @@ export const localTestTemplateBankA2 = [
           "Wenn wir feiern …"
         ],
         "correctIndex": 3,
-        "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern … wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟"
+        "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern 18 wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟"
       },
       {
         "id": "a2-22-m2",
@@ -1722,7 +1722,7 @@ export const localTestTemplateBankA2 = [
           "zwar … weil"
         ],
         "correctIndex": 1,
-        "explanationAr": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Entweder gehen wir jetzt oder wir bleiben». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و «zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟"
+        "explanationAr": "«entweder … oder» يطرح بديلين يُختار أحدهما: «Wir wählen entweder Plan A oder Plan B». weder … noch تنفي الاثنين، و sowohl … als auch تجمع بينهما، و «zwar … weil» ليس رابطًا موجودًا. فحص ذاتي: كم احتمالًا بقي؟"
       },
       {
         "id": "a2-24-m2",
@@ -1735,7 +1735,7 @@ export const localTestTemplateBankA2 = [
           "um … zu"
         ],
         "correctIndex": 0,
-        "explanationAr": "نفيُ شيئين معًا ب «weder … noch»: «Weder kalt noch hungrig». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيءًا يبقى بعد الرابط؟"
+        "explanationAr": "نفيُ شيئين معًا ب «weder … noch»، كما في التسجيل: «weder auf Freitag noch auf Montag». أمّا entweder … oder فتطرح أحدَ الاحتمالين، و sowohl … als auch تجمعهما إثباتًا، و um … zu أداةُ غاية. فحص ذاتي: كم شيئًا يبقى بعد الرابط؟"
       },
       {
         "id": "a2-24-m3",
@@ -1748,7 +1748,7 @@ export const localTestTemplateBankA2 = [
           "ob … wenn"
         ],
         "correctIndex": 1,
-        "explanationAr": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl schnell als auch günstig». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟"
+        "explanationAr": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl günstig als auch zentral». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟"
       },
       {
         "id": "a2-24-m4",

@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 141,
+  "count": 123,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -17,24 +17,9 @@
     },
     {
       "lessonId": "a2-01",
-      "quote": "Eine Stunde lang hat sie Deutsch gelernt",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-01",
-      "quote": "Um zehn",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-01",
       "quote": "Sie ist gekommen",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
-    },
-    {
-      "lessonId": "a2-02",
-      "quote": "Sein Chef hat ihn nicht gefunden, aber seine Schwester hat ihn gefunden",
-      "status": "unreviewed"
     },
     {
       "lessonId": "a2-02",
@@ -47,16 +32,6 @@
       "quote": "Als ich klein war, wohnte ich in Sfax",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. الجملة خطأ مقصود في الشرح أو جواب كامل بعد ملء الفراغ أو بديل مقبول أو استثناء معلن (المحادثة، 2026-10-13)"
-    },
-    {
-      "lessonId": "a2-04",
-      "quote": "Kann ich ... mitbringen؟",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-04",
-      "quote": "Abends holt sie das Paket ab",
-      "status": "unreviewed"
     },
     {
       "lessonId": "a2-06",
@@ -107,20 +82,10 @@
       "decision": "قرار مراجع بشري: يُبقى كما هو. ترتيب خاطئ مقصود معلن في الشرح (المحادثة، 2026-10-14)"
     },
     {
-      "lessonId": "a2-09",
-      "quote": "Hier spricht Nabil Osman von der Firma Meditex",
-      "status": "unreviewed"
-    },
-    {
       "lessonId": "a2-12",
       "quote": "Die Heizung ist kaputt. Deshalb brauche ich ein anderes Zimmer",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. جواب كامل بعد ملء الفراغ (المحادثة، 2026-10-14)"
-    },
-    {
-      "lessonId": "a2-13",
-      "quote": "Sieben Tage weniger Ablenkung",
-      "status": "unreviewed"
     },
     {
       "lessonId": "a2-14",
@@ -185,77 +150,26 @@
     {
       "lessonId": "a2-20",
       "quote": "Bevor ich bezahle, prüfe ich die Kursziele",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-20",
       "quote": "Bitte beachten Sie die Frist",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-21",
       "quote": "Wir werden das Ergebnis am Sonntag vergleichen",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-21",
-      "quote": "Im Oktober macht sie den A2-Kurs fertig",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-22",
-      "quote": "Ich komme gern würde",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-22",
-      "quote": "Vielleicht bringe ich ein Getränk mit",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-22",
-      "quote": "Den Kuchen habe ich schon",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-22",
-      "quote": "Wenn ich gestern … wurde",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-23",
-      "quote": "Der Helfer kommt um acht.",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-23",
-      "quote": "Das Projekt, das Kinder unterstützt…",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "a2-23",
       "quote": "Die Personen, die mitmachen, treffen sich heute",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-23",
-      "quote": "eine erfahrene Person",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-24",
-      "quote": "Entweder gehen wir jetzt oder wir bleiben",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-24",
-      "quote": "Weder kalt noch hungrig",
-      "status": "unreviewed"
-    },
-    {
-      "lessonId": "a2-24",
-      "quote": "sowohl schnell als auch günstig",
-      "status": "unreviewed"
+      "status": "human-kept",
+      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جواب كامل بعد ملء الفراغ، يعرض الجملة الصحيحة كاملة للمتعلم."
     },
     {
       "lessonId": "b1-01",

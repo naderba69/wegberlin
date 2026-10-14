@@ -1,0 +1,19 @@
+{
+  "format": "dwnb-browser-accessibility-audit",
+  "version": "browser-accessibility-audit-v1",
+  "base": "production build served locally",
+  "viewports": [
+    "desktop",
+    "mobile"
+  ],
+  "pages": 321,
+  "checks": 642,
+  "failingChecks": 0,
+  "loadErrors": 0,
+  "consoleErrorChecks": 0,
+  "pageErrorChecks": 0,
+  "violationsByRule": {},
+  "failing": [],
+  "minorOrModerateViolations": 0,
+  "contrastFailures": []
+}

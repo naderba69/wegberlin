@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98c6`
+Content SHA-256: `097c3897737be0b31cd0d314a8b3d09392d7eedfa72141fee81b0dcc5afeb5d9`
 
 ## Result
 
@@ -10,7 +10,7 @@ Content SHA-256: `e9434d6bd54bc9c3d8db91894504f689f55265a7cd679dc2b667df3ac65a98
 
 ```text
 Unapproved direct prompt leaks: 0
-Explicit type-aware exemptions: 3
+Explicit type-aware exemptions: 2
 Missing answer/evidence links: 0
 Duplicate audit IDs: 0
 ```
@@ -39,7 +39,6 @@ Duplicate audit IDs: 0
 
 | Item | Detected repeated surface | Why this is not an answer-key leak |
 |---|---|---|
-| `a1-01-m4` | guten abend | A greeting can be answered by repeating the same greeting; the prompt is a communicative stimulus, not a displayed answ… |
 | `a2-16-e4` | die stadt eröffnet einen park | The neutral first clause is intentionally retained while the learner removes the following unsupported opinion; this is… |
 | `diag-a-a1-vocabulary` | guten morgen | Repeating Guten Morgen is an authentic response to the greeting used as the diagnostic stimulus. |
 

@@ -1,3 +1,4 @@
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { Lightbulb, ShieldAlert } from "lucide-react";
 import {
   analyzeGermanGrammarSignals,
@@ -37,7 +38,7 @@ export function WritingGrammarSignalsPanel({ text }: { text: string }) {
               ) : (
                 <p className="writing-grammar-signals-fix"><Lightbulb size={13} aria-hidden="true" /> لا يقترح الفحص صيغة جاهزة هنا؛ رتّب الجملة بنفسك حسب القاعدة.</p>
               )}
-              <p>{finding.explanationAr}</p>
+              <p>{learnerExplanation(finding.explanationAr)}</p>
             </li>
           ))}
         </ul>
@@ -48,7 +49,7 @@ export function WritingGrammarSignalsPanel({ text }: { text: string }) {
             <li key={finding.key}>
               <strong>يحتاج تأكيدك</strong>
               <blockquote lang="de" dir="ltr">{finding.excerpt}</blockquote>
-              <p>{finding.explanationAr}</p>
+              <p>{learnerExplanation(finding.explanationAr)}</p>
             </li>
           ))}
         </ul>

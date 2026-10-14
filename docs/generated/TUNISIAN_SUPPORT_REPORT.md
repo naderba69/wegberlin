@@ -3,7 +3,7 @@
 Generated: 2026-09-05  
 Version: `tunisian-support-audit-v1`  
 Policy: `tunisian-support-v1`  
-Content SHA-256: `769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d`
+Content SHA-256: `4ee9df151fc4d6c448866e761e20fa6ca23f189b2a4d1bd594fc13000551efb0`
 
 ## Result
 
@@ -37,7 +37,7 @@ The 15 covered contrast categories include question/verb order, origin versus lo
 | `a2-01` | Perfekt als Satzklammer | `perfect-bracket` | `a2-01-t1` | `authored-review-pending` |
 | `a2-03` | als oder wenn | `temporal-connector` | `a2-03-t1` | `authored-review-pending` |
 | `a2-05` | nicht müssen oder nicht dürfen | `modal-negation` | `a2-05-t1` | `authored-review-pending` |
-| `a2-08` | dass und Verbende | `subordinate-clause` | `a2-08-t2` | `authored-review-pending` |
+| `a2-08` | dass-Satz und Verbendstellung | `subordinate-clause` | `a2-08-t2` | `authored-review-pending` |
 | `a2-23` | Relativpronomen im Nominativ | `relative-pronoun` | `a2-23-t1` | `authored-review-pending` |
 | `b1-04` | Vorgangspassiv | `passive-focus` | `b1-04-t1` | `authored-review-pending` |
 | `b1-08` | Funktion vor Relativpronomen | `relative-pronoun` | `b1-08-t1` | `authored-review-pending` |

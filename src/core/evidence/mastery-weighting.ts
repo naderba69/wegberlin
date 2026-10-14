@@ -1,4 +1,5 @@
 import type { FullLesson } from "@/types/lesson-content";
+import { derivePronunciationTestCase } from "@/core/lessons/pronunciation-test";
 import type { ExerciseAttempt } from "@/types/learning";
 
 export const MASTERY_WEIGHTING_VERSION = "novelty-weighting-v1" as const;
@@ -57,16 +58,22 @@ export function buildNoveltyWeightedEvidence(attempts: readonly ExerciseAttempt[
 }
 
 export function lessonMasteryFromAttempts(lesson: FullLesson, attempts: readonly ExerciseAttempt[]) {
+  // عنصر النطق المشتقّ (P1-22) عنصر إلزامي مثل بقية بنود الاختبار: وجوده في `acceptedIds`
+  // يعني أن تغطية الدرس تُحسب عليه أيضًا، فلا يستطيع المتعلّم بلوغ التغطية الكاملة بتجاهله.
+  const pronunciationItem = derivePronunciationTestCase(lesson);
+  const pronunciationIds = pronunciationItem ? [pronunciationItem.id] : [];
   const acceptedIds = new Set([
     ...lesson.exercises.map((exercise) => exercise.id),
     ...lesson.reading.questions.map((question) => question.id),
     ...lesson.listening.questions.map((question) => question.id),
     ...lesson.miniTest.map((question) => question.id),
+    ...pronunciationIds,
   ]);
   const transferIds = new Set([
     ...lesson.reading.questions.map((question) => question.id),
     ...lesson.listening.questions.map((question) => question.id),
     ...lesson.miniTest.map((question) => question.id),
+    ...pronunciationIds,
   ]);
   const lessonAttempts = attempts.filter((attempt) => attempt.lessonId === lesson.id && acceptedIds.has(attempt.exerciseId));
   const evidence = buildNoveltyWeightedEvidence(lessonAttempts, transferIds);

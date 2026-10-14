@@ -1,0 +1,86 @@
+{
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approved-2026-10-10-applied",
+  "generated": "2026-10-10",
+  "scope": "إعادة صياغة جملتين في كل نص من نصوص Sprachbausteine (t2 إلى t6)، لبنود الفجوتين 36 و37 (10 بنود). المفاتيح تبقى كما هي: allerdings وwenn.",
+  "rule": "the new text keeps the gap markers [31]..[40] in order; each explanation quotes a verbatim fragment from the NEW text (markers removed), inside «…». Not applied until the owner approves.",
+  "texts": [
+    {
+      "id": "t2-l2-text",
+      "oldTextDe": "Liebe Helferinnen und Helfer, [31] das Festival in zwei Wochen beginnt, senden wir euch den Plan. Bitte prüft, [32] eure Schicht korrekt eingetragen ist. Änderungen sind [33] Freitag möglich. Personen, [34] Technik betreuen, treffen sich früher. Wir öffnen zwei Eingänge, [35] Warteschlangen kürzer werden. Namensschilder liegen bereit; bringt [36] bitte einen eigenen Stift mit. Getränke sind kostenlos, [37] Essen wird nicht gestellt. Wer Unterstützung braucht, kann [38] an die Koordination wenden. Fotos entstehen nur [39] Zustimmung. Meldet euch, [40] ihr kurzfristig ausfallt.",
+      "newTextDe": "Liebe Helferinnen und Helfer, [31] das Festival in zwei Wochen beginnt, senden wir euch den Plan. Bitte prüft, [32] eure Schicht korrekt eingetragen ist. Änderungen sind [33] Freitag möglich. Personen, [34] Technik betreuen, treffen sich früher. Wir öffnen zwei Eingänge, [35] Warteschlangen kürzer werden. Namensschilder liegen bereit; [36] fehlen noch Stifte. Bringt bitte einen eigenen mit. Getränke sind kostenlos, [37] du Schicht hast; Essen wird nicht gestellt. Wer Unterstützung braucht, kann [38] an die Koordination wenden. Fotos entstehen nur [39] Zustimmung. Meldet euch, [40] ihr kurzfristig ausfallt."
+    },
+    {
+      "id": "t3-l2-text",
+      "oldTextDe": "Liebe Gäste, [31] wir länger öffnen, ändern sich Dienste. Prüfen Sie, [32] Ihr Termin stimmt. Änderungen bis [33] möglich. Personen, [34] beraten, tragen Namensschilder. Wir öffnen einen zweiten Eingang, [35] Wege kürzer werden. Bringen Sie [36] Kopfhörer mit. Getränke gibt es, [37] kein Essen. Bei Fragen wenden Sie [38] an uns. Fotos nur [39] Zustimmung. Melden Sie sich, [40] Sie Hilfe brauchen.",
+      "newTextDe": "Liebe Gäste, [31] wir länger öffnen, ändern sich Dienste. Prüfen Sie, [32] Ihr Termin stimmt. Änderungen bis [33] möglich. Personen, [34] beraten, tragen Namensschilder. Wir öffnen einen zweiten Eingang, [35] Wege kürzer werden. Zwei Räume sind frei; [36] bringen Sie bitte eigene Kopfhörer mit. Getränke gibt es, [37] Sie Mitglied sind, aber kein Essen. Bei Fragen wenden Sie [38] an uns. Fotos nur [39] Zustimmung. Melden Sie sich, [40] Sie Hilfe brauchen."
+    },
+    {
+      "id": "t4-l2-text",
+      "oldTextDe": "Liebe Teams, [31] die Woche bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik betreuen, kommen früher. Zwei Eingänge öffnen, [35] Wege kurz bleiben. Bringt [36] Kopfhörer mit. Getränke da, [37] Essen fehlt. Wendet [38] bei Fragen an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr ausfallt.",
+      "newTextDe": "Liebe Teams, [31] die Woche bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik betreuen, kommen früher. Zwei Eingänge öffnen, [35] Wege kurz bleiben. Der Raum ist ruhig; [36] bringt bitte Kopfhörer mit. Getränke sind da, [37] du Pfand hast; Essen fehlt. Wendet [38] bei Fragen an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr ausfallt."
+    },
+    {
+      "id": "t5-l2-text",
+      "oldTextDe": "Liebe Teams, [31] das Fest bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik machen, kommen früher. Zwei Eingänge, [35] Wege kurz bleiben. Bringt [36] Stifte mit. Getränke da, [37] Essen fehlt. Wendet [38] an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr fehlt.",
+      "newTextDe": "Liebe Teams, [31] das Fest bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik machen, kommen früher. Zwei Eingänge, [35] Wege kurz bleiben. Der Raum ist frei; [36] bringt bitte eigene Stifte mit. Getränke sind da, [37] du Mitglied bist; Essen fehlt. Wendet [38] an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr fehlt."
+    },
+    {
+      "id": "t6-l2-text",
+      "oldTextDe": "Liebe Teams, [31] der Tag bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik betreuen, kommen früher. Zwei Eingänge, [35] Wege kurz bleiben. Bringt [36] Stifte mit. Getränke da, [37] Essen fehlt. Wendet [38] an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr ausfallt.",
+      "newTextDe": "Liebe Teams, [31] der Tag bald beginnt, folgt der Plan. Prüft, [32] eure Zeit stimmt. Änderungen bis [33]. Personen, [34] Technik betreuen, kommen früher. Zwei Eingänge, [35] Wege kurz bleiben. Die Mittagspause ist kurz; [36] bringt bitte eigene Stifte mit. Getränke sind da, [37] Pause ist; Essen fehlt. Wendet [38] an uns. Fotos nur [39] Zustimmung. Meldet euch, [40] ihr ausfallt."
+    }
+  ],
+  "items": [
+    {
+      "id": "t2-l2-q6",
+      "textId": "t2-l2-text",
+      "explanationAr": "النص: «Namensschilder liegen bereit» و«fehlen noch Stifte». الجملة الثانية تعارض الأولى، لذلك الجواب allerdings (لكن)."
+    },
+    {
+      "id": "t2-l2-q7",
+      "textId": "t2-l2-text",
+      "explanationAr": "النص: «Getränke sind kostenlos» و«Essen wird nicht gestellt». الشرط «du Schicht hast» يبيّن متى تكون المشروبات مجانية، لذلك الجواب wenn (إذا)."
+    },
+    {
+      "id": "t3-l2-q6",
+      "textId": "t3-l2-text",
+      "explanationAr": "النص: «Zwei Räume sind frei» و«bringen Sie bitte eigene Kopfhörer mit». الجملة الثانية تعارض الأولى، لذلك الجواب allerdings (لكن)."
+    },
+    {
+      "id": "t3-l2-q7",
+      "textId": "t3-l2-text",
+      "explanationAr": "النص: «Getränke gibt es» و«Sie Mitglied sind, aber kein Essen». الشرط يبيّن متى تتوفر المشروبات، لذلك الجواب wenn (إذا)."
+    },
+    {
+      "id": "t4-l2-q6",
+      "textId": "t4-l2-text",
+      "explanationAr": "النص: «Der Raum ist ruhig» و«bringt bitte Kopfhörer mit». الجملة الثانية تعارض الأولى، لذلك الجواب allerdings (لكن)."
+    },
+    {
+      "id": "t4-l2-q7",
+      "textId": "t4-l2-text",
+      "explanationAr": "النص: «Getränke sind da» و«du Pfand hast; Essen fehlt». الشرط يبيّن متى تتوفر المشروبات، لذلك الجواب wenn (إذا)."
+    },
+    {
+      "id": "t5-l2-q6",
+      "textId": "t5-l2-text",
+      "explanationAr": "النص: «Der Raum ist frei» و«bringt bitte eigene Stifte mit». الجملة الثانية تعارض الأولى، لذلك الجواب allerdings (لكن)."
+    },
+    {
+      "id": "t5-l2-q7",
+      "textId": "t5-l2-text",
+      "explanationAr": "النص: «Getränke sind da» و«du Mitglied bist; Essen fehlt». الشرط يبيّن متى تتوفر المشروبات، لذلك الجواب wenn (إذا)."
+    },
+    {
+      "id": "t6-l2-q6",
+      "textId": "t6-l2-text",
+      "explanationAr": "النص: «Die Mittagspause ist kurz» و«bringt bitte eigene Stifte mit». الجملة الثانية تعارض الأولى، لذلك الجواب allerdings (لكن)."
+    },
+    {
+      "id": "t6-l2-q7",
+      "textId": "t6-l2-text",
+      "explanationAr": "النص: «Getränke sind da» و«Pause ist; Essen fehlt». الشرط يبيّن متى تتوفر المشروبات، لذلك الجواب wenn (إذا)."
+    }
+  ]
+}

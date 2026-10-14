@@ -1,0 +1,100 @@
+{
+ "format": "dwnb-listening-voice-plan",
+ "version": "listening-voice-plan-v1",
+ "recipe": {
+  "sampleRate": 24000,
+  "channels": 1,
+  "mp3Bitrate": "32k",
+  "opusBitrate": "24k",
+  "sentenceSilence": "0.32",
+  "lengthScale": "1.05"
+ },
+ "voices": [
+  {
+   "id": "ramona-low",
+   "model": "de_DE-ramona-low",
+   "labelAr": "صوت مرجعي (كان الصوت الوحيد قبل اليوم)",
+   "rate": 1,
+   "tier": "base"
+  },
+  {
+   "id": "thorsten-medium",
+   "model": "de_DE-thorsten-medium",
+   "labelAr": "صوت رجالي أوسط",
+   "rate": 1,
+   "tier": "variety"
+  },
+  {
+   "id": "eva_k-x_low",
+   "model": "de_DE-eva_k-x_low",
+   "labelAr": "صوت نسائي مختلف الطبقة",
+   "rate": 1,
+   "tier": "variety"
+  },
+  {
+   "id": "ramona-slow",
+   "model": "de_DE-ramona-low",
+   "labelAr": "تدريب مُبطَّأ (0.85×)",
+   "rate": 0.85,
+   "tier": "training"
+  }
+ ],
+ "lessons": 96,
+ "filesIfRun": 768,
+ "piperAvailable": false,
+ "ffmpegAvailable": false,
+ "voicesDir": "/home/user/.local/share/piper-voices",
+ "missingModels": [
+  "de_DE-ramona-low",
+  "de_DE-thorsten-medium",
+  "de_DE-eva_k-x_low"
+ ],
+ "plan": [
+  {
+   "id": "a1-01",
+   "files": [
+    "a1-01.ramona-low.mp3",
+    "a1-01.thorsten-medium.mp3",
+    "a1-01.eva_k-x_low.mp3",
+    "a1-01.ramona-slow.mp3"
+   ]
+  },
+  {
+   "id": "a1-02",
+   "files": [
+    "a1-02.ramona-low.mp3",
+    "a1-02.thorsten-medium.mp3",
+    "a1-02.eva_k-x_low.mp3",
+    "a1-02.ramona-slow.mp3"
+   ]
+  },
+  {
+   "id": "a1-03",
+   "files": [
+    "a1-03.ramona-low.mp3",
+    "a1-03.thorsten-medium.mp3",
+    "a1-03.eva_k-x_low.mp3",
+    "a1-03.ramona-slow.mp3"
+   ]
+  },
+  {
+   "id": "a1-04",
+   "files": [
+    "a1-04.ramona-low.mp3",
+    "a1-04.thorsten-medium.mp3",
+    "a1-04.eva_k-x_low.mp3",
+    "a1-04.ramona-slow.mp3"
+   ]
+  },
+  {
+   "id": "a1-05",
+   "files": [
+    "a1-05.ramona-low.mp3",
+    "a1-05.thorsten-medium.mp3",
+    "a1-05.eva_k-x_low.mp3",
+    "a1-05.ramona-slow.mp3"
+   ]
+  }
+ ],
+ "boundary": "planning-only-no-audio-was-written-in-this-run"
+}

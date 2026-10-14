@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useEffect, useMemo, useState } from "react";
 import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
@@ -119,7 +120,7 @@ export function TargetedExamSimulationView({ simulation }: { simulation: Targete
                   <strong lang="de" dir="ltr">{item.promptDe}</strong>
                   <small>إجابتك: <b lang="de" dir="ltr">{selected?.labelDe}</b></small>
                   {!correct && <small>الصحيح: <b lang="de" dir="ltr">{expected?.labelDe}</b></small>}
-                  <p>{item.explanationAr}</p>
+                  <p>{learnerExplanation(item.explanationAr)}</p>
                 </div>
               </article>
             );

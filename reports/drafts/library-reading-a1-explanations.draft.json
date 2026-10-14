@@ -1,0 +1,136 @@
+{
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approval-required-before-apply",
+  "scope": "lib-r-a1-* reading questions (32), replacing answer-only explanationAr",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's textDe, inside «…», then states why the keyed option follows",
+  "items": [
+    {
+      "id": "lib-r-a1-01-q1",
+      "explanationAr": "النص: «Samstags und sonntags ist das Café geschlossen.» السبت والأحد هما عطلة الأسبوع، لذلك الجواب Am Wochenende."
+    },
+    {
+      "id": "lib-r-a1-01-q2",
+      "explanationAr": "النص: «Am Freitag kostet das Frühstück nur sechs Euro.» السؤال عمّا يكلّف ستة يورو يوم الجمعة، والجواب هو الفطور: Das Frühstück."
+    },
+    {
+      "id": "lib-r-a1-02-q1",
+      "explanationAr": "النص: «Ich bin dann bei der Arbeit.» لينا في العمل وقت وصول الطرد، لذلك تطلب من الجارة استلامه: Sie arbeitet."
+    },
+    {
+      "id": "lib-r-a1-02-q2",
+      "explanationAr": "النص: «Am Abend bin ich ab achtzehn Uhr zu Hause und hole es bei Ihnen ab.» تأخذ الطرد من الجارة بعد الساعة 18: Ab achtzehn Uhr."
+    },
+    {
+      "id": "lib-r-a1-03-q1",
+      "explanationAr": "النص: «Das Schwimmbad ist am Mittwochmorgen geschlossen, weil dort ein Schulkurs stattfindet.» المغلق هو المسبح صباح الأربعاء: Mittwochmorgen."
+    },
+    {
+      "id": "lib-r-a1-03-q2",
+      "explanationAr": "النص: «Handtücher kann man für zwei Euro ausleihen.» الذي يُستعار بيورويْن هو المنشفة: Ein Handtuch."
+    },
+    {
+      "id": "lib-r-a1-04-q1",
+      "explanationAr": "النص: «am Freitag wird zwischen acht und zwölf Uhr das Wasser im Haus abgestellt.» الساعات من 8 إلى 12 صباحًا، لذلك الجواب Freitagvormittag."
+    },
+    {
+      "id": "lib-r-a1-04-q2",
+      "explanationAr": "النص: «Die Arbeiten sind nur im zweiten und dritten Stock.» الطابقان المعنيان هما الثاني والثالث: Zweiter und dritter Stock."
+    },
+    {
+      "id": "lib-r-a1-05-q1",
+      "explanationAr": "النص: «Kinder und Jugendliche bezahlen nichts.» من لا يدفع شيئًا هم الأطفال والشباب: Kinder und Jugendliche."
+    },
+    {
+      "id": "lib-r-a1-05-q2",
+      "explanationAr": "النص: «Bücher können Sie vier Wochen behalten.» مدة الاحتفاظ بالكتب أربعة أسابيع: Vier Wochen."
+    },
+    {
+      "id": "lib-r-a1-06-q1",
+      "explanationAr": "النص: «einen Tisch für vier Personen reservieren» الطاولة لأربعة أشخاص: Vier."
+    },
+    {
+      "id": "lib-r-a1-06-q2",
+      "explanationAr": "النص: «Bitte schicken Sie die Bestätigung per E-Mail.» تأتي التأكيدة عبر البريد الإلكتروني: Per E-Mail."
+    },
+    {
+      "id": "lib-r-a1-07-q1",
+      "explanationAr": "النص: «Der Zug fährt um neun Uhr zwanzig von Gleis vier.» القطار ينطلق من الرصيف الرابع: Gleis vier."
+    },
+    {
+      "id": "lib-r-a1-07-q2",
+      "explanationAr": "النص: «Wer ein Fahrrad mitnimmt, braucht eine zusätzliche Fahrradkarte für drei Euro.» بطاقة الدراجة تكلّف ثلاثة يورو: Drei Euro."
+    },
+    {
+      "id": "lib-r-a1-08-q1",
+      "explanationAr": "النص: «Sie können es bis Freitag abholen.» يبقى الطرد حتى يوم الجمعة: Bis Freitag."
+    },
+    {
+      "id": "lib-r-a1-08-q2",
+      "explanationAr": "النص: «Eine andere Person darf das Paket nur mit einer schriftlichen Vollmacht abholen.» الشخص الآخر يحتاج توكيلًا مكتوبًا: Eine Vollmacht."
+    },
+    {
+      "id": "lib-r-a1-09-q1",
+      "explanationAr": "النص: «Das Frühstück gibt es von sieben bis zehn Uhr im Restaurant im Erdgeschoss.» يُقدَّم الفطور في المطعم بالطابق الأرضي: Im Restaurant im Erdgeschoss."
+    },
+    {
+      "id": "lib-r-a1-09-q2",
+      "explanationAr": "النص: «Wer vor sieben Uhr abreist, kann am Abend vorher ein Frühstückspaket bestellen.» الضيوف المبكرون يطلبون حزمة فطور: Ein Frühstückspaket."
+    },
+    {
+      "id": "lib-r-a1-10-q1",
+      "explanationAr": "النص: «morgen lernen wir nicht in Raum zwölf, sondern in Raum acht.» الغرفة الجديدة هي الثامنة: Raum acht."
+    },
+    {
+      "id": "lib-r-a1-10-q2",
+      "explanationAr": "النص: «Das Kursbuch braucht ihr morgen nicht.» كتاب الدورة غير مطلوب: Das Kursbuch."
+    },
+    {
+      "id": "lib-r-a1-11-q1",
+      "explanationAr": "النص: «Der Abendkurs beginnt am 5. September und findet montags und donnerstags statt.» أيام الدورة الاثنين والخميس: Montag und Donnerstag."
+    },
+    {
+      "id": "lib-r-a1-11-q2",
+      "explanationAr": "النص: «Das Buch ist nicht im Preis enthalten.» السعر لا يشمل الكتاب: Das Buch."
+    },
+    {
+      "id": "lib-r-a1-12-q1",
+      "explanationAr": "النص: «Grillen ist nur auf der markierten Wiese erlaubt.» الشواء مسموح فقط في المساحة المحددة: Auf der markierten Wiese."
+    },
+    {
+      "id": "lib-r-a1-12-q2",
+      "explanationAr": "النص: «ist jeden Tag von sechs bis zweiundzwanzig Uhr geöffnet.» يُغلق الحديقة الساعة العاشرة مساءً: Um zweiundzwanzig Uhr."
+    },
+    {
+      "id": "lib-r-a1-13-q1",
+      "explanationAr": "النص: «Ein kleines Fach kostet drei Euro, ein großes fünf Euro.» الصندوق الكبير يكلّف خمسة يورو: Fünf Euro."
+    },
+    {
+      "id": "lib-r-a1-13-q2",
+      "explanationAr": "النص: «Der Schalter schließt um zwanzig Uhr.» يغلق الشباك الساعة الثامنة مساءً: Um zwanzig Uhr."
+    },
+    {
+      "id": "lib-r-a1-14-q1",
+      "explanationAr": "النص: «Neue Mitglieder können zuerst zweimal kostenlos teilnehmen.» المشاركة المجانية الأولى مرتان: Zweimal."
+    },
+    {
+      "id": "lib-r-a1-14-q2",
+      "explanationAr": "النص: «Instrumente sind vorhanden, aber Notenhefte bringt jeder selbst mit.» الآلات موجودة، أما دفتر النوتة فيحضره كل عضو: Ein Notenheft."
+    },
+    {
+      "id": "lib-r-a1-15-q1",
+      "explanationAr": "النص: «Die Fahrradwerkstatt ist dienstags bis samstags geöffnet.» الورشة تعمل من الثلاثاء إلى السبت: Dienstag bis Samstag."
+    },
+    {
+      "id": "lib-r-a1-15-q2",
+      "explanationAr": "النص: «Eine Kontrolle von Bremsen und Licht kostet zehn Euro.» فحص المكابح والضوء يكلّف عشرة يورو: Die Kontrolle von Bremsen und Licht."
+    },
+    {
+      "id": "lib-r-a1-16-q1",
+      "explanationAr": "النص: «wir essen am Freitag um neunzehn Uhr zusammen.» العشاء يوم الجمعة الساعة السابعة مساءً: Freitag 19 Uhr."
+    },
+    {
+      "id": "lib-r-a1-16-q2",
+      "explanationAr": "النص: «Du musst nichts mitbringen.» رامي لا يحتاج إلى إحضار أي شيء: Nichts."
+    }
+  ]
+}

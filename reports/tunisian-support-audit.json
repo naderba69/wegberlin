@@ -205,7 +205,7 @@
         "a2-08-t2"
       ],
       "category": "subordinate-clause",
-      "titleDe": "dass und Verbende",
+      "titleDe": "dass-Satz und Verbendstellung",
       "titleAr": "الجملة التابعة والفعل في النهاية",
       "msaBridgeAr": "الرابط العربي الذي يقدم مضمون القول لا يفرض ترتيبًا مطابقًا لترتيب الجملة التابعة الألمانية.",
       "tunisianNoteAr": "تنجم تقول «نظن اللي الخدمة تناسب» من غير ما يمشي الفعل للآخر. بعد الرابط الألماني، الفعل المصرف يمشي إلى نهاية الجملة التابعة.",
@@ -360,5 +360,5 @@
     }
   ],
   "boundary": "The audit proves conditional delivery, authored MSA/Tunisian separation, review-state honesty, and valid lesson/theory references. It does not count authored text as independent Tunisian linguistic review.",
-  "contentSha256": "769c3276791f02734ca5082a33b3b24cebabcfad9b2fd6ff886ae0a1069bef3d"
+  "contentSha256": "4ee9df151fc4d6c448866e761e20fa6ca23f189b2a4d1bd594fc13000551efb0"
 }

@@ -154,7 +154,7 @@ export const targetedSpeakingSimulations: TargetedSpeakingSimulation[] = [
     titleAr: "تبادل الحجج",
     descriptionAr: "مهمة نقاش أصلية حول مساحات عامة مجانية. تسجل مساهمة تتفاعل مع موقف مقابل وتلخص النتيجة؛ لا تدعي وجود شريك حي.",
     practiceMinutes: 18,
-    timingNoteAr: "التحضير الرسمي للوحدة الشفهية 15 دقيقة، وTeil 2 يستغرق قرابة 5 دقائق للمشاركين معًا. التسجيل الفردي هنا ثلاث دقائق تدريبية.",
+    timingNoteAr: "التحضير الرسمي للوحدة الشفهية 15 دقيقة، و Teil 2 يستغرق قرابة 5 دقائق للمشاركين معًا. التسجيل الفردي هنا ثلاث دقائق تدريبية.",
     instructionsDe: "Diskutieren Sie die Frage. Vertreten Sie eine Position, reagieren Sie auf mindestens zwei Gegenargumente und fassen Sie am Ende Ihren Standpunkt oder einen möglichen Kompromiss zusammen.",
     instructionsAr: "ناقش السؤال، واتخذ موقفًا، ورد على اعتراضين على الأقل، ثم لخّص موقفك أو حلًا وسطًا.",
     preparationMinutes: 15,

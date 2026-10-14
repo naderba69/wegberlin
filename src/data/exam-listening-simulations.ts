@@ -223,7 +223,7 @@ export const targetedListeningSimulations: TargetedListeningSimulation[] = [
       },
     ],
     items: [
-      { id: "telc-b2-listening-02-q1", clipId: "telc-h2-mobility-dialogue", promptDe: "Mehr als die Hälfte der Beschäftigten beantwortete die Umfrage.", promptAr: "أجاب أكثر من نصف الموظفين عن الاستطلاع.", options: ["Richtig", "Falsch"], correctIndex: 1, explanationAr: "أجاب 22 من 80 فقط." },
+      { id: "telc-b2-listening-02-q1", clipId: "telc-h2-mobility-dialogue", promptDe: "Mehr als die Hälfte der Beschäftigten beantwortete die Umfrage.", promptAr: "أجاب أكثر من نصف الموظفين عن الاستطلاع.", options: ["Richtig", "Falsch"], correctIndex: 1, explanationAr: "النص: «Von achtzig Beschäftigten haben allerdings nur zweiundzwanzig geantwortet.» أجاب 22 من 80 موظفًا فقط، أي أقل من النصف، لذلك العبارة خاطئة." },
       { id: "telc-b2-listening-02-q2", clipId: "telc-h2-mobility-dialogue", promptDe: "Ein sicherer Fahrradraum wurde häufiger gewünscht als ein Kaufzuschuss.", promptAr: "طُلب مخزن دراجات آمن أكثر من دعم الشراء.", options: ["Richtig", "Falsch"], correctIndex: 0, explanationAr: "كان المخزن الإجراء الأكثر ذكرًا." },
       { id: "telc-b2-listening-02-q3", clipId: "telc-h2-mobility-dialogue", promptDe: "Im Firmengebäude soll sofort eine neue Dusche gebaut werden.", promptAr: "ستُبنى فورًا دشات جديدة في مبنى الشركة.", options: ["Richtig", "Falsch"], correctIndex: 1, explanationAr: "البناء مكلف والبديل استخدام غرف المركز الرياضي." },
       { id: "telc-b2-listening-02-q4", clipId: "telc-h2-mobility-dialogue", promptDe: "Der Pilot ist für April bis Ende Juni geplant.", promptAr: "التجربة مخططة من أبريل حتى نهاية يونيو.", options: ["Richtig", "Falsch"], correctIndex: 0, explanationAr: "هذه مدة الأشهر الثلاثة المذكورة." },

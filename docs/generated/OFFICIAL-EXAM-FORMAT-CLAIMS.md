@@ -8,7 +8,7 @@ Policy: `exam-format-claim-guard-v1` · Result: **PASS**
 | Surfaces carrying an explicit boundary sentence | 3 |
 | Forbidden claim matches | 0 |
 | Missing surfaces | 0 |
-| Source fingerprint | `134eb2daa3e6` |
+| Source fingerprint | `810611e810c8` |
 
 No surface claims an official grade, a guaranteed pass, a certificate, a certified level, or a readiness decision.
 

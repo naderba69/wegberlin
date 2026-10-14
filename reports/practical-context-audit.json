@@ -18,7 +18,7 @@
       "lessonId": "a1-01",
       "titleDe": "Du oder Sie?",
       "titleAr": "اختيار المخاطبة",
-      "guidanceAr": "ابدأ بـSie في خدمة أو لقاء رسمي ثم اتبع ما يقترحه الشخص.",
+      "guidanceAr": "ابدأ ب Sie في خدمة أو لقاء رسمي ثم اتبع ما يقترحه الشخص.",
       "exampleDe": "Wie möchten Sie angesprochen werden?",
       "scopeAr": "موقف خدمة أو تعارف أول، لا قاعدة لكل علاقة.",
       "antiStereotypeAr": "اسأل عن تفضيل الشخص والسياق، ولا تحوّل المثال إلى وصف لكل الألمان أو العرب.",
@@ -715,5 +715,5 @@
     }
   ],
   "boundary": "internal-dated-situated-guidance-pending-independent-cultural-review",
-  "contentSha256": "c935b0f4ef8bfad8d966e8bea002e8d9f9c87f4fbeeaad233bc4af3d3a00ad4d"
+  "contentSha256": "2aed123e9a7b4051843fcd4255803369018dcdce3a4acf37aedff9b4bcb739af"
 }

@@ -17,11 +17,13 @@ import { LearningContractSummary } from "./learning-contract-summary";
 import { TodayOfflineReadiness } from "./today-offline-readiness";
 import { buildTodayOfflineRequirements } from "@/core/offline/today-readiness";
 import { PlanChangeTimeline } from "./plan-change-timeline";
+import { SessionBlocksStrip } from "./session-blocks-strip";
 import { planningPresetMinutes } from "@/core/coach/intensity-presets";
 import { WeeklyReflection } from "./weekly-reflection";
 import { buildStartingGoalReport } from "@/core/coach/starting-goal-report";
 import { buildExamTargetForecast } from "@/core/coach/exam-target-forecast";
 import { DailyFocusTools } from "./daily-focus-tools";
+import { WeeklyEvidenceSummary } from "./weekly-evidence-summary";
 
 const kindIcons = { diagnostic: ClipboardCheck, "check-in": Sparkles, review: RotateCcw, warmup: BrainCircuit, lesson: BrainCircuit, reading: BookOpenCheck, writing: FilePenLine, practice: Target, production: Mic2, reflection: CalendarCheck2, exam: Target };
 const ratingValues = [1, 2, 3, 4, 5] as const;
@@ -123,7 +125,6 @@ export function CoachDashboard() {
           <div className="journey-state-progress"><i role="progressbar" aria-label="تقدم المرحلة الحالية" aria-valuemin={0} aria-valuemax={100} aria-valuenow={journeyState.progressPercent}><b style={{width:`${journeyState.progressPercent}%`}}/></i><p><strong>شرط الانتقال:</strong> {journeyState.nextTransitionAr}</p></div>
           <footer>{journeyState.evidenceBoundaryAr}</footer>
         </section>
-        <LearningContractSummary />
         <div className="mission-hero">
           <div className="hero-copy">
             <span className="eyebrow light"><Sparkles size={15}/> مهمة اليوم</span>
@@ -137,20 +138,10 @@ export function CoachDashboard() {
           </div>
         </div>
 
-        <TodayOfflineReadiness requirements={offlineRequirements}/>
-        <PlanChangeTimeline />
-
-        <details className="starting-goal-report" data-starting-goal-report-policy={startingGoalReport.policyVersion}>
-          <summary><Target size={18}/><span><small>تقرير بداية قابل للمراجعة</small><strong>لماذا اختار المرشد هذه الأهداف؟</strong></span><b>{startingGoalReport.rows.length} أدلة</b></summary>
-          <div>{startingGoalReport.rows.map((row)=><article key={row.id}><strong>{row.goalAr}</strong><p>{row.evidenceAr}</p><small data-bidi-scope="technical" dir="ltr">{row.evidenceRef}</small><footer>{row.boundaryAr}</footer></article>)}</div>
-        </details>
-
         <section className={todaySession?.rescueMode?"rescue-day-card active":"rescue-day-card"} data-rescue-day-policy="save-my-day-ten-minute-v1">
           <div><Clock3 size={19}/><span><small lang="de" dir="ltr">Rette meinen Lerntag</small><strong>أنقذ يومي بجلسة مفيدة من 10 دقائق</strong><p>استرجاع قصير، خطوة تعلم أو نقل، ثم إغلاق إن أبقيته مفعّلًا. لا دين غدًا ولا إتقان بمجرد الضغط.</p></span></div>
-          <button type="button" onClick={startRescueMode}>{todaySession?.rescueMode?"أعد تركيب 10 دقائق":"فعّل جلسة الإنقاذ"}</button>
+          <button type="button" className="secondary-button" onClick={startRescueMode}>{todaySession?.rescueMode?"أعد تركيب 10 دقائق":"فعّل جلسة الإنقاذ"}</button>
         </section>
-
-        <DailyFocusTools mission={mission}/>
 
         {todaySession?.checkedInAt&&<section className="session-adaptation-card" data-adaptation-policy="session-adaptation-v1">
           <header><span><Clock3 size={17}/></span><div><strong>عدّل بقية الجلسة الآن</strong><small>إشارة تخطيط فقط؛ لا تمنح إتقانًا ولا تسجل جوابًا صحيحًا.</small></div></header>
@@ -164,8 +155,6 @@ export function CoachDashboard() {
           <p>هذا اقتراح واحد فقط، وليس حكمًا على قدرتك. القرار لك، والخطأ لا يمحو دليلًا ولا يخفض الإتقان.</p>
           <div><button type="button" onClick={()=>answerLoadReduction(true)}>نعم، خفف البقية</button><button type="button" onClick={()=>answerLoadReduction(false)}>لا، أبقِ خطتي</button></div>
         </section>}
-
-        <ReadingBenchmark/>
 
         <div className="section-heading"><div><span>خطة الجلسة</span><h2>خطوات قليلة، كل واحدة لها سبب</h2></div><strong>{doneMinutes}/{totalMinutes} دقيقة</strong></div>
         <div className="mission-list">
@@ -199,9 +188,26 @@ export function CoachDashboard() {
           })}
         </div>
 
+        <details className="today-secondary" data-today-secondary="true">
+          <summary><span><small>اختياري</small><strong>تفاصيل الأسبوع وأدوات إضافية</strong></span><b>افتح</b></summary>
+          <div className="today-secondary-body">
+        <LearningContractSummary />
+        <TodayOfflineReadiness requirements={offlineRequirements}/>
+        <PlanChangeTimeline />
+
+        <details className="starting-goal-report" data-starting-goal-report-policy={startingGoalReport.policyVersion}>
+          <summary><Target size={18}/><span><small>تقرير بداية قابل للمراجعة</small><strong>لماذا اختار المرشد هذه الأهداف؟</strong></span><b>{startingGoalReport.rows.length} أدلة</b></summary>
+          <div>{startingGoalReport.rows.map((row)=><article key={row.id}><strong>{row.goalAr}</strong><p>{row.evidenceAr}</p><small data-bidi-scope="technical" dir="ltr">{row.evidenceRef}</small><footer>{row.boundaryAr}</footer></article>)}</div>
+        </details>
+
+        <DailyFocusTools mission={mission}/>
+
+        <ReadingBenchmark/>
+
+        <SessionBlocksStrip />
         <section className="weekly-plan-card">
           <header><div><span className="eyebrow"><CalendarCheck2 size={14}/> خطة الأسبوع</span><h2>وقت موزع، لا ديون تتضاعف.</h2><p>ستة أيام دراسة ويوم راحة، ومعهما يوم سماح واحد ظاهر أسبوعيًا. يوم السماح لا يصنع دليلًا ولا يضاعف حمل العودة.</p></div><div><strong>{weeklyBudgetLabel(weeklyPlan.plannedMinutes)}</strong><small>{weeklyPlan.weekStart} → {weeklyPlan.weekEnd}</small></div></header>
-          <div className={weeklyPlan.graceDayDate?"continuity-policy applied":"continuity-policy"}><CalendarCheck2 size={15}/><p><b>سياسة الاستمرارية · weekly-grace-v1:</b> {weeklyPlan.graceDayDate?`استُخدم يوم السماح في ${weeklyPlan.graceDayDate}. عد من الخطة الحالية دون تعويضه.`:"يوم سماح واحد متاح هذا الأسبوع؛ لا تحتاج إلى سلسلة مثالية حتى تحافظ على العودة."}</p></div>
+          <div className={weeklyPlan.graceDayDate?"continuity-policy applied":"continuity-policy"} data-continuity-policy="weekly-grace-v1"><CalendarCheck2 size={15}/><p><b>قاعدة الاستمرارية:</b> {weeklyPlan.graceDayDate?`استُخدم يوم السماح في ${weeklyPlan.graceDayDate}. عد من الخطة الحالية دون تعويضه.`:"يوم سماح واحد متاح هذا الأسبوع؛ لا تحتاج إلى سلسلة مثالية حتى تحافظ على العودة."}</p></div>
           <section className={`weekly-time-comparison ${weeklyPlan.timeComparison.status}`} data-time-comparison-policy={weeklyPlan.timeComparison.policyVersion}>
             <header><div><small>حتى {weeklyPlan.timeComparison.throughDate}</small><strong>المخطط والمسجل — بلا لوم</strong></div><span><b>{weeklyPlan.timeComparison.plannedToDateMinutes}</b> مخطط</span><span><b>{weeklyPlan.timeComparison.actualRecordedMinutes}</b> مسجل</span></header>
             <p>{weeklyPlan.timeComparison.messageAr}</p><footer>الدقائق المسجلة تقديرات الأنشطة المحفوظة، لا مؤقت مراقبة. الفرق لا يغيّر الإتقان أو البوابة.</footer>
@@ -215,6 +221,9 @@ export function CoachDashboard() {
           <div className="weekly-plan-days">{weeklyPlan.days.map((day)=><article key={day.date} className={`weekly-plan-day ${day.status}`}><header><div><strong>{day.weekdayAr}</strong><small>{day.date.slice(5)}</small></div><span>{day.status==="rest"?"راحة":day.status==="complete"?"مكتمل":day.status==="grace"?"سماح":day.status==="missed"?"فائت":day.status==="today"?"اليوم":"قادم"}</span><b>{day.budgetMinutes?`${day.budgetMinutes} د`:"—"}</b></header>{day.status==="rest"?<p>راحة مقصودة أو استماع خفيف اختياري؛ لا يوجد دين دراسة.</p>:day.status==="grace"?<p>يوم سماح مستخدم؛ لا دليل مزيف ولا مهمة تعويضية.</p>:<div>{day.slots.map((slot)=><Link key={slot.id} href={slot.href} className={slot.kind==="recovery"?"recovery":""}><span>{slot.titleAr}</span><b>{slot.minutes} د</b></Link>)}</div>}{day.recoverySourceDate&&<small>استعادة محدودة من {day.recoverySourceDate}</small>}</article>)}</div>
         </section>
         <WeeklyReflection/>
+        <WeeklyEvidenceSummary />
+          </div>
+        </details>
       </section>
 
       <aside className="dashboard-side">

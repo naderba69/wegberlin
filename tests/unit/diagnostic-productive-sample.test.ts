@@ -1,9 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
   buildDiagnosticProductiveSample,
+  buildProductiveSampleComparison,
   canSubmitDiagnosticProductiveSample,
   DIAGNOSTIC_PRODUCTIVE_BOUNDARY,
   DIAGNOSTIC_PRODUCTIVE_SAMPLE_VERSION,
+  recordProductiveSampleFollowUp,
 } from "@/core/diagnostic/productive-sample";
 import { learningStateSchema } from "@/core/portability/schema";
 import { defaultState } from "@/core/portability/db";
@@ -36,12 +38,16 @@ describe("P0 diagnostic productive sample without fabricated grading",()=>{
     expect(()=>buildDiagnosticProductiveSample({writingText:"",selfAssessment:"independent"})).toThrow(/ثلاث كلمات/);
   });
 
-  it("round-trips through schema v3 and namespaces diagnostic audio on isolated import",()=>{
-    const sample=buildDiagnosticProductiveSample({writingText:"Ich lerne Deutsch.",speakingMediaId:"diag-media",speakingDurationSeconds:20,selfAssessment:"independent"});
-    const state={...defaultState,diagnosticResult:{estimatedLevel:"A1" as const,score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},productiveSample:sample,completedAt:sample.submittedAt}};
+  it("round-trips through schema v3 and namespaces both recordings in the paired comparison",()=>{
+    const sample=buildDiagnosticProductiveSample({writingText:"Ich lerne Deutsch.",speakingMediaId:"diag-media",speakingDurationSeconds:20,selfAssessment:"independent",submittedAt:"2026-09-01T10:00:00.000Z"});
+    const followUp=buildDiagnosticProductiveSample({writingText:"Ich lerne noch Deutsch.",speakingMediaId:"diag-follow-up",speakingDurationSeconds:24,selfAssessment:"independent",submittedAt:"2026-09-29T10:00:00.000Z"});
+    const comparison=recordProductiveSampleFollowUp(buildProductiveSampleComparison(sample),followUp);
+    const state={...defaultState,diagnosticResult:{estimatedLevel:"A1" as const,score:3,maxScore:4,levelScores:{A1:3,A2:0,B1:0,B2:0},productiveSample:sample,completedAt:sample.submittedAt},productiveSampleComparison:comparison};
     expect(learningStateSchema.safeParse(state).success).toBe(true);
-    const isolated=namespaceImportedProfile(state,[{id:"diag-media",blob:new Blob(["voice"]) }],"profile-z");
+    const isolated=namespaceImportedProfile(state,[{id:"diag-media",blob:new Blob(["voice"])},{id:"diag-follow-up",blob:new Blob(["follow-up voice"])}],"profile-z");
     expect(isolated.state.diagnosticResult?.productiveSample?.speakingMediaId).toBe("profile-z:diag-media");
-    expect(isolated.media[0].id).toBe("profile-z:diag-media");
+    expect(isolated.state.productiveSampleComparison?.baseline.speakingMediaId).toBe("profile-z:diag-media");
+    expect(isolated.state.productiveSampleComparison?.followUp?.speakingMediaId).toBe("profile-z:diag-follow-up");
+    expect(isolated.media.map((item)=>item.id)).toEqual(["profile-z:diag-media","profile-z:diag-follow-up"]);
   });
 });

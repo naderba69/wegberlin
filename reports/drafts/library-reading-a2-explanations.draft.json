@@ -1,0 +1,200 @@
+{
+  "status": "applied-owner-approved-2026-10-10",
+  "policy": "owner-approval-required-before-apply",
+  "scope": "lib-r-a2-* reading questions (48), replacing answer-only explanationAr",
+  "rule": "each explanation quotes a verbatim sentence fragment from the item's textDe, inside «…», then states why the keyed option follows",
+  "items": [
+    {
+      "id": "lib-r-a2-01-q1",
+      "explanationAr": "النص: «Eine Verlängerung ist nur möglich, wenn niemand auf der Warteliste steht.» التمديد ممكن فقط إذا لم يكن أحد على قائمة الانتظار، لذلك الجواب: Wenn niemand wartet."
+    },
+    {
+      "id": "lib-r-a2-01-q2",
+      "explanationAr": "النص: «Die Tablets müssen am Schalter zurückgegeben werden; der Rückgabekasten ist dafür nicht geeignet.» يجب إرجاع الجهاز عند الشباك، ولا يصلح صندوق الإرجاع لذلك، فالجواب: Am Schalter."
+    },
+    {
+      "id": "lib-r-a2-02-q1",
+      "explanationAr": "النص: «hatte aber ein gelbes Band am Griff.» كان مميّزه شريطًا أصفر على المقبض، لذلك عرف حقيبته بالشريط الأصفر."
+    },
+    {
+      "id": "lib-r-a2-02-q2",
+      "explanationAr": "النص: «Seitdem schreibt David seinen Namen auf eine Karte im Inneren und benutzt ein auffälliges rotes Band.» منذ الحادثة يكتب اسمه على بطاقة داخل الحقيبة ويستعمل شريطًا أحمر لافتًا، فالجواب: Er nutzt eine Namenskarte und rotes Band."
+    },
+    {
+      "id": "lib-r-a2-03-q1",
+      "explanationAr": "النص: «Die Lehrerin bittet jedoch darum, bis Montagabend Bescheid zu geben.» تطلب المعلمة الإعلام حتى مساء الاثنين، فالجواب: Montagabend."
+    },
+    {
+      "id": "lib-r-a2-03-q2",
+      "explanationAr": "النص: «Einmal im Monat treffen sich alle vor Ort für ein gemeinsames Projekt.» يلتقي الجميع حضوريًا مرة في الشهر لمشروع مشترك، فالجواب: Einmal im Monat."
+    },
+    {
+      "id": "lib-r-a2-04-q1",
+      "explanationAr": "النص: «Am Mittwoch erhielt Mina einen Kostenvoranschlag über 45 Euro.» استلمت مينا يوم الأربعاء تقدير التكلفة (عرض سعر)، لذلك الجواب: Einen Kostenvoranschlag."
+    },
+    {
+      "id": "lib-r-a2-04-q2",
+      "explanationAr": "النص: «Bezahlen muss sie erst bei der Abholung.» تدفع مينا عند الاستلام فقط، فالجواب: Bei der Abholung."
+    },
+    {
+      "id": "lib-r-a2-05-q1",
+      "explanationAr": "النص: «Es gilt im gesamten Stadtgebiet, aber nicht in den Regionalzügen.» الاشتراك صالح في المدينة كلها لكنه لا يصلح في القطارات الإقليمية، فالجواب: Im Regionalzug."
+    },
+    {
+      "id": "lib-r-a2-05-q2",
+      "explanationAr": "النص: «Am Wochenende gilt diese Zeitregel nicht.» قاعدة الوقت للدراجات لا تسري في عطلة نهاية الأسبوع، فالجواب: Am Wochenende."
+    },
+    {
+      "id": "lib-r-a2-06-q1",
+      "explanationAr": "النص: «Wegen eines Wasserschadens kann der Computerkurs morgen nicht im Lernzentrum stattfinden.» يتغيّر المكان من مركز التعلّم، وتصبح الحصة عبر الإنترنت في الوقت نفسه، فالجواب: المكان والصيغة."
+    },
+    {
+      "id": "lib-r-a2-06-q2",
+      "explanationAr": "النص: «Wer keinen eigenen Computer hat, kann einen Arbeitsplatz in der Stadtbibliothek reservieren.» من ليس لديه حاسوب يمكنه حجز مكان عمل في المكتبة البلدية، فالجواب: In der Stadtbibliothek."
+    },
+    {
+      "id": "lib-r-a2-07-q1",
+      "explanationAr": "النص: «Handschuhe und Farbe bringt der Stadtteilverein mit.» تحضر جمعية الحي القفازات والطلاء، فالجواب: Handschuhe und Farbe."
+    },
+    {
+      "id": "lib-r-a2-07-q2",
+      "explanationAr": "النص: «Bei starkem Regen findet die Aktion eine Woche später statt.» عند المطر الشديد تُؤجَّل الحملة أسبوعًا، فالجواب: Sie findet eine Woche später statt."
+    },
+    {
+      "id": "lib-r-a2-08-q1",
+      "explanationAr": "النص: «Ab nächstem Monat beginnt die Frühschicht um sieben statt um sechs Uhr dreißig.» تبدأ الوردية الصباحية في السابعة بدلًا من السادسة والنصف، أي تبدأ متأخرة، فالجواب: Die Frühschicht beginnt später."
+    },
+    {
+      "id": "lib-r-a2-08-q2",
+      "explanationAr": "النص: «Der Antrag ist keine automatische Zusage; die Teamleitung prüft zuerst, ob genug Personal da ist.» الطلب ليس موافقة تلقائية، والإدارة تتحقق أولًا من كفاية الموظفين، فالجواب: لا، يُفحص عدد الموظفين."
+    },
+    {
+      "id": "lib-r-a2-09-q1",
+      "explanationAr": "النص: «Die Fahrt dauert etwa dreißig Minuten länger.» الرحلة أطول بنحو ثلاثين دقيقة، فالجواب: Dreißig Minuten."
+    },
+    {
+      "id": "lib-r-a2-09-q2",
+      "explanationAr": "النص: «Fahrräder können in den Bussen nicht mitgenommen werden.» لا يمكن أخذ الدراجات في الحافلات البديلة، فالجواب: Fahrräder."
+    },
+    {
+      "id": "lib-r-a2-10-q1",
+      "explanationAr": "النص: «Fahrräder stehen nur noch in den markierten Bereichen, damit der Zugang zur Kellertür frei bleibt.» تُركن الدراجات في الأماكن المحددة حتى يبقى الوصول إلى باب القبو حرًا، فالجواب: Damit die Kellertür frei bleibt."
+    },
+    {
+      "id": "lib-r-a2-10-q2",
+      "explanationAr": "النص: «Feste mit mehr als zehn Gästen müssen drei Tage vorher angekündigt werden.» الحفلات التي تضم أكثر من عشرة ضيوف تُعلن قبل ثلاثة أيام، فالجواب: Drei Tage vorher."
+    },
+    {
+      "id": "lib-r-a2-11-q1",
+      "explanationAr": "النص: «nachts soll es stark regnen.» يُتوقع مطر شديد ليلًا، لذلك لا يخيّمون، فالجواب: Wegen starken Regens."
+    },
+    {
+      "id": "lib-r-a2-11-q2",
+      "explanationAr": "النص: «Falls der Wind zu stark ist, besuchen sie stattdessen das Naturmuseum im Nachbarort.» إذا كانت الريح قوية يزورون متحف الطبيعة بدلًا من ذلك، فالجواب: Sie besuchen ein Museum."
+    },
+    {
+      "id": "lib-r-a2-12-q1",
+      "explanationAr": "النص: «Bitte bereite bis Montagmittag die kurze Präsentation vor.» يُطلب تجهيز العرض حتى ظهر الاثنين، فالجواب: Montagmittag."
+    },
+    {
+      "id": "lib-r-a2-12-q2",
+      "explanationAr": "النص: «sprich mit Lea, weil ich am Freitag nicht im Büro bin.» الأسئلة عن التكاليف تُوجَّه إلى ليا، فالجواب: Lea."
+    },
+    {
+      "id": "lib-r-a2-13-q1",
+      "explanationAr": "النص: «Helm und Schloss sind im Preis enthalten.» الخوذة والقفل مشمولان في السعر، فالجواب: Helm und Schloss."
+    },
+    {
+      "id": "lib-r-a2-13-q2",
+      "explanationAr": "النص: «Bei starkem Regen darf die Buchung bis zwei Stunden vorher kostenlos storniert werden.» عند المطر الشديد يمكن إلغاء الحجز مجانًا حتى قبل ساعتين، فالجواب: حتى ساعتين قبل الموعد عند المطر."
+    },
+    {
+      "id": "lib-r-a2-14-q1",
+      "explanationAr": "النص: «Der Eintritt ist frei.» الدخول مجاني، فالجواب: Nichts."
+    },
+    {
+      "id": "lib-r-a2-14-q2",
+      "explanationAr": "النص: «soll bis Donnerstag anrufen» من يحتاج ترجمة يتصل حتى الخميس، فالجواب: Donnerstag."
+    },
+    {
+      "id": "lib-r-a2-15-q1",
+      "explanationAr": "النص: «Den Kundentermin um zehn Uhr übernimmt Ben.» يتولى بن موعد العميلة في العاشرة، فالجواب: Ben."
+    },
+    {
+      "id": "lib-r-a2-15-q2",
+      "explanationAr": "النص: «Die interne Sitzung am Nachmittag wird auf Donnerstag verschoben.» نُقلت الجلسة الداخلية إلى الخميس، فالجواب: Donnerstag."
+    },
+    {
+      "id": "lib-r-a2-16-q1",
+      "explanationAr": "النص: «Lea braucht den Abholcode und ihren Ausweis.» تحتاج ليا رمز الاستلام وهويتها، فالجواب: Code und Ausweis."
+    },
+    {
+      "id": "lib-r-a2-16-q2",
+      "explanationAr": "النص: «Wird das Paket nicht innerhalb von sieben Tagen abgeholt, geht es an den Absender zurück.» إذا لم يُستلم الطرد خلال سبعة أيام يعود إلى المرسل، فالجواب: Es geht zurück."
+    },
+    {
+      "id": "lib-r-a2-17-q1",
+      "explanationAr": "النص: «kommt Familie Yilmaz erst am Samstag statt am Freitag im Hotel an.» تصل العائلة يوم السبت بدلًا من الجمعة، فالجواب: Samstag."
+    },
+    {
+      "id": "lib-r-a2-17-q2",
+      "explanationAr": "النص: «ab Sonntag ist es im Preis enthalten.» الفطور مشمول في السعر ابتداءً من الأحد، فالجواب: Ab Sonntag."
+    },
+    {
+      "id": "lib-r-a2-18-q1",
+      "explanationAr": "النص: «Am Nachmittag begleiten Helfer kleine Kindergruppen zu den Lesungen.» يرافق المتطوعون مجموعات الأطفال الصغيرة إلى القراءات بعد الظهر، فالجواب: Sie begleiten Kindergruppen."
+    },
+    {
+      "id": "lib-r-a2-18-q2",
+      "explanationAr": "النص: «Fahrtkosten können nach vorheriger Absprache teilweise übernommen werden.» قد تُغطّى تكاليف السفر جزئيًا بعد الاتفاق المسبق، أي ليست مضمونة، فالجواب: Nein، فقط ربما بعد الاتفاق."
+    },
+    {
+      "id": "lib-r-a2-19-q1",
+      "explanationAr": "النص: «Von Mai bis September gibt es jeden Freitag einen Abendmarkt auf dem Rathausplatz.» السوق المسائي من مايو إلى سبتمبر، فالجواب: Mai bis September."
+    },
+    {
+      "id": "lib-r-a2-19-q2",
+      "explanationAr": "النص: «Bei starkem Wind zieht der Markt in die Halle am Bahnhof um.» عند الريح القوية ينتقل السوق إلى القاعة قرب المحطة، فالجواب: Er zieht in die Bahnhofshalle."
+    },
+    {
+      "id": "lib-r-a2-20-q1",
+      "explanationAr": "النص: «wenn sie mindestens acht von zehn Terminen besuchen» يلزم حضور ثمانية مواعيد على الأقل من عشرة، فالجواب: Acht."
+    },
+    {
+      "id": "lib-r-a2-20-q2",
+      "explanationAr": "النص: «Die Bescheinigung wird eine Woche nach Kursende per E-Mail verschickt.» تُرسل الشهادة بالبريد الإلكتروني بعد أسبوع من نهاية الدورة، فالجواب: Eine Woche nach Kursende."
+    },
+    {
+      "id": "lib-r-a2-21-q1",
+      "explanationAr": "النص: «der Bus fährt abends nur einmal pro Stunde.» الحافلة في المساء مرة واحدة في الساعة، وهذا عيب السكن الأرخص، فالجواب: Seltener Bus am Abend."
+    },
+    {
+      "id": "lib-r-a2-21-q2",
+      "explanationAr": "النص: «Er besichtigt beide Wohnungen am Samstag und fragt, ob Internet, Strom und eine Anmeldung an der Adresse möglich sind.» يقرر سمير بعد زيارة الشقتين وطرح الأسئلة، فالجواب: Erst nach den Besichtigungen und Fragen."
+    },
+    {
+      "id": "lib-r-a2-22-q1",
+      "explanationAr": "النص: «ein aktuelles Foto mitbringen» يجب أن تحضر صورة حديثة، فالجواب: Ein aktuelles Foto."
+    },
+    {
+      "id": "lib-r-a2-22-q2",
+      "explanationAr": "النص: «muss sie den Termin spätestens am Vortag absagen.» يجب الإلغاء في موعد أقصاه اليوم السابق، فالجواب: Spätestens am Vortag."
+    },
+    {
+      "id": "lib-r-a2-23-q1",
+      "explanationAr": "النص: «Karim machte Fotos von Paket, Etikett und Tasse» صوّر كريم الطرد والملصق والفنجان، فالجواب: Paket، Etikett und Tasse."
+    },
+    {
+      "id": "lib-r-a2-23-q2",
+      "explanationAr": "النص: «weil das Produkt ein Geschenk war.» اختار البديل لأن المنتج كان هدية، فالجواب: Das Produkt war ein Geschenk."
+    },
+    {
+      "id": "lib-r-a2-24-q1",
+      "explanationAr": "النص: «Treffpunkt ist um sieben Uhr fünfzig am Eingang des Bahnhofs.» نقطة اللقاء في السابعة وخمسين دقيقة، أي 7:50، فالجواب: 7:50 Uhr."
+    },
+    {
+      "id": "lib-r-a2-24-q2",
+      "explanationAr": "النص: «Die Führung beginnt um zehn Uhr und dauert neunzig Minuten.» تدوم الجولة تسعين دقيقة، فالجواب: 90 Minuten."
+    }
+  ]
+}

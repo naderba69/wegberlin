@@ -7,6 +7,7 @@ import type { LearningState } from "../../src/types/learning";
 const learner:LearningState={...defaultState,profile:{name:"QA learner",targetExam:"telc-deutsch-b2",dailyMinutes:90,arabicSupport:"modern-standard-arabic",currentLevel:"A1",priorExperience:"none",createdAt:"2026-10-01T09:00:00Z"}};
 async function seed(page:Page,state:LearningState){
   await page.goto("/today");
+  await expect(page.locator(".app-frame")).toHaveAttribute("data-learning-ready","true",{timeout:30_000});
   await page.evaluate(async value=>{
     const database=await new Promise<IDBDatabase>((resolve,reject)=>{const request=indexedDB.open("der-weg-nach-berlin",4);request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});
     await new Promise<void>((resolve,reject)=>{const transaction=database.transaction("learning-state","readwrite");transaction.objectStore("learning-state").put(value,"primary");transaction.oncomplete=()=>resolve();transaction.onerror=()=>reject(transaction.error);});database.close();
@@ -17,7 +18,7 @@ async function stored(page:Page){return page.evaluate(()=>new Promise<LearningSt
 
 test("B2 uses the actual 48-item parallel form and cannot pass 38 answers",async({page})=>{
   test.setTimeout(90_000);await seed(page,learner);await page.goto("/assessment/b2");
-  const panel=page.locator('[data-level-assessment-policy="independent-level-transition-v2"]');await expect(panel).toBeVisible();
+  const panel=page.locator('[data-level-assessment-policy="independent-level-transition-v3"]');await expect(panel).toBeVisible();
   await expect(panel).toContainText("39/48");await page.getByRole("button",{name:/ابدأ الصيغة/}).click();
   const qs=levelAssessmentQuestions("B2","A");await expect(page.locator("[data-assessment-question-id]")).toHaveCount(48);
   for(const [index,q] of qs.entries())await page.locator(`[data-assessment-question-id="${q.id}"] select`).selectOption(String(index<10?(q.correctIndex+1)%4:q.correctIndex));

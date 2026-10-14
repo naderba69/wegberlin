@@ -144,7 +144,7 @@ export function TargetedWritingSimulationView({ simulation }: { simulation: Targ
             <div className="exam-integrity-note"><CircleAlert size={16} /><p>{simulation.wordTargetNoteAr}</p></div>
           </section>
           <section className="writing-exam-editor">
-            <textarea lang="de" dir="ltr" value={text} onChange={(event) => setText(event.target.value)} placeholder="Schreiben Sie hier …" spellCheck={false} autoCorrect="off" autoCapitalize="off" />
+            <textarea lang="de" dir="ltr" aria-label="نص الكتابة بالألمانية" value={text} onChange={(event) => setText(event.target.value)} placeholder="Schreiben Sie hier …" spellCheck={false} autoCorrect="off" autoCapitalize="off" />
             <footer><span className={analysis.wordCount >= simulation.minimumWordsForPractice ? "good" : ""}>{analysis.wordCount} كلمة · هدف التدريب {simulation.minimumWordsForPractice}</span><div><button className="secondary-button" disabled={!text.trim()} onClick={() => persist("draft")}><Save size={15} /> حفظ مسودة</button><button className="primary-button" disabled={analysis.wordCount < 50} onClick={() => persist("submitted")}><Send size={15} /> {continuousSession ? "ثبّت النص وانتقل" : "تسليم التدريب"}</button></div></footer>
           </section>
         </div>

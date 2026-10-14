@@ -1,5 +1,6 @@
 import { normalizeGermanText } from "@/core/lesson/evaluate";
 import type { ErrorRecord } from "@/types/learning";
+import { relearnStepAt } from "./feedback-guidance";
 import { classifyErrorRecord } from "./pattern";
 
 export function errorCorrectionVariants(expected: string) {
@@ -18,6 +19,28 @@ export function matchesErrorCorrection(answer: string, expected: string) {
 }
 
 export type ErrorRepairState = "untreated" | "waiting" | "due" | "confirmed";
+
+/** المرحلة الفعلية للعلاج: الرجوع القريب بعد فشل يختلف عن الانتظار بعد نجاح. */
+export type ErrorRepairPhase = ErrorRepairState | "retry-soon" | "untreated-after-failure";
+
+export function errorRepairPhase(error: ErrorRecord, now = new Date()): ErrorRepairPhase {
+  const state = errorRepairState(error, now);
+  const failedAt = error.lastFailedRepairAt ? Date.parse(error.lastFailedRepairAt) : Number.NEGATIVE_INFINITY;
+  const repairedAt = error.lastRepairedAt ? Date.parse(error.lastRepairedAt) : Number.NEGATIVE_INFINITY;
+  const failedLast = failedAt > repairedAt;
+  if (!failedLast) return state;
+  if (!error.nextReviewAt) return "untreated-after-failure";
+  return Date.parse(error.nextReviewAt) <= now.getTime() ? "due" : "retry-soon";
+}
+
+/**
+ * جدولة الرجوع القصير بعد فشل العلاج (سلّم إعادة التعلّم: 10 دقائق ثم يوم ثم 3 أيام).
+ * إضافية على العقد القديم: لا تغيّر `recordFailedErrorRepair` ولا تعيد تعريف «الانتظار بعد نجاح».
+ */
+export function scheduleRetryAfterFailure(error: ErrorRecord, now = new Date()): ErrorRecord {
+  const failureCount = Math.max(1, error.failedRepairCount ?? 1);
+  return { ...error, nextReviewAt: relearnStepAt(failureCount, now).at };
+}
 
 export function errorRepairState(error: ErrorRecord, now = new Date()): ErrorRepairState {
   if (error.resolved) return "confirmed";

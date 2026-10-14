@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Check, CircleAlert, Eye, EyeOff, Headphones, Mic2, Save, Square, Trash2 } from "lucide-react";
+import { AudioWaveform, Check, CircleAlert, Eye, EyeOff, Headphones, Mic2, Save, Square, Trash2 } from "lucide-react";
 import { libraryAudioAssetByItemId, libraryAudioManifest, audioDurationLabel } from "@/data/library-audio-assets";
 import { listeningLibrary } from "@/data/library-registry";
 import type { CEFRLevel } from "@/types/learning";
@@ -10,6 +10,13 @@ import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
 import { useLearning } from "./learning-provider";
 import { AudioSpeedControl } from "./audio-speed-control";
 import { applyLearningPlaybackRate, type LearningPlaybackRate } from "@/core/audio/playback-speed";
+import {
+  buildEducationalWaveformComparison,
+  extractAudioBufferWaveformInput,
+  isEducationalWaveformCompressedFileWithinLimit,
+  EDUCATIONAL_WAVEFORM_COMPARISON_POLICY,
+  type EducationalWaveformComparison,
+} from "@/core/audio/waveform-comparison";
 import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
 import { emitListeningUsage } from "@/core/listening/usage-evidence";
 import { ProsodyProgressionPanel } from "./prosody-progression-panel";
@@ -39,6 +46,9 @@ export function ShadowingStudio() {
   const [selfScore, setSelfScore] = useState(3);
   const [reflection, setReflection] = useState("");
   const [message, setMessage] = useState("");
+  const [waveformComparison, setWaveformComparison] = useState<EducationalWaveformComparison | null>(null);
+  const [waveformBusy, setWaveformBusy] = useState(false);
+  const [waveformMessage, setWaveformMessage] = useState("");
   const attempts = selected ? state.speakingAttempts.filter((attempt) => attempt.taskId === `shadowing:${selected.id}`).length : 0;
 
   useEffect(() => () => {
@@ -62,6 +72,8 @@ export function ShadowingStudio() {
     setDurationSeconds(0);
     setReflection("");
     setMessage("");
+    setWaveformComparison(null);
+    setWaveformMessage("");
   }
 
   function changeRate(next: LearningPlaybackRate) {
@@ -71,6 +83,8 @@ export function ShadowingStudio() {
 
   async function startRecording() {
     if (!selected) return;
+    setWaveformComparison(null);
+    setWaveformMessage("");
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       const { recorder } = createRecordingMediaRecorder(stream);
@@ -139,6 +153,64 @@ export function ShadowingStudio() {
     setDurationSeconds(0);
     setPhase("idle");
     setMessage("");
+    setWaveformComparison(null);
+    setWaveformMessage("");
+  }
+
+  async function compareWaveforms() {
+    if (!selected || !asset || !recordedBlob) return;
+    if (
+      !isEducationalWaveformCompressedFileWithinLimit(asset.bytes) ||
+      !isEducationalWaveformCompressedFileWithinLimit(recordedBlob.size)
+    ) {
+      setWaveformMessage("هذا المقطع أكبر من حد المعالجة المحلية الآمنة؛ استمع إليه دون رسم.");
+      return;
+    }
+
+    setWaveformBusy(true);
+    setWaveformComparison(null);
+    setWaveformMessage("");
+    let context: AudioContext | null = null;
+    try {
+      const localUrl = new URL(asset.path, window.location.origin);
+      if (
+        localUrl.origin !== window.location.origin ||
+        !localUrl.pathname.startsWith("/audio/library/")
+      ) {
+        throw new Error("مصدر النموذج ليس ملفًا محليًا من مكتبة التطبيق.");
+      }
+      const response = await fetch(`${localUrl.pathname}${localUrl.search}`, {
+        credentials: "same-origin",
+        redirect: "error",
+      });
+      if (!response.ok) throw new Error("تعذر تحميل ملف النموذج من التطبيق.");
+      const referenceBytes = await response.arrayBuffer();
+      if (!isEducationalWaveformCompressedFileWithinLimit(referenceBytes.byteLength)) {
+        throw new Error("تعذر تحميل عينة نموذج بالحجم المتوقع.");
+      }
+      const AudioContextConstructor = window.AudioContext ??
+        (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioContextConstructor) {
+        throw new Error("هذا المتصفح لا يدعم فك الصوت محليًا لعرض الموجة.");
+      }
+      context = new AudioContextConstructor();
+      const referenceBuffer = await context.decodeAudioData(referenceBytes.slice(0));
+      const reference = extractAudioBufferWaveformInput(referenceBuffer);
+      const learnerBytes = await recordedBlob.arrayBuffer();
+      const learnerBuffer = await context.decodeAudioData(learnerBytes.slice(0));
+      const learner = extractAudioBufferWaveformInput(learnerBuffer);
+      setWaveformComparison(buildEducationalWaveformComparison({ reference, learner }));
+      setWaveformMessage("عُرض الشكلان مؤقتًا على جهازك؛ لم يُرسل الصوت أو الرسم إلى الشبكة.");
+    } catch (error) {
+      setWaveformMessage(
+        error instanceof Error && error.message.startsWith("اعرض مقطعًا")
+          ? error.message
+          : "تعذر فك المقطعين محليًا. يمكنك الاستماع إليهما ومراجعتهما بالطريقة المعتادة.",
+      );
+    } finally {
+      if (context) await context.close().catch(() => undefined);
+      setWaveformBusy(false);
+    }
   }
 
   if (!selected || !asset) return <div className="loading-state"><p>لا توجد ملفات صوت مولّدة متاحة بعد.</p></div>;
@@ -176,6 +248,19 @@ export function ShadowingStudio() {
           {(phase === "recorded" || phase === "saved") && <>
             <audio controls src={recordedUrl} className="audio-player" aria-label="تشغيل محاولة التقليد" />
             <div className="shadowing-duration"><span>مدة النموذج <b>{audioDurationLabel(asset.durationMs)}</b></span><span>مدة محاولتك <b>{audioDurationLabel(durationSeconds * 1000)}</b></span></div>
+            <section className="shadowing-waveform-panel" data-waveform-comparison-policy={EDUCATIONAL_WAVEFORM_COMPARISON_POLICY}>
+              <header><AudioWaveform size={17}/><div><strong>شكل الإشارة للملاحظة الذاتية</strong><small>محلي ومؤقت · لا درجة ولا تحليل نطق</small></div></header>
+              <p>يعرض غلاف شدة الإشارة عبر الزمن فقط. يُضبط ارتفاع كل رسم إلى ذروة تسجيله نفسه؛ لا توجد محاذاة أو مقارنة آلية بينهما. اختلاف الميكروفون والصوت والسرعة يغيّر الشكل.</p>
+              <button type="button" className="secondary-button" disabled={waveformBusy} onClick={() => void compareWaveforms()}>{waveformBusy?<><AudioWaveform size={15}/> جارٍ تجهيز الرسمين محليًا…</>:<><AudioWaveform size={15}/> اعرض الرسمين محليًا</>}</button>
+              {waveformMessage&&<p className="waveform-comparison-message" role="status">{waveformMessage}</p>}
+              {waveformComparison&&<div className="shadowing-waveform-grid" dir="rtl" lang="ar">
+                {[{key:"reference",label:"النموذج الاصطناعي",trace:waveformComparison.reference},{key:"learner",label:"محاولتك",trace:waveformComparison.learner}].map(({key,label,trace})=><figure key={key} data-waveform-trace={key}>
+                  <figcaption><span>{label}</span><b>{trace.durationSeconds} ثانية</b></figcaption>
+                  <div role="img" aria-label={`${label}؛ شكل غلاف الإشارة على ${trace.durationSeconds} ثانية، من دون تقييم`} dir="rtl" lang="ar"><div className={`shadowing-waveform-bars ${key}`} dir="ltr" data-bidi-scope="technical">{trace.envelope.map((value,index)=><i key={index} style={{height:`${Math.round(value*100)}%`}}/>)}</div></div>
+                </figure>)}
+                <small>كل رسم يعرض المقطع كاملًا على عرضه؛ لا توجد مطابقة زمنية بين الموجتين. الرسم مؤقت ولا يُضاف إلى سجل المحاولات أو الإتقان.</small>
+              </div>}
+            </section>
             <label>تقييم ذاتي من 5<div className="score-buttons">{[1, 2, 3, 4, 5].map((score) => <button key={score} className={selfScore === score ? "active" : ""} onClick={() => setSelfScore(score)}>{score}</button>)}</div></label>
             <label>ملاحظة قصيرة<textarea value={reflection} onChange={(event) => setReflection(event.target.value)} placeholder="الإيقاع، موضع التوقف، أو صوت يحتاج إعادة…" /></label>
             <div className="shadowing-actions"><button className="primary-button" disabled={phase === "saved"} onClick={() => void saveAttempt()}><Save size={15} /> {phase === "saved" ? "تم الحفظ" : "حفظ المحاولة"}</button>{phase !== "saved" && <button className="secondary-button" onClick={discard}><Trash2 size={15} /> حذف وإعادة</button>}</div>

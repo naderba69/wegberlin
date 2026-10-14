@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useEffect, useState } from "react";
 import { studyDayKey } from "@/core/coach/session-signals";
 import Link from "next/link";
@@ -89,7 +90,7 @@ export function TargetedChoiceSimulationView({ simulation }: { simulation: Targe
       <div className="wide-page targeted-result">
         <header><span><ShieldCheck size={28} /></span><small>{profile.displayName} · {isReading ? "تدريب قراءة تفصيلية" : "تدريب عناصر لغوية"}</small><h1>{score}<i>/{simulation.items.length}</i></h1><h2>{score >= 8 ? "تحكم جيد — اختبره لاحقًا بنص جديد" : "حدد الروابط والصيغ التي تكررت فيها الفجوة"}</h2><p>نسبة تدريب داخلية وليست نقاطًا رسمية.</p></header>
         <StatusAnnouncement message={behavioralPraise("exam-submission")} channel="targeted-choice-result" className="compact gamification-surface"/>
-        <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b {...fragmentLanguageAttributes(item.options[answers[item.id]])}>{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b {...fragmentLanguageAttributes(item.options[item.correctIndex])}>{item.options[item.correctIndex]}</b></small>}<p>{item.explanationAr}</p></div></article>; })}</div>
+        <div className="targeted-review-list">{simulation.items.map((item, index) => { const correct = answers[item.id] === item.correctIndex; return <article key={item.id} className={correct ? "correct" : "wrong"}><span>{correct ? <Check size={15} /> : index + 1}</span><div><strong lang="de" dir="ltr">{item.promptDe}</strong><small>إجابتك: <b {...fragmentLanguageAttributes(item.options[answers[item.id]])}>{item.options[answers[item.id]]}</b></small>{!correct && <small>الصحيح: <b {...fragmentLanguageAttributes(item.options[item.correctIndex])}>{item.options[item.correctIndex]}</b></small>}<p>{learnerExplanation(item.explanationAr)}</p></div></article>; })}</div>
         <footer><button className="secondary-button" onClick={reset}><RotateCcw size={16} /> إعادة التدريب</button><Link href="/exams" className="primary-button">مركز الامتحان <ArrowRight size={16} /></Link></footer>
       </div>
     );

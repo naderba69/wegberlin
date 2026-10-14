@@ -186,6 +186,22 @@ export interface BranchingConversationAttempt {
   createdAt:string;
 }
 
+export interface CohesionRewriteAttempt {
+  id:string;
+  policyVersion:"cohesion-unit-v1";
+  itemId:string;
+  connectorDe:string;
+  level:"A2"|"B1";
+  ruleKind:"verb-second"|"verb-final"|"element-connector";
+  text:string;
+  ok:boolean;
+  checkFlags:{connectorPresent:boolean;verbFinal:boolean;verbSecond:boolean;bothClausesPresent:boolean};
+  issuesAr:string[];
+  engine:"deterministic-rule-check";
+  evidenceBoundary:"rule-based-rewrite-check-not-style-or-fluency-assessment";
+  createdAt:string;
+}
+
 export interface CollocationNetworkAttempt {
   id:string;
   policyVersion:"contextual-collocation-network-v1";
@@ -528,6 +544,14 @@ export interface DiagnosticSessionDraft {
   updatedAt:string;
 }
 
+export interface ProductiveSampleComparison {
+  policyVersion: "four-week-productive-sample-comparison-v1";
+  baseline: DiagnosticProductiveSample;
+  followUpDueAt: string;
+  followUp?: DiagnosticProductiveSample;
+  evidenceBoundary: "paired-sample-comparison-only-no-language-quality-cefr-or-mastery";
+}
+
 export interface DiagnosticResult {
   estimatedLevel: CEFRLevel;
   score: number;
@@ -540,6 +564,8 @@ export interface DiagnosticResult {
   stoppedEarly?: boolean;
   confidence?: "low" | "medium" | "high";
   productiveSample?: DiagnosticProductiveSample;
+  /** إجابات خاطئة فقط (معرّف السؤال → رقم الخيار المختار)، لعرض المراجعة بعد إعادة التحميل. */
+  reviewAnswers?: { formId: "A" | "B"; wrong: Record<string, number> };
   completedAt: string;
 }
 
@@ -599,6 +625,8 @@ export interface WritingSubmission {
   plan?: WritingPlan;
   selfChecklist?: string[];
   dimensions?: WritingDimensionEvidence[];
+  /** تقييم ذاتي بمعايير telc؛ لا يُجمع في درجة، والحكم النهائي للمراجع البشري. */
+  telcSelfAssessment?: { policyVersion: "telc-criteria-self-assessment-v1"; assessedAt: string; levels: Record<"aufgabenbewaeltigung" | "kommunikative-gestaltung" | "formale-richtigkeit", "A" | "B" | "C" | "D"> };
   sourceVersion?: number;
   createdAt: string;
   updatedAt: string;
@@ -940,7 +968,7 @@ export interface ExerciseAttempt {
   answerChangeCount?:number;
   uncertaintyKind?:AttemptUncertaintyKind;
   processPolicyVersion?:"bounded-attempt-process-v1";
-  evidenceContext?: { policyVersion: "independent-assessment-v1"; kind: "level-check" | "placement-challenge" | "endurance"; level: CEFRLevel; formId: "A" | "B"; runId: string; independent: boolean; expectedItems: number };
+  evidenceContext?: { policyVersion: "independent-assessment-v1"; kind: "level-check" | "placement-challenge" | "endurance"; level: CEFRLevel; formId: "A" | "B" | "C" | "D"; runId: string; independent: boolean; expectedItems: number };
   createdAt: string;
 }
 
@@ -1019,6 +1047,7 @@ export interface LearningState {
   curriculumVersion: string;
   profile: LearnerProfile | null;
   diagnosticResult: DiagnosticResult | null;
+  productiveSampleComparison: ProductiveSampleComparison | null;
   diagnosticSessionDraft:DiagnosticSessionDraft|null;
   skillDiagnosticAttempts: SkillDiagnosticAttempt[];
   learningContracts: LearningContract[];
@@ -1083,6 +1112,7 @@ export interface LearningState {
   dictationAttempts: DictationAttempt[];
   branchingConversationAttempts: BranchingConversationAttempt[];
   collocationNetworkAttempts: CollocationNetworkAttempt[];
+  cohesionRewriteAttempts: CohesionRewriteAttempt[];
   supportUsageEvents: SupportUsageEvent[];
   listeningProcessEvents: ListeningProcessEvent[];
   listeningUsageEvents: ListeningUsageEvent[];

@@ -2,9 +2,10 @@ import { academicLessonList } from "@/data/academic-lessons";
 import { levelAssessmentQuestions, type AssessmentFormId } from "@/data/level-assessment-bank";
 import { uniqueRecentSpeakingTasks, uniqueRecentWritingTasks, evidenceIsRecent, attemptIsIndependent } from "@/core/evidence/independence";
 import { retentionEvidence } from "@/core/srs/review-session";
+import { RETENTION_GAP_POLICY, RETENTION_MIN_GAP_HOURS, retentionGapSummary } from "@/core/srs/retention-gaps";
 import type { CEFRLevel, ExerciseAttempt, LearningState } from "@/types/learning";
 
-export const LEVEL_GATE_POLICY = "independent-level-transition-v2" as const;
+export const LEVEL_GATE_POLICY = "independent-level-transition-v3" as const;
 export const LEVEL_KNOWLEDGE_SHARE = .8;
 const levels: CEFRLevel[] = ["A1", "A2", "B1", "B2"];
 const productiveSamples: Record<CEFRLevel, number> = { A1: 3, A2: 4, B1: 5, B2: 6 };
@@ -15,13 +16,15 @@ export function completedAssessmentRuns(state: LearningState, level: CEFRLevel):
   const groups = new Map<string, ExerciseAttempt[]>();
   for (const attempt of state.exerciseAttempts) {
     const context = attempt.evidenceContext;
-    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance") continue;
+    if (context?.policyVersion !== "independent-assessment-v1" || context.level !== level || context.kind === "endurance" || (context.formId === "C" || context.formId === "D")) continue;
     groups.set(context.runId, [...(groups.get(context.runId) ?? []), attempt]);
   }
   const runs: AssessmentRun[] = [];
   for (const [id, attempts] of groups) {
     const context = attempts[0].evidenceContext!;
-    const questions = levelAssessmentQuestions(level, context.formId);
+    if (context.formId === "C" || context.formId === "D") continue;
+    const formId: AssessmentFormId = context.formId;
+    const questions = levelAssessmentQuestions(level, formId);
     const expectedIds = new Set(questions.map((item) => item.id));
     if (attempts.length !== questions.length || new Set(attempts.map((item) => item.exerciseId)).size !== questions.length || attempts.some((item) => !expectedIds.has(item.exerciseId) || item.evidenceContext?.expectedItems !== questions.length || item.evidenceContext.formId !== context.formId || item.evidenceContext.kind !== context.kind)) continue;
     const byQuestion = new Map(attempts.map((attempt) => [attempt.exerciseId, attempt]));
@@ -41,7 +44,7 @@ export function completedAssessmentRuns(state: LearningState, level: CEFRLevel):
     const previousTimes=state.exerciseAttempts.filter(attempt=>attempt.evidenceContext?.level===level&&attempt.evidenceContext.formId===context.formId&&attempt.evidenceContext.runId!==id&&Date.parse(attempt.createdAt)<runTime).map(attempt=>Date.parse(attempt.createdAt));
     const delayedRetake=!novel&&previousTimes.length>0&&runTime-Math.max(...previousTimes)>=3*86_400_000;
     const required = Math.ceil(questions.length * LEVEL_KNOWLEDGE_SHARE);
-    runs.push({ id, level, formId: context.formId, kind: context.kind as AssessmentRun["kind"], completedAt: attempts.map((attempt) => attempt.createdAt).sort().at(-1)!, score, total: questions.length, required, independent, novel, delayedRetake, passed: independent && (novel||delayedRetake) && score >= required && Object.values(domainScores).every((domain) => domain.correct >= Math.ceil(domain.total * .6)), domainScores });
+    runs.push({ id, level, formId, kind: context.kind as AssessmentRun["kind"], completedAt: attempts.map((attempt) => attempt.createdAt).sort().at(-1)!, score, total: questions.length, required, independent, novel, delayedRetake, passed: independent && (novel||delayedRetake) && score >= required && Object.values(domainScores).every((domain) => domain.correct >= Math.ceil(domain.total * .6)), domainScores });
   }
   return runs.sort((left, right) => Date.parse(right.completedAt) - Date.parse(left.completedAt));
 }
@@ -60,7 +63,8 @@ export type LevelEvidenceGate = {
   policyVersion: typeof LEVEL_GATE_POLICY; level: CEFRLevel; passed: boolean; prerequisite: boolean;
   criteria: { orientation: boolean; knowledge: boolean; curriculum: boolean; writing: boolean; speaking: boolean; retention: boolean };
   latestRun: AssessmentRun | undefined; completed: number; requiredLessons: number; writing: number; speaking: number;
-  requiredProductiveSamples: number; retainedLessons: number; delayedKnowledge: boolean; placement: boolean; legacyReadyUnverified: boolean; boundaryAr: string;
+  requiredProductiveSamples: number; retainedLessons: number; spacedLessons: number; unverifiedGapLessons: number;
+  retentionMinGapHours: number; retentionGapPolicyVersion: typeof RETENTION_GAP_POLICY; delayedKnowledge: boolean; placement: boolean; legacyReadyUnverified: boolean; boundaryAr: string;
 };
 export function buildLevelEvidenceGate(state: LearningState, level: CEFRLevel, now = new Date()): LevelEvidenceGate {
   const runs = completedAssessmentRuns(state, level);
@@ -71,7 +75,12 @@ export function buildLevelEvidenceGate(state: LearningState, level: CEFRLevel, n
   const placement = Boolean(latestRun?.kind === "placement-challenge" && knowledge);
   const writing = uniqueRecentWritingTasks(state, level, now).size;
   const speaking = uniqueRecentSpeakingTasks(state, level, now).size;
-  const retained = retentionEvidence(state).confirmedLessonIds.filter((id) => lessonIds.includes(id)).length;
+  const confirmed = retentionEvidence(state).confirmedLessonIds.filter((id) => lessonIds.includes(id));
+  // P0-2: «أربع بطاقات ناجحة» وحدها ليست تثبيتًا؛ لا بد من فاصل مقيس ≥ 72 ساعة بين مراجعتين ناجحتين
+  // للبطاقة نفسها. الدروس التي نجحت بطاقاتها المتأخّرة قبل الفاصل تُعَدّ وتُعرض منفصلة، ولا تُحتسب تثبيتًا.
+  const spaced = confirmed.filter((id) => retentionGapSummary(state, id).meetsMinimumGap);
+  const unverifiedGap = confirmed.filter((id) => !retentionGapSummary(state, id).meetsMinimumGap);
+  const retained = spaced.length;
   const passedRuns = runs.filter((run) => run.passed && evidenceIsRecent(run.completedAt, now));
   const delayedKnowledge = passedRuns.some((recent) => passedRuns.some((earlier) => recent.formId !== earlier.formId && Date.parse(recent.completedAt) - Date.parse(earlier.completedAt) >= 3 * 86_400_000));
   const orientation = Boolean(state.profile && (state.profile.priorExperience === "none" || state.diagnosticResult));
@@ -102,10 +111,14 @@ export function buildLevelEvidenceGate(state: LearningState, level: CEFRLevel, n
     speaking,
     requiredProductiveSamples: productiveSamples[level],
     retainedLessons: retained,
+    spacedLessons: retained,
+    unverifiedGapLessons: unverifiedGap.length,
+    retentionMinGapHours: RETENTION_MIN_GAP_HOURS,
+    retentionGapPolicyVersion: RETENTION_GAP_POLICY,
     delayedKnowledge,
     placement,
     legacyReadyUnverified: !latestRun && (state.mastery[`level-${level.toLowerCase()}-ready`] ?? 0) > 0,
-    boundaryAr: "هذه بوابة انتقال داخل المنهج من معرفة مستقلة وعينات إنتاج واحتفاظ؛ جودة اللغة الحرة غير محسومة، ولا تمنح مستوى CEFR أو نتيجة امتحان.",
+    boundaryAr: `هذه بوابة انتقال داخل المنهج من معرفة مستقلة وعينات إنتاج واحتفاظ مثبَّت بفاصل مقيس لا يقل عن ${RETENTION_MIN_GAP_HOURS} ساعة؛ جودة اللغة الحرة غير محسومة، ولا تمنح مستوى CEFR أو نتيجة امتحان.`,
   };
 }
 

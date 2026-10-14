@@ -1,21 +1,20 @@
 # P2 Implementation Audit
 
-Sync batch: v180 · 2026-10-02 · re-verified after ADR-101 Vercel build-output compatibility fix.
+Sync batch: v192 · 2026-10-11 · ملخص أسبوعي من الأدلة المحلية (أرقام فقط بلا درجة) وملف متابعة للمدرّب (Markdown، بلا نصوص حرة افتراضيًا)؛ 2026-10-08 · route/UI fixes (broken /writing/portfolio link, copy-icon glyph); offline fingerprint ac82338f0809; pack cache v191 (staging v190, previous v190). Previous batch note: 2026-10-08 · P2-401 grammar labels: 63/64 source-checked (Wiktionary, DWDS, Duden); five labels corrected to dictionary-backed classes (nachträglich, zwangsläufig, pauschal = Adjektiv; bar = Adjektiv / Präposition; in der Nähe = mit Genitiv); 1 open (Nutzungssituation); pack cache v189 with v188 kept for rollback. Previous batch note follows · P2-401 grammar labels: record 57/64 source-checked (Wiktionary, DWDS, Duden) ...
 
+Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
-Build follow-up: ADR-101 supports Next/Vercel Build Output API v3; Offline/JS guards remain fail-closed and the serving size manifest is refreshed. No curriculum or Service Worker version change.
+Last updated: 2026-10-06 · Status synchronization only; P2 classifications are unchanged. P2-276 remains supported by its full local `npm run check` (1,355 tests/200 files, production build) and focused route/code-boundary checks. The repository-only P0 packet follow-up also passed [Quality Gate 37422617842](https://github.com/naderba69/wegberlin/actions/runs/37422617842) on code-bearing commit `2f34b38`: `check` 5m49s, complete desktop/mobile E2E 17m57s, and Vercel Preview. [Deployment Smoke 37422882120](https://github.com/naderba69/wegberlin/actions/runs/37422882120) was skipped and does not establish Production. P2-352 automated evidence does not replace pronunciation or device/accessibility review.
 
-Last audited: 2026-09-20 (أرقام `v138`)
-
-هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ140 في `IDEA_BACKLOG.md`، محدث بعد إغلاق P2-312 في دفعة Tags وChangelog وRollback المؤرخة 2026-09-12. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
+هذا تدقيق بندي رسمي لكل اقتراحات P2 الـ142 في `IDEA_BACKLOG.md`. التصنيف محافظ: `implemented` يعني وجود دورة استخدام واختبار مناسبين؛ `partial` يعني وجود أساس مفيد مع معيار قبول ناقص؛ `not-implemented` يعني غياب الدورة المطلوبة. لا يحول هذا التدقيق اختبارات الأتمتة إلى مراجعة لغوية أو قانونية أو وصول بشري، ولا يجعل P2 أولوية أعلى من حدود P0/P1 البشرية المعلّقة.
 
 ## الملخص
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 129 |
-| partial | 5 |
-| not-implemented | 8 |
+| implemented | 133 |
+| partial | 7 |
+| not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
 
@@ -114,7 +113,7 @@ Last audited: 2026-09-20 (أرقام `v138`)
 | 273 | إضافة تأمل أسبوعي عن ما نجح وما أعاق التعلم. | `implemented` | `independent-weekly-reflection-v1` يحفظ ما نجح والعوائق وتعديلًا واحدًا من نموذج الأسبوع فقط دون نسخ Daily reflection. | — |
 | 274 | تجنب رسائل الذنب والمقارنة الاجتماعية. | `implemented` | `weekly-planned-actual-no-blame-v1` وGrace/Recovery تمنع الذنب والمقارنة. | — |
 | 275 | إضافة أهداف صغيرة عند العودة بعد انقطاع. | `implemented` | العودة تستخدم يوم سماح ومهمة تعافٍ واحدة داخل الميزانية لا تراكمًا مخيفًا. | — |
-| 276 | عرض قصص نجاح كإرشاد عملي لا وعود تسويقية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 276 | عرض قصص نجاح كإرشاد عملي لا وعود تسويقية. | `implemented` | `illustrative-learning-pathways-v1` يعرض ثلاث حالات افتراضية مؤلَّفة في `/practice` بإفصاح صريح أنها ليست شهادات أو بيانات تجربة ولا نتائج مقاسة/وعودًا زمنية؛ كل خطوة تصل لمسار موجود في جميع حزم Offline، دون حفظ اختيار أو تغيير دليل تعلم. اختبارات الوحدة تغطي حدود الادعاء والروابط والخصوصية، واجتاز اختبار E2E الكامل desktop/mobile بعد Push في run `37377109271` على head `15e457c`، واجتازت وظيفة `check` وVercel Preview أيضًا. القرار: `docs/adr/ADR-113-illustrative-learning-pathways-not-testimonials.md`. | — |
 | 285 | توفير Timeline للتدخلات ونتائجها. | `implemented` | `derived-error-intervention-timeline-v1` يشتق تسلسل الظهور/فشل ونجاح العلاج/الجدولة/التأكيد/العيادة/مراجعة البطاقة من السجلات الحالية دون نص جواب أو تصحيح، وبحد صريح أن التسلسل لا يثبت السببية. | — |
 | 286 | إضافة تقرير «ماذا لو درست 30 دقيقة إضافية؟» محلي الحساب. | `implemented` | `local-extra-thirty-minutes-what-if-v1` يحسب محليًا فرق توزيع الوقت عند +30 دقيقة أسبوعيًا دون تغيير الخطة. | — |
 | 287 | فصل الأداء مع التلميحات عن الأداء المستقل. | `implemented` | السياسة نفسها تربط فقط Hint مباشرًا على item قبل commit بالمحاولة، وتعرض independent/assisted وtransferIndependent/transferAssisted منفصلة. الدعم بعد الالتزام أو على عنصر آخر لا يلوث الدليل، ولا تُنسخ إجابة المتعلم إلى السجل المشتق. | — |
@@ -139,18 +138,18 @@ Last audited: 2026-09-20 (أرقام `v138`)
 | 346 | إضافة زر نسخ مثال مع اتجاه النص الصحيح. | `implemented` | `all-visible-german-examples-copy-v1` يعزز كل German leaf ظاهر بزر Copy LTR مع Clipboard fallback. | — |
 | 347 | إنشاء Quick Practice من خمس دقائق حسب أضعف هدف. | `implemented` | `weakest-target-five-minute-practice-v1` يركب أربع خطوات مجموعها خمس دقائق من الخطأ أو المراجعة أو هدف المدرب الحالي. | — |
 | 348 | إتاحة تخصيص أصوات ونغمات محلية دون تتبع. | `implemented` | `local-synthetic-voice-preferences-v1` يحفظ voiceURI وpitch ويطبقه على كل أسطح Browser TTS دون تتبع. | — |
-| 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
-| 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `implemented` | وحدة `src/core/evidence/knowledge-tracing.ts` (Bayesian Knowledge Tracing بمعاملات ثابتة بسياسة `bkt-local-v1`، لا تُعاير على بيانات المستخدم)، وتعرض تقديرًا لكل درس فقط بعد 5 محاولات تمرين على الأقل، وتستبعد محاولات التقييم المستقل، وتعرض حدّ الادعاء "ليس توقعًا لنتيجة امتحان ولا مستوى CEFR". اللوحة على `/progress` (`knowledge-tracing-panel.tsx`). اختبارات: `tests/unit/knowledge-tracing.test.ts` (7 اختبارات). | لا شيء مفتوح من جهة الهندسة؛ أي معايرة للمعاملات تحتاج بيانات كافية وموافقة جديدة. |
+| 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `partial` | `anonymous-item-calibration-v1` (`src/core/assessment/item-calibration.ts`) يقرأ ملف CSV محليًا بعمودين فقط (`itemId,correct`) ويرفض أي عمود إضافي، ويحسب نسبة الصحيح لكل عنصر بحد أدنى 30 إجابة، ويعلّم السهل جدًا والصعب جدًا للمراجعة فقط. اللوحة في الإعدادات (`item-calibration-panel.tsx`) تعرض النتيجة ولا تحفظ شيئًا ولا تغيّر أي سؤال أو درجة. اختبارات الوحدة والـE2E. | جمع بيانات مجهولة بموافقة صريحة (opt-in) لم يُبنَ، ويحتاج قرارًا بشريًا ومراجعة خصوصية؛ لا تُعدّل الصعوبة من هذه النتائج. |
 | 351 | بناء نموذج صغير داخل المتصفح لتصنيف الأخطاء. | `implemented` | `learner-trained-local-error-classifier-v1` يدرب Naive Bayes مؤقتًا من أخطاء المتعلم ويقترح فئة بلا Mutation. | — |
-| 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `implemented` | `neutral-self-waveform-comparison-v1` في Shadowing Studio: بعد تسجيل المحاولة فقط وبطلب صريح، يفك المتصفح أصل النموذج المحلي وBlob المحاولة داخل الذاكرة (≤60 ثانية و≤4,000,000 بايت لكل ملف) ويعرض 48 ذروة لكل مقطع مع المدة. يُطبّع كل مسار إلى ذروته الخاصة؛ لا محاذاة زمنية أو تشابه أو درجة أو تحليل نطق/جودة، ولا إرسال/حفظ للرسم أو أثر في سجل التعلم. تغطي الوحدة حدود المدة والتطبيع والصمت، ويغطي Playwright عرض الرسمين وARIA وغياب طلبات الأصل الخارجي أو المحاولة المحفوظة. القرار: `docs/adr/ADR-112-neutral-waveform-self-comparison.md`. | — |
 | 353 | إنشاء وضع واقع عملي لسكن وعمل وإدارة في ألمانيا. | `implemented` | `multi-step-practical-day-mode-v1` يركب سكنًا أو عملًا أو إدارة في أربع خطوات مترابطة مع حد قانوني صريح. | — |
 | 354 | إضافة سيناريوهات محادثة متفرعة تعمل دون AI. | `implemented` | `offline-branching-conversation-v1` يقدم 8 أشجار أصلية بواقع سيناريوهين لكل A1–B2 في `/practice/conversation-paths`. الهدف التواصلي ظاهر قبل الاختيار، وكل رد ألماني يغير عاقبة الشريك ومسارًا من إكمال/إصلاح/إعادة؛ الوضع الموجه يظهر المقصد العربي، والتحدي يؤجله. المحرك حتمي محلي بلا `fetch` أو نص حر، ويحفظ `branchingConversationAttempts` معرفات الخيارات والنتيجة وفتح الدعم فقط في IndexedDB/DWNB/Merge دون AI أو شريك حي أو mastery/CEFR. | — |
-| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` | `local-test-generator-v1` في `/practice/test-generator`: يختار المتعلم A1–B2 و5/10/15، ويأخذ سؤالًا واحدًا كحد أقصى من كل درس منشور، يخلط الأسئلة والخيارات مع حفظ مطابقة المفتاح، ويؤخر التفسير حتى تثبيت الجميع. **480 قالبًا/96 درسًا** مع فحص freshness؛ لا AI أو مصدر خارجي أو حفظ أو أثر على الإتقان/التقدم/الخطة/CEFR. أُصلح المشتت المكرر `a2-04-m5`. 10 اختبارات وحدة؛ وُسّع E2E ليغطي عدم تغير الحالة والعمل Offline، لكن المتصفح غير متاح محليًا. القرار: `docs/adr/ADR-111-local-authored-mini-test-practice-generator.md`. | تبقى مراجعة ألمانية/عربية/CEFR مستقلة لمحتوى الدروس الأصلية معلقة؛ الفحص البنيوي لا يثبتها. |
 | 356 | إضافة خرائط مفاهيم تفاعلية للقواعد والمفردات. | `implemented` | `interactive-grammar-vocabulary-concept-map-v1` يربط عقد القواعد وعائلات الكلمات عبر درس مشترك مع Level filter. | — |
-| 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `partial` | `oer-review-queue-attribution-v1` (`src/core/oer/attribution.ts`) يشغّل بوابة الترخيص (`import-policy.ts`) على سجلات بيانات وصفية فقط، ويكتب سطر الإسناد للسجلات المؤهلة للمراجعة فقط، ولا يضيف أي محتوى ولا يسم شيئًا بأنه مستورد. السجلات الثمانية في `docs/OER_LICENSE_REGISTER.md` كلها مرفوضة كما يقرر السجل (`tests/unit/oer-attribution.test.ts`). | لا يوجد مصدر مرخّص مؤهل بعد: إصدار CC لبعض المصادر غير مُثبت، والمؤلف غير مُثبت لبعضها، وبعضها NC. الاستيراد الفعلي يحتاج مراجعة بشرية لكل مادة. |
 | 358 | إضافة وضع مشاركة ملف تقرير فقط مع معلم مستقبلي دون حساب. | `implemented` | ICS/PDF/TSV/JSON/DWNB ملفات محلية قابلة للمشاركة دون حساب. | — |
-| 359 | إنشاء حزمة Desktop اختيارية حول PWA إذا احتاج الصوت المحلي. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
-| 360 | تجربة Federated analytics اختيارية فقط بعد تدقيق خصوصية مستقل. | `not-implemented` | لا توجد دورة مستقلة تحقق هذا الاقتراح في الشيفرة الحالية. | تنفيذ دورة مستقلة قابلة للاستخدام مع اختبار وحدود ادعاء مناسبة. |
+| 359 | إنشاء حزمة Desktop اختيارية حول PWA إذا احتاج الصوت المحلي. | `not-implemented` | **مغلق بقرار المالك (2026-10-12): غير مطلوب في هذه المرحلة.** محاولة سابقة أثبتت أن Electron لا يمكن تنزيل ثنائيّه من بيئة التطوير (المضيف `objects.githubusercontent.com` محجوب)، ولم يثبت أن الصوت المحلي يحتاج حزمة مستقلة لأن نسخة PWA تعمل دون اتصال. لم يُضَف أي كود غير مختبر. | لا عمل مفتوح. إعادة الفتح تحتاج طلبًا صريحًا من المالك مع إثبات حاجة الصوت المحلي. |
+| 360 | تجربة Federated analytics اختيارية فقط بعد تدقيق خصوصية مستقل. | `not-implemented` | مراجع مجمعة في `docs/FEDERATED_ANALYTICS_REFERENCES.md` (Google Research، Prio، WP216، EDPB). لا يوجد أي تنفيذ أو جمع بيانات، وهذا مطابق للشرط. | تدقيق خصوصية مستقل من جهة خارجية قبل أي تجربة؛ هذا لا يمكن أن تنجزه الأتمتة. |
 | 369 | إضافة Release candidate قبل تحديث كل المستخدمين. | `implemented` | `pre-production-release-candidate-v1`: Workflow يدوي يشغل History secrets وcheck وDesktop/Mobile E2E ثم ينشئ Attestation مرتبطة بـ40-char commit ويرفع Artifact 14 يومًا؛ لا يحتوي أي Deploy/Production step والترقية تحتاج فعلًا بشريًا منفصلًا. | — |
 | 370 | الحفاظ على إمكانية الرجوع إلى آخر حزمة منهج سليمة. | `implemented` | `previous-complete-curriculum-pack-rollback-v1` يحفظ الحزمة الكاملة السابقة قبل Promotion ويبدلها ذريًا بزر. | — |
 | 371 | قياس قيمة الميزة على التعلم قبل توسيعها. | `partial` | local-learning-outcome-observation-v1 يعرض أول محاولة مستقلة/مدعومة وإعادات واحتفاظًا مؤجلًا ومقامات فعلية محليًا بلا تتبع خارجي أو دعوى سببية. | تجربة متعلمين منضبطة لتقييم أثر الميزة لم تنفذ. |
@@ -164,11 +163,11 @@ Last audited: 2026-09-20 (أرقام `v138`)
 | 395 | إضافة تقرير أصول مفقودة وChecksums. | `implemented` | تقارير الصوت وOffline تتحقق من الملفات الناقصة والحجم وSHA-256. | — |
 | 396 | نشر Known limitations بدل إخفاء النقص. | `implemented` | README وPROJECT_STATUS وKnown limitations تسجل النقص والحدود بدل إخفائها. | — |
 | 400 | محاذاة الهدف مع عناصر تعليمه وتدريبه وتقييمه. | `partial` | 389 صفًا يصرح pending-independent-item-alignment؛ الربط البنيوي لا يقدّم كدلالي، وبنوك المعرفة والمادة الإضافية لها عقد ومراجعة معلقة واضحة. | تأليف وتدقيق روابط دلالية لكل عنصر وكل هدف؛ المؤشر المعجمي ليس نقصة مثبتة. |
-| 401 | مدى استماع واقعي وحمل معجمي محكوم. | `partial` | graded-long-input-v1 يبني 8 مدخلات 113–473 كلمة، وprior-sequence-support-v3 يستبعد المستقبل والقاموس من المعرفة المزعومة؛ جسر مبكر وصوت جهاز موسوم اصطناعيًا. | تمديد بقية المادة، قاموس صرفي، صوت بشري ومراجعة ملاءمة وحقوق مستقلة. |
+| 401 | مدى استماع واقعي وحمل معجمي محكوم. | `partial` | graded-long-input-v1 يبني 16 مدخلًا (أربعة لكل مستوى، form C أُضيف في v184 وform D في v187) بين 113 و473 كلمة، وprior-sequence-support-v3 يستبعد المستقبل والقاموس من المعرفة المزعومة؛ جسر مبكر وصوت جهاز موسوم اصطناعيًا؛ حارس `extended-glossary-coverage` يتحقق أن headwords المسرد تظهر في نص مدخلها (v185، مع استثناءات مسماة لأربعة أفعال مصرّفة)، ووسم نحوي لكل headword من المسارد الـ48 (v186، للقراءة فقط)، ونموذج D فيصبح 16 مدخلًا بأربعة لكل مستوى (v187). | تمديد بقية المادة، قاموس صرفي، صوت بشري ومراجعة ملاءمة وحقوق مستقلة. |
 
 ## ترتيب التنفيذ المقترح
 
-1. أُغلقت الدورة البرمجية لكل البنود الجزئية القابلة للإغلاق آليًا: 44 بندًا انتقلت إلى `implemented`.
+1. أُغلقت الدورة البرمجية لكل البنود الجزئية القابلة للإغلاق آليًا: 44 بندًا انتقلت إلى `implemented`، ثم أُغلق P2-276 في v183.
 2. يبقى P2-264 جزئيًا حتى اختبار WCAG 2.2 AA يدوي حقيقي بقارئات شاشة وأجهزة ممثلة في الجولة النهائية.
 3. يبقى P2-384 جزئيًا حتى مراجعة عربية مستقلة تشمل وضوح تونس وبقية العالم العربي.
-4. لا تُغلق الحدود البشرية بادعاء آلي؛ الأولوية البرمجية التالية تنتقل إلى بنود `not-implemented` في جولة مستقلة بعد استقرار هذه الدفعة.
+4. لا تُغلق الحدود البشرية بادعاء آلي؛ البنود البرمجية غير المنفذة المتبقية هي 349/350/357/359/360، ولكل منها قيود الأدلة أو الحقوق أو الخصوصية الموضحة في صفه.

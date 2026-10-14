@@ -54,7 +54,7 @@ export const FEEDBACK_BOILERPLATE_TAILS = [
 ] as const;
 
 /** وسم أمانة لا نصيحة تعليمية: مكرَّر عمدًا على كل سؤال قراءة آليّ المرجع، فلا يدخل سقف التكرار. */
-export const FEEDBACK_DISCLOSURE_MARKER = "موضع الرجوع آلي ويحتاج مراجعة دلالية مستقلة.";
+export { FEEDBACK_DISCLOSURE_MARKER } from "./disclosure-marker";
 
 /** أيّ جُملة ذيل عامّ توجد في هذا النصّ؟ (تُعاد الجملة المحظورة أو null) */
 export function feedbackBoilerplateTail(text: string): string | null {

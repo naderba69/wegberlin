@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import Link from "next/link";
 import { FilePenLine, Printer, ShieldCheck } from "lucide-react";
 import { academicLessons } from "@/data/academic-lessons";
@@ -62,7 +63,7 @@ export function WritingPortfolio() {
               {entry.source && <WritingVersionDiff before={entry.source.text} after={entry.latest.text} />}
               <footer>
                 {entry.detectedPatterns.length
-                  ? entry.detectedPatterns.map((pattern) => <span key={`${pattern.patternId}:${pattern.sourceExcerpt}`}>{pattern.explanationAr}</span>)
+                  ? entry.detectedPatterns.map((pattern) => <span key={`${pattern.patternId}:${pattern.sourceExcerpt}`}>{learnerExplanation(pattern.explanationAr)}</span>)
                   : <span>لم تطابق النسخة الأنماط المحلية المحدودة؛ هذا لا يثبت خلوها من الأخطاء.</span>}
               </footer>
             </article>

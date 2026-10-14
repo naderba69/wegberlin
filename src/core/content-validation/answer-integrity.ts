@@ -27,7 +27,6 @@ export type ProductiveTaskAuditRow = {
 };
 
 const explicitLeakExemptions: Record<string, string> = {
-  "a1-01-m4": "A greeting can be answered by repeating the same greeting; the prompt is a communicative stimulus, not a displayed answer key.",
   "a2-16-e4": "The neutral first clause is intentionally retained while the learner removes the following unsupported opinion; this is an omission/editing task.",
   "diag-a-a1-vocabulary": "Repeating Guten Morgen is an authentic response to the greeting used as the diagnostic stimulus.",
 };

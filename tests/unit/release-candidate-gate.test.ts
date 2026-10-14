@@ -13,7 +13,7 @@ describe("P2 pre-production release candidate", () => {
       policyVersion: RELEASE_CANDIDATE_POLICY,
       commit: sha,
       status: "candidate-tests-passed-not-promoted",
-      offlineRouteCount: 319,
+      offlineRouteCount: 320,
       evidenceBoundary: "ci-attestation-only-no-production-promotion-without-separate-human-action",
     });
     expect(candidate.packageLockSha256).toMatch(/^[a-f0-9]{64}$/);

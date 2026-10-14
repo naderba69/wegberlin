@@ -888,6 +888,7 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
                   {preparationNotes.map((note, index) => (
                     <input
                       key={index}
+                      aria-label={`ملاحظة التحضير ${index + 1}`}
                       value={note}
                       onChange={(event) =>
                         setPreparationNotes((current) =>

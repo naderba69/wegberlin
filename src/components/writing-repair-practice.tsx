@@ -1,5 +1,6 @@
 "use client";
 
+import { learnerExplanation } from "@/core/lesson/learner-explanation";
 import { useState } from "react";
 import { Check, FileWarning, RotateCcw, ShieldCheck, X } from "lucide-react";
 import type { WritingRepairAttempt } from "@/types/learning";
@@ -29,7 +30,7 @@ export function WritingRepairPractice({ exercises, attempts, onAttempt }: {
         <blockquote lang="de" dir="ltr">{exercise.sourceExcerpt}</blockquote>
         <label>Ihre Korrektur · تصحيحك<input lang="de" dir="ltr" value={answer} onChange={(event)=>setAnswers((current)=>({...current,[exercise.id]:event.target.value}))} disabled={Boolean(committed[exercise.id])}/></label>
         {!committed[exercise.id]?<button disabled={!answer.trim()} onClick={()=>{onAttempt(exercise,answer);setCommitted((current)=>({...current,[exercise.id]:true}))}}><Check size={14}/> Prüfen · تحقق</button>:<button className="repair-again" onClick={()=>{setAnswers((current)=>({...current,[exercise.id]:""}));setCommitted((current)=>({...current,[exercise.id]:false}))}}><RotateCcw size={14}/> Noch einmal · أعد</button>}
-        {revealed&&<aside><span>{currentCorrect?<Check size={15}/>:<X size={15}/>}</span><div><strong>{currentCorrect?"مطابقة للتصحيح المحلي":"قارن وحاول النقل مرة أخرى"}</strong><code lang="de" dir="ltr">{exercise.correctedExcerpt}</code><p>{exercise.explanationAr}</p><small>هذا علاج شخصي ولا يرفع mastery أو بوابة المستوى.</small></div></aside>}
+        {revealed&&<aside><span>{currentCorrect?<Check size={15}/>:<X size={15}/>}</span><div><strong>{currentCorrect?"مطابقة للتصحيح المحلي":"قارن وحاول النقل مرة أخرى"}</strong><code lang="de" dir="ltr">{exercise.correctedExcerpt}</code><p>{learnerExplanation(exercise.explanationAr)}</p><small>هذا علاج شخصي ولا يرفع mastery أو بوابة المستوى.</small></div></aside>}
       </article>})}</div>
   </section>;
 }

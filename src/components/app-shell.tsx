@@ -28,8 +28,9 @@ const nav = [
   { href: "/progress", label: "تقدّمي", short: "التقدم", icon: ChartNoAxesCombined },
   { href: "/settings", label: "الإعدادات", short: "الإعدادات", icon: Settings },
 ];
-const learningNav=nav.filter((item)=>["/today","/path","/review","/practice","/progress"].includes(item.href));
-const resourceNav=nav.filter((item)=>["/library","/search","/exams","/settings"].includes(item.href));
+const learningNav=nav.filter((item)=>["/today","/path","/review","/practice"].includes(item.href));
+const resourceNav=nav.filter((item)=>["/exams","/library","/search"].includes(item.href));
+const trackingNav=nav.filter((item)=>["/progress","/settings"].includes(item.href));
 const mobilePrimary=nav.filter((item)=>["/today","/path","/review","/progress"].includes(item.href));
 
 function routeContext(pathname:string){
@@ -106,8 +107,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <nav aria-label="التنقل الرئيسي">
           <span className="nav-section-label">التعلّم اليومي</span>
           {learningNav.map(({ href, label, icon: Icon }) => {const active=pathname===href||pathname.startsWith(`${href}/`);return <Link key={href} href={href} className={active?"nav-item active":"nav-item"}><Icon size={19}/><span>{label}</span>{active&&<i/>}</Link>})}
-          <span className="nav-section-label tools">المصادر والأدوات</span>
+          <span className="nav-section-label tools">الامتحان والمراجع</span>
           {resourceNav.map(({ href, label, icon: Icon }) => {const active=pathname===href||pathname.startsWith(`${href}/`);return <Link key={href} href={href} className={active?"nav-item active":"nav-item"}><Icon size={19}/><span>{label}</span>{active&&<i/>}</Link>})}
+          <span className="nav-section-label">متابعتي</span>
+          {trackingNav.map(({ href, label, icon: Icon }) => {const active=pathname===href||pathname.startsWith(`${href}/`);return <Link key={href} href={href} className={active?"nav-item active":"nav-item"}><Icon size={19}/><span>{label}</span>{active&&<i/>}</Link>})}
         </nav>
         {!suppressCoachNudge && <div className="side-coach-card">
           <span className="coach-orb"><BookOpen size={18} /></span>

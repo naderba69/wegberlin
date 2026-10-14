@@ -15,11 +15,14 @@ export type LocalPronunciationCapability = {
   storageAvailableBytes?: number;
 };
 
+export type LocalPronunciationModelSource = "local-mirror" | "huggingface";
+
 export type LocalPronunciationModelMetadata = {
   policyVersion: typeof LOCAL_PRONUNCIATION_MODEL_POLICY;
   modelId: string;
   modelRevision: string;
   dtype: string;
+  source?: LocalPronunciationModelSource;
   installedAt: string;
   cacheEntries: number;
   headerByteSize: number;
@@ -29,6 +32,7 @@ export type LocalPronunciationModelMetadata = {
 export type LocalPronunciationProgress = {
   phase: "runtime" | "download" | "initializing";
   percent: number;
+  source?: LocalPronunciationModelSource;
   loadedBytes?: number;
   totalBytes?: number;
   file?: string;
@@ -48,7 +52,41 @@ type WorkerReply = {
   metadata?: LocalPronunciationModelMetadata;
   transcript?: string;
   message?: string;
+  code?: LocalPronunciationModelErrorCode;
 };
+
+export type LocalPronunciationModelErrorCode = "MODEL_SOURCE_UNREACHABLE" | "MODEL_FILES_MISSING" | "MODEL_LOAD_FAILED" | "MODEL_NOT_INSTALLED" | "WORKER_FAILED";
+
+export const LOCAL_PRONUNCIATION_MIRROR_PATH = "/vendor/pronunciation/manifest.json" as const;
+
+/**
+ * رسائل عربية قابلة للتنفيذ بدل نصّ transformers.js الإنجليزي.
+ * الشائع فعلًا: شبكة تحجب huggingface.co أو وسيط TLS في متصفح المؤسسة.
+ */
+export const LOCAL_PRONUNCIATION_ERROR_GUIDANCE: Record<LocalPronunciationModelErrorCode, string> = {
+  MODEL_SOURCE_UNREACHABLE:
+    "تعذّر الوصول إلى مصدر أوزان Whisper من هذه الشبكة. جرّب: (1) إعادة المحاولة بعد لحظات، (2) استضافة الأوزان داخل التطبيق بأمر واحد على جهاز متصل: npm run pronunciation:materialize ثم أعد البناء، (3) متابعة الاستعمال بدون تصحيح نطق — بقية التطبيق تعمل كما هي.",
+  MODEL_FILES_MISSING:
+    "ملفات النموذج على المصدر الحالي غير مكتملة (بانتظار اكتمال النسخة المستضافة). حتى تكتمل، يمكنك متابعة الاستعمال بدون حزمة مطابقة الكلمات.",
+  MODEL_LOAD_FAILED: "فشل تحميل النموذج المحلي. أعد المحاولة، وإن تكرّر فاحذف الحزمة ثم نزّلها من جديد.",
+  MODEL_NOT_INSTALLED: "حزمة مطابقة الكلمات غير منزّلة على هذا الجهاز بعد.",
+  WORKER_FAILED: "توقف عامل التعرّف الصوتي المحلي. أعد تحميل الصفحة ثم أعد المحاولة.",
+};
+
+export function pronunciationErrorCodeFromMessage(message: string): LocalPronunciationModelErrorCode {
+  if (/MODEL_SOURCE_UNREACHABLE|Service unavailable|Failed to fetch|NetworkError|Load failed/i.test(message)) return "MODEL_SOURCE_UNREACHABLE";
+  if (/MODEL_FILES_MISSING|\b404\b|not found/i.test(message)) return "MODEL_FILES_MISSING";
+  if (/MODEL_LOAD_FAILED/i.test(message)) return "MODEL_LOAD_FAILED";
+  if (/MODEL_NOT_INSTALLED|نزّل حزمة/i.test(message)) return "MODEL_NOT_INSTALLED";
+  if (/انتهت مهلة|Web Worker|لم يرجع النموذج/i.test(message)) return "WORKER_FAILED";
+  return "WORKER_FAILED";
+}
+
+export function describeLocalPronunciationError(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  const code = (error as { code?: LocalPronunciationModelErrorCode } | null)?.code ?? pronunciationErrorCodeFromMessage(message);
+  return LOCAL_PRONUNCIATION_ERROR_GUIDANCE[code];
+}
 
 let sharedWorker: Worker | null = null;
 

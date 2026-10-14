@@ -390,7 +390,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
       stimulusDe: "In der Dokumentation steht: «laut Angabe der Kollegin».",
       promptAr: "أيّ نقلٍ يحفظ درجة اليقين كما في الأصل؟",
       options: [
-        { textDe: "«Laut Angabe der Kollegin — nachweislich ist das nicht.»", kind: "document", reasonAr: "نقلٌ يفصل المصدر («لaut Angabe») عن الدليل («nachweislich»)، فيبقى اليقين كما كان." },
+        { textDe: "«Laut Angabe der Kollegin — nachweislich ist das nicht.»", kind: "document", reasonAr: "نقلٌ يفصل المصدر («ل aut Angabe») عن الدليل («nachweislich»)، فيبقى اليقين كما كان." },
         { textDe: "«Es ist nachweislich so.»", kind: "guess", reasonAr: "رفعُ الاحتمال إلى يقين يغيّر المعنى عند النقل." },
         { textDe: "«Vielleicht, ich habe es nicht gelesen.»", kind: "guess", reasonAr: "إعلان الجهل لا ينقل ما هو مكتوب." },
         { textDe: "«Wird schon stimmen.»", kind: "silent-agreement", reasonAr: "موافقة عامة تمحو مصدر المعلومة." },

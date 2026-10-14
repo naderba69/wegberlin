@@ -6,7 +6,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     provider: "goethe-b2",
     titleDe: "Vollsimulation 1 · Stadt, Arbeit und Teilhabe",
     titleAr: "المحاكاة الكاملة الأولى — المدينة والعمل والمشاركة",
-    descriptionAr: "حزمة أصلية تغطي الوحدات الأربع لـGoethe B2 بأجزاء القراءة الخمسة والاستماع الأربعة والكتابة والمحادثة. تنظمها المنصة بوصفها جلسة موجهة بمؤقت مستقل لكل جزء.",
+    descriptionAr: "حزمة أصلية تغطي الوحدات الأربع ل Goethe B2 بأجزاء القراءة الخمسة والاستماع الأربعة والكتابة والمحادثة. تنظمها المنصة بوصفها جلسة موجهة بمؤقت مستقل لكل جزء.",
     modules: [
       {
         id: "goethe-full-01-reading",
@@ -68,7 +68,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     provider: "telc-deutsch-b2",
     titleDe: "Vollsimulation 1 · Alltag, Service und Zusammenarbeit",
     titleAr: "المحاكاة الكاملة الأولى — الحياة والخدمات والتعاون",
-    descriptionAr: "حزمة أصلية تغطي القسم الكتابي والشفهي لـtelc Deutsch B2: القراءة والعناصر اللغوية والاستماع والرسالة والأجزاء الشفهية الثلاثة، دون استعمال قواعد Goethe.",
+    descriptionAr: "حزمة أصلية تغطي القسم الكتابي والشفهي ل telc Deutsch B2: القراءة والعناصر اللغوية والاستماع والرسالة والأجزاء الشفهية الثلاثة، دون استعمال قواعد Goethe.",
     modules: [
       {
         id: "telc-full-01-reading-language",
@@ -136,7 +136,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     contentStatus: "published",
     originalContent: true,
     sessionMode: "guided-module-timers",
-    limitationsAr: ["المؤقتات لكل مهمة مع استئناف محلي بين الصفحات.", "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.", "التسجيل الفردي لا يثبت تفاعل الشريك.", "لا توجد درجة رسمية آلية للكتابة أو المحادثة."],
+    limitationsAr: ["المؤقتات لكل مهمة مع استئناف محلي بين الصفحات.", "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.", "التسجيل الفردي لا يثبت تفاعل الشريك.", "لا توجد درجة رسمية آلية للكتابة أو المحادثة."],
   },
   {
     id: "telc-b2-full-02",
@@ -154,7 +154,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     contentStatus: "published",
     originalContent: true,
     sessionMode: "guided-module-timers",
-    limitationsAr: ["التنقل موجه وقابل للاستئناف، لا جلسة مراقبة واحدة.", "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.", "التفاعل الشفهي فردي تدريبي.", "لا تُحسب نتيجة telc رسمية."],
+    limitationsAr: ["التنقل موجه وقابل للاستئناف، لا جلسة مراقبة واحدة.", "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.", "التفاعل الشفهي فردي تدريبي.", "لا تُحسب نتيجة telc رسمية."],
   },
   {
     id: "goethe-b2-full-03", provider: "goethe-b2", titleDe: "Vollsimulation 3 · Alltag, Lernen und Infrastruktur", titleAr: "المحاكاة الكاملة الثالثة — الحياة والتعلم والبنية", descriptionAr: "مجموعة ثالثة مستقلة من 13 مهمة جديدة تحافظ على أجزاء Goethe دون مشاركة مهام مع المحاكاتين السابقتين.",
@@ -163,7 +163,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       { id: "goethe-full-03-listening", titleDe: "Hören", titleAr: "الاستماع", officialMinutes: 40, taskIds: ["goethe-b2-full-03-listening-01","goethe-b2-full-03-listening-02","goethe-b2-full-03-listening-03","goethe-b2-full-03-listening-04"], resultRuleAr: "أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS." },
       { id: "goethe-full-03-writing", titleDe: "Schreiben", titleAr: "الكتابة", officialMinutes: 75, taskIds: ["goethe-b2-full-03-writing-01","goethe-b2-full-03-writing-02"], resultRuleAr: "مهمتا كتابة جديدتان دون درجة رسمية آلية." },
       { id: "goethe-full-03-speaking", titleDe: "Sprechen", titleAr: "المحادثة", officialMinutes: 15, taskIds: ["goethe-b2-full-03-speaking-01","goethe-b2-full-03-speaking-02"], resultRuleAr: "عرض ونقاش جديدان بتسجيل فردي." },
-    ], sourceRefs: ["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"], contentStatus: "published", originalContent: true, sessionMode: "guided-module-timers", limitationsAr: ["مؤقتات مهام مع استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","المحادثة الفردية لا تثبت تفاعل الشريك.","لا درجة رسمية للإنتاج."],
+    ], sourceRefs: ["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"], contentStatus: "published", originalContent: true, sessionMode: "guided-module-timers", limitationsAr: ["مؤقتات مهام مع استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","المحادثة الفردية لا تثبت تفاعل الشريك.","لا درجة رسمية للإنتاج."],
   },
   {
     id: "telc-b2-full-03", provider: "telc-deutsch-b2", titleDe: "Vollsimulation 3 · Quartier, Bildung und Arbeit", titleAr: "المحاكاة الكاملة الثالثة — الحي والتعليم والعمل", descriptionAr: "مجموعة telc ثالثة مستقلة من 12 مهمة جديدة تغطي القراءة واللغة والاستماع والكتابة والمحادثة.",
@@ -172,7 +172,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       { id: "telc-full-03-listening", titleDe: "Hörverstehen", titleAr: "الاستماع", officialMinutes: 20, taskIds: ["telc-b2-full-03-listening-01","telc-b2-full-03-listening-02","telc-b2-full-03-listening-03"], resultRuleAr: "ثلاثة أجزاء و20 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS." },
       { id: "telc-full-03-writing", titleDe: "Schriftlicher Ausdruck", titleAr: "الكتابة", officialMinutes: 30, taskIds: ["telc-b2-full-03-writing-01"], resultRuleAr: "اختيار من رسالتين جديدتين." },
       { id: "telc-full-03-speaking", titleDe: "Mündlicher Ausdruck", titleAr: "المحادثة", officialMinutes: 15, taskIds: ["telc-b2-full-03-speaking-01","telc-b2-full-03-speaking-02","telc-b2-full-03-speaking-03"], resultRuleAr: "خبرة ونقاش وتخطيط جديدة." },
-    ], sourceRefs: ["telc-b2-overview-2026","telc-b2-mock-2019-current-link"], contentStatus: "published", originalContent: true, sessionMode: "guided-module-timers", limitationsAr: ["جلسة موجهة قابلة للاستئناف.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","تفاعل فردي غير رسمي.","لا نتيجة telc رسمية."],
+    ], sourceRefs: ["telc-b2-overview-2026","telc-b2-mock-2019-current-link"], contentStatus: "published", originalContent: true, sessionMode: "guided-module-timers", limitationsAr: ["جلسة موجهة قابلة للاستئناف.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","تفاعل فردي غير رسمي.","لا نتيجة telc رسمية."],
   },
   {
     id:"goethe-b2-full-04",provider:"goethe-b2",titleDe:"Vollsimulation 4 · Medien, Ressourcen und Stadt",titleAr:"المحاكاة الكاملة الرابعة — الإعلام والموارد والمدينة",descriptionAr:"مجموعة Goethe رابعة مستقلة من 13 مهمة جديدة.",
@@ -181,7 +181,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"goethe-full-04-listening",titleDe:"Hören",titleAr:"الاستماع",officialMinutes:40,taskIds:["goethe-b2-full-04-listening-01","goethe-b2-full-04-listening-02","goethe-b2-full-04-listening-03","goethe-b2-full-04-listening-04"],resultRuleAr:"أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"goethe-full-04-writing",titleDe:"Schreiben",titleAr:"الكتابة",officialMinutes:75,taskIds:["goethe-b2-full-04-writing-01","goethe-b2-full-04-writing-02"],resultRuleAr:"مهمتا كتابة جديدتان."},
       {id:"goethe-full-04-speaking",titleDe:"Sprechen",titleAr:"المحادثة",officialMinutes:15,taskIds:["goethe-b2-full-04-speaking-01","goethe-b2-full-04-speaking-02"],resultRuleAr:"عرض ونقاش جديدان بتسجيل فردي."}
-    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","لا شريك حي.","لا درجة إنتاج رسمية."]
+    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","لا شريك حي.","لا درجة إنتاج رسمية."]
   },
   {
     id:"telc-b2-full-04",provider:"telc-deutsch-b2",titleDe:"Vollsimulation 4 · Kultur, Zugang und Umwelt",titleAr:"المحاكاة الكاملة الرابعة — الثقافة والوصول والبيئة",descriptionAr:"مجموعة telc رابعة مستقلة من 12 مهمة جديدة.",
@@ -190,7 +190,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"telc-full-04-listening",titleDe:"Hörverstehen",titleAr:"الاستماع",officialMinutes:20,taskIds:["telc-b2-full-04-listening-01","telc-b2-full-04-listening-02","telc-b2-full-04-listening-03"],resultRuleAr:"ثلاثة أجزاء و20 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"telc-full-04-writing",titleDe:"Schriftlicher Ausdruck",titleAr:"الكتابة",officialMinutes:30,taskIds:["telc-b2-full-04-writing-01"],resultRuleAr:"اختيار من مهمتين جديدتين."},
       {id:"telc-full-04-speaking",titleDe:"Mündlicher Ausdruck",titleAr:"المحادثة",officialMinutes:15,taskIds:["telc-b2-full-04-speaking-01","telc-b2-full-04-speaking-02","telc-b2-full-04-speaking-03"],resultRuleAr:"خبرة ونقاش وتخطيط جديدة."}
-    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
+    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
   },
   {
     id:"goethe-b2-full-05",provider:"goethe-b2",titleDe:"Vollsimulation 5 · Konsum, Kultur und Zugang",titleAr:"المحاكاة الخامسة — الاستهلاك والثقافة والوصول",descriptionAr:"مجموعة Goethe خامسة مستقلة من 13 مهمة.",modules:[
@@ -198,7 +198,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"goethe-full-05-listening",titleDe:"Hören",titleAr:"الاستماع",officialMinutes:40,taskIds:["goethe-b2-full-05-listening-01","goethe-b2-full-05-listening-02","goethe-b2-full-05-listening-03","goethe-b2-full-05-listening-04"],resultRuleAr:"أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"goethe-full-05-writing",titleDe:"Schreiben",titleAr:"الكتابة",officialMinutes:75,taskIds:["goethe-b2-full-05-writing-01","goethe-b2-full-05-writing-02"],resultRuleAr:"مهمتا كتابة جديدتان."},
       {id:"goethe-full-05-speaking",titleDe:"Sprechen",titleAr:"المحادثة",officialMinutes:15,taskIds:["goethe-b2-full-05-speaking-01","goethe-b2-full-05-speaking-02"],resultRuleAr:"عرض ونقاش جديدان."}
-    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","لا شريك حي.","لا درجة رسمية."]
+    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","لا شريك حي.","لا درجة رسمية."]
   },
   {
     id:"telc-b2-full-05",provider:"telc-deutsch-b2",titleDe:"Vollsimulation 5 · Versorgung, Kultur und Alltag",titleAr:"المحاكاة الخامسة — الخدمات والثقافة والحياة",descriptionAr:"مجموعة telc خامسة مستقلة من 12 مهمة.",modules:[
@@ -206,7 +206,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"telc-full-05-listening",titleDe:"Hörverstehen",titleAr:"الاستماع",officialMinutes:20,taskIds:["telc-b2-full-05-listening-01","telc-b2-full-05-listening-02","telc-b2-full-05-listening-03"],resultRuleAr:"ثلاثة أجزاء و20 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"telc-full-05-writing",titleDe:"Schriftlicher Ausdruck",titleAr:"الكتابة",officialMinutes:30,taskIds:["telc-b2-full-05-writing-01"],resultRuleAr:"اختيار من مهمتين."},
       {id:"telc-full-05-speaking",titleDe:"Mündlicher Ausdruck",titleAr:"المحادثة",officialMinutes:15,taskIds:["telc-b2-full-05-speaking-01","telc-b2-full-05-speaking-02","telc-b2-full-05-speaking-03"],resultRuleAr:"خبرة ونقاش وتخطيط."}
-    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
+    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
   },
   {
     id:"goethe-b2-full-06",provider:"goethe-b2",titleDe:"Vollsimulation 6 · Lernen, Technik und Teilhabe",titleAr:"المحاكاة السادسة — التعلم والتقنية والمشاركة",descriptionAr:"البنك السادس المستقل والأخير من 13 مهمة Goethe.",modules:[
@@ -214,7 +214,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"goethe-full-06-listening",titleDe:"Hören",titleAr:"الاستماع",officialMinutes:40,taskIds:["goethe-b2-full-06-listening-01","goethe-b2-full-06-listening-02","goethe-b2-full-06-listening-03","goethe-b2-full-06-listening-04"],resultRuleAr:"أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"goethe-full-06-writing",titleDe:"Schreiben",titleAr:"الكتابة",officialMinutes:75,taskIds:["goethe-b2-full-06-writing-01","goethe-b2-full-06-writing-02"],resultRuleAr:"مهمتا كتابة."},
       {id:"goethe-full-06-speaking",titleDe:"Sprechen",titleAr:"المحادثة",officialMinutes:15,taskIds:["goethe-b2-full-06-speaking-01","goethe-b2-full-06-speaking-02"],resultRuleAr:"عرض ونقاش."}
-    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","لا شريك حي.","لا درجة رسمية."]
+    ],sourceRefs:["goethe-b2-overview-2026","goethe-b2-terms-2025","goethe-b2-model-2025"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["استئناف محلي.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","لا شريك حي.","لا درجة رسمية."]
   },
   {
     id:"telc-b2-full-06",provider:"telc-deutsch-b2",titleDe:"Vollsimulation 6 · Bildung, Stadt und Medien",titleAr:"المحاكاة السادسة — التعليم والمدينة والإعلام",descriptionAr:"البنك السادس المستقل والأخير من 12 مهمة telc.",modules:[
@@ -222,7 +222,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
       {id:"telc-full-06-listening",titleDe:"Hörverstehen",titleAr:"الاستماع",officialMinutes:20,taskIds:["telc-b2-full-06-listening-01","telc-b2-full-06-listening-02","telc-b2-full-06-listening-03"],resultRuleAr:"ثلاثة أجزاء و20 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS."},
       {id:"telc-full-06-writing",titleDe:"Schriftlicher Ausdruck",titleAr:"الكتابة",officialMinutes:30,taskIds:["telc-b2-full-06-writing-01"],resultRuleAr:"اختيار من مهمتين."},
       {id:"telc-full-06-speaking",titleDe:"Mündlicher Ausdruck",titleAr:"المحادثة",officialMinutes:15,taskIds:["telc-b2-full-06-speaking-01","telc-b2-full-06-speaking-02","telc-b2-full-06-speaking-03"],resultRuleAr:"خبرة ونقاش وتخطيط."}
-    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، وBrowser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
+    ],sourceRefs:["telc-b2-overview-2026","telc-b2-mock-2019-current-link"],contentStatus:"published",originalContent:true,sessionMode:"guided-module-timers",limitationsAr:["جلسة موجهة.","ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.","تفاعل فردي.","لا نتيجة رسمية."]
   },
 ];
 

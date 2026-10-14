@@ -1,0 +1,188 @@
+{
+ "format": "dwnb-human-review-audit",
+ "version": "human-review-audit-v1",
+ "generatedAt": "2026-10-04",
+ "ok": true,
+ "independentReviewStatus": "pending-zero-recorded-reviews",
+ "checklistItems": [
+  "german-correct",
+  "arabic-natural",
+  "cefr-level-fit",
+  "objective-aligned",
+  "answer-unambiguous",
+  "explanation-teaches-rule",
+  "audio-usable",
+  "no-cultural-harm",
+  "no-copyright-risk",
+  "transfer-task-realistic"
+ ],
+ "p099ExclusionSlots": {
+  "boundary": "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer",
+  "boundaryAr": "هذا الملخّص يعدّ حضور الخانات فقط: لا يحكم على كفاية الدليل ولا على محتوى قرار المراجع ولا يمنح اعتمادًا.",
+  "exclusionCount": 11,
+  "namedReferenceCount": 0,
+  "missingReferenceCount": 11,
+  "placeholderReferenceCount": 0,
+  "missingReferenceDecisionIds": [
+   "a1-21-umsteigen-in-frame-exclusion",
+   "b1-15-liegen-vor-frame-exclusion",
+   "b1-22-nachsteuern-bei-frame-exclusion",
+   "b1-23-liegen-vor-frame-exclusion",
+   "b2-01-reichen-aus-frame-exclusion",
+   "b2-01-reichen-um-frame-exclusion",
+   "b2-18-ziehen-in-frame-exclusion",
+   "b2-18-kommen-in-frame-exclusion",
+   "b2-24-bitten-zu-frame-exclusion",
+   "b2-24-einreichen-zu-frame-exclusion",
+   "b2-24-konnten-zu-frame-exclusion"
+  ],
+  "placeholderDecisionIds": [],
+  "signatureCellsFilled": 0,
+  "signatureCellsExpected": 55,
+  "readyForIndependentReviewCount": 0,
+  "pendingDecisionIds": [
+   "a1-21-umsteigen-in-frame-exclusion",
+   "b1-15-liegen-vor-frame-exclusion",
+   "b1-22-nachsteuern-bei-frame-exclusion",
+   "b1-23-liegen-vor-frame-exclusion",
+   "b2-01-reichen-aus-frame-exclusion",
+   "b2-01-reichen-um-frame-exclusion",
+   "b2-18-ziehen-in-frame-exclusion",
+   "b2-18-kommen-in-frame-exclusion",
+   "b2-24-bitten-zu-frame-exclusion",
+   "b2-24-einreichen-zu-frame-exclusion",
+   "b2-24-konnten-zu-frame-exclusion"
+  ],
+  "evidenceContentsInspected": false,
+  "reviewDecisionContentsInterpreted": false,
+  "p099ClosureAsserted": false
+ },
+ "reviewPacketPresence": {
+  "sheetCount": 17,
+  "rowCount": 3277,
+  "fullySignedRowCount": 0,
+  "unsignedRowCount": 3277,
+  "signedSignatureCells": 0,
+  "signatureCellsExpected": 13108,
+  "sheets": [
+   {
+    "name": "review-sheet-01.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-02.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-03.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-04.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-05.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-06.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-07.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-08.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-09.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-10.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-11.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-12.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-13.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-14.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-15.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-16.csv",
+    "rows": 200,
+    "fullySignedRows": 0,
+    "unsignedRows": 200
+   },
+   {
+    "name": "review-sheet-17.csv",
+    "rows": 77,
+    "fullySignedRows": 0,
+    "unsignedRows": 77
+   }
+  ],
+  "evidenceContentsInspected": false,
+  "reviewDecisionContentsInterpreted": false,
+  "humanReviewClosureAsserted": false
+ },
+ "policyVersion": "human-review-ledger-v1",
+ "boundary": "reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer",
+ "totalEntries": 0,
+ "reviewedLessons": 0,
+ "lessonTotal": 96,
+ "coveragePct": 0,
+ "monthlyTarget": 8,
+ "months": [],
+ "lastMonthReviewed": 0,
+ "targetMetLastMonth": false,
+ "invalidEntries": [],
+ "duplicateReviews": [],
+ "boundaryAr": "التطبيق لا يستطيع التحقق من هوية المراجع ولا من مؤهله؛ السجل يشهد بما سُجّل لا بما يُدّعى، ولذلك لا يمنح اعتمادًا ولا يغيّر حالة النشر تلقائيًا."
+}

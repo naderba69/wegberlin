@@ -6593,7 +6593,7 @@
         "prompt": "Der frühe Zug ist so günstig ___ der Bus. أكمل التساوي:",
         "answer": "wie",
         "evidenceRef": "a2-10:controlled:a2-10-e2:explanationAr",
-        "evidenceExcerpt": "التساوي في الصفة يُصاغ بـ so ثم الصفة ثم wie: «Der frühe Zug ist so günstig wie der Bus». als تُستعمل عند الاختلاف، و حذف wie يترك التشبيه بلا طرف ثانٍ. فحص ذاتي: بمَ تُقارَن الرحلة؟",
+        "evidenceExcerpt": "التساوي في الصفة يُصاغ بـ so ثم الصفة ثم wie: Der frühe Zug ist so günstig wie der Bus. als تُستعمل عند الاختلاف، و حذف wie يترك التشبيه بلا طرف ثانٍ. فحص ذاتي: بمَ تُقارَن الرحلة؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -6725,7 +6725,7 @@
         "prompt": "Komparativ اختر الصيغة الصحيحة لحالة «Komparativ»:",
         "answer": "schneller als",
         "evidenceRef": "a2-10:miniTest:a2-10-m1:explanationAr",
-        "evidenceExcerpt": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: «Diese Verbindung ist schneller als die Bahn». so … wie للمساواة، و «am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟",
+        "evidenceExcerpt": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: Diese Verbindung ist schneller als die Bahn. so … wie للمساواة، و «am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6736,7 +6736,7 @@
         "prompt": "Gleichheit أي خيار يحقّق «Gleichheit» في هذا السياق؟",
         "answer": "so günstig wie",
         "evidenceRef": "a2-10:miniTest:a2-10-m2:explanationAr",
-        "evidenceExcerpt": "المساواةُ بـ so + الصفة كما هي + wie: «Diese Verbindung ist so günstig wie die andere». أمّا -er فتقارن وتحتاج als، و «günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟",
+        "evidenceExcerpt": "المساواةُ بـ so + الصفة كما هي + wie: Diese Verbindung ist so günstig wie die andere. أمّا -er فتقارن وتحتاج als، و «günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -221504,5 +221504,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "0a6f82561a6e294f2632dedda1b01d4cb51ae0f9b0517dac93bd5554a5b3026e"
+  "contentSha256": "8ef7507e4ce035c02b1a8280bb94f8bfd52259159f12e79b5c0f59d3942e07b0"
 }

@@ -686,7 +686,7 @@ export const localTestTemplateBankA2 = [
           "schneller als"
         ],
         "correctIndex": 3,
-        "explanationAr": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: «Diese Verbindung ist schneller als die Bahn». so … wie للمساواة، و «am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟"
+        "explanationAr": "صيغةُ التفضيل تُلحق -er بالصفة ثم تأتي als: Diese Verbindung ist schneller als die Bahn. so … wie للمساواة، و «am schnell als» تركّب صيغةَ التفوّق على مقارنة. فحص ذاتي: هل بعد -er جاءت als؟"
       },
       {
         "id": "a2-10-m2",
@@ -699,7 +699,7 @@ export const localTestTemplateBankA2 = [
           "am günstig wie"
         ],
         "correctIndex": 0,
-        "explanationAr": "المساواةُ بـ so + الصفة كما هي + wie: «Diese Verbindung ist so günstig wie die andere». أمّا -er فتقارن وتحتاج als، و «günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟"
+        "explanationAr": "المساواةُ بـ so + الصفة كما هي + wie: Diese Verbindung ist so günstig wie die andere. أمّا -er فتقارن وتحتاج als، و «günstiger wie» تُدخل أداةَ المساواة على مقارنة. فحص ذاتي: أيّ أداتين التقيتا؟"
       },
       {
         "id": "a2-10-m3",

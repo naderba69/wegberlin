@@ -28,7 +28,11 @@ for (const lesson of lessons) {
     let start = -1;
     for (let i = 2; i < tokens.length - 1; i++) if (PREPS.has(tokens[i].toLowerCase())) { start = i; break; }
     if (start < 2) { rows.push({ lessonId: lesson.id, exerciseId: exercise.id, type: exercise.type, sentence, why: "لا توجد جرّة خلفية قابلة للتقديم؛ البديل المحتمل يحتاج قرار مؤلِّف" }); continue; }
-    const proposal = [tokens.slice(start).join(" "), tokens[1], tokens[0], ...tokens.slice(2, start)].filter(Boolean).join(" ");
+    // Moving the subject out of first position: a pronoun subject loses its sentence-initial capital ("Ich" → "ich"),
+    // and the fronted phrase gains one ("in Hannover" → "In Hannover"). Nouns keep their capital.
+    const subject = /^(Ich|Du|Er|Sie|Es|Wir|Ihr|Man)$/.test(tokens[0]) && tokens[0] !== "Sie" ? tokens[0].toLowerCase() : tokens[0];
+    const fronted = tokens.slice(start).join(" ");
+    const proposal = [fronted.charAt(0).toUpperCase() + fronted.slice(1), tokens[1], subject, ...tokens.slice(2, start)].filter(Boolean).join(" ");
     const same = proposal.toLowerCase().split(/\s+/).sort().join(" ") === tokens.slice().sort().join(" ").toLowerCase();
     if (!same || proposal === sentence) { rows.push({ lessonId: lesson.id, exerciseId: exercise.id, type: exercise.type, sentence, why: "التقديم المقترح لا يحافظ على نفس الرصيد أو يعيد نفس النص" }); continue; }
     rows.push({ lessonId: lesson.id, exerciseId: exercise.id, type: exercise.type, sentence, why: "قابل للإضافة بثقة: تقديم الجرّة مع الحفاظ على Position 2 للفعل", proposal });

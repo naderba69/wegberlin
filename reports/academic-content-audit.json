@@ -1454,9 +1454,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "ابدأ بالوقت:",
-        "answer": "Um sieben Uhr stehe ich auf | Ich stehe um sieben Uhr auf",
+        "answer": "Um sieben Uhr stehe ich auf",
         "evidenceRef": "a1-08:controlled:a1-08-e3:explanationAr",
-        "evidenceExcerpt": "الوقت أولًا ثم الفعل المصرف ثم الفاعل والبادئة أخيرًا. بعض الأفعال الألمانية تحمل بادئة تنفصل في الجملة الرئيسية. ويُقبل أيضًا: «Ich stehe um sieben Uhr auf».",
+        "evidenceExcerpt": "الوقت أولًا ثم الفعل المصرف ثم الفاعل والبادئة أخيرًا. بعض الأفعال الألمانية تحمل بادئة تنفصل في الجملة الرئيسية. الترتيب Ich stehe um sieben Uhr auf صحيح في ذاته، لكنه لا يبدأ بالوقت كما يطلب التمرين.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -3478,9 +3478,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Die Sonne ___. أكمل:",
-        "answer": "scheint | leuchtet",
+        "answer": "scheint",
         "evidenceRef": "a1-18:controlled:a1-18-e7:explanationAr",
-        "evidenceExcerpt": "التعبير الثابت: Die Sonne scheint. تربط deshalb السبب بالنتيجة. ويُقبل أيضًا: «leuchtet».",
+        "evidenceExcerpt": "للطقس نستعمل التعبير الثابت: Die Sonne scheint. أما leuchten فيصف ضوءًا يصدر عن شيء كالمصباح، ولا يُستعمل عادة في وصف الطقس.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -5205,9 +5205,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ ich klein war, wohnte ich in Sfax. أكمل الرابط:",
-        "answer": "Als | Wenn",
+        "answer": "Als",
         "evidenceRef": "a2-03:controlled:a2-03-e2:explanationAr",
-        "evidenceExcerpt": "ما وقع مرّة واحدة في الماضي يُروى بـ als: «Als ich klein war, wohnte ich in Sfax». wenn تُستعمل للشرط أو للماضي المتكرر، فتحويل الطفولة إلى حدث متكرر يغيّر المعنى لا الصيغة. فحص ذاتي: هل الحدث وحدة واحدة؟ ويُقبل أيضًا: …",
+        "evidenceExcerpt": "ما وقع مرّة واحدة في الماضي يُروى بـ als: «Als ich klein war, wohnte ich in Sfax». wenn تُستعمل للشرط أو للماضي المتكرر، فتحويل الطفولة إلى حدث متكرر يغيّر المعنى لا الصيغة. فحص ذاتي: هل الحدث وحدة واحدة؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7779,9 +7779,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ der Meldung bleibt die Straße geschlossen. أكمل نسبة الخبر:",
-        "answer": "Laut | Nach",
+        "answer": "Laut",
         "evidenceRef": "a2-16:controlled:a2-16-e2:explanationAr",
-        "evidenceExcerpt": "نسبةُ الخبر إلى مصدره تُفتح بـ Laut متبوعة بالاسم: «Laut der Meldung bleibt die Straße geschlossen.» mit تقول الوسيلة، و wegen تُعلّل سببًا، فلا يبقى للمعلومة مُصدِر تُراجعه. فحص ذاتي: هل عرفتُ مَن قال؟ ويُقبل أيضًا: «N…",
+        "evidenceExcerpt": "نسبةُ الخبر إلى مصدره تُفتح بـ Laut متبوعة بالاسم: «Laut der Meldung bleibt die Straße geschlossen.» mit تقول الوسيلة، و wegen تُعلّل سببًا، فلا يبقى للمعلومة مُصدِر تُراجعه. فحص ذاتي: هل عرفتُ مَن قال؟ أما Nach der Mel…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8177,9 +8177,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ Beispiel nutze ich ein Wörterbuch. قدم مثالًا:",
-        "answer": "Zum | Als",
+        "answer": "Zum",
         "evidenceRef": "a2-18:controlled:a2-18-e2:explanationAr",
-        "evidenceExcerpt": "المثال يُقدَّم بـ Zum Beispiel ثم جملة كاملة: «Zum Beispiel nutze ich ein Wörterbuch». zu بلا اسم يُبقي العبارة مقطوعة، و Für Beispiel نقل حرفي لا يقبله النص الألماني. ويُقبل أيضًا: Als Beispiel، بالمعنى نفسه.",
+        "evidenceExcerpt": "المثال يُقدَّم بـ Zum Beispiel ثم جملة كاملة: «Zum Beispiel nutze ich ein Wörterbuch». zu بلا اسم يُبقي العبارة مقطوعة، و Für Beispiel نقل حرفي لا يقبله النص الألماني. أما Als Beispiel nutze ich ein Wörterbuch فتعني «أس…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -9959,9 +9959,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Der Zug ___ schon abgefahren. (sein) حركة سابقة:",
-        "answer": "war | ist",
+        "answer": "war",
         "evidenceRef": "b1-03:controlled:b1-03-e2:explanationAr",
-        "evidenceExcerpt": "أفعال الحركة تتصرّف مع sein في الماضي: «Der Zug war schon abgefahren». مع haben يبقى التركيب غير مطابق للانتقال، وحذف schon يترك السبق الزمني بلا إشارة. فحص ذاتي: هل تحرك شيء قبل الآن؟ ويُقبل أيضًا: «ist».",
+        "evidenceExcerpt": "أفعال الحركة تتصرّف مع sein في الماضي: «Der Zug war schon abgefahren». مع haben يبقى التركيب غير مطابق للانتقال، وحذف schon يترك السبق الزمني بلا إشارة. فحص ذاتي: هل تحرك شيء قبل الآن؟ أما ist abgefahren فهو Perfekt، وا…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -10212,9 +10212,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Der Raum wird ___ Ben gebucht. اذكر المنفذ:",
-        "answer": "von | durch",
+        "answer": "von",
         "evidenceRef": "b1-04:controlled:b1-04-e7:explanationAr",
-        "evidenceExcerpt": "المنفِّذ في المبني للمجهول يُذكر بـ von مع اسمه: «Der Raum wird von Ben gebucht». بدونها يبقى الفاعل مبهمًا، و durch تُستعمل للأداة لا للشخص. فحص ذاتي: هل يمكن أن تبدأ الإجابة باسم شخص؟ ويُقبل أيضًا: «durch».",
+        "evidenceExcerpt": "المنفِّذ في المبني للمجهول يُذكر بـ von مع اسمه: «Der Raum wird von Ben gebucht». بدونها يبقى الفاعل مبهمًا، و durch تُستعمل للأداة لا للشخص. فحص ذاتي: هل يمكن أن تبدأ الإجابة باسم شخص؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -11202,9 +11202,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Die Ergebnisse werden öffentlich ___. أكمل العبارة:",
-        "answer": "gemacht | veröffentlicht | veroeffentlicht",
+        "answer": "gemacht",
         "evidenceRef": "b1-09:controlled:b1-09-e7:explanationAr",
-        "evidenceExcerpt": "الفعل يجب أن يسمّي ما حدث للنشر فعلًا: «Die Ergebnisse werden öffentlich gemacht» أي صارت مرئية للجميع. بدل عام يُبقي الطريقة مبهمة، وحذف öffentlich يجعل النشر داخليًا.",
+        "evidenceExcerpt": "الفعل يجب أن يسمّي ما حدث للنشر فعلًا: «Die Ergebnisse werden öffentlich gemacht» أي صارت مرئية للجميع. بدل عام يُبقي الطريقة مبهمة، وحذف öffentlich يجعل النشر داخليًا. أما veröffentlicht فيكرّر معنى öffentlich (öffentl…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -11939,9 +11939,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ regelmäßige Übung spreche ich flüssiger. أكمل الوسيلة:",
-        "answer": "Durch | Mit",
+        "answer": "Durch",
         "evidenceRef": "b1-13:controlled:b1-13-e2:explanationAr",
-        "evidenceExcerpt": "الوسيلة تُقدَّم بـ Durch ويتها الاسم بعدها بلا أداة: Durch regelmäßige Übung spreche ich flüssiger. «Von» تسأل عن المصدر لا عن الوسيلة، ولا تُبنى جملة جانبية بعد حرف جر. فحص ذاتي: هل يصلح «Mit»؟ ويُقبل أيضًا: «Mit».",
+        "evidenceExcerpt": "الوسيلة تُقدَّم بـ Durch ويليها الاسم بعدها بلا أداة: Durch regelmäßige Übung spreche ich flüssiger. «Von» تسأل عن المصدر لا عن الوسيلة، ولا تُبنى جملة جانبية بعد حرف جر. ولا يصلح Mit هنا: mit يأخذ Dativ فيلزم regelmäßi…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -12390,9 +12390,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Vielen Dank für Ihre ___. أكمل الخاتمة:",
-        "answer": "Aufmerksamkeit | Mühe | Unterstützung",
+        "answer": "Aufmerksamkeit",
         "evidenceRef": "b1-15:controlled:b1-15-e7:explanationAr",
-        "evidenceExcerpt": "ختمة العرض محفوظة بصيغة Sie: «Vielen Dank für Ihre Aufmerksamkeit». صيغة الـ du لا تناسب سياقًا رُفع فيه الخطاب إلى Sie، وأي اسم آخر يكسر عبارة محفوظة. فحص ذاتي: هل خاطبت الحضور بصيغة Sie؟ ويُقبل أيضًا: «Mühe»، «Unterst…",
+        "evidenceExcerpt": "ختمة العرض محفوظة بصيغة Sie: «Vielen Dank für Ihre Aufmerksamkeit». صيغة الـ du لا تناسب سياقًا رُفع فيه الخطاب إلى Sie، وأي اسم آخر يكسر عبارة محفوظة. فحص ذاتي: هل خاطبت الحضور بصيغة Sie؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -15360,9 +15360,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Unter einer Stichprobe ___ man den untersuchten Teil einer größeren Gruppe. أكمل التعريف:",
-        "answer": "versteht | bezeichnet",
+        "answer": "versteht",
         "evidenceRef": "b2-06:controlled:b2-06-e7:explanationAr",
-        "evidenceExcerpt": "التعريف الاصطلاحي يُصاغ بـ Unter einer Stichprobe versteht man …: المصطلح ثم الفعل ثم الشرح. مع sagt تصير الجملة نقل قول، ومع heißt تُترجِم الكلمة ولا تُعرّف مفهومها. ويُقبل أيضًا: «bezeichnet».",
+        "evidenceExcerpt": "التعريف الاصطلاحي يُصاغ بـ Unter einer Stichprobe versteht man …: المصطلح ثم الفعل ثم الشرح. مع sagt تصير الجملة نقل قول، ومع heißt تُترجِم الكلمة ولا تُعرّف مفهومها. أما bezeichnen فيأتي مع als لا مع unter: Als Stichpr…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -16889,9 +16889,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Alle Felder waren ausgefüllt, ___ dauerte die Prüfung nur zwei Tage. أكمل برابط نتيجة:",
-        "answer": "sodann | dadurch | somit",
+        "answer": "dadurch | somit",
         "evidenceRef": "b2-14:controlled:b2-14-e2:explanationAr",
-        "evidenceExcerpt": "الروابط الثلاث مقبولة هنا لأنها تُنتج نتيجة ممّا سبق: dadurch تُبرز الوسيلة، و somit نتيجة منطقية، و sodann تتابعًا زمنيًا؛ لا حاجة لإعادة الصياغة.",
+        "evidenceExcerpt": "الرابطان المقبولان يربطان النتيجة بما سبق: dadurch يُبرز الوسيلة (لأن الحقول كانت مكتملة)، و somit يقدّم نتيجة منطقية. أما sodann فيعني «ثم» ويرتّب الأحداث زمنيًا ولا يدل على نتيجة.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -16944,9 +16944,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "___ alle Unterlagen beilagen, konnte der Antrag sofort bearbeitet werden. أكمل بالوسيلة:",
-        "answer": "Dadurch, dass | Indem",
+        "answer": "Dadurch, dass",
         "evidenceRef": "b2-14:controlled:b2-14-e7:explanationAr",
-        "evidenceExcerpt": "الوسيلة تُربط بجملة: Dadurch, dass أو Indem، وأداتهموجب فعلًا في نهاية الجزء التابع؛ إدخال أداة سبب يقلب المطلوب من الكيفية إلى العلة.",
+        "evidenceExcerpt": "الوسيلة هنا لها فاعل غير فاعل الجملة الرئيسية (alle Unterlagen ثم der Antrag)، فتلزم Dadurch, dass مع الفعل في آخر الجزء التابع. أما indem فتشترط أن يكون فاعل الجملتين واحدًا، وإدخال أداة سبب يقلب المطلوب من الكيفية إلى…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17098,9 +17098,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "رتّب جملة تبدأ بظرف:",
-        "answer": "Zuerst lese ich die Aufgabenstellung zweimal | Die Aufgabenstellung lese ich zuerst zweimal",
+        "answer": "Zuerst lese ich die Aufgabenstellung zweimal",
         "evidenceRef": "b2-15:controlled:b2-15-e3:explanationAr",
-        "evidenceExcerpt": "الظرف يفتتح الجملة والفعل يليه مباشرة ثم الفاعل: «Zuerst lese ich die Aufgabenstellung zweimal». تقديم ich على lese يترك الترتيب بلا غاية، وتكرار الظرف يربك ما يُراد التأكيد عليه. ويُقبل أيضًا: «Die Aufgabenstellung les…",
+        "evidenceExcerpt": "الظرف يفتتح الجملة والفعل يليه مباشرة ثم الفاعل: «Zuerst lese ich die Aufgabenstellung zweimal». تقديم ich على lese يترك الترتيب بلا غاية، وتكرار الظرف يربك ما يُراد التأكيد عليه. أما Die Aufgabenstellung lese ich zuers…",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -17923,9 +17923,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Haben Sie die Unterlagen ___ übersehen, oder war die Post unterwegs? أكمل أداة تجعل السؤال شكًّا مهذّبًا لا اتّهامًا:",
-        "answer": "etwa | vielleicht",
+        "answer": "vielleicht",
         "evidenceRef": "b2-19:controlled:b2-19-e6:explanationAr",
-        "evidenceExcerpt": "«etwa» تضع الاحتمال موضع السؤال؛ من دونها يُقرأ السؤال نسبة تقصير. ويُقبل أيضًا: «vielleicht».",
+        "evidenceExcerpt": "«vielleicht» تجعل السؤال احتمالًا مهذّبًا يترك للمخاطَب مخرجًا، والشق الثاني (oder war die Post unterwegs?) يقترح سببًا لا يلوم أحدًا. أما etwa فتحمل استغرابًا أو اتهامًا مضمرًا (تهذيب ظاهري واتهام مضمون، كما في شرح الد…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -18923,10 +18923,10 @@
         "id": "b2-24-e3",
         "scope": "lesson-controlled",
         "kind": "error-correction",
-        "prompt": "أغلق القوس الأيمن وأزل الفعل الزائد: Es ist unklar, dass die Frist am Montag endete ist, deshalb prüfen wir nach.",
-        "answer": "Es ist unklar, dass die Frist am Montag endete, deshalb prüfen wir nach. | Es ist unklar, ob die Frist am Montag endete; deshalb prüfen wir nach.",
+        "prompt": "أغلق القوس الأيمن وأزل الفعل الزائد: Es ist unklar, ob die Frist am Montag endete ist, deshalb prüfen wir nach.",
+        "answer": "Es ist unklar, ob die Frist am Montag endete, deshalb prüfen wir nach.",
         "evidenceRef": "b2-24:controlled:b2-24-e3:explanationAr",
-        "evidenceExcerpt": "الفعل المسند للجملة الرئيسية يأتي بعد إغلاق القوس، و «ist» الثانية تكرار لا يحتاجه الجملة.",
+        "evidenceExcerpt": "الجملة الجانبية تنتهي بفعلها endete ثم تُغلق بفاصلة وتأتي الجملة التالية، و «ist» الثانية فعل زائد. ولاحظ أن unklar يأتي مع ob لا مع dass، لأن الأمر غير محسوم.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -188494,22 +188494,15 @@
           {
             "path": "exercises[2].acceptedAnswers[0]",
             "stage": "controlled",
-            "text": "Es ist unklar, dass die Frist am Montag endete, deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, dass die Frist am Montag endete, deshalb prüfen wir nach.",
-            "strength": "context"
-          },
-          {
-            "path": "exercises[2].acceptedAnswers[1]",
-            "stage": "controlled",
-            "text": "Es ist unklar, ob die Frist am Montag endete; deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, ob die Frist am Montag endete; deshalb prüfen wir nach.",
+            "text": "Es ist unklar, ob die Frist am Montag endete, deshalb prüfen wir nach.",
+            "surface": "Es ist unklar, ob die Frist am Montag endete, deshalb prüfen wir nach.",
             "strength": "context"
           },
           {
             "path": "exercises[2].sentence",
             "stage": "controlled",
-            "text": "Es ist unklar, dass die Frist am Montag endete ist, deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, dass die Frist am Montag endete ist, deshalb prüfen wir nach.",
+            "text": "Es ist unklar, ob die Frist am Montag endete ist, deshalb prüfen wir nach.",
+            "surface": "Es ist unklar, ob die Frist am Montag endete ist, deshalb prüfen wir nach.",
             "strength": "context"
           },
           {
@@ -221256,22 +221249,15 @@
           {
             "path": "exercises[2].acceptedAnswers[0]",
             "stage": "controlled",
-            "text": "Es ist unklar, dass die Frist am Montag endete, deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, dass die Frist am Montag endete, deshalb prüfen wir nach.",
-            "strength": "context"
-          },
-          {
-            "path": "exercises[2].acceptedAnswers[1]",
-            "stage": "controlled",
-            "text": "Es ist unklar, ob die Frist am Montag endete; deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, ob die Frist am Montag endete; deshalb prüfen wir nach.",
+            "text": "Es ist unklar, ob die Frist am Montag endete, deshalb prüfen wir nach.",
+            "surface": "Es ist unklar, ob die Frist am Montag endete, deshalb prüfen wir nach.",
             "strength": "context"
           },
           {
             "path": "exercises[2].sentence",
             "stage": "controlled",
-            "text": "Es ist unklar, dass die Frist am Montag endete ist, deshalb prüfen wir nach.",
-            "surface": "Es ist unklar, dass die Frist am Montag endete ist, deshalb prüfen wir nach.",
+            "text": "Es ist unklar, ob die Frist am Montag endete ist, deshalb prüfen wir nach.",
+            "surface": "Es ist unklar, ob die Frist am Montag endete ist, deshalb prüfen wir nach.",
             "strength": "context"
           }
         ],
@@ -221503,5 +221489,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "1d1d983b58cc3a36e8c3b793261ecd4eb05f6fd0605bb1ccdb4afb461e2ccd4e"
+  "contentSha256": "5865d2e9cfe988d0edfdf6e2ef4957e21afe63ea0261c73e429f4671932bb168"
 }

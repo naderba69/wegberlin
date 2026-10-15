@@ -423,7 +423,7 @@ export const b2Module4Lessons: FullLesson[] = [
  mistakes: [
  { wrong: "خمسة مواقع = خمسة مصادر مستقلة", correct: "أتتبع كل رابط إلى الأصل وأتحقق هل سلاسل الأدلة مستقلة.", whyAr: "قد تعيد مواقع كثيرة صياغة البيان نفسه.", trickAr: "عدّ الأصول لا العناوين." },
  { wrong: "Der Autor sagt, die Studie ist sicher unabhängig.", correct: "Der Autor sagt, die Studie sei unabhängig.", whyAr: "Indikativ قد يطمس الحد بين قوله وتقرير الكاتب.", trickAr: "sein → sei، haben → habe." },
- { wrong: "تمويل الشركة يثبت التزوير", correct: "التمويل مصلحة محتملة تحتاج كشفًا وفحصًا مستقلًا.", whyAr: "هو عامل مخاطر لا دليل منطقي كافٍ على خطأ النتيجة.", trickAr: "Interesse prüfen، nicht automatisch verwerfen." },
+ { wrong: "تمويل الشركة يثبت التزوير", correct: "التمويل مصلحة محتملة تحتاج كشفًا وفحصًا مستقلًا.", whyAr: "هو عامل مخاطر لا دليل منطقي كافٍ على خطأ النتيجة.", trickAr: "افحص المصلحة (Interesse) ولا ترفض النتيجة تلقائيًا." },
  { wrong: "صورة حقيقية = سياق صحيح", correct: "أفحص تاريخ الصورة ومكانها واستخدامها الأصلي حتى دون تعديل تقني.", whyAr: "يمكن تضليل القارئ بإعادة نسبة صورة أصلية إلى حدث آخر.", trickAr: "Echtes Bild, falscher Kontext." },
  ],
  miniTest: [

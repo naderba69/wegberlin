@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "8834a32629457e2c806fd86f42e752c0b5937e50b28c5250792fc89b65413f34",
+  "contentSha256": "9c8c9abadad19001c273a11c292b2e4f093ed352249e8f96f4a9b511bbae647a",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -32,7 +32,7 @@
       25.84
     ],
     "lessonsWithoutPositionD": 3,
-    "longestOptionIsKeyPct": 39.2
+    "longestOptionIsKeyPct": 39.28
   },
   "writing": {
     "statedRangeTasks": 92,
@@ -915,29 +915,6 @@
         ]
       },
       {
-        "lessonId": "b1-03",
-        "level": "B1",
-        "pct": 44,
-        "unknown": [
-          "rania",
-          "kam",
-          "arbeitete",
-          "zunaechst",
-          "teilzeit",
-          "caf",
-          "grafikdesign",
-          "arbeitsmarkt",
-          "einige",
-          "entwuerfe",
-          "praesentierte",
-          "besitzerin",
-          "begeistert",
-          "empfahl",
-          "befreundeten",
-          "bekam"
-        ]
-      },
-      {
         "lessonId": "b1-08",
         "level": "B1",
         "pct": 44,
@@ -958,6 +935,29 @@
           "konnte",
           "vermieterin",
           "gemeldet"
+        ]
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
+        "pct": 43.4,
+        "unknown": [
+          "rania",
+          "kam",
+          "arbeitete",
+          "zunaechst",
+          "teilzeit",
+          "caf",
+          "grafikdesign",
+          "arbeitsmarkt",
+          "einige",
+          "entwuerfe",
+          "praesentierte",
+          "besitzerin",
+          "begeistert",
+          "empfahl",
+          "befreundeten",
+          "bekam"
         ]
       },
       {
@@ -1559,29 +1559,6 @@
         ]
       },
       {
-        "lessonId": "b1-13",
-        "level": "B1",
-        "pct": 36.9,
-        "unknown": [
-          "amals",
-          "einige",
-          "umwege",
-          "begann",
-          "grammatikregeln",
-          "wortlisten",
-          "erkannte",
-          "strukturen",
-          "doch",
-          "konnte",
-          "dachte",
-          "zunaechst",
-          "talent",
-          "gespraeche",
-          "aufgenommen",
-          "aufnahmen"
-        ]
-      },
-      {
         "lessonId": "a2-19",
         "level": "A2",
         "pct": 36.8,
@@ -1602,6 +1579,29 @@
           "antworten",
           "falsche",
           "legt"
+        ]
+      },
+      {
+        "lessonId": "b1-13",
+        "level": "B1",
+        "pct": 36.5,
+        "unknown": [
+          "amals",
+          "einige",
+          "umwege",
+          "begann",
+          "grammatikregeln",
+          "wortlisten",
+          "erkannte",
+          "strukturen",
+          "doch",
+          "konnte",
+          "dachte",
+          "zunaechst",
+          "talent",
+          "gespraeche",
+          "aufgenommen",
+          "aufnahmen"
         ]
       },
       {
@@ -2270,29 +2270,6 @@
         ]
       },
       {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "pct": 26.8,
-        "unknown": [
-          "forum",
-          "studienberatung",
-          "ben",
-          "mitarbeiter",
-          "antwortete",
-          "spam",
-          "gelandet",
-          "diesmal",
-          "april",
-          "unbeantwortet",
-          "geblieben",
-          "erteilt",
-          "beiden",
-          "saetzen",
-          "neuer",
-          "inhalt"
-        ]
-      },
-      {
         "lessonId": "b1-22",
         "level": "B1",
         "pct": 26.7,
@@ -2359,6 +2336,29 @@
           "aktenlage",
           "fand",
           "kette"
+        ]
+      },
+      {
+        "lessonId": "b2-19",
+        "level": "B2",
+        "pct": 25.5,
+        "unknown": [
+          "forum",
+          "studienberatung",
+          "ben",
+          "mitarbeiter",
+          "antwortete",
+          "spam",
+          "gelandet",
+          "diesmal",
+          "april",
+          "unbeantwortet",
+          "erteilt",
+          "beiden",
+          "saetzen",
+          "neuer",
+          "inhalt",
+          "zugleich"
         ]
       }
     ]

@@ -41,8 +41,8 @@
         "gist": 24,
         "detail": 81,
         "stance": 7,
-        "inference": 21,
-        "structure": 11
+        "inference": 20,
+        "structure": 12
       },
       "detailPercent": 56,
       "gistPercent": 17
@@ -51,10 +51,10 @@
       "total": 144,
       "counts": {
         "gist": 24,
-        "detail": 81,
-        "stance": 11,
+        "detail": 80,
+        "stance": 10,
         "inference": 18,
-        "structure": 10
+        "structure": 12
       },
       "detailPercent": 56,
       "gistPercent": 17
@@ -63,26 +63,26 @@
       "total": 144,
       "counts": {
         "gist": 24,
-        "detail": 55,
+        "detail": 58,
         "stance": 13,
-        "inference": 28,
-        "structure": 24
+        "inference": 26,
+        "structure": 23
       },
-      "detailPercent": 38,
+      "detailPercent": 40,
       "gistPercent": 17
     }
   },
   "questionCategoryCounts": {
     "gist": 96,
-    "detail": 312,
-    "stance": 37,
-    "inference": 81,
-    "structure": 50
+    "detail": 314,
+    "stance": 36,
+    "inference": 78,
+    "structure": 52
   },
   "classificationBasisCounts": {
     "listening-sequence-gist-contract": 96,
-    "item-text-semantic-signal": 168,
-    "specific-detail-default": 312
+    "item-text-semantic-signal": 166,
+    "specific-detail-default": 314
   },
   "boundaries": {
     "grammar": "canonical-rule-map-and-semantic-controlled-to-production-links-no-automatic-mastery-or-cefr",
@@ -3793,11 +3793,11 @@
       "level": "A2",
       "surface": "reading",
       "questionId": "a2-10-rq3",
-      "category": "inference",
-      "labelDe": "Schlussfolgern",
-      "labelAr": "استنتاج",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "reason-or-conclusion",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -4605,11 +4605,11 @@
       "level": "A2",
       "surface": "reading",
       "questionId": "a2-20-rq1",
-      "category": "stance",
-      "labelDe": "Haltung",
-      "labelAr": "الموقف",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "speaker-stance-or-evaluation",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -4969,11 +4969,11 @@
       "level": "A2",
       "surface": "reading",
       "questionId": "a2-24-rq3",
-      "category": "detail",
-      "labelDe": "Detail",
-      "labelAr": "تفصيل",
-      "classificationBasis": "specific-detail-default",
-      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
+      "category": "stance",
+      "labelDe": "Haltung",
+      "labelAr": "الموقف",
+      "classificationBasis": "item-text-semantic-signal",
+      "matchedSignal": "speaker-stance-or-evaluation",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -5725,11 +5725,11 @@
       "level": "B1",
       "surface": "reading",
       "questionId": "b1-09-rq3",
-      "category": "detail",
-      "labelDe": "Detail",
-      "labelAr": "تفصيل",
-      "classificationBasis": "specific-detail-default",
-      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
+      "classificationBasis": "item-text-semantic-signal",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -6145,11 +6145,11 @@
       "level": "B1",
       "surface": "reading",
       "questionId": "b1-14-rq3",
-      "category": "inference",
-      "labelDe": "Schlussfolgern",
-      "labelAr": "استنتاج",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "reason-or-conclusion",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -6229,11 +6229,11 @@
       "level": "B1",
       "surface": "reading",
       "questionId": "b1-15-rq3",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -6313,11 +6313,11 @@
       "level": "B1",
       "surface": "reading",
       "questionId": "b1-16-rq3",
-      "category": "detail",
-      "labelDe": "Detail",
-      "labelAr": "تفصيل",
-      "classificationBasis": "specific-detail-default",
-      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
+      "category": "inference",
+      "labelDe": "Schlussfolgern",
+      "labelAr": "استنتاج",
+      "classificationBasis": "item-text-semantic-signal",
+      "matchedSignal": "reason-or-conclusion",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -6621,11 +6621,11 @@
       "level": "B1",
       "surface": "reading",
       "questionId": "b1-20-rq1",
-      "category": "stance",
-      "labelDe": "Haltung",
-      "labelAr": "الموقف",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "speaker-stance-or-evaluation",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -7293,11 +7293,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-04-rq1",
-      "category": "inference",
-      "labelDe": "Schlussfolgern",
-      "labelAr": "استنتاج",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "reason-or-conclusion",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -7307,11 +7307,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-04-rq2",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -8245,11 +8245,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-15-rq3",
-      "category": "inference",
-      "labelDe": "Schlussfolgern",
-      "labelAr": "استنتاج",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
       "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "reason-or-conclusion",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -8973,11 +8973,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-24-r1",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -8987,11 +8987,11 @@
       "level": "B2",
       "surface": "reading",
       "questionId": "b2-24-r2",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -9051,5 +9051,5 @@
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     }
   ],
-  "contentSha256": "cd90f0e8ef1259b92a133973ab76a102493d2373a7003f2d549c44bf0544024c"
+  "contentSha256": "72939b3e045067527e1ae7c662b7c6aac78dfbfdc975bf69c854a60b8283f8b9"
 }

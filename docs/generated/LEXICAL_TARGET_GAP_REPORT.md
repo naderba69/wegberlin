@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `8ca5f1dda5e07e54fe22c67cfa600da47f80d9307bbfb588b53d5f8b105dc700`
+Content SHA-256: `0aeee2395da8377fae475c7e175de9d90ba3dd97442bed622390b1303b448898`
 
 ## Honest result
 
@@ -15,8 +15,8 @@ The audit does **not** create grammatical facts. A pending noun row must receive
 | A1 | 569 | 298 | 0 | 271 | 106 | 25 | 0 | 81 |
 | A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
 | B1 | 1231 | 338 | 0 | 893 | 317 | 31 | 0 | 286 |
-| B2 | 2215 | 456 | 89 | 1670 | 633 | 48 | 1 | 584 |
-| **Total** | **4898** | **1384** | **89** | **3425** | **1260** | **134** | **1** | **1125** |
+| B2 | 2212 | 456 | 89 | 1667 | 633 | 48 | 1 | 584 |
+| **Total** | **4895** | **1384** | **89** | **3422** | **1260** | **134** | **1** | **1125** |
 
 ## Classification contract
 

@@ -1,6 +1,6 @@
 # ملف قراءة الاستبعادات البنيوية الأحد عشر — P0-99
 
-قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف `reports/lexical-review-packet/structural-exclusions.csv` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: `faa0f83c811428f6ee8b2b7e5d257df9f94a4391b88087acba2973c747b40e8b`.
+قراءة فقط: هذا الملف ليس دليلًا، وليس مراجعة، ولا يمنح اعتمادًا ولا يغلق P0-99. بُني من صفوف `reports/lexical-review-packet/structural-exclusions.csv` نفسها، وبصمة المحتوى المؤلَّف التي بُني عليها: `1d1d983b58cc3a36e8c3b793261ecd4eb05f6fd0605bb1ccdb4afb461e2ccd4e`.
 
 - عدد الاستبعادات: **11** · أسماء أدلة مسمّاة: **0/11** · أسماء نائبة: **0** · خلايا توقيع ممتلئة (حضور فقط): **0/55** · خانات جاهزة لمراجعة مستقلة: **0**.
 - يُطبع هنا حضور الخلايا فقط: لا يُفتح دليل، ولا يُطبع محتوى قرار مراجع، ولا يُفسَّر حكم. اسم دليل مسجّل لا يثبت وجود الدليل ولا كفايته.
@@ -95,7 +95,7 @@
 - الدرس: `b2-18` · الفعل/الحرف الملتقط: `ziehen + in` · نوع الاستبعاد: ظرف مكان لا يحكمه الفعل (`locative-adjunct`)
 - سبب التأليف بالعربية: في «in Betracht ziehen» ليس in حرف جر يحكمه الفعل: التركيب يجري بأفعال خفيفة أخرى: «in Betracht ziehen» و «das kommt nicht in Betracht» — فلو كان in محكومًا بالفعل لتبدّل مع تبدّله؛ وهو هنا ظرف ثابت مع اسم بلا مقال، ولا حالة تُلاحَظ لأن المقال غائب.
 - حالة الخانة: لم يُسمَّ بعد · حالة المراجعة: `authored-review-pending` · خلايا توقيع ممتلئة: 0/5 (المحتوى غير مطبوع وغير مفسَّر)
-- دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): [target/vocabulary] phrases[3].de: in Betracht ziehen || [context/listening] listening.questions[1].options[1]: „Wir stellen einen Antrag auf Verlängerung.“ und „Wir ziehen zwei Termine in Betracht.“ || [context/listening] listening.transcriptDe: Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antr… || [context/test] miniTest[1].options[2]: Wir ziehen zwei Termine in Betracht. || [context/rule] theory[1].examples[1].de: Wir ziehen derzeit zwei Termine in Betracht, haben aber noch nicht entschieden.
+- دليل الكشف الآلي (يُفتح كاملًا أثناء المراجعة، وليس حكمًا): [target/vocabulary] phrases[3].de: in Betracht ziehen || [context/listening] listening.questions[1].options[1]: „Wir stellen einen Antrag auf Verlängerung.“ und „Wir ziehen zwei Termine in Betracht.“ || [context/listening] listening.transcriptDe: Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antr… || [context/test] miniTest[1].options[2]: Wir ziehen zwei Termine in Betracht. || [context/pronunciation] pronunciation.items[5].de: in BeTRACHT ziehen
 
 ### ما يلزم لإغلاق خانة `b2-18-ziehen-in-frame-exclusion`
 

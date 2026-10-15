@@ -1130,7 +1130,7 @@ export const localTestTemplateBankB2 = [
           "Er hätte nach Hause gehen gewesen."
         ],
         "correctIndex": 0,
-        "explanationAr": "«gehen» حركة ⇒ wäre + Partizip II. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen»."
+        "explanationAr": "gehen فعل انتقال يأخذ sein في الماضي التام، فيأتي معه wäre والتصريف الثاني gegangen في آخر الجملة: «Er wäre nach Hause gegangen». أما hätte مع gegangen فخطأ في المساعد، والمصدر gehen أو gehen gewesen لا يصنعان ماضيًا لم يقع."
       },
       {
         "id": "b2-16-m2",
@@ -1143,7 +1143,7 @@ export const localTestTemplateBankB2 = [
           "… als ob die Mahnung ihm ist."
         ],
         "correctIndex": 1,
-        "explanationAr": "المنفي الواقع يأخذ التصريف مع المساند المؤجَّل. «als ob» و «als wenn» تصفان انطباعًا يشبه حالة لا تؤكَّدها: الفعل مؤجَّل إلى الآخر ويأتي في صيغة الشرط، وفي الماضي مركّبًا («als ob er die Frist gekannt hätte»)."
+        "explanationAr": "مع als ob في الماضي يأتي التصريف الثاني ثم hätte في آخر الجملة: «als ob er die Mahnung bekommen hätte». أما bekommt فمضارع يقرّر واقعة، ووضع hat مباشرة بعد er يكسر ترتيب الجملة الجانبية، والخيار الأخير لا يحمل معنى."
       },
       {
         "id": "b2-16-m3",
@@ -1156,7 +1156,7 @@ export const localTestTemplateBankB2 = [
           "Das hätte ich prüfen sollen."
         ],
         "correctIndex": 3,
-        "explanationAr": "المساعد في وسط الجملة والزوج في الآخر. للنقد الذاتي أو الاعتراض المؤدَّب تُستعمل صيغة الشرط مع الأفعال الناقصة في تركيب «hätte … sollen/wollen/müssen» (وفي الجنوبية يُسمَع «hätte … gesollt» بدل «sollen» — كلاهما يُفهم، والأول هو المكتوب المعتاد): «Das hätte ich früher prüfen sollen.» هذه الصيغة تقرّ بالتقصير وتفتح في الوقت نفسه احتمال الظروف؛ ولهذا تُقرأ مهذّبة لا متهرّبة."
+        "explanationAr": "المساعد hätte في الموضع الثاني، والمصدران في آخر الجملة، والفعل الناقص هو الأخير: «Das hätte ich prüfen sollen». للنقد الذاتي أو الاعتراض المؤدَّب تُستعمل هذه الصيغة مع sollen أو müssen أو können؛ فهي تقرّ بالتقصير وتفتح في الوقت نفسه احتمال الظروف، ولهذا تُقرأ مهذّبة لا متهرّبة."
       },
       {
         "id": "b2-16-m4",
@@ -1169,7 +1169,7 @@ export const localTestTemplateBankB2 = [
           "Hätte ich die Frist geprüft, wäre die Gebühr entfallen."
         ],
         "correctIndex": 3,
-        "explanationAr": "شرط يُسمّي خطوة لا مذنبًا. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen»."
+        "explanationAr": "المراجعة تسمّي خطوة كان يمكن فعلها ولا تبحث عن مذنب: «Hätte ich die Frist geprüft, wäre die Gebühr entfallen». الخيارات الأخرى تلقي اللوم على البريد أو على التنبيه أو على الإشراف، ولا تقول ماذا كان يمكن أن يتغيّر."
       },
       {
         "id": "b2-16-m5",
@@ -1182,7 +1182,7 @@ export const localTestTemplateBankB2 = [
           "Es ersetzt das Partizip."
         ],
         "correctIndex": 0,
-        "explanationAr": "تليّن ولا تُعفي. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen»."
+        "explanationAr": "doch تليّن النبرة ولا تُعفي من الواجب: «Das wäre doch zu klären gewesen» ما زالت تقول إن التوضيح كان لازمًا. فهي لا تقوّي الاتهام، ولا تجعل الجملة سؤالًا، ولا تحلّ محل التصريف الثاني."
       }
     ]
   },
@@ -1200,11 +1200,11 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Die Belege lassen sich später beifügen.",
           "Die Belege sind bis Freitag beizufügen.",
-          "Die Belege sind umgehend und vollständig beizufügen.",
+          "Wir müssen die Belege bis Freitag beifügen.",
           "Wir fügen die Belege selbst bei."
         ],
         "correctIndex": 1,
-        "explanationAr": "«sind … beizufügen» إلزام، و «lassen sich» إمكان، والصفة تقييم."
+        "explanationAr": "«Die Belege sind bis Freitag beizufügen» إلزام لا يسمّي الملزَم. أما «Wir müssen die Belege bis Freitag beifügen» فإلزام يسمّي الملزَم (wir)، و lassen sich إمكان، و «Wir fügen die Belege selbst bei» وصف لما نفعله."
       },
       {
         "id": "b2-17-m2",
@@ -1224,13 +1224,13 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Verneinte Möglichkeit",
         "promptAr": "أي جملة تنفي إمكان الإثبات لا وجوبه؟",
         "options": [
-          "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
-          "Das konnte bisher nicht belegt werden.",
+          "Das muss mit unseren Daten nicht belegt werden.",
+          "Das darf mit unseren Daten nicht belegt werden.",
           "Das lässt sich mit unseren Daten nicht belegen.",
           "Das muss für unsere Zwecke unbelegt bleiben."
         ],
         "correctIndex": 2,
-        "explanationAr": "النفي مع «sich lassen» ينفي الإمكان عند كل أحد. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به."
+        "explanationAr": "النفي مع sich lassen ينفي الإمكان عند كل أحد: «Das lässt sich mit unseren Daten nicht belegen». أما muss nicht فينفي الوجوب، و darf nicht يمنع، و «Das muss für unsere Zwecke unbelegt bleiben» يفرض."
       },
       {
         "id": "b2-17-m4",
@@ -1243,7 +1243,7 @@ export const localTestTemplateBankB2 = [
           "Das zweite ist ein Werturteil, das erste eine schlichte Feststellung."
         ],
         "correctIndex": 1,
-        "explanationAr": "«un-» يعترض، و «nicht» ينفي الواقع. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به."
+        "explanationAr": "البادئة un- تصنع حكم قيمة يعترض على التكليف ذاته، أما nicht فيقرّر أن الشرط غير متحقق. وفي الاتجاه الإيجابي: «Die einmalige Nachreichung ist zumutbar» حكم بأن التكليف معقول."
       },
       {
         "id": "b2-17-m5",
@@ -1352,7 +1352,7 @@ export const localTestTemplateBankB2 = [
           "Doch, am Montag schicke ich sie ab."
         ],
         "correctIndex": 2,
-        "explanationAr": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du das nicht bekommen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch gesagt»; (3) ظرف منبور قابل للتقديم يعني «jedoch/alles in allem» — «Es ist ein Versuch, doch kein Beweis»."
+        "explanationAr": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du die Mail nicht gelesen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch schon geschickt»; (3) ظرف منبور قابل للتقديم يعني «jedoch» — «Es ist ein Versuch, doch kein Beweis»."
       },
       {
         "id": "b2-19-m2",

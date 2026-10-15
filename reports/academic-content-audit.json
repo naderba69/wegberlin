@@ -15109,7 +15109,7 @@
         "prompt": "Daraus lässt sich nicht ___, dass das Programm die Ursache ist. أكمل حد الاستنتاج:",
         "answer": "schließen | folgern | ableiten",
         "evidenceRef": "b2-05:controlled:b2-05-e2:explanationAr",
-        "evidenceExcerpt": "الصيغة الثابتة للاستنتاج المسوَّر: «Daraus lässt sich nicht schließen, dass…». المصدر يأخذه lassen بلا zu، و schließt المُصرَّفة قبل dass تترك التابعة بلا فعل. استبدال المصدر بـ sagen يُلغي الفعل العقلي. ويُقبل أيضًا: «…",
+        "evidenceExcerpt": "الصيغة الثابتة للاستنتاج المسوَّر: «Daraus lässt sich nicht schließen, dass…». المصدر يأخذه lassen بلا zu، أما schließt المُصرَّفة فخطأ، لأن الفعل المُصرَّف في الجملة هو lässt. استبدال المصدر بـ sagen يُلغي الفعل العقلي…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -15307,7 +15307,7 @@
         "prompt": "Die Flächen waren kühler, ___ nur die Oberfläche gemessen wurde. أدخل الرابط الذي يُقيّد الجملة السابقة:",
         "answer": "wobei",
         "evidenceRef": "b2-06:controlled:b2-06-e2:explanationAr",
-        "evidenceExcerpt": "wobei تلحق جملة جانبية تُقيّد ما سبقها مع فعل في النهاية: «…, wobei nur die Oberfläche gemessen wurde». und مع فعل مُصرَّف تصنع مستقلة فتضيع علاقة القيد بالنتيجة.",
+        "evidenceExcerpt": "wobei تلحق جملة جانبية تُقيّد ما سبقها مع فعل في النهاية: «Die Flächen waren kühler, wobei nur die Oberfläche gemessen wurde». und مع فعل مُصرَّف تصنع مستقلة فتضيع علاقة القيد بالنتيجة.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17111,7 +17111,7 @@
         "prompt": "صحّح الجملة: Nachdem er die Aufgabenstellung überflogen hat, verschenkte er neunzig Minuten.",
         "answer": "Nachdem er die Aufgabenstellung überflogen hatte, verschenkte er neunzig Minuten. | Er verschenkte neunzig Minuten, nachdem er die Aufgabenstellung überflogen hatte.",
         "evidenceRef": "b2-15:controlled:b2-15-e4:explanationAr",
-        "evidenceExcerpt": "داخل حكاية ماضية يأخذ الحدث الأسبق الماضي السابق: hatte لا hat. ويصح تقديم الرئيسية على بعد أن: «Er verschenkte neunzig Minuten, nachdem er überflogen hatte». فحص ذاتي: أيّ الحدثين سبق الآخر؟",
+        "evidenceExcerpt": "داخل حكاية ماضية يأخذ الحدث الأسبق الماضي السابق: hatte لا hat. ويصح تقديم الرئيسية على جملة nachdem: «Er verschenkte neunzig Minuten, nachdem er die Aufgabenstellung überflogen hatte». فحص ذاتي: أيّ الحدثين سبق الآخر؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17419,7 +17419,7 @@
         "prompt": "Hilfsverb wählen أي جملة اختارت المساعد صحيحًا؟",
         "answer": "Er wäre nach Hause gegangen.",
         "evidenceRef": "b2-16:miniTest:b2-16-m1:explanationAr",
-        "evidenceExcerpt": "«gehen» حركة ⇒ wäre + Partizip II. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen».",
+        "evidenceExcerpt": "gehen فعل انتقال يأخذ sein في الماضي التام، فيأتي معه wäre والتصريف الثاني gegangen في آخر الجملة: «Er wäre nach Hause gegangen». أما hätte مع gegangen فخطأ في المساعد، والمصدر gehen أو gehen gewesen لا يصنعان ماضيًا لم…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17430,7 +17430,7 @@
         "prompt": "als ob أي صيغة تناسب «als ob» في الماضي؟",
         "answer": "… als ob er die Mahnung bekommen hätte.",
         "evidenceRef": "b2-16:miniTest:b2-16-m2:explanationAr",
-        "evidenceExcerpt": "المنفي الواقع يأخذ التصريف مع المساند المؤجَّل. «als ob» و «als wenn» تصفان انطباعًا يشبه حالة لا تؤكَّدها: الفعل مؤجَّل إلى الآخر ويأتي في صيغة الشرط، وفي الماضي مركّبًا («als ob er die Frist gekannt hätte»).",
+        "evidenceExcerpt": "مع als ob في الماضي يأتي التصريف الثاني ثم hätte في آخر الجملة: «als ob er die Mahnung bekommen hätte». أما bekommt فمضارع يقرّر واقعة، ووضع hat مباشرة بعد er يكسر ترتيب الجملة الجانبية، والخيار الأخير لا يحمل معنى.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17441,7 +17441,7 @@
         "prompt": "Doppelinfinitiv أين يقف التركيب الصحيح؟",
         "answer": "Das hätte ich prüfen sollen.",
         "evidenceRef": "b2-16:miniTest:b2-16-m3:explanationAr",
-        "evidenceExcerpt": "المساعد في وسط الجملة والزوج في الآخر. للنقد الذاتي أو الاعتراض المؤدَّب تُستعمل صيغة الشرط مع الأفعال الناقصة في تركيب «hätte … sollen/wollen/müssen» (وفي الجنوبية يُسمَع «hätte … gesollt» بدل «sollen» — كلاهما يُفهم، …",
+        "evidenceExcerpt": "المساعد hätte في الموضع الثاني، والمصدران في آخر الجملة، والفعل الناقص هو الأخير: «Das hätte ich prüfen sollen». للنقد الذاتي أو الاعتراض المؤدَّب تُستعمل هذه الصيغة مع sollen أو müssen أو können؛ فهي تقرّ بالتقصير وتفت…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17452,7 +17452,7 @@
         "prompt": "Ton der Nachlese أي جملة مراجعة لا تبرير؟",
         "answer": "Hätte ich die Frist geprüft, wäre die Gebühr entfallen.",
         "evidenceRef": "b2-16:miniTest:b2-16-m4:explanationAr",
-        "evidenceExcerpt": "شرط يُسمّي خطوة لا مذنبًا. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen».",
+        "evidenceExcerpt": "المراجعة تسمّي خطوة كان يمكن فعلها ولا تبحث عن مذنب: «Hätte ich die Frist geprüft, wäre die Gebühr entfallen». الخيارات الأخرى تلقي اللوم على البريد أو على التنبيه أو على الإشراف، ولا تقول ماذا كان يمكن أن يتغيّر.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17463,7 +17463,7 @@
         "prompt": "Abschwächung ما وظيفة «doch» في «Das wäre doch zu klären gewesen»؟",
         "answer": "Es färbt die Note höflicher, ohne die Pflicht zu ersetzen.",
         "evidenceRef": "b2-16:miniTest:b2-16-m5:explanationAr",
-        "evidenceExcerpt": "تليّن ولا تُعفي. للحديث عن ماضٍ لم يقع يأتي الفعل المساعد في صيغة الشرط ثم التصريف الثاني في آخر الجملة: «hätte gelesen», «wäre gekommen».",
+        "evidenceExcerpt": "doch تليّن النبرة ولا تُعفي من الواجب: «Das wäre doch zu klären gewesen» ما زالت تقول إن التوضيح كان لازمًا. فهي لا تقوّي الاتهام، ولا تجعل الجملة سؤالًا، ولا تحلّ محل التصريف الثاني.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17474,7 +17474,7 @@
         "prompt": " أي جملة تفرض واجبًا دون تسمية الملزَم؟",
         "answer": "Die Frist ist bis zum 12. zu verlängern.",
         "evidenceRef": "b2-17:controlled:b2-17-e1:explanationAr",
-        "evidenceExcerpt": "«ist … zu + المصدر» صيغة إلزام، و «sich lassen» و «machbar» إمكان، و «wir können» فعل شخص.",
+        "evidenceExcerpt": "صيغة sein + zu + المصدر تفرض واجبًا دون تسمية الملزَم: «Die Frist ist bis zum 12. zu verlängern». أما sich lassen و machbar فيعبّران عن الإمكان، و «Wir können die Frist verlängern» تسمّي من يفعل.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17485,7 +17485,7 @@
         "prompt": "Der fehlende Nachweis ist binnen einer Woche ___. أكمل بصيغة الواجب مع «sein»:",
         "answer": "beizubringen",
         "evidenceRef": "b2-17:controlled:b2-17-e2:explanationAr",
-        "evidenceExcerpt": "«beibringen» ينفصل في المضارع (er bringt bei)، فتنزل «zu» بين البادئة والجذر: bei + zu + bringen.",
+        "evidenceExcerpt": "الفعل beibringen ينفصل في المضارع (er bringt bei)، فتنزل «zu» بين البادئة والجذر: bei + zu + bringen.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -17617,7 +17617,7 @@
         "prompt": "Pflicht ohne Träger أي جملة تفرض واجبًا وتترك الجهة معلّقة؟",
         "answer": "Die Belege sind bis Freitag beizufügen.",
         "evidenceRef": "b2-17:miniTest:b2-17-m1:explanationAr",
-        "evidenceExcerpt": "«sind … beizufügen» إلزام، و «lassen sich» إمكان، والصفة تقييم.",
+        "evidenceExcerpt": "«Die Belege sind bis Freitag beizufügen» إلزام لا يسمّي الملزَم. أما «Wir müssen die Belege bis Freitag beifügen» فإلزام يسمّي الملزَم (wir)، و lassen sich إمكان، و «Wir fügen die Belege selbst bei» وصف لما نفعله.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17639,7 +17639,7 @@
         "prompt": "Verneinte Möglichkeit أي جملة تنفي إمكان الإثبات لا وجوبه؟",
         "answer": "Das lässt sich mit unseren Daten nicht belegen.",
         "evidenceRef": "b2-17:miniTest:b2-17-m3:explanationAr",
-        "evidenceExcerpt": "النفي مع «sich lassen» ينفي الإمكان عند كل أحد. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به.",
+        "evidenceExcerpt": "النفي مع sich lassen ينفي الإمكان عند كل أحد: «Das lässt sich mit unseren Daten nicht belegen». أما muss nicht فينفي الوجوب، و darf nicht يمنع، و «Das muss für unsere Zwecke unbelegt bleiben» يفرض.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17650,7 +17650,7 @@
         "prompt": "Bewertung oder Beschreibung ما فرق «unzumutbar» عن «nicht zumutbar»؟",
         "answer": "Das erste ist ein Werturteil, das zweite eine Feststellung.",
         "evidenceRef": "b2-17:miniTest:b2-17-m4:explanationAr",
-        "evidenceExcerpt": "«un-» يعترض، و «nicht» ينفي الواقع. تقول «Das lässt sich belegen»: الشيء قابل للإثبات، ولا تقول إن أحدًا ملزم به.",
+        "evidenceExcerpt": "البادئة un- تصنع حكم قيمة يعترض على التكليف ذاته، أما nicht فيقرّر أن الشرط غير متحقق. وفي الاتجاه الإيجابي: «Die einmalige Nachreichung ist zumutbar» حكم بأن التكليف معقول.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18013,7 +18013,7 @@
         "prompt": "Antwort auf eine Verneinung «ألم تُرسل المستندات؟» — كيف تُثبت أنك أرسلتها؟",
         "answer": "Doch, ich habe sie am Montag abgeschickt.",
         "evidenceRef": "b2-19:miniTest:b2-19-m1:explanationAr",
-        "evidenceExcerpt": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du das nicht bekommen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند الم…",
+        "evidenceExcerpt": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du die Mail nicht gelesen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18090,7 +18090,7 @@
         "prompt": "رتّب جملة اعتذار معترف به:",
         "answer": "Zwar fehlt uns die Rückmeldung der Studienberatung, aber die Frist ist dokumentiert.",
         "evidenceRef": "b2-20:controlled:b2-20-e3:explanationAr",
-        "evidenceExcerpt": "zwar يفتح قوس الاعتراف و aber يغلقه باعتراض لا يُلغي ما قبله: «Zwar fehlt uns die Rückmeldung, aber die Frist ist dokumentiert». حذف zwar يترك الاعتراض بلا شيء يُعترَض عليه.",
+        "evidenceExcerpt": "zwar يفتح قوس الاعتراف و aber يغلقه باعتراض لا يُلغي ما قبله: «Zwar fehlt uns die Rückmeldung der Studienberatung, aber die Frist ist dokumentiert». حذف zwar يترك الاعتراض بلا شيء يُعترَض عليه.",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -18288,7 +18288,7 @@
         "prompt": "Die Sprecherin sagte, die Lage ___ angespannt. أدخل صيغة النقل من sein.",
         "answer": "sei",
         "evidenceRef": "b2-21:controlled:b2-21-e2:explanationAr",
-        "evidenceExcerpt": "النقل الذي لا يُصرَّح بصاحبه يأخذ صيغة Konjunktiv I، وصيغة المفرد الغائب من sein هي sei: «Die Sprecherin sagte, die Lage sei angespannt». مع war تصير الجملة تأكيدًا لواقعة لا نقلًا لقول.",
+        "evidenceExcerpt": "الكلام المنقول عن غير الكاتب يأخذ صيغة Konjunktiv I، وصيغة المفرد الغائب من sein هي sei: «Die Sprecherin sagte, die Lage sei angespannt». مع war تصير الجملة تأكيدًا لواقعة لا نقلًا لقول.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -18717,7 +18717,7 @@
         "prompt": "die Überprüfung der Zahlungen ___ die Verwaltung أكمل بحرف الرفع للفاعل الحقيقي.",
         "answer": "durch",
         "evidenceRef": "b2-23:controlled:b2-23-e3:explanationAr",
-        "evidenceExcerpt": "إذا يصلح الاسم المضاف فاعلًا ومفعولًا تُزيل durch اللبس: «die Überprüfung der Zahlungen durch die Verwaltung» تسمّي من فحص. الإضافة وحدها تترك الفاحص والمفحوص وجهين محتملين.",
+        "evidenceExcerpt": "إذا احتملت الإضافة الفاعل والمفعول تُزيل durch اللبس: «die Überprüfung der Zahlungen durch die Verwaltung» تسمّي من فحص. الإضافة وحدها تترك الفاحص والمفحوص وجهين محتملين.",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -32774,8 +32774,8 @@
       {
         "id": "b2-18-writing",
         "scope": "lesson-writing",
-        "prompt": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde. اكتب فقرة ردّ رسمي (170–200 كلمة) إلى طالب: اذكر ثبّتَوصول، ونظرًا مفتوحًا، وإتمامًا مخططًا له — كل واحد بتركيب — ثم اصوغ جملتين بفعلين مباشرين. ولا تستعمل أكثر من تركيبتين في الجملة الواحدة، واشرح في جملة لماذا حُذف موضع ثالث.",
-        "reviewEvidence": "وردت ثلاث تراكيب مختلفة الوظائف: zur Kenntnis nehmen, in Betracht ziehen, zum Abschluss bringen. · جملتان بفعل مفرد مباشر، بلا اسم مُحوَّل. · لم تتجاوز تركيبتان في أي جملة، وسبب الحذف مذكور صراحة. · الأجل والجهة مسمّيان حيث لزم الوعد، ومُبقِيًا مفتوحًا حيث لا وعد.",
+        "prompt": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde. اكتب فقرة ردّ رسمي (170–200 كلمة) إلى شخص يدرس: اذكر تسجيل وصولٍ، وفحصًا لم يُنجَز بعد، وإتمامًا مخططًا له — كلٌّ منها بتركيب — ثم صُغ جملتين بفعلين بسيطين. لا تستعمل أكثر من تركيبين في الجملة الواحدة، واشرح في جملة لماذا اختُصر موضع ثالث.",
+        "reviewEvidence": "وردت ثلاثة تراكيب مختلفة الوظائف: zur Kenntnis nehmen, in Betracht ziehen, zum Abschluss bringen. · جملتان بفعل مفرد مباشر، بلا اسم مُحوَّل. · لم يُستعمل أكثر من تركيبين في أي جملة، وسبب الاختصار مذكور صراحة. · الأجل والجهة مسمّيان حيث يلزم الوعد، ويبقى الأمر مفتوحًا حيث لا وعد.",
         "answerPolicy": "model-after-commit"
       },
       {
@@ -165539,8 +165539,8 @@
           {
             "path": "pronunciation.items[5].de",
             "stage": "pronunciation",
-            "text": "die NachLEse, nicht der VorWURf",
-            "surface": "die NachLEse, nicht der VorWURf",
+            "text": "die NACHlese, nicht der VORwurf",
+            "surface": "die NACHlese, nicht der VORwurf",
             "strength": "context"
           },
           {
@@ -166708,8 +166708,8 @@
           {
             "path": "pronunciation.items[5].de",
             "stage": "pronunciation",
-            "text": "die NachLEse, nicht der VorWURf",
-            "surface": "die NachLEse, nicht der VorWURf",
+            "text": "die NACHlese, nicht der VORwurf",
+            "surface": "die NACHlese, nicht der VORwurf",
             "strength": "context"
           },
           {
@@ -167628,6 +167628,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "miniTest[0].options[2]",
+            "stage": "test",
+            "text": "Wir müssen die Belege bis Freitag beifügen.",
+            "surface": "Wir müssen die Belege bis Freitag beifügen.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[0].options[3]",
             "stage": "test",
             "text": "Wir fügen die Belege selbst bei.",
@@ -167887,8 +167894,15 @@
           {
             "path": "miniTest[2].options[0]",
             "stage": "test",
-            "text": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
-            "surface": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
+            "text": "Das muss mit unseren Daten nicht belegt werden.",
+            "surface": "Das muss mit unseren Daten nicht belegt werden.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[2].options[1]",
+            "stage": "test",
+            "text": "Das darf mit unseren Daten nicht belegt werden.",
+            "surface": "Das darf mit unseren Daten nicht belegt werden.",
             "strength": "context"
           },
           {
@@ -170444,8 +170458,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -170478,8 +170492,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -170796,8 +170810,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -171151,8 +171165,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -171600,8 +171614,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -172073,8 +172087,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -172185,13 +172199,6 @@
             "strength": "context"
           },
           {
-            "path": "pronunciation.items[5].de",
-            "stage": "pronunciation",
-            "text": "die etaPPIERTE Prüfung",
-            "surface": "die etaPPIERTE Prüfung",
-            "strength": "context"
-          },
-          {
             "path": "theory[0].examples[1].de",
             "stage": "rule",
             "text": "…, dass die Prüfung der Unterlagen bis Freitag gestellt werden muss.",
@@ -172215,8 +172222,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -172268,8 +172275,8 @@
           {
             "path": "pronunciation.items[3].de",
             "stage": "pronunciation",
-            "text": "ein RiSIko eingehen",
-            "surface": "ein RiSIko eingehen",
+            "text": "ein RIsiko eingehen",
+            "surface": "ein RIsiko eingehen",
             "strength": "context"
           }
         ],
@@ -172356,8 +172363,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -172441,8 +172448,8 @@
           {
             "path": "writing.promptDe",
             "stage": "writing",
-            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
-            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studying Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "text": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
+            "surface": "Schreiben Sie den Absatz einer formellen Antwort (170–200 Wörter) an eine studierende Person: nennen Sie einen registrierten Eingang, eine offene Prüfung und einen geplanten Abschluss — jeweils mit einer Fügung — und formulieren Sie zwei weitere Sätze mit einfachen Verben. Verwenden Sie höchstens zwei Fügungen in einem Satz und erklären Sie in einem Satz, warum eine dritte Stelle gekürzt wurde.",
             "strength": "context"
           }
         ],
@@ -216082,13 +216089,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "miniTest[2].options[0]",
-            "stage": "test",
-            "text": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
-            "surface": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
-            "strength": "context"
-          },
-          {
             "path": "miniTest[2].options[2]",
             "stage": "test",
             "text": "Das lässt sich mit unseren Daten nicht belegen.",
@@ -216703,8 +216703,7 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "accusative",
-          "unknown"
+          "accusative"
         ],
         "anchorIds": [],
         "sources": [
@@ -216713,13 +216712,6 @@
             "stage": "entry",
             "text": "Richtig. Genau deshalb ist die Wahl der Form eine Inhaltsfrage, keine Stilfrage: „Die Unterlagen sind von der Behörde zu prüfen“ nennt den Träger, „Die Unterlagen sind zu prüfen“ lässt die Frage offen.",
             "surface": "Richtig. Genau deshalb ist die Wahl der Form eine Inhaltsfrage, keine Stilfrage: „Die Unterlagen sind von der Behörde zu prüfen“ nennt den Träger, „Die Unterlagen sind zu prüfen“ lässt die Frage offen.",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[2].options[0]",
-            "stage": "test",
-            "text": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
-            "surface": "Das ist mit unseren Daten nicht zu belegen und bleibt offen.",
             "strength": "context"
           }
         ],
@@ -218328,6 +218320,13 @@
             "text": "in Betracht ziehen",
             "surface": "in Betracht ziehen",
             "strength": "target"
+          },
+          {
+            "path": "pronunciation.items[5].de",
+            "stage": "pronunciation",
+            "text": "in BeTRACHT ziehen",
+            "surface": "in BeTRACHT ziehen",
+            "strength": "context"
           },
           {
             "path": "theory[1].examples[1].de",
@@ -221504,5 +221503,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "faa0f83c811428f6ee8b2b7e5d257df9f94a4391b88087acba2973c747b40e8b"
+  "contentSha256": "1d1d983b58cc3a36e8c3b793261ecd4eb05f6fd0605bb1ccdb4afb461e2ccd4e"
 }

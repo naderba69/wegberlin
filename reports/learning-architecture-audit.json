@@ -63,26 +63,26 @@
       "total": 144,
       "counts": {
         "gist": 24,
-        "detail": 58,
+        "detail": 59,
         "stance": 13,
         "inference": 26,
-        "structure": 23
+        "structure": 22
       },
-      "detailPercent": 40,
+      "detailPercent": 41,
       "gistPercent": 17
     }
   },
   "questionCategoryCounts": {
     "gist": 96,
-    "detail": 314,
+    "detail": 315,
     "stance": 36,
     "inference": 78,
-    "structure": 52
+    "structure": 51
   },
   "classificationBasisCounts": {
     "listening-sequence-gist-contract": 96,
-    "item-text-semantic-signal": 166,
-    "specific-detail-default": 314
+    "item-text-semantic-signal": 165,
+    "specific-detail-default": 315
   },
   "boundaries": {
     "grammar": "canonical-rule-map-and-semantic-controlled-to-production-links-no-automatic-mastery-or-cefr",
@@ -3569,11 +3569,11 @@
       "level": "A2",
       "surface": "listening",
       "questionId": "a2-07-lq2",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -4157,11 +4157,11 @@
       "level": "A2",
       "surface": "listening",
       "questionId": "a2-14-lq2",
-      "category": "detail",
-      "labelDe": "Detail",
-      "labelAr": "تفصيل",
-      "classificationBasis": "specific-detail-default",
-      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
+      "category": "structure",
+      "labelDe": "Textaufbau",
+      "labelAr": "البنية",
+      "classificationBasis": "item-text-semantic-signal",
+      "matchedSignal": "sequence-or-text-function",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -8119,11 +8119,11 @@
       "level": "B2",
       "surface": "listening",
       "questionId": "b2-13-lq3",
-      "category": "structure",
-      "labelDe": "Textaufbau",
-      "labelAr": "البنية",
-      "classificationBasis": "item-text-semantic-signal",
-      "matchedSignal": "sequence-or-text-function",
+      "category": "detail",
+      "labelDe": "Detail",
+      "labelAr": "تفصيل",
+      "classificationBasis": "specific-detail-default",
+      "matchedSignal": "specific-who-what-where-when-or-explicit-fact",
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     },
     {
@@ -9051,5 +9051,5 @@
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     }
   ],
-  "contentSha256": "72939b3e045067527e1ae7c662b7c6aac78dfbfdc975bf69c854a60b8283f8b9"
+  "contentSha256": "4811d7cfaa5a006ae9f976b556b1a5a6d019031cdb641cb25824f7773257d4ae"
 }

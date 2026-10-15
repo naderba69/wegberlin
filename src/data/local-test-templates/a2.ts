@@ -1299,9 +1299,9 @@ export const localTestTemplateBankA2 = [
         "promptAr": "اختر الصيغة الصحيحة لحالة «Teilweise Zustimmung»:",
         "options": [
           "Das stimmt, aber …",
-          "Du bist falsch.",
-          "Nein, Ende.",
-          "Keine Meinung du."
+          "Du bist falsch",
+          "Nein, Ende",
+          "Keine Meinung du"
         ],
         "correctIndex": 0,
         "explanationAr": "الموافقة الجزئية تُبنى على ربطٍ صريح: «Das stimmt, aber …» يقرّ بوجهٍ ثم يعترض. والرفضُ الجاف أو غيابُ الرأي لا يفتحان حوارًا؛ فحص ذاتي: هل أقْررتَ ثم أبديتَ تحفّظك؟"

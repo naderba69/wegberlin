@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 75,
+  "count": 74,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -86,12 +86,6 @@
       "quote": "Die Heizung ist kaputt. Deshalb brauche ich ein anderes Zimmer",
       "status": "human-kept",
       "decision": "قرار مراجع بشري: يُبقى كما هو. جواب كامل بعد ملء الفراغ (المحادثة، 2026-10-14)"
-    },
-    {
-      "lessonId": "a2-14",
-      "quote": "Nach dem Termin meldet sie sich wieder",
-      "status": "human-kept",
-      "decision": "قرار مراجع بشري: يُبقى كما هو. جواب كامل لسؤال الاستماع (المحادثة، 2026-10-14)"
     },
     {
       "lessonId": "a2-15",

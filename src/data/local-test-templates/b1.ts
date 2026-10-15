@@ -484,7 +484,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Kontrast",
         "promptAr": "اختر التعبير المطابق ل «Kontrast»:",
         "options": [
-          "Die Miete ist niedriger; dafür ist der Weg länger.",
+          "Die Miete ist niedriger; dafür ist der Weg länger",
           "Die Miete niedriger während der Weg",
           "Dafür der Weg ist länger und die Miete viel niedriger",
           "Niedriger als dafür die Miete und Weg"
@@ -500,7 +500,7 @@ export const localTestTemplateBankB1 = [
           "Für alle Menschen ist das Land immer besser geeignet",
           "Alle Stadtbewohner sind gestresst und unzufrieden",
           "Dörfer sind grundsätzlich billig und laut",
-          "Für Familien kann mehr Platz wichtiger sein."
+          "Für Familien kann mehr Platz wichtiger sein"
         ],
         "correctIndex": 3,
         "explanationAr": "صياغة محددة وغير مطلقة. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedingung, dass …، Wenn ich täglich pendeln müsste …."
@@ -510,7 +510,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Bedingung",
         "promptAr": "أي خيار يحقّق «Bedingung» في هذا السياق؟",
         "options": [
-          "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
+          "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen",
           "Wenn regelmäßig der Zug fahren würde, dann ich dort wohnen würde",
           "Ich dort wohnen würde, wenn der Zug regelmäßig",
           "Zug fährt regelmäßig, dann ich dort wohnen würde"
@@ -855,7 +855,7 @@ export const localTestTemplateBankB1 = [
         "promptAr": "اختر الصيغة الصحيحة لحالة «falls»:",
         "options": [
           "Falls es wird regnen, nutzen wir innen Platz",
-          "Falls es regnet, nutzen wir den Innenraum.",
+          "Falls es regnet, nutzen wir den Innenraum",
           "Falls regnet es, den Innenraum wir nutzen",
           "Wir nutzen den Innenraum"
         ],
@@ -869,7 +869,7 @@ export const localTestTemplateBankB1 = [
         "options": [
           "Wir hoffen einfach, dass genug Leute kommen",
           "Einen Plan B brauchen wir für solche Fälle wirklich nicht",
-          "Falls zu wenige kommen, verkürzen wir das Programm.",
+          "Falls zu wenige kommen, verkürzen wir das Programm",
           "Danach entscheiden wir, was wir machen können"
         ],
         "correctIndex": 2,
@@ -1126,7 +1126,7 @@ export const localTestTemplateBankB1 = [
         "options": [
           "Statt dass ich sofort zu antworten, nur zu warten",
           "Statt ich antworte sofort und warte überhaupt nicht",
-          "Statt sofort zu antworten, warte ich.",
+          "Statt sofort zu antworten, warte ich",
           "Statt zu antworten und zu warten"
         ],
         "correctIndex": 2,
@@ -1140,7 +1140,7 @@ export const localTestTemplateBankB1 = [
           "Statt dass entscheidet die App, wähle ich",
           "Statt die App entscheidet alles",
           "Die App statt ich wählt allein",
-          "Statt dass die App entscheidet, wähle ich."
+          "Statt dass die App entscheidet, wähle ich"
         ],
         "correctIndex": 3,
         "explanationAr": "فاعل مختلف مع dass. نستعمل statt … zu عندما يقوم الشخص نفسه بالفعلين: Statt sofort zu antworten, sammle ich Nachrichten."
@@ -1166,7 +1166,7 @@ export const localTestTemplateBankB1 = [
           "Alles gleichzeitig ohne Vergleich ändern",
           "Eine Dauer fehlt im Testplan",
           "Ohne Vergleich bleibt der Wert unklar",
-          "Eine Regel sieben Tage testen."
+          "Eine Regel sieben Tage testen"
         ],
         "correctIndex": 3,
         "explanationAr": "قاعدة ومدة. اختر مشكلة واحدة وقاعدة واحدة لمدة أسبوع أو أسبوعين."
@@ -1423,7 +1423,7 @@ export const localTestTemplateBankB1 = [
           "Du musst genau das tun, sonst klappt nichts",
           "Ich entscheide für dich und nicht umgekehrt",
           "Fragen sind dafür nicht nötig",
-          "An deiner Stelle würde ich nachfragen."
+          "An deiner Stelle würde ich nachfragen"
         ],
         "correctIndex": 3,
         "explanationAr": "نصيحة افتراضية. نستعمل An deiner Stelle würde ich … و Du könntest … و Eine Möglichkeit wäre … لعرض خيارات."
@@ -1459,7 +1459,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Grenze",
         "promptAr": "اختر التعبير المطابق ل «Grenze» في درس «النصائح»:",
         "options": [
-          "Das müsste ein Fachberater prüfen.",
+          "Das müsste ein Fachberater prüfen",
           "Ich weiß sicher alles darüber und brauche keine Hilfe",
           "Jeder Vertrag ist gleich, das ist doch klar",
           "Eine Quelle brauche ich nicht"
@@ -1474,7 +1474,7 @@ export const localTestTemplateBankB1 = [
         "options": [
           "Ich entscheide für dich, nicht du",
           "Du darfst nur meine Lösung nehmen, sonst keine",
-          "Die Entscheidung liegt bei dir.",
+          "Die Entscheidung liegt bei dir",
           "Rat ist Pflicht für alle"
         ],
         "correctIndex": 2,

@@ -511,9 +511,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "أفضل ممارسة:",
         "options": [
           "Vorschläge dokumentieren und Annahme, Änderung oder Ablehnung begründen",
-          "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
-          "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen.",
-          "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen."
+          "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren",
+          "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen",
+          "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen"
         ],
         "correctIndex": 0,
         "explanationAr": "الرد المعلل يغلق الحلقة: يعرف كل مقترِح هل قُبل اقتراحه أو عُدّل أو رُفض ولماذا. التسجيل بلا رد، والإقصاء بلا تفسير، والعرض العام وحده لا تغلقها."
@@ -532,10 +532,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Belegkette",
         "promptAr": "ما الخطوة الأولى؟",
         "options": [
-          "Die Meldung eines anderen Mediums als Bestätigung zitieren.",
+          "Die Meldung eines anderen Mediums als Bestätigung zitieren",
           "Zur ursprünglichen Quelle und Messung zurückgehen",
-          "Die Zahl übernehmen und sie im eigenen Beitrag wiederholen.",
-          "Die Kommentare unter dem Beitrag lesen."
+          "Die Zahl übernehmen und sie im eigenen Beitrag wiederholen",
+          "Die Kommentare unter dem Beitrag lesen"
         ],
         "correctIndex": 1,
         "explanationAr": "الأصل يبين ما المادة الداعمة فعلًا: Zur ursprünglichen Quelle und Messung zurückgehen. نقلاً عن نقلك لا يضيف دليلًا، والسؤال الأصلي يكشف هل المادة داعمة أصلًا."
@@ -558,10 +558,10 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Selbsteinschätzung",
         "promptAr": "ماذا تثبت مباشرة؟",
         "options": [
-          "Dass alle tatsächlich kompetenter wurden.",
-          "Dass objektiv bessere Kompetenzwerte gemessen wurden.",
+          "Dass alle tatsächlich kompetenter wurden",
+          "Dass objektiv bessere Kompetenzwerte gemessen wurden",
           "Was Befragte über ihre Wahrnehmung berichten",
-          "Dass der Kurs bei allen gut ankam."
+          "Dass der Kurs bei allen gut ankam"
         ],
         "correctIndex": 2,
         "explanationAr": "التقييم الذاتي يقيس ما يقوله المشاركون عن إدراكهم، لا كفاءة مقيسة موضوعيًا ولا رضا الجميع. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟"
@@ -572,9 +572,9 @@ export const localTestTemplateBankB2 = [
         "promptAr": "التقييم الأدق:",
         "options": [
           "Offenlegen und Methode sowie unabhängige Prüfung beachten",
-          "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse.",
-          "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet.",
-          "Der Konflikt widerlegt jede einzelne Zahl der Studie."
+          "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse",
+          "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet",
+          "Der Konflikt widerlegt jede einzelne Zahl der Studie"
         ],
         "correctIndex": 0,
         "explanationAr": "الشفافية والفحص أنسب من الحكم الآلي. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟"
@@ -768,7 +768,7 @@ export const localTestTemplateBankB2 = [
         "promptAr": "أفضل صياغة:",
         "options": [
           "Man sollte etwas tun, etwa mehr Personal, ohne Zahl und ohne Frist",
-          "Die Bibliothek testet acht Wochen zwei Zonen und misst Nutzung sowie Beschwerden.",
+          "Die Bibliothek testet acht Wochen zwei Zonen und misst Nutzung sowie Beschwerden",
           "Eine Lösung wäre gut, zum Beispiel längere Öffnungszeiten am Wochenende",
           "Das Thema ist interessant und betrifft viele Nutzer, doch fehlt ein konkreter Vorschlag"
         ],
@@ -793,7 +793,7 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Sprechreparatur",
         "promptAr": "اختر التعبير المطابق ل «Sprechreparatur»:",
         "options": [
-          "Ich korrigiere mich: zwölf statt zehn Prozent.",
+          "Ich korrigiere mich: zwölf statt zehn Prozent",
           "Ich beginne den ganzen Vortrag einfach noch einmal von vorn",
           "Ich höre auf und beende den Beitrag hier",
           "Ich erkläre eine Minute lang, warum der Fehler passierte"
@@ -882,7 +882,7 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
           "Bei einem fehlenden Wort fange ich von vorn an",
-          "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
+          "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig",
           "Wenn ein Wort fehlt, höre ich auf und bitte um einen neuen Anlauf"
         ],
         "correctIndex": 2,
@@ -903,7 +903,7 @@ export const localTestTemplateBankB2 = [
         "promptAr": "اختر الأدق:",
         "options": [
           "Die Studie beweist die Regel für alle Kurse",
-          "Die Studie stützt die Regel für diese zwei Kurse.",
+          "Die Studie stützt die Regel für diese zwei Kurse",
           "Alle Kurse profitieren sicher und dauerhaft davon",
           "Die Regel ist durch nichts widerlegt"
         ],
@@ -917,7 +917,7 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Ich bleibe bei meiner Meinung, egal was die Daten zeigen",
           "Die Daten sind gut, deshalb bleibt alles",
-          "Bleibt der Effekt aus, entfällt die Regelung.",
+          "Bleibt der Effekt aus, entfällt die Regelung",
           "Wir messen später im nächsten Kurs erneut"
         ],
         "correctIndex": 2,
@@ -930,7 +930,7 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Nur der eigene Befund zählt am Ende des gesamten Kurses und danach",
           "Die Meinung der Gruppe ist dafür nicht relevant",
-          "Ein möglicher Störfaktor wie der Niveauunterschied.",
+          "Ein möglicher Störfaktor wie der Niveauunterschied",
           "Die Schlussfolgerung aus dem zweiten Bericht"
         ],
         "correctIndex": 2,
@@ -942,7 +942,7 @@ export const localTestTemplateBankB2 = [
         "promptAr": "التراجع المنظم يعني:",
         "options": [
           "Alles zurückziehen und neu beginnen",
-          "Ziel behalten, Maßnahme anpassen.",
+          "Ziel behalten, Maßnahme anpassen",
           "Den Gegner persönlich angreifen",
           "Am Montag nichts ändern"
         ],

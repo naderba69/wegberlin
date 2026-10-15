@@ -7108,7 +7108,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Unter welcher Bedingung akzeptiert er das Zimmer? بأي شرط يقبل الغرفة؟",
-        "answer": "Er kann morgen zurückwechseln, wenn repariert wurde.",
+        "answer": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
         "evidenceRef": "a2-12:listening.transcriptDe",
         "evidenceExcerpt": "Wenn die Heizung morgen repariert ist, möchte ich zurückwechseln.",
         "visibilityPolicy": "authorized-option-bank",
@@ -8099,7 +8099,7 @@
         "id": "a2-17-lq3",
         "scope": "lesson-listening",
         "kind": "multiple-choice",
-        "prompt": "Was aktiviert sie? ماذا تفعل؟",
+        "prompt": "Was aktiviert sie? ماذا تُفعِّل؟",
         "answer": "Zwei-Faktor-Anmeldung",
         "evidenceRef": "a2-17:listening.transcriptDe",
         "evidenceExcerpt": "Dann ändere ich trotzdem mein Passwort und aktiviere die Zwei-Faktor-Anmeldung.",
@@ -8474,7 +8474,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Wo liegt das Problem? أين المشكلة؟",
-        "answer": "Beim Sprechen fehlen Wörter.",
+        "answer": "Beim Sprechen fehlen Wörter",
         "evidenceRef": "a2-19:listening.transcriptDe",
         "evidenceExcerpt": "— Lernende: Beim Lesen verstehe ich viel, aber beim Sprechen fehlen mir die Wörter.",
         "visibilityPolicy": "authorized-option-bank",
@@ -10740,7 +10740,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " اختر ترتيب während:",
-        "answer": "Die Stadt ist lebendig, während das Land ruhiger ist.",
+        "answer": "Die Stadt ist lebendig, während das Land ruhiger ist",
         "evidenceRef": "b1-07:controlled:b1-07-e1:explanationAr",
         "evidenceExcerpt": "während تُقابل بين حالتين وتأتي بفعلها في نهاية الجزء: «während das Land ruhiger ist». تقديم ist على الفاعل يعطي ترتيب جملة رئيسية داخل جزء تابع، وجزء بلا فعل يبقى معلقًا. فحص ذاتي: هل الحالتان في زمان واحد؟",
         "visibilityPolicy": "authorized-option-bank",
@@ -10795,7 +10795,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " اختر رأيًا مشروطًا:",
-        "answer": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
+        "answer": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
         "evidenceRef": "b1-07:controlled:b1-07-e6:explanationAr",
         "evidenceExcerpt": "الرأي المشروط يربط الحكم بحال ويسوّغها: «Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe». أما «für alle besser» و «immer gestresst» فيزيلان الشرط. فحص ذاتي: هل يمكنك ذكر حالة يسقط فيها ر…",
         "visibilityPolicy": "authorized-option-bank",
@@ -10839,7 +10839,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum wählte sie eine kleinere Stadt? لماذا اختارت مدينة صغيرة؟",
-        "answer": "Als Kompromiss aus Natur, Verbindung und Nähe.",
+        "answer": "Als Kompromiss aus Natur, Verbindung und Nähe",
         "evidenceRef": "b1-07:reading.textDe",
         "evidenceExcerpt": "Sie zog in eine kleinere Stadt mit Bahnanschluss.",
         "visibilityPolicy": "authorized-option-bank",
@@ -10850,7 +10850,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was ist der größte Nachteil? ما العيب الأكبر؟",
-        "answer": "Der tägliche Arbeitsweg dauert fast zwei Stunden.",
+        "answer": "Der tägliche Arbeitsweg dauert fast zwei Stunden",
         "evidenceRef": "b1-07:listening.transcriptDe",
         "evidenceExcerpt": "— Nabil: Einerseits ist unsere Wohnung groß und günstig, andererseits pendle ich täglich fast zwei Stunden.",
         "visibilityPolicy": "authorized-option-bank",
@@ -10905,7 +10905,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Kontrast اختر التعبير المطابق ل «Kontrast»:",
-        "answer": "Die Miete ist niedriger; dafür ist der Weg länger.",
+        "answer": "Die Miete ist niedriger; dafür ist der Weg länger",
         "evidenceRef": "b1-07:miniTest:b1-07-m3:explanationAr",
         "evidenceExcerpt": "dafür في الخانة الأولى والفعل ثانيًا. تربط je … desto متغيرين: Je weiter man vom Zentrum wohnt, desto günstiger ist oft die Miete.",
         "visibilityPolicy": "authorized-option-bank",
@@ -10916,7 +10916,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Differenziert اختر الصيغة الصحيحة لحالة «Differenziert»:",
-        "answer": "Für Familien kann mehr Platz wichtiger sein.",
+        "answer": "Für Familien kann mehr Platz wichtiger sein",
         "evidenceRef": "b1-07:miniTest:b1-07-m4:explanationAr",
         "evidenceExcerpt": "صياغة محددة وغير مطلقة. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedingung, dass …، Wenn ich täglich pendeln müsste ….",
         "visibilityPolicy": "authorized-option-bank",
@@ -10927,7 +10927,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Bedingung أي خيار يحقّق «Bedingung» في هذا السياق؟",
-        "answer": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
+        "answer": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen",
         "evidenceRef": "b1-07:miniTest:b1-07-m5:explanationAr",
         "evidenceExcerpt": "شرط وقرار افتراضي: Konjunktiv II في الجزأين (fahren würde … würde wohnen)، والفعل المصرَّف في آخر جملة wenn ثم في أول الجملة الرئيسية. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedin…",
         "visibilityPolicy": "authorized-option-bank",
@@ -11785,7 +11785,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي خطة خطر جيدة؟",
-        "answer": "Falls es regnet, nutzen wir den reservierten Innenraum.",
+        "answer": "Falls es regnet, nutzen wir den reservierten Innenraum",
         "evidenceRef": "b1-12:controlled:b1-12-e6:explanationAr",
         "evidenceExcerpt": "خطة خطر جيدة تحتاج شرطًا مُسبقًا وبديلًا جاهزًا: «Falls es regnet, nutzen wir den reservierten Innenraum». الأمل بلا مطر ليس خطة، والقرار بعد الفشل يجعل البديل متأخرًا. فحص ذاتي: هل المكان محجوز فعلًا؟",
         "visibilityPolicy": "authorized-option-bank",
@@ -11807,7 +11807,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Wurde das Ziel von 150 Dingen erreicht? هل تحقق هدف 150 غرضًا؟",
-        "answer": "Ja, 265 Dinge wurden getauscht.",
+        "answer": "Ja, 265 Dinge wurden getauscht",
         "evidenceRef": "b1-12:reading.textDe",
         "evidenceExcerpt": "Ihr Ziel war, bei einem Tauschmarkt mindestens 150 Dinge weiterzugeben.",
         "visibilityPolicy": "authorized-option-bank",
@@ -11829,7 +11829,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was ändert die Initiative beim nächsten Mal? ماذا تغير لاحقًا؟",
-        "answer": "Sie begrenzt die Menge und plant den Abtransport.",
+        "answer": "Sie begrenzt die Menge und plant den Abtransport",
         "evidenceRef": "b1-12:reading.textDe",
         "evidenceExcerpt": "Beim nächsten Mal soll die Annahmemenge begrenzt und der Abtransport vorher vereinbart werden.",
         "visibilityPolicy": "authorized-option-bank",
@@ -11851,7 +11851,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was passiert bei weniger als zwei Fachleuten? ماذا عند وجود أقل من خبيرين؟",
-        "answer": "Die Zahl der Termine wird reduziert.",
+        "answer": "Die Zahl der Termine wird reduziert",
         "evidenceRef": "b1-12:listening.transcriptDe",
         "evidenceExcerpt": "Falls wir weniger als zwei Fachleute finden, reduzieren wir die Zahl der Termine.",
         "visibilityPolicy": "authorized-option-bank",
@@ -11895,7 +11895,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "falls اختر الصيغة الصحيحة لحالة «falls»:",
-        "answer": "Falls es regnet, nutzen wir den Innenraum.",
+        "answer": "Falls es regnet, nutzen wir den Innenraum",
         "evidenceRef": "b1-12:miniTest:b1-12-m3:explanationAr",
         "evidenceExcerpt": "فعل الشرط في النهاية. تستعمل falls بمعنى «في حال» عندما نعرض احتمالًا ونتيجته: Falls der Raum nicht frei ist, nutzen wir die Schule.",
         "visibilityPolicy": "authorized-option-bank",
@@ -11906,7 +11906,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Risiko الأفضل:",
-        "answer": "Falls zu wenige kommen, verkürzen wir das Programm.",
+        "answer": "Falls zu wenige kommen, verkürzen wir das Programm",
         "evidenceRef": "b1-12:miniTest:b1-12-m4:explanationAr",
         "evidenceExcerpt": "خطر وخطة B. تستعمل falls بمعنى «في حال» عندما نعرض احتمالًا ونتيجته: Falls der Raum nicht frei ist, nutzen wir die Schule.",
         "visibilityPolicy": "authorized-option-bank",
@@ -12522,7 +12522,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " الفاعل نفسه:",
-        "answer": "Statt sofort zu antworten, sammle ich Nachrichten.",
+        "answer": "Statt sofort zu antworten, sammle ich Nachrichten",
         "evidenceRef": "b1-16:controlled:b1-16-e1:explanationAr",
         "evidenceExcerpt": "فاعل واحد ومصدر مع zu يكفيان: «Statt sofort zu antworten, sammle ich Nachrichten». «Statt dass ich sofort zu antworten, sammle ich Notizen» يضاعف الرابط، و «Statt ich antworte» يبني جملة رئيسية بلا أن. فحص ذاتي: هل الفا…",
         "visibilityPolicy": "authorized-option-bank",
@@ -12621,7 +12621,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Welche Schlussfolgerung zieht sie? ما استنتاجها؟",
-        "answer": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil.",
+        "answer": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil",
         "evidenceRef": "b1-16:reading.textDe",
         "evidenceExcerpt": "Lina glaubte, dass ihre tägliche Bildschirmzeit von zwei Stunden unproblematisch war.",
         "visibilityPolicy": "authorized-option-bank",
@@ -12665,7 +12665,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Gleiches Subjekt أي خيار يحقّق «Gleiches Subjekt» في هذا السياق؟",
-        "answer": "Statt sofort zu antworten, warte ich.",
+        "answer": "Statt sofort zu antworten, warte ich",
         "evidenceRef": "b1-16:miniTest:b1-16-m1:explanationAr",
         "evidenceExcerpt": "فاعل واحد. نستعمل statt … zu عندما يقوم الشخص نفسه بالفعلين: Statt sofort zu antworten, sammle ich Nachrichten.",
         "visibilityPolicy": "authorized-option-bank",
@@ -12676,7 +12676,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Verschiedene Subjekte اختر التعبير المطابق ل «Verschiedene Subjekte»:",
-        "answer": "Statt dass die App entscheidet, wähle ich.",
+        "answer": "Statt dass die App entscheidet, wähle ich",
         "evidenceRef": "b1-16:miniTest:b1-16-m2:explanationAr",
         "evidenceExcerpt": "فاعل مختلف مع dass. نستعمل statt … zu عندما يقوم الشخص نفسه بالفعلين: Statt sofort zu antworten, sammle ich Nachrichten.",
         "visibilityPolicy": "authorized-option-bank",
@@ -12698,7 +12698,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Experiment الأفضل:",
-        "answer": "Eine Regel sieben Tage testen.",
+        "answer": "Eine Regel sieben Tage testen",
         "evidenceRef": "b1-16:miniTest:b1-16-m4:explanationAr",
         "evidenceExcerpt": "قاعدة ومدة. اختر مشكلة واحدة وقاعدة واحدة لمدة أسبوع أو أسبوعين.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13316,7 +13316,7 @@
         "prompt": " اختر سؤالًا قبل النصيحة:",
         "answer": "Was ist dein wichtigstes Ziel?",
         "evidenceRef": "b1-20:controlled:b1-20-e1:explanationAr",
-        "evidenceExcerpt": "قبل النصيحة يُجمع السياق بسؤال مفتوح: «Was ist dein wichtigstes Ziel?». أما «Kündige sofort und denk nicht nach» و «Du darfst nur meine Lösung nehmen» فأمرٌ بلا معلومة، و «Warte ab und sag dazu nichts» يغلق الحوار. فحص …",
+        "evidenceExcerpt": "قبل النصيحة يُجمع السياق بسؤال مفتوح: «Was ist dein wichtigstes Ziel?». أما «Willst du nicht einfach sofort kündigen?» و «Warum nimmst du nicht meine Lösung?» فسؤالان موجِّهان يضعان النصيحة في فم السائل، و «Soll ich für…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -13369,7 +13369,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " موضوع قانوني؛ الأفضل:",
-        "answer": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat.",
+        "answer": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat",
         "evidenceRef": "b1-20:controlled:b1-20-e6:explanationAr",
         "evidenceExcerpt": "في موضوع قانوني تُعرض الفرضية مع حدّ ويوجَّه إلى مختص: «Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat». الضمان وتعميم عقدٍ والاستغناء عن المصدر تتجاوز النصيحة.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13391,7 +13391,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum gab Sara nicht sofort einen Rat? لماذا لم تنصح سارة فورًا؟",
-        "answer": "Sie wollte Ziele, Einschränkungen und Versuche verstehen.",
+        "answer": "Sie wollte Ziele, Einschränkungen und Versuche verstehen",
         "evidenceRef": "b1-20:reading.textDe",
         "evidenceExcerpt": "Ihre Freundin Sara riet ihr nicht sofort zum Aufhören.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13446,7 +13446,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Warum entscheidet Lea nicht für ihn? لماذا لا تقرر ليا عنه؟",
-        "answer": "Sie kennt Vertrag und Familiensituation nicht vollständig.",
+        "answer": "Sie kennt Vertrag und Familiensituation nicht vollständig",
         "evidenceRef": "b1-20:listening.transcriptDe",
         "evidenceExcerpt": "Ich kenne den Vertrag und eure Situation nicht genau.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13457,7 +13457,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Rat اختر الصيغة الصحيحة لحالة «Rat»:",
-        "answer": "An deiner Stelle würde ich nachfragen.",
+        "answer": "An deiner Stelle würde ich nachfragen",
         "evidenceRef": "b1-20:miniTest:b1-20-m1:explanationAr",
         "evidenceExcerpt": "نصيحة افتراضية. نستعمل An deiner Stelle würde ich … و Du könntest … و Eine Möglichkeit wäre … لعرض خيارات.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13490,7 +13490,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Grenze اختر التعبير المطابق ل «Grenze» في درس «النصائح»:",
-        "answer": "Das müsste ein Fachberater prüfen.",
+        "answer": "Das müsste ein Fachberater prüfen",
         "evidenceRef": "b1-20:miniTest:b1-20-m4:explanationAr",
         "evidenceExcerpt": "حد معرفي: Das müsste ein Fachberater prüfen. الاعتراف بحدود المعرفة وحاجة الاختصاصي موقف مهني لا يُنقص الحجة، بخلاف ادعاء معرفة كل شيء.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13501,7 +13501,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Entscheidung اختر الصيغة الصحيحة لحالة «Entscheidung»:",
-        "answer": "Die Entscheidung liegt bei dir.",
+        "answer": "Die Entscheidung liegt bei dir",
         "evidenceRef": "b1-20:miniTest:b1-20-m5:explanationAr",
         "evidenceExcerpt": "القرار للطرف. اذكر ما تعرفه وما لا تعرفه، خاصة في الصحة والقانون والمال.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13787,7 +13787,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was war das Problem des alten Plans? ما مشكلة الخطة القديمة؟",
-        "answer": "Er war nur ein allgemeiner Wunsch ohne Struktur.",
+        "answer": "Er war nur ein allgemeiner Wunsch ohne Struktur",
         "evidenceRef": "b1-22:reading.textDe",
         "evidenceExcerpt": "Sonntags kontrolliert sie den Plan, ohne alles gleichzeitig zu ändern.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13798,7 +13798,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was macht Salma bei drei Wochen Stagnation? ماذا تفعل عند الركود ثلاثة أسابيع؟",
-        "answer": "Sie reduziert Neues und erhöht gezielte Überarbeitung.",
+        "answer": "Sie reduziert Neues und erhöht gezielte Überarbeitung",
         "evidenceRef": "b1-22:reading.textDe",
         "evidenceExcerpt": "Falls eine Fähigkeit drei Wochen stagniert, reduziert sie neue Inhalte und erhöht gezielte Überarbeitung.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13809,7 +13809,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum garantieren die Indikatoren keinen Prüfungserfolg? لماذا لا تضمن المؤشرات النجاح؟",
-        "answer": "Weil sie nur frühe Hinweise und Teilbelege liefern.",
+        "answer": "Weil sie nur frühe Hinweise und Teilbelege liefern",
         "evidenceRef": "b1-22:reading.textDe",
         "evidenceExcerpt": "So erkennt sie Risiken früher, obwohl kein einzelner Indikator den Prüfungserfolg garantiert.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15228,7 +15228,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was empfiehlt die Analystin? بماذا توصي المحللة؟",
-        "answer": "Nach Altersgruppen auswerten und eine dritte Messung abwarten",
+        "answer": "Nach Altersgruppen auswerten und eine dritte Messung abwarten.",
         "evidenceRef": "b2-05:listening.transcriptDe",
         "evidenceExcerpt": "Wir sollten jedoch nach Altersgruppen auswerten und eine dritte Messung abwarten.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15800,7 +15800,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was ist das Hauptproblem des Fotos? ما المشكلة الرئيسية للصورة؟",
-        "answer": "Ein falscher zeitlicher und örtlicher Kontext",
+        "answer": "Ein falscher zeitlicher und örtlicher Kontext.",
         "evidenceRef": "b2-08:listening.transcriptDe",
         "evidenceExcerpt": "Das Problem ist der falsche Kontext, nicht unbedingt eine technische Veränderung.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16339,7 +16339,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي إصلاح شفهي يحافظ على الخيط؟",
-        "answer": "Ich korrigiere mich: zwölf statt zehn Prozent. Damit komme ich zur Folge.",
+        "answer": "Ich korrigiere mich: zwölf statt zehn Prozent. Damit komme ich zur Folge",
         "evidenceRef": "b2-11:controlled:b2-11-e6:explanationAr",
         "evidenceExcerpt": "الإصلاح الشفهي الجيد يصحّح الرقم ويعيد الخيط فورًا: جملة قصيرة تعترف بالخطأ ثم تربطه بالنتيجة، بدل إعادة العرض أو الاعتذار المتكرر.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16361,7 +16361,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum war die erste Fassung trotz guter Sprache schwach? لماذا كانت النسخة الأولى ضعيفة رغم اللغة؟",
-        "answer": "Sie übergewichtete Vorteile und erfüllte Abwägung, Position und Vorschlag nicht sichtbar.",
+        "answer": "Sie übergewichtete Vorteile und erfüllte Abwägung, Position und Vorschlag nicht sichtbar",
         "evidenceRef": "b2-11:reading.textDe",
         "evidenceExcerpt": "Die Aufgabe verlangte vier Schritte: Vorteile erläutern, Risiken abwägen, eine eigene Position begründen und eine konkrete Maßnahme vorschlagen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16383,7 +16383,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was verbesserte die Verweisketten? ما الذي حسن الإحالات؟",
-        "answer": "Konkrete Ausdrücke wie diese Buchungsregel ersetzten mehrdeutige Verweise.",
+        "answer": "Konkrete Ausdrücke wie diese Buchungsregel ersetzten mehrdeutige Verweise",
         "evidenceRef": "b2-11:reading.textDe",
         "evidenceExcerpt": "Auch die Verweisketten wurden klarer: Statt mehrmals „dies“ zu schreiben, nannte die Verfasserin „diese Buchungsregel“ oder „dieses Zugangsrisiko“.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16438,7 +16438,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "vorschlagen أفضل صياغة:",
-        "answer": "Die Bibliothek testet acht Wochen zwei Zonen und misst Nutzung sowie Beschwerden.",
+        "answer": "Die Bibliothek testet acht Wochen zwei Zonen und misst Nutzung sowie Beschwerden",
         "evidenceRef": "b2-11:miniTest:b2-11-m2:explanationAr",
         "evidenceExcerpt": "فاعل وإجراء ومدة ومؤشرات. ضع خطًا تحت أفعال المهمة: beschreiben يعرض السمات، erläutern يشرحها بمثال، vergleichen يحدد معيارًا وقاسمًا وفارقًا، abwägen يزن الجانبين، Stellung nehmen يعلن موقفًا، vorschlagen يقدم إجراءً.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16460,7 +16460,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Sprechreparatur اختر التعبير المطابق ل «Sprechreparatur»:",
-        "answer": "Ich korrigiere mich: zwölf statt zehn Prozent.",
+        "answer": "Ich korrigiere mich: zwölf statt zehn Prozent",
         "evidenceRef": "b2-11:miniTest:b2-11-m4:explanationAr",
         "evidenceExcerpt": "إصلاح موجز للمعلومة. في عرض قصير، أعلن المسار: Thema، zwei Aspekte، Position، Beispiel، Schluss.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16559,7 +16559,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum war die Generalprobe anbieterneutral? لماذا كانت البروفة محايدة؟",
-        "answer": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden.",
+        "answer": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden",
         "evidenceRef": "b2-12:reading.textDe",
         "evidenceExcerpt": "Sie bildete weder das Goethe- noch das telc-Format ab, sondern prüfte gemeinsame Kompetenzen: komplexe Informationen verstehen, Quellen einordnen, argumentieren, schreiben, sprechen und die eigene Leistung auswerten.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16570,7 +16570,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Wie reagierte Farid auf den Zeitverlust? كيف تعامل فريد مع ضياع الوقت؟",
-        "answer": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren.",
+        "answer": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren",
         "evidenceRef": "b2-12:reading.textDe",
         "evidenceExcerpt": "Er wechselte deshalb zur Mindeststrategie: den Begriff umschreiben, jeden fehlenden Operator mit einem Kernsatz sichern und erst danach Beispiele ergänzen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16592,7 +16592,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Warum fehlte der Einwand? لماذا غاب الاعتراض؟",
-        "answer": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor.",
+        "answer": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor",
         "evidenceRef": "b2-12:listening.transcriptDe",
         "evidenceExcerpt": "— Lernerin: In meiner Präsentation fehlt der Einwand aus dem Hörtext.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16603,7 +16603,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Welche Folge hatte die Lücke? ما أثر الفجوة؟",
-        "answer": "Die Empfehlung wirkte sicherer als die Quellenlage.",
+        "answer": "Die Empfehlung wirkte sicherer als die Quellenlage",
         "evidenceRef": "b2-12:listening.transcriptDe",
         "evidenceExcerpt": "— Lernerin: Meine Empfehlung klang sicherer, als die Quellenlage erlaubte.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16614,7 +16614,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Warum werden nicht alle Adjektive wahllos geübt? لماذا لا تُدرّب كل الصفات عشوائيًا؟",
-        "answer": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war.",
+        "answer": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war",
         "evidenceRef": "b2-12:listening.transcriptDe",
         "evidenceExcerpt": "— Lernerin: Zwei entstanden in langen Partizipialattributen, eine war eine einzelne Unachtsamkeit.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16669,7 +16669,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Selbst wenn أي جملة تصف الاستراتيجية الصحيحة عند نقص كلمة؟",
-        "answer": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
+        "answer": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig",
         "evidenceRef": "b2-12:miniTest:b2-12-m5:explanationAr",
         "evidenceExcerpt": "selbst wenn تقدّم شرطًا لا يغيّر النتيجة: الفعل في نهاية جملة selbst wenn، ثم يبدأ الجزء الرئيسي بالفعل المصرَّف (bleibe ich). والاستراتيجية الصحيحة أن تبقى قادرًا على الإنجاز فتصف الكلمة الناقصة أو تلتف حولها، لا أن تق…",
         "visibilityPolicy": "authorized-option-bank",
@@ -16768,7 +16768,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was wurde beibehalten? ما الذي استُبقي؟",
-        "answer": "Die Regelung für stille Arbeitsphasen.",
+        "answer": "Die Regelung für stille Arbeitsphasen",
         "evidenceRef": "b2-13:reading.textDe",
         "evidenceExcerpt": "Für die Entscheidung hieß das: Die Regelung für stille Arbeitsphasen wurde beibehalten, weil der Rückgang der Unterbrechungen in beiden Gruppen konsistent war.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16779,7 +16779,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was gilt als Kriterium? ما المعيار المتفق عليه؟",
-        "answer": "Eine zweite Messung nach einem halben Jahr.",
+        "answer": "Eine zweite Messung nach einem halben Jahr",
         "evidenceRef": "b2-13:reading.textDe",
         "evidenceExcerpt": "Offene Frage blieb, ob sich nach einem halben Jahr ein Unterschied zeigt.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16790,7 +16790,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was bleibt bestehen? ما الذي يبقى؟",
-        "answer": "Die Regel für stille Phasen.",
+        "answer": "Die Regel für stille Phasen",
         "evidenceRef": "b2-13:listening.transcriptDe",
         "evidenceExcerpt": "Der Rückgang der Unterbrechungen sei in beiden Gruppen konsistent, deshalb bleibe die Regel für stille Arbeitsphasen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16812,7 +16812,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Welches Kriterium gilt? ما المعيار؟",
-        "answer": "Neue Auslosung und standardisierte Aufgabe plus zweite Messung.",
+        "answer": "Neue Auslosung und standardisierte Aufgabe plus zweite Messung",
         "evidenceRef": "b2-13:listening.transcriptDe",
         "evidenceExcerpt": "Lea ergänzt, sie lege ein Kriterium vorab fest: Bleibt der Unterschied in einer zweiten Messung nach acht Wochen aus, nehme sie die Regelung zurück.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16823,7 +16823,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Reichweite اختر الأدق:",
-        "answer": "Die Studie stützt die Regel für diese zwei Kurse.",
+        "answer": "Die Studie stützt die Regel für diese zwei Kurse",
         "evidenceRef": "b2-13:miniTest:b2-13-m1:explanationAr",
         "evidenceExcerpt": "تطابق الدليل والعينة. العبارة الصحيحة تأخذ مداها من الدليل: نتائج مجموعتين تدعمان «في هاتين المجموعتين»، لا «في كل الدورات».",
         "visibilityPolicy": "authorized-option-bank",
@@ -16834,7 +16834,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Kriterium أي جملة تثبّت معيارًا مسبقًا؟",
-        "answer": "Bleibt der Effekt aus, entfällt die Regelung.",
+        "answer": "Bleibt der Effekt aus, entfällt die Regelung",
         "evidenceRef": "b2-13:miniTest:b2-13-m2:explanationAr",
         "evidenceExcerpt": "شرط قابل للقياس. الرجوع الدقيق يُميَّز فيه ثلاث طبقات: الهدف يبقى، والوسيلة تتغيّر، والمقياس الجديد يُعلَن.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16845,7 +16845,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Alternativerklärung ما الذي يجب ذكره؟",
-        "answer": "Ein möglicher Störfaktor wie der Niveauunterschied.",
+        "answer": "Ein möglicher Störfaktor wie der Niveauunterschied",
         "evidenceRef": "b2-13:miniTest:b2-13-m3:explanationAr",
         "evidenceExcerpt": "تفسير بديل يُضعف التعميم: Ein möglicher Störfaktor wie der Niveauunterschied ينافس التفسير المطروح. ذكره يجعل الحجة أدق، وإخفاؤه يوهم بأن النتيجة محسومة.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16856,7 +16856,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Revision التراجع المنظم يعني:",
-        "answer": "Ziel behalten, Maßnahme anpassen.",
+        "answer": "Ziel behalten, Maßnahme anpassen",
         "evidenceRef": "b2-13:miniTest:b2-13-m4:explanationAr",
         "evidenceExcerpt": "يبقى الهدف وتُعدّل الوسيلة: Revision تعني تعديل الإجراء مع الحفاظ على الهدف، لا التراجع عن كل شيء ولا مهاجمة الطرف الآخر.",
         "visibilityPolicy": "authorized-option-bank",
@@ -17185,7 +17185,7 @@
         "id": "b2-15-lq1",
         "scope": "lesson-listening",
         "kind": "multiple-choice",
-        "prompt": "Worum geht es in der Aufnahme hauptsächlich? عن ماذا تدور التسجيلات أساسًا؟",
+        "prompt": "Worum geht es in der Aufnahme hauptsächlich? عن ماذا يدور التسجيل أساسًا؟",
         "answer": "Um die Zeiteinteilung bei einer Schreibprüfung",
         "evidenceRef": "b2-15:listening.transcriptDe",
         "evidenceExcerpt": "Ben legt sich eine Stoppuhr bereit, Herr Aziz verlangt nur ein Blatt.",
@@ -17207,7 +17207,7 @@
         "id": "b2-15-lq3",
         "scope": "lesson-listening",
         "kind": "multiple-choice",
-        "prompt": "Warum verschiebt Herr Aziz lieber einen Absatz, als die Kontrolle zu halbieren? لماذا يُنقل فقرة بدل أن تُنصَف المراجعة؟",
+        "prompt": "Warum verschiebt Herr Aziz lieber einen Absatz, als die Kontrolle zu halbieren? لماذا تُنقل فقرة بدل أن تُنصَّف المراجعة؟",
         "answer": "Weil ein fehlender Absatz reparierbar ist, ungeprüfte Zeit nicht",
         "evidenceRef": "b2-15:listening.transcriptDe",
         "evidenceExcerpt": "Herr Aziz lässt ihn stattdessen einen Absatz verschieben und begründet: Ein Text mit einem fehlenden Absatz ist reparierbar, ein Text ohne Prüfung der Zeit nicht.",
@@ -17593,7 +17593,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Warum gilt die einzelne Pflicht als auffälliger? لماذا صار الالتزام الواحد أوضح؟",
-        "answer": "Weil er nicht mehr zwischen drei gleichen Sätzen untergeht.",
+        "answer": "Weil sie nicht mehr zwischen drei gleichen Sätzen untergeht.",
         "evidenceRef": "b2-17:listening.transcriptDe",
         "evidenceExcerpt": "Herr Aziz verneint: Weich sei der Text nicht, nur verteilt; die Pflicht stehe in einem einzigen Satz und sei dadurch auffälliger, weil sie nicht mehr im Lärm der anderen Pflichten untergehe.",
         "visibilityPolicy": "authorized-option-bank",
@@ -17604,7 +17604,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Welche Verwechslung wird zuletzt genannt? أي خلط يُذكر أخيرًا؟",
-        "answer": "Wer die Möglichkeit statt der Pflicht setzt, erbetet statt zu fordern.",
+        "answer": "Wer die Möglichkeit statt der Pflicht setzt, erbittet statt zu fordern.",
         "evidenceRef": "b2-17:listening.transcriptDe",
         "evidenceExcerpt": "Zuletzt die häufigste Verwechslung: Wer statt der Pflicht die Möglichkeit setze, erflehe etwas, das er fordern wolle; und wer statt der Bewertung die Pflicht setze, behaupte eine Verbindlichkeit, die er nicht belegen kö…",
         "visibilityPolicy": "authorized-option-bank",
@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4895,
+      "totalCandidates": 4896,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3422,
+      "contextualNotTarget": 3423,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51139,10 +51139,10 @@
           "contextualNotTarget": 893
         },
         "B2": {
-          "totalCandidates": 2212,
+          "totalCandidates": 2213,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1667
+          "contextualNotTarget": 1668
         }
       }
     },
@@ -81653,6 +81653,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
+            "surface": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Gast: Entschuldigung, in meinem Zimmer funktioniert die Heizung nicht, und es ist sehr kalt. — Rezeption: Das tut mir leid. Ich kann sofort jemanden schicken. — Gast: Ich habe das Problem schon vor zwei Stunden gemeldet, aber niemand ist gekommen. — Rezeption: Ich verstehe. Leider ist heute kein Techniker mehr da. Wir können Ihnen ein anderes Zimmer im dritten Stock anbieten. — Gast: Hat es auch einen Balkon wie meine Buchung? — Rezeption: Nein, aber es ist größer und ohne Aufpreis. — Gast: Gut. Wenn die Heizung morgen repariert ist, möchte ich zurückwechseln. Bitte bestätigen Sie das schriftlich.",
@@ -101080,6 +101087,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "surface": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "strength": "context"
+          },
+          {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
             "text": "Mara hatte seine Arbeit im Team ausdrücklich gelobt.",
@@ -102026,6 +102040,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "surface": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
@@ -103867,8 +103888,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
-            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
+            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
+            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
             "strength": "context"
           },
           {
@@ -104379,8 +104400,8 @@
           {
             "path": "exercises[0].options[1]",
             "stage": "controlled",
-            "text": "Die Stadt ist lebendig, während das Land ruhiger ist.",
-            "surface": "Die Stadt ist lebendig, während das Land ruhiger ist.",
+            "text": "Die Stadt ist lebendig, während das Land ruhiger ist",
+            "surface": "Die Stadt ist lebendig, während das Land ruhiger ist",
             "strength": "context"
           },
           {
@@ -104977,8 +104998,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
-            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
+            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
+            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
             "strength": "context"
           },
           {
@@ -105031,8 +105052,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
-            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe.",
+            "text": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
+            "surface": "Für meine aktuelle Situation ist die Stadt praktischer, weil ich kein Auto habe",
             "strength": "context"
           },
           {
@@ -105364,8 +105385,8 @@
           {
             "path": "miniTest[2].options[0]",
             "stage": "test",
-            "text": "Die Miete ist niedriger; dafür ist der Weg länger.",
-            "surface": "Die Miete ist niedriger; dafür ist der Weg länger.",
+            "text": "Die Miete ist niedriger; dafür ist der Weg länger",
+            "surface": "Die Miete ist niedriger; dafür ist der Weg länger",
             "strength": "context"
           },
           {
@@ -105523,8 +105544,8 @@
           {
             "path": "miniTest[4].options[0]",
             "stage": "test",
-            "text": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
-            "surface": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
+            "text": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen",
+            "surface": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen",
             "strength": "context"
           },
           {
@@ -111149,8 +111170,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Sie begrenzt die Menge und plant den Abtransport.",
-            "surface": "Sie begrenzt die Menge und plant den Abtransport.",
+            "text": "Sie begrenzt die Menge und plant den Abtransport",
+            "surface": "Sie begrenzt die Menge und plant den Abtransport",
             "strength": "context"
           },
           {
@@ -111814,15 +111835,15 @@
           {
             "path": "exercises[5].options[1]",
             "stage": "controlled",
-            "text": "Falls es regnet, nutzen wir den reservierten Innenraum.",
-            "surface": "Falls es regnet, nutzen wir den reservierten Innenraum.",
+            "text": "Falls es regnet, nutzen wir den reservierten Innenraum",
+            "surface": "Falls es regnet, nutzen wir den reservierten Innenraum",
             "strength": "context"
           },
           {
             "path": "miniTest[2].options[1]",
             "stage": "test",
-            "text": "Falls es regnet, nutzen wir den Innenraum.",
-            "surface": "Falls es regnet, nutzen wir den Innenraum.",
+            "text": "Falls es regnet, nutzen wir den Innenraum",
+            "surface": "Falls es regnet, nutzen wir den Innenraum",
             "strength": "context"
           },
           {
@@ -111938,8 +111959,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Sie begrenzt die Menge und plant den Abtransport.",
-            "surface": "Sie begrenzt die Menge und plant den Abtransport.",
+            "text": "Sie begrenzt die Menge und plant den Abtransport",
+            "surface": "Sie begrenzt die Menge und plant den Abtransport",
             "strength": "context"
           }
         ],
@@ -112023,8 +112044,8 @@
           {
             "path": "miniTest[3].options[2]",
             "stage": "test",
-            "text": "Falls zu wenige kommen, verkürzen wir das Programm.",
-            "surface": "Falls zu wenige kommen, verkürzen wir das Programm.",
+            "text": "Falls zu wenige kommen, verkürzen wir das Programm",
+            "surface": "Falls zu wenige kommen, verkürzen wir das Programm",
             "strength": "context"
           },
           {
@@ -112449,8 +112470,8 @@
           {
             "path": "listening.questions[1].options[2]",
             "stage": "listening",
-            "text": "Die Zahl der Termine wird reduziert.",
-            "surface": "Die Zahl der Termine wird reduziert.",
+            "text": "Die Zahl der Termine wird reduziert",
+            "surface": "Die Zahl der Termine wird reduziert",
             "strength": "context"
           },
           {
@@ -116950,8 +116971,8 @@
           {
             "path": "miniTest[1].options[3]",
             "stage": "test",
-            "text": "Statt dass die App entscheidet, wähle ich.",
-            "surface": "Statt dass die App entscheidet, wähle ich.",
+            "text": "Statt dass die App entscheidet, wähle ich",
+            "surface": "Statt dass die App entscheidet, wähle ich",
             "strength": "context"
           },
           {
@@ -118118,8 +118139,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil.",
-            "surface": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil.",
+            "text": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil",
+            "surface": "Bewusste Auswahl ist sinnvoller als ein pauschales Urteil",
             "strength": "context"
           }
         ],
@@ -118857,6 +118878,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[1].options[0]",
+            "stage": "listening",
+            "text": "Es gibt keine Figuren.",
+            "surface": "Es gibt keine Figuren.",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
@@ -122840,8 +122868,8 @@
           {
             "path": "miniTest[3].options[0]",
             "stage": "test",
-            "text": "Das müsste ein Fachberater prüfen.",
-            "surface": "Das müsste ein Fachberater prüfen.",
+            "text": "Das müsste ein Fachberater prüfen",
+            "surface": "Das müsste ein Fachberater prüfen",
             "strength": "context"
           }
         ],
@@ -123242,8 +123270,8 @@
           {
             "path": "exercises[0].options[2]",
             "stage": "controlled",
-            "text": "Du darfst nur meine Lösung nehmen",
-            "surface": "Du darfst nur meine Lösung nehmen",
+            "text": "Warum nimmst du nicht meine Lösung?",
+            "surface": "Warum nimmst du nicht meine Lösung?",
             "strength": "context"
           },
           {
@@ -123361,8 +123389,8 @@
           {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
-            "text": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat.",
-            "surface": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat.",
+            "text": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat",
+            "surface": "Das könnte eine Option sein; für rechtliche Fragen hol dir bitte fachlichen Rat",
             "strength": "context"
           },
           {
@@ -123759,8 +123787,8 @@
           {
             "path": "miniTest[0].options[3]",
             "stage": "test",
-            "text": "An deiner Stelle würde ich nachfragen.",
-            "surface": "An deiner Stelle würde ich nachfragen.",
+            "text": "An deiner Stelle würde ich nachfragen",
+            "surface": "An deiner Stelle würde ich nachfragen",
             "strength": "context"
           },
           {
@@ -126908,8 +126936,8 @@
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
-            "text": "Er war nur ein allgemeiner Wunsch ohne Struktur.",
-            "surface": "Er war nur ein allgemeiner Wunsch ohne Struktur.",
+            "text": "Er war nur ein allgemeiner Wunsch ohne Struktur",
+            "surface": "Er war nur ein allgemeiner Wunsch ohne Struktur",
             "strength": "context"
           }
         ],
@@ -130548,8 +130576,8 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Ein vollständiges Verbot wurde am Ende des Pilotprojekts beschlossen.",
-            "surface": "Ein vollständiges Verbot wurde am Ende des Pilotprojekts beschlossen.",
+            "text": "Ein vollständiges Verbot wurde am Ende des Pilotprojekts beschlossen",
+            "surface": "Ein vollständiges Verbot wurde am Ende des Pilotprojekts beschlossen",
             "strength": "context"
           }
         ],
@@ -136614,8 +136642,8 @@
           {
             "path": "listening.questions[2].options[3]",
             "stage": "listening",
-            "text": "Nach Altersgruppen auswerten und eine dritte Messung abwarten",
-            "surface": "Nach Altersgruppen auswerten und eine dritte Messung abwarten",
+            "text": "Nach Altersgruppen auswerten und eine dritte Messung abwarten.",
+            "surface": "Nach Altersgruppen auswerten und eine dritte Messung abwarten.",
             "strength": "context"
           },
           {
@@ -140022,8 +140050,8 @@
           {
             "path": "reading.questions[2].options[2]",
             "stage": "reading",
-            "text": "Indem ein Abschlussbericht gedruckt und an alle Haushalte verteilt wurde.",
-            "surface": "Indem ein Abschlussbericht gedruckt und an alle Haushalte verteilt wurde.",
+            "text": "Indem ein Abschlussbericht gedruckt und an alle Haushalte verteilt wurde",
+            "surface": "Indem ein Abschlussbericht gedruckt und an alle Haushalte verteilt wurde",
             "strength": "context"
           }
         ],
@@ -140041,8 +140069,8 @@
           {
             "path": "listening.questions[0].options[3]",
             "stage": "listening",
-            "text": "Die Stadtverwaltung mit ihren Ämtern für Jugend und Soziales.",
-            "surface": "Die Stadtverwaltung mit ihren Ämtern für Jugend und Soziales.",
+            "text": "Die Stadtverwaltung mit ihren Ämtern für Jugend und Soziales",
+            "surface": "Die Stadtverwaltung mit ihren Ämtern für Jugend und Soziales",
             "strength": "context"
           }
         ],
@@ -140094,8 +140122,8 @@
           {
             "path": "listening.questions[1].options[1]",
             "stage": "listening",
-            "text": "Durch mehr Werbung in Zeitungen und eine längere Anmeldefrist.",
-            "surface": "Durch mehr Werbung in Zeitungen und eine längere Anmeldefrist.",
+            "text": "Durch mehr Werbung in Zeitungen und eine längere Anmeldefrist",
+            "surface": "Durch mehr Werbung in Zeitungen und eine längere Anmeldefrist",
             "strength": "context"
           }
         ],
@@ -140612,8 +140640,8 @@
           {
             "path": "miniTest[4].options[3]",
             "stage": "test",
-            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
-            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
+            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
+            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
             "strength": "context"
           }
         ],
@@ -140650,8 +140678,8 @@
           {
             "path": "miniTest[4].options[2]",
             "stage": "test",
-            "text": "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen.",
-            "surface": "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen.",
+            "text": "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen",
+            "surface": "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen",
             "strength": "context"
           }
         ],
@@ -141092,8 +141120,8 @@
           {
             "path": "listening.questions[1].options[0]",
             "stage": "listening",
-            "text": "Durch kürzere Treffen und einen Newsletter für alle Beteiligten.",
-            "surface": "Durch kürzere Treffen und einen Newsletter für alle Beteiligten.",
+            "text": "Durch kürzere Treffen und einen Newsletter für alle Beteiligten",
+            "surface": "Durch kürzere Treffen und einen Newsletter für alle Beteiligten",
             "strength": "context"
           }
         ],
@@ -141130,8 +141158,8 @@
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
-            "surface": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
+            "text": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren",
+            "surface": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren",
             "strength": "context"
           }
         ],
@@ -141168,8 +141196,8 @@
           {
             "path": "miniTest[4].options[3]",
             "stage": "test",
-            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
-            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
+            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
+            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
             "strength": "context"
           }
         ],
@@ -141296,8 +141324,8 @@
           {
             "path": "listening.questions[1].options[2]",
             "stage": "listening",
-            "text": "Durch einen Raum im Rathaus mit besserer Technik.",
-            "surface": "Durch einen Raum im Rathaus mit besserer Technik.",
+            "text": "Durch einen Raum im Rathaus mit besserer Technik",
+            "surface": "Durch einen Raum im Rathaus mit besserer Technik",
             "strength": "context"
           },
           {
@@ -141506,8 +141534,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Lokale Wirtschaftsverbände aus der Stadtmitte.",
-            "surface": "Lokale Wirtschaftsverbände aus der Stadtmitte.",
+            "text": "Lokale Wirtschaftsverbände aus der Stadtmitte",
+            "surface": "Lokale Wirtschaftsverbände aus der Stadtmitte",
             "strength": "context"
           }
         ],
@@ -141657,8 +141685,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Indem die Teilnehmenden am Ende nur verabschiedet wurden.",
-            "surface": "Indem die Teilnehmenden am Ende nur verabschiedet wurden.",
+            "text": "Indem die Teilnehmenden am Ende nur verabschiedet wurden",
+            "surface": "Indem die Teilnehmenden am Ende nur verabschiedet wurden",
             "strength": "context"
           }
         ],
@@ -141964,6 +141992,25 @@
       {
         "lessonId": "b2-07",
         "level": "B2",
+        "lemmaCandidate": "Wohnungsbau",
+        "normalizedLemma": "wohnungsbau",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Ältere Bewohnerinnen aus dem sozialen Wohnungsbau",
+            "surface": "Ältere Bewohnerinnen aus dem sozialen Wohnungsbau",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-07-18aec22a"
+      },
+      {
+        "lessonId": "b2-07",
+        "level": "B2",
         "lemmaCandidate": "Ziel",
         "normalizedLemma": "ziel",
         "role": "context-only",
@@ -142125,8 +142172,8 @@
           {
             "path": "miniTest[3].options[1]",
             "stage": "test",
-            "text": "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse.",
-            "surface": "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse.",
+            "text": "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse",
+            "surface": "Ein Interessenkonflikt macht Ergebnisse falsch und gehört in keine Analyse",
             "strength": "context"
           }
         ],
@@ -142260,8 +142307,8 @@
           {
             "path": "listening.questions[1].options[1]",
             "stage": "listening",
-            "text": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme.",
-            "surface": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme.",
+            "text": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme",
+            "surface": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme",
             "strength": "context"
           },
           {
@@ -142306,6 +142353,25 @@
           }
         ],
         "id": "lex-n-b2-08-0789578f"
+      },
+      {
+        "lessonId": "b2-08",
+        "level": "B2",
+        "lemmaCandidate": "Austausch",
+        "normalizedLemma": "austausch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Mit einem stillen Austausch der Meldung ohne jeden Hinweis",
+            "surface": "Mit einem stillen Austausch der Meldung ohne jeden Hinweis",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-08-37f85cff"
       },
       {
         "lessonId": "b2-08",
@@ -142446,8 +142512,8 @@
           {
             "path": "miniTest[0].options[3]",
             "stage": "test",
-            "text": "Die Kommentare unter dem Beitrag lesen.",
-            "surface": "Die Kommentare unter dem Beitrag lesen.",
+            "text": "Die Kommentare unter dem Beitrag lesen",
+            "surface": "Die Kommentare unter dem Beitrag lesen",
             "strength": "context"
           }
         ],
@@ -142684,15 +142750,15 @@
           {
             "path": "listening.questions[2].options[1]",
             "stage": "listening",
-            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
-            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
+            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
+            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
             "strength": "context"
           },
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
-            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
+            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
+            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
             "strength": "context"
           },
           {
@@ -142891,8 +142957,8 @@
           {
             "path": "listening.questions[2].options[1]",
             "stage": "listening",
-            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
-            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
+            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
+            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
             "strength": "context"
           }
         ],
@@ -142974,22 +143040,22 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
-            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
+            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
+            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
             "strength": "context"
           },
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Der Text erwähnt die Finanzierung nur am Rande, ohne sie zu bewerten.",
-            "surface": "Der Text erwähnt die Finanzierung nur am Rande, ohne sie zu bewerten.",
+            "text": "Der Text erwähnt die Finanzierung nur am Rande, ohne sie zu bewerten",
+            "surface": "Der Text erwähnt die Finanzierung nur am Rande, ohne sie zu bewerten",
             "strength": "context"
           },
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe.",
-            "surface": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe.",
+            "text": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe",
+            "surface": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe",
             "strength": "context"
           },
           {
@@ -143104,8 +143170,8 @@
           {
             "path": "listening.questions[1].options[1]",
             "stage": "listening",
-            "text": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme.",
-            "surface": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme.",
+            "text": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme",
+            "surface": "Ein späteres Datum und ein anderes Gebäude auf der Aufnahme",
             "strength": "context"
           }
         ],
@@ -143189,8 +143255,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
-            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
+            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
+            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
             "strength": "context"
           },
           {
@@ -143327,8 +143393,8 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben.",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben.",
+            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
+            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
             "strength": "context"
           }
         ],
@@ -143353,8 +143419,8 @@
           {
             "path": "reading.questions[1].options[3]",
             "stage": "reading",
-            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen.",
-            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen.",
+            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
+            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
             "strength": "context"
           }
         ],
@@ -143539,8 +143605,8 @@
           {
             "path": "miniTest[2].options[3]",
             "stage": "test",
-            "text": "Dass der Kurs bei allen gut ankam.",
-            "surface": "Dass der Kurs bei allen gut ankam.",
+            "text": "Dass der Kurs bei allen gut ankam",
+            "surface": "Dass der Kurs bei allen gut ankam",
             "strength": "context"
           }
         ],
@@ -143648,8 +143714,8 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
-            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
+            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
+            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
             "strength": "context"
           }
         ],
@@ -143687,8 +143753,8 @@
           {
             "path": "miniTest[0].options[0]",
             "stage": "test",
-            "text": "Die Meldung eines anderen Mediums als Bestätigung zitieren.",
-            "surface": "Die Meldung eines anderen Mediums als Bestätigung zitieren.",
+            "text": "Die Meldung eines anderen Mediums als Bestätigung zitieren",
+            "surface": "Die Meldung eines anderen Mediums als Bestätigung zitieren",
             "strength": "context"
           }
         ],
@@ -143703,6 +143769,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Mit einem stillen Austausch der Meldung ohne jeden Hinweis",
+            "surface": "Mit einem stillen Austausch der Meldung ohne jeden Hinweis",
+            "strength": "context"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -143810,8 +143883,8 @@
           {
             "path": "miniTest[3].options[2]",
             "stage": "test",
-            "text": "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet.",
-            "surface": "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet.",
+            "text": "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet",
+            "surface": "Interessenkonflikte sind unerheblich, wenn die Methodik sauber arbeitet",
             "strength": "context"
           }
         ],
@@ -144027,8 +144100,8 @@
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
-            "text": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat.",
-            "surface": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat.",
+            "text": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat",
+            "surface": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat",
             "strength": "context"
           }
         ],
@@ -144065,8 +144138,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe.",
-            "surface": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe.",
+            "text": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe",
+            "surface": "Der Text lobt die Finanzierung, weil sie die methodische Qualität erhöhe",
             "strength": "context"
           }
         ],
@@ -144221,25 +144294,6 @@
           }
         ],
         "id": "lex-n-b2-08-de2c1243"
-      },
-      {
-        "lessonId": "b2-08",
-        "level": "B2",
-        "lemmaCandidate": "Schild",
-        "normalizedLemma": "schild",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[1].options[2]",
-            "stage": "listening",
-            "text": "Ein älteres Datum sowie ein Schild am Gebäude im Bild.",
-            "surface": "Ein älteres Datum sowie ein Schild am Gebäude im Bild.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-08-aa112eed"
       },
       {
         "lessonId": "b2-08",
@@ -144407,8 +144461,8 @@
           {
             "path": "miniTest[3].options[3]",
             "stage": "test",
-            "text": "Der Konflikt widerlegt jede einzelne Zahl der Studie.",
-            "surface": "Der Konflikt widerlegt jede einzelne Zahl der Studie.",
+            "text": "Der Konflikt widerlegt jede einzelne Zahl der Studie",
+            "surface": "Der Konflikt widerlegt jede einzelne Zahl der Studie",
             "strength": "context"
           },
           {
@@ -144435,8 +144489,8 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
-            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet.",
+            "text": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
+            "surface": "Der Text hält die Finanzierung für einen Mangel, der die Studie entwertet",
             "strength": "context"
           },
           {
@@ -144525,15 +144579,15 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben.",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben.",
+            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
+            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
             "strength": "context"
           },
           {
             "path": "reading.questions[1].options[3]",
             "stage": "reading",
-            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen.",
-            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen.",
+            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
+            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
             "strength": "context"
           }
         ],
@@ -144622,6 +144676,25 @@
           }
         ],
         "id": "lex-n-b2-08-209db01e"
+      },
+      {
+        "lessonId": "b2-08",
+        "level": "B2",
+        "lemmaCandidate": "Uhrzeit",
+        "normalizedLemma": "uhrzeit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[2]",
+            "stage": "listening",
+            "text": "Ein Wetterbericht vom Vortag und eine Uhrzeit im Bild",
+            "surface": "Ein Wetterbericht vom Vortag und eine Uhrzeit im Bild",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-08-883029c9"
       },
       {
         "lessonId": "b2-08",
@@ -144929,8 +145002,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
-            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen.",
+            "text": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
+            "surface": "Mit dem neuen Bild und dem Hinweis auf ein Versehen",
             "strength": "context"
           }
         ],
@@ -144948,8 +145021,8 @@
           {
             "path": "listening.questions[2].options[1]",
             "stage": "listening",
-            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
-            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild.",
+            "text": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
+            "surface": "Mit einer Entschuldigung und dem Verweis auf das gelöschte Bild",
             "strength": "context"
           }
         ],
@@ -153158,8 +153231,8 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren.",
-            "surface": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren.",
+            "text": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren",
+            "surface": "Er umschrieb den Begriff und sicherte zuerst alle fehlenden Operatoren",
             "strength": "context"
           },
           {
@@ -153395,8 +153468,8 @@
           {
             "path": "listening.questions[0].options[0]",
             "stage": "listening",
-            "text": "Der Hörtext nannte den Einwand, die Sprecherin ließ ihn aber aus",
-            "surface": "Der Hörtext nannte den Einwand, die Sprecherin ließ ihn aber aus",
+            "text": "Der Hörtext enthielt keinen Einwand, den sie hätte nennen können",
+            "surface": "Der Hörtext enthielt keinen Einwand, den sie hätte nennen können",
             "strength": "context"
           },
           {
@@ -153665,8 +153738,8 @@
           {
             "path": "listening.questions[0].options[3]",
             "stage": "listening",
-            "text": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor.",
-            "surface": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor.",
+            "text": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor",
+            "surface": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor",
             "strength": "context"
           }
         ],
@@ -153782,8 +153855,8 @@
           {
             "path": "listening.questions[0].options[3]",
             "stage": "listening",
-            "text": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor.",
-            "surface": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor.",
+            "text": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor",
+            "surface": "Die Stichwortkarte sah kein Feld für eine Gegenposition vor",
             "strength": "context"
           },
           {
@@ -153948,8 +154021,8 @@
           {
             "path": "reading.questions[0].options[2]",
             "stage": "reading",
-            "text": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden.",
-            "surface": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden.",
+            "text": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden",
+            "surface": "Sie prüfte gemeinsame B2-Kompetenzen, ohne ein Goethe- oder telc-Format nachzubilden",
             "strength": "context"
           },
           {
@@ -154324,8 +154397,8 @@
           {
             "path": "listening.questions[2].options[0]",
             "stage": "listening",
-            "text": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war.",
-            "surface": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war.",
+            "text": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war",
+            "surface": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war",
             "strength": "context"
           },
           {
@@ -154779,8 +154852,8 @@
           {
             "path": "listening.questions[1].options[2]",
             "stage": "listening",
-            "text": "Die Empfehlung wirkte sicherer als die Quellenlage.",
-            "surface": "Die Empfehlung wirkte sicherer als die Quellenlage.",
+            "text": "Die Empfehlung wirkte sicherer als die Quellenlage",
+            "surface": "Die Empfehlung wirkte sicherer als die Quellenlage",
             "strength": "context"
           },
           {
@@ -154944,25 +155017,6 @@
           }
         ],
         "id": "lex-n-b2-12-d67d3b26"
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
-        "lemmaCandidate": "Sprecherin",
-        "normalizedLemma": "sprecherin",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[0]",
-            "stage": "listening",
-            "text": "Der Hörtext nannte den Einwand, die Sprecherin ließ ihn aber aus",
-            "surface": "Der Hörtext nannte den Einwand, die Sprecherin ließ ihn aber aus",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-12-209138bc"
       },
       {
         "lessonId": "b2-12",
@@ -155206,8 +155260,8 @@
           {
             "path": "listening.questions[2].options[0]",
             "stage": "listening",
-            "text": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war.",
-            "surface": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war.",
+            "text": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war",
+            "surface": "Weil nur zwei Fehler ein ähnliches Muster bildeten und einer eine einzelne Unachtsamkeit war",
             "strength": "context"
           },
           {
@@ -155462,8 +155516,8 @@
           {
             "path": "miniTest[4].options[2]",
             "stage": "test",
-            "text": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
-            "surface": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
+            "text": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig",
+            "surface": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig",
             "strength": "context"
           },
           {
@@ -156399,8 +156453,8 @@
           {
             "path": "miniTest[1].options[2]",
             "stage": "test",
-            "text": "Bleibt der Effekt aus, entfällt die Regelung.",
-            "surface": "Bleibt der Effekt aus, entfällt die Regelung.",
+            "text": "Bleibt der Effekt aus, entfällt die Regelung",
+            "surface": "Bleibt der Effekt aus, entfällt die Regelung",
             "strength": "context"
           },
           {
@@ -156818,8 +156872,8 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Eine zweite Messung nach einem halben Jahr.",
-            "surface": "Eine zweite Messung nach einem halben Jahr.",
+            "text": "Eine zweite Messung nach einem halben Jahr",
+            "surface": "Eine zweite Messung nach einem halben Jahr",
             "strength": "context"
           },
           {
@@ -157267,8 +157321,8 @@
           {
             "path": "miniTest[2].options[2]",
             "stage": "test",
-            "text": "Ein möglicher Störfaktor wie der Niveauunterschied.",
-            "surface": "Ein möglicher Störfaktor wie der Niveauunterschied.",
+            "text": "Ein möglicher Störfaktor wie der Niveauunterschied",
+            "surface": "Ein möglicher Störfaktor wie der Niveauunterschied",
             "strength": "context"
           }
         ],
@@ -157528,8 +157582,8 @@
           {
             "path": "miniTest[0].options[1]",
             "stage": "test",
-            "text": "Die Studie stützt die Regel für diese zwei Kurse.",
-            "surface": "Die Studie stützt die Regel für diese zwei Kurse.",
+            "text": "Die Studie stützt die Regel für diese zwei Kurse",
+            "surface": "Die Studie stützt die Regel für diese zwei Kurse",
             "strength": "context"
           },
           {
@@ -157589,8 +157643,8 @@
           {
             "path": "miniTest[1].options[2]",
             "stage": "test",
-            "text": "Bleibt der Effekt aus, entfällt die Regelung.",
-            "surface": "Bleibt der Effekt aus, entfällt die Regelung.",
+            "text": "Bleibt der Effekt aus, entfällt die Regelung",
+            "surface": "Bleibt der Effekt aus, entfällt die Regelung",
             "strength": "context"
           },
           {
@@ -167406,8 +167460,8 @@
           {
             "path": "listening.questions[1].options[0]",
             "stage": "listening",
-            "text": "Weil er als Frage formuliert ist und damit eine Antwort offen bleibt.",
-            "surface": "Weil er als Frage formuliert ist und damit eine Antwort offen bleibt.",
+            "text": "Weil sie als Frage formuliert ist und damit eine Antwort offen bleibt.",
+            "surface": "Weil sie als Frage formuliert ist und damit eine Antwort offen bleibt.",
             "strength": "context"
           }
         ],
@@ -168800,8 +168854,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Wer die Möglichkeit statt der Pflicht setzt, erbetet statt zu fordern.",
-            "surface": "Wer die Möglichkeit statt der Pflicht setzt, erbetet statt zu fordern.",
+            "text": "Wer die Möglichkeit statt der Pflicht setzt, erbittet statt zu fordern.",
+            "surface": "Wer die Möglichkeit statt der Pflicht setzt, erbittet statt zu fordern.",
             "strength": "context"
           },
           {
@@ -169104,8 +169158,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Wer die Möglichkeit statt der Pflicht setzt, erbetet statt zu fordern.",
-            "surface": "Wer die Möglichkeit statt der Pflicht setzt, erbetet statt zu fordern.",
+            "text": "Wer die Möglichkeit statt der Pflicht setzt, erbittet statt zu fordern.",
+            "surface": "Wer die Möglichkeit statt der Pflicht setzt, erbittet statt zu fordern.",
             "strength": "context"
           },
           {
@@ -198516,52 +198570,6 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
-        "infinitiveCandidate": "erzeugten",
-        "normalizedVerb": "erzeugten",
-        "preposition": "für",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[0]",
-            "stage": "listening",
-            "text": "Nachrichten nach 17 Uhr erzeugten für sie Dringlichkeit.",
-            "surface": "Nachrichten nach 17 Uhr erzeugten für sie Dringlichkeit.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b1-05-e06e47cd"
-      },
-      {
-        "lessonId": "b1-05",
-        "level": "B1",
-        "infinitiveCandidate": "erzeugten",
-        "normalizedVerb": "erzeugten",
-        "preposition": "nach",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[0]",
-            "stage": "listening",
-            "text": "Nachrichten nach 17 Uhr erzeugten für sie Dringlichkeit.",
-            "surface": "Nachrichten nach 17 Uhr erzeugten für sie Dringlichkeit.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b1-05-202e67ed"
-      },
-      {
-        "lessonId": "b1-05",
-        "level": "B1",
         "infinitiveCandidate": "klären",
         "normalizedVerb": "klären",
         "preposition": "zu",
@@ -198680,6 +198688,29 @@
           }
         ],
         "id": "lex-v-b1-05-e867a920"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "infinitiveCandidate": "offen",
+        "normalizedVerb": "offen",
+        "preposition": "vor",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "surface": "Tom kritisierte ihre Arbeit offen vor dem gesamten Team.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-05-43d9f229"
       },
       {
         "lessonId": "b1-05",
@@ -201314,8 +201345,8 @@
           {
             "path": "miniTest[3].options[2]",
             "stage": "test",
-            "text": "Falls zu wenige kommen, verkürzen wir das Programm.",
-            "surface": "Falls zu wenige kommen, verkürzen wir das Programm.",
+            "text": "Falls zu wenige kommen, verkürzen wir das Programm",
+            "surface": "Falls zu wenige kommen, verkürzen wir das Programm",
             "strength": "context"
           },
           {
@@ -201482,8 +201513,8 @@
           {
             "path": "miniTest[3].options[2]",
             "stage": "test",
-            "text": "Falls zu wenige kommen, verkürzen wir das Programm.",
-            "surface": "Falls zu wenige kommen, verkürzen wir das Programm.",
+            "text": "Falls zu wenige kommen, verkürzen wir das Programm",
+            "surface": "Falls zu wenige kommen, verkürzen wir das Programm",
             "strength": "context"
           },
           {
@@ -203791,6 +203822,29 @@
           }
         ],
         "id": "lex-v-b1-20-c5cce08f"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "infinitiveCandidate": "entscheiden",
+        "normalizedVerb": "entscheiden",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Soll ich für dich entscheiden?",
+            "surface": "Soll ich für dich entscheiden?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-824b2a53"
       },
       {
         "lessonId": "b1-20",
@@ -210108,8 +210162,8 @@
           {
             "path": "miniTest[4].options[3]",
             "stage": "test",
-            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
-            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
+            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
+            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
             "strength": "context"
           }
         ],
@@ -210545,8 +210599,8 @@
           {
             "path": "miniTest[4].options[3]",
             "stage": "test",
-            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
-            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
+            "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
+            "surface": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen",
             "strength": "context"
           }
         ],
@@ -221507,5 +221561,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "0aeee2395da8377fae475c7e175de9d90ba3dd97442bed622390b1303b448898"
+  "contentSha256": "39b4b60d07fa3d71b2661ea415af8f5f578a47ab6f8c1158fd3600d257676f54"
 }

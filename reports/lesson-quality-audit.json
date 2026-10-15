@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "9c8c9abadad19001c273a11c292b2e4f093ed352249e8f96f4a9b511bbae647a",
+  "contentSha256": "3d400262308d77c1b61b1dc870269b576ff765772241bcf168ce106875a40a64",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -70,7 +70,7 @@
     "allMedianChars": 172,
     "allUnder60Chars": 0,
     "allMissing": 0,
-    "explanationMedianChars": 165,
+    "explanationMedianChars": 167,
     "under40Chars": 0,
     "ofItems": 1250
   },

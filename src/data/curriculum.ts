@@ -7,7 +7,7 @@ const seeds: Record<CEFRLevel, ModuleSeed[]> = {
   A1: [
     { titleDe: "Erste Kontakte", titleAr: "التواصل الأول", lessons: [
       ["Hallo Berlin!", "مرحبًا برلين", "أحيّي الآخرين وأعرّف بنفسي."],
-      ["Woher kommst du?", "من أين أتيت؟", "أسأل عن البلد واللغة وأجيب."],
+      ["Woher kommst du?", "من أين أنت؟", "أسأل عن البلد واللغة وأجيب."],
       ["Buchstaben und Zahlen", "الحروف والأرقام", "أتهجّى اسمي وأفهم الأرقام الأساسية."],
     ]},
     { titleDe: "Menschen", titleAr: "الأشخاص", lessons: [

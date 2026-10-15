@@ -81,7 +81,7 @@ export const localTestTemplateBankA1 = [
     "level": "A1",
     "module": 1,
     "titleDe": "Woher kommst du?",
-    "titleAr": "من أين أتيت؟",
+    "titleAr": "من أين أنت؟",
     "questions": [
       {
         "id": "a1-02-m1",
@@ -191,7 +191,7 @@ export const localTestTemplateBankA1 = [
           "أين تسكن؟",
           "كيف تُكتب؟",
           "كم عمرك؟",
-          "من أين أتيت؟"
+          "من أين أنت؟"
         ],
         "correctIndex": 1,
         "explanationAr": "Wie schreibt man das? تعني «كيف تُكتب هذه الكلمة؟»: أداة الاستفهام Wie ثم الفعل schreibt ثم الفاعل man. تُستعمل عند سماع كلمة جديدة لطلب تهجئتها حرفًا حرفًا."

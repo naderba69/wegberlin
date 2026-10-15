@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "94676e5cc02d60dee44e44541da3292668ac3d608f7497ed5b0698fbf86c2e65",
+  "contentSha256": "d370da0e0738bb6c9b5ebf0c9eee2802e176914d215ccf8e4f68d3d2a0786e30",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -1743,29 +1743,6 @@
         ]
       },
       {
-        "lessonId": "b2-14",
-        "level": "B2",
-        "pct": 35.5,
-        "unknown": [
-          "behoerdenbriefen",
-          "berichten",
-          "fachtexten",
-          "grammatikstunde",
-          "verstaendlichkeit",
-          "kohaesion",
-          "art",
-          "aneinander",
-          "andocken",
-          "werkzeuge",
-          "last",
-          "fuerwort",
-          "demonstrativum",
-          "nomen",
-          "konnektoren",
-          "zeitverlauf"
-        ]
-      },
-      {
         "lessonId": "b1-21",
         "level": "B1",
         "pct": 35,
@@ -1786,6 +1763,29 @@
           "fachliche",
           "lehrkraft",
           "gefragt"
+        ]
+      },
+      {
+        "lessonId": "b2-14",
+        "level": "B2",
+        "pct": 34.5,
+        "unknown": [
+          "behoerdenbriefen",
+          "berichten",
+          "fachtexten",
+          "grammatikstunde",
+          "verstaendlichkeit",
+          "kohaesion",
+          "art",
+          "aneinander",
+          "andocken",
+          "werkzeuge",
+          "last",
+          "fuerwort",
+          "demonstrativum",
+          "nomen",
+          "konnektoren",
+          "zeitverlauf"
         ]
       },
       {
@@ -2134,7 +2134,7 @@
       {
         "lessonId": "b2-22",
         "level": "B2",
-        "pct": 29.1,
+        "pct": 30.4,
         "unknown": [
           "pruefungsamts",
           "einzigen",

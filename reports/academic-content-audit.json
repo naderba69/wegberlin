@@ -79862,13 +79862,6 @@
             "text": "Beraterin: Sie können um 8:10 Uhr direkt fahren. Die Fahrt dauert zwei Stunden und zwanzig Minuten. — Kunde: Wie viel kostet das Ticket? — Beraterin: 58 Euro. Es gibt auch eine Verbindung um 8:40 Uhr für 39 Euro. Sie müssen in Hannover umsteigen. — Kunde: Wie lange dauert sie? — Beraterin: Drei Stunden. Der Umstieg dauert nur zehn Minuten. — Kunde: Das ist etwas stressig. Gibt es später einen günstigeren Direktzug? — Beraterin: Ja, um 11:00 Uhr für 42 Euro. — Kunde: Der ist am besten. Ich habe am Vormittag Zeit.",
             "surface": "Beraterin: Sie können um 8:10 Uhr direkt fahren. Die Fahrt dauert zwei Stunden und zwanzig Minuten. — Kunde: Wie viel kostet das Ticket? — Beraterin: 58 Euro. Es gibt auch eine Verbindung um 8:40 Uhr für 39 Euro. Sie müssen in Hannover umsteigen. — Kunde: Wie lange dauert sie? — Beraterin: Drei Stunden. Der Umstieg dauert nur zehn Minuten. — Kunde: Das ist etwas stressig. Gibt es später einen günstigeren Direktzug? — Beraterin: Ja, um 11:00 Uhr für 42 Euro. — Kunde: Der ist am besten. Ich habe am Vormittag Zeit.",
             "strength": "context"
-          },
-          {
-            "path": "phrases[1].de",
-            "stage": "vocabulary",
-            "text": "eine Verbindung vergleichen",
-            "surface": "eine Verbindung vergleichen",
-            "strength": "target"
           }
         ],
         "id": "lex-n-a2-10-abe677c6"
@@ -87365,13 +87358,6 @@
             "stage": "vocabulary",
             "surface": "die Meldung",
             "strength": "registry"
-          },
-          {
-            "path": "phrases[17].de",
-            "stage": "vocabulary",
-            "text": "eine Meldung blockieren",
-            "surface": "eine Meldung blockieren",
-            "strength": "target"
           }
         ],
         "id": "lex-n-a2-17-8593482b"
@@ -121924,13 +121910,6 @@
             "strength": "registry"
           },
           {
-            "path": "phrases[0].de",
-            "stage": "vocabulary",
-            "text": "ein Missverständnis entstehen",
-            "surface": "ein Missverständnis entstehen",
-            "strength": "target"
-          },
-          {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
             "text": "Wie wurde das Missverständnis geklärt?",
@@ -136991,24 +136970,10 @@
         ],
         "sources": [
           {
-            "path": "flashcards[4].frontDe",
-            "stage": "vocabulary",
-            "text": "eine Stichprobe umfassen",
-            "surface": "eine Stichprobe umfassen",
-            "strength": "target"
-          },
-          {
             "path": "lexicalRegistry.b2-05-noun-10",
             "stage": "vocabulary",
             "surface": "die Stichprobe",
             "strength": "registry"
-          },
-          {
-            "path": "phrases[8].de",
-            "stage": "vocabulary",
-            "text": "eine Stichprobe umfassen",
-            "surface": "eine Stichprobe umfassen",
-            "strength": "target"
           },
           {
             "path": "reading.textDe",
@@ -160025,6 +159990,13 @@
             "strength": "registry"
           },
           {
+            "path": "phrases[16].de",
+            "stage": "vocabulary",
+            "text": "eine Nominalisierung vornehmen",
+            "surface": "eine Nominalisierung vornehmen",
+            "strength": "target"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In Behördenbriefen, Berichten und Fachtexten entscheidet selten die einzelne Grammatikstunde über die Verständlichkeit, sondern die Kohäsion: die Art, wie Sätze aneinander andocken. Drei Werkzeuge tragen die Last. Erstens die Verweiskette: Ein Fürwort oder Demonstrativum muss auf genau ein Bezugswort zeigen; ist dieses mehrdeutig, wiederholt man das Nomen oder ersetzt es durch einen Oberbegriff wie «der Vorgang». Zweitens die Konnektoren, die die Relation ausdrücklich markieren — Grund, Folge, Gegensatz, Einschränkung, Bedingung. Wer «während» für einen Gegensatz wählt statt für einen Zeitverlauf, sagt mehr als mit drei lose aneinandergereihten Hauptsätzen. Drittens die Nominalisierung, die Information verdichtet; sie ist in Berichten üblich, wird aber zum Hindernis, wenn eine Genitivkette sich über drei Stufen türmt und kein Verb mehr bleibt. Lesbarkeit entsteht also durch Abwägung: sichtbar verweisen, logisch verbinden, dicht zusammenziehen — und dort wieder auflösen, wo der Text zu atmen aufhört. Ein praktischer Prüfschritt am Ende des Schreibens: Jeden Konnektor einzeln fragen, welche Relation er nennt; jedes Fürwort einzeln fragen, auf welches Wort es zeigt; und jeden Nominalcluster in einen Verbalabsatz zurückübersetzen. Was dabei holpert, ist die Stelle, die ein fremder Leser nicht versteht.",
@@ -163889,8 +163861,8 @@
           {
             "path": "phrases[16].de",
             "stage": "vocabulary",
-            "text": "ein Modalpartikel der Abschwächung",
-            "surface": "ein Modalpartikel der Abschwächung",
+            "text": "eine Modalpartikel der Abschwächung",
+            "surface": "eine Modalpartikel der Abschwächung",
             "strength": "target"
           },
           {
@@ -165484,8 +165456,8 @@
           {
             "path": "phrases[16].de",
             "stage": "vocabulary",
-            "text": "ein Modalpartikel der Abschwächung",
-            "surface": "ein Modalpartikel der Abschwächung",
+            "text": "eine Modalpartikel der Abschwächung",
+            "surface": "eine Modalpartikel der Abschwächung",
             "strength": "target"
           }
         ],
@@ -170303,13 +170275,6 @@
             "stage": "vocabulary",
             "surface": "die Zumutbarkeit",
             "strength": "registry"
-          },
-          {
-            "path": "phrases[6].de",
-            "stage": "vocabulary",
-            "text": "eine Zumutbarkeit geltend machen",
-            "surface": "eine Zumutbarkeit geltend machen",
-            "strength": "target"
           }
         ],
         "id": "lex-n-b2-17-08f91ca7"
@@ -176613,8 +176578,8 @@
           {
             "path": "phrases[3].de",
             "stage": "vocabulary",
-            "text": "sowohl die Beratung als auch die Nachbereitung läuft online",
-            "surface": "sowohl die Beratung als auch die Nachbereitung läuft online",
+            "text": "sowohl die Beratung als auch die Nachbereitung laufen online",
+            "surface": "sowohl die Beratung als auch die Nachbereitung laufen online",
             "strength": "target"
           },
           {
@@ -176739,8 +176704,8 @@
           {
             "path": "phrases[1].de",
             "stage": "vocabulary",
-            "text": "je mehr Stimmen zählen, um so tragfähiger der Beschluss",
-            "surface": "je mehr Stimmen zählen, um so tragfähiger der Beschluss",
+            "text": "je mehr Stimmen zählen, umso tragfähiger der Beschluss",
+            "surface": "je mehr Stimmen zählen, umso tragfähiger der Beschluss",
             "strength": "target"
           }
         ],
@@ -178207,8 +178172,8 @@
           {
             "path": "phrases[3].de",
             "stage": "vocabulary",
-            "text": "sowohl die Beratung als auch die Nachbereitung läuft online",
-            "surface": "sowohl die Beratung als auch die Nachbereitung läuft online",
+            "text": "sowohl die Beratung als auch die Nachbereitung laufen online",
+            "surface": "sowohl die Beratung als auch die Nachbereitung laufen online",
             "strength": "target"
           }
         ],
@@ -178580,13 +178545,6 @@
             "text": "Warum ist der Plural bei „sowohl … als auch“ hier richtig?",
             "surface": "Warum ist der Plural bei „sowohl … als auch“ hier richtig?",
             "strength": "context"
-          },
-          {
-            "path": "phrases[8].de",
-            "stage": "vocabulary",
-            "text": "sowohl als auch verlangt den Plural beim Verb",
-            "surface": "sowohl als auch verlangt den Plural beim Verb",
-            "strength": "target"
           }
         ],
         "id": "lex-n-b2-20-058b0cac"
@@ -219344,8 +219302,7 @@
         "role": "anchor",
         "status": "covered",
         "observedCases": [
-          "accusative",
-          "ambiguous"
+          "accusative"
         ],
         "anchorIds": [
           "b2-20-verb-frame-2"
@@ -219356,13 +219313,6 @@
             "stage": "vocabulary",
             "surface": "eine Angabe um ein Wort zählen",
             "strength": "registry"
-          },
-          {
-            "path": "phrases[1].de",
-            "stage": "vocabulary",
-            "text": "je mehr Stimmen zählen, um so tragfähiger der Beschluss",
-            "surface": "je mehr Stimmen zählen, um so tragfähiger der Beschluss",
-            "strength": "target"
           }
         ],
         "id": "lex-v-b2-20-4be3a407"
@@ -221648,5 +221598,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "5fb32455777b05923b9c423e65047aaae54ec68e722209da53ed6892123f9670"
+  "contentSha256": "692ccde55ef477f2b995dbf7818be42c3eb81e050ac1664177d93fbb56e3dac9"
 }

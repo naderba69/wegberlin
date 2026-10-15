@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `39b4b60d07fa3d71b2661ea415af8f5f578a47ab6f8c1158fd3600d257676f54`
+Content SHA-256: `38666315fb67bd35a1bb174546623da383ecaf9c89e7c83c458aab350547e771`
 
 ## Honest result
 
@@ -15,8 +15,8 @@ The audit does **not** create grammatical facts. A pending noun row must receive
 | A1 | 569 | 298 | 0 | 271 | 106 | 25 | 0 | 81 |
 | A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
 | B1 | 1231 | 338 | 0 | 893 | 317 | 31 | 0 | 286 |
-| B2 | 2213 | 456 | 89 | 1668 | 633 | 48 | 1 | 584 |
-| **Total** | **4896** | **1384** | **89** | **3423** | **1260** | **134** | **1** | **1125** |
+| B2 | 2214 | 456 | 89 | 1669 | 633 | 48 | 1 | 584 |
+| **Total** | **4897** | **1384** | **89** | **3424** | **1260** | **134** | **1** | **1125** |
 
 ## Classification contract
 
@@ -82,10 +82,10 @@ Boundary: Target means an existing anchor, an uppercase reading-glossary lemma, 
 | `lex-n-b2-23-a84c0992` | B2 | `b2-23` | Einspruch | `phrases[15].de`: ein Einspruch gegen die Ablehnung |
 | `lex-n-b2-23-428bbbb7` | B2 | `b2-23` | Einverständnis | `phrases[3].de`: das Einverständnis der Eltern |
 | `lex-n-b2-23-a0fe65ff` | B2 | `b2-23` | Eltern | `phrases[3].de`: das Einverständnis der Eltern |
-| `lex-n-b2-23-3116f769` | B2 | `b2-23` | Fristversäumnis | `flashcards[4].frontDe`: die Fristversäumnis<br>`phrases[6].de`: der Hinweis auf die Fristversäumnis |
+| `lex-n-b2-23-3116f769` | B2 | `b2-23` | Fristversäumnis | `flashcards[4].frontDe`: das Fristversäumnis<br>`phrases[6].de`: der Hinweis auf das Fristversäumnis |
 | `lex-n-b2-23-85eac1d1` | B2 | `b2-23` | Gebühr | `flashcards[8].frontDe`: der Erlass der Gebühr |
 | `lex-n-b2-23-43c8d837` | B2 | `b2-23` | Gebührenbefreiung | `phrases[8].de`: die Gebührenbefreiung für Härtefälle |
-| `lex-n-b2-23-9a6995c0` | B2 | `b2-23` | Hinweis | `phrases[6].de`: der Hinweis auf die Fristversäumnis |
+| `lex-n-b2-23-9a6995c0` | B2 | `b2-23` | Hinweis | `phrases[6].de`: der Hinweis auf das Fristversäumnis |
 | `lex-n-b2-23-97886831` | B2 | `b2-23` | Hochschule | `phrases[0].de`: die Gebührenordnung der Hochschule |
 | `lex-n-b2-23-26d277a0` | B2 | `b2-23` | Kandidaten | `phrases[2].de`: die Prüfung des Kandidaten |
 | `lex-n-b2-23-84211e29` | B2 | `b2-23` | Nachfrist | `phrases[5].de`: die Verlängerung der Nachfrist um zwei Wochen |

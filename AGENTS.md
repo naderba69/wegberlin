@@ -8,7 +8,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-Sync batch: v203 · 2026-10-15 · مراجعة سطرًا سطرًا للأسئلة الـ 330 غير المُعلَّمة في القراءة والاستماع: 93 سؤالًا صُحّحت (13 موضع رجوع إلى جملة خاطئة، 3 مبتورة، 8 اقتباسات غير حرفية، نحو 20 شرحًا بمعلومة خاطئة، 4 مشتّتات تطابق المفتاح، ضميران، 3 خيارات بألمانية خاطئة)؛ إشارة علامة الترقيم أُزيلت من 49 سؤال اختيار؛ 35 بادئة متكلم حُذفت؛ الاستثناءات 74؛ المعجم 4896/3423؛ الكاش v203 (staging v202)؛ البصمة 14c73fa9c2af.
+Sync batch: v204 · 2026-10-15 · مراجعة سطرًا سطرًا لبنود «الأخطاء الشائعة» الـ 392: 33 تعديلًا في 20 درسًا (قواعد خاطئة في a1-10 وa1-20 وa2-10 وb2-13 وb2-15 وb2-21 وb2-23، ومثال ألماني خاطئ في a2-23، وقواعد مطلقة خُففت)؛ Versäumnis وُحّد محايدًا في b2-23؛ 4 أخطاء نطق في b2-23 صُحّحت؛ المعجم 4897/3424؛ الاستثناءات 74؛ الكاش v204 (staging v203)؛ البصمة 1d45ef1a3c58.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

@@ -55,7 +55,7 @@ export const a1Module4Lessons: FullLesson[] = [
  mediation:{scenarioAr:"زميلك العربي يريد معرفة ما يناسبه من قائمة فطور ألمانية.",sourceDe:"Frühstück: ein Ei, Käse, Brot, Joghurt, Obst. Getränke: Kaffee, Tee oder Wasser. Kein Fleisch.",taskAr:"اشرح مكونات الفطور بالعربية ووضح أنه لا يحتوي على لحم، ثم اقترح طلبًا ألمانيًا.",suggestedAr:"الفطور فيه بيضة وجبن وخبز ويوغورت وفاكهة، والمشروبات قهوة أو شاي أو ماء، ولا يوجد لحم. مثال: Ich nehme ein Ei, Brot und einen Tee."},
  mistakes:[
  {wrong:"Ich esse ein Apfel.",correct:"Ich esse einen Apfel.",whyAr:"Apfel مذكر وأصبح مفعولًا مباشرًا.",trickAr:"المذكر في Akkusativ يرتدي n: einen."},
- {wrong:"Ich habe kein Milch.",correct:"Ich habe keine Milch.",whyAr:"Milch مؤنث (die Milch)، والنفي عن مؤنث في حالة النصب يأخذ keine؛ kein بلا نهاية يبقى للمحايد: kein Brot.",trickAr:"der/die → keine، das → kein؛ احفظ الاسم بأداته ثم انْفِ على وزنه: die Milch → keine Milch."},
+ {wrong:"Ich habe kein Milch.",correct:"Ich habe keine Milch.",whyAr:"Milch مؤنث (die Milch)، والنفي عن مؤنث في حالة النصب يأخذ keine؛ kein بلا نهاية يبقى للمحايد: kein Brot.",trickAr:"die → keine، das → kein، der → keinen في النصب (keinen Kaffee)؛ احفظ الاسم بأداته ثم انْفِ على وزنه: die Milch → keine Milch."},
  {wrong:"Ich gern esse Brot.",correct:"Ich esse gern Brot.",whyAr:"الفعل المصرف يجب أن يبقى في الموقع الثاني.",trickAr:"شخص + فعل + gern."},
  {wrong:"Ich trinke nicht Kaffee.",correct:"Ich trinke keinen Kaffee.",whyAr:"عند نفي اسم غير معرف نستعمل kein غالبًا.",trickAr:"لا شيء من الاسم = kein بصيغة الأداة."},
  ],

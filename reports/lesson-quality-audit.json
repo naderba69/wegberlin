@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "1b320845afe904f0031bb07f1eb8f1b6411ab46eb4f93062726f28821da4c691",
+  "contentSha256": "8834a32629457e2c806fd86f42e752c0b5937e50b28c5250792fc89b65413f34",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -21,18 +21,18 @@
     "items": 1250,
     "positions": {
       "A": 324,
-      "B": 298,
-      "C": 305,
+      "B": 297,
+      "C": 306,
       "D": 323
     },
     "sharePct": [
       25.92,
-      23.84,
-      24.4,
+      23.76,
+      24.48,
       25.84
     ],
     "lessonsWithoutPositionD": 3,
-    "longestOptionIsKeyPct": 39.28
+    "longestOptionIsKeyPct": 39.2
   },
   "writing": {
     "statedRangeTasks": 92,
@@ -46,9 +46,9 @@
     "legacyCeilingExceeded": true,
     "freeProductionEvaluation": "workflow-and-independent-source-no-single-answer-comparator",
     "unchangedCorrectionAccepted": [],
-    "singleAcceptedString": 241,
-    "sharePct": 62.27,
-    "broadenedExercises": 146,
+    "singleAcceptedString": 242,
+    "sharePct": 62.53,
+    "broadenedExercises": 145,
     "acceptedAnswerHygieneVersion": "accepted-answer-hygiene-v1",
     "noOpVariants": 0,
     "noOpVariantItems": [],
@@ -67,10 +67,10 @@
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
     "allItems": 1733,
-    "allMedianChars": 171,
+    "allMedianChars": 172,
     "allUnder60Chars": 0,
     "allMissing": 0,
-    "explanationMedianChars": 164,
+    "explanationMedianChars": 165,
     "under40Chars": 0,
     "ofItems": 1250
   },

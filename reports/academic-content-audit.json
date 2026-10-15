@@ -3423,9 +3423,9 @@
         "scope": "lesson-controlled",
         "kind": "fill-blank",
         "prompt": "Es ___ 18 Grad. أكمل درجات الحرارة:",
-        "answer": "sind | ist",
+        "answer": "sind",
         "evidenceRef": "a1-18:controlled:a1-18-e2:explanationAr",
-        "evidenceExcerpt": "18 جمع، لذلك sind. تستعمل جمل الطقس الألمانية es حتى عندما لا يشير إلى شيء محدد: Es regnet، Es ist sonnig، Es schneit. ويُقبل أيضًا: «ist».",
+        "evidenceExcerpt": "18 جمع، لذلك sind. تستعمل جمل الطقس الألمانية es حتى عندما لا يشير إلى شيء محدد: Es regnet، Es ist sonnig، Es schneit. قد تسمع ist في الكلام اليومي، لكن الصيغة المعيارية مع العدد الجمع هي sind، وهي المطلوبة هنا كما في س…",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -4555,7 +4555,7 @@
         "id": "a1-23-m2",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Sie ___ viel trinken. اختر:",
+        "prompt": "Sie ___ viel trinken. الطبيب يخاطب المريض رسميًا (Sie):",
         "answer": "sollen",
         "evidenceRef": "a1-23:miniTest:a1-23-m2:explanationAr",
         "evidenceExcerpt": "Sie الرسمية: sollen. نستعمل sollen لنقل ما يُنصح به أو ما يطلبه شخص آخر: Sie sollen viel trinken.",
@@ -4808,7 +4808,7 @@
         "id": "a2-01-e2",
         "scope": "lesson-controlled",
         "kind": "fill-blank",
-        "prompt": "Wir haben Deutsch ___. أكمل Partizip II:",
+        "prompt": "Wir haben Deutsch ___. (lernen) أكمل Partizip II:",
         "answer": "gelernt",
         "evidenceRef": "a2-01:controlled:a2-01-e2:explanationAr",
         "evidenceExcerpt": "في Perfekt يأتي haben مُصرَّفًا في مكانه والمصدر في الآخر: «Wir haben Deutsch gelernt». الصيغة learnen لا وجود لها، و lernen المجردة تترك الفراغ بلا فعل تامّ. فحص ذاتي: هل تُنهي جملةَ الماضي صيغةُ ge؟",
@@ -5141,7 +5141,7 @@
         "prompt": "anrufen اختر Partizip:",
         "answer": "angerufen",
         "evidenceRef": "a2-02:miniTest:a2-02-m1:explanationAr",
-        "evidenceExcerpt": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين الأُفّ والجذر: «an-ge-rufen». ف «geanrufen» تخطئ موضعَ ge، و «anruft» مضارعٌ لا Partizip، و «angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟",
+        "evidenceExcerpt": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين البادئة والجذر: «an-ge-rufen». ف «geanrufen» تخطئ موضعَ ge، و «anruft» مضارعٌ لا Partizip، و «angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5394,7 +5394,7 @@
         "prompt": "Kannst du ___ helfen? (ich) اختر ضمير Dativ:",
         "answer": "mir",
         "evidenceRef": "a2-04:controlled:a2-04-e1:explanationAr",
-        "evidenceExcerpt": "helpen يعني يساعد، ومن يُساعد يُذكر بالمفعول غير المباشر: Er hilft mir. mich و dich تعودان على المتكلم أو المخاطَب، و mein ملكية، و ich فاعل؛ فلا واحدة منها تُجيب عن لمن؟. فحص ذاتي: هل الجواب عن لمن وُضع؟",
+        "evidenceExcerpt": "helfen يعني يساعد، ومن يُساعَد يُذكر في Dativ: Er hilft mir. أما mich فصيغة Akkusativ، و mein ملكية، و ich فاعل؛ فلا واحدة منها تُجيب عن لمن؟. فحص ذاتي: هل الجواب عن لمن وُضع؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5798,7 +5798,7 @@
         "id": "a2-06-e2",
         "scope": "lesson-controlled",
         "kind": "fill-blank",
-        "prompt": "___ Sie die Musik bitte leiser machen? أكمل الطلب الرسمي:",
+        "prompt": "___ Sie die Musik bitte leiser machen? أكمل الطلب الرسمي بصيغة Konjunktiv II من können:",
         "answer": "Könnten",
         "evidenceRef": "a2-06:controlled:a2-06-e2:explanationAr",
         "evidenceExcerpt": "الطلب الرسمي المهذّب يبدأ بفعل الودّ ثم الضمير الرسمي: Könnten Sie die Musik bitte leiser machen? können بلا صيغة ودّ أقلّ تلطيفًا، و möchtest لا تُبنى لهذا الغرض. فحص ذاتي: هل خفّفت بصيغة الفعل لا بنبرة الصوت؟",
@@ -7327,7 +7327,7 @@
         "id": "a2-13-m2",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "ich اختر الضمير:",
+        "prompt": "ich اختر الضمير الانعكاسي: Ich entspanne ___.",
         "answer": "mich",
         "evidenceRef": "a2-13:miniTest:a2-13-m2:explanationAr",
         "evidenceExcerpt": "الفعلُ الانعكاسي مع ich يأخذ الضميرَ «mich»: ich entspanne mich. وأمّا sich فللغائب، و dich للمخاطَب، و mir ضميرُ جرٍّ لا يطلبه هذا الفعل. فحص ذاتي: مَن الفاعل ومَن الضمير العائد إليه؟",
@@ -7580,7 +7580,7 @@
         "id": "a2-15-e2",
         "scope": "lesson-controlled",
         "kind": "fill-blank",
-        "prompt": "Nehmen Sie das ___ dem Essen. أكمل التوقيت:",
+        "prompt": "Nehmen Sie das ___ dem Essen. (بعد الأكل) أكمل التوقيت:",
         "answer": "nach",
         "evidenceRef": "a2-15:controlled:a2-15-e2:explanationAr",
         "evidenceExcerpt": "التوقيت الذي يلي حدثًا يُعبَّر عنه بـ nach: «Nehmen Sie das nach dem Essen». vor تُنكس الترتيب، و bei تُلصق الفعل بالظرف فتُفقد العلاقة. فحص ذاتي: قبل الطعام أم بعده؟",
@@ -8135,7 +8135,7 @@
         "prompt": "anmelden mit zu أي خيار يحقّق «anmelden mit zu» في هذا السياق؟",
         "answer": "anzumelden",
         "evidenceRef": "a2-17:miniTest:a2-17-m3:explanationAr",
-        "evidenceExcerpt": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تُبقي الأُفّ مفصولًا، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟",
+        "evidenceExcerpt": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تضع zu قبل البادئة، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9298,10 +9298,10 @@
         "id": "a2-23-m1",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "der Helfer اختر الضمير:",
+        "prompt": "der Helfer اختر الضمير الموصول للفاعل: der Helfer, ___ hilft …",
         "answer": "der",
         "evidenceRef": "a2-23:miniTest:a2-23-m1:explanationAr",
-        "evidenceExcerpt": "الاسمُ «der Helfer» مذكّر، فيأخذ في Nominativ الأداةَ «der». وأمّا «die» فللمؤنث، و «das» للمحايد، و «den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟",
+        "evidenceExcerpt": "الاسمُ «der Helfer» مذكّر، وهو فاعلٌ في الجملة الموصولة، فيأخذ في Nominativ الضميرَ «der». وأمّا «die» فللمؤنث، و «das» للمحايد، و «den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9331,10 +9331,10 @@
         "id": "a2-23-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Plural Personen أي خيار يحقّق «Plural Personen» في هذا السياق؟",
+        "prompt": "Plural Personen اختر الضمير الموصول للفاعل في الجمع: die Personen, ___ helfen …",
         "answer": "die",
         "evidenceRef": "a2-23:miniTest:a2-23-m4:explanationAr",
-        "evidenceExcerpt": "الفاعلُ المعرّف في الجمع يأخذ die في Nominativ، وهو «die» في هذا التمرين. وأمّا der و das فمفرد، و den تُستعمل في الجمع المنصوب (Akkusativ). فحص ذاتي: أهو فاعلٌ أم مفعولٌ في جملتك؟",
+        "evidenceExcerpt": "الضمير الموصول للجمع في Nominativ هو die، وهو «die» في هذا التمرين. وأمّا der و das فللمفرد، و den ليست ضميرًا موصولًا للجمع أصلًا: في Dativ الجمع يكون الضمير denen. فحص ذاتي: أهو فاعلٌ في الجملة الموصولة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10101,10 +10101,10 @@
         "id": "b1-03-m2",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Bewegung اختر التعبير المطابق ل «Bewegung»:",
+        "prompt": "Bewegung اختر Plusquamperfekt لفعل حركة:",
         "answer": "Der Zug war abgefahren.",
         "evidenceRef": "b1-03:miniTest:b1-03-m2:explanationAr",
-        "evidenceExcerpt": "sein في Plusquamperfekt: war abgefahren. نستعمل Plusquamperfekt عندما نحتاج توضيح أن حدثًا اكتمل قبل حدث ماضٍ آخر.",
+        "evidenceExcerpt": "فعل الحركة يأخذ sein، وفي Plusquamperfekt يصير war abgefahren؛ أما ist abgefahren فهو Perfekt. نستعمل Plusquamperfekt عندما نحتاج توضيح أن حدثًا اكتمل قبل حدث ماضٍ آخر.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10156,7 +10156,7 @@
         "id": "b1-04-e2",
         "scope": "lesson-controlled",
         "kind": "fill-blank",
-        "prompt": "Der Plan ___ von Mara erstellt. أكمل المساعد:",
+        "prompt": "Der Plan ___ von Mara erstellt. (Präsens) أكمل المساعد:",
         "answer": "wird",
         "evidenceRef": "b1-04:controlled:b1-04-e2:explanationAr",
         "evidenceExcerpt": "المبني للمجهول يطلب werden مصروفًا مع الفاعل: «Der Plan wird von Mara erstellt» لأن Plan مفرد. صيغة الجمع لا تطابق العدد، و «ist erstellt» يصف نتيجة لا إجراءً جاريا. فحص ذاتي: حوّل الفاعل إلى Pläne وراقب المساعد.",
@@ -10607,7 +10607,7 @@
         "id": "b1-06-e7",
         "scope": "lesson-controlled",
         "kind": "fill-blank",
-        "prompt": "Daran ___ ich noch. أكمل التطور:",
+        "prompt": "Daran ___ ich noch. (arbeiten) أكمل التطور:",
         "answer": "arbeite",
         "evidenceRef": "b1-06:controlled:b1-06-e7:explanationAr",
         "evidenceExcerpt": "الربط بـ daran يقدّم الضمير على الفعل في جملة رئيسية: «Daran arbeite ich noch». تقديم ich على arbeite يعطي ترتيب جملة جانبية، وحذفه يترك arbeite بلا مرجع. فحص ذاتي: ابدأ بـ «Morgen»؛ هل يبقى الفعل قبل الفاعل؟",
@@ -10927,9 +10927,9 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Bedingung أي خيار يحقّق «Bedingung» في هذا السياق؟",
-        "answer": "Wenn der Zug regelmäßig fährt, würde ich dort wohnen.",
+        "answer": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
         "evidenceRef": "b1-07:miniTest:b1-07-m5:explanationAr",
-        "evidenceExcerpt": "شرط وقرار افتراضي. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedingung, dass …، Wenn ich täglich pendeln müsste ….",
+        "evidenceExcerpt": "شرط وقرار افتراضي: Konjunktiv II في الجزأين (fahren würde … würde wohnen)، والفعل المصرَّف في آخر جملة wenn ثم في أول الجملة الرئيسية. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedin…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12071,7 +12071,7 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Nominalisierung اختر الصيغة الصحيحة للاسم المشتق بعد beim:",
-        "answer": "beim gelesen",
+        "answer": "beim Lesen",
         "evidenceRef": "b1-13:miniTest:b1-13-m1:explanationAr",
         "evidenceExcerpt": "اسم بحرف كبير. beim اختصار bei dem، ويمكن أن يأتي بعده فعل محول إلى اسم: beim Lesen، beim Schreiben، beim Sprechen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15153,7 +15153,7 @@
         "prompt": " أي جملة تلتزم بالبيانات؟",
         "answer": "In dieser Stichprobe ging längeres Üben mit höheren Werten einher.",
         "evidenceRef": "b2-05:controlled:b2-05-e6:explanationAr",
-        "evidenceExcerpt": "الالتزام بالبيانات يسمّي العينة ونوع العلاقة: «In dieser Stichprobe ging längeres Üben mit höheren Werten einher». صيغ beweisen و immer تُضيف سببًا وتعميمًا ليسا في القياس.",
+        "evidenceExcerpt": "الالتزام بالبيانات يسمّي العينة ونوع العلاقة: «In dieser Stichprobe ging längeres Üben mit höheren Werten einher». صيغة beweist تحوّل الارتباط إلى سبب لم يقسه أحد، والصيغتان الأخريان تناقضان اتجاه البيانات (wirkungslos …",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15285,7 +15285,7 @@
         "prompt": "Begrenzte Schlussfolgerung أي خيار يحقّق «Begrenzte Schlussfolgerung» في هذا السياق؟",
         "answer": "Die Daten deuten in dieser Stichprobe auf einen Zusammenhang hin.",
         "evidenceRef": "b2-05:miniTest:b2-05-m5:explanationAr",
-        "evidenceExcerpt": "تحدد الدليل والعينة دون يقين زائد. قد يتحرك متغيران معًا بسبب متغير ثالث أو اختيار المشاركين لأنفسهم أو اتجاه سببي معاكس.",
+        "evidenceExcerpt": "تحدد الدليل والعينة دون يقين زائد. قد يتحرك متغيران معًا بسبب متغير ثالث أو اختيار المشاركين لأنفسهم أو اتجاه سببي معاكس؛ لذلك تتجاوز beweisen و ausgeschlossen ما تسمح به العينة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15670,7 +15670,7 @@
         "prompt": "Anhörung ماذا تعني؟",
         "answer": "Perspektiven werden gehört, ohne automatisch die Endentscheidung zu übertragen.",
         "evidenceRef": "b2-07:miniTest:b2-07-m4:explanationAr",
-        "evidenceExcerpt": "الاستماع لا يساوي القرار المشترك. حلل المشاركة في ثلاث درجات: هل وصلت الدعوة؟",
+        "evidenceExcerpt": "الاستماع لا يساوي القرار المشترك: في Anhörung تُسمع وجهات النظر ويبقى القرار النهائي عند الجهة المختصة، أما التصويت الملزم والاتفاق على قرار مشترك فدرجتا مشاركة أعلى، والرد الرسمي على الشكاوى إجراء آخر.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15681,7 +15681,7 @@
         "prompt": "Rückkopplung أفضل ممارسة:",
         "answer": "Vorschläge dokumentieren und Annahme, Änderung oder Ablehnung begründen",
         "evidenceRef": "b2-07:miniTest:b2-07-m5:explanationAr",
-        "evidenceExcerpt": "الرد المعلل يغلق الحلقة. حلل المشاركة في ثلاث درجات: هل وصلت الدعوة؟",
+        "evidenceExcerpt": "الرد المعلل يغلق الحلقة: يعرف كل مقترِح هل قُبل اقتراحه أو عُدّل أو رُفض ولماذا. التسجيل بلا رد، والإقصاء بلا تفسير، والعرض العام وحده لا تغلقها.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15857,7 +15857,7 @@
         "prompt": "Selbsteinschätzung ماذا تثبت مباشرة؟",
         "answer": "Was Befragte über ihre Wahrnehmung berichten",
         "evidenceRef": "b2-08:miniTest:b2-08-m3:explanationAr",
-        "evidenceExcerpt": "التقييم الذاتي يقيس التقرير الذاتي. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟",
+        "evidenceExcerpt": "التقييم الذاتي يقيس ما يقوله المشاركون عن إدراكهم، لا كفاءة مقيسة موضوعيًا ولا رضا الجميع. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16668,10 +16668,10 @@
         "id": "b2-12-m5",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Selbst wenn اختر الصحيح:",
+        "prompt": "Selbst wenn أي جملة تصف الاستراتيجية الصحيحة عند نقص كلمة؟",
         "answer": "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
         "evidenceRef": "b2-12:miniTest:b2-12-m5:explanationAr",
-        "evidenceExcerpt": "الفعل في نهاية جملة wenn، ثم الفعل ثانيًا في الرئيسية. قبل البدء اكتب عقدًا قصيرًا: المنتج، الجمهور، الأفعال، الطول أو الزمن، المصادر، والمخرجات.",
+        "evidenceExcerpt": "selbst wenn تقدّم شرطًا لا يغيّر النتيجة: الفعل في نهاية جملة selbst wenn، ثم يبدأ الجزء الرئيسي بالفعل المصرَّف (bleibe ich). والاستراتيجية الصحيحة أن تبقى قادرًا على الإنجاز فتصف الكلمة الناقصة أو تلتف حولها، لا أن تق…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16682,7 +16682,7 @@
         "prompt": " أي صيغة تطابق حجم الدليل؟",
         "answer": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen.",
         "evidenceRef": "b2-13:controlled:b2-13-e1:explanationAr",
-        "evidenceExcerpt": "حجم النص يطابق حجم الدليل: Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen يسمّي العينة والاتجاه. صيغ Beweisen و für alle تُوسّع ملاحظتين إلى قانون عام.",
+        "evidenceExcerpt": "حجم النص يطابق حجم الدليل: Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen يسمّي العينة والاتجاه. صيغ beweisen و für alle Kurse تُوسّع ملاحظتين إلى قانون عام.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16737,7 +16737,7 @@
         "prompt": " أي بديل تفسيري ذكره سليم؟",
         "answer": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen.",
         "evidenceRef": "b2-13:controlled:b2-13-e6:explanationAr",
-        "evidenceExcerpt": "غياب مجموعة ضبط يبقي السببية مفتوحة: «Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen». أما «Die zweite Gruppe bestätigt den Effekt» و «Der Effekt ist bewiesen» فجزمٌ يسبق الدليل. فحص ذاتي…",
+        "evidenceExcerpt": "غياب مجموعة ضبط يبقي السببية مفتوحة: «Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen». أما «Die zweite Gruppe bestätigt den Effekt» و «Der Effekt ist bewiesen» وإسناد الرجوع إلى القاعدة د…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16933,9 +16933,9 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " متى يكون «außerdem» مناسبًا؟",
-        "answer": "nur für eine zusätzliche Begründung zum Gleichen",
+        "answer": "für ein weiteres Argument in dieselbe Richtung",
         "evidenceRef": "b2-14:controlled:b2-14-e6:explanationAr",
-        "evidenceExcerpt": "außerdem تُضيف تعليلًا ثانيًا إلى الحجة نفسها: «…außerdem sind die Kosten gesunken». لا تحلّ محل weil لأن الإضافة ليست سببًا، ولا تُفتَح بها فقرة بلا حجة سابقة تُضاف إليها.",
+        "evidenceExcerpt": "außerdem تُضيف تعليلًا ثانيًا إلى الحجة نفسها: «…außerdem sind die Kosten gesunken». لا تحلّ محل weil لأن الإضافة ليست سببًا، ولا تصلح لكل معلومة جديدة لا صلة لها بما قبلها، وموضعها أول الجملة أو وسطها لا آخرها فقط.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17053,7 +17053,7 @@
         "id": "b2-14-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Nominalstil الحد المعقول للأسمار في جملة:",
+        "prompt": "Nominalstil الحد المعقول للأسماء في جملة:",
         "answer": "عنقود اسمي واحد، والباقي أفعال",
         "evidenceRef": "b2-14:miniTest:b2-14-m4:explanationAr",
         "evidenceExcerpt": "ضغط مع بقاء فعل: عنقود اسمي واحد والباقي أفعال. الأسلوب الاسمي يقصر الجملة ويكثّف المعنى، لكن إعدام الأفعال كلها يجعل النص جافًا وغامض المسؤول.",
@@ -17251,10 +17251,10 @@
         "id": "b2-15-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Sinn des Puffers ماوظيفة الهامش في النص؟",
+        "prompt": "Sinn des Puffers ما وظيفة الهامش الزمني في الامتحان؟",
         "answer": "geschützte Zeit für die Kontrolle",
         "evidenceRef": "b2-15:miniTest:b2-15-m4:explanationAr",
-        "evidenceExcerpt": "وقت محجوز للمراجعة لا فضلات. الغرض يُعبَّر عنه بطريقتين، والفرق ليس أسلوبيًا بل تركيبيًا: إذا كان الفاعل واحدًا في الجملتين اختيرت مجموعة «zu» أي «um … zu» بلا فاعل مذكور، وإذا ظهر فاعل في جملة الغرض لزم «damit» مع فعل …",
+        "evidenceExcerpt": "وقت محجوز للمراجعة لا فضلات: الهامش يحمي فحص الإجابات في آخر الزمن، فلا يُصرف على مهام إضافية ولا على النسخ، ولا ينتظر أسئلة المراقب.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17263,9 +17263,9 @@
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
         "prompt": "Fehlerquelle oder Flüchtigkeitsfehler متى يصبح الخطأ مصدرًا لا زلّة؟",
-        "answer": "wenn er dreimal dieselbe Form trifft",
+        "answer": "wenn dasselbe Verb dreimal in derselben Falschform steht",
         "evidenceRef": "b2-15:miniTest:b2-15-m5:explanationAr",
-        "evidenceExcerpt": "التكرر المنهجي علامة نقص في التعلم. التخطيط الواقعي يفترض أن المرحلة الأخيرة مهددة بالحذف دائمًا، لذلك تُكتب لها مدة وموضع: لا «إن بقي وقت»، بل دقائق محجوزة في آخر الزمن.",
+        "evidenceExcerpt": "التكرر المنهجي علامة نقص في التعلم: الفعل نفسه بالصيغة الخاطئة نفسها ثلاث مرات يدل على قاعدة لم تُكتسب بعد فيحتاج تدريبًا، أما الخطأ المنفرد فزلّة تُصحَّح عند المراجعة. ليس مكان الخطأ ولا من وجده ما يحدد نوعه.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18032,7 +18032,7 @@
         "id": "b2-19-m3",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Vorsicht statt Behauptung أي جماعة تُبقي ما تقول فرضية لا جزمًا؟",
+        "prompt": "Vorsicht statt Behauptung أي جملة تُبقي ما تقوله فرضية لا جزمًا؟",
         "answer": "Das ist wohl ein Versehen in der Liste.",
         "evidenceRef": "b2-19:miniTest:b2-19-m3:explanationAr",
         "evidenceExcerpt": "«wohl» تُبقي الاحتمال احتمالًا؛ الباقي يجزم أو يُفترض علمًا مشتركًا.",
@@ -18043,10 +18043,10 @@
         "id": "b2-19-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Register in der Beschwerde أيّ جملة تصلح لمقال شكوى مكتوبة؟",
+        "prompt": "Register in der Beschwerde أيّ جملة تصلح لشكوى مكتوبة؟",
         "answer": "Ihr Bescheid vom 2. April nennt die Frist nicht; ich bitte um eine Berichtigung bis zum 15.",
         "evidenceRef": "b2-19:miniTest:b2-19-m4:explanationAr",
-        "evidenceExcerpt": "الأولى وقائع وتاريخ وطلب؛ الأدوات الثلاث الباقية تحاور ولا تُثبّت.",
+        "evidenceExcerpt": "الأولى تذكر الواقعة والتاريخ وتطلب بأدب مع مهلة؛ الثانية تطالب بلا مهلة، والثالثة تتهم، والرابعة لا تطلب شيئًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18057,7 +18057,7 @@
         "prompt": "betont oder unbetont متى تكون «doch» بمعنى «jedoch»؟",
         "answer": "Es ist ein Hinweis, doch kein Beleg.",
         "evidenceRef": "b2-19:miniTest:b2-19-m5:explanationAr",
-        "evidenceExcerpt": "في الأولى تقابل بين شيئين وتقبل الوقوع بعد الاسم؛ في الباقي أداة خفيفة تعترض على ظنّ.",
+        "evidenceExcerpt": "في الأولى تربط doch بين جزأين متقابلين بمعنى jedoch. في الثانية أداة غير مشدّدة تعترض على ظنّ، وفي الثالثة جواب إثبات بعد سؤال منفي، وفي الرابعة أداة تليّن الطلب.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4895,
+      "totalCandidates": 4898,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3422,
+      "contextualNotTarget": 3425,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51139,18 +51139,18 @@
           "contextualNotTarget": 893
         },
         "B2": {
-          "totalCandidates": 2212,
+          "totalCandidates": 2215,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1667
+          "contextualNotTarget": 1670
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1258,
+      "totalCandidates": 1260,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1123,
+      "contextualNotTarget": 1125,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51172,10 +51172,10 @@
           "contextualNotTarget": 286
         },
         "B2": {
-          "totalCandidates": 631,
+          "totalCandidates": 633,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 582
+          "contextualNotTarget": 584
         }
       }
     },
@@ -84230,8 +84230,8 @@
           {
             "path": "exercises[1].template",
             "stage": "controlled",
-            "text": "Nehmen Sie das ___ dem Essen.",
-            "surface": "Nehmen Sie das ___ dem Essen.",
+            "text": "Nehmen Sie das ___ dem Essen. (بعد الأكل)",
+            "surface": "Nehmen Sie das ___ dem Essen. (بعد الأكل)",
             "strength": "context"
           },
           {
@@ -105523,15 +105523,15 @@
           {
             "path": "miniTest[4].options[0]",
             "stage": "test",
-            "text": "Wenn der Zug regelmäßig fährt, würde ich dort wohnen.",
-            "surface": "Wenn der Zug regelmäßig fährt, würde ich dort wohnen.",
+            "text": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
+            "surface": "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
             "strength": "context"
           },
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Wenn regelmäßig der Zug fahren würde, dann dort ich wohnen",
-            "surface": "Wenn regelmäßig der Zug fahren würde, dann dort ich wohnen",
+            "text": "Wenn regelmäßig der Zug fahren würde, dann ich dort wohnen würde",
+            "surface": "Wenn regelmäßig der Zug fahren würde, dann ich dort wohnen würde",
             "strength": "context"
           },
           {
@@ -116936,8 +116936,8 @@
           {
             "path": "miniTest[1].options[0]",
             "stage": "test",
-            "text": "Statt dass die App entscheidet, wähle ich selbst",
-            "surface": "Statt dass die App entscheidet, wähle ich selbst",
+            "text": "Statt dass entscheidet die App, wähle ich",
+            "surface": "Statt dass entscheidet die App, wähle ich",
             "strength": "context"
           },
           {
@@ -125794,8 +125794,8 @@
           {
             "path": "miniTest[1].options[0]",
             "stage": "test",
-            "text": "ohne dass die verlorenen Daten wieder auftauchen",
-            "surface": "ohne dass die verlorenen Daten wieder auftauchen",
+            "text": "ohne dass gehen die Daten verloren",
+            "surface": "ohne dass gehen die Daten verloren",
             "strength": "context"
           },
           {
@@ -136243,44 +136243,6 @@
       {
         "lessonId": "b2-05",
         "level": "B2",
-        "lemmaCandidate": "Beweis",
-        "normalizedLemma": "beweis",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "surface": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-05-6befc25c"
-      },
-      {
-        "lessonId": "b2-05",
-        "level": "B2",
-        "lemmaCandidate": "Daten",
-        "normalizedLemma": "daten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "surface": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-05-097108a9"
-      },
-      {
-        "lessonId": "b2-05",
-        "level": "B2",
         "lemmaCandidate": "Datensatz",
         "normalizedLemma": "datensatz",
         "role": "anchor",
@@ -136973,6 +136935,25 @@
       {
         "lessonId": "b2-05",
         "level": "B2",
+        "lemmaCandidate": "Schriftart",
+        "normalizedLemma": "schriftart",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "die Schriftart und Farbe der Tabellenzeilen",
+            "surface": "die Schriftart und Farbe der Tabellenzeilen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-05-9edff273"
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
         "lemmaCandidate": "Selektion",
         "normalizedLemma": "selektion",
         "role": "context-only",
@@ -137040,13 +137021,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "miniTest[3].options[2]",
-            "stage": "test",
-            "text": "die Streuung innerhalb beider Gruppen",
-            "surface": "die Streuung innerhalb beider Gruppen",
-            "strength": "context"
-          },
-          {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
             "text": "Alle Teilnehmenden verloren Punkte, und die Streuung blieb dabei unverändert.",
@@ -137055,6 +137029,25 @@
           }
         ],
         "id": "lex-n-b2-05-8c1642da"
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
+        "lemmaCandidate": "Tabellenzeilen",
+        "normalizedLemma": "tabellenzeilen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "die Schriftart und Farbe der Tabellenzeilen",
+            "surface": "die Schriftart und Farbe der Tabellenzeilen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-05-d2c4b0b7"
       },
       {
         "lessonId": "b2-05",
@@ -137367,6 +137360,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Die Daten beweisen in dieser Stichprobe, dass Üben die Ursache ist.",
+            "surface": "Die Daten beweisen in dieser Stichprobe, dass Üben die Ursache ist.",
+            "strength": "context"
+          },
+          {
             "path": "mistakes[1].correct",
             "stage": "errors",
             "text": "X ging mit Y einher; eine Ursache ist damit nicht nachgewiesen.",
@@ -137618,6 +137618,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Diese Stichprobe beweist, dass längeres Üben die Werte in jedem Fall erhöht.",
+            "surface": "Diese Stichprobe beweist, dass längeres Üben die Werte in jedem Fall erhöht.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Längeres Üben senkte die Werte in jeder Gruppe messbar.",
@@ -137722,13 +137729,6 @@
         ],
         "sources": [
           {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "surface": "In dieser Stichprobe zeigen die Daten einen Zusammenhang, aber keinen Beweis.",
-            "strength": "context"
-          },
-          {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
             "text": "Zwischen den Variablen bestand ein Zusammenhang.",
@@ -137747,13 +137747,6 @@
             "stage": "vocabulary",
             "surface": "der Zusammenhang",
             "strength": "registry"
-          },
-          {
-            "path": "miniTest[4].options[0]",
-            "stage": "test",
-            "text": "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
-            "surface": "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
-            "strength": "context"
           },
           {
             "path": "miniTest[4].options[1]",
@@ -140123,13 +140116,6 @@
             "text": "Er berät nur, ohne je eine Antwort zu erhalten.",
             "surface": "Er berät nur, ohne je eine Antwort zu erhalten.",
             "strength": "context"
-          },
-          {
-            "path": "miniTest[4].options[1]",
-            "stage": "test",
-            "text": "Jeden Vorschlag erfassen und den Personen eine nachvollziehbare Antwort geben.",
-            "surface": "Jeden Vorschlag erfassen und den Personen eine nachvollziehbare Antwort geben.",
-            "strength": "context"
           }
         ],
         "id": "lex-n-b2-07-2c92d8bc"
@@ -140624,13 +140610,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "miniTest[3].options[0]",
-            "stage": "test",
-            "text": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "surface": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "strength": "context"
-          },
-          {
             "path": "miniTest[4].options[3]",
             "stage": "test",
             "text": "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen.",
@@ -140983,6 +140962,25 @@
       {
         "lessonId": "b2-07",
         "level": "B2",
+        "lemmaCandidate": "Mehrheit",
+        "normalizedLemma": "mehrheit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Alle Beteiligten stimmen ab, und die Mehrheit entscheidet verbindlich.",
+            "surface": "Alle Beteiligten stimmen ab, und die Mehrheit entscheidet verbindlich.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-07-d5df3b05"
+      },
+      {
+        "lessonId": "b2-07",
+        "level": "B2",
         "lemmaCandidate": "Mitglieder",
         "normalizedLemma": "mitglieder",
         "role": "context-only",
@@ -141132,8 +141130,8 @@
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Jeden Vorschlag erfassen und den Personen eine nachvollziehbare Antwort geben.",
-            "surface": "Jeden Vorschlag erfassen und den Personen eine nachvollziehbare Antwort geben.",
+            "text": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
+            "surface": "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
             "strength": "context"
           }
         ],
@@ -141397,25 +141395,6 @@
           }
         ],
         "id": "lex-n-b2-07-d9facd1e"
-      },
-      {
-        "lessonId": "b2-07",
-        "level": "B2",
-        "lemmaCandidate": "Sicht",
-        "normalizedLemma": "sicht",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[0]",
-            "stage": "test",
-            "text": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "surface": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-07-2796c2dc"
       },
       {
         "lessonId": "b2-07",
@@ -142950,8 +142929,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Gefördete nur zustimmend antworten.",
-            "surface": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Gefördete nur zustimmend antworten.",
+            "text": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Geförderte nur zustimmend antworten.",
+            "surface": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Geförderte nur zustimmend antworten.",
             "strength": "context"
           },
           {
@@ -143343,13 +143322,6 @@
             "stage": "controlled",
             "text": "Die Befragung zeigt, dass alle Teilnehmenden ihre Kompetenz inzwischen als sehr hoch einschätzen.",
             "surface": "Die Befragung zeigt, dass alle Teilnehmenden ihre Kompetenz inzwischen als sehr hoch einschätzen.",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[2].options[0]",
-            "stage": "test",
-            "text": "Dass die Teilnehmenden ihre Kompetenz höher bewerteten.",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz höher bewerteten.",
             "strength": "context"
           },
           {
@@ -144141,8 +144113,8 @@
           {
             "path": "miniTest[4].options[0]",
             "stage": "test",
-            "text": "Änderung, Datum, Grund und die Quellen nennen",
-            "surface": "Änderung, Datum, Grund und die Quellen nennen",
+            "text": "Änderung still einfügen, ohne die Quellen zu nennen",
+            "surface": "Änderung still einfügen, ohne die Quellen zu nennen",
             "strength": "context"
           }
         ],
@@ -144551,13 +144523,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "miniTest[2].options[0]",
-            "stage": "test",
-            "text": "Dass die Teilnehmenden ihre Kompetenz höher bewerteten.",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz höher bewerteten.",
-            "strength": "context"
-          },
-          {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
             "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben.",
@@ -144670,8 +144635,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Gefördete nur zustimmend antworten.",
-            "surface": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Gefördete nur zustimmend antworten.",
+            "text": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Geförderte nur zustimmend antworten.",
+            "surface": "Die Finanzierung durch das Unternehmen erklärt die positiven Ergebnisse, weil Geförderte nur zustimmend antworten.",
             "strength": "context"
           },
           {
@@ -152931,6 +152896,25 @@
       {
         "lessonId": "b2-12",
         "level": "B2",
+        "lemmaCandidate": "Antwort",
+        "normalizedLemma": "antwort",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
+            "surface": "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-12-47d88fe2"
+      },
+      {
+        "lessonId": "b2-12",
+        "level": "B2",
         "lemmaCandidate": "Aufgabe",
         "normalizedLemma": "aufgabe",
         "role": "context-only",
@@ -155464,8 +155448,8 @@
           {
             "path": "miniTest[4].options[0]",
             "stage": "test",
-            "text": "Auch wenn ein Wort fehlt, rede ich kurz weiter und kehre dann zurück",
-            "surface": "Auch wenn ein Wort fehlt, rede ich kurz weiter und kehre dann zurück",
+            "text": "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
+            "surface": "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
             "strength": "context"
           },
           {
@@ -156693,13 +156677,6 @@
             "strength": "context"
           },
           {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache hier zunächst offen.",
-            "surface": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache hier zunächst offen.",
-            "strength": "context"
-          },
-          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen.",
@@ -157521,6 +157498,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
+            "surface": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[6].template",
             "stage": "controlled",
             "text": "___ der Unterschied nach acht Wochen ausbleibt, ziehe ich die Regel zurück.",
@@ -157692,8 +157676,8 @@
           {
             "path": "exercises[0].options[0]",
             "stage": "controlled",
-            "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "surface": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
+            "text": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "surface": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
             "strength": "context"
           },
           {
@@ -157701,6 +157685,13 @@
             "stage": "controlled",
             "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen.",
             "surface": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
+            "surface": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
             "strength": "context"
           },
           {
@@ -157746,6 +157737,25 @@
           }
         ],
         "id": "lex-n-b2-13-1ee29376"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "lemmaCandidate": "Schule",
+        "normalizedLemma": "schule",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[0].options[0]",
+            "stage": "controlled",
+            "text": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "surface": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-13-4c54970e"
       },
       {
         "lessonId": "b2-13",
@@ -157881,8 +157891,8 @@
           {
             "path": "exercises[0].options[0]",
             "stage": "controlled",
-            "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "surface": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
+            "text": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "surface": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
             "strength": "context"
           },
           {
@@ -157979,13 +157989,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache hier zunächst offen.",
-            "surface": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache hier zunächst offen.",
-            "strength": "context"
-          },
           {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
@@ -158598,6 +158601,25 @@
       {
         "lessonId": "b2-14",
         "level": "B2",
+        "lemmaCandidate": "Argument",
+        "normalizedLemma": "argument",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "für ein weiteres Argument in dieselbe Richtung",
+            "surface": "für ein weiteres Argument in dieselbe Richtung",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-14-7adfa9d0"
+      },
+      {
+        "lessonId": "b2-14",
+        "level": "B2",
         "lemmaCandidate": "Art",
         "normalizedLemma": "art",
         "role": "context-only",
@@ -158675,13 +158697,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "exercises[5].options[2]",
-            "stage": "controlled",
-            "text": "nur für eine zusätzliche Begründung zum Gleichen",
-            "surface": "nur für eine zusätzliche Begründung zum Gleichen",
-            "strength": "context"
-          },
           {
             "path": "theory[2].examples[5].de",
             "stage": "rule",
@@ -173746,8 +173761,22 @@
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Das ist nur ein Beleg, doch kein Hinweis für uns.",
-            "surface": "Das ist nur ein Beleg, doch kein Hinweis für uns.",
+            "text": "Das ist doch kein Beleg für diese Behauptung!",
+            "surface": "Das ist doch kein Beleg für diese Behauptung!",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Doch, das ist sehr wohl ein Beleg.",
+            "surface": "Doch, das ist sehr wohl ein Beleg.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Schick mir doch den Beleg.",
+            "surface": "Schick mir doch den Beleg.",
             "strength": "context"
           }
         ],
@@ -174698,13 +174727,6 @@
             "stage": "test",
             "text": "Es ist ein Hinweis, doch kein Beleg.",
             "surface": "Es ist ein Hinweis, doch kein Beleg.",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[4].options[1]",
-            "stage": "test",
-            "text": "Das ist nur ein Beleg, doch kein Hinweis für uns.",
-            "surface": "Das ist nur ein Beleg, doch kein Hinweis für uns.",
             "strength": "context"
           }
         ],
@@ -208281,6 +208303,29 @@
       {
         "lessonId": "b2-05",
         "level": "B2",
+        "infinitiveCandidate": "ausgeschlossen",
+        "normalizedVerb": "ausgeschlossen",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Andere Erklärungen sind damit für alle Gruppen ausgeschlossen.",
+            "surface": "Andere Erklärungen sind damit für alle Gruppen ausgeschlossen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-05-f4b28fca"
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
         "infinitiveCandidate": "auswerten",
         "normalizedVerb": "auswerten",
         "preposition": "nach",
@@ -208346,6 +208391,29 @@
           }
         ],
         "id": "lex-v-b2-05-d1ce1233"
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
+        "infinitiveCandidate": "beweisen",
+        "normalizedVerb": "beweisen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Die Daten beweisen in dieser Stichprobe, dass Üben die Ursache ist.",
+            "surface": "Die Daten beweisen in dieser Stichprobe, dass Üben die Ursache ist.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-05-da8a700a"
       },
       {
         "lessonId": "b2-05",
@@ -208947,29 +209015,6 @@
           }
         ],
         "id": "lex-v-b2-05-a5db7733"
-      },
-      {
-        "lessonId": "b2-05",
-        "level": "B2",
-        "infinitiveCandidate": "zeigen",
-        "normalizedVerb": "zeigen",
-        "preposition": "in",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[4].options[0]",
-            "stage": "test",
-            "text": "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
-            "surface": "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-05-4048095e"
       },
       {
         "lessonId": "b2-05",
@@ -209772,29 +209817,6 @@
       {
         "lessonId": "b2-07",
         "level": "B2",
-        "infinitiveCandidate": "darlegen",
-        "normalizedVerb": "darlegen",
-        "preposition": "über",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[0]",
-            "stage": "test",
-            "text": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "surface": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-07-38b938c6"
-      },
-      {
-        "lessonId": "b2-07",
-        "level": "B2",
         "infinitiveCandidate": "einbezogen",
         "normalizedVerb": "einbezogen",
         "preposition": "aus",
@@ -209891,29 +209913,6 @@
           }
         ],
         "id": "lex-v-b2-07-bee1b422"
-      },
-      {
-        "lessonId": "b2-07",
-        "level": "B2",
-        "infinitiveCandidate": "entscheiden",
-        "normalizedVerb": "entscheiden",
-        "preposition": "über",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[0]",
-            "stage": "test",
-            "text": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "surface": "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-07-f1c160d0"
       },
       {
         "lessonId": "b2-07",
@@ -210680,6 +210679,29 @@
           }
         ],
         "id": "lex-v-b2-08-d1e81a83"
+      },
+      {
+        "lessonId": "b2-08",
+        "level": "B2",
+        "infinitiveCandidate": "einfügen",
+        "normalizedVerb": "einfügen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Änderung still einfügen, ohne die Quellen zu nennen",
+            "surface": "Änderung still einfügen, ohne die Quellen zu nennen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-08-9fca33e5"
       },
       {
         "lessonId": "b2-08",
@@ -214149,13 +214171,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "exercises[0].options[0]",
-            "stage": "controlled",
-            "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "surface": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "strength": "context"
-          },
-          {
             "path": "exercises[0].options[3]",
             "stage": "controlled",
             "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen.",
@@ -214193,13 +214208,6 @@
         ],
         "anchorIds": [],
         "sources": [
-          {
-            "path": "exercises[0].options[0]",
-            "stage": "controlled",
-            "text": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "surface": "Die Daten deuten für diese zwei Kurse auf einen Rückgang der Unterbrechungen im Halbjahr.",
-            "strength": "context"
-          },
           {
             "path": "exercises[0].options[3]",
             "stage": "controlled",
@@ -214469,6 +214477,52 @@
           }
         ],
         "id": "lex-v-b2-13-f2d47fd6"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "infinitiveCandidate": "zeigen",
+        "normalizedVerb": "zeigen",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[0].options[0]",
+            "stage": "controlled",
+            "text": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "surface": "Die Daten zeigen für alle Kurse der Schule einen Rückgang der Unterbrechungen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-13-2c37c782"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "infinitiveCandidate": "zurückzuführen",
+        "normalizedVerb": "zurückzuführen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
+            "surface": "Auch ohne Vergleichsgruppe ist der Rückgang eindeutig auf die neue Regel zurückzuführen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-13-32b4759f"
       },
       {
         "lessonId": "b2-14",
@@ -221489,5 +221543,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "5865d2e9cfe988d0edfdf6e2ef4957e21afe63ea0261c73e429f4671932bb168"
+  "contentSha256": "8ca5f1dda5e07e54fe22c67cfa600da47f80d9307bbfb588b53d5f8b105dc700"
 }

@@ -173,7 +173,7 @@ export const localTestTemplateBankB1 = [
       {
         "id": "b1-03-m2",
         "promptDe": "Bewegung",
-        "promptAr": "اختر التعبير المطابق ل «Bewegung»:",
+        "promptAr": "اختر Plusquamperfekt لفعل حركة:",
         "options": [
           "Der Zug hatte abgefahren.",
           "Der Zug ist abgefahren",
@@ -181,7 +181,7 @@ export const localTestTemplateBankB1 = [
           "Der Zug war abgefahren."
         ],
         "correctIndex": 3,
-        "explanationAr": "sein في Plusquamperfekt: war abgefahren. نستعمل Plusquamperfekt عندما نحتاج توضيح أن حدثًا اكتمل قبل حدث ماضٍ آخر."
+        "explanationAr": "فعل الحركة يأخذ sein، وفي Plusquamperfekt يصير war abgefahren؛ أما ist abgefahren فهو Perfekt. نستعمل Plusquamperfekt عندما نحتاج توضيح أن حدثًا اكتمل قبل حدث ماضٍ آخر."
       },
       {
         "id": "b1-03-m3",
@@ -510,13 +510,13 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Bedingung",
         "promptAr": "أي خيار يحقّق «Bedingung» في هذا السياق؟",
         "options": [
-          "Wenn der Zug regelmäßig fährt, würde ich dort wohnen.",
-          "Wenn regelmäßig der Zug fahren würde, dann dort ich wohnen",
+          "Wenn der Zug regelmäßig fahren würde, würde ich dort wohnen.",
+          "Wenn regelmäßig der Zug fahren würde, dann ich dort wohnen würde",
           "Ich dort wohnen würde, wenn der Zug regelmäßig",
           "Zug fährt regelmäßig, dann ich dort wohnen würde"
         ],
         "correctIndex": 0,
-        "explanationAr": "شرط وقرار افتراضي. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedingung, dass …، Wenn ich täglich pendeln müsste …."
+        "explanationAr": "شرط وقرار افتراضي: Konjunktiv II في الجزأين (fahren würde … würde wohnen)، والفعل المصرَّف في آخر جملة wenn ثم في أول الجملة الرئيسية. استعمل معايير وقيودًا: Für meine aktuelle Situation ist … wichtiger، Unter der Bedingung, dass …، Wenn ich täglich pendeln müsste …."
       }
     ]
   },
@@ -907,7 +907,7 @@ export const localTestTemplateBankB1 = [
           "beim Lesen",
           "beim zu lesen"
         ],
-        "correctIndex": 1,
+        "correctIndex": 2,
         "explanationAr": "اسم بحرف كبير. beim اختصار bei dem، ويمكن أن يأتي بعده فعل محول إلى اسم: beim Lesen، beim Schreiben، beim Sprechen."
       },
       {
@@ -1137,7 +1137,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Verschiedene Subjekte",
         "promptAr": "اختر التعبير المطابق ل «Verschiedene Subjekte»:",
         "options": [
-          "Statt dass die App entscheidet, wähle ich selbst",
+          "Statt dass entscheidet die App, wähle ich",
           "Statt die App entscheidet alles",
           "Die App statt ich wählt allein",
           "Statt dass die App entscheidet, wähle ich."
@@ -1581,7 +1581,7 @@ export const localTestTemplateBankB1 = [
         "promptDe": "Anderes Subjekt",
         "promptAr": "اختر الصيغة الصحيحة لحالة «Anderes Subjekt»:",
         "options": [
-          "ohne dass die verlorenen Daten wieder auftauchen",
+          "ohne dass gehen die Daten verloren",
           "ohne dass die Daten verloren gehen",
           "ohne die Daten zu gehen verloren",
           "ohne dass verloren die Daten"

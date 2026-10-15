@@ -1653,7 +1653,7 @@ export const localTestTemplateBankA1 = [
       {
         "id": "a1-23-m2",
         "promptDe": "Sie ___ viel trinken.",
-        "promptAr": "اختر:",
+        "promptAr": "الطبيب يخاطب المريض رسميًا (Sie):",
         "options": [
           "sollen",
           "soll",

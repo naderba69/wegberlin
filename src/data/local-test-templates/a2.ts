@@ -94,7 +94,7 @@ export const localTestTemplateBankA2 = [
           "angeruft"
         ],
         "correctIndex": 0,
-        "explanationAr": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين الأُفّ والجذر: «an-ge-rufen». ف «geanrufen» تخطئ موضعَ ge، و «anruft» مضارعٌ لا Partizip، و «angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟"
+        "explanationAr": "«anrufen» فعلٌ منفصل: في Partizip تدخل الـge بين البادئة والجذر: «an-ge-rufen». ف «geanrufen» تخطئ موضعَ ge، و «anruft» مضارعٌ لا Partizip، و «angeruft» تأخذ جذرَ المضارع ruft بدل gerufen. فحص ذاتي: أين تقع الـge؟"
       },
       {
         "id": "a2-02-m2",
@@ -913,7 +913,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-13-m2",
         "promptDe": "ich",
-        "promptAr": "اختر الضمير:",
+        "promptAr": "اختر الضمير الانعكاسي: Ich entspanne ___.",
         "options": [
           "sich",
           "mir",
@@ -1230,7 +1230,7 @@ export const localTestTemplateBankA2 = [
           "angezumelden"
         ],
         "correctIndex": 1,
-        "explanationAr": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تُبقي الأُفّ مفصولًا، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟"
+        "explanationAr": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تضع zu قبل البادئة، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟"
       },
       {
         "id": "a2-17-m4",
@@ -1640,7 +1640,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-23-m1",
         "promptDe": "der Helfer",
-        "promptAr": "اختر الضمير:",
+        "promptAr": "اختر الضمير الموصول للفاعل: der Helfer, ___ hilft …",
         "options": [
           "der",
           "die",
@@ -1648,7 +1648,7 @@ export const localTestTemplateBankA2 = [
           "den"
         ],
         "correctIndex": 0,
-        "explanationAr": "الاسمُ «der Helfer» مذكّر، فيأخذ في Nominativ الأداةَ «der». وأمّا «die» فللمؤنث، و «das» للمحايد، و «den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟"
+        "explanationAr": "الاسمُ «der Helfer» مذكّر، وهو فاعلٌ في الجملة الموصولة، فيأخذ في Nominativ الضميرَ «der». وأمّا «die» فللمؤنث، و «das» للمحايد، و «den» تُستعمل في المفعول (Akkusativ)؛ فحص ذاتي: هل الاسمُ فاعلٌ في الجملة أم مفعول؟"
       },
       {
         "id": "a2-23-m2",
@@ -1679,7 +1679,7 @@ export const localTestTemplateBankA2 = [
       {
         "id": "a2-23-m4",
         "promptDe": "Plural Personen",
-        "promptAr": "أي خيار يحقّق «Plural Personen» في هذا السياق؟",
+        "promptAr": "اختر الضمير الموصول للفاعل في الجمع: die Personen, ___ helfen …",
         "options": [
           "der",
           "das",
@@ -1687,7 +1687,7 @@ export const localTestTemplateBankA2 = [
           "den"
         ],
         "correctIndex": 2,
-        "explanationAr": "الفاعلُ المعرّف في الجمع يأخذ die في Nominativ، وهو «die» في هذا التمرين. وأمّا der و das فمفرد، و den تُستعمل في الجمع المنصوب (Akkusativ). فحص ذاتي: أهو فاعلٌ أم مفعولٌ في جملتك؟"
+        "explanationAr": "الضمير الموصول للجمع في Nominativ هو die، وهو «die» في هذا التمرين. وأمّا der و das فللمفرد، و den ليست ضميرًا موصولًا للجمع أصلًا: في Dativ الجمع يكون الضمير denen. فحص ذاتي: أهو فاعلٌ في الجملة الموصولة؟"
       },
       {
         "id": "a2-23-m5",

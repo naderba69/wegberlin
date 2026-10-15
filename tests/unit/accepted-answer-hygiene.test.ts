@@ -59,8 +59,9 @@ describe("accepted-answer hygiene", () => {
     // Semantic review (v200, 2026-10-15): 15 accepted strings that were grammatically wrong, contradicted the prompt, or changed
     // the meaning were removed (e.g. Wenn for a single past period, durch for a personal agent, Mit + accusative, sodann as a
     // result connector, Unter … bezeichnet); 14 items became single-string and b2-24-e3 keeps one corrected key (226 -> 241; 161 -> 146).
-    expect(summary.acceptsExactlyOneString).toBe(241);
-    expect(summary.broadenedExercises).toBe(146);
+    // v201 (2026-10-15): a1-18-e2 keeps only the standard plural «sind» (consistent with a1-18-e6/m2), so 241 -> 242; 146 -> 145.
+    expect(summary.acceptsExactlyOneString).toBe(242);
+    expect(summary.broadenedExercises).toBe(145);
     expect(summary.acceptsExactlyOneString + summary.broadenedExercises).toBe(summary.productiveExercises);
     for (const level of ["A1", "A2", "B1", "B2"]) expect(summary.byLevel[level]?.productiveExercises).toBeGreaterThan(0);
   });

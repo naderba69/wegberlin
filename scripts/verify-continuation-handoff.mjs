@@ -566,7 +566,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v200" || stagingCacheName !== "dwnb-full-pack-staging-v199") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v201" || stagingCacheName !== "dwnb-full-pack-staging-v200") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -732,8 +732,8 @@ for(const text of["P2-57","Light","Balanced","Intensive","never activate automat
 if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planning intensity state drifted");
 const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1297 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
-if (lexicalGaps?.nounSummary?.totalCandidates !== 4895 || lexicalGaps?.nounSummary?.covered !== 1384 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3422) fail("noun target-gap counters drifted");
-if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1258 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1123 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+if (lexicalGaps?.nounSummary?.totalCandidates !== 4898 || lexicalGaps?.nounSummary?.covered !== 1384 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3425) fail("noun target-gap counters drifted");
+if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1260 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1125 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
 const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");
 const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
@@ -779,7 +779,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v200"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v201"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -927,9 +927,9 @@ if (!packageJson.scripts["nursing:layer:write"].includes("generate-nursing-layer
 for (const text of ["data-nursing-policy", "data-nursing-verdict", "a1-22-nurse", "b1-04-nurse", "zweiter-teller"]) requireText(e2e, text, "nursing-layer browser flow");
 // P1-398 basis (ADR-084): breadth is counted on distinct normalized forms, and padding is gated at 0.
 if (acceptedAnswerAudit.format !== "dwnb-accepted-answer-hygiene-audit" || acceptedAnswerAudit.version !== "accepted-answer-hygiene-v1" || acceptedAnswerAudit.ok !== true) fail("accepted-answer hygiene audit identity drifted");
-if (acceptedAnswerAudit.productiveExercises !== 387 || acceptedAnswerAudit.acceptsExactlyOneString !== 241 || acceptedAnswerAudit.acceptsExactlyOneStringPct !== 62.3 || acceptedAnswerAudit.broadenedExercises !== 146 || acceptedAnswerAudit.noOpVariantCount !== 0 || acceptedAnswerAudit.exercisesWithNoOpVariants !== 0 || acceptedAnswerAudit.offenders.length !== 0) fail("accepted-answer breadth basis drifted");
-if (lessonQualityAudit.productive?.acceptedAnswerHygieneVersion !== "accepted-answer-hygiene-v1" || lessonQualityAudit.productive?.noOpVariants !== 0 || lessonQualityAudit.productive?.singleAcceptedString !== 241 || lessonQualityAudit.productive?.sharePct !== 62.27) fail("lesson-quality accepted-answer basis drifted");
-for (const text of [acceptedAnswerAudit.contentSha256, "accepted-answer-hygiene-v1", "Unreachable accepted variants listed in the tree: **0**", "241"]) requireText(acceptedAnswerReport, text, "accepted-answer hygiene report");
+if (acceptedAnswerAudit.productiveExercises !== 387 || acceptedAnswerAudit.acceptsExactlyOneString !== 242 || acceptedAnswerAudit.acceptsExactlyOneStringPct !== 62.5 || acceptedAnswerAudit.broadenedExercises !== 145 || acceptedAnswerAudit.noOpVariantCount !== 0 || acceptedAnswerAudit.exercisesWithNoOpVariants !== 0 || acceptedAnswerAudit.offenders.length !== 0) fail("accepted-answer breadth basis drifted");
+if (lessonQualityAudit.productive?.acceptedAnswerHygieneVersion !== "accepted-answer-hygiene-v1" || lessonQualityAudit.productive?.noOpVariants !== 0 || lessonQualityAudit.productive?.singleAcceptedString !== 242 || lessonQualityAudit.productive?.sharePct !== 62.53) fail("lesson-quality accepted-answer basis drifted");
+for (const text of [acceptedAnswerAudit.contentSha256, "accepted-answer-hygiene-v1", "Unreachable accepted variants listed in the tree: **0**", "242"]) requireText(acceptedAnswerReport, text, "accepted-answer hygiene report");
 for (const text of ["ACCEPTED_ANSWER_HYGIENE_VERSION", "NO_OP_VARIANT_POLICY", "distinctAcceptedForms", "noOpAcceptedVariants", "acceptsExactlyOneString"]) requireText(acceptedAnswerSource, text, "accepted-answer hygiene source");
 for (const text of ["keeps the documented removal grade-neutral", "heisst", "reports the whole tree with no unreachable variant left", "202", "185"]) requireText(acceptedAnswerTest, text, "accepted-answer hygiene test");
 for (const text of ["ADR-084", "87.3%", "150 unreachable", "grade-neutral", "87.1%", "a1-21-e4"]) requireText(acceptedAnswerAdr, text, "accepted-answer hygiene ADR (dated figures plus the 2026-10-04 broadened variant)");

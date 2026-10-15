@@ -351,7 +351,7 @@ export const localTestTemplateBankB2 = [
         "options": [
           "Verteilung und Gruppenunterschiede",
           "Ein einziger Grund wurde belegt",
-          "die Streuung innerhalb beider Gruppen",
+          "die Schriftart und Farbe der Tabellenzeilen",
           "die Reihenfolge der Texte"
         ],
         "correctIndex": 0,
@@ -362,13 +362,13 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Begrenzte Schlussfolgerung",
         "promptAr": "أي خيار يحقّق «Begrenzte Schlussfolgerung» في هذا السياق؟",
         "options": [
-          "Die Daten zeigen in dieser freiwilligen Stichprobe einen Zusammenhang.",
+          "Die Daten beweisen in dieser Stichprobe, dass Üben die Ursache ist.",
           "Die Daten deuten in dieser Stichprobe auf einen Zusammenhang hin.",
           "Der Trend gilt für jeden einzelnen Menschen unverändert.",
-          "Andere Erklärungen sind nicht ausgeschlossen und bleiben offen."
+          "Andere Erklärungen sind damit für alle Gruppen ausgeschlossen."
         ],
         "correctIndex": 1,
-        "explanationAr": "تحدد الدليل والعينة دون يقين زائد. قد يتحرك متغيران معًا بسبب متغير ثالث أو اختيار المشاركين لأنفسهم أو اتجاه سببي معاكس."
+        "explanationAr": "تحدد الدليل والعينة دون يقين زائد. قد يتحرك متغيران معًا بسبب متغير ثالث أو اختيار المشاركين لأنفسهم أو اتجاه سببي معاكس؛ لذلك تتجاوز beweisen و ausgeschlossen ما تسمح به العينة."
       }
     ]
   },
@@ -497,13 +497,13 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Anhörung",
         "promptAr": "ماذا تعني؟",
         "options": [
-          "Alle Beteiligten dürfen ihre Sicht darlegen, entscheiden aber nicht über das Ergebnis.",
+          "Alle Beteiligten stimmen ab, und die Mehrheit entscheidet verbindlich.",
           "Die Verwaltung hört Beschwerden an und antwortet darauf in einem offiziellen Schreiben.",
           "Die Teilnehmenden einigen sich dort auf einen gemeinsamen Beschluss.",
           "Perspektiven werden gehört, ohne automatisch die Endentscheidung zu übertragen."
         ],
         "correctIndex": 3,
-        "explanationAr": "الاستماع لا يساوي القرار المشترك. حلل المشاركة في ثلاث درجات: هل وصلت الدعوة؟"
+        "explanationAr": "الاستماع لا يساوي القرار المشترك: في Anhörung تُسمع وجهات النظر ويبقى القرار النهائي عند الجهة المختصة، أما التصويت الملزم والاتفاق على قرار مشترك فدرجتا مشاركة أعلى، والرد الرسمي على الشكاوى إجراء آخر."
       },
       {
         "id": "b2-07-m5",
@@ -511,12 +511,12 @@ export const localTestTemplateBankB2 = [
         "promptAr": "أفضل ممارسة:",
         "options": [
           "Vorschläge dokumentieren und Annahme, Änderung oder Ablehnung begründen",
-          "Jeden Vorschlag erfassen und den Personen eine nachvollziehbare Antwort geben.",
+          "Jeden Vorschlag erfassen, die Personen danach aber nicht mehr informieren.",
           "Die besten Vorschläge auswählen und die anderen ohne Erklärung ausschließen.",
           "Eine Umfrage machen und das Ergebnis in einer Präsentation zeigen."
         ],
         "correctIndex": 0,
-        "explanationAr": "الرد المعلل يغلق الحلقة. حلل المشاركة في ثلاث درجات: هل وصلت الدعوة؟"
+        "explanationAr": "الرد المعلل يغلق الحلقة: يعرف كل مقترِح هل قُبل اقتراحه أو عُدّل أو رُفض ولماذا. التسجيل بلا رد، والإقصاء بلا تفسير، والعرض العام وحده لا تغلقها."
       }
     ]
   },
@@ -558,13 +558,13 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Selbsteinschätzung",
         "promptAr": "ماذا تثبت مباشرة؟",
         "options": [
-          "Dass die Teilnehmenden ihre Kompetenz höher bewerteten.",
+          "Dass alle tatsächlich kompetenter wurden.",
           "Dass objektiv bessere Kompetenzwerte gemessen wurden.",
           "Was Befragte über ihre Wahrnehmung berichten",
           "Dass der Kurs bei allen gut ankam."
         ],
         "correctIndex": 2,
-        "explanationAr": "التقييم الذاتي يقيس التقرير الذاتي. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟"
+        "explanationAr": "التقييم الذاتي يقيس ما يقوله المشاركون عن إدراكهم، لا كفاءة مقيسة موضوعيًا ولا رضا الجميع. استخرج الجملة المركزية، ثم اسأل ما المادة التي تسندها: وثيقة، بيانات، مقابلة، صورة أم مصدر مجهول؟"
       },
       {
         "id": "b2-08-m4",
@@ -584,7 +584,7 @@ export const localTestTemplateBankB2 = [
         "promptDe": "Transparente Korrektur",
         "promptAr": "ما الذي تحتويه؟",
         "options": [
-          "Änderung, Datum, Grund und die Quellen nennen",
+          "Änderung still einfügen, ohne die Quellen zu nennen",
           "Nur die Korrektur selbst, ohne Erklärung",
           "Eine knappe Entschuldigung",
           "Änderung, Zeitpunkt, Grund und Belege"
@@ -878,15 +878,15 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-12-m5",
         "promptDe": "Selbst wenn",
-        "promptAr": "اختر الصحيح:",
+        "promptAr": "أي جملة تصف الاستراتيجية الصحيحة عند نقص كلمة؟",
         "options": [
-          "Auch wenn ein Wort fehlt, rede ich kurz weiter und kehre dann zurück",
+          "Selbst wenn ein Wort fehlt, breche ich die Antwort sofort ab",
           "Bei einem fehlenden Wort fange ich von vorn an",
           "Selbst wenn ein Wort fehlt, bleibe ich handlungsfähig.",
           "Wenn ein Wort fehlt, höre ich auf und bitte um einen neuen Anlauf"
         ],
         "correctIndex": 2,
-        "explanationAr": "الفعل في نهاية جملة wenn، ثم الفعل ثانيًا في الرئيسية. قبل البدء اكتب عقدًا قصيرًا: المنتج، الجمهور، الأفعال، الطول أو الزمن، المصادر، والمخرجات."
+        "explanationAr": "selbst wenn تقدّم شرطًا لا يغيّر النتيجة: الفعل في نهاية جملة selbst wenn، ثم يبدأ الجزء الرئيسي بالفعل المصرَّف (bleibe ich). والاستراتيجية الصحيحة أن تبقى قادرًا على الإنجاز فتصف الكلمة الناقصة أو تلتف حولها، لا أن تقطع الإجابة أو تبدأ من جديد أو تتوقف."
       }
     ]
   },
@@ -1013,12 +1013,12 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-14-m4",
         "promptDe": "Nominalstil",
-        "promptAr": "الحد المعقول للأسمار في جملة:",
+        "promptAr": "الحد المعقول للأسماء في جملة:",
         "options": [
           "عنقود اسمي واحد، والباقي أفعال",
           "بلا حد",
           "لا أفعال إطلاقًا",
-          "أسمار في كل جملة"
+          "عناقيد اسمية متتالية في كل جملة"
         ],
         "correctIndex": 0,
         "explanationAr": "ضغط مع بقاء فعل: عنقود اسمي واحد والباقي أفعال. الأسلوب الاسمي يقصر الجملة ويكثّف المعنى، لكن إعدام الأفعال كلها يجعل النص جافًا وغامض المسؤول."
@@ -1087,15 +1087,15 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-15-m4",
         "promptDe": "Sinn des Puffers",
-        "promptAr": "ماوظيفة الهامش في النص؟",
+        "promptAr": "ما وظيفة الهامش الزمني في الامتحان؟",
         "options": [
           "geschützte Zeit für die Kontrolle",
           "Zeit für zusätzliche Aufgaben",
           "Zeit für Rückfragen der Aufsicht",
-          "Zeit zum Abschriften"
+          "Zeit zum Abschreiben"
         ],
         "correctIndex": 0,
-        "explanationAr": "وقت محجوز للمراجعة لا فضلات. الغرض يُعبَّر عنه بطريقتين، والفرق ليس أسلوبيًا بل تركيبيًا: إذا كان الفاعل واحدًا في الجملتين اختيرت مجموعة «zu» أي «um … zu» بلا فاعل مذكور، وإذا ظهر فاعل في جملة الغرض لزم «damit» مع فعل مصروف في آخر الجملة."
+        "explanationAr": "وقت محجوز للمراجعة لا فضلات: الهامش يحمي فحص الإجابات في آخر الزمن، فلا يُصرف على مهام إضافية ولا على النسخ، ولا ينتظر أسئلة المراقب."
       },
       {
         "id": "b2-15-m5",
@@ -1105,10 +1105,10 @@ export const localTestTemplateBankB2 = [
           "wenn er zweimal vorkommt",
           "wenn der Prüfer ihn findet",
           "wenn er in der letzten Zeile steht",
-          "wenn er dreimal dieselbe Form trifft"
+          "wenn dasselbe Verb dreimal in derselben Falschform steht"
         ],
         "correctIndex": 3,
-        "explanationAr": "التكرر المنهجي علامة نقص في التعلم. التخطيط الواقعي يفترض أن المرحلة الأخيرة مهددة بالحذف دائمًا، لذلك تُكتب لها مدة وموضع: لا «إن بقي وقت»، بل دقائق محجوزة في آخر الزمن."
+        "explanationAr": "التكرر المنهجي علامة نقص في التعلم: الفعل نفسه بالصيغة الخاطئة نفسها ثلاث مرات يدل على قاعدة لم تُكتسب بعد فيحتاج تدريبًا، أما الخطأ المنفرد فزلّة تُصحَّح عند المراجعة. ليس مكان الخطأ ولا من وجده ما يحدد نوعه."
       }
     ]
   },
@@ -1370,7 +1370,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-19-m3",
         "promptDe": "Vorsicht statt Behauptung",
-        "promptAr": "أي جماعة تُبقي ما تقول فرضية لا جزمًا؟",
+        "promptAr": "أي جملة تُبقي ما تقوله فرضية لا جزمًا؟",
         "options": [
           "Das ist wohl ein Versehen in der Liste.",
           "Das ist ein Versehen in der Liste; ich bestehe darauf.",
@@ -1383,7 +1383,7 @@ export const localTestTemplateBankB2 = [
       {
         "id": "b2-19-m4",
         "promptDe": "Register in der Beschwerde",
-        "promptAr": "أيّ جملة تصلح لمقال شكوى مكتوبة؟",
+        "promptAr": "أيّ جملة تصلح لشكوى مكتوبة؟",
         "options": [
           "Ihr Bescheid vom 2. April nennt die Frist nicht; ich bitte um eine Berichtigung bis zum 15.",
           "Ihr Bescheid vom 2. April nennt die Frist nicht, und ich verlange hiermit eine Berichtigung.",
@@ -1391,7 +1391,7 @@ export const localTestTemplateBankB2 = [
           "Ich danke Ihnen für Ihren Bescheid vom 2. April und komme später darauf zurück."
         ],
         "correctIndex": 0,
-        "explanationAr": "الأولى وقائع وتاريخ وطلب؛ الأدوات الثلاث الباقية تحاور ولا تُثبّت."
+        "explanationAr": "الأولى تذكر الواقعة والتاريخ وتطلب بأدب مع مهلة؛ الثانية تطالب بلا مهلة، والثالثة تتهم، والرابعة لا تطلب شيئًا."
       },
       {
         "id": "b2-19-m5",
@@ -1399,12 +1399,12 @@ export const localTestTemplateBankB2 = [
         "promptAr": "متى تكون «doch» بمعنى «jedoch»؟",
         "options": [
           "Es ist ein Hinweis, doch kein Beleg.",
-          "Das ist nur ein Beleg, doch kein Hinweis für uns.",
-          "Ein solcher Hinweis genügt hier völlig.",
-          "Belege habe ich hier keine."
+          "Das ist doch kein Beleg für diese Behauptung!",
+          "Doch, das ist sehr wohl ein Beleg.",
+          "Schick mir doch den Beleg."
         ],
         "correctIndex": 0,
-        "explanationAr": "في الأولى تقابل بين شيئين وتقبل الوقوع بعد الاسم؛ في الباقي أداة خفيفة تعترض على ظنّ."
+        "explanationAr": "في الأولى تربط doch بين جزأين متقابلين بمعنى jedoch. في الثانية أداة غير مشدّدة تعترض على ظنّ، وفي الثالثة جواب إثبات بعد سؤال منفي، وفي الرابعة أداة تليّن الطلب."
       }
     ]
   },

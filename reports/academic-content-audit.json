@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4897,
+      "totalCandidates": 4896,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3424,
+      "contextualNotTarget": 3423,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51139,10 +51139,10 @@
           "contextualNotTarget": 893
         },
         "B2": {
-          "totalCandidates": 2214,
+          "totalCandidates": 2213,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1669
+          "contextualNotTarget": 1668
         }
       }
     },
@@ -156707,8 +156707,8 @@
           {
             "path": "pronunciation.items[3].de",
             "stage": "pronunciation",
-            "text": "Ich REvidiere meine ForDERung.",
-            "surface": "Ich REvidiere meine ForDERung.",
+            "text": "Ich reviDIEre meine FORderung.",
+            "surface": "Ich reviDIEre meine FORderung.",
             "strength": "context"
           }
         ],
@@ -156827,8 +156827,8 @@
           {
             "path": "pronunciation.items[5].de",
             "stage": "pronunciation",
-            "text": "Kein BEleg, sondern ein HINweis.",
-            "surface": "Kein BEleg, sondern ein HINweis.",
+            "text": "Kein BeLEG, sondern ein HINweis.",
+            "surface": "Kein BeLEG, sondern ein HINweis.",
             "strength": "context"
           }
         ],
@@ -158337,8 +158337,8 @@
           {
             "path": "pronunciation.items[4].de",
             "stage": "pronunciation",
-            "text": "KonsISTENT sank die Zahl.",
-            "surface": "KonsISTENT sank die Zahl.",
+            "text": "KonsisTENT sank die Zahl.",
+            "surface": "KonsisTENT sank die Zahl.",
             "strength": "context"
           },
           {
@@ -159878,8 +159878,8 @@
           {
             "path": "pronunciation.items[0].de",
             "stage": "pronunciation",
-            "text": "DADurch, dass die Meldung spät kam …",
-            "surface": "DADurch, dass die Meldung spät kam …",
+            "text": "DAdurch, dass die Meldung spät kam …",
+            "surface": "DAdurch, dass die Meldung spät kam …",
             "strength": "context"
           },
           {
@@ -161612,8 +161612,8 @@
           {
             "path": "pronunciation.items[3].de",
             "stage": "pronunciation",
-            "text": "NACHdem der Durchgang beENdet war, …",
-            "surface": "NACHdem der Durchgang beENdet war, …",
+            "text": "nachDEM der Durchgang beENdet war, …",
+            "surface": "nachDEM der Durchgang beENdet war, …",
             "strength": "context"
           },
           {
@@ -161885,8 +161885,8 @@
           {
             "path": "pronunciation.items[1].de",
             "stage": "pronunciation",
-            "text": "DAmit ich die Kette nicht STREIche, …",
-            "surface": "DAmit ich die Kette nicht STREIche, …",
+            "text": "daMIT ich die Kette nicht STREIche, …",
+            "surface": "daMIT ich die Kette nicht STREIche, …",
             "strength": "context"
           }
         ],
@@ -162260,8 +162260,8 @@
           {
             "path": "pronunciation.items[4].de",
             "stage": "pronunciation",
-            "text": "SOBald die Markierung STEHT, …",
-            "surface": "SOBald die Markierung STEHT, …",
+            "text": "soBALD die Markierung STEHT, …",
+            "surface": "soBALD die Markierung STEHT, …",
             "strength": "context"
           },
           {
@@ -167432,6 +167432,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "pronunciation.items[0].de",
+            "stage": "pronunciation",
+            "text": "der Antrag ist EINzureichen",
+            "surface": "der Antrag ist EINzureichen",
+            "strength": "context"
+          },
+          {
             "path": "theory[1].examples[3].de",
             "stage": "rule",
             "text": "Was sich nicht belegen lässt, gehört nicht in den Antrag.",
@@ -168434,13 +168441,6 @@
             "text": "eine Frist zur Nachreichung setzen",
             "surface": "eine Frist zur Nachreichung setzen",
             "strength": "target"
-          },
-          {
-            "path": "pronunciation.items[0].de",
-            "stage": "pronunciation",
-            "text": "die Frist ist EINzureichen",
-            "surface": "die Frist ist EINzureichen",
-            "strength": "context"
           },
           {
             "path": "theory[2].examples[3].de",
@@ -175912,8 +175912,8 @@
           {
             "path": "pronunciation.items[2].de",
             "stage": "pronunciation",
-            "text": "das ist WOHL ein VerSEHen",
-            "surface": "das ist WOHL ein VerSEHen",
+            "text": "das ist wohl ein VerSEhen",
+            "surface": "das ist wohl ein VerSEhen",
             "strength": "context"
           },
           {
@@ -176123,25 +176123,6 @@
           }
         ],
         "id": "lex-n-b2-19-99c44b27"
-      },
-      {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "lemmaCandidate": "WOHL",
-        "normalizedLemma": "wohl",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "pronunciation.items[2].de",
-            "stage": "pronunciation",
-            "text": "das ist WOHL ein VerSEHen",
-            "surface": "das ist WOHL ein VerSEHen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-19-640baad0"
       },
       {
         "lessonId": "b2-19",
@@ -221573,5 +221554,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "38666315fb67bd35a1bb174546623da383ecaf9c89e7c83c458aab350547e771"
+  "contentSha256": "5c1bd061a8695d3833147623d807fb91d7eb9ef7a6f26937089ed566a1ee333a"
 }

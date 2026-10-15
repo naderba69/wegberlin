@@ -1,6 +1,31 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v204 · 2026-10-15 · مراجعة سطرًا سطرًا لبنود «الأخطاء الشائعة» الـ 392: 33 تعديلًا في 20 درسًا (قواعد خاطئة في a1-10 وa1-20 وa2-10 وb2-13 وb2-15 وb2-21 وb2-23، ومثال ألماني خاطئ في a2-23، وقواعد مطلقة خُففت)؛ Versäumnis وُحّد محايدًا في b2-23؛ 4 أخطاء نطق في b2-23 صُحّحت؛ المعجم 4897/3424؛ الاستثناءات 74؛ الكاش v204 (staging v203)؛ البصمة 1d45ef1a3c58.
+Sync batch: v205 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم النطق (576 بندًا): 67 بندًا في 26 درسًا وتسعة شروح؛ قواعد نبر خاطئة في b2-13 وb2-15 وb2-17 وb2-19 (daMIT/beVOR/nachDEM/soBALD)، ونصوص ألمانية خاطئة في b2-14 وb2-17؛ المعجم 4896/3423؛ الاستثناءات 74؛ الكاش v205 (staging v204)؛ البصمة 353bcf90c68a.
+
+## مراجعة سطرًا سطرًا لقسم النطق — 2026-10-15 (v205)
+
+- **النطاق:** قسم `pronunciation` في الدروس الـ 96 كلها: **576 بندًا** (`de` و`ipa` و`ar`)، مع `explanationAr` و`trickAr` لكل درس. توقعت v204 هذه المراجعة بعد أن ظهرت 4 أخطاء نطق في `b2-23` عرضًا.
+- **أخطر ما وُجد: قواعد نبر تُعلَّم خطأً (صُحّحت):**
+  - `b2-15`: علّم الشرح والبنود النبر على المقطع الأول في DAmit وBEvor وNACHdem وSObald، والصحيح daMIT وbeVOR وnachDEM وsoBALD. صُحّح الشرح والبنود وIPA.
+  - `b2-13`: علّم الشرح revisIEren وREvision. صُحّح الشرح، وصُحّح نبر FORderung وkonsisTENT وBeLEG، وأُصلح IPA الذي كان يكتب zwei `[tsuˈvaɪ̯]` (صار `[tsvaɪ̯]`)، وdarauf، وfür.
+  - `b2-17`: نبر ZUmutbar وNACHvollziehen/-bar كان معلَّمًا على غير المقطع الأول. والبند «BEIzubringen, nicht beiBRINGen» كان يعلّم نبرًا غير موجود، فصار «BEIzubringen wie BEIbringen». أما «die Frist ist einzureichen» فبلا معنى (الأجل لا يُقدَّم)، فصار «der Antrag ist einzureichen». وأُعيدت كتابة الشرح المضطرب.
+  - `b2-19`: البند يقول إن «wohl» و«nur» خفيفتان، لكن IPA كان ينبرهما، فوُحّدا مع قاعدة الدرس. وكان معنى doch المنبورة والخفيفة معكوسًا فصُحّح، وحُذف ادعاء عن [ç] لهجي في doch، وأُصلح IPA لـ oder وwar. (اختبار `pronunciation-consistency` يثبّت الآن `[ˈdɔx ˈoːdɐ dɔx]`.)
+  - `a2-01`: صار الشرح واضحًا في أن ge- في Partizip II لا يُنبر أبدًا.
+- **نصوص ألمانية خاطئة في البنود نفسها (صُحّحت):** `b2-14` «ANschließlich» (لا وجود لها) ⇒ «ANschließend wurde das bestätigt»، و«mit ANderen WORDen» ⇒ «WORten»، وبند Meldung كان IPA فيه لا يطابق نصه. صُحّح كذلك IPA لـ während وOnline-Termine.
+- **أخطاء IPA وملاحظات (صُحّحت):**
+  - A1/A2: anfangen `[ˈanfaŋən]`، Kinoeingang، angekommen `ˈanɡəkɔmən`، begrüßt `bəˈɡʁyːst`، Team `tiːm`.
+  - B1: seitdem `zaɪ̯tˈdeːm` (درسان)، geprüft، zuverlässig `ˈtsuːfɛɐ̯lɛsɪç`، barrierefrei، reduzieren/reduziere `ʁeduˈtsiː…`، Zusammenhang `…haŋ`.
+  - B2: Vorbehalt (علامة النبر)، erhoben (ʔ)، pauschale `paʊ̯ˈʃaːlə`؛ ob `ɔp`؛ verzichten `ts` لا `tʃ`، Markierung، Stichwörter؛ `b2-20` (kürzer وfrüher وdesto، ونبر sowohl وonline وPräsenz، وملاحظات geprüft وKlausel التي كانت بلا معنى، وإعادة كتابة الشرح والحيلة لإزالة تناقض noch)؛ `b2-21` (ترجمة نصف جملة ألمانية في الشرح، و«السين مهموسة» ⇒ [z] مجهورة، و«هاء ممدودة» و«راء مكسورة»، وملاحظات könne وwisse وabgestimmt)؛ `b2-22` (-end في ablehnend، وeingegangene، وaufrechterhalten بـ [ç] وʔ، ونبر zu prüfende)؛ `b2-23` (النبر على -bühr)؛ `b2-24` (ʔ في endet، ونغمة erlassen الهابطة، وSemikolon `lɔn`، وAber `ˈaːbɐ`، وzwar `tsvaːɐ̯` مع «und zwar» بلا وقفة).
+- **المجموع:** **67 بندًا** في **26 درسًا** (55 تعديل IPA، و28 ملاحظة عربية، و17 نصًا ألمانيًا)، إضافةً إلى **9 شروح** و**حيلة واحدة**. بقية البنود سليمة. تُركت عمدًا فروق كتابة r و`[u]`/`[ʊ]` الطفيفة، والصيغ المقبولة لـ vorher وunabhängig وdadurch وinsofern. لا صوت مولَّد لبنود النطق، ولا تعديل لنصوص الاستماع، ولم يتغير أي سؤال أو إجابة مقبولة أو حساب درجات.
+- **الأرقام:**
+  - **مرشحات المعجم:** الأسماء 4897/3424 ⇒ **4896/3423**؛ الناقص «WOHL» التي كانت تُعدّ اسمًا خطأً لأنها مكتوبة بحروف كبيرة. المغطاة **1384**، والأفعال **1260/1125**. حُدّثت في `lexical-target-gap.test.ts` و`verify-continuation-handoff.mjs`.
+  - **اتساق النطق:** البنود المحاذاة كلمةً بكلمة 350 ⇒ **355** (221 متخطاة).
+  - **معجم الفونيمات:** أُعيد توليد `src/config/curriculum-phoneme-reference.generated.ts` بـ `npm run phoneme:lexicon:generate` (4 صفوف). هذه الخطوة ليست في prebuild، وكشفها `german-phoneme-corpus.test.ts` في أول تشغيل لـ `npm run check`. أي تعديل على IPA لكلمة مفردة يحتاجها.
+  - **استثناءات الاقتباس:** **74** بلا تغيير. **الإجابات المقبولة:** **242/145**. **مؤشر «المفتاح أطول خيار»:** **39.28%**. **عقد التدريس:** 0 إخفاقات صلبة.
+- **الكاش:** `PACK_CACHE` = **v205**، و`PACK_STAGING_CACHE` = **v204**، والرجوع `previous` = **v204**، وسطر `Offline cache:` حُدّث يدويًا (`--prev v203`). الوثائق الثلاث عشرة على `Sync batch: v205`.
+- **البناء:** 325/325 صفحة؛ Offline **`353bcf90c68a`** (full 6,102,690 gzip؛ a1 2,784,432 · a2 2,896,112 · b1 2,921,935 · b2 4,372,764)؛ JS 131 / 2,076,197 gzip / أقصى 265,166؛ الصوت 544 / 52,943,843 بايت؛ المنهج 1,172,005 gzip؛ التباين 323 صفحة / 0 دون الحد.
+- **التحقق المحلي:** أول تشغيل لـ `npm run check` فشل في اختبار وحدة واحد (`german-phoneme-corpus`) لأن معجم الفونيمات المولَّد لم يُحدَّث. بعد `phoneme:lexicon:generate` وإعادة البناء نجح `npm run check` كاملًا: lint وtypecheck، واختبارات الوحدة **1,573/1,573** في **225** ملفًا، وفحوص الأسرار والمصادر وسير العمل و`handoff:check` والتبعيات، والبناء بالبصمة نفسها **`353bcf90c68a`**، و`a11y:browser` **642** فحصًا بلا فشل من أول تشغيل. E2E: **66/66** على سطح المكتب و**66/66** على الهاتف من أول تشغيل.
+- **الحدود:** القرارات قرار الوكيل بتفويض صريح من المالك في المحادثة («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية ألمانية مستقلة.
 
 ## مراجعة سطرًا سطرًا لقسم «الأخطاء الشائعة» — 2026-10-15 (v204)
 
@@ -607,7 +632,7 @@ Sync batch: v204 · 2026-10-15 · مراجعة سطرًا سطرًا لبنود 
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v204 (staging v203; previous complete v203)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
+- Offline cache: dwnb-full-pack-v205 (staging v204; previous complete v204)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
 - قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
 - Unit/Integrity tests الحالية: **1,573/1,573 في 225 ملفًا** (`npm run check` خروج 0 كاملًا، 2026-10-15، v201، بما فيه `a11y:browser` 642/642؛ وPlaywright محليًا 132/132). القياس التاريخي: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium is available through the npm `@sparticuz/chromium` method (v194 section; temporary paths outside the repo). Earlier, remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.

@@ -227,7 +227,7 @@ export const b2Module5Lessons: FullLesson[] = [
  { de: "die als KÜHL wahrgenommene Antwort", ipa: "[… vaːɐ̯ɡəˌnɔmənə …]", ar: "الجواب المدرك كبرود" },
  { de: "der mehrsprachig VERFASSTE Text", ipa: "[… fɛɐ̯ˈfastə …]", ar: "النص المكتوب بلغات" },
  { de: "die vom Kontext GEPRÄGTE Deutung", ipa: "[… ɡəˈpʁɛːktə …]", ar: "التأويل المتشكل بالسياق" },
- { de: "eine PAUSCHALE Aussage", ipa: "[ˈpaʊ̯ʃaːlə …]", ar: "قول تعميمي" },
+ { de: "eine PAUSCHALE Aussage", ipa: "[paʊ̯ˈʃaːlə …]", ar: "قول تعميمي" },
  ],
  trickAr: "لا تضع النبر الأكبر على كل تفاصيل الصفة؛ احفظه للاسم الذي تجيبه الكتلة: أي إجابة؟ أي نص؟",
  },

@@ -42,7 +42,7 @@ describe("German ch transcription consistency", () => {
     expect(audit.boundary).toBe(PRONUNCIATION_CONSISTENCY_BOUNDARY);
     const b2Six = academicLessons["b2-19"] as unknown as FullLesson;
     const items = JSON.stringify(b2Six.pronunciation);
-    expect(items).toContain("[dɔx ˈoːdɐ dɔx]");
+    expect(items).toContain("[ˈdɔx ˈoːdɐ dɔx]");
     expect(items).toContain("«sch» فيه [ʃ]");
     expect(items).not.toContain("dɔç");
     expect(items).not.toContain("صوتًا أماميًّا [ç] في النطق المعياري");

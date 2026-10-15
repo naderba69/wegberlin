@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v204 · 2026-10-15 · مراجعة سطرًا سطرًا لبنود «الأخطاء الشائعة» الـ 392: 33 تعديلًا في 20 درسًا (قواعد خاطئة في a1-10 وa1-20 وa2-10 وb2-13 وb2-15 وb2-21 وb2-23، ومثال ألماني خاطئ في a2-23، وقواعد مطلقة خُففت)؛ Versäumnis وُحّد محايدًا في b2-23؛ 4 أخطاء نطق في b2-23 صُحّحت؛ المعجم 4897/3424؛ الاستثناءات 74؛ الكاش v204 (staging v203)؛ البصمة 1d45ef1a3c58.
+Sync batch: v205 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم النطق (576 بندًا): 67 بندًا في 26 درسًا وتسعة شروح؛ قواعد نبر خاطئة في b2-13 وb2-15 وb2-17 وb2-19 (daMIT/beVOR/nachDEM/soBALD)، ونصوص ألمانية خاطئة في b2-14 وb2-17؛ المعجم 4896/3423؛ الاستثناءات 74؛ الكاش v205 (staging v204)؛ البصمة 353bcf90c68a.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

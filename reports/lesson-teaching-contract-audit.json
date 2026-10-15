@@ -45,7 +45,7 @@
     "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "c3c4ce982a04",
+  "contentSha256": "d60816d72a66",
   "counts": {
     "lessons": 96,
     "questions": 8,
@@ -1917,7 +1917,7 @@
         },
         "explanation-model": {
           "ok": true,
-          "valueAr": "3 كتلة شرح (أقصرها 199 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 733 حرفًا"
+          "valueAr": "3 كتلة شرح (أقصرها 203 حرفًا، 6 مثالًا) + حوار 5 سطرًا + نموذج كتابة 733 حرفًا"
         },
         "graded-practice": {
           "ok": true,

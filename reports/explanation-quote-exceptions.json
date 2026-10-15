@@ -1,7 +1,7 @@
 {
   "policy": "explanation-quote-exceptions-v1",
   "rule": "every German «…» quote in explanationAr must appear verbatim in the same lesson's German content, or be listed here as an exception: status unreviewed (not yet decided) or human-kept (kept as is by a human decision, with its reason in decision)",
-  "count": 74,
+  "count": 73,
   "entries": [
     {
       "lessonId": "a1-05",
@@ -356,12 +356,6 @@
       "quote": "ohne dass ich mich überfordere",
       "status": "human-kept",
       "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. صيغة dass يقارن بها الشرح ليبيّن متى يلزم فعل مُصرَّف وفاعل ظاهر، لا تُنسب إلى نص الدرس."
-    },
-    {
-      "lessonId": "b1-22",
-      "quote": "ohne dass Daten verloren gehen",
-      "status": "human-kept",
-      "decision": "قرار الوكيل بتفويض صريح من المالك في المحادثة (2026-10-14: «نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية بندًا بندًا: يُبقى كما هو. جزء من الجواب الكامل بعد ملء الفراغ، يعرض موضع القاعدة في الجملة الصحيحة."
     },
     {
       "lessonId": "b1-22",

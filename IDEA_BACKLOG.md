@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v205 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم النطق (576 بندًا): 67 بندًا في 26 درسًا وتسعة شروح؛ قواعد نبر خاطئة في b2-13 وb2-15 وb2-17 وb2-19 (daMIT/beVOR/nachDEM/soBALD)، ونصوص ألمانية خاطئة في b2-14 وb2-17؛ المعجم 4896/3423؛ الاستثناءات 74؛ الكاش v205 (staging v204)؛ البصمة 353bcf90c68a.
+Sync batch: v206 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم القواعد في A1–B1 (204 أقسام): 59 تعديلًا في 31 درسًا؛ أمثلة تناقض قاعدتها في b1-17 (Partizip I داخل Partizip II) وb1-22 (ohne dass بفاعل واحد) وb1-11 وb1-07، وألمانية غير طبيعية في a1-16 وa1-21 وa2-11 وa2-17، وترجمات مضللة؛ المعجم 4895/3422؛ الاستثناءات 73؛ الكاش v206 (staging v205)؛ البصمة 2352f6b5851a.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `5c1bd061a8695d3833147623d807fb91d7eb9ef7a6f26937089ed566a1ee333a`
+Content SHA-256: `75523430396a9af5c48278cae61544c645e8e8530df925a7d261b7c45c9d3658`
 
 ## Result
 

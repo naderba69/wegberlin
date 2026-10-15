@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4896,
+      "totalCandidates": 4895,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3423,
+      "contextualNotTarget": 3422,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51133,10 +51133,10 @@
           "contextualNotTarget": 591
         },
         "B1": {
-          "totalCandidates": 1231,
+          "totalCandidates": 1230,
           "covered": 338,
           "pendingHuman": 0,
-          "contextualNotTarget": 893
+          "contextualNotTarget": 892
         },
         "B2": {
           "totalCandidates": 2213,
@@ -105310,8 +105310,8 @@
           {
             "path": "theory[1].examples[4].de",
             "stage": "rule",
-            "text": "Je mehr Angebote es gibt, desto leichter ist die Wahl nicht immer.",
-            "surface": "Je mehr Angebote es gibt, desto leichter ist die Wahl nicht immer.",
+            "text": "Je mehr Angebote es gibt, desto schwerer fällt oft die Wahl.",
+            "surface": "Je mehr Angebote es gibt, desto schwerer fällt oft die Wahl.",
             "strength": "context"
           }
         ],
@@ -119871,8 +119871,8 @@
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
-            "text": "eine überraschende Wendung",
-            "surface": "eine überraschende Wendung",
+            "text": "eine gelungene Wendung",
+            "surface": "eine gelungene Wendung",
             "strength": "context"
           }
         ],
@@ -125677,25 +125677,6 @@
       {
         "lessonId": "b1-22",
         "level": "B1",
-        "lemmaCandidate": "Antwort",
-        "normalizedLemma": "antwort",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "theory[0].examples[3].de",
-            "stage": "rule",
-            "text": "Der Coach hilft, ohne dass er die Antwort gibt.",
-            "surface": "Der Coach hilft, ohne dass er die Antwort gibt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-22-6cb88eea"
-      },
-      {
-        "lessonId": "b1-22",
-        "level": "B1",
         "lemmaCandidate": "Aufgabe",
         "normalizedLemma": "aufgabe",
         "role": "context-only",
@@ -126147,25 +126128,6 @@
       {
         "lessonId": "b1-22",
         "level": "B1",
-        "lemmaCandidate": "Import",
-        "normalizedLemma": "import",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "theory[0].examples[5].de",
-            "stage": "rule",
-            "text": "Die Daten bleiben erhalten, ohne dass der Import scheitert.",
-            "surface": "Die Daten bleiben erhalten, ohne dass der Import scheitert.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-22-416d138c"
-      },
-      {
-        "lessonId": "b1-22",
-        "level": "B1",
         "lemmaCandidate": "Indikator",
         "normalizedLemma": "indikator",
         "role": "context-only",
@@ -126321,6 +126283,25 @@
           }
         ],
         "id": "lex-n-b1-22-db451466"
+      },
+      {
+        "lessonId": "b1-22",
+        "level": "B1",
+        "lemmaCandidate": "Lösung",
+        "normalizedLemma": "lösung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[0].examples[3].de",
+            "stage": "rule",
+            "text": "Der Coach hilft, ohne dass ich die Lösung sofort sehe.",
+            "surface": "Der Coach hilft, ohne dass ich die Lösung sofort sehe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-22-57de3d10"
       },
       {
         "lessonId": "b1-22",
@@ -221554,5 +221535,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "5c1bd061a8695d3833147623d807fb91d7eb9ef7a6f26937089ed566a1ee333a"
+  "contentSha256": "75523430396a9af5c48278cae61544c645e8e8530df925a7d261b7c45c9d3658"
 }

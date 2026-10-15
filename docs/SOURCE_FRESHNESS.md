@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v206 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم القواعد في A1–B1 (204 أقسام): 59 تعديلًا في 31 درسًا؛ أمثلة تناقض قاعدتها في b1-17 (Partizip I داخل Partizip II) وb1-22 (ohne dass بفاعل واحد) وb1-11 وb1-07، وألمانية غير طبيعية في a1-16 وa1-21 وa2-11 وa2-17، وترجمات مضللة؛ المعجم 4895/3422؛ الاستثناءات 73؛ الكاش v206 (staging v205)؛ البصمة 2352f6b5851a.
+Sync batch: v207 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم القواعد في A1–B1 (204 أقسام): 59 تعديلًا في 31 درسًا؛ أمثلة تناقض قاعدتها في b1-17 (Partizip I داخل Partizip II) وb1-22 (ohne dass بفاعل واحد) وb1-11 وb1-07، وألمانية غير طبيعية في a1-16 وa1-21 وa2-11 وa2-17، وترجمات مضللة؛ المعجم 4895/3422؛ الاستثناءات 73؛ الكاش v206 (staging v205)؛ البصمة 2352f6b5851a.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

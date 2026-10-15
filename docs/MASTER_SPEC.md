@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v206 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم القواعد في A1–B1 (204 أقسام): 59 تعديلًا في 31 درسًا؛ أمثلة تناقض قاعدتها في b1-17 (Partizip I داخل Partizip II) وb1-22 (ohne dass بفاعل واحد) وb1-11 وb1-07، وألمانية غير طبيعية في a1-16 وa1-21 وa2-11 وa2-17، وترجمات مضللة؛ المعجم 4895/3422؛ الاستثناءات 73؛ الكاش v206 (staging v205)؛ البصمة 2352f6b5851a.
+Sync batch: v207 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم القواعد في A1–B1 (204 أقسام): 59 تعديلًا في 31 درسًا؛ أمثلة تناقض قاعدتها في b1-17 (Partizip I داخل Partizip II) وb1-22 (ohne dass بفاعل واحد) وb1-11 وb1-07، وألمانية غير طبيعية في a1-16 وa1-21 وa2-11 وa2-17، وترجمات مضللة؛ المعجم 4895/3422؛ الاستثناءات 73؛ الكاش v206 (staging v205)؛ البصمة 2352f6b5851a.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

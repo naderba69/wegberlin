@@ -1256,7 +1256,7 @@ export const localTestTemplateBankB2 = [
           "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin ließe sich kurzfristig vereinbaren, und eine schriftliche Auskunft wäre in jedem Fall zumutbar."
         ],
         "correctIndex": 0,
-        "explanationAr": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل ب «sein + zu» تُقرأ أوامر مغلقة، وثلاث ب «sich lassen» تُقرأ تبريًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا."
+        "explanationAr": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل ب «sein + zu» تُقرأ أوامر مغلقة، وثلاث ب «sich lassen» تُقرأ تبرّؤًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا."
       }
     ]
   },
@@ -1352,7 +1352,7 @@ export const localTestTemplateBankB2 = [
           "Doch, am Montag schicke ich sie ab."
         ],
         "correctIndex": 2,
-        "explanationAr": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du die Mail nicht gelesen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch schon geschickt»; (3) ظرف منبور قابل للتقديم يعني «jedoch» — «Es ist ein Versuch, doch kein Beweis»."
+        "explanationAr": "الإثبات بعد سؤال منفيّ ب «Doch»؛ «Ja» توافق على النفي. ل «doch» ثلاث وظائف يُخطئ المتعلم في خلطها: (1) ردّ الإثبات بعد سؤال منفيّ — «Hast du die Mail nicht gelesen?» «Doch!»; (2) أداة خفيفة داخل الجملة تنفي افتراضًا عند المخاطَب — «Das habe ich dir doch schon geschickt»; (3) رابط بمعنى aber — «Es ist ein Versuch, doch kein Beweis»."
       },
       {
         "id": "b2-19-m2",
@@ -1426,7 +1426,7 @@ export const localTestTemplateBankB2 = [
           "Je mehr helfen Personen, desto schneller ist es."
         ],
         "correctIndex": 0,
-        "explanationAr": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة موقوعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto voller») ثم الفعل مباشرة."
+        "explanationAr": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة تابعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto voller») ثم الفعل مباشرة."
       },
       {
         "id": "b2-20-m2",
@@ -1574,7 +1574,7 @@ export const localTestTemplateBankB2 = [
           "die geltende Frist"
         ],
         "correctIndex": 3,
-        "explanationAr": "الحال المستمر بـ -end. يُبنى اسم الفاعل من المضارع + der: die fehlende Rückmeldung، der wahrende Anspruch."
+        "explanationAr": "الحال المستمر بـ -end. يُبنى Partizip I من المصدر + d ثم نهاية الصفة: gelten → die geltende Frist، fehlen → die fehlende Rückmeldung."
       },
       {
         "id": "b2-22-m2",
@@ -1587,7 +1587,7 @@ export const localTestTemplateBankB2 = [
           "Der am Montag, eingegangene Antrag, wurde bearbeitet."
         ],
         "correctIndex": 0,
-        "explanationAr": "التوسعة بين الفاصلتين فقط عند الإدراج. الحلقة الوصفية كلها محصورة بفاصلتين حين تسبق الاسم: „die am Montag eingegangene, schriftlich bestätigte Beschwerde“؛ وحين تتّسع الحلقة تُستبدل بجملة موصولة."
+        "explanationAr": "لا فاصلة داخل النعت الموسّع: الحلقة كلها بين الأداة والاسم بلا فواصل: „Der am Montag eingegangene Antrag“. الفاصلة تأتي فقط بين نعتين متعاطفين أو حول إدراج توضيحي."
       },
       {
         "id": "b2-22-m3",
@@ -1604,7 +1604,7 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-22-m4",
-        "promptDe": "Zu + Infinitiv",
+        "promptDe": "zu + Partizip I",
         "promptAr": "ما دلالة „der zu klärende Punkt“؟",
         "options": [
           "Er wurde bereits geklärt.",
@@ -1722,7 +1722,7 @@ export const localTestTemplateBankB2 = [
           "Wir baten zu prüfen."
         ],
         "correctIndex": 2,
-        "explanationAr": "„ohne … zu“ في أول الجملة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, aber، أو إذا كانت مرتبطة باسم أو بفعل يحتاج إلى توضيح، أو إذا سبقها كلمة إشارة (darum, daran, dazu, hierfür)."
+        "explanationAr": "„ohne … zu“ في أول الجملة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, als، أو إذا تعلّقت باسم، أو إذا أشارت إليها كلمة إشارة (darum, daran, dazu, es)."
       },
       {
         "id": "b2-24-m2",
@@ -1735,7 +1735,7 @@ export const localTestTemplateBankB2 = [
           "Dass er, widersprach ist notiert."
         ],
         "correctIndex": 0,
-        "explanationAr": "القوس الأيمن يأتي بعد فعل الجملة الجانبية. كل جملة جانبية محصورة بفاصلتين: قبل أداة الربط وقبل الفعل المسند في نهاية الجملة الرئيسية."
+        "explanationAr": "القوس الأيمن يأتي بعد فعل الجملة الجانبية. كل جملة جانبية تقع وسط الجملة محصورة بفاصلتين: واحدة قبل أداة الربط، وأخرى بعد فعلها الأخير."
       },
       {
         "id": "b2-24-m3",
@@ -1761,7 +1761,7 @@ export const localTestTemplateBankB2 = [
           "darum"
         ],
         "correctIndex": 3,
-        "explanationAr": "„darum/daran/dazu“ كلمات إشارة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, aber، أو إذا كانت مرتبطة باسم أو بفعل يحتاج إلى توضيح، أو إذا سبقها كلمة إشارة (darum, daran, dazu, hierfür)."
+        "explanationAr": "„darum/daran/dazu“ كلمات إشارة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, als، أو إذا تعلّقت باسم، أو إذا أشارت إليها كلمة إشارة (darum, daran, dazu, es)."
       },
       {
         "id": "b2-24-m5",

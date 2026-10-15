@@ -90,7 +90,7 @@ export const b2Module4Lessons: FullLesson[] = [
  id: "b2-07-t2",
  titleDe: "Mechanismen mit indem und dadurch, dass",
  titleAr: "شرح الآلية لا الاكتفاء بالهدف",
- explanationAr: "تجيب indem عن سؤال wie?: Die Stadt senkt Barrieren, indem sie Betreuung anbietet. الفاعل في الجملتين واحد غالبًا وتحذف أداة الربط المنفصلة. أما dadurch, dass فتجعل الآلية أكثر بروزًا وتسمح بفاعلين مختلفين: Vertrauen wächst dadurch, dass die Leitung Entscheidungen erklärt. في الجملة التابعة يأتي الفعل في النهاية.",
+ explanationAr: "تجيب indem عن سؤال wie?: Die Stadt senkt Barrieren, indem sie Betreuung anbietet. الفاعل في الجملتين واحد غالبًا، ويتكرر في الجملة التابعة ضميرًا (sie). أما dadurch, dass فتجعل الآلية أكثر بروزًا وتسمح بفاعلين مختلفين: Vertrauen wächst dadurch, dass die Leitung Entscheidungen erklärt. في الجملة التابعة يأتي الفعل في النهاية.",
  contrastAr: "قول «نريد مشاركة أفضل» هدف لا آلية. أضف فعلًا قابلًا للملاحظة: نخفض العائق عن طريق ماذا؟",
  formula: "Wirkung, indem + Subjekt + Mittel + Verb | Wirkung dadurch, dass + Mechanismus + Verb",
  examples: [
@@ -309,7 +309,7 @@ export const b2Module4Lessons: FullLesson[] = [
  id: "b2-08-t2",
  titleDe: "Indirekte Rede und Konjunktiv I",
  titleAr: "النقل غير المباشر والمسافة التحريرية",
- explanationAr: "ينقل Konjunktiv I كلام المصدر دون أن يتبناه الكاتب: Sie sagt, die Daten zeigten/zeigen? الصيغ الواضحة: er sei, er habe, er werde؛ مع الجمع قد تتطابق صيغة Konjunktiv I مع الحاضر، فيستعمل Konjunktiv II للتمييز: sie hätten. يمكن كذلك استعمال laut + Dativ أو zufolge بعد الاسم. المسافة لا تعني اتهام المصدر بالكذب.",
+ explanationAr: "ينقل Konjunktiv I كلام المصدر دون أن يتبناه الكاتب: Sie sagt, die Daten zeigten einen Rückgang. فصيغة Konjunktiv I للجمع (sie zeigen) تطابق الحاضر، لذلك تُستعمل zeigten. الصيغ الواضحة: er sei, er habe, er werde؛ مع الجمع قد تتطابق صيغة Konjunktiv I مع الحاضر، فيستعمل Konjunktiv II للتمييز: sie hätten. يمكن كذلك استعمال laut + Dativ أو zufolge بعد الاسم. المسافة لا تعني اتهام المصدر بالكذب.",
  contrastAr: "العربية تستخدم «بحسب» و«قال إن» للمسافة. في الألمانية يساعد المزاج النحوي على تمييز صوت المصدر من صوت الكاتب.",
  formula: "Quelle + erklärt, + Konjunktiv I | laut + Dat. | Dat. + zufolge | nach eigenen Angaben",
  examples: [

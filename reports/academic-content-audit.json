@@ -17661,7 +17661,7 @@
         "prompt": "Verteilung im Brief أي فقرة موزّعة الوظائف لأجل خاتمة رسمية؟",
         "answer": "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin ließe sich kurzfristig vereinbaren, eine mündliche Auskunft wäre nicht nachvollziehbar.",
         "evidenceRef": "b2-17:miniTest:b2-17-m5:explanationAr",
-        "evidenceExcerpt": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل ب «sein + zu» تُقرأ أوامر مغلقة، وثلاث ب «sich lassen» تُقرأ تبريًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا.",
+        "evidenceExcerpt": "رجاء + إمكان + تقييم، بلا تراكم أوامر. في شكوى أو طلب تُغلِق صيغة واحدة النص: ثلاث جمل ب «sein + zu» تُقرأ أوامر مغلقة، وثلاث ب «sich lassen» تُقرأ تبرّؤًا من المسؤولية، والصفات وحدها لا تُلزم أحدًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18222,7 +18222,7 @@
         "prompt": "je … desto أي صيغة صحيحة؟",
         "answer": "Je mehr Personen helfen, desto schneller ist es fertig.",
         "evidenceRef": "b2-20:miniTest:b2-20-m1:explanationAr",
-        "evidenceExcerpt": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة موقوعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto voller») ثم الفعل مباشرة.",
+        "evidenceExcerpt": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة تابعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto voller») ثم الفعل مباشرة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18640,7 +18640,7 @@
         "prompt": "Partizip I von „gelten“ ما صيغة الحال من gelten؟",
         "answer": "die geltende Frist",
         "evidenceRef": "b2-22:miniTest:b2-22-m1:explanationAr",
-        "evidenceExcerpt": "الحال المستمر بـ -end. يُبنى اسم الفاعل من المضارع + der: die fehlende Rückmeldung، der wahrende Anspruch.",
+        "evidenceExcerpt": "الحال المستمر بـ -end. يُبنى Partizip I من المصدر + d ثم نهاية الصفة: gelten → die geltende Frist، fehlen → die fehlende Rückmeldung.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18651,7 +18651,7 @@
         "prompt": "Kommas bei erweitertem Attribut أي وضع للفواصل صحيح؟",
         "answer": "Der am Montag eingegangene Antrag wurde bearbeitet.",
         "evidenceRef": "b2-22:miniTest:b2-22-m2:explanationAr",
-        "evidenceExcerpt": "التوسعة بين الفاصلتين فقط عند الإدراج. الحلقة الوصفية كلها محصورة بفاصلتين حين تسبق الاسم: „die am Montag eingegangene, schriftlich bestätigte Beschwerde“؛ وحين تتّسع الحلقة تُستبدل بجملة موصولة.",
+        "evidenceExcerpt": "لا فاصلة داخل النعت الموسّع: الحلقة كلها بين الأداة والاسم بلا فواصل: „Der am Montag eingegangene Antrag“. الفاصلة تأتي فقط بين نعتين متعاطفين أو حول إدراج توضيحي.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18670,7 +18670,7 @@
         "id": "b2-22-m4",
         "scope": "lesson-mini-test",
         "kind": "multiple-choice",
-        "prompt": "Zu + Infinitiv ما دلالة „der zu klärende Punkt“؟",
+        "prompt": "zu + Partizip I ما دلالة „der zu klärende Punkt“؟",
         "answer": "Er muss noch geklärt werden.",
         "evidenceRef": "b2-22:miniTest:b2-22-m4:explanationAr",
         "evidenceExcerpt": "الإلزام المستقبلي: der zu klärende Punkt يعني نقطة يجب أن تُحل لاحقًا، لا حُلّت ولا تُحل الآن. التركيب zu + Partizip I ينقل ما ينتظر الإنجاز.",
@@ -19058,7 +19058,7 @@
         "prompt": "Pflichtkomma? أين الفاصلة إلزامية؟",
         "answer": "Ohne die Frist zu versäumen, reichten wir ein.",
         "evidenceRef": "b2-24:miniTest:b2-24-m1:explanationAr",
-        "evidenceExcerpt": "„ohne … zu“ في أول الجملة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, aber، أو إذا كانت مرتبطة باسم أو بفعل يحتاج إلى توضيح، أو إذا سبقها كلمة إشارة (darum, daran, dazu, hierfür).",
+        "evidenceExcerpt": "„ohne … zu“ في أول الجملة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, als، أو إذا تعلّقت باسم، أو إذا أشارت إليها كلمة إشارة (darum, daran, dazu, es).",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19069,7 +19069,7 @@
         "prompt": "Rechte Klammer أي جملة أُغلق قوسها صحيحًا؟",
         "answer": "Dass er widersprach, ist notiert.",
         "evidenceRef": "b2-24:miniTest:b2-24-m2:explanationAr",
-        "evidenceExcerpt": "القوس الأيمن يأتي بعد فعل الجملة الجانبية. كل جملة جانبية محصورة بفاصلتين: قبل أداة الربط وقبل الفعل المسند في نهاية الجملة الرئيسية.",
+        "evidenceExcerpt": "القوس الأيمن يأتي بعد فعل الجملة الجانبية. كل جملة جانبية تقع وسط الجملة محصورة بفاصلتين: واحدة قبل أداة الربط، وأخرى بعد فعلها الأخير.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19091,7 +19091,7 @@
         "prompt": "Hinweiswort أي كلمة تُوجب الفاصلة قبل المصدر؟",
         "answer": "darum",
         "evidenceRef": "b2-24:miniTest:b2-24-m4:explanationAr",
-        "evidenceExcerpt": "„darum/daran/dazu“ كلمات إشارة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, aber، أو إذا كانت مرتبطة باسم أو بفعل يحتاج إلى توضيح، أو إذا سبقها كلمة إشارة (darum, daran, dazu, hierfür).",
+        "evidenceExcerpt": "„darum/daran/dazu“ كلمات إشارة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, als، أو إذا تعلّقت باسم، أو إذا أشارت إليها كلمة إشارة (darum, daran, dazu, es).",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4895,
+      "totalCandidates": 4899,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3422,
+      "contextualNotTarget": 3426,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51139,18 +51139,18 @@
           "contextualNotTarget": 892
         },
         "B2": {
-          "totalCandidates": 2213,
+          "totalCandidates": 2217,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1668
+          "contextualNotTarget": 1672
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1260,
+      "totalCandidates": 1261,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1125,
+      "contextualNotTarget": 1126,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51172,10 +51172,10 @@
           "contextualNotTarget": 286
         },
         "B2": {
-          "totalCandidates": 633,
+          "totalCandidates": 634,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 584
+          "contextualNotTarget": 585
         }
       }
     },
@@ -129696,8 +129696,8 @@
           {
             "path": "theory[0].examples[2].de",
             "stage": "rule",
-            "text": "Beleg: Im Pilot lösten 70 % die Audioaufgabe erfolgreicher.",
-            "surface": "Beleg: Im Pilot lösten 70 % die Audioaufgabe erfolgreicher.",
+            "text": "Beleg: Im Pilot lösten 70 % die Audioaufgabe erfolgreich.",
+            "surface": "Beleg: Im Pilot lösten 70 % die Audioaufgabe erfolgreich.",
             "strength": "context"
           }
         ],
@@ -155839,25 +155839,6 @@
       {
         "lessonId": "b2-13",
         "level": "B2",
-        "lemmaCandidate": "Anpassung",
-        "normalizedLemma": "anpassung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "theory[2].examples[4].de",
-            "stage": "rule",
-            "text": "Das ist keine Aufgabe meines Ziels, sondern eine Anpassung.",
-            "surface": "Das ist keine Aufgabe meines Ziels, sondern eine Anpassung.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-13-23c13d7e"
-      },
-      {
-        "lessonId": "b2-13",
-        "level": "B2",
         "lemmaCandidate": "Arbeitsphasen",
         "normalizedLemma": "arbeitsphasen",
         "role": "context-only",
@@ -155914,13 +155895,6 @@
             "stage": "listening",
             "text": "Ben fragt, ob Lea ihren Vorschlag nach der Auswertung zurückzieht. Lea verneint teilweise. Der Rückgang der Unterbrechungen sei in beiden Gruppen konsistent, deshalb bleibe die Regel für stille Arbeitsphasen. Für die Audioaufgaben schwächt sie ihre Forderung ab, weil der Vorteil nur in einer Gruppe auftrat und die Gruppen sich im Ausgangsniveau unterschieden. Ben hält fest, dass das kein Widerspruch sei, sondern eine Präzisierung. Lea ergänzt, sie lege ein Kriterium vorab fest: Bleibt der Unterschied in einer zweiten Messung nach acht Wochen aus, nehme sie die Regelung zurück. Außerdem will sie einen Störfaktor prüfen lassen, die Aufmerksamkeit durch das Projekt selbst. Zum einen werde die Gruppe neu ausgelost, zum anderen die Aufgabe standardisiert. Wichtig sei ihr, offen zu benennen, was die Daten nicht zeigen. Ein Ergebnis, das sich nicht reproduzieren lasse, bleibe ein Hinweis und kein Beleg.",
             "surface": "Ben fragt, ob Lea ihren Vorschlag nach der Auswertung zurückzieht. Lea verneint teilweise. Der Rückgang der Unterbrechungen sei in beiden Gruppen konsistent, deshalb bleibe die Regel für stille Arbeitsphasen. Für die Audioaufgaben schwächt sie ihre Forderung ab, weil der Vorteil nur in einer Gruppe auftrat und die Gruppen sich im Ausgangsniveau unterschieden. Ben hält fest, dass das kein Widerspruch sei, sondern eine Präzisierung. Lea ergänzt, sie lege ein Kriterium vorab fest: Bleibt der Unterschied in einer zweiten Messung nach acht Wochen aus, nehme sie die Regelung zurück. Außerdem will sie einen Störfaktor prüfen lassen, die Aufmerksamkeit durch das Projekt selbst. Zum einen werde die Gruppe neu ausgelost, zum anderen die Aufgabe standardisiert. Wichtig sei ihr, offen zu benennen, was die Daten nicht zeigen. Ein Ergebnis, das sich nicht reproduzieren lasse, bleibe ein Hinweis und kein Beleg.",
-            "strength": "context"
-          },
-          {
-            "path": "theory[2].examples[4].de",
-            "stage": "rule",
-            "text": "Das ist keine Aufgabe meines Ziels, sondern eine Anpassung.",
-            "surface": "Das ist keine Aufgabe meines Ziels, sondern eine Anpassung.",
             "strength": "context"
           }
         ],
@@ -157917,6 +157891,25 @@
       {
         "lessonId": "b2-13",
         "level": "B2",
+        "lemmaCandidate": "Umsetzung",
+        "normalizedLemma": "umsetzung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[2].examples[4].de",
+            "stage": "rule",
+            "text": "Ich gebe mein Ziel nicht auf, sondern passe die Umsetzung an.",
+            "surface": "Ich gebe mein Ziel nicht auf, sondern passe die Umsetzung an.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-13-67f8dc14"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
         "lemmaCandidate": "Unterbrechungen",
         "normalizedLemma": "unterbrechungen",
         "role": "context-only",
@@ -158366,6 +158359,25 @@
         "id": "lex-n-b2-13-7a4cd652"
       },
       {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "lemmaCandidate": "Ziel",
+        "normalizedLemma": "ziel",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[2].examples[4].de",
+            "stage": "rule",
+            "text": "Ich gebe mein Ziel nicht auf, sondern passe die Umsetzung an.",
+            "surface": "Ich gebe mein Ziel nicht auf, sondern passe die Umsetzung an.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-13-5e4c11d0"
+      },
+      {
         "lessonId": "b2-14",
         "level": "B2",
         "lemmaCandidate": "Absatz",
@@ -158541,8 +158553,8 @@
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
-            "text": "Dieses ist falsch: Es ist unklar, ob «dieses» den Termin oder den Antrag meint.",
-            "surface": "Dieses ist falsch: Es ist unklar, ob «dieses» den Termin oder den Antrag meint.",
+            "text": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
+            "surface": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
             "strength": "context"
           },
           {
@@ -160434,8 +160446,8 @@
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
-            "text": "Dieses ist falsch: Es ist unklar, ob «dieses» den Termin oder den Antrag meint.",
-            "surface": "Dieses ist falsch: Es ist unklar, ob «dieses» den Termin oder den Antrag meint.",
+            "text": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
+            "surface": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
             "strength": "context"
           },
           {
@@ -162756,8 +162768,8 @@
           {
             "path": "theory[2].examples[3].de",
             "stage": "rule",
-            "text": "Anstatt dass ich weiter schreibe, lese ich die Randnotizen.",
-            "surface": "Anstatt dass ich weiter schreibe, lese ich die Randnotizen.",
+            "text": "Anstatt weiterzuschreiben, lese ich die Randnotizen.",
+            "surface": "Anstatt weiterzuschreiben, lese ich die Randnotizen.",
             "strength": "context"
           }
         ],
@@ -167813,6 +167825,13 @@
             "text": "In der Prüfvorbereitung schrieb Ben einen Absatz für eine Beschwerde bei einer Studienbehörde. Die erste Fassung bestand aus drei Sätzen mit derselben Struktur: Die Anlage ist nachzureichen. Die Frist ist einzuhalten. Die Gebühr ist zu entrichten. Sprachlich war nichts falsch, und trotzdem wirkte der Absatz wie eine Befehlsliste. Herr Aziz strich keinen Fehler, sondern verteilte die Funktionen. Für den Kern der Forderung blieb «sein + zu», denn hier wird eine Pflicht benannt, deren Träger die Behörde ist und genannt werden soll: Die Prüfung der Anlagen ist bis zum 5. Mai vorzunehmen, und der Bescheid ist uns anschließend schriftlich zuzustellen. Für die Lösung, die Ben anbot, wählte er «sich lassen», weil sie eine Möglichkeit beschreibt und keine Verantwortung zuweist: Ein Termin ließe sich kurzfristig vereinbaren, falls Fragen offenbleiben. Die Bewertung bekam eine Adjektivbildung auf -bar: Eine mündliche Auskunft ohne Aktenzeichen ist für Außenstehende nicht nachvollziehbar, eine schriftliche Bestätigung dagegen wäre zumutbar. Zwei Lehrpunkte stecken in dieser Umstellung. Erstens ist die Ersatzform keine Sparversion des Passivs, denn sie verschmilzt Modalität mit Struktur; weil sie den Handelnden nicht erwartet, muss jede Zuschreibung ausdrücklich erfolgen und fällt dann auf. Zweitens entscheidet die Verteilung über die Lesbarkeit: Drei Pflichten in einem Absatz erzeugen den Eindruck eines Ultimatums, während ein Wechsel aus Pflicht, Möglichkeit und Bewertung denselben Inhalt prüfbar macht. Die Note, schloss Herr Aziz, folge nicht der seltensten Form, sondern der klarsten Zuordnung.",
             "surface": "In der Prüfvorbereitung schrieb Ben einen Absatz für eine Beschwerde bei einer Studienbehörde. Die erste Fassung bestand aus drei Sätzen mit derselben Struktur: Die Anlage ist nachzureichen. Die Frist ist einzuhalten. Die Gebühr ist zu entrichten. Sprachlich war nichts falsch, und trotzdem wirkte der Absatz wie eine Befehlsliste. Herr Aziz strich keinen Fehler, sondern verteilte die Funktionen. Für den Kern der Forderung blieb «sein + zu», denn hier wird eine Pflicht benannt, deren Träger die Behörde ist und genannt werden soll: Die Prüfung der Anlagen ist bis zum 5. Mai vorzunehmen, und der Bescheid ist uns anschließend schriftlich zuzustellen. Für die Lösung, die Ben anbot, wählte er «sich lassen», weil sie eine Möglichkeit beschreibt und keine Verantwortung zuweist: Ein Termin ließe sich kurzfristig vereinbaren, falls Fragen offenbleiben. Die Bewertung bekam eine Adjektivbildung auf -bar: Eine mündliche Auskunft ohne Aktenzeichen ist für Außenstehende nicht nachvollziehbar, eine schriftliche Bestätigung dagegen wäre zumutbar. Zwei Lehrpunkte stecken in dieser Umstellung. Erstens ist die Ersatzform keine Sparversion des Passivs, denn sie verschmilzt Modalität mit Struktur; weil sie den Handelnden nicht erwartet, muss jede Zuschreibung ausdrücklich erfolgen und fällt dann auf. Zweitens entscheidet die Verteilung über die Lesbarkeit: Drei Pflichten in einem Absatz erzeugen den Eindruck eines Ultimatums, während ein Wechsel aus Pflicht, Möglichkeit und Bewertung denselben Inhalt prüfbar macht. Die Note, schloss Herr Aziz, folge nicht der seltensten Form, sondern der klarsten Zuordnung.",
             "strength": "context"
+          },
+          {
+            "path": "theory[3].examples[2].de",
+            "stage": "rule",
+            "text": "Eine mündliche Auskunft ist nicht überprüfbar; eine schriftliche Bestätigung ist daher erforderlich.",
+            "surface": "Eine mündliche Auskunft ist nicht überprüfbar; eine schriftliche Bestätigung ist daher erforderlich.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-17-cd4a819e"
@@ -169305,8 +169324,8 @@
           {
             "path": "theory[0].examples[3].de",
             "stage": "rule",
-            "text": "Offen bleibt, welche Stelle die Prüfung durchzuführen hat.",
-            "surface": "Offen bleibt, welche Stelle die Prüfung durchzuführen hat.",
+            "text": "Offen bleibt, von welcher Stelle die Prüfung durchzuführen ist.",
+            "surface": "Offen bleibt, von welcher Stelle die Prüfung durchzuführen ist.",
             "strength": "context"
           }
         ],
@@ -170773,6 +170792,13 @@
             "text": "Wir stellen hiermit einen Antrag auf Verlängerung der Frist.",
             "surface": "Wir stellen hiermit einen Antrag auf Verlängerung der Frist.",
             "strength": "context"
+          },
+          {
+            "path": "theory[0].examples[1].de",
+            "stage": "rule",
+            "text": "…, dass der Antrag bis Freitag gestellt werden muss.",
+            "surface": "…, dass der Antrag bis Freitag gestellt werden muss.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-18-f2a0c9de"
@@ -172213,13 +172239,6 @@
             "strength": "context"
           },
           {
-            "path": "theory[0].examples[1].de",
-            "stage": "rule",
-            "text": "…, dass die Prüfung der Unterlagen bis Freitag gestellt werden muss.",
-            "surface": "…, dass die Prüfung der Unterlagen bis Freitag gestellt werden muss.",
-            "strength": "context"
-          },
-          {
             "path": "theory[3].examples[1].de",
             "stage": "rule",
             "text": "Wir treffen eine Entscheidung über Ihren Antrag und nehmen eine Prüfung Ihrer Unterlagen vor.",
@@ -172682,13 +172701,6 @@
             "stage": "test",
             "text": "Wir stellen Ihnen die Unterlagen zur Verfügung.",
             "surface": "Wir stellen Ihnen die Unterlagen zur Verfügung.",
-            "strength": "context"
-          },
-          {
-            "path": "theory[0].examples[1].de",
-            "stage": "rule",
-            "text": "…, dass die Prüfung der Unterlagen bis Freitag gestellt werden muss.",
-            "surface": "…, dass die Prüfung der Unterlagen bis Freitag gestellt werden muss.",
             "strength": "context"
           }
         ],
@@ -182363,6 +182375,25 @@
       {
         "lessonId": "b2-22",
         "level": "B2",
+        "lemmaCandidate": "Akte",
+        "normalizedLemma": "akte",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[3].examples[2].de",
+            "stage": "rule",
+            "text": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
+            "surface": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-22-d716860b"
+      },
+      {
+        "lessonId": "b2-22",
+        "level": "B2",
         "lemmaCandidate": "Aktenzeichen",
         "normalizedLemma": "aktenzeichen",
         "role": "anchor",
@@ -182454,6 +182485,13 @@
             "text": "der gestempelte Antrag",
             "surface": "der gestempelte Antrag",
             "strength": "target"
+          },
+          {
+            "path": "theory[1].formula",
+            "stage": "rule",
+            "text": "Partizip II + Adjektivendung → der gestempelte Antrag",
+            "surface": "Partizip II + Adjektivendung → der gestempelte Antrag",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-22-01fe6fed"
@@ -183132,6 +183170,13 @@
             "text": "der zu prüfende Fall",
             "surface": "der zu prüfende Fall",
             "strength": "target"
+          },
+          {
+            "path": "theory[2].formula",
+            "stage": "rule",
+            "text": "zu + Partizip I + Adjektivendung → der zu prüfende Fall",
+            "surface": "zu + Partizip I + Adjektivendung → der zu prüfende Fall",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-22-ecea19c1"
@@ -183399,8 +183444,8 @@
           {
             "path": "theory[0].examples[1].de",
             "stage": "rule",
-            "text": "der beantragende Kandidat",
-            "surface": "der beantragende Kandidat",
+            "text": "der wartende Kandidat",
+            "surface": "der wartende Kandidat",
             "strength": "context"
           }
         ],
@@ -183472,8 +183517,8 @@
           {
             "path": "theory[3].examples[2].de",
             "stage": "rule",
-            "text": "die von der Kommission, die tagte, geprüfte Akte",
-            "surface": "die von der Kommission, die tagte, geprüfte Akte",
+            "text": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
+            "surface": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
             "strength": "context"
           }
         ],
@@ -184141,6 +184186,25 @@
           }
         ],
         "id": "lex-n-b2-22-10412086"
+      },
+      {
+        "lessonId": "b2-22",
+        "level": "B2",
+        "lemmaCandidate": "Sitzung",
+        "normalizedLemma": "sitzung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[3].examples[2].de",
+            "stage": "rule",
+            "text": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
+            "surface": "die Akte, die von der Kommission in ihrer letzten Sitzung geprüft wurde",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-22-decb633a"
       },
       {
         "lessonId": "b2-22",
@@ -185437,8 +185501,8 @@
           {
             "path": "theory[3].examples[1].de",
             "stage": "rule",
-            "text": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
-            "surface": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "text": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "surface": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
             "strength": "context"
           },
           {
@@ -185761,8 +185825,8 @@
           {
             "path": "theory[3].examples[1].de",
             "stage": "rule",
-            "text": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
-            "surface": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "text": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "surface": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
             "strength": "context"
           },
           {
@@ -186606,8 +186670,8 @@
           {
             "path": "theory[3].examples[1].de",
             "stage": "rule",
-            "text": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
-            "surface": "Im Text: Sie beantragen, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "text": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
+            "surface": "Im Text: Ich beantrage, dass die Nachforderung erlassen wird, weil die Einrichtung die Frist versäumt hat.",
             "strength": "context"
           },
           {
@@ -189069,6 +189133,13 @@
             "strength": "context"
           },
           {
+            "path": "theory[3].formula",
+            "stage": "rule",
+            "text": "1. Kommas zählen (öffnen = schließen) | 2. kein Komma zwischen Subjekt und Verb",
+            "surface": "1. Kommas zählen (öffnen = schließen) | 2. kein Komma zwischen Subjekt und Verb",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Sehr geehrte Damen und Herren, wir bitten darum, den Antrag zurückzustellen, und bitten nicht darum, die Frist zu verlängern. Der Bescheid, den Sie am 12. April erlassen haben, nennt nämlich nur die Nachforderung; über den Antrag selbst ist noch nicht entschieden worden. Dass die Frist am Montag abgelaufen ist, haben wir nicht bestritten, zumal wir die Anlage, die Sie verlangt hatten, erst am Dienstag nachgereicht haben. Wir bitten Sie, die Prüfung bis zum 20. Mai abzuschließen, und sehen Ihrer schriftlichen Bestätigung, aus der die Rechtsgrundlage und die Widerspruchsfrist hervorgehen, entgegen. Wir haben die drei Absätze des ursprünglichen Briefs geprüft und jede Öffnung gezählt; wo eine zweite Klammer fehlte, haben wir den Nebensatz vorangestellt, weil diese Lesart seltener missverstanden wird. Auch die Anrede und die Grußformel stehen in eigenen Zeilen, damit die Struktur des Blatts nicht mit der des Satzes verwechselt wird. Für künftige Briefe gelten bei uns zwei Regeln: Erstens wird jede Infinitivgruppe mit um, ohne oder statt durch ein Komma abgegrenzt, weil sie sonst den Satz verschließt. Zweitens zählt man vor dem Absenden die geöffneten Klammern; fehlt die rechte, bleibt der Sinn beim Leser.",
@@ -189143,6 +189214,25 @@
           }
         ],
         "id": "lex-n-b2-24-c812dcf3"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
+        "lemmaCandidate": "Mitte",
+        "normalizedLemma": "mitte",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[0].formula",
+            "stage": "rule",
+            "text": "…, Konnektor … Verb, … — Nebensatz in der Mitte = zwei Kommas",
+            "surface": "…, Konnektor … Verb, … — Nebensatz in der Mitte = zwei Kommas",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-24-07bc058f"
       },
       {
         "lessonId": "b2-24",
@@ -207199,8 +207289,8 @@
           {
             "path": "theory[1].examples[0].de",
             "stage": "rule",
-            "text": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort.",
-            "surface": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort.",
+            "text": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort oder im Homeoffice.",
+            "surface": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort oder im Homeoffice.",
             "strength": "context"
           }
         ],
@@ -207558,8 +207648,8 @@
           {
             "path": "theory[1].examples[0].de",
             "stage": "rule",
-            "text": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort.",
-            "surface": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort.",
+            "text": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort oder im Homeoffice.",
+            "surface": "Je nachdem, ob Kunden kommen, arbeiten wir vor Ort oder im Homeoffice.",
             "strength": "context"
           }
         ],
@@ -216277,6 +216367,29 @@
       {
         "lessonId": "b2-17",
         "level": "B2",
+        "infinitiveCandidate": "durchzuführen",
+        "normalizedVerb": "durchzuführen",
+        "preposition": "von",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "theory[0].examples[3].de",
+            "stage": "rule",
+            "text": "Offen bleibt, von welcher Stelle die Prüfung durchzuführen ist.",
+            "surface": "Offen bleibt, von welcher Stelle die Prüfung durchzuführen ist.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-17-9ec395d9"
+      },
+      {
+        "lessonId": "b2-17",
+        "level": "B2",
         "infinitiveCandidate": "einreichen",
         "normalizedVerb": "einreichen",
         "preposition": "zu",
@@ -221535,5 +221648,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "75523430396a9af5c48278cae61544c645e8e8530df925a7d261b7c45c9d3658"
+  "contentSha256": "5fb32455777b05923b9c423e65047aaae54ec68e722209da53ed6892123f9670"
 }

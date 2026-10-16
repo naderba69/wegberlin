@@ -1,6 +1,87 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v208 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم العبارات (phrases) في A1–B2 (1,666 عبارة): 169 تعديلًا (155 في العبارات عبر 64 درسًا + 14 نسخة متسقة)؛ ألمانية خاطئة صُحّحت (umso، وsowohl … als auch + laufen، وeine Modalpartikel، وتلازمات غير مستعملة)، وترجمات مضللة (Woher kommst du، وaufstehen، وWarmmiete، وwindig، وJobticket، وb2-21 niemand habe ihn informiert)، وملاحظات قواعد خاطئة في b2-21 وb2-23 وb2-24؛ المعجم بلا تغيير (4899/3426)؛ الكاش v208؛ البناء a3d75b14cdd9.
+Sync batch: v209 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم البطاقات (flashcards) في A1–B2 (976 بطاقة): 231 تعديلًا (229 حقلًا في 83 درسًا: 194 ظهرًا عربيًا، و3 وجوه، و32 مثالًا؛ + عبارة b1-16 + جنس Betracht في السجل)؛ أدوات خاطئة (der Betracht، وdas Aktenzeichen)، وungebeugten، وأمثلة كانت تعلّم قاعدة خاطئة في b2-20 وb2-24، وظهور b2-18 صارت ترجمات؛ الأسماء 4899/3426 بلا تغيير، والأفعال 1264/1129؛ الكاش v209؛ البناء 3a90f3f12b04.
+
+## مراجعة سطرًا سطرًا لقسم البطاقات (`flashcards`) في A1–B2 — 2026-10-16 (v209)
+
+- **النطاق:** كل بطاقات الدروس الـ 96، أي **976 بطاقة**. لكل بطاقة ثلاثة حقول: الوجه الألماني `frontDe`، والظهر العربي `backAr`، والمثال `exampleDe`. المعيار: ما يفيد المتعلم وما هو صحيح. أُخذت تصحيحات العبارات في v208 مرجعًا للاتساق، لأن كثيرًا من البطاقات ينسخ العبارات نفسها.
+- **أخطاء ألمانية في الوجه أو المثال (صُحّحت):**
+  - **أداة خاطئة:**
+    - `b2-18` «die Betracht» ⇒ **der Betracht**، فالاسم مذكر ولا يُستعمل إلا في «in Betracht ziehen/kommen». وصُحّح الجنس كذلك في السجل المعجمي `lexical-grammar-b2.ts` (feminine ⇒ masculine).
+    - `b2-22` «die Aktenzeichen» ⇒ **das Aktenzeichen**، وكان مثال البطاقة نفسها يقول «Das».
+  - **صيغة غير موجودة:** `b2-19` «unbeugten» ⇒ **ungebeugten**.
+  - **أمثلة تعلّم قاعدة خاطئة:**
+    - `b2-24`: «Die Apposition … bleibt in Klammern» ⇒ «steht zwischen zwei Kommas»، و«Nach dem Verb steht ein Doppelpunkt» ⇒ «Vor der Aufzählung steht ein Doppelpunkt».
+    - `b2-20`: «Bei sowohl … als auch steht der Plural» ⇒ «steht meist»، متسقًا مع v208. و«Nach desto folgt Verb an Position zwei» ⇒ «Nach desto und dem Komparativ folgt das Verb».
+  - **ألمانية غير منطقية أو غير طبيعية:**
+    - `b2-10` «Die Bewerbung muss die Frist einhalten» ⇒ «Bewerber müssen …».
+    - `b1-18` «die ursprüngliche Primärquelle» (حشو).
+    - `b2-22` «Der Bescheid blieb aufrechterhalten» ⇒ «wurde»، و«binnen Wochen» ⇒ «binnen zwei Wochen».
+    - `a1-20` «Biegen Sie an der Ampel ab» بلا اتجاه ⇒ «rechts ab».
+    - `a2-11` و`a2-12` «Das Zimmer ist mit Frühstück / ohne Aufpreis» ⇒ جمل طبيعية.
+    - `b2-19` «Das gemeinsame Wissen zeigt die Partikel „ja“ an» (ترتيب ملتبس) ⇒ «Die Partikel „ja“ zeigt gemeinsames Wissen an».
+  - **أمثلة لا تحتوي كلمة البطاقة:**
+    - `a2-08`: teamfähig وdie Stelle.
+    - `a2-20`: «Wie lang ist die Kursdauer?»، وهو حشو.
+    - `a2-23`: klein anfangen.
+    - `a2-24`: Vor- und Nachteile.
+    - `b1-10`: gebraucht kaufen.
+    - `b1-19`: «richtig verstanden».
+    - `b1-21`: Verantwortung zuweisen.
+    - `b2-02`: «Habe ich Sie richtig verstanden».
+    - `b2-08`: Interessenkonflikt.
+    - `b2-13`: zurücknehmen.
+    - وأمثلة ناقصة: `a1-23` و`a2-13` و`a2-18` و`b1-07` و`b1-23` و`b2-01`.
+  - **عبارة غير اصطلاحية:** `b1-16` «Korrelation ist keine Ursache» ⇒ «Korrelation beweist keine Ursache» في البطاقة والعبارة معًا، متسقًا مع مثالها («Gleichzeitigkeit beweist keine Ursache»). لم تُستعمل «Kausalität» حتى لا يدخل اسم هدف جديد إلى نطاق P0-98 التاريخي المثبّت.
+- **ظهور عربية خاطئة أو مضللة (صُحّحت):**
+  - **A1 وA2:**
+    - «aufstehen / aufgestanden» = ينهض لا يستيقظ (`a1-08`، و`a2-01`).
+    - «zu früh» = مبكر أكثر من اللازم لا «مبكر جدًا» (sehr).
+    - «Nachname» = اسم العائلة (اللقب).
+    - «die Augen» = العينان.
+    - «Kann ich Ihnen helfen?» كانت «هل أساعدك رسميًا؟».
+    - «zurückrufen» = يعاود الاتصال.
+    - «sich krankmelden / Krankmeldung» صارت متسقة مع العبارات.
+    - «damit» كانت «لكي بفاعل ظاهر» ⇒ بفاعل مختلف.
+    - «Bescheid sagen» كانت «يؤكد/يخبر».
+  - **B1:**
+    - «Weiterbildung» و«Ausbildung machen» كانتا «تكوين» ⇒ تدريب مهني.
+    - «Je …, desto» = «كلما…، ازداد…» لا «كلما… كلما».
+    - «Barrierefreiheit» = سهولة الوصول لذوي الإعاقة.
+    - «etwas reparieren lassen» = يكلّف غيره بالإصلاح.
+    - «Wovon? Davon.» كانت «على ماذا يعتمد؟».
+    - صارت ملصقات الضمائر الموصولة في `b1-08` واضحة (der فاعل، den مفعول به، der Dativ).
+  - **B2:**
+    - `b2-18`: كانت ظهور بطاقات تراكيب Funktionsverbgefüge الـ 12 أوصافًا مبهمة لا ترجمات، مثل «ثبّت العلم بالوصول» لـ «die Kenntnis»، و«تغافل عمدًا مع تبعة» لـ «die Acht». صارت كل بطاقة: معنى الاسم + التركيب وترجمته (zur Kenntnis nehmen: يحيط علمًا).
+    - `b2-19`: «أداة نبرة لا تُنبر» ⇒ غالبًا غير منبورة.
+    - `b2-08`: «er sei: يقال إنه يكون» ⇒ نقل غير مباشر بـ Konjunktiv I.
+    - `b2-02`: «eine Debatte führen» = يخوض نقاشًا لا «يدير».
+    - وتصحيحات متسقة مع v208 (wobei، وinsofern als، وBarriere abbauen، وZwischenbilanz، وUnterstellung، وZuschreibung).
+- **ظهور مبتورة أو ركيكة:** نحو 140 أُكملت. أمثلة: «ما التهيئة؟» ⇒ ما برنامج تهيئة الموظف الجديد؟، و«هل تحولني؟» ⇒ هل يمكنكم تحويلي؟، و«نتائج طويلة» ⇒ عواقب طويلة الأمد.
+- **المجموع:** **231 تعديلًا**:
+  - **229** حقلًا في البطاقات عبر **83 درسًا**: **194** ظهرًا عربيًا، و**3** وجوه ألمانية، و**32** مثالًا ألمانيًا. التوزيع A1 21، وA2 45، وB1 73، وB2 90.
+  - عبارة `b1-16` المطابقة.
+  - جنس Betracht في السجل.
+  - **ما لم يتغيّر:** لا صوت مولّد لأمثلة البطاقات (تحقق grep في `public`). لم يُمسّ أي نص مسموع، ولم يتغير أي مفتاح أو إجابة مقبولة.
+- **أُبقي عليه عمدًا:**
+  - «Wir brauchen einen Käse» في `a1-10`: صيغة عامية صحيحة («قطعة جبن») يطابقها نص الاستماع المسجّل، والدرس عن المفعول به.
+  - **مشكلة مفتوحة:** «lässt dem anderen seinen Beweis» (ألمانية غير طبيعية) ما زالت في نص القراءة لـ `b2-19` وخيار سؤال. هذا خارج نطاق البطاقات، ويحتاج تحديث مؤشرات الاقتباس.
+- **الأرقام:**
+  - **مرشحات المعجم:** الأسماء **4899/3426** بلا تغيير في المجموع (A2 −1، وB1 +1)، والمغطاة **1384**، ونطاق P0-98 باقٍ على **1297/89**. الأفعال 1261/1126 ⇒ **1264/1129** (أفعال سياقية من الأمثلة الجديدة)، وحُدّثت في `lexical-target-gap.test.ts` و`verify-continuation-handoff.mjs`.
+  - **استثناءات الاقتباس:** **73**.
+  - **الإجابات المقبولة:** **242/145**.
+  - **مؤشر «المفتاح أطول خيار»:** **39.28%**.
+  - **عقد التدريس:** 0 إخفاقات صلبة.
+- **الكاش:** `PACK_CACHE` = **v209**، و`PACK_STAGING_CACHE` = **v208**، والرجوع `previous` = **v208**. حُدّث سطر `Offline cache:` يدويًا. الوثائق الثلاث عشرة على `Sync batch: v209`.
+- **البناء:**
+  - الصفحات: 325/325.
+  - Offline **`3a90f3f12b04`**: full 6,112,545 gzip (a1 2,788,052 · a2 2,900,205 · b1 2,926,720 · b2 4,379,955).
+  - JS: 131 / 2,079,536 gzip / أقصى 267,217.
+  - الصوت: 544 / 52,943,843 بايت.
+  - المنهج: 1,175,399 gzip.
+  - التباين: 323 صفحة / 0 دون الحد.
+- **التحقق المحلي:** نجح `npm run check` كاملًا من أول تشغيل: lint وtypecheck، واختبارات الوحدة **1,573/1,573** في **225** ملفًا، وفحوص الأسرار والمصادر وسير العمل و`handoff:check` والتبعيات، والبناء بالبصمة نفسها **`3a90f3f12b04`**، و`a11y:browser` **642** فحصًا بلا فشل. E2E: **66/66** على سطح المكتب و**66/66** على الهاتف من أول تشغيل.
+- **الحدود:** القرارات قرار الوكيل بتفويض صريح من المالك في المحادثة («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية ألمانية مستقلة. لم تُراجَع سطرًا سطرًا بعد: `discovery`، وحوارات المدخل، ومطالب الكتابة والمحادثة والوساطة.
 
 ## مراجعة سطرًا سطرًا لقسم العبارات (`phrases`) في A1–B2 — 2026-10-15 (v208)
 
@@ -787,7 +868,7 @@ Sync batch: v208 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم ا
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v208 (staging v207; previous complete v207)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
+- Offline cache: dwnb-full-pack-v209 (staging v208; previous complete v208)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
 - قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
 - Unit/Integrity tests الحالية: **1,573/1,573 في 225 ملفًا** (`npm run check` خروج 0 كاملًا، 2026-10-15، v201، بما فيه `a11y:browser` 642/642؛ وPlaywright محليًا 132/132). القياس التاريخي: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium is available through the npm `@sparticuz/chromium` method (v194 section; temporary paths outside the repo). Earlier, remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.

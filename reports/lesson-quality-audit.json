@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "d370da0e0738bb6c9b5ebf0c9eee2802e176914d215ccf8e4f68d3d2a0786e30",
+  "contentSha256": "f8dba2af72b37f93cd1fa18ea61488a5af82054f066a2b08802a026050be9ad4",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -173,8 +173,8 @@
         "pct": 54.2
       },
       {
-        "id": "b2-06",
-        "pct": 53.4
+        "id": "a1-16",
+        "pct": 52.8
       }
     ],
     "unknownByLesson": [
@@ -432,29 +432,6 @@
         ]
       },
       {
-        "lessonId": "b2-06",
-        "level": "B2",
-        "pct": 53.4,
-        "unknown": [
-          "hochschule",
-          "beschattete",
-          "unbeschattete",
-          "strassenoberflaechen",
-          "erwaermen",
-          "interne",
-          "bericht",
-          "thermischer",
-          "oberflaechenunterschiede",
-          "erfolgte",
-          "mittels",
-          "mobiler",
-          "sensorik",
-          "satellitengestuetzter",
-          "fernerkundung",
-          "veranstaltung"
-        ]
-      },
-      {
         "lessonId": "a1-16",
         "level": "A1",
         "pct": 52.8,
@@ -475,6 +452,29 @@
           "leila",
           "joggt",
           "tausch"
+        ]
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
+        "pct": 52.6,
+        "unknown": [
+          "hochschule",
+          "beschattete",
+          "unbeschattete",
+          "strassenoberflaechen",
+          "erwaermen",
+          "interne",
+          "bericht",
+          "thermischer",
+          "oberflaechenunterschiede",
+          "erfolgte",
+          "mittels",
+          "mobiler",
+          "sensorik",
+          "satellitengestuetzter",
+          "fernerkundung",
+          "veranstaltung"
         ]
       },
       {

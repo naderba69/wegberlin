@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `692ccde55ef477f2b995dbf7818be42c3eb81e050ac1664177d93fbb56e3dac9`
+Content SHA-256: `77efcd0cffe26fed6f003c4233401ec7afe03786118152a6dd5f37b6c5f01ed7`
 
 ## Honest result
 
@@ -13,10 +13,10 @@ The audit does **not** create grammatical facts. A pending noun row must receive
 | Level | Noun signals | Covered | Pending human | Context only | Verb signals | Covered | Pending human | Context only |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | A1 | 569 | 298 | 0 | 271 | 106 | 25 | 0 | 81 |
-| A2 | 883 | 292 | 0 | 591 | 204 | 30 | 0 | 174 |
-| B1 | 1230 | 338 | 0 | 892 | 317 | 31 | 0 | 286 |
-| B2 | 2217 | 456 | 89 | 1672 | 634 | 48 | 1 | 585 |
-| **Total** | **4899** | **1384** | **89** | **3426** | **1261** | **134** | **1** | **1126** |
+| A2 | 882 | 292 | 0 | 590 | 205 | 30 | 0 | 175 |
+| B1 | 1231 | 338 | 0 | 893 | 318 | 31 | 0 | 287 |
+| B2 | 2217 | 456 | 89 | 1672 | 635 | 48 | 1 | 586 |
+| **Total** | **4899** | **1384** | **89** | **3426** | **1264** | **134** | **1** | **1129** |
 
 ## Classification contract
 

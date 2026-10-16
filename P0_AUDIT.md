@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v208 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم العبارات (phrases) في A1–B2 (1,666 عبارة): 169 تعديلًا (155 في العبارات عبر 64 درسًا + 14 نسخة متسقة)؛ ألمانية خاطئة صُحّحت (umso، وsowohl … als auch + laufen، وeine Modalpartikel، وتلازمات غير مستعملة)، وترجمات مضللة (Woher kommst du، وaufstehen، وWarmmiete، وwindig، وJobticket، وb2-21 niemand habe ihn informiert)، وملاحظات قواعد خاطئة في b2-21 وb2-23 وb2-24؛ المعجم بلا تغيير (4899/3426)؛ الكاش v208؛ البناء a3d75b14cdd9.
+Sync batch: v209 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم البطاقات (flashcards) في A1–B2 (976 بطاقة): 231 تعديلًا (229 حقلًا في 83 درسًا: 194 ظهرًا عربيًا، و3 وجوه، و32 مثالًا؛ + عبارة b1-16 + جنس Betracht في السجل)؛ أدوات خاطئة (der Betracht، وdas Aktenzeichen)، وungebeugten، وأمثلة كانت تعلّم قاعدة خاطئة في b2-20 وb2-24، وظهور b2-18 صارت ترجمات؛ الأسماء 4899/3426 بلا تغيير، والأفعال 1264/1129؛ الكاش v209؛ البناء 3a90f3f12b04.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

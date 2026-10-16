@@ -51127,16 +51127,16 @@
           "contextualNotTarget": 271
         },
         "A2": {
-          "totalCandidates": 883,
+          "totalCandidates": 882,
           "covered": 292,
           "pendingHuman": 0,
-          "contextualNotTarget": 591
+          "contextualNotTarget": 590
         },
         "B1": {
-          "totalCandidates": 1230,
+          "totalCandidates": 1231,
           "covered": 338,
           "pendingHuman": 0,
-          "contextualNotTarget": 892
+          "contextualNotTarget": 893
         },
         "B2": {
           "totalCandidates": 2217,
@@ -51147,10 +51147,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1261,
+      "totalCandidates": 1264,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1126,
+      "contextualNotTarget": 1129,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51160,22 +51160,22 @@
           "contextualNotTarget": 81
         },
         "A2": {
-          "totalCandidates": 204,
+          "totalCandidates": 205,
           "covered": 30,
           "pendingHuman": 0,
-          "contextualNotTarget": 174
+          "contextualNotTarget": 175
         },
         "B1": {
-          "totalCandidates": 317,
+          "totalCandidates": 318,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 286
+          "contextualNotTarget": 287
         },
         "B2": {
-          "totalCandidates": 634,
+          "totalCandidates": 635,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 585
+          "contextualNotTarget": 586
         }
       }
     },
@@ -65674,8 +65674,8 @@
           {
             "path": "flashcards[4].exampleDe",
             "stage": "vocabulary",
-            "text": "Biegen Sie an der Ampel ab.",
-            "surface": "Biegen Sie an der Ampel ab.",
+            "text": "Biegen Sie an der Ampel rechts ab.",
+            "surface": "Biegen Sie an der Ampel rechts ab.",
             "strength": "context"
           },
           {
@@ -77261,6 +77261,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
+            "surface": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
+            "strength": "context"
+          },
+          {
             "path": "phrases[15].de",
             "stage": "vocabulary",
             "text": "weil die Aufgaben gut passen",
@@ -77909,6 +77916,13 @@
             "stage": "controlled",
             "text": "Ich interessiere mich ___ die Stelle.",
             "surface": "Ich interessiere mich ___ die Stelle.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
+            "surface": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
             "strength": "context"
           },
           {
@@ -80914,6 +80928,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[3].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir buchen das Zimmer mit Frühstück.",
+            "surface": "Wir buchen das Zimmer mit Frühstück.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[9].exampleDe",
             "stage": "vocabulary",
             "text": "Ich würde gern ein Zimmer buchen.",
@@ -82301,6 +82322,13 @@
             "text": "ein anderes Zimmer",
             "surface": "ein anderes Zimmer",
             "strength": "target"
+          },
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Sie bekommen das Zimmer ohne Aufpreis.",
+            "surface": "Sie bekommen das Zimmer ohne Aufpreis.",
+            "strength": "context"
           },
           {
             "path": "lexicalRegistry.a2-12-noun-14",
@@ -88278,25 +88306,6 @@
       {
         "lessonId": "a2-18",
         "level": "A2",
-        "lemmaCandidate": "Grund",
-        "normalizedLemma": "grund",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "flashcards[8].exampleDe",
-            "stage": "vocabulary",
-            "text": "Ich sehe das aus einem anderen Grund anders.",
-            "surface": "Ich sehe das aus einem anderen Grund anders.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a2-18-5e87e96a"
-      },
-      {
-        "lessonId": "a2-18",
-        "level": "A2",
         "lemmaCandidate": "Gruppe",
         "normalizedLemma": "gruppe",
         "role": "context-only",
@@ -90609,13 +90618,6 @@
           "a2-20-noun-14"
         ],
         "sources": [
-          {
-            "path": "flashcards[2].exampleDe",
-            "stage": "vocabulary",
-            "text": "Wie lang ist die Kursdauer?",
-            "surface": "Wie lang ist die Kursdauer?",
-            "strength": "context"
-          },
           {
             "path": "flashcards[2].frontDe",
             "stage": "vocabulary",
@@ -94430,8 +94432,8 @@
           {
             "path": "flashcards[8].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich möchte mit einer Stunde anfangen.",
-            "surface": "Ich möchte mit einer Stunde anfangen.",
+            "text": "Ich möchte klein anfangen: mit einer Stunde pro Woche.",
+            "surface": "Ich möchte klein anfangen: mit einer Stunde pro Woche.",
             "strength": "context"
           },
           {
@@ -95179,25 +95181,6 @@
       {
         "lessonId": "a2-24",
         "level": "A2",
-        "lemmaCandidate": "Optionen",
-        "normalizedLemma": "optionen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "flashcards[2].exampleDe",
-            "stage": "vocabulary",
-            "text": "Wir wägen die Optionen ab.",
-            "surface": "Wir wägen die Optionen ab.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a2-24-d86dfe6f"
-      },
-      {
-        "lessonId": "a2-24",
-        "level": "A2",
         "lemmaCandidate": "Ort",
         "normalizedLemma": "ort",
         "role": "context-only",
@@ -95501,6 +95484,25 @@
           }
         ],
         "id": "lex-n-a2-24-a323d895"
+      },
+      {
+        "lessonId": "a2-24",
+        "level": "A2",
+        "lemmaCandidate": "Vor-",
+        "normalizedLemma": "vor-",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[2].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir wägen die Vor- und Nachteile ab.",
+            "surface": "Wir wägen die Vor- und Nachteile ab.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-24-798a0c5f"
       },
       {
         "lessonId": "a2-24",
@@ -104104,6 +104106,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[5].exampleDe",
+            "stage": "vocabulary",
+            "text": "Je weiter der Weg, desto länger die Fahrt.",
+            "surface": "Je weiter der Weg, desto länger die Fahrt.",
+            "strength": "context"
+          },
+          {
             "path": "mistakes[1].correct",
             "stage": "errors",
             "text": "Je weiter der Ort ist, desto länger ist die Fahrt.",
@@ -105338,6 +105347,13 @@
             "stage": "controlled",
             "text": "Die Miete ist niedriger; ___ ist der Weg länger.",
             "surface": "Die Miete ist niedriger; ___ ist der Weg länger.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[5].exampleDe",
+            "stage": "vocabulary",
+            "text": "Je weiter der Weg, desto länger die Fahrt.",
+            "surface": "Je weiter der Weg, desto länger die Fahrt.",
             "strength": "context"
           },
           {
@@ -109112,13 +109128,6 @@
             "strength": "context"
           },
           {
-            "path": "flashcards[6].exampleDe",
-            "stage": "vocabulary",
-            "text": "Ich prüfe ein gebrauchtes Gerät.",
-            "surface": "Ich prüfe ein gebrauchtes Gerät.",
-            "strength": "context"
-          },
-          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Kundin: Mein Laptop wird sehr langsam, aber er funktioniert noch. — Berater: Wie alt ist er? — Kundin: Vier Jahre. Ich wollte einen neuen kaufen, ohne die Ursache prüfen zu lassen. — Berater: Wir können zuerst Speicher und Akku testen. Ein größerer Speicher wäre günstiger als ein neues Gerät. — Kundin: Wie lange würde die Reparatur dauern? — Berater: Einen Tag. Wenn nur der Akku schwach ist, kostet der Austausch 90 Euro. — Kundin: Dann lasse ich ihn prüfen. Statt sofort zu bestellen, warte ich auf den Bericht. — Berater: Gute Entscheidung. Danach kennen Sie Kosten und mögliche Lebensdauer.",
@@ -109261,6 +109270,25 @@
           }
         ],
         "id": "lex-n-b1-10-70626c00"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Handy",
+        "normalizedLemma": "handy",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich kaufe das Handy gebraucht.",
+            "surface": "Ich kaufe das Handy gebraucht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-be38f762"
       },
       {
         "lessonId": "b1-10",
@@ -118093,8 +118121,8 @@
           {
             "path": "flashcards[9].frontDe",
             "stage": "vocabulary",
-            "text": "Korrelation ist keine Ursache",
-            "surface": "Korrelation ist keine Ursache",
+            "text": "Korrelation beweist keine Ursache",
+            "surface": "Korrelation beweist keine Ursache",
             "strength": "target"
           },
           {
@@ -118106,8 +118134,8 @@
           {
             "path": "phrases[16].de",
             "stage": "vocabulary",
-            "text": "Korrelation ist keine Ursache",
-            "surface": "Korrelation ist keine Ursache",
+            "text": "Korrelation beweist keine Ursache",
+            "surface": "Korrelation beweist keine Ursache",
             "strength": "target"
           }
         ],
@@ -120644,8 +120672,8 @@
           {
             "path": "flashcards[1].exampleDe",
             "stage": "vocabulary",
-            "text": "Suche die ursprüngliche Primärquelle.",
-            "surface": "Suche die ursprüngliche Primärquelle.",
+            "text": "Suche die Primärquelle.",
+            "surface": "Suche die Primärquelle.",
             "strength": "context"
           },
           {
@@ -125329,6 +125357,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "flashcards[2].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir weisen die Verantwortung klar zu.",
+            "surface": "Wir weisen die Verantwortung klar zu.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[1].options[3]",
             "stage": "test",
             "text": "Wer entscheidet, der übernimmt Verantwortung.",
@@ -127619,13 +127654,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "flashcards[8].exampleDe",
-            "stage": "vocabulary",
-            "text": "Wir brauchen einen offenen Export.",
-            "surface": "Wir brauchen einen offenen Export.",
-            "strength": "context"
-          },
-          {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
             "text": "Welche Grenze hatte der Export?",
@@ -127660,6 +127688,13 @@
           "b1-23-noun-8"
         ],
         "sources": [
+          {
+            "path": "flashcards[8].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir brauchen eine offene Exportfunktion.",
+            "surface": "Wir brauchen eine offene Exportfunktion.",
+            "strength": "context"
+          },
           {
             "path": "flashcards[8].frontDe",
             "stage": "vocabulary",
@@ -129597,6 +129632,25 @@
           }
         ],
         "id": "lex-n-b1-24-5435d2a5"
+      },
+      {
+        "lessonId": "b2-01",
+        "level": "B2",
+        "lemmaCandidate": "Ablenkung",
+        "normalizedLemma": "ablenkung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[4].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein berechtigter Einwand betrifft die Ablenkung.",
+            "surface": "Ein berechtigter Einwand betrifft die Ablenkung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-01-283a8f1e"
       },
       {
         "lessonId": "b2-01",
@@ -143291,6 +143345,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[8].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Autorin legt ihren Interessenkonflikt offen.",
+            "surface": "Die Autorin legt ihren Interessenkonflikt offen.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[8].frontDe",
             "stage": "vocabulary",
             "text": "einen Interessenkonflikt offenlegen",
@@ -148853,8 +148914,8 @@
           {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
-            "text": "Die Bewerbung muss die Frist einhalten.",
-            "surface": "Die Bewerbung muss die Frist einhalten.",
+            "text": "Bewerber müssen die Frist einhalten.",
+            "surface": "Bewerber müssen die Frist einhalten.",
             "strength": "context"
           },
           {
@@ -158075,6 +158136,13 @@
           "b2-13-noun-18"
         ],
         "sources": [
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir nehmen die Vorgabe für Audioaufgaben zurück.",
+            "surface": "Wir nehmen die Vorgabe für Audioaufgaben zurück.",
+            "strength": "context"
+          },
           {
             "path": "flashcards[7].frontDe",
             "stage": "vocabulary",
@@ -171048,14 +171116,14 @@
           {
             "path": "flashcards[3].frontDe",
             "stage": "vocabulary",
-            "text": "die Betracht",
-            "surface": "die Betracht",
+            "text": "der Betracht",
+            "surface": "der Betracht",
             "strength": "target"
           },
           {
             "path": "lexicalRegistry.b2-18-noun-5",
             "stage": "vocabulary",
-            "surface": "die Betracht",
+            "surface": "der Betracht",
             "strength": "registry"
           }
         ],
@@ -173990,13 +174058,6 @@
             "strength": "target"
           },
           {
-            "path": "flashcards[6].exampleDe",
-            "stage": "vocabulary",
-            "text": "Eine Vermutung mit „wohl“ lässt dem anderen seinen Beweis.",
-            "surface": "Eine Vermutung mit „wohl“ lässt dem anderen seinen Beweis.",
-            "strength": "context"
-          },
-          {
             "path": "lexicalRegistry.b2-19-noun-4",
             "stage": "vocabulary",
             "surface": "der Beweis",
@@ -175044,13 +175105,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "flashcards[1].exampleDe",
-            "stage": "vocabulary",
-            "text": "Das gemeinsame Wissen zeigt die Partikel „ja“ an.",
-            "surface": "Das gemeinsame Wissen zeigt die Partikel „ja“ an.",
-            "strength": "context"
-          },
-          {
             "path": "flashcards[11].exampleDe",
             "stage": "vocabulary",
             "text": "Wer angreift, braucht den Beweis, nicht die Partikel.",
@@ -176094,8 +176148,8 @@
           {
             "path": "flashcards[7].exampleDe",
             "stage": "vocabulary",
-            "text": "Der Ton hängt an einem einzigen unbeugten Wort.",
-            "surface": "Der Ton hängt an einem einzigen unbeugten Wort.",
+            "text": "Der Ton hängt an einem einzigen ungebeugten Wort.",
+            "surface": "Der Ton hängt an einem einzigen ungebeugten Wort.",
             "strength": "context"
           },
           {
@@ -177881,6 +177935,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach „desto“ und dem Komparativ folgt das Verb.",
+            "surface": "Nach „desto“ und dem Komparativ folgt das Verb.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b2-20-noun-28",
             "stage": "vocabulary",
             "surface": "der Komparativ",
@@ -178529,8 +178590,8 @@
           {
             "path": "flashcards[4].exampleDe",
             "stage": "vocabulary",
-            "text": "Bei „sowohl … als auch“ steht der Plural.",
-            "surface": "Bei „sowohl … als auch“ steht der Plural.",
+            "text": "Bei „sowohl … als auch“ steht meist der Plural.",
+            "surface": "Bei „sowohl … als auch“ steht meist der Plural.",
             "strength": "context"
           },
           {
@@ -179568,6 +179629,13 @@
             "stage": "entry",
             "text": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
             "surface": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach „desto“ und dem Komparativ folgt das Verb.",
+            "surface": "Nach „desto“ und dem Komparativ folgt das Verb.",
             "strength": "context"
           },
           {
@@ -182363,8 +182431,8 @@
           {
             "path": "flashcards[6].frontDe",
             "stage": "vocabulary",
-            "text": "die Aktenzeichen",
-            "surface": "die Aktenzeichen",
+            "text": "das Aktenzeichen",
+            "surface": "das Aktenzeichen",
             "strength": "target"
           },
           {
@@ -188102,6 +188170,13 @@
             "strength": "target"
           },
           {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Vor der Aufzählung steht ein Doppelpunkt.",
+            "surface": "Vor der Aufzählung steht ein Doppelpunkt.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b2-24-noun-6",
             "stage": "vocabulary",
             "surface": "die Aufzählung",
@@ -188471,8 +188546,8 @@
           {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
-            "text": "Nach dem Verb steht ein Doppelpunkt.",
-            "surface": "Nach dem Verb steht ein Doppelpunkt.",
+            "text": "Vor der Aufzählung steht ein Doppelpunkt.",
+            "surface": "Vor der Aufzählung steht ein Doppelpunkt.",
             "strength": "context"
           },
           {
@@ -189761,25 +189836,6 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
-        "lemmaCandidate": "Verb",
-        "normalizedLemma": "verb",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "flashcards[6].exampleDe",
-            "stage": "vocabulary",
-            "text": "Nach dem Verb steht ein Doppelpunkt.",
-            "surface": "Nach dem Verb steht ein Doppelpunkt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-24-38b05a0f"
-      },
-      {
-        "lessonId": "b2-24",
-        "level": "B2",
         "lemmaCandidate": "Verben",
         "normalizedLemma": "verben",
         "role": "context-only",
@@ -189841,8 +189897,8 @@
           {
             "path": "flashcards[5].exampleDe",
             "stage": "vocabulary",
-            "text": "Die Apposition „der Vertreter“ bleibt in Klammern.",
-            "surface": "Die Apposition „der Vertreter“ bleibt in Klammern.",
+            "text": "Die Apposition „der Vertreter“ steht zwischen zwei Kommas.",
+            "surface": "Die Apposition „der Vertreter“ steht zwischen zwei Kommas.",
             "strength": "context"
           },
           {
@@ -193848,8 +193904,8 @@
           {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
-            "text": "Die Aufgaben passen zu mir.",
-            "surface": "Die Aufgaben passen zu mir.",
+            "text": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
+            "surface": "Ich interessiere mich für die Stelle, weil die Aufgaben zu mir passen.",
             "strength": "context"
           }
         ],
@@ -194368,6 +194424,29 @@
           }
         ],
         "id": "lex-v-a2-11-85a6604c"
+      },
+      {
+        "lessonId": "a2-11",
+        "level": "A2",
+        "infinitiveCandidate": "buchen",
+        "normalizedVerb": "buchen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[3].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir buchen das Zimmer mit Frühstück.",
+            "surface": "Wir buchen das Zimmer mit Frühstück.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-11-bef3adfe"
       },
       {
         "lessonId": "a2-11",
@@ -197214,8 +197293,8 @@
           {
             "path": "flashcards[8].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich möchte mit einer Stunde anfangen.",
-            "surface": "Ich möchte mit einer Stunde anfangen.",
+            "text": "Ich möchte klein anfangen: mit einer Stunde pro Woche.",
+            "surface": "Ich möchte klein anfangen: mit einer Stunde pro Woche.",
             "strength": "context"
           }
         ],
@@ -204656,6 +204735,29 @@
           }
         ],
         "id": "lex-v-b1-21-2f39446c"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "infinitiveCandidate": "weisen",
+        "normalizedVerb": "weisen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[2].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir weisen die Verantwortung klar zu.",
+            "surface": "Wir weisen die Verantwortung klar zu.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-8664d99a"
       },
       {
         "lessonId": "b1-21",
@@ -214383,6 +214485,29 @@
       {
         "lessonId": "b2-13",
         "level": "B2",
+        "infinitiveCandidate": "nehmen",
+        "normalizedVerb": "nehmen",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir nehmen die Vorgabe für Audioaufgaben zurück.",
+            "surface": "Wir nehmen die Vorgabe für Audioaufgaben zurück.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-13-a4287045"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
         "infinitiveCandidate": "schließen",
         "normalizedVerb": "schließen",
         "preposition": "aus",
@@ -221598,5 +221723,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "692ccde55ef477f2b995dbf7818be42c3eb81e050ac1664177d93fbb56e3dac9"
+  "contentSha256": "77efcd0cffe26fed6f003c4233401ec7afe03786118152a6dd5f37b6c5f01ed7"
 }

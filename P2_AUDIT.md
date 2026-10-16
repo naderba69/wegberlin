@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v208 · 2026-10-15 · مراجعة سطرًا سطرًا لقسم العبارات (phrases) في A1–B2 (1,666 عبارة): 169 تعديلًا (155 في العبارات عبر 64 درسًا + 14 نسخة متسقة)؛ ألمانية خاطئة صُحّحت (umso، وsowohl … als auch + laufen، وeine Modalpartikel، وتلازمات غير مستعملة)، وترجمات مضللة (Woher kommst du، وaufstehen، وWarmmiete، وwindig، وJobticket، وb2-21 niemand habe ihn informiert)، وملاحظات قواعد خاطئة في b2-21 وb2-23 وb2-24؛ المعجم بلا تغيير (4899/3426)؛ الكاش v208؛ البناء a3d75b14cdd9.
+Sync batch: v209 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم البطاقات (flashcards) في A1–B2 (976 بطاقة): 231 تعديلًا (229 حقلًا في 83 درسًا: 194 ظهرًا عربيًا، و3 وجوه، و32 مثالًا؛ + عبارة b1-16 + جنس Betracht في السجل)؛ أدوات خاطئة (der Betracht، وdas Aktenzeichen)، وungebeugten، وأمثلة كانت تعلّم قاعدة خاطئة في b2-20 وb2-24، وظهور b2-18 صارت ترجمات؛ الأسماء 4899/3426 بلا تغيير، والأفعال 1264/1129؛ الكاش v209؛ البناء 3a90f3f12b04.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

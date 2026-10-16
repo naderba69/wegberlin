@@ -24,10 +24,10 @@ describe("lexical target-gap inventory", () => {
 
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4894,
+      totalCandidates: 4896,
       covered: 1385,
       pendingHuman: 89,
-      contextualNotTarget: 3420,
+      contextualNotTarget: 3422,
       authoredTargets: 1474,
     });
     expect(audit.verbFrameSummary).toMatchObject({

@@ -1,6 +1,47 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v212 · 2026-10-16 · إصلاح أخطاء النصوص المسموعة السبعة بصوت مُعاد توليده (14 ملفًا)، ومراجعة سطرًا سطرًا لمطالب الكتابة والمحادثة والوساطة في A1–B2: 108 تعديلات في 62 درسًا؛ كاش v212، بناء 2c18125f6872.
+Sync batch: v213 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص القراءة ومسارداتها وأهداف الدروس في A1–B2: 91 تعديلًا في 33 درسًا؛ كاش v213، بناء 1b5f27db9c3d.
+
+## مراجعة سطرًا سطرًا لنصوص القراءة ومسارداتها وأهداف الدروس في A1–B2 — 2026-10-16 (v213)
+
+- **النطاق:** تعليمة المالك «ارفع جميع التحديثات وواصل». هذه الدفعة استكمال لمراجعات v200–v212. رُوجع في الدروس الـ 96 كلٌّ من عنوان القراءة، والنص الألماني `textDe`، وترجمته `textAr`، والمسرد `glossary` (`lemma`/`surfaceForm`/`ar`)، والأهداف `objectives`. المعيار ما يفيد المتعلم وما هو صحيح، وأن يبقى كل مؤشر اقتباس في شروح الأسئلة حرفيًا. نصوص القراءة معروضة بلا صوت، فلا يلزم إعادة توليد صوت.
+- **أخطاء ألمانية في نصوص القراءة تعلّم صيغة خاطئة (صُحّحت):**
+  - `b2-22`: جملة المثال «Der **von der** … informierten Kandidatin … erteilte Bescheid» تعني أن المترشّحة هي التي أصدرت القرار ⇒ «Der **der** … Kandidatin … erteilte Bescheid» (داتيف المستفيد)، وهو ما تقوله الترجمة العربية أصلًا.
+  - `b2-23`: «nach **der** ersten Gebührenbescheid» ⇒ «nach **dem** ersten Gebührenbescheid».
+  - `b2-24`: درس عن الفواصل، وجملته المصحّحة نفسها فيها فاصلة خاطئة قبل «und ob» التي تربط جملتين جانبيتين متكافئتين ⇒ حُذفت (وفي الترجمة كذلك).
+  - `b2-04`: «einschließlich Umfang, **Termine** und Prüfkriterien» ⇒ «**Terminen**» (داتيف حين لا يظهر الجر بالإضافة)، في النص وفي مؤشر الاقتباس.
+  - `b2-16`: «**Ein** Modalpartikel … **es** ersetzt» ⇒ «**Eine** Modalpartikel … **sie** ersetzt»، و«die Note weicher machen» ⇒ «den Ton».
+  - `b2-19`: «für **den Akt**» ⇒ «für **die Akte**»، و«Wer im Widerspruch stehen will» ⇒ «Wer vorsichtig widersprechen will».
+  - `b2-20`: «die Anmerkung an die Beschlusslage **angrenzen**» (فعل لازم) ⇒ «**anknüpfen**». و`b2-14`: «Verbalabsatz» ⇒ «Verbalsatz».
+  - `a2-03`: «Sie hatte zwei Wochen lang vorbereitet» (فعل متعدٍّ بلا مفعول) ⇒ «Sie hatte **sich** … vorbereitet». و`a1-21`: «lädt die Verbindung als Screenshot auf ihr Handy» (ومدخل المسرد `aufladen` = يشحن) ⇒ «**speichert** … auf ihrem Handy» ومدخل `speichern`.
+  - `b1-11`: «Nachtschichten bekamen Informationen» ⇒ «Beschäftigte in Nachtschichten …». و`b1-22`: «Ihr früherer Plan … Wunschzettel. **Früher** bestand ihr Plan …» ⇒ «… Wunschzettel: Er bestand …»، مع تحديث مؤشر الاقتباس في الشرح. و`b1-01`: «der Weg» ⇒ «ihr **Lebensweg**» ليطابق مدخل المسرد ومرساه.
+  - `b2-13`: «privater **Nachrichtenmeldungen**» (أخبار صحفية) ⇒ «privater **Benachrichtigungen**» (إشعارات).
+- **نصوص تناقض نفسها أو أسئلتها (صُحّحت):**
+  - `a1-12`: يطلب الضيف «Gemüsesuppe ohne Sahne» (وهو مفتاح سؤال، وفي الحوار والوساطة)، والقائمة لا تذكر إلا حساء الطماطم ⇒ «Es gibt eine Tomatensuppe und eine Gemüsesuppe. Beide kosten fünf Euro und sind vegetarisch.». سؤال «Welches Gericht ist vegetarisch?» يبقى بلا لبس لأن حساء الخضار ليس من خياراته.
+  - `a1-17`: سامي «kann erst ab elf Uhr» ثم يصل متأخرًا عشر دقائق عن موعد 10:30 ⇒ «erst ab Viertel vor elf» و«eine Viertelstunde später» (وفي الترجمة).
+  - `a2-10`: الاختيار «القطار الأرخص يصل قبل موعد الظهر» بلا ساعة انطلاق ⇒ «Ein späterer Zug um 8:15 Uhr …» (نحو ثلاث ساعات ⇒ قبل الظهر).
+  - `b2-18`: فقرة غير متماسكة («warum niemand den Vergleich selbst anstelle … zwei Vergleiche, einer davon mit Protokoll»، و«strich drei Sätze, in denen … zweimal hintereinander stand») ⇒ «warum er klarer sei … „wir haben geprüft“ nennt beides» و«In dem Protokoll, das Ben selbst entworfen hatte, stand „eine Entscheidung treffen“ dreimal hintereinander; sie strich die dritte Nennung». بقي نص الاقتباس الذي يحيل إليه السؤال الثالث «zweimal sei die Fügung amtlich, dreimal werde sie Füllstoff» حرفيًا.
+- **المسرد (صُحّح):** مداخل `lemma` لا تطابق الكلمة: `zusage` ⇒ `zusagen`، و`Beschluss/beschloss` ⇒ `beschließen`، و`Medienprotokoll/protokollierte` ⇒ `protokollieren`، و`zugreifen/greifen` ⇒ `zu kurz greifen`، و`entgegenhalten/halten` ⇒ `dagegenhalten`، و`die Zulässigkeit/zulässig` ⇒ `zulässig`، و`die Manipulation/manipuliert` ⇒ `manipulieren`، و`die Rückstellung/zurückzustellen` ⇒ `zurückstellen`، و`die Nachvollziehbarkeit/nachvollzogen` ⇒ `nachvollziehen`، و`entwickeln/unterscheiden` ⇒ `sich entwickeln/sich unterscheiden` (`b2-13`)، و`dieRelation` ⇒ `die Relation`. ومعانٍ عربية: «يسخين» ⇒ «يسخن»، و«يسّّع» ⇒ «يوسّع»، و«Orientierung = تموضع» ⇒ «توجّه»، و«يستدراك» ⇒ «يقدّم لاحقًا»، و«مُسطَّر» ⇒ «مُسجَّل»، و«اسم المفعول من teilte» ⇒ «من teilen»، و`befreundet` و`motiviert` و`richtig`. وحُذف مدخل `der Vergleich` (لم يعد في النص) وحلّ محله `abschließen/abgeschlossen`، وصار `das Protokoll` = «Protokoll».
+- **الترجمات العربية (صُحّحت):** `b2-14` «طريقة التفافّ الجمل» و«يحتملثنين» وجملة افتتاح مضطربة. و`b2-13` العنوان «وتحفّز واحد» ⇒ «دورتان وتحفّظ واحد»، و«القياسة» و«عُيّنت معيارًا»، و«ثماني نقاط» ⇒ «ثماني نقاط مئوية». و`b2-16` «أزاعم» ⇒ «مزاعم». و`b2-21` «الإشرافة» و«انتفت أساسه» و«الجهة المعنية» ⇒ «الشخص المعني». و`b2-20` «ثلاث كلمات حشو» والنص «zwei Füllwörter»، و«يُقرِّن» و«أيُّهما يُحذف خيرًا». و`b2-15` و`b2-17` و`b2-18` و`b2-19` و`b2-23`. وفي A1/B1: `a1-01` «درس» ⇒ «دورة»، و`a1-05` «عمر بول» (يُقرأ اسمًا) ⇒ «سنّ بول»، و`b1-21` «ثلاث أسئلة» ⇒ «ثلاثة»، و`b1-22` «ركّدت».
+- **الأهداف (`objectives`، صُحّحت):** `b2-20` «das Verb vor dem zweiten Teil stellen» (خطأ نحوي ووصف غير دقيق) ⇒ «„je …, desto …“ mit dem Verb am Ende des je-Teils und dem Verb direkt nach „desto“ + Komparativ bilden»، و«مُصمَّدة» ⇒ «مقصودة». و`b2-22` ترجمة لا تطابق الهدف («الحال والاسم والماضي») ⇒ «الدلالة الفاعلة والمفعولة والمستقبلية». و`b2-23` «die Zweiheit eines Genitivs» ⇒ «ob ein Genitiv den Handelnden oder den Betroffenen nennt»، وترجمتان لا تطابقان. و`b2-24` «تفصل المسند عن مسند إليه» ⇒ «المسند إليه عن المسند». بقية الأهداف في المستويات الأربعة سليمة.
+- **المجموع:** **91 تعديلًا** في **33 درسًا**: A1 ‏9 في 5 دروس، وA2 ‏4 في درسين، وB1 ‏15 في 9، وB2 ‏63 في 17.
+- **الأرقام:**
+  - **مرشحات المعجم:** الأسماء 4894/3420 ⇒ **4896/3422** (اسمان سياقيان جديدان من الصياغات المصحّحة)، والمغطاة **1385**، و`authoredTargets` **1474**. نطاق P0-98 باقٍ على **1297/89**. الأفعال **1279/1144** بلا تغيير. حُدّثت في `lexical-target-gap.test.ts` و`verify-continuation-handoff.mjs`.
+  - **استثناءات الاقتباس:** **73** (بلا تغيير). **عقد التدريس:** 0 إخفاقات صلبة. **مؤشر «المفتاح أطول خيار»:** **39.2%**.
+- **الكاش:** `PACK_CACHE` = **v213**، و`PACK_STAGING_CACHE` = **v212**، والرجوع `previous` = **v212**. حُدّث سطر `Offline cache:` يدويًا. الوثائق الثلاث عشرة على `Sync batch: v213`.
+- **البناء:**
+  - الصفحات: 325/325.
+  - Offline **`1b5f27db9c3d`**: full 6,115,412 gzip (a1 2,789,248 · a2 2,901,545 · b1 2,928,463 · b2 4,381,615).
+  - JS: 131 / 2,080,529 gzip / أقصى 267,608.
+  - الصوت: 544 / **53,193,753** بايت (بلا تغيير).
+  - المنهج: 1,176,357 gzip.
+  - التباين: 323 صفحة / 0 دون الحد.
+- **التحقق المحلي:** نجح `npm run check` كاملًا من أول تشغيل: lint وtypecheck، واختبارات الوحدة **1,573/1,573** في **225** ملفًا، وفحوص الأسرار والمصادر وسير العمل و`handoff:check` والتبعيات، والبناء بالبصمة نفسها **`1b5f27db9c3d`**، و`a11y:browser` **642** فحصًا بلا فشل. E2E: **66/66** على سطح المكتب و**66/66** على الهاتف من أول تشغيل.
+- **الحدود (ما لا يغلقه الكود بصدق):**
+  - القرارات قرار الوكيل بتفويض صريح من المالك في المحادثة («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية ألمانية مستقلة.
+  - **لم تُراجَع بعد سطرًا سطرًا:** نصوص الاستماع `transcriptDe/transcriptAr` (عدا الأخطاء السبعة المغلقة في v212). أي تصحيح فيها يتطلب إعادة توليد الصوت، وهي الدفعة التالية المقترحة.
+  - الاستماع البشري للصوت، والمراجعة الألمانية البشرية المستقلة (P0-98/99)، والأجهزة الحقيقية، وتدقيق الخصوصية (P2-360)، كلها تحتاج بشرًا.
+  - P0-301: ‏PR #7 مفتوح، وتركه المالك مفتوحًا («لاحقًا»). لا يُدمج دون موافقته.
 
 ## إصلاح أخطاء النصوص المسموعة السبعة بصوت مُعاد توليده، ومراجعة مطالب الكتابة والمحادثة والوساطة سطرًا سطرًا — 2026-10-16 (v212)
 
@@ -1043,7 +1084,7 @@ Sync batch: v212 · 2026-10-16 · إصلاح أخطاء النصوص المسم�
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v212 (staging v211; previous complete v211)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
+- Offline cache: dwnb-full-pack-v213 (staging v212; previous complete v212)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
 - قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
 - Unit/Integrity tests الحالية: **1,573/1,573 في 225 ملفًا** (`npm run check` خروج 0 كاملًا، 2026-10-15، v201، بما فيه `a11y:browser` 642/642؛ وPlaywright محليًا 132/132). القياس التاريخي: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium is available through the npm `@sparticuz/chromium` method (v194 section; temporary paths outside the repo). Earlier, remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.

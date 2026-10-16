@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "0f68c7e900320ab728e01ec95f55c6e6b3db0ca99c4afe456ab1787b6b434375",
+  "contentSha256": "70bf7a0d1e5b0b4efd7db8052f65a345090006d62478b0f803f6fffd9d23fe93",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -115,13 +115,13 @@
   },
   "reading": {
     "definition": "prior-sequence-support-v3 · current phrases but no future lessons/current glossary · not learner mastery",
-    "legacyCumulativeMedianUnknownWordPct": 22.7,
+    "legacyCumulativeMedianUnknownWordPct": 22.9,
     "medianUnknownWordPct": 40,
     "medianByLevel": {
       "A1": 52.8,
       "A2": 36.8,
       "B1": 40.8,
-      "B2": 38.4
+      "B2": 39.4
     },
     "lessonsOver45Pct": 29,
     "maxUnknownWordPct": 80,
@@ -501,6 +501,29 @@
         ]
       },
       {
+        "lessonId": "b1-01",
+        "level": "B1",
+        "pct": 51.2,
+        "unknown": [
+          "nadia",
+          "ben",
+          "salem",
+          "monastir",
+          "wuchs",
+          "interessierte",
+          "technik",
+          "doch",
+          "begann",
+          "zunaechst",
+          "kaufmaennische",
+          "musste",
+          "technische",
+          "probleme",
+          "buero",
+          "merkte"
+        ]
+      },
+      {
         "lessonId": "a1-22",
         "level": "A1",
         "pct": 51.1,
@@ -590,29 +613,6 @@
           "einzuplanen",
           "busverkehr",
           "zuverlaessiger"
-        ]
-      },
-      {
-        "lessonId": "b1-01",
-        "level": "B1",
-        "pct": 50,
-        "unknown": [
-          "nadia",
-          "ben",
-          "salem",
-          "monastir",
-          "wuchs",
-          "interessierte",
-          "technik",
-          "doch",
-          "begann",
-          "zunaechst",
-          "kaufmaennische",
-          "musste",
-          "technische",
-          "probleme",
-          "buero",
-          "merkte"
         ]
       },
       {
@@ -747,10 +747,10 @@
           "erhielten",
           "konnten",
           "zusaetzlichen",
+          "beschaeftigte",
           "nachtschichten",
           "bekamen",
-          "informationen",
-          "fahrgemeinschaften"
+          "informationen"
         ]
       },
       {
@@ -825,7 +825,7 @@
       {
         "lessonId": "a1-12",
         "level": "A1",
-        "pct": 45.1,
+        "pct": 46.2,
         "unknown": [
           "caf",
           "linden",
@@ -833,16 +833,16 @@
           "freitag",
           "kleine",
           "mittagskarte",
+          "gibt",
           "tomatensuppe",
+          "gemuesesuppe",
+          "beide",
           "fuenf",
           "ihn",
-          "gibt",
           "haehnchen",
           "kartoffeln",
           "bekommt",
-          "glas",
-          "dienstag",
-          "fragt"
+          "glas"
         ]
       },
       {
@@ -1026,7 +1026,7 @@
           "informiert",
           "freundin",
           "spaetere",
-          "laedt"
+          "speichert"
         ]
       },
       {
@@ -1329,6 +1329,52 @@
         ]
       },
       {
+        "lessonId": "a1-17",
+        "level": "A1",
+        "pct": 39.6,
+        "unknown": [
+          "nora",
+          "habt",
+          "fahrradtour",
+          "sami",
+          "mei",
+          "nachmittag",
+          "jonas",
+          "fahrrad",
+          "park",
+          "spazieren",
+          "mehreren",
+          "nachrichten",
+          "aendern",
+          "stadtparks",
+          "stunde",
+          "viertelstunde"
+        ]
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "pct": 39.5,
+        "unknown": [
+          "agentur",
+          "urspruenglich",
+          "geplante",
+          "lieferung",
+          "bereitzustellen",
+          "projektteam",
+          "abzulehnen",
+          "verkuerzten",
+          "vollstaendige",
+          "unveraenderter",
+          "qualitaet",
+          "reihenfolge",
+          "formulierte",
+          "option",
+          "sah",
+          "restlichen"
+        ]
+      },
+      {
         "lessonId": "b2-17",
         "level": "B2",
         "pct": 39.4,
@@ -1372,52 +1418,6 @@
           "ueberarbeitete",
           "lautete",
           "fuehrte"
-        ]
-      },
-      {
-        "lessonId": "a1-17",
-        "level": "A1",
-        "pct": 38.5,
-        "unknown": [
-          "nora",
-          "habt",
-          "fahrradtour",
-          "sami",
-          "mei",
-          "nachmittag",
-          "jonas",
-          "fahrrad",
-          "park",
-          "spazieren",
-          "mehreren",
-          "nachrichten",
-          "aendern",
-          "stadtparks",
-          "stunde",
-          "vorher"
-        ]
-      },
-      {
-        "lessonId": "b2-04",
-        "level": "B2",
-        "pct": 38.4,
-        "unknown": [
-          "agentur",
-          "urspruenglich",
-          "geplante",
-          "lieferung",
-          "bereitzustellen",
-          "projektteam",
-          "abzulehnen",
-          "verkuerzten",
-          "vollstaendige",
-          "unveraenderter",
-          "qualitaet",
-          "reihenfolge",
-          "formulierte",
-          "option",
-          "sah",
-          "restlichen"
         ]
       },
       {
@@ -1510,6 +1510,29 @@
           "startseite",
           "verantwortliche",
           "antwortzeit"
+        ]
+      },
+      {
+        "lessonId": "b2-18",
+        "level": "B2",
+        "pct": 37.3,
+        "unknown": [
+          "sprechstunde",
+          "las",
+          "ben",
+          "derselben",
+          "genommen",
+          "lehnen",
+          "beiden",
+          "saetzen",
+          "hoeflichkeit",
+          "etappe",
+          "registriert",
+          "worden",
+          "behoerde",
+          "schroff",
+          "kessler",
+          "verneinte"
         ]
       },
       {
@@ -1697,29 +1720,6 @@
         ]
       },
       {
-        "lessonId": "b2-18",
-        "level": "B2",
-        "pct": 36,
-        "unknown": [
-          "sprechstunde",
-          "las",
-          "ben",
-          "derselben",
-          "genommen",
-          "lehnen",
-          "beiden",
-          "saetzen",
-          "hoeflichkeit",
-          "etappe",
-          "registriert",
-          "worden",
-          "behoerde",
-          "schroff",
-          "kessler",
-          "verneinte"
-        ]
-      },
-      {
         "lessonId": "a2-21",
         "level": "A2",
         "pct": 35.9,
@@ -1809,29 +1809,6 @@
           "interessant",
           "gewuenschten",
           "protokoll"
-        ]
-      },
-      {
-        "lessonId": "b2-13",
-        "level": "B2",
-        "pct": 34.3,
-        "unknown": [
-          "pilotprojekts",
-          "beiden",
-          "kursen",
-          "ging",
-          "privater",
-          "nachrichtenmeldungen",
-          "arbeitsphasen",
-          "lernerfolge",
-          "entwickelten",
-          "stieg",
-          "trefferquote",
-          "hoerverstehen",
-          "projektleitung",
-          "allgemeinen",
-          "verwies",
-          "unterschieden"
         ]
       },
       {
@@ -1948,6 +1925,29 @@
         ]
       },
       {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "pct": 33.3,
+        "unknown": [
+          "pilotprojekts",
+          "beiden",
+          "kursen",
+          "ging",
+          "privater",
+          "arbeitsphasen",
+          "lernerfolge",
+          "entwickelten",
+          "stieg",
+          "trefferquote",
+          "hoerverstehen",
+          "projektleitung",
+          "allgemeinen",
+          "verwies",
+          "unterschieden",
+          "beginn"
+        ]
+      },
+      {
         "lessonId": "a2-10",
         "level": "A2",
         "pct": 32.8,
@@ -1968,6 +1968,29 @@
           "lang",
           "spaeteren",
           "direktzug"
+        ]
+      },
+      {
+        "lessonId": "b2-16",
+        "level": "B2",
+        "pct": 32.7,
+        "unknown": [
+          "anklage",
+          "aufschreibt",
+          "schiefging",
+          "schuldigen",
+          "steckt",
+          "grammatik",
+          "ueberflogen",
+          "inhalt",
+          "gelesen",
+          "haette",
+          "entglitten",
+          "gangbar",
+          "betrifft",
+          "fremde",
+          "kursleiter",
+          "pech"
         ]
       },
       {
@@ -2037,29 +2060,6 @@
           "klingen",
           "beschlossen",
           "mitglied"
-        ]
-      },
-      {
-        "lessonId": "b2-16",
-        "level": "B2",
-        "pct": 31.8,
-        "unknown": [
-          "anklage",
-          "aufschreibt",
-          "schiefging",
-          "schuldigen",
-          "steckt",
-          "grammatik",
-          "ueberflogen",
-          "inhalt",
-          "gelesen",
-          "haette",
-          "entglitten",
-          "gangbar",
-          "betrifft",
-          "fremde",
-          "kursleiter",
-          "pech"
         ]
       },
       {
@@ -2224,6 +2224,29 @@
         ]
       },
       {
+        "lessonId": "b2-19",
+        "level": "B2",
+        "pct": 27.8,
+        "unknown": [
+          "forum",
+          "studienberatung",
+          "ben",
+          "mitarbeiter",
+          "antwortete",
+          "spam",
+          "gelandet",
+          "diesmal",
+          "april",
+          "unbeantwortet",
+          "erteilt",
+          "beiden",
+          "saetzen",
+          "neuer",
+          "inhalt",
+          "zugleich"
+        ]
+      },
+      {
         "lessonId": "a2-13",
         "level": "A2",
         "pct": 27.4,
@@ -2280,7 +2303,6 @@
           "aehnelte",
           "eher",
           "wunschzettel",
-          "frueher",
           "unregelmaessigen",
           "entwickelte",
           "genaueres",
@@ -2289,7 +2311,8 @@
           "prueft",
           "woechentlich",
           "laenge",
-          "sonntags"
+          "sonntags",
+          "stagniert"
         ]
       },
       {
@@ -2313,29 +2336,6 @@
           "kleinere",
           "bahnanschluss",
           "zahlt"
-        ]
-      },
-      {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "pct": 25.8,
-        "unknown": [
-          "forum",
-          "studienberatung",
-          "ben",
-          "mitarbeiter",
-          "antwortete",
-          "spam",
-          "gelandet",
-          "diesmal",
-          "april",
-          "unbeantwortet",
-          "erteilt",
-          "beiden",
-          "saetzen",
-          "neuer",
-          "inhalt",
-          "zugleich"
         ]
       },
       {

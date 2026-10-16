@@ -364,7 +364,7 @@ export const b2Module3Lessons: FullLesson[] = [
  { lemma: "zuschreiben", surfaceForm: "zugeschrieben", ar: "ينسب إلى" },
  { lemma: "Umbau", surfaceForm: "Umbauten", ar: "إعادة تهيئة" }, { lemma: "beschatten", surfaceForm: "beschattete", ar: "يظلّل" },
  { lemma: "unbeschattet", surfaceForm: "unbeschattete", ar: "غير مظلّل" },
- { lemma: "erwärmen", surfaceForm: "erwärmen", ar: "يسخين" },
+ { lemma: "erwärmen", surfaceForm: "erwärmen", ar: "يسخن" },
  { lemma: "thermisch", surfaceForm: "thermischer", ar: "حراري" },
  { lemma: "Satellitenbild", surfaceForm: "Satellitenbildern", ar: "صورة قمر صناعي" },
  { lemma: "mittels", surfaceForm: "mittels", ar: "بواسطة" },

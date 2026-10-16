@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `affebd9d564886f516c842f06859c594bd611a2df3d5957e80ccde4aaf71a996`
+Content SHA-256: `3e72121037ce1768718a90e9c364261261b9843ac2584b613d38366b8e5d5a08`
 
 ## Result
 
@@ -390,11 +390,11 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching includes entry
 | `b2-19-objective-2` | Ich kann mit „ja“, „eben“ und „halt“ geteiltes Wissen oder Unvermeidlic… | أُبدي علمًا مشتركًا ب «ja» أو حتمًا ب «eben/halt». | 7 · `b2-19:entry`, `b2-19:vocabulary` | 17 | 5 · `b2-19-m1` | covered |
 | `b2-19-objective-3` | Ich kann „mal“, „ruhig“, „etwa“, „wohl“ und „eigentlich“ in Bitte und F… | أضع أدوات الطلب والسؤال في موضعها الوظيفي لا الزخرفي. | 7 · `b2-19:entry`, `b2-19:vocabulary` | 17 | 5 · `b2-19-m1` | covered |
 | `b2-19-objective-4` | Ich kann entscheiden, welche Partikel in einer schriftlichen Beschwerde… | أقرّر أيّ أداة يجب أن تغيب في شكوى مكتوبة. | 7 · `b2-19:entry`, `b2-19:vocabulary` | 17 | 5 · `b2-19-m1` | covered |
-| `b2-20-objective-1` | Ich kann nach „je“ das Verb vor dem zweiten Teil stellen und den Vergle… | أضع الفعل قبل الجزء الثاني بعد «je» وأختصر جملة المقارنة في البداية. | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
+| `b2-20-objective-1` | Ich kann „je …, desto …“ mit dem Verb am Ende des je-Teils und dem Verb… | أبني «je …, desto …» بفعل في آخر جزء je وفعل يلي «desto» مع صيغة المقار… | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
 | `b2-20-objective-2` | Ich kann den Schwerpunkt mit „nicht nur …, sondern auch“ so setzen, das… | أضع الثقل في «nicht nur …, sondern auch» بحيث يحمل الجزء الثاني المعلوم… | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
 | `b2-20-objective-3` | Ich kann bei „sowohl … als auch“ den Numerus des Verbs und die Aufzählu… | أفحص عدد الفعل والتوازي في العناصر عند «sowohl … als auch». | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
 | `b2-20-objective-4` | Ich kann „zwar …, aber …“ von „zwar …, jedoch …“ unterscheiden und die … | أميّز «zwar …, aber» عن «zwar …, jedoch» وأُتبع «weder … noch» صحيحًا. | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
-| `b2-20-objective-5` | Ich kann in einem Prüfungstext vier bis sechs bewusste Konnektoren setz… | أضع أربعة إلى ستة روابط مُصمَّدة في نص الامتحان وأحذف الحشو التركيبي. | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
+| `b2-20-objective-5` | Ich kann in einem Prüfungstext vier bis sechs bewusste Konnektoren setz… | أضع أربعة إلى ستة روابط مقصودة في نص الامتحان وأحذف الحشو التركيبي. | 7 · `b2-20:entry`, `b2-20:vocabulary` | 18 | 5 · `b2-20-m1` | covered |
 | `b2-21-objective-1` | Ich kann direkte Zitate in berichtete Rede umformen, ohne den Sinn zu v… | أُعيد صياغة الاقتباس المباشر نقلًا غير مباشر دون إزاحة المعنى. | 7 · `b2-21:entry`, `b2-21:vocabulary` | 18 | 5 · `b2-21-m1` | covered |
 | `b2-21-objective-2` | Ich kann die gängigen Konjunktiv-I-Formen bilden und ihre Zeitstufe bes… | أُكوّن صيغ النقل الشائعة وأحدّد مستوى زمنها. | 7 · `b2-21:entry`, `b2-21:vocabulary` | 18 | 5 · `b2-21-m1` | covered |
 | `b2-21-objective-3` | Ich erkenne Formgleichheit mit dem Indikativ und wähle eine Ersatzform. | أميّز التطابق مع الإخبار فأختار بديلًا صالحًا. | 7 · `b2-21:entry`, `b2-21:vocabulary` | 18 | 5 · `b2-21-m1` | covered |
@@ -403,15 +403,15 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching includes entry
 | `b2-22-objective-1` | Ich kann Partizip I und II als Attribut korrekt deklinieren. | أُعرِب الوصف باسم الفاعل والمفعول نعتًا إعرابًا صحيحًا. | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
 | `b2-22-objective-2` | Ich kann erweiterte Attribute mit Kommas abgrenzen. | أفصل الوصف الموسَّع بفواصل صحيحة. | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
 | `b2-22-objective-3` | Ich löse enge Attribute in Relativsätze auf, wenn das Verstehen es verl… | أُحلّل النعت المضغوط إلى جملة موصولة حين يقتضي الفهم. | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
-| `b2-22-objective-4` | Ich unterscheide aktive, passive und zukünftige Bedeutung im Attribut. | أميّز دلالة الحال والاسم والماضي في الوصف. | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
+| `b2-22-objective-4` | Ich unterscheide aktive, passive und zukünftige Bedeutung im Attribut. | أميّز في النعت الدلالة الفاعلة والمفعولة والمستقبلية (zu + Partizip I). | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
 | `b2-22-objective-5` | Ich vermeide Verschachtelung, die den Lesefaden abbricht. | أتجنّب التعشيش الذي يقطع خيط القراءة. | 7 · `b2-22:entry`, `b2-22:vocabulary` | 18 | 5 · `b2-22-m1` | covered |
-| `b2-23-objective-1` | Ich bestimme Grundwort und Bestimmungswort in langen Komposita. | أحدّد اسم الجنس والمحدِّد في المركّبات الطويلة. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
+| `b2-23-objective-1` | Ich bestimme Grundwort und Bestimmungswort in langen Komposita. | أحدّد الكلمة الأساسية والكلمة المحدِّدة في المركّبات الطويلة. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
 | `b2-23-objective-2` | Ich löse Genitivketten in Beziehungen auf und ordne sie richtig zu. | أُحلّل سلاسل الإضافة إلى علاقات وأنسبها صحيحًا. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
 | `b2-23-objective-3` | Ich schreibe Komposita zusammen oder mit Bindestrich, nie mit Leerzeich… | أكتب المركّب متّصلًا أو بشرطة، ولا أفصله بمسافة. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
-| `b2-23-objective-4` | Ich erkenne die Zweiheit eines Genitivs (wer handelt, wer leidet). | أميّز وجهَي الإضافة: فاعلٌ ومفعولٌ به. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
-| `b2-23-objective-5` | Ich entscheide beim Lesen, wann eine Kette ein Verb braucht. | أقرّر عند القراءة متى استبدلت السلسلةُ فعلًا. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
+| `b2-23-objective-4` | Ich erkenne, ob ein Genitiv den Handelnden oder den Betroffenen nennt. | أميّز وجهَي الإضافة: فاعلٌ ومفعولٌ به. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
+| `b2-23-objective-5` | Ich entscheide beim Lesen, wann eine Kette ein Verb braucht. | أقرّر عند القراءة متى تحتاج السلسلة إلى فعل. | 7 · `b2-23:entry`, `b2-23:vocabulary` | 18 | 5 · `b2-23-m1` | covered |
 | `b2-24-objective-1` | Ich setze Komma vor Nebensätzen und schließe die rechte Klammer. | أضع الفاصلة قبل الجملة الجانبية وأُغلق القوس الأيمن. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |
 | `b2-24-objective-2` | Ich kenne die Pflichtkommata bei erweiterten Infinitivgruppen. | أعرف الفواصل الإلزامية مع مجموعات المصدر الممتدّة. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |
 | `b2-24-objective-3` | Ich trenne gleichrangige Hauptsätze korrekt mit Punkt, Semikolon oder K… | أفصل الجمل المستقلة المتكافئة بنقطة أو فاصلة منقوطة أو فاصلة. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |
-| `b2-24-objective-4` | Ich vermeide Kommas, die Subjekt und Prädikat trennen. | أتجنّب فواصل تفصل المسند عن مسند إليه. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |
+| `b2-24-objective-4` | Ich vermeide Kommas, die Subjekt und Prädikat trennen. | أتجنّب فواصل تفصل المسند إليه عن المسند. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |
 | `b2-24-objective-5` | Ich prüfe meinen Text mit einer zweistufigen Kontrolle vor der Abgabe. | أفحص نصّي بخطوتين قبل التسليم: الأقواس والأفعال. | 7 · `b2-24:entry`, `b2-24:vocabulary` | 18 | 5 · `b2-24-m1` | covered |

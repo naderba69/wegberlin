@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v216 · 2026-10-16 · مراجعة المحادثات المتفرعة الثماني ووحدات طبقة التمريض الأربع عشرة سطرًا سطرًا: 27 تعديلًا (منها نهايتان لا تطابقان مسار الإصلاح وشرح خاطئ لـ halb sieben)؛ كاش v216، بناء 89028bed52d7.
+Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

@@ -6,11 +6,11 @@
   "items": [
     {
       "id": "lib-l-b1-01-q1",
-      "explanationAr": "النص: «Problematisch ist der fehlende sichere Abstellplatz.» تشكو المتحدثة من غياب موقف آمن للدراجة، فالجواب: Kein sicherer Abstellplatz."
+      "explanationAr": "النص: «Problematisch ist der fehlende sichere Abstellplatz.» يشكو بن من غياب موقف آمن للدراجة، فالجواب: Kein sicherer Abstellplatz."
     },
     {
       "id": "lib-l-b1-01-q2",
-      "explanationAr": "النص: «für jeden Tag eine passende Alternative zu haben» هدفه أن تكون لديه بديل مناسب لكل يوم، فالجواب: Für jeden Tag eine passende Alternative haben."
+      "explanationAr": "النص: «für jeden Tag eine passende Alternative zu haben» هدفه أن يكون لديه بديل مناسب لكل يوم، فالجواب: Für jeden Tag eine passende Alternative haben."
     },
     {
       "id": "lib-l-b1-02-q1",
@@ -26,7 +26,7 @@
     },
     {
       "id": "lib-l-b1-03-q2",
-      "explanationAr": "النص: «Über die endgültige Einteilung entscheiden wir erst, wenn morgen alle Verfügbarkeiten vorliegen» التقسيم ليس نهائيًا بعد لأن التوفر لم يكتمل، فالجواب: Nein، التوفر ناقص."
+      "explanationAr": "النص: «Über die endgültige Einteilung entscheiden wir erst, wenn morgen alle Verfügbarkeiten vorliegen» التقسيم ليس نهائيًا بعد لأن التوفر لم يكتمل، فالجواب: Nein, Verfügbarkeiten fehlen."
     },
     {
       "id": "lib-l-b1-04-q1",
@@ -58,7 +58,7 @@
     },
     {
       "id": "lib-l-b1-07-q2",
-      "explanationAr": "النص: «ob Online- und Raumgruppe gleich oft zu Wort kamen» تتحقق منى من تساوي عدد المتحدثين من المجموعتين، فالجواب: توزيع الكلمات بين المجموعات."
+      "explanationAr": "النص: «ob Online- und Raumgruppe gleich oft zu Wort kamen» تتحقق مارا هل حصلت المجموعتان على فرص كلام متساوية، فالجواب: توزيع المداخلات بين المجموعتين."
     },
     {
       "id": "lib-l-b1-08-q1",
@@ -86,11 +86,11 @@
     },
     {
       "id": "lib-l-b1-11-q1",
-      "explanationAr": "النص: «Ich meinte nur die Grafik auf Seite vier.» قصد جوناس النقد للرسم البياني في الصفحة الرابعة فقط، فالجواب: Nur die Grafik auf Seite vier."
+      "explanationAr": "النص: «Ich meinte nur die Grafik auf Seite vier.» كان جوناس يقصد الرسم البياني في الصفحة الرابعة فقط، فالجواب: Nur die Grafik auf Seite vier."
     },
     {
       "id": "lib-l-b1-11-q2",
-      "explanationAr": "النص: «Ich ändere die Grafik bis morgen» سيغيّر الرسم البياني غدًا ويذكر ما يبقى، فالجواب: تغيير الرسم وذكر ما يبقى."
+      "explanationAr": "النص: «Ich ändere die Grafik bis morgen» سيغيّر الرسم البياني حتى الغد ويذكر ما يبقى، فالجواب: تغيير الرسم وذكر ما يبقى."
     },
     {
       "id": "lib-l-b1-12-q1",

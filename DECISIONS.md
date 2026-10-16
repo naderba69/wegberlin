@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v216 · 2026-10-16 · مراجعة المحادثات المتفرعة الثماني ووحدات طبقة التمريض الأربع عشرة سطرًا سطرًا: 27 تعديلًا (منها نهايتان لا تطابقان مسار الإصلاح وشرح خاطئ لـ halb sieben)؛ كاش v216، بناء 89028bed52d7.
+Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

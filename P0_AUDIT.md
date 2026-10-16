@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v216 · 2026-10-16 · مراجعة المحادثات المتفرعة الثماني ووحدات طبقة التمريض الأربع عشرة سطرًا سطرًا: 27 تعديلًا (منها نهايتان لا تطابقان مسار الإصلاح وشرح خاطئ لـ halb sieben)؛ كاش v216، بناء 89028bed52d7.
+Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

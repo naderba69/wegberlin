@@ -273,7 +273,7 @@ export const b2Module6Lessons: FullLesson[] = [
  { de: "der Anbieterform treu bleiben", ar: "يلتزم بصيغة الجهة المختارة" },
  ],
  discovery: {
- instructionAr: "صنف أفعال البروفة إلى ضروري لإكمال المهمة، مهم لتحسين الحجة، وتجميل منخفض العائد. اربط كل معلومة من المصدر بوظيفتها لا بترتيب ظهورها.",
+ instructionAr: "صنف خطوات البروفة إلى ضروري لإكمال المهمة، مهم لتحسين الحجة، وتجميل منخفض العائد. اربط كل معلومة من المصدر بوظيفتها لا بترتيب ظهورها.",
  examples: [
  "Pflicht: alle Teilaufträge beantworten und eine klare Position nennen.",
  "Wirkung: einen Einwand aus der Quelle fair einordnen.",
@@ -451,7 +451,7 @@ export const b2Module6Lessons: FullLesson[] = [
  objectives:[{de:"Ich kann meine These nach Maßgabe der Belege begrenzen.",ar:"أقيّد أطروحتي بقدر ما يحمله الدليل."},{de:"Ich kann Alternativerklärungen benennen.",ar:"أذكر التفسيرات البديلة المحتملة."},{de:"Ich kann eine begründete Revision formulieren.",ar:"أصيغ تراجعًا مُعلَّلًا عن جزء من موقفي."},{de:"Ich kann ein Falsifikationskriterium nennen.",ar:"أذكر معيارًا يثبت خطأ موقفي."}],
  entry:{titleAr:"الرجوع عن الرأي ليس هزيمة",sceneAr:"بعد أسبوعين من تجربة قاعدة الهواتف، تظهر نتائج لا تؤيد كل ما دافعت عنه ليّا. بدل إنكار البيانات أو التمسك بالرأي، تعيد صياغة موقفها بدقة: ماذا يبقى، وما يسقط، وما يبقى مفتوحًا.",dialogue:[{speaker:"Lea",de:"Die Unterbrechungen sind tatsächlich gesunken, aber die Lernerfolge nur in einer der zwei Gruppen.",ar:"انخفضت المقاطعات فعلًا، لكن نتائج التعلم تحسنت في مجموعة واحدة فقط من المجموعتين."},{speaker:"Ben",de:"Widerrufst du deinen Vorschlag?",ar:"هل تسحبين اقتراحك؟"},{speaker:"Lea",de:"Nicht vollständig. Die Regel für stille Arbeitsphasen behalte ich, weil der Beleg dort konsistent ist. Für Audioaufgaben muss ich meine Forderung abschwächen: Die Daten zeigen keinen Vorteil.",ar:"ليس كليًا. أُبقي على قاعدة فترات العمل الصامت لاتساق الدليل، وأُضعف مطلبي في مهام الصوت لأن البيانات لا تُظهر فائدة."},{speaker:"Ben",de:"Was bleibt offen?",ar:"وما الذي يبقى مفتوحًا؟"},{speaker:"Lea",de:"Ob der Effekt nach acht Wochen trägt. Das wäre mein Kriterium: Bleibt der Unterschied aus, nehme ich die Regel zurück.",ar:"هل يستمر الأثر بعد ثمانية أسابيع؟ هذا معياري: إن لم يظهر الفرق، سحبتُ القاعدة."}]},
  phrases:[{de:"die eigene Position überprüfen",ar:"يراجع موقفه"},{de:"eine Einschränkung vornehmen",ar:"يُدخِل تقييدًا"},{de:"die Reichweite begrenzen",ar:"يحدّ نطاق الاستنتاج"},{de:"den Beleg ernst nehmen",ar:"يأخذ الدليل بجدية"},{de:"eine Alternative erklären",ar:"يشرح تفسيرًا بديلًا"},{de:"ein Falsifikationskriterium nennen",ar:"يذكر معيار دحض"},{de:"teilweise zurückrudern",ar:"يتراجع جزئيًا",noteAr:"تعبير غير رسمي؛ في النص الكتابي استخدم: meine Position einschränken."},{de:"die Datenlage ändert nichts an …",ar:"لا تُغيّر المعطيات في…"},{de:"die Schlussfolgerung korrigieren",ar:"يصحّح الاستنتاج"},{de:"ein Ergebnis reproduzieren",ar:"يكرّر الدراسة فيحصل على النتيجة نفسها"},{de:"eine Verzerrung ausschließen",ar:"يستبعد الانحياز"},{de:"die Stichprobe war zu klein",ar:"كانت العينة صغيرة جدًا"},{de:"Korrelation ist keine Kausalität",ar:"الترابط ليس سببية"},{de:"der Effekt verschwand",ar:"اختفى الأثر"},{de:"unter kontrollierten Bedingungen",ar:"في ظروف مضبوطة"},{de:"Ich bleibe beim Ziel, ändere den Weg.",ar:"أتمسّك بالهدف وأغيّر الطريق."},{de:"Sollte X eintreten, ziehe ich Y zurück.",ar:"إن تحقق س أتراجع عن ص."},{de:"Die Evidenz reicht für …, nicht für …",ar:"الدليل يكفي ل… ولا يكفي ل…"}],
- discovery:{instructionAr:"صنّف كل جملة: أطيروح تبقى كما هي، أم تُقيَّد، أم تُسحب؟ ثم حدد ما الذي جعلك تقرر.",examples:["bleibt: In stillen Phasen sank die Zahl privater Unterbrechungen konsistent.","eingeschränkt: Der Vorteil bei Audioaufgaben zeigt sich nur in einer Gruppe.","zurückgezogen: Eine generelle Regel für alle Kurse lässt sich nicht begründen.","offen: Die Wirkung nach acht Wochen ist nicht gemessen.","Kriterium: Bleibt der Unterschied aus, entfällt die Regelung."],questionsAr:["ما الدليل الذي جعلك تغيّر الرأي بالتحديد؟","هل تسحب الأطروحة كلها أم جزءًا منها؟","ما القياس الذي كان سينهي الجدال؟"]},
+ discovery:{instructionAr:"صنّف كل جملة: أطروحة تبقى كما هي، أم تُقيَّد، أم تُسحب؟ ثم حدد ما الذي جعلك تقرر.",examples:["bleibt: In stillen Phasen sank die Zahl privater Unterbrechungen konsistent.","eingeschränkt: Der Vorteil bei Audioaufgaben zeigt sich nur in einer Gruppe.","zurückgezogen: Eine generelle Regel für alle Kurse lässt sich nicht begründen.","offen: Die Wirkung nach acht Wochen ist nicht gemessen.","Kriterium: Bleibt der Unterschied aus, entfällt die Regelung."],questionsAr:["ما الدليل الذي جعلك تغيّر الرأي بالتحديد؟","هل تسحب الأطروحة كلها أم جزءًا منها؟","ما القياس الذي كان سينهي الجدال؟"]},
  theory:[
  {id:"b2-13-t1",titleDe:"Evidenzgrad bestimmt Reichweite",titleAr:"قوة الدليل تحدد مدى القول",explanationAr:"العبارة الصحيحة تأخذ مداها من الدليل: نتائج مجموعتين تدعمان «في هاتين المجموعتين»، لا «في كل الدورات». استعمل صيغ التدرّج: deuten darauf hin، sprechen dafür، belegen, lassen sich nicht verallgemeinern. ثم اذكر صراحةً ما لا تدعمه البيانات.",contrastAr:"في العربية الأكاديمية تُستعمل صيغ الجزم مثل «أثبتت الدراسات» كثيرًا؛ نقلها حرفيًا إلى الألمانية يرفع الادعاء فوق الدليل. وفي الكتابة العلمية الألمانية يُتوقَّع ذكر القيود صراحةً.",formula:"Belegumfang → zulässige Aussage → offene Frage",examples:[{de:"Die Daten deuten auf weniger Unterbrechungen hin.",ar:"تشير المعطيات إلى مقاطعات أقل."},{de:"Das belegt keinen Lerneffekt.",ar:"هذا لا يثبت أثرًا تعلميًا."},{de:"Für diese zwei Kurse gilt der Vorteil.",ar:"الفائدة ثابتة لهاتين الدورتين."},{de:"Eine Verallgemeinerung ist nicht gerechtfertigt.",ar:"التعميم غير مُسوَّغ."},{de:"Offen bleibt die langfristige Wirkung.",ar:"يبقى الأثر طويل المدى مفتوحًا."},{de:"Die Evidenz reicht für eine Testphase, nicht für eine Dauerregel.",ar:"الدليل يكفي لتجربة لا لقاعدة دائمة."}],trickAr:"اكتب بعد كل نتيجة: من؟ ماذا؟ لأي مدة؟ وما الذي لم يُقَس؟"},
  {id:"b2-13-t2",titleDe:"Alternativerklärungen mitdenken",titleAr:"احسب التفسيرات البديلة",explanationAr:"قبل أن تنسب التغيير إلى سببك، اذكر تفسيرين بديلين على الأقل: توقيت موازٍ، أو فرق بين المجموعتين، أو أثر المراقبة، أو قياس غير مباشر. ثم بيّن أيّ هذه التفسيرات تستبعده بياناتك وأيّها يبقى مفتوحًا؛ فيصير القول أضيق لكنه أسهل في الدفاع عنه.",contrastAr:"ذكر التفسير البديل ليس ضعفًا في الحجة، بل هو معيار الدقة في النقاش الألماني؛ والخطوة التالية أن تذكر القياس الذي يمكن أن يدحض تفسيرك.",formula:"Befund → konkurrierende Erklärung → prüfbares Kriterium",examples:[{de:"Der Rückgang könnte an der Prüfungsvorbereitung liegen.",ar:"قد يعود الانخفاض للتحضير للامتحان."},{de:"Beide Gruppen unterschieden sich bereits im Niveau.",ar:"اختلف مستوى المجموعتين أصلًا."},{de:"Allein die Beobachtung kann Verhalten ändern.",ar:"قد تغيّر المراقبةُ ذاتها السلوك."},{de:"Ein Vergleich über acht Wochen würde das prüfen.",ar:"مقارنة على مدى ثمانية أسابيع تختبر ذلك."},{de:"Unsere Daten schließen diesen Faktor nicht aus.",ar:"بياناتنا لا تستبعد هذا العامل."},{de:"Deshalb formuliere ich korrelativ, nicht kausal.",ar:"لذلك أصيغ ترابطًا لا سببية."}],trickAr:"اذكر بديلين، ثم قل أيهما تستبعد ولماذا — ولا تدّعِ استبعاد ما لم تُختبر."},
@@ -474,7 +474,7 @@ export const b2Module6Lessons: FullLesson[] = [
  objectives:[{de:"Ich kann einen Textabschnitt mit klaren Verweisketten zusammenhalten.",ar:"أُحكم سلاسل الإحالة داخل الفقرة."},{de:"Ich kann Konnektoren nach ihrer logischen Funktion wählen.",ar:"أختار الروابط بحسب وظيفتها المنطقية."},{de:"Ich kann Nominalisierung gezielt einsetzen.",ar:"أستعمل الأسلوب الاسمي في موضعه."},{de:"Ich kann einen eigenen Text auf Kohäsion prüfen und überarbeiten.",ar:"أراجع نصي نفسه وأصلح تماسكه."}],
  entry:{titleAr:"فقرة صحيحة قواعدًا، ضعيفة القراءة",sceneAr:"مساعد إداري يقرأ مسودة طلب تمديد: كل جملة صحيحة وحدَها، لكن القارئ يضيع لأن «dieses» لا يعرف أحد إلى ماذا يعود، والروابط تتكرر بلا معنى. معًا يعيدان خياطة النص.",dialogue:[{speaker:"Herr Aziz",de:"Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",ar:"طلبك سليم لغويًا، لكن عليّ أن أقرأه مرتين لأفهم ما الذي يعنيه «dieses»."},{speaker:"Ben",de:"Ich hatte doch im ersten Satz die Frist genannt. Sollte ich sie wiederholen? Das klingt doch nach Wiederholung.",ar:"كنت ذكرت الأجل في الجملة الأولى؛ هل أُكرره؟ سيبدو تكرارًا."},{speaker:"Herr Aziz",de:"Wiederholung ist nicht das Problem. Das Problem ist die Kette: jeder Verweis muss eindeutig sein, und jeder Konnektor muss die Relation zeigen, statt den Satz nur zu schmücken.",ar:"التكرار ليس المشكلة؛ المشكلة في السلسلة: كل إحالة يجب أن تكون واضحة لا لبس فيها، وكل رابط يجب أن يبيّن العلاقة لا أن يزيّن الجملة."},{speaker:"Ben",de:"Also: Frist nennen, dann «diese Frist» schreiben, statt «dieses».",ar:"إذن: أذكر الأجل ثم أكتب «diese Frist» بدل «dieses»."},{speaker:"Herr Aziz",de:"Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",ar:"بالضبط. وإن قارنتَ إجراءين يصلح «während»، وللسبب «weil»، وللنتيجة «folglich» أو «dadurch»."}]},
  phrases:[{de:"den Text zusammenhalten",ar:"يحافظ على تماسك النص"},{de:"die Verweiskette",ar:"سلسلة الإحالة"},{de:"eindeutig verweisen",ar:"يُحيل بوضوح لا لبس فيه"},{de:"auf etwas zurückverweisen",ar:"يعيد الإشارة إلى شيء"},{de:"der Bezug ist unklar",ar:"المرجع غير واضح"},{de:"ein Bezugswort wiederholen",ar:"يكرر كلمة المرجع"},{de:"den roten Faden verlieren",ar:"يفقد خيط الموضوع"},{de:"ein Konjunktionaladverb benutzen",ar:"يستعمل ظرفًا رابطًا"},{de:"dadurch, dass …",ar:"بأن… (وسيلة)"},{de:"wodurch …",ar:"وبذلك…"},{de:"während … (Vergleich)",ar:"بينما… (مقارنة)"},{de:"im Gegensatz dazu",ar:"بخلاف ذلك"},{de:"mit anderen Worten",ar:"بعبارة أخرى"},{de:"das heißt",ar:"أي أن"},{de:"somit / folglich",ar:"وبالتالي"},{de:"dennoch / gleichwohl",ar:"مع ذلك"},{de:"eine Nominalisierung vornehmen",ar:"يحوّل الفعل إلى اسم"},{de:"den Lesefluss unterbrechen",ar:"يقطع انسياب القراءة"}],
- discovery:{instructionAr:"اقرأ الفقرة التالية وحدّد: إلى أي اسم يعود كل ضمير أو إشارة؟ اكتب الكلمة الواضحة مكان الغامض، ثم اذكر أي رابط يمكن حذفه دون خسارة معنى.",examples:["«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)","«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» bezieht sich auf den Antrag oder die Frist?","«Außerdem … Außerdem … Außerdem …» → Reihung ohne Relation","«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied"],questionsAr:["أي إشارة تفقد السلسلة عندها؟","أي رابط يعبّر عن العلاقة فعلًا: سبب، نتيجة، تقابل، وسيلة؟","متى تكون الجملة الاسمية أثقل من الفعلية؟"]},
+ discovery:{instructionAr:"اقرأ المقاطع التالية وحدّد: إلى أي اسم يعود كل ضمير أو إشارة؟ اكتب الكلمة الواضحة مكان الغامض، ثم اذكر أي رابط يمكن حذفه دون خسارة معنى.",examples:["«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)","«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»","«Außerdem … Außerdem … Außerdem …» → Reihung ohne Relation","«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied"],questionsAr:["أي إشارة تفقد السلسلة عندها؟","أي رابط يعبّر عن العلاقة فعلًا: سبب، نتيجة، تقابل، وسيلة؟","متى تكون الجملة الاسمية أثقل من الفعلية؟"]},
  theory:[
  {id:"b2-14-t1",titleDe:"Verweisketten statt Pronomen-Roulette",titleAr:"سلاسل إحالة لا يانصيب الضمائر",explanationAr:"كل الضمائر وأسماء الإشارة (er/sie/es، dieser، jener، derselbe) تحتاج مرجعًا واحدًا لا يحتمل الشك. الأدوات: أن يُكرَّر اسم المرجع أو يُستبدل بكلمة أعمّ (das Verfahren، der Vorgang، diese Frist)، وأن تُبقي الجنس والعدد واضحين بين جملتين متجاورتين. فإذا احتمل الضمير مرجعين، فقد القارئ الخيط — لا بسبب النحو، بل بسبب ترابط النص.",contrastAr:"في العربية تحمل أسماء الإشارة (هذا، هذه) والضمائر السلسلةَ عبر جمل كثيرة، والحذف مألوف أسلوبيًا؛ أما في الألمانية فيجب أن تبقى سلسلة الإحالة ظاهرة بوضوح. ومن يترجم «هذا» آليًا بـ «dieses» قد ينتج جملة ألمانية بلا مرجع واضح.",formula:"Bezugswort → Signalwort (diese/r/s) → gegebenenfalls Oberbegriff",examples:[{de:"die Bearbeitungszeit. Diese Frist gilt ab Zugang des Bescheids.",ar:"أجل المعالجة. هذا الأجل يسري من تاريخ التبليغ."},{de:"Das Verfahren wurde geändert; der Vorgang dauerte dennoch vier Wochen.",ar:"غُيّر الإجراء؛ ومع ذلك استغرق الأمر أربعة أسابيع."},{de:"Er stellte einen Antrag. Dieser Antrag war unvollständig.",ar:"قدّم طلبًا. هذا الطلب كان ناقصًا."},{de:"Zwei Termine standen zur Wahl, von denen der zweite günstiger war.",ar:"كان موعدان مطروحين للاختيار، وكان الثاني منهما أنسب."},{de:"Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",ar:"خطأ: لا يُعرف هل يعود «er» على الموعد أم على الطلب، فكلاهما مذكّر."},{de:"Notfalls: «die zweite Möglichkeit» statt eines bloßen Fürworts.",ar:"عند اللزوم: «die zweite Möglichkeit» بدل ضمير غامض."}],trickAr:"ضع تحت كل ضمير سؤالًا: إلى أي كلمة يعود بالضبط؟ إن وجدت جوابين، فاكتب الاسم مرة أخرى."},
  {id:"b2-14-t2",titleDe:"Konnektoren zeigen die Relation",titleAr:"الروابط تُظهر العلاقة لا تزيين الجملة",explanationAr:"الرابط لا يحمل معنى إلا إذا سمّى العلاقة: السبب (weil, da)، والنتيجة (folglich, somit, deshalb)، والتقابل (während, hingegen, wohingegen)، والتقييد (allerdings, freilich)، والشرط (sofern, vorausgesetzt, dass)، والوسيلة (indem حين يكون الفاعل واحدًا، و dadurch, dass). أما sodann و anschließend فللترتيب الزمني لا للنتيجة. ظروف الربط (deshalb, dennoch, anschließend) تقف في الموضع الأول فيأتي الفعل بعدها مباشرة، ويمكن أن تقع أيضًا في وسط الجملة بعد الفعل؛ أما أدوات الربط التابعة (weil, obwohl, sodass) فتدفع الفعل إلى آخر الجملة — فترتيب الكلمات ثمن الاختيار.",contrastAr:"تكثر العربية من الربط المفتوح بـ«و» و«فـ»، ويُفهم الترابط من السياق؛ أما في الألمانية فيُعدّ النص مفكّكًا إذا لم تُعلَّم العلاقة بين الجمل لغويًا. ولا يصلح «außerdem» رابطًا عامًا لكل معلومة جديدة، فهو يدل على الإضافة فقط.",formula:"Relation wählen → Konnektortyp (Konjunktion oder Adverb) → Verbstellung prüfen",examples:[{de:"Da die Frist ablief, reichten wir einen Antrag auf Verlängerung ein.",ar:"لأن الأجل انتهى، قدّمنا طلب تمديد."},{de:"Die Gebühr entfiel; anschließend wurde der Termin bestätigt.",ar:"سقط الرسم؛ ثم أُكّد الموعد."},{de:"Online-Termine sind schneller, während Präsenztermine persönliche Prüfung erlauben.",ar:"المواعيد الرقمية أسرع، بينما تسمح المواعيد الحضورية بفحص شخصي."},{de:"Der Antrag war fristgerecht, allerdings unvollständig.",ar:"كان الطلب في الميعاد، لكنه كان ناقصًا."},{de:"Vorausgesetzt, dass die Unterlagen stimmen, erfolgt die Zusage innerhalb einer Woche.",ar:"بشرط صحة الوثائق، يصدر القبول في حدود أسبوع."},{de:"Dadurch, dass alle Felder ausgefüllt waren, verkürzte sich die Prüfung.",ar:"بامتلاء كل الحقول، قصُر الفحص."}],trickAr:"سمِّ العلاقة بكلمة عربية واحدة (سبب؟ نتيجة؟ تقابل؟). إن لم تجد كلمة، فلا مكان لرابط في الجملة."},
@@ -538,7 +538,7 @@ export const b2Module6Lessons: FullLesson[] = [
  {de:"zwei Sätze Ehrlichkeit am Schluss",ar:"جملتان من الصراحة في الختام"}
  ],
  discovery: {
- instructionAr:"اقرأ الخطة التالية وحدّد: أين ذُكر الهدف قبل العمل؟ وأي مرحلة يمكن أن تُحذف دون خسارة معنى؟ وأي خطأ يتكرر فيدلّ على مصدر لا على سهو؟",
+ instructionAr:"اقرأ الخطة التالية وحدّد: أين تغيب قراءة المهمة قبل العمل؟ وأين لا تجد مرحلة الفحص مكانًا في الخطة؟ وأي خطأ يتكرر فيدلّ على مصدر لا على سهو؟",
  examples: [
  "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
  "«Die Kontrolle mache ich, wenn Zeit bleibt.» → Kontrollphase ohne Platz im Plan",
@@ -547,7 +547,7 @@ export const b2Module6Lessons: FullLesson[] = [
  ],
  questionsAr: [
  "أي خطوة في الخطة بلا هدف مكتوب؟",
- "أين يمكن تحويل «لا وقت» إلى «مصدر خطأ»؟",
+ "أي ملاحظة تدل على مصدر خطأ لا على ضيق الوقت؟",
  "ما الذي يُحذف أولًا: فقرة أم مرحلة الفحص؟ ولماذا؟"
  ]
  },
@@ -644,7 +644,7 @@ export const b2Module6Lessons: FullLesson[] = [
  instructionAr:"اقرأ أربع جمل من دفتر بن. حوّل كل تقرير عن ماضٍ فائت إلى شرط لم يحدث، ثم بيّن أي جملة تُبدي انطباعًا وأيها يزعم أمرًا — وما الذي تغيّر في المسؤولية بعد التحويل.",
  examples: [
  "«Ich habe die Aufgabenstellung überflogen.» → «Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.»",
- "«Er sagt, ich hätte nur Pech.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
+ "«Er sagt, ich hätte nur Pech gehabt.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
  "«Das war dumm von mir.» → Abschwächung: «Das hätte ich früher prüfen sollen.»",
  "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»"
  ],
@@ -859,7 +859,7 @@ export const b2Module6Lessons: FullLesson[] = [
  "„Wir stellen den Antrag schriftlich.“ → der Antrag bleibt zählbar; „Wir beantragen“ verliert das Objekt.",
  "„Die Prüfung wird bis Freitag zum Abschluss gebracht.“ → die letzte Etappe ist gemeint, nicht bloß „prüfen“.",
  "„Ihr Einwand wird zur Kenntnis genommen.“ → Empfang registriert, Entscheidung bleibt offen.",
- "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern."
+ "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern."
  ],
  questionsAr: [
  "أي الجمل يبقى ناقصًا لو اكتفيت بالفعل المفرد وحذفت الاسم؟",
@@ -1029,17 +1029,17 @@ export const b2Module6Lessons: FullLesson[] = [
  {de:"Auch das wird schon klappen.",ar:"تطمين بلا وعد قاطع"}
  ],
  discovery: {
- instructionAr:"اقرأ الجمل الأربع. حدّد في كل جملة ما الذي تغيّر من الموقف لا من المعلومة حين أُضيفت الأداة، ثم قرّر أيّ الجمل يجوز كتابته إلى جهة رسمية وأيّه يبقى شفهيًا.",
+ instructionAr:"اقرأ الجمل الأربع. حدّد في كل جملة ما الذي تغيّر من الموقف لا من المعلومة حين أُضيفت الأداة، ثم قرّر أيّ الجمل يجوز كتابته إلى جهة رسمية وأيّها يبقى شفهيًا.",
  examples: [
  "„Du hast die Frist nicht beachtet.“ → ein Vorwurf, weil nur die Behauptung da ist.",
- "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der andere Lesart wird Raum gegeben.",
+ "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der anderen Lesart wird Raum gegeben.",
  "„Schicken Sie mir die Akten.“ → ein Auftrag. „Schicken Sie mir mal die Akten, bitte.“ → eine Bitte im gesprochenen Ton.",
  "„Die Anlage ist bis Freitag nachzureichen.“ → behördlich klar. Mit „eben“ darin („… ist eben nachzureichen“) klingt Ungeduld."
  ],
  questionsAr: [
  "أيّ الجمل يبقى صدقه كما هو وتنقلب العلاقة الاجتماعية وحدها؟",
  "لماذا تُقرأ „eben“ في رسالة إلى جهة كأنّها تبرير لا توضيح؟",
- "كيف تُميَّز „doch“ المنبور بمعنى „jedoch“ من „doch“ الخفيفة للاعتراض على النفي؟"
+ "كيف تُميَّز „doch“ الرابطة بمعنى „jedoch“ من „doch“ الخفيفة داخل الجملة للاعتراض على افتراض؟"
  ]
  },
 
@@ -1198,7 +1198,7 @@ export const b2Module6Lessons: FullLesson[] = [
  "„Weder die Mail noch das Formular war angekommen.“ → Singular ist möglich, wenn jedes Glied für sich genommen wird; Plural, wenn zusammen. Beides muss zum Satz passen.",
  ],
  questionsAr: [
- "في الصيغة الأولى: لماذا لا تكفي «die Entscheidung ist sicher» بعد «je» رغم صحاحتها نحويًا منفردة؟",
+ "في الصيغة الأولى: لماذا لا تكفي «die Entscheidung ist sicher» بعد «je» رغم صحتها نحويًا منفردة؟",
  "حين تحذف «sondern auch» وتُبقي «nicht nur» وحده، أي معلومة تضيع من الفقرة؟",
  "ما الفرق في توزيع الثقل بين «zwar …, aber» و «zwar …, jedoch» في بريد إلى جهة رسمية؟",
  ],
@@ -1451,7 +1451,7 @@ export const b2Module6Lessons: FullLesson[] = [
  "„Wir haben nichts erhalten.“ → Er erklärte, sie hätten nichts erhalten.",
  "„Der Beschluss wurde vertagt.“ → Es hieß, der Beschluss sei vertagt worden.",
  "„Ich kann nicht kommen.“ → Sie sagte, sie könne nicht kommen.",
- "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
+ "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
  ],
  questionsAr: [
  "ما الذي يميّز النقل بـ „hätten“ عن الإخبار في „sie haben“؟",
@@ -1860,7 +1860,7 @@ export const b2Module6Lessons: FullLesson[] = [
  ],
  questionsAr: [
  "ما الفرق بين „die prüfende Kommission“ و „die geprüfte Akte“؟",
- "لماذا تحتاج التوسعة فاصلةً قبلها وبعدها؟",
+ "لماذا تحتاج الجملة الموصولة فاصلةً قبلها وبعدها؟",
  "متى يُصبح النعت الموسَّع خطرًا على الفهم؟",
  "كيف نُبقي الفاعل ظاهرًا داخل حلقة النعت؟",
  ],
@@ -2254,10 +2254,10 @@ export const b2Module6Lessons: FullLesson[] = [
  instructionAr: "اقرأ السلاسل. اكتب لكل سلسلة رأسَها، ثم أعدها جملةً بفعل: مَن فعل ماذا، وبمَ، ومتى؟",
  examples: [
  "die Erhebung der Gebühren durch die Hochschule → Die Hochschule erhebt die Gebühren.",
- "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
+ "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
  "die Einladung der Freundin von Lena → Wer lud wen ein? (zwei Lesarten)",
  "die Bearbeitungsdauer des Antrags im Sekretariat → Das Sekretariat bearbeitet den Antrag; die Dauer beträgt …",
- "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
+ "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
  ],
  questionsAr: [
  "من رأس السلسلة في «die Erhebung der Gebühren durch die Hochschule»؟",
@@ -2634,11 +2634,11 @@ export const b2Module6Lessons: FullLesson[] = [
  { de: "Prüfe nach dem Schreiben: Kommas, Verben, Klammern.", ar: "راجع بعد الكتابة: الفواصل، الأفعال، الأقواس.", noteAr: "فحص الخطوتين في نهاية كل نصّ." },
  ],
  discovery: {
- instructionAr: "اقرأ الأزواج. حدّد أين يفتح القوس وأين يُغلق، ثم احسب الأفعال المسندة في كل قوس.",
+ instructionAr: "اقرأ الأمثلة. حدّد أين يفتح القوس وأين يُغلق، ثم احسب الأفعال المسندة في كل قوس.",
  examples: [
  "Wir bitten darum, den Bescheid zu prüfen. (Pflicht: Hinweiswort „darum“)",
  "Wir bitten, den Bescheid zu prüfen. (empfohlen: erweiterte Infinitivgruppe)",
- "Er versuchte zu fliehen. (kein Komma Pflicht, kurze Gruppe)",
+ "Er versuchte zu fliehen. (Komma nicht nötig: kurze Gruppe)",
  "Der Bescheid, den die Behörde erlassen hatte, wurde aufgehoben. (rechte Klammer!)",
  "Deshalb, haben wir nachgereicht. (falsch: kein Komma nach Adverb)",
  ],

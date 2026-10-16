@@ -274,7 +274,7 @@ export const b2Module4Lessons: FullLesson[] = [
  { de: "die Belegkette nachvollziehen", ar: "يتتبع سلسلة الأدلة" },
  ],
  discovery: {
- instructionAr: "ضع تحت كل جملة ملصقًا: قول مصدر، دليل مباشر، تفسير صحفي، أو حقيقة مؤكدة مستقلًا. ثم أعد نقل الأقوال دون تبنّيها.",
+ instructionAr: "ضع تحت كل جملة ملصقًا: قول مصدر، دليل مباشر، تفسير صحفي، أو حقيقة مؤكدة بشكل مستقل. ثم أعد نقل الأقوال دون تبنّيها.",
  examples: [
  "Der Anbieter behauptet: Die App steigert die Leistung.",
  "Der Anbieter erklärt, die App steigere die Leistung.",

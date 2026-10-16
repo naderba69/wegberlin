@@ -51114,11 +51114,11 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4898,
-      "covered": 1384,
+      "totalCandidates": 4902,
+      "covered": 1385,
       "pendingHuman": 89,
-      "contextualNotTarget": 3425,
-      "authoredTargets": 1473,
+      "contextualNotTarget": 3428,
+      "authoredTargets": 1474,
       "byLevel": {
         "A1": {
           "totalCandidates": 569,
@@ -51127,30 +51127,30 @@
           "contextualNotTarget": 271
         },
         "A2": {
-          "totalCandidates": 882,
+          "totalCandidates": 883,
           "covered": 292,
           "pendingHuman": 0,
-          "contextualNotTarget": 590
+          "contextualNotTarget": 591
         },
         "B1": {
-          "totalCandidates": 1232,
-          "covered": 338,
+          "totalCandidates": 1234,
+          "covered": 339,
           "pendingHuman": 0,
-          "contextualNotTarget": 894
+          "contextualNotTarget": 895
         },
         "B2": {
-          "totalCandidates": 2215,
+          "totalCandidates": 2216,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1670
+          "contextualNotTarget": 1671
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1263,
+      "totalCandidates": 1265,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1128,
+      "contextualNotTarget": 1130,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51166,16 +51166,16 @@
           "contextualNotTarget": 175
         },
         "B1": {
-          "totalCandidates": 318,
+          "totalCandidates": 319,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 287
+          "contextualNotTarget": 288
         },
         "B2": {
-          "totalCandidates": 634,
+          "totalCandidates": 635,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 585
+          "contextualNotTarget": 586
         }
       }
     },
@@ -71637,6 +71637,13 @@
             "strength": "context"
           },
           {
+            "path": "discovery.examples[4]",
+            "stage": "discover",
+            "text": "Plötzlich war die Tasche weg.",
+            "surface": "Plötzlich war die Tasche weg.",
+            "strength": "context"
+          },
+          {
             "path": "entry.dialogue[2].de",
             "stage": "entry",
             "text": "Ich bin ausgestiegen und habe die falsche Tasche mitgenommen.",
@@ -71747,6 +71754,25 @@
           }
         ],
         "id": "lex-n-a2-02-544125f4"
+      },
+      {
+        "lessonId": "a2-02",
+        "level": "A2",
+        "lemmaCandidate": "Zeit",
+        "normalizedLemma": "zeit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "discovery.examples[5]",
+            "stage": "discover",
+            "text": "Ich hatte keine Zeit.",
+            "surface": "Ich hatte keine Zeit.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-02-3bf29801"
       },
       {
         "lessonId": "a2-02",
@@ -117247,6 +117273,25 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Fragen",
+        "normalizedLemma": "fragen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "discovery.examples[2]",
+            "stage": "discover",
+            "text": "Statt dass Ben mich ständig unterbricht, sammle ich seine Fragen in einer Liste.",
+            "surface": "Statt dass Ben mich ständig unterbricht, sammle ich seine Fragen in einer Liste.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-637bc733"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Gefühl",
         "normalizedLemma": "gefühl",
         "role": "context-only",
@@ -117509,8 +117554,8 @@
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "Statt dass Ben mich ständig unterbricht, schreibt er eine Liste.",
-            "surface": "Statt dass Ben mich ständig unterbricht, schreibt er eine Liste.",
+            "text": "Statt dass Ben mich ständig unterbricht, sammle ich seine Fragen in einer Liste.",
+            "surface": "Statt dass Ben mich ständig unterbricht, sammle ich seine Fragen in einer Liste.",
             "strength": "context"
           }
         ],
@@ -120231,6 +120276,27 @@
       {
         "lessonId": "b1-18",
         "level": "B1",
+        "lemmaCandidate": "Ergebnisse",
+        "normalizedLemma": "ergebnisse",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-18-noun-5"
+        ],
+        "sources": [
+          {
+            "path": "discovery.examples[3]",
+            "stage": "discover",
+            "text": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "surface": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-18-7bd165ed"
+      },
+      {
+        "lessonId": "b1-18",
+        "level": "B1",
         "lemmaCandidate": "Getränk",
         "normalizedLemma": "getränk",
         "role": "context-only",
@@ -120805,8 +120871,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "Laut der Studie verbesserte sich ein Soforttest.",
-            "surface": "Laut der Studie verbesserte sich ein Soforttest.",
+            "text": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "surface": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
             "strength": "context"
           },
           {
@@ -120874,8 +120940,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "Laut der Studie verbesserte sich ein Soforttest.",
-            "surface": "Laut der Studie verbesserte sich ein Soforttest.",
+            "text": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "surface": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
             "strength": "context"
           },
           {
@@ -158486,8 +158552,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» bezieht sich auf den Antrag oder die Frist?",
-            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» bezieht sich auf den Antrag oder die Frist?",
+            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
+            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
             "strength": "context"
           },
           {
@@ -159279,8 +159345,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» bezieht sich auf den Antrag oder die Frist?",
-            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» bezieht sich auf den Antrag oder die Frist?",
+            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
+            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
             "strength": "context"
           },
           {
@@ -166514,8 +166580,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«Er sagt, ich hätte nur Pech.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
-            "surface": "«Er sagt, ich hätte nur Pech.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
+            "text": "«Er sagt, ich hätte nur Pech gehabt.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
+            "surface": "«Er sagt, ich hätte nur Pech gehabt.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
             "strength": "context"
           }
         ],
@@ -171264,8 +171330,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
-            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
+            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
+            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
             "strength": "context"
           },
           {
@@ -174521,8 +174587,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der andere Lesart wird Raum gegeben.",
-            "surface": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der andere Lesart wird Raum gegeben.",
+            "text": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der anderen Lesart wird Raum gegeben.",
+            "surface": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der anderen Lesart wird Raum gegeben.",
             "strength": "context"
           },
           {
@@ -174824,8 +174890,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der andere Lesart wird Raum gegeben.",
-            "surface": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der andere Lesart wird Raum gegeben.",
+            "text": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der anderen Lesart wird Raum gegeben.",
+            "surface": "„Du hast die Frist doch beachtet, sie ist ja knapp gewesen.“ → der anderen Lesart wird Raum gegeben.",
             "strength": "context"
           },
           {
@@ -180912,8 +180978,8 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
-            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
+            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
             "strength": "context"
           },
           {
@@ -181555,8 +181621,8 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
-            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
+            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
             "strength": "context"
           }
         ],
@@ -184738,8 +184804,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
-            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
+            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
+            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
             "strength": "context"
           },
           {
@@ -184806,8 +184872,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
-            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
+            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
+            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
             "strength": "context"
           },
           {
@@ -184993,8 +185059,8 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
-            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
+            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
             "strength": "context"
           }
         ],
@@ -185764,8 +185830,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
-            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
+            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
+            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
             "strength": "context"
           },
           {
@@ -186089,8 +186155,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
-            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, weil die Frist verlängert werden soll.",
+            "text": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
+            "surface": "die Genehmigung des Antrags auf Fristverlängerung → Man genehmigt den Antrag, die Frist zu verlängern.",
             "strength": "context"
           }
         ],
@@ -186963,8 +187029,8 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
-            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
+            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
             "strength": "context"
           }
         ],
@@ -187393,6 +187459,25 @@
           }
         ],
         "id": "lex-n-b2-23-9e728169"
+      },
+      {
+        "lessonId": "b2-23",
+        "level": "B2",
+        "lemmaCandidate": "Termin",
+        "normalizedLemma": "termin",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "discovery.examples[4]",
+            "stage": "discover",
+            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-23-599e4f78"
       },
       {
         "lessonId": "b2-23",
@@ -189048,13 +189133,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "discovery.examples[2]",
-            "stage": "discover",
-            "text": "Er versuchte zu fliehen. (kein Komma Pflicht, kurze Gruppe)",
-            "surface": "Er versuchte zu fliehen. (kein Komma Pflicht, kurze Gruppe)",
-            "strength": "context"
-          },
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
@@ -203454,6 +203532,29 @@
       {
         "lessonId": "b1-18",
         "level": "B1",
+        "infinitiveCandidate": "sich verbesserten",
+        "normalizedVerb": "verbesserten",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "discovery.examples[3]",
+            "stage": "discover",
+            "text": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "surface": "Laut der Studie verbesserten sich die Ergebnisse in einem Soforttest.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-18-58bf82b1"
+      },
+      {
+        "lessonId": "b1-18",
+        "level": "B1",
         "infinitiveCandidate": "verlinken",
         "normalizedVerb": "verlinken",
         "preposition": "zu",
@@ -217438,8 +217539,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
-            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
+            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
+            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
             "strength": "context"
           },
           {
@@ -217476,8 +217577,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
-            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
+            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
+            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
             "strength": "context"
           },
           {
@@ -218257,8 +218358,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
-            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in vier Wörtern.",
+            "text": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
+            "surface": "„Wir treffen eine Entscheidung über Ihren Einwand.“ → aufgeblasen: „Wir entscheiden über Ihren Einwand“ sagt dasselbe in fünf Wörtern.",
             "strength": "context"
           },
           {
@@ -219963,12 +220064,35 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
-            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennen die Regel (formgleich mit dem Indikativ).",
+            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
             "strength": "context"
           }
         ],
         "id": "lex-v-b2-21-4ed94b06"
+      },
+      {
+        "lessonId": "b2-21",
+        "level": "B2",
+        "infinitiveCandidate": "kennten",
+        "normalizedVerb": "kennten",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "discovery.examples[4]",
+            "stage": "discover",
+            "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-21-021d5efc"
       },
       {
         "lessonId": "b2-21",
@@ -220871,15 +220995,15 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "unknown"
+          "accusative"
         ],
         "anchorIds": [],
         "sources": [
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
-            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
+            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
             "strength": "context"
           }
         ],
@@ -220901,8 +221025,8 @@
           {
             "path": "discovery.examples[4]",
             "stage": "discover",
-            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
-            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er versäumt hat.",
+            "text": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
+            "surface": "der Ausschluss vom Prüfungsteil wegen Versäumnisses → Man schließt jemanden von einem Prüfungsteil aus, weil er einen Termin versäumt hat.",
             "strength": "context"
           }
         ],
@@ -221688,5 +221812,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "42702b7f08c7a5c1011154214e6a199d25ec2cf71f62a6b4d7f52153d74737cc"
+  "contentSha256": "d6c44f3204de33be3d60277b3eb5f75fa6e774f06c1a9d3052410910f30abecd"
 }

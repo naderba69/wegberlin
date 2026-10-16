@@ -17967,9 +17967,9 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was folgt aus dem dritten Beispiel für einen Widerspruch? ما النتيجة المستخلصة من المثال الثالث عند الاعتراض؟",
-        "answer": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
+        "answer": "Mit „wohl“ bleibt die Aussage eine Vermutung, die man noch nicht beweisen muss; ohne sie wird behauptet.",
         "evidenceRef": "b2-19:reading.textDe",
-        "evidenceExcerpt": "Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn.",
+        "evidenceExcerpt": "Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -51114,10 +51114,10 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4899,
+      "totalCandidates": 4898,
       "covered": 1384,
       "pendingHuman": 89,
-      "contextualNotTarget": 3426,
+      "contextualNotTarget": 3425,
       "authoredTargets": 1473,
       "byLevel": {
         "A1": {
@@ -51133,24 +51133,24 @@
           "contextualNotTarget": 590
         },
         "B1": {
-          "totalCandidates": 1231,
+          "totalCandidates": 1232,
           "covered": 338,
           "pendingHuman": 0,
-          "contextualNotTarget": 893
+          "contextualNotTarget": 894
         },
         "B2": {
-          "totalCandidates": 2217,
+          "totalCandidates": 2215,
           "covered": 456,
           "pendingHuman": 89,
-          "contextualNotTarget": 1672
+          "contextualNotTarget": 1670
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1264,
+      "totalCandidates": 1263,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1129,
+      "contextualNotTarget": 1128,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51172,10 +51172,10 @@
           "contextualNotTarget": 287
         },
         "B2": {
-          "totalCandidates": 635,
+          "totalCandidates": 634,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 586
+          "contextualNotTarget": 585
         }
       }
     },
@@ -53712,13 +53712,6 @@
         ],
         "sources": [
           {
-            "path": "entry.dialogue[4].de",
-            "stage": "entry",
-            "text": "Wie ist deine E-Mail-Adresse?",
-            "surface": "Wie ist deine E-Mail-Adresse?",
-            "strength": "context"
-          },
-          {
             "path": "lexicalRegistry.a1-05-noun-5",
             "stage": "vocabulary",
             "surface": "die E-Mail-Adresse",
@@ -54066,13 +54059,6 @@
           "a1-05-noun-10"
         ],
         "sources": [
-          {
-            "path": "entry.dialogue[5].de",
-            "stage": "entry",
-            "text": "Bitte zuerst langsam die Telefonnummer.",
-            "surface": "Bitte zuerst langsam die Telefonnummer.",
-            "strength": "context"
-          },
           {
             "path": "lexicalRegistry.a1-05-noun-10",
             "stage": "vocabulary",
@@ -94754,8 +94740,8 @@
           {
             "path": "entry.dialogue[1].de",
             "stage": "entry",
-            "text": "Für den Ausflug haben weder alle Zeit noch genug Geld.",
-            "surface": "Für den Ausflug haben weder alle Zeit noch genug Geld.",
+            "text": "Für den Ausflug haben wir weder genug Zeit noch genug Geld.",
+            "surface": "Für den Ausflug haben wir weder genug Zeit noch genug Geld.",
             "strength": "context"
           }
         ],
@@ -110444,8 +110430,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Wir reduzieren Emissionen, dadurch dass mehr Mitarbeitende mit dem Fahrrad kommen.",
-            "surface": "Wir reduzieren Emissionen, dadurch dass mehr Mitarbeitende mit dem Fahrrad kommen.",
+            "text": "Wir reduzieren Emissionen dadurch, dass mehr Mitarbeitende mit dem Fahrrad kommen.",
+            "surface": "Wir reduzieren Emissionen dadurch, dass mehr Mitarbeitende mit dem Fahrrad kommen.",
             "strength": "context"
           }
         ],
@@ -125924,6 +125910,25 @@
       {
         "lessonId": "b1-22",
         "level": "B1",
+        "lemmaCandidate": "Ergebnisse",
+        "normalizedLemma": "ergebnisse",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "entry.dialogue[3].de",
+            "stage": "entry",
+            "text": "Gut. Plane keine Ergebnisse, ohne dass auch der Prozess sichtbar wird.",
+            "surface": "Gut. Plane keine Ergebnisse, ohne dass auch der Prozess sichtbar wird.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-22-0efd18ae"
+      },
+      {
+        "lessonId": "b1-22",
+        "level": "B1",
         "lemmaCandidate": "Etappe",
         "normalizedLemma": "etappe",
         "role": "anchor",
@@ -126517,8 +126522,8 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Gut. Plane nicht nur Ergebnisse, ohne dass du den Prozess misst.",
-            "surface": "Gut. Plane nicht nur Ergebnisse, ohne dass du den Prozess misst.",
+            "text": "Gut. Plane keine Ergebnisse, ohne dass auch der Prozess sichtbar wird.",
+            "surface": "Gut. Plane keine Ergebnisse, ohne dass auch der Prozess sichtbar wird.",
             "strength": "context"
           },
           {
@@ -132047,8 +132052,8 @@
           {
             "path": "entry.dialogue[2].de",
             "stage": "entry",
-            "text": "Genau. Mir geht es nicht gegen das Modell, sondern gegen unbezahlte Mehrarbeit.",
-            "surface": "Genau. Mir geht es nicht gegen das Modell, sondern gegen unbezahlte Mehrarbeit.",
+            "text": "Genau. Ich bin nicht gegen das Modell, sondern gegen unbezahlte Mehrarbeit.",
+            "surface": "Genau. Ich bin nicht gegen das Modell, sondern gegen unbezahlte Mehrarbeit.",
             "strength": "context"
           },
           {
@@ -159255,8 +159260,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «sodann» oder «dadurch».",
-            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «sodann» oder «dadurch».",
+            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
+            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
             "strength": "context"
           }
         ],
@@ -159281,8 +159286,8 @@
           {
             "path": "entry.dialogue[1].de",
             "stage": "entry",
-            "text": "Ich hatte doch im ersten Satz die Frist genannt. Sollte ich sie wiederholen? Das klingt doch wiederholt.",
-            "surface": "Ich hatte doch im ersten Satz die Frist genannt. Sollte ich sie wiederholen? Das klingt doch wiederholt.",
+            "text": "Ich hatte doch im ersten Satz die Frist genannt. Sollte ich sie wiederholen? Das klingt doch nach Wiederholung.",
+            "surface": "Ich hatte doch im ersten Satz die Frist genannt. Sollte ich sie wiederholen? Das klingt doch nach Wiederholung.",
             "strength": "context"
           },
           {
@@ -159572,8 +159577,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «sodann» oder «dadurch».",
-            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «sodann» oder «dadurch».",
+            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
+            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
             "strength": "context"
           },
           {
@@ -168179,8 +168184,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
-            "surface": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
+            "text": "Deine Forderung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: Man muss ihn ausdrücklich nachtragen.",
+            "surface": "Deine Forderung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: Man muss ihn ausdrücklich nachtragen.",
             "strength": "context"
           },
           {
@@ -168601,8 +168606,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
-            "surface": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
+            "text": "Deine Forderung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: Man muss ihn ausdrücklich nachtragen.",
+            "surface": "Deine Forderung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: Man muss ihn ausdrücklich nachtragen.",
             "strength": "context"
           },
           {
@@ -170443,25 +170448,6 @@
       {
         "lessonId": "b2-17",
         "level": "B2",
-        "lemmaCandidate": "Zuschuldung",
-        "normalizedLemma": "zuschuldung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "entry.dialogue[0].de",
-            "stage": "entry",
-            "text": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
-            "surface": "Deine Bedingung ist unvollständig, weil die Ersatzform den Handelnden gar nicht erst nennt: man muss ihn ausdrücklich nachtragen, und dieser Nachtrag wirkt wie eine Zuschuldung.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-17-aba94984"
-      },
-      {
-        "lessonId": "b2-17",
-        "level": "B2",
         "lemmaCandidate": "Zuständigkeit",
         "normalizedLemma": "zuständigkeit",
         "role": "anchor",
@@ -171285,8 +171271,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           },
           {
@@ -171469,8 +171455,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           },
           {
@@ -172073,8 +172059,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           },
           {
@@ -173341,8 +173327,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -173375,8 +173361,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -173422,8 +173408,8 @@
           {
             "path": "entry.dialogue[2].de",
             "stage": "entry",
-            "text": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
-            "surface": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
+            "text": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "surface": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
             "strength": "context"
           },
           {
@@ -173502,8 +173488,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -173534,6 +173520,25 @@
           }
         ],
         "id": "lex-n-b2-19-09c820af"
+      },
+      {
+        "lessonId": "b2-19",
+        "level": "B2",
+        "lemmaCandidate": "Argument",
+        "normalizedLemma": "argument",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "entry.dialogue[2].de",
+            "stage": "entry",
+            "text": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "surface": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-19-7b86e469"
       },
       {
         "lessonId": "b2-19",
@@ -173640,8 +173645,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
-            "surface": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
+            "text": "Mit „wohl“ bleibt die Aussage eine Vermutung, die man noch nicht beweisen muss; ohne sie wird behauptet.",
+            "surface": "Mit „wohl“ bleibt die Aussage eine Vermutung, die man noch nicht beweisen muss; ohne sie wird behauptet.",
             "strength": "context"
           }
         ],
@@ -173779,8 +173784,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -173968,8 +173973,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174064,17 +174069,10 @@
             "strength": "registry"
           },
           {
-            "path": "reading.questions[2].options[1]",
-            "stage": "reading",
-            "text": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
-            "surface": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
-            "strength": "context"
-          },
-          {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -174120,8 +174118,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -174262,8 +174260,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174386,8 +174384,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174476,8 +174474,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174495,8 +174493,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174691,8 +174689,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174807,8 +174805,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -174979,8 +174977,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -175056,25 +175054,6 @@
           }
         ],
         "id": "lex-n-b2-19-18e5cfb0"
-      },
-      {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "lemmaCandidate": "Negierten",
-        "normalizedLemma": "negierten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "entry.dialogue[2].de",
-            "stage": "entry",
-            "text": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
-            "surface": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-19-c903aa3f"
       },
       {
         "lessonId": "b2-19",
@@ -175473,8 +175452,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -175511,8 +175490,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -175540,6 +175519,13 @@
             "text": "Dein Satz war grammatikalisch richtig und sozial falsch: Du hast eine Tatsache behauptet, als wäre sie ihm entgangen — ohne anzudeuten, dass du eine andere Lesart kennst.",
             "surface": "Dein Satz war grammatikalisch richtig und sozial falsch: Du hast eine Tatsache behauptet, als wäre sie ihm entgangen — ohne anzudeuten, dass du eine andere Lesart kennst.",
             "strength": "context"
+          },
+          {
+            "path": "reading.textDe",
+            "stage": "reading",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-19-85eb5caf"
@@ -175556,8 +175542,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -175636,8 +175622,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -175703,8 +175689,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -175767,8 +175753,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -175815,8 +175801,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
-            "surface": "Mit „wohl“ bleibt die Aussage eine Vermutung und der andere behält seinen Beweis; ohne sie wird behauptet.",
+            "text": "Mit „wohl“ bleibt die Aussage eine Vermutung, die man noch nicht beweisen muss; ohne sie wird behauptet.",
+            "surface": "Mit „wohl“ bleibt die Aussage eine Vermutung, die man noch nicht beweisen muss; ohne sie wird behauptet.",
             "strength": "context"
           },
           {
@@ -175829,8 +175815,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -175845,6 +175831,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "entry.dialogue[2].de",
+            "stage": "entry",
+            "text": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "surface": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "strength": "context"
+          },
           {
             "path": "miniTest[0].promptDe",
             "stage": "test",
@@ -175931,8 +175924,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -176009,8 +176002,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -176068,8 +176061,8 @@
           {
             "path": "entry.dialogue[2].de",
             "stage": "entry",
-            "text": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
-            "surface": "Sie widerspricht deinem Negierten: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein „nein, doch nicht“-Argument mehr.",
+            "text": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
+            "surface": "Sie widerspricht deiner Verneinung: „Das habe ich doch beachtet“ heißt: doch, sehr wohl, entgegen deiner Annahme. Die kleine Silbe trägt den ganzen Widerspruch, deshalb braucht er kein weiteres Argument.",
             "strength": "context"
           },
           {
@@ -176169,8 +176162,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -176591,8 +176584,8 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "text": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "surface": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
             "strength": "context"
           },
           {
@@ -177930,8 +177923,8 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "text": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "surface": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
             "strength": "context"
           },
           {
@@ -179314,8 +179307,8 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "text": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "surface": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
             "strength": "context"
           },
           {
@@ -179347,8 +179340,8 @@
           {
             "path": "entry.dialogue[5].de",
             "stage": "entry",
-            "text": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
-            "surface": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
+            "text": "Dann „sowohl … als auch“ — aber das Verb steht meist im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
+            "surface": "Dann „sowohl … als auch“ — aber das Verb steht meist im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
             "strength": "context"
           }
         ],
@@ -179620,15 +179613,15 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "text": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
+            "surface": "Nach „je“ steht das Verb am Ende, und der zweite Teil beginnt mit „desto“ und dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
             "strength": "context"
           },
           {
             "path": "entry.dialogue[5].de",
             "stage": "entry",
-            "text": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
-            "surface": "Dann „sowohl … als auch“ — aber das Verb bleibt im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
+            "text": "Dann „sowohl … als auch“ — aber das Verb steht meist im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
+            "surface": "Dann „sowohl … als auch“ — aber das Verb steht meist im Plural, und die Teile müssen auf gleicher Ebene stehen: Nomen zu Nomen, Satz zu Satz.",
             "strength": "context"
           },
           {
@@ -179998,25 +179991,6 @@
           }
         ],
         "id": "lex-n-b2-20-458b9a97"
-      },
-      {
-        "lessonId": "b2-20",
-        "level": "B2",
-        "lemmaCandidate": "Zweitspanne",
-        "normalizedLemma": "zweitspanne",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "entry.dialogue[3].de",
-            "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-20-ab0ab928"
       },
       {
         "lessonId": "b2-21",
@@ -185185,25 +185159,6 @@
       {
         "lessonId": "b2-23",
         "level": "B2",
-        "lemmaCandidate": "Bestimmungswort",
-        "normalizedLemma": "bestimmungswort",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "entry.dialogue[1].de",
-            "stage": "entry",
-            "text": "Richtig. Und das Bestimmungswort „Nachforderung“ sagt, welche Forderung gemeint ist.",
-            "surface": "Richtig. Und das Bestimmungswort „Nachforderung“ sagt, welche Forderung gemeint ist.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-23-85a7e061"
-      },
-      {
-        "lessonId": "b2-23",
-        "level": "B2",
         "lemmaCandidate": "Beteiligten",
         "normalizedLemma": "beteiligten",
         "role": "context-only",
@@ -185717,8 +185672,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Grundwort ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
-            "surface": "Grundwort ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
+            "text": "Der Kern der Kette ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
+            "surface": "Der Kern der Kette ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
             "strength": "context"
           },
           {
@@ -186180,6 +186135,13 @@
         ],
         "sources": [
           {
+            "path": "entry.dialogue[1].de",
+            "stage": "entry",
+            "text": "Richtig. Im Kompositum ist „Nachforderung“ das Grundwort, und „Prüfungsgebühren“ sagt, welche Nachforderung gemeint ist.",
+            "surface": "Richtig. Im Kompositum ist „Nachforderung“ das Grundwort, und „Prüfungsgebühren“ sagt, welche Nachforderung gemeint ist.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[5].frontDe",
             "stage": "vocabulary",
             "text": "das Grundwort",
@@ -186367,6 +186329,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "entry.dialogue[0].de",
+            "stage": "entry",
+            "text": "Der Kern der Kette ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
+            "surface": "Der Kern der Kette ist „Erlass“ — also bittet jemand darum, dass eine Forderung erlassen wird.",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -188725,6 +188694,25 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
+        "lemmaCandidate": "Gegensatz",
+        "normalizedLemma": "gegensatz",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "entry.dialogue[3].de",
+            "stage": "entry",
+            "text": "Vor „sondern“ und „aber“ steht immer ein Komma, wenn sie einen Gegensatz verbinden.",
+            "surface": "Vor „sondern“ und „aber“ steht immer ein Komma, wenn sie einen Gegensatz verbinden.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-24-eccbc34a"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
         "lemmaCandidate": "Gegenteil",
         "normalizedLemma": "gegenteil",
         "role": "context-only",
@@ -189091,8 +189079,8 @@
           {
             "path": "entry.dialogue[3].de",
             "stage": "entry",
-            "text": "Vor „sondern“, „aber“, „deshalb“ steht ein Komma, wenn zwei Sätze oder Glieder einander gegenüberstehen.",
-            "surface": "Vor „sondern“, „aber“, „deshalb“ steht ein Komma, wenn zwei Sätze oder Glieder einander gegenüberstehen.",
+            "text": "Vor „sondern“ und „aber“ steht immer ein Komma, wenn sie einen Gegensatz verbinden.",
+            "surface": "Vor „sondern“ und „aber“ steht immer ein Komma, wenn sie einen Gegensatz verbinden.",
             "strength": "context"
           },
           {
@@ -201001,8 +200989,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Wir reduzieren Emissionen, dadurch dass mehr Mitarbeitende mit dem Fahrrad kommen.",
-            "surface": "Wir reduzieren Emissionen, dadurch dass mehr Mitarbeitende mit dem Fahrrad kommen.",
+            "text": "Wir reduzieren Emissionen dadurch, dass mehr Mitarbeitende mit dem Fahrrad kommen.",
+            "surface": "Wir reduzieren Emissionen dadurch, dass mehr Mitarbeitende mit dem Fahrrad kommen.",
             "strength": "context"
           }
         ],
@@ -217495,8 +217483,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           },
           {
@@ -217700,8 +217688,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           }
         ],
@@ -218276,8 +218264,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
-            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Sechs Wörter mehr, keine einzige Etappe mehr.",
+            "text": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
+            "surface": "Wenn das Nomen nichts enthält, was man allein lassen könnte: „Wir treffen eine Entscheidung über Ihren Antrag“ statt „Wir entscheiden über Ihren Antrag“. Zwei Wörter mehr, keine einzige Etappe mehr.",
             "strength": "context"
           },
           {
@@ -218675,8 +218663,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -218790,8 +218778,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -218883,8 +218871,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -218953,8 +218941,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           },
           {
@@ -218983,8 +218971,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -219006,8 +218994,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -219029,8 +219017,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
-            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung und lässt dem anderen seinen Beweis; „Das ist ein Versehen“ behauptet ihn. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "text": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
+            "surface": "Im Forum der Studienberatung stand eine kurze Nachfrage von Ben: „Sie haben die Antwort doch bekommen, oder?“ Ein Mitarbeiter antwortete am selben Tag: „Die Mail ist im Spam gelandet, so ist das eben.“ Dann schrieb er eine zweite Fassung, diesmal für den Akt: „Ihre Anfrage vom 3. April blieb zunächst unbeantwortet. Die Auskunft wurde am 8. April erteilt.“ Zwischen beiden Sätzen liegt kein neuer Inhalt, sondern ein anderer Ton: In der ersten tragen „doch“ und „eben“ den Vorwurf und die Entschuldigung zugleich, in der zweiten trägt kein Wort beides — deshalb ist sie diejenige, die in einer Akte bleiben kann. Frau Kessler zeigte den Unterschied an einem dritten Beispiel: „Das ist wohl ein Versehen“ nennt eine Vermutung, die man noch nicht beweisen muss; „Das ist ein Versehen“ behauptet eine Tatsache, für die man einen Beweis braucht. Wer im Widerspruch stehen will, wählt die erste Form; wer einen Bescheid angreifen will, braucht den zweiten Schritt: eine Nachfrage mit Datum und ohne Partikel. Am Ende strichen die Teilnehmenden in ihren eigenen Texten sieben Partikeln und ließen genau zwei stehen: eine in der Bitte um Aufschub, eine in der Frage nach dem Grund.",
             "strength": "context"
           }
         ],
@@ -219352,29 +219340,6 @@
       {
         "lessonId": "b2-20",
         "level": "B2",
-        "infinitiveCandidate": "kommen",
-        "normalizedVerb": "kommen",
-        "preposition": "mit",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "dative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "entry.dialogue[3].de",
-            "stage": "entry",
-            "text": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "surface": "Nach „je“ rückt das Verb an die Zweitspanne, und der zweite Teil beginnt sofort mit dem Komparativ: „je mehr Studierende kommen, desto voller wird die Beratung“.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-20-70a5f98b"
-      },
-      {
-        "lessonId": "b2-20",
-        "level": "B2",
         "infinitiveCandidate": "wurden",
         "normalizedVerb": "wurden",
         "preposition": "in",
@@ -219458,8 +219423,8 @@
           {
             "path": "entry.dialogue[1].de",
             "stage": "entry",
-            "text": "Einkausige Bindewörter zeigen nur an, dass etwas folgt. Zweiteilige Konnektoren zeigen, wie viel folgt und wo.",
-            "surface": "Einkausige Bindewörter zeigen nur an, dass etwas folgt. Zweiteilige Konnektoren zeigen, wie viel folgt und wo.",
+            "text": "Einteilige Konnektoren zeigen nur an, dass etwas folgt. Zweiteilige Konnektoren zeigen, wie viel folgt und wo.",
+            "surface": "Einteilige Konnektoren zeigen nur an, dass etwas folgt. Zweiteilige Konnektoren zeigen, wie viel folgt und wo.",
             "strength": "context"
           }
         ],
@@ -221723,5 +221688,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "77efcd0cffe26fed6f003c4233401ec7afe03786118152a6dd5f37b6c5f01ed7"
+  "contentSha256": "42702b7f08c7a5c1011154214e6a199d25ec2cf71f62a6b4d7f52153d74737cc"
 }

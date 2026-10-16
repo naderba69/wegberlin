@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v209 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم البطاقات (flashcards) في A1–B2 (976 بطاقة): 231 تعديلًا (229 حقلًا في 83 درسًا: 194 ظهرًا عربيًا، و3 وجوه، و32 مثالًا؛ + عبارة b1-16 + جنس Betracht في السجل)؛ أدوات خاطئة (der Betracht، وdas Aktenzeichen)، وungebeugten، وأمثلة كانت تعلّم قاعدة خاطئة في b2-20 وb2-24، وظهور b2-18 صارت ترجمات؛ الأسماء 4899/3426 بلا تغيير، والأفعال 1264/1129؛ الكاش v209؛ البناء 3a90f3f12b04.
+Sync batch: v210 · 2026-10-16 · مراجعة سطرًا سطرًا لحوارات المدخل (entry) في A1–B2 (495 سطرًا): 156 تعديلًا (153 حقلًا في 66 درسًا: 4 عناوين، و17 مشهدًا، و18 سطرًا ألمانيًا، و114 ترجمة؛ و3 مواضع لإصلاح «Beweis» في قراءة b2-19)؛ كاش v210، بناء e7333c275ef1.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

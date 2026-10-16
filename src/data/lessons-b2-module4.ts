@@ -248,7 +248,7 @@ export const b2Module4Lessons: FullLesson[] = [
  dialogue: [
  { speaker: "Samir", de: "Fünf Portale melden, eine neue Studie habe bewiesen, dass Smartphones die Konzentration halbierten.", ar: "خمسة مواقع تقول إن دراسة أثبتت أن الهواتف تخفض التركيز للنصف." },
  { speaker: "Mara", de: "Führen die fünf Meldungen zu fünf unabhängigen Quellen?", ar: "هل تقود الأخبار إلى خمسة مصادر مستقلة؟" },
- { speaker: "Samir", de: "Nein. Alle verweisen auf dieselbe Pressemitteilung eines App-Anbieters.", ar: "لا، كلها تشير إلى بيان شركة تطبيق." },
+ { speaker: "Samir", de: "Nein. Alle verweisen auf dieselbe Pressemitteilung eines App-Anbieters.", ar: "لا، كلها تحيل إلى البيان الصحفي نفسه لشركة تطبيقات." },
  { speaker: "Mara", de: "Was wurde tatsächlich erhoben?", ar: "ما الذي جُمع فعليًا؟" },
  { speaker: "Samir", de: "Der Anbieter erklärt, 400 freiwillig Befragte hätten ihre Konzentration selbst eingeschätzt. Ein Kausalnachweis fehlt.", ar: "تقول الشركة إن 400 متطوع قيّموا تركيزهم ذاتيًا، ولا يوجد إثبات سببي." },
  ],

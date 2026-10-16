@@ -300,11 +300,11 @@ export const b2Module5Lessons: FullLesson[] = [
  titleAr: "المعنى أهم من ترتيب الكلمات",
  sceneAr: "يطلب فريق عربي خلاصة إعلان ألماني لورشة. تترجم زميلة كلمة بكلمة فتضيع مهلة التأكيد والاستثناء وحقيقة أن تعويض السفر ممكن لا مضمون.",
  dialogue: [
- { speaker: "Koordinator", de: "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird. Fahrtkosten können in begründeten Fällen übernommen werden.", ar: "المشاركة مجانية بشرط التأكيد حتى الاثنين، ويمكن تحمل السفر في حالات مبررة." },
+ { speaker: "Koordinator", de: "Die Teilnahme ist kostenlos, sofern die Zusage bis Montag bestätigt wird. Fahrtkosten können in begründeten Fällen übernommen werden.", ar: "المشاركة مجانية بشرط تأكيد الحضور بحلول الاثنين، ويمكن تحمّل تكاليف السفر في حالات مبررة." },
  { speaker: "Lina", de: "Dann schreibe ich: Die Fahrtkosten werden übernommen.", ar: "إذن سأكتب: ستُدفع تكاليف السفر." },
  { speaker: "Samir", de: "Das wäre zu sicher. Können bedeutet hier Möglichkeit, nicht Anspruch oder Garantie.", ar: "هذا يقين زائد؛ können تعني إمكانية لا حقًا أو ضمانًا." },
  { speaker: "Lina", de: "Und welche Information braucht das Team zuerst?", ar: "وأي معلومة يحتاجها الفريق أولًا؟" },
- { speaker: "Samir", de: "Handlung zuerst: bis Montag bestätigen. Danach nennen wir Kostenregel, Ausnahme und Kontakt für offene Fälle.", ar: "الفعل أولًا: التأكيد حتى الاثنين، ثم قاعدة التكلفة والاستثناء والتواصل." },
+ { speaker: "Samir", de: "Handlung zuerst: bis Montag bestätigen. Danach nennen wir Kostenregel, Ausnahme und Kontakt für offene Fälle.", ar: "الفعل أولًا: التأكيد بحلول الاثنين، ثم قاعدة التكاليف والاستثناء وجهة الاتصال للحالات المفتوحة." },
  ],
  },
  phrases: [

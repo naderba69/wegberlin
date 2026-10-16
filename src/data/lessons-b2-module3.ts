@@ -28,10 +28,10 @@ export const b2Module3Lessons: FullLesson[] = [
  sceneAr: "يعرض فريق تجربة تدريبية ويقول إن الانقطاع انخفض 50%. تسأل مارا عن خط الأساس وحجم العينة والتوزيع قبل قبول العنوان.",
  dialogue: [
  { speaker: "Leitung", de: "Die Abbruchquote ist um fünfzig Prozent gesunken. Das Programm ist ein großer Erfolg.", ar: "انخفض معدل الانقطاع خمسين بالمئة؛ البرنامج نجاح كبير." },
- { speaker: "Mara", de: "Von welchem Ausgangswert sprechen wir?", ar: "ما قيمة خط الأساس؟" },
- { speaker: "Leitung", de: "Von vier auf zwei Prozentpunkte, bei achtzig Teilnehmenden.", ar: "من أربع إلى نقطتين مئويتين لدى ثمانين مشاركًا." },
+ { speaker: "Mara", de: "Von welchem Ausgangswert sprechen wir?", ar: "من أي قيمة أولية نتحدث؟" },
+ { speaker: "Leitung", de: "Von vier auf zwei Prozent, bei zweihundert Teilnehmenden.", ar: "من أربعة إلى اثنين بالمئة، لدى مئتي مشارك." },
  { speaker: "Samir", de: "Relativ ist das eine Halbierung, absolut aber ein Rückgang um zwei Prozentpunkte.", ar: "نسبيًا هو النصف، ومطلقًا انخفاض نقطتين مئويتين." },
- { speaker: "Mara", de: "Das Ergebnis ist interessant. Daraus lässt sich jedoch noch nicht schließen, dass allein das Programm die Veränderung verursacht hat.", ar: "النتيجة مهمة، لكن لا نستنتج بعد أن البرنامج وحده سبب التغير." },
+ { speaker: "Mara", de: "Das Ergebnis ist interessant. Daraus lässt sich jedoch noch nicht schließen, dass allein das Programm die Veränderung verursacht hat.", ar: "النتيجة مثيرة للاهتمام، لكن لا يمكن أن نستنتج منها بعد أن البرنامج وحده سبب التغير." },
  ],
  },
  phrases: [
@@ -246,7 +246,7 @@ export const b2Module3Lessons: FullLesson[] = [
  titleAr: "بسّط، لكن لا تحذف التحفظ",
  sceneAr: "تطلب بلدية شرح دراسة عن الظل وحرارة الشوارع للجمهور. يحول الفريق تقريرًا اسميًا كثيفًا إلى قصة قياس واضحة دون ادعاء أن الأشجار وحدها سبب كل فرق.",
  dialogue: [
- { speaker: "Forscherin", de: "Die Ermittlung der Oberflächentemperatur erfolgte mittels satellitengestützter Fernerkundung.", ar: "تم تحديد حرارة السطح بواسطة الاستشعار الفضائي." },
+ { speaker: "Forscherin", de: "Die Ermittlung der Oberflächentemperatur erfolgte mittels satellitengestützter Fernerkundung.", ar: "حُدّدت حرارة السطح بواسطة الاستشعار عن بعد بالأقمار الصناعية." },
  { speaker: "Redakteur", de: "Für die Öffentlichkeit würde ich zuerst sagen: Satelliten haben gemessen, wie warm Dächer und Straßenoberflächen waren.", ar: "للجمهور أقول أولًا: قاست الأقمار مدى سخونة الأسطح والشوارع." },
  { speaker: "Forscherin", de: "Gut, wobei wir klarstellen müssen, dass Oberflächentemperatur nicht dasselbe wie Lufttemperatur ist.", ar: "جيد، مع ضرورة توضيح أن حرارة السطح ليست حرارة الهواء نفسها." },
  { speaker: "Redakteur", de: "Dann erkläre ich den Fachbegriff, gebe ein Beispiel und nenne anschließend diese Grenze.", ar: "سأعرّف المصطلح وأعطي مثالًا ثم أذكر هذا الحد." },

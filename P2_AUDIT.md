@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v209 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم البطاقات (flashcards) في A1–B2 (976 بطاقة): 231 تعديلًا (229 حقلًا في 83 درسًا: 194 ظهرًا عربيًا، و3 وجوه، و32 مثالًا؛ + عبارة b1-16 + جنس Betracht في السجل)؛ أدوات خاطئة (der Betracht، وdas Aktenzeichen)، وungebeugten، وأمثلة كانت تعلّم قاعدة خاطئة في b2-20 وb2-24، وظهور b2-18 صارت ترجمات؛ الأسماء 4899/3426 بلا تغيير، والأفعال 1264/1129؛ الكاش v209؛ البناء 3a90f3f12b04.
+Sync batch: v210 · 2026-10-16 · مراجعة سطرًا سطرًا لحوارات المدخل (entry) في A1–B2 (495 سطرًا): 156 تعديلًا (153 حقلًا في 66 درسًا: 4 عناوين، و17 مشهدًا، و18 سطرًا ألمانيًا، و114 ترجمة؛ و3 مواضع لإصلاح «Beweis» في قراءة b2-19)؛ كاش v210، بناء e7333c275ef1.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

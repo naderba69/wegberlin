@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "f8dba2af72b37f93cd1fa18ea61488a5af82054f066a2b08802a026050be9ad4",
+  "contentSha256": "58b3c0184186d4fc13cc6b9ee00b69f0d31070f45a8b1d9cef4d251cc93cf02b",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -2316,6 +2316,29 @@
         ]
       },
       {
+        "lessonId": "b2-19",
+        "level": "B2",
+        "pct": 25.8,
+        "unknown": [
+          "forum",
+          "studienberatung",
+          "ben",
+          "mitarbeiter",
+          "antwortete",
+          "spam",
+          "gelandet",
+          "diesmal",
+          "april",
+          "unbeantwortet",
+          "erteilt",
+          "beiden",
+          "saetzen",
+          "neuer",
+          "inhalt",
+          "zugleich"
+        ]
+      },
+      {
         "lessonId": "b2-23",
         "level": "B2",
         "pct": 25.8,
@@ -2336,29 +2359,6 @@
           "aktenlage",
           "fand",
           "kette"
-        ]
-      },
-      {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "pct": 25.5,
-        "unknown": [
-          "forum",
-          "studienberatung",
-          "ben",
-          "mitarbeiter",
-          "antwortete",
-          "spam",
-          "gelandet",
-          "diesmal",
-          "april",
-          "unbeantwortet",
-          "erteilt",
-          "beiden",
-          "saetzen",
-          "neuer",
-          "inhalt",
-          "zugleich"
         ]
       }
     ]

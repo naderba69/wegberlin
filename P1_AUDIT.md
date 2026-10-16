@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v213 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص القراءة ومسارداتها وأهداف الدروس في A1–B2: 91 تعديلًا في 33 درسًا؛ كاش v213، بناء 1b5f27db9c3d.
+Sync batch: v214 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص الاستماع في A1–B2: 43 تعديلًا في 18 درسًا، منها 8 نصوص مسموعة صُحّحت وأُعيد توليد صوتها؛ كاش v214، بناء 7761f052f038.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

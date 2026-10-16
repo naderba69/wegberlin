@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v213 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص القراءة ومسارداتها وأهداف الدروس في A1–B2: 91 تعديلًا في 33 درسًا؛ كاش v213، بناء 1b5f27db9c3d.
+Sync batch: v214 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص الاستماع في A1–B2: 43 تعديلًا في 18 درسًا، منها 8 نصوص مسموعة صُحّحت وأُعيد توليد صوتها؛ كاش v214، بناء 7761f052f038.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,12 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v214 (2026-10-16): ثمانية نصوص استماع أخرى مصحّحة بصوت مُعاد توليده
+
+- الدروس: `a2-02` و`b2-11` و`b2-15` و`b2-16` و`b2-18` و`b2-22` و`b2-23` و`b2-24`، بعد مراجعة سطرًا سطرًا لكل نصوص الاستماع الـ 96. صُحّح النص أولًا ثم وُلّد الصوت منه (16 ملفًا: 8 MP3 و8 Opus) بالصوت نفسه `german-educational-feminine-04` (`Arena.ai speech synthesis`)، ضمن دفعة المانيفست 2026-10-16.
+- الإجمالي المقيس بعد البناء: 544 ملف MP3+Opus / **53,181,499** بايتًا (كان 53,193,753)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط (المدة، كثافة 15–17 حرفًا/ثانية، لا صمت طويل، المتوسط نحو −20 dB). الاستماع البشري مفتوح.
 
 ## تحديث v212 (2026-10-16): سبعة نصوص استماع مصحّحة بصوت مُعاد توليده
 

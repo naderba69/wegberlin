@@ -55,7 +55,9 @@ const NEW_BATCH = {
   // v212: transcript errors fixed in seven lessons (sind/ist, speaker turn, demonstrative reference,
   // Adjektivbildung, opening fragment + der Komparativ, bejaht/verneint, erweiterten); audio re-synthesised
   // from the corrected transcript with one voice so text and recording match again.
-  "2026-10-16": { voiceProfile: "german-educational-feminine-04", synthesisProvider: "Arena.ai speech synthesis", lessons: ["a1-12", "a1-17", "b2-14", "b2-17", "b2-20", "b2-21", "b2-24"] },
+  // v214: eight more transcripts corrected (Kuchendose logic, reflexive beginnen, ungeprüfter Text, die Modalpartikel,
+  // Datum-Satz, drei Partizipialattribute + Pronomen, Verjährung claim removed, bejaht → geht durch); same voice/date batch.
+  "2026-10-16": { voiceProfile: "german-educational-feminine-04", synthesisProvider: "Arena.ai speech synthesis", lessons: ["a1-12", "a1-17", "a2-02", "b2-11", "b2-14", "b2-15", "b2-16", "b2-17", "b2-18", "b2-20", "b2-21", "b2-22", "b2-23", "b2-24"] },
 };
 const provenance = new Map();
 for (const [generatedAt, meta] of Object.entries(NEW_BATCH)) for (const lessonId of meta.lessons) provenance.set(lessonId, { generatedAt, voiceProfile: meta.voiceProfile, synthesisProvider: meta.synthesisProvider });

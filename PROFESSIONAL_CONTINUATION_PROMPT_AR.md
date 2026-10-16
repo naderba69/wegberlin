@@ -1,6 +1,76 @@
 # برومبت الاستمرار الاحترافي الاحتياطي — Der Weg nach Berlin
 
-Sync batch: v211 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم الاكتشاف (discovery) في A1–B2 (402 مثال و294 سؤالًا): 59 تعديلًا في 44 درسًا (20 تعليمة، و25 سؤالًا، و11 مثالًا ألمانيًا مصحّحًا، و3 أمثلة مضافة)؛ كاش v211، بناء dc988ef97298.
+Sync batch: v212 · 2026-10-16 · إصلاح أخطاء النصوص المسموعة السبعة بصوت مُعاد توليده (14 ملفًا)، ومراجعة سطرًا سطرًا لمطالب الكتابة والمحادثة والوساطة في A1–B2: 108 تعديلات في 62 درسًا؛ كاش v212، بناء 2c18125f6872.
+
+## إصلاح أخطاء النصوص المسموعة السبعة بصوت مُعاد توليده، ومراجعة مطالب الكتابة والمحادثة والوساطة سطرًا سطرًا — 2026-10-16 (v212)
+
+- **النطاق:** تعليمة المالك «سنغلق جميع النقائص ونصلح جميع الأخطاء». أُغلق في هذه الدفعة كل ما يستطيع الوكيل إغلاقه بالكود والمحتوى. أما بنود المراجعة البشرية والأجهزة الحقيقية وتدقيق الخصوصية فبقيت مفتوحة بصدق (انظر «الحدود»).
+- **أولًا — أخطاء النصوص المسموعة السبعة (أُغلقت؛ كانت «مفتوح، يحتاج إعادة توليد الصوت» في v202 وv203):**
+  - `a1-12`: «Hier ist die Tomatensuppe und der Salat» ⇒ «Hier **sind** …» (فاعلان).
+  - `a1-17`: كان «Das ist zu früh» على لسان Lena، وكريم هو الذي يعمل حتى الثامنة ⇒ «Lena: Um halb acht. — Karim: Das ist zu früh für mich. …».
+  - `b2-14`: «dieses» (محايد) نُسب إلى «der Termin/der Antrag» ⇒ «davor aber stehen der Termin, der Antrag und die Frist, und «dieses» passt zu keinem davon». وتبع ذلك مفتاح سؤال الاستماع الأول ومشتّته وشرحه («Es hat kein passendes Bezugswort.»)، والترجمة العربية.
+  - `b2-17`: «Adjektivausbildung» ⇒ «Adjektiv**bildung**».
+  - `b2-20`: كان التسجيل يبدأ بشذرة «vor der Prüfungssimulation.» ⇒ «Kurz vor der Prüfungssimulation.». و«das Komparativ» ⇒ «**der** Komparativ». و«ein Konkretes» ⇒ «etwas Konkretes» في النص وفي شرح السؤال. والاسم العربي «أزيرز» ⇒ «عزيز».
+  - `b2-21`: «Sie verneint knapp» ثم وصف المحضر نفسه ⇒ «Sie **bejaht** knapp». و«halte» في كلام غير منقول ⇒ «hält». و«الإشرافة» ⇒ «المراقِبة».
+  - `b2-24`: «vor einem erweitertem Infinitiv» ⇒ «erweiterten». وحُذفت «Beistrich» (نمساوية، لا تخدم متعلّم ألمانيا). وصُحّح السؤال العربي عن فصل الفاعل عن المسند.
+  - **الصوت:** أُعيد توليد الملفات الأربعة عشر (7 MP3 + 7 Opus) من النصوص المصحّحة نفسها بصوت واحد اختاره المالك في المحادثة (`german-educational-feminine-04`، مزوّد `Arena.ai speech synthesis`). الصيغة مطابقة للملفات القائمة: MP3 ‏24 kHz mono ‏32 kb/s، وOpus ‏48 kHz mono ‏24 kb/s. رُفض نص `b2-20` كاملًا خطأً من مرشّح المحتوى في أداة التوليد، فوُلّد على جزأين عند «Ben: Also: …» ودُمجا بنصف ثانية صمت. «5. Mai» في `b2-17` نُطقت «fünften Mai».
+  - **الفحص الآلي:** المدة، وكثافة 13–17 حرفًا في الثانية، و`silencedetect` (لا صمت أطول من نحو 1.3 ث)، ومتوسط الصوت نحو −20 dB. لا يوجد في البيئة تحويل كلام إلى نص، فلم يُستمع إلى الملفات آليًا ولا بشريًا: **الاستماع البشري ما زال مفتوحًا** كما لبقية الصوت.
+  - **المانيفست:** `scripts/generate-lesson-audio-manifest.mjs` يضيف دفعة «2026-10-16» للدروس السبعة، وأُخرجت الدروس الخمسة من B2 من دفعاتها السابقة. `public/audio/lessons/manifest.json` = 96 أصلًا. اختبارات الصوت الستة: 26/26.
+
+| الدرس | المدة ms | MP3 | Opus |
+|---|---|---|---|
+| `a1-12` | 28,152 | 112,749 | 84,755 |
+| `a1-17` | 28,440 | 113,901 | 86,037 |
+| `b2-14` | 75,432 | 301,869 | 235,219 |
+| `b2-17` | 84,120 | 336,621 | 259,512 |
+| `b2-20` | 100,392 | 401,708 | 298,445 |
+| `b2-21` | 68,472 | 274,029 | 217,338 |
+| `b2-24` | 82,488 | 330,093 | 257,270 |
+
+- **ثانيًا — مطالب الكتابة والمحادثة والوساطة (`writing`/`speaking`/`mediation`) في الدروس الـ 96، سطرًا سطرًا (أُغلقت؛ كانت «لم تُراجَع بعد» في v211):** المعيار ما يفيد المتعلم وما هو صحيح، وأن يطابق نموذج الكتابة `modelDe` قائمة التحقق والمدى المطلوب من الكلمات. نماذج الكتابة نصوص معروضة بلا صوت مسجّل.
+  - **أخطاء ألمانية في النماذج تعلّم صيغة خاطئة (صُحّحت):**
+    - `b1-09` «gilt der Versuch als gescheit» ⇒ «gescheitert».
+    - `b1-02` «das Kriterium, das mich am längsten gezögert hat» ⇒ «bei dem ich am längsten gezögert habe».
+    - `b1-11` «Die Fahrradnutzung stieg, indem …» و«Der Stress wurde weniger, indem …»، وindem تحتاج فاعلًا يقوم بالفعل، وهذا عين ما تطلبه قائمة الدرس ⇒ «Wir steigerten die Fahrradnutzung, indem wir …» و«Der Stress sank dadurch, dass …». و«die Grenze verschwommen hat» ⇒ «verschwommen ist».
+    - `b1-22` «Die Pufferplane» ⇒ «Den Pufferabend». و`b1-24` «während des Pilot» ⇒ «des Pilotprojekts» (وكذلك `b2-02` و`b2-12`).
+    - `b1-17` «Der Eintritt war … besetzt» ⇒ «Der Saal». و«Ohne das Ende zu verraten, steht … die Beziehung» (مصدر بلا فاعل مطابق) ⇒ «…, kann man sagen: Im Mittelpunkt steht …».
+    - `b1-21` «Was die Technik betrifft, das prüft Ben» ⇒ «Was technisch nötig ist, das prüft Ben».
+    - `b2-07` «die nicht alle Lesen können» ⇒ «lesen». و`b2-09` «Die Koffer standen im Winter aus» ⇒ «Die Installation war im Winter ausgestellt».
+    - `b2-10` «es ist empfohlen» ⇒ «es wird empfohlen». و`b2-16` «wäre mir nicht entglitten, dass» ⇒ «entgangen» (وفي العبارة المفيدة). و`b2-18` «Den Widerspruch … entscheiden wir» ⇒ «Über den Widerspruch …». و`b2-23` «Ich beantrage, … mitzuteilen» ⇒ «Ich bitte Sie, mir … mitzuteilen». و`b2-22` «bleibt aufrechterhalten» ⇒ «wird aufrechterhalten».
+    - في A1/A2: `a2-03` «bin … gesessen» ⇒ «habe … gesessen» (معيار ألمانيا)، و`a1-10` «einen Käse» ⇒ «ein Stück Käse»، و`a2-20` «die Bedingung» ⇒ «die Bedingungen»، و`a2-23` «Aufgaben, die Gespräche strukturieren» (المهام لا تنظّم) ⇒ «Aufgaben, bei denen ich …».
+  - **نماذج تناقض نفسها أو قائمتها أو مطلبها (صُحّحت):**
+    - `b2-06`: «Erstens wurde die Oberfläche gemessen und nicht die Luft» ثم «… und die Lufttemperatur in 1,5 Metern Höhe» ⇒ «nur die Oberflächentemperatur».
+    - `b2-08`: استطلاع ذاتي لـ 400 شخص ثم «Einschätzungen von Vorgesetzten»، ومزوّد تطبيق ثم «denselben Firmen» ⇒ «Selbstauskünfte» و«dass der Anbieter die Befragung selbst finanziert hat». و«Im Artikel heiße es» (Konjunktiv I في كلام الكاتب نفسه) ⇒ «heißt es».
+    - `b2-10`: «bis Montag» ثم «bis zum 15. März»، و«die Teilnahmegebühr entfällt» ثم «Die Gebühr beträgt 45 Euro»، وجهتان مسؤولتان متعارضتان ⇒ موحّدة مع المصدر.
+    - `b2-05`: فقرة عن الحضور (41 ⇒ 49) دخلت نصًا عن النقاط، ومجموع فئاتها لا يساوي الإجمالي ⇒ التغير النسبي للبيانات نفسها (62 ⇒ 71 = نحو 14.5% و9 نقاط مطلقة) وفروق متسقة بين المستويات.
+    - `b2-13`: «zwei Kriterien» بثلاثة شروط، و«Prozent» مقابل «Prozentpunkten» في درس عن الدقة ⇒ «fünf Prozentpunkte» بلا عدد خاطئ. وفي المطلب «welche Ihrer ursprünglichen Forderung» ⇒ «Forderungen».
+    - `b2-19`: يقول النص إن الافتتاح فيه «ja» و«nur» ولا «ja» فيه ⇒ «Sie wissen ja, …». و«die Antwort ist ausgeblieben» ثم «Sie teilten mir mit» ⇒ «Im Portal steht».
+    - `b2-20`: القائمة تطلب «je … desto» واحدة والنموذج فيه اثنتان ⇒ واحدة. و«gehe ich davon aus, dass die Unterlagen vollständig geprüft sind» ⇒ «noch nicht zugeordnet». وأُعيد بناء مهمة الوساطة: كان المشهد يصف إعلانًا عربيًا والمصدر ألماني، والمقترح يضيف «أُعيد إلى آخر الطابور» غير الموجود في المصدر.
+    - `b2-22`: «nur ein enges Attribut — „beantragte Wiederholung“» وفي النص ثلاثة ⇒ «pro Satz höchstens ein enges Attribut, etwa …».
+    - `b1-08`: القائمة «تجنبت ادعاءً قانونيًا غير موثق» والنموذج «Laut Mietvertrag … sehe ich die Firma in der Pflicht» مع تلميح لتخفيض الإيجار ⇒ إرفاق نسخة البلاغ الأول وطلب اتصال لحل مشترك.
+    - `b1-13`: «الجواب صار أقصر» يناقض «التسجيلات صارت أطول» ⇒ «die Pause vor einer Antwort».
+    - `b2-15`: القائمة «خمس دقائق للمراجعة» والنموذج عشر ⇒ القائمة بلا رقم متعارض. ومقترح الوساطة كان يضيف «obwohl Zeit vorhanden war» غير الموجود في المصدر ⇒ حُذف.
+    - A1/A2: `a1-08` ترتيب يومي غير منطقي (يأخذ ابنه إلى المدرسة قبل الفطور بعد ذكر الفطور) ⇒ ترتيب متسق. و`a1-09` يقترح الثلاثاء ثم يرفض «um sechs» ⇒ رفض الاثنين بسبب العمل ثم بديل الثلاثاء. و`a1-17` «Um fünf kannst du leider nicht?» ⇒ «Du schreibst, um fünf kannst du leider nicht. Kein Problem!». و`a1-21` هامبورغ عبر هانوفر و«zehn Minuten Verspätung» مع وصول 12:20 ⇒ بريمن و«zwanzig». و`a2-14` «bis zwölf erreichbar» في إجازة مرضية تمنعها القائمة ⇒ «hilft Ihnen Ben weiter». و`a2-15` «morgens und abends» متسقة مع الجرعة.
+  - **صياغات أدق للمتعلم:** نحو 20 جملة في A1/A2 (مثل `a2-04` «Ich ziehe … um» وهو قد انتقل ⇒ «Ich bin … eingezogen»، و`a2-08` «Sie können mich … einstellen» ⇒ «Ich kann … anfangen»)، وفي B1/B2 (`b1-07` و`b1-14` و`b2-11` و`b2-24`).
+  - **العربية:** «بال العربية … لألمانيًا» ⇒ «بالعربية … بالألمانية»، و«جمتين» ⇒ «جمل»، و«بجلتين» ⇒ «بجملتين»، و«مُصمَّدتين» ⇒ «مقصودتين»، و«مغلوق» ⇒ «مغلق»، و«أجزائها» ⇒ «أجزاءها»، و«صيغ» ⇒ «صُغ»، و«أفصحت عنه البنك» ⇒ «أفصح»، و«الإشرافة» ⇒ «المشرفة»، واسم «كايسلر» المقحم.
+  - **المجموع:** **108 تعديلات** في **62 درسًا**: A1 ‏10 في 9 دروس، وA2 ‏24 في 19، وB1 ‏21 في 14، وB2 ‏53 في 20. كل نموذج كتابة ما زال داخل مداه (`writing-range violations 0`)، وكل ميزة تطلبها القائمة باقية في النموذج.
+- **الأرقام:**
+  - **مرشحات المعجم:** الأسماء 4902/3428 ⇒ **4894/3420**، والمغطاة **1385**، و`authoredTargets` **1474**. نطاق P0-98 باقٍ على **1297/89**. الأفعال 1265/1130 ⇒ **1279/1144**. حُدّثت في `lexical-target-gap.test.ts` و`verify-continuation-handoff.mjs`.
+  - **استثناءات الاقتباس:** **73** (بلا تغيير). **عقد التدريس:** 0 إخفاقات صلبة. **مؤشر «المفتاح أطول خيار»:** **39.2%**.
+- **الكاش:** `PACK_CACHE` = **v212**، و`PACK_STAGING_CACHE` = **v211**، والرجوع `previous` = **v211**. حُدّث سطر `Offline cache:` يدويًا. الوثائق الثلاث عشرة على `Sync batch: v212`.
+- **البناء:**
+  - الصفحات: 325/325.
+  - Offline **`2c18125f6872`**: full 6,115,739 gzip (a1 2,789,191 · a2 2,901,522 · b1 2,928,511 · b2 4,381,785).
+  - JS: 131 / 2,080,415 gzip / أقصى 267,505.
+  - الصوت: 544 / **53,193,753** بايت (+249,910 من الملفات الأربعة عشر؛ تحت السقف الآمن 59,500,000).
+  - المنهج: 1,176,242 gzip.
+  - التباين: 323 صفحة / 0 دون الحد.
+- **التحقق المحلي:** نجح `npm run check` كاملًا من أول تشغيل: lint وtypecheck، واختبارات الوحدة **1,573/1,573** في **225** ملفًا، وفحوص الأسرار والمصادر وسير العمل و`handoff:check` والتبعيات، والبناء بالبصمة نفسها **`2c18125f6872`**، و`a11y:browser` **642** فحصًا بلا فشل. E2E: **66/66** على سطح المكتب و**66/66** على الهاتف من أول تشغيل.
+- **الحدود (ما لا يغلقه الكود بصدق):**
+  - القرارات قرار الوكيل بتفويض صريح من المالك في المحادثة («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية ألمانية مستقلة.
+  - الاستماع البشري لكل الصوت المولّد، ومنه الملفات الأربعة عشر الجديدة، ما زال مفتوحًا. صوت `german-educational-feminine-04` يختلف عن أصوات الدروس الأخرى في المستوى نفسه.
+  - مراجعة ألمانية بشرية مستقلة (P0-98/99: ‏89 اسمًا و11 استثناء إطار)، والاختبار على أجهزة حقيقية، وتدقيق الخصوصية (P2-360)، كلها تحتاج بشرًا.
+  - P0-301: ‏PR #7 مفتوح وقابل للدمج (Quality Gate وPreview أخضران على `2f34b38`)، وتركه المالك مفتوحًا في 2026-10-16 («لاحقًا»). لا يُدمج دون موافقته.
 
 ## مراجعة سطرًا سطرًا لقسم الاكتشاف (`discovery`) في A1–B2 — 2026-10-16 (v211)
 
@@ -447,7 +517,7 @@ Sync batch: v211 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم ا
   - فحص آلي يثبت أن كل اقتباس ألماني («…» أو „…“) في الأسئلة المعدّلة موجود حرفيًا في نصه أو خياراته.
   - لا مواضع مبتورة.
   - **0** إشارات ترقيم.
-- **مفتوح، يحتاج إعادة توليد الصوت** (لم يُعدَّل النص المكتوب، إضافةً إلى بنود v202):
+- **مفتوح، يحتاج إعادة توليد الصوت** (لم يُعدَّل النص المكتوب، إضافةً إلى بنود v202) — **أُغلق في v212**: صُحّح النص وأُعيد توليد الصوت:
   - `a1-12` استماع: «Hier ist die Tomatensuppe und der Salat» (الأصح sind).
   - `a1-17` استماع: يحتاج تحققًا مَن يقول «Das ist zu früh».
   - `b2-20` استماع: التسجيل يبدأ بشذرة «vor der Prüfungssimulation.»، وفيه «das Komparativ» (الأصح der).
@@ -510,7 +580,7 @@ Sync batch: v211 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم ا
     - هل كلمات المفتاح موجودة في النص؟
     - فحص للضمائر في كل أسئلة الاختيار في المنهج.
   - لم يُقرأ كل سؤال استماع غير مُعلَّم سطرًا سطرًا.
-- **مفتوح، يحتاج إعادة توليد الصوت** (لم يُعدَّل النص المكتوب حتى يبقى مطابقًا للتسجيل):
+- **مفتوح، يحتاج إعادة توليد الصوت** (لم يُعدَّل النص المكتوب حتى يبقى مطابقًا للتسجيل) — **أُغلق في v212**: صُحّح النص وأُعيد توليد الصوت:
   - `b2-14` استماع: «dieses» يُنسب إلى der Termin/der Antrag (مذكّران) ثم يُستبدل بـ «diese Frist».
   - `b2-17` استماع: «Adjektivausbildung».
   - `b2-21` استماع: «Sie verneint knapp» ثم وصف للمحضر نفسه.
@@ -973,7 +1043,7 @@ Sync batch: v211 · 2026-10-16 · مراجعة سطرًا سطرًا لقسم ا
 - لا B1 مؤكد في 12 شهرًا ولا وعد B2 بمدة ثابتة. سقف التمريض 2/5 دقائق، والمقارنة احترازية غير سببية؛ 0 مراجعات مهنية.
 - 19/19 official source records: فحص 2026-10-02 = 3 fresh، 16 due-soon، 0 stale؛ أضيف تثبيت مصدر ONNX Runtime WebGPU، ولم نزوّر مراجعة بشرية أو نقدم تاريخها. أقرب مراجعة 2026-10-03.
 - Next 16.3.8 / React 19.2.8، والمنهج dwnb-a1-b2-2026.10-v2؛ تستورد النسخ المدعومة القديمة v1 دون حذف أدلة أو ترقيتها رجعيًا.
-- Offline cache: dwnb-full-pack-v211 (staging v210; previous complete v210)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
+- Offline cache: dwnb-full-pack-v212 (staging v211; previous complete v211)؛ الحزم 60/60/60/221/320، و320/320 مسارًا؛ `/practice/test-generator` وقوالبه ضمن كل مستوى، وShadowing يدعم مقارنة الموجة المحلية P2-352، و`/practice` يعرض مسارات P2-276 الافتراضية دون ادعاء نتيجة. قياس v182 تاريخي موثق أدناه.
 - قياس بناء تاريخي لجيل ADR-106 (2026-10-03، مراحله A+B+C: عقد الدرس الثمانية، إعادة التسمية، عيادة الخطأ والنقل المؤجل): 688b30fccd87 · full 5,911,288 · JavaScript 124 chunks / 1,937,372 gzip / max 262,055؛ الصوت 544 MP3+Opus / 52,943,843 bytes؛ المنهج 1,045,989 gzip، احتياطي 15% باقٍ. البصمة تُقاس على مخرجات `npm run build` نفسها (مسارات الأصول تحمل معرّف البناء)، فتتغيّر بين تشغيلين متتاليين على نفس المصدر: قياس هذه الجلسة أعطى 329d37aa1324 ثم ef613e05d712 مع JS والصوت والمنهج بلا تغيير؛ ليست دليل تعديل محتوى. بصمة جيل المرحلة A من ADR-106 (قبل توثيق عيادة الخطأ) كانت d399ed70a36e مع full 5,761,912، وبصمة جيل ADR-101 قبل الدمج d1069c0c1d44؛ كلاهما محفوظ كما قِيست.
 - Unit/Integrity tests الحالية: **1,573/1,573 في 225 ملفًا** (`npm run check` خروج 0 كاملًا، 2026-10-15، v201، بما فيه `a11y:browser` 642/642؛ وPlaywright محليًا 132/132). القياس التاريخي: 1,355/1,355 in 200/200 files (`npm test`, measured 2026-10-05 after P2-276; no threshold softened or test file disabled). The P2-352 and P2-276 Playwright flows are in the suite. Local Chromium is available through the npm `@sparticuz/chromium` method (v194 section; temporary paths outside the repo). Earlier, remote Quality Gate run `37377109271` on head `15e457c` passed both `check` and the full desktop/mobile E2E job, including P2-276; Vercel Preview also passed. Prior successful `check`/E2E runs on `b974c48` and `e37bf84` predate P2-276 and do not validate it.
 - P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.
@@ -2532,6 +2602,8 @@ A1 24/24 · A2 24/24 · B1 24/24 · B2 24/24
 | `b2-22` | Bescheid und Nachfrist umformen | 1,161 | 196 | 286,509 | 208,229 |
 | `b2-23` | Genitivketten und Komposita | 1,333 | 182 | 324,621 | 233,982 |
 | `b2-24` | Kommasetzung bei Relativ- und Infinitivgruppen | 1,181 | 185 | 281,709 | 204,072 |
+
+تحديث v212 (2026-10-16): أُعيد توليد صوت `b2-21` (MP3 274,029 · Opus 217,338) و`b2-24` (MP3 330,093 · Opus 257,270) بعد تصحيح النص؛ الجدول أعلاه قياس يوم الكتابة.
 
 لكل درس: 5 أهداف، 18 عبارة، 4 كتل نظرية، 8 تمارين موزعة على الأنواع الخمسة، 3 أسئلة قراءة +
 3 أسئلة استماع، 6 عناصر `ipa`، 5 أخطاء شائعة، Mini-Test من 5 عناصر، و12 بطاقة SRS. أُضيف إطارا

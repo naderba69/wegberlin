@@ -49,9 +49,13 @@ function mp3DurationMs(bytes) {
 // lessons recorded later are labelled with their own profile and date instead of being back-dated.
 const NEW_BATCH = {
   "2026-09-14": { voiceProfile: "german-educational-feminine-02", lessons: ["b2-13"] },
-  "2026-09-15": { voiceProfile: "german-educational-feminine-02", lessons: ["b2-14", "b2-15", "b2-16"] },
-  "2026-09-16": { voiceProfile: "german-educational-feminine-02", lessons: ["b2-17", "b2-18", "b2-19"] },
-  "2026-09-17": { voiceProfile: "german-educational-feminine-03", synthesisProvider: "piper-local-neural-tts-1-8-0", lessons: ["b2-20", "b2-21", "b2-22", "b2-23", "b2-24"] },
+  "2026-09-15": { voiceProfile: "german-educational-feminine-02", lessons: ["b2-15", "b2-16"] },
+  "2026-09-16": { voiceProfile: "german-educational-feminine-02", lessons: ["b2-18", "b2-19"] },
+  "2026-09-17": { voiceProfile: "german-educational-feminine-03", synthesisProvider: "piper-local-neural-tts-1-8-0", lessons: ["b2-22", "b2-23"] },
+  // v212: transcript errors fixed in seven lessons (sind/ist, speaker turn, demonstrative reference,
+  // Adjektivbildung, opening fragment + der Komparativ, bejaht/verneint, erweiterten); audio re-synthesised
+  // from the corrected transcript with one voice so text and recording match again.
+  "2026-10-16": { voiceProfile: "german-educational-feminine-04", synthesisProvider: "Arena.ai speech synthesis", lessons: ["a1-12", "a1-17", "b2-14", "b2-17", "b2-20", "b2-21", "b2-24"] },
 };
 const provenance = new Map();
 for (const [generatedAt, meta] of Object.entries(NEW_BATCH)) for (const lessonId of meta.lessons) provenance.set(lessonId, { generatedAt, voiceProfile: meta.voiceProfile, synthesisProvider: meta.synthesisProvider });

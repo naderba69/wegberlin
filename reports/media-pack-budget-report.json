@@ -27,51 +27,51 @@
   },
   "actual": {
     "curriculumFileCount": 92,
-    "curriculumSourceGzipBytes": 1176231,
+    "curriculumSourceGzipBytes": 1176242,
     "physicalAudioFileCount": 544,
     "mp3AssetCount": 272,
     "opusAssetCount": 272,
-    "totalAudioBytes": 52943843,
+    "totalAudioBytes": 53193753,
     "packs": {
       "a1": {
-        "pageGzipBytes": 2789103,
-        "mp3Bytes": 3539304,
-        "opusBytes": 2563432,
-        "selectedMaximumBytes": 3539304,
+        "pageGzipBytes": 2789191,
+        "mp3Bytes": 3551112,
+        "opusBytes": 2574717,
+        "selectedMaximumBytes": 3551112,
         "audioAssetCount": 40,
-        "totalBytes": 6328407
+        "totalBytes": 6340303
       },
       "a2": {
-        "pageGzipBytes": 2901405,
+        "pageGzipBytes": 2901522,
         "mp3Bytes": 4714032,
         "opusBytes": 3497558,
         "selectedMaximumBytes": 4714032,
         "audioAssetCount": 48,
-        "totalBytes": 7615437
+        "totalBytes": 7615554
       },
       "b1": {
-        "pageGzipBytes": 2928316,
+        "pageGzipBytes": 2928511,
         "mp3Bytes": 5838576,
         "opusBytes": 4373622,
         "selectedMaximumBytes": 5838576,
         "audioAssetCount": 48,
-        "totalBytes": 8766892
+        "totalBytes": 8767087
       },
       "b2": {
-        "pageGzipBytes": 4381643,
-        "mp3Bytes": 16242792,
-        "opusBytes": 12174527,
-        "selectedMaximumBytes": 16242792,
+        "pageGzipBytes": 4381785,
+        "mp3Bytes": 16343207,
+        "opusBytes": 12300929,
+        "selectedMaximumBytes": 16343207,
         "audioAssetCount": 136,
-        "totalBytes": 20624435
+        "totalBytes": 20724992
       },
       "full": {
-        "pageGzipBytes": 6115431,
-        "mp3Bytes": 30334704,
-        "opusBytes": 22609139,
-        "selectedMaximumBytes": 30334704,
+        "pageGzipBytes": 6115739,
+        "mp3Bytes": 30446927,
+        "opusBytes": 22746826,
+        "selectedMaximumBytes": 30446927,
         "audioAssetCount": 272,
-        "totalBytes": 36450135
+        "totalBytes": 36562666
       }
     }
   },

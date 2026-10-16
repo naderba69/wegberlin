@@ -67,7 +67,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
       promptAr: "ما الذي سمعته بالضبط؟",
       options: [
         { textDe: "Guten Morgen, ich bin Hamza.", kind: "recognize", reasonAr: "تطابق حرفي مع ما قيل: الاسمُ والتحية كما سمعتهما، ولا شيء فيهما من عندك." },
-        { textDe: "Guten Abend, ich bin Hamza.", kind: "guess", reasonAr: "الحرف الأول تغيّر: Abend ليست Morgen. البيئة ترفض التخمين لأن الفرق حرفي لا معنوي." },
+        { textDe: "Guten Abend, ich bin Hamza.", kind: "guess", reasonAr: "الكلمة تغيّرت: Abend ليست Morgen. البيئة ترفض التخمين لأن المطلوب ما قيل حرفيًّا." },
         { textDe: "Ich bin Hamza und wohne hier.", kind: "guess", reasonAr: "زادت جملة لم تُقَل. الجملة صحيحة ألمانيًّا لكنها ليست ما سمعته." },
         { textDe: "Guten Morgen, ich heiße anders.", kind: "silent-agreement", reasonAr: "قول «غير ذلك» يلغي الاسم المسموع، وهو عكس التعرّف المطلوب." },
       ],
@@ -91,7 +91,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
       promptAr: "أيّ جملةٍ تطابق ما قيل؟",
       options: [
         { textDe: "Um sieben Uhr kommt Frau Yilmaz.", kind: "recognize", reasonAr: "الساعة والاسم كما قيلا حرفيًّا." },
-        { textDe: "Um halb sieben kommt Frau Yilmaz.", kind: "guess", reasonAr: "halb sieben نصف السابعة لا السابعة؛ الفرق في التعبير عن الوقت نفسه." },
+        { textDe: "Um halb sieben kommt Frau Yilmaz.", kind: "guess", reasonAr: "halb sieben تعني السادسة والنصف لا السابعة؛ فالألمانية تعدّ النصف نحو الساعة التالية." },
         { textDe: "Um sieben Uhr kommt Frau Bauer.", kind: "guess", reasonAr: "الاسم تبدّل: القالب صحيح والاسم لا." },
         { textDe: "Gestern um sieben Uhr kam Frau Yilmaz.", kind: "guess", reasonAr: "أضفت زمنًا لم يُقل وحوّلت الجملة إلى الماضي." },
       ],
@@ -205,15 +205,15 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
     titleDe: "Störung melden", titleAr: "الإبلاغ عن عطل بصياغة هادئة",
     situationAr: "قيلت جملة عن عطل متكرر. المطلوب لغويًّا: إعادةُ القول ثم سؤالٌ عن الخطوة التالية بصيغة غير متصاعدة.",
     reusedTheoryIds: ["a2-12-t3"],
-    targetDe: "Ich wiederhole: der Aufzug ist wieder kaputt. Was soll ich jetzt machen?",
+    targetDe: "Ich wiederhole: Der Aufzug ist wieder kaputt. Was soll ich jetzt machen?",
     safetyTask: {
       stimulusDe: "Der Aufzug ist wieder kaputt.",
       promptAr: "أيّ جوابٍ ينقل المشكلة بدقة ويسأل عن الخطوة؟",
       options: [
-        { textDe: "Ich wiederhole: der Aufzug ist wieder kaputt. Was soll ich jetzt machen?", kind: "confirm", reasonAr: "إعادة + سؤال مباشر: القول صار قابلًا للتحقق، والسؤال صار واضحًا." },
+        { textDe: "Ich wiederhole: Der Aufzug ist wieder kaputt. Was soll ich jetzt machen?", kind: "confirm", reasonAr: "إعادة + سؤال مباشر: القول صار قابلًا للتحقق، والسؤال صار واضحًا." },
         { textDe: "Ich sage nichts, ich habe es verstanden.", kind: "silent-agreement", reasonAr: "الصمت يُبقي «ماذا أفعل؟» بلا جواب." },
         { textDe: "Es ist bestimmt der zweite Aufzug.", kind: "guess", reasonAr: "حدّدت أيَّ مصعدٍ بلا معلومة؛ التخمين يوجّه العمل في الاتجاه الخطأ." },
-        { textDe: "Ich rufe sofort jemanden an, ohne zu fragen.", kind: "act-now", reasonAr: "مكالمة بلا سؤال تُضيع تفصيلًا سُئل عنه صراحةً." },
+        { textDe: "Ich rufe sofort jemanden an, ohne zu fragen.", kind: "act-now", reasonAr: "الاتصال قبل السؤال عن الخطوة التالية قد يكرّر إجراءً قائمًا أو يتجاوز المسؤول." },
       ],
     },
     reviewWords: [],
@@ -306,12 +306,12 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
     titleDe: "Vorschlag statt Anweisung", titleAr: "اقتراح قابل للقياس لا أمر",
     situationAr: "مطلوب منك رأيٌ تنظيمي. المطلوب لغويًّا: اقتراحٌ محدَّد يذكر منفّذًا ووقتًا، بصيغة لا تفرض نفسها.",
     reusedTheoryIds: ["b1-20-t2", "b1-20-t3"],
-    targetDe: "Wir könnten die Übergabe auf 14 Uhr legen — passt das dir?",
+    targetDe: "Wir könnten die Übergabe auf 14 Uhr legen — passt dir das?",
     safetyTask: {
       stimulusDe: "Eine Kollegin fragt: «Wann machen wir die Übergabe?»",
       promptAr: "أيّ جوابٍ اقتراحٌ لا أمر؟",
       options: [
-        { textDe: "Wir könnten die Übergabe auf 14 Uhr legen — passt das dir?", kind: "ask", reasonAr: "Konjunktiv II يقدّم الاقتراح، والسؤال في النهاية يفتح باب الاتفاق." },
+        { textDe: "Wir könnten die Übergabe auf 14 Uhr legen — passt dir das?", kind: "ask", reasonAr: "Konjunktiv II يقدّم الاقتراح، والسؤال في النهاية يفتح باب الاتفاق." },
         { textDe: "Die Übergabe ist um 14 Uhr.", kind: "act-now", reasonAr: "صيغة إخبارية تُثبّت القرار بلا اتفاق، وهي أقرب إلى الأمر." },
         { textDe: "Irgendwann nach der Pause.", kind: "guess", reasonAr: "زمن غامض لا يمكن التحقق منه ولا متابعته." },
         { textDe: "Mir ist das egal.", kind: "silent-agreement", reasonAr: "الحياد يترك القرار معلّقًا ويُنقل عبؤه إلى غيرك." },
@@ -337,7 +337,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
       stimulusDe: "Bitte koordinieren Sie das bis Freitag und melden Sie den Stand zurück.",
       promptAr: "أيّ صياغةٍ رسمية تُثبّت الفهم دون أن تَعِد بما لم يُتّفق عليه؟",
       options: [
-        { textDe: "«Ich habe verstanden: Koordination bis Freitag, Rückmeldung über den Stand. Eine Zusage trifft das nicht.»", kind: "document", reasonAr: "جملةٌ تفصل الفهم عن الالتزام: ما فُهم مذكور، وما لم يُتّفق عليه مُستثنى صراحةً." },
+        { textDe: "«Ich habe verstanden: Koordination bis Freitag, Rückmeldung über den Stand. Eine Zusage ist das noch nicht.»", kind: "document", reasonAr: "جملةٌ تفصل الفهم عن الالتزام: ما فُهم مذكور، وما لم يُتّفق عليه مُستثنى صراحةً." },
         { textDe: "«Kein Problem, ich mache alles fertig.»", kind: "act-now", reasonAr: "وعدٌ بما لم يُطلب ولم يُحدَّد." },
         { textDe: "«Ich denke, es wird Freitag klappen.»", kind: "guess", reasonAr: "توقّعٌ شخصي يُقرأ كالتزام." },
         { textDe: "Schweigen und später antworten.", kind: "silent-agreement", reasonAr: "الصمت لا يوثّق شيئًا ولا يفتح تنبيهًا مبكرًا." },
@@ -362,7 +362,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
     targetDe: "Notiert wurde: «Um 14:00 Uhr hat die Kollegin die Angabe ergänzt.»",
     safetyTask: {
       stimulusDe: "Im Vermerk steht: «Um 14:00 Uhr hat die Kollegin die Angabe ergänzt.»",
-      promptAr: "أيّ جملةٍ تُنقل الملاحظة بلا زيادة تفسير؟",
+      promptAr: "أيّ جملةٍ تنقل الملاحظة بلا زيادة تفسير؟",
       options: [
         { textDe: "Ich notiere: «Um 14:00 Uhr ergänzt.» — ohne Deutung.", kind: "document", reasonAr: "نقلُ ما سُجّل مع تنصيص على ترك التفسير؛ الارتباط لا يصبح سببًا." },
         { textDe: "«Das war bestimmt ein Fehler.»", kind: "guess", reasonAr: "حكمٌ لا يسنده النصّ المسجّل." },
@@ -390,7 +390,7 @@ export const nursingLayerUnits: NursingLayerUnit[] = [
       stimulusDe: "In der Dokumentation steht: «laut Angabe der Kollegin».",
       promptAr: "أيّ نقلٍ يحفظ درجة اليقين كما في الأصل؟",
       options: [
-        { textDe: "«Laut Angabe der Kollegin — nachweislich ist das nicht.»", kind: "document", reasonAr: "نقلٌ يفصل المصدر («ل aut Angabe») عن الدليل («nachweislich»)، فيبقى اليقين كما كان." },
+        { textDe: "«Laut Angabe der Kollegin — nachweislich ist das nicht.»", kind: "document", reasonAr: "نقلٌ يفصل المصدر («laut Angabe») عن الدليل («nachweislich»)، فيبقى اليقين كما كان." },
         { textDe: "«Es ist nachweislich so.»", kind: "guess", reasonAr: "رفعُ الاحتمال إلى يقين يغيّر المعنى عند النقل." },
         { textDe: "«Vielleicht, ich habe es nicht gelesen.»", kind: "guess", reasonAr: "إعلان الجهل لا ينقل ما هو مكتوب." },
         { textDe: "«Wird schon stimmen.»", kind: "silent-agreement", reasonAr: "موافقة عامة تمحو مصدر المعلومة." },

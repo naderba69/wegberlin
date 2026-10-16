@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v215 · 2026-10-16 · مراجعة عناوين الدروس ووصفها وتوحيد العنوان بين قائمة الدروس وصفحة الدرس (27 عنوانًا كانت مختلفة) مع اختبار حارس: 43 تعديلًا؛ كاش v215، بناء c9798af2a2c7.
+Sync batch: v216 · 2026-10-16 · مراجعة المحادثات المتفرعة الثماني ووحدات طبقة التمريض الأربع عشرة سطرًا سطرًا: 27 تعديلًا (منها نهايتان لا تطابقان مسار الإصلاح وشرح خاطئ لـ halb sieben)؛ كاش v216، بناء 89028bed52d7.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

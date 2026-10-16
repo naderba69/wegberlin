@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v215";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v216";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -2814,7 +2814,7 @@ test("offline branching conversations change consequences and persist structured
   const lab=page.locator('[data-branching-conversation-policy="offline-branching-conversation-v1"]');
   await expect(lab).toContainText("8 سيناريوهات أصلية");
   await expect(lab.locator(".branching-scenario-tabs>button")).toHaveCount(2);
-  await expect(lab.locator(".branching-mission")).toContainText("اطلب قطعتين واسأل عن السعر");
+  await expect(lab.locator(".branching-mission")).toContainText("اطلب خبزتين صغيرتين واسأل عن السعر");
   const branchingAxe=await new AxeBuilder({page}).include("main").withTags(["wcag2a","wcag2aa"]).analyze();
   expect(branchingAxe.violations.filter((item)=>item.impact==="serious"||item.impact==="critical")).toEqual([]);
   await lab.locator(".branching-choices>button").first().click();

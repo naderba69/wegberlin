@@ -8,7 +8,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
+Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

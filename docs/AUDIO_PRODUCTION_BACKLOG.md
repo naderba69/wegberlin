@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
+Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,15 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v218 (2026-10-16): نص استماع مكتبة مصحّح بصوت مُعاد توليده
+
+- المكتبة: `lib-l-b2-09`، وفيه «beide Ausgangswerte» ⇒ «Ausgangs- und Endwert». صُحّح النص أولًا، ثم وُلّد منه ملفان (MP3 وOpus) بصوت اختاره المالك في اختبار صوتي جديد (`Arena.ai speech synthesis`).
+  - وُسم `voiceProfile` بـ`german-educational-feminine-05`، لأنه قد يختلف عن صوت بنود المكتبة الـ79 الأخرى (`-01`).
+  - `generatedAt` هو `2026-10-16`.
+- الإجمالي المقيس بعد البناء: 544 ملف MP3+Opus / **53,190,199** بايتًا (كان 53,181,499)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط: 16.99 ثانية، ونحو 15 حرفًا في الثانية، والمتوسط −20.4 dB، ولا صمت طويل. الاستماع البشري مفتوح.
+- قيد قائم: مولّد مانيفست المكتبة لا يكتب حقول Opus، فحُدّث البند في المانيفست مباشرة.
 
 ## تحديث v214 (2026-10-16): ثمانية نصوص استماع أخرى مصحّحة بصوت مُعاد توليده
 

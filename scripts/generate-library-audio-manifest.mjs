@@ -73,6 +73,11 @@ function mp3DurationMs(bytes) {
   return Math.round(samples / sampleRate * 1000);
 }
 
+// Real regeneration dates after a transcript correction (v218: lib-l-b2-09 "Ausgangs- und Endwert").
+const regeneratedAt = { "lib-l-b2-09": "2026-10-16" };
+// The regenerated clip used a voice chosen by the owner in a new audition; it may differ from the original batch voice.
+const regeneratedVoice = { "lib-l-b2-09": "german-educational-feminine-05" };
+
 const assets = [];
 for (const itemId of ids) {
   const relativePath = `/audio/library/${itemId}.mp3`;
@@ -87,9 +92,9 @@ for (const itemId of ids) {
     bytes: bytes.length,
     sha256: createHash("sha256").update(bytes).digest("hex"),
     speakerCount: 1,
-    voiceProfile: "german-educational-feminine-01",
+    voiceProfile: regeneratedVoice[itemId] ?? "german-educational-feminine-01",
     synthesisProvider: "Arena.ai speech synthesis",
-    generatedAt: "2026-08-30",
+    generatedAt: regeneratedAt[itemId] ?? "2026-08-30",
     sourceContent: "original-project-transcript",
     rightsStatus: "generated-for-project-review-required",
     examGrade: false,

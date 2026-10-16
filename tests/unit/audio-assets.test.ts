@@ -49,7 +49,9 @@ describe("generated library audio assets", () => {
       expect(asset.durationMs).toBeLessThan(60_000);
       expect(asset.synthesisProvider).toBe("Arena.ai speech synthesis");
       expect(asset.rightsStatus).toBe("generated-for-project-review-required");
-      expect(asset.generatedAt).toBe("2026-08-30");
+      // Original batch date, or the real date of a later regeneration after a transcript fix (e.g. lib-l-b2-09 in v218).
+      expect(asset.generatedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(asset.generatedAt >= "2026-08-30").toBe(true);
     }
   });
 });

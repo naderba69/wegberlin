@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v217 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 1–4، 160 سؤالًا) سطرًا سطرًا: 93 سطر دعم عربي صار ترجمة كاملة للسؤال، و40 تصحيحًا في المعنى والألمانية والعربية؛ بلا تغيير صوت؛ كاش v217، بناء a39b79eda789.
+Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

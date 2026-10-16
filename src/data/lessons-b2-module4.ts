@@ -14,7 +14,7 @@ export const b2Module4Lessons: FullLesson[] = [
  level: "B2",
  module: 2,
  titleDe: "Teilhabe",
- titleAr: "المشاركة المجتمعية",
+ titleAr: "المشاركة الفعلية",
  estimatedMinutes: 90,
  descriptionAr: "تحلل من يستطيع المشاركة فعلًا، وتميز الاستشارة من القرار المشترك والتمثيل من الحضور الرمزي، وتصوغ آليات وصول قابلة للفحص ب indem و dadurch, dass.",
  objectives: [

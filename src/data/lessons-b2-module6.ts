@@ -446,7 +446,7 @@ export const b2Module6Lessons: FullLesson[] = [
  ]),
  },
  {
- id:"b2-13",level:"B2",module:4,titleDe:"Die eigene Position revidieren",titleAr:"تصحيح الموقف أمام الأدلة",estimatedMinutes:90,
+ id:"b2-13",level:"B2",module:4,titleDe:"Die eigene Position revidieren",titleAr:"مراجعة الموقف أمام الأدلة",estimatedMinutes:90,
  descriptionAr:"تقيس قوة أدلتك، وتحدد متى تستبقي أطروحتك ومتى تضيّقها أو تتراجع عنها، وتكتب Revision واضحة دون تشويه الأدلة أو ادعاء يقين لا تحمله البيانات.",
  objectives:[{de:"Ich kann meine These nach Maßgabe der Belege begrenzen.",ar:"أقيّد أطروحتي بقدر ما يحمله الدليل."},{de:"Ich kann Alternativerklärungen benennen.",ar:"أذكر التفسيرات البديلة المحتملة."},{de:"Ich kann eine begründete Revision formulieren.",ar:"أصيغ تراجعًا مُعلَّلًا عن جزء من موقفي."},{de:"Ich kann ein Falsifikationskriterium nennen.",ar:"أذكر معيارًا يثبت خطأ موقفي."}],
  entry:{titleAr:"الرجوع عن الرأي ليس هزيمة",sceneAr:"بعد أسبوعين من تجربة قاعدة الهواتف، تظهر نتائج لا تؤيد كل ما دافعت عنه ليّا. بدل إنكار البيانات أو التمسك بالرأي، تعيد صياغة موقفها بدقة: ماذا يبقى، وما يسقط، وما يبقى مفتوحًا.",dialogue:[{speaker:"Lea",de:"Die Unterbrechungen sind tatsächlich gesunken, aber die Lernerfolge nur in einer der zwei Gruppen.",ar:"انخفضت المقاطعات فعلًا، لكن نتائج التعلم تحسنت في مجموعة واحدة فقط من المجموعتين."},{speaker:"Ben",de:"Widerrufst du deinen Vorschlag?",ar:"هل تسحبين اقتراحك؟"},{speaker:"Lea",de:"Nicht vollständig. Die Regel für stille Arbeitsphasen behalte ich, weil der Beleg dort konsistent ist. Für Audioaufgaben muss ich meine Forderung abschwächen: Die Daten zeigen keinen Vorteil.",ar:"ليس كليًا. أُبقي على قاعدة فترات العمل الصامت لاتساق الدليل، وأُضعف مطلبي في مهام الصوت لأن البيانات لا تُظهر فائدة."},{speaker:"Ben",de:"Was bleibt offen?",ar:"وما الذي يبقى مفتوحًا؟"},{speaker:"Lea",de:"Ob der Effekt nach acht Wochen trägt. Das wäre mein Kriterium: Bleibt der Unterschied aus, nehme ich die Regel zurück.",ar:"هل يستمر الأثر بعد ثمانية أسابيع؟ هذا معياري: إن لم يظهر الفرق، سحبتُ القاعدة."}]},
@@ -601,7 +601,7 @@ export const b2Module6Lessons: FullLesson[] = [
  titleDe: "Nachlese ohne Anklage",
  titleAr: "مراجعة بلا اتهام",
  estimatedMinutes: 95,
- descriptionAr: "تصوغ ما فاتك كشرط لم يحدث، وتبدي الانطباع دون أن تنسبه حقيقة، ثم تخفّف الاتهام بصيغة تسمح للآخر بأن يشرح.",
+ descriptionAr: "تصوغ ما فاتك كشرط لم يحدث، وتبدي الانطباع دون أن تزعمه حقيقة، ثم تخفّف الاتهام بصيغة تسمح للآخر بأن يشرح.",
  objectives: [
  {de:"Ich kann ein vergangenes Versäumnis als Bedingung im Konjunktiv II formulieren.",ar:"أصوغ تقصيرًا ماضيًا كشرط بأسلوب الشرط الثاني الماضي."},
  {de:"Ich kann einen Eindruck mit «als ob» äußern, ohne ihn zu behaupten.",ar:"أبدي الانطباع ب «als ob» دون أن أزعمه حقيقة."},
@@ -1147,7 +1147,7 @@ export const b2Module6Lessons: FullLesson[] = [
  titleDe: "Zweiteilige Konnektoren: Ein Satz, zwei Klammern",
  titleAr: "الروابط ثنائية الأجزاء: جملة واحدة وقوسان",
  estimatedMinutes: 95,
- descriptionAr: "الرابط الثنائي قوسان لا كلمتان: الجزء الأول يعلن أن هناك شريكًا، والثاني يحدّد موقعه ووزنه. تتدرّب على je … desto و nicht nur … sondern auch و sowohl … als auch و weder … noch و zwar … aber، فتحديد الجزء الثاني للثقل، والترتيب بعد je، والعدد الصحيح للفعل بعد sowohl … als auch، وحذف الأدوات الفارغة في النص الرسمي. الدرس يقودك من تشخيص نص مترابط الظاهر إلى صياغتين للمضمون نفسه: واحدة بقرائن واضحة وأخرى بلا قوسين فتُقرأ سلسلة بلا روابط.",
+ descriptionAr: "الرابط الثنائي قوسان لا كلمتان: الجزء الأول يعلن أن هناك شريكًا، والثاني يحدّد موقعه ووزنه. تتدرّب على je … desto و nicht nur … sondern auch و sowohl … als auch و weder … noch و zwar … aber: أين يقع الثقل في الجزء الثاني، وأين يقف الفعل بعد je وبعد desto، ومتى يأتي الفعل جمعًا بعد sowohl … als auch، ولماذا تُحذف الأدوات الفارغة في النص الرسمي. الدرس يقودك من تشخيص نص مترابط الظاهر إلى صياغتين للمضمون نفسه: واحدة بقرائن واضحة وأخرى بلا قوسين فتُقرأ سلسلة بلا روابط.",
  objectives: [
  { de: "Ich kann „je …, desto …“ mit dem Verb am Ende des je-Teils und dem Verb direkt nach „desto“ + Komparativ bilden.", ar: "أبني «je …, desto …» بفعل في آخر جزء je وفعل يلي «desto» مع صيغة المقارنة مباشرة." },
  { de: "Ich kann den Schwerpunkt mit „nicht nur …, sondern auch“ so setzen, dass der zweite Teil die neue Information trägt.", ar: "أضع الثقل في «nicht nur …, sondern auch» بحيث يحمل الجزء الثاني المعلومة الجديدة." },
@@ -1406,7 +1406,7 @@ export const b2Module6Lessons: FullLesson[] = [
  titleDe: "Berichtete Rede: Wer spricht, und wer behauptet nur?",
  titleAr: "النقل غير المباشر: من تكلّم فعلًا، ومن يدّعي فحسب؟",
  estimatedMinutes: 95,
- descriptionAr: "النقل غير المباشر ليس ترفًا نحويًا بل موقفٌ من القول: إلى مَن تنسب العبارة، وبأي قدر من اليقين. تتدرّب على صيغ النقل حين تكفي، وعلى البدائل حين تُلتبس بصيغة الإخبار، ثم تزن أثر ذلك في محضر رسمي وفي الفهم القرائي، وتُجري مقارنةً صريحة بين الروايتين دون أن تقضي فيهما.",
+ descriptionAr: "النقل غير المباشر ليس ترفًا نحويًا بل موقفٌ من القول: إلى مَن تنسب العبارة، وبأي قدر من اليقين. تتدرّب على صيغ النقل حين تكفي، وعلى البدائل حين تلتبس بصيغة الإخبار، ثم تزن أثر ذلك في محضر رسمي وفي الفهم القرائي، وتُجري مقارنةً صريحة بين الروايتين دون أن تقضي فيهما.",
  objectives: [
  { de: "Ich kann direkte Zitate in berichtete Rede umformen, ohne den Sinn zu verschieben.", ar: "أُعيد صياغة الاقتباس المباشر نقلًا غير مباشر دون إزاحة المعنى." },
  { de: "Ich kann die gängigen Konjunktiv-I-Formen bilden und ihre Zeitstufe bestimmen.", ar: "أُكوّن صيغ النقل الشائعة وأحدّد مستوى زمنها." },
@@ -1811,7 +1811,7 @@ export const b2Module6Lessons: FullLesson[] = [
  titleDe: "Attribute, die den Satz strecken: Partizipien und Zusätze",
  titleAr: "نَعْتٌ يَمُدّ الجملة: اسم الفاعل والمفعول والتوسعة",
  estimatedMinutes: 95,
- descriptionAr: "النص الرسمي في B2 يقبل وصفًا مضغوطًا قبل الاسم بدل جملة موصولة كاملة. تتدرّب على صيغتين: الوصف بالفعل (اسم الفاعل واسم المفعول) والوصف الموسَّع بحلقة صفة، ثم تفكّ الشيفرة القرائية: كيف تُعيد الوصف المضغوط إلى جملة موصولة تفهمها، ومتى يكون الفكّ أفضل للاسم ومناسبًا للمعنى.",
+ descriptionAr: "النص الرسمي في B2 يقبل وصفًا مضغوطًا قبل الاسم بدل جملة موصولة كاملة. تتدرّب على الوصف باسم الفاعل (Partizip I) واسم المفعول (Partizip II)، وعلى وصف الإلزام ب zu + Partizip I، وعلى الوصف الموسَّع وفواصله، ثم تفكّ الشيفرة القرائية: كيف تُعيد الوصف المضغوط إلى جملة موصولة تفهمها، ومتى يكون الفكّ أوضح للقارئ دون أن يتغيّر المعنى.",
  objectives: [
  { de: "Ich kann Partizip I und II als Attribut korrekt deklinieren.", ar: "أُعرِب الوصف باسم الفاعل والمفعول نعتًا إعرابًا صحيحًا." },
  { de: "Ich kann erweiterte Attribute mit Kommas abgrenzen.", ar: "أفصل الوصف الموسَّع بفواصل صحيحة." },
@@ -2595,7 +2595,7 @@ export const b2Module6Lessons: FullLesson[] = [
  titleDe: "Kommas, die Struktur zeigen: Zeichensetzung im langen Satz",
  titleAr: "فواصل تُظهر البنية: الترقيم في الجملة الطويلة",
  estimatedMinutes: 95,
- descriptionAr: "الفاصلة في الألمانية ليست نَفَسًا بل قوس: تفتح جملة جانبية وتغلقها، وتُعلّم القارئ أين تنتهي الإضافة وأين يبدأ الفعل. تتدرّب على ما يُلزِمه الترقيم فعلًا، وعلى ما يُنصح به فقط، ثم تفحص نصّك فحصًا آليًا بخطوتين: عدد الأقواس وعدد الأفعال المسندة. وفي آخر درس في B2 تُجمَع هذه المهارة مع المراجعة الذاتية للأدلة قبل الامتحان.",
+ descriptionAr: "الفاصلة في الألمانية ليست نَفَسًا بل قوس: تفتح جملة جانبية وتغلقها، وتُعلّم القارئ أين تنتهي الإضافة وأين يبدأ الفعل. تتدرّب على ما يُلزِمه الترقيم فعلًا، وعلى ما يُنصح به فقط، ثم تفحص نصّك فحصًا منظّمًا بخطوتين: عدد الأقواس وعدد الأفعال المسندة. وفي آخر درس في B2 تُجمَع هذه المهارة مع المراجعة الذاتية للأدلة قبل الامتحان.",
  objectives: [
  { de: "Ich setze Komma vor Nebensätzen und schließe die rechte Klammer.", ar: "أضع الفاصلة قبل الجملة الجانبية وأُغلق القوس الأيمن." },
  { de: "Ich kenne die Pflichtkommata bei erweiterten Infinitivgruppen.", ar: "أعرف الفواصل الإلزامية مع مجموعات المصدر الممتدّة." },

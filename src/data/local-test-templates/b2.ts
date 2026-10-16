@@ -451,7 +451,7 @@ export const localTestTemplateBankB2 = [
     "level": "B2",
     "module": 2,
     "titleDe": "Teilhabe",
-    "titleAr": "المشاركة المجتمعية",
+    "titleAr": "المشاركة الفعلية",
     "questions": [
       {
         "id": "b2-07-m1",
@@ -895,7 +895,7 @@ export const localTestTemplateBankB2 = [
     "level": "B2",
     "module": 4,
     "titleDe": "Die eigene Position revidieren",
-    "titleAr": "تصحيح الموقف أمام الأدلة",
+    "titleAr": "مراجعة الموقف أمام الأدلة",
     "questions": [
       {
         "id": "b2-13-m1",

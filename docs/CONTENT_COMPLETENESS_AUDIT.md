@@ -1,6 +1,6 @@
 # Content Completeness and Empty-Asset Audit
 
-Sync batch: v214 · 2026-10-16 · مراجعة سطرًا سطرًا لنصوص الاستماع في A1–B2: 43 تعديلًا في 18 درسًا، منها 8 نصوص مسموعة صُحّحت وأُعيد توليد صوتها؛ كاش v214، بناء 7761f052f038.
+Sync batch: v215 · 2026-10-16 · مراجعة عناوين الدروس ووصفها وتوحيد العنوان بين قائمة الدروس وصفحة الدرس (27 عنوانًا كانت مختلفة) مع اختبار حارس: 43 تعديلًا؛ كاش v215، بناء c9798af2a2c7.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

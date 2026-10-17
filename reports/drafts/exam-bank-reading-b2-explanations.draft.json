@@ -211,11 +211,11 @@
     },
     {
       "id": "g4-r2-q1",
-      "explanationAr": "النص: «Fleisch und gekochte Speisen blieben ausgeschlossen.» اللحوم والأطعمة المطبوخة مستثناة، فالجواب a يحدد ما هو مسموح، لذلك يملأ الفجوة الأولى."
+      "explanationAr": "النص: «Ein Wohnviertel richtete drei Sammelstellen für Küchenabfälle ein.» و«Fleisch und gekochte Speisen blieben ausgeschlossen.» الجملة a تذكر ما كان مسموحًا (بقايا نباتية نيئة وفلاتر القهوة والشاي)، والجملة التالية تذكر المستثنى، لذلك الجواب a."
     },
     {
       "id": "g4-r2-q2",
-      "explanationAr": "النص: «Danach sank der Fehlanteil.» الفجوة تسبق انخفاض الأخطاء بعد الإجراء، والجواب b يصف الشرح المصوّر عند الإلقاء الذي عالج الأخطاء."
+      "explanationAr": "النص: «Trotzdem enthielten viele Behälter anfangs falsche Stoffe.» و«Danach sank der Fehlanteil.» بعد ذكر الأخطاء تأتي الجملة b: صور عند فتحة الرمي تشرح القواعد مرة أخرى (deshalb)، ثم انخفضت نسبة الأخطاء، لذلك الجواب b."
     },
     {
       "id": "g4-r2-q3",
@@ -259,7 +259,7 @@
     },
     {
       "id": "g4-r5-q1",
-      "explanationAr": "النص: «Geräte dürfen erst nach einer kurzen Einweisung benutzt werden.» §1 يشترط تعليمًا قصيرًا قبل الاستخدام، لذلك الجواب a."
+      "explanationAr": "النص: «Geräte dürfen erst nach einer kurzen Einweisung benutzt werden.» القسم 1 يشترط إرشادًا قصيرًا قبل استعمال الأجهزة، لذلك الجواب a."
     },
     {
       "id": "g4-r5-q2",
@@ -291,43 +291,43 @@
     },
     {
       "id": "t4-r3-q1",
-      "explanationAr": "الإعلان a: «Samstag Töpfern Anfänger» فخار للمبتدئين يوم السبت، وهذا يطابق الفخار يوم السبت للمبتدئين."
+      "explanationAr": "الإعلان a: «Töpferkurs für Anfänger, samstags» دورة فخار للمبتدئين يوم السبت، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q2",
-      "explanationAr": "الإعلان b: «Online Deutsch abends» ألمانية إلكترونية مساءً، وهذا يطابق الدراسة المسائية عبر الإنترنت."
+      "explanationAr": "الإعلان b: «Deutschkurs online, abends» دورة ألمانية عبر الإنترنت في المساء، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q3",
-      "explanationAr": "الإعلان c: «Rollstuhlgerechtes Yoga» يوغا مناسبة للكراسي المتحركة، وهذا يطابق طلب اليوغا المتاحة."
+      "explanationAr": "الإعلان c: «Rollstuhlgerechtes Yoga» يوغا مهيأة لمستعملي الكراسي المتحركة، وهذا ما تحتاجه الصديقة."
     },
     {
       "id": "t4-r3-q4",
-      "explanationAr": "الإعلان d: «Werkzeug Wochenende» أدوات لعطلة الأسبوع، وهذا يطابق طلب الأدوات لعطلة الأسبوع."
+      "explanationAr": "الإعلان d: «Werkzeugverleih am Wochenende» إعارة أدوات في عطلة نهاية الأسبوع، فلا حاجة إلى شرائها، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q5",
-      "explanationAr": "الإعلان e: «Handy-Reparatur Dienstag» إصلاح الهاتف يوم الثلاثاء، وهذا يطابق إصلاح الهاتف يوم الثلاثاء."
+      "explanationAr": "الإعلان e: «Handy-Reparatur jeden Dienstag» إصلاح الهواتف كل يوم ثلاثاء، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q6",
-      "explanationAr": "الإعلان f: «Bewerbung mit Betreuung» تقديم الطلبات مع رعاية، وهذا يطابق التدريب على التقديم مع رعاية الأطفال."
+      "explanationAr": "الإعلان f: «Bewerbungstraining mit Kinderbetreuung» يجمع التدريب على طلبات التوظيف ورعاية الأطفال، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q7",
-      "explanationAr": "الإعلان g: «Lernraum Sonntag» مكان للدراسة يوم الأحد، وهذا يطابق طلب الدراسة يوم الأحد."
+      "explanationAr": "الإعلان g: «Lernraum, auch sonntags geöffnet» قاعة دراسة مفتوحة يوم الأحد أيضًا، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q8",
-      "explanationAr": "الإعلان h: «Freiwillig Tierheim Freitag» تطوع في دار الحيوانات يوم الجمعة، وهذا يطابق التطوع يوم الجمعة."
+      "explanationAr": "الإعلان h: «Freiwillige Hilfe im Tierheim, freitags» تطوع في مأوى الحيوانات يوم الجمعة، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q9",
-      "explanationAr": "الإعلان i: «Gemüsekiste Donnerstag» صندوق خضار يوم الخميس، وهذا يطابق استلام الخضار يوم الخميس."
+      "explanationAr": "الإعلان i: «Gemüsekiste zum Abholen, donnerstags» صندوق خضار يُستلم يوم الخميس، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t4-r3-q10",
-      "explanationAr": "الإعلان j: «Online Schreiben mit Aufnahme» كتابة إلكترونية مع تسجيل، وهذا يطابق مشاهدة التسجيل لاحقًا."
+      "explanationAr": "الإعلان j: «Online-Schreibkurs mit Aufzeichnung» دورة كتابة عبر الإنترنت مع تسجيل يمكن مشاهدته لاحقًا، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "g5-r1-q1",

@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v221 · 2026-10-17 · مراجعة المحاكاة الكاملة الثالثة سطرًا سطرًا (25 مهمة): خمسة نصوص استماع برقية أو متناقضة أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها بصوت اختاره المالك (german-educational-feminine-06)، ونص Sprachbausteine 1 البرقي أُعيدت كتابته بالمفتاح نفسه، و215 تعديلًا ألمانيًا وعربيًا مع إصلاحات قالبية في 02–06؛ الصوت 53,339,505 بايتًا؛ كاش v221، بناء 8b6c733440d6.
+Sync batch: v222 · 2026-10-17 · مراجعة المحاكاة الكاملة الرابعة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، و233 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,564,348 بايتًا؛ كاش v222، بناء ee3201151fd6.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,19 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v222 (2026-10-17): ستة مقاطع استماع في المحاكاة الكاملة الرابعة مصحّحة بصوت مُعاد توليده
+
+- **Goethe 04:**
+  - `g4-h2`: أسئلة المذيع كانت كلمات مفردة («Warum?»، «Ergebnis?»، «Änderung?»، «Erfolg?»)، فصارت أسئلة كاملة، وصار الجواب الأخير جملة تامة.
+  - `g4-h3`: «Frau König leitet Personal» ⇒ «leitet die Personalabteilung»، و«über Fortsetzung» ⇒ «über die Fortsetzung».
+- **telc 04:**
+  - `t4-h1`: كانت الأخبار كلمات مفتاحية («Drittens braucht der Vortrag Anmeldung.»)، فصارت جملًا خبرية كاملة.
+  - `t4-h2`: كان الحوار برقيًا («B: Morgens? A: Dienstag am stärksten»)، فصار حوارًا طبيعيًا بين Lena وTom. الحقائق والإجابات لم تتغير.
+  - `t4-h3-4` و`t4-h3-5`: «Das Paket braucht keinen Ausdruck, nur Code.» ⇒ «Für das Paket brauchen Sie keinen Ausdruck, nur den Code.»، و«Der Markt beginnt später um zehn.» ⇒ «Der Markt beginnt heute später, erst um zehn Uhr.». بقية إعلانات Hörverstehen 3 الثلاثة بصوتها القديم، لأن نصوصها سليمة، والإعلانات المنفصلة بأصوات مختلفة واقعية.
+- صُحّح النص أولًا، ثم وُلّدت منه 12 ملفًا (6 MP3 و6 Opus) بالصوت نفسه الذي اختاره المالك في v221 (`german-educational-feminine-06`، `Arena.ai speech synthesis`)، بتاريخ `generatedAt` `2026-10-17`. وأُضيفت المعرّفات الستة إلى `regeneratedFileIdsV221` في المولّد.
+- الإجمالي المقيس: 544 ملف MP3+Opus / **53,564,348** بايتًا (كان 53,339,505)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط: 3.2–53.5 ثانية، ونحو 15 حرفًا في الثانية، والمتوسط بين −19.5 و−20 dB، ولا صمت يتجاوز 1.2 ثانية. الاستماع البشري مفتوح.
 
 ## تحديث v221 (2026-10-17): خمسة نصوص استماع في المحاكاة الكاملة الثالثة مصحّحة بصوت مُعاد توليده
 

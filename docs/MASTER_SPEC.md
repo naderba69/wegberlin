@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v221 · 2026-10-17 · مراجعة المحاكاة الكاملة الثالثة سطرًا سطرًا (25 مهمة): خمسة نصوص استماع برقية أو متناقضة أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها بصوت اختاره المالك (german-educational-feminine-06)، ونص Sprachbausteine 1 البرقي أُعيدت كتابته بالمفتاح نفسه، و215 تعديلًا ألمانيًا وعربيًا مع إصلاحات قالبية في 02–06؛ الصوت 53,339,505 بايتًا؛ كاش v221، بناء 8b6c733440d6.
+Sync batch: v222 · 2026-10-17 · مراجعة المحاكاة الكاملة الرابعة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، و233 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,564,348 بايتًا؛ كاش v222، بناء ee3201151fd6.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

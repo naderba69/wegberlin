@@ -13,25 +13,25 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2108013,
-    "maxSingleChunkGzipBytes": 267682
+    "totalChunkGzipBytes": 2122739,
+    "maxSingleChunkGzipBytes": 266822
   },
   "issues": [],
   "largest": [
     {
-      "path": ".next/static/chunks/curriculum-b2-a093dc22a341f5db.js",
-      "rawBytes": 895188,
-      "gzipBytes": 267682
+      "path": ".next/static/chunks/curriculum-b2-2adf5372a6873ee3.js",
+      "rawBytes": 889680,
+      "gzipBytes": 266822
     },
     {
-      "path": ".next/static/chunks/curriculum-b1-adee5e53652e83c5.js",
-      "rawBytes": 656242,
-      "gzipBytes": 179094
+      "path": ".next/static/chunks/curriculum-b1-7bb6bd95be5b5a62.js",
+      "rawBytes": 651166,
+      "gzipBytes": 179055
     },
     {
-      "path": ".next/static/chunks/curriculum-a2-d2a27cc5f073caae.js",
-      "rawBytes": 617709,
-      "gzipBytes": 168974
+      "path": ".next/static/chunks/curriculum-a2-29f11ebc858c9777.js",
+      "rawBytes": 615343,
+      "gzipBytes": 168864
     },
     {
       "path": ".next/static/chunks/1269-b6b28928787723f5.js",
@@ -39,9 +39,9 @@
       "gzipBytes": 142056
     },
     {
-      "path": ".next/static/chunks/curriculum-a1-fc4967a5c0a92b1c.js",
-      "rawBytes": 469843,
-      "gzipBytes": 118405
+      "path": ".next/static/chunks/curriculum-a1-e3901b9b77a50601.js",
+      "rawBytes": 464453,
+      "gzipBytes": 118393
     },
     {
       "path": ".next/static/chunks/app/practice/test-generator/page-c5d7aab5aba34f50.js",
@@ -64,9 +64,9 @@
       "gzipBytes": 63160
     },
     {
-      "path": ".next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
-      "rawBytes": 216393,
-      "gzipBytes": 60537
+      "path": ".next/static/chunks/app/settings/page-01ab84caf92fda51.js",
+      "rawBytes": 218890,
+      "gzipBytes": 61363
     },
     {
       "path": ".next/static/chunks/framework-666c53740fc261c8.js",
@@ -74,7 +74,7 @@
       "gzipBytes": 59766
     },
     {
-      "path": ".next/static/chunks/app/lernen/[lessonId]/page-5150acdca49e0a52.js",
+      "path": ".next/static/chunks/app/lernen/[lessonId]/page-ad81c2946e8656bb.js",
       "rawBytes": 163851,
       "gzipBytes": 48251
     },

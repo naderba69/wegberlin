@@ -13,6 +13,7 @@ import { LEARNING_STATE_INDEPENDENCE_NOTE, LEARNING_STATE_LABELS } from "@/core/
 import { fullLessonSchema } from "@/core/content-validation/schemas";
 import { buildLessonSrsCards } from "@/core/srs/lesson-cards";
 import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "@/core/lesson/teaching-contract";
+import { readingEvidenceLocators } from "@/data/reading-evidence-locators";
 import { reviewCards } from "@/data/review-cards";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
 
@@ -185,16 +186,22 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
 
   it("labels mechanically located reading evidence instead of hiding it", () => {
     let cited = 0, marked = 0;
+    const unauthored: string[] = [];
     for (const lesson of academicLessonList) {
       for (const question of lesson.reading.questions) {
         const text = String(question.explanationAr ?? "");
-        if (text.includes("ارجع إلى")) cited += 1;
         if (text.includes(FEEDBACK_DISCLOSURE_MARKER)) marked += 1;
+        if (!text.includes("ارجع إلى")) continue;
+        cited += 1;
+        // P0-124 (ADR-120): the citation must be exactly the authored locator, so no reference is mechanical any more.
+        const quotes = [...text.slice(text.indexOf("ارجع إلى")).matchAll(/«([^«»]*(?:«[^«»]*»[^«»]*)*)»/gu)].map((match) => match[1]);
+        if (JSON.stringify(quotes) !== JSON.stringify(readingEvidenceLocators[question.id]?.quotes ?? [])) unauthored.push(question.id);
       }
     }
-    expect(cited).toBeGreaterThan(0);
-    // الوسم على كل مرجع آليّ فقط: لا يُلغى ولا يُلصق بما لا يحتاجه.
-    expect(marked).toBe(cited);
+    expect(cited).toBe(246);
+    expect(unauthored).toEqual([]);
+    // الوسم على كل مرجع آليّ فقط: بعد التأليف لا يبقى مرجع آلي، فلا يبقى وسم.
+    expect(marked).toBe(0);
   });
 
   it("keeps the committed quality artifact honest about feedback ceilings", () => {

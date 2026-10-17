@@ -51,7 +51,9 @@ describe("delayed lesson support", () => {
       for (const questionItem of lesson.reading.questions) {
         const record = evidence[questionItem.id];
         expect(record, `${lesson.id}/${questionItem.id} has no evidence record`).toBeDefined();
-        expect(record.policyVersion).toBe("reading-evidence-grounded-v1");
+        // P0-124: every published question now carries an authored locator; the lexical selector is fallback only.
+        expect(record.policyVersion).toBe("reading-evidence-authored-v1");
+        expect(record.source).toBe("authored");
         if (record.quote === null) {
           expect(record.kind).toBe("ungrounded");
           // Ungrounded must be the honest residual: no sentence may contain an answer word or digit.
@@ -63,7 +65,7 @@ describe("delayed lesson support", () => {
           }
           continue;
         }
-        expect(lesson.reading.textDe).toContain(record.quote);
+        for (const quote of record.quotes) expect(lesson.reading.textDe).toContain(quote);
         expect(record.labelAr.length).toBeGreaterThan(0);
       }
     }

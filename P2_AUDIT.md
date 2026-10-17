@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
+Sync batch: v229 · 2026-10-17 · إغلاق P0-124 وP2-350 (ADR-120): مواضع دليل مؤلفة لكل أسئلة القراءة الـ288 (113 حرفيًا، 80 بتعبير آخر، 86 مركّبًا، 6 حساب، 2 استنتاج، 1 استبعاد؛ أُبقي 192 وأُكمل 72 واستُبدل 24 مقارنة بالاختيار اللفظي)، وزال وسم «موضع الرجوع آلي» من الشروح الـ246؛ ومساهمة اختيارية بملف `itemId,correct` (المحاولة الأولى فقط، أسطر مخلوطة، موافقة صريحة، لا إرسال) مع دمج عدة ملفات في لوحة المعايرة. قرار وكيل بتفويض المالك وبمصادر (GDPR Recital 26، WP216)، لا مراجعة بشرية مستقلة. P0 121/3، P2 136/4/2، الكاش v229.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
@@ -12,8 +12,8 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 135 |
-| partial | 5 |
+| implemented | 136 |
+| partial | 4 |
 | not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
@@ -139,7 +139,7 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 347 | إنشاء Quick Practice من خمس دقائق حسب أضعف هدف. | `implemented` | `weakest-target-five-minute-practice-v1` يركب أربع خطوات مجموعها خمس دقائق من الخطأ أو المراجعة أو هدف المدرب الحالي. | — |
 | 348 | إتاحة تخصيص أصوات ونغمات محلية دون تتبع. | `implemented` | `local-synthetic-voice-preferences-v1` يحفظ voiceURI وpitch ويطبقه على كل أسطح Browser TTS دون تتبع. | — |
 | 349 | إنشاء Knowledge tracing أكثر تطورًا بعد جمع أدلة محلية كافية. | `implemented` | وحدة `src/core/evidence/knowledge-tracing.ts` (Bayesian Knowledge Tracing بمعاملات ثابتة بسياسة `bkt-local-v1`، لا تُعاير على بيانات المستخدم)، وتعرض تقديرًا لكل درس فقط بعد 5 محاولات تمرين على الأقل، وتستبعد محاولات التقييم المستقل، وتعرض حدّ الادعاء "ليس توقعًا لنتيجة امتحان ولا مستوى CEFR". اللوحة على `/progress` (`knowledge-tracing-panel.tsx`). اختبارات: `tests/unit/knowledge-tracing.test.ts` (7 اختبارات). | لا شيء مفتوح من جهة الهندسة؛ أي معايرة للمعاملات تحتاج بيانات كافية وموافقة جديدة. |
-| 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `partial` | `anonymous-item-calibration-v1` (`src/core/assessment/item-calibration.ts`) يقرأ ملف CSV محليًا بعمودين فقط (`itemId,correct`) ويرفض أي عمود إضافي، ويحسب نسبة الصحيح لكل عنصر بحد أدنى 30 إجابة، ويعلّم السهل جدًا والصعب جدًا للمراجعة فقط. اللوحة في الإعدادات (`item-calibration-panel.tsx`) تعرض النتيجة ولا تحفظ شيئًا ولا تغيّر أي سؤال أو درجة. اختبارات الوحدة والـE2E. | جمع بيانات مجهولة بموافقة صريحة (opt-in) لم يُبنَ، ويحتاج قرارًا بشريًا ومراجعة خصوصية؛ لا تُعدّل الصعوبة من هذه النتائج. |
+| 350 | إضافة معايرة صعوبة الأسئلة من بيانات مجهولة اختيارية. | `implemented` | `anonymous-item-calibration-v1` يقرأ محليًا ملفات CSV بعمودين فقط (`itemId,correct`) ويرفض أي عمود إضافي، ويحسب نسبة الصحيح لكل عنصر بحد أدنى 30 إجابة، ولا يغيّر أي سؤال أو درجة. أُضيف في v229 (ADR-120) الجمع الاختياري دون خادم: `anonymous-response-export-v1` يتيح للمتعلم، بعد موافقة صريحة معطلة افتراضيًا، تنزيل ملف فيه **المحاولة الأولى فقط** لكل سؤال، وأسطره مخلوطة بـ`crypto.getRandomValues`، وبلا نص إجابة أو وقت أو جهاز، ولا يُرسل شيء تلقائيًا. اللوحة تدمج عدة ملفات، فحد الثلاثين يعني ثلاثين متعلمًا مختلفًا على الأقل لكل عنصر (تجميع/k-anonymity وفق WP216 §3.2.1، وGDPR Recital 26). الحدود معروضة بجانب الموافقة: الملف المفرد يعرف مستلمه مصدره، والعنصر الذي أصابه أو أخطأه الجميع يكشف إجاباتهم. `tests/unit/anonymous-response-export.test.ts` واختبار E2E للموافقة والتنزيل. |
 | 351 | بناء نموذج صغير داخل المتصفح لتصنيف الأخطاء. | `implemented` | `learner-trained-local-error-classifier-v1` يدرب Naive Bayes مؤقتًا من أخطاء المتعلم ويقترح فئة بلا Mutation. | — |
 | 352 | إضافة مقارنة موجة صوتية تعليمية دون ادعاء درجة رسمية. | `implemented` | `neutral-self-waveform-comparison-v1` في Shadowing Studio: بعد تسجيل المحاولة فقط وبطلب صريح، يفك المتصفح أصل النموذج المحلي وBlob المحاولة داخل الذاكرة (≤60 ثانية و≤4,000,000 بايت لكل ملف) ويعرض 48 ذروة لكل مقطع مع المدة. يُطبّع كل مسار إلى ذروته الخاصة؛ لا محاذاة زمنية أو تشابه أو درجة أو تحليل نطق/جودة، ولا إرسال/حفظ للرسم أو أثر في سجل التعلم. تغطي الوحدة حدود المدة والتطبيع والصمت، ويغطي Playwright عرض الرسمين وARIA وغياب طلبات الأصل الخارجي أو المحاولة المحفوظة. القرار: `docs/adr/ADR-112-neutral-waveform-self-comparison.md`. | — |
 | 353 | إنشاء وضع واقع عملي لسكن وعمل وإدارة في ألمانيا. | `implemented` | `multi-step-practical-day-mode-v1` يركب سكنًا أو عملًا أو إدارة في أربع خطوات مترابطة مع حد قانوني صريح. | — |

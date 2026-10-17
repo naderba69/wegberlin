@@ -31,7 +31,9 @@ for(const lesson of academicLessonList){
     let text=previous.trim();
     if(lesson.reading.questions.some(question=>question.id===item.id)){
       const evidence=selectReadingEvidence(lesson.reading.textDe,item as typeof lesson.reading.questions[number]);
-      text+=` الجواب الموافق للمعلومة هو «${target}». ارجع إلى «${evidence}» وقارن الفاعل والفعل والتفصيل بالسؤال؛ لا يكفي تشابه كلمة في الخيار. موضع الرجوع آلي ويحتاج مراجعة دلالية مستقلة.`;
+      // P0-124 (ADR-120): cite the authored locator verbatim; the internal marker belongs only to a lexical fallback.
+      const cited=evidence.quotes.map(quote=>`«${quote}»`).join(" ثم ");
+      text+=cited?` الجواب الموافق للمعلومة هو «${target}». ارجع إلى ${cited} وقارن الفاعل والفعل والتفصيل بالسؤال؛ لا يكفي تشابه كلمة في الخيار.${evidence.source==="authored"?"":" موضع الرجوع آلي ويحتاج مراجعة دلالية مستقلة."}`:` الجواب الموافق للمعلومة هو «${target}».`;
     }else if(lesson.listening.questions.some(question=>question.id===item.id)){
       text+=` المطلوب في هذا السؤال هو «${target}».`;
     }else{

@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
+Sync batch: v229 · 2026-10-17 · إغلاق P0-124 وP2-350 (ADR-120): مواضع دليل مؤلفة لكل أسئلة القراءة الـ288 (113 حرفيًا، 80 بتعبير آخر، 86 مركّبًا، 6 حساب، 2 استنتاج، 1 استبعاد؛ أُبقي 192 وأُكمل 72 واستُبدل 24 مقارنة بالاختيار اللفظي)، وزال وسم «موضع الرجوع آلي» من الشروح الـ246؛ ومساهمة اختيارية بملف `itemId,correct` (المحاولة الأولى فقط، أسطر مخلوطة، موافقة صريحة، لا إرسال) مع دمج عدة ملفات في لوحة المعايرة. قرار وكيل بتفويض المالك وبمصادر (GDPR Recital 26، WP216)، لا مراجعة بشرية مستقلة. P0 121/3، P2 136/4/2، الكاش v229.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 
@@ -21,10 +21,10 @@ Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per
 - Offline cache: `dwnb-full-pack-v189` (staging v188; previous complete v188); the manifest remains 320/320 routes with pack counts 60/60/60/221/320. P2-276 adds hypothetical guidance on `/practice` without changing route inventory or learner schema; P2-352 local waveform comparison remains available.
 - Historical build v182 measured 2026-10-05: full `npm run check` passed; 325/325 static pages; Offline fingerprint `072383e68604`, full 6,000,079 gzip; contrast audit 323 pages / 22,940 text elements / 0 failures (586 gradient/image-backdrop skips); JS 128 chunks / 2,017,731 gzip / max 262,117. Unit/Integrity suite passed 1,352/1,352 in 199/199 files. Audio/curriculum manifests remain 544 files / 52,943,843 bytes and curriculum source 1,117,421 gzip; curriculum version is dwnb-a1-b2-2026.10-v2. These are local build metrics, not browser E2E or remote CI results.
 - Current v183 `npm run check` passed locally: lint/typecheck, `npm test` 1,355/1,355 in 200/200 files, secret/source/workflow/handoff gates, and production build. Build fingerprint `5c3bfded5f54`, Offline full 6,007,413 gzip; 325/325 static pages; contrast 323 pages / 22,960 elements / 0 failures; JS 128 / 2,017,731 gzip / max 262,117. Audio/curriculum totals are unchanged. The P2-276 Playwright test is included and the full desktop/mobile E2E job passed remotely in Quality Gate `37377109271` on head `15e457c`. Local E2E could not launch because Chromium is absent. Both Quality Gate jobs and Vercel Preview passed; Production deployment remains unclaimed.
-- Formal audits: P0 = 120 implemented / 4 partial / 0 missing / 0 blocked; P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked; P2 = 135 implemented / 5 partial / 2 not implemented / 0 blocked (142 rows). P2-276 and P2-352 are implemented without closing human-review boundaries or claiming learner outcomes.
-- P0 = 120 implemented / 4 partial / 0 missing / 0 blocked.
+- Formal audits: P0 = 121 implemented / 3 partial / 0 missing / 0 blocked; P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked; P2 = 136 implemented / 4 partial / 2 not implemented / 0 blocked (142 rows). P2-276 and P2-352 are implemented without closing human-review boundaries or claiming learner outcomes.
+- P0 = 121 implemented / 3 partial / 0 missing / 0 blocked.
 - P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 135 implemented / 5 partial / 2 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 136 implemented / 4 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - مساحة Git الفعلية `/home/user/wegberlin` على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى فرع تاريخي ولا ادعاء دمج في `main` أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 

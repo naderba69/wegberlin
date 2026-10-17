@@ -1,5 +1,6 @@
 import type { PracticeExercise, Question } from "@/types/lesson-content";
 import { normalizeGermanText } from "./evaluate";
+import { READING_EVIDENCE_AUTHORED_POLICY, readingEvidenceLocators, type ReadingEvidenceRelation } from "@/data/reading-evidence-locators";
 
 const germanStopwords = new Set([
   "aber", "als", "am", "an", "auf", "aus", "bei", "das", "dass", "dem", "den", "der", "des", "die", "ein", "eine", "einer", "eines", "er", "es", "für", "hat", "im", "in", "ist", "mit", "nicht", "oder", "sie", "sind", "und", "von", "war", "was", "welche", "welcher", "welches", "wer", "wie", "wird", "wo", "zu",
@@ -16,10 +17,14 @@ const germanNumberWords = new Set([
 export const READING_EVIDENCE_POLICY_VERSION = "reading-evidence-grounded-v1" as const;
 
 export type ReadingEvidence = {
-  policyVersion: typeof READING_EVIDENCE_POLICY_VERSION;
-  /** Verbatim sentence from the text, or null when no sentence carries the answer keys. */
+  /** Authored locator (P0-124, ADR-120) or the lexical fallback for questions without one. */
+  policyVersion: typeof READING_EVIDENCE_POLICY_VERSION | typeof READING_EVIDENCE_AUTHORED_POLICY;
+  source: "authored" | "lexical-fallback";
+  /** Verbatim span(s) from the text joined with " … ", or null when nothing carries the answer keys. */
   quote: string | null;
-  kind: "verbatim" | "morphological" | "computed" | "ungrounded";
+  /** Each verbatim span on its own, in text order. Empty when ungrounded. */
+  quotes: string[];
+  kind: "verbatim" | "paraphrase" | "combined" | "morphological" | "computed" | "inference" | "exclusion" | "ungrounded";
   labelAr: string;
 };
 
@@ -93,10 +98,36 @@ export function questionHintSteps(question: Question): [string, string] {
 
 const EVIDENCE_LABELS: Record<ReadingEvidence["kind"], string> = {
   verbatim: "موضع الدليل من النص بعد الالتزام",
+  paraphrase: "الدليل في النص بكلمات أخرى: الخيار الصحيح يعيد صياغة هذا الموضع",
+  combined: "الجواب يحتاج الجمع بين هذه المواضع من النص معًا",
   morphological: "الدليل في النص بصيغة صرفية مختلفة، لا نسخًا حرفيًا",
   computed: "موضع البيانات: العدد أو الزمن مكتوب في النص بشكل مختلف عن الجواب",
+  inference: "سؤال استنتاجي: هذا هو الشاهد في النص، والجواب يُستنتج منه ولا يرد فيه حرفيًا",
+  exclusion: "الدليل بالاستبعاد: هذه هي القائمة الكاملة في النص، والخيار الصحيح غير موجود فيها",
   ungrounded: "",
 };
+
+const RELATION_KIND: Record<ReadingEvidenceRelation, ReadingEvidence["kind"]> = {
+  direct: "verbatim",
+  paraphrase: "paraphrase",
+  combined: "combined",
+  computed: "computed",
+  inference: "inference",
+  exclusion: "exclusion",
+};
+
+/**
+ * Authored location for a published reading question. A locator is used only when every span still
+ * occurs in the text, so an edited text silently falls back to the lexical selector instead of quoting
+ * a sentence that no longer exists (the unit gate fails before that can ship).
+ */
+export function authoredReadingEvidence(textDe: string, questionId: string): ReadingEvidence | null {
+  const locator = readingEvidenceLocators[questionId];
+  if (!locator || !locator.quotes.length || !locator.quotes.every((quote) => textDe.includes(quote))) return null;
+  const kind = RELATION_KIND[locator.relation];
+  const quotes = [...locator.quotes];
+  return { policyVersion: READING_EVIDENCE_AUTHORED_POLICY, source: "authored", quote: quotes.join(" … "), quotes, kind, labelAr: EVIDENCE_LABELS[kind] };
+}
 
 /**
  * Locates the sentence that actually carries the answer. When no sentence carries any answer key the
@@ -104,11 +135,16 @@ const EVIDENCE_LABELS: Record<ReadingEvidence["kind"], string> = {
  * learner to cite a line that does not support their answer.
  */
 export function selectReadingEvidence(textDe: string, question: Question): ReadingEvidence {
+  return authoredReadingEvidence(textDe, question.id) ?? selectLexicalReadingEvidence(textDe, question);
+}
+
+/** Lexical fallback (reading-evidence-grounded-v1): only for questions without an authored locator. */
+export function selectLexicalReadingEvidence(textDe: string, question: Question): ReadingEvidence {
   const sentences = textDe
     .split(/(?<=[.!?])\s+|\n+/u)
     .map((sentence) => sentence.trim())
     .filter(Boolean);
-  const ungrounded: ReadingEvidence = { policyVersion: READING_EVIDENCE_POLICY_VERSION, quote: null, kind: "ungrounded", labelAr: "" };
+  const ungrounded: ReadingEvidence = { policyVersion: READING_EVIDENCE_POLICY_VERSION, source: "lexical-fallback", quote: null, quotes: [], kind: "ungrounded", labelAr: "" };
   if (!sentences.length) return ungrounded;
 
   const answerKeys = evidenceKeysFor(question.options[question.correctIndex] ?? "");
@@ -138,7 +174,7 @@ export function selectReadingEvidence(textDe: string, question: Question): Readi
     : bestOverlap.morphological > 0
       ? "morphological"
       : "computed";
-  return { policyVersion: READING_EVIDENCE_POLICY_VERSION, quote: bestSentence, kind, labelAr: EVIDENCE_LABELS[kind] };
+  return { policyVersion: READING_EVIDENCE_POLICY_VERSION, source: "lexical-fallback", quote: bestSentence, quotes: [bestSentence], kind, labelAr: EVIDENCE_LABELS[kind] };
 }
 
 export function readingEvidenceMap(textDe: string, questions: Question[]): Record<string, ReadingEvidence> {

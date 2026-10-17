@@ -1,6 +1,35 @@
 # Project Status
 
-Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
+Sync batch: v229 · 2026-10-17 · إغلاق P0-124 وP2-350 (ADR-120): مواضع دليل مؤلفة لكل أسئلة القراءة الـ288 (113 حرفيًا، 80 بتعبير آخر، 86 مركّبًا، 6 حساب، 2 استنتاج، 1 استبعاد؛ أُبقي 192 وأُكمل 72 واستُبدل 24 مقارنة بالاختيار اللفظي)، وزال وسم «موضع الرجوع آلي» من الشروح الـ246؛ ومساهمة اختيارية بملف `itemId,correct` (المحاولة الأولى فقط، أسطر مخلوطة، موافقة صريحة، لا إرسال) مع دمج عدة ملفات في لوحة المعايرة. قرار وكيل بتفويض المالك وبمصادر (GDPR Recital 26، WP216)، لا مراجعة بشرية مستقلة. P0 121/3، P2 136/4/2، الكاش v229.
+
+## إغلاق P0-124 وP2-350: مواضع دليل مؤلفة ومساهمة اختيارية بملف إجابات مختصر — 2026-10-17 (v229)
+
+- **النطاق:** تنفيذ «واصل» على آخر بندين يستطيع الوكيل إغلاقهما بدليل. القرار في **ADR-120**، وهو قرار وكيل بتفويض المالك («نفّذ ما يفيد المتعلم والصحيح») وبمصادر منشورة، **لا مراجعة بشرية مستقلة**.
+- **P0-124، دليل القراءة:**
+  - **البيانات:** `src/data/reading-evidence-locators.ts` (`reading-evidence-authored-v1`) فيه 288 موضعًا مؤلفًا، واحد لكل سؤال قراءة. كل موضع مقطع حرفي واحد أو أكثر من النص، يظهر مرة واحدة بالضبط وبترتيب النص.
+  - **العلاقات:** 113 حرفيًا، و80 بتعبير آخر، و86 مركّبًا، و6 حساب، و2 استنتاج، و1 استبعاد.
+  - **المقارنة مع الاختيار اللفظي:** أُبقي 192، وأُكمل 72، واستُبدل 24. من الأمثلة: a1-01-rq2 كان يقتبس سؤال عمر بدل «Sie ist die Lehrerin»، وa2-21-rq1 كان يقتبس الاختبار بعد أربعة أسابيع بدل أيام الدورة الأربعة.
+  - **الواجهة:** `selectReadingEvidence` يقدّم الموضع المؤلف، والمطابقة اللفظية احتياط فقط. تعرض الواجهة كل مقطع في `<q>` مع نوع العلاقة بالعربية (`data-evidence-source="authored"`).
+  - **الشروح:** صارت الإحالات الـ246 تقتبس المقاطع نفسها، فصار عدد الوسم الداخلي «موضع الرجوع آلي» صفرًا. صُحّح أيضًا `scripts/repair-lesson-feedback.ts` كي لا يعيد الاقتباس اللفظي.
+  - **الدليل:** `reports/reading-evidence-review/` (README وCSV من 288 صفًّا).
+- **P2-350، المساهمة الاختيارية:**
+  - **الملف:** في لوحة المعايرة بالإعدادات صار هناك زر «نزّل ملف إجاباتي المختصر»، معطل حتى يوافق المتعلم صراحة. الملف بعمودين `itemId,correct` فيهما المحاولة الأولى فقط لكل سؤال، وأسطره مخلوطة، وبلا نص إجابة أو وقت أو جهاز، ولا يُرسل شيء.
+  - **الدمج:** اللوحة تقبل عدة ملفات معًا، فحد الثلاثين إجابة يعني ثلاثين متعلمًا مختلفًا على الأقل لكل سؤال.
+  - **المصادر:** GDPR Recital 26 (لا تنطبق المبادئ على المعلومات المجهولة، ومنها الأغراض الإحصائية)، وWP216 (التجميع يمنع الإفراد ولا يمنع الاستنتاج).
+  - **الحدود المعروضة بجانب الموافقة:** من يستلم ملفًا مفردًا يعرف مصدره، والسؤال الذي أصابه أو أخطأه الجميع يكشف إجاباتهم.
+- **ما بقي ولا تغلقه المصادر:** P0-135 وP0-255، وP0-301 (PR #7 بقرار المالك)، وP1-331 وP1-380 (معايرة على تسجيلات عربية حقيقية)، وP2-264/371/400/401، وP2-359/360.
+- **التدقيق:**
+  - P0 = **121/124 منجز، 3 جزئية** (135، 255، 301).
+  - P2 = **136/142 منجز، 4 جزئية، 2 غير منجز**.
+  - P1 = 133/2.
+- **الكاش:** **v229** (staging v228، والرجوع v228).
+- **البناء والتحقق:**
+  - Offline **`a6e8b9c5bd5f`**: full 6,188,066 gzip (a1 2,836,310 · a2 2,948,740 · b1 2,975,591 · b2 4,456,557).
+  - JS: 131 / 2,122,739 gzip. المنهج: 1,218,710 gzip. الصوت: 544 ملفًا / 54,036,433 بايتًا (لا تغيير). التباين: 323 صفحة / 0.
+  - `npm run check`: اختبارات الوحدة **1595 في 231 ملفًا** والبناء نجحا. فشل `a11y:browser` في التشغيل الكامل بعقدة تباين واحدة على `/status` (Mobile)، وهي صفحة لم تُمس، ثم نجح منفردًا بـ**642 فحصًا / 0 إخفاق**، وهو التذبذب المعروف.
+  - تدقيق Bidi: الوسوم 8,257 ⇒ 8,266 بسبب حقل المساهمة الاختيارية. الوسوم الألمانية والتقنية والنص المختلط ثابتة (449 · 60 · 207).
+  - متوسط طول الشرح نزل 167 ⇒ 156 حرفًا بعد حذف الوسم الآلي المكرر. أُعيد توليد `reports/lesson-quality-audit.json`، وأُضيف إلى خط التوليد.
+  - E2E: **66/66** على Desktop و**66/66** على Mobile (Chromium 153) دون إعادة تشغيل. اختبار القراءة يتحقق من `data-evidence-source="authored"`، واختبار المعايرة يتحقق من الموافقة والتنزيل ومحتوى الملف.
 
 ## إغلاق P1-92 وP2-357: مقارنة خارجية مشروعة واستيراد مصدر مفتوح مُسند — 2026-10-17 (v228)
 
@@ -18,8 +47,8 @@ Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-v
 - **الدليل:** `reports/licence-rights-verification/` و`reports/external-reference-comparison/`.
 - **التدقيق:**
   - P1 = **133/135 منجز، 2 جزئي** (331، 380).
-  - P2 = **135/142 منجز، 5 جزئية، 2 غير منجز**.
-  - P0 = 120/4.
+  - P2 = **135/142 منجز، 5 جزئية، 2 غير منجز** عند v228.
+  - P0 = 120/4 عند v228.
 - **الكاش:** **v228** (staging v227، والرجوع v227).
 - **البناء والتحقق:**
   - Offline **`71f84be2779f`**: full 6,176,239 gzip (a1 2,821,904 · a2 2,934,193 · b1 2,961,087 · b2 4,442,446).
@@ -79,7 +108,7 @@ Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-v
 - **P2-384:** أضيف `tests/unit/arabic-msa-clarity.test.ts`، وهو يرفض العلامات اللهجية التونسية/المغاربية والمصرية والشامية والخليجية في كل النصوص العربية في `src/data` (24,145 سلسلة)، ويفرض نظامًا واحدًا لأسماء الأشهر. النتيجة: 0 مخالفات.
 - **الدليل:** `reports/tunisian-source-verification/TUNISIAN_SOURCE_VERIFICATION_2026-10-17.md` و`tunisian-notes-2026-10-17.csv` (17 صفًّا).
 - **التدقيق:**
-  - P0 = **120/124 منجز، 4 جزئية** (124 و135 و255 و301).
+  - P0 = **120/124 منجز، 4 جزئية** (124 و135 و255 و301) عند v226.
   - P2 = **134 منجزًا، 6 جزئية** (264/350/357/371/400/401)، و2 غير منجزين (359/360).
 - **الكاش:** **v226** (staging v225، والرجوع v225).
 - **البناء والتحقق:**
@@ -1776,9 +1805,9 @@ Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-v
 - **قياس v181 التاريخي (2026-10-05)**: بصمة Offline `1cb34d1c5b49`, full 5,997,189 gzip; 325 static pages/323 contrast pages (22,940 text elements; zero below threshold); JS 128 chunks / 2,015,005 gzip / max 262,117; audio 544 MP3+Opus / 52,943,843 bytes; curriculum 1,117,421 gzip.
 - **اختبارات v181 التاريخية**: 1,349/1,349 في 199/199 (`npm test` عند إغلاق P2-355؛ بلا تخفيف عتبة أو تعطيل ملف). أضاف P2-352 ثلاث اختبارات وحدة، فأصبح خط الأساس عنده 1,352/1,352؛ P2-276 أضاف 3 اختبارات أخرى.
 - Historical Browser/CI evidence before v181: CI re-measured the full desktop and mobile production suite on this head (PR #4, head 3fdf9b6, run `37147779120`): `check` passed in 4m28s (carries lint, typecheck, the 1,244 tests, the secret, freshness, workflow and handoff gates, the build, and a new step that re-runs the local-day and storage-integrity files under `TZ=Asia/Tunis`, `Pacific/Kiritimati` and `Pacific/Niue`) and `e2e` in 16m41s (both projects); Vercel passed, and `Deployment Smoke` reported skipping on the PR run by design, not by success — it stays unproven for production until the variable-pinned run says otherwise. Earlier, kept as measured: head 0acb40d (run `37118734143`) `check` 4m08s / `e2e` 15m38s (both projects, with the pinned-zone step green in all three zones); head 5b1fc79 (run `37112362964`) `check` 2m46s (`npm run check` 2m23s, 1,231 tests) and `e2e` 10m55s (build 0m59s, suite 9m13s). The docs-only head that preceded it (083fd38) had its run cancelled by the branch concurrency guard, so no browser number is attributed to it. Earlier generations, kept as measured: 95bfcfe (run `37110656051`) `check` 3m28s / `e2e` 16m46s (suite 14m17s); Stage A head 6fb5667 (run `37108553360`) `check` 4m26s / `e2e` 11m06s (suite 9m20s) — an earlier note had wrongly given both jobs 11m06s, read from a GraphQL job field instead of step timings; 65b6f03 (run `37105579225`) `check` 2m48s / `e2e` 16m28s, which is where the `review-session-dose-v1` browser assertions were first run; 076cd48 16m16s after two defects were fixed from real CI evidence (the stage-gate `reachLimit` freeze at stage one and a progress test counting the phantom mastery seed removed by ADR-103). Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so no browser number is ever taken from a local run. A prior generation (head 076cd48) measured 16m16s after two defects were fixed from real CI evidence — the stage-gate `reachLimit` freeze at stage one, and a progress test that counted the phantom mastery seed removed by ADR-103. Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so this number comes from Actions, not from here. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
-- P0 = 120 implemented / 4 partial / 0 missing / 0 blocked.
+- P0 = 121 implemented / 3 partial / 0 missing / 0 blocked.
 - P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 135 implemented / 5 partial / 2 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 136 implemented / 4 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - الدليل التاريخي السابق لـP2-276: PR #7 عند `b974c48` اجتاز Quality Gate `37335158220` (64/64 Desktop و64/64 Mobile) وVercel Preview؛ هذه النتيجة لا تغطي P2-276. الدليل الحالي لهذه الدفعة موثق في كتلة P2-276 بأعلى الملف. `Deployment Smoke` تخطّى شرطه ولا يثبت Production. P0-302 مغلق؛ P0-301 جزئي حتى إغلاق PR.
 

@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v228";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v229";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -1727,7 +1727,8 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await expect(readingQuestion.locator(".hint-panel")).toContainText(/فكرة عامة أم تفصيلًا أم سببًا|حدّد الشخص أو الحدث/);
       await readingQuestion.locator(".quiz-options button").filter({ hasText: lesson.reading.questions[0].options[lesson.reading.questions[0].correctIndex] }).click();
       await readingQuestion.getByRole("button", { name: "تحقق" }).click();
-      await expect(readingQuestion.locator(".question-evidence q")).toBeVisible();
+      await expect(readingQuestion.locator(".question-evidence q").first()).toBeVisible();
+      await expect(readingQuestion.locator(".question-evidence")).toHaveAttribute("data-evidence-source","authored");
       await expect(page.locator(".glossary-strip")).toBeVisible();
       await expect(page.locator(".reading-support-lock")).toHaveCount(0);
     }
@@ -1966,6 +1967,19 @@ test("item calibration reads an anonymous two-column file locally and rejects ex
   await panel.locator('input[type="file"]').setInputFiles({ name: "bad.csv", mimeType: "text/csv", buffer: Buffer.from("itemId,correct,learner\nx,1,abc") });
   await expect(panel.getByRole("alert")).toContainText("header-must-be-exactly-itemId,correct");
   await expect(panel.locator("tbody tr")).toHaveCount(0);
+  const contribute = panel.locator('[data-anonymous-export-policy="anonymous-response-export-v1"]');
+  const exportButton = contribute.getByRole("button", { name: "نزّل ملف إجاباتي المختصر" });
+  await expect(exportButton).toBeDisabled();
+  await contribute.getByRole("checkbox").check();
+  const downloadPromise = page.waitForEvent("download");
+  await exportButton.click();
+  const download = await downloadPromise;
+  expect(download.suggestedFilename()).toBe("anonymous-answers.csv");
+  const exportedPath = await download.path(); if (!exportedPath) throw new Error("missing anonymous export path");
+  const exportedText = await readFile(exportedPath, "utf8");
+  expect(exportedText.split("\n")[0]).toBe("itemId,correct");
+  expect(exportedText).not.toMatch(/T\d\d:\d\d|@/u);
+  await expect(contribute.getByRole("status")).toContainText("نُزّل الملف");
 });
 
 test("settings exports an encrypted DWNB archive and imports it as an isolated profile", async ({ page }) => {

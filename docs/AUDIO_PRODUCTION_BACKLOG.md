@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v223 · 2026-10-17 · مراجعة المحاكاة الكاملة الخامسة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم البند المعلَّم g5-r2-q1، و278 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,832,960 بايتًا؛ كاش v223، بناء 8128b408d302.
+Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا (25 مهمة)، وهي آخر محاكاة: عشرة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم آخر بند معلَّم g6-r2-q5 (المطبَّق 526، المعلَّم 0)، و222 تعديلًا ألمانيًا وعربيًا؛ الصوت 54,036,433 بايتًا؛ كاش v224، بناء 9ce02365c529.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,21 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v224 (2026-10-17): عشرة مقاطع استماع في المحاكاة الكاملة السادسة مصحّحة بصوت مُعاد توليده
+
+- **Goethe 06:**
+  - `g6-h1-1` إلى `g6-h1-5`: أُكملت الأدوات والأفعال الناقصة («Freitag um elf im Raum vier» ⇒ «am Freitag um elf Uhr in Raum vier»، «nicht in Süd; nutzen Sie Bus acht» ⇒ «nicht am Bahnhof Süd; nutzen Sie bitte die Buslinie acht»، «Anmeldung bis Mittwoch» ⇒ «anmelden kann man sich bis Mittwoch»).
+  - `g6-h2`: أسئلة المذيع كانت كلمة واحدة («Auswahl?»، «Problem?»، «Erfolg?»)، فصارت أسئلة كاملة، وصار الجواب الأخير جملة تامة.
+  - `g6-h3`: قُدّم المتحدثان بجملة كاملة، و«Pflege» ⇒ «die Pflege»، و«Überleben und Schatten» ⇒ «das Überleben der Bäume und der Schatten».
+- **telc 06:**
+  - `t6-h1`: كانت الأخبار مختصرة («Drittens ist der Kurs kostenlos mit Anmeldung.»)، فصارت أخبارًا كاملة.
+  - `t6-h2`: كان الحوار برقيًا («B: Abends? A: Nach neuer Werbung stärker.»)، فصار حوارًا طبيعيًا بين Sara وBen. الحقائق والإجابات لم تتغير.
+  - `t6-h3-3`: «im Raum neun» ⇒ «in Raum neun». الإعلانات الأربعة الأخرى سليمة فبقيت بصوتها القديم.
+- `g6-h4` سليم نحويًا فبقي بصوته.
+- صُحّح النص أولًا، ثم وُلّدت منه 20 ملفًا (10 MP3 و10 Opus) بالصوت نفسه الذي اختاره المالك في v221 (`german-educational-feminine-06`، `Arena.ai speech synthesis`)، بتاريخ `generatedAt` `2026-10-17`. وأُضيفت المعرّفات العشرة إلى `regeneratedFileIdsV221` في المولّد.
+- الإجمالي المقيس: 544 ملف MP3+Opus / **54,036,433** بايتًا (كان 53,832,960)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط: 2.3–50.0 ثانية، ونحو 15 حرفًا في الثانية، والمتوسط بين −19.7 و−20.4 dB، ولا صمت يتجاوز 1.5 ثانية. الاستماع البشري مفتوح.
 
 ## تحديث v223 (2026-10-17): ستة مقاطع استماع في المحاكاة الكاملة الخامسة مصحّحة بصوت مُعاد توليده
 

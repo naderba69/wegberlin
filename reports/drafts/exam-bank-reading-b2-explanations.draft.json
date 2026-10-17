@@ -515,7 +515,7 @@
     },
     {
       "id": "g6-r2-q1",
-      "explanationAr": "النص: «Kundinnen konnten Bestellungen bis 22 Uhr abholen.» الخزائن تتيح استلام الطلبات حتى العاشرة مساءً، لذلك يطابق الجواب a: توحيد المسارات وإتاحة الاستلام المتأخر."
+      "explanationAr": "النص: «Ein Quartier testete gemeinsame Abholschränke für lokale Geschäfte.» و«Kundinnen konnten Bestellungen bis 22 Uhr abholen.» الجملة a تذكر هدف الخزائن (Die Schränke): جمع المشاوير في مكان واحد وإتاحة الاستلام المتأخر، ثم تأتي الجملة التي تذكر الاستلام حتى الساعة 22، لذلك الجواب a."
     },
     {
       "id": "g6-r2-q2",
@@ -528,6 +528,10 @@
     {
       "id": "g6-r2-q4",
       "explanationAr": "النص: «Besonders bei direkter Sonne reagierten zwei Displays schlecht.» الجواب d يضيف حماية من الشمس وتباينًا أقوى، وهذا حل لمشكلة الشاشات في ضوء الشمس."
+    },
+    {
+      "id": "g6-r2-q5",
+      "explanationAr": "النص: «Ein gemeinsames Etikett reduzierte Verwechslungen.» و«Die Stadt verlängert den Pilotversuch, ohne ihn sofort auszuweiten.» الجملة e تبدأ بـ Damit، أي بفضل الملصق الموحد قصُر أيضًا وقت تعبئة الخزائن الذي كان أطول من المخطط، ثم ينتقل النص إلى قرار المدينة. أما f فمكانها الفجوة 6، لأن الجملة الأخيرة «So werden Zuverlässigkeit, Zugang und Aufwand gemeinsam bewertet.» تشير إلى القياسات المذكورة فيها، لذلك الجواب e."
     },
     {
       "id": "g6-r2-q6",
@@ -543,7 +547,7 @@
     },
     {
       "id": "g6-r4-q3",
-      "explanationAr": "الرأي d: «Gute Mikrofone sind wichtiger als dekorative Kamerabilder.» الميكروفونات الجيدة أهم من صور الكاميرا الزخرفية، وهذا يطابق الصوت قبل الجمالية."
+      "explanationAr": "الرأي d: «Gute Mikrofone sind wichtiger als dekorative Kamerabilder.» الميكروفونات الجيدة أهم من صور الكاميرا الزخرفية، وهذا يطابق العنوان: الصوت أهم من الصور الجميلة."
     },
     {
       "id": "g6-r4-q4",
@@ -559,75 +563,75 @@
     },
     {
       "id": "g6-r5-q1",
-      "explanationAr": "النص: «Archivalien werden spätestens zwei Werktage vorher über die Signatur bestellt.» §1 يتعلق بالطلب المسبق عبر الرمز، لذلك الجواب a."
+      "explanationAr": "النص: «Archivalien werden spätestens zwei Werktage vorher über die Signatur bestellt.» القسم 1 يتعلق بالطلب المسبق عبر الرمز، لذلك الجواب a."
     },
     {
       "id": "g6-r5-q2",
-      "explanationAr": "النص: «Bleistifte sind erlaubt; Getränke, Stifte mit Tinte und eigene Scanner bleiben außerhalb.» §2 يتعلق بالمواد المسموحة داخل قاعة القراءة، لذلك الجواب d."
+      "explanationAr": "النص: «Bleistifte sind erlaubt; Getränke, Stifte mit Tinte und eigene Scanner bleiben außerhalb.» القسم 2 يتعلق بالمواد المسموحة داخل قاعة القراءة، لذلك الجواب d."
     },
     {
       "id": "g6-r5-q3",
-      "explanationAr": "النص: «Fotografien sind nur nach Genehmigung und ohne Blitz möglich; Veröffentlichungsrechte werden dadurch nicht automatisch erteilt.» §3 يتعلق بالتصوير والحقوق، لذلك الجواب e."
+      "explanationAr": "النص: «Fotografien sind nur nach Genehmigung und ohne Blitz möglich; Veröffentlichungsrechte werden dadurch nicht automatisch erteilt.» القسم 3 يتعلق بالتصوير والحقوق، لذلك الجواب e."
     },
     {
       "id": "t6-r1-q1",
-      "explanationAr": "النص: «Lernbus besucht Dörfer am Abend.» حافلة التعلم تزور القرى مساءً، وهذا يطابق الخيار a: التعليم يصل إلى الريف."
+      "explanationAr": "النص: «Ein Lernbus besucht abends Dörfer ohne eigene Volkshochschule.» حافلة التعلم تزور مساءً قرى ليس فيها مركز لتعليم الكبار، وهذا يطابق الخيار a: التعليم يصل إلى الريف."
     },
     {
       "id": "t6-r1-q2",
-      "explanationAr": "النص: «Mehrsprachige Theater-Einführung.» مقدمة للمسرح بعدة لغات تساعد على البدء بفهم، لذلك الجواب b."
+      "explanationAr": "النص: «Vor jeder Vorstellung erklärt das Theater das Stück in mehreren Sprachen.» المسرح يشرح المسرحية بعدة لغات قبل كل عرض، فيبدأ الجمهور العرض وهو يفهمه، لذلك الجواب b."
     },
     {
       "id": "t6-r1-q3",
-      "explanationAr": "النص: «Gemeinsamer Werkzeugschrank.» خزانة أدوات مشتركة، وهذا يطابق استخدام الأدوات بشكل مشترك، لذلك الجواب c."
+      "explanationAr": "النص: «Im Hausflur steht jetzt ein Werkzeugschrank für alle Mieter.» خزانة أدوات في مدخل البيت لجميع السكان، وهذا يطابق استخدام الأدوات بشكل مشترك، لذلك الجواب c."
     },
     {
       "id": "t6-r1-q4",
-      "explanationAr": "النص: «Mobile Fahrradannahme.» استقبال الدراجات بشكل متنقل، وهو أقرب خيار لإصلاح الدراجات متنقلًا، لذلك الجواب d."
+      "explanationAr": "النص: «Eine mobile Fahrradwerkstatt kommt in die Wohnviertel.» ورشة دراجات متنقلة تأتي إلى الأحياء، وهذا يطابق إصلاح الدراجات بشكل متنقل، لذلك الجواب d."
     },
     {
       "id": "t6-r1-q5",
-      "explanationAr": "النص: «Ruhige Einkaufszeit.» وقت تسوق هادئ يطابق المحيط الهادئ قليل المؤثرات، لذلك الجواب e: تسوق بعيد عن الضوضاء."
+      "explanationAr": "النص: «Ein Supermarkt bietet dienstags eine ruhige Einkaufsstunde ohne Musik und mit gedämpftem Licht.» ساعة تسوق هادئة بلا موسيقى وبإضاءة خافتة تعني تسوقًا قليل المؤثرات، لذلك الجواب e."
     },
     {
       "id": "t6-r3-q1",
-      "explanationAr": "الإعلان a: «Samstag Computer Anfänger» دورة حاسوب للمبتدئين يوم السبت، وهذا يطابق طلب الحاسوب للمبتدئين يوم السبت."
+      "explanationAr": "الإعلان a: «Computerkurs für Anfänger, samstags» دورة حاسوب للمبتدئين يوم السبت، وهذا يناسب من يريد التعلم من البداية في عطلة نهاية الأسبوع، لذلك الجواب a."
     },
     {
       "id": "t6-r3-q2",
-      "explanationAr": "الإعلان b: «Online Deutsch Nachmittag» ألمانية إلكترونية بعد الظهر، وهذا يطابق طلب الدراسة عبر الإنترنت بعد الظهر."
+      "explanationAr": "الإعلان b: «Deutsch online am Nachmittag» دورة ألمانية عبر الإنترنت بعد الظهر، فيمكن التعلم من البيت في وقت الفراغ، لذلك الجواب b."
     },
     {
       "id": "t6-r3-q3",
-      "explanationAr": "الإعلان c: «Zugängliches Theater» مسرح متاح للجميع، وهذا يطابق طلب المسرح الذي يمكن الوصول إليه."
+      "explanationAr": "الإعلان c: «Theater mit Rollstuhlplätzen und Audiodeskription» مسرح فيه أماكن للكراسي المتحركة ووصف صوتي، وهذا يناسب الجدة، لذلك الجواب c."
     },
     {
       "id": "t6-r3-q4",
-      "explanationAr": "الإعلان d: «Werkzeug Sonntag» أدوات يوم الأحد، وهذا يطابق طلب الأدوات يوم الأحد."
+      "explanationAr": "الإعلان d: «Werkzeugausleihe, auch sonntags» إعارة أدوات حتى يوم الأحد، فيمكن استعارة مثقاب، لذلك الجواب d."
     },
     {
       "id": "t6-r3-q5",
-      "explanationAr": "الإعلان e: «Fahrrad Montag» دراجات يوم الاثنين، وهذا يطابق إصلاح الدراجة يوم الاثنين."
+      "explanationAr": "الإعلان e: «Fahrradreparatur jeden Montag» إصلاح الدراجات كل يوم اثنين، وهذا يطابق الفرامل المعطلة والوقت المتاح، لذلك الجواب e."
     },
     {
       "id": "t6-r3-q6",
-      "explanationAr": "الإعلان f: «Bewerbung Betreuung» تدريب على التقديم مع رعاية، وهذا يطابق التقديم مع رعاية الأطفال."
+      "explanationAr": "الإعلان f: «Bewerbungshilfe mit Kinderbetreuung» مساعدة في طلبات العمل مع رعاية الأطفال، فلا مشكلة في وجود الطفل، لذلك الجواب f."
     },
     {
       "id": "t6-r3-q7",
-      "explanationAr": "الإعلان g: «Lernraum früh» مكان للدراسة في الصباح الباكر، وهذا يطابق طلب الدراسة المبكرة."
+      "explanationAr": "الإعلان g: «Lernraum ab 6 Uhr geöffnet» مكان للدراسة يفتح من الساعة السادسة صباحًا، أي قبل العمل، لذلك الجواب g."
     },
     {
       "id": "t6-r3-q8",
-      "explanationAr": "الإعلان h: «Freiwillig Bibliothek» تطوع في المكتبة، وهذا يطابق المساعدة في المكتبة."
+      "explanationAr": "الإعلان h: «Ehrenamtliche Lesepaten für die Stadtbibliothek gesucht» المكتبة تبحث عن متطوعين للقراءة للأطفال، وهذا يطابق حب القراءة بصوت عالٍ، لذلك الجواب h."
     },
     {
       "id": "t6-r3-q9",
-      "explanationAr": "الإعلان i: «Gemüse Mittwoch» خضار يوم الأربعاء، وهذا يطابق استلام الخضار يوم الأربعاء."
+      "explanationAr": "الإعلان i: «Gemüsekiste zum Abholen, mittwochs» صندوق خضار يُستلم يوم الأربعاء، أي في منتصف الأسبوع ومن دون سوق، لذلك الجواب i."
     },
     {
       "id": "t6-r3-q10",
-      "explanationAr": "الإعلان j: «Online Datenkurs Aufnahme» دورة إلكترونية في البيانات مع تسجيل، وهذا يطابق مشاهدة التسجيل لاحقًا."
+      "explanationAr": "الإعلان j: «Online-Datenkurs mit Aufzeichnung» دورة بيانات عبر الإنترنت مع تسجيل، فيمكن مشاهدتها لاحقًا، لذلك الجواب j."
     }
   ]
 }

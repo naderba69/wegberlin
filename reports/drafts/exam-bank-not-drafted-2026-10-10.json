@@ -2,14 +2,9 @@
   "status": "not-drafted-owner-decision-required",
   "policy": "owner-approval-required-before-apply",
   "generated": "2026-10-10",
-  "scope": "بنود قصيرة لم تُكتب لها مسودة: بند واحد بمفتاح مشكوك فيه (تمرين في القراءة: g6-r2-q5). البند g5-r2-q1 حُسم في v223 (2026-10-17): المفتاح a صحيح، وصار فاعل الجملة صريحًا («Die Stationen sollten …»)، وكُتب شرحه في exam-bank-reading-b2-explanations.draft.json. الفجوات 36 و37 في t2-t6 أُعيدت صياغتها وطُبّقت في 2026-10-10.",
+  "scope": "لا بنود قصيرة مفتوحة: آخر بند معلَّم (g6-r2-q5، تمرين في القراءة) حُسم في v224 (2026-10-17): أُعيدت صياغة الخيار e («Damit verkürzte sich auch die Befüllung, …») ليرتبط بجملة الملصق الموحد قبله، وكُتب شرحه في exam-bank-reading-b2-explanations.draft.json. والبند g5-r2-q1 حُسم في v223. الفجوات 36 و37 في t2-t6 أُعيدت صياغتها وطُبّقت في 2026-10-10.",
   "flagged": {
-    "reason": "doubtful keyed answer: the keyed option does not fit the gap sentence (g6-r2-q5). g5-r2-q1 was resolved on 2026-10-17 (v223): key a verified, subject made explicit, explanation applied. The 10 gap-36/37 items in t2-t6 were rewritten and applied on 2026-10-10 (see exam-bank-gap-rewrites-2026-10-10.draft.json).",
-    "items": [
-      {
-        "taskId": "goethe-b2-full-06-reading-02",
-        "id": "g6-r2-q5"
-      }
-    ]
+    "reason": "doubtful keyed answers: none remain. g6-r2-q5 was resolved on 2026-10-17 (v224): option e rewritten so it follows the shared-label sentence, explanation applied. g5-r2-q1 was resolved in v223. The 10 gap-36/37 items in t2-t6 were rewritten and applied on 2026-10-10 (see exam-bank-gap-rewrites-2026-10-10.draft.json).",
+    "items": []
   }
 }

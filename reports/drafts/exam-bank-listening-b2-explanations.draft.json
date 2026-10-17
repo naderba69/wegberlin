@@ -723,11 +723,11 @@
     },
     {
       "id": "g6-h1-q1",
-      "explanationAr": "النص: «Der Termin findet Freitag um elf im Raum vier statt.» الموعد الجمعة لا الخميس، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Der Termin findet am Freitag um elf Uhr in Raum vier statt.» الموعد يوم الجمعة لا الخميس، لذلك العبارة خاطئة."
     },
     {
       "id": "g6-h1-q2",
-      "explanationAr": "النص: «Der Termin findet Freitag um elf im Raum vier statt.» القاعة رقم 4، لذلك الجواب 4."
+      "explanationAr": "النص: «Der Termin findet am Freitag um elf Uhr in Raum vier statt.» الموعد في القاعة 4، لذلك الجواب: In Raum 4."
     },
     {
       "id": "g6-h1-q3",
@@ -735,15 +735,15 @@
     },
     {
       "id": "g6-h1-q4",
-      "explanationAr": "النص: «das graue kommt nächste Woche.» الجهاز الرمادي يصل الأسبوع القادم، لذلك الجواب الرمادي."
+      "explanationAr": "النص: «das graue kommt erst nächste Woche.» الجهاز الرمادي لا يصل إلا الأسبوع القادم، لذلك الجواب: Das graue."
     },
     {
       "id": "g6-h1-q5",
-      "explanationAr": "النص: «Der Zug hält nicht in Süd» القطار لا يتوقف في Süd، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Zug hält heute nicht am Bahnhof Süd» القطار لا يتوقف اليوم في محطة الجنوب، لذلك العبارة صحيحة."
     },
     {
       "id": "g6-h1-q6",
-      "explanationAr": "النص: «nutzen Sie Bus acht.» البديل الحافلة 8، لذلك الجواب Bus 8."
+      "explanationAr": "النص: «nutzen Sie bitte die Buslinie acht.» البديل خط الحافلات 8، لذلك الجواب: Mit der Buslinie 8."
     },
     {
       "id": "g6-h1-q7",
@@ -751,7 +751,7 @@
     },
     {
       "id": "g6-h1-q8",
-      "explanationAr": "النص: «Anmeldung bis Mittwoch.» آخر موعد للتسجيل الأربعاء، لذلك الجواب Mittwoch."
+      "explanationAr": "النص: «anmelden kann man sich bis Mittwoch.» آخر موعد للتسجيل الأربعاء، لذلك الجواب: Bis Mittwoch."
     },
     {
       "id": "g6-h1-q9",
@@ -759,35 +759,35 @@
     },
     {
       "id": "g6-h1-q10",
-      "explanationAr": "النص: «Einlass ab neunzehn Uhr.» الدخول من الساعة 19، لذلك الجواب 19 Uhr."
+      "explanationAr": "النص: «Einlass ist ab neunzehn Uhr.» الدخول من الساعة 19، لذلك الجواب: Ab 19 Uhr."
     },
     {
       "id": "g6-h2-q1",
-      "explanationAr": "النص: «Sie planen mit Erwachsenen kleine Lernziele, unterrichten aber keinen Fachkurs.» دور المتطوع هو التخطيط لأهداف تعلم صغيرة لا التدريس، لذلك الجواب تخطيط الأهداف."
+      "explanationAr": "النص: «Sie planen mit Erwachsenen kleine Lernziele, unterrichten aber keinen Fachkurs.» دور المتطوع هو التخطيط لأهداف تعلم صغيرة لا التدريس، لذلك الجواب: Sie planen kleine Lernziele."
     },
     {
       "id": "g6-h2-q2",
-      "explanationAr": "النص: «eine Koordinatorin bildet Paare.» المنسقة هي التي تكوّن الأزواج، لذلك الجواب المنسقة."
+      "explanationAr": "النص: «eine Koordinatorin bildet dann die Paare.» المنسقة هي التي تكوّن الأزواج، لذلك الجواب: Eine Koordinatorin."
     },
     {
       "id": "g6-h2-q3",
-      "explanationAr": "النص: «Anfangs waren Ziele zu allgemein.» كانت الأهداف عامة جدًا في البداية، لذلك الجواب أهداف عامة جدًا."
+      "explanationAr": "النص: «anfangs waren die Ziele zu allgemein.» كانت الأهداف عامة جدًا في البداية، لذلك الجواب: Die Ziele waren zu allgemein."
     },
     {
       "id": "g6-h2-q4",
-      "explanationAr": "النص: «Nun wird alle vier Wochen ein konkretes Ergebnis vereinbart.» تُتفق النتيجة كل أربعة أسابيع، لذلك الجواب أربعة أسابيع."
+      "explanationAr": "النص: «Nun wird alle vier Wochen ein konkretes Ergebnis vereinbart.» تُتفق النتيجة كل أربعة أسابيع، لذلك الجواب: Alle vier Wochen."
     },
     {
       "id": "g6-h2-q5",
-      "explanationAr": "النص: «das erste Treffen findet möglichst persönlich statt.» الاجتماع الأول يكون شخصيًا قدر الإمكان، لذلك الجواب شخصيًا."
+      "explanationAr": "النص: «das erste Treffen findet möglichst persönlich statt.» الاجتماع الأول يكون شخصيًا قدر الإمكان، لذلك الجواب: Möglichst persönlich."
     },
     {
       "id": "g6-h2-q6",
-      "explanationAr": "النص: «erreichte Ziele, Abbrüche und Gründe.» النجاح يُقاس بالأهداف المحققة والانسحابات وأسبابها، لذلك الجواب الأهداف والانسحابات."
+      "explanationAr": "النص: «erreichte Ziele, Abbrüche und deren Gründe.» النجاح يُقاس بالأهداف المحققة والانسحابات وأسبابها، لا بعدد اللقاءات وحده، لذلك الجواب: An erreichten Zielen, Abbrüchen und deren Gründen."
     },
     {
       "id": "g6-h3-q1",
-      "explanationAr": "النص: «Entscheidend ist Pflege in den ersten Jahren.» السيدة Wolf تقول إن الرعاية أساسية، لذلك الجواب Frau Wolf."
+      "explanationAr": "النص: «Entscheidend ist die Pflege in den ersten Jahren.» السيدة Wolf تقول إن الرعاية أساسية، لذلك الجواب Frau Wolf."
     },
     {
       "id": "g6-h3-q2",
@@ -807,103 +807,103 @@
     },
     {
       "id": "g6-h3-q6",
-      "explanationAr": "النص: «Nach zwei Sommern werden Überleben und Schatten gemessen.» المذيع يذكر موعد القياس بعد صيفين، لذلك الجواب Moderator."
+      "explanationAr": "النص: «Nach zwei Sommern werden das Überleben der Bäume und der Schatten gemessen.» المذيع يذكر موعد القياس بعد صيفين، لذلك الجواب Moderator."
     },
     {
       "id": "g6-h4-q1",
-      "explanationAr": "النص: «Ein verständliches Formular beginnt mit der Handlung: Was muss bis wann eingetragen oder beigefügt werden?» يبدأ الاستمارة بالفعل والموعد، لذلك الجواب الفعل والموعد."
+      "explanationAr": "النص: «Ein verständliches Formular beginnt mit der Handlung: Was muss bis wann eingetragen oder beigefügt werden?» تبدأ الاستمارة بما يجب فعله وبموعده، لذلك الجواب: Mit der Handlung und der Frist."
     },
     {
       "id": "g6-h4-q2",
-      "explanationAr": "النص: «Interne Begriffe sollten erklärt werden.» المصطلحات الداخلية تُشرح، لذلك الجواب شرحها."
+      "explanationAr": "النص: «Interne Begriffe sollten erklärt werden.» المصطلحات الداخلية تُشرح، لذلك الجواب: Sie sollen erklärt werden."
     },
     {
       "id": "g6-h4-q3",
-      "explanationAr": "النص: «werden besser in Regel, Bedingung und Ausnahme getrennt.» الجمل المعقدة تُفصل إلى قاعدة وشرط واستثناء، لذلك الجواب قاعدة وشرط واستثناء."
+      "explanationAr": "النص: «werden besser in Regel, Bedingung und Ausnahme getrennt.» الجمل المعقدة تُفصل إلى قاعدة وشرط واستثناء، لذلك الجواب: In Regel, Bedingung und Ausnahme trennen."
     },
     {
       "id": "g6-h4-q4",
-      "explanationAr": "النص: «dürfen aber keine zusätzliche Pflicht erfinden.» الأمثلة لا يجوز أن تخلق التزامًا إضافيًا، لذلك الجواب خلق التزام جديد."
+      "explanationAr": "النص: «dürfen aber keine zusätzliche Pflicht erfinden.» الأمثلة لا يجوز أن تخلق التزامًا إضافيًا، لذلك الجواب: Eine neue Pflicht erfinden."
     },
     {
       "id": "g6-h4-q5",
-      "explanationAr": "النص: «Digitale Formulare sollten Fehler am betroffenen Feld anzeigen» تظهر الأخطاء عند الحقل المعني، لذلك الجواب عند الحقل."
+      "explanationAr": "النص: «Digitale Formulare sollten Fehler am betroffenen Feld anzeigen» تظهر الأخطاء عند الحقل المعني، لذلك الجواب: Am betroffenen Feld."
     },
     {
       "id": "g6-h4-q6",
-      "explanationAr": "النص: «eingegebene Daten nicht nach einem kleinen Fehler löschen.» لا تُحذف البيانات بعد خطأ صغير، لذلك الجواب لا تُحذف."
+      "explanationAr": "النص: «eingegebene Daten nicht nach einem kleinen Fehler löschen.» لا تُحذف البيانات بعد خطأ صغير، لذلك الجواب: Sie bleiben erhalten."
     },
     {
       "id": "g6-h4-q7",
-      "explanationAr": "النص: «Tests müssen Menschen mit unterschiedlicher Erfahrung einschließen.» يجب أن تشمل الاختبارات أشخاصًا بخبرات مختلفة، لذلك الجواب خبرات مختلفة."
+      "explanationAr": "النص: «Tests müssen Menschen mit unterschiedlicher Erfahrung einschließen.» يجب أن تشمل الاختبارات أشخاصًا بخبرات مختلفة، لذلك الجواب: Menschen mit unterschiedlicher Erfahrung."
     },
     {
       "id": "g6-h4-q8",
-      "explanationAr": "النص: «auch Abbrüche, Bearbeitungszeit und falsche Einreichungen zählen.» تُقاس ثلاثة أمور: الانسحاب ووقت المعالجة والتقديمات الخاطئة، لذلك الجواب الانسحاب والوقت والأخطاء."
+      "explanationAr": "النص: «auch Abbrüche, Bearbeitungszeit und falsche Einreichungen zählen.» تُقاس ثلاثة أمور: الانسحاب ووقت المعالجة والتقديمات الخاطئة، لذلك الجواب: Abbrüche, Bearbeitungszeit und falsche Einreichungen."
     },
     {
       "id": "t6-h1-q1",
-      "explanationAr": "النص: «Erstens öffnet das Museum um zwölf.» المتحف يفتح في الساعة 12، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Erstens: Das Stadtmuseum öffnet heute erst um zwölf Uhr.» المتحف يفتح اليوم في الساعة 12 ظهرًا، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h1-q2",
-      "explanationAr": "النص: «Zweitens fährt Bus sieben nicht zum Zentrum.» الحافلة 7 لا تذهب إلى المركز، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Zweitens: Die Buslinie sieben fährt wegen einer Baustelle nicht ins Zentrum.» الخط 7 لا يصل إلى وسط المدينة بسبب أعمال البناء، لذلك العبارة خاطئة."
     },
     {
       "id": "t6-h1-q3",
-      "explanationAr": "النص: «Drittens ist der Kurs kostenlos mit Anmeldung.» الدورة مجانية مع التسجيل، أي أن التسجيل مطلوب، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Drittens: Der Computerkurs in der Bücherei ist kostenlos, eine Anmeldung ist aber nötig.» الدورة مجانية لكن التسجيل مطلوب، لذلك العبارة خاطئة."
     },
     {
       "id": "t6-h1-q4",
-      "explanationAr": "النص: «Viertens endet der Markt um sechzehn Uhr.» السوق ينتهي في الساعة 16، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Viertens: Der Bauernmarkt auf dem Kirchplatz endet heute um sechzehn Uhr.» السوق ينتهي في الساعة 16، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h1-q5",
-      "explanationAr": "النص: «Fünftens gilt die Frist bis Donnerstag.» الموعد النهائي الخميس، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Fünftens: Bewerbungen für die Ferienjobs werden bis Donnerstag angenommen.» تُقبل الطلبات حتى الخميس، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q1",
-      "explanationAr": "النص: «Der Bus fährt seit zwölf Wochen.» الحافلة تعمل منذ اثني عشر أسبوعًا، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Seit zwölf Wochen.» الحافلة تعمل منذ اثني عشر أسبوعًا، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q2",
-      "explanationAr": "النص: «Wie viele Orte? A: Sechs.» عدد الأماكن ستة، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Sechs Dörfer.» عدد القرى ستة، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q3",
-      "explanationAr": "النص: «180 gebucht, 130 wahrgenommen.» حُجز 180 موعدًا وحضر 130، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Es wurden hundertachtzig Termine gebucht, aber nur hundertdreißig wurden auch wahrgenommen.» حُجز 180 موعدًا وحضر 130 فقط، لذلك العبارة خاطئة."
     },
     {
       "id": "t6-h2-q4",
-      "explanationAr": "النص: «Nach neuer Werbung stärker.» ارتفع الاستخدام المسائي بعد الحملة، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «seit der neuen Werbung ist es abends deutlich voller.» ازداد الإقبال المسائي بعد الحملة الإعلانية الجديدة، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q5",
-      "explanationAr": "النص: «Acht, einer defekt.» من الحواسيب الثمانية واحد معطل، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Acht, aber einer ist gerade kaputt.» من الحواسيب الثمانية واحد معطل، لذلك العبارة خاطئة."
     },
     {
       "id": "t6-h2-q6",
-      "explanationAr": "النص: «Acht, einer defekt.» جهاز واحد معطل، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Acht, aber einer ist gerade kaputt.» حاسوب واحد معطل الآن، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q7",
-      "explanationAr": "النص: «9.000 Euro, davon 5.000 Personal.» التكلفة 9000 يورو، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Neuntausend Euro, davon fünftausend für das Personal.» التكلفة 9000 يورو، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q8",
-      "explanationAr": "النص: «davon 5.000 Personal.» تكلفة الموظفين 5000 يورو، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «davon fünftausend für das Personal.» تكلفة الموظفين 5000 يورو، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h2-q9",
-      "explanationAr": "النص: «Noch sechs Wochen» التجربة مستمرة ستة أسابيع أخرى، فلا تنتهي فورًا، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Wir fahren noch sechs Wochen.» التجربة مستمرة ستة أسابيع أخرى، فلا تنتهي فورًا، لذلك العبارة خاطئة."
     },
     {
       "id": "t6-h2-q10",
-      "explanationAr": "النص: «wir messen Wiederkehr und offene Anliegen.» يُقاس عدد العودة والطلبات المفتوحة، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «messen wir, wie viele wiederkommen und welche Anliegen offen bleiben.» يُقاس عدد العائدين والطلبات التي تبقى بلا حل، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h3-q1",
-      "explanationAr": "النص: «Der Zug fährt von Gleis fünf.» القطار يقلع من الرصيف 5، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Zug fährt von Gleis fünf.» القطار ينطلق من الرصيف 5، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h3-q2",
@@ -911,7 +911,7 @@
     },
     {
       "id": "t6-h3-q3",
-      "explanationAr": "النص: «Der Kurs findet im Raum neun statt.» الدورة في القاعة 9، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Kurs findet in Raum neun statt.» الدورة في القاعة 9، لذلك العبارة صحيحة."
     },
     {
       "id": "t6-h3-q4",

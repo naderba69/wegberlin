@@ -1,11 +1,54 @@
 # Project Status
 
-Sync batch: v223 · 2026-10-17 · مراجعة المحاكاة الكاملة الخامسة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم البند المعلَّم g5-r2-q1، و278 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,832,960 بايتًا؛ كاش v223، بناء 8128b408d302.
+Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا (25 مهمة)، وهي آخر محاكاة: عشرة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم آخر بند معلَّم g6-r2-q5 (المطبَّق 526، المعلَّم 0)، و222 تعديلًا ألمانيًا وعربيًا؛ الصوت 54,036,433 بايتًا؛ كاش v224، بناء 9ce02365c529.
+
+## مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا، وعشرة مقاطع استماع بصوت مُعاد توليده، وحسم آخر بند معلَّم — 2026-10-17 (v224)
+
+- **النطاق:** تعليمة المالك «واصل» بعد v223. رُوجعت مهام المحاكاة الكاملة السادسة الـ25 كلها (Goethe 13 وtelc 12)، بنصوصها وأسئلتها وخياراتها وشروحها وترجماتها.
+  - بهذا اكتملت المراجعة السطرية للمحاكيات الكاملة الست كلها (01–06).
+- **نصوص الاستماع (10 مقاطع، أُعيد توليد صوتها بالصوت الذي اختاره المالك في v221):**
+  - `g6-h1-1` إلى `g6-h1-5`: كانت المقاطع القصيرة ناقصة الأدوات («Der Termin findet Freitag um elf im Raum vier statt.»، «Der Zug hält nicht in Süd; nutzen Sie Bus acht.»، «Die Beratung ist kostenlos, Anmeldung bis Mittwoch.»)، فصارت جملًا تامة («… am Freitag um elf Uhr in Raum vier …»، «… nicht am Bahnhof Süd; nutzen Sie bitte die Buslinie acht.»، «… anmelden kann man sich bis Mittwoch.»).
+  - `g6-h2`: أسئلة المذيع كانت كلمة واحدة («Auswahl?»، «Problem?»، «Online?»، «Erfolg?») والجواب الأخير بلا فعل، فصارت أسئلة وأجوبة كاملة.
+  - `g6-h3`: «Frau Wolf plant, Herr Demir betreibt ein Geschäft.» ⇒ تقديم كامل للمتحدثين، و«Entscheidend ist Pflege…» ⇒ «Entscheidend ist die Pflege…»، و«werden Überleben und Schatten gemessen» ⇒ «werden das Überleben der Bäume und der Schatten gemessen».
+  - `t6-h1`: كانت الأخبار مختصرة («Drittens ist der Kurs kostenlos mit Anmeldung.»)، فصارت أخبارًا كاملة.
+  - `t6-h2`: كان الحوار «B: Termine? A: 180 gebucht, 130 wahrgenommen.»، فصار حوارًا طبيعيًا بين Sara وBen.
+  - `t6-h3-3`: «im Raum neun» ⇒ «in Raum neun». بقية إعلانات Hörverstehen 3 بصوتها القديم لأن نصوصها سليمة.
+  - `g6-h4` سليم نحويًا فبقي بصوته؛ صُحّحت أسئلته وخياراته المكتوبة فقط.
+  - لم تتغير أي إجابة صحيحة. أُعيدت صياغة شروح المقاطع لتقتبس النص الجديد حرفيًا.
+- **البند `g6-r2-q5` (آخر بند معلَّم):** كان مُعلَّمًا منذ 2026-10-10 بأن «المفتاح مشكوك فيه»، وشرحه كلمتان («عبء التجار.»). الفحص أكّد الشك: الخيار e «Auch die Befüllung dauerte anfangs länger als geplant.» لا يرتبط بالجملة التي قبله («Ein gemeinsames Etikett reduzierte Verwechslungen.»). صار الخيار «Damit verkürzte sich auch die Befüllung, die anfangs länger als geplant gedauert hatte.»، فصار الحل الوحيد للفجوة 5: ‏Damit يعود على الملصق الموحد، أما f فلا تصلح إلا في الفجوة 6 لأن «So werden…» تشير إلى قياساتها. وكُتب له شرح مطبَّق يقتبس الجملتين، ونُقل إلى المطبَّق: **526 مطبَّقًا، و0 مُعلَّم**. قائمة `exam-bank-not-drafted` صارت فارغة.
+  - وفي النص نفسه: «Sie sollten Wege bündeln…» ⇒ «Die Schränke sollten Wege bündeln und eine späte Abholung ermöglichen.» (الالتباس نفسه الذي حُسم في g5-r2-q1)، و«den Pilot» ⇒ «den Pilotversuch».
+- **Goethe (المحاكاة 06):**
+  - **Lesen:** صارت أسئلة Lesen 1 جملًا واضحة («Wer verlangt Produktion statt Übersetzung?» ⇒ «Wer bevorzugt Karten, bei denen man einen Satz bilden muss?»، «Wer schätzt feste Abgaben?» ⇒ «… feste Abgabetermine?»). وصارت أسئلة Lesen 3 وخياراتها جملًا تامة («Vorteil Segel?» ⇒ «Welchen Vorteil haben die Sonnensegel?»). وعناوين Lesen 4 بأدواتها («Ton vor Bildästhetik» ⇒ «Der Ton ist wichtiger als schöne Bilder»). و`promptAr` «1» ⇒ «الفجوة 1»، و«§1» ⇒ «القسم 1».
+  - **Hören:** صارت الأسئلة والعبارات المبتورة («Raum?»، «Rolle?»، «Womit beginnen?»، «Pflege zuerst wichtig.») والخيارات («Am Feld»، «Verschiedene Erfahrung») جملًا ألمانية وعربية تامة. ولم يُكرَّر سؤال المحاكاة 05 «Ab wann ist Einlass?»، بل «Wann darf man in den Saal?».
+  - **الكتابة والمحادثة:** صارت التعليمات («Schreiben Sie.»، «Wählen Sie.»، «Diskutieren Sie.») والمواقف العربية («كل الفعاليات هجينة.») ونقاط التوجيه وأسئلة المتابعة («Welche Alternative?») جملًا تامة.
+- **telc (المحاكاة 06):**
+  - **Leseverstehen 1:** كانت النصوص الخمسة عناوين بلا فعل («Mobile Fahrradannahme.»، و«الاستقبال» لا يطابق «الإصلاح» في الخيار)، فصارت جملًا خبرية («Eine mobile Fahrradwerkstatt kommt in die Wohnviertel.»).
+  - **Leseverstehen 3:** كانت الإعلانات كلمات متراصة («Gemüse Mittwoch»)، وكذلك الحالات العشر والترجمة («خضار»). صارت الإعلانات عناوين سليمة، والحالات جملًا كاملة بالألمانية والعربية تختلف عن صياغة 04 و05، والشروح العشرة تقتبس الإعلان الجديد. المفتاح a–j لم يتغير.
+  - **Sprachbausteine 1:** النص كان برقيًا («Mehr kommen, [24] erwartet.»)، فأُعيدت كتابته عن يوم تعلم في مركز الحي، بجمل تامة تختلف عن نصي 04 و05. المفتاح لم يتغير (Da/die/ob/als/damit/statt/um/sondern/aus/werden)، وكُتبت الشروح العشرة من جديد.
+  - **Leseverstehen 2 وHörverstehen:** صارت الأسئلة («Buchung?» ⇒ «Wie kann man einen Termin vereinbaren?») والعبارات العشرون والخيارات المبتورة جملًا تامة. و«News» ⇒ «Nachrichten». و«يقلع» ⇒ «ينطلق». و«den Pilot» ⇒ «den Pilotversuch».
+  - **الكتابة والمحادثة:** صارت التعليمات والمواقف كاملة، ووقت التحضير بوحداته، وأسئلة المتابعة جملًا تامة («Was gelernt?» ⇒ «Welche Lehre ziehen Sie daraus?»).
+- **فحص التشابه الداخلي:** كشف أن السؤال «Woran wird der Erfolg gemessen?» صار مطابقًا حرفيًا لسؤال في المحاكاة 04 (1.00). فصار سؤال 06 «Was berücksichtigt das Programm, um seinen Erfolg zu beurteilen?». النتيجة: 0 مشكلات في 3277 مدخلًا.
+- **المجموع:**
+  - 222 استبدالًا في ملف المحاكاة السادسة، مع تحديث مولّد مانيفست الصوت وأعداد اختبار المسودات (526/0).
+  - 78 بندًا في مسودات `exam-bank` زُومنت حرفيًا، وأُضيف بند واحد (`g6-r2-q5`).
+  - أعداد المعجم بلا تغيير. استثناءات الاقتباس 73.
+- **الصوت:** 544 ملفًا / **54,036,433** بايتًا (كان 53,832,960)، تحت السقف الآمن 59,500,000.
+- **الكاش:** **v224** (staging v223، والرجوع v223). حُدّث سطر `Offline cache:` يدويًا. الوثائق الثلاث عشرة على `Sync batch: v224`.
+- **البناء:**
+  - الصفحات: 325/325.
+  - Offline **`9ce02365c529`**: full 6,167,290 gzip (a1 2,812,948 · a2 2,925,253 · b1 2,952,139 · b2 4,433,446).
+  - JS: 131 / 2,103,129 gzip.
+  - المنهج: 1,198,666 gzip.
+  - التباين: 323 صفحة / 0.
+- **التحقق المحلي:** `npm run check` نجح كاملًا من التشغيل الأول: lint، وtypecheck، واختبارات الوحدة 1575 في 226 ملفًا، وsource/secret/workflows/handoff/deps، والبناء (البصمة نفسها `9ce02365c529`)، و`a11y:browser` بـ642 فحصًا / 0 إخفاق. ‏E2E: سطح المكتب **66/66**، والجوال **66/66** من التشغيل الأول.
+- **الحدود:**
+  - القرارات قرار الوكيل بتفويض صريح من المالك في المحادثة («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة بشرية ألمانية مستقلة.
+  - لم يستمع أي إنسان إلى المقاطع العشرة الجديدة بعد.
+  - P0-301: ‏PR #7 مفتوح.
 
 ## مراجعة المحاكاة الكاملة الخامسة سطرًا سطرًا، وستة مقاطع استماع بصوت مُعاد توليده — 2026-10-17 (v223)
 
 - **النطاق:** تعليمة المالك «واصل» بعد v222. رُوجعت مهام المحاكاة الكاملة الخامسة الـ25 كلها (Goethe 13 وtelc 12)، بنصوصها وأسئلتها وخياراتها وشروحها وترجماتها.
-  - **التالي:** المحاكاة 06.
 - **نصوص الاستماع (6 مقاطع، أُعيد توليد صوتها بالصوت الذي اختاره المالك في v221):**
   - `g5-h1-3`: «Nach Zentrum fahren Sie…» ⇒ «Ins Zentrum fahren Sie mit der Linie sechs weiter.».
   - `g5-h2`: أسئلة المذيع كانت برقية («Wer prüft?»، «Häufigster Fehler?»، «Was messen Sie?»)، والجواب الأخير بلا فعل. صارت أسئلة وأجوبة كاملة.

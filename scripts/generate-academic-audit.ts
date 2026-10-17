@@ -50,6 +50,9 @@ const payloadWithoutHash = {
   objectiveCoverage: {
     objectives: coverage.rows.length,
     gaps: coverage.rows.filter((row) => row.status === "gap").length,
+    gapsByDimension: coverage.gapsByDimension,
+    gapLedger: coverage.gaps,
+    unalignedSurfaces: coverage.unalignedSurfaces,
     byLevel: coverage.byLevel,
     canonicalStages: coverage.canonicalStages,
     mappingBoundary: coverage.mappingBoundary,
@@ -161,7 +164,11 @@ The complete item-by-item question → answer → evidence registry is stored in
 `;
 
 const levelRows = Object.entries(coverage.byLevel).map(([level, value]) => `| ${level} | ${value.objectives} | ${value.covered} | ${value.gaps} |`).join("\n");
-const objectiveRows = coverage.rows.map((row) => `| \`${row.objectiveId}\` | ${md(row.canDoDe, 72)} | ${md(row.canDoAr, 72)} | ${row.taughtIn.length} · \`${row.taughtIn.slice(0, 2).join("`, `")}\` | ${row.practicedIn.length} | ${row.assessedIn.length} · \`${row.assessedIn[0]}\` | ${row.status} |`).join("\n");
+const coverageGapCount = coverage.rows.filter((row) => row.status === "gap").length;
+const coverageCoveredCount = coverage.rows.length - coverageGapCount;
+const surfaceList = (ids: string[]) => ids.length ? `${ids.length} · \`${ids.slice(0, 2).join("`, `")}\`` : "**0**";
+const objectiveRows = coverage.rows.map((row) => `| \`${row.objectiveId}\` | ${md(row.canDoDe, 72)} | ${md(row.canDoAr, 72)} | ${surfaceList(row.taughtIn)} | ${row.practicedIn.length || "**0**"} | ${surfaceList(row.assessedIn)} | ${row.status === "gap" ? `gap: ${row.missing.join(", ")}` : "covered"} |`).join("\n");
+const gapRows = coverage.rows.filter((row) => row.status === "gap").map((row) => `| \`${row.objectiveId}\` | ${md(row.canDoDe, 80)} | ${row.missing.join(", ")} |`).join("\n");
 const coverageReport = `# Objective → Teaching → Practice → Assessment Report
 
 Definition date: ${AUDIT_DATE} (audit spec, not the run date; the content fingerprint below is authoritative)  
@@ -170,20 +177,26 @@ Content SHA-256: \`${contentHash}\`
 
 ## Result
 
-\`PASS\` — **${coverage.rows.length}/${coverage.rows.length} lesson objectives** own at least one teaching surface, practice surface, and Mini-Test assessment surface. There are **0 structural gaps**.
+Alignment integrity: \`PASS\` — every lesson surface is linked to named objectives or explicitly marked unaligned (${coverage.unalignedSurfaces.length} unaligned surfaces). **${coverageCoveredCount}/${coverage.rows.length} lesson objectives** have at least one authored teaching link, practice link and Mini-Test link; **${coverageGapCount} objectives are reported gaps** (not taught: ${coverage.gapsByDimension.taught}; not practised: ${coverage.gapsByDimension.practiced}; not assessed by the Mini-Test: ${coverage.gapsByDimension.assessed}).
 
 | Level | Objectives | Covered | Gaps |
 |---|---:|---:|---:|
 ${levelRows}
-| **Total** | **${coverage.rows.length}** | **${coverage.rows.length}** | **0** |
+| **Total** | **${coverage.rows.length}** | **${coverageCoveredCount}** | **${coverageGapCount}** |
 
 ## Mapping boundary
 
 ${coverage.mappingBoundary}
 
-Stable report IDs are derived as \`lessonId-objective-N\`. Teaching includes entry/vocabulary/discovery/theory; practice includes controlled, reading, listening, writing, speaking, mediation, and error-clinic surfaces; assessment uses unseen Mini-Test IDs. The machine report preserves every complete reference array.
+Stable report IDs are derived as \`lessonId-objective-N\`. Teaching links come from entry/vocabulary/discovery/theory; practice links from controlled exercises, reading, listening, writing, speaking and mediation; assessment links from unseen Mini-Test items. The authored source is \`src/data/objective-item-alignment.ts\`; the machine report preserves every complete reference array, the gap ledger and the unaligned surfaces.
 
-## Per-objective structural map
+## Gap ledger
+
+| Objective ID | Can-Do DE | Missing |
+|---|---|---|
+${gapRows || "| — | — | — |"}
+
+## Per-objective item map
 
 | Objective ID | Can-Do DE | Can-Do AR | Teaching surfaces | Practice count | Assessment surfaces | Status |
 |---|---|---|---|---:|---|---|
@@ -301,6 +314,6 @@ if (checkMode) {
 console.log("Academic content governance verified:");
 console.log(`- Zod: ${schema.counts.totalRootObjects} root objects / ${schema.schemaFamilies} schema families / 0 failures`);
 console.log(`- answers: ${answer.rows.length} closed items + ${answer.productiveTasks.length} productive tasks / ${answer.exemptions.length} explicit exemptions / 0 leaks`);
-console.log(`- objectives: ${coverage.rows.length}/${coverage.rows.length} teaching→practice→assessment maps / 0 structural gaps`);
+console.log(`- objectives: ${coverage.rows.length - coverage.gaps.length}/${coverage.rows.length} authored teaching→practice→assessment links / ${coverage.gaps.length} reported gaps / ${coverage.unalignedSurfaces.length} unaligned surfaces`);
 console.log(`- lexical target gaps: ${lexical.nounSummary.pendingHuman} noun + ${lexical.verbFrameSummary.pendingHuman} verb-frame candidates pending human review`);
 console.log(`- content SHA-256: ${contentHash}`);

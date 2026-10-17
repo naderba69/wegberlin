@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v227";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v228";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -286,11 +286,14 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();
   await expect(grammarGlossary.locator(".grammar-glossary-grid article")).toHaveCount(24);
+  await expect(grammarGlossary.locator("a.glossary-oer-link")).toHaveCount(21);
+  await expect(grammarGlossary.locator('[data-oer-policy="oer-attributed-reference-import-v1"]')).toContainText("Lizenz CC-BY-4.0");
   await grammarGlossary.getByRole("button",{name:"A2",exact:true}).click();
   await expect(grammarGlossary.locator(".grammar-glossary-grid article")).toHaveCount(6);
   await grammarGlossary.getByPlaceholder(/Dativ/).fill("Dativ");
   await expect(grammarGlossary.locator(".grammar-glossary-grid article")).toHaveCount(1);
   await expect(grammarGlossary).toContainText("حالة المفعول غير المباشر");
+  await expect(grammarGlossary.locator("a.glossary-oer-link")).toHaveAttribute("href","https://coerll.utexas.edu/gg/gr/cas_07.html");
   const explorer=page.locator('[data-lexical-strategy-policy="lexical-strategy-registry-v1"]');
   await expect(explorer).toBeVisible();await expect(explorer.locator(".word-family-card")).toHaveCount(8);await expect(explorer).toContainText("wohnen");
   await explorer.getByRole("button",{name:/Register.*السجل/}).click();await expect(explorer.locator('[data-language-register]')).toHaveCount(8);await explorer.getByRole("button",{name:/umgangssprachlich.*محادثي/}).click();await expect(explorer.locator('[data-language-register="colloquial"]')).toHaveCount(2);await expect(explorer).toContainText("تعتمد العمر والعلاقة والمنطقة");

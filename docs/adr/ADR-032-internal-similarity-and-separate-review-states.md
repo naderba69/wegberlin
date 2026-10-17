@@ -48,3 +48,5 @@ Every corpus object receives separate `german`, `arabic`, `cefr`, and `copyright
 ## Consequences
 
 P1-293 is implemented because the complete internal prompt corpus has a deterministic fail-closed gate. P1-295 is implemented because all four states exist separately per object without pretending pending automation is human review. P1-92 remains partial until legally authorized comparison material and an independent copyright reviewer are available in the final review.
+
+**Update 2026-10-17 (v228): P1-92 implemented by ADR-119.** `authorizedExternalReferenceCorpora` now records one external corpus: the official Menschen public samples. It was compared with all German text under § 44b UrhG and gave 0 matches. Only hashes and scores are stored. Copyright clearance stays pending.

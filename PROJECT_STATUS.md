@@ -1,6 +1,36 @@
 # Project Status
 
-Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
+Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
+
+## إغلاق P1-92 وP2-357: مقارنة خارجية مشروعة واستيراد مصدر مفتوح مُسند — 2026-10-17 (v228)
+
+- **النطاق:** تطبيق تعليمة المالك («كل ما تحتاج بشريًا ابحث ستجد مصادره») على بندَي الحقوق. القرار في **ADR-119**، بطبقة `source-verified-agent`، **وليس رأي محامٍ**.
+- **P1-92، المقارنة مع الكتاب:**
+  - **الأداة:** `scripts/compare-external-reference-corpus.ts` (`external-reference-comparison-v1`). تقارن كل نص ألماني في `src/data` (19,780 مقطعًا) بمدونة مرجعية **خارج المستودع**، ولا تحفظ من نصها إلا البصمات والدرجات.
+  - **الأساس القانوني:** § 44b UrhG، ولا تحفّظ آليًا في robots.txt لدى Hueber.
+  - **التشغيل:** على نماذج Hueber الرسمية العامة: Menschen A1.1 الدرس 1، وA1 الدرس 9، وB1 الدرس 1. حُذفت النسخ المؤقتة بعده، ولم تُستعمل النسخ المقرصنة.
+  - **النتيجة:** **0 تطابق**، وأقرب درجة 0.4933 مقابل حد 0.84. الاختبارات تكشف النسخ الحرفي وإعادة الصياغة القريبة.
+  - **الحدود:** التغطية نحو 12 صفحة فقط، وCopyright clearance ما زال معلّقًا. المقارنة الكاملة تكون بنسخة يملكها المالك وبالأداة نفسها.
+- **P2-357، المصادر المفتوحة:**
+  - **الترخيص:** ثبت من صفحات المصدر نفسها أن ترخيص Grimm Grammar وDeutsch im Blick هو CC BY 4.0. G-FOL يبقى مرفوضًا: لا يظهر إصدار ترخيصه، وأمثلته من DWDS.
+  - **المستورد:** `src/core/oer/importer.ts`، مع السجل الآلي `src/data/oer-register.ts`.
+  - **الاستيراد:** 21 رابطًا مُسندًا إلى صفحات Grimm Grammar، تظهر تحت المصطلحات المقابلة في قاموس القواعد، مع سطر إسناد كامل وتنبيه بأن الشرح بالإنجليزية. لم يُنسخ أي نص، وبقيت ثلاثة مصطلحات بلا رابط لأنها بلا صفحة مطابقة.
+- **الدليل:** `reports/licence-rights-verification/` و`reports/external-reference-comparison/`.
+- **التدقيق:**
+  - P1 = **133/135 منجز، 2 جزئي** (331، 380).
+  - P2 = **135/142 منجز، 5 جزئية، 2 غير منجز**.
+  - P0 = 120/4.
+- **الكاش:** **v228** (staging v227، والرجوع v227).
+- **البناء والتحقق:**
+  - Offline **`71f84be2779f`**: full 6,176,239 gzip (a1 2,821,904 · a2 2,934,193 · b1 2,961,087 · b2 4,442,446).
+  - JS: 131 / 2,108,013 gzip. المنهج: 1,203,874 gzip. الصوت: 544 ملفًا / 54,036,433 بايتًا (لا تغيير). التباين: 323 صفحة / 0.
+  - `npm run check` نجح كاملًا: اختبارات الوحدة **1584 في 229 ملفًا**، والبناء، و`a11y:browser` بـ642 فحصًا / 0 إخفاق.
+  - تدقيق Bidi: الوسوم 8,252 ⇒ 8,257، والنطاقات التقنية 58 ⇒ 60 (رابط الشرح وسطر الإسناد)، والنص المختلط ثابت عند 207.
+  - E2E: **66/66** على Desktop و**66/66** على Mobile (Chromium 153) دون إعادة تشغيل. اختبار القاموس صار يتحقق أيضًا من 21 رابطًا، ومن رابط Dativ إلى `cas_07`، ومن سطر الإسناد.
+  - **ملاحظات من هذه الجولة:**
+    - أوقف lint التشغيل الأول بسبب اسم المتغير `module` في سكربت المقارنة، فغُيّر إلى `dataModule`.
+    - أوقف اختبار الوحدة التشغيل الثاني، لأنه كان ما زال يتوقع التسمية القديمة «External authorized reference corpora: 0».
+    - صُحّح الأمران، ثم أعيدت البوابات كاملة.
 
 ## إغلاق P1-377 بتحقق مصدري رسمي للسياقات القنصلية والقانونية — 2026-10-17 (v227)
 
@@ -18,8 +48,8 @@ Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسم
 - **ما يراه المتعلم:** قائمة قابلة للطي في بطاقة «دورة المحتوى» بالإعدادات: الجملة الألمانية، والتعليمة، وروابط الجهات، مع تنبيه بأن الإجراءات تتغير.
 - **الدليل:** `reports/context-claims-source-verification/` (تقرير + CSV من 12 صفًّا).
 - **التدقيق:**
-  - P1 = **132/135 منجز، 3 جزئية** (92، 331، 380).
-  - P0 = 120/4، وP2 = 134/6/2.
+  - P1 = **132/135 منجز، 3 جزئية** (92، 331، 380) عند v227.
+  - P0 = 120/4، وP2 = 134/6/2 عند v227.
 - **الكاش:** **v227** (staging v226، والرجوع v226).
 - **البناء والتحقق:**
   - Offline **`a63f731614a7`**: full 6,172,571 gzip (a1 2,818,168 · a2 2,930,488 · b1 2,957,376 · b2 4,438,695).
@@ -1747,8 +1777,8 @@ Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسم
 - **اختبارات v181 التاريخية**: 1,349/1,349 في 199/199 (`npm test` عند إغلاق P2-355؛ بلا تخفيف عتبة أو تعطيل ملف). أضاف P2-352 ثلاث اختبارات وحدة، فأصبح خط الأساس عنده 1,352/1,352؛ P2-276 أضاف 3 اختبارات أخرى.
 - Historical Browser/CI evidence before v181: CI re-measured the full desktop and mobile production suite on this head (PR #4, head 3fdf9b6, run `37147779120`): `check` passed in 4m28s (carries lint, typecheck, the 1,244 tests, the secret, freshness, workflow and handoff gates, the build, and a new step that re-runs the local-day and storage-integrity files under `TZ=Asia/Tunis`, `Pacific/Kiritimati` and `Pacific/Niue`) and `e2e` in 16m41s (both projects); Vercel passed, and `Deployment Smoke` reported skipping on the PR run by design, not by success — it stays unproven for production until the variable-pinned run says otherwise. Earlier, kept as measured: head 0acb40d (run `37118734143`) `check` 4m08s / `e2e` 15m38s (both projects, with the pinned-zone step green in all three zones); head 5b1fc79 (run `37112362964`) `check` 2m46s (`npm run check` 2m23s, 1,231 tests) and `e2e` 10m55s (build 0m59s, suite 9m13s). The docs-only head that preceded it (083fd38) had its run cancelled by the branch concurrency guard, so no browser number is attributed to it. Earlier generations, kept as measured: 95bfcfe (run `37110656051`) `check` 3m28s / `e2e` 16m46s (suite 14m17s); Stage A head 6fb5667 (run `37108553360`) `check` 4m26s / `e2e` 11m06s (suite 9m20s) — an earlier note had wrongly given both jobs 11m06s, read from a GraphQL job field instead of step timings; 65b6f03 (run `37105579225`) `check` 2m48s / `e2e` 16m28s, which is where the `review-session-dose-v1` browser assertions were first run; 076cd48 16m16s after two defects were fixed from real CI evidence (the stage-gate `reachLimit` freeze at stage one and a progress test counting the phantom mastery seed removed by ADR-103). Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so no browser number is ever taken from a local run. A prior generation (head 076cd48) measured 16m16s after two defects were fixed from real CI evidence — the stage-gate `reachLimit` freeze at stage one, and a progress test that counted the phantom mastery seed removed by ADR-103. Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so this number comes from Actions, not from here. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
 - P0 = 120 implemented / 4 partial / 0 missing / 0 blocked.
-- P1 = 132 implemented / 3 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 134 implemented / 6 partial / 2 not implemented / 0 blocked.
+- P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 135 implemented / 5 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - الدليل التاريخي السابق لـP2-276: PR #7 عند `b974c48` اجتاز Quality Gate `37335158220` (64/64 Desktop و64/64 Mobile) وVercel Preview؛ هذه النتيجة لا تغطي P2-276. الدليل الحالي لهذه الدفعة موثق في كتلة P2-276 بأعلى الملف. `Deployment Smoke` تخطّى شرطه ولا يثبت Production. P0-302 مغلق؛ P0-301 جزئي حتى إغلاق PR.
 

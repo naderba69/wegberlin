@@ -25,7 +25,7 @@ Content SHA-256: \`${contentSha256}\`
 - Suspicious pairs above threshold: ${audit.similarity.suspiciousPairCount}
 - Same-context teach→practice→assessment exemptions: ${audit.similarity.exemptSameContextCount}
 - Explicit independently reviewed exemptions: ${audit.similarity.exemptReviewedCount}
-- External authorized reference corpora: ${audit.externalReferenceCorpusCount}
+- External reference corpora compared (lawful basis recorded, ADR-119): ${audit.externalReferenceCorpusCount}
 - Copyright clearance: \`${audit.copyrightClearance}\`
 
 ## Separate per-object review states

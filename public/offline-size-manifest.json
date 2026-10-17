@@ -3,22 +3,22 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "a63f731614a77eb20e96b55c90d82ee01e15da1f0be609a79a8416e367ce4078",
+  "buildFingerprint": "71f84be2779fdedb3cd3b8275b1d856585f9af9a00a3818e76f4183b4e31ea22",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
       "id": "a1",
       "label": "A1",
       "routeCount": 60,
-      "routeRawBytes": 3977502,
-      "routeGzipBytes": 788189,
+      "routeRawBytes": 3984880,
+      "routeGzipBytes": 789361,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7145682,
-      "nextAssetGzipBytes": 2018014,
+      "nextAssetRawBytes": 7153690,
+      "nextAssetGzipBytes": 2020578,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11190834,
-      "totalGzipBytes": 2818168,
+      "totalRawBytes": 11206220,
+      "totalGzipBytes": 2821904,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -386,9 +386,9 @@
           "gzipBytes": 8722
         },
         {
-          "path": "/_next/static/chunks/app/search/page-a017737f0654aae4.js",
-          "rawBytes": 47086,
-          "gzipBytes": 16798
+          "path": "/_next/static/chunks/app/search/page-b87eead11e22761b.js",
+          "rawBytes": 54562,
+          "gzipBytes": 19244
         },
         {
           "path": "/_next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
@@ -461,9 +461,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/5bebb1f2b75503b5.css",
-          "rawBytes": 487266,
-          "gzipBytes": 79064
+          "path": "/_next/static/css/a2ff0904c900df9c.css",
+          "rawBytes": 487798,
+          "gzipBytes": 79182
         }
       ]
     },
@@ -471,15 +471,15 @@
       "id": "a2",
       "label": "A2",
       "routeCount": 60,
-      "routeRawBytes": 4278698,
-      "routeGzipBytes": 900510,
+      "routeRawBytes": 4286076,
+      "routeGzipBytes": 901651,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7145682,
-      "nextAssetGzipBytes": 2018013,
+      "nextAssetRawBytes": 7153690,
+      "nextAssetGzipBytes": 2020577,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11492030,
-      "totalGzipBytes": 2930488,
+      "totalRawBytes": 11507416,
+      "totalGzipBytes": 2934193,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -847,9 +847,9 @@
           "gzipBytes": 8722
         },
         {
-          "path": "/_next/static/chunks/app/search/page-a017737f0654aae4.js",
-          "rawBytes": 47086,
-          "gzipBytes": 16798
+          "path": "/_next/static/chunks/app/search/page-b87eead11e22761b.js",
+          "rawBytes": 54562,
+          "gzipBytes": 19244
         },
         {
           "path": "/_next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
@@ -922,9 +922,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/5bebb1f2b75503b5.css",
-          "rawBytes": 487266,
-          "gzipBytes": 79064
+          "path": "/_next/static/css/a2ff0904c900df9c.css",
+          "rawBytes": 487798,
+          "gzipBytes": 79182
         }
       ]
     },
@@ -932,15 +932,15 @@
       "id": "b1",
       "label": "B1",
       "routeCount": 60,
-      "routeRawBytes": 4359851,
-      "routeGzipBytes": 927399,
+      "routeRawBytes": 4367229,
+      "routeGzipBytes": 928546,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7145680,
-      "nextAssetGzipBytes": 2018012,
+      "nextAssetRawBytes": 7153688,
+      "nextAssetGzipBytes": 2020576,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11573181,
-      "totalGzipBytes": 2957376,
+      "totalRawBytes": 11588567,
+      "totalGzipBytes": 2961087,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1308,9 +1308,9 @@
           "gzipBytes": 8722
         },
         {
-          "path": "/_next/static/chunks/app/search/page-a017737f0654aae4.js",
-          "rawBytes": 47086,
-          "gzipBytes": 16798
+          "path": "/_next/static/chunks/app/search/page-b87eead11e22761b.js",
+          "rawBytes": 54562,
+          "gzipBytes": 19244
         },
         {
           "path": "/_next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
@@ -1383,9 +1383,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/5bebb1f2b75503b5.css",
-          "rawBytes": 487266,
-          "gzipBytes": 79064
+          "path": "/_next/static/css/a2ff0904c900df9c.css",
+          "rawBytes": 487798,
+          "gzipBytes": 79182
         }
       ]
     },
@@ -1393,15 +1393,15 @@
       "id": "b2",
       "label": "B2 + Prüfung",
       "routeCount": 221,
-      "routeRawBytes": 10263061,
-      "routeGzipBytes": 2363736,
+      "routeRawBytes": 10270439,
+      "routeGzipBytes": 2364923,
       "nextAssetCount": 93,
-      "nextAssetRawBytes": 7290103,
-      "nextAssetGzipBytes": 2062994,
+      "nextAssetRawBytes": 7298111,
+      "nextAssetGzipBytes": 2065558,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17620814,
-      "totalGzipBytes": 4438695,
+      "totalRawBytes": 17636200,
+      "totalGzipBytes": 4442446,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1789,9 +1789,9 @@
           "gzipBytes": 8722
         },
         {
-          "path": "/_next/static/chunks/app/search/page-a017737f0654aae4.js",
-          "rawBytes": 47086,
-          "gzipBytes": 16798
+          "path": "/_next/static/chunks/app/search/page-b87eead11e22761b.js",
+          "rawBytes": 54562,
+          "gzipBytes": 19244
         },
         {
           "path": "/_next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
@@ -1864,9 +1864,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/5bebb1f2b75503b5.css",
-          "rawBytes": 487266,
-          "gzipBytes": 79064
+          "path": "/_next/static/css/a2ff0904c900df9c.css",
+          "rawBytes": 487798,
+          "gzipBytes": 79182
         }
       ]
     },
@@ -1874,15 +1874,15 @@
       "id": "full",
       "label": "A1–B2 komplett",
       "routeCount": 320,
-      "routeRawBytes": 16960340,
-      "routeGzipBytes": 4093133,
+      "routeRawBytes": 16967718,
+      "routeGzipBytes": 4094237,
       "nextAssetCount": 120,
-      "nextAssetRawBytes": 7295291,
-      "nextAssetGzipBytes": 2067473,
+      "nextAssetRawBytes": 7303299,
+      "nextAssetGzipBytes": 2070037,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24323281,
-      "totalGzipBytes": 6172571,
+      "totalRawBytes": 24338667,
+      "totalGzipBytes": 6176239,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -2405,9 +2405,9 @@
           "gzipBytes": 8722
         },
         {
-          "path": "/_next/static/chunks/app/search/page-a017737f0654aae4.js",
-          "rawBytes": 47086,
-          "gzipBytes": 16798
+          "path": "/_next/static/chunks/app/search/page-b87eead11e22761b.js",
+          "rawBytes": 54562,
+          "gzipBytes": 19244
         },
         {
           "path": "/_next/static/chunks/app/settings/page-0eb40c3670ca1b3f.js",
@@ -2480,9 +2480,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/5bebb1f2b75503b5.css",
-          "rawBytes": 487266,
-          "gzipBytes": 79064
+          "path": "/_next/static/css/a2ff0904c900df9c.css",
+          "rawBytes": 487798,
+          "gzipBytes": 79182
         }
       ]
     }

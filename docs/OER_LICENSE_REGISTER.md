@@ -1,14 +1,20 @@
 # سجل تراخيص المصادر المفتوحة (P2-357)
 
-هذا السجل يحدد المصادر التي يُسمح بالنظر في استيرادها، مع الترخيص كما ورد في صفحة المصدر نفسها وتاريخ الفحص. التسجيل هنا **ليس استيرادًا**: لا يُضاف أي محتوى من هذه المصادر إلى الشيفرة أو الحزم، ولا يغيّر أي مسار أو درس.
+هذا السجل يحدد المصادر التي يُسمح بالنظر في استيرادها، مع الترخيص كما ورد في صفحة المصدر نفسها وتاريخ الفحص. التسجيل وحده **ليس استيرادًا**.
+
+النسخة الآلية من السجل في `src/data/oer-register.ts`.
+
+**تحديث 2026-10-17 (ADR-119):**
+- ثبت أن إصدار ترخيص OER-02 (Grimm Grammar) وOER-03 (Deutsch im Blick) هو **CC BY 4.0**، من شارة الترخيص في صفحاتهما نفسها.
+- استُورد OER-02 **كروابط مُسندة فقط**: 21 صفحة موضوعية مربوطة بمصطلحات قاموس القواعد، دون نسخ أي نص إلى التطبيق.
 
 قاعدة الإسناد: كل عنصر مستورد لاحقًا يجب أن يحمل اسم المؤلف وعنوان المصدر ورابط الترخيص وتاريخ الاستيراد.
 
 | المعرّف | المصدر | الرابط الذي فُحص | الترخيص كما ورد في الصفحة | تاريخ الفحص | الإسناد المطلوب | الحالة |
 | --- | --- | --- | --- | --- | --- | --- |
-| OER-01 | German Frame-semantic Online Lexicon (G-FOL)، Hans Boas، COERLL / UT Austin | https://coerll.utexas.edu/coerll/materials/language/german/ | CC-BY | 2026-10-08 | Hans Boas، G-FOL، COERLL / UT Austin، مع رابط الترخيص | مسجّل، غير مستورد |
-| OER-02 | Grimm Grammar، Zsuzsanna Abrams، COERLL / UT Austin | https://coerll.utexas.edu/coerll/materials/language/german/ | CC-BY | 2026-10-08 | Zsuzsanna Abrams، Grimm Grammar، COERLL / UT Austin، مع رابط الترخيص | مسجّل، غير مستورد |
-| OER-03 | Deutsch im Blick، Zsuzsanna Abrams، COERLL / UT Austin | https://coerll.utexas.edu/coerll/materials/language/german/ | CC-BY | 2026-10-08 | Zsuzsanna Abrams، Deutsch im Blick، COERLL / UT Austin، مع رابط الترخيص | مسجّل، غير مستورد |
+| OER-01 | German Frame-semantic Online Lexicon (G-FOL)، Hans Boas، COERLL / UT Austin | https://frames.coerll.utexas.edu/ | CC-BY (لا يظهر الإصدار في صفحات G-FOL نفسها، وأمثلتها مقتبسة من DWDS بحقوق طرف ثالث) | 2026-10-17 | Hans Boas، G-FOL، COERLL / UT Austin، مع رابط الترخيص | مسجّل، غير مستورد؛ الإصدار غير مُثبت |
+| OER-02 | Grimm Grammar، Zsuzsanna Abrams، COERLL / UT Austin | https://coerll.utexas.edu/gg/ | CC BY 4.0 (شارة في تذييل الصفحة الرئيسية وصفحة الاعتمادات وفهرس الموقع والصفحات الموضوعية، ترتبط بـ creativecommons.org/licenses/by/4.0) | 2026-10-17 | Zsuzsanna Abrams، Grimm Grammar، COERLL / UT Austin، مع رابط الترخيص | مستورد كروابط مُسندة فقط: 21 صفحة في قاموس القواعد، دون نسخ أي نص (`src/data/oer-imports.ts`) |
+| OER-03 | Deutsch im Blick، Zsuzsanna Abrams، COERLL / UT Austin | https://coerll.utexas.edu/dib/ | CC BY 4.0 (شارة في تذييل الصفحة الرئيسية، ترتبط بـ creativecommons.org/licenses/by/4.0) | 2026-10-17 | Zsuzsanna Abrams، Deutsch im Blick، COERLL / UT Austin، مع رابط الترخيص | مؤهل لمراجعة الاستيراد، غير مستورد (مقاطع الفيديو فيها أشخاص مسجَّلون، فلا تُستورد وسائط دون فحص منفصل) |
 | OER-04 | Wiktionary (نصوص المداخل) | https://en.wiktionary.org/wiki/Wiktionary:Copyrights | CC BY-SA 4.0 و GFDL 1.1 (بلا أقسام ثابتة) | 2026-10-08 | اسم المساهمين وتاريخ التعديل ورابط الترخيص، مع ترخيص المشتق نفسه (ShareAlike) | مسجّل، غير مستورد |
 | OER-05 | Grenzenlos Deutsch | https://oercommons.org/browse?f.keyword=german-language (قائمة؛ لم تُفتح صفحته الفردية) | CC BY-NC-SA (من قائمة OER Commons) | 2026-10-08 | غير مستورد: ترخيص غير تجاري | مستبعد افتراضيًا (NC) |
 | OER-06 | German 101 وGerman 102، Rebecca Linem | https://nku.libguides.com/c.php?g=1241432&p=10871937 (قائمة؛ لم تُفتح صفحة المصدر الفردية) | CC BY (من قائمة LibGuide؛ الإصدار غير مُثبت) | 2026-10-08 | Rebecca Linem، German 101/102، مع رابط الترخيص | مسجّل، غير مستورد؛ الإصدار غير مُثبت |
@@ -19,7 +25,8 @@
 
 الوحدة `src/core/oer/import-policy.ts` تقرر فقط هل يحق لسجلّ أن يدخل مرحلة مراجعة استيراد يدوية. نتائجها على السجل الحالي:
 
-- OER-01 · OER-02 · OER-03: **مرفوضة** — `license-version-unverified:CC-BY` حتى يُثبت إصدار CC من صفحة المصدر.
+- OER-01: **مرفوضة**، والسبب `license-version-unverified:CC-BY`.
+- OER-02 وOER-03: **مؤهلتان** منذ 2026-10-17، بعد أن ثبت الإصدار CC BY 4.0 من صفحة المصدر.
 - OER-04: **مرفوضة افتراضيًا** — يلزمها قبول ShareAlike صريح من المالك (`share-alike-not-accepted`)؛ عند قبوله تصبح مؤهلة لمراجعة الاستيراد فقط.
 - OER-05: **مرفوضة** — `non-commercial-license`.
 - OER-06: **مرفوضة** — `license-version-unverified:CC-BY`.
@@ -33,7 +40,9 @@
 - يُقرأ الترخيص من صفحة المصدر وقت الفحص فقط؛ لا يُعد الفحص رأيًا قانونيًا، ويبقى التحقق القانوني النهائي قرارًا بشريًا.
 - الترخيص `CC-BY` على صفحة COERLL لا يحدد إصدار CC؛ يجب تحديد الإصدار قبل أي استيراد.
 - المصادر ذات `NC` مستبعدة من الاستيراد الافتراضي. أي استثناء يحتاج قرار المالك كتابةً.
-- لم يُنفَّذ بعد أي مستورد يقرأ هذا السجل؛ لذلك يبقى P2-357 **غير منفّذ**.
+- **المستورد:** `src/core/oer/importer.ts`، بسياسة `oer-attributed-reference-import-v1`. يرفض أي سجل لم تقبله بوابة الترخيص، وأي رابط خارج المصدر المرخّص، وأي عنصر بلا سجل مراجعة. أول استيراد هو 21 رابطًا من Grimm Grammar.
+- **في التطبيق:** يظهر كل رابط تحت المصطلح المقابل في قاموس القواعد، مع سطر إسناد كامل يذكر المؤلف والعنوان والمصدر والترخيص ورابطه وتاريخ الفحص.
+- **الحالة:** P2-357 **منجز**. الحكم القانوني ليس رأي محامٍ، وأي استيراد لنص فعلي في المستقبل يحتاج قرارًا منفصلًا لكل مادة.
 
 ## نتائج البحث عن مواد الامتحانات الرسمية (2026-10-08، غير مسجّلة كمصادر مرخّصة)
 

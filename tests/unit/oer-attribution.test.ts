@@ -13,8 +13,8 @@ const valid: OerCandidate = {
 };
 
 describe("P2-357 قائمة مراجعة الاستيراد والإسناد", () => {
-  it("سجلات السجل الحالي الثمانية كلها مرفوضة كما يقرر السجل", () => {
-    // نفس السجلات الثمانية بقرارات docs/OER_LICENSE_REGISTER.md؛ لا يُستورد أي منها.
+  it("السجلات المرفوضة في السجل تبقى مرفوضة بلا سطر إسناد", () => {
+    // OER-02 وOER-03 صارا مؤهلين في 2026-10-17 بعد إثبات CC BY 4.0 (ADR-119)؛ انظر oer-importer.test.ts.
     const register: OerCandidate[] = [
       { ...valid, id: "OER-01", licenseIds: ["CC-BY"], shareAlikeAccepted: false },
       { ...valid, id: "OER-04", licenseIds: ["CC-BY-SA-4.0", "GFDL-1.1"], shareAlikeAccepted: false },

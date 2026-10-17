@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
+Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
@@ -12,8 +12,8 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 134 |
-| partial | 6 |
+| implemented | 135 |
+| partial | 5 |
 | not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
@@ -146,7 +146,7 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 354 | إضافة سيناريوهات محادثة متفرعة تعمل دون AI. | `implemented` | `offline-branching-conversation-v1` يقدم 8 أشجار أصلية بواقع سيناريوهين لكل A1–B2 في `/practice/conversation-paths`. الهدف التواصلي ظاهر قبل الاختيار، وكل رد ألماني يغير عاقبة الشريك ومسارًا من إكمال/إصلاح/إعادة؛ الوضع الموجه يظهر المقصد العربي، والتحدي يؤجله. المحرك حتمي محلي بلا `fetch` أو نص حر، ويحفظ `branchingConversationAttempts` معرفات الخيارات والنتيجة وفتح الدعم فقط في IndexedDB/DWNB/Merge دون AI أو شريك حي أو mastery/CEFR. | — |
 | 355 | إنشاء مولد اختبارات محلي من قوالب موثوقة. | `implemented` | `local-test-generator-v1` في `/practice/test-generator`: يختار المتعلم A1–B2 و5/10/15، ويأخذ سؤالًا واحدًا كحد أقصى من كل درس منشور، يخلط الأسئلة والخيارات مع حفظ مطابقة المفتاح، ويؤخر التفسير حتى تثبيت الجميع. **480 قالبًا/96 درسًا** مع فحص freshness؛ لا AI أو مصدر خارجي أو حفظ أو أثر على الإتقان/التقدم/الخطة/CEFR. أُصلح المشتت المكرر `a2-04-m5`. 10 اختبارات وحدة؛ وُسّع E2E ليغطي عدم تغير الحالة والعمل Offline، لكن المتصفح غير متاح محليًا. القرار: `docs/adr/ADR-111-local-authored-mini-test-practice-generator.md`. | تبقى مراجعة ألمانية/عربية/CEFR مستقلة لمحتوى الدروس الأصلية معلقة؛ الفحص البنيوي لا يثبتها. |
 | 356 | إضافة خرائط مفاهيم تفاعلية للقواعد والمفردات. | `implemented` | `interactive-grammar-vocabulary-concept-map-v1` يربط عقد القواعد وعائلات الكلمات عبر درس مشترك مع Level filter. | — |
-| 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `partial` | `oer-review-queue-attribution-v1` (`src/core/oer/attribution.ts`) يشغّل بوابة الترخيص (`import-policy.ts`) على سجلات بيانات وصفية فقط، ويكتب سطر الإسناد للسجلات المؤهلة للمراجعة فقط، ولا يضيف أي محتوى ولا يسم شيئًا بأنه مستورد. السجلات الثمانية في `docs/OER_LICENSE_REGISTER.md` كلها مرفوضة كما يقرر السجل (`tests/unit/oer-attribution.test.ts`). | لا يوجد مصدر مرخّص مؤهل بعد: إصدار CC لبعض المصادر غير مُثبت، والمؤلف غير مُثبت لبعضها، وبعضها NC. الاستيراد الفعلي يحتاج مراجعة بشرية لكل مادة. |
+| 357 | دعم استيراد Open Educational Resources المرخصة مع Attribution. | `implemented` | السجل الآلي في `src/data/oer-register.ts`، وبوابة الترخيص في `import-policy.ts`، والمستورد `oer-attributed-reference-import-v1` في `src/core/oer/importer.ts`. المستورد يرفض أي سجل لم تقبله البوابة، وأي رابط خارج المصدر المرخّص، وأي عنصر بلا سجل مراجعة. في v228 (ADR-119) ثبت من صفحات المصدر نفسها أن ترخيص Grimm Grammar وDeutsch im Blick هو CC BY 4.0، فاستُورد 21 رابطًا مُسندًا من Grimm Grammar، يظهر كل منها تحت المصطلح المقابل في قاموس القواعد مع سطر إسناد كامل، دون نسخ أي نص. الاختبار في `tests/unit/oer-importer.test.ts` | الاستيراد الحالي روابط فقط. استيراد نص أو وسائط فعلية يحتاج قرارًا منفصلًا لكل مادة، وفيديوهات Deutsch im Blick فيها أشخاص مسجَّلون. هذا ليس رأي محامٍ |
 | 358 | إضافة وضع مشاركة ملف تقرير فقط مع معلم مستقبلي دون حساب. | `implemented` | ICS/PDF/TSV/JSON/DWNB ملفات محلية قابلة للمشاركة دون حساب. | — |
 | 359 | إنشاء حزمة Desktop اختيارية حول PWA إذا احتاج الصوت المحلي. | `not-implemented` | **مغلق بقرار المالك (2026-10-12): غير مطلوب في هذه المرحلة.** محاولة سابقة أثبتت أن Electron لا يمكن تنزيل ثنائيّه من بيئة التطوير (المضيف `objects.githubusercontent.com` محجوب)، ولم يثبت أن الصوت المحلي يحتاج حزمة مستقلة لأن نسخة PWA تعمل دون اتصال. لم يُضَف أي كود غير مختبر. | لا عمل مفتوح. إعادة الفتح تحتاج طلبًا صريحًا من المالك مع إثبات حاجة الصوت المحلي. |
 | 360 | تجربة Federated analytics اختيارية فقط بعد تدقيق خصوصية مستقل. | `not-implemented` | مراجع مجمعة في `docs/FEDERATED_ANALYTICS_REFERENCES.md` (Google Research، Prio، WP216، EDPB). لا يوجد أي تنفيذ أو جمع بيانات، وهذا مطابق للشرط. | تدقيق خصوصية مستقل من جهة خارجية قبل أي تجربة؛ هذا لا يمكن أن تنجزه الأتمتة. |

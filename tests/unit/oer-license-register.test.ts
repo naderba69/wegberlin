@@ -24,9 +24,10 @@ describe("OER license register (P2-357 prerequisite)", () => {
     }
   });
 
-  it("records no imported content: every entry is registered or excluded, none imported", () => {
+  it("imports only OER-02, and only as attributed links (ADR-119); every other entry stays not imported", () => {
     for (const [id, , , , , , status] of rows) {
-      expect(status, id).not.toMatch(/^مستورد|تم الاستيراد/);
+      if (id === "OER-02") expect(status, id).toMatch(/^مستورد كروابط مُسندة فقط/);
+      else expect(status, id).not.toMatch(/^مستورد|تم الاستيراد/);
     }
   });
 });

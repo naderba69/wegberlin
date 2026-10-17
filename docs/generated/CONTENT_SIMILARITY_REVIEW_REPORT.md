@@ -2,7 +2,7 @@
 
 Generated: 2026-09-07  
 Version: `content-similarity-review-audit-v1`  
-Content SHA-256: `efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17ed0`
+Content SHA-256: `df55126755ba9ed59ded11264e57e91376ca2ca4c3323bd02b56b9ad8017e5d1`
 
 ## Result
 
@@ -11,7 +11,7 @@ Content SHA-256: `efdb019376f3a25430d01249dff486740645f2577ad60dcb192415dfc6a17e
 - Suspicious pairs above threshold: 10
 - Same-context teach→practice→assessment exemptions: 10
 - Explicit independently reviewed exemptions: 0
-- External authorized reference corpora: 0
+- External reference corpora compared (lawful basis recorded, ADR-119): 1
 - Copyright clearance: `pending-authorized-corpus-and-independent-review`
 
 ## Separate per-object review states
@@ -44,4 +44,4 @@ Every object has separate `german`, `arabic`, `cefr`, and `copyright` state obje
 
 Deterministic normalized token/bigram similarity scans the internal project corpus only. It is a lexical-semantic proxy, not embedding equivalence, plagiarism detection, copyright clearance, or comparison with Menschen/Hueber/official exam source text.
 
-P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 remains partial while external authorized comparison and independent copyright review are absent.
+P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 is implemented by the external-reference-comparison-v1 tool and its recorded run on lawful public Menschen samples (0 matches, ADR-119); that covers sample pages only and is not copyright clearance, which stays pending a full-book comparison and an independent rights review.

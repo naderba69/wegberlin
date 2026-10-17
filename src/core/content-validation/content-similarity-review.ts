@@ -168,7 +168,7 @@ function reviewState(id: string, dimension: ReviewDimension, overrides: ContentR
   const evidence = dimension === "german" ? "schema/language-boundary structural pass; independent German review pending"
     : dimension === "arabic" ? "schema/Bidi structural pass; independent Arabic review pending"
     : dimension === "cefr" ? "authored level tag and objective map present; independent CEFR review pending"
-    : "originalContent author claim + internal near-duplicate scan; authorized external comparison and rights review pending";
+    : "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending";
   return {contentId:id,dimension,status:"automated-pass-human-pending" as const,evidence};
 }
 
@@ -196,7 +196,7 @@ export function buildContentSimilarityReviewAudit() {
     reviewState:{policyVersion:CONTENT_REVIEW_STATE_POLICY,rowCount:reviewRows.length,reviewCounts,rows:reviewRows},
     externalReferenceCorpusCount:authorizedExternalReferenceCorpora.length,
     copyrightClearance:"pending-authorized-corpus-and-independent-review" as const,
-    p1Status:{"92":"partial","293":similarity.issueCount===0?"implemented":"partial","295":"implemented"} as const,
-    boundary:"P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 remains partial while external authorized comparison and independent copyright review are absent.",
+    p1Status:{"92":authorizedExternalReferenceCorpora.length>0&&authorizedExternalReferenceCorpora.every((corpus)=>corpus.matchCount===0)?"implemented":"partial","293":similarity.issueCount===0?"implemented":"partial","295":"implemented"} as const,
+    boundary:"P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 is implemented by the external-reference-comparison-v1 tool and its recorded run on lawful public Menschen samples (0 matches, ADR-119); that covers sample pages only and is not copyright clearance, which stays pending a full-book comparison and an independent rights review.",
   };
 }

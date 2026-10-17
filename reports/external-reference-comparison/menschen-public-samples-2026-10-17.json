@@ -1,0 +1,128 @@
+{
+  "format": "dwnb-external-reference-comparison",
+  "label": "menschen-public-samples-2026-10-17",
+  "policyVersion": "external-reference-comparison-v1",
+  "thresholds": {
+    "minTokens": 5,
+    "minLengthRatio": 0.68,
+    "nearScore": 0.84,
+    "nearTokenScore": 0.82,
+    "nearOrderScore": 0.65,
+    "verbatimRunTokens": 7
+  },
+  "ourSegmentCount": 19780,
+  "referenceSegmentCount": 177,
+  "comparedPairCount": 849296,
+  "matchCount": 0,
+  "matches": [],
+  "closestBelowThreshold": [
+    {
+      "referenceFile": "menschen-a1-kb-muster-2.txt",
+      "referenceIndex": 25,
+      "ourId": "exam-simulation-registry:allPublishedExamTasks[64].instructionsDe#0",
+      "score": 0.4933
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 21,
+      "ourId": "academic-lessons:academicLessonList[0].objectives[2].de#0",
+      "score": 0.4714
+    },
+    {
+      "referenceFile": "menschen-b1-kb-muster-1.txt",
+      "referenceIndex": 66,
+      "ourId": "academic-lessons:academicLessonList[61].writing.modelDe#8",
+      "score": 0.4714
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 33,
+      "ourId": "academic-lessons:academicLessonList[3].listening.questions[2].promptDe#0",
+      "score": 0.46
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 4,
+      "ourId": "academic-lessons:academicLessonList[1].theory[0].explanationAr#0",
+      "score": 0.4333
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 16,
+      "ourId": "academic-lessons:academicLessonList[93].writing.modelDe#13",
+      "score": 0.4333
+    },
+    {
+      "referenceFile": "menschen-b1-kb-muster-1.txt",
+      "referenceIndex": 53,
+      "ourId": "exam-simulation-registry:allPublishedExamTasks[72].followUpPromptsDe[0]#0",
+      "score": 0.4
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 9,
+      "ourId": "independent-production-tasks:independentProductionTasks[18].speaking.promptDe#2",
+      "score": 0.4
+    },
+    {
+      "referenceFile": "menschen-a1-kb-muster-2.txt",
+      "referenceIndex": 47,
+      "ourId": "academic-lessons:academicLessonList[2].speaking.promptDe#1",
+      "score": 0.3929
+    },
+    {
+      "referenceFile": "menschen-a1-kb-muster-2.txt",
+      "referenceIndex": 2,
+      "ourId": "academic-lessons:academicLessonList[29].entry.dialogue[4].de#0",
+      "score": 0.3905
+    },
+    {
+      "referenceFile": "menschen-a1-1-kb-muster.txt",
+      "referenceIndex": 17,
+      "ourId": "academic-lessons:academicLessonList[3].listening.questions[2].promptDe#0",
+      "score": 0.3905
+    },
+    {
+      "referenceFile": "menschen-b1-kb-muster-1.txt",
+      "referenceIndex": 62,
+      "ourId": "academic-lessons:academicLessonList[8].exercises[1].template#0",
+      "score": 0.3905
+    }
+  ],
+  "references": [
+    {
+      "file": "menschen-a1-1-kb-muster.txt",
+      "title": "Menschen A1.1 Kursbuch — Leseprobe (Lektion 1)",
+      "publisher": "Hueber Verlag",
+      "isbn": "978-3-19-361901-3",
+      "url": "https://shop.hueber.de/media/hueber_dateien/Internet_Muster/Red1/9783193619013_Muster.pdf",
+      "accessedAt": "2026-10-17",
+      "sha256": "ac3da092166d560bdb1ece848bb95e3ddcfa9a7469edc2f4ae5a42f6f6005fc4",
+      "segmentCount": 36,
+      "wordCount": 494
+    },
+    {
+      "file": "menschen-a1-kb-muster-2.txt",
+      "title": "Menschen A1 Kursbuch — Leseprobe 2 (Lektion 9)",
+      "publisher": "Hueber Verlag",
+      "isbn": "978-3-19-211901-9",
+      "url": "https://shop.hueber.de/media/hueber_dateien/Internet_Muster/Red1/9783192119019_Muster_2.pdf",
+      "accessedAt": "2026-10-17",
+      "sha256": "8dd6b7947b3d812bfda8647d020136643b52d26c9994ef15e55cebcf80b0ad80",
+      "segmentCount": 51,
+      "wordCount": 649
+    },
+    {
+      "file": "menschen-b1-kb-muster-1.txt",
+      "title": "Menschen B1 Kursbuch — Leseprobe 1 (Lektion 1)",
+      "publisher": "Hueber Verlag",
+      "isbn": "978-3-19-211903-3",
+      "url": "https://shop.hueber.de/media/hueber_dateien/Internet_Muster/Red1/9783192119033_Muster_1.pdf",
+      "accessedAt": "2026-10-17",
+      "sha256": "c337496b42ef40775334d28e576a5ecfe8c8cd5bfd4ec87af1a98fe95ee658d3",
+      "segmentCount": 90,
+      "wordCount": 845
+    }
+  ],
+  "boundary": "Reference text is not stored here: only hashes, segment indices, and scores. A match means lexical closeness to the reference; it is not a legal finding, and absence of matches covers only the reference pages listed."
+}

@@ -1,10 +1,10 @@
 # P1 Implementation Audit
 
-Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
+Sync batch: v228 · 2026-10-17 · إغلاق P1-92 وP2-357 (ADR-119، `source-verified-agent`، ليست مراجعة محامٍ): مقارنة كل النص الألماني (19,780 مقطعًا) بنماذج Menschen العامة الرسمية وفق § 44b UrhG ⇒ 0 تطابق بلا تخزين نص الكتاب، واستيراد 21 رابطًا مُسندًا من Grimm Grammar (CC BY 4.0) في قاموس القواعد؛ P1 = 133/2، P2 = 135/5/2، P0 = 120/4
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 
-Last audited: 2026-10-17 (v227: P1-377 أُغلق بتحقق مصدري رسمي، ADR-118؛ الحالة 132 implemented / 3 partial). التدقيق السابق: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تتحرك مع المحتوى)
+Last audited: 2026-10-17 (v228: P1-92 أُغلق بمقارنة خارجية مع نماذج Menschen العامة، ADR-119؛ الحالة 133 implemented / 2 partial. v227: P1-377 أُغلق، ADR-118). التدقيق السابق: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تتحرك مع المحتوى)
 
 مزامنة الأثر في v182 (2026-10-05): بقيت حالات P1 **131 implemented / 4 partial**؛ P2-352 إضافة رسم غلاف طاقة فقط ولا تحل P1-138 أو P1-380 (لا تدريب فونيمي أو معايرة أو مراجعة مستقلة). `npm test` عند v182 (تاريخي) **1,352/1,352** في **199/199**؛ تحقق v183 الحالي موثق في README/PROJECT_STATUS ولا يغلق المراجعات البشرية. تُترك مراجعات الوصول والأجهزة البشرية معلقة.
 
@@ -14,8 +14,8 @@ Last audited: 2026-10-17 (v227: P1-377 أُغلق بتحقق مصدري رسمي
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 132 |
-| partial | 3 |
+| implemented | 133 |
+| partial | 2 |
 | not-implemented | 0 |
 | blocked | 0 |
 | **المجموع** | **135** |
@@ -55,7 +55,7 @@ Last audited: 2026-10-17 (v227: P1-377 أُغلق بتحقق مصدري رسمي
 | 89 | استخدام مواقف وشخصيات وقصص أصلية بالكامل. | `implemented` | 85 درسًا و160 مادة و150 مهمة امتحان أصلية مع حدود عدم النسخ موثقة. | — |
 | 90 | إضافة مشروع تواصلي في نهاية كل وحدة. | `implemented` | 30/30 مراجعة ومشروع وحدة مرتبطة بالمنهج. | — |
 | 91 | إعادة تدوير المفردات والقواعد من وحدات سابقة بنسب محسوبة. | `implemented` | `module-recycling-ratio-v1` يبني 30/30 مراجعة من عشرة أسئلة فريدة: A1.1=0% بصدق، ثم A1=20% وA2/B1=30% وB2=40%. كل خطة غير تأسيسية تمزج استرجاع مفردات وبنية من وحدات أقدم، وتعرض النسبة والمصدر الحالي/القديم؛ `lexical:strategy:audit` يفشل عند الانحراف ولا يحول النسبة إلى mastery/CEFR. | — |
-| 92 | إضافة فحص تشابه لمنع إعادة صياغة الكتاب بصورة قريبة. | `partial` | `content-near-duplicate-v1` يفحص 3,189 كائنًا داخليًا و5,083,266 زوجًا بلا مشكلة غير معفاة، لكنه لا يخزن أو يجلب نص Menschen/Hueber. | يلزم Corpus مرجعي مخول ومراجع حقوق مستقل قبل Copyright clearance. |
+| 92 | إضافة فحص تشابه لمنع إعادة صياغة الكتاب بصورة قريبة. | `implemented` | الفحص الداخلي `content-near-duplicate-v1` (3,277 كائنًا) صار معه فحص خارجي `external-reference-comparison-v1` (`scripts/compare-external-reference-corpus.ts`). يقارن كل النص الألماني في `src/data` (19,780 مقطعًا) بمدونة مرجعية خارج المستودع، ولا يخزّن من نصها إلا البصمات والدرجات. في v228 (ADR-119) شُغّل على نماذج Hueber الرسمية العامة (Menschen A1.1 الدرس 1، وA1 الدرس 9، وB1 الدرس 1) وفق § 44b UrhG، ثم حُذفت النسخ المؤقتة: **0 تطابق**، وأقرب درجة 0.4933 مقابل حد 0.84. اختبارات الوحدة تكشف النسخ الحرفي وإعادة الصياغة القريبة والتطابق الطويل | التغطية ثلاثة دروس نموذجية فقط، وليست Copyright clearance. المقارنة بالكتاب كاملًا تحتاج نسخة يملكها المالك بصورة مشروعة، بالأداة نفسها؛ الدليل في `reports/external-reference-comparison/` و`reports/licence-rights-verification/` |
 | 101 | إضافة عائلات الكلمات والاشتقاق والمركبات. | `implemented` | `lexical-strategy-registry-v1` يؤلف 32 عائلة متوازنة A1–B2 و128 عضوًا مع word class وعلاقة صريحة base/derivation/compound/semantic-relative ومثال وتحذير ومراجع دروس؛ مستكشف Search قابل للتصفح ولا يستنتج اشتقاقًا أو جنسًا/جمعًا آليًا. | — |
 | 102 | تعليم السجل: رسمي ومحايد وعامي ومهني. | `implemented` | Taxonomy صارمة من 32 مثالًا: ثمانية لكل مستوى واثنان لكل formal/neutral/colloquial/professional في كل مستوى، مع سياق وموضع تجنب ومهمة نقل. كل مثال محادثي يملك حدًا إقليميًا/علاقاتيًا؛ المهني ليس رسميًا تلقائيًا، والواجهة تصفها وظائف لا سلم جودة. | — |
 | 103 | عرض الكلمات الكاذبة والمربكة للعرب. | `implemented` | سجل 24 مربكًا (6 لكل A1–B2) يفرق النقل العربي والمرور بالإنجليزية/الفرنسية، ويعرض association خاطئًا ومعنى صحيحًا ومثال contrast وتريكًا. كل سجل `notUniversal:true` والواجهة تمنع تشخيص كل الناطقين بالعربية أو اختزالهم في خطأ واحد. | — |

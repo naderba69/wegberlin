@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v220 · 2026-10-17 · مراجعة المحاكاة الكاملة الثانية سطرًا سطرًا (25 مهمة): رسائل Sprachbausteine 2 الخمس أُعيدت كتابتها (ألمانية ناقصة، وخلط du/ihr، وجوابان محتملان wenn/falls في الفجوتين 37/40)، وقالب موضوعات المحادثة 1 الذي ولّد «über ein hilfreicher rat» صُحّح في المحاكيات 02–05، و136 تعديلًا ألمانيًا وعربيًا؛ لا تغيير في الصوت؛ كاش v220، بناء a061c4f63234.
+Sync batch: v221 · 2026-10-17 · مراجعة المحاكاة الكاملة الثالثة سطرًا سطرًا (25 مهمة): خمسة نصوص استماع برقية أو متناقضة أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها بصوت اختاره المالك (german-educational-feminine-06)، ونص Sprachbausteine 1 البرقي أُعيدت كتابته بالمفتاح نفسه، و215 تعديلًا ألمانيًا وعربيًا مع إصلاحات قالبية في 02–06؛ الصوت 53,339,505 بايتًا؛ كاش v221، بناء 8b6c733440d6.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

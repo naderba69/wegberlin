@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v220 · 2026-10-17 · مراجعة المحاكاة الكاملة الثانية سطرًا سطرًا (25 مهمة): رسائل Sprachbausteine 2 الخمس أُعيدت كتابتها (ألمانية ناقصة، وخلط du/ihr، وجوابان محتملان wenn/falls في الفجوتين 37/40)، وقالب موضوعات المحادثة 1 الذي ولّد «über ein hilfreicher rat» صُحّح في المحاكيات 02–05، و136 تعديلًا ألمانيًا وعربيًا؛ لا تغيير في الصوت؛ كاش v220، بناء a061c4f63234.
+Sync batch: v221 · 2026-10-17 · مراجعة المحاكاة الكاملة الثالثة سطرًا سطرًا (25 مهمة): خمسة نصوص استماع برقية أو متناقضة أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها بصوت اختاره المالك (german-educational-feminine-06)، ونص Sprachbausteine 1 البرقي أُعيدت كتابته بالمفتاح نفسه، و215 تعديلًا ألمانيًا وعربيًا مع إصلاحات قالبية في 02–06؛ الصوت 53,339,505 بايتًا؛ كاش v221، بناء 8b6c733440d6.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,19 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v221 (2026-10-17): خمسة نصوص استماع في المحاكاة الكاملة الثالثة مصحّحة بصوت مُعاد توليده
+
+- **Goethe 03:**
+  - `g3-h1-2`: كان النص يقول «vollständig» ثم يذكر دفترًا يصل لاحقًا، فصار «fast vollständig eingetroffen».
+  - `g3-h2`: أسئلة المذيعة كانت كلمات مفردة («Tickets?»، «Sicherheit?»)، فصارت أسئلة كاملة. وصُحّحت أيضًا جملة «Beleuchtete Haltebereiche … sind auf Wunsch möglich».
+  - `g3-h3`: «Ich brauche Schatten wichtiger als …» غير سليمة نحويًا، فصارت «Schatten ist mir wichtiger als …». وتحوّل «beobachtet» إلى صيغة Sie، لأن المتحدث يخاطب المسؤولة.
+- **telc 03:**
+  - `t3-h1`: كانت الأخبار كلمات مفتاحية («kostenlos, Anmeldung nötig»)، فصارت جملًا خبرية كاملة.
+  - `t3-h2`: كان الحوار برقيًا («B: Preis? A: …»)، فصار حوارًا طبيعيًا بين Ben وSara، والحقائق والإجابات لم تتغير.
+- صُحّح النص أولًا، ثم وُلّدت منه 10 ملفات (5 MP3 و5 Opus) بصوت جديد اختاره المالك في جولة استماع (`german-educational-feminine-06`، `Arena.ai speech synthesis`)، بتاريخ `generatedAt` `2026-10-17`. وسُجّلت المعرّفات الخمسة في المولّد (`regeneratedFileIdsV221`).
+- الإجمالي المقيس: 544 ملف MP3+Opus / **53,339,505** بايتًا (كان 53,154,679؛ صار الحواران أطول لأنهما جمل كاملة)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط: 6.7–62.8 ثانية، ونحو 15–16 حرفًا في الثانية، والمتوسط بين −19 و−20 dB، ولا صمت يتجاوز 1.2 ثانية. الاستماع البشري مفتوح.
 
 ## تحديث v220 (2026-10-17): لا تغيير في الصوت
 

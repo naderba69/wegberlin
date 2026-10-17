@@ -408,8 +408,13 @@ const regeneratedFileIds = [
   "telc-h2-mobility-dialogue-seg-1",
   "telc-h2-mobility-dialogue-seg-2",
 ];
-const regeneratedAt = Object.fromEntries(regeneratedFileIds.map((id) => [id, "2026-10-17"]));
-const regeneratedVoice = Object.fromEntries(regeneratedFileIds.map((id) => [id, "german-educational-feminine-05"]));
+// v221: full simulation 3 transcripts rewritten (keyword dialogues, ungrammatical/self-contradicting lines); new owner audition.
+const regeneratedFileIdsV221 = ["g3-h1-2", "g3-h2", "g3-h3", "t3-h1", "t3-h2"];
+const regeneratedAt = Object.fromEntries([...regeneratedFileIds, ...regeneratedFileIdsV221].map((id) => [id, "2026-10-17"]));
+const regeneratedVoice = Object.fromEntries([
+  ...regeneratedFileIds.map((id) => [id, "german-educational-feminine-05"]),
+  ...regeneratedFileIdsV221.map((id) => [id, "german-educational-feminine-06"]),
+]);
 
 const taskInventory = await discoverListeningTaskInventory();
 const taskById = new Map(taskInventory.map((task) => [task.taskId, task]));

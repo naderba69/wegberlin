@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v219 · 2026-10-17 · مراجعة بنك الامتحان (المهام الموجّهة الـ24 وبيانات المحاكيات) سطرًا سطرًا: 4 بنود ذات جوابين محتملين أُغلقت (من قال ذلك ×2، wenn/falls، Obwohl⇐Da)، ونصّا استماع صُحّحا وأُعيد توليد 5 مقاطع صوتية، وادعاء «Browser TTS فقط» القديم صُحّح؛ كاش v219، بناء 47c999e610bc.
+Sync batch: v220 · 2026-10-17 · مراجعة المحاكاة الكاملة الثانية سطرًا سطرًا (25 مهمة): رسائل Sprachbausteine 2 الخمس أُعيدت كتابتها (ألمانية ناقصة، وخلط du/ihr، وجوابان محتملان wenn/falls في الفجوتين 37/40)، وقالب موضوعات المحادثة 1 الذي ولّد «über ein hilfreicher rat» صُحّح في المحاكيات 02–05، و136 تعديلًا ألمانيًا وعربيًا؛ لا تغيير في الصوت؛ كاش v220، بناء a061c4f63234.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

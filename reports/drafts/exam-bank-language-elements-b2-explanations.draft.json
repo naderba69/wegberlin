@@ -7,163 +7,163 @@
   "items": [
     {
       "id": "t2-l2-q1",
-      "explanationAr": "النص: «das Festival in zwei Wochen beginnt» الجملة الثانوية الزمنية/السببية تبدأ بـ da وتكون بعدها الفعل في آخر الجملة، والجواب da."
+      "explanationAr": "النص: «das Festival schon in zwei Wochen beginnt» و«senden wir euch heute den Schichtplan». الجملة الأولى تذكر سبب إرسال الخطة اليوم، والفعل beginnt في آخرها، فهي جملة ثانوية سببية. لا تصلح wenn أو falls لأن موعد المهرجان معروف وليس شرطًا، لذلك الجواب da (لأنّ)."
     },
     {
       "id": "t2-l2-q2",
-      "explanationAr": "النص: «eure Schicht korrekt eingetragen ist» بعد الفعل prüft تأتي جملة غير مباشرة بالترتيب الأخير، وهي تحقق من الصحة، لذلك الجواب ob."
+      "explanationAr": "النص: «Bitte prüft,» و«eure Schicht korrekt eingetragen ist». بعد prüfen تأتي جملة سؤال غير مباشر من نوع نعم/لا والفعل في آخرها، لذلك الجواب ob (هل)."
     },
     {
       "id": "t2-l2-q3",
-      "explanationAr": "النص: «Änderungen sind» و«Freitag möglich» في هذه المهمة الكلمة المطلوبة هي bis، فتصبح الجملة bis Freitag möglich أي حتى يوم الجمعة، لذلك الجواب bis."
+      "explanationAr": "النص: «Änderungen sind noch» و«Freitag möglich». حرف الجر bis يحدد آخر موعد: noch bis Freitag أي حتى يوم الجمعة فقط، لذلك الجواب bis."
     },
     {
       "id": "t2-l2-q4",
-      "explanationAr": "النص: «Personen, Technik betreuen, treffen sich früher» الكلمة die ضمير موصول للجمع يعود على Personen، لذلك الجواب die."
+      "explanationAr": "النص: «Personen,» و«Technik und Ton betreuen, treffen sich eine Stunde früher». يلزم ضمير موصول للجمع يعود على Personen ويكون فاعلًا لـ betreuen، لذلك الجواب die."
     },
     {
       "id": "t2-l2-q5",
-      "explanationAr": "النص: «Warteschlangen kürzer werden» الجملة تذكر الهدف من فتح المدخلين، لذلك الجواب damit (لكي)."
+      "explanationAr": "النص: «Wir öffnen zwei Eingänge,» و«die Warteschlangen kürzer werden». الجملة الثانية تذكر الهدف من فتح مدخلين والفعل في آخرها، لذلك الجواب damit (لكي)."
     },
     {
       "id": "t2-l2-q8",
-      "explanationAr": "النص: «an die Koordination wenden» الفعل sich wenden an يتطلب الضمير المنعكس sich، لذلك الجواب sich."
+      "explanationAr": "النص: «Wer Unterstützung braucht, kann» و«jederzeit an die Koordination wenden». الفعل sich wenden an (يتوجّه إلى) انعكاسي، وفاعله wer للمفرد الغائب، لذلك الجواب sich."
     },
     {
       "id": "t2-l2-q9",
-      "explanationAr": "النص: «Fotos entstehen nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم حرف الجر mit، لذلك الجواب mit."
+      "explanationAr": "النص: «Fotos von euch veröffentlichen wir nur» و«eurer Zustimmung». المعنى: ننشر الصور فقط بموافقتكم؛ حرف الجر mit يأخذ Dativ، أما ohne فيعكس المعنى، لذلك الجواب mit."
     },
     {
       "id": "t2-l2-q10",
-      "explanationAr": "النص: «Meldet euch» و«ihr kurzfristig ausfallt» الشرط الاحتمالي (إذا تغيبتم) يُعبَّر عنه بـ falls، لذلك الجواب falls."
+      "explanationAr": "النص: «Meldet euch bitte sofort,» و«ihr kurzfristig ausfallt». الغياب احتمال فقط، فتأتي falls (في حال). كلمة wenn تصلح نحويًا أيضًا، لكنها مطلوبة في الفجوة 37 بعد immer dann، وكل كلمة تُستعمل مرة واحدة، لذلك الجواب falls."
     },
     {
       "id": "t3-l2-q1",
-      "explanationAr": "النص: «wir länger öffnen, ändern sich Dienste» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+      "explanationAr": "النص: «wir seit Mai länger geöffnet haben» و«haben sich einige Dienste geändert». الجملة الأولى تذكر سبب تغيّر الخدمات، والفعل haben في آخرها، لذلك الجواب da (لأنّ)."
     },
     {
       "id": "t3-l2-q2",
-      "explanationAr": "النص: «Ihr Termin stimmt» بعد Prüfen Sie تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+      "explanationAr": "النص: «Bitte prüfen Sie,» و«Ihr gebuchter Termin noch stimmt». بعد prüfen تأتي جملة سؤال غير مباشر من نوع نعم/لا والفعل في آخرها، لذلك الجواب ob (هل)."
     },
     {
       "id": "t3-l2-q3",
-      "explanationAr": "النص: «Änderungen bis» و«möglich» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+      "explanationAr": "النص: «Änderungen sind bis» و«möglich». بعد bis يلزم موعد، واسم اليوم الوحيد في القائمة هو Freitag، فتصبح الجملة bis Freitag (حتى الجمعة)، لذلك الجواب Freitag."
     },
     {
       "id": "t3-l2-q4",
-      "explanationAr": "النص: «beraten, tragen Namensschilder» ضمير الموصول die للجمع يعود على Personen، لذلك الجواب die."
+      "explanationAr": "النص: «Personen,» و«Sie beraten, tragen ein Namensschild». يلزم ضمير موصول للجمع يعود على Personen، أي الأشخاص الذين يقدّمون لكم الإرشاد، لذلك الجواب die."
     },
     {
       "id": "t3-l2-q5",
-      "explanationAr": "النص: «Wege kürzer werden» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+      "explanationAr": "النص: «Wir öffnen einen zweiten Eingang,» و«Ihre Wege kürzer werden». الجملة الثانية تذكر الهدف من المدخل الثاني والفعل في آخرها، لذلك الجواب damit (لكي)."
     },
     {
       "id": "t3-l2-q8",
-      "explanationAr": "النص: «Bei Fragen wenden Sie» و«an uns» الفعل sich wenden an يتطلب sich، لذلك الجواب sich."
+      "explanationAr": "النص: «Bei Fragen wenden Sie» و«bitte an den Empfang». الفعل sich wenden an انعكاسي، ومع صيغة المخاطبة الرسمية Sie يكون الضمير sich، لذلك الجواب sich."
     },
     {
       "id": "t3-l2-q9",
-      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+      "explanationAr": "النص: «Fotos machen wir nur» و«Ihrer Zustimmung». المعنى: نلتقط الصور فقط بموافقتكم؛ حرف الجر mit يأخذ Dativ، أما ohne فيعكس المعنى، لذلك الجواب mit."
     },
     {
       "id": "t3-l2-q10",
-      "explanationAr": "النص: «Melden Sie sich» و«Sie Hilfe brauchen» الشرط (إذا احتجتم) يُعبَّر عنه بـ falls، لذلك الجواب falls."
+      "explanationAr": "النص: «Melden Sie sich bitte,» و«Sie Unterstützung brauchen». الحاجة إلى المساعدة احتمال، فتأتي falls (في حال). كلمة wenn تصلح نحويًا أيضًا، لكنها مطلوبة في الفجوة 37 بعد immer dann، وكل كلمة تُستعمل مرة واحدة، لذلك الجواب falls."
     },
     {
       "id": "t4-l2-q1",
-      "explanationAr": "النص: «die Woche bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+      "explanationAr": "النص: «die Projektwoche schon am Montag beginnt» و«schicken wir euch heute den Ablaufplan». الجملة الأولى تذكر سبب إرسال الخطة اليوم، والفعل beginnt في آخرها، لذلك الجواب da (لأنّ)."
     },
     {
       "id": "t4-l2-q2",
-      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+      "explanationAr": "النص: «Prüft bitte,» و«eure Zeiten richtig eingetragen sind». بعد prüfen تأتي جملة سؤال غير مباشر من نوع نعم/لا والفعل في آخرها، لذلك الجواب ob (هل)."
     },
     {
       "id": "t4-l2-q3",
-      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+      "explanationAr": "النص: «Änderungen sind nur bis» و«möglich». بعد bis يلزم موعد، واسم اليوم الوحيد في القائمة هو Freitag، فتصبح الجملة nur bis Freitag (حتى الجمعة فقط)، لذلك الجواب Freitag."
     },
     {
       "id": "t4-l2-q4",
-      "explanationAr": "النص: «Technik betreuen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+      "explanationAr": "النص: «Personen,» و«Licht und Ton betreuen, kommen bitte eine Stunde früher». يلزم ضمير موصول للجمع يعود على Personen ويكون فاعلًا لـ betreuen، لذلك الجواب die."
     },
     {
       "id": "t4-l2-q5",
-      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+      "explanationAr": "النص: «Wir öffnen beide Eingänge,» و«die Wege kurz bleiben». الجملة الثانية تذكر الهدف من فتح المدخلين والفعل في آخرها، لذلك الجواب damit (لكي)."
     },
     {
       "id": "t4-l2-q8",
-      "explanationAr": "النص: «Wendet» و«bei Fragen an uns» الفعل sich wenden يتطلب الضمير المنعكس الجمع euch، لذلك الجواب euch."
+      "explanationAr": "النص: «Wendet» و«bei Fragen bitte an das Orga-Team». الفعل sich wenden an انعكاسي، ومع صيغة الأمر للجمع ihr يكون الضمير euch، لذلك الجواب euch."
     },
     {
       "id": "t4-l2-q9",
-      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+      "explanationAr": "النص: «Fotos machen wir nur» و«eurer Zustimmung». المعنى: نلتقط الصور فقط بموافقتكم؛ حرف الجر mit يأخذ Dativ، أما ohne فيعكس المعنى، لذلك الجواب mit."
     },
     {
       "id": "t4-l2-q10",
-      "explanationAr": "النص: «Meldet euch» و«ihr ausfallt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+      "explanationAr": "النص: «Sagt bitte rechtzeitig Bescheid,» و«ihr ausfallt». الغياب احتمال فقط، فتأتي falls (في حال). كلمة wenn تصلح نحويًا أيضًا، لكنها مطلوبة في الفجوة 37 بعد immer dann، وكل كلمة تُستعمل مرة واحدة، لذلك الجواب falls."
     },
     {
       "id": "t5-l2-q1",
-      "explanationAr": "النص: «das Fest bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+      "explanationAr": "النص: «unser Sommerfest schon bald beginnt» و«findet ihr hier den Plan». الجملة الأولى تذكر سبب نشر الخطة، والفعل beginnt في آخرها، لذلك الجواب da (لأنّ)."
     },
     {
       "id": "t5-l2-q2",
-      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+      "explanationAr": "النص: «Prüft bitte,» و«eure Aufgaben stimmen». بعد prüfen تأتي جملة سؤال غير مباشر من نوع نعم/لا والفعل في آخرها، لذلك الجواب ob (هل)."
     },
     {
       "id": "t5-l2-q3",
-      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+      "explanationAr": "النص: «Änderungen sind bis» و«möglich». بعد bis يلزم موعد، واسم اليوم الوحيد في القائمة هو Freitag، فتصبح الجملة bis Freitag (حتى الجمعة)، لذلك الجواب Freitag."
     },
     {
       "id": "t5-l2-q4",
-      "explanationAr": "النص: «Technik machen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+      "explanationAr": "النص: «Personen,» و«am Grill arbeiten, kommen früher und bauen auf». يلزم ضمير موصول للجمع يعود على Personen ويكون فاعلًا لـ arbeiten، لذلك الجواب die."
     },
     {
       "id": "t5-l2-q5",
-      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+      "explanationAr": "النص: «Wir nutzen zwei Eingänge,» و«die Wege kurz bleiben». الجملة الثانية تذكر الهدف من المدخلين والفعل في آخرها، لذلك الجواب damit (لكي)."
     },
     {
       "id": "t5-l2-q8",
-      "explanationAr": "النص: «Wendet» و«an uns» الفعل sich wenden يتطلب الضمير المنعكس euch، لذلك الجواب euch."
+      "explanationAr": "النص: «Wendet» و«bei Fragen an das Orga-Team». الفعل sich wenden an انعكاسي، ومع صيغة الأمر للجمع ihr يكون الضمير euch، لذلك الجواب euch."
     },
     {
       "id": "t5-l2-q9",
-      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+      "explanationAr": "النص: «Fotos machen wir nur» و«eurer Zustimmung». المعنى: نلتقط الصور فقط بموافقتكم؛ حرف الجر mit يأخذ Dativ، أما ohne فيعكس المعنى، لذلك الجواب mit."
     },
     {
       "id": "t5-l2-q10",
-      "explanationAr": "النص: «Meldet euch» و«ihr fehlt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+      "explanationAr": "النص: «Meldet euch bitte,» و«ihr kurzfristig fehlt». الغياب احتمال فقط، فتأتي falls (في حال). كلمة wenn تصلح نحويًا أيضًا، لكنها مطلوبة في الفجوة 37 بعد immer dann، وكل كلمة تُستعمل مرة واحدة، لذلك الجواب falls."
     },
     {
       "id": "t6-l2-q1",
-      "explanationAr": "النص: «der Tag bald beginnt» الجملة الثانوية السببية تبدأ بـ da، لذلك الجواب da."
+      "explanationAr": "النص: «der Aktionstag schon bald beginnt» و«folgt hier der Plan». الجملة الأولى تذكر سبب نشر الخطة، والفعل beginnt في آخرها، لذلك الجواب da (لأنّ)."
     },
     {
       "id": "t6-l2-q2",
-      "explanationAr": "النص: «eure Zeit stimmt» بعد Prüft تأتي جملة غير مباشرة بـ ob، لذلك الجواب ob."
+      "explanationAr": "النص: «Prüft bitte,» و«eure Zeiten stimmen». بعد prüfen تأتي جملة سؤال غير مباشر من نوع نعم/لا والفعل في آخرها، لذلك الجواب ob (هل)."
     },
     {
       "id": "t6-l2-q3",
-      "explanationAr": "النص: «Änderungen bis» تعبير الزمن bis Freitag، لذلك الجواب Freitag."
+      "explanationAr": "النص: «Änderungen sind bis» و«möglich». بعد bis يلزم موعد، واسم اليوم الوحيد في القائمة هو Freitag، فتصبح الجملة bis Freitag (حتى الجمعة)، لذلك الجواب Freitag."
     },
     {
       "id": "t6-l2-q4",
-      "explanationAr": "النص: «Technik betreuen, kommen früher» ضمير الموصول die للجمع، لذلك الجواب die."
+      "explanationAr": "النص: «Personen,» و«Kasse und Technik betreuen, kommen früher». يلزم ضمير موصول للجمع يعود على Personen ويكون فاعلًا لـ betreuen، لذلك الجواب die."
     },
     {
       "id": "t6-l2-q5",
-      "explanationAr": "النص: «Wege kurz bleiben» الجملة تعبّر عن الهدف، لذلك الجواب damit (لكي)."
+      "explanationAr": "النص: «Wir öffnen zwei Eingänge,» و«die Wege kurz bleiben». الجملة الثانية تذكر الهدف من فتح المدخلين والفعل في آخرها، لذلك الجواب damit (لكي)."
     },
     {
       "id": "t6-l2-q8",
-      "explanationAr": "النص: «Wendet» و«an uns» الفعل sich wenden يتطلب الضمير المنعكس euch، لذلك الجواب euch."
+      "explanationAr": "النص: «Wendet» و«bei Fragen an uns». الفعل sich wenden an انعكاسي، ومع صيغة الأمر للجمع ihr يكون الضمير euch، لذلك الجواب euch."
     },
     {
       "id": "t6-l2-q9",
-      "explanationAr": "النص: «Fotos nur» و«Zustimmung» التعبير nur mit Zustimmung يستخدم mit، لذلك الجواب mit."
+      "explanationAr": "النص: «Fotos machen wir nur» و«eurer Zustimmung». المعنى: نلتقط الصور فقط بموافقتكم؛ حرف الجر mit يأخذ Dativ، أما ohne فيعكس المعنى، لذلك الجواب mit."
     },
     {
       "id": "t6-l2-q10",
-      "explanationAr": "النص: «Meldet euch» و«ihr ausfallt» الشرط الاحتمالي يُعبَّر عنه بـ falls، لذلك الجواب falls."
+      "explanationAr": "النص: «Meldet euch bitte,» و«ihr ausfallt». الغياب احتمال فقط، فتأتي falls (في حال). كلمة wenn تصلح نحويًا أيضًا، لكنها مطلوبة في الفجوة 37 بعد immer dann، وكل كلمة تُستعمل مرة واحدة، لذلك الجواب falls."
     }
   ]
 }

@@ -51147,10 +51147,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1278,
+      "totalCandidates": 1277,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1143,
+      "contextualNotTarget": 1142,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -51172,10 +51172,10 @@
           "contextualNotTarget": 291
         },
         "B2": {
-          "totalCandidates": 635,
+          "totalCandidates": 634,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 586
+          "contextualNotTarget": 585
         }
       }
     },
@@ -95972,7 +95972,7 @@
           {
             "path": "lexicalRegistry.b1-01-noun-7",
             "stage": "vocabulary",
-            "surface": "die Erwachsene",
+            "surface": "der Erwachsene",
             "strength": "registry"
           },
           {
@@ -147723,7 +147723,7 @@
           {
             "path": "lexicalRegistry.b2-09-noun-20",
             "stage": "vocabulary",
-            "surface": "die Teilnehmende",
+            "surface": "der Teilnehmende",
             "strength": "registry"
           },
           {
@@ -159966,7 +159966,7 @@
           {
             "path": "lexicalRegistry.b2-14-noun-11",
             "stage": "vocabulary",
-            "surface": "das Nominalcluster",
+            "surface": "der Nominalcluster",
             "strength": "registry"
           }
         ],
@@ -165462,7 +165462,7 @@
           {
             "path": "lexicalRegistry.b2-16-noun-13",
             "stage": "vocabulary",
-            "surface": "das Modalpartikel",
+            "surface": "die Modalpartikel",
             "strength": "registry"
           },
           {
@@ -215854,8 +215854,8 @@
         "role": "anchor",
         "status": "covered",
         "observedCases": [
-          "ambiguous",
-          "dative"
+          "accusative",
+          "ambiguous"
         ],
         "anchorIds": [
           "b2-15-verb-frame-1"
@@ -219493,8 +219493,8 @@
       {
         "lessonId": "b2-20",
         "level": "B2",
-        "infinitiveCandidate": "angrenzen",
-        "normalizedVerb": "angrenzen",
+        "infinitiveCandidate": "anknüpfen",
+        "normalizedVerb": "anknüpfen",
         "preposition": "an",
         "role": "anchor",
         "status": "covered",
@@ -219508,25 +219508,9 @@
           {
             "path": "lexicalRegistry.b2-20-verb-frame-1",
             "stage": "vocabulary",
-            "surface": "eine Anmerkung an die Beschlusslage angrenzen",
+            "surface": "eine Anmerkung an die Beschlusslage anknüpfen",
             "strength": "registry"
-          }
-        ],
-        "id": "lex-v-b2-20-acbfe803"
-      },
-      {
-        "lessonId": "b2-20",
-        "level": "B2",
-        "infinitiveCandidate": "anknüpfen",
-        "normalizedVerb": "anknüpfen",
-        "preposition": "an",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -219680,11 +219664,11 @@
         "level": "B2",
         "infinitiveCandidate": "zählen",
         "normalizedVerb": "zählen",
-        "preposition": "um",
+        "preposition": "zu",
         "role": "anchor",
         "status": "covered",
         "observedCases": [
-          "accusative"
+          "dative"
         ],
         "anchorIds": [
           "b2-20-verb-frame-2"
@@ -219693,11 +219677,11 @@
           {
             "path": "lexicalRegistry.b2-20-verb-frame-2",
             "stage": "vocabulary",
-            "surface": "eine Angabe um ein Wort zählen",
+            "surface": "zu den Pflichtangaben zählen",
             "strength": "registry"
           }
         ],
-        "id": "lex-v-b2-20-4be3a407"
+        "id": "lex-v-b2-20-44086848"
       },
       {
         "lessonId": "b2-20",
@@ -221356,6 +221340,30 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
+        "infinitiveCandidate": "sich anschließen",
+        "normalizedVerb": "anschließen",
+        "preposition": "an",
+        "role": "anchor",
+        "status": "covered",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [
+          "b2-24-verb-frame-2"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-24-verb-frame-2",
+            "stage": "vocabulary",
+            "surface": "sich an das Zitat anschließen",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-v-b2-24-27ecb854"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
         "infinitiveCandidate": "baten",
         "normalizedVerb": "baten",
         "preposition": "zu",
@@ -221817,30 +221825,6 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
-        "infinitiveCandidate": "schließen",
-        "normalizedVerb": "schließen",
-        "preposition": "an",
-        "role": "anchor",
-        "status": "covered",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [
-          "b2-24-verb-frame-2"
-        ],
-        "sources": [
-          {
-            "path": "lexicalRegistry.b2-24-verb-frame-2",
-            "stage": "vocabulary",
-            "surface": "den Satz an das Zitat schließen",
-            "strength": "registry"
-          }
-        ],
-        "id": "lex-v-b2-24-e1060edb"
-      },
-      {
-        "lessonId": "b2-24",
-        "level": "B2",
         "infinitiveCandidate": "stehen",
         "normalizedVerb": "stehen",
         "preposition": "in",
@@ -222017,5 +222001,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "b9e9fef6085626e06f2ffd4eff9c8e6d8e0a87943c4c73eb0fbde5095aff523b"
+  "contentSha256": "e0b6b1ee84ba321cd2e89e3e45b10442daf014decf1eb9f57d932195b6f86f52"
 }

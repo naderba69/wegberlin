@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا (25 مهمة)، وهي آخر محاكاة: عشرة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم آخر بند معلَّم g6-r2-q5 (المطبَّق 526، المعلَّم 0)، و222 تعديلًا ألمانيًا وعربيًا؛ الصوت 54,036,433 بايتًا؛ كاش v224، بناء 9ce02365c529.
+Sync batch: v225 · 2026-10-17 · إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل (ADR-116، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): قوبلت 1,297 مرساة اسم و89 مرشحًا و134 إطارًا و11 استبعادًا بمصادر مسمّاة، وأُصلحت 6 أسماء و4 أطر؛ P0 = 118/6
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

@@ -1,6 +1,6 @@
 # ورقة عمل مراجعة الأهداف اللغوية الـ126 — P0-99 (المرحلة الثانية)
 
-قراءة فقط: هذه الورقة ليست مراجعة ولا توقيعًا ولا اعتمادًا، ولا تغلق P0-99. بُنيت من صفوف `reports/lexical-review-packet/frame-quality-targets.csv` نفسها، وبصمة المحتوى المؤلَّف: `b9e9fef6085626e06f2ffd4eff9c8e6d8e0a87943c4c73eb0fbde5095aff523b`.
+قراءة فقط: هذه الورقة ليست مراجعة ولا توقيعًا ولا اعتمادًا، ولا تغلق P0-99. بُنيت من صفوف `reports/lexical-review-packet/frame-quality-targets.csv` نفسها، وبصمة المحتوى المؤلَّف: `e0b6b1ee84ba321cd2e89e3e45b10442daf014decf1eb9f57d932195b6f86f52`.
 
 - نطاق المراجعة `P0-99-original-126-quality-target`، والعدد **126**، والتوزيع A1/A2/B1/B2 = 25/30/31/40.
 - بوابة المرحلة الأولى ما زالت مغلقة: أسماء أدلة الاستبعادات **0/11**. لا تبدأ مراجعة الجودة قبل تسميتها كلها، ولا يقبل الفاحص أي توقيع هنا قبل ذلك.
@@ -134,7 +134,7 @@
 | 19 | `b2-13` | `b2-13-verb-frame-1` | ableiten + aus | dative | einen Effekt aus Daten ableiten | Aus zwei Messungen lässt sich kein allgemeiner Effekt ableiten. |
 | 20 | `b2-14` | `b2-14-verb-frame-1` | sich beziehen + auf | accusative | sich auf ein Bezugswort beziehen | Jedes Fürwort muss sich auf genau ein Bezugswort beziehen. |
 | 21 | `b2-14` | `b2-14-verb-frame-2` | zurückverweisen + auf | accusative | im nächsten Satz auf die Frist zurückverweisen | Der zweite Satz verweist auf die genannte Frist zurück. |
-| 22 | `b2-15` | `b2-15-verb-frame-1` | sich halten + an | dative | sich an den eigenen Plan halten | Unter Druck hält er sich an seinen eigenen Plan. |
+| 22 | `b2-15` | `b2-15-verb-frame-1` | sich halten + an | accusative | sich an den eigenen Plan halten | Unter Druck hält er sich an seinen eigenen Plan. |
 | 23 | `b2-15` | `b2-15-verb-frame-2` | verzichten + auf | accusative | auf den dritten Durchgang verzichten | Er verzichtet auf den dritten Durchgang, nicht auf die Kontrolle. |
 | 24 | `b2-15` | `b2-15-verb-frame-3` | ablesen + an | dative | die Zeit an einer Teilaufgabe ablesen | Er liest die Verspätung an einer einzigen Teilaufgabe ab. |
 | 25 | `b2-15` | `b2-15-verb-frame-4` | nutzen + für | accusative | den Vorlauf für eine zweite Markierung nutzen | Den Vorlauf nutzt sie für eine zweite Markierung. |
@@ -151,8 +151,8 @@
 | 36 | `b2-18` | `b2-18-verb-frame-1` | Rücksicht nehmen + auf | accusative | auf eine Verspätung Rücksicht nehmen | Auf die Verspätung müssen wir keine Rücksicht nehmen. |
 | 37 | `b2-18` | `b2-18-verb-frame-2` | richten + an | accusative | ein Gesuch an die Studienberatung richten | Ihr Gesuch richten Sie bitte an die Studienberatung. |
 | 38 | `b2-19` | `b2-19-verb-frame-1` | sich verlassen + auf | accusative | sich auf eine Auskunft verlassen | Auf die mündliche Auskunft können Sie sich im Schriftverkehr nicht verlassen. |
-| 39 | `b2-20` | `b2-20-verb-frame-1` | angrenzen + an | accusative | eine Anmerkung an die Beschlusslage angrenzen | Die Anmerkung grenzt die Kommission an den früheren Beschluss an, statt sie neu zu begründen. |
-| 40 | `b2-20` | `b2-20-verb-frame-2` | zählen + um | accusative | eine Angabe um ein Wort zählen | Diese Angabe zählt man um einen Hinweis mehr, wenn sie die Frist erklärt. |
+| 39 | `b2-20` | `b2-20-verb-frame-1` | anknüpfen + an | accusative | eine Anmerkung an die Beschlusslage anknüpfen | Die Kommission knüpft die Anmerkung an den früheren Beschluss an, statt sie neu zu begründen. |
+| 40 | `b2-20` | `b2-20-verb-frame-2` | zählen + zu | dative | zu den Pflichtangaben zählen | Das Datum der Sitzung zählt zu den Pflichtangaben im Protokoll. |
 
 ## قائمة تحقق المراجع (لكل صف)
 

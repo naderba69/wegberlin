@@ -1,6 +1,46 @@
 # Project Status
 
-Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا (25 مهمة)، وهي آخر محاكاة: عشرة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم آخر بند معلَّم g6-r2-q5 (المطبَّق 526، المعلَّم 0)، و222 تعديلًا ألمانيًا وعربيًا؛ الصوت 54,036,433 بايتًا؛ كاش v224، بناء 9ce02365c529.
+Sync batch: v225 · 2026-10-17 · إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل (ADR-116، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): قوبلت 1,297 مرساة اسم و89 مرشحًا و134 إطارًا و11 استبعادًا بمصادر مسمّاة، وأُصلحت 6 أسماء و4 أطر؛ P0 = 118/6
+
+## إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل، وإصلاح 6 أسماء و4 أطر — 2026-10-17 (v225)
+
+- **النطاق:** تعليمة المالك: «الخطط التربوية توثقها المدارس والمراجع وهي موجودة في النت — كل ما تحتاج بشريًا ابحث ستجد مصادره، أنت ستغلق كل ما هو بشري».
+  - سُجّل القرار في **ADR-116** (`DECISIONS.md` و`docs/adr/ADR-116-source-verified-agent-evidence-tier.md`): طبقة دليل جديدة اسمها `source-verified-agent`.
+  - **ليست مراجعة بشرية مستقلة ولا توقيعًا.** خانات المراجع في الحزمة وحالة `authored-review-pending` في الاستبعادات بقيت فارغة كما هي.
+  - ما يحتاج سماعًا أو أجهزة أو مشاركين (P0-135 وP0-255 وP1-331 وP2-264 وP2-371 وP2-360) لا تغلقه المصادر.
+- **P0-98 (الأسماء):** قوبلت المراسي الـ1,297 كلها آليًا بـWiktionaryDE (`german_nouns` 1.2.5) في الجنس وصيغ الحالات والجمع.
+  - النتيجة: 1,113 تطابقًا مباشرًا، و174 مركّبًا عبر كلمته الأساسية، و8 بقاعدة اللواحق، و2 بقرار موثق. **0 غير محسوم.**
+  - **أخطاء حقيقية أُصلحت:**
+    - «das Modalpartikel» ⇒ «die Modalpartikel» (نص الدرس نفسه يقول «eine Modalpartikel»).
+    - «das Nominalcluster» ⇒ «der Nominalcluster» (كما في نص الدرس).
+    - Erwachsene وTeilnehmende: كانا مؤنثين وصيغة النصب «die Erwachsenen» خاطئة، فصارا مذكرين بالتصريف الضعيف (der/den/dem Erwachsenen).
+    - Öffnungszeiten وSprachkenntnisse: كانا مفردين مؤنثين وصيغة الجر «der Öffnungszeiten» خاطئة، فصارا جمعًا فقط («den Öffnungszeiten»).
+    - أضيف دعم `plural-only` إلى مولّد B2.
+  - **المرشحون الـ89:** حُسموا كلهم: 66 Wiktionary، و4 أخطاء كاشف، و9 صيغ رُدّت إلى أصلها، و8 DWDS، و2 عبر الكلمة الأساسية.
+  - «Rat ⇒ Ratschläge» بقي، لأنه الجمع المستعمل بمعنى «نصيحة».
+- **P0-99 (الأطر):** فُحصت المراجع الـ134، ومنها نطاق الجودة 126.
+  - 81 موجودة في قوائم منشورة (QuillBot وperfekt-deutsch وaktiv-mit-deutsch وdeutschakademie)، و24 بقاعدة حرف الجر ذي الحالة الثابتة، و21 بمصدر محدد لكل فعل (grammis IDS وverben.de وLEO وDWDS)، و8 بقاعدة Wo/Wohin أو بالقياس.
+  - **أخطاء أُصلحت:**
+    - b2-15 «sich an den eigenen Plan halten»: سُجّلت الحالة Dativ، وكانت ملاحظة التباين **تعلّم المتعلم الخطأ** («an dem Plan، لا an den Plan»). صارت Akkusativ، وصُحّحت الملاحظة.
+    - b2-20 «eine Anmerkung an die Beschlusslage angrenzen» (مثال غير نحوي) ⇒ «anknüpfen» كما في نص الدرس.
+    - b2-20 «eine Angabe um ein Wort zählen» (ليس تركيبًا ألمانيًا) ⇒ «zu den Pflichtangaben zählen» (zählen zu + Dativ).
+    - b2-24 «den Satz an das Zitat schließen» ⇒ «sich an das Zitat anschließen».
+  - **الاستبعادات الـ11:** ثُبّتت كلها بالمصادر: فعل منفصل، أو ظرف، أو تركيب فعلي اسمي، أو علامة مصدر `zu`.
+  - سقط إطار سياقي واحد من عدّاد الكاشف: الأطر **1,277/1,142** (كانت 1,278/1,143). حُدّث الثابت في الاختبار وفي `handoff:check`.
+- **الدليل:** `reports/lexical-review-packet/SOURCE_VERIFICATION_2026-10-17.md` مع ثلاثة ملفات CSV صفًّا بصف (1,297 + 90 + 145)، وفي كل صف النتيجة والمصدر وتاريخ الفحص.
+- **التدقيق:** P0 = **118/124 منجز، 6 جزئية** (124 و135 و255 و301 و373 و376). نُقل البندان 98 و99 إلى قسم المنجز في `P0_AUDIT.md`، وعُدّلت قاعدة الإغلاق هناك بقرار المالك.
+- **الكاش:** **v225** (staging v224، والرجوع v224). حُدّث سطر `Offline cache:` يدويًا. الوثائق الثلاث عشرة على `Sync batch: v225`.
+- **البناء:**
+  - الصفحات: 325/325.
+  - Offline **`aa2609c8a471`**: full 6,167,917 gzip (a1 2,813,124 · a2 2,925,436 · b1 2,952,330 · b2 4,433,859).
+  - JS: 131 / 2,103,202 gzip.
+  - المنهج: 1,198,780 gzip.
+  - الصوت: 544 ملفًا / 54,036,433 بايتًا (لا تغيير).
+  - التباين: 323 صفحة / 0.
+- **التحقق المحلي:** `npm run check` نجح كاملًا من التشغيل الأول: lint، وtypecheck، واختبارات الوحدة 1575 في 226 ملفًا، وsource/secret/workflows/handoff/deps، والبناء (البصمة نفسها `aa2609c8a471`)، و`a11y:browser` بـ642 فحصًا / 0 إخفاق. وE2E: **66/66 Desktop** و**66/66 Mobile** (Chromium 153).
+- **الحدود:**
+  - هذا تحقق مصدري من الوكيل بقرار المالك (ADR-116)، لا مراجعة بشرية ألمانية مستقلة. التحقق يغطي صحة القواعد فقط (الجنس والجمع والحالة وحكم حرف الجر)، لا الأسلوب ولا الاختيار التربوي.
+  - P0-301: ‏PR #7 مفتوح.
 
 ## مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا، وعشرة مقاطع استماع بصوت مُعاد توليده، وحسم آخر بند معلَّم — 2026-10-17 (v224)
 
@@ -1649,7 +1689,7 @@ Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة �
 - **قياس v181 التاريخي (2026-10-05)**: بصمة Offline `1cb34d1c5b49`, full 5,997,189 gzip; 325 static pages/323 contrast pages (22,940 text elements; zero below threshold); JS 128 chunks / 2,015,005 gzip / max 262,117; audio 544 MP3+Opus / 52,943,843 bytes; curriculum 1,117,421 gzip.
 - **اختبارات v181 التاريخية**: 1,349/1,349 في 199/199 (`npm test` عند إغلاق P2-355؛ بلا تخفيف عتبة أو تعطيل ملف). أضاف P2-352 ثلاث اختبارات وحدة، فأصبح خط الأساس عنده 1,352/1,352؛ P2-276 أضاف 3 اختبارات أخرى.
 - Historical Browser/CI evidence before v181: CI re-measured the full desktop and mobile production suite on this head (PR #4, head 3fdf9b6, run `37147779120`): `check` passed in 4m28s (carries lint, typecheck, the 1,244 tests, the secret, freshness, workflow and handoff gates, the build, and a new step that re-runs the local-day and storage-integrity files under `TZ=Asia/Tunis`, `Pacific/Kiritimati` and `Pacific/Niue`) and `e2e` in 16m41s (both projects); Vercel passed, and `Deployment Smoke` reported skipping on the PR run by design, not by success — it stays unproven for production until the variable-pinned run says otherwise. Earlier, kept as measured: head 0acb40d (run `37118734143`) `check` 4m08s / `e2e` 15m38s (both projects, with the pinned-zone step green in all three zones); head 5b1fc79 (run `37112362964`) `check` 2m46s (`npm run check` 2m23s, 1,231 tests) and `e2e` 10m55s (build 0m59s, suite 9m13s). The docs-only head that preceded it (083fd38) had its run cancelled by the branch concurrency guard, so no browser number is attributed to it. Earlier generations, kept as measured: 95bfcfe (run `37110656051`) `check` 3m28s / `e2e` 16m46s (suite 14m17s); Stage A head 6fb5667 (run `37108553360`) `check` 4m26s / `e2e` 11m06s (suite 9m20s) — an earlier note had wrongly given both jobs 11m06s, read from a GraphQL job field instead of step timings; 65b6f03 (run `37105579225`) `check` 2m48s / `e2e` 16m28s, which is where the `review-session-dose-v1` browser assertions were first run; 076cd48 16m16s after two defects were fixed from real CI evidence (the stage-gate `reachLimit` freeze at stage one and a progress test counting the phantom mastery seed removed by ADR-103). Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so no browser number is ever taken from a local run. A prior generation (head 076cd48) measured 16m16s after two defects were fixed from real CI evidence — the stage-gate `reachLimit` freeze at stage one, and a progress test that counted the phantom mastery seed removed by ADR-103. Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so this number comes from Actions, not from here. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
-- P0 = 116 implemented / 8 partial / 0 missing / 0 blocked.
+- P0 = 118 implemented / 6 partial / 0 missing / 0 blocked.
 - P1 = 131 implemented / 4 partial / 0 not implemented / 0 blocked.
 - Formal P2 audit: 142/142 rows = 133 implemented / 7 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
@@ -2062,7 +2102,7 @@ Phase 5 — core product, portability, Offline pack, continuous exam rehearsal, 
 - The second production audit removed silent modulo wraps from finite Dictation, Branching, Collocation, and context-appropriateness rounds; each now advances by task/level and reaches an explicit terminal destination. It also removed learner-visible provider/content/task IDs, reset the empty-state due-review counter to zero, and made five-minute coaching consult the real eligible SRS queue before routing to Review.
 - ADR-073 makes `src/config/curriculum-version.json` the authored identity source. prepare/prebuild materialize a generated TypeScript module and the marked Service Worker constant; tests fail on drift. Offline pack comparison v2 fails safely when installed legacy metadata lacks a curriculum identity.
 - `npm run handoff:check` validates IDEA counts (P0 124, P1 135, P2 142), P0 table rows/status, framework versions, 88/80/88/96/90 curriculum-audio counters, 18 source records, 17 Tunisian-support notes and review state, pinned WebGPU runtime/model hashes, the 3,020-object/4,622,320-pair similarity baseline and four review dimensions, 306 Offline routes, cache-name parity with Playwright, and documented current unit/browser test counts and the 132-row P1 audit before every production build.
-- `P0_AUDIT.md` now classifies all 124/124 P0 proposals against actual code: 116 implemented, 8 partial, 0 not implemented, and 0 fully blocked items (updated 2026-10-05 after P0-302 remote CI passed). It also lists the non-P0 human review and release blockers separately so quantitative curriculum completion is not confused with production validation.
+- `P0_AUDIT.md` now classifies all 124/124 P0 proposals against actual code: 118 implemented, 6 partial, 0 not implemented, and 0 fully blocked items (updated 2026-10-17 after P0-98/99 source-verified closure, ADR-116). It also lists the non-P0 human review and release blockers separately so quantitative curriculum completion is not confused with production validation.
 - `P1_AUDIT.md` now classifies all 135/135 P1 proposals conservatively: 130 implemented, 4 partial, 1 not implemented, and 0 blocked. Every row records the actual evidence and the exact remaining criterion; this replaces the former overlap-only list and permits P1 numbers without implying human academic review.
 - `P2_AUDIT.md` classifies all 142/142 P2 proposals: 118 implemented, 2 partial, 22 not implemented, and 0 blocked. 44 formerly partial software rows, including P2-273, are now closed. Only P2-264 and P2-384 remain partial for final real WCAG/assistive-technology testing and independent Arabic regional review; 20 separate proposals remain not implemented.
 - P2 `event-derived-mastery-v1` closes P2-72/237. The central LearningProvider captures every new runtime mutation of `mastery` as a strict set/increment/delete event with source, previous/resulting value, and bounded evidence references; the materialized record is a recalculated cache. Merge unions stable event IDs before reduction, so distinct concurrent delayed-review increments accumulate, duplicate IDs do not double count, later sets can lower an older score, and delete events prevent workflow markers from reappearing. Old snapshots remain explicitly labeled Legacy fallback until new evidence exists; Zod, IndexedDB, DWNB, partial export, import normalization, Merge, Progress UI, and tests preserve the contract.

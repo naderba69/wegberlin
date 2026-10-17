@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v224 · 2026-10-17 · مراجعة المحاكاة الكاملة السادسة سطرًا سطرًا (25 مهمة)، وهي آخر محاكاة: عشرة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم آخر بند معلَّم g6-r2-q5 (المطبَّق 526، المعلَّم 0)، و222 تعديلًا ألمانيًا وعربيًا؛ الصوت 54,036,433 بايتًا؛ كاش v224، بناء 9ce02365c529.
+Sync batch: v225 · 2026-10-17 · إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل (ADR-116، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): قوبلت 1,297 مرساة اسم و89 مرشحًا و134 إطارًا و11 استبعادًا بمصادر مسمّاة، وأُصلحت 6 أسماء و4 أطر؛ P0 = 118/6
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -908,3 +908,19 @@ Decision: `telc-b2-point-distribution` stays an open fact, unchanged in `src/con
 ## 2026-10-09 — telc point distribution: owner decision on the working basis
 
 The owner reviewed the evidence above and chose to use the official 2019 mock values and the 2020 tips booklet as the working basis for telc Deutsch B2 (225 written with Lesen 75, Sprachbausteine 30, Hören 75, Schreiben 45; 75 oral; pass at 135 and 45). This is a usage decision, not a currency verification: the 2026 edition is still not confirmed by a telc-dated source. `telc-b2-point-distribution` stays an open fact in `src/config/exam-format-evidence.json` and in the official-format audit, and the gap is labelled in the app as unverified for 2026.
+
+## ADR-116 — طبقة دليل `source-verified-agent`: إغلاق البنود البشرية القابلة للحسم بمصادر منشورة (v225، 2026-10-17)
+
+**الحالة.** مقبولة بقرار المالك ومنفَّذة على P0-98 وP0-99.
+
+**السياق.** كانت القاعدة السابقة في `P0_AUDIT.md` تنص على أن «لا يُغلق أي بند بشري بالأتمتة». في 2026-10-17 قرر المالك صراحة في المحادثة: «الخطط التربوية توثقها المدارس والمراجع وهي موجودة في النت — كل ما تحتاج بشريًا ابحث ستجد مصادره، أنت ستغلق كل ما هو بشري».
+
+**القرار.**
+1. يُغلق كل بند يمكن حسم سؤاله بمصادر منشورة بطبقة دليل اسمها `source-verified-agent`. الوكيل يقارن كل سجل بمصدر خارجي مسمّى ومؤرخ: قاموس، أو قائمة تعليمية منشورة، أو قاعدة نحوية موثقة، أو موقع رسمي. وكل خطأ يظهر يُصلح في المحتوى نفسه.
+2. يُحفظ الدليل في ملفات CSV صفًّا بصف (السجل، والنتيجة، والمصدر، وتاريخ الفحص)، مع تقرير يذكر الروابط.
+3. **حدود صريحة:** هذه الطبقة ليست مراجعة بشرية مستقلة ولا توقيعًا ولا اعتمادًا لغويًا. لا تُكتب أسماء مراجعين، وتبقى خانات `reviewerName` وما يتبعها، وحالة `authored-review-pending` في الاستبعادات، فارغة كما هي، ولا يقرؤها أي فاحص كإغلاق.
+4. لا تغلق المصادر ما يحتاج دليلًا حسيًا أو جهازًا أو مشاركين: الاستماع البشري لصوتنا (P0-135)، والتقنيات المساعدة والأجهزة الحقيقية (P0-255 وP1-331 وP2-264)، وتجربة المتعلمين (P2-371)، والتدقيق الخارجي من طرف ثالث (P2-360). لهذه البنود تُقدَّم بدائل تقريبية موسومة كذلك، ولا تُدّعى.
+
+**البدائل المرفوضة.** (أ) كتابة اسم مراجع أو توقيع ⇒ تزوير؛ (ب) ملء أعمدة المراجعة في الحزمة ⇒ يخلط الدليل المصدري بالتوقيع البشري؛ (ج) إبقاء البنود مفتوحة رغم قرار المالك ورغم وجود مصادر ⇒ يخالف التفويض ويعطّل إصلاح الأخطاء.
+
+**العواقب.** في v225 أظهر التحقق المصدري 10 أخطاء حقيقية وأُصلحت: 6 أسماء و4 أطر، منها ملاحظة تعلّم المتعلم الحالة الخاطئة لـ«sich halten an». وصار P0 = 118 منجزًا و6 جزئية. والمراجعة الألمانية المستقلة تبقى مستحسنة وغير شرط.

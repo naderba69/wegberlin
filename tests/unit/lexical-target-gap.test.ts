@@ -31,10 +31,10 @@ describe("lexical target-gap inventory", () => {
       authoredTargets: 1474,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1278,
+      totalCandidates: 1277,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1143,
+      contextualNotTarget: 1142,
       authoredTargets: 135,
     });
   });

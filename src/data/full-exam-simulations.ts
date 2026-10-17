@@ -33,7 +33,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
           "goethe-b2-listening-03",
           "goethe-b2-listening-04",
         ],
-        resultRuleAr: "أربعة أجزاء و30 عنصرًا؛ الصوت الحالي Browser TTS، لذلك لا يُعرض الأداء كدرجة امتحانية رسمية.",
+        resultRuleAr: "أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS؛ الصوت اصطناعي، لذلك لا يُعرض الأداء كدرجة امتحانية رسمية.",
       },
       {
         id: "goethe-full-01-writing",
@@ -58,7 +58,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     sessionMode: "guided-module-timers",
     limitationsAr: [
       "المؤقت يطبق داخل كل مهمة؛ الانتقال بين الصفحات قابل للاستئناف ولا يفرض جلسة واحدة غير قابلة للتوقف.",
-      "الاستماع يستخدم Browser TTS ولا يمثل تنوع الصوت البشري في الامتحان.",
+      "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل؛ لا تمثل تنوع الأصوات البشرية في الامتحان.",
       "المحادثة تسجل طرفًا واحدًا ولا تحاكي شريكًا حيًا.",
       "الكتابة والمحادثة لا تحصلان على درجة رسمية آلية.",
     ],
@@ -90,7 +90,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
         titleAr: "فهم الاستماع",
         officialMinutes: 20,
         taskIds: ["telc-b2-listening-01", "telc-b2-listening-02", "telc-b2-listening-03"],
-        resultRuleAr: "ثلاثة أجزاء و20 عنصرًا؛ Browser TTS يمنع الادعاء بأنها درجة استماع رسمية.",
+        resultRuleAr: "ثلاثة أجزاء و20 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS؛ الصوت الاصطناعي يمنع الادعاء بأنها درجة استماع رسمية.",
       },
       {
         id: "telc-full-01-writing",
@@ -115,7 +115,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     sessionMode: "guided-module-timers",
     limitationsAr: [
       "المحاكاة تستخدم تنقلًا موجهًا بين المهام مع حفظ محلي، وليست جلسة مراقبة رسمية.",
-      "الاستماع يستخدم Browser TTS بدل تسجيلات بشرية متعددة.",
+      "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل؛ لا تسجيلات بشرية متعددة.",
       "المحادثة تدرب مساهمة طرف واحد ولا تحاكي تفاوضًا حيًا كاملًا.",
       "لا تُستخرج نتيجة telc رسمية من الفحوص الحتمية أو التقييم الذاتي.",
     ],
@@ -157,7 +157,7 @@ export const fullExamSimulations: FullExamSimulation[] = [
     limitationsAr: ["التنقل موجه وقابل للاستئناف، لا جلسة مراقبة واحدة.", "ملفات MP3 اصطناعية أحادية المتحدث وغير امتحانية، و Browser TTS بديل.", "التفاعل الشفهي فردي تدريبي.", "لا تُحسب نتيجة telc رسمية."],
   },
   {
-    id: "goethe-b2-full-03", provider: "goethe-b2", titleDe: "Vollsimulation 3 · Alltag, Lernen und Infrastruktur", titleAr: "المحاكاة الكاملة الثالثة — الحياة والتعلم والبنية", descriptionAr: "مجموعة ثالثة مستقلة من 13 مهمة جديدة تحافظ على أجزاء Goethe دون مشاركة مهام مع المحاكاتين السابقتين.",
+    id: "goethe-b2-full-03", provider: "goethe-b2", titleDe: "Vollsimulation 3 · Alltag, Lernen und Infrastruktur", titleAr: "المحاكاة الكاملة الثالثة — الحياة والتعلم والبنية التحتية", descriptionAr: "مجموعة ثالثة مستقلة من 13 مهمة جديدة تحافظ على أجزاء Goethe دون مشاركة مهام مع المحاكاتين السابقتين.",
     modules: [
       { id: "goethe-full-03-reading", titleDe: "Lesen", titleAr: "القراءة", officialMinutes: 65, taskIds: ["goethe-b2-full-03-reading-01","goethe-b2-full-03-reading-02","goethe-b2-full-03-reading-03","goethe-b2-full-03-reading-04","goethe-b2-full-03-reading-05"], resultRuleAr: "خمسة أجزاء و30 عنصرًا جديدًا." },
       { id: "goethe-full-03-listening", titleDe: "Hören", titleAr: "الاستماع", officialMinutes: 40, taskIds: ["goethe-b2-full-03-listening-01","goethe-b2-full-03-listening-02","goethe-b2-full-03-listening-03","goethe-b2-full-03-listening-04"], resultRuleAr: "أربعة أجزاء و30 عنصرًا بملفات MP3 مولّدة مع بديل Browser TTS." },

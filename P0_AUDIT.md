@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
+Sync batch: v219 · 2026-10-17 · مراجعة بنك الامتحان (المهام الموجّهة الـ24 وبيانات المحاكيات) سطرًا سطرًا: 4 بنود ذات جوابين محتملين أُغلقت (من قال ذلك ×2، wenn/falls، Obwohl⇐Da)، ونصّا استماع صُحّحا وأُعيد توليد 5 مقاطع صوتية، وادعاء «Browser TTS فقط» القديم صُحّح؛ كاش v219، بناء 47c999e610bc.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

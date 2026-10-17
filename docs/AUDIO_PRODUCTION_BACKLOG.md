@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
+Sync batch: v219 · 2026-10-17 · مراجعة بنك الامتحان (المهام الموجّهة الـ24 وبيانات المحاكيات) سطرًا سطرًا: 4 بنود ذات جوابين محتملين أُغلقت (من قال ذلك ×2، wenn/falls، Obwohl⇐Da)، ونصّا استماع صُحّحا وأُعيد توليد 5 مقاطع صوتية، وادعاء «Browser TTS فقط» القديم صُحّح؛ كاش v219، بناء 47c999e610bc.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -11,6 +11,16 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
 New longer-input bank: 8 device-TTS-only tasks; 0 new MP3 or human recordings. Existing 96 lesson / 80 library / 96 exam MP3 files remain synthetic with review pending.
 
 آخر تحديث: 2026-09-20 مقابل `v138`. القسم التاريخي أدناه يبقى كما قيس يومها، وتلي جدولَ الحالة طبقةُ totals المقيسة الآن.
+
+## تحديث v219 (2026-10-17): نصّا استماع امتحانيان مصحّحان بصوت مُعاد توليده
+
+- **الامتحان:**
+  - `goethe-h4-wayfinding-lecture`، بمقاطعه الثلاثة: صُحّحت جملة غير سليمة نحويًا («die Oberseite der Karte»).
+  - `telc-h2-mobility-dialogue`، بمقطعيه: «Beschäftigte aus Randzeiten» ⇒ «mit sehr frühen oder späten Arbeitszeiten».
+  - صُحّح النص أولًا، ثم وُلّدت منه 10 ملفات (5 MP3 و5 Opus) بالصوت الذي اختاره المالك (`german-educational-feminine-05`، `Arena.ai speech synthesis`)، بتاريخ `generatedAt` `2026-10-17`.
+- الإجمالي المقيس بعد البناء: 544 ملف MP3+Opus / **53,154,679** بايتًا (كان 53,190,199)، تحت السقف الآمن 59,500,000.
+- الفحص آلي فقط: 44–55 ثانية لكل مقطع، و15.6–17.6 حرفًا في الثانية، والمتوسط نحو −20 dB، ولا صمت طويل. الاستماع البشري مفتوح.
+- صار مولّد مانيفست الامتحان يحفظ تاريخ إعادة التوليد والوسم. ما زال لا يكتب حقول Opus، فحُدّثت البنود الخمسة مباشرة.
 
 ## تحديث v218 (2026-10-16): نص استماع مكتبة مصحّح بصوت مُعاد توليده
 

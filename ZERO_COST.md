@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
+Sync batch: v219 · 2026-10-17 · مراجعة بنك الامتحان (المهام الموجّهة الـ24 وبيانات المحاكيات) سطرًا سطرًا: 4 بنود ذات جوابين محتملين أُغلقت (من قال ذلك ×2، wenn/falls، Obwohl⇐Da)، ونصّا استماع صُحّحا وأُعيد توليد 5 مقاطع صوتية، وادعاء «Browser TTS فقط» القديم صُحّح؛ كاش v219، بناء 47c999e610bc.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

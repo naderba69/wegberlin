@@ -12,7 +12,7 @@ export const targetedWritingSimulations: TargetedWritingSimulation[] = [
     descriptionAr: "مساهمة منتدى أصلية تتطلب موقفًا وأسبابًا وبديلًا ومزايا. تحاكي نوع Goethe Schreiben Teil 1 فقط.",
     practiceMinutes: 50,
     timingNoteAr: "50 دقيقة هي المدة المقترحة ل Schreiben Teil 1 في النموذج الرسمي الحالي؛ وحدة الكتابة الكاملة 75 دقيقة.",
-    instructionsDe: "Wählen Sie den Arbeitsauftrag, planen Sie kurz und schreiben Sie Ihren Forumsbeitrag. Bearbeiten Sie alle vier Punkte.",
+    instructionsDe: "Lesen Sie den Arbeitsauftrag, planen Sie kurz und schreiben Sie Ihren Forumsbeitrag. Bearbeiten Sie alle vier Punkte.",
     instructionsAr: "خطط بإيجاز ثم اكتب مساهمة المنتدى ونفذ النقاط الأربع كلها.",
     minimumWordsForPractice: 150,
     wordTargetNoteAr: "150 كلمة هي القيمة المذكورة لهذا الجزء في النموذج الرسمي الحالي. الفحص داخل التطبيق لغوي آلي محدود وليس تقييم Goethe.",

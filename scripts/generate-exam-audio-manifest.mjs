@@ -400,6 +400,17 @@ async function discoverListeningTaskInventory() {
   return inventory;
 }
 
+// v219: transcripts corrected, files regenerated with a voice chosen by the owner in a new audition (may differ from the original batch voice).
+const regeneratedFileIds = [
+  "goethe-h4-wayfinding-lecture-seg-1",
+  "goethe-h4-wayfinding-lecture-seg-2",
+  "goethe-h4-wayfinding-lecture-seg-3",
+  "telc-h2-mobility-dialogue-seg-1",
+  "telc-h2-mobility-dialogue-seg-2",
+];
+const regeneratedAt = Object.fromEntries(regeneratedFileIds.map((id) => [id, "2026-10-17"]));
+const regeneratedVoice = Object.fromEntries(regeneratedFileIds.map((id) => [id, "german-educational-feminine-05"]));
+
 const taskInventory = await discoverListeningTaskInventory();
 const taskById = new Map(taskInventory.map((task) => [task.taskId, task]));
 const assets = [];
@@ -419,9 +430,9 @@ for (const clip of generatedClips) {
     bytes: bytes.length,
     sha256: createHash("sha256").update(bytes).digest("hex"),
     speakerCount: 1,
-    voiceProfile: "german-educational-feminine-01",
+    voiceProfile: regeneratedVoice[clip.fileId] ?? "german-educational-feminine-01",
     synthesisProvider: "Arena.ai speech synthesis",
-    generatedAt: clip.generatedAt ?? "2026-08-30",
+    generatedAt: regeneratedAt[clip.fileId] ?? clip.generatedAt ?? "2026-08-30",
     sourceContent: "original-exam-practice-transcript",
     rightsStatus: "generated-for-project-review-required",
     examGrade: false,

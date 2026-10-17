@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v218 · 2026-10-16 · مراجعة مكتبة القراءة والاستماع (الدفعات 5–8) سطرًا سطرًا واكتمال المكتبة (320 سؤالًا): 100 سطر دعم عربي صار ترجمة كاملة (193 مع v217)، و6 أسئلة ألمانية لا تطابق خياراتها، ونص استماع B2 خاطئ صُحّح وأُعيد توليد صوته؛ كاش v218، بناء 4648c56c829e.
+Sync batch: v219 · 2026-10-17 · مراجعة بنك الامتحان (المهام الموجّهة الـ24 وبيانات المحاكيات) سطرًا سطرًا: 4 بنود ذات جوابين محتملين أُغلقت (من قال ذلك ×2، wenn/falls، Obwohl⇐Da)، ونصّا استماع صُحّحا وأُعيد توليد 5 مقاطع صوتية، وادعاء «Browser TTS فقط» القديم صُحّح؛ كاش v219، بناء 47c999e610bc.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

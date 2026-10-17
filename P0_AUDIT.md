@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v222 · 2026-10-17 · مراجعة المحاكاة الكاملة الرابعة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو غير نحوية أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، و233 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,564,348 بايتًا؛ كاش v222، بناء ee3201151fd6.
+Sync batch: v223 · 2026-10-17 · مراجعة المحاكاة الكاملة الخامسة سطرًا سطرًا (25 مهمة): ستة مقاطع استماع برقية أو ناقصة الأدوات أُعيدت كتابتها وأُعيد توليد صوتها (german-educational-feminine-06)، وإعلانات Leseverstehen 3 ونص Sprachbausteine 1 البرقيان أُعيدت كتابتهما بالمفتاح نفسه، وحُسم البند المعلَّم g5-r2-q1، و278 تعديلًا ألمانيًا وعربيًا؛ الصوت 53,832,960 بايتًا؛ كاش v223، بناء 8128b408d302.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

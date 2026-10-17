@@ -69,8 +69,8 @@ describe("exam bank explanation drafts", () => {
     const all = [...applied, ...flaggedIds];
 
     expect(new Set(all).size).toBe(all.length);
-    expect(applied.length).toBe(524);
-    expect(flaggedIds.length).toBe(2);
+    expect(applied.length).toBe(525);
+    expect(flaggedIds.length).toBe(1);
     expect(all.length).toBe(526);
     // البنود القصيرة المتبقية في البيانات الحية هي بالضبط المُعلَّمة
     expect([...shortItemIds].sort()).toEqual([...flaggedIds].sort());

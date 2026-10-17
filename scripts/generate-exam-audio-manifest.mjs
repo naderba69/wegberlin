@@ -413,6 +413,8 @@ const regeneratedFileIdsV221 = [
   "g3-h1-2", "g3-h2", "g3-h3", "t3-h1", "t3-h2",
   // v222: full simulation 4 (telegraphic interview/dialogue/news, «leitet Personal»), same owner-chosen voice.
   "g4-h2", "g4-h3", "t4-h1", "t4-h2", "t4-h3-4", "t4-h3-5",
+  // v223: full simulation 5 (telegraphic interview/dialogue/news, missing articles), same owner-chosen voice.
+  "g5-h1-3", "g5-h2", "g5-h3", "g5-h4", "t5-h1", "t5-h2",
 ];
 const regeneratedAt = Object.fromEntries([...regeneratedFileIds, ...regeneratedFileIdsV221].map((id) => [id, "2026-10-17"]));
 const regeneratedVoice = Object.fromEntries([

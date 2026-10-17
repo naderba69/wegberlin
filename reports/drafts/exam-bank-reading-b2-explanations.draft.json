@@ -366,6 +366,10 @@
       "explanationAr": "النص: «Deshalb kaufe ich dort nur wenige, klar ausgezeichnete Produkte.» عادل يشتري من المتاجر الآلية منتجات قليلة ومحددة فقط، لذلك الجواب b."
     },
     {
+      "id": "g5-r2-q1",
+      "explanationAr": "النص: «Eine Stadt installierte zwölf öffentliche Trinkwasserstationen.» و«Die ersten Geräte standen vor allem im Zentrum.» بعد ذكر تركيب المحطات تأتي الجملة a التي تشرح الغرض منها: تعبئة القوارير الخاصة مجانًا، ثم ينتقل النص إلى مواقع الأجهزة الأولى. أما b فتحتاج إلى Zentrum قبلها (Dort)، لذلك الجواب a."
+    },
+    {
       "id": "g5-r2-q2",
       "explanationAr": "النص: «Außenviertel blieben dadurch schlechter versorgt.» الجواب b يصف أن المركز كان مرئيًا لكثرة المارة لكن ليس لكل الحاجات، وهذا يمهّد لأن الأحياء الخارجية بقيت أقل تزويدًا."
     },
@@ -403,15 +407,15 @@
     },
     {
       "id": "g5-r5-q1",
-      "explanationAr": "النص: «Gruppen reservieren sieben Tage vorher und nennen Teilnehmendenzahl sowie Unterstützungsbedarf.» §1 يتعلق بحجز المجموعات قبل سبعة أيام، لذلك الجواب a."
+      "explanationAr": "النص: «Gruppen reservieren sieben Tage vorher und nennen Teilnehmendenzahl sowie Unterstützungsbedarf.» القسم 1 يتعلق بحجز المجموعات قبل سبعة أيام، لذلك الجواب a."
     },
     {
       "id": "g5-r5-q2",
-      "explanationAr": "النص: «Materialien mit Gefahrensymbol dürfen nur unter Anleitung verwendet werden.» §2 يتعلق بالمواد التي عليها رمز خطر ولا تُستخدم إلا بإشراف، لذلك الجواب d."
+      "explanationAr": "النص: «Materialien mit Gefahrensymbol dürfen nur unter Anleitung verwendet werden.» القسم 2 يتعلق بالمواد التي عليها رمز خطر ولا تُستعمل إلا بإشراف، لذلك الجواب d."
     },
     {
       "id": "g5-r5-q3",
-      "explanationAr": "النص: «Fotos eigener Ergebnisse sind erlaubt; andere Personen dürfen nur mit deren Zustimmung erkennbar aufgenommen werden.» §3 يتعلق بالصور والموافقة، لذلك الجواب e."
+      "explanationAr": "النص: «Fotos eigener Ergebnisse sind erlaubt; andere Personen dürfen nur mit deren Zustimmung erkennbar aufgenommen werden.» القسم 3 يتعلق بالتصوير وموافقة الأشخاص الظاهرين في الصور، لذلك الجواب e."
     },
     {
       "id": "t5-r1-q1",
@@ -423,7 +427,7 @@
     },
     {
       "id": "t5-r1-q3",
-      "explanationAr": "النص: «Museum mit Audiobeschreibung.» متحف بوصف صوتي، لذلك الجواب c: الاستماع للمتحف."
+      "explanationAr": "النص: «Museum mit Audiobeschreibung.» متحف يقدّم وصفًا صوتيًا لمعروضاته، لذلك الجواب c: متحف يمكن الاستماع إليه."
     },
     {
       "id": "t5-r1-q4",
@@ -435,43 +439,43 @@
     },
     {
       "id": "t5-r3-q1",
-      "explanationAr": "الإعلان a: «Samstag Nähen Anfänger» خياطة للمبتدئين يوم السبت، وهذا يطابق طلب الخياطة يوم السبت."
+      "explanationAr": "الإعلان a: «Nähkurs für Anfänger, samstags» دورة خياطة للمبتدئين يوم السبت، فهي تناسب من لم يخِط من قبل."
     },
     {
       "id": "t5-r3-q2",
-      "explanationAr": "الإعلان b: «Online Deutsch Mittag» ألمانية إلكترونية عند الظهر، وهذا يطابق طلب الألمانية عبر الإنترنت وقت الظهر."
+      "explanationAr": "الإعلان b: «Deutschkurs online in der Mittagspause» دورة ألمانية عبر الإنترنت في وقت استراحة الغداء، وهذا يناسب الوقت المتاح."
     },
     {
       "id": "t5-r3-q3",
-      "explanationAr": "الإعلان c: «Zugängliches Fitness» لياقة بدنية متاحة للجميع، وهذا يطابق طلب مكان لياقة يمكن الوصول إليه."
+      "explanationAr": "الإعلان c: «Barrierefreies Fitnessstudio» نادٍ رياضي بلا عوائق، يمكن دخوله بالكرسي المتحرك، وهذا ما يحتاجه الشخص."
     },
     {
       "id": "t5-r3-q4",
-      "explanationAr": "الإعلان d: «Leiter Wochenende» إعارة سلم لعطلة الأسبوع، وهذا يطابق طلب استعارة السلم لعطلة الأسبوع."
+      "explanationAr": "الإعلان d: «Leiterverleih am Wochenende» إعارة سلالم في عطلة نهاية الأسبوع، والسبت جزء منها، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t5-r3-q5",
-      "explanationAr": "الإعلان e: «Kamera-Reparatur Montag» إصلاح الكاميرات يوم الاثنين، وهذا يطابق إصلاح الكاميرا يوم الاثنين."
+      "explanationAr": "الإعلان e: «Kamera-Reparatur jeden Montag» إصلاح الكاميرات كل يوم اثنين، وهذا يناسب الموعد المفضل."
     },
     {
       "id": "t5-r3-q6",
-      "explanationAr": "الإعلان f: «Bewerbung Betreuung» تدريب على التقديم مع رعاية، وهذا يطابق التقديم مع رعاية الأطفال."
+      "explanationAr": "الإعلان f: «Bewerbungstraining mit Kinderbetreuung» تدريب على طلبات التوظيف مع رعاية للأطفال في الوقت نفسه، فيمكن الحضور مع الطفل."
     },
     {
       "id": "t5-r3-q7",
-      "explanationAr": "الإعلان g: «Lernraum nachts» مكان للدراسة ليلًا، وهذا يطابق طلب الدراسة ليلًا."
+      "explanationAr": "الإعلان g: «Lernraum, nachts geöffnet» قاعة دراسة مفتوحة ليلًا، وهذا يناسب من يعمل نهارًا."
     },
     {
       "id": "t5-r3-q8",
-      "explanationAr": "الإعلان h: «Freiwillig Museum Dienstag» تطوع في المتحف يوم الثلاثاء، وهذا يطابق المساعدة في المتحف يوم الثلاثاء."
+      "explanationAr": "الإعلان h: «Ehrenamt im Museum, dienstags» عمل تطوعي في المتحف يوم الثلاثاء، والتطوع عمل بلا أجر."
     },
     {
       "id": "t5-r3-q9",
-      "explanationAr": "الإعلان i: «Brotkiste Freitag» صندوق خبز يوم الجمعة، وهذا يطابق استلام الخبز يوم الجمعة."
+      "explanationAr": "الإعلان i: «Brotkiste zum Vorbestellen, freitags» صندوق خبز يُطلب مسبقًا ويُستلم يوم الجمعة، وهذا ما تحتاجه الحالة."
     },
     {
       "id": "t5-r3-q10",
-      "explanationAr": "الإعلان j: «Online Moderation Aufnahme» تدريب إلكتروني على الإلقاء مع تسجيل، وهذا يطابق مشاهدة التسجيل لاحقًا."
+      "explanationAr": "الإعلان j: «Online-Moderationskurs mit Aufzeichnung» دورة إلقاء عبر الإنترنت مع تسجيل يمكن مشاهدته بعد العمل."
     },
     {
       "id": "g6-r1-q1",

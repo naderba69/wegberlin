@@ -543,7 +543,7 @@
     },
     {
       "id": "g5-h1-q6",
-      "explanationAr": "النص: «Nach Zentrum fahren Sie mit der Linie sechs weiter.» للوصول إلى المركز يُستقل الخط 6، لذلك الجواب Linie 6."
+      "explanationAr": "النص: «Ins Zentrum fahren Sie mit der Linie sechs weiter.» للوصول إلى وسط المدينة يُستقل الخط 6، لذلك الجواب Linie 6."
     },
     {
       "id": "g5-h1-q7",
@@ -567,7 +567,7 @@
     },
     {
       "id": "g5-h2-q2",
-      "explanationAr": "النص: «Jede Fassung lesen zwei Personen, eine kennt das Thema, eine die Zielsprache.» كل نسخة يقرؤها شخصان، أحدهما يعرف الموضوع والآخر اللغة الهدف، لذلك الجواب شخصان بكفاءتين مختلفتين."
+      "explanationAr": "النص: «Jede Fassung lesen zwei Personen: Eine kennt das Thema, die andere die Zielsprache.» كل نسخة يقرؤها شخصان، أحدهما يعرف الموضوع والآخر يتقن اللغة الهدف، لذلك الجواب شخصان بكفاءتين مختلفتين."
     },
     {
       "id": "g5-h2-q3",
@@ -579,7 +579,7 @@
     },
     {
       "id": "g5-h2-q5",
-      "explanationAr": "النص: «Nicht nur verteilte Blätter, sondern gelöste Anfragen und wiederkehrende Missverständnisse.» لا تُحسب الأوراق الموزعة وحدها، لذلك الجواب الأوراق الموزعة."
+      "explanationAr": "النص: «Wir zählen nicht nur verteilte Blätter, sondern auch gelöste Anfragen und wiederkehrende Missverständnisse.» عدد الأوراق الموزعة يُحسب، لكنه لا يكفي وحده لتقييم النجاح، لذلك الجواب Verteilte Blätter."
     },
     {
       "id": "g5-h2-q6",
@@ -591,27 +591,27 @@
     },
     {
       "id": "g5-h3-q2",
-      "explanationAr": "النص: «Familien werden oft pauschal als laut betrachtet.» السيد Kranz يعترض على استبعاد العائلات، لذلك الجواب Herr Kranz."
+      "explanationAr": "النص: «Familien werden oft pauschal als laut betrachtet.» و«Ein Mehrzweckwagen wäre besser als ein Ausschluss.» السيد Kranz يعترض على اعتبار العائلات كلها صاخبة ويفضّل عربة متعددة الأغراض على إقصائها، لذلك الجواب Herr Kranz."
     },
     {
       "id": "g5-h3-q3",
-      "explanationAr": "النص: «Im Pilot sanken Beschwerden, doch nur auf langen Strecken.» المذيع يذكر تراجع الشكاوى على الخطوط الطويلة فقط، لذلك الجواب Moderator."
+      "explanationAr": "النص: «Im Pilotversuch sanken die Beschwerden, allerdings nur auf langen Strecken.» المذيع يذكر أن الشكاوى تراجعت على الرحلات الطويلة فقط، لذلك الجواب Moderator."
     },
     {
       "id": "g5-h3-q4",
-      "explanationAr": "النص: «Personal muss freundlich eingreifen, sonst tragen Reisende Konflikte aus.» السيدة Mai ترى أن على الموظفين التدخل بلطف، لذلك الجواب Frau Mai."
+      "explanationAr": "النص: «Das Personal muss freundlich eingreifen, sonst tragen die Reisenden Konflikte untereinander aus.» السيدة Mai ترى أن على الموظفين التدخل بلطف، وإلا حلّ المسافرون نزاعاتهم بأنفسهم، لذلك الجواب Frau Mai."
     },
     {
       "id": "g5-h3-q5",
-      "explanationAr": "النص: «Buchung muss deutlich zeigen, welcher Wagen wofür gedacht ist.» السيد Kranz يطلب توضيح وظيفة كل عربة عند الحجز، لذلك الجواب Herr Kranz."
+      "explanationAr": "النص: «Bei der Buchung muss deutlich zu sehen sein, welcher Wagen wofür gedacht ist.» السيد Kranz يطلب توضيح وظيفة كل عربة عند الحجز، لذلك الجواب Herr Kranz."
     },
     {
       "id": "g5-h3-q6",
-      "explanationAr": "النص: «Nach drei Monaten werden Beschwerden und Umstiege ausgewertet.» المذيع يذكر موعد التقييم بعد ثلاثة أشهر، لذلك الجواب Moderator."
+      "explanationAr": "النص: «Nach drei Monaten werden die Beschwerden und Umstiege ausgewertet.» المذيع يذكر أن الشكاوى وحالات الانتقال إلى عربات أخرى تُقيَّم بعد ثلاثة أشهر، لذلك الجواب Moderator."
     },
     {
       "id": "g5-h4-q1",
-      "explanationAr": "النص: «Nächtliche Beleuchtung erfüllt Sicherheit, Orientierung und Gestaltung.» وظائف الإضاءة الليلية ثلاث: الأمان والتوجيه والتصميم، لذلك الجواب الأمان والتوجيه والتصميم."
+      "explanationAr": "النص: «Nächtliche Beleuchtung dient der Sicherheit, der Orientierung und der Gestaltung.» للإضاءة الليلية ثلاث وظائف: الأمان والتوجيه والتصميم، لذلك الجواب الأول."
     },
     {
       "id": "g5-h4-q2",
@@ -623,19 +623,19 @@
     },
     {
       "id": "g5-h4-q4",
-      "explanationAr": "النص: «gezielt Flächen, reduziert unnötige Zeiten» يقلل التخطيط الجيد الأوقات غير الضرورية، لذلك الجواب الأوقات غير الضرورية."
+      "explanationAr": "النص: «Gute Planung beleuchtet gezielt Flächen, reduziert unnötige Leuchtzeiten» يقلل التخطيط الجيد ساعات الإنارة غير الضرورية، لذلك الجواب Unnötige Leuchtzeiten."
     },
     {
       "id": "g5-h4-q5",
-      "explanationAr": "النص: «können aber bei später Reaktion Unsicherheit erzeugen.» محدد الحركة يسبب شعورًا بعدم الأمان عند التأخر في الاستجابة، لذلك الجواب التأخر في الاستجابة."
+      "explanationAr": "النص: «können aber bei später Reaktion Unsicherheit erzeugen.» حساس الحركة قد يسبب شعورًا بعدم الأمان إذا تأخر في الاستجابة، لذلك الجواب التأخر في الاستجابة."
     },
     {
       "id": "g5-h4-q6",
-      "explanationAr": "النص: «Der Stromverbrauch sank, während an zwei Übergängen Beschwerden zunahmen.» انخفض الاستهلاك بينما زادت الشكاوى عند نقطتين، لذلك الجواب انخفض الاستهلاك وزادت الشكاوى عند نقطتين."
+      "explanationAr": "النص: «Der Stromverbrauch sank, während an zwei Übergängen die Beschwerden zunahmen.» انخفض استهلاك الكهرباء بينما زادت الشكاوى عند معبرين للمشاة، لذلك الجواب الأول."
     },
     {
       "id": "g5-h4-q7",
-      "explanationAr": "النص: «Erfolg verlangt also Messung nach Ort und Uhrzeit» القياس يكون حسب المكان والوقت، لذلك الجواب المكان والوقت."
+      "explanationAr": "النص: «Erfolg verlangt also Messungen nach Ort und Uhrzeit» يُقاس النجاح حسب المكان والوقت، لذلك الجواب Nach Ort und Uhrzeit."
     },
     {
       "id": "g5-h4-q8",
@@ -643,67 +643,67 @@
     },
     {
       "id": "t5-h1-q1",
-      "explanationAr": "النص: «Erstens öffnet das Bad um elf.» الحمام يفتح في الساعة 11، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Das Stadtbad ist heute ab elf Uhr geöffnet.» المسبح البلدي مفتوح اليوم من الساعة 11، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h1-q2",
-      "explanationAr": "النص: «Zweitens fährt Bus vier nicht zum Bahnhof.» الحافلة 4 لا تذهب إلى محطة القطار، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Die Buslinie vier fährt heute nicht zum Bahnhof.» الخط الرابع لا يذهب اليوم إلى محطة القطار، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h1-q3",
-      "explanationAr": "النص: «Drittens ist der Kurs online.» الدورة عبر الإنترنت، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Erste-Hilfe-Kurs am Abend findet online statt.» دورة الإسعافات الأولية المسائية تُعقد عبر الإنترنت، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h1-q4",
-      "explanationAr": "النص: «Viertens endet der Markt um fünfzehn Uhr.» السوق ينتهي في الساعة 15، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Flohmarkt auf dem Rathausplatz ist heute um fünfzehn Uhr zu Ende.» سوق المستعمل ينتهي اليوم في الساعة 15، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h1-q5",
-      "explanationAr": "النص: «Fünftens gilt die Frist bis Dienstag.» الموعد النهائي هو الثلاثاء لا الأربعاء، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Anmeldungen für den Stadtlauf sind bis Dienstag möglich.» آخر موعد للتسجيل هو الثلاثاء لا الأربعاء، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q1",
-      "explanationAr": "النص: «Der Pass läuft zehn Wochen.» التجربة تستمر عشرة أسابيع، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Wie lange läuft der Versuch schon?» و«Seit zehn Wochen.» التجربة جارية منذ عشرة أسابيع، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h2-q2",
-      "explanationAr": "النص: «Zwölf Euro monatlich.» السعر اثنا عشر يورو، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Der Pass kostet zwölf Euro im Monat.» السعر اثنا عشر يورو شهريًا لا عشرون، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q3",
-      "explanationAr": "النص: «500 registriert, 310 nutzten Karten.» سُجّل 500 شخص، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Fünfhundert Personen haben sich registriert» سجّل خمسمئة شخص، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h2-q4",
-      "explanationAr": "النص: «310 nutzten Karten.» استخدم 310 فقط البطاقات، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «aber nur dreihundertzehn haben tatsächlich Karten genutzt.» لم يستعمل البطاقات فعلًا إلا 310 من أصل 500، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q5",
-      "explanationAr": "النص: «Theater stark, Museen schwach.» المسرح قوي، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Das Theater ist sehr gefragt» الإقبال على المسرح كبير، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h2-q6",
-      "explanationAr": "النص: «Theater stark, Museen schwach.» المتاحف أضعف لا أقوى، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «die Museen dagegen kaum.» الإقبال على المتاحف ضعيف مقارنة بالمسرح، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q7",
-      "explanationAr": "النص: «Auch Telefon.» الوصول لا يقتصر على التطبيق بل يشمل الهاتف، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Nein, man kann auch telefonisch buchen.» الحجز لا يقتصر على التطبيق بل يمكن بالهاتف أيضًا، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q8",
-      "explanationAr": "النص: «Ab zwölf Uhr am Veranstaltungstag.» البطاقات المتبقية تُباع من الساعة 12 في يوم الفعالية، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Ab zwölf Uhr am Tag der Veranstaltung.» البطاقات المتبقية متاحة من الساعة 12 في يوم الفعالية، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h2-q9",
-      "explanationAr": "النص: «Entscheidung nach zwei weiteren Monaten» لم يُقرر التمديد بعد، لذلك العبارة خاطئة."
+      "explanationAr": "النص: «Das entscheiden wir erst nach zwei weiteren Monaten.» لم يُتخذ قرار التمديد بعد، لذلك العبارة خاطئة."
     },
     {
       "id": "t5-h2-q10",
-      "explanationAr": "النص: «wir messen Nutzung nach Stadtteil.» تُقارن الأحياء، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Bis dahin vergleichen wir die Nutzung in den einzelnen Stadtteilen.» يُقارن الاستعمال بين أحياء المدينة، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h3-q1",
-      "explanationAr": "النص: «Der Zug fährt von Gleis zwei.» القطار يقلع من الرصيف 2، لذلك العبارة صحيحة."
+      "explanationAr": "النص: «Der Zug fährt von Gleis zwei.» القطار ينطلق من الرصيف 2، لذلك العبارة صحيحة."
     },
     {
       "id": "t5-h3-q2",

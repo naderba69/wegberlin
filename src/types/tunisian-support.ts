@@ -17,7 +17,8 @@ export type TunisianSupportCategory =
   | "quantitative-precision"
   | "formal-preposition";
 
-export type TunisianReviewStatus = "authored-review-pending" | "independently-reviewed";
+/** source-verified-agent (ADR-116/ADR-117): checked against dated published sources by the agent; not an independent human review. */
+export type TunisianReviewStatus = "authored-review-pending" | "source-verified-agent" | "independently-reviewed";
 
 export interface TunisianSupportNote {
   id: string;
@@ -35,6 +36,8 @@ export interface TunisianSupportNote {
   reviewStatus: TunisianReviewStatus;
   reviewedBy?: string;
   reviewedAt?: string;
+  sourceVerifiedAt?: string;
+  sourceRefs?: readonly string[];
   sourceVersion: "tunisian-support-v1";
 }
 
@@ -42,6 +45,7 @@ export interface TunisianSupportCoverage {
   noteCount: number;
   lessonCount: number;
   pendingReview: number;
+  sourceVerified: number;
   independentlyReviewed: number;
   byLevel: Record<CEFRLevel, number>;
   categories: number;

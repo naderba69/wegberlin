@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v225";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v226";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -482,7 +482,7 @@ test("P0 onboarding captures goals and an explicit device-check skip locally", a
   await expect(tunisianPanel).toBeVisible();
   await expect(tunisianPanel).toContainText("بالتونسي للتقريب");
   await expect(tunisianPanel).toContainText("شنوّة اسمك؟");
-  await expect(tunisianPanel).toContainText("مراجعة مستقلة معلّقة");
+  await expect(tunisianPanel).toContainText("مُتحقَّق منه بمصادر منشورة");
   await expect(tunisianPanel.locator('[lang="ar-TN"][dir="rtl"]')).toBeVisible();
   await expect(tunisianPanel.locator('[lang="de"][dir="ltr"]')).toHaveCount(3);
 });

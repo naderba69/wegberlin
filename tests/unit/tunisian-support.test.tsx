@@ -2,7 +2,7 @@ import { createElement } from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { TunisianSupportPanel } from "@/components/tunisian-support-panel";
-import { tunisianSupportForMode, tunisianSupportNotes } from "@/data/tunisian-support-registry";
+import { TUNISIAN_SOURCES, tunisianSupportForMode, tunisianSupportNotes } from "@/data/tunisian-support-registry";
 import { buildTunisianSupportAudit } from "@/core/content-validation/tunisian-support";
 
 const audit = buildTunisianSupportAudit();
@@ -10,7 +10,7 @@ const audit = buildTunisianSupportAudit();
 describe("P0 optional Tunisian support", () => {
   it("owns 17 valid notes across A1-B2 without structural gaps", () => {
     expect(audit.ok, audit.issues.join("\n")).toBe(true);
-    expect(audit).toMatchObject({ version:"tunisian-support-audit-v1",policyVersion:"tunisian-support-v1",noteCount:17,lessonCount:17,theoryReferenceCount:17,pendingReview:17,independentlyReviewed:0,byLevel:{A1:6,A2:5,B1:4,B2:2},categoryCount:15 });
+    expect(audit).toMatchObject({ version:"tunisian-support-audit-v1",policyVersion:"tunisian-support-v1",noteCount:17,lessonCount:17,theoryReferenceCount:17,pendingReview:0,sourceVerified:17,independentlyReviewed:0,sourceCount:8,byLevel:{A1:6,A2:5,B1:4,B2:2},categoryCount:15 });
   });
 
   it("keeps every note attached to one published theory focus", () => {
@@ -36,7 +36,9 @@ describe("P0 optional Tunisian support", () => {
     expect(screen.getByText("بالتونسي للتقريب")).toBeTruthy();
     expect(screen.getByText(/ما يلزمكش/)).toBeTruthy();
     expect(screen.getByText("nicht müssen ≠ nicht dürfen")).toBeTruthy();
-    expect(screen.getByText("مراجعة مستقلة معلّقة")).toBeTruthy();
+    expect(screen.getByText("مُتحقَّق منه بمصادر منشورة")).toBeTruthy();
+    expect(screen.getByText(/ست لهجات جهوية/)).toBeTruthy();
+    expect(screen.getByText(/وليست مراجعة بشرية مستقلة/)).toBeTruthy();
   });
 
   it("renders nothing in MSA/minimal modes or in a lesson without a registered difference", () => {
@@ -52,9 +54,21 @@ describe("P0 optional Tunisian support", () => {
 
   it("does not disguise authored notes as independent linguistic review", () => {
     for (const item of tunisianSupportNotes) {
-      expect(item.reviewStatus, item.id).toBe("authored-review-pending");
+      expect(item.reviewStatus, item.id).toBe("source-verified-agent");
       expect(item.reviewedBy, item.id).toBeUndefined();
       expect(item.reviewedAt, item.id).toBeUndefined();
+      expect(item.sourceVerifiedAt, item.id).toBe("2026-10-17");
+      expect(item.sourceRefs?.length, item.id).toBeGreaterThan(0);
+      for (const ref of item.sourceRefs ?? []) expect(Object.keys(TUNISIAN_SOURCES), item.id).toContain(ref);
     }
+  });
+
+  it("keeps the source-verified Tunisian forms attested by the cited grammars", () => {
+    const text = (lessonId: string) => tunisianSupportNotes.find((item) => item.lessonId === lessonId)?.tunisianNoteAr ?? "";
+    expect(text("a1-01")).toContain("احنا وين؟");
+    expect(text("a1-04")).toContain("الكتاب متاعي");
+    expect(text("a2-08")).toContain("الخدمة هاذي");
+    expect(text("b1-04")).toContain("الخدمة تعملت");
+    expect(tunisianSupportNotes.find((item) => item.lessonId === "b1-04")?.sourceRefs).toContain("wisc-tn-passive");
   });
 });

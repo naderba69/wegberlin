@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v225 · 2026-10-17 · إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل (ADR-116، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): قوبلت 1,297 مرساة اسم و89 مرشحًا و134 إطارًا و11 استبعادًا بمصادر مسمّاة، وأُصلحت 6 أسماء و4 أطر؛ P0 = 118/6
+Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
@@ -12,8 +12,8 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 133 |
-| partial | 7 |
+| implemented | 134 |
+| partial | 6 |
 | not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
@@ -157,7 +157,7 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 381 | دعم لوحة مفاتيح افتراضية للحروف الألمانية عند الحاجة. | `implemented` | `virtual-german-character-keyboard-v1` يظهر سياقيًا لكل Input/Textarea ألماني قابل للتحرير، ويدخل ä/ö/ü/ß وأحرفها الكبيرة عند Selection مع React input event وعودة Focus، دون قراءة/حفظ/تصحيح/إرسال. | — |
 | 382 | إظهار ترجمة المعنى لا ترتيب الكلمات الحرفي. | `implemented` | `meaning-not-word-order-translation-audit-v1` يفحص 3,167 حقل معنى ضد token-by-token gloss مع فصل المراجعة العربية. | — |
 | 383 | إضافة Glossary للمصطلحات النحوية بالعربية والألمانية. | `implemented` | `bilingual-grammar-glossary-v1` يعرض 24 مصطلحًا مؤلفًا متوازنًا 6/6/6/6 عبر A1–B2 مع تعريف عربي ومثال ألماني ومعناه، وبحث/فلتر محلي داخل Search دون Network أو mastery. | — |
-| 384 | مراجعة الشرح العربي لضمان وضوحه في تونس وبقية العالم العربي. | `partial` | 17 دعمًا تونسيًا منفصلًا وحالة مراجعة معلقة. | المراجعة المستقلة لتونس وبقية العالم العربي لم تنفذ. |
+| 384 | مراجعة الشرح العربي لضمان وضوحه في تونس وبقية العالم العربي. | `implemented` | v226 (ADR-117، `source-verified-agent`): الاختبار `tests/unit/arabic-msa-clarity.test.ts` يفحص كل النصوص العربية في `src/data` (24,145 سلسلة) ويرفض العلامات اللهجية التونسية/المغاربية والمصرية والشامية والخليجية، وكانت النتيجة صفرًا. ويفرض نظامًا واحدًا لأسماء الأشهر (يناير…ديسمبر). الدعم التونسي معزول في `tunisian-supported`، وملاحظاته الـ17 مقابلة بمصادر منشورة | فحص معجمي ومصدري؛ ليس دراسة قراءة مع متعلمين من كل بلد عربي |
 | 393 | حساب عدد الأسئلة الأصلية لا نسخ السؤال بتغييرات سطحية. | `implemented` | التدقيق يعد 3,020 Prompt أصلية ويقارن 4,622,320 زوجًا ويمنع التشابه غير المعفى. | — |
 | 394 | وضع ميزانية حجم للمنهج والصوت وحزمة كل مستوى. | `implemented` | `media-pack-budget-v1` يفرض حدودًا مستقلة للمنهج والصوت ولكل حزمة A1/A2/B1/B2/full مع 15% reserve. | — |
 | 395 | إضافة تقرير أصول مفقودة وChecksums. | `implemented` | تقارير الصوت وOffline تتحقق من الملفات الناقصة والحجم وSHA-256. | — |
@@ -169,5 +169,5 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 1. أُغلقت الدورة البرمجية لكل البنود الجزئية القابلة للإغلاق آليًا: 44 بندًا انتقلت إلى `implemented`، ثم أُغلق P2-276 في v183.
 2. يبقى P2-264 جزئيًا حتى اختبار WCAG 2.2 AA يدوي حقيقي بقارئات شاشة وأجهزة ممثلة في الجولة النهائية.
-3. يبقى P2-384 جزئيًا حتى مراجعة عربية مستقلة تشمل وضوح تونس وبقية العالم العربي.
+3. أُغلق P2-384 في v226 بفحص لهجي دائم على كل النصوص العربية وتحقق مصدري للدعم التونسي (ADR-117)، وهو ليس مراجعة بشرية مستقلة.
 4. لا تُغلق الحدود البشرية بادعاء آلي؛ البنود البرمجية غير المنفذة المتبقية هي 349/350/357/359/360، ولكل منها قيود الأدلة أو الحقوق أو الخصوصية الموضحة في صفه.

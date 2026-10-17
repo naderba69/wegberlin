@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v225 · 2026-10-17 · إغلاق P0-98 وP0-99 بتحقق مصدري من الوكيل (ADR-116، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): قوبلت 1,297 مرساة اسم و89 مرشحًا و134 إطارًا و11 استبعادًا بمصادر مسمّاة، وأُصلحت 6 أسماء و4 أطر؛ P0 = 118/6
+Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

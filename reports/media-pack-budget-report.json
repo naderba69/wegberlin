@@ -27,51 +27,51 @@
   },
   "actual": {
     "curriculumFileCount": 92,
-    "curriculumSourceGzipBytes": 1198780,
+    "curriculumSourceGzipBytes": 1200067,
     "physicalAudioFileCount": 544,
     "mp3AssetCount": 272,
     "opusAssetCount": 272,
     "totalAudioBytes": 54036433,
     "packs": {
       "a1": {
-        "pageGzipBytes": 2813124,
+        "pageGzipBytes": 2813675,
         "mp3Bytes": 3551112,
         "opusBytes": 2574717,
         "selectedMaximumBytes": 3551112,
         "audioAssetCount": 40,
-        "totalBytes": 6364236
+        "totalBytes": 6364787
       },
       "a2": {
-        "pageGzipBytes": 2925436,
+        "pageGzipBytes": 2925983,
         "mp3Bytes": 4712399,
         "opusBytes": 3500212,
         "selectedMaximumBytes": 4712399,
         "audioAssetCount": 48,
-        "totalBytes": 7637835
+        "totalBytes": 7638382
       },
       "b1": {
-        "pageGzipBytes": 2952330,
+        "pageGzipBytes": 2952881,
         "mp3Bytes": 5838576,
         "opusBytes": 4373622,
         "selectedMaximumBytes": 5838576,
         "audioAssetCount": 48,
-        "totalBytes": 8790906
+        "totalBytes": 8791457
       },
       "b2": {
-        "pageGzipBytes": 4433859,
+        "pageGzipBytes": 4434192,
         "mp3Bytes": 16719777,
         "opusBytes": 12766018,
         "selectedMaximumBytes": 16719777,
         "audioAssetCount": 136,
-        "totalBytes": 21153636
+        "totalBytes": 21153969
       },
       "full": {
-        "pageGzipBytes": 6167917,
+        "pageGzipBytes": 6168051,
         "mp3Bytes": 30821864,
         "opusBytes": 23214569,
         "selectedMaximumBytes": 30821864,
         "audioAssetCount": 272,
-        "totalBytes": 36989781
+        "totalBytes": 36989915
       }
     }
   },

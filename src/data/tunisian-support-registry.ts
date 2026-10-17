@@ -1,11 +1,49 @@
 import type { ArabicSupportMode } from "@/types/learning";
 import type { TunisianSupportNote } from "@/types/tunisian-support";
 
-const note = (value: Omit<TunisianSupportNote, "id" | "visibleFor" | "reviewStatus" | "sourceVersion">): TunisianSupportNote => ({
+/**
+ * ADR-117: published sources used to verify the Tunisian side of every note (checked 2026-10-17).
+ * This is agent source verification (ADR-116 tier), not an independent human Tunisian/MSA review:
+ * no reviewer name or signature is recorded, and authored-review-pending notes stay distinguishable.
+ */
+export const TUNISIAN_SOURCES = {
+  "lingualism-tn-grammar": { title: "Lingualism — Tunisian Arabic Grammar (Tunis middle-class variety)", url: "https://resources.lingualism.com/maghrebi-arabic/tunisian-arabic-grammar/" },
+  "peace-corps-tn": { title: "Peace Corps — Spoken Tunisian Arabic", url: "https://www.livelingua.com/peace-corps/Arabic-Tunisian/Peace%20Corps%20Spoken%20Tunisian%20Arabic%20First%20Draft.pdf" },
+  "bacha-tn-verbs": { title: "Mohamed Bacha — Tunisian Arabic Dictionary of Verbs", url: "https://www.scribd.com/document/911683142/Tunisian-Arabic-Dictionary-of-Verbs-Mohamed-Bacha-liber3-1" },
+  "wisc-tn-passive": { title: "University of Wisconsin LCTL — The passive voice in Tunisian colloquial Arabic", url: "https://wisc.pb.unizin.org/lctlresources/chapter/the-passive-voice-in-tunisian-colloquial-arabic/" },
+  "acl-i13-1048": { title: "ACL Anthology I13-1048 — Tunisian dialect morphology (التفاحة تاكلت)", url: "https://aclanthology.org/I13-1048.pdf" },
+  "ithaca-tn-where": { title: "Ithaca Bound Languages — A study: Where in Tunisian Arabic", url: "https://www.ithacaboundlanguages.com/articles/a-study-where-in-tunisian-arabic/" },
+  "wiki-tn": { title: "Wikipedia — Tunisian Arabic (varieties, phonology, syntax; secondary)", url: "https://en.wikipedia.org/wiki/Tunisian_Arabic" },
+  "wiki-varieties": { title: "Wikipedia — Varieties of Arabic (Tunis sample: وقتلّي)", url: "https://en.wikipedia.org/wiki/Varieties_of_Arabic" },
+} as const;
+export type TunisianSourceId = keyof typeof TUNISIAN_SOURCES;
+export const TUNISIAN_SOURCE_VERIFIED_AT = "2026-10-17" as const;
+
+const sourcesByCategory: Record<TunisianSupportNote["category"], readonly [TunisianSourceId, ...TunisianSourceId[]]> = {
+  "question-order": ["lingualism-tn-grammar", "ithaca-tn-where", "wiki-tn"],
+  "origin-location": ["lingualism-tn-grammar", "ithaca-tn-where"],
+  "possessive-gender": ["lingualism-tn-grammar", "wiki-tn"],
+  "verb-second": ["lingualism-tn-grammar", "wiki-tn"],
+  "case-role": ["lingualism-tn-grammar", "wiki-tn"],
+  "perfect-bracket": ["lingualism-tn-grammar"],
+  "temporal-connector": ["wiki-varieties", "bacha-tn-verbs"],
+  "modal-negation": ["lingualism-tn-grammar", "wiki-tn"],
+  "subordinate-clause": ["bacha-tn-verbs", "lingualism-tn-grammar"],
+  "relative-pronoun": ["peace-corps-tn", "wiki-tn"],
+  "passive-focus": ["wisc-tn-passive", "acl-i13-1048"],
+  "reported-distance": ["bacha-tn-verbs", "peace-corps-tn"],
+  "prepositional-pronoun": ["lingualism-tn-grammar"],
+  "quantitative-precision": ["wiki-tn"],
+  "formal-preposition": ["wiki-tn"],
+};
+
+const note = (value: Omit<TunisianSupportNote, "id" | "visibleFor" | "reviewStatus" | "sourceVersion" | "sourceVerifiedAt" | "sourceRefs">): TunisianSupportNote => ({
   ...value,
   id: `${value.lessonId}-${value.category}-tn`,
   visibleFor: ["tunisian-supported"],
-  reviewStatus: "authored-review-pending",
+  reviewStatus: "source-verified-agent",
+  sourceVerifiedAt: TUNISIAN_SOURCE_VERIFIED_AT,
+  sourceRefs: sourcesByCategory[value.category],
   sourceVersion: "tunisian-support-v1",
 });
 
@@ -14,8 +52,8 @@ export const tunisianSupportNotes: TunisianSupportNote[] = [
     lessonId: "a1-01", level: "A1", theoryIds: ["a1-01-t2"], category: "question-order",
     titleDe: "Fragewort und Verb", titleAr: "السؤال وترتيب الفعل",
     msaBridgeAr: "في العربية قد يظهر السؤال بأداة استفهام ثم اسم أو ضمير، ولا تكون حركة الفعل في الجملة هي العلامة الأساسية دائمًا.",
-    tunisianNoteAr: "بالتونسي تنجم تسأل «شنوّة اسمك؟» من غير ما يكون تبديل مكان الفعل ظاهر كيف الألمانية. في الألمانية ركّز على الترتيب نفسه: أداة السؤال، ثم الفعل، ثم الضمير.",
-    differenceImpactAr: "إذا نقلت ترتيب السؤال التونسي حرفيًا قد تضع الضمير قبل الفعل في السؤال الألماني المستقل.",
+    tunisianNoteAr: "بالتونسي تسأل «شنوّة اسمك؟» وإلا «شِسمك؟»، وكلمة السؤال تنجم زادة تجي في الآخر: «وين احنا؟» و«احنا وين؟» الزوز يتقالوا. في الألمانية الترتيب ثابت: أداة السؤال، ثم الفعل، ثم الضمير.",
+    differenceImpactAr: "إذا نقلت ترتيب السؤال التونسي حرفيًا قد تؤخّر أداة السؤال («Du wohnst wo?» لا تصلح إلا سؤال استغراب أو تأكيد) أو تضع الضمير قبل الفعل؛ في السؤال الألماني العادي تأتي أداة السؤال أولًا ثم الفعل مباشرة.",
     germanAnchorDe: "Wie heißt du? — Wie + Verb + Person",
   }),
   note({
@@ -30,7 +68,7 @@ export const tunisianSupportNotes: TunisianSupportNote[] = [
     lessonId: "a1-04", level: "A1", theoryIds: ["a1-04-t1"], category: "possessive-gender",
     titleDe: "mein oder meine", titleAr: "الملكية وجنس الاسم",
     msaBridgeAr: "الملكية العربية ترتبط غالبًا بصاحب الشيء عبر ضمير أو لاحقة، أما شكل أداة الملكية الألمانية فيتأثر أيضًا بالاسم الذي يليها.",
-    tunisianNoteAr: "نقولو «كتابي» و«داري»، والملكية تبان في آخر الكلمة. في الألمانية شكل أداة الملكية يتبدّل زادة حسب جنس الاسم وعدده.",
+    tunisianNoteAr: "نقولو «كتابي» و«داري»، والملكية تبان في آخر الكلمة؛ ونقولو زادة «الكتاب متاعي» كي نحبّو نأكّدو على المالك. في الزوز الشكل مربوط بصاحب الشيء، أما في الألمانية شكل أداة الملكية يتبدّل زادة حسب جنس الاسم وعدده.",
     differenceImpactAr: "معرفة صاحب الشيء وحدها لا تكفي لاختيار الصيغة الألمانية؛ يجب معرفة جنس الاسم وعدده ودوره.",
     germanAnchorDe: "mein Vater — meine Mutter — mein Kind — meine Eltern",
   }),
@@ -86,7 +124,7 @@ export const tunisianSupportNotes: TunisianSupportNote[] = [
     lessonId: "a2-08", level: "A2", theoryIds: ["a2-08-t2"], category: "subordinate-clause",
     titleDe: "dass-Satz und Verbendstellung", titleAr: "الجملة التابعة والفعل في النهاية",
     msaBridgeAr: "الرابط العربي الذي يقدم مضمون القول لا يفرض ترتيبًا مطابقًا لترتيب الجملة التابعة الألمانية.",
-    tunisianNoteAr: "تنجم تقول «نظن اللي الخدمة تناسب» من غير ما يمشي الفعل للآخر. بعد الرابط الألماني، الفعل المصرف يمشي إلى نهاية الجملة التابعة.",
+    tunisianNoteAr: "تنجم تقول «نظن اللي الخدمة هاذي تصلحلي» من غير ما يمشي الفعل للآخر. بعد الرابط الألماني، الفعل المصرف يمشي إلى نهاية الجملة التابعة.",
     differenceImpactAr: "النقل الحرفي يبقي الفعل الألماني قرب بداية الجملة التابعة بدل موضعه الأخير.",
     germanAnchorDe: "Ich glaube, dass die Stelle passt.",
   }),
@@ -102,7 +140,7 @@ export const tunisianSupportNotes: TunisianSupportNote[] = [
     lessonId: "b1-04", level: "B1", theoryIds: ["b1-04-t1"], category: "passive-focus",
     titleDe: "Vorgangspassiv", titleAr: "إبراز العملية لا المنفذ",
     msaBridgeAr: "يمكن للعربية أن تبني المجهول صرفيًا أو تحذف المنفذ، ولا يلزم أن يظهر فعل مساعد مطابق لفعل المبني للمجهول الألماني.",
-    tunisianNoteAr: "بالتونسي تنجم تستعمل صيغة مجهول أو تخلي شكون عمل الفعل غير مذكور. ما تقيسهاش كلمة بكلمة على البناء الألماني.",
+    tunisianNoteAr: "بالتونسي المجهول يتبنى عادة بـ«تـ» في أول الفعل: «الخدمة تعملت»، «التفاحة تاكلت»، وشكون عمل الفعل يبقى موش مذكور. في الألمانية المجهول يحتاج فعلًا مساعدًا (werden) وصيغة الفعل الأساسي في الآخر؛ ما تقيسهاش كلمة بكلمة.",
     differenceImpactAr: "الترجمة الحرفية قد تحذف الفعل المساعد الألماني أو تخلط معناه بمعنى المستقبل.",
     germanAnchorDe: "Die Texte werden geprüft.",
   }),

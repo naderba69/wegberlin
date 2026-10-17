@@ -1,5 +1,5 @@
 import { academicLessonList } from "@/data/academic-lessons";
-import { tunisianSupportNotes } from "@/data/tunisian-support-registry";
+import { TUNISIAN_SOURCES, tunisianSupportNotes } from "@/data/tunisian-support-registry";
 import type { CEFRLevel } from "@/types/learning";
 
 export const TUNISIAN_SUPPORT_AUDIT_VERSION = "tunisian-support-audit-v1" as const;
@@ -35,6 +35,12 @@ export function buildTunisianSupportAudit() {
     const hasReviewEvidence = Boolean(item.reviewedBy?.trim() && item.reviewedAt?.trim());
     if (item.reviewStatus === "independently-reviewed" && !hasReviewEvidence) issues.push(`${item.id}: reviewed status lacks reviewer/date evidence`);
     if (item.reviewStatus === "authored-review-pending" && hasReviewEvidence) issues.push(`${item.id}: pending status carries contradictory review evidence`);
+    if (item.reviewStatus === "source-verified-agent") {
+      if (hasReviewEvidence || item.reviewedBy || item.reviewedAt) issues.push(`${item.id}: agent source verification must not carry human reviewer/signature evidence`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(item.sourceVerifiedAt ?? "")) issues.push(`${item.id}: source-verified note lacks a dated check`);
+      if (!item.sourceRefs?.length) issues.push(`${item.id}: source-verified note lacks published source references`);
+      for (const ref of item.sourceRefs ?? []) if (!(ref in TUNISIAN_SOURCES)) issues.push(`${item.id}: unknown Tunisian source ${ref}`);
+    } else if (item.sourceVerifiedAt || item.sourceRefs) issues.push(`${item.id}: source evidence requires source-verified-agent status`);
   }
 
   const levels: CEFRLevel[] = ["A1", "A2", "B1", "B2"];
@@ -42,6 +48,8 @@ export function buildTunisianSupportAudit() {
   for (const level of levels) if (byLevel[level] < 2) issues.push(`${level}: needs at least two meaningful Tunisian contrast notes`);
   const pendingReview = tunisianSupportNotes.filter((item) => item.reviewStatus === "authored-review-pending").length;
   const independentlyReviewed = tunisianSupportNotes.filter((item) => item.reviewStatus === "independently-reviewed").length;
+  const sourceVerified = tunisianSupportNotes.filter((item) => item.reviewStatus === "source-verified-agent").length;
+  const sourceIds = [...new Set(tunisianSupportNotes.flatMap((item) => item.sourceRefs ?? []))].sort();
 
   return {
     ok: issues.length === 0,
@@ -51,11 +59,14 @@ export function buildTunisianSupportAudit() {
     lessonCount: lessons.size,
     theoryReferenceCount: ownedTheoryIds.size,
     pendingReview,
+    sourceVerified,
     independentlyReviewed,
+    sourceCount: sourceIds.length,
+    sources: sourceIds.map((sourceId) => ({ id: sourceId, ...TUNISIAN_SOURCES[sourceId as keyof typeof TUNISIAN_SOURCES] })),
     byLevel,
     categoryCount: new Set(tunisianSupportNotes.map((item) => item.category)).size,
     issues,
     notes: tunisianSupportNotes,
-    boundary: "The audit proves conditional delivery, authored MSA/Tunisian separation, review-state honesty, and valid lesson/theory references. It does not count authored text as independent Tunisian linguistic review.",
+    boundary: "The audit proves conditional delivery, authored MSA/Tunisian separation, review-state honesty, valid lesson/theory references, and dated published-source evidence for every source-verified note (ADR-117). Agent source verification is not counted as an independent human Tunisian/MSA review.",
   };
 }

@@ -56,3 +56,5 @@ Unit tests cover conditional selection, rendering, language boundaries, valid re
 The option now changes real lesson content and makes high-risk MSA/Tunisian differences explicit without replacing the German target. All 17 notes are currently `authored-review-pending`: automated checks prove structure, conditional delivery, and honest labels, not Tunisian linguistic correctness or representativeness.
 
 P0-373 and P0-376 therefore remain partial until an independent Tunisian/MSA reviewer checks every note, resolves regional wording concerns, and records reviewer/date evidence in the registry. The product owner asked to group that real linguistic review with the final whole-project review.
+
+**Superseded in part by ADR-117 (v226, 2026-10-17).** Under the owner-approved ADR-116 evidence tier, all 17 notes became `source-verified-agent`: each one now carries a dated check and references to registered published Tunisian grammars. Four notes were refined, and diversity inside Tunisia is documented. P0-373 and P0-376 are closed by that source evidence. This is not an independent human Tunisian/MSA review, and no reviewer name is recorded.

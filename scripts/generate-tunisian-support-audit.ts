@@ -8,13 +8,14 @@ const checkMode = process.argv.includes("--check") || !writeMode;
 const audit = buildTunisianSupportAudit();
 if (!audit.ok) throw new Error(`Tunisian support audit failed:\n${audit.issues.join("\n")}`);
 
-const withoutHash = { format: "dwnb-tunisian-support-audit", generatedAt: "2026-09-05", ...audit };
+const withoutHash = { format: "dwnb-tunisian-support-audit", generatedAt: "2026-10-17", ...audit };
 const contentSha256 = createHash("sha256").update(JSON.stringify(withoutHash)).digest("hex");
 const machine = { ...withoutHash, contentSha256 };
-const rows = audit.notes.map((item) => `| \`${item.lessonId}\` | ${item.titleDe} | \`${item.category}\` | ${item.theoryIds.map((id) => `\`${id}\``).join(", ")} | \`${item.reviewStatus}\` |`).join("\n");
+const rows = audit.notes.map((item) => `| \`${item.lessonId}\` | ${item.titleDe} | \`${item.category}\` | ${item.theoryIds.map((id) => `\`${id}\``).join(", ")} | \`${item.reviewStatus}\` | ${(item.sourceRefs ?? []).map((ref) => `\`${ref}\``).join(", ") || "—"} |`).join("\n");
+const sourceRows = audit.sources.map((source) => `| \`${source.id}\` | ${source.title} | ${source.url} |`).join("\n");
 const report = `# Optional Tunisian Support Coverage Report
 
-Generated: 2026-09-05  
+Generated: 2026-10-17  
 Version: \`${audit.version}\`  
 Policy: \`${audit.policyVersion}\`  
 Content SHA-256: \`${contentSha256}\`
@@ -34,15 +35,26 @@ Content SHA-256: \`${contentSha256}\`
 | Review state | Count |
 |---|---:|
 | Authored; independent review pending | ${audit.pendingReview} |
+| Agent source-verified against dated published sources (ADR-117; not a human review) | ${audit.sourceVerified} |
 | Independently reviewed with named evidence | ${audit.independentlyReviewed} |
 
 The ${audit.categoryCount} covered contrast categories include question/verb order, origin versus location, possessive gender, V2, case roles, the Perfekt bracket, temporal connectors, modal negation, subordinate clauses, relative pronouns, passive focus, reported distance, prepositional pronouns, percentage precision, and formal governed prepositions.
 
 ## Per-note registry
 
-| Lesson | German focus | Category | Theory references | Review status |
-|---|---|---|---|---|
+| Lesson | German focus | Category | Theory references | Review status | Published sources |
+|---|---|---|---|---|---|
 ${rows}
+
+## Published sources (checked ${audit.notes[0]?.sourceVerifiedAt ?? "—"})
+
+| ID | Source | URL |
+|---|---|---|
+${sourceRows}
+
+## Diversity inside Tunisia
+
+Tunisian Arabic has six mutually intelligible regional varieties: Tunis (the usual reference variety), the Sahel, Sfax, the southwest, the southeast, and the northwest; sedentary speech (Tunis, Sahel, Sfax) keeps [q] in words such as «قال» where Bedouin-origin varieties use [g] (wiki-tn). The notes therefore use pan-Tunisian / Tunis-koiné grammar that the sources attest (n- first person, mā…š negation, mtē3 possession, t- passive, illi), avoid region-specific pronunciation, and present variable orders as options («وين احنا؟» / «احنا وين؟») rather than as one regional norm. The learner-facing panel names the six regions and keeps MSA as the reference.
 
 ## Acceptance rules
 
@@ -51,13 +63,14 @@ ${rows}
 - MSA and Tunisian fields must be nonempty Arabic-script text and cannot duplicate each other;
 - every CEFR level has at least two meaningful contrast notes;
 - an independently reviewed status is rejected without reviewer and date evidence;
-- a pending note cannot carry contradictory reviewer evidence.
+- a pending note cannot carry contradictory reviewer evidence;
+- a source-verified note needs a dated check and at least one registered published source, and must not carry reviewer/signature evidence.
 
 ## Boundary
 
 ${audit.boundary}
 
-All ${audit.pendingReview} current notes remain **authored-review-pending**. Therefore P0-373 and P0-376 remain partial until the final independent Tunisian/MSA review is recorded; this report must not be used to claim that review already happened.
+All ${audit.sourceVerified} current notes are **source-verified-agent** (ADR-117 under the ADR-116 tier): P0-373 and P0-376 are closed by dated published-source evidence. This report must not be used to claim that an independent human Tunisian/MSA review happened; ${audit.independentlyReviewed} notes carry named reviewer evidence.
 `;
 
 const outputs = new Map([
@@ -74,5 +87,5 @@ if (checkMode) {
   }
   if (stale.length) throw new Error(`Tunisian support artifacts are not current:\n${stale.join("\n")}\nRun: npm run tunisian:audit:write`);
 }
-console.log(`Tunisian support governance verified: ${audit.noteCount} notes / ${audit.lessonCount} lessons / ${audit.theoryReferenceCount} theory refs / ${audit.pendingReview} pending independent review / 0 structural gaps`);
+console.log(`Tunisian support governance verified: ${audit.noteCount} notes / ${audit.lessonCount} lessons / ${audit.theoryReferenceCount} theory refs / ${audit.sourceVerified} source-verified (agent) / ${audit.pendingReview} pending / 0 structural gaps`);
 console.log(`- content SHA-256: ${contentSha256}`);

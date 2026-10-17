@@ -419,9 +419,11 @@ export const tunisianSupportNoteSchema = z.object({
   differenceImpactAr: text,
   germanAnchorDe: text,
   visibleFor: z.tuple([z.literal("tunisian-supported")]),
-  reviewStatus: z.enum(["authored-review-pending", "independently-reviewed"]),
+  reviewStatus: z.enum(["authored-review-pending", "source-verified-agent", "independently-reviewed"]),
   reviewedBy: text.optional(),
   reviewedAt: text.optional(),
+  sourceVerifiedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  sourceRefs: z.array(id).min(1).optional(),
   sourceVersion: z.literal("tunisian-support-v1"),
 }).strict();
 

@@ -40,3 +40,5 @@ No row diagnoses an Arabic speaker, recognizes learner phonemes, or creates a pr
 - `reports/content-governance-audit.json`
 - `docs/generated/CONTENT_GOVERNANCE_REPORT.md`
 - `tests/unit/content-governance-curriculum-version.test.ts`
+
+**Superseded in part by ADR-118 (v227, 2026-10-17).** The twelve consular/legal claims are now `source-verified-agent`. Each one carries dated references to 11 registered official or public sources, and its Arabic instruction names the official channel. All twelve remain `officialClaimStatus: not-claimed`, so P1-377 is closed. This is not a lawyer's or consular specialist's review. P1-380 is unchanged.

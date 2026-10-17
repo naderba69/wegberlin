@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
+Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

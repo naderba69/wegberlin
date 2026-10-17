@@ -3,7 +3,7 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "7a0425102ccf28e084f45c492a761c3d6035637f49cfec4ee78c46c8b896cedb",
+  "contentSha256": "63248bf8d17159d7484d66d74e0912553393f82ae0f9528a7c921ea18f5096e9",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
@@ -17,6 +17,7 @@
     "sources": 19,
     "ownedRiskTypes": 12,
     "highRiskContextClaims": 12,
+    "highRiskContextSources": 11,
     "pronunciationInventoryItems": 18,
     "pronunciationInteractivePairs": 11,
     "pronunciationDiagramCoverage": 18
@@ -29720,13 +29721,16 @@
       "lessonId": "a1-09",
       "trainingCanDoDe": "Ich möchte einen Termin vereinbaren.",
       "supportAr": "تدريب لغوي على طلب موعد دون ادعاء أن هذه هي طريقة الحجز لدى بعثة بعينها.",
-      "verificationInstructionAr": "تحقق من موقع البعثة المختصة ببلدك وغرضك قبل الحجز.",
+      "verificationInstructionAr": "ابحث عن البعثة الألمانية المختصة بمكان سكنك عبر أداة Konsulatfinder الرسمية، ثم اتبع طريقة الحجز المنشورة على موقعها أو في بوابة الخدمات القنصلية.",
+      "sourceRefs": [
+        "aa-consular-portal"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29737,13 +29741,16 @@
       "lessonId": "a1-24",
       "trainingCanDoDe": "Welche Unterlagen soll ich mitbringen?",
       "supportAr": "سؤال عام عن الوثائق؛ لا تسرد المنصة قائمة إلزامية.",
-      "verificationInstructionAr": "اطلب القائمة الحالية من الجهة القنصلية الرسمية المختصة.",
+      "verificationInstructionAr": "القائمة الملزمة تصدرها البعثة المختصة وحدها؛ وفي بوابة الخدمات القنصلية يُفحص الطلب مسبقًا وتصلك قائمة بالوثائق الأصلية المطلوبة للموعد.",
+      "sourceRefs": [
+        "aa-consular-portal"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29754,13 +29761,16 @@
       "lessonId": "a2-09",
       "trainingCanDoDe": "Könnten Sie mir bitte den aktuellen Stand mitteilen?",
       "supportAr": "متابعة مهذبة عامة لا تعد بمدة معالجة أو نتيجة.",
-      "verificationInstructionAr": "استخدم قناة المتابعة الرسمية ورقم ملفك إن طلبته الجهة.",
+      "verificationInstructionAr": "تابع عبر القناة الرسمية فقط: حالة الطلب المقدَّم في بوابة الخدمات القنصلية تظهر فيها، واذكر رقم ملفك إن طلبته البعثة.",
+      "sourceRefs": [
+        "aa-consular-portal"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29771,13 +29781,18 @@
       "lessonId": "a2-12",
       "trainingCanDoDe": "Meine Verbindung ist ausgefallen. Welche Möglichkeit gibt es jetzt?",
       "supportAr": "لغة لشرح تعطل الرحلة وطلب الخيارات، دون تقرير حق تعويض.",
-      "verificationInstructionAr": "تحقق من شروط الناقل والسلطة الرسمية قبل المطالبة بحق أو مبلغ.",
+      "verificationInstructionAr": "حقوق ركاب القطار والطائرة في الاتحاد الأوروبي منشورة في بوابة Your Europe الرسمية: اشتكِ أولًا للشركة (للقطار خلال ثلاثة أشهر)، ثم للسلطة الوطنية أو لجهة التسوية المجانية Schlichtungsstelle Reise & Verkehr. التمرين لا يقرر أن لك تعويضًا.",
+      "sourceRefs": [
+        "eu-rail-passenger-rights",
+        "eu-air-passenger-rights",
+        "schlichtung-reise-verkehr"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29788,13 +29803,16 @@
       "lessonId": "a2-11",
       "trainingCanDoDe": "Ich möchte die Buchungsbedingungen noch einmal prüfen.",
       "supportAr": "طلب توضيح شروط الحجز دون تعميم سياسة الإلغاء.",
-      "verificationInstructionAr": "راجع تأكيد الحجز والشروط الحالية لمزود الإقامة.",
+      "verificationInstructionAr": "راجع تأكيد الحجز وشروط المزوّد الحالية؛ وإن كنت مقيمًا في ألمانيا والمزوّد في بلد أوروبي آخر فالمركز الأوروبي للمستهلك (ECC Germany) يقدّم استشارة مجانية.",
+      "sourceRefs": [
+        "ecc-germany"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29805,13 +29823,17 @@
       "lessonId": "b1-14",
       "trainingCanDoDe": "Welche Voraussetzungen gelten für diesen Studiengang?",
       "supportAr": "استفسار عن شروط برنامج محدد؛ لا تقرر المنصة الأهلية.",
-      "verificationInstructionAr": "تحقق من صفحة الجامعة أو مكتب القبول للبرنامج والسنة المعنيين.",
+      "verificationInstructionAr": "الشروط تحددها الجامعة لكل برنامج وسنة: ابدأ بصفحة المتطلبات لدى DAAD، وتحقق هل تفحص الجامعة الشهادات عبر uni-assist، ثم اعتمد صفحة البرنامج نفسها.",
+      "sourceRefs": [
+        "daad-requirements",
+        "uni-assist"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29822,13 +29844,16 @@
       "lessonId": "b1-13",
       "trainingCanDoDe": "An wen kann ich mich wegen der Einschreibung wenden?",
       "supportAr": "لغة لتحديد جهة الاتصال دون اختلاق موعد أو وثيقة.",
-      "verificationInstructionAr": "استخدم جهة الاتصال الرسمية للمؤسسة التعليمية.",
+      "verificationInstructionAr": "جهة التسجيل هي مكتب شؤون الطلاب أو القبول في الجامعة نفسها (Studierendensekretariat)؛ استعمل بيانات الاتصال المنشورة على موقعها الرسمي.",
+      "sourceRefs": [
+        "daad-requirements"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29839,13 +29864,16 @@
       "lessonId": "b1-04",
       "trainingCanDoDe": "Ich möchte diese Vertragsklausel schriftlich klären.",
       "supportAr": "طلب توضيح مكتوب لبند عقد؛ ليس تفسيرًا قانونيًا له.",
-      "verificationInstructionAr": "استعن بجهة مختصة قبل قبول تفسير قانوني أو توقيع ملزم.",
+      "verificationInstructionAr": "لأسئلة الأجر وساعات العمل والإجازة والفصل يقدّم مكتب Faire Integration استشارة مجانية دون كشف الهوية وبلغات عدة لمواطني الدول من خارج الاتحاد الأوروبي؛ وقبل أي توقيع ملزم استعن بجهة مختصة.",
+      "sourceRefs": [
+        "faire-integration"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29856,13 +29884,16 @@
       "lessonId": "b1-05",
       "trainingCanDoDe": "Wo finde ich eine unabhängige Beratungsstelle?",
       "supportAr": "طلب إحالة مستقلة دون تسمية جهة غير متحققة أو ضمان خدمتها.",
-      "verificationInstructionAr": "تحقق من جهة رسمية أو مختصة حسب مكان العمل ووضعك.",
+      "verificationInstructionAr": "مثال على جهة مستقلة بتمويل رسمي: Faire Integration، بتمويل وزارة العمل الاتحادية ووفق المادة 45b من قانون الإقامة، ولها مراكز استشارة في كل الولايات.",
+      "sourceRefs": [
+        "faire-integration"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29873,13 +29904,16 @@
       "lessonId": "a1-24",
       "trainingCanDoDe": "Welche Behörde ist für mein Anliegen zuständig?",
       "supportAr": "سؤال عام لتحديد الجهة المختصة؛ لا تفترض مدينة أو نوع إقامة.",
-      "verificationInstructionAr": "تحقق من بوابة الإدارة الرسمية لمكان سكنك ونوع الطلب.",
+      "verificationInstructionAr": "مكتب الأجانب المختص يتحدد بمكان سكنك لا بمكان وجودك الحالي؛ ابحث عنه في أداة BAMF-NAvI الرسمية لمكتب الهجرة الاتحادي.",
+      "sourceRefs": [
+        "bamf-navi-authorities"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29890,13 +29924,16 @@
       "lessonId": "b2-04",
       "trainingCanDoDe": "Bitte bestätigen Sie mir die Frist schriftlich.",
       "supportAr": "لغة لطلب تأكيد مهلة؛ لا تنشئ المنصة تاريخًا قانونيًا.",
-      "verificationInstructionAr": "اعتمد فقط المهلة المكتوبة من الجهة المختصة أو مستشار مؤهل.",
+      "verificationInstructionAr": "المهلة الملزمة هي المكتوبة في القرار نفسه في فقرة Rechtsbehelfsbelehrung؛ فحسب المادة 58 من نظام المحاكم الإدارية (VwGO) لا تبدأ مهلة الاعتراض إلا بعد هذا البيان المكتوب. لا تعتمد تاريخًا من التمرين.",
+      "sourceRefs": [
+        "vwgo-58"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     },
@@ -29907,13 +29944,16 @@
       "lessonId": "b2-10",
       "trainingCanDoDe": "Dazu brauche ich eine fachlich qualifizierte Beratung.",
       "supportAr": "لغة للاعتراف بحدود المعرفة وطلب مساعدة مختصة.",
-      "verificationInstructionAr": "لا تتخذ قرارًا قانونيًا اعتمادًا على تمرين اللغة أو AI عام.",
+      "verificationInstructionAr": "لذوي الدخل المحدود في ألمانيا توجد Beratungshilfe: استشارة قانونية خارج المحكمة تُمنح بطلب وفق المادة 1 من قانونها. ولا تتخذ قرارًا قانونيًا اعتمادًا على تمرين لغة أو AI عام.",
+      "sourceRefs": [
+        "berhg-1"
+      ],
       "policyVersion": "general-consular-legal-claims-v1",
       "officialClaimStatus": "not-claimed",
-      "sourceRefs": [],
+      "sourceVerifiedAt": "2026-10-17",
       "ownerId": "practical-context-owner",
       "reviewerId": "legal-consular-specialist-reviewer-role",
-      "reviewStatus": "specialist-review-pending",
+      "reviewStatus": "source-verified-agent",
       "authoredAt": "2026-09-09",
       "evidenceBoundary": "general-language-practice-not-legal-consular-or-eligibility-advice"
     }
@@ -30365,7 +30405,7 @@
   ],
   "reviewBoundaries": {
     "content": "automated-validated-independent-review-pending",
-    "claims": "specialist-review-pending",
+    "claims": "source-verified-agent-not-specialist-review",
     "pronunciation": "authored-review-pending"
   },
   "issues": []

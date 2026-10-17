@@ -3,7 +3,7 @@
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
 Curriculum: `dwnb-a1-b2-2026.10-v2` (app `0.1.0`)
-Content SHA-256: `7a0425102ccf28e084f45c492a761c3d6035637f49cfec4ee78c46c8b896cedb`
+Content SHA-256: `63248bf8d17159d7484d66d74e0912553393f82ae0f9528a7c921ea18f5096e9`
 
 ## Result
 
@@ -44,6 +44,6 @@ PASS
 ## Claim boundaries
 
 - Publication means the validated route is available; it does not mean independent German, Arabic, CEFR, or rights approval.
-- All 12 consular/legal rows are language practice with `officialClaimStatus=not-claimed` and specialist review pending.
+- All 12 consular/legal rows are language practice with `officialClaimStatus=not-claimed`; each row is source-verified by the agent (ADR-118) against 11 official/public sources checked 2026-10-17 (Auswärtiges Amt, EU Your Europe, BAMF, gesetze-im-internet.de, DAAD, Faire Integration and others). This is not a lawyer's or consular specialist's review.
 - All 18 pronunciation rows set `notUniversal=true`; current diagrams and 11 synthetic pairs are teaching support, not a learner pronunciation score. Independent phonetics review remains pending.
 - Named IDs assign accountable product roles; they do not fabricate that a pending human review occurred.

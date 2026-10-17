@@ -1,10 +1,10 @@
 # P1 Implementation Audit
 
-Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
+Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 
-Last audited: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تتحرك مع المحتوى)
+Last audited: 2026-10-17 (v227: P1-377 أُغلق بتحقق مصدري رسمي، ADR-118؛ الحالة 132 implemented / 3 partial). التدقيق السابق: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تتحرك مع المحتوى)
 
 مزامنة الأثر في v182 (2026-10-05): بقيت حالات P1 **131 implemented / 4 partial**؛ P2-352 إضافة رسم غلاف طاقة فقط ولا تحل P1-138 أو P1-380 (لا تدريب فونيمي أو معايرة أو مراجعة مستقلة). `npm test` عند v182 (تاريخي) **1,352/1,352** في **199/199**؛ تحقق v183 الحالي موثق في README/PROJECT_STATUS ولا يغلق المراجعات البشرية. تُترك مراجعات الوصول والأجهزة البشرية معلقة.
 
@@ -14,8 +14,8 @@ Last audited: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تت�
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 131 |
-| partial | 4 |
+| implemented | 132 |
+| partial | 3 |
 | not-implemented | 0 |
 | blocked | 0 |
 | **المجموع** | **135** |
@@ -148,7 +148,7 @@ Last audited: 2026-09-20 (قياسات `v138` مثبتة أدناه حيث تت�
 | 366 | إنشاء نموذج بلاغ عن خطأ لغوي يرفق معرف المحتوى. | `implemented` | `local-content-error-report-v1` يرفق kind/ID/route/title/app version/category ووصفًا محدودًا من سجل 394 مرجعًا، Preview ثم حفظ `local-draft-not-submitted` ونسخ/JSON يدوي، بلا Network أو Answer key/progress/key؛ Manager وحذف وold-v3/Zod/DWNB/merge. | — |
 | 367 | إدارة نسخ المنهج منفصلة عن نسخة التطبيق. | `implemented` | `independent-curriculum-version-v1` يثبت `curriculumVersion=dwnb-a1-b2-2026.09-v1` منفصلًا عن `appVersion=0.1.0` في LearningState وZod وDWNB manifest/preview وMerge؛ old schema-v3 بلا حقل يأخذ Default وschema v1/v2 يهاجر قبل التحقق. | — |
 | 368 | تحديد مالك لكل خطر ومصدر ومراجعة محتوى. | `implemented` | `content-accountability-lifecycle-v1` يولد 3,020/3,020 سجل محتوى عبر 16 عائلة مع ownerId/reviewerId منفصلين، ويغطي 12/12 نوع Risk يظهر للمتعلم. سجل المصادر نفسه صار يفرض ownerId/reviewerId مختلفين على 18/18 مصدرًا؛ `governance:audit` يفشل عند أي فجوة. أسماء الأدوار لا تدعي أن المراجعة البشرية المعلقة حدثت. | — |
-| 377 | إضافة سياقات قنصلية وسفر ودراسة وعمل بصورة قانونية عامة. | `partial` | `general-consular-legal-claims-v1` يضيف 12 Claim أصلية موزعة على القنصليات والسفر والدراسة والعمل والإقامة والإحالة القانونية، مرتبطة بدروس A1–B2. كلها `officialClaimStatus:not-claimed` وبدون مصدر حكومي مختلق، مع تعليمات تحقق وowner/reviewer وحد not-legal-advice؛ التدقيق الآلي كامل. | تبقى المراجعة القنصلية/القانونية المختصة الفعلية `specialist-review-pending` للجولة النهائية. |
+| 377 | إضافة سياقات قنصلية وسفر ودراسة وعمل بصورة قانونية عامة. | `implemented` | `general-consular-legal-claims-v1` يضم 12 جملة تدريب في ستة سياقات مرتبطة بدروس A1–B2، وكلها تبقى `officialClaimStatus:not-claimed`. في v226 (ADR-118، `source-verified-agent`) صار لكل جملة `sourceRefs` من 11 مصدرًا رسميًا أو عامًّا فُحصت في 2026-10-17: بوابة الخدمات القنصلية، وYour Europe، وBAMF-NAvI، وFaire Integration (§ 45b AufenthG)، و§ 58 VwGO، و§ 1 BerHG، وDAAD، وuni-assist، وECC، وSchlichtungsstelle Reise & Verkehr. التعليمات العربية صارت تسمّي القناة الرسمية، والقائمة ظاهرة للمتعلم في الإعدادات | ليست مراجعة محامٍ أو جهة قنصلية؛ الروابط والإجراءات تتغير، والدليل في `reports/context-claims-source-verification/` |
 | 378 | تدريب كتابة الاسم والعنوان والتاريخ والأرقام بالطريقة الألمانية. | `implemented` | الدروس والتمارين تغطي الاسم والعنوان والتاريخ والأرقام والصيغ الألمانية. | — |
 | 379 | إضافة أخطاء شائعة ناتجة عن غياب Artikel والحالات في العربية. | `implemented` | Meaning-first case و1,044 اسمًا بأداة/جمع/حالات وأخطاء شائعة تعالج أثر غيابها عربيًا. | — |
 | 380 | تدريب نطق الأصوات التي يشيع خلطها لدى متحدثي العربية. | `partial` | `arabic-learner-pronunciation-inventory-v1` يجرد 18 Contrast و11/18 Pair TTS. أضاف `local-german-word-matching-v1` دورة Whisper q8 محلية فعلية لمطابقة كلمات التسجيل القصير، و`local-microphone-signal-check-v1` لفصل الصمت/الانخفاض/القص قبل ASR، ودورة علاج كاملة للكلمة غير المؤكدة، دون Score أو ادعاء فونيمي. | يلزم إكمال Pair التفاعلية السبعة، ومعايرة/محاذاة فونيمية على تسجيلات عربية حقيقية، ومراجعة فونيتية مستقلة؛ الحالة `authored-review-pending`. |

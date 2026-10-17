@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v226";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v227";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -1974,7 +1974,12 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
   await expect(governance).toContainText("3277");
-  await governance.locator(":scope > details > summary").click();
+  const officialSources = governance.locator("details.context-official-sources");
+  await officialSources.locator("summary").click();
+  await expect(officialSources.locator("li[data-claim-id]")).toHaveCount(12);
+  await expect(officialSources.locator('li[data-claim-id="claim-consular-appointment"] a')).toHaveAttribute("href", "https://digital.diplo.de/visa");
+  await expect(officialSources.locator('li[data-claim-id="claim-residence-deadline"]')).toContainText("Rechtsbehelfsbelehrung");
+  await governance.locator(":scope > details:not(.context-official-sources) > summary").click();
   await expect(governance.locator(".content-family-lifecycle article")).toHaveCount(16);
   await expect(governance.locator(".content-family-lifecycle article").first()).toContainText("Draft");
   await expect(governance.locator(".content-family-lifecycle article").first()).toContainText("Validated");

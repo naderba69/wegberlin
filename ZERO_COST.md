@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
+Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

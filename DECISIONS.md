@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
+Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -966,3 +966,35 @@ The owner reviewed the evidence above and chose to use the official 2019 mock va
 **العواقب.** صار P0 = 120 منجزًا و4 جزئية (124، 135، 255، 301)، وP2 = 134 منجزًا و6 جزئية وبندان غير منجزين.
 
 الدليل: `reports/tunisian-source-verification/TUNISIAN_SOURCE_VERIFICATION_2026-10-17.md` و`tunisian-notes-2026-10-17.csv`.
+
+## ADR-118 — التحقق المصدري الرسمي للسياقات القنصلية والقانونية العامة (v226، 2026-10-17)
+
+**الحالة.** مقبولة ومنفَّذة على P1-377، تحت طبقة `source-verified-agent` في ADR-116.
+
+**السياق.** يضم `general-consular-legal-claims-v1` اثنتي عشرة جملة تدريب. تغطي ستة سياقات: القنصلية والسفر والدراسة والعمل والإقامة والإحالة القانونية. كانت كلها `specialist-review-pending` بلا أي مصدر (`sourceRefs:[]`)، وتعليماتها عامة مثل «تحقق من الجهة الرسمية» دون تسمية القناة.
+
+**القرار.**
+1. يُسجَّل `CONTEXT_OFFICIAL_SOURCES` ويضم 11 مصدرًا رسميًا أو عامًّا فُحصت في 2026-10-17:
+   - بوابة الخدمات القنصلية للخارجية الألمانية، مع أداة Konsulatfinder.
+   - صفحتا Your Europe لحقوق ركاب القطار والطائرة.
+   - Schlichtungsstelle Reise & Verkehr، وهو الاسم الجديد لـ«söp».
+   - المركز الأوروبي للمستهلك في ألمانيا.
+   - DAAD وuni-assist.
+   - Faire Integration: يعمل منذ 2026-01-01 وفق § 45b AufenthG بتمويل وزارة العمل الاتحادية BMAS.
+   - BAMF-NAvI: الاختصاص بحسب مكان السكن لا مكان الوجود الحالي.
+   - § 58 VwGO: لا تبدأ مهلة الاعتراض إلا بعد بيان كتابي، وإلا فالمهلة سنة.
+   - § 1 BerHG: Beratungshilfe لذوي الدخل المحدود.
+2. لكل جملة الآن `sourceRefs` و`sourceVerifiedAt` والحالة `source-verified-agent`. وأُعيدت كتابة تعليمات التحقق العربية لتسمّي القناة الرسمية بدل الإحالة العامة.
+3. تبقى `officialClaimStatus = not-claimed`: لا تقرر المنصة إجراءً ولا أهلية ولا مهلة ولا حق تعويض، وحدود `general-language-practice-not-legal-consular-or-eligibility-advice` قائمة. المدقق يرفض أي جملة بلا مصدر مسجل أو بلا تاريخ.
+4. تعرض بطاقة «دورة المحتوى» في الإعدادات قائمة قابلة للطي: الجملة الألمانية، والتعليمة، وروابط المصادر، مع تنبيه بأن الإجراءات تتغير وأن المرجع هو الصفحة الرسمية الحالية.
+
+**الحدود.** ليست مراجعة محامٍ أو جهة قنصلية مختصة. لا اسم مراجع ولا توقيع، و`reviewerId` يبقى دورًا لا شخصًا. والروابط قد تتغير: رابطان فُحصا وأعادا 404 (صفحة BAMF القديمة لأداة البحث عن مكتب الأجانب وصفحة Hochschulkompass)، فاستُبدل بهما المصدران الحاليان.
+
+**البدائل المرفوضة.**
+- (أ) سرد قوائم وثائق أو مدد معالجة ⇒ تتغير حسب البعثة والغرض، وتصير ادعاءً رسميًا.
+- (ب) إبقاء التعليمات العامة رغم وجود قنوات رسمية مسمّاة تفيد المتعلم.
+- (ج) تسمية مكاتب محاماة أو خدمات تجارية.
+
+**العواقب.** صار P1 = 132 منجزًا و3 جزئية (92، 331، 380).
+
+الدليل: `reports/context-claims-source-verification/CONTEXT_CLAIMS_SOURCE_VERIFICATION_2026-10-17.md` و`context-claims-2026-10-17.csv`.

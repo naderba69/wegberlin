@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v226 · 2026-10-17 · إغلاق P0-373 وP0-376 وP2-384 بتحقق مصدري من الوكيل (ADR-117، طبقة `source-verified-agent`، ليست مراجعة بشرية مستقلة): الملاحظات التونسية الـ17 قوبلت بـ8 مصادر منشورة وحُسّنت 4 منها، ووُثّق التنوع داخل تونس، وفحص لهجي دائم لـ24,145 نصًّا عربيًا أعطى 0 مخالفات؛ P0 = 120/4، P2 = 134/6/2
+Sync batch: v227 · 2026-10-17 · إغلاق P1-377 بتحقق مصدري رسمي (ADR-118، `source-verified-agent`، ليست مراجعة محامٍ أو جهة قنصلية): 12 جملة قنصلية/قانونية مقابلة بـ11 مصدرًا رسميًا وتعليماتها تسمّي القناة الرسمية وتظهر للمتعلم؛ P1 = 132/3، P0 = 120/4، P2 = 134/6/2
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

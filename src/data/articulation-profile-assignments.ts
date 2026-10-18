@@ -8,6 +8,8 @@ export const ARTICULATION_PROFILE_ASSIGNMENT_POLICY = "authored-articulation-pro
  * It is chosen from the lesson's pronunciation focus, explanation and items, not from
  * keyword matching. Sentence-level foci (Satzakzent, Kontrast, Intonation, Sprechgruppen)
  * stay on "prosody" because browser TTS cannot honestly vary focus on an identical string.
+ * ADR-129: the [pf] lessons (a1-10, a1-11) use "lipClosure" ([p]–[b] and [pf]–[f]) and the
+ * [ʃp]/[ʃt] lessons (a1-06, a1-16) use "clusters" ([ʃt]–[ʃ] and an epenthesis contrast).
  */
 export const articulationProfileByLesson: Readonly<Record<string, ArticulationProfileId>> = {
   "a1-01": "onsetH",
@@ -15,17 +17,17 @@ export const articulationProfileByLesson: Readonly<Record<string, ArticulationPr
   "a1-03": "rounded",
   "a1-04": "palate",
   "a1-05": "affricates",
-  "a1-06": "palate",
+  "a1-06": "clusters",
   "a1-07": "vowelLength",
   "a1-08": "wordStress",
   "a1-09": "rounded",
-  "a1-10": "affricates",
-  "a1-11": "affricates",
+  "a1-10": "lipClosure",
+  "a1-11": "lipClosure",
   "a1-12": "rounded",
   "a1-13": "vowelLength",
   "a1-14": "lipTeeth",
   "a1-15": "lipTeeth",
-  "a1-16": "palate",
+  "a1-16": "clusters",
   "a1-17": "wordStress",
   "a1-18": "lipTeeth",
   "a1-19": "lipTeeth",

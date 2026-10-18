@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v236 · 2026-10-18 · أول نصوص A1 أبسط (ADR-128): ستة نصوص أُعيدت كتابتها حول جمل الدليل المقتبسة حرفيًا (الأسئلة والمحددات والمسارد بلا تغيير)؛ لا نص قراءة فوق 45% (كانت 4)، والأثقل 53.7% ⇒ 41.3%، والوسيط 22.0%، وحدّ تراجع جديد لأثقل نص 42%.
+Sync batch: v237 · 2026-10-18 · ملفا نطق جديدان (ADR-129): درسا [pf] يعرضان packen/backen لتمييز [p] من [b]، ودرسا [ʃp]/[ʃt] يعرضان Stein/Schein وPlatte/Palette ضد إقحام حركة بين الصوامت؛ الأزواج التفاعلية 13/18 ⇒ 15/18، وتحديث صفوف م17/م19/م42 بالقياس الحالي.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

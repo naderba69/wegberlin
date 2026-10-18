@@ -3,7 +3,7 @@
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
 Curriculum: `dwnb-a1-b2-2026.10-v2` (app `0.1.0`)
-Content SHA-256: `fe11e06a64fa646cd5049141dc38ad2c1fbd61a47f0f6e5d237878c560cf893f`
+Content SHA-256: `9bfefc4987b7e89eb10a1ef1f8b596e5ea90735774186d075edabda21953ba92`
 
 ## Result
 
@@ -18,7 +18,7 @@ PASS
 | Learner-risk types with owner + reviewer | 12 |
 | General consular/legal context claims | 12 |
 | Arabic-learner pronunciation inventory | 18 |
-| Inventory rows with existing interactive synthetic pair | 13 |
+| Inventory rows with existing interactive synthetic pair | 15 |
 | Inventory rows mapped to articulation diagram | 18 |
 | Issues | 0 |
 
@@ -45,5 +45,5 @@ PASS
 
 - Publication means the validated route is available; it does not mean independent German, Arabic, CEFR, or rights approval.
 - All 12 consular/legal rows are language practice with `officialClaimStatus=not-claimed`; each row is source-verified by the agent (ADR-118) against 11 official/public sources checked 2026-10-17 (Auswärtiges Amt, EU Your Europe, BAMF, gesetze-im-internet.de, DAAD, Faire Integration and others). This is not a lawyer's or consular specialist's review.
-- All 18 pronunciation rows set `notUniversal=true`; current diagrams and 13 synthetic pairs are teaching support, not a learner pronunciation score. Independent phonetics review remains pending.
+- All 18 pronunciation rows set `notUniversal=true`; current diagrams and 15 synthetic pairs are teaching support, not a learner pronunciation score. Independent phonetics review remains pending.
 - Named IDs assign accountable product roles; they do not fabricate that a pending human review occurred.

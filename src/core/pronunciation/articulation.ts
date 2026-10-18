@@ -6,7 +6,7 @@ export const ARTICULATION_CONTRAST_POLICY = "articulation-contrast-practice-v1" 
 export const PRONUNCIATION_EVIDENCE_BOUNDARY = "synthetic-discrimination-only-no-pronunciation-or-mastery-score" as const;
 
 export type ArticulationZone = "lips" | "lip-teeth" | "ridge" | "palate" | "vowel-space" | "throat" | "rhythm" | "velum";
-export type ArticulationProfileId = "onsetH" | "lipTeeth" | "affricates" | "palate" | "achLaut" | "rounded" | "vowelLength" | "wordStress" | "prosody";
+export type ArticulationProfileId = "onsetH" | "lipTeeth" | "lipClosure" | "affricates" | "clusters" | "palate" | "achLaut" | "rounded" | "vowelLength" | "wordStress" | "prosody";
 export type PronunciationContrastKind = "minimal-pair" | "meaningful-sound-contrast" | "meaningful-prosody-contrast";
 export type PronunciationContrastSide = { de: string; ipa: string; ar: string };
 export type PronunciationContrastPair = {
@@ -39,9 +39,17 @@ const pairCatalog = {
     { id:"fv-vier-wir",kind:"minimal-pair",target:"[f] – [v]",left:{de:"vier",ipa:"[fiːɐ̯]",ar:"أربعة"},right:{de:"wir",ipa:"[viːɐ̯]",ar:"نحن"},noteAr:"الموضع متقارب؛ الفرق أن [v] مصحوب باهتزاز الصوت." },
     { id:"fv-fein-wein",kind:"minimal-pair",target:"[f] – [v]",left:{de:"fein",ipa:"[faɪ̯n]",ar:"ناعم/دقيق"},right:{de:"Wein",ipa:"[vaɪ̯n]",ar:"نبيذ"},noteAr:"ضع أصابعك على الحنجرة: الاهتزاز يظهر في Wein." },
   ],
+  lipClosure: [
+    { id:"pb-packen-backen",kind:"minimal-pair",target:"[p] – [b]",left:{de:"packen",ipa:"[ˈpakn̩]",ar:"يحزم/يعبّئ"},right:{de:"backen",ipa:"[ˈbakn̩]",ar:"يخبز"},noteAr:"ضع ورقة أمام فمك: مع packen تخرج نفخة هواء واضحة عند فتح الشفتين، ومع backen يكون الفتح أهدأ بلا نفخة؛ النفخة هي ما يميز [p] عن [b]." },
+    { id:"pf-pfund-fund",kind:"minimal-pair",target:"[pf] – [f]",left:{de:"Pfund",ipa:"[pfʊnt]",ar:"رطل/نصف كيلو تقريبًا"},right:{de:"Fund",ipa:"[fʊnt]",ar:"اكتشاف/شيء عُثر عليه"},noteAr:"ابدأ Pfund بإغلاق الشفتين [p] ثم افتحه مباشرة إلى [f]." },
+  ],
   affricates: [
     { id:"ts-zeit-seit",kind:"meaningful-sound-contrast",target:"[ts] – [z]",left:{de:"Zeit",ipa:"[tsaɪ̯t]",ar:"وقت"},right:{de:"seit",ipa:"[zaɪ̯t]",ar:"منذ"},noteAr:"في Zeit يبدأ الصوت بإغلاق قصير ثم احتكاك؛ في seit يبدأ الصوت مجهورًا." },
-    { id:"pf-pfund-fund",kind:"minimal-pair",target:"[pf] – [f]",left:{de:"Pfund",ipa:"[pfʊnt]",ar:"رطل/نصف كيلو تقريبًا"},right:{de:"Fund",ipa:"[fʊnt]",ar:"اكتشاف/شيء عُثر عليه"},noteAr:"ابدأ Pfund بإغلاق الشفتين [p] ثم افتحه مباشرة إلى [f]." },
+    { id:"ts-ziege-siege",kind:"minimal-pair",target:"[ts] – [z]",left:{de:"Ziege",ipa:"[ˈtsiːɡə]",ar:"عنزة"},right:{de:"Siege",ipa:"[ˈziːɡə]",ar:"انتصارات"},noteAr:"ابدأ Ziege بإغلاق قصير لطرف اللسان ثم احتكاك؛ أما Siege فتبدأ بصوت مجهور مستمر بلا إغلاق." },
+  ],
+  clusters: [
+    { id:"cluster-stein-schein",kind:"minimal-pair",target:"[ʃt] – [ʃ]",left:{de:"Stein",ipa:"[ʃtaɪ̯n]",ar:"حجر"},right:{de:"Schein",ipa:"[ʃaɪ̯n]",ar:"ورقة نقدية/شهادة"},noteAr:"في Stein يلتصق [t] مباشرة بصوت [ʃ] دون حركة بينهما؛ إذا سقط [t] صارت الكلمة Schein." },
+    { id:"cluster-platte-palette",kind:"meaningful-sound-contrast",target:"[pl] – [pal]",left:{de:"Platte",ipa:"[ˈplatə]",ar:"لوح/صفيحة"},right:{de:"Palette",ipa:"[paˈlɛtə]",ar:"منصّة نقل/لوح ألوان"},noteAr:"إضافة حركة قصيرة بين [p] و[l] تصنع كلمة أخرى هي Palette؛ والقاعدة نفسها في sprechen و Straße: لا حركة بين الصوامت." },
   ],
   palate: [
     { id:"ch-kirche-kirsche",kind:"minimal-pair",target:"[ç] – [ʃ]",left:{de:"Kirche",ipa:"[ˈkɪʁçə]",ar:"كنيسة"},right:{de:"Kirsche",ipa:"[ˈkɪʁʃə]",ar:"كرزة"},noteAr:"في [ç] يقترب وسط اللسان من الحنك؛ في [ʃ] يتجه الاحتكاك إلى الأمام." },
@@ -89,6 +97,8 @@ export function getArticulationGuide(lesson: FullLesson): ArticulationGuide {
   const profile = getArticulationProfileId(lesson);
   if (profile === "onsetH") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"throat",titleDe:"Luft am Wortanfang",titleAr:"نفَس بداية الكلمة",mouthAr:"افتح الفم بحسب الحركة التالية دون ضغط.",tongueAr:"اترك اللسان مستعدًا للحركة التالية؛ لا يصنع [h] إغلاقًا.",airflowAr:"مرّر نفَسًا خفيفًا من الحنجرة قبل الحركة.",diagramAltAr:"مقطع جانبي مبسط يبرز الحنجرة ومسار الهواء المفتوح.",pairs:[...pairCatalog.onsetH] };
   if (profile === "lipTeeth") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"lip-teeth",titleDe:"Unterlippe und obere Zähne",titleAr:"الشفة السفلى والأسنان العليا",mouthAr:"المس الشفة السفلى بالأسنان العليا لمسًا خفيفًا.",tongueAr:"اللسان مرتاح ولا يغلق مجرى الهواء.",airflowAr:"دع الهواء يحتك؛ أضف اهتزاز الحنجرة في [v].",diagramAltAr:"مقطع جانبي مبسط يبرز تماس الشفة السفلى بالأسنان العليا.",pairs:[...pairCatalog.lipTeeth] };
+  if (profile === "lipClosure") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"lips",titleDe:"Lippenverschluss: [p], [b], [pf]",titleAr:"إغلاق الشفتين",mouthAr:"أغلق الشفتين إغلاقًا كاملًا ثم افتحهما مرة واحدة.",tongueAr:"اللسان مرتاح في قاع الفم؛ العمل كله للشفتين، ومع [pf] تنتقل الشفة السفلى إلى الأسنان العليا.",airflowAr:"مع [p] تخرج نفخة هواء قصيرة عند الفتح؛ ومع [pf] يتبع الإغلاقَ احتكاكُ [f] مباشرة دون حركة بينهما.",diagramAltAr:"مقطع جانبي مبسط يبرز الشفتين المغلقتين ونفخة الهواء عند فتحهما.",pairs:[...pairCatalog.lipClosure] };
+  if (profile === "clusters") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"ridge",titleDe:"Konsonanten ohne Zwischenvokal",titleAr:"صوامت متجاورة بلا حركة بينها",mouthAr:"ابدأ مباشرة بالصامت الأول دون همزة أو حركة قبله.",tongueAr:"مع [ʃt] ينتقل طرف اللسان من وضع الشين إلى الحافة خلف الأسنان العليا لصنع [t] دون أن ينفصل الصوتان.",airflowAr:"أخرج الصوامت المتجاورة في نفَس واحد، ولا تفتح الفم للحركة إلا بعد آخر صامت.",diagramAltAr:"مقطع جانبي مبسط يبرز طرف اللسان عند الحافة خلف الأسنان العليا ومسار الهواء بلا حركة فاصلة.",pairs:[...pairCatalog.clusters] };
   if (profile === "affricates") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"ridge",titleDe:"Kurzer Verschluss, dann Reibung",titleAr:"إغلاق قصير ثم احتكاك",mouthAr:"ابدأ بإغلاق قصير ثم افتحه مباشرة.",tongueAr:"مع [ts] يقترب طرف اللسان من الحافة خلف الأسنان؛ مع [pf] يبدأ الإغلاق بالشفتين.",airflowAr:"لا تضف حركة بين الجزأين؛ أخرجهما كصوت واحد.",diagramAltAr:"مقطع جانبي مبسط يبرز حافة اللثة والشفتين ومسار الهواء المتصل.",pairs:[...pairCatalog.affricates] };
   if (profile === "palate") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"palate",titleDe:"Zungenmitte und Gaumen",titleAr:"وسط اللسان والحنك",mouthAr:"افتح الشفتين قليلًا دون تدوير مبالغ.",tongueAr:"ارفع وسط اللسان قريبًا من الحنك من غير إغلاق كامل لصوت [ç].",airflowAr:"مرّر الهواء في الممر الضيق بلطف؛ لا تحوله إلى كاف.",diagramAltAr:"مقطع جانبي مبسط يبرز اقتراب وسط اللسان من الحنك ومسار الهواء.",pairs:[...pairCatalog.palate] };
   if (profile === "achLaut") return { policyVersion:ARTICULATION_CONTRAST_POLICY,profileId:profile,zone:"velum",titleDe:"Hinterzunge und weicher Gaumen",titleAr:"مؤخرة اللسان والحنك الرخو",mouthAr:"افتح الفم بحسب الحركة الخلفية قبله: a أو o أو u أو au.",tongueAr:"ارفع مؤخرة اللسان نحو الحنك الرخو دون إغلاق؛ وبعد الحركات الأمامية ارجع إلى وسط اللسان لصوت [ç].",airflowAr:"احتكاك مستمر في الخلف قريب من الخاء؛ لا تجعله حلقيًا عميقًا ولا تستعمله بعد i أو e أو ü.",diagramAltAr:"مقطع جانبي مبسط يبرز اقتراب مؤخرة اللسان من الحنك الرخو ومسار الهواء.",pairs:[...pairCatalog.achLaut] };

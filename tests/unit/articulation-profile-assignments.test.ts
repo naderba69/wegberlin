@@ -28,7 +28,9 @@ describe("ADR-125 authored articulation profile per lesson", () => {
     expect(counts.get("prosody")).toBe(55);
     expect(counts.get("wordStress")).toBe(14);
     expect(counts.get("achLaut")).toBe(2);
-    expect(counts.size).toBe(9);
+    expect(counts.size).toBe(11);
+    expect(counts.get("lipClosure")).toBe(2);
+    expect(counts.get("clusters")).toBe(2);
     for (const id of ["a2-02", "a2-06", "a2-12", "b1-01", "b2-24"]) expect(profileOf(id)).toBe("prosody");
   });
 
@@ -51,7 +53,7 @@ describe("ADR-125 authored articulation profile per lesson", () => {
 
   it("makes the word-stress and ach-Laut inventory rows interactive through lessons that really show the pair", () => {
     const interactive = arabicLearnerPronunciationInventory.filter((row) => row.interactivePairId);
-    expect(interactive).toHaveLength(13);
+    expect(interactive).toHaveLength(15);
     for (const row of interactive) {
       const shown = row.lessonIds.some((id) => getArticulationGuide(academicLessons[id]).pairs.some((pair) => pair.id === row.interactivePairId));
       expect(shown, row.id).toBe(true);
@@ -72,5 +74,29 @@ describe("ADR-125 authored articulation profile per lesson", () => {
     }
     expect(arabicLearnerPronunciationInventory.find((row) => row.id === "ar-pron-consonant-cluster")?.lessonIds).toEqual(["a1-06", "a1-16"]);
     expect(academicLessons["b2-18"].pronunciation.explanationAr).toContain("[p]");
+  });
+
+  it("ADR-129: gives the [pf] and [ʃp]/[ʃt] lessons their own TTS-distinguishable contrasts and makes p-b and clusters interactive", () => {
+    for (const id of ["a1-10", "a1-11"]) {
+      const guide = getArticulationGuide(academicLessons[id]);
+      expect(guide.profileId).toBe("lipClosure");
+      expect(guide.zone).toBe("lips");
+      expect(guide.pairs.map((pair) => pair.id)).toEqual(["pb-packen-backen", "pf-pfund-fund"]);
+      expect(academicLessons[id].pronunciation.focus).toBe("[pf]");
+    }
+    for (const id of ["a1-06", "a1-16"]) {
+      const guide = getArticulationGuide(academicLessons[id]);
+      expect(guide.profileId).toBe("clusters");
+      expect(guide.pairs.map((pair) => pair.id)).toEqual(["cluster-stein-schein", "cluster-platte-palette"]);
+      expect(academicLessons[id].pronunciation.focus).toContain("[ʃp]");
+    }
+    for (const id of ["a1-05", "a1-21"]) { expect(profileOf(id)).toBe("affricates"); expect(getArticulationGuide(academicLessons[id]).pairs.map((pair) => pair.id)).toEqual(["ts-zeit-seit", "ts-ziege-siege"]); }
+    const pb = arabicLearnerPronunciationInventory.find((row) => row.id === "ar-pron-p-b");
+    expect(pb).toMatchObject({ diagramProfileId: "lipClosure", articulationZone: "lips", interactivePairId: "pb-packen-backen", evidenceMode: "synthetic-discrimination", leftDe: "packen", rightDe: "backen" });
+    const cluster = arabicLearnerPronunciationInventory.find((row) => row.id === "ar-pron-consonant-cluster");
+    expect(cluster).toMatchObject({ diagramProfileId: "clusters", interactivePairId: "cluster-platte-palette", evidenceMode: "synthetic-discrimination" });
+    const guided = arabicLearnerPronunciationInventory.filter((row) => !row.interactivePairId).map((row) => row.id).sort();
+    expect(guided).toEqual(["ar-pron-final-devoicing", "ar-pron-r-variants", "ar-pron-sentence-focus"]);
+    for (const row of arabicLearnerPronunciationInventory.filter((item) => !item.interactivePairId)) expect(row.evidenceMode).toBe("guided-self-observation");
   });
 });

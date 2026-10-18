@@ -92,8 +92,12 @@ describe("lesson-quality report carries the lemmatized gate (ADR-126)", () => {
     expect(lemmatized.vocabularyStagePolicy).toBe("reading-anchored-noun-visibility-v1");
     // ADR-127: the 25% pedagogical median is met, and the ratchet sits at the measured state.
     expect(lemmatized.ratchet.targetMet).toBe(true);
-    expect(report.thresholds.readingLemmatizedMedianPctMax).toBeLessThanOrEqual(23);
-    expect(report.thresholds.readingLemmatizedOver45Max).toBeLessThanOrEqual(4);
+    expect(report.thresholds.readingLemmatizedMedianPctMax).toBeLessThanOrEqual(22);
+    expect(report.thresholds.readingLemmatizedOver45Max).toBe(0);
+    // ADR-128: the first A1 readings were simplified; no reading text is above 45% and the heaviest is ratcheted.
+    expect(lemmatized.lessonsOver45Pct).toBe(0);
+    expect(lemmatized.maxUnknownWordPct).toBeLessThanOrEqual(report.thresholds.readingLemmatizedMaxPctMax);
+    expect(report.thresholds.readingLemmatizedMaxPctMax).toBeLessThanOrEqual(42);
     expect(lemmatized.medianUnknownWordPct).toBeLessThanOrEqual(report.thresholds.readingLemmatizedMedianPctMax);
     expect(lemmatized.lessonsOver45Pct).toBeLessThanOrEqual(report.thresholds.readingLemmatizedOver45Max);
     expect(lemmatized.medianUnknownWordPct).toBeLessThan(report.reading.medianUnknownWordPct);

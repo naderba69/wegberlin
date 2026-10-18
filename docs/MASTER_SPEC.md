@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v235 · 2026-10-18 · حمل القراءة المعجمي (ADR-127): مرحلة المفردات تعرض مراسي الاسم التي يستعملها نص الدرس نفسه (549 مرسى في 92 درسًا) و30 بطاقة قبل القراءة؛ وسيط القراءة 28.9% ⇒ 22.6% فتحقق هدف 25%، والنصوص فوق 45% ‏13 ⇒ 4، وشُدّ حدّ التراجع إلى 23% و4.
+Sync batch: v236 · 2026-10-18 · أول نصوص A1 أبسط (ADR-128): ستة نصوص أُعيدت كتابتها حول جمل الدليل المقتبسة حرفيًا (الأسئلة والمحددات والمسارد بلا تغيير)؛ لا نص قراءة فوق 45% (كانت 4)، والأثقل 53.7% ⇒ 41.3%، والوسيط 22.0%، وحدّ تراجع جديد لأثقل نص 42%.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v235 · 2026-10-18 · حمل القراءة المعجمي (ADR-127): مرحلة المفردات تعرض مراسي الاسم التي يستعملها نص الدرس نفسه (549 مرسى في 92 درسًا) و30 بطاقة قبل القراءة؛ وسيط القراءة 28.9% ⇒ 22.6% فتحقق هدف 25%، والنصوص فوق 45% ‏13 ⇒ 4، وشُدّ حدّ التراجع إلى 23% و4.
+Sync batch: v236 · 2026-10-18 · أول نصوص A1 أبسط (ADR-128): ستة نصوص أُعيدت كتابتها حول جمل الدليل المقتبسة حرفيًا (الأسئلة والمحددات والمسارد بلا تغيير)؛ لا نص قراءة فوق 45% (كانت 4)، والأثقل 53.7% ⇒ 41.3%، والوسيط 22.0%، وحدّ تراجع جديد لأثقل نص 42%.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

@@ -23,19 +23,20 @@ describe("lexical target-gap inventory", () => {
   });
 
   // v231: the 54 rewritten Mini-Test items add contextual (non-target) candidates only; covered and pendingHuman are unchanged.
+  // v236: six simplified A1 reading texts (ADR-128) drop 10 contextual noun and 3 contextual verb candidates; targets are unchanged.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4934,
+      totalCandidates: 4924,
       covered: 1385,
       pendingHuman: 89,
-      contextualNotTarget: 3460,
+      contextualNotTarget: 3450,
       authoredTargets: 1474,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1291,
+      totalCandidates: 1288,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1156,
+      contextualNotTarget: 1153,
       authoredTargets: 135,
     });
   });

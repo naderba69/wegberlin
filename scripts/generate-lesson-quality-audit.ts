@@ -35,11 +35,12 @@ const thresholds = {
   duplicateExplanationsInLessonMax: 0,
   maxRepeatedFinalSentence: 24,
   wordOrderingTilesMin: 3,
-  // ADR-126 ratchet, tightened by ADR-127 (2026-10-18, lemmatized-lexical-load-v2 with
-  // reading-anchored-noun-visibility-v1): measured median 22.6% and 4 texts above 45%. The 25% median
-  // target is met; these ceilings forbid regression from the measured state.
-  readingLemmatizedMedianPctMax: 23,
-  readingLemmatizedOver45Max: 4,
+  // ADR-126 ratchet, tightened by ADR-127 (median 22.6%, 4 texts above 45%) and again by ADR-128
+  // (2026-10-18, six simplified A1 readings): measured median 22.0%, no text above 45%, highest 41.3%.
+  // These ceilings forbid regression from the measured state.
+  readingLemmatizedMedianPctMax: 22,
+  readingLemmatizedOver45Max: 0,
+  readingLemmatizedMaxPctMax: 42,
   longInputUnknownPctMax: 32,
 };
 
@@ -206,6 +207,7 @@ const longInputMax = Math.max(...longInputRows.map((row) => row.pct));
 const shares = positions.map((count) => (100 * count) / Math.max(1, itemTotal));
 const issues: string[] = [];
 if (lemmatizedMedian > thresholds.readingLemmatizedMedianPctMax) issues.push(`lemmatized reading load median ${lemmatizedMedian}% (ratchet ${thresholds.readingLemmatizedMedianPctMax}%)`);
+if (Math.max(...lemmatizedPcts) > thresholds.readingLemmatizedMaxPctMax) issues.push(`heaviest reading text at ${Math.max(...lemmatizedPcts)}% lemmatized unknown types (ratchet ${thresholds.readingLemmatizedMaxPctMax}%)`);
 if (lemmatizedOver45 > thresholds.readingLemmatizedOver45Max) issues.push(`reading texts above 45% lemmatized unknown types: ${lemmatizedOver45} (ratchet ${thresholds.readingLemmatizedOver45Max})`);
 if (longInputMax > thresholds.longInputUnknownPctMax) issues.push(`long input above ${thresholds.longInputUnknownPctMax}% unknown types: ${longInputRows.filter((row) => row.pct > thresholds.longInputUnknownPctMax).map((row) => `${row.id} ${row.pct}%`).join(", ")}`);
 if (writingViolations.length > thresholds.writingModelRangeViolations) issues.push(`writing model answers outside their own stated range: ${writingViolations.length} (allowed ${thresholds.writingModelRangeViolations})`);
@@ -283,7 +285,7 @@ const report = {
       lessonsOver45Pct: lemmatizedOver45,
       maxUnknownWordPct: Math.max(...lemmatizedPcts),
       properNamesExcluded: lemmatizedReading.reduce((sum, row) => sum + row.properNames, 0),
-      ratchet: { medianPctMax: thresholds.readingLemmatizedMedianPctMax, over45Max: thresholds.readingLemmatizedOver45Max, pedagogicalTargetMedianPct: 25, targetMet: lemmatizedMedian <= 25 },
+      ratchet: { medianPctMax: thresholds.readingLemmatizedMedianPctMax, over45Max: thresholds.readingLemmatizedOver45Max, maxPctMax: thresholds.readingLemmatizedMaxPctMax, pedagogicalTargetMedianPct: 25, targetMet: lemmatizedMedian <= 25 },
       worstLessons: [...lemmatizedReading].sort((a, b) => b.pct - a.pct).slice(0, 13).map((row) => ({ id: row.id, pct: row.pct, unknown: row.unknown.slice(0, 12) })),
       note: "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high. v2 (ADR-127): irregular forms of stop-listed verbs count as function words through the dictionary only, and support includes what the vocabulary stage shows openly (the first four noun anchors, the anchors the lesson's own reading text uses, and every verb-preposition frame); anchors in the closed «Weitere Zielnomen» disclosure and case forms are not counted.",
     },

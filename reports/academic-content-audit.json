@@ -136,7 +136,7 @@
         "prompt": "Wer ist Frau Keller? من السيدة كيلر؟",
         "answer": "Die Lehrerin",
         "evidenceRef": "a1-01:reading.textDe",
-        "evidenceExcerpt": "Freut mich.“ Dann kommt Frau Keller.",
+        "evidenceExcerpt": "Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -543,7 +543,7 @@
         "prompt": "Welchen Zahlenfehler hört Sami? ما خطأ الرقم الذي يسمعه؟",
         "answer": "acht statt neun",
         "evidenceRef": "a1-03:reading.textDe",
-        "evidenceExcerpt": "Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig.",
+        "evidenceExcerpt": "Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -719,7 +719,7 @@
         "prompt": "Wer steht in der Mitte? من يقف في الوسط؟",
         "answer": "Leilas Eltern",
         "evidenceRef": "a1-04:reading.textDe",
-        "evidenceExcerpt": "In der Mitte stehen ihre Eltern.",
+        "evidenceExcerpt": "Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -741,7 +741,7 @@
         "prompt": "Wann telefoniert Leila mit der Familie? متى تتصل ليلى بعائلتها؟",
         "answer": "Jeden Sonntag",
         "evidenceRef": "a1-04:reading.textDe",
-        "evidenceExcerpt": "Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien.",
+        "evidenceExcerpt": "Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -928,7 +928,7 @@
         "prompt": "Warum schreibt Aylin keine private Nummer? لماذا لا تكتب آيلين رقمًا خاصًا؟",
         "answer": "Die Liste ist offen.",
         "evidenceRef": "a1-05:reading.textDe",
-        "evidenceExcerpt": "Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an.",
+        "evidenceExcerpt": "Sie möchte keine private Nummer auf die offene Liste schreiben.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -939,7 +939,7 @@
         "prompt": "Welcher Fehler steht auf Mariams Karte? ما الخطأ في بطاقة مريم؟",
         "answer": "32 statt 22",
         "evidenceRef": "a1-05:reading.textDe",
-        "evidenceExcerpt": "Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22.",
+        "evidenceExcerpt": "Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1731,7 +1731,7 @@
         "prompt": "Was bereitet Kenji vor? ماذا يحضر كينجي؟",
         "answer": "Wortkarten",
         "evidenceRef": "a1-09:reading.textDe",
-        "evidenceExcerpt": "David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor.",
+        "evidenceExcerpt": "David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -44238,17 +44238,17 @@
     "nounAnchorCount": 1297,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4934,
+      "totalCandidates": 4924,
       "covered": 1385,
       "pendingHuman": 89,
-      "contextualNotTarget": 3460,
+      "contextualNotTarget": 3450,
       "authoredTargets": 1474,
       "byLevel": {
         "A1": {
-          "totalCandidates": 572,
+          "totalCandidates": 562,
           "covered": 298,
           "pendingHuman": 0,
-          "contextualNotTarget": 274
+          "contextualNotTarget": 264
         },
         "A2": {
           "totalCandidates": 898,
@@ -44271,17 +44271,17 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1291,
+      "totalCandidates": 1288,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1156,
+      "contextualNotTarget": 1153,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
-          "totalCandidates": 108,
+          "totalCandidates": 105,
           "covered": 25,
           "pendingHuman": 0,
-          "contextualNotTarget": 83
+          "contextualNotTarget": 80
         },
         "A2": {
           "totalCandidates": 222,
@@ -44316,8 +44316,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
+            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
             "strength": "context"
           }
         ],
@@ -44437,25 +44437,6 @@
       {
         "lessonId": "a1-01",
         "level": "A1",
-        "lemmaCandidate": "Kursraum",
-        "normalizedLemma": "kursraum",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-01-4907ed07"
-      },
-      {
-        "lessonId": "a1-01",
-        "level": "A1",
         "lemmaCandidate": "Lehrerin",
         "normalizedLemma": "lehrerin",
         "role": "anchor",
@@ -44486,8 +44467,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
+            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
             "strength": "context"
           }
         ],
@@ -44534,8 +44515,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
+            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
             "strength": "context"
           },
           {
@@ -45171,8 +45152,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
             "strength": "context"
           }
         ],
@@ -45212,8 +45193,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
             "strength": "context"
           }
         ],
@@ -45245,8 +45226,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
             "strength": "context"
           }
         ],
@@ -45278,8 +45259,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
             "strength": "context"
           }
         ],
@@ -45318,8 +45299,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
             "strength": "context"
           }
         ],
@@ -45480,25 +45461,6 @@
       {
         "lessonId": "a1-03",
         "level": "A1",
-        "lemmaCandidate": "Nummer",
-        "normalizedLemma": "nummer",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt freundlich: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Nummer langsam. Sami hört einen Fehler und sagt: „Nicht vier acht, sondern vier neun.“ Jetzt sind alle Daten richtig. Er kontrolliert das Formular und unterschreibt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-03-a8de6c2d"
-      },
-      {
-        "lessonId": "a1-03",
-        "level": "A1",
         "lemmaCandidate": "Telefonnummer",
         "normalizedLemma": "telefonnummer",
         "role": "anchor",
@@ -45540,6 +45502,13 @@
             "text": "die Telefonnummer",
             "surface": "die Telefonnummer",
             "strength": "target"
+          },
+          {
+            "path": "reading.textDe",
+            "stage": "reading",
+            "text": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "surface": "Sami meldet sich für einen Deutschkurs an. Auf dem Formular stehen Vorname, Nachname, Adresse, E-Mail und Telefonnummer. Sein Vorname ist Sami. Der Nachname ist Ben Salem. Die Mitarbeiterin schreibt zuerst „Bensalem“ zusammen. Sami sagt: „Ben und Salem sind zwei Wörter. Dazwischen ist ein Leerzeichen.“ Dann buchstabiert er seine E-Mail-Adresse: sami Punkt bensalem at mail Punkt de. Seine Telefonnummer ist 0157 28 493. Die Mitarbeiterin wiederholt die Telefonnummer. Sami sagt: „Langsamer, bitte. Bitte noch einmal.“ Jetzt hört er einen Fehler: „Nicht vier acht, sondern vier neun.“ Jetzt ist alles richtig. Sami unterschreibt das Formular.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-a1-03-70e52300"
@@ -45867,8 +45836,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           },
           {
@@ -45943,8 +45912,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           },
           {
@@ -46009,8 +45978,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           }
         ],
@@ -46038,38 +46007,12 @@
       {
         "lessonId": "a1-04",
         "level": "A1",
-        "lemmaCandidate": "Großmutter",
-        "normalizedLemma": "großmutter",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-04-7c8921ec"
-      },
-      {
-        "lessonId": "a1-04",
-        "level": "A1",
         "lemmaCandidate": "Hotel",
         "normalizedLemma": "hotel",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "strength": "context"
-          },
           {
             "path": "writing.modelDe",
             "stage": "writing",
@@ -46271,8 +46214,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           }
         ],
@@ -46387,8 +46330,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           }
         ],
@@ -46489,8 +46432,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           },
           {
@@ -46544,8 +46487,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           },
           {
@@ -46773,25 +46716,6 @@
       {
         "lessonId": "a1-05",
         "level": "A1",
-        "lemmaCandidate": "Daten",
-        "normalizedLemma": "daten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-05-b8b92b5b"
-      },
-      {
-        "lessonId": "a1-05",
-        "level": "A1",
         "lemmaCandidate": "E-Mail-Adresse",
         "normalizedLemma": "e-mail-adresse",
         "role": "anchor",
@@ -46812,6 +46736,13 @@
             "text": "Wie ist deine E-Mail-Adresse?",
             "surface": "Wie ist deine E-Mail-Adresse?",
             "strength": "target"
+          },
+          {
+            "path": "reading.textDe",
+            "stage": "reading",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-a1-05-064db51a"
@@ -46825,13 +46756,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          },
           {
             "path": "speaking.promptDe",
             "stage": "speaking",
@@ -46920,8 +46844,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
             "strength": "context"
           }
         ],
@@ -46939,8 +46863,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
             "strength": "context"
           }
         ],
@@ -47026,8 +46950,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
             "strength": "context"
           }
         ],
@@ -47059,8 +46983,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
             "strength": "context"
           },
           {
@@ -47085,8 +47009,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
+            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
+            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben. Sie schreibt nur eine E-Mail-Adresse. Der Trainer kontrolliert die Karten. Er fragt: „Stimmt das?“ Paul sagt: „Ja, das stimmt.“ Mariam sagt: „Nein, das stimmt nicht.“ Auf ihrer Karte steht 32 statt 22. Sie schreibt sofort 22.",
             "strength": "context"
           }
         ],
@@ -47174,25 +47098,6 @@
       {
         "lessonId": "a1-05",
         "level": "A1",
-        "lemmaCandidate": "Übungs-E-Mail-Adresse",
-        "normalizedLemma": "übungs-e-mail-adresse",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-05-6527b812"
-      },
-      {
-        "lessonId": "a1-05",
-        "level": "A1",
         "lemmaCandidate": "Übungsdaten",
         "normalizedLemma": "übungsdaten",
         "role": "anchor",
@@ -47215,25 +47120,6 @@
           }
         ],
         "id": "lex-n-a1-05-07daf26a"
-      },
-      {
-        "lessonId": "a1-05",
-        "level": "A1",
-        "lemmaCandidate": "Zahl",
-        "normalizedLemma": "zahl",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-05-06cae23a"
       },
       {
         "lessonId": "a1-06",
@@ -47264,25 +47150,6 @@
       {
         "lessonId": "a1-06",
         "level": "A1",
-        "lemmaCandidate": "Alltag",
-        "normalizedLemma": "alltag",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-06-633399c9"
-      },
-      {
-        "lessonId": "a1-06",
-        "level": "A1",
         "lemmaCandidate": "Arbeit",
         "normalizedLemma": "arbeit",
         "role": "context-only",
@@ -47306,8 +47173,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           },
           {
@@ -47411,25 +47278,6 @@
       {
         "lessonId": "a1-06",
         "level": "A1",
-        "lemmaCandidate": "Aufgabe",
-        "normalizedLemma": "aufgabe",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-06-78981181"
-      },
-      {
-        "lessonId": "a1-06",
-        "level": "A1",
         "lemmaCandidate": "Ausbildung",
         "normalizedLemma": "ausbildung",
         "role": "anchor",
@@ -47514,13 +47362,6 @@
             "stage": "vocabulary",
             "surface": "der Beruf",
             "strength": "registry"
-          },
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "strength": "context"
           },
           {
             "path": "speaking.promptDe",
@@ -47980,8 +47821,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           }
         ],
@@ -48025,8 +47866,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           }
         ],
@@ -48103,8 +47944,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           }
         ],
@@ -49111,13 +48952,6 @@
             "text": "Mona hat einen Arzttermin.",
             "surface": "Mona hat einen Arzttermin.",
             "strength": "context"
-          },
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "strength": "context"
           }
         ],
         "id": "lex-n-a1-09-d27594fb"
@@ -49184,44 +49018,6 @@
       {
         "lessonId": "a1-09",
         "level": "A1",
-        "lemmaCandidate": "Deutschtest",
-        "normalizedLemma": "deutschtest",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-09-1aa7d6c1"
-      },
-      {
-        "lessonId": "a1-09",
-        "level": "A1",
-        "lemmaCandidate": "Grammatiknotizen",
-        "normalizedLemma": "grammatiknotizen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-09-832730f7"
-      },
-      {
-        "lessonId": "a1-09",
-        "level": "A1",
         "lemmaCandidate": "Gruppe",
         "normalizedLemma": "gruppe",
         "role": "context-only",
@@ -49231,8 +49027,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           }
         ],
@@ -49250,8 +49046,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           },
           {
@@ -49267,8 +49063,8 @@
       {
         "lessonId": "a1-09",
         "level": "A1",
-        "lemmaCandidate": "Person",
-        "normalizedLemma": "person",
+        "lemmaCandidate": "Notizen",
+        "normalizedLemma": "notizen",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
@@ -49276,12 +49072,12 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           }
         ],
-        "id": "lex-n-a1-09-2174df92"
+        "id": "lex-n-a1-09-b22fd114"
       },
       {
         "lessonId": "a1-09",
@@ -49295,8 +49091,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           }
         ],
@@ -49314,8 +49110,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           }
         ],
@@ -49386,6 +49182,13 @@
             "text": "den Termin absagen",
             "surface": "den Termin absagen",
             "strength": "target"
+          },
+          {
+            "path": "reading.textDe",
+            "stage": "reading",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "strength": "context"
           },
           {
             "path": "speaking.promptDe",
@@ -183961,21 +183764,44 @@
       {
         "lessonId": "a1-01",
         "level": "A1",
-        "infinitiveCandidate": "schreiben",
-        "normalizedVerb": "schreiben",
+        "infinitiveCandidate": "kennen",
+        "normalizedVerb": "kennen",
         "preposition": "auf",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "ambiguous"
+          "unknown"
         ],
         "anchorIds": [],
         "sources": [
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
-            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora kommt aus Spanien und wartet vor dem Kursraum. Omar kommt aus Tunesien. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Im Raum sitzen auch Lina, David und Mei. Alle schreiben ihre Namen auf kleine Karten. Der Kurs beginnt um neun Uhr. Nora sitzt neben Omar. Jetzt kennen sie schon zwei Namen.",
+            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a1-01-0ef7120c"
+      },
+      {
+        "lessonId": "a1-01",
+        "level": "A1",
+        "infinitiveCandidate": "schreiben",
+        "normalizedVerb": "schreiben",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.textDe",
+            "stage": "reading",
+            "text": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
+            "surface": "Heute beginnt ein Deutschkurs in Berlin. Nora wartet schon. Omar kommt. Er sagt: „Guten Morgen! Ich heiße Omar. Wie heißt du?“ Nora antwortet: „Ich heiße Nora. Freut mich.“ Omar fragt: „Wie geht es dir?“ Nora sagt: „Danke, gut.“ Dann kommt Frau Keller. Sie ist die Lehrerin. Omar fragt höflich: „Wie heißen Sie?“ Die Lehrerin sagt: „Mein Name ist Anna Keller. Willkommen im Kurs!“ Alle schreiben ihre Namen auf Karten. Nora sitzt neben Omar. Jetzt kennen sie schon alle Namen.",
             "strength": "context"
           }
         ],
@@ -184094,35 +183920,13 @@
       {
         "lessonId": "a1-04",
         "level": "A1",
-        "infinitiveCandidate": "stehen",
-        "normalizedVerb": "stehen",
-        "preposition": "aus",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "ambiguous"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-a1-04-f9702068"
-      },
-      {
-        "lessonId": "a1-04",
-        "level": "A1",
         "infinitiveCandidate": "telefonieren",
         "normalizedVerb": "telefonieren",
         "preposition": "in",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
+          "ambiguous",
           "unknown"
         ],
         "anchorIds": [],
@@ -184130,8 +183934,8 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
-            "surface": "Leila zeigt Anna ein Foto aus Sousse. In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem und arbeitet in einem Hotel. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Er ist neunzehn Jahre alt und studiert. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei Jahre alt. Leila lebt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Anna fragt: „Hast du auch Großeltern in Sousse?“ Leila antwortet: „Ja, meine Großmutter wohnt ganz in der Nähe. Mein Großvater lebt in Monastir.“",
+            "text": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
+            "surface": "Leila zeigt Anna ein Foto aus Sousse. Anna fragt: „Wer ist das?“ Leila sagt: „Das ist meine Familie.“ In der Mitte stehen ihre Eltern. Ihr Vater heißt Hatem. Ihre Mutter heißt Nadia und ist Lehrerin. Links steht Leilas Bruder Karim. Rechts sitzt ihre Schwester Mouna mit ihrem kleinen Sohn Adam. Adam ist drei. Leila wohnt jetzt in Berlin, aber ihre Familie wohnt in Tunesien. Sie telefonieren jeden Sonntag. Ihre Großmutter wohnt auch in Sousse, ganz in der Nähe.",
             "strength": "context"
           }
         ],
@@ -184162,52 +183966,6 @@
         "id": "lex-v-a1-05-19a18516"
       },
       {
-        "lessonId": "a1-05",
-        "level": "A1",
-        "infinitiveCandidate": "schreiben",
-        "normalizedVerb": "schreiben",
-        "preposition": "an",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "ambiguous"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-a1-05-d6f845b1"
-      },
-      {
-        "lessonId": "a1-05",
-        "level": "A1",
-        "infinitiveCandidate": "schreiben",
-        "normalizedVerb": "schreiben",
-        "preposition": "auf",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "surface": "Im Sportverein füllt Mariam drei Kontaktkarten aus. Ihre eigene Karte hat nur Übungsdaten: Mariam, 22 Jahre, Geburtstag im Mai. Neben ihr sitzt Paul. Er ist 27 Jahre alt und hat am zwölften Oktober Geburtstag. Seine Telefonnummer schreibt er in drei Gruppen. Aylin ist 19 Jahre alt. Sie möchte keine private Nummer auf die offene Liste schreiben und gibt nur eine Übungs-E-Mail-Adresse an. Der Trainer kontrolliert die Karten. Er fragt jedes Mal: „Stimmt das?“ Alle lesen ihre Daten noch einmal. Mariam findet einen Fehler: Auf ihrer Karte steht 32 statt 22. Sie korrigiert die Zahl sofort.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-a1-05-3de2ba42"
-      },
-      {
         "lessonId": "a1-06",
         "level": "A1",
         "infinitiveCandidate": "arbeiten",
@@ -184234,31 +183992,31 @@
       {
         "lessonId": "a1-06",
         "level": "A1",
-        "infinitiveCandidate": "schreiben",
-        "normalizedVerb": "schreiben",
-        "preposition": "aus",
+        "infinitiveCandidate": "fragen",
+        "normalizedVerb": "fragen",
+        "preposition": "mit",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "dative"
+          "unknown"
         ],
         "anchorIds": [],
         "sources": [
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           }
         ],
-        "id": "lex-v-a1-06-d1640b08"
+        "id": "lex-v-a1-06-27f6bd09"
       },
       {
         "lessonId": "a1-06",
         "level": "A1",
-        "infinitiveCandidate": "üben",
-        "normalizedVerb": "üben",
+        "infinitiveCandidate": "fragen",
+        "normalizedVerb": "fragen",
         "preposition": "von",
         "role": "context-only",
         "status": "not-target",
@@ -184270,12 +184028,12 @@
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
-            "surface": "Der Abendkurs beginnt um achtzehn Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant technische Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er lernt den Beruf Verkäufer und arbeitet drei Tage pro Woche in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt kurze E-Mails und Rami beantwortet Fragen von Kundinnen und Kunden. Im Kurs üben sie heute Berufe und Arbeitsorte. Danach schreiben sie je eine echte Aufgabe aus ihrem Alltag auf.",
+            "text": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
+            "surface": "Der Abendkurs beginnt um sechs Uhr. Adel ist Koch und arbeitet in einem Restaurant am Bahnhof. Er arbeitet oft am Wochenende. Lena ist Ingenieurin bei einer kleinen Umweltfirma. Sie plant Projekte und arbeitet manchmal zu Hause. Rami ist noch in Ausbildung. Er arbeitet als Verkäufer in einem Supermarkt. Alle drei brauchen Deutsch bei der Arbeit. Adel spricht mit Gästen, Lena schreibt E-Mails und Rami spricht mit Kunden. Im Kurs fragen sie: „Was bist du von Beruf?“ und „Was machen Sie beruflich?“",
             "strength": "context"
           }
         ],
-        "id": "lex-v-a1-06-b9114116"
+        "id": "lex-v-a1-06-4cfff550"
       },
       {
         "lessonId": "a1-07",
@@ -184597,23 +184355,23 @@
         "level": "A1",
         "infinitiveCandidate": "möchten",
         "normalizedVerb": "möchten",
-        "preposition": "für",
+        "preposition": "um",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "ambiguous"
+          "unknown"
         ],
         "anchorIds": [],
         "sources": [
           {
             "path": "reading.textDe",
             "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
+            "text": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
+            "surface": "Mona, David und Kenji möchten zusammen Deutsch lernen. Mona schlägt Montag um sechs Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Er sagt: „Leider kann ich nicht.“ Kenji hat am Dienstag einen Termin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen Raum. David bringt seine Notizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt er eine Nachricht in die Gruppe.",
             "strength": "context"
           }
         ],
-        "id": "lex-v-a1-09-0ea18206"
+        "id": "lex-v-a1-09-cd286e48"
       },
       {
         "lessonId": "a1-09",
@@ -184661,29 +184419,6 @@
           }
         ],
         "id": "lex-v-a1-09-a9a94b4b"
-      },
-      {
-        "lessonId": "a1-09",
-        "level": "A1",
-        "infinitiveCandidate": "zusammen",
-        "normalizedVerb": "zusammen",
-        "preposition": "für",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "ambiguous"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.textDe",
-            "stage": "reading",
-            "text": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "surface": "Mona, David und Kenji möchten zusammen für den Deutschtest lernen. Mona schlägt Montag um achtzehn Uhr vor. David arbeitet aber am Montag bis sieben und kann nicht pünktlich kommen. Kenji hat am Dienstag einen Arzttermin. Am Mittwoch haben alle Zeit, aber nicht zur gleichen Uhrzeit. Mona kann ab fünf, David ab halb sechs und Kenji erst ab sechs. Sie vereinbaren Mittwoch von sechs bis halb acht in der Stadtbibliothek. Mona reserviert einen kleinen Raum. David bringt seine Grammatiknotizen mit, und Kenji bereitet Wortkarten vor. Falls jemand später kommt, schreibt die Person eine kurze Nachricht in die Gruppe.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-a1-09-34e3b3bf"
       },
       {
         "lessonId": "a1-10",
@@ -216234,5 +215969,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "3342cf5a5a1a06fb29f343c61d8a884c1d03f04de2f1c735eccb8de2842b9940"
+  "contentSha256": "1cf73073b87ea3cf387dfc6b41fa9186a6548fb24bef848c6a839532b3377869"
 }

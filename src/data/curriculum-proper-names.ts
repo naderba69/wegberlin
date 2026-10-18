@@ -8,7 +8,7 @@
 export const CURRICULUM_PROPER_NAMES_POLICY = "curriculum-proper-names-v1" as const;
 
 export const curriculumPersonNames = [
-  "Adam", "Ali", "Amal", "Amir", "Amira", "Anna", "Aylin", "Aziz", "Ben", "Bensalem", "Berger", "Brandt", "Dalia", "David", "Demir",
+  "Adam", "Adel", "Ali", "Amal", "Amir", "Amira", "Anna", "Aylin", "Aziz", "Ben", "Bensalem", "Berger", "Brandt", "Dalia", "David", "Demir",
   "Elena", "Elias", "Farid", "Hana", "Hatem", "Jana", "Jonas", "Julia", "Karim", "Keller", "Kenji", "Kessler", "Kraus", "Krüger", "Lea", "Leila",
   "Lena", "Lenz", "Lina", "Mara", "Mariam", "Meier", "Mei", "Mila", "Mira", "Mona", "Mouna", "Nabil", "Nadia", "Nora", "Okafor", "Özdemir", "Omar",
   "Paul", "Rami", "Rania", "Salem", "Salma", "Sami", "Samir", "Sara", "Schmidt", "Sofia", "Tarek", "Thomas", "Vogt", "Weber", "Yilmaz", "Yusuf",

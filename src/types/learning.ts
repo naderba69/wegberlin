@@ -130,6 +130,7 @@ export interface StudyDay {
   evidenceCount: number;
 }
 
+export type WorkflowMarker={value:number|null;updatedAt:string};
 export type MasteryEvidenceSource="diagnostic-assessment"|"lesson-evidence"|"module-assessment"|"level-assessment"|"targeted-exam"|"full-exam-workflow"|"other-learning-evidence";
 export interface MasteryEvidenceEvent {
   id:string;
@@ -1069,6 +1070,8 @@ export interface LearningState {
   exerciseAttempts: ExerciseAttempt[];
   dueReviews: number;
   mastery: Record<string, number>;
+  /** ADR-131: UI workflow markers (full-exam started/completed), never learning evidence. `value: null` is a reset tombstone. */
+  workflowMarkers: Record<string, WorkflowMarker>;
   masteryEvidenceEvents: MasteryEvidenceEvent[];
   errors: ErrorRecord[];
   errorClinicAttempts: ErrorClinicAttempt[];

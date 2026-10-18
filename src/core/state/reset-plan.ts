@@ -29,7 +29,7 @@ export type ResetFieldRow = {
 };
 
 /**
- * التصنيف الإلزامي: 68 حقلًا = 19 تقدّمًا يُصفَّر · 27 سجل دليل يبقى قبل=بعد ·
+ * التصنيف الإلزامي: 69 حقلًا = 20 تقدّمًا يُصفَّر · 27 سجل دليل يبقى قبل=بعد ·
  * 12 إعدادًا يبقى · 10 حقول هوية تبقى. السلة «progress» هي الوحيدة التي تُصفَّر.
  */
 export const RESET_FIELD_POLICIES: readonly ResetFieldRow[] = [
@@ -56,6 +56,7 @@ export const RESET_FIELD_POLICIES: readonly ResetFieldRow[] = [
   { field: "dueReviews", bucket: "progress", rationaleAr: "عدّاد المراجعات المستحقة مشتقّ من الجدول المُصفَّر." },
   { field: "mastery", bucket: "progress", rationaleAr: "الإتقان المشتقّ يُصفَّر لأن أحداث دليله أُفرغت." },
   { field: "masteryEvidenceEvents", bucket: "progress", rationaleAr: "أحداث الدليل المشتقّ تُفرَّغ مع إتقانها في هذه التهيئة." },
+  { field: "workflowMarkers", bucket: "progress", rationaleAr: "علامات بدء محاكاة الامتحان الكاملة وإنهائها حالةُ واجهة لا دليل، فتُصفَّر مع جلساتها." },
   { field: "errors", bucket: "progress", rationaleAr: "بنك الأخطاء المشتقّ من محاولات التمرين يُصفَّر." },
   { field: "errorClinicAttempts", bucket: "progress", rationaleAr: "جلسات عيادة الخطأ المشتقّة تُصفَّر." },
   { field: "reviewItems", bucket: "progress", rationaleAr: "جدول التكرار المتباعد يُصفَّر." },
@@ -119,6 +120,7 @@ export type ClearedField =
   | "dueReviews"
   | "mastery"
   | "masteryEvidenceEvents"
+  | "workflowMarkers"
   | "errors"
   | "errorClinicAttempts"
   | "reviewItems"
@@ -152,6 +154,7 @@ export const RESET_CLEARED_DEFAULTS: Pick<LearningState, ClearedField> = {
   dueReviews: defaultState.dueReviews,
   mastery: defaultState.mastery,
   masteryEvidenceEvents: defaultState.masteryEvidenceEvents,
+  workflowMarkers: defaultState.workflowMarkers,
   errors: defaultState.errors,
   errorClinicAttempts: defaultState.errorClinicAttempts,
   reviewItems: defaultState.reviewItems,

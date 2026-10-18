@@ -1,4 +1,5 @@
 import type { LearningState, MasteryEvidenceEvent, ReviewEvent } from "@/types/learning";
+import { isWorkflowMarkerKey, separateWorkflowMarkers } from "@/core/state/workflow-markers";
 
 export const EVENT_DERIVED_MASTERY_POLICY="event-derived-mastery-v1" as const;
 export const EVENT_DERIVED_MASTERY_BOUNDARY="event-log-authoritative-for-new-mutations-legacy-snapshot-fallback-explicit" as const;
@@ -30,7 +31,7 @@ function addedEvidenceRefs(current:LearningState,candidate:LearningState,key:str
 function stableEventId(source:MasteryEvidenceEvent["source"],key:string,operation:MasteryEvidenceEvent["operation"],refs:string[],createdAt:string,index:number){const seed=(refs.length?refs.join("+"):createdAt).replace(/[^a-zA-Z0-9:._-]+/g,"-").slice(0,280);return`mastery-event:${source}:${key}:${operation}:${seed}:${index}`}
 
 export function captureMasteryMutationEvents(current:LearningState,candidate:LearningState,now=new Date()):LearningState{
- const keys=[...new Set([...Object.keys(current.mastery),...Object.keys(candidate.mastery)])].filter((key)=>current.mastery[key]!==candidate.mastery[key]).sort();
+ const keys=[...new Set([...Object.keys(current.mastery),...Object.keys(candidate.mastery)])].filter((key)=>!isWorkflowMarkerKey(key)&&current.mastery[key]!==candidate.mastery[key]).sort();
  if(!keys.length)return candidate;
  const reviews=addedReviewEvents(current,candidate);const createdAt=now.toISOString();const existing=new Map(candidate.masteryEvidenceEvents.map((event)=>[event.id,event]));
  keys.forEach((key,index)=>{
@@ -57,6 +58,6 @@ export function recalculateMasteryFromEvidence(legacyMastery:Record<string,numbe
  return result;
 }
 
-export function normalizeEventDerivedMastery(state:LearningState):LearningState{return{...state,mastery:recalculateMasteryFromEvidence(state.mastery,state.masteryEvidenceEvents)}}
+export function normalizeEventDerivedMastery(input:LearningState):LearningState{const state=separateWorkflowMarkers(input);return{...state,mastery:recalculateMasteryFromEvidence(state.mastery,state.masteryEvidenceEvents)}}
 
 export function masteryDerivationSummary(state:LearningState){const eventKeys=new Set(state.masteryEvidenceEvents.map((event)=>event.key));const legacyFallbackKeys=Object.keys(state.mastery).filter((key)=>!eventKeys.has(key)).sort();return{policyVersion:EVENT_DERIVED_MASTERY_POLICY,eventCount:state.masteryEvidenceEvents.length,eventDerivedKeys:eventKeys.size,legacyFallbackKeys,legacyFallbackCount:legacyFallbackKeys.length,evidenceBoundary:EVENT_DERIVED_MASTERY_BOUNDARY}}

@@ -333,17 +333,17 @@
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 67,
+      "line": 68,
       "text": "ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق."
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 122,
+      "line": 123,
       "text": "بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة مراقبة أو نتيجة رسمية."
     },
     {
       "path": "src/components/exam-hub.tsx",
-      "line": 168,
+      "line": 169,
       "text": "بوابة B2 الداخلية"
     },
     {
@@ -1054,5 +1054,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "76be3b2313d63a17957b5b8eb98d21a50a9445fad94fba283f8443cc7bf35f0a"
+  "contentSha256": "9d720e3fbaae47d74a54a75f640598498aa343055421b56ae53ee035cf0677c2"
 }

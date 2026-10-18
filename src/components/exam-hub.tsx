@@ -27,6 +27,7 @@ import type { ExamProvider } from "@/types/learning";
 import { useLearning } from "./learning-provider";
 import { SeparatedRubrics } from "./separated-rubrics";
 import { ExamPartnerPanel } from "./exam-partner-panel";
+import { fullExamMarkerKeys, workflowMarkerValue } from "@/core/state/workflow-markers";
 
 const moduleIcons = {
   lesen: BookOpenCheck,
@@ -132,7 +133,7 @@ export function ExamHub() {
             .map((taskId) => examAudioTaskCoverageById[taskId])
             .filter((coverage) => coverage !== undefined);
           const listeningAudioComplete = listeningCoverage.filter((coverage) => coverage.status === "complete").length;
-          const completed = (state.mastery[`full-exam-${simulation.id}-completed`] ?? 0) >= 100;
+          const completed = (workflowMarkerValue(state, fullExamMarkerKeys(simulation.id).completed) ?? 0) >= 100;
           return <article key={simulation.id}><span><GraduationCap size={24} /></span><div><small lang="de" dir="ltr">{simulation.titleDe}</small><h3>{simulation.titleAr}</h3><p>{simulation.descriptionAr}</p><footer><b>{simulation.modules.length} وحدات</b><b>{taskCount} مهمة</b><b>MP3: {listeningAudioComplete}/{listeningCoverage.length} استماع</b><b>{completed ? "منجزة داخليًا" : "قابلة للاستئناف"}</b></footer></div><Link aria-label={`افتح ${simulation.titleAr}`} href={`/exams/${simulation.provider}/full/${simulation.id}`}><Play size={18} /></Link></article>;
         })}
       </section>

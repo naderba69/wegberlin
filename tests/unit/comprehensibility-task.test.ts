@@ -204,7 +204,7 @@ describe("P2-156 real-task comprehensibility check", () => {
   it("classifies the new evidence field in the reset plan with the documented totals", () => {
     const row = RESET_FIELD_POLICIES.find((entry) => entry.field === "comprehensibilityChecks");
     expect(row?.bucket).toBe("evidence");
-    expect(RESET_FIELD_POLICIES.length).toBe(68);
+    expect(RESET_FIELD_POLICIES.length).toBe(69);
     expect(RESET_FIELD_POLICIES.filter((entry) => entry.bucket === "evidence")).toHaveLength(27);
     expect(RESET_FIELD_POLICIES.filter((entry) => entry.bucket === "settings")).toHaveLength(12);
   });

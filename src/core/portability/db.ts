@@ -84,6 +84,7 @@ export const defaultState: LearningState = {
   exerciseAttempts: [],
   dueReviews: 0,
   mastery: {},
+  workflowMarkers: {},
   masteryEvidenceEvents: [],
   errors: [],
   errorClinicAttempts: [],

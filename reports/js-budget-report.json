@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2091375,
+    "totalChunkGzipBytes": 2092064,
     "maxSingleChunkGzipBytes": 268119
   },
   "issues": [],
@@ -59,9 +59,9 @@
       "gzipBytes": 63160
     },
     {
-      "path": ".next/static/chunks/app/settings/page-01ab84caf92fda51.js",
-      "rawBytes": 218890,
-      "gzipBytes": 61363
+      "path": ".next/static/chunks/app/settings/page-5f8b4d608c2dba73.js",
+      "rawBytes": 219292,
+      "gzipBytes": 61509
     },
     {
       "path": ".next/static/chunks/framework-666c53740fc261c8.js",
@@ -99,9 +99,9 @@
       "gzipBytes": 28038
     },
     {
-      "path": ".next/static/chunks/6850-182e0defe17f29fc.js",
-      "rawBytes": 90550,
-      "gzipBytes": 27074
+      "path": ".next/static/chunks/6850-1759ea6246d0bd32.js",
+      "rawBytes": 92010,
+      "gzipBytes": 27556
     },
     {
       "path": ".next/static/chunks/app/speaking/page-5bf0a6d4d6aa172f.js",

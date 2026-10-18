@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v238";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v239";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -3199,9 +3199,9 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
   await expect(wizard).toBeVisible();
   await expect(wizard.locator("[data-reset-attempt-log]")).toHaveAttribute("data-reset-attempt-log", "4");
   await expect(wizard).toContainText("سجل المحاولات (4 محاولة) محفوظ");
-  await expect(wizard).toContainText("68 حقلًا مصنَّفًا");
+  await expect(wizard).toContainText("69 حقلًا مصنَّفًا");
   await expect(wizard.locator("[data-reset-unclassified]")).toHaveAttribute("data-reset-unclassified", "0");
-  await expect(wizard).toContainText("19 تقدّمًا");
+  await expect(wizard).toContainText("20 تقدّمًا");
   // بلا إقرار ولا كلمة تأكيد: لا تنفيذ.
   await wizard.locator("[data-reset-run]").click();
   await expect(wizard.getByRole("status")).toContainText("الإقرار مطلوب");
@@ -3209,7 +3209,7 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
   await wizard.locator("[data-reset-acknowledgement]").check();
   await wizard.getByLabel("كلمة تأكيد إعادة التهيئة").fill("إعادة");
   await wizard.locator("[data-reset-run]").click();
-  await expect(wizard.getByRole("status")).toContainText("19 حقل تقدّم صُفِّر");
+  await expect(wizard.getByRole("status")).toContainText("20 حقل تقدّم صُفِّر");
   await expect(wizard.getByRole("status")).toContainText("سجل المحاولات (4 محاولة) محفوظ");
   await expect(wizard.locator("[data-reset-attempt-log]")).toHaveAttribute("data-reset-attempt-log", "4");
   await expect
@@ -3259,7 +3259,7 @@ test("P2 reset wizard clears derived progress and keeps the old attempt log", as
       attempts: 4,
       resetEvents: 1,
       policy: "reset-wizard-keeps-attempt-log-v1",
-      cleared: 19,
+      cleared: 20,
       preserved: 27,
       keptAttemptCount: 4,
     });
@@ -3420,7 +3420,7 @@ test("P2 guest session starts with zero inherited evidence and promotes to a per
   await guest.getByLabel("اسم الملف الدائم").fill("ضيف الاختبار");
   await guest.locator("[data-guest-promote]").click();
   await expect(guest.locator("[data-guest-session]")).toHaveAttribute("data-guest-session", "promoted");
-  await expect(guest.locator("[data-guest-plan]")).toContainText("68 حقلًا مصنَّفًا");
+  await expect(guest.locator("[data-guest-plan]")).toContainText("69 حقلًا مصنَّفًا");
   await expect(guest.getByRole("status").first()).toContainText("ملف دائم محلي");
   await expect(guest.locator("[data-guest-active-profile]")).toContainText("لم يُمسّ");
 

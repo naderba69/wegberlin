@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v238 · 2026-10-18 · سند بعد التسليم لمهمات النقل المستقلة الـ96 (ADR-130): خمس عبارات لكل مهمة ونموذج كامل لكل مهمة A1/A2 داخل مدى كلماتها، يُفتح بعد الفحص فقط ويُسقط استقلال أي محاولة لاحقة؛ وعبارات للمحاولة التالية في التحدث لـ32 مهمة؛ وإغلاق ثغرة «الجولة الجديدة» بعد فتح النموذج؛ ونماذج B1/B2 مؤجلة لميزانية المنهج؛ الكاش v238.
+Sync batch: v239 · 2026-10-18 · فصل علامات سير العمل عن الإتقان (ADR-131، م34): علامتا بدء محاكاة الامتحان الكاملة وإنهائها انتقلتا من `mastery` إلى `workflowMarkers` بطابع زمني وشاهد حذف، مع ترحيل عند التحميل والاستيراد والدمج، فلم تعد فتحة محاكاة تُنتج حدث دليل إتقان؛ الحقول المصنّفة 69 (20 تُصفَّر)؛ وتصحيح حالة صف م40؛ الكاش v239.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

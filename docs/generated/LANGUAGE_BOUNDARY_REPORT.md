@@ -3,7 +3,7 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `76be3b2313d63a17957b5b8eb98d21a50a9445fad94fba283f8443cc7bf35f0a`
+Content SHA-256: `9d720e3fbaae47d74a54a75f640598498aa343055421b56ae53ee035cf0677c2`
 
 ## Result
 
@@ -100,9 +100,9 @@ Content SHA-256: `76be3b2313d63a17957b5b8eb98d21a50a9445fad94fba283f8443cc7bf35f
 | src/components/error-notebook.tsx:118 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:119 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
 | src/components/evidence-achievements.tsx:8 | لا تُفتح بزيارة صفحة أو تكرار نقرة، ولا تضيف mastery أو شهادة. | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:67 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:122 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:168 | بوابة B2 الداخلية | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:68 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:123 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:169 | بوابة B2 الداخلية | Arabic host + plaintext boundary |
 | src/components/exam-print-tools.tsx:1 | ورقة تدريب محلية غير رسمية · Goethe وtelc لا يختلطان. | Arabic host + plaintext boundary |
 | src/components/grammar-progression-map.tsx:8 | 24 قاعدة محورية مرتبة بعلاقات تدريس فعلية. الأسهم تعني «تعلم هذا أولًا»، لا حكم CEFR رسميًا ولا إتقانًا بالتصف | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:33 | ليس تقييم مدرس رسميًا ولا حكم CEFR. | Arabic host + plaintext boundary |

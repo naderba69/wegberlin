@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v238" || stagingCacheName !== "dwnb-full-pack-staging-v237") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v239" || stagingCacheName !== "dwnb-full-pack-staging-v238") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v238"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v239"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -980,6 +980,13 @@ for (const text of ["data-after-commit-transfer-support", "transferSupportForTas
 for (const text of ["data-after-attempt-phrases", "showRecordingSupport || afterAttemptPhrasesSeen", ":after-attempt-phrases"]) requireText(read("src/components/speaking-lab.tsx"), text, "ADR-130 speaking lab");
 for (const text of ["closes the cross-round loophole", "toHaveLength(32)", "B1/B2 models stay honestly deferred"]) requireText(read("tests/unit/after-commit-transfer-support.test.ts"), text, "ADR-130 tests");
 for (const text of ["ADR-130", "1,275,000", "not a human linguistic review"]) requireText(read("docs/adr/ADR-130-after-commit-support-for-independent-transfer-tasks.md"), text, "ADR-130");
+// ADR-131 (v239): full-exam started/completed markers live in workflowMarkers (timestamp + tombstone), never in mastery or its event log.
+for (const text of ["workflow-markers-separate-from-mastery-v1", "export function separateWorkflowMarkers", "export function mergeWorkflowMarkers"]) requireText(read("src/core/state/workflow-markers.ts"), text, "ADR-131 workflow markers");
+for (const text of ["separateWorkflowMarkers(input)", "!isWorkflowMarkerKey(key)&&"]) requireText(read("src/core/evidence/event-derived-mastery.ts"), text, "ADR-131 mastery normalization");
+requireText(read("src/core/portability/merge.ts"), "workflowMarkers:mergeWorkflowMarkers(current.workflowMarkers,incoming.workflowMarkers)", "ADR-131 merge");
+requireText(portabilitySchema, "workflowMarkers: z.record(", "ADR-131 schema");
+if (/state\.mastery\[(startedKey|completedKey)\]|mastery\[`full-exam-/.test(read("src/components/full-exam-simulation.tsx") + read("src/components/exam-hub.tsx"))) fail("ADR-131: full-exam markers must not be read from mastery");
+for (const text of ["ADR-131", "tombstone", "68 to 69"]) requireText(read("docs/adr/ADR-131-workflow-markers-separate-from-mastery.md"), text, "ADR-131");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");
@@ -1257,7 +1264,7 @@ for (const text of ["real-task-comprehensibility-check-v1","listener-judged-real
 for (const text of ["data-comprehensibility-policy","data-comprehensibility-listener-question","data-comprehensibility-answer-key","data-comprehensibility-record","data-comprehensibility-summary","data-comprehensibility-no-effect","data-comprehensibility-honest-note"]) requireText(comprehensibilityPanel, text, "comprehensibility panel");
 for (const text of ["تقرير ذاتي لا يُعدّ تحقّقًا خارجيًا","المعلومة التي يجب أن تصل","لا تُمنح هنا درجة نطقٍ أو طلاقة"]) requireText(comprehensibilityPanel, text, "comprehensibility honesty copy");
 if (/\bfetch\(|localStorage|sessionStorage|indexedDB|navigator\./.test(comprehensibilityCore)) fail("comprehensibility core must stay network-free and storage-free");
-for (const text of ["8","3","68"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
+for (const text of ["8","3","69"]) requireText(comprehensibilityTest, text, "comprehensibility unit tests");
 requireText(comprehensibilityAdr, "٨ مهام", "comprehensibility ADR inventory");
 requireText(comprehensibilityAdr, "self-report-no-external-verification", "comprehensibility ADR self-report label");
 requireText(comprehensibilityRunLog, "66", "comprehensibility run log field count (historical record of the field count at that time)");

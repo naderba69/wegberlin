@@ -11,6 +11,7 @@ import { useLearning } from "./learning-provider";
 import { ContinuousExamClock } from "./continuous-exam-session";
 import { abandonContinuousSession, completeContinuousSession, continuousSessionEffectiveStatus, createContinuousExamSession } from "@/core/exams/continuous-session";
 import { deleteMedia } from "@/core/portability/db";
+import { fullExamMarkerKeys, setWorkflowMarker, workflowMarkerValue } from "@/core/state/workflow-markers";
 import { AccessibleDialog } from "./accessible-dialog";
 
 const tasksById = Object.fromEntries(allPublishedExamTasks.map((task) => [task.id, task])) as Record<string, PublishedTargetedExamSimulation>;
@@ -21,15 +22,14 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
   const [confirmAction, setConfirmAction] = useState<"abandon" | "reset" | null>(null);
   const profile = examProfiles[simulation.provider];
   const taskIds = simulation.modules.flatMap((module) => module.taskIds);
-  const startedKey = `full-exam-${simulation.id}-started`;
-  const completedKey = `full-exam-${simulation.id}-completed`;
+  const { started: startedKey, completed: completedKey } = fullExamMarkerKeys(simulation.id);
   const continuousSession = state.examSessions[simulation.id];
   const continuousStatus = continuousSession ? continuousSessionEffectiveStatus(continuousSession) : null;
   const continuousAttempt = Boolean(continuousSession);
   const connected = Boolean(continuousSession && continuousSession.status !== "abandoned");
   const abandoned = continuousSession?.status === "abandoned";
-  const startedAt = continuousAttempt ? 1 : state.mastery[startedKey];
-  const finalized = continuousAttempt ? continuousStatus === "completed" : (state.mastery[completedKey] ?? 0) >= 100;
+  const startedAt = continuousAttempt ? 1 : workflowMarkerValue(state, startedKey);
+  const finalized = continuousAttempt ? continuousStatus === "completed" : (workflowMarkerValue(state, completedKey) ?? 0) >= 100;
 
   function isTaskComplete(task: PublishedTargetedExamSimulation) {
     if (continuousSession) return continuousSession.completedTaskIds.includes(task.id);
@@ -45,7 +45,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
 
   function start() {
     if (startedAt) return;
-    update((current) => ({ ...current, mastery: { ...current.mastery, [startedKey]: 1 } }));
+    update((current) => ({ ...current, workflowMarkers: setWorkflowMarker(current.workflowMarkers, startedKey, 1) }));
   }
 
   function startContinuous() {
@@ -53,7 +53,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
     const session = createContinuousExamSession(simulation);
     update((current) => ({
       ...current,
-      mastery: { ...current.mastery, [startedKey]: 1 },
+      workflowMarkers: setWorkflowMarker(current.workflowMarkers, startedKey, 1),
       examSessions: { ...current.examSessions, [simulation.id]: session },
     }));
   }
@@ -62,7 +62,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
     const session = createContinuousExamSession(simulation);
     update((current) => ({
       ...current,
-      mastery: { ...current.mastery, [startedKey]: 1 },
+      workflowMarkers: setWorkflowMarker(current.workflowMarkers, startedKey, 1),
       examSessions: { ...current.examSessions, [simulation.id]: session },
     }));
   }
@@ -73,7 +73,7 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
     update((current) => {
       const withEvidence = {
         ...current,
-        mastery: { ...current.mastery, [completedKey]: 100 },
+        workflowMarkers: setWorkflowMarker(current.workflowMarkers, completedKey, 100, now),
         studyHistory: [...current.studyHistory, { date: studyDayKey(new Date(now)), minutes: simulation.modules.reduce((sum, module) => sum + module.officialMinutes, 0), evidenceCount: taskIds.length }],
       };
       return connected ? completeContinuousSession(withEvidence, simulation.id, now) : withEvidence;
@@ -91,12 +91,11 @@ export function FullExamSimulationView({ simulation }: { simulation: FullExamSim
     const temporaryMediaIds = Object.values(continuousSession?.taskDrafts ?? {}).flatMap((draft) => typeof draft.payload.mediaId === "string" ? [draft.payload.mediaId] : []);
     await Promise.all(temporaryMediaIds.map((mediaId) => deleteMedia(mediaId)));
     update((current) => {
-      const mastery = { ...current.mastery };
       const examSessions = { ...current.examSessions };
-      delete mastery[startedKey];
-      delete mastery[completedKey];
       delete examSessions[simulation.id];
-      return { ...current, mastery, examSessions };
+      const resetAt = new Date();
+      const workflowMarkers = setWorkflowMarker(setWorkflowMarker(current.workflowMarkers, startedKey, null, resetAt), completedKey, null, resetAt);
+      return { ...current, workflowMarkers, examSessions };
     });
     setConfirmAction(null);
   }

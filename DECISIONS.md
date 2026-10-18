@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v241 · 2026-10-18 · عبارات تحدث لمواقف مهمات النقل 9–24 (ADR-133، باقي م39): لكل مهمة من المهمات الـ64 ذات موقف التحدث المختلف خمس عبارات كُتبت لموقف التحدث نفسه، تظهر بعد حفظ المحاولة فقط وتجعل أي تسجيل لاحق موجّهًا؛ فصار لكل المهمات الـ96 سند تحدث مطابق؛ وتصحيح نص صف م37 (الباقي a1-01 حدّ بنيوي)؛ الكاش v241.
+Sync batch: v242 · 2026-10-18 · التحقق المصدري من الكتابة الصوتية وادعاءات النطق (ADR-134، P1-380): قورنت 601 كتابة صوتية في الدروس وأزواج التمييز وجرد النطق بقاموس مشتق من de.wiktionary مثبّت بالـcommit، فصُحّحت 11 كتابة خاطئة (منها notiere و jedoch و Komma و allerdings) و6 مواءمات رمزية، ووُثّق كل ادعاء من ادعاءات صعوبات النطق الثمانية عشر لدى المتعلمين العرب بمصادر منشورة؛ وأُعيدت صياغة صفّين نقلًا إيجابيًا لأن العربية فيها الهاء والهمزة وطول الحركات. يبقى P1-380 جزئيًا: مراجع فونيتي بشري ومعايرة على تسجيلات حقيقية والصفوف الموجَّهة الثلاثة.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1813,3 +1813,20 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - **Stated limits:**
   - The phrases are agent-written to level norms, not checked by a human linguist.
   - There is no learner data yet on whether after-attempt phrases improve the next attempt for this group of learners.
+
+## ADR-134 — Source verification of every IPA transcription and of the 18 Arabic-learner pronunciation claims (P1-380)
+
+- Status: accepted, 2026-10-18 (v242)
+- Policy IDs: `ipa-dictionary-source-verification-v1`, `arabic-learner-pronunciation-source-check-v1`
+- Evidence tier: `source-verified-agent` (ADR-116). Not an independent phonetician's review; inventory `reviewStatus` stays `authored-review-pending`.
+
+## Decision
+
+1. All 601 distinct transcriptions (lesson items, 44 contrast-pair sides, 36 inventory sides) were compared with a pinned Wiktionary-derived dictionary (`open-dict-data/ipa-dict` `de.txt`, commit `43c3570e…`, CC BY-SA) by `scripts/verify-ipa-against-dictionary.ts`. Evidence: `reports/pronunciation-source-verification/IPA_SOURCE_VERIFICATION_2026-10-18.csv`. 17 rows carry a recorded manual decision (4 intonation arrows out of scope).
+2. Eleven real transcription errors were corrected (notiere, jedoch, also, Komma, des, ausgewertet, allerdings ×2, unsicher, Telefonnummer, telefoniert), plus six notation alignments (r → ʁ ×4, deːɐ → deːɐ̯ ×2).
+3. Each of the 18 Arabic-learner claims now cites published sources (`src/core/pronunciation/arabic-learner-claim-sources.ts`): 10 supported, 3 partially supported, 3 general DaF, 2 rewritten as positive transfer (Arabic has ه/ء and long/short a/i/u). The r row gained the sourced Ġain ≈ Zäpfchen-r hint.
+4. `tests/unit/ipa-source-verification.test.ts` fails on any unverified transcription, unresolved mismatch, reintroduced error, or unsourced claim.
+
+## Consequences
+
+- P1-380 stays `partial`: an independent phonetician, calibration on real Arabic-speaker recordings, and the three guided-only rows remain open. No pronunciation score is claimed.

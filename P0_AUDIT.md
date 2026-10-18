@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v241 · 2026-10-18 · عبارات تحدث لمواقف مهمات النقل 9–24 (ADR-133، باقي م39): لكل مهمة من المهمات الـ64 ذات موقف التحدث المختلف خمس عبارات كُتبت لموقف التحدث نفسه، تظهر بعد حفظ المحاولة فقط وتجعل أي تسجيل لاحق موجّهًا؛ فصار لكل المهمات الـ96 سند تحدث مطابق؛ وتصحيح نص صف م37 (الباقي a1-01 حدّ بنيوي)؛ الكاش v241.
+Sync batch: v242 · 2026-10-18 · التحقق المصدري من الكتابة الصوتية وادعاءات النطق (ADR-134، P1-380): قورنت 601 كتابة صوتية في الدروس وأزواج التمييز وجرد النطق بقاموس مشتق من de.wiktionary مثبّت بالـcommit، فصُحّحت 11 كتابة خاطئة (منها notiere و jedoch و Komma و allerdings) و6 مواءمات رمزية، ووُثّق كل ادعاء من ادعاءات صعوبات النطق الثمانية عشر لدى المتعلمين العرب بمصادر منشورة؛ وأُعيدت صياغة صفّين نقلًا إيجابيًا لأن العربية فيها الهاء والهمزة وطول الحركات. يبقى P1-380 جزئيًا: مراجع فونيتي بشري ومعايرة على تسجيلات حقيقية والصفوف الموجَّهة الثلاثة.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

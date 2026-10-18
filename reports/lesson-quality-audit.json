@@ -15,7 +15,10 @@
     "feedbackBoilerplateTailsMax": 0,
     "duplicateExplanationsInLessonMax": 0,
     "maxRepeatedFinalSentence": 24,
-    "wordOrderingTilesMin": 3
+    "wordOrderingTilesMin": 3,
+    "readingLemmatizedMedianPctMax": 29,
+    "readingLemmatizedOver45Max": 13,
+    "longInputUnknownPctMax": 32
   },
   "multipleChoice": {
     "items": 1250,
@@ -125,7 +128,272 @@
     },
     "lessonsOver45Pct": 29,
     "maxUnknownWordPct": 80,
-    "measurementNote": "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. Reported, not thresholded: the stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze) without a lemma dictionary, and proper names count as unknown, so the figure is a conservative upper bound. Turning it into a gate requires a lemmatizer first.",
+    "measurementNote": "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. The fields at this level are the legacy suffix-stemmer figures, kept for comparability: that stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze), counts proper names as unknown and uses an unfolded stop list. Since ADR-126 the thresholded figure is `lemmatized` below.",
+    "lemmatized": {
+      "policy": "lemmatized-lexical-load-v1",
+      "lemmatizer": "german-curriculum-lemmatizer-v1",
+      "dictionary": {
+        "verbs": 111,
+        "otherVerbForms": 50,
+        "irregularPlurals": 88,
+        "irregularComparison": 32
+      },
+      "properNamePolicy": "curriculum-proper-names-v1",
+      "unit": "distinct content-word types per text",
+      "medianUnknownWordPct": 28.9,
+      "medianByLevel": {
+        "A1": 45.1,
+        "A2": 28.2,
+        "B1": 28,
+        "B2": 27
+      },
+      "lessonsOver45Pct": 13,
+      "maxUnknownWordPct": 73.3,
+      "properNamesExcluded": 139,
+      "ratchet": {
+        "medianPctMax": 29,
+        "over45Max": 13,
+        "pedagogicalTargetMedianPct": 25,
+        "targetMet": false
+      },
+      "worstLessons": [
+        {
+          "id": "a1-02",
+          "pct": 73.3,
+          "unknown": [
+            "pause",
+            "sitzen",
+            "zusammen",
+            "jetzt",
+            "franzoesisch",
+            "spanien",
+            "faehrt",
+            "jeden",
+            "zum",
+            "deutschkurs",
+            "muttersprache",
+            "spanisch"
+          ]
+        },
+        {
+          "id": "a1-01",
+          "pct": 66.7,
+          "unknown": [
+            "heute",
+            "beginnt",
+            "deutschkurs",
+            "kommt",
+            "spanien",
+            "kursraum",
+            "tunesien",
+            "sagt",
+            "antwortet",
+            "dann",
+            "frau",
+            "lehrerin"
+          ]
+        },
+        {
+          "id": "a1-06",
+          "pct": 63.5,
+          "unknown": [
+            "abendkurs",
+            "achtzehn",
+            "uhr",
+            "adel",
+            "bahnhof",
+            "oft",
+            "wochenende",
+            "umweltfirma",
+            "plant",
+            "technische",
+            "projekte",
+            "manchmal"
+          ]
+        },
+        {
+          "id": "a1-05",
+          "pct": 62,
+          "unknown": [
+            "sportverein",
+            "fuellt",
+            "drei",
+            "kontaktkarten",
+            "eigene",
+            "nur",
+            "uebungsdaten",
+            "zwoelften",
+            "oktober",
+            "gruppen",
+            "moechte",
+            "private"
+          ]
+        },
+        {
+          "id": "a1-03",
+          "pct": 58.5,
+          "unknown": [
+            "meldet",
+            "sich",
+            "formular",
+            "stehen",
+            "mitarbeiterin",
+            "zuerst",
+            "sagt",
+            "freundlich",
+            "zwei",
+            "dazwischen",
+            "leerzeichen",
+            "dann"
+          ]
+        },
+        {
+          "id": "a1-04",
+          "pct": 55.8,
+          "unknown": [
+            "zeigt",
+            "foto",
+            "mitte",
+            "stehen",
+            "hotel",
+            "links",
+            "steht",
+            "neunzehn",
+            "jahre",
+            "alt",
+            "studiert",
+            "rechts"
+          ]
+        },
+        {
+          "id": "a1-07",
+          "pct": 54.5,
+          "unknown": [
+            "dienstag",
+            "drei",
+            "termine",
+            "trinkt",
+            "kaffee",
+            "dauert",
+            "danach",
+            "zum",
+            "zug",
+            "anzeige",
+            "verspaetung",
+            "fuenf"
+          ]
+        },
+        {
+          "id": "a1-11",
+          "pct": 50,
+          "unknown": [
+            "vier",
+            "personen",
+            "kartoffeln",
+            "zwei",
+            "gurken",
+            "apfelsaft",
+            "ersten",
+            "geschaeft",
+            "teuer",
+            "markt",
+            "nur",
+            "fuenfzig"
+          ]
+        },
+        {
+          "id": "a1-14",
+          "pct": 48.8,
+          "unknown": [
+            "gegenueber",
+            "schreibtisch",
+            "laptop",
+            "zwei",
+            "buecher",
+            "notizheft",
+            "tasche",
+            "kleiderschrank",
+            "fenster",
+            "normalerweise",
+            "schale",
+            "heute"
+          ]
+        },
+        {
+          "id": "a1-09",
+          "pct": 46.5,
+          "unknown": [
+            "deutschtest",
+            "schlaegt",
+            "achtzehn",
+            "dienstag",
+            "arzttermin",
+            "uhrzeit",
+            "fuenf",
+            "erst",
+            "vereinbaren",
+            "stadtbibliothek",
+            "reserviert",
+            "raum"
+          ]
+        },
+        {
+          "id": "a1-13",
+          "pct": 45.7,
+          "unknown": [
+            "sucht",
+            "neue",
+            "samstag",
+            "besichtigt",
+            "zwei",
+            "erste",
+            "liegt",
+            "zentrum",
+            "strasse",
+            "laut",
+            "zweite",
+            "gegend"
+          ]
+        },
+        {
+          "id": "a2-08",
+          "pct": 45.2,
+          "unknown": [
+            "mittelstaendisches",
+            "unternehmen",
+            "september",
+            "mitarbeiterin",
+            "mitarbeiter",
+            "telefonische",
+            "terminvereinbarungen",
+            "pflege",
+            "kundendaten",
+            "bewerberinnen",
+            "deutschkenntnisse",
+            "vorteil"
+          ]
+        },
+        {
+          "id": "a1-12",
+          "pct": 45.1,
+          "unknown": [
+            "cafe",
+            "linden",
+            "bietet",
+            "freitag",
+            "mittagskarte",
+            "gibt",
+            "tomatensuppe",
+            "gemuesesuppe",
+            "beide",
+            "fuenf",
+            "ihn",
+            "haehnchen"
+          ]
+        }
+      ],
+      "note": "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high."
+    },
     "legacyFoldMedianUnknownWordPct": 35,
     "worstLessons": [
       {
@@ -2362,6 +2630,318 @@
         ]
       }
     ]
+  },
+  "longInputs": {
+    "policy": "lemmatized-lexical-load-v1",
+    "support": "every lesson at or below the input's level (phrases, cards, reading glossary) plus the glossary shown beside the input",
+    "tasks": 16,
+    "medianUnknownWordPct": 20,
+    "maxUnknownWordPct": 31.3,
+    "ceilingPct": 32,
+    "rows": [
+      {
+        "id": "endurance-a1-A",
+        "level": "A1",
+        "contentTypes": 48,
+        "properNames": 1,
+        "pct": 16.7,
+        "unknownSample": [
+          "dienstag",
+          "endet",
+          "schule",
+          "stock",
+          "raum",
+          "frau",
+          "offen",
+          "stift"
+        ]
+      },
+      {
+        "id": "endurance-a1-B",
+        "level": "A1",
+        "contentTypes": 56,
+        "properNames": 1,
+        "pct": 16.1,
+        "unknownSample": [
+          "denn",
+          "oeffnet",
+          "durch",
+          "post",
+          "person",
+          "nachmittag",
+          "jacke",
+          "siebzehn",
+          "hole"
+        ]
+      },
+      {
+        "id": "endurance-a2-A",
+        "level": "A2",
+        "contentTypes": 109,
+        "properNames": 2,
+        "pct": 12.8,
+        "unknownSample": [
+          "freundin",
+          "besuchen",
+          "gepackt",
+          "besuch",
+          "technisches",
+          "situation",
+          "unterwegs",
+          "supermarkt",
+          "nachmittag",
+          "freitag"
+        ]
+      },
+      {
+        "id": "endurance-a2-B",
+        "level": "A2",
+        "contentTypes": 118,
+        "properNames": 0,
+        "pct": 18.6,
+        "unknownSample": [
+          "unserem",
+          "garten",
+          "gepflanzt",
+          "umgezogen",
+          "kaum",
+          "einige",
+          "nachbarn",
+          "besprochen",
+          "pflanzen",
+          "wochenende"
+        ]
+      },
+      {
+        "id": "endurance-b1-A",
+        "level": "B1",
+        "contentTypes": 165,
+        "properNames": 0,
+        "pct": 18.8,
+        "unknownSample": [
+          "stadtbibliothek",
+          "verleihen",
+          "zusammenbringen",
+          "werkstatt",
+          "dinge",
+          "moebel",
+          "bibliothek",
+          "helfenden",
+          "tipps",
+          "arbeitsschritte"
+        ]
+      },
+      {
+        "id": "endurance-b1-B",
+        "level": "B1",
+        "contentTypes": 169,
+        "properNames": 1,
+        "pct": 18.9,
+        "unknownSample": [
+          "betrieb",
+          "monat",
+          "gebaeude",
+          "nachmittag",
+          "strecke",
+          "fluss",
+          "hauptstrasse",
+          "allerdings",
+          "beleuchtung",
+          "dunklen"
+        ]
+      },
+      {
+        "id": "endurance-b2-A",
+        "level": "B2",
+        "contentTypes": 244,
+        "properNames": 0,
+        "pct": 23.8,
+        "unknownSample": [
+          "bibliothek",
+          "verfuegt",
+          "leseraum",
+          "lerngruppen",
+          "vergangenen",
+          "monaten",
+          "zugaenglichen",
+          "ort",
+          "zusammenarbeit",
+          "erwaegt"
+        ]
+      },
+      {
+        "id": "endurance-b2-B",
+        "level": "B2",
+        "contentTypes": 250,
+        "properNames": 0,
+        "pct": 19.2,
+        "unknownSample": [
+          "nachbarschaftszentrum",
+          "bisher",
+          "telefonisch",
+          "mitarbeitenden",
+          "benoetigen",
+          "ablauf",
+          "begruesst",
+          "solchen",
+          "bedienen",
+          "immer"
+        ]
+      },
+      {
+        "id": "endurance-a1-C",
+        "level": "A1",
+        "contentTypes": 65,
+        "properNames": 2,
+        "pct": 20,
+        "unknownSample": [
+          "schlimm",
+          "schlecht",
+          "nacht",
+          "holt",
+          "frueheren",
+          "praxis",
+          "herr",
+          "ausweis",
+          "medikamenten",
+          "zeitschriften"
+        ]
+      },
+      {
+        "id": "endurance-a2-C",
+        "level": "A2",
+        "contentTypes": 104,
+        "properNames": 1,
+        "pct": 18.3,
+        "unknownSample": [
+          "bald",
+          "beruhigt",
+          "genau",
+          "ausserdem",
+          "unserem",
+          "leute",
+          "einige",
+          "winter",
+          "betroffen",
+          "ofen"
+        ]
+      },
+      {
+        "id": "endurance-b1-C",
+        "level": "B1",
+        "contentTypes": 140,
+        "properNames": 2,
+        "pct": 29.3,
+        "unknownSample": [
+          "stadtteil",
+          "parkplatz",
+          "verschwinden",
+          "stadtverwaltung",
+          "zugezogen",
+          "fuerchten",
+          "einige",
+          "kuenftig",
+          "buergerversammlung",
+          "beider"
+        ]
+      },
+      {
+        "id": "endurance-b2-C",
+        "level": "B2",
+        "contentTypes": 184,
+        "properNames": 0,
+        "pct": 25,
+        "unknownSample": [
+          "sueden",
+          "kuenftig",
+          "smartphones",
+          "unterricht",
+          "geregelt",
+          "bisher",
+          "schulleitung",
+          "lehrkraefte",
+          "recherche",
+          "umfragen"
+        ]
+      },
+      {
+        "id": "endurance-a1-D",
+        "level": "A1",
+        "contentTypes": 68,
+        "properNames": 0,
+        "pct": 23.5,
+        "unknownSample": [
+          "offen",
+          "vierzehn",
+          "ende",
+          "dass",
+          "gemuesestand",
+          "besuchen",
+          "frischen",
+          "paprika",
+          "tasche",
+          "geld"
+        ]
+      },
+      {
+        "id": "endurance-a2-D",
+        "level": "A2",
+        "contentTypes": 119,
+        "properNames": 0,
+        "pct": 23.5,
+        "unknownSample": [
+          "fahrradkurs",
+          "stadtpark",
+          "rad",
+          "verkehr",
+          "dienstag",
+          "achtzehn",
+          "neunzehn",
+          "ueberweisen",
+          "rads",
+          "trainer"
+        ]
+      },
+      {
+        "id": "endurance-b1-D",
+        "level": "B1",
+        "contentTypes": 147,
+        "properNames": 1,
+        "pct": 31.3,
+        "unknownSample": [
+          "grundschule",
+          "fruehjahr",
+          "bisher",
+          "asphalt",
+          "fussballplatz",
+          "gegenseitig",
+          "schulleitung",
+          "bereiche",
+          "schaffen",
+          "idee"
+        ]
+      },
+      {
+        "id": "endurance-b2-D",
+        "level": "B2",
+        "contentTypes": 190,
+        "properNames": 1,
+        "pct": 22.1,
+        "unknownSample": [
+          "stadtrat",
+          "theatergruppen",
+          "bisher",
+          "anbot",
+          "zuschauer",
+          "kuenftig",
+          "auffuehrungen",
+          "besucherzahlen",
+          "jugendlichen",
+          "kritiker"
+        ]
+      }
+    ],
+    "note": "Measures whether the long inputs ask for vocabulary the curriculum has exposed; it says nothing about voice, pacing or rights, which remain human review items of P2-401."
   },
   "pronunciation": {
     "medianCoveragePct": 33.3

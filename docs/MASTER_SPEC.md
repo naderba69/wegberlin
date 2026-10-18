@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v233 · 2026-10-18 · ملف نطق مؤلف لكل درس (ADR-125): خريطة صريحة للدروس الـ96 بدل الاستدلال بالكلمات المفتاحية — ملف النغمة العام 73 ⇒ 55 درسًا، وملفان جديدان (نبر الكلمة في 14 درسًا، وach-Laut في درسين)، وa2-11 إلى الحركات المدورة؛ أعيد ربط صفوف جرد النطق الـ18 بدروس تعلّم أصواتها، والأزواج التفاعلية 11/18 ⇒ 13/18.
+Sync batch: v234 · 2026-10-18 · حمل معجمي مقيس بالجذور المعجمية (ADR-126): مُلَمِّم منهجي وقاموس أشكال شاذة (2,044 زوجًا) وقائمة أعلام — وسيط حمل القراءة 40% ⇒ 28.9%، والنصوص فوق 45% ‏29 ⇒ 13، وقياس المدخلات الطويلة الـ16 لأول مرة (الأعلى 31.3%)، وبوابة تراجع في lesson:quality، وعشر كلمات مسرد بوسم متحقق منه؛ الهدف 25% لم يتحقق بعد.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

@@ -1,6 +1,6 @@
 # Verifikation der Grammatik-Labels (P2-401)
 
-Stand 2026-10-08: 63 von 64 Labels mit Quelle verifiziert، 1 غير مُتحقق منها بعد (Nutzungssituation: keine Quelle vorhanden).
+Stand 2026-10-18: 73 von 74 Labels mit Quelle verifiziert (v234: zehn neue Stichwörter für die fünf Langtexte mit dem höchsten Anteil unbekannter Wörter), 1 غير مُتحقق منها بعد (Nutzungssituation: keine Quelle vorhanden).
 
 Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/DWDS/Duden) لا مراجعة لغوية بشرية. أي label بحالة «غير متحقق» لا يُعد صحيحًا ولا خاطئًا. Alle 11 Verben mit Partizip II/Trennbarkeit sind geprüft.
 
@@ -70,3 +70,13 @@ Hinweis: هذه مطابقة مع مصادر مرجعية عامة (Wiktionary/D
 | die Spielzeit | die · Pl. die Spielzeiten | verifiziert | de.wiktionary (Wikitext-API) |
 | zwangsläufig | Adjektiv | verifiziert | de.wiktionary und Duden: Adjektiv |
 | der Übergang | der · Pl. die Übergänge | verifiziert | de.wiktionary (Wikitext-API) |
+| der Schulhof | der · Pl. die Schulhöfe | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| der Schatten | der · Pl. die Schatten | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| der Spielplatz | der · Pl. die Spielplätze | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| der Fragebogen | der · Pl. die Fragebögen | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18): Plural Fragebogen und Fragebögen; das Label nennt die zweite Form |
+| trocken | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| die Erdbeere | die · Pl. die Erdbeeren | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| die Lehrkraft | die · Pl. die Lehrkräfte | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| heimlich | Adjektiv | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| die Bremse | die · Pl. die Bremsen | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |
+| der Helm | der · Pl. die Helme | verifiziert | de.wiktionary (Wikitext-API, abgerufen 2026-10-18) |

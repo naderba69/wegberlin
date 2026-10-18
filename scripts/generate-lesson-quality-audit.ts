@@ -6,6 +6,11 @@ import { evaluateExercise } from "../src/core/lesson/evaluate";
 import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
 import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "../src/core/lesson/teaching-contract";
+import { LEXICAL_LOAD_POLICY, createLexicalLoadContext, measureLongInputLoad, measureReadingLoad, medianOf } from "../src/core/content-validation/lexical-load";
+import { GERMAN_LEMMATIZER_POLICY } from "../src/core/german/lemmatizer";
+import { GERMAN_LEMMA_DICTIONARY_COUNTS, germanLemmaDictionary } from "../src/data/german-lemma-dictionary";
+import { CURRICULUM_PROPER_NAMES_POLICY, curriculumPersonNames, curriculumPlaceNames } from "../src/data/curriculum-proper-names";
+import { extendedComprehensionTasks, extendedTaskText } from "../src/data/extended-comprehension";
 
 /**
  * Lesson-quality audit — measures what the structural gates do not:
@@ -28,6 +33,11 @@ const thresholds = {
   duplicateExplanationsInLessonMax: 0,
   maxRepeatedFinalSentence: 24,
   wordOrderingTilesMin: 3,
+  // ADR-126 ratchet: measured 2026-10-18 with lemmatized-lexical-load-v1. The pedagogical target
+  // stays a 25% median; these ceilings only forbid regression while the gap is closed in content.
+  readingLemmatizedMedianPctMax: 29,
+  readingLemmatizedOver45Max: 13,
+  longInputUnknownPctMax: 32,
 };
 
 const STOP = new Set("der die das und oder aber für mit von zu im am an ein eine einen einer einem des dem den ich du er sie es wir ihr sie nicht kein keine alle jeder jede wenn als auch noch schon sehr mehr weniger man uns euch ihnen ihm sein ihre ihrem diesem dieser dieses bei nach aus über unter vor hinter zwischen um ohne innerhalb außerhalb kann werde werden wird hat haben hatte sollte müssen will möchten".split(" "));
@@ -177,8 +187,22 @@ for (const lesson of lessons) {
   unknownLoadLegacy.push(100 * legacyWords.filter((word) => !taughtByLevelLegacy.get(lesson.level)!.has(stem(word))).length / Math.max(1, legacyWords.length));
 }
 
+// ADR-126 (P2-401): the same prior-sequence question, answered with lemma candidates instead of the
+// suffix stemmer. Proper names are counted apart, and the stop list is folded like the text (the
+// legacy STOP set above is unfolded, so für/über/möchten never matched it; kept for comparability).
+const lexicalContext = createLexicalLoadContext({ dictionary: germanLemmaDictionary, stopWords: STOP, properNames: [...curriculumPersonNames, ...curriculumPlaceNames], stem });
+const lemmatizedReading = measureReadingLoad(lessons, lexicalContext);
+const lemmatizedPcts = lemmatizedReading.map((row) => row.pct);
+const lemmatizedMedian = medianOf(lemmatizedPcts);
+const lemmatizedOver45 = lemmatizedPcts.filter((pct) => pct > 45).length;
+const longInputRows = measureLongInputLoad(extendedComprehensionTasks.map((task) => ({ id: task.id, level: task.level, text: extendedTaskText(task), glossary: task.glossary.map((entry) => entry.de) })), lessons, lexicalContext);
+const longInputMax = Math.max(...longInputRows.map((row) => row.pct));
+
 const shares = positions.map((count) => (100 * count) / Math.max(1, itemTotal));
 const issues: string[] = [];
+if (lemmatizedMedian > thresholds.readingLemmatizedMedianPctMax) issues.push(`lemmatized reading load median ${lemmatizedMedian}% (ratchet ${thresholds.readingLemmatizedMedianPctMax}%)`);
+if (lemmatizedOver45 > thresholds.readingLemmatizedOver45Max) issues.push(`reading texts above 45% lemmatized unknown types: ${lemmatizedOver45} (ratchet ${thresholds.readingLemmatizedOver45Max})`);
+if (longInputMax > thresholds.longInputUnknownPctMax) issues.push(`long input above ${thresholds.longInputUnknownPctMax}% unknown types: ${longInputRows.filter((row) => row.pct > thresholds.longInputUnknownPctMax).map((row) => `${row.id} ${row.pct}%`).join(", ")}`);
 if (writingViolations.length > thresholds.writingModelRangeViolations) issues.push(`writing model answers outside their own stated range: ${writingViolations.length} (allowed ${thresholds.writingModelRangeViolations})`);
 const overPosition = shares.findIndex((share) => share > thresholds.maxPositionSharePct);
 const underPosition = shares.findIndex((share) => share < thresholds.minPositionSharePct);
@@ -245,7 +269,19 @@ const report = {
     medianByLevel: Object.fromEntries(LEVEL_ORDER.map((lvl) => { const sub = unknownLoadByLevel.get(lvl)!; return [lvl, Number(median(sub).toFixed(1))]; })),
     lessonsOver45Pct: unknownLoad.filter((pct) => pct > 45).length,
     maxUnknownWordPct: Number(Math.max(...unknownLoad).toFixed(1)),
-    measurementNote: "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. Reported, not thresholded: the stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze) without a lemma dictionary, and proper names count as unknown, so the figure is a conservative upper bound. Turning it into a gate requires a lemmatizer first.",
+    measurementNote: "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. The fields at this level are the legacy suffix-stemmer figures, kept for comparability: that stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze), counts proper names as unknown and uses an unfolded stop list. Since ADR-126 the thresholded figure is `lemmatized` below.",
+    lemmatized: {
+      policy: LEXICAL_LOAD_POLICY, lemmatizer: GERMAN_LEMMATIZER_POLICY, dictionary: GERMAN_LEMMA_DICTIONARY_COUNTS, properNamePolicy: CURRICULUM_PROPER_NAMES_POLICY,
+      unit: "distinct content-word types per text",
+      medianUnknownWordPct: lemmatizedMedian,
+      medianByLevel: Object.fromEntries(LEVEL_ORDER.map((lvl) => [lvl, medianOf(lemmatizedReading.filter((row) => row.level === lvl).map((row) => row.pct))])),
+      lessonsOver45Pct: lemmatizedOver45,
+      maxUnknownWordPct: Math.max(...lemmatizedPcts),
+      properNamesExcluded: lemmatizedReading.reduce((sum, row) => sum + row.properNames, 0),
+      ratchet: { medianPctMax: thresholds.readingLemmatizedMedianPctMax, over45Max: thresholds.readingLemmatizedOver45Max, pedagogicalTargetMedianPct: 25, targetMet: lemmatizedMedian <= 25 },
+      worstLessons: [...lemmatizedReading].sort((a, b) => b.pct - a.pct).slice(0, 13).map((row) => ({ id: row.id, pct: row.pct, unknown: row.unknown.slice(0, 12) })),
+      note: "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high.",
+    },
     legacyFoldMedianUnknownWordPct: Number(median(unknownLoadLegacy).toFixed(1)),
     worstLessons: [...unknownLoad.entries()].map(([index, pct]) => ({ id: lessons[index]!.id, pct: Number(pct.toFixed(1)) })).sort((a, b) => b.pct - a.pct).slice(0, 12),
     // Only lessons above the 25% median target are listed; the arrays are capped, so the report stays small.
@@ -254,6 +290,16 @@ const report = {
     unknownByLesson: unknownWordsByLesson
       .filter((entry) => entry.pct > 25)
       .sort((a, b) => b.pct - a.pct),
+  },
+  longInputs: {
+    policy: LEXICAL_LOAD_POLICY,
+    support: "every lesson at or below the input's level (phrases, cards, reading glossary) plus the glossary shown beside the input",
+    tasks: longInputRows.length,
+    medianUnknownWordPct: medianOf(longInputRows.map((row) => row.pct)),
+    maxUnknownWordPct: longInputMax,
+    ceilingPct: thresholds.longInputUnknownPctMax,
+    rows: longInputRows.map((row) => ({ id: row.id, level: row.level, contentTypes: row.contentTypes, properNames: row.properNames, pct: row.pct, unknownSample: row.unknown.slice(0, 10) })),
+    note: "Measures whether the long inputs ask for vocabulary the curriculum has exposed; it says nothing about voice, pacing or rights, which remain human review items of P2-401.",
   },
   pronunciation: { medianCoveragePct: Number(median(pronunciationCoverage).toFixed(1)) },
   policyNotes: [

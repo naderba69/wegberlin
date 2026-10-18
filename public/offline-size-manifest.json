@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "da76b28cbf784ff27932b2e1de40416410eb38ace1c51a0028d93c725bd77af4",
+  "buildFingerprint": "e6a8d87c2947160e66088dc2ba22095951f882f0ab79dd9dc0a3655ae13477c5",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3984211,
-      "routeGzipBytes": 792134,
+      "routeGzipBytes": 792077,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6997484,
-      "nextAssetGzipBytes": 1987280,
+      "nextAssetRawBytes": 6998373,
+      "nextAssetGzipBytes": 1987528,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11049345,
-      "totalGzipBytes": 2791379,
+      "totalRawBytes": 11050234,
+      "totalGzipBytes": 2791570,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -351,9 +351,9 @@
           "gzipBytes": 11857
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-          "rawBytes": 77385,
-          "gzipBytes": 28847
+          "path": "/_next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+          "rawBytes": 78274,
+          "gzipBytes": 29095
         },
         {
           "path": "/_next/static/chunks/app/practice/page-ad1379c7072b5a51.js",
@@ -472,14 +472,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4296051,
-      "routeGzipBytes": 906426,
+      "routeGzipBytes": 906374,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6997484,
-      "nextAssetGzipBytes": 1987279,
+      "nextAssetRawBytes": 6998373,
+      "nextAssetGzipBytes": 1987527,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11361185,
-      "totalGzipBytes": 2905670,
+      "totalRawBytes": 11362074,
+      "totalGzipBytes": 2905866,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -812,9 +812,9 @@
           "gzipBytes": 11857
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-          "rawBytes": 77385,
-          "gzipBytes": 28847
+          "path": "/_next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+          "rawBytes": 78274,
+          "gzipBytes": 29095
         },
         {
           "path": "/_next/static/chunks/app/practice/page-ad1379c7072b5a51.js",
@@ -933,14 +933,14 @@
       "label": "B1",
       "routeCount": 60,
       "routeRawBytes": 4370494,
-      "routeGzipBytes": 933501,
+      "routeGzipBytes": 933442,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6997482,
-      "nextAssetGzipBytes": 1987278,
+      "nextAssetRawBytes": 6998371,
+      "nextAssetGzipBytes": 1987526,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11435626,
-      "totalGzipBytes": 2932744,
+      "totalRawBytes": 11436515,
+      "totalGzipBytes": 2932933,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1273,9 +1273,9 @@
           "gzipBytes": 11857
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-          "rawBytes": 77385,
-          "gzipBytes": 28847
+          "path": "/_next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+          "rawBytes": 78274,
+          "gzipBytes": 29095
         },
         {
           "path": "/_next/static/chunks/app/practice/page-ad1379c7072b5a51.js",
@@ -1394,14 +1394,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10266947,
-      "routeGzipBytes": 2366466,
+      "routeGzipBytes": 2366233,
       "nextAssetCount": 93,
-      "nextAssetRawBytes": 7141905,
-      "nextAssetGzipBytes": 2032260,
+      "nextAssetRawBytes": 7142794,
+      "nextAssetGzipBytes": 2032508,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17476502,
-      "totalGzipBytes": 4410691,
+      "totalRawBytes": 17477391,
+      "totalGzipBytes": 4410706,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1754,9 +1754,9 @@
           "gzipBytes": 11857
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-          "rawBytes": 77385,
-          "gzipBytes": 28847
+          "path": "/_next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+          "rawBytes": 78274,
+          "gzipBytes": 29095
         },
         {
           "path": "/_next/static/chunks/app/practice/page-ad1379c7072b5a51.js",
@@ -1875,14 +1875,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 320,
       "routeRawBytes": 16972615,
-      "routeGzipBytes": 4107029,
+      "routeGzipBytes": 4106703,
       "nextAssetCount": 120,
-      "nextAssetRawBytes": 7147093,
-      "nextAssetGzipBytes": 2036739,
+      "nextAssetRawBytes": 7147982,
+      "nextAssetGzipBytes": 2036987,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24187358,
-      "totalGzipBytes": 6155733,
+      "totalRawBytes": 24188247,
+      "totalGzipBytes": 6155655,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -2370,9 +2370,9 @@
           "gzipBytes": 11857
         },
         {
-          "path": "/_next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-          "rawBytes": 77385,
-          "gzipBytes": 28847
+          "path": "/_next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+          "rawBytes": 78274,
+          "gzipBytes": 29095
         },
         {
           "path": "/_next/static/chunks/app/practice/page-ad1379c7072b5a51.js",

@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v233 · 2026-10-18 · ملف نطق مؤلف لكل درس (ADR-125): خريطة صريحة للدروس الـ96 بدل الاستدلال بالكلمات المفتاحية — ملف النغمة العام 73 ⇒ 55 درسًا، وملفان جديدان (نبر الكلمة في 14 درسًا، وach-Laut في درسين)، وa2-11 إلى الحركات المدورة؛ أعيد ربط صفوف جرد النطق الـ18 بدروس تعلّم أصواتها، والأزواج التفاعلية 11/18 ⇒ 13/18.
+Sync batch: v234 · 2026-10-18 · حمل معجمي مقيس بالجذور المعجمية (ADR-126): مُلَمِّم منهجي وقاموس أشكال شاذة (2,044 زوجًا) وقائمة أعلام — وسيط حمل القراءة 40% ⇒ 28.9%، والنصوص فوق 45% ‏29 ⇒ 13، وقياس المدخلات الطويلة الـ16 لأول مرة (الأعلى 31.3%)، وبوابة تراجع في lesson:quality، وعشر كلمات مسرد بوسم متحقق منه؛ الهدف 25% لم يتحقق بعد.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

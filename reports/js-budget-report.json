@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2074519,
+    "totalChunkGzipBytes": 2074767,
     "maxSingleChunkGzipBytes": 267975
   },
   "issues": [],
@@ -89,9 +89,9 @@
       "gzipBytes": 31120
     },
     {
-      "path": ".next/static/chunks/app/practice/endurance/page-d086f4c910418965.js",
-      "rawBytes": 77385,
-      "gzipBytes": 28847
+      "path": ".next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
+      "rawBytes": 78274,
+      "gzipBytes": 29095
     },
     {
       "path": ".next/static/chunks/app/today/page-9dfef96ead292ea2.js",

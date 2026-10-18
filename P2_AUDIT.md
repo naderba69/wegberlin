@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v240 · 2026-10-18 · تتبّع أدلة المتعلم لكل لِمّة قبل القراءة (ADR-132، م17): لكل كلمة محتوى في نص القراءة حالة من مراجعات المتعلم وأجوبته الصحيحة نفسها (تعثّر، استرجاع بعد فاصل، تدرّب داخل الدرس، مرّت دون محاولة، جديدة)، تُعرض قبل النص بلا معانٍ؛ بلا حقل حالة جديد، وبذرة مدمجة لكل درس تُبنى على الخادم فلا يصل المنهج إلى المتصفح؛ السياق المعجمي مشترك مع التدقيق وتقريره لم يتغيّر؛ الكاش v240.
+Sync batch: v241 · 2026-10-18 · عبارات تحدث لمواقف مهمات النقل 9–24 (ADR-133، باقي م39): لكل مهمة من المهمات الـ64 ذات موقف التحدث المختلف خمس عبارات كُتبت لموقف التحدث نفسه، تظهر بعد حفظ المحاولة فقط وتجعل أي تسجيل لاحق موجّهًا؛ فصار لكل المهمات الـ96 سند تحدث مطابق؛ وتصحيح نص صف م37 (الباقي a1-01 حدّ بنيوي)؛ الكاش v241.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

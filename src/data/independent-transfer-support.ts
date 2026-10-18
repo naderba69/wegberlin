@@ -113,8 +113,87 @@ export const independentTransferSupport: Readonly<Record<string, IndependentTran
   "b2-24": s("Die Unterlagen – das gilt auch für Kopien – müssen … | Wir prüfen, ob die Frist endet, bevor … | Das Komma schließt den Nebensatz. | Die Gedankenstriche rahmen den Einschub. | Gesprochen hört man das Komma als kurze Pause."),
 };
 
-/** The first eight tasks of each level were authored with a parallel speaking scenario; later
- * tasks use a different speaking situation, so the written-task phrases are not offered there. */
+/**
+ * ADR-133 (م39 remainder): tasks 9–24 of each level use a speaking situation that differs from the
+ * written one, so the written-task phrases do not fit there. These five chunks per task were
+ * authored for the SPEAKING scenario itself (same after-commit rule: shown only after a saved
+ * attempt, and any later recording of the task after opening them is guided, never independent).
+ * Keyed by source lesson; one task per lesson.
+ */
+const p = (phrases: string) => phrases.split(" | ");
+export const speakingScenarioPhrases: Readonly<Record<string, string[]>> = {
+  // A1
+  "a1-02": p("Entschuldigung, ist hier noch frei? | Ich komme aus … | Ich wohne jetzt in … | Woher kommen Sie? | Welche Sprachen sprechen Sie?"),
+  "a1-03": p("Ich möchte mich für den Kurs anmelden. | Mein Nachname ist … Ich buchstabiere: … | Meine Telefonnummer ist … | Wie bitte? Können Sie den Namen wiederholen? | Noch einmal die Kursnummer, bitte."),
+  "a1-04": p("Das ist mein Bruder … | Das ist meine Tante … | Und das ist meine Mutter. | Der Name ist … Ich buchstabiere: … | Wer ist das auf dem Foto?"),
+  "a1-05": p("Ich bin … Jahre alt. | Mein Geburtstag ist im … | Wie alt bist du? | Wie ist deine E-Mail-Adresse? | Wie bitte? Noch einmal die Nummer, bitte."),
+  "a1-06": p("Ich bin … von Beruf. | Ich arbeite bei … | Was sind Sie von Beruf? | Wo arbeiten Sie? | Entschuldigung, welcher Beruf? Noch einmal, bitte."),
+  "a1-07": p("Wann öffnet das Amt? | Wann schließt das Amt? | Das Amt öffnet um 8 Uhr. | Es schließt um 15:30 Uhr, also um halb vier. | Wie bitte? Um wie viel Uhr?"),
+  "a1-08": p("Um halb sieben stehe ich auf. | Um acht Uhr fängt der Kurs an. | Danach räume ich die Küche auf. | Am Morgen trinke ich Tee. | Und du? Wann stehst du auf?"),
+  "a1-10": p("Wir brauchen noch einen Salat. | Wir brauchen keinen Käse. | Was kostet das, bitte? | Wie viel? Noch einmal, bitte. | Haben wir alles?"),
+  "a1-12": p("Ich möchte eine Suppe, bitte. | Den Tee bitte ohne Zucker. | Ich esse kein Fleisch. | Entschuldigung, die Suppe ist kalt. | Können Sie sie bitte warm machen?"),
+  "a1-13": p("Es gibt eine Küche und ein Bad. | Es gibt auch ein Wohnzimmer. | Die Wohnung ist 50 Quadratmeter groß. | Die Miete? Das weiß ich leider nicht. | Möchtest du die Wohnung sehen?"),
+  "a1-14": p("Das Buch liegt auf dem Tisch. | Die Jacke hängt an der Wand. | Die Schuhe stehen unter dem Bett. | Nein, der Ausweis liegt nicht dort. | Er liegt im Regal."),
+  "a1-16": p("Ich spiele gern Fußball. | Ich koche nicht so gern. | Was machst du gern? | Hast du am Samstag Zeit? | Schade! Geht es am Sonntag?"),
+  "a1-18": p("Heute regnet es. | Morgen ist es sonnig. | Dann gehen wir lieber ins Kino. | Was machst du lieber? | Gut, dann machen wir das."),
+  "a1-20": p("Gehen Sie geradeaus. | Biegen Sie an der Apotheke links ab. | Gehen Sie dann bis zum Brunnen. | Der Bahnhof ist neben dem Supermarkt. | Sehen Sie das Café? Dort gehen Sie rechts."),
+  "a1-21": p("Eine Fahrkarte nach Dresden, bitte. | Ich möchte um 8 Uhr ankommen. | Von welchem Gleis fährt der Zug? | Ich brauche eine Rückfahrkarte. | Am zwölften Mai, also am 12. 5."),
+  "a1-22": p("Mein Kopf tut weh. | Mein Rücken tut auch weh. | Meine Augen tun weh. | Seit zwei Tagen. | Kann ich heute arbeiten?"),
+  // A2
+  "a2-02": p("Wir wollten uns am Samstag treffen. | Leider ist der Zug ausgefallen. | Ich bin dann zu Hause geblieben. | Am Abend habe ich dich angerufen. | Das tut mir wirklich leid."),
+  "a2-03": p("Als ich hier ankam, war alles neu. | Am Anfang war ich unsicher. | Am ersten Tag habe ich mich verlaufen. | Inzwischen kenne ich mich gut aus. | Heute fühle ich mich hier zu Hause."),
+  "a2-04": p("Entschuldigung, dass ich so spät klingle. | Die Musik ist sehr laut. | Ich kann leider nicht schlafen. | Könnten Sie die Musik leiser machen? | Kann ich Ihnen irgendwie helfen?"),
+  "a2-05": p("Darf man hier rauchen? | Darf ich im Büro Musik hören? | Dürfen Gäste mitkommen? | Wer räumt die Küche auf? | Ich weiß schon, dass …"),
+  "a2-07": p("Ich gebe dir drei Aufgaben weiter. | Für die Rechnungen ist Frau Weber zuständig. | Du kümmerst dich um die Termine. | Wann passt dir die Übergabe? | Hast du noch Fragen?"),
+  "a2-09": p("Könnte ich bitte Frau Berger sprechen? | Könnte sie mich zurückrufen? | Ich bin ab 14 Uhr erreichbar. | Meine Nummer ist … | Vielen Dank, auf Wiederhören."),
+  "a2-10": p("Der Zug ist schneller als der Bus. | Der Bus ist billiger als der Zug. | Der Zug ist aber bequemer. | Deshalb nehme ich lieber den Zug. | Was ist für dich am wichtigsten?"),
+  "a2-12": p("Ich habe ein Zimmer reserviert. | Leider ist die Anmeldung falsch. | Hier ist die Bestätigung. | Ich habe auch eine E-Mail von Ihnen. | Ich möchte bitte ein anderes Zimmer."),
+  "a2-13": p("Ich esse oft spät am Abend. | Ich soll mehr Wasser trinken. | Ich soll weniger Kaffee trinken. | Zuerst gehe ich jeden Tag zu Fuß. | Das passt gut in meinen Tag."),
+  "a2-14": p("Ich bin leider krank. | Ich fehle bis Mittwoch. | Herr Kraus hat die Dateien. | Ich rufe am Montag wieder an. | Die Krankmeldung schicke ich morgen."),
+  "a2-15": p("Ich habe seit drei Tagen Halsschmerzen. | Wie oft soll ich das nehmen? | Wie lange soll ich es nehmen? | Darf ich dabei Auto fahren? | Was darf ich nicht tun?"),
+  "a2-17": p("Du sollst dein Passwort niemandem sagen. | Du sollst keine Fotos von anderen posten. | Das ist wichtig, damit du sicher bist. | Frag mich, wenn du unsicher bist. | Ich sage das, weil …"),
+  "a2-18": p("Ich finde, dass der Club gut ist. | Zum Beispiel können wir dort … | Ein Vorteil ist … | Ein Nachteil ist … | Was meinst du dazu?"),
+  "a2-20": p("Ich möchte einen Deutschkurs buchen. | Was kostet der Kurs? | Wann fängt der Kurs an? | Gibt es am Ende eine Prüfung? | Entschuldigung, wie viel? Noch einmal, bitte."),
+  "a2-22": p("Jedes Jahr feiern wir zu Hause. | Diesmal machen wir es anders. | Wir feiern im Garten. | Wen laden wir ein? | Ich lade auch die Nachbarn ein."),
+  "a2-23": p("Ich möchte gern im Zentrum helfen. | Ich habe einmal im Monat Zeit. | Welche Aufgaben gibt es? | Ich kann gut kochen. | Ich kann auch Kindern bei den Hausaufgaben helfen."),
+  // B1
+  "b1-01": p("Nach der Schule habe ich … gelernt. | Danach habe ich in … gearbeitet. | Seit 2022 lebe ich in Deutschland. | Deshalb bin ich heute hier. | Im Jahr zweitausendzweiundzwanzig, also 2022."),
+  "b1-03": p("Ich habe den Kurs gewechselt, weil … | Vorher hatte ich mich schon zur Prüfung angemeldet. | Nachdem ich mit der Lehrerin gesprochen hatte, … | Seitdem läuft es besser. | Jetzt kann ich mich besser konzentrieren."),
+  "b1-04": p("Wie wird das dokumentiert? | Bis wann wird das geprüft? | Von wem wird die Liste verschickt? | Ich übernehme die Kontrolle der Daten. | Wer wird darüber informiert?"),
+  "b1-06": p("In meinem letzten Projekt sollte ich … | Meine Aufgabe war es, … | Zuerst habe ich … | Am Ende haben wir 20 Prozent Zeit gespart. | Wie sieht die Einarbeitung bei Ihnen aus?"),
+  "b1-07": p("In der Stadt ist der Weg zur Arbeit kürzer. | Auf dem Land ist die Miete niedriger. | Das stimmt, aber … | Je ruhiger der Ort, desto länger ist der Weg. | Für mich ist am wichtigsten, …"),
+  "b1-09": p("Unser Ziel ist, dass mehr Menschen Rad fahren. | Wir erreichen das, indem wir … | Die Stellplätze kommen neben den Eingang. | Die Kosten könnte die Stadt übernehmen. | Gibt es dazu Fragen?"),
+  "b1-10": p("Brauchst du das Handy wirklich? | Für mich zählt zuerst der Preis. | Wichtig ist auch, wie lange es hält. | Ich spare, indem ich … | Auf Wichtiges verzichte ich nicht, aber …"),
+  "b1-12": p("Unsere Initiative möchte … | Wir treffen uns jeden zweiten Samstag. | Uns fehlen noch zwei Helfer. | Falls am ersten Tag niemand kommt, … | Wer Lust hat, kann sich bei mir melden."),
+  "b1-13": p("Mir hilft es, jeden Tag zehn Minuten zu lernen. | Außerdem hilft mir … | Am Anfang kannte ich … Wörter. | Heute kenne ich ungefähr … | Probier das doch auch einmal."),
+  "b1-15": p("Meine Leitfrage lautet: … | Ich komme jetzt zum zweiten Punkt. | Damit komme ich zum Schluss. | Danke für die Frage. Ein Beispiel dafür ist … | Zusammenfassend kann man sagen, …"),
+  "b1-16": p("Früher habe ich abends lange aufs Handy geschaut. | Statt dass ich abends ins Handy schaue, lese ich ein Buch. | Meine Regel lautet: … | Ab 21 Uhr bleibt das Handy in der Küche. | Seitdem schlafe ich besser."),
+  "b1-17": p("Das Buch passt zu dir, weil … | Im dritten Kapitel … | Die Hauptfigur … | Wer …, findet das Buch vielleicht langweilig. | Eine Szene zeigt das gut: …"),
+  "b1-20": p("An deiner Stelle würde ich zuerst mit den Nachbarn sprechen. | An deiner Stelle würde ich alles aufschreiben. | Das Risiko ist, dass … | Was ich nicht weiß, ist … | Vielleicht hilft auch die Hausverwaltung."),
+  "b1-21": p("Wer eine Aufgabe übernimmt, der trägt sie in die Liste ein. | Wer fertig ist, der sagt kurz Bescheid. | Ich komme gerade nicht weiter, weil … | Könnte mir jemand bis Donnerstag helfen? | Passt das für alle?"),
+  "b1-22": p("Ich will dreimal pro Woche laufen. | Ich fange langsam an, ohne mich zu überfordern. | Wann hast du Zeit? | Wie wäre es mit Dienstag? | Lass uns in vier Wochen prüfen, wie es läuft."),
+  "b1-23": p("Ich achte vor allem darauf, dass … | Wichtig ist mir auch der Datenschutz. | Ohne Netz kann man keine neuen Termine buchen. | Dann fehlt auch die Erinnerung. | Deshalb würde ich dir eine App empfehlen, die auch offline funktioniert."),
+  // B2
+  "b2-02": p("Ich verstehe Ihren Einwand, dass … | Lassen Sie mich darauf eingehen. | Selbst wenn Sie in allem recht hätten, würde ich … ändern. | Mir geht es um die Sache, nicht um Personen. | Können wir uns darauf einigen, dass …?"),
+  "b2-04": p("Die Entscheidung hängt davon ab, dass … vorliegt. | Solange das fehlt, kann das Amt nicht entscheiden. | Das hat zur Folge, dass … | Frühestens Ende des Monats rechnen wir mit … | Eine feste Zusage gibt es noch nicht."),
+  "b2-06": p("Die Empfehlung klingt einfach, aber … | Die Studie zeigt, dass … | Was die Studie nicht zeigt, ist … | In der Schule scheitert das oft an … | Deshalb schlage ich vor, zunächst …"),
+  "b2-07": p("Die Beteiligung entsteht dadurch, dass … | Sie entsteht nicht dadurch, dass … | Viele wussten nichts von der Befragung. | Das bewirkt, dass … | Über die Gründe im Einzelnen lässt sich noch nichts sagen."),
+  "b2-09": p("Was ich wirklich weiß, ist … | Das ist eine Behauptung, keine Beobachtung. | Ich sehe darin eher ein Muster: … | Zwei Beispiele dafür sind … | Daraus folgt kein Urteil über die ganze Gruppe."),
+  "b2-11": p("Zum Einstieg: Es geht um … | Erstens … | Zweitens … | Abschließend lässt sich sagen, … | Einzelheiten dazu kann ich noch nicht belegen."),
+  "b2-12": p("Zum aktuellen Stand des Projekts: … | Laut der ersten Quelle … | Die zweite Quelle schränkt das ein. | Genaue Zahlen dazu liegen mir nicht vor. | Diese Frage nehme ich mit und kläre sie."),
+  "b2-14": p("Ich führe zuerst den Begriff … ein. | Er bezeichnet … | Dieser Ansatz zeigt, dass … | Damit ist gemeint, dass … | Daraus ergibt sich als Konsequenz, …"),
+  "b2-15": p("In den letzten 30 Minuten prüfe ich zuerst … | Damit nichts zu kurz kommt, plane ich … | Bevor ich abgebe, lese ich … | Solange noch Zeit ist, … | Wenn die Zeit knapp wird, …"),
+  "b2-16": p("In diesem Fall hätte der Bericht früher fertig sein können. | Wir hätten früher nachfragen sollen. | Ich schlage vor, dass wir künftig … | Mir ist klar, dass das Folgen hatte. | Dass die Berichte immer zu spät sind, stimmt so aber nicht."),
+  "b2-18": p("Wir bedauern, Ihnen mitteilen zu müssen, dass … | Ihr Vorschlag kommt derzeit nicht in Betracht. | Ihr Hinweis zu den Öffnungszeiten findet Berücksichtigung. | Ohne zusätzliche Kräfte lässt sich das nicht umsetzen. | Sobald sich daran etwas ändert, melden wir uns."),
+  "b2-19": p("Wir haben doch letzte Woche darüber gesprochen. | Der Termin steht ja schon lange fest. | Das ist halt so, wenn … | Doch, das schaffen wir noch. | Mit ja erinnere ich an etwas Bekanntes."),
+  "b2-20": p("Je länger ich gelernt habe, desto ruhiger wurde ich. | Die Prüfung war nicht nur schwer, sondern auch lehrreich. | Ich habe nicht nur Wörter gelernt, sondern auch … | Je mehr ich gesprochen habe, desto … | Rückblickend hat sie mir viel gebracht."),
+  "b2-21": p("Sie behauptet, das sei schon besprochen worden. | Herr … soll gesagt haben, dass … | Er will davon nichts gewusst haben. | Ich werde im Protokoll nachprüfen, ob … | Bis dahin gilt das nur als Behauptung."),
+  "b2-23": p("Wenn das Amt die Anträge prüft, … | Die Frist wird verlängert, wenn … | Mit dem Verb sieht man, wer handelt. | Dadurch wird sichtbar, dass … | In der Nominalkette bleibt offen, wer …"),
+  "b2-24": p("Die Unterlagen – das gilt auch für Kopien – müssen vollständig sein. | Der Antrag, der bis Freitag eingeht, wird bearbeitet. | Hier würde im Text ein Komma fehlen. | Das Komma trennt den Nebensatz ab. | Beim Sprechen mache ich dort eine kurze Pause."),
+};
+
+/** The first eight tasks of each level were authored with a parallel speaking scenario, so they reuse
+ * the written-task phrases; tasks 9–24 get the phrases authored for their own speaking scenario. */
 export const SPEAKING_ALIGNED_TASKS_PER_LEVEL = 8;
 /** Primitive arguments only, so React Compiler never treats a task object as possibly mutated. */
 export function transferSupportForTask(sourceLessonId: string | undefined) {
@@ -122,5 +201,6 @@ export function transferSupportForTask(sourceLessonId: string | undefined) {
 }
 export function speakingTransferPhrases(taskId: string | undefined, sourceLessonId: string | undefined): string[] {
   const position = Number(taskId?.split("-").at(-1));
-  return sourceLessonId && position >= 1 && position <= SPEAKING_ALIGNED_TASKS_PER_LEVEL ? independentTransferSupport[sourceLessonId]?.phrases ?? [] : [];
+  if (!sourceLessonId || !(position >= 1)) return [];
+  return position <= SPEAKING_ALIGNED_TASKS_PER_LEVEL ? independentTransferSupport[sourceLessonId]?.phrases ?? [] : speakingScenarioPhrases[sourceLessonId] ?? [];
 }

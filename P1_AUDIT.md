@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v240 · 2026-10-18 · تتبّع أدلة المتعلم لكل لِمّة قبل القراءة (ADR-132، م17): لكل كلمة محتوى في نص القراءة حالة من مراجعات المتعلم وأجوبته الصحيحة نفسها (تعثّر، استرجاع بعد فاصل، تدرّب داخل الدرس، مرّت دون محاولة، جديدة)، تُعرض قبل النص بلا معانٍ؛ بلا حقل حالة جديد، وبذرة مدمجة لكل درس تُبنى على الخادم فلا يصل المنهج إلى المتصفح؛ السياق المعجمي مشترك مع التدقيق وتقريره لم يتغيّر؛ الكاش v240.
+Sync batch: v241 · 2026-10-18 · عبارات تحدث لمواقف مهمات النقل 9–24 (ADR-133، باقي م39): لكل مهمة من المهمات الـ64 ذات موقف التحدث المختلف خمس عبارات كُتبت لموقف التحدث نفسه، تظهر بعد حفظ المحاولة فقط وتجعل أي تسجيل لاحق موجّهًا؛ فصار لكل المهمات الـ96 سند تحدث مطابق؛ وتصحيح نص صف م37 (الباقي a1-01 حدّ بنيوي)؛ الكاش v241.
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

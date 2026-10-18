@@ -120,7 +120,7 @@ const providerLabel = {
   local: "Ollama المحلي",
 } as const;
 
-/** ADR-130: phrases for the next attempt, shown only after a saved independent attempt whose speaking scenario matches the written task. */
+/** ADR-130/ADR-133: phrases for the next attempt, shown only after a saved independent attempt. Tasks 1–8 reuse the written-task phrases (parallel scenario); tasks 9–24 use phrases authored for their own speaking scenario. */
 function AfterAttemptPhrases({ independentTaskId, sourceLessonId, onOpen, onPlay }: { independentTaskId: string; sourceLessonId: string; onOpen: () => void; onPlay: (text: string) => void }) {
   const phrases = speakingTransferPhrases(independentTaskId, sourceLessonId);
   if (phrases.length === 0) return null;

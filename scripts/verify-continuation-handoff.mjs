@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v240" || stagingCacheName !== "dwnb-full-pack-staging-v239") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v241" || stagingCacheName !== "dwnb-full-pack-staging-v240") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v240"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v241"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -994,6 +994,10 @@ for (const text of ["const STOP = new Set(CURRICULUM_STOP_WORDS);", "const stem 
 requireText(read("src/app/lernen/[lessonId]/page.tsx"), "readingLexicon={readingLexiconSeed(lessonId)}", "ADR-132 seed prop");
 for (const file of ["src/components/lesson-runner.tsx", "src/components/learner-reading-profile.tsx", "src/core/evidence/learner-lexical-knowledge.ts"]) if (/@\/data\/(academic-lessons|review-cards|reading-lexicon-seeds)/.test(read(file))) fail(`ADR-132: ${file} must not import the curriculum, the card list or the seed builder`);
 for (const text of ["ADR-132", "Wrong answers are never attributed", "not a vocabulary test"]) requireText(read("docs/adr/ADR-132-per-learner-lemma-evidence.md"), text, "ADR-132");
+// ADR-133 (v241, م39 remainder): speaking-scenario phrases for transfer tasks 9–24; tasks 1–8 keep the written-task phrases.
+for (const text of ["export const speakingScenarioPhrases", "speakingScenarioPhrases[sourceLessonId]", "SPEAKING_ALIGNED_TASKS_PER_LEVEL = 8"]) requireText(read("src/data/independent-transfer-support.ts"), text, "ADR-133 speaking scenario phrases");
+requireText(read("tests/unit/after-commit-transfer-support.test.ts"), "expect(later).toHaveLength(64);", "ADR-133 coverage test");
+for (const text of ["ADR-133", "positions 9–24", "not checked by a human linguist"]) requireText(read("docs/adr/ADR-133-speaking-scenario-phrases.md"), text, "ADR-133");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");

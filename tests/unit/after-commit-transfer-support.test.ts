@@ -1,7 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
-import { independentTransferSupport, speakingTransferPhrases, transferSupportForTask, AFTER_COMMIT_TRANSFER_SUPPORT_POLICY } from "@/data/independent-transfer-support";
+import { independentTransferSupport, speakingScenarioPhrases, speakingTransferPhrases, transferSupportForTask, AFTER_COMMIT_TRANSFER_SUPPORT_POLICY } from "@/data/independent-transfer-support";
 import { uniqueRecentWritingTasks, uniqueRecentSpeakingTasks, afterCommitSpeakingSupportSeen } from "@/core/evidence/independence";
 import { createSupportUsageEvent } from "@/core/evidence/support-usage";
 import { analyzeWriting } from "@/core/writing/analyze";
@@ -36,10 +36,30 @@ describe("ADR-130 after-commit support for independent transfer tasks", () => {
       } else expect(support.model, task.id).toBeUndefined();
     }
   });
-  it("offers speaking phrases only where the speaking scenario parallels the written one", () => {
-    const aligned = independentProductionTasks.filter((task) => speakingTransferPhrases(task.id, task.sourceLessonId).length > 0);
+  it("reuses written-task phrases only where the speaking scenario parallels the written one (tasks 1–8)", () => {
+    const aligned = independentProductionTasks.filter((task) => Number(task.id.split("-").at(-1)) <= 8);
     expect(aligned).toHaveLength(32);
     for (const level of ["A1", "A2", "B1", "B2"] as const) expect(aligned.filter((task) => task.level === level)).toHaveLength(8);
+    for (const task of aligned) expect(speakingTransferPhrases(task.id, task.sourceLessonId), task.id).toEqual(transferSupportForTask(task.sourceLessonId)!.phrases);
+  });
+  it("ADR-133: tasks 9–24 get five phrases authored for their own speaking scenario, never the written-task set", () => {
+    const later = independentProductionTasks.filter((task) => Number(task.id.split("-").at(-1)) > 8);
+    expect(later).toHaveLength(64);
+    expect(new Set(Object.keys(speakingScenarioPhrases))).toEqual(new Set(later.map((task) => task.sourceLessonId)));
+    for (const task of later) {
+      const phrases = speakingTransferPhrases(task.id, task.sourceLessonId);
+      expect(phrases, task.id).toHaveLength(5);
+      expect(new Set(phrases).size, task.id).toBe(5);
+      expect(phrases, task.id).not.toEqual(transferSupportForTask(task.sourceLessonId)!.phrases);
+      for (const phrase of phrases) {
+        expect(phrase.trim().length, task.id).toBeGreaterThan(3);
+        expect(phrase, task.id).not.toMatch(/[\u0600-\u06FF]/u);
+        expect(phrase, task.id).not.toMatch(/schwein|speck|schinken|salami|wurst|\b(bier|wein)\b/iu);
+      }
+    }
+    expect(independentProductionTasks.filter((task) => speakingTransferPhrases(task.id, task.sourceLessonId).length > 0)).toHaveLength(96);
+    expect(speakingTransferPhrases(undefined, "a1-02")).toEqual([]);
+    expect(speakingTransferPhrases("independent-a1-9", undefined)).toEqual([]);
   });
   it("closes the cross-round loophole: a model opened after a weak attempt taints a later new round", () => {
     const weak = { ...independentWriting("A1", 0, at(-2 * 3_600_000)), id: "weak", text: "Hallo ich heiße Sami", wordCount: 4 };

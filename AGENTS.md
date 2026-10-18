@@ -8,7 +8,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-Sync batch: v237 · 2026-10-18 · ملفا نطق جديدان (ADR-129): درسا [pf] يعرضان packen/backen لتمييز [p] من [b]، ودرسا [ʃp]/[ʃt] يعرضان Stein/Schein وPlatte/Palette ضد إقحام حركة بين الصوامت؛ الأزواج التفاعلية 13/18 ⇒ 15/18، وتحديث صفوف م17/م19/م42 بالقياس الحالي.
+Sync batch: v238 · 2026-10-18 · سند بعد التسليم لمهمات النقل المستقلة الـ96 (ADR-130): خمس عبارات لكل مهمة ونموذج كامل لكل مهمة A1/A2 داخل مدى كلماتها، يُفتح بعد الفحص فقط ويُسقط استقلال أي محاولة لاحقة؛ وعبارات للمحاولة التالية في التحدث لـ32 مهمة؛ وإغلاق ثغرة «الجولة الجديدة» بعد فتح النموذج؛ ونماذج B1/B2 مؤجلة لميزانية المنهج؛ الكاش v238.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

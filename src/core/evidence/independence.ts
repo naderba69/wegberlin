@@ -51,11 +51,17 @@ export function writingIsIndependent(submission: WritingSubmission, state: Learn
   const earlier = state.writingSubmissions.some((item) => item.id !== submission.id && item.taskId === submission.taskId && item.status !== "draft" && Date.parse(item.createdAt) < Date.parse(submission.createdAt) && (!context.draftStartedAt || Date.parse(item.createdAt)>=Date.parse(context.draftStartedAt)));
   if(independentTask&&state.writingSubmissions.some(item=>item.id!==submission.id&&item.taskId===submission.taskId&&item.status!=="draft"&&Date.parse(item.createdAt)<Date.parse(submission.createdAt)&&normalized(item.text)===normalized(submission.text)))return false;
   return !earlier && Boolean(submission.plan?.audience.trim() && submission.plan.purpose.trim()) && (submission.plan?.points.filter((point) => point.trim()).length ?? 0) >= 2 &&
-    !state.supportUsageEvents.some((event) => event.contentId === `${submission.taskId}:writing-model` && event.kind === "writing-model" && Date.parse(event.createdAt) <= Date.parse(submission.createdAt) && (!context.draftStartedAt || Date.parse(event.createdAt)>=Date.parse(context.draftStartedAt)));
+    !state.supportUsageEvents.some((event) => event.contentId === `${submission.taskId}:writing-model` && event.kind === "writing-model" && Date.parse(event.createdAt) <= Date.parse(submission.createdAt));
 }
 
 /** Missing provenance is unknown, not proof of independent speaking. */
-export function speakingHasIndependentProvenance(attempt: SpeakingAttempt, now = new Date()): boolean {
+/** ADR-130: a revealed model or after-commit phrase list taints every later attempt of the same task, across rounds. */
+export function afterCommitSpeakingSupportSeen(state: Pick<LearningState, "supportUsageEvents">, attempt: Pick<SpeakingAttempt, "taskId" | "createdAt">): boolean {
+  return state.supportUsageEvents.some((event) => event.contentId === `${attempt.taskId}:after-attempt-phrases` && Date.parse(event.createdAt) < Date.parse(attempt.createdAt));
+}
+
+export function speakingHasIndependentProvenance(attempt: SpeakingAttempt, now = new Date(), state?: Pick<LearningState, "supportUsageEvents">): boolean {
+  if (state && afterCommitSpeakingSupportSeen(state, attempt)) return false;
   const independentTask=independentProductionTask(attempt.taskId.replace(/-speaking$/u,""));
   const lesson=academicLessons[independentTask?.sourceLessonId??attempt.taskId];
   const task=independentTask?.speaking??lesson?.speaking;
@@ -70,5 +76,5 @@ export function uniqueRecentWritingTasks(state: LearningState, level: string, no
 }
 
 export function uniqueRecentSpeakingTasks(state: LearningState, level: string, now = new Date()): Set<string> {
-  return new Set(state.speakingAttempts.filter((item) => (productionTaskLevel(item.taskId) ?? academicLessons[item.taskId]?.level) === level && speakingHasIndependentProvenance(item, now)).map((item) => item.taskId));
+  return new Set(state.speakingAttempts.filter((item) => (productionTaskLevel(item.taskId) ?? academicLessons[item.taskId]?.level) === level && speakingHasIndependentProvenance(item, now, state)).map((item) => item.taskId));
 }

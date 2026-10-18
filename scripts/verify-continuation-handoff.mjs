@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v237" || stagingCacheName !== "dwnb-full-pack-staging-v236") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v238" || stagingCacheName !== "dwnb-full-pack-staging-v237") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v237"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v238"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -973,6 +973,13 @@ for (const text of ["ADR-128", "evidence sentences", "22.0", "not a human review
 for (const text of ["\"lipClosure\"", "\"clusters\"", "pb-packen-backen", "cluster-stein-schein", "cluster-platte-palette", "ts-ziege-siege"]) requireText(pronunciationArticulationCore, text, "ADR-129 articulation profiles");
 for (const text of ["interactivePairId:\"pb-packen-backen\"", "interactivePairId:\"cluster-platte-palette\""]) requireText(read("src/data/arabic-learner-pronunciation-inventory.ts"), text, "ADR-129 interactive inventory rows");
 for (const text of ["ADR-129", "15/18", "not an independent phonetics review"]) requireText(read("docs/adr/ADR-129-lip-closure-and-cluster-articulation-profiles.md"), text, "ADR-129");
+// ADR-130 (v238): after-commit phrases/models for the 96 independent transfer tasks; any earlier reveal removes independence across rounds.
+for (const text of ["after-commit-transfer-support-v1", "SPEAKING_ALIGNED_TASKS_PER_LEVEL = 8", "export function speakingTransferPhrases"]) requireText(read("src/data/independent-transfer-support.ts"), text, "ADR-130 transfer support data");
+for (const text of ["afterCommitSpeakingSupportSeen", "speakingHasIndependentProvenance(item, now, state)"]) requireText(read("src/core/evidence/independence.ts"), text, "ADR-130 independence");
+for (const text of ["data-after-commit-transfer-support", "transferSupportForTask"]) requireText(read("src/components/writing-lab.tsx"), text, "ADR-130 writing lab");
+for (const text of ["data-after-attempt-phrases", "showRecordingSupport || afterAttemptPhrasesSeen", ":after-attempt-phrases"]) requireText(read("src/components/speaking-lab.tsx"), text, "ADR-130 speaking lab");
+for (const text of ["closes the cross-round loophole", "toHaveLength(32)", "B1/B2 models stay honestly deferred"]) requireText(read("tests/unit/after-commit-transfer-support.test.ts"), text, "ADR-130 tests");
+for (const text of ["ADR-130", "1,275,000", "not a human linguistic review"]) requireText(read("docs/adr/ADR-130-after-commit-support-for-independent-transfer-tasks.md"), text, "ADR-130");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");
@@ -996,10 +1003,10 @@ for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
 // P1-19 adds the paired progress panel and the intake/four-week step labels; its German prompt remains isolated.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 216 || languageAudit.openingTagCount !== 8296 || languageAudit.germanTagCount !== 454 || languageAudit.arabicTagCount !== 11 || languageAudit.technicalScopeCount !== 60 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 216 || languageAudit.openingTagCount !== 8312 || languageAudit.germanTagCount !== 457 || languageAudit.arabicTagCount !== 11 || languageAudit.technicalScopeCount !== 60 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:216", "openingTagCount:8296", "germanTagCount:454", "arabicTagCount:11", "technicalScopeCount:60", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:216", "openingTagCount:8312", "germanTagCount:457", "arabicTagCount:11", "technicalScopeCount:60", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

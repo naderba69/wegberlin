@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v237 · 2026-10-18 · ملفا نطق جديدان (ADR-129): درسا [pf] يعرضان packen/backen لتمييز [p] من [b]، ودرسا [ʃp]/[ʃt] يعرضان Stein/Schein وPlatte/Palette ضد إقحام حركة بين الصوامت؛ الأزواج التفاعلية 13/18 ⇒ 15/18، وتحديث صفوف م17/م19/م42 بالقياس الحالي.
+Sync batch: v238 · 2026-10-18 · سند بعد التسليم لمهمات النقل المستقلة الـ96 (ADR-130): خمس عبارات لكل مهمة ونموذج كامل لكل مهمة A1/A2 داخل مدى كلماتها، يُفتح بعد الفحص فقط ويُسقط استقلال أي محاولة لاحقة؛ وعبارات للمحاولة التالية في التحدث لـ32 مهمة؛ وإغلاق ثغرة «الجولة الجديدة» بعد فتح النموذج؛ ونماذج B1/B2 مؤجلة لميزانية المنهج؛ الكاش v238.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

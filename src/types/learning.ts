@@ -219,7 +219,7 @@ export interface CollocationNetworkAttempt {
 }
 
 export type SupportUsageKind = "hint" | "reading-translation" | "listening-transcript" | "writing-model" | "mediation-model" | "library-transcript" | "shadowing-transcript";
-export type SupportUsageSurface = "lesson" | "writing-lab" | "mediation-lab" | "library" | "shadowing";
+export type SupportUsageSurface = "lesson" | "writing-lab" | "mediation-lab" | "library" | "shadowing" | "speaking-lab";
 
 export type ListeningFocusId = "people-roles" | "place-time" | "message-result";
 export type ListeningProcessEventKind = "focus-committed" | "playback-started" | "gist-committed" | "detail-committed";

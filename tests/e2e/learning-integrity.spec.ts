@@ -42,9 +42,14 @@ test("model comparison stays locked before a draft and new independent writing k
   await page.locator(".writing-plan>div input").nth(0).fill("اسمي وسكني");await page.locator(".writing-plan>div input").nth(1).fill("السؤال عن الاسم");await page.getByRole("button",{name:/ابدأ المسودة/}).click();
   await page.getByRole("textbox",{name:"المسودة الألمانية"}).fill("Guten Tag, ich heiße Yara. Ich wohne jetzt in Jena und lerne Deutsch. Heute bin ich in der Bibliothek. Wie heißt du? Wo wohnst du? Ich freue mich auf deine Antwort. Viele Grüße, Yara.");
   await page.getByRole("button",{name:/حفظ المسودة والانتقال/}).click();for(const checkbox of await page.locator(".writing-self-check input[type=checkbox]").all())await checkbox.check();await page.getByRole("button",{name:/شغّل الفحص المرتبط بنصي/}).click();
-  await expect(page.locator(".writing-reviewed-text")).toBeVisible();await expect(page.locator(".translation-panel")).toHaveCount(0);
+  await expect(page.locator(".writing-reviewed-text")).toBeVisible();
+  // ADR-130: the only panel after the check is the closed after-commit support; nothing was opened before the draft.
+  const support=page.locator('[data-after-commit-transfer-support="independent-a1-1"]');await expect(page.locator(".translation-panel")).toHaveCount(1);await expect(support).toHaveCount(1);await expect(support).not.toHaveAttribute("open",/.*/);
   await expect.poll(async()=> (await stored(page)).writingSubmissions.filter(w=>w.status==="submitted").length).toBe(1);
   const submitted=(await stored(page)).writingSubmissions.find(w=>w.status==="submitted")!;expect(submitted.taskId).toBe("independent-a1-1-writing");expect(submitted.evidenceContext).toMatchObject({firstDraft:true,supportUsedBeforeDraft:false,taskLevel:"A1"});
+  expect((await stored(page)).supportUsageEvents.filter(e=>e.contentId==="independent-a1-1-writing:writing-model")).toHaveLength(0);
+  await support.locator("summary").click();await expect(support.getByText("Ich heiße Samir Haddad",{exact:false})).toBeVisible();
+  await expect.poll(async()=> (await stored(page)).supportUsageEvents.filter(e=>e.contentId==="independent-a1-1-writing:writing-model"&&e.afterCommit).length).toBe(1);
 });
 
 test("longer inputs start explicitly, keep listening text delayed, and finish without a silent loop",async({page})=>{

@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v237 · 2026-10-18 · ملفا نطق جديدان (ADR-129): درسا [pf] يعرضان packen/backen لتمييز [p] من [b]، ودرسا [ʃp]/[ʃt] يعرضان Stein/Schein وPlatte/Palette ضد إقحام حركة بين الصوامت؛ الأزواج التفاعلية 13/18 ⇒ 15/18، وتحديث صفوف م17/م19/م42 بالقياس الحالي.
+Sync batch: v238 · 2026-10-18 · سند بعد التسليم لمهمات النقل المستقلة الـ96 (ADR-130): خمس عبارات لكل مهمة ونموذج كامل لكل مهمة A1/A2 داخل مدى كلماتها، يُفتح بعد الفحص فقط ويُسقط استقلال أي محاولة لاحقة؛ وعبارات للمحاولة التالية في التحدث لـ32 مهمة؛ وإغلاق ثغرة «الجولة الجديدة» بعد فتح النموذج؛ ونماذج B1/B2 مؤجلة لميزانية المنهج؛ الكاش v238.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

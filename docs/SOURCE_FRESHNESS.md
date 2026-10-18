@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v237 · 2026-10-18 · ملفا نطق جديدان (ADR-129): درسا [pf] يعرضان packen/backen لتمييز [p] من [b]، ودرسا [ʃp]/[ʃt] يعرضان Stein/Schein وPlatte/Palette ضد إقحام حركة بين الصوامت؛ الأزواج التفاعلية 13/18 ⇒ 15/18، وتحديث صفوف م17/م19/م42 بالقياس الحالي.
+Sync batch: v238 · 2026-10-18 · سند بعد التسليم لمهمات النقل المستقلة الـ96 (ADR-130): خمس عبارات لكل مهمة ونموذج كامل لكل مهمة A1/A2 داخل مدى كلماتها، يُفتح بعد الفحص فقط ويُسقط استقلال أي محاولة لاحقة؛ وعبارات للمحاولة التالية في التحدث لـ32 مهمة؛ وإغلاق ثغرة «الجولة الجديدة» بعد فتح النموذج؛ ونماذج B1/B2 مؤجلة لميزانية المنهج؛ الكاش v238.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

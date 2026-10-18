@@ -21,7 +21,7 @@ describe("P0 exhaustive language and Bidi boundaries",()=>{
   });
 
   it("audits every TSX opening tag with zero pairing or control-character issues",()=>{
-    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:216,openingTagCount:8296,germanTagCount:454,arabicTagCount:11,technicalScopeCount:60,adaptiveConsumerCount:7,mixedStaticCount:207,issues:[]}); // refreshed from the tracked TSX tree and committed audit artifacts
+    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:216,openingTagCount:8312,germanTagCount:457,arabicTagCount:11,technicalScopeCount:60,adaptiveConsumerCount:7,mixedStaticCount:207,issues:[]}); // refreshed from the tracked TSX tree and committed audit artifacts
     expect(report.ltrTagCount).toBeGreaterThanOrEqual(report.germanTagCount);
   });
 

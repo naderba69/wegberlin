@@ -4,10 +4,10 @@
   "generatedAt": "2026-09-07",
   "ok": true,
   "tsxFiles": 216,
-  "openingTagCount": 8296,
-  "germanTagCount": 454,
+  "openingTagCount": 8312,
+  "germanTagCount": 457,
   "arabicTagCount": 11,
-  "ltrTagCount": 508,
+  "ltrTagCount": 511,
   "rtlTagCount": 11,
   "autoDirCount": 12,
   "technicalScopeCount": 60,
@@ -1054,5 +1054,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "1793cc5519351a5984cba0a1a888efc5aa452499132e9638b781ceb3e27fb257"
+  "contentSha256": "76be3b2313d63a17957b5b8eb98d21a50a9445fad94fba283f8443cc7bf35f0a"
 }

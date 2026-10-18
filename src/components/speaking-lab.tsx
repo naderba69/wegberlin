@@ -25,6 +25,8 @@ import {
   Volume2,
 } from "lucide-react";
 import { independentProductionTask } from "@/data/independent-production-tasks";
+import { speakingTransferPhrases } from "@/data/independent-transfer-support";
+import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
 import { academicLessons } from "@/data/academic-lessons";
 import { deleteMedia, saveMedia } from "@/core/portability/db";
 import { createRecordingMediaRecorder } from "@/core/audio/recording-format";
@@ -118,6 +120,36 @@ const providerLabel = {
   local: "Ollama المحلي",
 } as const;
 
+/** ADR-130: phrases for the next attempt, shown only after a saved independent attempt whose speaking scenario matches the written task. */
+function AfterAttemptPhrases({ independentTaskId, sourceLessonId, onOpen, onPlay }: { independentTaskId: string; sourceLessonId: string; onOpen: () => void; onPlay: (text: string) => void }) {
+  const phrases = speakingTransferPhrases(independentTaskId, sourceLessonId);
+  if (phrases.length === 0) return null;
+  return (
+    <details
+      className="translation-panel"
+      data-after-attempt-phrases={independentTaskId}
+      onToggle={(event) => {
+        if (event.currentTarget.open) onOpen();
+      }}
+    >
+      <summary>عبارات للمحاولة التالية</summary>
+      <p>
+        استمع إليها بعد حفظ محاولتك. أي تسجيل لاحق لهذه المهمة بعد فتحها يُحفظ
+        كتدريب موجّه، لا كمحاولة مستقلة.
+      </p>
+      <ul lang="de" dir="ltr">
+        {phrases.map((phrase) => (
+          <li key={phrase}>
+            <button type="button" className="secondary-button" onClick={() => onPlay(phrase)}>
+              <Volume2 size={14} /> {phrase}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
+
 export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string; independentTaskId?: string }) {
   const { state, update } = useLearning();
   const independentTask = independentProductionTask(independentTaskId);
@@ -125,6 +157,11 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
   const task = independentTask?.speaking ?? lesson?.speaking ?? fallback;
   const taskId = independentTask ? `${independentTask.id}-speaking` : lesson?.id ?? "a1-introduction";
   const level = independentTask?.level ?? lesson?.level ?? "A1";
+  const afterAttemptPhrasesSeen = state.supportUsageEvents.some((event) => event.contentId === `${taskId}:after-attempt-phrases`);
+  function recordAfterAttemptPhrases() {
+    const event = createSupportUsageEvent({ kind: "hint", surface: "speaking-lab", contentId: `${taskId}:after-attempt-phrases`, lessonId: lesson?.id, afterCommit: true });
+    update((current) => ({ ...current, supportUsageEvents: appendSupportUsageEvent(current.supportUsageEvents, event) }));
+  }
   const firstLessonScaffold = taskId === "a1-01";
   const targetSeconds = speakingTargetSeconds(task.promptDe, level, {
     beginnerFirstLesson: firstLessonScaffold,
@@ -323,7 +360,7 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
         setPhase("review");
       };
       recorderRef.current = recorder;
-      supportDuringRecordingRef.current = showRecordingSupport;
+      supportDuringRecordingRef.current = showRecordingSupport || afterAttemptPhrasesSeen;
       recorder.start();
       setMessage("");
       setLocalWordMatch(null);
@@ -1453,6 +1490,14 @@ export function SpeakingLab({ lessonId, independentTaskId }: { lessonId?: string
                 <button className="secondary-button" onClick={retry}>
                   <RotateCcw size={15} /> ابدأ محاولة محسنة
                 </button>
+              )}
+              {phase === "saved" && independentTask && (
+                <AfterAttemptPhrases
+                  independentTaskId={independentTask.id}
+                  sourceLessonId={independentTask.sourceLessonId}
+                  onOpen={recordAfterAttemptPhrases}
+                  onPlay={playModel}
+                />
               )}
               <div className="privacy-note">
                 <Volume2 size={17} />

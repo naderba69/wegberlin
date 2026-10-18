@@ -110,15 +110,21 @@ describe("P2-355 local test generator from published lesson templates", () => {
     expect(() => buildLocalPracticeTest("A1", 5, "duplicate-source", duplicateBank)).toThrow("duplicate source lesson ids");
   });
 
-  it("statically bundles every level bank so the practice route works after an Offline pack install", () => {
+  it("derives every level bank from the statically loaded published lessons so the route works after an Offline pack install", () => {
     const loader = readFileSync("src/core/training/local-test-template-loader.ts", "utf8");
-    for (const level of ["A1", "A2", "B1", "B2"] as const) {
-      expect(loader).toContain(`import { localTestTemplateBank${level} } from "@/data/local-test-templates/${level.toLowerCase()}"`);
-    }
+    // ADR-123: one copy of each Mini-Test item ships to the client (the curriculum chunks); the generated banks stay a checked artifact.
+    expect(loader).toContain('import { academicLessonList } from "@/data/academic-lessons"');
+    expect(loader).toContain('import { curriculum } from "@/data/curriculum"');
+    expect(loader).toContain("buildLocalTestCatalog(academicLessonList, curriculum)");
+    expect(loader).toContain("failed closed");
+    expect(loader).not.toContain("@/data/local-test-templates/");
     expect(loader).not.toContain("await import(");
   });
 
-  it("loads the learner-selected level bank", async () => {
+  it("loads the learner-selected level bank, identical to the reviewed generated artifact", async () => {
+    for (const [level, generated] of [["A1", localTestTemplateBankA1], ["A2", localTestTemplateBankA2], ["B1", localTestTemplateBankB1], ["B2", localTestTemplateBankB2]] as const) {
+      expect(await loadLocalTestTemplateBank(level)).toEqual(generated);
+    }
     const bank = await loadLocalTestTemplateBank("A2");
     expect(bank).toHaveLength(24);
     expect(bank.every((lesson) => lesson.level === "A2")).toBe(true);

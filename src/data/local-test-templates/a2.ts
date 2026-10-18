@@ -50,16 +50,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-01-m4",
-        "promptDe": "einkaufen",
-        "promptAr": "أي خيار يحقّق «einkaufen» في هذا السياق؟",
+        "promptDe": "Gestern",
+        "promptAr": "أي جملة تصف يوم أمس بترتيب زمني منطقي؟",
         "options": [
-          "geeinkauft",
-          "einkaufen",
-          "eingekauft",
-          "eingekaufen"
+          "Zuerst bin ich aufgestanden, danach habe ich gearbeitet.",
+          "Danach bin ich aufgestanden, zuerst habe ich gearbeitet.",
+          "Am Abend bin ich aufgestanden, später habe ich gefrühstückt.",
+          "Am Abend habe ich gefrühstückt, am Morgen habe ich geschlafen."
         ],
-        "correctIndex": 2,
-        "explanationAr": "الفعلُ einkaufen منفصلُ البادئة، والـPartizip II يحصر الجذر بين ein و ge-: «eingekauft». أمّا geeinkauft فتكرّر ge، و einkaufen تبقى مصدرًا، و eingekaufen تقلب الترتيب. فحص ذاتي: أين وقع الجذرُ بين ein و ge؟"
+        "correctIndex": 0,
+        "explanationAr": "الترتيب الزمني يبدأ ب zuerst ثم danach: «Zuerst bin ich aufgestanden, danach habe ich gearbeitet». أما الجملة الثانية فتقلب الكلمتين، والاستيقاظ أو الفطور في المساء يكسر منطق اليوم. فحص ذاتي: هل يسير يومك من الصباح إلى المساء؟"
       },
       {
         "id": "a2-01-m5",
@@ -211,16 +211,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-03-m5",
-        "promptDe": "Gefühl",
-        "promptAr": "اختر جملة الفرح بالماضي:",
+        "promptDe": "Ein besonderer Moment",
+        "promptAr": "أي جملة تروي لحظة مميزة من الماضي؟",
         "options": [
-          "Ich bin mich gefreut.",
-          "Ich habe mir freuen.",
-          "Ich habe mich gefreut.",
-          "Ich freue gewesen."
+          "Jeden Morgen fahre ich mit dem Bus zur Arbeit und trinke dort einen Kaffee.",
+          "Nächstes Jahr möchte ich vielleicht mit meiner Familie nach Berlin reisen.",
+          "Ich trinke oft Kaffee, weil ich immer müde bin.",
+          "Als ich zum ersten Mal in Berlin war, war ich sehr nervös."
         ],
-        "correctIndex": 2,
-        "explanationAr": "sich freuen في Perfekt مع haben. نستعمل als مع حدث واحد أو مرحلة ماضية نراها كوحدة: Als ich angekommen bin، Als ich zehn Jahre alt war."
+        "correctIndex": 3,
+        "explanationAr": "اللحظة المميزة حدث فريد في الماضي مع شعور: «Als ich zum ersten Mal in Berlin war, war ich sehr nervös». أما «Jeden Morgen fahre ich mit dem Bus zur Arbeit und trinke dort einen Kaffee.» و «Ich trinke oft Kaffee, weil ich immer müde bin.» فعادات متكررة، و «Nächstes Jahr möchte ich vielleicht mit meiner Familie nach Berlin reisen.» خطة للمستقبل. فحص ذاتي: هل حدثت لحظتك مرة واحدة؟"
       }
     ]
   },
@@ -233,16 +233,16 @@ export const localTestTemplateBankA2 = [
     "questions": [
       {
         "id": "a2-04-m1",
-        "promptDe": "helfen + ich",
-        "promptAr": "أي خيار يحقّق «helfen + ich» في هذا السياق؟",
+        "promptDe": "Neue Nachbarn",
+        "promptAr": "أي جملة تناسب تقديم نفسك لجار جديد؟",
         "options": [
-          "mich",
-          "mein",
-          "mir",
-          "ich"
+          "Hallo, können Sie mir bitte die schwere Kiste geben?",
+          "Hallo, ich bin Rami. Ich wohne nebenan.",
+          "Wo ist hier der nächste Supermarkt mit langen Öffnungszeiten?",
+          "Tschüss, bis morgen!"
         ],
-        "correctIndex": 2,
-        "explanationAr": "الفعلُ helfen يطلب Dativ فيكون المفعولُ «mir» لا mich ولا ich ولا mein. وهذا ما يفسّر عنوان التمرين helfen + ich: تُصرَّف الضميرةُ في الحالة التي يفتحها الفعل. فحص ذاتي: أيّ حالةٍ يطلبها فعلك؟"
+        "correctIndex": 1,
+        "explanationAr": "التقديم للجار يذكر الاسم ومكان السكن: «Hallo, ich bin Rami. Ich wohne nebenan». أما طلب الصندوق والسؤال عن السوبرماركت فطلبات لا تعريف فيها، و «Tschüss, bis morgen!» وداع. فحص ذاتي: هل عرف جارك اسمك وأين تسكن؟"
       },
       {
         "id": "a2-04-m2",
@@ -272,16 +272,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-04-m4",
-        "promptDe": "wenn",
-        "promptAr": "اختر الترتيب:",
+        "promptDe": "Nachricht an die Nachbarn",
+        "promptAr": "أي رسالة قصيرة للجيران كاملة وواضحة؟",
         "options": [
-          "Wenn du Zeit hast, hilfst du mir.",
-          "Wenn du hast Zeit, du hilfst.",
-          "Wenn Zeit du, hilfst hast.",
-          "Wenn du Zeit, mir helfen."
+          "Samstag Party.",
+          "Hallo, wir machen vielleicht irgendwann am Wochenende eine Party, mal sehen wann genau und wie lange.",
+          "Liebe Nachbarn, am Samstag feiern wir bis 22 Uhr. Viele Grüße, Rami (2. Stock)",
+          "Ruhe bitte!"
         ],
-        "correctIndex": 0,
-        "explanationAr": "في جملة wenn ينتقل الفعلُ المصرَّف إلى آخر الجزء الأوّل: «Wenn du Zeit hast». ثم يبدأ الجوابُ بالفعل: «hilfst du mir»؛ فحص ذاتي: أين وقف الفعلُ في كل نصفٍ من الجملة؟"
+        "correctIndex": 2,
+        "explanationAr": "رسالة الجيران القصيرة فيها تحية وخبر بموعد واضح وتوقيع: «Liebe Nachbarn, am Samstag feiern wir bis 22 Uhr». أما «Samstag Party» فبلا تحية ولا ساعة، والرسالة الطويلة غامضة بلا يوم أو مدة، و «Ruhe bitte!» أمر بلا سياق. فحص ذاتي: هل يعرف الجار من كتب، ومتى، وإلى أي ساعة؟"
       },
       {
         "id": "a2-04-m5",
@@ -320,16 +320,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-05-m2",
-        "promptDe": "Verbot",
-        "promptAr": "اختر التعبير المطابق ل «Verbot»:",
+        "promptDe": "Hausordnung: „Ruhezeit 22–6 Uhr. Fahrräder nur im Keller abstellen.“",
+        "promptAr": "ماذا يقول نظام المبنى؟",
         "options": [
-          "Man muss nicht rauchen.",
-          "Man kann rauchen.",
-          "Man möchte nicht Regel.",
-          "Man darf nicht rauchen."
+          "Fahrräder darf man im Flur abstellen.",
+          "Bis 22 Uhr muss man leise sein.",
+          "Man darf nach 22 Uhr laut Musik hören und das Fahrrad im Treppenhaus lassen.",
+          "Nach 22 Uhr soll es leise sein; Fahrräder gehören in den Keller."
         ],
         "correctIndex": 3,
-        "explanationAr": "المنعُ يُصاغ ب dürfen مع nicht: «Man darf nicht rauchen.». وأمّا «Man muss nicht rauchen.» فتعني أنّ التدخين غيرُ مطلوب (إباحة)، و «Man kann rauchen.» تُبيحه صراحةً. فحص ذاتي: هل منعتَ أم أبيحتَ؟"
+        "explanationAr": "Ruhezeit 22–6 Uhr تعني الهدوء من العاشرة ليلًا إلى السادسة صباحًا، و «nur im Keller» تعني أن مكان الدراجات القبو وحده. لذلك لا يصح الممر ولا الموسيقى بعد 22 Uhr، و «Bis 22 Uhr» تعكس الوقت. فحص ذاتي: في أي ساعة تبدأ فترة الهدوء؟"
       },
       {
         "id": "a2-05-m3",
@@ -407,16 +407,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-06-m3",
-        "promptDe": "obwohl",
-        "promptAr": "أي خيار يحقّق «obwohl» في سياق درس «العيش معًا»؟",
+        "promptDe": "Wohnproblem beschreiben",
+        "promptAr": "أي جملة تصف مشكلة السكن بموضوعية؟",
         "options": [
-          "Obwohl er ist müde, er räumt.",
-          "Obwohl müde, auf er räumt.",
-          "Obwohl er müde, ist räumt.",
-          "Obwohl er müde ist, räumt er auf."
+          "Seit einer Woche steht der Müll im Flur.",
+          "Du bist total unordentlich und denkst nie an die anderen in der Wohnung!",
+          "Die Wohnung ist schlecht.",
+          "Ich hasse diese WG."
         ],
-        "correctIndex": 3,
-        "explanationAr": "الفعل في النهاية ثم فعل الجملة الرئيسية. تقدم obwohl معلومة تجعل النتيجة غير متوقعة: Obwohl Jonas spät arbeitet, übernimmt er eine Aufgabe."
+        "correctIndex": 0,
+        "explanationAr": "الوصف الموضوعي يذكر ما يُرى ومنذ متى: «Seit einer Woche steht der Müll im Flur». أما «Du bist total unordentlich und denkst nie an die anderen in der Wohnung!» فحكم على الشخص، و «Die Wohnung ist schlecht» عام، و «Ich hasse diese WG» شعور لا وصف. فحص ذاتي: هل يستطيع أي شخص أن يرى ما وصفته؟"
       },
       {
         "id": "a2-06-m4",
@@ -468,16 +468,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-07-m2",
-        "promptDe": "Ich kümmere ___ um Termine.",
-        "promptAr": "اختر:",
+        "promptDe": "Mein Arbeitsplatz",
+        "promptAr": "أي جملة تصف مكان العمل؟",
         "options": [
-          "mir",
-          "mich",
-          "sich",
-          "mein"
+          "Arbeit ist wichtig.",
+          "Ich arbeite in einem hellen Büro mit drei Kollegen.",
+          "Ich möchte später vielleicht einmal in einem großen Krankenhaus arbeiten.",
+          "Morgen habe ich frei."
         ],
         "correctIndex": 1,
-        "explanationAr": "sich kümmern يأخذ mich مع ich: «Ich kümmere mich um Termine». mir تُفيد «لي» لا الرجوع، و mein يُضاف إلى اسمٍ بعده، و sich للغيبة — فتبقى العبارةُ سليمةَ اللفظ مقلوبةَ المعنى. فحص ذاتي: هل الفعلُ عنك أنت؟"
+        "explanationAr": "وصف مكان العمل يذكر المكان وصفته ومن فيه: «Ich arbeite in einem hellen Büro mit drei Kollegen». أما المستشفى فأمنية للمستقبل، و «Arbeit ist wichtig» رأي، و «Morgen habe ich frei» موعد. فحص ذاتي: هل وصفت أين تعمل ومع من؟"
       },
       {
         "id": "a2-07-m3",
@@ -642,16 +642,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-09-m4",
-        "promptDe": "Gespräch beenden",
-        "promptAr": "اختر التعبير المطابق ل «Gespräch beenden»:",
+        "promptDe": "Herr Lang ruft an: Er kann am Dienstag nicht kommen und bittet um Rückruf unter 0176 2233.",
+        "promptAr": "أي ملاحظة تنقل الرسالة الهاتفية كاملة لزميلتك؟",
         "options": [
-          "Auf Wiedersehen im Telefon.",
-          "Tschau Leute Firma.",
-          "Ende jetzt.",
-          "Auf Wiederhören."
+          "Herr Lang kommt Dienstag.",
+          "Jemand hat heute Vormittag angerufen und wollte irgendetwas wegen eines Termins.",
+          "Herr Lang: Dienstag abgesagt, bitte zurückrufen, 0176 2233.",
+          "Bitte Herrn Lang anrufen."
         ],
-        "correctIndex": 3,
-        "explanationAr": "في المكالمة تُختم ب «Auf Wiederhören» لأنها تُسمع لا تُرى، و «Auf Wiedersehen» عند اللقاء الحضوري. وصيغٌ مثل «Ende jetzt» ليست ألمانية؛ فحص ذاتي: هل تُنهي مكالمةً أم لقاءً؟"
+        "correctIndex": 2,
+        "explanationAr": "الملاحظة الهاتفية تنقل من اتصل وماذا يريد وكيف نعاود الاتصال: «Herr Lang: Dienstag abgesagt, bitte zurückrufen, 0176 2233». أما «Jemand hat heute Vormittag angerufen und wollte irgendetwas wegen eines Termins.» فبلا اسم ولا رقم، و «kommt Dienstag» عكس الرسالة، و «Bitte Herrn Lang anrufen» بلا سبب ولا رقم. فحص ذاتي: هل تستطيع زميلتك معاودة الاتصال دون أن تسألك؟"
       },
       {
         "id": "a2-09-m5",
@@ -729,16 +729,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-10-m5",
-        "promptDe": "kurz",
-        "promptAr": "اختر Komparativ:",
+        "promptDe": "Zug: 4 Stunden, 39 €. Bus: 7 Stunden, 25 €.",
+        "promptAr": "أي جملة تبرّر القرار بالمقارنة الصحيحة؟",
         "options": [
-          "kurzer",
-          "mehr kurz",
-          "kürzer",
-          "am kurz"
+          "Ich nehme den Bus, weil er schneller ist als der Zug und nur sieben Stunden fährt.",
+          "Ich nehme den Zug.",
+          "Der Bus ist teurer, deshalb nehme ich ihn.",
+          "Ich nehme den Zug, weil er viel schneller ist."
         ],
-        "correctIndex": 2,
-        "explanationAr": "الصفةُ قصيرةُ المقطع تُعتلّ مع اللاحقة: kurz ⇒ kürzer. ف «kurzer» تنسى الاعتلال، و «mehr kurz» ترجمةٌ حرفية، و «am kurz» تُبقي الأصلَ حيث تُطلب المقارنة. فحص ذاتي: هل تحرّك حرفُ العلّة؟"
+        "correctIndex": 3,
+        "explanationAr": "تبرير القرار يذكر الاختيار والسبب بعد weil: «Ich nehme den Zug, weil er viel schneller ist»، فالقطار 4 ساعات والحافلة 7. أما الحافلة فليست أسرع ولا أغلى، و «Ich nehme den Zug» قرار بلا سبب. فحص ذاتي: هل يطابق سببك الأرقام المعروضة؟"
       }
     ]
   },
@@ -764,16 +764,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-11-m2",
-        "promptDe": "wir",
-        "promptAr": "أي خيار يحقّق «wir» في هذا السياق؟",
+        "promptDe": "Buchung bestätigen",
+        "promptAr": "أي رسالة تؤكد الحجز تأكيدًا كاملًا؟",
         "options": [
-          "wir würden",
-          "wir würde",
-          "wir wurdet",
-          "wir würden gern bleibt"
+          "Ich bestätige ein Einzelzimmer vom 3. bis 5. Mai für 2 Nächte, mit Frühstück.",
+          "Ja, okay.",
+          "Vielen Dank für Ihre schnelle Antwort, das Zimmer sieht auf den Fotos wirklich sehr schön aus.",
+          "Ich komme im Mai."
         ],
         "correctIndex": 0,
-        "explanationAr": "صيغةُ التمنّي تُصرَّف مع الفاعل: wir würden. و «wir würde» تُبقي صيغةَ المفرد، و «wir wurdet» تخلط الماضي بالافتراض. الفكرةُ مجاملةٌ مشروطة: würde ثم المصدر في الآخر. فحص ذاتي: هل انفرد المصدر بالنهاية؟"
+        "explanationAr": "التأكيد الكامل يذكر نوع الغرفة والتواريخ وعدد الليالي وما يشمله السعر: «Ich bestätige ein Einzelzimmer vom 3. bis 5. Mai für 2 Nächte, mit Frühstück.». أما الشكر على الصور فلا يؤكد شيئًا، و «Ja, okay» و «Ich komme im Mai» ناقصتان. فحص ذاتي: هل ذكرت النوع والتاريخ والليالي؟"
       },
       {
         "id": "a2-11-m3",
@@ -851,16 +851,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-12-m3",
-        "promptDe": "deshalb",
-        "promptAr": "اختر التعبير المطابق ل «deshalb»:",
+        "promptDe": "Hotel: „Wir haben kein Doppelzimmer mehr. Sie können zwei Einzelzimmer zum gleichen Preis nehmen oder kostenlos stornieren.“",
+        "promptAr": "ما البدائل التي يعرضها الفندق؟",
         "options": [
-          "Deshalb ich brauche Lösung.",
-          "Ich deshalb eine Lösung brauche.",
-          "Deshalb brauche ich eine Lösung.",
-          "Brauche deshalb ich."
+          "ein Doppelzimmer zum halben Preis",
+          "zwei Einzelzimmer zum gleichen Preis oder kostenlose Stornierung",
+          "zwei Einzelzimmer gegen einen Aufpreis oder eine Stornierung mit Gebühr",
+          "nur eine Stornierung"
         ],
-        "correctIndex": 2,
-        "explanationAr": "الرابط deshalb يُقدَّم فيأتي الفعلُ مباشرةً بعده: «Deshalb brauche ich eine Lösung.». ف «Deshalb ich brauche Lösung.» تُبقي ترتيبَ الجملة العادية فتفقد أثرَ الرابط. فحص ذاتي: هل جاء الفعل بعد الرابط مباشرة؟"
+        "correctIndex": 1,
+        "explanationAr": "الفندق يعرض بديلين: «zwei Einzelzimmer zum gleichen Preis» أو الإلغاء «kostenlos». لا توجد غرفة مزدوجة، ولا Aufpreis ولا رسوم إلغاء، والإلغاء ليس الخيار الوحيد. فحص ذاتي: ما الشرط المرتبط بكل بديل؟"
       },
       {
         "id": "a2-12-m4",
@@ -1025,16 +1025,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-14-m5",
-        "promptDe": "Gute …",
-        "promptAr": "أكمل:",
+        "promptDe": "Übergabe",
+        "promptAr": "أي رسالة تنظّم تسليم المهام لزميلك أثناء مرضك؟",
         "options": [
-          "Arbeit",
-          "Krank",
-          "Pause nur",
-          "Besserung"
+          "Ich bin krank. Bitte macht alles, was diese Woche noch zu tun ist, ich weiß nicht genau, was noch offen ist.",
+          "Gute Besserung an mich.",
+          "Kannst du bitte heute den Kunden Meier anrufen? Die Unterlagen liegen auf meinem Tisch.",
+          "Ich komme morgen vielleicht."
         ],
-        "correctIndex": 3,
-        "explanationAr": "لتمنّي الشفاء تُستعمل العبارةُ الجاهزة «Gute Besserung» كما في رسالة زميلٍ مريض. أمّا Gute Arbeit فتُثني على إنجاز، و Gute Pause تخصّ الاستراحة. فحص ذاتي: إلى مَن يتّجه الكلام؟"
+        "correctIndex": 2,
+        "explanationAr": "تسليم المهام يذكر المهمة المحددة ومكان ما يحتاجه الزميل: «Kannst du bitte heute den Kunden Meier anrufen? Die Unterlagen liegen auf meinem Tisch». أما «Bitte macht alles» فلا يحدد شيئًا، والجملتان الأخريان لا تسلّمان أي مهمة. فحص ذاتي: هل يعرف زميلك ماذا يفعل وأين يجد الأوراق؟"
       }
     ]
   },
@@ -1073,29 +1073,29 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-15-m3",
-        "promptDe": "sollen",
-        "promptAr": "اختر التعبير المطابق ل «sollen»:",
+        "promptDe": "In der Apotheke",
+        "promptAr": "أي جملة تصف الأعراض للصيدلي؟",
         "options": [
-          "Ich soll die Tablette nehmen.",
-          "Ich soll nehme die Tablette.",
-          "Ich die Tablette soll nimmt.",
-          "Soll ich genommen Tablette."
+          "Ich hätte gern irgendein Medikament, das gegen wirklich alle Krankheiten hilft.",
+          "Wo ist die Kasse?",
+          "Ich bin gesund.",
+          "Ich habe seit zwei Tagen Halsschmerzen und Husten."
         ],
-        "correctIndex": 0,
-        "explanationAr": "sollen تنقل توصيةَ الطبيب وتُبقي المصدرَ في النهاية: «Ich soll die Tablette nehmen.». ف «Ich soll nehme die Tablette.» تصرّف الفعلَ بعد sollen. فحص ذاتي: هل بقي الفعل مصدرًا؟"
+        "correctIndex": 3,
+        "explanationAr": "وصف الأعراض يذكر الشكوى ومدتها: «Ich habe seit zwei Tagen Halsschmerzen und Husten». أما طلب دواء لكل الأمراض فلا يصف شيئًا، والسؤال عن الصندوق و «Ich bin gesund» لا علاقة لهما بالأعراض. فحص ذاتي: هل ذكرت ماذا تشعر ومنذ متى؟"
       },
       {
         "id": "a2-15-m4",
-        "promptDe": "Imperativ Sie",
-        "promptAr": "اختر الصيغة الصحيحة لحالة «Imperativ Sie»:",
+        "promptDe": "Unklare Einnahme",
+        "promptAr": "لم تفهم تعليمات الاستعمال. أي جملة تطلب رأي المختص؟",
         "options": [
-          "Sie nehmen das!",
-          "Nimmst Sie das.",
-          "Nehmen das Sie Wasser.",
-          "Nehmen Sie das mit Wasser."
+          "Ich nehme einfach doppelt so viele Tabletten, dann wirkt es bestimmt schneller.",
+          "Können Sie mir das bitte noch einmal erklären?",
+          "Ich frage später im Internet.",
+          "Egal, ich probiere es."
         ],
-        "correctIndex": 3,
-        "explanationAr": "الأمرُ مع صيغة الاحترام يبدأ بالفعل ثم Sie: «Nehmen Sie das mit Wasser». و «Sie nehmen das!» جملةٌ خبرية، و «Nimmst Sie» تخلط تصريفَ المفرد غير الرسمي مع Sie. فحص ذاتي: مَن يقصد الحديثُ رسميًا؟"
+        "correctIndex": 1,
+        "explanationAr": "عند الغموض تطلب الشرح من الصيدلي نفسه: «Können Sie mir das bitte noch einmal erklären?». أما مضاعفة الجرعة فخطر على الصحة، والبحث لاحقًا في الإنترنت أو التجريب لا يعطيك رأي مختص. فحص ذاتي: من يستطيع أن يشرح لك الجرعة بأمان؟"
       },
       {
         "id": "a2-15-m5",
@@ -1221,16 +1221,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-17-m3",
-        "promptDe": "anmelden mit zu",
-        "promptAr": "أي خيار يحقّق «anmelden mit zu» في هذا السياق؟",
+        "promptDe": "Digitale Gewohnheiten",
+        "promptAr": "أي جملة تصف عادة رقمية؟",
         "options": [
-          "zu anmelden",
-          "anzumelden",
-          "anmelden zu",
-          "angezumelden"
+          "Ich lese jeden Morgen zehn Minuten Nachrichten am Handy.",
+          "Morgen will ich vielleicht ein neues Konto bei einer Bank erstellen.",
+          "Bitte prüfe den Link!",
+          "Ein Passwort ist geheim."
         ],
-        "correctIndex": 1,
-        "explanationAr": "مع «zu» ينقسمُ فعلُ الانفصال حوله: an ⇒ an-zu-melden. ف «zu anmelden» تضع zu قبل البادئة، و «anmelden zu» بلا حركةٍ للفعل، و «angezumelden» تلقي ge زائدًا. فحص ذاتي: أين تدخلُ zu بالضبط؟"
+        "correctIndex": 0,
+        "explanationAr": "العادة شيء يتكرر، لذلك تحتاج كلمة تكرار مثل jeden Morgen: «Ich lese jeden Morgen zehn Minuten Nachrichten am Handy». أما الخطة لمرة واحدة والأمر والتعريف فليست وصفًا لعادة. فحص ذاتي: هل في جملتك كلمة تدل على التكرار؟"
       },
       {
         "id": "a2-17-m4",
@@ -1369,16 +1369,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-19-m3",
-        "promptDe": "Zweck",
-        "promptAr": "اختر التعبير المطابق ل «Zweck»:",
+        "promptDe": "Lerngewohnheit",
+        "promptAr": "أي جملة تصف عادتك في التعلم؟",
         "options": [
-          "um besser zu sprechen",
-          "damit besser zu sprechen",
-          "um ich spreche besser",
-          "zu um sprechen"
+          "Lernen ist wichtig für alle.",
+          "Nächste Woche probiere ich vielleicht eine neue App für Wörter aus.",
+          "Ich wiederhole jeden Abend zwanzig Minuten meine Karten.",
+          "Deutsch ist eine schwere Sprache."
         ],
-        "correctIndex": 0,
-        "explanationAr": "الغايةُ مع نفس الفاعل بـ um … zu والمصدر في الآخر: «Ich übe jeden Tag, um besser zu sprechen». damit تأخذ فاعلًا مختلفًا وجملةً مُصرَّفة، و «damit … zu» يمزج الأداتين. فحص ذاتي: مَن الفاعل هنا؟"
+        "correctIndex": 2,
+        "explanationAr": "عادة التعلم شيء تفعله بانتظام مع وقت ومدة: «Ich wiederhole jeden Abend zwanzig Minuten meine Karten». أما «Lernen ist wichtig für alle» فرأي عام، وتجربة الأسبوع القادم خطة لا عادة، والجملة الأخيرة حكم على اللغة. فحص ذاتي: هل وصفت ما تفعله فعلًا ومتى؟"
       },
       {
         "id": "a2-19-m4",
@@ -1430,16 +1430,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-20-m2",
-        "promptDe": "Nach vorangestelltem Nebensatz",
-        "promptAr": "اختر التعبير المطابق ل «Nach vorangestelltem Nebensatz»:",
+        "promptDe": "Kurs A: Abendkurs, 2 × pro Woche, 12 Wochen, 240 €. Kurs B: Intensivkurs, 5 × pro Woche, 4 Wochen, 390 €.",
+        "promptAr": "أي مقارنة صحيحة بين الدورتين؟",
         "options": [
-          "Bevor der Kurs beginnt, mache ich einen Test.",
-          "Bevor der Kurs beginnt, ich mache einen Test.",
-          "Bevor beginnt Kurs, Test ich.",
-          "Der Kurs bevor, mache."
+          "Kurs B ist günstiger und kürzer.",
+          "Beide Kurse kosten gleich viel.",
+          "Kurs A hat mehr Unterrichtstage pro Woche als Kurs B.",
+          "Kurs A ist günstiger, dauert aber länger."
         ],
-        "correctIndex": 0,
-        "explanationAr": "فعل الجملة الرئيسية يأتي بعد الفاصلة. تقدم bevor حدثًا يقع قبل حدث آخر: Bevor ich mich anmelde, lese ich die Bedingungen."
+        "correctIndex": 3,
+        "explanationAr": "Kurs A يكلّف 240 € مقابل 390 €، فهو günstiger، لكنه يستمر 12 أسبوعًا مقابل 4، فهو يدوم länger. أما Kurs B فأغلى، والسعران مختلفان، و Kurs A يدرّس مرتين فقط في الأسبوع. فحص ذاتي: هل قارنت السعر والمدة كلًّا على حدة؟"
       },
       {
         "id": "a2-20-m3",
@@ -1565,16 +1565,16 @@ export const localTestTemplateBankA2 = [
     "questions": [
       {
         "id": "a2-22-m1",
-        "promptDe": "Wiederholt",
-        "promptAr": "اختر الصيغة الصحيحة لحالة «Wiederholt»:",
+        "promptDe": "Planung der Feier",
+        "promptAr": "أي ملاحظة تنظّم برنامج الحفلة واحتياجات الضيوف؟",
         "options": [
-          "Als wir jeden Monat feiern …",
-          "Als immer Gäste kommen …",
-          "Wenn ich gestern 18 wurde …",
-          "Wenn wir feiern …"
+          "Wir feiern irgendwann.",
+          "18 Uhr Essen, 20 Uhr Musik; Sara bringt vegetarisches Essen.",
+          "Alle bringen alles mit.",
+          "Herzlichen Glückwunsch zum Geburtstag und alles Gute für das neue Jahr!"
         ],
-        "correctIndex": 3,
-        "explanationAr": "للتكرار المعتاد تأتي wenn: «Wenn wir feiern, …». أمّا als فلموقفٍ واحدٍ في الماضي، لذلك «Als wir jeden Monat feiern» يمزج الماضي بالتكرار و «Wenn ich gestern 18 wurde» يكرّر مفردًا. فحص ذاتي: متكررٌ أم مفرد؟"
+        "correctIndex": 1,
+        "explanationAr": "تنظيم المناسبة يحدد البرنامج بالوقت ويوزّع الاحتياجات: «18 Uhr Essen, 20 Uhr Musik; Sara bringt vegetarisches Essen». أما «Wir feiern irgendwann» فبلا موعد، و «Alle bringen alles mit» بلا توزيع، والتهنئة ليست خطة. فحص ذاتي: هل يعرف كل ضيف متى يأتي وماذا يحضر؟"
       },
       {
         "id": "a2-22-m2",
@@ -1652,29 +1652,29 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-23-m2",
-        "promptDe": "die Initiative",
-        "promptAr": "اختر التعبير المطابق ل «die Initiative»:",
+        "promptDe": "Engagement",
+        "promptAr": "أي جملة تتحدث عن مشاركة تطوعية؟",
         "options": [
-          "der",
-          "die",
-          "das",
-          "den"
+          "Ich arbeite seit zwei Jahren als Verkäuferin in einem großen Supermarkt.",
+          "Ein Projekt ist ein Plan.",
+          "Ich helfe freiwillig zweimal im Monat im Sprachcafé.",
+          "Ich kaufe Lebensmittel im Supermarkt."
         ],
-        "correctIndex": 1,
-        "explanationAr": "الأسماءُ المنتهية بـ -tion مؤنّثة: die Initiative، مثل die Station و die Information. der و das تُخطئان الجنس، و «den» لا يكون أداةً للمبتدأ — يبقى المعنى وتَسقط الفصاحة. فحص ذاتي: هل حفظتَ الاسمَ بأداته؟"
+        "correctIndex": 2,
+        "explanationAr": "المشاركة التطوعية عمل بلا أجر يُختار بحرية: «Ich helfe freiwillig zweimal im Monat im Sprachcafé». أما العمل في السوبرماركت فوظيفة مدفوعة، وشراء الطعام ليس تطوعًا، والجملة الثانية تعريف. فحص ذاتي: هل ذكرت كلمة freiwillig ومكان المساعدة؟"
       },
       {
         "id": "a2-23-m3",
-        "promptDe": "das Projekt",
-        "promptAr": "اختر الصيغة الصحيحة لحالة «das Projekt»:",
+        "promptDe": "Motivation und Aufgabe",
+        "promptAr": "أي جملة تذكر الدافع والمهمة معًا؟",
         "options": [
-          "das",
-          "der",
-          "die",
-          "dem"
+          "Ich begleite ältere Menschen.",
+          "Weil ich gern zuhöre.",
+          "Viele ältere Menschen in unserer Nachbarschaft wohnen allein in großen Wohnungen.",
+          "Ich begleite ältere Menschen, weil ich gern zuhöre."
         ],
-        "correctIndex": 0,
-        "explanationAr": "اسمُ Projekt يأخذ das في المفرد: das Projekt، والجمع die Projekte. لذلك لا تكون der ولا die أداةً معه، و dem formٌ آخر لا يصلح لمبتدأٍ في هذه الصيغة. فحص ذاتي: هل حفظتَ الاسمَ بأداته؟"
+        "correctIndex": 3,
+        "explanationAr": "الجملة الصحيحة تذكر المهمة (ältere Menschen begleiten) والدافع بعد weil: «Ich begleite ältere Menschen, weil ich gern zuhöre». الأولى مهمة بلا دافع، والثانية دافع بلا مهمة، والثالثة وصف عام للحي. فحص ذاتي: ماذا تفعل، ولماذا؟"
       },
       {
         "id": "a2-23-m4",
@@ -1739,16 +1739,16 @@ export const localTestTemplateBankA2 = [
       },
       {
         "id": "a2-24-m3",
-        "promptDe": "Beide Eigenschaften",
-        "promptAr": "اختر التعبير المطابق ل «Beide Eigenschaften»:",
+        "promptDe": "Wir suchen einen Ort für das Kursfest.",
+        "promptAr": "أي ملاحظة تجمع المعايير والخيارات قبل القرار؟",
         "options": [
-          "weder … noch",
-          "sowohl … als auch",
-          "entweder … oder",
-          "ob … wenn"
+          "Kriterien: günstig, zentral. Optionen: Park, Café, Kursraum.",
+          "Wir nehmen das Café.",
+          "Ich mag Parks.",
+          "Am Freitag feiern wir ab 18 Uhr zusammen mit allen Lehrkräften das Fest."
         ],
-        "correctIndex": 1,
-        "explanationAr": "الجمعُ بين صفتين إثباتًا ب «sowohl … als auch»: «sowohl günstig als auch zentral». و entweder … oder تختار واحدًا، و weder … noch تنفي الاثنين، و «ob … wenn» رابطٌ غير موجود. فحص ذاتي: هل الصفتانِ قائمتان؟"
+        "correctIndex": 0,
+        "explanationAr": "جمع المعايير والخيارات يأتي قبل القرار: Kriterien هي ما نريده (günstig, zentral)، و Optionen هي البدائل (Park, Café, Kursraum). أما «Wir nehmen das Café» فقرار جاهز، و «Ich mag Parks» ذوق شخصي، والجملة الأخيرة موعد. فحص ذاتي: هل كتبت المعايير والخيارات قبل أن تختار؟"
       },
       {
         "id": "a2-24-m4",

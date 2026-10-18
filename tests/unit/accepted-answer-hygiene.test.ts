@@ -60,8 +60,9 @@ describe("accepted-answer hygiene", () => {
     // the meaning were removed (e.g. Wenn for a single past period, durch for a personal agent, Mit + accusative, sodann as a
     // result connector, Unter … bezeichnet); 14 items became single-string and b2-24-e3 keeps one corrected key (226 -> 241; 161 -> 146).
     // v201 (2026-10-15): a1-18-e2 keeps only the standard plural «sind» (consistent with a1-18-e6/m2), so 241 -> 242; 146 -> 145.
-    expect(summary.acceptsExactlyOneString).toBe(242);
-    expect(summary.broadenedExercises).toBe(145);
+    // v231 (2026-10-18): a1-14-e3 now orders a real place question (P2-400); «Wo liegt der Schlüssel» has one standard order, so 242 -> 243; 145 -> 144.
+    expect(summary.acceptsExactlyOneString).toBe(243);
+    expect(summary.broadenedExercises).toBe(144);
     expect(summary.acceptsExactlyOneString + summary.broadenedExercises).toBe(summary.productiveExercises);
     for (const level of ["A1", "A2", "B1", "B2"]) expect(summary.byLevel[level]?.productiveExercises).toBeGreaterThan(0);
   });

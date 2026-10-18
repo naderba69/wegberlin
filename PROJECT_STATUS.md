@@ -1,6 +1,36 @@
 # Project Status
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
+
+## P2-400: سدّ الفجوات الـ54 في المحتوى — 2026-10-18 (v231)
+
+- **النطاق:** تنفيذ «واصل الانتاج» على الفجوات التي أعلنها ADR-121. القرار في **ADR-122**، وهو عمل وكيل بتفويض المالك («نفّذ ما يفيد المتعلم والصحيح»)، لا مراجعة ألمانية بشرية مستقلة.
+- **المبدأ:** لم يُعَد وسم عناصر موجودة لتخضرّ الأرقام؛ تغيّر ما يفعله المتعلم فعلًا.
+- **ما تغيّر:**
+  - **54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها** (A1 ‏11، وA2 ‏21، وB1 ‏13، وB2 ‏9). كل عنصر يقيس هدفًا واحدًا كان بلا اختبار. اختير العنصر المستبدَل من العناصر الخمسة الخارجة عن الأهداف أولًا، ثم من عنصر ما زال هدفه مختبرًا بعنصر آخر في الدرس نفسه، فلم يفقد أي هدف آخر تقييمه.
+  - **الأهداف التواصلية تُختبر كاختيار تواصلي** لا كتمرين قواعد: أي ملاحظة تنقل رسالة هاتفية كاملة، وأي جملة تذكر اهتمامًا وحدًّا، وأي ملخص لا يكشف النهاية.
+  - **قواعد كل عنصر:** 4 خيارات، والمفتاح ليس الأطول وحده، والمواضع موزعة على A–D، والسؤال لا يكشف المفتاح، والشرح العربي يقتبس المفتاح الألماني ويشرح خطأ كل مشتت وينتهي بفحص ذاتي.
+  - **5 نقاط تعليم** أُضيفت إلى شرح كتل نظرية قائمة: a1-15-t1، وa1-24-t1، وa2-04-t3، وa2-10-t3، وb1-12-t1. الأمثلة لم تتغير، فلا تغيير في الصوت أو البيان.
+  - **تمرين واحد:** a1-14-e3 صار ترتيب سؤال مكان حقيقي (Wo liegt der Schlüssel).
+  - **عقود الحالات الإعرابية:** ثمانية عناصر مستبدلة كانت مدرجة كتقييم للحالة في `src/data/case-teaching-registry.ts`، وصارت تقيس أهدافًا تواصلية، فأُخرجت من `assessmentIds`. بقي في كل عقد عنصر اختبار يقيس الحالة. مراجع التقييم 44 ⇒ **36**، وإشارات الحالة في التقييم 25 ⇒ **21**.
+  - **الخيارات المتوازية:** في b1-05 وb2-07 وb2-11 وb2-19 تحترم العناصر الجديدة قاعدة التوازي (المفتاح ليس الأطول ولا الأقصر وحده، والفرق في الطول 25 حرفًا على الأكثر).
+- **ميزانية JavaScript (ADR-123):** نمو الشروح دفع مجموع JS المبني إلى 2,136,520 gzip، فوق سقف الأمان 2,125,000 (احتياطي 15% إلزامي من ADR-049). لم تُرخَ السياسة: كان مسار `/practice/test-generator` يحمّل مقاطع المنهج الأربعة **و**نسخة ثانية من كل عناصر الاختبار القصير (نحو 76 KB gzip). صار المحمّل يشتق البنوك في المتصفح من الدروس المنشورة المحمّلة أصلًا، بالدالة نفسها المغلقة عند الفشل `buildLocalTestCatalog`، وباستيراد ثابت بلا `dynamic import`، فيبقى ضمان Offline في ADR-111. الملفات المولّدة في `src/data/local-test-templates/` باقية أثرًا مُدقَّقًا، ويثبت اختبار أن البنوك المشتقة تساويها. النتيجة: JS **2,067,006** gzip.
+- **النتيجة:** **389/389** هدفًا له رابط تعليم وتدريب واختبار قصير، و**0** فجوة. يثبّت `tests/unit/objective-item-alignment.test.ts` سجلًا فارغًا، فأي فجوة جديدة تُسقط الاختبار. يبقى **62** عنصرًا غير مرتبط معلنًا: 61 سؤال فهم وكتلة النظرية a2-06-t3.
+- **أرقام مرافقة:**
+  - المفتاح هو الخيار الأطول: 39.2% ⇒ **38%**. المواضع A ‏319، وB ‏302، وC ‏305، وD ‏324. دروس بلا موضع D: 3 ⇒ **2**.
+  - استثناءات الاقتباس 73 ⇒ **70** بلا مدخل جديد غير مراجَع.
+  - الإجابات المقبولة: نص واحد 242 ⇒ **243**، والموسَّعة 145 ⇒ **144** (a1-14-e3).
+  - مرشحات المعجم: الأسماء 4897/3423 ⇒ **4934/3460**، والأفعال 1277/1142 ⇒ **1291/1156** (سياقية فقط؛ المغطاة والمعلقة بلا تغيير).
+- **التدقيق:**
+  - P0 = **121/124**.
+  - P1 = **133/135**.
+  - P2 = **137/142 منجز، 3 جزئية (264، 371، 401)، 2 غير منجز**.
+- **الكاش:** **v231** (staging v230، والرجوع v230).
+- **البناء والتحقق:**
+  - Offline **`a6ec49a38ffd`**: full 6,147,412 gzip (a1 2,783,623 · a2 2,897,880 · b1 2,924,946 · b2 4,402,686)، أصغر من v230 لأن نسخة البنوك المكررة خرجت من المسار.
+  - JS: 131 / **2,067,006** gzip (كان 2,122,739 في v230). المنهج: 1,237,083 gzip. الصوت: 544 ملفًا / 54,036,433 بايتًا (لا تغيير). التباين: 0 إخفاق.
+  - `npm run check` كاملًا بخروج 0: lint وtypecheck واختبارات الوحدة **1599 في 232 ملفًا** وhandoff والبناء و`a11y:browser` **642 فحصًا / 0 إخفاق**.
+  - E2E: Mobile **66/66**. Desktop ‏65/66 في التشغيل الكامل: سقط `critical-flows:321` بإغلاق سياق المتصفح (`browser.newContext: Target page, context or browser has been closed`)، وهو التذبذب المعروف، ثم نجح منفردًا (1/1)، فالمجموع **66/66**.
 
 ## P2-400: محاذاة مؤلفة بين كل هدف وكل عنصر — 2026-10-18 (v230)
 
@@ -1831,7 +1861,7 @@ Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بي
 - Historical Browser/CI evidence before v181: CI re-measured the full desktop and mobile production suite on this head (PR #4, head 3fdf9b6, run `37147779120`): `check` passed in 4m28s (carries lint, typecheck, the 1,244 tests, the secret, freshness, workflow and handoff gates, the build, and a new step that re-runs the local-day and storage-integrity files under `TZ=Asia/Tunis`, `Pacific/Kiritimati` and `Pacific/Niue`) and `e2e` in 16m41s (both projects); Vercel passed, and `Deployment Smoke` reported skipping on the PR run by design, not by success — it stays unproven for production until the variable-pinned run says otherwise. Earlier, kept as measured: head 0acb40d (run `37118734143`) `check` 4m08s / `e2e` 15m38s (both projects, with the pinned-zone step green in all three zones); head 5b1fc79 (run `37112362964`) `check` 2m46s (`npm run check` 2m23s, 1,231 tests) and `e2e` 10m55s (build 0m59s, suite 9m13s). The docs-only head that preceded it (083fd38) had its run cancelled by the branch concurrency guard, so no browser number is attributed to it. Earlier generations, kept as measured: 95bfcfe (run `37110656051`) `check` 3m28s / `e2e` 16m46s (suite 14m17s); Stage A head 6fb5667 (run `37108553360`) `check` 4m26s / `e2e` 11m06s (suite 9m20s) — an earlier note had wrongly given both jobs 11m06s, read from a GraphQL job field instead of step timings; 65b6f03 (run `37105579225`) `check` 2m48s / `e2e` 16m28s, which is where the `review-session-dose-v1` browser assertions were first run; 076cd48 16m16s after two defects were fixed from real CI evidence (the stage-gate `reachLimit` freeze at stage one and a progress test counting the phantom mastery seed removed by ADR-103). Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so no browser number is ever taken from a local run. A prior generation (head 076cd48) measured 16m16s after two defects were fixed from real CI evidence — the stage-gate `reachLimit` freeze at stage one, and a progress test that counted the phantom mastery seed removed by ADR-103. Local browser runs remain impossible in this sandbox (no Chromium, no CDN), so this number comes from Actions, not from here. The Worker test verifies local ESM loading only, not GPU inference; see docs/run-logs/2026-10-02-production-release/QA_SUMMARY.json.
 - P0 = 121 implemented / 3 partial / 0 missing / 0 blocked.
 - P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 136 implemented / 4 partial / 2 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 137 implemented / 3 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - الدليل التاريخي السابق لـP2-276: PR #7 عند `b974c48` اجتاز Quality Gate `37335158220` (64/64 Desktop و64/64 Mobile) وVercel Preview؛ هذه النتيجة لا تغطي P2-276. الدليل الحالي لهذه الدفعة موثق في كتلة P2-276 بأعلى الملف. `Deployment Smoke` تخطّى شرطه ولا يثبت Production. P0-302 مغلق؛ P0-301 جزئي حتى إغلاق PR.
 

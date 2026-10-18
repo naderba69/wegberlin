@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "2db6ead2fec4f5487ede5ff7cf8e602deb8b2639f03d7264366a2b506dc207df",
+  "contentSha256": "6fa7a8139f2be1402fdface5818aca38d4fa59412ebfb175d0b0f502ef6fde34",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -20,19 +20,19 @@
   "multipleChoice": {
     "items": 1250,
     "positions": {
-      "A": 324,
-      "B": 297,
-      "C": 306,
-      "D": 323
+      "A": 319,
+      "B": 302,
+      "C": 305,
+      "D": 324
     },
     "sharePct": [
-      25.92,
-      23.76,
-      24.48,
-      25.84
+      25.52,
+      24.16,
+      24.4,
+      25.92
     ],
-    "lessonsWithoutPositionD": 3,
-    "longestOptionIsKeyPct": 39.2
+    "lessonsWithoutPositionD": 2,
+    "longestOptionIsKeyPct": 38
   },
   "writing": {
     "statedRangeTasks": 92,
@@ -46,9 +46,9 @@
     "legacyCeilingExceeded": true,
     "freeProductionEvaluation": "workflow-and-independent-source-no-single-answer-comparator",
     "unchangedCorrectionAccepted": [],
-    "singleAcceptedString": 242,
-    "sharePct": 62.53,
-    "broadenedExercises": 145,
+    "singleAcceptedString": 243,
+    "sharePct": 62.79,
+    "broadenedExercises": 144,
     "acceptedAnswerHygieneVersion": "accepted-answer-hygiene-v1",
     "noOpVariants": 0,
     "noOpVariantItems": [],
@@ -67,10 +67,10 @@
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
     "allItems": 1733,
-    "allMedianChars": 165,
+    "allMedianChars": 168,
     "allUnder60Chars": 0,
     "allMissing": 0,
-    "explanationMedianChars": 156,
+    "explanationMedianChars": 160,
     "under40Chars": 0,
     "ofItems": 1250
   },

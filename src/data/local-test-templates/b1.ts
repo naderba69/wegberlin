@@ -37,16 +37,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-01-m3",
-        "promptDe": "können Präteritum",
-        "promptAr": "أي خيار يحقّق «können Präteritum» في هذا السياق؟",
+        "promptDe": "Biografie strukturieren",
+        "promptAr": "أي ترتيب يناسب سيرة منظمة؟",
         "options": [
-          "kannte",
-          "gekonnt hat",
-          "könnte",
-          "konnte"
+          "Beruf – Rückblick – Ausbildung – Herkunft",
+          "Rückblick – Beruf – Herkunft – Ausbildung",
+          "Herkunft – Ausbildung – Beruf – Rückblick",
+          "Ausbildung – Herkunft – Rückblick – Beruf"
         ],
-        "correctIndex": 3,
-        "explanationAr": "konnte. تستعمل war و hatte و konnte و musste و wollte كثيرًا في الكلام والكتابة: Er war jung، hatte wenig Geld، musste arbeiten، konnte nicht reisen."
+        "correctIndex": 2,
+        "explanationAr": "السيرة المنظمة تسير مع الزمن: النشأة (Herkunft)، ثم التعليم (Ausbildung)، ثم العمل (Beruf)، وفي النهاية نظرة إلى الوراء (Rückblick) تربط المراحل بدلالتها. أي ترتيب آخر يقفز بين المراحل فيضيع القارئ. فحص ذاتي: هل تبدأ سيرتك بالبداية وتنتهي بالخلاصة؟"
       },
       {
         "id": "b1-01-m4",
@@ -333,16 +333,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-05-m3",
-        "promptDe": "trotzdem",
-        "promptAr": "أي خيار يحقّق «trotzdem» في هذا السياق؟",
+        "promptDe": "Ich-Botschaft",
+        "promptAr": "أي جملة رسالة تبدأ بتجربتك (Ich-Botschaft)؟",
         "options": [
-          "Trotzdem fanden wir eine Lösung.",
-          "Trotzdem wir fanden eine Lösung.",
-          "Trotzdem eine Lösung wir.",
-          "Wir trotzdem Lösung fanden."
+          "Du hörst mir nie zu, wenn wir über die Planung sprechen.",
+          "Ich war unsicher, weil ich die Änderung erst am Freitag gesehen habe.",
+          "Du hast die Änderung wieder einmal ohne jede Abstimmung allein entschieden.",
+          "Man ändert so etwas nicht einfach am Freitag, ohne vorher alle zu fragen."
         ],
-        "correctIndex": 0,
-        "explanationAr": "الفعل بعد trotzdem. obwohl تبدأ جملة فرعية والفعل في نهايتها: Obwohl Jonas geschrieben hatte, sah Mariam die Nachricht nicht."
+        "correctIndex": 1,
+        "explanationAr": "رسالة الأنا تصف شعورك وسببه دون حكم على الآخر: «Ich war unsicher, weil ich die Änderung erst am Freitag gesehen habe». أما «Du hörst mir nie zu, wenn wir über die Planung sprechen.» و «Du hast die Änderung wieder einmal ohne jede Abstimmung allein entschieden.» فتبدآن باتهام، و «Man ändert so etwas nicht einfach am Freitag, ohne vorher alle zu fragen.» حكم عام لا يذكر تجربتك. فحص ذاتي: هل بدأت بما شعرت به أنت؟"
       },
       {
         "id": "b1-05-m4",
@@ -529,16 +529,16 @@ export const localTestTemplateBankB1 = [
     "questions": [
       {
         "id": "b1-08-m1",
-        "promptDe": "Nominativ",
-        "promptAr": "اختر التعبير المطابق ل «Nominativ»:",
+        "promptDe": "Seit dem 12. Januar fällt die Heizung nachts aus. Mein Kind ist erkältet. Bitte reparieren Sie sie bis Freitag.",
+        "promptAr": "ما تصنيف الجمل الثلاث بالترتيب؟",
         "options": [
-          "der Techniker, den kommt",
-          "der Techniker, der kommt",
-          "der Techniker, dem kommt",
-          "der Techniker, die kommt"
+          "Folge – Fakt – Lösung",
+          "Lösung – Folge – Fakt",
+          "Fakt – Lösung – Folge",
+          "Fakt – Folge – Lösung"
         ],
-        "correctIndex": 1,
-        "explanationAr": "الضمير فاعل. يأخذ الضمير الموصول جنس وعدد الاسم السابق، لكن حالته تأتي من وظيفته داخل الجملة."
+        "correctIndex": 3,
+        "explanationAr": "تعطّل التدفئة منذ 12 يناير واقعة يمكن التحقق منها (Fakt)، ومرض الطفل أثرها (Folge)، وطلب الإصلاح حتى الجمعة هو الحل المطلوب (Lösung). الفصل بينها يجعل الطلب واضحًا دون خلط بين الدليل والمطلب. فحص ذاتي: أي جملة يمكن إثباتها، وأيها تطلب شيئًا؟"
       },
       {
         "id": "b1-08-m2",
@@ -877,16 +877,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-12-m5",
-        "promptDe": "Bilanz",
-        "promptAr": "يجب أن تشمل:",
+        "promptDe": "Projektantrag präsentieren",
+        "promptAr": "أي بداية لعرض مقترح مشروع قصير هي الأوضح؟",
         "options": [
-          "Nur die positiven Ergebnisse",
-          "Fotos ohne jegliche Zahlen",
-          "Wirkung behaupten",
-          "Erfolge und Probleme"
+          "Wir planen einen Tauschmarkt, damit weniger Dinge im Müll landen.",
+          "Wir haben viele Ideen und sehen dann, was passiert.",
+          "Unser Projekt ist sehr gut und alle finden es toll.",
+          "Zuerst zeige ich Ihnen zwanzig Fotos von unserem Viertel und den Straßen."
         ],
-        "correctIndex": 3,
-        "explanationAr": "حصيلة صادقة. ما يذكر الإيجابيات وحده لا يقيّم التجربة؛ اذكر الأثر والمشكلة معًا."
+        "correctIndex": 0,
+        "explanationAr": "عرض المقترح يبدأ بالنشاط وهدفه في جملة واحدة: «Wir planen einen Tauschmarkt, damit weniger Dinge im Müll landen»، ثم تأتي الفئة والمؤشر والموارد. أما وعد النجاح أو عرض الصور أولًا فلا يقول للجنة ماذا تريدون ولماذا. فحص ذاتي: هل يعرف السامع النشاط والهدف من الجملة الأولى؟"
       }
     ]
   },
@@ -938,16 +938,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-13-m4",
-        "promptDe": "Ursache vorsichtig",
-        "promptAr": "اختر التعبير المطابق ل «Ursache vorsichtig»:",
+        "promptDe": "Lernweg reflektieren",
+        "promptAr": "أي جملة تصف مسار التعلم بتأمّل؟",
         "options": [
-          "Das könnte an mehreren Faktoren liegen.",
-          "Nur die App war sicher der Grund.",
-          "Keine Daten nötig.",
-          "Fortschritt hat nie Ursachen."
+          "Ich lerne Deutsch.",
+          "Am Anfang las ich nur; durch den Kurs spreche ich mehr, Schreiben bleibt schwer.",
+          "Ich lerne seit zwei Jahren jeden Tag Deutsch mit vielen verschiedenen Apps und Büchern.",
+          "Mein Kurs beginnt um neun."
         ],
-        "correctIndex": 0,
-        "explanationAr": "لغة احتمالية دقيقة. قارن المهمة نفسها قبل وبعد: طول النص، عدد التوقفات، نسبة الإجابات الجديدة، نوع الأخطاء."
+        "correctIndex": 1,
+        "explanationAr": "الوصف المتأمل يقارن المراحل ويذكر السبب وما بقي صعبًا: البداية (las ich nur)، ثم ما تغيّر (durch den Kurs spreche ich mehr)، ثم الحد (Schreiben bleibt schwer). أما ذكر السنوات والتطبيقات فوصف كمي بلا تأمل، والجملتان القصيرتان خبر عادي. فحص ذاتي: ما الذي تغيّر في تعلمك، وبسبب ماذا؟"
       },
       {
         "id": "b1-13-m5",
@@ -986,16 +986,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-14-m2",
-        "promptDe": "Reflexiv",
-        "promptAr": "أي خيار يحقّق «Reflexiv» في هذا السياق؟",
+        "promptDe": "Beratungsanfrage",
+        "promptAr": "أي جملة تناسب طلب استشارة رسميًا؟",
         "options": [
-          "Wir lassen sich beraten.",
-          "Wir beraten lassen uns falsch.",
-          "Wir lassen uns beraten.",
-          "Wir lassen uns zu beraten."
+          "Hey, sag mal schnell, ob mein Abschluss hier etwas wert ist!",
+          "Ich habe einen Abschluss.",
+          "Könnten Sie mich zur Anerkennung meines Abschlusses beraten?",
+          "Anerkennen Sie sofort meinen Abschluss, ich brauche ihn morgen dringend!"
         ],
         "correctIndex": 2,
-        "explanationAr": "wir → uns. نستعمل lassen + مصدر عندما نطلب أو نسمح لشخص آخر بتنفيذ فعل: Ich lasse die Unterlagen übersetzen."
+        "explanationAr": "طلب الاستشارة الرسمي مهذّب ويحدد الموضوع: «Könnten Sie mich zur Anerkennung meines Abschlusses beraten?». أما «Hey, sag mal schnell, ob mein Abschluss hier etwas wert ist!» فغير رسمي، و «Anerkennen Sie sofort meinen Abschluss, ich brauche ihn morgen dringend!» يطالب بالنتيجة بدل الاستشارة، و «Ich habe einen Abschluss» لا يطلب شيئًا. فحص ذاتي: هل ذكرت الموضوع وطلبت الاستشارة بأدب؟"
       },
       {
         "id": "b1-14-m3",
@@ -1173,16 +1173,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-16-m5",
-        "promptDe": "nicht nur",
-        "promptAr": "أكمل:",
+        "promptDe": "Mediennutzung analysieren",
+        "promptAr": "أي جملة تحلّل استعمال الإعلام بتفصيل؟",
         "options": [
-          "sondern auch",
-          "aber nur",
-          "weder noch",
-          "als ob"
+          "Ich benutze mein Handy.",
+          "Social Media macht alle süchtig.",
+          "Handys sind heute für junge Leute in fast allen Bereichen des Lebens schlecht.",
+          "Abends scrolle ich etwa 40 Minuten nebenbei, danach schlafe ich später ein."
         ],
-        "correctIndex": 0,
-        "explanationAr": "nicht nur … sondern auch: الإطار يقدّم طرفين معطوفين، فالتكملة الصحيحة sondern auch. أما aber nur و weder noch فتقلبان المعنى إلى استدراك أو نفي مزدوج."
+        "correctIndex": 3,
+        "explanationAr": "التحليل المفصّل يذكر الوقت والمدة والسياق والأثر: «Abends scrolle ich etwa 40 Minuten nebenbei» ثم الأثر على النوم. أما «Ich benutze mein Handy» فعام، والحكم على «alle» أو «junge Leute» تعميم لا يحلل استعمالك أنت. فحص ذاتي: هل ذكرت متى وكم وما الأثر؟"
       }
     ]
   },
@@ -1221,16 +1221,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-17-m3",
-        "promptDe": "überzeugen",
-        "promptAr": "الفيلم مقنع:",
+        "promptDe": "Spoilerarme Zusammenfassung",
+        "promptAr": "أي تلخيص يعرض الفكرة دون حرق النهاية؟",
         "options": [
-          "Der Film ist überzeugt.",
-          "Der Film überzeugt gewesen Adjektiv.",
-          "Der überzeugte Film mich ist.",
-          "Der Film ist überzeugend."
+          "Eine junge Ärztin zieht aufs Land und muss dort ein altes Geheimnis lösen.",
+          "Am Ende stellt sich heraus, dass ausgerechnet der Bruder der Ärztin der Täter war.",
+          "Der Film ist toll.",
+          "In der letzten Szene stirbt die Ärztin."
         ],
-        "correctIndex": 3,
-        "explanationAr": "überzeugend. يمكن أن يعمل Partizip II كصفة قبل الاسم: die erzählte Geschichte، die gut gespielte Rolle، das sorgfältig geschriebene Buch."
+        "correctIndex": 0,
+        "explanationAr": "التلخيص دون حرق يعرض الشخصية والموقف والسؤال المفتوح: «Eine junge Ärztin zieht aufs Land und muss dort ein altes Geheimnis lösen». أما «Am Ende stellt sich heraus, dass ausgerechnet der Bruder der Ärztin der Täter war.» و «In der letzten Szene stirbt die Ärztin.» فتكشفان النهاية، و «Der Film ist toll» تقييم لا تلخيص. فحص ذاتي: هل يبقى للمشاهد سؤال مفتوح؟"
       },
       {
         "id": "b1-17-m4",
@@ -1395,16 +1395,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-19-m5",
-        "promptDe": "Korrektur",
-        "promptAr": "اختر التعبير المطابق ل «Korrektur»:",
+        "promptDe": "Jonas: „Wir treffen uns nächsten Freitag.“ (Heute ist Mittwoch.)",
+        "promptAr": "ما العلامة المبكرة لسوء فهم محتمل؟",
         "options": [
-          "nicht Freitag, aber Donnerstag",
-          "weder Freitag sondern",
-          "nicht Freitag, sondern Donnerstag",
-          "Freitag nicht Donnerstag"
+          "Jonas spricht zu schnell und benutzt viel zu viele schwierige Wörter.",
+          "„nächsten Freitag“ kann übermorgen oder in neun Tagen bedeuten.",
+          "Freitag ist ein Arbeitstag.",
+          "Es gibt kein Problem."
         ],
-        "correctIndex": 2,
-        "explanationAr": "nicht … sondern. بدل قول Du hast falsch erklärt، لخص فهمك: Wenn ich dich richtig verstehe, brauchst du die Datei Donnerstagabend."
+        "correctIndex": 1,
+        "explanationAr": "سوء الفهم يبدأ غالبًا من صياغة تحتمل معنيين: «nächsten Freitag» قد تعني بعد يومين أو بعد تسعة أيام، فالأفضل السؤال عن التاريخ. أما سرعة الكلام فليست في النص، و «Freitag ist ein Arbeitstag» لا يحل الغموض، و «Es gibt kein Problem» يتجاهله. فحص ذاتي: أي كلمة تحتمل معنيين؟"
       }
     ]
   },
@@ -1604,16 +1604,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-22-m4",
-        "promptDe": "Ergebnisindikator",
-        "promptAr": "اختر التعبير المطابق ل «Ergebnisindikator»:",
+        "promptDe": "Ziel: „Ich will im Beruf besser Deutsch schreiben.“",
+        "promptAr": "أي خطوة تحوّل الهدف إلى إجراء قابل للتنفيذ؟",
         "options": [
-          "Die App jeden Morgen kurz und langsam öffnen",
-          "Die Zahl der Klicker",
-          "unbekannter Test unter Zeitdruck",
-          "Den Plan einmal laut vorlesen"
+          "Ich werde mich in Zukunft beim Schreiben einfach viel mehr anstrengen.",
+          "Besser werden.",
+          "Jede Woche zwei Arbeits-E-Mails schreiben und korrigieren lassen.",
+          "Deutsch ist wichtig für den Beruf."
         ],
         "correctIndex": 2,
-        "explanationAr": "يقيس أداء قريبًا من النتيجة. مؤشر النتيجة يقيس الهدف النهائي مثل درجة اختبار جديد."
+        "explanationAr": "التحويل إلى إجراء يحدد ماذا ومتى وكم: «Jede Woche zwei Arbeits-E-Mails schreiben und korrigieren lassen». أما «Ich werde mich in Zukunft beim Schreiben einfach viel mehr anstrengen.» و «Besser werden.» فنوايا بلا فعل يمكن قياسه، والجملة الأخيرة رأي. فحص ذاتي: هل تعرف ماذا ستفعل هذا الأسبوع وكم مرة؟"
       },
       {
         "id": "b1-22-m5",
@@ -1665,16 +1665,16 @@ export const localTestTemplateBankB1 = [
       },
       {
         "id": "b1-23-m3",
-        "promptDe": "Person",
-        "promptAr": "اختر التعبير المطابق ل «Person» في درس «التقنية في الحياة اليومية»:",
+        "promptDe": "Eine Termin-App bewerten",
+        "promptAr": "أي تقييم يعتمد على معايير؟",
         "options": [
-          "Womit arbeitest du?",
-          "Damit Person.",
-          "Wofür Sara?",
-          "Mit wem arbeitest du?"
+          "Die App hat ein sehr schönes Logo und gefällt allen meinen Freunden sehr.",
+          "Alle benutzen sie.",
+          "Sie ist modern.",
+          "Sie funktioniert offline und ist barrierefrei, hat aber keinen Export."
         ],
         "correctIndex": 3,
-        "explanationAr": "mit wem للأشخاص. عندما يشير حرف الجر إلى شيء أو فكرة، نستعمل wo- للسؤال و da- للجواب: Wofür? Dafür."
+        "explanationAr": "التقييم وفق معايير يفحص نقاطًا محددة مثل العمل دون اتصال والوصول والتصدير: «Sie funktioniert offline und ist barrierefrei, hat aber keinen Export». أما الشعار وإعجاب الأصدقاء و «modern» فانطباعات لا معايير. فحص ذاتي: أي معيار يمكن فحصه في جملتك؟"
       },
       {
         "id": "b1-23-m4",
@@ -1713,29 +1713,29 @@ export const localTestTemplateBankB1 = [
     "questions": [
       {
         "id": "b1-24-m1",
-        "promptDe": "sich konzentrieren auf",
-        "promptAr": "أي خيار يحقّق «sich konzentrieren auf» في هذا السياق؟",
+        "promptDe": "Projektphasen",
+        "promptAr": "أي ترتيب لمراحل المشروع صحيح؟",
         "options": [
-          "wovon/davon",
-          "womit/damit",
-          "worauf/darauf",
-          "worüber/darüber"
+          "Pilot – Leitfrage – Auswertung – Quellen",
+          "Leitfrage – Quellen – Pilot – Auswertung",
+          "Auswertung – Pilot – Quellen – Leitfrage",
+          "Quellen – Auswertung – Leitfrage – Pilot"
         ],
-        "correctIndex": 2,
-        "explanationAr": "auf. نستعمل worauf/darauf مع sich konzentrieren auf، و wovon/davon مع abhängen von، و wodurch/dadurch مع تغير بسبب وسيلة، و worüber/darüber مع berichten über."
+        "correctIndex": 1,
+        "explanationAr": "المشروع متعدد المراحل يبدأ بسؤال موجِّه (Leitfrage)، ثم جمع المصادر وخط البداية (Quellen)، ثم تجربة صغيرة (Pilot)، ثم التقييم (Auswertung). إذا بدأت بالتجربة أو التقييم قبل السؤال فلا تعرف ماذا تقيس. فحص ذاتي: ما السؤال الذي يوجّه مشروعك؟"
       },
       {
         "id": "b1-24-m2",
-        "promptDe": "abhängen von",
-        "promptAr": "اختر التعبير المطابق ل «abhängen von»:",
+        "promptDe": "Quellen integrieren",
+        "promptAr": "أي جملة تدمج مصدرين ووجهتي نظر؟",
         "options": [
-          "wovon/davon",
-          "worauf/darauf",
-          "womit/damit",
-          "wofür/dafür"
+          "Ich habe eine Umfrage gemacht.",
+          "Die Mitarbeitenden haben immer recht, deshalb brauchen wir keine weiteren Daten oder Meinungen.",
+          "Quellen sind wichtig.",
+          "Die Umfrage zeigt lange Wartezeiten, die Mitarbeitenden nennen aber andere Gründe."
         ],
-        "correctIndex": 0,
-        "explanationAr": "von. نستعمل worauf/darauf مع sich konzentrieren auf، و wovon/davon مع abhängen von، و wodurch/dadurch مع تغير بسبب وسيلة، و worüber/darüber مع berichten über."
+        "correctIndex": 3,
+        "explanationAr": "الدمج يضع مصدرين متقابلين ويربطهما: «Die Umfrage zeigt lange Wartezeiten, die Mitarbeitenden nennen aber andere Gründe». أما ذكر استطلاع واحد فمصدر بلا مقارنة، وإعطاء رأي واحد الحق دائمًا يلغي وجهة النظر الأخرى، و «Quellen sind wichtig» عبارة عامة. فحص ذاتي: هل ذكرت مصدرين وما يقوله كل منهما؟"
       },
       {
         "id": "b1-24-m3",

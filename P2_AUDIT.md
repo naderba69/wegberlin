@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 
@@ -12,8 +12,8 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 
 | الحالة | العدد |
 |---|---:|
-| implemented | 136 |
-| partial | 4 |
+| implemented | 137 |
+| partial | 3 |
 | not-implemented | 2 |
 | blocked | 0 |
 | **المجموع** | **142** |
@@ -162,7 +162,7 @@ Last updated: 2026-10-06 · Status synchronization only; P2 classifications are 
 | 394 | وضع ميزانية حجم للمنهج والصوت وحزمة كل مستوى. | `implemented` | `media-pack-budget-v1` يفرض حدودًا مستقلة للمنهج والصوت ولكل حزمة A1/A2/B1/B2/full مع 15% reserve. | — |
 | 395 | إضافة تقرير أصول مفقودة وChecksums. | `implemented` | تقارير الصوت وOffline تتحقق من الملفات الناقصة والحجم وSHA-256. | — |
 | 396 | نشر Known limitations بدل إخفاء النقص. | `implemented` | README وPROJECT_STATUS وKnown limitations تسجل النقص والحدود بدل إخفائها. | — |
-| 400 | محاذاة الهدف مع عناصر تعليمه وتدريبه وتقييمه. | `partial` | منذ v230 (ADR-121) يربط `src/data/objective-item-alignment.ts` كل عنصر في كل درس من الدروس الـ96 بالأهداف التي يخدمها، أو يعلنه غير مرتبط، فصار المجموع 3,266 رابطًا. ويشتق `objective-coverage.ts` منها `taughtIn` و`practicedIn` و`assessedIn` لكل هدف (`authored-item-alignment`). النتيجة: 335/389 هدفًا مغطى، و54 فجوة معلنة في سجل ثابت يثبّته اختبار؛ كلها بلا عنصر اختبار قصير، و5 منها بلا تعليم أيضًا. الروابط قرار وكيل بتفويض المالك، لا مراجعة ألمانية بشرية مستقلة. | سد الفجوات الـ54 في المحتوى: توجيه عناصر الاختبار القصير المكررة أو الخارجة عن الأهداف إلى الأهداف غير المختبرة مع الحفاظ على معرّفاتها، وإضافة نقاط التعليم الخمس الناقصة. |
+| 400 | محاذاة الهدف مع عناصر تعليمه وتدريبه وتقييمه. | `implemented` | منذ v230 (ADR-121) يربط `src/data/objective-item-alignment.ts` كل عنصر في كل درس من الدروس الـ96 بالأهداف التي يخدمها، ويشتق `objective-coverage.ts` منها `taughtIn` و`practicedIn` و`assessedIn` (`authored-item-alignment`). وفي v231 (ADR-122) سُدّت الفجوات الـ54 في المحتوى نفسه: أُعيدت كتابة 54 عنصر اختبار قصير بمعرّفاتها لتقيس الأهداف غير المختبرة، وأُضيفت 5 نقاط تعليم، ووُجّه تمرين واحد (a1-14-e3). النتيجة 389/389 هدفًا مغطى، وسجل فجوات فارغ يثبّته اختبار، و62 عنصرًا غير مرتبط معلنًا (61 سؤال فهم وكتلة نظرية واحدة). العناصر والروابط عمل وكيل بتفويض المالك، لا مراجعة ألمانية بشرية مستقلة. | مراجعة بشرية اختيارية للروابط والعناصر الجديدة؛ أي فجوة جديدة تُسقط الاختبار. |
 | 401 | مدى استماع واقعي وحمل معجمي محكوم. | `partial` | graded-long-input-v1 يبني 16 مدخلًا (أربعة لكل مستوى، form C أُضيف في v184 وform D في v187) بين 113 و473 كلمة، وprior-sequence-support-v3 يستبعد المستقبل والقاموس من المعرفة المزعومة؛ جسر مبكر وصوت جهاز موسوم اصطناعيًا؛ حارس `extended-glossary-coverage` يتحقق أن headwords المسرد تظهر في نص مدخلها (v185، مع استثناءات مسماة لأربعة أفعال مصرّفة)، ووسم نحوي لكل headword من المسارد الـ48 (v186، للقراءة فقط)، ونموذج D فيصبح 16 مدخلًا بأربعة لكل مستوى (v187). | تمديد بقية المادة، قاموس صرفي، صوت بشري ومراجعة ملاءمة وحقوق مستقلة. |
 
 ## ترتيب التنفيذ المقترح

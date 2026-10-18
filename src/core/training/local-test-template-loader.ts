@@ -1,20 +1,19 @@
-import { localTestTemplateBankA1 } from "@/data/local-test-templates/a1";
-import { localTestTemplateBankA2 } from "@/data/local-test-templates/a2";
-import { localTestTemplateBankB1 } from "@/data/local-test-templates/b1";
-import { localTestTemplateBankB2 } from "@/data/local-test-templates/b2";
+import { academicLessonList } from "@/data/academic-lessons";
+import { curriculum } from "@/data/curriculum";
 import type { CEFRLevel } from "@/types/learning";
-import type { LocalTestTemplateLesson } from "./local-test-generator";
+import { buildLocalTestCatalog, type LocalTestCatalog, type LocalTestTemplateLesson } from "./local-test-generator";
 
-/** Static imports keep every authored bank in the route's installable Offline asset graph. */
+/**
+ * ADR-123: the level banks are derived in the browser from the published lessons that this route
+ * already loads statically (the curriculum-a1…b2 chunks are part of its Offline asset graph), with
+ * the same fail-closed `buildLocalTestCatalog` the build-time audit uses. The generated files in
+ * `src/data/local-test-templates/` stay as a reviewed, drift-checked artifact, but they are no longer
+ * shipped to the client as a second copy of every Mini-Test item. No dynamic import is involved.
+ */
+let catalog: LocalTestCatalog | null = null;
+
 export async function loadLocalTestTemplateBank(level: CEFRLevel): Promise<readonly LocalTestTemplateLesson[]> {
-  switch (level) {
-    case "A1":
-      return localTestTemplateBankA1;
-    case "A2":
-      return localTestTemplateBankA2;
-    case "B1":
-      return localTestTemplateBankB1;
-    case "B2":
-      return localTestTemplateBankB2;
-  }
+  catalog ??= buildLocalTestCatalog(academicLessonList, curriculum);
+  if (!catalog.ok) throw new Error(`local test catalog failed closed: ${catalog.issues.join("; ")}`);
+  return catalog.banks[level];
 }

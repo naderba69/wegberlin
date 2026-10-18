@@ -7,11 +7,11 @@
   "lessonCount": 19,
   "theoryReferenceCount": 23,
   "controlledReferenceCount": 57,
-  "assessmentReferenceCount": 44,
+  "assessmentReferenceCount": 36,
   "discoveredSignals": {
     "theory": 20,
     "controlled": 23,
-    "assessment": 25
+    "assessment": 21
   },
   "byLevel": {
     "A1": 6,
@@ -79,8 +79,7 @@
         "a1-12-e4"
       ],
       "assessmentIds": [
-        "a1-12-m1",
-        "a1-12-m5"
+        "a1-12-m1"
       ],
       "id": "a1-12-meaning-first-case",
       "sequence": [
@@ -146,7 +145,6 @@
         "a1-14-e6"
       ],
       "assessmentIds": [
-        "a1-14-m1",
         "a1-14-m2",
         "a1-14-m5"
       ],
@@ -255,7 +253,6 @@
         "a2-04-e7"
       ],
       "assessmentIds": [
-        "a2-04-m1",
         "a2-04-m2",
         "a2-04-m3",
         "a2-04-m5"
@@ -292,8 +289,7 @@
         "a2-07-e7"
       ],
       "assessmentIds": [
-        "a2-07-m1",
-        "a2-07-m2"
+        "a2-07-m1"
       ],
       "id": "a2-07-meaning-first-case",
       "sequence": [
@@ -360,8 +356,6 @@
       ],
       "assessmentIds": [
         "a2-23-m1",
-        "a2-23-m2",
-        "a2-23-m3",
         "a2-23-m4"
       ],
       "id": "a2-23-meaning-first-case",
@@ -463,7 +457,6 @@
         "b1-08-e7"
       ],
       "assessmentIds": [
-        "b1-08-m1",
         "b1-08-m2",
         "b1-08-m3"
       ],
@@ -532,8 +525,7 @@
       ],
       "assessmentIds": [
         "b2-04-m1",
-        "b2-04-m2",
-        "b2-04-m3"
+        "b2-04-m2"
       ],
       "id": "b2-04-meaning-first-case",
       "sequence": [
@@ -675,5 +667,5 @@
     }
   ],
   "boundary": "The audit proves authored sequencing and complete ownership of explicit case-name signals. It does not replace an independent linguistic judgment of every explanation or learner interpretation.",
-  "contentSha256": "518df6516a3f7e358615a3ee218737d28d372a138e8185639420d70a0d6e3998"
+  "contentSha256": "274d99d75f81aa4be6d7d1a2129aafecc51de65b5e30bba27cd4ff75a24c7f23"
 }

@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 
@@ -21,10 +21,10 @@ Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per
 - Offline cache: `dwnb-full-pack-v189` (staging v188; previous complete v188); the manifest remains 320/320 routes with pack counts 60/60/60/221/320. P2-276 adds hypothetical guidance on `/practice` without changing route inventory or learner schema; P2-352 local waveform comparison remains available.
 - Historical build v182 measured 2026-10-05: full `npm run check` passed; 325/325 static pages; Offline fingerprint `072383e68604`, full 6,000,079 gzip; contrast audit 323 pages / 22,940 text elements / 0 failures (586 gradient/image-backdrop skips); JS 128 chunks / 2,017,731 gzip / max 262,117. Unit/Integrity suite passed 1,352/1,352 in 199/199 files. Audio/curriculum manifests remain 544 files / 52,943,843 bytes and curriculum source 1,117,421 gzip; curriculum version is dwnb-a1-b2-2026.10-v2. These are local build metrics, not browser E2E or remote CI results.
 - Current v183 `npm run check` passed locally: lint/typecheck, `npm test` 1,355/1,355 in 200/200 files, secret/source/workflow/handoff gates, and production build. Build fingerprint `5c3bfded5f54`, Offline full 6,007,413 gzip; 325/325 static pages; contrast 323 pages / 22,960 elements / 0 failures; JS 128 / 2,017,731 gzip / max 262,117. Audio/curriculum totals are unchanged. The P2-276 Playwright test is included and the full desktop/mobile E2E job passed remotely in Quality Gate `37377109271` on head `15e457c`. Local E2E could not launch because Chromium is absent. Both Quality Gate jobs and Vercel Preview passed; Production deployment remains unclaimed.
-- Formal audits: P0 = 121 implemented / 3 partial / 0 missing / 0 blocked; P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked; P2 = 136 implemented / 4 partial / 2 not implemented / 0 blocked (142 rows). P2-276 and P2-352 are implemented without closing human-review boundaries or claiming learner outcomes.
+- Formal audits: P0 = 121 implemented / 3 partial / 0 missing / 0 blocked; P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked; P2 = 137 implemented / 3 partial / 2 not implemented / 0 blocked (142 rows). P2-400 is implemented by ADR-122; P2-276 and P2-352 are implemented without closing human-review boundaries or claiming learner outcomes.
 - P0 = 121 implemented / 3 partial / 0 missing / 0 blocked.
 - P1 = 133 implemented / 2 partial / 0 not implemented / 0 blocked.
-- Formal P2 audit: 142/142 rows = 136 implemented / 4 partial / 2 not implemented / 0 blocked.
+- Formal P2 audit: 142/142 rows = 137 implemented / 3 partial / 2 not implemented / 0 blocked.
 - المراجعات الألمانية/العربية/CEFR/الحقوق والصوت والأجهزة وشريك الحوار والدراسة التجريبية معلقة؛ لا اعتماد نهائي أو نتيجة امتحان.
 - مساحة Git الفعلية `/home/user/wegberlin` على الفرع المثبّت `arena/01a106a4-wegberlin`؛ لا تبديل إلى فرع تاريخي ولا ادعاء دمج في `main` أو نشر Production. لا تستخدم أوامر Termux/استعادة ZIP التاريخية لتغيير فرع الجلسة أو استبدال الجذر.
 

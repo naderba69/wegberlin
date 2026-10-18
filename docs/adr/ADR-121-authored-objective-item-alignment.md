@@ -43,5 +43,5 @@
 ## Consequences
 
 - The coverage report no longer claims 389/389. It shows 335/389 with a gap ledger. `docs/generated/OBJECTIVE_COVERAGE_REPORT.md` and `reports/academic-content-audit.json` (`gapLedger`, `unalignedSurfaces`) are the evidence.
-- Next content step: retarget off-objective or duplicate Mini-Test items to unassessed objectives, keeping their IDs, and add the five missing teaching points. Then flip P2-400 to `implemented`.
+- Next content step: retarget off-objective or duplicate Mini-Test items to unassessed objectives, keeping their IDs, and add the five missing teaching points. Then flip P2-400 to `implemented`. (Done in v231: ADR-122.)
 - Boundary: the alignment is the agent's judgement under delegation. A German-teaching reviewer may disagree with individual links. The data file is the single place to change them, and the tests re-derive everything.

@@ -259,16 +259,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-04-m3",
-        "promptDe": "Perspektive",
-        "promptAr": "اختر الصيغة الصحيحة لحالة «Perspektive»:",
+        "promptDe": "Interessen und Grenzen verhandeln",
+        "promptAr": "أي جملة تعرض المصلحة والحدّ بشفافية؟",
         "options": [
-          "im Hinblick auf die Qualität",
-          "im Hinblick der Qualität",
-          "hinsichtlich auf Qualität",
-          "angesichts auf"
+          "Wir schaffen alles bis Freitag, egal wie viel Arbeit am Ende noch dazukommt.",
+          "Das geht nicht.",
+          "Uns ist die Qualität wichtig; bis Freitag schaffen wir nur den Kernumfang.",
+          "Sie müssen eben warten, bis wir irgendwann Zeit haben."
         ],
-        "correctIndex": 0,
-        "explanationAr": "im Hinblick auf + Akkusativ: im Hinblick auf die Qualität. المركّب يقبل حرف الجر auf بعد hin، ولا يأتي هكذا: im Hinblick der Qualität، وحرف الجر يحدد النصب."
+        "correctIndex": 2,
+        "explanationAr": "التفاوض الشفاف يذكر ما يهمك والحد الذي لا تتجاوزه معًا: «Uns ist die Qualität wichtig; bis Freitag schaffen wir nur den Kernumfang». أما وعد كل شيء فيخفي الحدود، و «Das geht nicht» رفض بلا مصلحة، والانتظار «irgendwann» بلا موعد. فحص ذاتي: هل يعرف شريكك ما يهمك وأين حدّك؟"
       },
       {
         "id": "b2-04-m4",
@@ -494,16 +494,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-07-m4",
-        "promptDe": "Anhörung",
-        "promptAr": "ماذا تعني؟",
+        "promptDe": "Zugangsbarrieren analysieren",
+        "promptAr": "أي تحليل يربط الحاجز بالفئة المتأثرة؟",
         "options": [
-          "Alle Beteiligten stimmen ab, und die Mehrheit entscheidet verbindlich.",
-          "Die Verwaltung hört Beschwerden an und antwortet darauf in einem offiziellen Schreiben.",
-          "Die Teilnehmenden einigen sich dort auf einen gemeinsamen Beschluss.",
-          "Perspektiven werden gehört, ohne automatisch die Endentscheidung zu übertragen."
+          "Viele Menschen haben einfach kein Interesse an Politik und kommen deshalb nicht.",
+          "Die Sitzung war mit achtzig Personen aus dem Viertel gut besucht.",
+          "Barrieren gibt es leider überall in unserer Gesellschaft, das ist ganz normal.",
+          "Abendtermine ohne Kinderbetreuung schließen vor allem Alleinerziehende aus."
         ],
         "correctIndex": 3,
-        "explanationAr": "الاستماع لا يساوي القرار المشترك: في Anhörung تُسمع وجهات النظر ويبقى القرار النهائي عند الجهة المختصة، أما التصويت الملزم والاتفاق على قرار مشترك فدرجتا مشاركة أعلى، والرد الرسمي على الشكاوى إجراء آخر."
+        "explanationAr": "التحليل المنهجي يسمّي الحاجز والفئة التي يقصيها: مواعيد المساء بلا رعاية أطفال تقصي «vor allem Alleinerziehende». أما تفسير الغياب بقلة الاهتمام فيلوم الأفراد دون فحص الحاجز، والحضور الجيد لا يقول من غاب، والتعميم «überall» لا يحلل شيئًا. فحص ذاتي: من الذي يمنعه هذا الحاجز تحديدًا؟"
       },
       {
         "id": "b2-07-m5",
@@ -777,16 +777,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-11-m3",
-        "promptDe": "zwar … jedoch",
-        "promptAr": "ما الوظيفة؟",
+        "promptDe": "Drei Minuten sprechen",
+        "promptAr": "أي بداية تناسب عرضًا منظمًا لثلاث دقائق أمام مجلس الحي؟",
         "options": [
-          "Einen einzigen Grund angeben, warum etwas so ist",
-          "Nur eine zeitliche Abfolge von zwei Schritten nennen",
-          "Eine Konzession mit anschließendem Gegensatz",
-          "Ein Zitat wörtlich wiedergeben"
+          "Ich spreche über die Bibliothek: zuerst zwei Probleme, dann mein Vorschlag.",
+          "Also, ähm, ich weiß nicht genau, ich fange einfach mal irgendwo mit dem Thema an.",
+          "Bibliotheken gibt es in Europa schon seit vielen Jahrhunderten in jeder Stadt.",
+          "Kennt ihr das auch? Die Bibliothek ist echt voll nervig, oder etwa nicht?"
         ],
-        "correctIndex": 2,
-        "explanationAr": "تعترف بجانب ثم تقابله. في عرض قصير، أعلن المسار: Thema، zwei Aspekte، Position، Beispiel، Schluss."
+        "correctIndex": 0,
+        "explanationAr": "العرض المنظم يعلن الموضوع والمسار في البداية ويخاطب الجمهور برسمية مناسبة: «Ich spreche über die Bibliothek: zuerst zwei Probleme, dann mein Vorschlag». البدء بلا خطة يضيع الخيط، والتاريخ العام خارج السؤال، و «Kennt ihr das auch? Die Bibliothek ist echt voll nervig, oder etwa nicht?» لا تناسب مجلس الحي. فحص ذاتي: هل يعرف جمهورك مسار كلامك من الجملة الأولى؟"
       },
       {
         "id": "b2-11-m4",
@@ -1073,16 +1073,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-15-m3",
-        "promptDe": "Wortstellung",
-        "promptAr": "أين الفعل في جملة بدأت ب «Bevor»؟",
+        "promptDe": "Ziel für den zweiten Durchgang",
+        "promptAr": "أي جملة تصوغ هدف المرور الثاني على النص؟",
         "options": [
-          "nach dem Subjekt",
-          "am Anfang",
-          "am Ende",
-          "nach dem Komma des Hauptsatzes"
+          "Im zweiten Durchgang lese ich alles noch einmal und verbessere einfach alles, was mir auffällt.",
+          "Im zweiten Durchgang prüfe ich nur die Verbposition in Nebensätzen.",
+          "Alles perfekt machen.",
+          "Ich bin fertig."
         ],
-        "correctIndex": 2,
-        "explanationAr": "في الجملة التابعة يذهب الفعل آخرًا: بعد Bevor steht das Verb am Ende der Nebensatz، فالفعل المصرف ينتقل إلى نهاية الجملة التابعة، والجملة الرئيسية تبدأ بعدها."
+        "correctIndex": 1,
+        "explanationAr": "هدف المرور الواحد محدد في جملة واحدة: «Im zweiten Durchgang prüfe ich nur die Verbposition in Nebensätzen». أما «verbessere einfach alles» فيشتت الانتباه بين أشياء كثيرة، و «Alles perfekt machen» أمنية، و «Ich bin fertig» ليست هدفًا. فحص ذاتي: ما الشيء الواحد الذي تفحصه في هذا المرور؟"
       },
       {
         "id": "b2-15-m4",
@@ -1173,16 +1173,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-16-m5",
-        "promptDe": "Abschwächung",
-        "promptAr": "ما وظيفة «doch» في «Das wäre doch zu klären gewesen»؟",
+        "promptDe": "Einschätzung oder Unterstellung?",
+        "promptAr": "أي جملة تقدير مبني على ملاحظة لا اتهام بلا دليل؟",
         "options": [
-          "Es färbt die Note höflicher, ohne die Pflicht zu ersetzen.",
-          "Es verstärkt den Vorwurf.",
-          "Es macht den Satz zur Frage.",
-          "Es ersetzt das Partizip."
+          "Sie haben die Mail absichtlich ignoriert, weil Ihnen unser Anliegen egal ist.",
+          "Sie wollten uns wohl nur ärgern.",
+          "Die Mail kam zwei Tage später; vermutlich lag sie im Spam-Ordner.",
+          "Typisch, so etwas passiert bei Ihnen ja immer."
         ],
-        "correctIndex": 0,
-        "explanationAr": "doch تليّن النبرة ولا تُعفي من الواجب: «Das wäre doch zu klären gewesen» ما زالت تقول إن التوضيح كان لازمًا. فهي لا تقوّي الاتهام، ولا تجعل الجملة سؤالًا، ولا تحلّ محل التصريف الثاني."
+        "correctIndex": 2,
+        "explanationAr": "التقدير يبدأ بملاحظة ثم يضع احتمالًا معلنًا: «Die Mail kam zwei Tage später; vermutlich lag sie im Spam-Ordner». أما «absichtlich ignoriert» و «Sie wollten uns wohl nur ärgern.» فتنسبان نية بلا دليل، و «Typisch, so etwas passiert bei Ihnen ja immer.» تعميم على الشخص. فحص ذاتي: هل فصلت ما رأيته عمّا تظنه؟"
       }
     ]
   },
@@ -1356,16 +1356,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-19-m2",
-        "promptDe": "Partikel in Mitte",
-        "promptAr": "أين موضع «nur» الصحيح في جملة خبرية؟",
+        "promptDe": "Die Frist endet am Freitag.",
+        "promptAr": "أي جملة تُظهر أن المعلومة معروفة للطرفين؟",
         "options": [
-          "Nur ich frage, ob der Termin gilt.",
-          "Ich frage nur, ob der Termin gilt.",
-          "Ich, nur frage ob der Termin gilt.",
-          "Frage ich nur, ob der Termin gilt?"
+          "Wissen Sie das etwa nicht seit Montag?",
+          "Schauen Sie mal in Ihren Kalender.",
+          "Nehmen Sie sich ruhig noch etwas Zeit.",
+          "Das wissen Sie ja schon seit Montag."
         ],
-        "correctIndex": 1,
-        "explanationAr": "الأداة خفيفة في الوسط، بعد الفعل المُصرَّف وقبل بقية المجموعة."
+        "correctIndex": 3,
+        "explanationAr": "الأداة ja داخل الجملة الخبرية تشير إلى علم مشترك: «Das wissen Sie ja schon seit Montag.» تعني «كما تعلمون منذ الاثنين». أما etwa فتجعل الجملة سؤالًا مستغربًا، و mal تليّن طلبًا، و ruhig تشجّع على أخذ الوقت، ولا تُظهر أيٌّ منها علمًا مشتركًا. فحص ذاتي: هل المعلومة معروفة للمخاطَب من قبل؟"
       },
       {
         "id": "b2-19-m3",
@@ -1469,16 +1469,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-20-m5",
-        "promptDe": "offizieller Ton",
-        "promptAr": "أي فقرة تصلح لبريد رسمي؟",
+        "promptDe": "Füllkonstruktion streichen",
+        "promptAr": "أي صياغة تحذف الحشو وتبقي رابطًا مقصودًا؟",
         "options": [
-          "Du hast die Bestätigung ja wieder vergessen, oder?",
-          "Natürlich ist das schon wieder euer Problem!",
-          "Zwar fehlt die Bestätigung, aber ich brauche sie bis Freitag, 12 Uhr.",
-          "Ihr wart wohl wieder zu spät, ne?"
+          "Es ist ja so, dass das Formular, sagen wir mal, eher lang ist, aber die Felder sind erklärt.",
+          "Zwar ist das Formular lang, jedoch sind die Felder erklärt.",
+          "Formular lang, Felder erklärt.",
+          "Das Formular ist lang und die Felder sind und bleiben ja auch erklärt."
         ],
-        "correctIndex": 2,
-        "explanationAr": "اعتراف + طلب مؤرَّخ بلا نبرة. «nicht nur …, sondern auch» يجعل الجديد بعد «sondern»؛ و «weder … noch» يوزّع النفي على الطرفين فيمنع فهمًا ناقصًا؛ و «zwar …, aber» يعترف ثم يعترض."
+        "correctIndex": 1,
+        "explanationAr": "الحشو مثل «Es ist ja so, dass» و «sagen wir mal» يطيل الجملة بلا معنى؛ الرابط المقصود «Zwar ist das Formular lang, jedoch sind die Felder erklärt» يعترف ويقابل في جملة واحدة. أما حذف الأفعال كليًا فأسلوب برقيات، و «sind und bleiben ja auch» حشو جديد. فحص ذاتي: أي كلمة في جملتك لا تحمل معنى؟"
       }
     ]
   },
@@ -1591,16 +1591,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-22-m3",
-        "promptDe": "Welche Form ist falsch?",
-        "promptAr": "أي صيغة خطأ؟",
+        "promptDe": "„die von der Behörde am Montag geprüfte Beschwerde“",
+        "promptAr": "أي جملة موصولة تحلّ هذا النعت المضغوط دون تغيير المعنى؟",
         "options": [
-          "die eingegangene Beschwerde",
-          "die zu bearbeitende Beschwerde",
-          "die fehlende Rückmeldung",
-          "die eingegangen Beschwerde"
+          "die Beschwerde, die die Behörde am Montag geprüft hat",
+          "die Beschwerde, die die Behörde am Montag noch prüfen muss",
+          "die Beschwerde, die am Montag die Behörde geprüft",
+          "die Behörde, die die Beschwerde am Montag geprüft hat"
         ],
-        "correctIndex": 3,
-        "explanationAr": "ينقصها نهاية الإعراب -e: die eingegangen Beschwerde خطأ، والصحيح die eingegangene Beschwerde. الصفة المشتقة من Partizip II تأخذ نهاية الإعراب عند الإضافة."
+        "correctIndex": 0,
+        "explanationAr": "النعت «geprüfte» يدل على فعل مكتمل، فيصير في الجملة الموصولة «die Beschwerde, die die Behörde am Montag geprüft hat». أما «noch prüfen muss» فيغير المعنى إلى المستقبل، والخيار الثالث ينقصه الفعل المساعد، والرابع يجعل Behörde هي الموصوف. فحص ذاتي: من فعل ماذا، ومتى؟"
       },
       {
         "id": "b2-22-m4",
@@ -1752,16 +1752,16 @@ export const localTestTemplateBankB2 = [
       },
       {
         "id": "b2-24-m4",
-        "promptDe": "Hinweiswort",
-        "promptAr": "أي كلمة تُوجب الفاصلة قبل المصدر؟",
+        "promptDe": "Komma zwischen Subjekt und Prädikat?",
+        "promptAr": "أي جملة خالية من فاصلة تفصل المسند إليه عن المسند؟",
         "options": [
-          "dann",
-          "vielleicht",
-          "kaum",
-          "darum"
+          "Die am Montag eingegangene Stellungnahme, wurde geprüft.",
+          "Die Stellungnahme, wurde am Montag geprüft.",
+          "Die am Montag, eingegangene Stellungnahme wurde geprüft.",
+          "Die am Montag eingegangene Stellungnahme wurde geprüft."
         ],
         "correctIndex": 3,
-        "explanationAr": "„darum/daran/dazu“ كلمات إشارة. الفاصلة إلزامية إذا بدأت المجموعة بـ um, ohne, statt, anstatt, außer, als، أو إذا تعلّقت باسم، أو إذا أشارت إليها كلمة إشارة (darum, daran, dazu, es)."
+        "explanationAr": "المسند إليه «Die am Montag eingegangene Stellungnahme» كتلة واحدة، فلا تأتي فاصلة بينها وبين الفعل wurde. الفاصلة قبل wurde تقطع الجملة في الخيارين الأول والثاني، والفاصلة بعد Montag تقطع النعت الموسّع. فحص ذاتي: أين ينتهي المسند إليه، وهل وضعت فاصلة بعده؟"
       },
       {
         "id": "b2-24-m5",

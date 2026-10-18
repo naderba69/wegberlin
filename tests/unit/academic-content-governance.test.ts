@@ -85,10 +85,10 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(objectives.ok, objectives.issues.join("\n")).toBe(true);
     expect(objectives.rows).toHaveLength(389);
     expect(objectives.byLevel).toEqual({
-      A1: { objectives: 96, covered: 85, gaps: 11 },
-      A2: { objectives: 96, covered: 75, gaps: 21 },
-      B1: { objectives: 96, covered: 83, gaps: 13 },
-      B2: { objectives: 101, covered: 92, gaps: 9 },
+      A1: { objectives: 96, covered: 96, gaps: 0 },
+      A2: { objectives: 96, covered: 96, gaps: 0 },
+      B1: { objectives: 96, covered: 96, gaps: 0 },
+      B2: { objectives: 101, covered: 101, gaps: 0 },
     });
     expect(objectives.rows.every((row) => row.mappingBasis === "authored-item-alignment" && row.semanticReviewStatus === "agent-authored-under-owner-delegation")).toBe(true);
     expect(objectives.rows.every((row) => (row.status === "covered") === (row.missing.length === 0))).toBe(true);

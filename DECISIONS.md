@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1173,5 +1173,96 @@ The owner reviewed the evidence above and chose to use the official 2019 mock va
 ## Consequences
 
 - The coverage report no longer claims 389/389. It shows 335/389 with a gap ledger. `docs/generated/OBJECTIVE_COVERAGE_REPORT.md` and `reports/academic-content-audit.json` (`gapLedger`, `unalignedSurfaces`) are the evidence.
-- Next content step: retarget off-objective or duplicate Mini-Test items to unassessed objectives, keeping their IDs, and add the five missing teaching points. Then flip P2-400 to `implemented`.
+- Next content step: retarget off-objective or duplicate Mini-Test items to unassessed objectives, keeping their IDs, and add the five missing teaching points. Then flip P2-400 to `implemented`. (Done in v231: ADR-122.)
 - Boundary: the alignment is the agent's judgement under delegation. A German-teaching reviewer may disagree with individual links. The data file is the single place to change them, and the tests re-derive everything.
+
+## ADR-122 — The 54 objective gaps are closed in the content, not by re-tagging (P2-400)
+
+- Status: accepted — 2026-10-18 (v231)
+- Evidence tier: agent-authored content and alignment under explicit owner delegation («نفّذ ما يفيد المتعلم والصحيح»). **It is not an independent human German review.** P2-400 becomes `implemented` because its acceptance criterion — every objective is linked to an item that teaches it, one that practises it and one that assesses it, derived from authored item-level links — is now met and pinned by a test. Independent reviewer agreement on individual links stays a separate, human question.
+
+## Context
+
+ADR-121 (v230) replaced lesson-scoped structural coverage with authored objective↔item links. It found 335/389 objectives covered and left a pinned ledger of 54 gaps:
+
+- All 54 had no Mini-Test item.
+- 5 also had no teaching point: a1-15 O4, a1-24 O4, a2-04 O4, a2-10 O4 and b1-12 O4.
+- 1 also had no practice item: a1-14 O2.
+
+The usual pattern was five Mini-Test items on the grammar objective and none on the communicative objective.
+
+Re-tagging existing items to the missing objectives would have made the numbers green without changing what learners do. That option was rejected.
+
+## Decision
+
+1. **54 Mini-Test items rewritten (IDs kept).** Each replacement item targets exactly one missing objective. The item it replaces was chosen in this order:
+   - the 5 deliberately unaligned items (a2-06-m3, a2-14-m5, a2-19-m3, a2-24-m3, b2-15-m3);
+   - otherwise, an item whose objective is still assessed by at least one other Mini-Test item in the same lesson.
+
+   No objective lost its last assessment.
+
+   Each new item follows these rules:
+   - It has 4 options.
+   - The key is never the uniquely longest option.
+   - Keys are spread across positions A–D.
+   - The prompt does not leak the key.
+   - The Arabic explanation quotes the German key, says why each distractor is wrong, and ends with a self-check question (فحص ذاتي).
+
+   Communicative objectives are tested as communicative choices, for example:
+   - which note passes on a phone message completely;
+   - which sentence states an interest and a limit;
+   - which summary does not spoil the ending.
+
+   They are not tested as grammar drills.
+2. **5 teaching points added.** The `explanationAr` of an existing theory block was extended for each one:
+   - a1-15-t1: pros and cons with aber;
+   - a1-24-t1: invented data in practice forms;
+   - a2-04-t3: structure of a short note to neighbours;
+   - a2-10-t3: justifying a travel decision with weil or deshalb;
+   - b1-12-t1: five-sentence project proposal.
+
+   The examples were not touched, so no audio or manifest changed.
+3. **1 practice item retargeted.** a1-14-e3 now asks the learner to order the words of a real place question (Wo liegt der Schlüssel). The case-free explanation keeps the meaning-first case audit clean.
+4. **Explanation quotes.** Every German «…» quote in the new explanations appears verbatim in the same lesson's German content. Illustrative German that does not appear there is written without quote marks. The quote-exception ledger went from 73 to 70 entries, and no new unreviewed entry was added.
+
+5. **Case-teaching contracts kept honest.** Eight replaced items had been listed as case assessments in `src/data/case-teaching-registry.ts`: a1-12-m5, a1-14-m1, a2-04-m1, a2-07-m2, a2-23-m2, a2-23-m3, b1-08-m1 and b2-04-m3. Their new versions test communicative objectives, not case, so they were removed from `assessmentIds`. Every contract still keeps at least one Mini-Test item that tests case. Assessment references went from 44 to 36, and the case-signal items found in assessments went from 25 to 21.
+6. **Parallel options in the parallelised lessons.** In b1-05, b2-07, b2-11 and b2-19 the new items meet the existing option-parallelism rule: the key is neither the unique longest nor the unique shortest option, and option lengths differ by at most 25 characters.
+
+## Result (v231)
+
+- 389/389 objectives have at least one teaching, one practice and one Mini-Test link. 0 gaps.
+- `tests/unit/objective-item-alignment.test.ts` pins an empty gap ledger, so any new gap fails.
+- 62 unaligned surfaces remain: 61 comprehension-only practice questions and the theory block a2-06-t3. All 5 off-objective Mini-Test items were replaced.
+- MCQ cues improved:
+  - The longest-option-is-key share went from 39.2% to 38%.
+  - Lessons without position D went from 3 to 2.
+  - Key positions are now A 319, B 302, C 305, D 324.
+
+## Consequences
+
+- P2-400 → `implemented`. P2 is now 137 implemented, 3 partial (264, 371, 401) and 2 not implemented (359, 360).
+- Boundary: the items and links are the agent's work under delegation. A German-teaching reviewer may disagree with individual choices. `src/data/objective-item-alignment.ts` and the lesson module files are the single places to change them, and the tests re-derive coverage.
+
+## ADR-123 — The local practice bank is derived from the already-loaded curriculum, not shipped twice (P2-355, ADR-049)
+
+- Status: accepted — 2026-10-18 (v231)
+- Policy ID: `local-test-generator-v1` (unchanged). Amends point 5 of ADR-111; the rest of ADR-111 stays in force.
+
+## Context
+
+ADR-111 shipped four generated level banks (`src/data/local-test-templates/{a1,a2,b1,b2}.ts`) as static imports of `/practice/test-generator`, so the route works offline after a pack install. Each bank is a copy of the published lessons' `miniTest` items. The route's HTML already references the four `curriculum-a1…b2` chunks, so every Mini-Test item reached the browser twice on that route: once in the curriculum chunks and once in the page chunk (about 76 KB gzip).
+
+In v231 (ADR-122), 54 Mini-Test items were rewritten with complete explanations. Both copies grew, and the total built JavaScript reached 2,136,520 gzip bytes. That is above the ADR-049 safety ceiling of 2,125,000, which keeps a mandatory 15% reserve below the 2,500,000 hard limit. Project precedent (2026-09-19, curriculum split per level) is to fix `js:budget` with engineering, not by relaxing the policy.
+
+## Decision
+
+1. `loadLocalTestTemplateBank(level)` now builds the banks in the browser with the same pure, fail-closed `buildLocalTestCatalog(academicLessonList, curriculum)` that the build-time audit uses. The result is cached for the page session. If the catalog is not `ok`, the loader throws, and the existing UI shows its error state without saving anything.
+2. The inputs are static imports (`@/data/academic-lessons`, `@/data/curriculum`) whose chunks the route already loads. There is still no `dynamic import`, so the ADR-111 offline guarantee holds: an installed pack keeps every level usable on this route.
+3. The generated bank files stay as a reviewed, drift-checked artifact. `npm run local:test:templates` still fails when they are stale, and `tests/unit/local-test-generator.test.ts` checks that the browser-derived banks equal them level by level. They are no longer imported by client code.
+4. `scripts/audit-js-budgets.mjs` and the 15% reserve are unchanged.
+
+## Consequences
+
+- One copy of each Mini-Test item ships to the client. Built JavaScript falls back under the safety ceiling (see the v231 build line in `PROJECT_STATUS.md`).
+- Learners see the same 480 templates from the 96 published lessons, with the same sampling, shuffling and delayed answer reveal.
+- `scripts/verify-continuation-handoff.mjs` now requires the derived loader and fails if the loader imports the generated banks again.

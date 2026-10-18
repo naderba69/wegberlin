@@ -33,7 +33,10 @@ B1: 4
 B2: 3
 ```
 
-It maps 23 theory blocks, 57 controlled exercises, and 44 Mini-Test items. An independent detector finds 19 theory, 28 controlled, and 20 assessment objects that explicitly name a German case; every discovered ID belongs to a contract.
+It maps 23 theory blocks, 57 controlled exercises, and 44 Mini-Test items.
+
+Update (v231, ADR-122): eight Mini-Test items were rewritten to assess communicative objectives that had no Mini-Test item. They no longer test case, so they left the contracts. The contracts now map 36 Mini-Test items, and every contract still has at least one Mini-Test item that tests case.
+ An independent detector finds 19 theory, 28 controlled, and 20 assessment objects that explicitly name a German case; every discovered ID belongs to a contract.
 
 `case:audit` runs during `prebuild` and checks generated JSON/Markdown reports for drift. It fails on an unowned explicit case signal, an unknown cross-reference, a missing teaching/practice/assessment layer, a duplicated lesson/ID, form terminology in the semantic-first question, or a changed sequence.
 

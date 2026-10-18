@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

@@ -22,19 +22,20 @@ describe("lexical target-gap inventory", () => {
     expect(representedFrameAnchors).toEqual(new Set(verbPrepositionFrames.map((entry) => entry.id)));
   });
 
+  // v231: the 54 rewritten Mini-Test items add contextual (non-target) candidates only; covered and pendingHuman are unchanged.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4897,
+      totalCandidates: 4934,
       covered: 1385,
       pendingHuman: 89,
-      contextualNotTarget: 3423,
+      contextualNotTarget: 3460,
       authoredTargets: 1474,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1277,
+      totalCandidates: 1291,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1142,
+      contextualNotTarget: 1156,
       authoredTargets: 135,
     });
   });

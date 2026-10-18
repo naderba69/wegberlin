@@ -3,7 +3,7 @@
   "version": "learning-integrity-v1",
   "definitionDate": "2026-10-02",
   "ok": true,
-  "sourceSha256": "5e0c000e2ffcbde2097ced6f9c665de9c8a77729c191216cb0b2d0c573bbd70b",
+  "sourceSha256": "3bdfdea17851e59c3bb2d0ae4da4198702c7b40047cb4bc737437392de236629",
   "assessmentBankVersion": "authored-parallel-level-check-v1",
   "assessmentTemplateInstances": 384,
   "competencyFamilies": 24,
@@ -269,7 +269,7 @@
     }
   ],
   "objectiveAlignmentAgentAuthored": 389,
-  "objectiveAlignmentGaps": 54,
+  "objectiveAlignmentGaps": 0,
   "independentHumanReviews": 0,
   "qualityBoundary": "automated-contract-checks-not-independent-german-arabic-cefr-rights-or-acoustic-review",
   "issues": []

@@ -1,6 +1,6 @@
 # Pronunciation Item in Every Lesson Test
 
-Policy `lesson-pronunciation-item-v1` · Content SHA-256: `785ebd782ab41a8de7dfe56eebf19ee1613950f4a00774327ae1a2ef184a864c`
+Policy `lesson-pronunciation-item-v1` · Content SHA-256: `5207284bfc2601fa9e6d0e057aac69264d5040f650654b69d7554844adfa87a8`
 
 Boundary: ipa-discrimination-item-no-acoustic-verification-of-the-learner
 
@@ -8,7 +8,7 @@ Boundary: ipa-discrimination-item-no-acoustic-verification-of-the-learner
 | --- | --- |
 | Lessons | 96 |
 | Lessons with a derived discrimination item | 96 |
-| Lessons whose authored test already carried a pronunciation item | 0 |
+| Lessons whose authored test already carried a pronunciation item | 2 |
 | Lessons missing an item | 0 |
 | Options are distinct authored IPA symbols from the same lesson | true |
 | The item is counted in lesson mastery coverage | true |

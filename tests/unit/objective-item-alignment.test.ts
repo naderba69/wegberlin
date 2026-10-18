@@ -8,17 +8,9 @@ const row = (lessonId: string, n: number) => report.rows.find((candidate) => can
 
 // P2-400 / ADR-121: the authored gap ledger is a ratchet. Closing a gap shrinks this list in the same change;
 // a new gap (or a silently re-widened link) fails here instead of disappearing behind lesson-level presence.
-const GAP_LEDGER: Array<[string, string]> = [
-  ["a1-01#3", "a"], ["a1-03#4", "a"], ["a1-06#2", "a"], ["a1-08#1", "a"], ["a1-12#1", "a"], ["a1-14#1", "a"], ["a1-14#2", "pa"],
-  ["a1-15#4", "ta"], ["a1-19#4", "a"], ["a1-23#1", "a"], ["a1-24#4", "ta"],
-  ["a2-01#4", "a"], ["a2-03#1", "a"], ["a2-04#1", "a"], ["a2-04#4", "ta"], ["a2-05#1", "a"], ["a2-06#1", "a"], ["a2-07#1", "a"],
-  ["a2-09#4", "a"], ["a2-10#4", "ta"], ["a2-11#4", "a"], ["a2-12#4", "a"], ["a2-14#4", "a"], ["a2-15#1", "a"], ["a2-15#4", "a"],
-  ["a2-17#1", "a"], ["a2-19#1", "a"], ["a2-20#1", "a"], ["a2-22#4", "a"], ["a2-23#1", "a"], ["a2-23#2", "a"], ["a2-24#1", "a"],
-  ["b1-01#1", "a"], ["b1-05#2", "a"], ["b1-08#4", "a"], ["b1-12#4", "ta"], ["b1-13#1", "a"], ["b1-14#4", "a"], ["b1-16#1", "a"],
-  ["b1-17#1", "a"], ["b1-19#1", "a"], ["b1-22#1", "a"], ["b1-23#1", "a"], ["b1-24#1", "a"], ["b1-24#2", "a"],
-  ["b2-04#3", "a"], ["b2-07#2", "a"], ["b2-11#3", "a"], ["b2-15#2", "a"], ["b2-16#4", "a"], ["b2-19#2", "a"], ["b2-20#5", "a"],
-  ["b2-22#3", "a"], ["b2-24#4", "a"],
-];
+// v231 closed the last 54 gaps in content (replaced Mini-Test items, five theory extensions, one retargeted exercise);
+// the ledger is now empty and must stay empty.
+const GAP_LEDGER: Array<[string, string]> = [];
 
 describe("authored objective-item alignment (P2-400)", () => {
   it("accounts for every required surface of every lesson with valid objective indices", () => {
@@ -45,17 +37,23 @@ describe("authored objective-item alignment (P2-400)", () => {
   it("keeps the authored gap ledger exact", () => {
     const actual = report.gaps.map((gap) => [gap.objectiveId.replace("-objective-", "#"), gap.missing.map((dimension) => dimension[0]).join("")]);
     expect(actual).toEqual(GAP_LEDGER);
-    expect(report.gapsByDimension).toEqual({ taught: 5, practiced: 1, assessed: 54 });
+    expect(report.gapsByDimension).toEqual({ taught: 0, practiced: 0, assessed: 0 });
   });
 
   it("records real semantic decisions, not structural presence", () => {
     // Grammar objective taught by its theory block and assessed by its own Mini-Test item.
     expect(row("b1-23", 2).taughtIn).toContain("b1-23-t1");
-    expect(row("b1-23", 2).assessedIn).toEqual(["b1-23-m1", "b1-23-m2", "b1-23-m3", "b1-23-m4"]);
+    expect(row("b1-23", 2).assessedIn).toEqual(["b1-23-m1", "b1-23-m2", "b1-23-m4"]);
+    expect(row("b1-23", 1).assessedIn).toEqual(["b1-23-m3"]);
     // Comprehension-only questions are explicitly unaligned.
     expect(report.unalignedSurfaces).toContainEqual({ lessonId: "b2-21", surfaceId: "b2-21-r1", dimension: "practiced" });
-    // A real teaching gap stays visible: "Vor- und Nachteile" is practised but neither taught nor assessed.
-    expect(row("a1-15", 4).missing).toEqual(["taught", "assessed"]);
+    // A former gap closed in content, not by re-tagging: "Vor- und Nachteile" is now taught by an extended theory block
+    // and assessed by a dedicated Mini-Test item, and still practised elsewhere.
+    expect(row("a1-15", 4).missing).toEqual([]);
+    expect(row("a1-15", 4).taughtIn).toContain("a1-15-t1");
+    expect(row("a1-15", 4).assessedIn).toEqual(["a1-15-m5"]);
     expect(row("a1-15", 4).practicedIn.length).toBeGreaterThan(0);
+    // "Nach dem Ort fragen" is practised by an exercise that really builds a Wo-question.
+    expect(row("a1-14", 2).practicedIn).toContain("a1-14-e3");
   });
 });

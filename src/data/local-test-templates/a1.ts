@@ -24,16 +24,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-01-m2",
-        "promptDe": "Ich ___ Leila.",
-        "promptAr": "أكمل:",
+        "promptDe": "Wie geht es dir?",
+        "promptAr": "اختر ردًّا قصيرًا مناسبًا:",
         "options": [
-          "heißt",
-          "heißen",
-          "heißt du",
-          "heiße"
+          "Ich heiße Leila.",
+          "Danke, gut. Und dir?",
+          "Ich komme aus Tunis.",
+          "Auf Wiedersehen!"
         ],
-        "correctIndex": 3,
-        "explanationAr": "مع ich: heiße. و heißen يدل على الاسم الذي يعرّف به الشخص نفسه: Ich heiße …"
+        "correctIndex": 1,
+        "explanationAr": "السؤال عن الحال يُجاب بالحال: «Danke, gut. Und dir?» ثم نردّ السؤال بلطف. أما «Ich heiße Leila» فاسم، و «Ich komme aus Tunis» بلد، و «Auf Wiedersehen» وداع. فحص ذاتي: هل أجبت عن الحال أم عن سؤال آخر؟"
       },
       {
         "id": "a1-01-m3",
@@ -211,16 +211,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-03-m5",
-        "promptDe": "die Telefonnummer",
-        "promptAr": "اختر ضمير الملكية مع ich:",
+        "promptDe": "Sara Haddad",
+        "promptAr": "في أي خانة من النموذج تكتب «Haddad» من اسم Sara Haddad؟",
         "options": [
-          "mein Telefonnummer",
-          "meinen Telefonnummer",
-          "meiner Telefonnummer",
-          "meine Telefonnummer"
+          "Vorname",
+          "Geburtsort",
+          "Nachname",
+          "Anschrift"
         ],
-        "correctIndex": 3,
-        "explanationAr": "الاسم مؤنث: die Telefonnummer، ولذلك يظهر ضمير الملكية meine. mein للمذكر والمحايد، و meine للمؤنث والجمع، والملكية تتبع جنس الاسم لا جنس صاحبه."
+        "correctIndex": 2,
+        "explanationAr": "في الاسم Sara Haddad يكون Sara الاسم الأول (Vorname) و Haddad اسم العائلة، فيُكتب في خانة «Nachname». أما Geburtsort فمكان الميلاد، و Anschrift العنوان. فحص ذاتي: أي جزء من اسمك هو اسم العائلة؟"
       }
     ]
   },
@@ -394,16 +394,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-06-m2",
-        "promptDe": "Ich arbeite ___ einer Firma.",
-        "promptAr": "اختر:",
+        "promptDe": "Frage nach Aufgaben",
+        "promptAr": "أي سؤال يسأل عن مهام العمل؟",
         "options": [
-          "als",
-          "bei",
-          "von",
-          "nach"
+          "Wo wohnst du?",
+          "Bei welcher Firma arbeitest du genau?",
+          "Wie heißt du?",
+          "Was machst du bei der Arbeit?"
         ],
-        "correctIndex": 1,
-        "explanationAr": "bei لجهة العمل. تُسمع كما هي مع اسم الشركة: bei einer Firma، وفي المختصر beim Amt."
+        "correctIndex": 3,
+        "explanationAr": "السؤال عن المهام يسأل ماذا تفعل: «Was machst du bei der Arbeit?». أما «Bei welcher Firma arbeitest du genau?» فيسأل عن جهة العمل لا عن المهمة، و «Wo wohnst du?» عن السكن، و «Wie heißt du?» عن الاسم. فحص ذاتي: هل سؤالك عن المهمة أم عن المكان؟"
       },
       {
         "id": "a1-06-m3",
@@ -581,16 +581,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-08-m5",
-        "promptDe": "Danach …",
-        "promptAr": "اختر الترتيب:",
+        "promptDe": "Mein Tag",
+        "promptAr": "أي جملة تصف بداية اليوم بترتيب منطقي؟",
         "options": [
-          "Danach ich arbeite.",
-          "Danach arbeite ich.",
-          "Danach arbeiten ich.",
-          "Ich danach arbeite."
+          "Zuerst stehe ich auf, dann frühstücke ich.",
+          "Am Abend stehe ich auf, danach frühstücke ich.",
+          "Ich frühstücke nicht gern.",
+          "Am Montag habe ich frei."
         ],
-        "correctIndex": 1,
-        "explanationAr": "Danach ثم الفعل ثم الفاعل. يمكن أن تبدأ الجملة بالفاعل: Ich stehe um sieben auf."
+        "correctIndex": 0,
+        "explanationAr": "وصف الروتين اليومي يرتّب الأفعال: «Zuerst stehe ich auf, dann frühstücke ich». أما الاستيقاظ «Am Abend» فلا يناسب بداية اليوم، و «Ich frühstücke nicht gern» ذوق شخصي، و «Am Montag habe ich frei» موعد. فحص ذاتي: هل يسير يومك بالترتيب zuerst ثم dann؟"
       }
     ]
   },
@@ -877,16 +877,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-12-m5",
-        "promptDe": "das Wasser",
-        "promptAr": "اختر الطلب:",
+        "promptDe": "Speisekarte: Suppe mit Fleisch 6,50 € · Salat ohne Fleisch 8,00 € · Reis mit Fleisch 11,90 €",
+        "promptAr": "لا تأكل اللحم. ماذا تختار من القائمة؟",
         "options": [
-          "einen Wasser",
-          "eine Wasser",
-          "ein Wasser",
-          "einem Wasser"
+          "die Suppe",
+          "der Salat",
+          "der Reis",
+          "Suppe und Reis"
         ],
-        "correctIndex": 2,
-        "explanationAr": "Wasser محايد: ein. وللطلب في السوق تكفي صيغة واحدة صريحة: Ich nehme ein Kilo Tomaten."
+        "correctIndex": 1,
+        "explanationAr": "في القائمة طبق واحد دون لحم: «Salat ohne Fleisch»، و ohne تعني «دون». لذلك تختار «der Salat». أما الحساء والأرز فمكتوب بعدهما mit Fleisch، و «Suppe und Reis» طبقان فيهما لحم. فحص ذاتي: هل قرأت mit أو ohne بعد اسم الطبق؟"
       }
     ]
   },
@@ -973,16 +973,16 @@ export const localTestTemplateBankA1 = [
     "questions": [
       {
         "id": "a1-14-m1",
-        "promptDe": "auf ___ Tisch",
-        "promptAr": "اختر:",
+        "promptDe": "Hier schläfst du.",
+        "promptAr": "ما قطعة الأثاث المقصودة؟",
         "options": [
-          "dem",
-          "der",
-          "den",
-          "die"
+          "der Tisch",
+          "der Schrank",
+          "das Bett",
+          "die Lampe"
         ],
-        "correctIndex": 0,
-        "explanationAr": "auf مع السكون تأخذ Dativ: auf dem Tisch؛ والمذكر هنا لا يجمع ولا يتغير شكله."
+        "correctIndex": 2,
+        "explanationAr": "النوم يكون في السرير: «das Bett». أما der Tisch فطاولة للأكل أو العمل، و der Schrank خزانة للملابس، و die Lampe مصباح للضوء. فحص ذاتي: أين تنام كل ليلة؟"
       },
       {
         "id": "a1-14-m2",
@@ -999,16 +999,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-14-m3",
-        "promptDe": "Das Bild ___ an der Wand.",
-        "promptAr": "اختر:",
+        "promptDe": "___ ist der Schlüssel?",
+        "promptAr": "تسأل عن مكان المفتاح. اختر أداة السؤال:",
         "options": [
-          "hängt",
-          "liegt",
-          "steht",
-          "sitzt"
+          "Wer",
+          "Wie",
+          "Was",
+          "Wo"
         ],
-        "correctIndex": 0,
-        "explanationAr": "الصورة معلقة: hängt. نستعمل stehen غالبًا لشيء قائم أو موضوع على قاعدته، مثل Die Flasche steht auf dem Tisch."
+        "correctIndex": 3,
+        "explanationAr": "للسؤال عن المكان نستعمل Wo: «Wo ist der Schlüssel?» والجواب مكان مثل auf dem Tisch. أما Wer فتسأل عن شخص، و Wie عن الطريقة أو الحال، و Was عن شيء. فحص ذاتي: هل سيكون الجواب مكانًا؟"
       },
       {
         "id": "a1-14-m4",
@@ -1099,16 +1099,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-15-m5",
-        "promptDe": "Interesse",
-        "promptAr": "اختر الصيغة الصحيحة لحالة «Interesse»:",
+        "promptDe": "Die Wohnung ist zentral gelegen, aber die Miete ist hoch.",
+        "promptAr": "ما الميزة وما العيب في هذه الجملة؟",
         "options": [
-          "Ich interessiere die Wohnung.",
-          "Ich bin Interesse Wohnung.",
-          "Ich interessiere mich für die Wohnung.",
-          "Für Wohnung ich Interesse."
+          "الميزة: الموقع، والعيب: الإيجار",
+          "الميزة: الإيجار، والعيب: الموقع",
+          "الميزة: المساحة، والعيب: المطبخ",
+          "لا توجد في الجملة ميزة ولا عيب"
         ],
-        "correctIndex": 2,
-        "explanationAr": "sich interessieren für. وللسؤال عن الحجم: Wie groß ist die Wohnung?، وعن الإيجار: Wie hoch ist die Miete?"
+        "correctIndex": 0,
+        "explanationAr": "الكلمة aber تفصل بين الميزة والعيب: «zentral gelegen» ميزة الموقع، و «die Miete ist hoch» عيب الإيجار. الخيار الثاني يقلبهما، والمساحة والمطبخ غير مذكورين، والجملة فيها ميزة وعيب معًا. فحص ذاتي: ماذا جاء قبل aber وماذا جاء بعدها؟"
       }
     ]
   },
@@ -1382,16 +1382,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-19-m4",
-        "promptDe": "Du ___ mit dem Zug.",
-        "promptAr": "اختر:",
+        "promptDe": "Einzelfahrkarte AB – gültig 2 Stunden, nur in eine Richtung",
+        "promptAr": "ماذا تعني معلومات هذه التذكرة؟",
         "options": [
-          "fährst",
-          "fahre",
-          "fahrt",
-          "fahren"
+          "ذهاب وعودة طوال اليوم",
+          "رحلة ذهاب فقط خلال ساعتين",
+          "رحلات غير محدودة لمدة أسبوع",
+          "رحلة واحدة دون حد زمني"
         ],
-        "correctIndex": 0,
-        "explanationAr": "du fährst: الفعل fahren يتغير مع الفاعل، ف du يأخذ نهاية -st و er/sie/es يأخذ fährt. ويُقال في وصف الوسيلة Ich fahre mit dem Bus."
+        "correctIndex": 1,
+        "explanationAr": "Einzelfahrkarte تذكرة لرحلة واحدة، و «gültig 2 Stunden» مدة صلاحيتها، و «nur in eine Richtung» تعني ذهابًا فقط. لذلك لا تشمل العودة ولا اليوم كله ولا أسبوعًا، ولها حد زمني واضح. فحص ذاتي: كم ساعة صلاحيتها، وفي أي اتجاه؟"
       },
       {
         "id": "a1-19-m5",
@@ -1665,16 +1665,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-23-m3",
-        "promptDe": "Du ___ dich ausruhen.",
-        "promptAr": "اختر:",
+        "promptDe": "Am Telefon in der Praxis",
+        "promptAr": "تريد حجز موعد عند الطبيب. ماذا تقول؟",
         "options": [
-          "soll",
-          "sollst",
-          "sollen",
-          "sollte Sie"
+          "Ich habe seit gestern starke Kopfschmerzen.",
+          "Ich soll viel Wasser trinken und schlafen.",
+          "Ich brauche einen Termin.",
+          "Wo ist die Apotheke?"
         ],
-        "correctIndex": 1,
-        "explanationAr": "du sollst. و sollen تنقل نصيحة أو طلبًا من غيرك: Sie sollen sich ausruhen."
+        "correctIndex": 2,
+        "explanationAr": "لحجز موعد نطلبه صراحة: «Ich brauche einen Termin». أما «Ich habe seit gestern starke Kopfschmerzen» فوصف للأعراض، و «Ich soll viel Wasser trinken» نصيحة الطبيب بعد الزيارة، و «Wo ist die Apotheke?» سؤال عن مكان. فحص ذاتي: هل طلبت الموعد بكلمة Termin؟"
       },
       {
         "id": "a1-23-m4",
@@ -1765,16 +1765,16 @@ export const localTestTemplateBankA1 = [
       },
       {
         "id": "a1-24-m5",
-        "promptDe": "Unterschrift",
-        "promptAr": "اختر التعليمة:",
+        "promptDe": "Übungsformular im Kurs: Ausweisnummer",
+        "promptAr": "تتدرّب على ملء نموذج في الدرس. ماذا تكتب في خانة رقم الهوية؟",
         "options": [
-          "Unterschreiben Sie hier.",
-          "Sie hier Unterschrift.",
-          "Unterschrift machen du.",
-          "Hier Sie unterschreibt."
+          "رقم جواز سفري الحقيقي",
+          "رقم بطاقتي البنكية الحقيقي",
+          "كلمة مرور بريدي الإلكتروني",
+          "رقمًا مخترعًا للتدريب"
         ],
-        "correctIndex": 0,
-        "explanationAr": "الفعل ثم Sie ثم المكان. في الأمر الرسمي نقول Füllen Sie … aus و Bringen Sie … mit."
+        "correctIndex": 3,
+        "explanationAr": "في التمرين نحمي البيانات الحساسة، فنكتب في خانة «Ausweisnummer» رقمًا مخترعًا. أما رقم الجواز الحقيقي ورقم البطاقة البنكية وكلمة المرور فبيانات خاصة لا تُكتب في تمرين. فحص ذاتي: هل هذا النموذج رسمي أم تدريب؟"
       }
     ]
   }

@@ -1,6 +1,6 @@
 # P1 Implementation Audit
 
-Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
+Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
 
 Historical v182 follow-up: the model and learner clip are decoded on-device from a same-origin asset and in-memory Blob (≤60 seconds / ≤4 MB each), then represented by independent peak-normalized envelopes only. No alignment, pronunciation/quality score, upload, persistence, or P1-380 phonetic-calibration claim. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. Last full item-by-item P1 audit remains 2026-09-20; this sync checked impact only.
 

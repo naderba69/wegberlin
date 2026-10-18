@@ -566,7 +566,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v229" || stagingCacheName !== "dwnb-full-pack-staging-v228") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v230" || stagingCacheName !== "dwnb-full-pack-staging-v229") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -621,7 +621,7 @@ if (academicAudit.version !== "academic-governance-v1") fail("academic audit ver
 if (academicAudit.schema?.counts?.totalRootObjects !== 4345 || academicAudit.schema?.schemaFamilies !== 16 || academicAudit.schema?.counts?.tunisianSupportNotes !== 17) fail("academic Zod counters drifted");
 if (academicAudit.schema?.counts?.nounGrammarEntries !== 1297 || academicAudit.schema?.counts?.verbPrepositionFrames !== 134) fail("A1–B2 lexical anchor counters drifted");
 if (academicAudit.answerIntegrity?.closedAnswerItems !== 2805 || academicAudit.answerIntegrity?.productiveTasks !== 384 || academicAudit.answerIntegrity?.failures !== 0 || academicAudit.answerIntegrity?.exemptions !== 2) fail("answer integrity counters drifted");
-if (academicAudit.objectiveCoverage?.objectives !== 389 || academicAudit.objectiveCoverage?.gaps !== 0) fail("objective coverage counters drifted");
+if (academicAudit.objectiveCoverage?.objectives !== 389 || academicAudit.objectiveCoverage?.gaps !== 54 || academicAudit.objectiveCoverage?.gapLedger?.length !== 54 || academicAudit.objectiveCoverage?.unalignedSurfaces?.length !== 67 || academicAudit.objectiveCoverage?.rows?.some((row) => row.mappingBasis !== "authored-item-alignment")) fail("objective coverage counters drifted");
 if (similarityReviewAudit.format !== "dwnb-content-similarity-review-audit" || similarityReviewAudit.version !== "content-similarity-review-audit-v1" || !/^[a-f0-9]{64}$/.test(similarityReviewAudit.contentSha256)) fail("content similarity/review audit identity drifted");
 if (similarityReviewAudit.similarity?.policyVersion !== "content-near-duplicate-v1" || similarityReviewAudit.similarity.entryCount !== 3277 || similarityReviewAudit.similarity.comparedPairCount !== 5367726 || similarityReviewAudit.similarity.suspiciousPairCount !== 10 || similarityReviewAudit.similarity.exemptSameContextCount !== 10 || similarityReviewAudit.similarity.exemptReviewedCount !== 0 || similarityReviewAudit.similarity.issueCount !== 0) fail("internal near-duplicate baseline drifted");
 if (similarityReviewAudit.reviewState?.policyVersion !== "content-review-state-v1" || similarityReviewAudit.reviewState.rowCount !== 3277 || similarityReviewAudit.reviewState.rows?.length !== 3277) fail("per-object review-state rows drifted");
@@ -783,7 +783,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v229"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v230"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");

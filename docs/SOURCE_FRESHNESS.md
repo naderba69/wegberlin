@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v229 · 2026-10-17 · إغلاق P0-124 وP2-350 (ADR-120): مواضع دليل مؤلفة لكل أسئلة القراءة الـ288 (113 حرفيًا، 80 بتعبير آخر، 86 مركّبًا، 6 حساب، 2 استنتاج، 1 استبعاد؛ أُبقي 192 وأُكمل 72 واستُبدل 24 مقارنة بالاختيار اللفظي)، وزال وسم «موضع الرجوع آلي» من الشروح الـ246؛ ومساهمة اختيارية بملف `itemId,correct` (المحاولة الأولى فقط، أسطر مخلوطة، موافقة صريحة، لا إرسال) مع دمج عدة ملفات في لوحة المعايرة. قرار وكيل بتفويض المالك وبمصادر (GDPR Recital 26، WP216)، لا مراجعة بشرية مستقلة. P0 121/3، P2 136/4/2، الكاش v229.
+Sync batch: v230 · 2026-10-18 · P2-400 (ADR-121): محاذاة مؤلفة بين كل هدف وكل عنصر بدل الربط البنيوي على مستوى الدرس؛ 3,266 رابطًا، و335/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، و54 فجوة معلنة في سجل ثابت؛ يبقى P2-400 جزئيًا حتى تُسد الفجوات في المحتوى.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

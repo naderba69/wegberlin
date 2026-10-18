@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { academicLessonList as lessons } from "../src/data/academic-lessons";
 import { independentProductionTasks } from "../src/data/independent-production-tasks";
 import { grammarNodesByLesson } from "../src/data/grammar-progression-registry";
+import { resolveLessonPrerequisites } from "../src/core/lesson/lesson-prerequisites";
 import { reviewCards } from "../src/data/review-cards";
 import { buildLessonSrsCards } from "../src/core/srs/lesson-cards";
 import { allLessonsTeachingContract, CONTRACT_QUESTIONS, CONTRACT_THRESHOLDS, englishGrammarTermLeak, LESSON_TEACHING_CONTRACT_BOUNDARY, LESSON_TEACHING_CONTRACT_POLICY, learnerArabicFields } from "../src/core/lesson/teaching-contract";
@@ -21,7 +22,8 @@ const DOC = "docs/generated/LESSON_TEACHING_CONTRACT.md";
 const limits = {
   lessonsTotal: 96,
   hardFailures: 0,
-  lessonsWithoutAuthoredPrerequisiteLink: 73,
+  // v232 (ADR-124): 73 → 1. الباقي a1-01، أول درس في المنهج كله، ولا شيء قبله يُبنى عليه (له نقطة قاعدة تأسيسية).
+  lessonsWithoutAuthoredPrerequisiteLink: 1,
   lessonsWithoutDeferredTransferTask: 0,
   mistakeWhyStubs: 0,
   mistakeTrickStubs: 0,
@@ -51,6 +53,8 @@ const perLesson = results.map((result) => {
     hardFailures: result.hardFailures,
     gaps: result.gaps,
     authoredPrerequisiteNodes: (grammarNodesByLesson[result.lessonId] ?? []).filter((node) => node.prerequisiteIds.length > 0).length,
+    // ADR-124: روابط الدرس المؤلفة إلى كتل شرح سابقة بعينها.
+    authoredLessonLinks: resolveLessonPrerequisites(result.lessonId).length,
     deferredTransferTask: independentProductionTasks.some((task) => task.sourceLessonId === result.lessonId) ? result.lessonId : null,
     mistakeWhyStubs: stubWhy(result.lessonId),
     mistakeTrickStubs: stubTrick(result.lessonId),
@@ -61,7 +65,7 @@ const perLesson = results.map((result) => {
 const measured = {
   lessonsTotal: perLesson.length,
   hardFailures: perLesson.reduce((sum, row) => sum + row.hardFailures.length, 0),
-  lessonsWithoutAuthoredPrerequisiteLink: perLesson.filter((row) => row.authoredPrerequisiteNodes === 0).length,
+  lessonsWithoutAuthoredPrerequisiteLink: perLesson.filter((row) => row.authoredPrerequisiteNodes === 0 && row.authoredLessonLinks === 0).length,
   lessonsWithoutDeferredTransferTask: perLesson.filter((row) => !row.deferredTransferTask).length,
   mistakeWhyStubs: perLesson.reduce((sum, row) => sum + row.mistakeWhyStubs, 0),
   mistakeTrickStubs: perLesson.reduce((sum, row) => sum + row.mistakeTrickStubs, 0),
@@ -103,7 +107,7 @@ lines.push("| المستوى | دروس | بلا رابط متطلب مؤلَّ�
 lines.push("|---|---|---|---|---|---|---|");
 lines.push(...["A1","A2","B1","B2"].map((level) => {
   const rows = byLevel(level);
-  return `| ${level} | ${rows.length} | ${rows.filter((r)=>r.authoredPrerequisiteNodes===0).length} | ${rows.filter((r)=>!r.deferredTransferTask).length} | ${rows.reduce((s,r)=>s+r.mistakeWhyStubs,0)} | ${rows.reduce((s,r)=>s+r.mistakeTrickStubs,0)} | ${rows.reduce((s,r)=>s+r.hardFailures.length,0)} |`;
+  return `| ${level} | ${rows.length} | ${rows.filter((r)=>r.authoredPrerequisiteNodes===0&&r.authoredLessonLinks===0).length} | ${rows.filter((r)=>!r.deferredTransferTask).length} | ${rows.reduce((s,r)=>s+r.mistakeWhyStubs,0)} | ${rows.reduce((s,r)=>s+r.mistakeTrickStubs,0)} | ${rows.reduce((s,r)=>s+r.hardFailures.length,0)} |`;
 }));
 lines.push("");
 lines.push("## الدروس الأربع المعنية بالعيّنة (درس لكل مستوى)");

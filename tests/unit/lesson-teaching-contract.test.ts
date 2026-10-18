@@ -22,7 +22,7 @@ const report = JSON.parse(readFileSync("reports/lesson-teaching-contract-audit.j
   measured: Record<string, number>;
   limits: Record<string, number>;
   status: string;
-  lessons: Array<{ id: string; hardFailures: string[]; gaps: string[]; deferredTransferTask: string | null; authoredPrerequisiteNodes: number }>;
+  lessons: Array<{ id: string; hardFailures: string[]; gaps: string[]; deferredTransferTask: string | null; authoredPrerequisiteNodes: number; authoredLessonLinks: number }>;
 };
 
 const results = allLessonsTeachingContract(academicLessonList);
@@ -48,12 +48,12 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     expect(contract.answers.prerequisites.ok).toBe(true);
   });
 
-  it("keeps the B2 pilot's remaining gap visible instead of hiding it", () => {
+  it("closes the B2 pilot's former prerequisite gap with an authored link (ADR-124)", () => {
     const contract = lessonTeachingContract(academicLessons["b2-14"]);
     expect(contract.hardFailures).toEqual([]);
-    expect(contract.gaps.join(" ")).toContain("متطلب");
+    expect(contract.gaps).toEqual([]);
     expect(contract.gaps.some((gap) => gap.startsWith("transfer"))).toBe(false);
-    expect(contract.answers.prerequisites.valueAr).toContain("ترتيب المنهج");
+    expect(contract.answers.prerequisites.valueAr).toContain("رابط مؤلَّف إلى شرح سابق بعينه");
     expect(contract.answers["explanation-model"].ok).toBe(true);
   });
 
@@ -137,6 +137,8 @@ describe("one-lesson teaching contract (8 questions, measured)", () => {
     }
     expect(report.lessons).toHaveLength(96);
     expect(report.lessons.filter((row) => row.authoredPrerequisiteNodes === 0)).toHaveLength(73);
+    // v232 (ADR-124): authored lesson links close 72 of them; only a1-01, the first lesson of the curriculum, has nothing before it.
+    expect(report.lessons.filter((row) => row.authoredPrerequisiteNodes === 0 && row.authoredLessonLinks === 0).map((row) => row.id)).toEqual(["a1-01"]);
   });
 
   it("keeps English grammar metalanguage out of learner-facing Arabic (ع1)", async () => {

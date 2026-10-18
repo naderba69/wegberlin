@@ -26,7 +26,7 @@
   "limits": {
     "lessonsTotal": 96,
     "hardFailures": 0,
-    "lessonsWithoutAuthoredPrerequisiteLink": 73,
+    "lessonsWithoutAuthoredPrerequisiteLink": 1,
     "lessonsWithoutDeferredTransferTask": 0,
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
@@ -37,7 +37,7 @@
   "measured": {
     "lessonsTotal": 96,
     "hardFailures": 0,
-    "lessonsWithoutAuthoredPrerequisiteLink": 73,
+    "lessonsWithoutAuthoredPrerequisiteLink": 1,
     "lessonsWithoutDeferredTransferTask": 0,
     "mistakeWhyStubs": 0,
     "mistakeTrickStubs": 0,
@@ -45,12 +45,12 @@
     "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "32c7f111509b",
+  "contentSha256": "676b6a66b24d",
   "counts": {
     "lessons": 96,
     "questions": 8,
-    "answeredOk": 697,
-    "gaps": 71
+    "answeredOk": 768,
+    "gaps": 0
   },
   "byLevel": {
     "A1": {
@@ -85,6 +85,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-01",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -129,6 +130,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -171,10 +173,9 @@
       "id": "a1-03",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "a1-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -184,8 +185,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 93 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-02)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a1-01-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -219,6 +220,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -261,10 +263,9 @@
       "id": "a1-05",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -274,8 +275,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 123 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-04)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-01-t1، a1-03-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -307,10 +308,9 @@
       "id": "a1-06",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -320,8 +320,8 @@
           "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 97 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-05)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-01-t1، a1-02-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -353,10 +353,9 @@
       "id": "a1-07",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "a1-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -366,8 +365,8 @@
           "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 92 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-06)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a1-03-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -401,6 +400,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-08",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -445,6 +445,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -487,10 +488,9 @@
       "id": "a1-10",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -500,8 +500,8 @@
           "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 121 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-09)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-04-t1، a1-02-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -533,10 +533,9 @@
       "id": "a1-11",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-11",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -546,8 +545,8 @@
           "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 84 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-10)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-10-t1، a1-03-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -579,10 +578,9 @@
       "id": "a1-12",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -592,8 +590,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 102 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-11)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-11-t2، a1-10-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -625,10 +623,9 @@
       "id": "a1-13",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -638,8 +635,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 83 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-12)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-10-t1، a1-04-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -673,6 +670,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a1-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -715,10 +713,9 @@
       "id": "a1-15",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -728,8 +725,8 @@
           "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-14)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-13-t1، a1-09-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -761,10 +758,9 @@
       "id": "a1-16",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -774,8 +770,8 @@
           "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 118 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-15)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-10-t2، a1-09-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -807,10 +803,9 @@
       "id": "a1-17",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -820,8 +815,8 @@
           "valueAr": "4 أهداف؛ أقصرها 12 حرفًا، والوصف 101 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-16)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-09-t1، a1-09-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -853,10 +848,9 @@
       "id": "a1-18",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "a1-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -866,8 +860,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-17)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a1-08-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -899,10 +893,9 @@
       "id": "a1-19",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-19",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -912,8 +905,8 @@
           "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 87 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-18)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-14-t1، a1-10-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -945,10 +938,9 @@
       "id": "a1-20",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -958,8 +950,8 @@
           "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 90 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-19)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-08-t1، a1-14-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -991,10 +983,9 @@
       "id": "a1-21",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1004,8 +995,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 121 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-20)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-09-t1، a1-02-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1037,10 +1028,9 @@
       "id": "a1-22",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "a1-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1050,8 +1040,8 @@
           "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 94 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-21)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a1-04-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1083,10 +1073,9 @@
       "id": "a1-23",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1096,8 +1085,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 124 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-22)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-21-t2، a1-22-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1129,10 +1118,9 @@
       "id": "a1-24",
       "level": "A1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a1-24",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1142,8 +1130,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 124 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a1-23)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-20-t1، a1-03-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1177,6 +1165,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-01",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1219,10 +1208,9 @@
       "id": "a2-02",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1232,8 +1220,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 106 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-01)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-01-t3، a1-08-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1267,6 +1255,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1311,6 +1300,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1353,10 +1343,9 @@
       "id": "a2-05",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1366,8 +1355,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 96 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-04)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-21-t2، a1-02-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1401,6 +1390,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1443,10 +1433,9 @@
       "id": "a2-07",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1456,8 +1445,8 @@
           "valueAr": "4 أهداف؛ أقصرها 14 حرفًا، والوصف 103 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-06)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-03-t3، a2-04-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -1491,6 +1480,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-08",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1533,10 +1523,9 @@
       "id": "a2-09",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1546,8 +1535,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-08)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-08-t2، a1-08-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1581,6 +1570,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "a2-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1623,10 +1613,9 @@
       "id": "a2-11",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-11",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1636,8 +1625,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 96 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-10)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-09-t2، a1-11-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1669,10 +1658,9 @@
       "id": "a2-12",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1682,8 +1670,8 @@
           "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 96 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-11)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-06-t3، a1-18-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1715,10 +1703,9 @@
       "id": "a2-13",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1728,8 +1715,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 156 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-12)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-03-t3، a1-23-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1761,10 +1748,9 @@
       "id": "a2-14",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1774,8 +1760,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 101 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-13)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-09-t2، a1-23-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1807,10 +1793,9 @@
       "id": "a2-15",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1820,8 +1805,8 @@
           "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 106 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-14)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-20-t1، a1-23-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1853,10 +1838,9 @@
       "id": "a2-16",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1866,8 +1850,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 105 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-15)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-01-t1، a2-02-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1899,10 +1883,9 @@
       "id": "a2-17",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1912,8 +1895,8 @@
           "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 98 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-16)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-08-t2، a1-09-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -1945,10 +1928,9 @@
       "id": "a2-18",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -1958,8 +1940,8 @@
           "valueAr": "4 أهداف؛ أقصرها 18 حرفًا، والوصف 90 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-17)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-03-t2، a2-12-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -1991,10 +1973,9 @@
       "id": "a2-19",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "a2-19",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2004,8 +1985,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-18)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a2-04-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2037,10 +2018,9 @@
       "id": "a2-20",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2050,8 +2030,8 @@
           "valueAr": "4 أهداف؛ أقصرها 15 حرفًا، والوصف 109 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-19)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-19-t3، a2-04-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2083,10 +2063,9 @@
       "id": "a2-21",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2096,8 +2075,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 110 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-20)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-17-t1، a1-09-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2129,10 +2108,9 @@
       "id": "a2-22",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2142,8 +2120,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 98 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-21)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-03-t1، a1-17-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -2175,10 +2153,9 @@
       "id": "a2-23",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2188,8 +2165,8 @@
           "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 107 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-22)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-08-t2، a2-17-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2221,10 +2198,9 @@
       "id": "a2-24",
       "level": "A2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "a2-24",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2234,8 +2210,8 @@
           "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (a2-23)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-10-t1، a2-12-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -2269,6 +2245,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-01",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2279,7 +2256,7 @@
         },
         "prerequisites": {
           "ok": true,
-          "valueAr": "أول درس في المستوى: نقطة تأسيس بلا سابق"
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-02-t3، a2-01-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2311,10 +2288,9 @@
       "id": "b1-02",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2324,8 +2300,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 122 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-01)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-11-t1، a2-18-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2359,6 +2335,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2403,6 +2380,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2445,10 +2423,9 @@
       "id": "b1-05",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2458,8 +2435,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 133 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-04)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-06-t3، b1-04-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2491,10 +2468,9 @@
       "id": "b1-06",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2504,8 +2480,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 125 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-05)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-08-t3، b1-01-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2537,10 +2513,9 @@
       "id": "b1-07",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2550,8 +2525,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 132 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-06)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-10-t1، a2-12-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -2585,6 +2560,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-08",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2629,6 +2605,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2673,6 +2650,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2715,10 +2693,9 @@
       "id": "b1-11",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "b1-11",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2728,8 +2705,8 @@
           "valueAr": "4 أهداف؛ أقصرها 16 حرفًا، والوصف 129 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-10)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (b1-09-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2761,10 +2738,9 @@
       "id": "b1-12",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2774,8 +2750,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 116 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-11)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-09-t2، a2-04-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2807,10 +2783,9 @@
       "id": "b1-13",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2820,8 +2795,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 143 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-12)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-19-t1، a1-10-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2853,10 +2828,9 @@
       "id": "b1-14",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2866,8 +2840,8 @@
           "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 122 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-13)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-09-t1، a2-20-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2899,10 +2873,9 @@
       "id": "b1-15",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "b1-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2912,8 +2885,8 @@
           "valueAr": "4 أهداف؛ أقصرها 17 حرفًا، والوصف 97 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-14)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a2-18-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -2945,10 +2918,9 @@
       "id": "b1-16",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -2958,8 +2930,8 @@
           "valueAr": "4 أهداف؛ أقصرها 26 حرفًا، والوصف 116 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-15)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-10-t1، a2-19-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -2991,10 +2963,9 @@
       "id": "b1-17",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3004,8 +2975,8 @@
           "valueAr": "4 أهداف؛ أقصرها 21 حرفًا، والوصف 104 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-16)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-01-t3، a2-18-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3039,6 +3010,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b1-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3081,10 +3053,9 @@
       "id": "b1-19",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 1,
       "deferredTransferTask": "b1-19",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3094,8 +3065,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 113 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-18)"
+          "ok": true,
+          "valueAr": "1 رابط مؤلَّف إلى شرح سابق بعينه (a2-14-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -3127,10 +3098,9 @@
       "id": "b1-20",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3140,8 +3110,8 @@
           "valueAr": "4 أهداف؛ أقصرها 19 حرفًا، والوصف 112 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-19)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-13-t1، b1-05-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -3173,10 +3143,9 @@
       "id": "b1-21",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3186,8 +3155,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 110 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-20)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-23-t1، b1-08-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3219,10 +3188,9 @@
       "id": "b1-22",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3232,8 +3200,8 @@
           "valueAr": "4 أهداف؛ أقصرها 26 حرفًا، والوصف 119 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-21)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-10-t2، b1-12-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3265,10 +3233,9 @@
       "id": "b1-23",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3278,8 +3245,8 @@
           "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 128 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-22)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-02-t1، a2-07-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -3311,10 +3278,9 @@
       "id": "b1-24",
       "level": "B1",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b1-24",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3324,8 +3290,8 @@
           "valueAr": "4 أهداف؛ أقصرها 22 حرفًا، والوصف 132 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b1-23)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-23-t1، b1-12-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -3359,6 +3325,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-01",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3401,10 +3368,9 @@
       "id": "b2-02",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-02",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3414,8 +3380,8 @@
           "valueAr": "4 أهداف؛ أقصرها 20 حرفًا، والوصف 135 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-01)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-01-t2، b1-07-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3447,10 +3413,9 @@
       "id": "b2-03",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-03",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3460,8 +3425,8 @@
           "valueAr": "4 أهداف؛ أقصرها 27 حرفًا، والوصف 114 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-02)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-12-t2، b2-01-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -3495,6 +3460,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-04",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3539,6 +3505,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-05",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3583,6 +3550,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-06",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3625,10 +3593,9 @@
       "id": "b2-07",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-07",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3638,8 +3605,8 @@
           "valueAr": "4 أهداف؛ أقصرها 33 حرفًا، والوصف 145 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-06)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-11-t2، b1-12-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3673,6 +3640,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-08",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3717,6 +3685,7 @@
       "hardFailures": [],
       "gaps": [],
       "authoredPrerequisiteNodes": 1,
+      "authoredLessonLinks": 0,
       "deferredTransferTask": "b2-09",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3759,10 +3728,9 @@
       "id": "b2-10",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-10",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3772,8 +3740,8 @@
           "valueAr": "4 أهداف؛ أقصرها 24 حرفًا، والوصف 127 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-09)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-05-t1، b2-03-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3805,10 +3773,9 @@
       "id": "b2-11",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-11",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3818,8 +3785,8 @@
           "valueAr": "4 أهداف؛ أقصرها 29 حرفًا، والوصف 175 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-10)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-01-t1، b1-15-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -3851,10 +3818,9 @@
       "id": "b2-12",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-12",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3864,8 +3830,8 @@
           "valueAr": "4 أهداف؛ أقصرها 25 حرفًا، والوصف 171 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-11)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-11-t1، b2-01-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -3897,10 +3863,9 @@
       "id": "b2-13",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-13",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3910,8 +3875,8 @@
           "valueAr": "4 أهداف؛ أقصرها 28 حرفًا، والوصف 140 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-12)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-01-t3، b2-05-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -3943,10 +3908,9 @@
       "id": "b2-14",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-14",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -3956,8 +3920,8 @@
           "valueAr": "4 أهداف؛ أقصرها 28 حرفًا، والوصف 133 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-13)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-11-t2، b2-06-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -3989,10 +3953,9 @@
       "id": "b2-15",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-15",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4002,8 +3965,8 @@
           "valueAr": "4 أهداف؛ أقصرها 31 حرفًا، والوصف 110 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-14)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a2-17-t2، b1-03-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -4035,10 +3998,9 @@
       "id": "b2-16",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-16",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4048,8 +4010,8 @@
           "valueAr": "4 أهداف؛ أقصرها 34 حرفًا، والوصف 105 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-15)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-03-t1، b1-05-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -4081,10 +4043,9 @@
       "id": "b2-17",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-17",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4094,8 +4055,8 @@
           "valueAr": "4 أهداف؛ أقصرها 42 حرفًا، والوصف 111 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-16)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-04-t1، b1-14-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -4127,10 +4088,9 @@
       "id": "b2-18",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-18",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4140,8 +4100,8 @@
           "valueAr": "4 أهداف؛ أقصرها 40 حرفًا، والوصف 126 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-17)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-14-t3، b2-04-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -4173,10 +4133,9 @@
       "id": "b2-19",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-19",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4186,8 +4145,8 @@
           "valueAr": "4 أهداف؛ أقصرها 42 حرفًا، والوصف 162 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-18)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (a1-08-t2، b1-19-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -4219,10 +4178,9 @@
       "id": "b2-20",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-20",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4232,8 +4190,8 @@
           "valueAr": "5 أهداف؛ أقصرها 59 حرفًا، والوصف 468 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-19)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-07-t2، a2-24-t2)"
         },
         "explanation-model": {
           "ok": true,
@@ -4265,10 +4223,9 @@
       "id": "b2-21",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-21",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4278,8 +4235,8 @@
           "valueAr": "5 أهداف؛ أقصرها 44 حرفًا، والوصف 265 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-20)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-08-t2، b1-18-t1)"
         },
         "explanation-model": {
           "ok": true,
@@ -4311,10 +4268,9 @@
       "id": "b2-22",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-22",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4324,8 +4280,8 @@
           "valueAr": "5 أهداف؛ أقصرها 33 حرفًا، والوصف 328 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-21)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b1-17-t1، b2-09-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -4357,10 +4313,9 @@
       "id": "b2-23",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-23",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4370,8 +4325,8 @@
           "valueAr": "5 أهداف؛ أقصرها 38 حرفًا، والوصف 313 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-22)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-04-t1، b2-14-t3)"
         },
         "explanation-model": {
           "ok": true,
@@ -4403,10 +4358,9 @@
       "id": "b2-24",
       "level": "B2",
       "hardFailures": [],
-      "gaps": [
-        "prerequisites: المتطلب مستنتج من الترتيب لا من رابط مؤلَّف نقطةً بنقطة"
-      ],
+      "gaps": [],
       "authoredPrerequisiteNodes": 0,
+      "authoredLessonLinks": 2,
       "deferredTransferTask": "b2-24",
       "mistakeWhyStubs": 0,
       "mistakeTrickStubs": 0,
@@ -4416,8 +4370,8 @@
           "valueAr": "5 أهداف؛ أقصرها 40 حرفًا، والوصف 324 حرفًا"
         },
         "prerequisites": {
-          "ok": false,
-          "valueAr": "لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (b2-23)"
+          "ok": true,
+          "valueAr": "2 رابط مؤلَّف إلى شرح سابق بعينه (b2-22-t4، b2-15-t1)"
         },
         "explanation-model": {
           "ok": true,

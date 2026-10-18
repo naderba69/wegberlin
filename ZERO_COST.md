@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v231 · 2026-10-18 · P2-400 (ADR-122): سُدّت الفجوات الـ54 في المحتوى نفسه لا بإعادة الوسم — 54 عنصر اختبار قصير أُعيدت كتابتها بمعرّفاتها، و5 نقاط تعليم، وتمرين واحد؛ 389/389 هدفًا مغطى تعليمًا وتدريبًا واختبارًا، وصار P2-400 منجزًا (P2 ‏137/142).
+Sync batch: v232 · 2026-10-18 · عقد الدرس (ADR-124): روابط متطلب مؤلفة — 136 رابطًا من 72 درسًا إلى كتل شرح سابقة بعينها مع سبب عربي، تظهر في مرحلة القاعدة كـ«يبني هذا الدرس على»؛ الدروس بلا رابط متطلب مؤلف 73 ⇒ 1 (a1-01، أول درس في المنهج).
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

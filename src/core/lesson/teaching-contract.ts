@@ -1,6 +1,7 @@
 import type { FullLesson } from "@/types/lesson-content";
 import { academicLessons } from "@/data/academic-lessons";
 import { grammarNodesByLesson } from "@/data/grammar-progression-registry";
+import { resolveLessonPrerequisites } from "@/core/lesson/lesson-prerequisites";
 import { independentProductionTasks } from "@/data/independent-production-tasks";
 import { reviewCards } from "@/data/review-cards";
 import { buildLessonSrsCards } from "@/core/srs/lesson-cards";
@@ -150,10 +151,13 @@ export function lessonTeachingContract(lesson: FullLesson): LessonTeachingContra
   const nodes = grammarNodesByLesson[lesson.id] ?? [];
   const withParents = nodes.filter((node) => node.prerequisiteIds.length > 0);
   const previous = previousLessonId(lesson);
-  const kind = withParents.length > 0 ? "authored" : nodes.length > 0 ? "authored-node-without-parents" : previous ? "curriculum-order" : "founding";
+  // ADR-124: رابط مؤلَّف من الدرس إلى كتلة شرح سابقة بعينها يجيب السؤال بلا استنتاج من الترتيب.
+  const lessonLinks = resolveLessonPrerequisites(lesson.id);
+  const kind = withParents.length > 0 ? "authored" : lessonLinks.length > 0 ? "authored-lesson-link" : nodes.length > 0 ? "authored-node-without-parents" : previous ? "curriculum-order" : "founding";
   answers.prerequisites = {
-    ok: kind === "authored" || kind === "authored-node-without-parents" || kind === "founding",
+    ok: kind === "authored" || kind === "authored-lesson-link" || kind === "authored-node-without-parents" || kind === "founding",
     valueAr: kind === "authored" ? `${withParents.length} نقطة قاعدة موصولة بسابقها (تأليف صريح)`
+      : kind === "authored-lesson-link" ? `${lessonLinks.length} رابط مؤلَّف إلى شرح سابق بعينه (${lessonLinks.map((link) => link.theoryId).join("، ")})`
       : kind === "authored-node-without-parents" ? "نقطة قاعدة موصولة بدرسها بلا سابق: نقطة تأسيس"
       : kind === "curriculum-order" ? `لا رابط مؤلَّف؛ الاستنتاج من ترتيب المنهج فقط (${previous})`
       : "أول درس في المستوى: نقطة تأسيس بلا سابق",

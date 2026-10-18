@@ -3,17 +3,17 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `0afea72a7db40deff85891b2987756b39c6e66c3ad41db04bcf86f5db74f53f5`
+Content SHA-256: `2507822046a7b2e500deb4180640bff715205dc80450966ac4e8f152db09cc72`
 
 ## Result
 
-`PASS` — 215 TSX files and 8266 opening JSX tags were scanned.
+`PASS` — 216 TSX files and 8280 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 449 |
+| Explicit German fragments (lang=de + dir=ltr) | 450 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 503 |
+| LTR tags audited | 504 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 60 |

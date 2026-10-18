@@ -7,6 +7,7 @@ import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
 import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "../src/core/lesson/teaching-contract";
 import { LEXICAL_LOAD_POLICY, createLexicalLoadContext, measureLongInputLoad, measureReadingLoad, medianOf } from "../src/core/content-validation/lexical-load";
+import { CURRICULUM_STOP_WORDS, curriculumStem } from "../src/core/german/curriculum-lexical-context";
 import { VOCABULARY_STAGE_POLICY, vocabularyStageVisibleTexts } from "../src/core/lesson/vocabulary-stage";
 import { nounsByLesson, verbFramesByLesson } from "../src/data/lexical-grammar-registry";
 import { GERMAN_LEMMATIZER_POLICY } from "../src/core/german/lemmatizer";
@@ -44,7 +45,7 @@ const thresholds = {
   longInputUnknownPctMax: 32,
 };
 
-const STOP = new Set("der die das und oder aber für mit von zu im am an ein eine einen einer einem des dem den ich du er sie es wir ihr sie nicht kein keine alle jeder jede wenn als auch noch schon sehr mehr weniger man uns euch ihnen ihm sein ihre ihrem diesem dieser dieses bei nach aus über unter vor hinter zwischen um ohne innerhalb außerhalb kann werde werden wird hat haben hatte sollte müssen will möchten".split(" "));
+const STOP = new Set(CURRICULUM_STOP_WORDS);
 // Measurement defect found 2026-09-19: NFKD first decomposes every umlaut into base + combining
 // mark, so the ä/ö/ü/ß replacements below were dead code and the strip step turned "Produktivität"
 // into two tokens ("produktivita" + "t"). That inflated the reading unknown-word load and split
@@ -56,7 +57,7 @@ const fold = (value: string) => String(value ?? "").normalize("NFC").toLowerCase
 const isVocabulary = (word: string) => !/^\d+$/.test(word);
 const wordsWith = (value: string, folder: (input: string) => string) => [...new Set(folder(String(value ?? "")).split(/\s+/).filter((word) => word.length > 2 && isVocabulary(word) && !STOP.has(word)))];
 const words = (value: string) => wordsWith(value, fold);
-const stem = (word: string) => word.replace(/(chen|lein|ungen|ung|keiten|keit|heiten|heit|ieren|ieren|erte|ern|en|em|es|e|s)$/, "").slice(0, Math.max(4, word.length - 2));
+const stem = curriculumStem;
 const median = (values: number[]) => { const sorted = [...values].sort((a, b) => a - b); return sorted.length ? sorted[Math.floor(sorted.length / 2)] : 0; };
 const countWords = (value: string) => (String(value ?? "").match(/\S+/g) ?? []).length;
 

@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v239 · 2026-10-18 · فصل علامات سير العمل عن الإتقان (ADR-131، م34): علامتا بدء محاكاة الامتحان الكاملة وإنهائها انتقلتا من `mastery` إلى `workflowMarkers` بطابع زمني وشاهد حذف، مع ترحيل عند التحميل والاستيراد والدمج، فلم تعد فتحة محاكاة تُنتج حدث دليل إتقان؛ الحقول المصنّفة 69 (20 تُصفَّر)؛ وتصحيح حالة صف م40؛ الكاش v239.
+Sync batch: v240 · 2026-10-18 · تتبّع أدلة المتعلم لكل لِمّة قبل القراءة (ADR-132، م17): لكل كلمة محتوى في نص القراءة حالة من مراجعات المتعلم وأجوبته الصحيحة نفسها (تعثّر، استرجاع بعد فاصل، تدرّب داخل الدرس، مرّت دون محاولة، جديدة)، تُعرض قبل النص بلا معانٍ؛ بلا حقل حالة جديد، وبذرة مدمجة لكل درس تُبنى على الخادم فلا يصل المنهج إلى المتصفح؛ السياق المعجمي مشترك مع التدقيق وتقريره لم يتغيّر؛ الكاش v240.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v239";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v240";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -1728,6 +1728,11 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await expect(page.locator(".reading-support-lock")).toContainText("القاموس والترجمة مؤجلان");
       await expect(page.locator(".reading-vocabulary-bridge")).not.toHaveAttribute("open", "");
       await expect(page.locator(".reading-vocabulary-bridge .glossary-strip")).not.toBeVisible();
+      const learnerProfile=page.locator('[data-learner-lexical-policy="learner-lemma-evidence-v1"]');
+      await expect(learnerProfile).toBeVisible();
+      await expect(learnerProfile).toContainText("وليس اختبار مفردات");
+      await expect(learnerProfile.locator(".learner-reading-counts li")).toHaveCount(5);
+      await expect(learnerProfile.locator(".learner-reading-words li[lang=de]").first()).toBeVisible();
       const readingQuestion = page.locator(".question-stack .quiz-item").first();
       await expect(readingQuestion.locator("[data-question-category]")).toBeVisible();await expect(readingQuestion.locator("h3[lang=de]")).toHaveText(lesson.reading.questions[0].promptDe);await expect(readingQuestion.locator(".arabic-scaffold p")).toHaveText(lesson.reading.questions[0].promptAr);
       await readingQuestion.getByRole("button", { name: "تلميح قبل الإجابة" }).click();

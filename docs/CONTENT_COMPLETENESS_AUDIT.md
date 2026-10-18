@@ -1,6 +1,6 @@
 # Content Completeness and Empty-Asset Audit
 
-Sync batch: v239 · 2026-10-18 · فصل علامات سير العمل عن الإتقان (ADR-131، م34): علامتا بدء محاكاة الامتحان الكاملة وإنهائها انتقلتا من `mastery` إلى `workflowMarkers` بطابع زمني وشاهد حذف، مع ترحيل عند التحميل والاستيراد والدمج، فلم تعد فتحة محاكاة تُنتج حدث دليل إتقان؛ الحقول المصنّفة 69 (20 تُصفَّر)؛ وتصحيح حالة صف م40؛ الكاش v239.
+Sync batch: v240 · 2026-10-18 · تتبّع أدلة المتعلم لكل لِمّة قبل القراءة (ADR-132، م17): لكل كلمة محتوى في نص القراءة حالة من مراجعات المتعلم وأجوبته الصحيحة نفسها (تعثّر، استرجاع بعد فاصل، تدرّب داخل الدرس، مرّت دون محاولة، جديدة)، تُعرض قبل النص بلا معانٍ؛ بلا حقل حالة جديد، وبذرة مدمجة لكل درس تُبنى على الخادم فلا يصل المنهج إلى المتصفح؛ السياق المعجمي مشترك مع التدقيق وتقريره لم يتغيّر؛ الكاش v240.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

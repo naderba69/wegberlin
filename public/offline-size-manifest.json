@@ -3,22 +3,22 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "ebef9947d1d5d287ef49c2c0647ea5d782e531b5c4d72e56c390d1551a14e687",
+  "buildFingerprint": "23cbe37ff76459d4de2e2f839f3a659f070ceea6a339ed737438921340f2f37b",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
       "id": "a1",
       "label": "A1",
       "routeCount": 60,
-      "routeRawBytes": 3992933,
-      "routeGzipBytes": 794159,
+      "routeRawBytes": 4087032,
+      "routeGzipBytes": 827700,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7051005,
-      "nextAssetGzipBytes": 2004975,
+      "nextAssetRawBytes": 7068466,
+      "nextAssetGzipBytes": 2011428,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11111588,
-      "totalGzipBytes": 2811099,
+      "totalRawBytes": 11223148,
+      "totalGzipBytes": 2851093,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -66,6 +66,11 @@
           "gzipBytes": 5457
         },
         {
+          "path": "/_next/static/chunks/3221-13862d7228359dad.js",
+          "rawBytes": 7907,
+          "gzipBytes": 2534
+        },
+        {
           "path": "/_next/static/chunks/3348-de258de9602783db.js",
           "rawBytes": 235913,
           "gzipBytes": 65155
@@ -94,11 +99,6 @@
           "path": "/_next/static/chunks/4785-4466446c28d4987f.js",
           "rawBytes": 14403,
           "gzipBytes": 5733
-        },
-        {
-          "path": "/_next/static/chunks/4994-76019d60e0643054.js",
-          "rawBytes": 7519,
-          "gzipBytes": 2487
         },
         {
           "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
@@ -261,9 +261,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-51ca1ef1a3352246.js",
-          "rawBytes": 197762,
-          "gzipBytes": 56860
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ee12604aef62858a.js",
+          "rawBytes": 213499,
+          "gzipBytes": 63060
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -461,9 +461,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/f13a9b1bf4b9fb1e.css",
-          "rawBytes": 490839,
-          "gzipBytes": 79589
+          "path": "/_next/static/css/57bd7dddde492163.css",
+          "rawBytes": 492175,
+          "gzipBytes": 79795
         }
       ]
     },
@@ -471,15 +471,15 @@
       "id": "a2",
       "label": "A2",
       "routeCount": 60,
-      "routeRawBytes": 4296555,
-      "routeGzipBytes": 906650,
+      "routeRawBytes": 4425838,
+      "routeGzipBytes": 951935,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7051005,
-      "nextAssetGzipBytes": 2004974,
+      "nextAssetRawBytes": 7068466,
+      "nextAssetGzipBytes": 2011427,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11415210,
-      "totalGzipBytes": 2923589,
+      "totalRawBytes": 11561954,
+      "totalGzipBytes": 2975327,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -527,6 +527,11 @@
           "gzipBytes": 5457
         },
         {
+          "path": "/_next/static/chunks/3221-13862d7228359dad.js",
+          "rawBytes": 7907,
+          "gzipBytes": 2534
+        },
+        {
           "path": "/_next/static/chunks/3348-de258de9602783db.js",
           "rawBytes": 235913,
           "gzipBytes": 65155
@@ -555,11 +560,6 @@
           "path": "/_next/static/chunks/4785-4466446c28d4987f.js",
           "rawBytes": 14403,
           "gzipBytes": 5733
-        },
-        {
-          "path": "/_next/static/chunks/4994-76019d60e0643054.js",
-          "rawBytes": 7519,
-          "gzipBytes": 2487
         },
         {
           "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
@@ -722,9 +722,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-51ca1ef1a3352246.js",
-          "rawBytes": 197762,
-          "gzipBytes": 56860
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ee12604aef62858a.js",
+          "rawBytes": 213499,
+          "gzipBytes": 63060
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -922,9 +922,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/f13a9b1bf4b9fb1e.css",
-          "rawBytes": 490839,
-          "gzipBytes": 79589
+          "path": "/_next/static/css/57bd7dddde492163.css",
+          "rawBytes": 492175,
+          "gzipBytes": 79795
         }
       ]
     },
@@ -932,15 +932,15 @@
       "id": "b1",
       "label": "B1",
       "routeCount": 60,
-      "routeRawBytes": 4370812,
-      "routeGzipBytes": 933664,
+      "routeRawBytes": 4529772,
+      "routeGzipBytes": 987524,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 7051003,
-      "nextAssetGzipBytes": 2004973,
+      "nextAssetRawBytes": 7068464,
+      "nextAssetGzipBytes": 2011426,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11489465,
-      "totalGzipBytes": 2950602,
+      "totalRawBytes": 11665886,
+      "totalGzipBytes": 3010915,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -988,6 +988,11 @@
           "gzipBytes": 5457
         },
         {
+          "path": "/_next/static/chunks/3221-13862d7228359dad.js",
+          "rawBytes": 7907,
+          "gzipBytes": 2534
+        },
+        {
           "path": "/_next/static/chunks/3348-de258de9602783db.js",
           "rawBytes": 235913,
           "gzipBytes": 65155
@@ -1016,11 +1021,6 @@
           "path": "/_next/static/chunks/4785-4466446c28d4987f.js",
           "rawBytes": 14403,
           "gzipBytes": 5733
-        },
-        {
-          "path": "/_next/static/chunks/4994-76019d60e0643054.js",
-          "rawBytes": 7519,
-          "gzipBytes": 2487
         },
         {
           "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
@@ -1183,9 +1183,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-51ca1ef1a3352246.js",
-          "rawBytes": 197762,
-          "gzipBytes": 56860
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ee12604aef62858a.js",
+          "rawBytes": 213499,
+          "gzipBytes": 63060
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -1383,9 +1383,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/f13a9b1bf4b9fb1e.css",
-          "rawBytes": 490839,
-          "gzipBytes": 79589
+          "path": "/_next/static/css/57bd7dddde492163.css",
+          "rawBytes": 492175,
+          "gzipBytes": 79795
         }
       ]
     },
@@ -1393,15 +1393,15 @@
       "id": "b2",
       "label": "B2 + Prüfung",
       "routeCount": 221,
-      "routeRawBytes": 10268363,
-      "routeGzipBytes": 2367242,
+      "routeRawBytes": 10479731,
+      "routeGzipBytes": 2434834,
       "nextAssetCount": 93,
-      "nextAssetRawBytes": 7195544,
-      "nextAssetGzipBytes": 2050016,
+      "nextAssetRawBytes": 7213005,
+      "nextAssetGzipBytes": 2056469,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17531557,
-      "totalGzipBytes": 4429223,
+      "totalRawBytes": 17760386,
+      "totalGzipBytes": 4503268,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1449,6 +1449,11 @@
           "gzipBytes": 5457
         },
         {
+          "path": "/_next/static/chunks/3221-13862d7228359dad.js",
+          "rawBytes": 7907,
+          "gzipBytes": 2534
+        },
+        {
           "path": "/_next/static/chunks/3348-de258de9602783db.js",
           "rawBytes": 235913,
           "gzipBytes": 65155
@@ -1482,11 +1487,6 @@
           "path": "/_next/static/chunks/4785-4466446c28d4987f.js",
           "rawBytes": 14403,
           "gzipBytes": 5733
-        },
-        {
-          "path": "/_next/static/chunks/4994-76019d60e0643054.js",
-          "rawBytes": 7519,
-          "gzipBytes": 2487
         },
         {
           "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
@@ -1674,9 +1674,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-51ca1ef1a3352246.js",
-          "rawBytes": 197762,
-          "gzipBytes": 56860
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ee12604aef62858a.js",
+          "rawBytes": 213499,
+          "gzipBytes": 63060
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -1864,9 +1864,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/f13a9b1bf4b9fb1e.css",
-          "rawBytes": 490839,
-          "gzipBytes": 79589
+          "path": "/_next/static/css/57bd7dddde492163.css",
+          "rawBytes": 492175,
+          "gzipBytes": 79795
         }
       ]
     },
@@ -1874,15 +1874,15 @@
       "id": "full",
       "label": "A1–B2 komplett",
       "routeCount": 320,
-      "routeRawBytes": 16983575,
-      "routeGzipBytes": 4110040,
+      "routeRawBytes": 17577285,
+      "routeGzipBytes": 4310423,
       "nextAssetCount": 120,
-      "nextAssetRawBytes": 7200732,
-      "nextAssetGzipBytes": 2054495,
+      "nextAssetRawBytes": 7218193,
+      "nextAssetGzipBytes": 2060948,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24251957,
-      "totalGzipBytes": 6176500,
+      "totalRawBytes": 24863128,
+      "totalGzipBytes": 6383336,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1930,6 +1930,11 @@
           "gzipBytes": 5457
         },
         {
+          "path": "/_next/static/chunks/3221-13862d7228359dad.js",
+          "rawBytes": 7907,
+          "gzipBytes": 2534
+        },
+        {
           "path": "/_next/static/chunks/3348-de258de9602783db.js",
           "rawBytes": 235913,
           "gzipBytes": 65155
@@ -1963,11 +1968,6 @@
           "path": "/_next/static/chunks/4785-4466446c28d4987f.js",
           "rawBytes": 14403,
           "gzipBytes": 5733
-        },
-        {
-          "path": "/_next/static/chunks/4994-76019d60e0643054.js",
-          "rawBytes": 7519,
-          "gzipBytes": 2487
         },
         {
           "path": "/_next/static/chunks/4bd1b696-8a4ab4fdf0ae305a.js",
@@ -2170,9 +2170,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-51ca1ef1a3352246.js",
-          "rawBytes": 197762,
-          "gzipBytes": 56860
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ee12604aef62858a.js",
+          "rawBytes": 213499,
+          "gzipBytes": 63060
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -2480,9 +2480,9 @@
           "gzipBytes": 1674
         },
         {
-          "path": "/_next/static/css/f13a9b1bf4b9fb1e.css",
-          "rawBytes": 490839,
-          "gzipBytes": 79589
+          "path": "/_next/static/css/57bd7dddde492163.css",
+          "rawBytes": 492175,
+          "gzipBytes": 79795
         }
       ]
     }

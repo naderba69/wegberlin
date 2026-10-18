@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v239" || stagingCacheName !== "dwnb-full-pack-staging-v238") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v240" || stagingCacheName !== "dwnb-full-pack-staging-v239") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v239"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v240"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -987,6 +987,13 @@ requireText(read("src/core/portability/merge.ts"), "workflowMarkers:mergeWorkflo
 requireText(portabilitySchema, "workflowMarkers: z.record(", "ADR-131 schema");
 if (/state\.mastery\[(startedKey|completedKey)\]|mastery\[`full-exam-/.test(read("src/components/full-exam-simulation.tsx") + read("src/components/exam-hub.tsx"))) fail("ADR-131: full-exam markers must not be read from mastery");
 for (const text of ["ADR-131", "tombstone", "68 to 69"]) requireText(read("docs/adr/ADR-131-workflow-markers-separate-from-mastery.md"), text, "ADR-131");
+// ADR-132 (v240, م17): per-learner per-lemma evidence on the reading stage; build-time seed, no curriculum in the browser, shared lexical context with the audit.
+for (const text of ["learner-lemma-evidence-v1", "export function buildReadingLexiconSeed", "export function profileReadingForLearner", "evidenceScope === \"personal-error-remediation\"", "!key.startsWith(\"~\")"]) requireText(read("src/core/evidence/learner-lexical-knowledge.ts"), text, "ADR-132 learner lemma evidence");
+for (const text of ["curriculum-lexical-context-v1", "export const CURRICULUM_STOP_WORDS", "export function curriculumStem"]) requireText(read("src/core/german/curriculum-lexical-context.ts"), text, "ADR-132 shared lexical context");
+for (const text of ["const STOP = new Set(CURRICULUM_STOP_WORDS);", "const stem = curriculumStem;"]) requireText(read("scripts/generate-lesson-quality-audit.ts"), text, "ADR-132 audit uses shared context");
+requireText(read("src/app/lernen/[lessonId]/page.tsx"), "readingLexicon={readingLexiconSeed(lessonId)}", "ADR-132 seed prop");
+for (const file of ["src/components/lesson-runner.tsx", "src/components/learner-reading-profile.tsx", "src/core/evidence/learner-lexical-knowledge.ts"]) if (/@\/data\/(academic-lessons|review-cards|reading-lexicon-seeds)/.test(read(file))) fail(`ADR-132: ${file} must not import the curriculum, the card list or the seed builder`);
+for (const text of ["ADR-132", "Wrong answers are never attributed", "not a vocabulary test"]) requireText(read("docs/adr/ADR-132-per-learner-lemma-evidence.md"), text, "ADR-132");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");
@@ -1010,10 +1017,10 @@ for (const text of ['"ok": true', '"mismatchCount": 0', '"claimsOfficialApproval
 for (const text of ["Official exam-format verification", "never means an exam format is unchanged", "telc-b2-point-distribution"]) requireText(examFormatDoc, text, "exam-format verification report");
 if (partialIds.includes(112)) fail("P0-112 returned to partial after meaning-first case acceptance");
 // P1-19 adds the paired progress panel and the intake/four-week step labels; its German prompt remains isolated.
-if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 216 || languageAudit.openingTagCount !== 8312 || languageAudit.germanTagCount !== 457 || languageAudit.arabicTagCount !== 11 || languageAudit.technicalScopeCount !== 60 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
+if (languageAudit.format !== "dwnb-language-boundary-audit" || languageAudit.version !== "language-boundary-audit-v1" || !languageAudit.ok || languageAudit.tsxFiles !== 217 || languageAudit.openingTagCount !== 8334 || languageAudit.germanTagCount !== 458 || languageAudit.arabicTagCount !== 11 || languageAudit.technicalScopeCount !== 60 || languageAudit.adaptiveConsumerCount !== 7 || languageAudit.mixedStaticCount !== 207 || languageAudit.issues.length !== 0) fail("language/Bidi audit counters drifted");
 for (const text of [languageAudit.contentSha256, `${languageAudit.tsxFiles} TSX files`, String(languageAudit.germanTagCount), String(languageAudit.mixedStaticCount), "| **Issues** | **0** |"]) requireText(languageReport, text, "language/Bidi report");
 for (const text of ["language-boundary-v1", "detectFragmentLanguage", "fragmentLanguageAttributes", "data-bidi-scope"]) requireText(languageHelper, text, "adaptive language helper");
-for (const text of ["tsxFiles:216", "openingTagCount:8312", "germanTagCount:457", "arabicTagCount:11", "technicalScopeCount:60", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
+for (const text of ["tsxFiles:217", "openingTagCount:8334", "germanTagCount:458", "arabicTagCount:11", "technicalScopeCount:60", "mixedStaticCount:207"]) requireText(languageTest, text, "language/Bidi tests");
 for (const text of ["TSX files: 189", "Opening JSX tags: 7,496", "P0-255 remains open"]) requireText(languageAdr, text,"language/Bidi ADR");
 if (!packageJson.scripts.prebuild.includes("language:audit")) fail("language/Bidi audit must remain in prebuild");
 if (partialIds.includes(254)) fail("P0-254 returned to partial after language/Bidi acceptance");

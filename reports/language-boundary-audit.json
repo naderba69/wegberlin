@@ -733,17 +733,17 @@
     },
     {
       "path": "src/components/pronunciation-articulation-lab.tsx",
-      "line": 34,
+      "line": 35,
       "text": "vereinfachte Lernskizze · رسم تعليمي مبسط"
     },
     {
       "path": "src/components/pronunciation-articulation-lab.tsx",
-      "line": 94,
+      "line": 95,
       "text": "Hörprobe starten · ابدأ عينة مخفية"
     },
     {
       "path": "src/components/pronunciation-articulation-lab.tsx",
-      "line": 102,
+      "line": 103,
       "text": "النتيجة تقيس مطابقة اختيارك لعينة Browser TTS الاصطناعية فقط. لا تستمع المنصة إلى نطقك، ولا تمنح درجة نطق أو طلاقة أو CEFR، ولا تغيّر إتقان الدرس."
     },
     {
@@ -1054,5 +1054,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "2507822046a7b2e500deb4180640bff715205dc80450966ac4e8f152db09cc72"
+  "contentSha256": "66f1a8c3294471eb200ce6aed3490aa1d4a5672a09894732eda7dcbf7cb5e072"
 }

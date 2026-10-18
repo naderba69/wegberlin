@@ -3,7 +3,7 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `2507822046a7b2e500deb4180640bff715205dc80450966ac4e8f152db09cc72`
+Content SHA-256: `66f1a8c3294471eb200ce6aed3490aa1d4a5672a09894732eda7dcbf7cb5e072`
 
 ## Result
 
@@ -180,9 +180,9 @@ Content SHA-256: `2507822046a7b2e500deb4180640bff715205dc80450966ac4e8f152db09cc
 | src/components/practical-day-mode.tsx:1 | يحفظ السجل السيناريو والخطوات وأطوال الرد فقط، لا نص المعاملة. لا إرسال ولا نتيجة لغوية ولا mastery. | Arabic host + plaintext boundary |
 | src/components/productive-sample-comparison.tsx:129 | هذه مقارنة ذاتية وصفية: عدد كلمات، مدة تسجيل، وتقدير تختاره أنت. لا نفحص صحة النص أو النطق، ولا نستنتج طلاقة أ | Arabic host + plaintext boundary |
 | src/components/productive-sample-comparison.tsx:137 | التقدير الإنتاجي يقارن حجم ما اخترت إنتاجه وتقييمك الذاتي فقط. لا يصحح التطبيق الكتابة أو الكلام، ولا ينتج درج | Arabic host + plaintext boundary |
-| src/components/pronunciation-articulation-lab.tsx:34 | vereinfachte Lernskizze · رسم تعليمي مبسط | Arabic host + plaintext boundary |
-| src/components/pronunciation-articulation-lab.tsx:94 | Hörprobe starten · ابدأ عينة مخفية | Arabic host + plaintext boundary |
-| src/components/pronunciation-articulation-lab.tsx:102 | النتيجة تقيس مطابقة اختيارك لعينة Browser TTS الاصطناعية فقط. لا تستمع المنصة إلى نطقك، ولا تمنح درجة نطق أو ط | Arabic host + plaintext boundary |
+| src/components/pronunciation-articulation-lab.tsx:35 | vereinfachte Lernskizze · رسم تعليمي مبسط | Arabic host + plaintext boundary |
+| src/components/pronunciation-articulation-lab.tsx:95 | Hörprobe starten · ابدأ عينة مخفية | Arabic host + plaintext boundary |
+| src/components/pronunciation-articulation-lab.tsx:103 | النتيجة تقيس مطابقة اختيارك لعينة Browser TTS الاصطناعية فقط. لا تستمع المنصة إلى نطقك، ولا تمنح درجة نطق أو ط | Arabic host + plaintext boundary |
 | src/components/prosody-progression-panel.tsx:3 | Hörprobe · عينة اصطناعية | Arabic host + plaintext boundary |
 | src/components/raw-data-export.tsx:6 | نسخة JSON واحدة لكل IndexedDB Store مع مفاتيحه وقاموس يشرح محتواه. | Arabic host + plaintext boundary |
 | src/components/raw-data-export.tsx:6 | يشمل الوسائط ونقاط الاستعادة كـBase64، لكنه لا يشمل Session Storage أو مفتاح API. للاستعادة استخدم `.dwnb` فقط | Arabic host + plaintext boundary |

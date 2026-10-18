@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v232" || stagingCacheName !== "dwnb-full-pack-staging-v231") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v233" || stagingCacheName !== "dwnb-full-pack-staging-v232") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -694,7 +694,7 @@ for(const text of["dwnb-deprecation-policy-v1","2027-03-31","2027-09-30","deprec
 for(const text of["longer than 180 days","DWNB v1","DWNB v2","DWNB v3","runtime warning","before any local mutation"])requireText(dwnbDeprecationDoc+planningSecurityAdr,text,"DWNB deprecation documentation");
 for(const text of["compares only the elapsed","bounded week range","global wildcard","imports and migrates supported v1"])requireText(planningReadinessSecurityTest,text,"time/readiness/security/deprecation acceptance tests");
 for(const id of[282,284,318,365])if(!p1Rows.some(row=>row.id===id&&row.status==="implemented"))fail(`P1-${id} planning/security state drifted`);
-if(contentGovernanceAudit.format!=="dwnb-content-governance-audit"||contentGovernanceAudit.version!=="content-governance-audit-v1"||contentGovernanceAudit.policyVersion!=="content-accountability-lifecycle-v1"||!contentGovernanceAudit.ok||contentGovernanceAudit.counts?.contentRecords!==3277||contentGovernanceAudit.counts?.contentFamilies!==16||contentGovernanceAudit.counts?.publishedFamilies!==16||contentGovernanceAudit.counts?.sources!==19||contentGovernanceAudit.counts?.ownedRiskTypes!==12||contentGovernanceAudit.counts?.highRiskContextClaims!==12||contentGovernanceAudit.counts?.pronunciationInventoryItems!==18||contentGovernanceAudit.counts?.pronunciationInteractivePairs!==11||contentGovernanceAudit.counts?.pronunciationDiagramCoverage!==18||contentGovernanceAudit.issues?.length)fail("content accountability/lifecycle audit drifted");
+if(contentGovernanceAudit.format!=="dwnb-content-governance-audit"||contentGovernanceAudit.version!=="content-governance-audit-v1"||contentGovernanceAudit.policyVersion!=="content-accountability-lifecycle-v1"||!contentGovernanceAudit.ok||contentGovernanceAudit.counts?.contentRecords!==3277||contentGovernanceAudit.counts?.contentFamilies!==16||contentGovernanceAudit.counts?.publishedFamilies!==16||contentGovernanceAudit.counts?.sources!==19||contentGovernanceAudit.counts?.ownedRiskTypes!==12||contentGovernanceAudit.counts?.highRiskContextClaims!==12||contentGovernanceAudit.counts?.pronunciationInventoryItems!==18||contentGovernanceAudit.counts?.pronunciationInteractivePairs!==13||contentGovernanceAudit.counts?.pronunciationDiagramCoverage!==18||contentGovernanceAudit.issues?.length)fail("content accountability/lifecycle audit drifted");
 if(contentGovernanceAudit.curriculum?.policyVersion!=="independent-curriculum-version-v1"||contentGovernanceAudit.curriculum?.appVersion!=="0.1.0"||contentGovernanceAudit.curriculum?.curriculumVersion!=="dwnb-a1-b2-2026.10-v2"||!contentGovernanceAudit.curriculum?.independent)fail("independent curriculum version drifted");
 for(const text of["independent-curriculum-version-v1","CURRENT_APP_VERSION","CURRENT_CURRICULUM_VERSION","migrateCurriculumVersion","curriculum-identity-separate-from-app-build"])requireText(curriculumVersionSource,text,"curriculum version source");
 for(const text of["content-accountability-lifecycle-v1","lesson-controlled","riskOwnershipRegistry","draft","validated","published","governanceForRisk"])requireText(contentGovernanceRegistry,text,"content accountability registry");
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v232"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v233"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -951,6 +951,11 @@ requireText(read("src/data/lesson-prerequisite-links.ts"), "authored-lesson-prer
 for (const text of ["validateLessonPrerequisiteLinks", "is not from an earlier lesson", "contains Latin letters"]) requireText(read("src/core/lesson/lesson-prerequisites.ts"), text, "ADR-124 prerequisite validator");
 for (const text of ["LessonPrerequisitePanel", "يبني هذا الدرس على", "لا شرط إتقان ولا قفل"]) requireText(read("src/components/lesson-prerequisite-panel.tsx"), text, "ADR-124 prerequisite panel");
 for (const text of ["ADR-124", "a1-01", "not an independent human review"]) requireText(read("docs/adr/ADR-124-authored-lesson-prerequisite-links.md"), text, "ADR-124");
+// ADR-125 (v233): every lesson carries an authored articulation profile; the keyword heuristic is only a fallback.
+requireText(read("src/data/articulation-profile-assignments.ts"), "authored-articulation-profile-per-lesson-v1", "ADR-125 articulation profile map");
+for (const text of ["articulationProfileByLesson", "getArticulationProfileId", "stress-umfahren", "stress-kaffee-cafe", "ach-buch-buecher", "ach-dach-daecher", "\"velum\""]) requireText(pronunciationArticulationCore, text, "ADR-125 articulation profiles");
+for (const text of ["interactivePairId:\"stress-umfahren\"", "interactivePairId:\"ach-dach-daecher\""]) requireText(read("src/data/arabic-learner-pronunciation-inventory.ts"), text, "ADR-125 interactive inventory rows");
+for (const text of ["ADR-125", "13/18", "not an independent phonetics review"]) requireText(read("docs/adr/ADR-125-authored-articulation-profile-per-lesson.md"), text, "ADR-125");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");

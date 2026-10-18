@@ -1,6 +1,6 @@
 # Content Completeness and Empty-Asset Audit
 
-Sync batch: v232 · 2026-10-18 · عقد الدرس (ADR-124): روابط متطلب مؤلفة — 136 رابطًا من 72 درسًا إلى كتل شرح سابقة بعينها مع سبب عربي، تظهر في مرحلة القاعدة كـ«يبني هذا الدرس على»؛ الدروس بلا رابط متطلب مؤلف 73 ⇒ 1 (a1-01، أول درس في المنهج).
+Sync batch: v233 · 2026-10-18 · ملف نطق مؤلف لكل درس (ADR-125): خريطة صريحة للدروس الـ96 بدل الاستدلال بالكلمات المفتاحية — ملف النغمة العام 73 ⇒ 55 درسًا، وملفان جديدان (نبر الكلمة في 14 درسًا، وach-Laut في درسين)، وa2-11 إلى الحركات المدورة؛ أعيد ربط صفوف جرد النطق الـ18 بدروس تعلّم أصواتها، والأزواج التفاعلية 11/18 ⇒ 13/18.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

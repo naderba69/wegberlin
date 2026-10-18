@@ -3,7 +3,7 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "63248bf8d17159d7484d66d74e0912553393f82ae0f9528a7c921ea18f5096e9",
+  "contentSha256": "fe11e06a64fa646cd5049141dc38ad2c1fbd61a47f0f6e5d237878c560cf893f",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
@@ -19,7 +19,7 @@
     "highRiskContextClaims": 12,
     "highRiskContextSources": 11,
     "pronunciationInventoryItems": 18,
-    "pronunciationInteractivePairs": 11,
+    "pronunciationInteractivePairs": 13,
     "pronunciationDiagramCoverage": 18
   },
   "familyCounts": {
@@ -29972,7 +29972,7 @@
       "articulationZone": "lips",
       "diagramProfileId": "affricates",
       "lessonIds": [
-        "a1-03",
+        "a1-10",
         "a1-11"
       ],
       "evidenceMode": "guided-self-observation",
@@ -29996,8 +29996,8 @@
       "articulationZone": "lip-teeth",
       "diagramProfileId": "lipTeeth",
       "lessonIds": [
-        "a1-02",
-        "a1-06"
+        "a1-14",
+        "a1-19"
       ],
       "interactivePairId": "fv-fein-wein",
       "evidenceMode": "synthetic-discrimination",
@@ -30022,7 +30022,7 @@
       "diagramProfileId": "onsetH",
       "lessonIds": [
         "a1-01",
-        "a1-18"
+        "a1-23"
       ],
       "interactivePairId": "h-eis-heiss",
       "evidenceMode": "synthetic-discrimination",
@@ -30046,8 +30046,8 @@
       "articulationZone": "palate",
       "diagramProfileId": "palate",
       "lessonIds": [
-        "a1-04",
-        "a2-04"
+        "a1-02",
+        "a1-04"
       ],
       "interactivePairId": "ch-kirche-kirsche",
       "evidenceMode": "synthetic-discrimination",
@@ -30060,7 +30060,7 @@
     },
     {
       "id": "ar-pron-ich-s",
-      "level": "A2",
+      "level": "A1",
       "category": "consonant",
       "target": "[ç] – [s]",
       "possibleArabicLearnerConfusionAr": "قد يُنقل الاحتكاك من وسط الفم إلى الأسنان.",
@@ -30071,8 +30071,8 @@
       "articulationZone": "palate",
       "diagramProfileId": "palate",
       "lessonIds": [
-        "a2-01",
-        "a2-16"
+        "a1-02",
+        "a1-20"
       ],
       "interactivePairId": "ch-licht-list",
       "evidenceMode": "synthetic-discrimination",
@@ -30085,21 +30085,22 @@
     },
     {
       "id": "ar-pron-ach-ch",
-      "level": "A2",
+      "level": "B2",
       "category": "consonant",
       "target": "[x] – [ç]",
       "possibleArabicLearnerConfusionAr": "قد لا يتبدل موضع ch بعد الحركات الخلفية والأمامية.",
-      "leftDe": "Bach",
-      "leftIpa": "[bax]",
-      "rightDe": "ich",
-      "rightIpa": "[ɪç]",
-      "articulationZone": "palate",
-      "diagramProfileId": "palate",
+      "leftDe": "Dach",
+      "leftIpa": "[dax]",
+      "rightDe": "Dächer",
+      "rightIpa": "[ˈdɛçɐ]",
+      "articulationZone": "velum",
+      "diagramProfileId": "achLaut",
       "lessonIds": [
-        "a2-03",
-        "b1-01"
+        "b2-19",
+        "b2-20"
       ],
-      "evidenceMode": "guided-self-observation",
+      "interactivePairId": "ach-dach-daecher",
+      "evidenceMode": "synthetic-discrimination",
       "policyVersion": "arabic-learner-pronunciation-inventory-v1",
       "notUniversal": true,
       "ownerId": "pronunciation-content-owner",
@@ -30120,8 +30121,8 @@
       "articulationZone": "ridge",
       "diagramProfileId": "affricates",
       "lessonIds": [
-        "a1-07",
-        "a1-20"
+        "a1-05",
+        "a1-21"
       ],
       "interactivePairId": "ts-zeit-seit",
       "evidenceMode": "synthetic-discrimination",
@@ -30134,7 +30135,7 @@
     },
     {
       "id": "ar-pron-pf-f",
-      "level": "A2",
+      "level": "A1",
       "category": "consonant",
       "target": "[pf] – [f]",
       "possibleArabicLearnerConfusionAr": "قد يُختصر الصوت المركب [pf] إلى [f].",
@@ -30145,8 +30146,8 @@
       "articulationZone": "lip-teeth",
       "diagramProfileId": "affricates",
       "lessonIds": [
-        "a2-10",
-        "b1-10"
+        "a1-10",
+        "a1-11"
       ],
       "interactivePairId": "pf-pfund-fund",
       "evidenceMode": "synthetic-discrimination",
@@ -30183,7 +30184,7 @@
     },
     {
       "id": "ar-pron-final-devoicing",
-      "level": "A2",
+      "level": "B1",
       "category": "consonant",
       "target": "Auslautverhärtung",
       "possibleArabicLearnerConfusionAr": "قد يبقى الجهر في آخر الكلمة بدل التحول السياقي.",
@@ -30194,8 +30195,8 @@
       "articulationZone": "ridge",
       "diagramProfileId": "affricates",
       "lessonIds": [
-        "a2-19",
-        "b1-11"
+        "b1-11",
+        "b2-18"
       ],
       "evidenceMode": "guided-self-observation",
       "policyVersion": "arabic-learner-pronunciation-inventory-v1",
@@ -30218,8 +30219,8 @@
       "articulationZone": "vowel-space",
       "diagramProfileId": "vowelLength",
       "lessonIds": [
-        "a1-14",
-        "a1-21"
+        "a1-07",
+        "a1-13"
       ],
       "interactivePairId": "length-stadt-staat",
       "evidenceMode": "synthetic-discrimination",
@@ -30232,7 +30233,7 @@
     },
     {
       "id": "ar-pron-vowel-open-o",
-      "level": "A2",
+      "level": "A1",
       "category": "vowel",
       "target": "[ɔ] – [oː]",
       "possibleArabicLearnerConfusionAr": "قد يختلط الانفتاح مع الطول في الحركة الخلفية.",
@@ -30243,8 +30244,8 @@
       "articulationZone": "vowel-space",
       "diagramProfileId": "vowelLength",
       "lessonIds": [
-        "a2-05",
-        "a2-11"
+        "a1-13",
+        "a1-22"
       ],
       "interactivePairId": "length-offen-ofen",
       "evidenceMode": "synthetic-discrimination",
@@ -30268,8 +30269,8 @@
       "articulationZone": "vowel-space",
       "diagramProfileId": "rounded",
       "lessonIds": [
-        "a1-14",
-        "a1-20"
+        "a1-03",
+        "a1-12"
       ],
       "interactivePairId": "yu-tuer-tour",
       "evidenceMode": "synthetic-discrimination",
@@ -30282,7 +30283,7 @@
     },
     {
       "id": "ar-pron-oe-o",
-      "level": "A2",
+      "level": "A1",
       "category": "vowel",
       "target": "[øː] – [oː]",
       "possibleArabicLearnerConfusionAr": "قد يبقى اللسان خلفيًا مع تدوير الشفتين.",
@@ -30293,8 +30294,8 @@
       "articulationZone": "vowel-space",
       "diagramProfileId": "rounded",
       "lessonIds": [
-        "a2-03",
-        "b1-07"
+        "a1-03",
+        "a1-22"
       ],
       "interactivePairId": "oe-schon-schoen",
       "evidenceMode": "synthetic-discrimination",
@@ -30307,7 +30308,7 @@
     },
     {
       "id": "ar-pron-consonant-cluster",
-      "level": "B1",
+      "level": "A1",
       "category": "cluster",
       "target": "Konsonantenverbindung",
       "possibleArabicLearnerConfusionAr": "قد تُضاف حركة قصيرة بين صوامت متجاورة لتسهيل النطق.",
@@ -30316,10 +30317,10 @@
       "rightDe": "Straße",
       "rightIpa": "[ˈʃtʁaːsə]",
       "articulationZone": "ridge",
-      "diagramProfileId": "affricates",
+      "diagramProfileId": "palate",
       "lessonIds": [
-        "b1-06",
-        "b1-18"
+        "a1-06",
+        "a1-16"
       ],
       "evidenceMode": "guided-self-observation",
       "policyVersion": "arabic-learner-pronunciation-inventory-v1",
@@ -30331,7 +30332,7 @@
     },
     {
       "id": "ar-pron-word-stress",
-      "level": "B1",
+      "level": "A1",
       "category": "prosody",
       "target": "Wortakzent",
       "possibleArabicLearnerConfusionAr": "قد يتوزع الضغط على مقاطع أكثر بدل إبراز المقطع المعجمي.",
@@ -30340,12 +30341,14 @@
       "rightDe": "umFAHren",
       "rightIpa": "[ʊmˈfaːʁən]",
       "articulationZone": "rhythm",
-      "diagramProfileId": "prosody",
+      "diagramProfileId": "wordStress",
       "lessonIds": [
-        "b1-08",
-        "b2-02"
+        "a1-08",
+        "a2-07",
+        "b2-17"
       ],
-      "evidenceMode": "guided-self-observation",
+      "interactivePairId": "stress-umfahren",
+      "evidenceMode": "synthetic-discrimination",
       "policyVersion": "arabic-learner-pronunciation-inventory-v1",
       "notUniversal": true,
       "ownerId": "pronunciation-content-owner",
@@ -30379,7 +30382,7 @@
     },
     {
       "id": "ar-pron-statement-question",
-      "level": "A1",
+      "level": "A2",
       "category": "prosody",
       "target": "Aussage – Frage",
       "possibleArabicLearnerConfusionAr": "قد لا تظهر وظيفة سؤال التأكد عندما تبقى النغمة هابطة.",
@@ -30390,8 +30393,8 @@
       "articulationZone": "rhythm",
       "diagramProfileId": "prosody",
       "lessonIds": [
-        "a1-09",
-        "a2-09"
+        "a2-06",
+        "b1-19"
       ],
       "interactivePairId": "prosody-kommen",
       "evidenceMode": "synthetic-discrimination",

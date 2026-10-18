@@ -3,7 +3,7 @@
   "version": 1,
   "generatedAt": "2026-09-05",
   "compressionPolicy": "gzip-level-9-estimate-v1",
-  "buildFingerprint": "9a90b7b6e56ee9cedc1eb196ee5358e9ca744fa555278bac43397485672669e1",
+  "buildFingerprint": "da76b28cbf784ff27932b2e1de40416410eb38ace1c51a0028d93c725bd77af4",
   "boundary": "Precomputed deterministic gzip bytes for built route HTML, discovered Next static assets, and core support files. CDN Brotli/headers and the size manifest response itself may differ. Optional audio bytes are reported separately from committed audio manifests.",
   "packs": [
     {
@@ -11,14 +11,14 @@
       "label": "A1",
       "routeCount": 60,
       "routeRawBytes": 3984211,
-      "routeGzipBytes": 792212,
+      "routeGzipBytes": 792134,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6992393,
-      "nextAssetGzipBytes": 1985867,
+      "nextAssetRawBytes": 6997484,
+      "nextAssetGzipBytes": 1987280,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11044254,
-      "totalGzipBytes": 2790044,
+      "totalRawBytes": 11049345,
+      "totalGzipBytes": 2791379,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -106,9 +106,9 @@
           "gzipBytes": 63160
         },
         {
-          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
-          "rawBytes": 13806,
-          "gzipBytes": 4751
+          "path": "/_next/static/chunks/5056-c352395e8c2be558.js",
+          "rawBytes": 13899,
+          "gzipBytes": 4788
         },
         {
           "path": "/_next/static/chunks/5201-0acfd2449d93d3ed.js",
@@ -261,9 +261,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c8d685146b998947.js",
-          "rawBytes": 187853,
-          "gzipBytes": 54158
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ce1c96111d628c9f.js",
+          "rawBytes": 192851,
+          "gzipBytes": 55534
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -472,14 +472,14 @@
       "label": "A2",
       "routeCount": 60,
       "routeRawBytes": 4296051,
-      "routeGzipBytes": 906519,
+      "routeGzipBytes": 906426,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6992393,
-      "nextAssetGzipBytes": 1985866,
+      "nextAssetRawBytes": 6997484,
+      "nextAssetGzipBytes": 1987279,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11356094,
-      "totalGzipBytes": 2904350,
+      "totalRawBytes": 11361185,
+      "totalGzipBytes": 2905670,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -567,9 +567,9 @@
           "gzipBytes": 63160
         },
         {
-          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
-          "rawBytes": 13806,
-          "gzipBytes": 4751
+          "path": "/_next/static/chunks/5056-c352395e8c2be558.js",
+          "rawBytes": 13899,
+          "gzipBytes": 4788
         },
         {
           "path": "/_next/static/chunks/5201-0acfd2449d93d3ed.js",
@@ -722,9 +722,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c8d685146b998947.js",
-          "rawBytes": 187853,
-          "gzipBytes": 54158
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ce1c96111d628c9f.js",
+          "rawBytes": 192851,
+          "gzipBytes": 55534
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -933,14 +933,14 @@
       "label": "B1",
       "routeCount": 60,
       "routeRawBytes": 4370494,
-      "routeGzipBytes": 933586,
+      "routeGzipBytes": 933501,
       "nextAssetCount": 89,
-      "nextAssetRawBytes": 6992391,
-      "nextAssetGzipBytes": 1985865,
+      "nextAssetRawBytes": 6997482,
+      "nextAssetGzipBytes": 1987278,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 11430535,
-      "totalGzipBytes": 2931416,
+      "totalRawBytes": 11435626,
+      "totalGzipBytes": 2932744,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1028,9 +1028,9 @@
           "gzipBytes": 63160
         },
         {
-          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
-          "rawBytes": 13806,
-          "gzipBytes": 4751
+          "path": "/_next/static/chunks/5056-c352395e8c2be558.js",
+          "rawBytes": 13899,
+          "gzipBytes": 4788
         },
         {
           "path": "/_next/static/chunks/5201-0acfd2449d93d3ed.js",
@@ -1183,9 +1183,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c8d685146b998947.js",
-          "rawBytes": 187853,
-          "gzipBytes": 54158
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ce1c96111d628c9f.js",
+          "rawBytes": 192851,
+          "gzipBytes": 55534
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -1394,14 +1394,14 @@
       "label": "B2 + Prüfung",
       "routeCount": 221,
       "routeRawBytes": 10266947,
-      "routeGzipBytes": 2366632,
+      "routeGzipBytes": 2366466,
       "nextAssetCount": 93,
-      "nextAssetRawBytes": 7136814,
-      "nextAssetGzipBytes": 2030847,
+      "nextAssetRawBytes": 7141905,
+      "nextAssetGzipBytes": 2032260,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 17471411,
-      "totalGzipBytes": 4409444,
+      "totalRawBytes": 17476502,
+      "totalGzipBytes": 4410691,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1494,9 +1494,9 @@
           "gzipBytes": 63160
         },
         {
-          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
-          "rawBytes": 13806,
-          "gzipBytes": 4751
+          "path": "/_next/static/chunks/5056-c352395e8c2be558.js",
+          "rawBytes": 13899,
+          "gzipBytes": 4788
         },
         {
           "path": "/_next/static/chunks/5201-0acfd2449d93d3ed.js",
@@ -1674,9 +1674,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c8d685146b998947.js",
-          "rawBytes": 187853,
-          "gzipBytes": 54158
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ce1c96111d628c9f.js",
+          "rawBytes": 192851,
+          "gzipBytes": 55534
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",
@@ -1875,14 +1875,14 @@
       "label": "A1–B2 komplett",
       "routeCount": 320,
       "routeRawBytes": 16972615,
-      "routeGzipBytes": 4107415,
+      "routeGzipBytes": 4107029,
       "nextAssetCount": 120,
-      "nextAssetRawBytes": 7142002,
-      "nextAssetGzipBytes": 2035326,
+      "nextAssetRawBytes": 7147093,
+      "nextAssetGzipBytes": 2036739,
       "supportRawBytes": 67650,
       "supportGzipBytes": 11965,
-      "totalRawBytes": 24182267,
-      "totalGzipBytes": 6154706,
+      "totalRawBytes": 24187358,
+      "totalGzipBytes": 6155733,
       "assets": [
         {
           "path": "/_next/static/chunks/1083-bd68b255833c05e9.js",
@@ -1975,9 +1975,9 @@
           "gzipBytes": 63160
         },
         {
-          "path": "/_next/static/chunks/5056-b494876d996d068a.js",
-          "rawBytes": 13806,
-          "gzipBytes": 4751
+          "path": "/_next/static/chunks/5056-c352395e8c2be558.js",
+          "rawBytes": 13899,
+          "gzipBytes": 4788
         },
         {
           "path": "/_next/static/chunks/5201-0acfd2449d93d3ed.js",
@@ -2170,9 +2170,9 @@
           "gzipBytes": 9075
         },
         {
-          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-c8d685146b998947.js",
-          "rawBytes": 187853,
-          "gzipBytes": 54158
+          "path": "/_next/static/chunks/app/lernen/%5BlessonId%5D/page-ce1c96111d628c9f.js",
+          "rawBytes": 192851,
+          "gzipBytes": 55534
         },
         {
           "path": "/_next/static/chunks/app/library/page-88ea05a6d3260ba2.js",

@@ -14,6 +14,7 @@ const zonePoint: Record<ArticulationZone, { x: number; y: number }> = {
   "vowel-space": { x: 137, y: 94 },
   throat: { x: 77, y: 116 },
   rhythm: { x: 112, y: 137 },
+  velum: { x: 106, y: 70 },
 };
 
 function ArticulationDiagram({ zone, titleAr, altAr }: { zone: ArticulationZone; titleAr: string; altAr: string }) {

@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v232 · 2026-10-18 · عقد الدرس (ADR-124): روابط متطلب مؤلفة — 136 رابطًا من 72 درسًا إلى كتل شرح سابقة بعينها مع سبب عربي، تظهر في مرحلة القاعدة كـ«يبني هذا الدرس على»؛ الدروس بلا رابط متطلب مؤلف 73 ⇒ 1 (a1-01، أول درس في المنهج).
+Sync batch: v233 · 2026-10-18 · ملف نطق مؤلف لكل درس (ADR-125): خريطة صريحة للدروس الـ96 بدل الاستدلال بالكلمات المفتاحية — ملف النغمة العام 73 ⇒ 55 درسًا، وملفان جديدان (نبر الكلمة في 14 درسًا، وach-Laut في درسين)، وa2-11 إلى الحركات المدورة؛ أعيد ربط صفوف جرد النطق الـ18 بدروس تعلّم أصواتها، والأزواج التفاعلية 11/18 ⇒ 13/18.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

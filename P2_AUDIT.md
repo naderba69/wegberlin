@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v232 · 2026-10-18 · عقد الدرس (ADR-124): روابط متطلب مؤلفة — 136 رابطًا من 72 درسًا إلى كتل شرح سابقة بعينها مع سبب عربي، تظهر في مرحلة القاعدة كـ«يبني هذا الدرس على»؛ الدروس بلا رابط متطلب مؤلف 73 ⇒ 1 (a1-01، أول درس في المنهج).
+Sync batch: v233 · 2026-10-18 · ملف نطق مؤلف لكل درس (ADR-125): خريطة صريحة للدروس الـ96 بدل الاستدلال بالكلمات المفتاحية — ملف النغمة العام 73 ⇒ 55 درسًا، وملفان جديدان (نبر الكلمة في 14 درسًا، وach-Laut في درسين)، وa2-11 إلى الحركات المدورة؛ أعيد ربط صفوف جرد النطق الـ18 بدروس تعلّم أصواتها، والأزواج التفاعلية 11/18 ⇒ 13/18.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

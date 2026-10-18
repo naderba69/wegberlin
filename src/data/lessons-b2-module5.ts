@@ -498,6 +498,7 @@ export const b2Module5Lessons: FullLesson[] = [
  ["eine Ergänzung kennzeichnen", "يعلّم إضافة", "Kennzeichnen Sie Ihre eigene Ergänzung."],
  ["eine Unklarheit offenlassen", "يُبقي نقطة الغموض مفتوحة ويصرّح بها", "Wir lassen die Unklarheit offen und fragen nach."],
  ["für etwas zuständig sein", "يكون مسؤولًا عن شيء", "Die Koordination ist für Anträge zuständig."],
+ ["sprachlich erläutern", "يشرح من ناحية اللغة فقط", "Das erläutere ich nur sprachlich."],
  ]),
  },
 ];

@@ -444,6 +444,7 @@ export const b2Module4Lessons: FullLesson[] = [
  ["er habe", "أنه فعل / لديه (Konjunktiv I من haben)", "Er sagt, man habe die Daten geprüft."],
  ["einen Interessenkonflikt offenlegen", "يكشف تضارب مصالح", "Die Autorin legt ihren Interessenkonflikt offen."],
  ["eine Korrektur kennzeichnen", "يعلّم التصحيح", "Das Portal kennzeichnet die Korrektur mit Datum."],
+ ["etwas verlangen", "يتطلّب شيئًا أو يشترطه", "Das verlangt Transparenz."],
  ]),
  },
 ];

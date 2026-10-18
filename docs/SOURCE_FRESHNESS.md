@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v234 · 2026-10-18 · حمل معجمي مقيس بالجذور المعجمية (ADR-126): مُلَمِّم منهجي وقاموس أشكال شاذة (2,044 زوجًا) وقائمة أعلام — وسيط حمل القراءة 40% ⇒ 28.9%، والنصوص فوق 45% ‏29 ⇒ 13، وقياس المدخلات الطويلة الـ16 لأول مرة (الأعلى 31.3%)، وبوابة تراجع في lesson:quality، وعشر كلمات مسرد بوسم متحقق منه؛ الهدف 25% لم يتحقق بعد.
+Sync batch: v235 · 2026-10-18 · حمل القراءة المعجمي (ADR-127): مرحلة المفردات تعرض مراسي الاسم التي يستعملها نص الدرس نفسه (549 مرسى في 92 درسًا) و30 بطاقة قبل القراءة؛ وسيط القراءة 28.9% ⇒ 22.6% فتحقق هدف 25%، والنصوص فوق 45% ‏13 ⇒ 4، وشُدّ حدّ التراجع إلى 23% و4.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

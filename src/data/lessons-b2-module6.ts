@@ -1801,6 +1801,7 @@ export const b2Module6Lessons: FullLesson[] = [
  ["anmerken", "يُبدي ملاحظة (تُذكر في المحضر)", "Ein Mitglied merkte die Frist an."],
  ["beweisen", "يُثبت بدليل", "Das Protokoll beweist das nicht."],
  ["die Audioaufnahme", "تسجيل صوتي لجلسة الاستماع", "Die Audioaufnahme wird am Freitag geprüft."],
+ ["manipulieren", "يتلاعب بنتيجة أو معلومة", "Niemand darf Ergebnisse manipulieren."],
  ]),
  },
  // b2-22: authored 2026-09-17 (batch b2-22)

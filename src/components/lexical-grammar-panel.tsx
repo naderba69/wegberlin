@@ -1,5 +1,6 @@
 import { BookKey, GitBranch } from "lucide-react";
 import { nounsByLesson, verbFramesByLesson } from "@/data/lexical-grammar-registry";
+import { splitNounAnchors } from "@/core/lesson/vocabulary-stage";
 import type { NounGrammarEntry } from "@/types/lexical-grammar";
 
 const genderLabels = {
@@ -31,8 +32,21 @@ function NounGrid({ nouns, baseline = false }: { nouns: NounGrammarEntry[]; base
   </div>;
 }
 
-export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
+/** Compact pre-reading list: one line per noun the reading text uses; case forms stay one click away. */
+function ReadingNounList({ nouns }: { nouns: NounGrammarEntry[] }) {
+  return <ul className="reading-noun-list">
+    {nouns.map((noun) => <li key={noun.id} data-lexical-id={noun.id}>
+      <details>
+        <summary><strong lang="de" dir="ltr">{noun.caseForms.nominative}</strong><span>{noun.meaningAr}</span>{noun.gender === "plural-only" && <em lang="de" dir="ltr">nur Plural</em>}<b lang="de" dir="ltr">{noun.plural.form ? `die ${noun.plural.form}` : "meist ohne Plural"}</b></summary>
+        <dl>{Object.entries(noun.caseForms).map(([caseName, form]) => <div key={caseName}><dt>{caseLabels[caseName as keyof typeof caseLabels]}</dt><dd lang="de" dir="ltr">{form}</dd></div>)}</dl>
+      </details>
+    </li>)}
+  </ul>;
+}
+
+export function LexicalGrammarPanel({ lessonId, readingText = "" }: { lessonId: string; readingText?: string }) {
   const nouns = nounsByLesson[lessonId] ?? [];
+  const { baseline, forReading, further } = splitNounAnchors(nouns, readingText);
   const frames = verbFramesByLesson[lessonId] ?? [];
   const level = lessonId.slice(0, 2).toUpperCase();
   if (!nouns.length && !frames.length) return null;
@@ -46,11 +60,16 @@ export function LexicalGrammarPanel({ lessonId }: { lessonId: string }) {
         <p>احفظ الاسم مع أداته وجمعه. افتح الحالات عندما تحتاج شكلًا داخل الجملة، لا تحفظ النهاية وحدها.</p>
       </div>
     </header>
-    <NounGrid nouns={nouns.slice(0, 4)} baseline />
-    {nouns.length > 4 && <details className="additional-noun-anchors">
-      <summary><span lang="de" dir="ltr">Weitere Zielnomen</span><span>أسماء هدف إضافية موثقة · {nouns.length - 4}</span></summary>
-      <p>افتحها بعد تثبيت المراسي الأربع الأولى حتى لا تتحول البداية إلى قائمة حفظ طويلة.</p>
-      <NounGrid nouns={nouns.slice(4)} />
+    <NounGrid nouns={baseline} baseline />
+    {forReading.length > 0 && <section className="reading-noun-anchors" aria-label="أسماء ستقابلها في نص القراءة">
+      <h4>ستقابلها في نص القراءة · {forReading.length}</h4>
+      <p>هذه الأسماء موجودة في نص هذا الدرس؛ مرّ عليها مع أداتها وجمعها قبل أن تقرأ، واضغط السطر لترى الحالات.</p>
+      <ReadingNounList nouns={forReading} />
+    </section>}
+    {further.length > 0 && <details className="additional-noun-anchors">
+      <summary><span lang="de" dir="ltr">Weitere Zielnomen</span><span>أسماء هدف إضافية موثقة · {further.length}</span></summary>
+      <p>افتحها بعد تثبيت المراسي الأولى حتى لا تتحول البداية إلى قائمة حفظ طويلة.</p>
+      <NounGrid nouns={further} />
     </details>}
 
     {frames.map((frame) => <article className="verb-frame-card" key={frame.id} data-frame-id={frame.id}>

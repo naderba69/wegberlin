@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v234";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v235";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -148,7 +148,11 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await waitForLearningReady(page);
   for(let step=0;step<2;step+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
   const roomNounPanel = page.locator(".lexical-grammar-panel");
-  await expect(roomNounPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 11");
+  // ADR-127: anchors the reading text uses are shown openly before the reading; only the rest stays collapsed.
+  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("ستقابلها في نص القراءة · 9");
+  await expect(roomNounPanel.locator(".reading-noun-list > li")).toHaveCount(9);
+  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("das Bett");
+  await expect(roomNounPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 2");
   await expect(roomNounPanel).toContainText("Plural Dativ: den Stühlen");
   for(let step=0;step<2;step+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
   const casePanel=page.locator('.meaning-first-case-panel[data-case-policy="meaning-first-case-v1"]');
@@ -173,12 +177,15 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const pluralOnlyPanel = page.locator(".lexical-grammar-panel");
   const familyExtras = pluralOnlyPanel.locator(".additional-noun-anchors");
-  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 8");
+  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 1");
+  const familyReading = pluralOnlyPanel.locator(".reading-noun-anchors");
+  await expect(familyReading).toContainText("ستقابلها في نص القراءة · 7");
+  await expect(familyReading).toContainText("die Eltern");
+  await expect(familyReading).toContainText("nur Plural");
+  await familyReading.locator("details").filter({ hasText:"die Eltern" }).locator("summary").click();
+  await expect(familyReading).toContainText("den Eltern");
   await familyExtras.getByText("Weitere Zielnomen").click();
-  await expect(familyExtras).toContainText("die Eltern");
-  await expect(familyExtras).toContainText("nur Plural");
-  await familyExtras.locator("details").filter({ hasText:"die Eltern" }).getByText(/Kasusformen ansehen/).click();
-  await expect(familyExtras).toContainText("den Eltern");
+  await expect(familyExtras).toContainText("die Tochter");
 
   await page.goto("/lernen/a1-10");
   await waitForLearningReady(page);
@@ -186,10 +193,10 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const foodNounPanel = page.locator(".lexical-grammar-panel");
   const foodExtras = foodNounPanel.locator(".additional-noun-anchors");
-  await expect(foodExtras).toContainText("أسماء هدف إضافية موثقة · 13");
+  await expect(foodExtras).toContainText("أسماء هدف إضافية موثقة · 3");
+  await expect(foodNounPanel.locator(".reading-noun-anchors")).toContainText("das Wasser");
   await foodExtras.getByText("Weitere Zielnomen").click();
   await expect(foodExtras).toContainText("der Apfel");
-  await expect(foodExtras).toContainText("das Wasser");
 
   await page.goto("/lernen/a1-22");
   await waitForLearningReady(page);
@@ -197,7 +204,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const bodyNounPanel = page.locator(".lexical-grammar-panel");
   const bodyExtras = bodyNounPanel.locator(".additional-noun-anchors");
-  await expect(bodyExtras).toContainText("أسماء هدف إضافية موثقة · 12");
+  await expect(bodyExtras).toContainText("أسماء هدف إضافية موثقة · 7");
   await bodyExtras.getByText("Weitere Zielnomen").click();
   await expect(bodyExtras).toContainText("das Auge");
   await expect(bodyExtras).toContainText("die Augen");
@@ -215,9 +222,10 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(a2LexicalPanel).toContainText("auf andere Rücksicht nehmen");
   await expect(a2LexicalPanel).toContainText("14 مراسي اسم و2 إطار فعل");
   const a2Extras = a2LexicalPanel.locator(".additional-noun-anchors");
-  await expect(a2Extras).toContainText("أسماء هدف إضافية موثقة · 10");
+  await expect(a2Extras).toContainText("أسماء هدف إضافية موثقة · 2");
+  await expect(a2LexicalPanel.locator(".reading-noun-anchors")).toContainText("das Treppenhaus");
   await a2Extras.getByText("Weitere Zielnomen").click();
-  await expect(a2Extras).toContainText("das Treppenhaus");
+  await expect(a2Extras).toContainText("die Haustür");
 
   await page.goto("/lernen/b1-02");
   await waitForLearningReady(page);
@@ -237,7 +245,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const biographyNouns = page.locator(".lexical-grammar-panel");
   const biographyExtras = biographyNouns.locator(".additional-noun-anchors");
-  await expect(biographyExtras).toContainText("أسماء هدف إضافية موثقة · 21");
+  await expect(biographyExtras).toContainText("أسماء هدف إضافية موثقة · 4");
   await biographyExtras.getByText("Weitere Zielnomen").click();
   await biographyExtras.locator("details").filter({hasText:"das Studium"}).getByText(/Kasusformen ansehen/).click();
   await expect(biographyExtras).toContainText("des Studiums");
@@ -1677,12 +1685,11 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await expect(lexicalPanel).toContainText("der Name");
       await expect(lexicalPanel).toContainText("die Namen");
       await expect(lexicalPanel).toContainText("nach dem Namen fragen");
-      const additionalNouns = lexicalPanel.locator(".additional-noun-anchors");
-      await expect(additionalNouns).not.toHaveAttribute("open", "");
-      await additionalNouns.getByText("Weitere Zielnomen").click();
-      await expect(additionalNouns).toHaveAttribute("open", "");
-      await expect(additionalNouns.locator(".noun-grammar-grid > article")).toHaveCount(1);
-      await expect(additionalNouns).toContainText("die Karte");
+      // ADR-127: the reading uses its only extra anchor, so it is shown openly and no closed disclosure remains.
+      const readingNouns = lexicalPanel.locator(".reading-noun-anchors");
+      await expect(readingNouns.locator(".reading-noun-list > li")).toHaveCount(1);
+      await expect(readingNouns).toContainText("die Karte");
+      await expect(lexicalPanel.locator(".additional-noun-anchors")).toHaveCount(0);
       await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
       await expect(lexicalPanel.locator("details").first()).toContainText("den Namen");
     }

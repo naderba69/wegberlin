@@ -82,6 +82,10 @@ export function lemmaCandidates(word: string, dictionary: LemmaDictionary): stri
     const rest = word.slice(prefix.length + 2);
     if (rest.endsWith("en") && rest.length >= MIN_BASE + 2) add(`${prefix}${rest}`);
   }
+  // Participle I used as an adjective or noun: wartende, entstehenden, lernenden → warten, entstehen, lernen
+  for (const ending of ["end", "ende", "enden", "endem", "ender", "endes"]) {
+    if (word.endsWith(ending) && word.length - ending.length >= MIN_BASE) add(`${word.slice(0, -ending.length)}en`);
+  }
   // Weak preterite and present endings → infinitive
   for (const ending of ["eten", "etet", "etest", "ete", "test", "ten", "tet", "te", "est", "st", "et", "t", "e"]) {
     if (word.endsWith(ending) && word.length - ending.length >= MIN_BASE) {

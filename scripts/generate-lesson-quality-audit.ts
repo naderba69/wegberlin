@@ -7,6 +7,8 @@ import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
 import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "../src/core/lesson/teaching-contract";
 import { LEXICAL_LOAD_POLICY, createLexicalLoadContext, measureLongInputLoad, measureReadingLoad, medianOf } from "../src/core/content-validation/lexical-load";
+import { VOCABULARY_STAGE_POLICY, vocabularyStageVisibleTexts } from "../src/core/lesson/vocabulary-stage";
+import { nounsByLesson, verbFramesByLesson } from "../src/data/lexical-grammar-registry";
 import { GERMAN_LEMMATIZER_POLICY } from "../src/core/german/lemmatizer";
 import { GERMAN_LEMMA_DICTIONARY_COUNTS, germanLemmaDictionary } from "../src/data/german-lemma-dictionary";
 import { CURRICULUM_PROPER_NAMES_POLICY, curriculumPersonNames, curriculumPlaceNames } from "../src/data/curriculum-proper-names";
@@ -33,10 +35,11 @@ const thresholds = {
   duplicateExplanationsInLessonMax: 0,
   maxRepeatedFinalSentence: 24,
   wordOrderingTilesMin: 3,
-  // ADR-126 ratchet: measured 2026-10-18 with lemmatized-lexical-load-v1. The pedagogical target
-  // stays a 25% median; these ceilings only forbid regression while the gap is closed in content.
-  readingLemmatizedMedianPctMax: 29,
-  readingLemmatizedOver45Max: 13,
+  // ADR-126 ratchet, tightened by ADR-127 (2026-10-18, lemmatized-lexical-load-v2 with
+  // reading-anchored-noun-visibility-v1): measured median 22.6% and 4 texts above 45%. The 25% median
+  // target is met; these ceilings forbid regression from the measured state.
+  readingLemmatizedMedianPctMax: 23,
+  readingLemmatizedOver45Max: 4,
   longInputUnknownPctMax: 32,
 };
 
@@ -191,11 +194,13 @@ for (const lesson of lessons) {
 // suffix stemmer. Proper names are counted apart, and the stop list is folded like the text (the
 // legacy STOP set above is unfolded, so für/über/möchten never matched it; kept for comparability).
 const lexicalContext = createLexicalLoadContext({ dictionary: germanLemmaDictionary, stopWords: STOP, properNames: [...curriculumPersonNames, ...curriculumPlaceNames], stem });
-const lemmatizedReading = measureReadingLoad(lessons, lexicalContext);
+const readingTextById = new Map(lessons.map((lesson) => [lesson.id, lesson.reading.textDe]));
+const vocabularyStage = (lessonId: string) => vocabularyStageVisibleTexts(nounsByLesson[lessonId] ?? [], verbFramesByLesson[lessonId] ?? [], readingTextById.get(lessonId) ?? "");
+const lemmatizedReading = measureReadingLoad(lessons, lexicalContext, vocabularyStage);
 const lemmatizedPcts = lemmatizedReading.map((row) => row.pct);
 const lemmatizedMedian = medianOf(lemmatizedPcts);
 const lemmatizedOver45 = lemmatizedPcts.filter((pct) => pct > 45).length;
-const longInputRows = measureLongInputLoad(extendedComprehensionTasks.map((task) => ({ id: task.id, level: task.level, text: extendedTaskText(task), glossary: task.glossary.map((entry) => entry.de) })), lessons, lexicalContext);
+const longInputRows = measureLongInputLoad(extendedComprehensionTasks.map((task) => ({ id: task.id, level: task.level, text: extendedTaskText(task), glossary: task.glossary.map((entry) => entry.de) })), lessons, lexicalContext, vocabularyStage);
 const longInputMax = Math.max(...longInputRows.map((row) => row.pct));
 
 const shares = positions.map((count) => (100 * count) / Math.max(1, itemTotal));
@@ -271,7 +276,7 @@ const report = {
     maxUnknownWordPct: Number(Math.max(...unknownLoad).toFixed(1)),
     measurementNote: "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. The fields at this level are the legacy suffix-stemmer figures, kept for comparability: that stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze), counts proper names as unknown and uses an unfolded stop list. Since ADR-126 the thresholded figure is `lemmatized` below.",
     lemmatized: {
-      policy: LEXICAL_LOAD_POLICY, lemmatizer: GERMAN_LEMMATIZER_POLICY, dictionary: GERMAN_LEMMA_DICTIONARY_COUNTS, properNamePolicy: CURRICULUM_PROPER_NAMES_POLICY,
+      policy: LEXICAL_LOAD_POLICY, vocabularyStagePolicy: VOCABULARY_STAGE_POLICY, lemmatizer: GERMAN_LEMMATIZER_POLICY, dictionary: GERMAN_LEMMA_DICTIONARY_COUNTS, properNamePolicy: CURRICULUM_PROPER_NAMES_POLICY,
       unit: "distinct content-word types per text",
       medianUnknownWordPct: lemmatizedMedian,
       medianByLevel: Object.fromEntries(LEVEL_ORDER.map((lvl) => [lvl, medianOf(lemmatizedReading.filter((row) => row.level === lvl).map((row) => row.pct))])),
@@ -280,7 +285,7 @@ const report = {
       properNamesExcluded: lemmatizedReading.reduce((sum, row) => sum + row.properNames, 0),
       ratchet: { medianPctMax: thresholds.readingLemmatizedMedianPctMax, over45Max: thresholds.readingLemmatizedOver45Max, pedagogicalTargetMedianPct: 25, targetMet: lemmatizedMedian <= 25 },
       worstLessons: [...lemmatizedReading].sort((a, b) => b.pct - a.pct).slice(0, 13).map((row) => ({ id: row.id, pct: row.pct, unknown: row.unknown.slice(0, 12) })),
-      note: "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high.",
+      note: "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high. v2 (ADR-127): irregular forms of stop-listed verbs count as function words through the dictionary only, and support includes what the vocabulary stage shows openly (the first four noun anchors, the anchors the lesson's own reading text uses, and every verb-preposition frame); anchors in the closed «Weitere Zielnomen» disclosure and case forms are not counted.",
     },
     legacyFoldMedianUnknownWordPct: Number(median(unknownLoadLegacy).toFixed(1)),
     worstLessons: [...unknownLoad.entries()].map(([index, pct]) => ({ id: lessons[index]!.id, pct: Number(pct.toFixed(1)) })).sort((a, b) => b.pct - a.pct).slice(0, 12),

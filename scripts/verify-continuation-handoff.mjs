@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v243" || stagingCacheName !== "dwnb-full-pack-staging-v242") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v244" || stagingCacheName !== "dwnb-full-pack-staging-v243") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v243"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v244"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -1012,6 +1012,15 @@ if (JSON.parse(read("reports/lesson-quality-audit.json")).reading?.lemmatized?.q
 if (read("reports/lexical-review-packet/question-support-noun-anchors.csv").trimEnd().split(/\r?\n/u).length !== 106) fail("ADR-135 question-support noun worksheet drifted");
 requireText(read("tests/unit/question-critical-support.test.ts"), "leaves no reading question or keyed answer depending on a never-explained word", "ADR-135 guard test");
 for (const text of ["ADR-135", "question-critical", "authored-review-pending"]) requireText(read("docs/adr/ADR-135-question-critical-reading-support.md"), text, "ADR-135");
+// ADR-136 (v244): the 105 ADR-135 anchors are source-verified against WiktionaryDE; the ADR-133 speaking panel has a browser proof.
+{
+  const qsRows = read("reports/lexical-review-packet/source-verification-question-support-nouns-2026-10-19.csv").trimEnd().split(/\r?\n/u);
+  if (qsRows.length !== 106 || !qsRows.slice(1).every((row) => /^"[^"]+","[^"]+","[^"]+","[^"]+","[^"]+","[^"]*","confirmed-wiktionary(-compound-head|-manual)?",/u.test(row))) fail("ADR-136 question-support source verification CSV drifted or holds an unconfirmed row");
+}
+requireText(read("tests/unit/question-critical-support.test.ts"), "keeps every question-support noun anchor source-verified against WiktionaryDE (v244)", "ADR-136 CSV-registry guard");
+requireText(read("tests/e2e/learning-integrity.spec.ts"), "speaking phrases for the next attempt stay hidden until a saved independent attempt and match the spoken scenario", "ADR-136 speaking phrases E2E");
+for (const text of ["ADR-136", "source-verified-agent", "not an independent German review", "The Arabic meanings of the 105 anchors are not verified here"]) requireText(read("docs/adr/ADR-136-question-support-source-verification-and-speaking-phrases-e2e.md"), text, "ADR-136");
+for (const text of ["ليس مراجعة بشرية ألمانية مستقلة", "المعاني العربية لم يُتحقق منها هنا"]) requireText(read("reports/lexical-review-packet/SOURCE_VERIFICATION_2026-10-19.md"), text, "ADR-136 Arabic summary");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");

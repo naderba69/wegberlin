@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v243 · 2026-10-19 · دعم الكلمات التي تحتاجها أسئلة القراءة (ADR-135، البند 402): قيس كل لفظ من النص يحتاجه سؤال أو جوابه المفتاح ولم يشرحه أي سطح سابق ولا المسرد، وكان 151 لفظًا في 75 درسًا (مثل statt و Sahne و Vertrag). صار 0 في المستويات الأربعة بـ105 مراسي أسماء تظهر في مرحلة المفردات قبل النص، و42 مدخل مسرد، و4 أسماء علم، وسقفه في تدقيق الجودة 0. نزل وسيط حمل القراءة إلى 20.3% والأثقل إلى 38.6%، دون حشو قائمة التوقف أو تعديل النصوص. للمراسي الجديدة ورقة مراجعة مستقلة غير موقعة، ونطاق P0-98 الأصلي باقٍ 1,297.
+Sync batch: v244 · 2026-10-19 · تحقق مصدري من مراسي أسماء دعم الأسئلة وإثبات متصفح للوحة عبارات المحادثة (ADR-136): قوبلت المراسي الـ105 التي أضافها ADR-135 بـWiktionary في الجنس والنصب والجر والجمع، فتطابقت كلها (82 مباشرة، 21 عبر الكلمة الأساسية للمركّب، 2 بمراجعة يدوية) دون أي تصحيح، واختبار يربط الملف بالسجل. وأضيف اختبار متصفح يثبت أن لوحة «عبارات للمحاولة التالية» لا تظهر قبل حفظ محاولة مستقلة، وأن فتحها يُسجَّل مساعدة بعد المحاولة. هذا تحقق الوكيل لا مراجعة بشرية، والمعاني العربية لم تُفحص.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

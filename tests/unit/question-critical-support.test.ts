@@ -6,7 +6,7 @@ import { CURRICULUM_STOP_WORDS, curriculumStem } from "@/core/german/curriculum-
 import { vocabularyStageVisibleTexts } from "@/core/lesson/vocabulary-stage";
 import { germanLemmaDictionary } from "@/data/german-lemma-dictionary";
 import { curriculumPersonNames, curriculumPlaceNames } from "@/data/curriculum-proper-names";
-import { nounGrammarEntries, nounsByLesson, verbFramesByLesson } from "@/data/lexical-grammar-registry";
+import { nounGrammarEntries, nounsByLesson, questionSupportNounEntries, verbFramesByLesson } from "@/data/lexical-grammar-registry";
 import type { FullLesson } from "@/types/lesson-content";
 
 // ADR-135: no reading question may depend on a word that nothing in the course ever explained.
@@ -52,6 +52,23 @@ describe("question-critical reading support (ADR-135)", () => {
     for (const [lessonId, nouns] of Object.entries(nounsByLesson)) {
       const lemmas = nouns.map((noun) => noun.lemma);
       expect(new Set(lemmas).size, lessonId).toBe(lemmas.length);
+    }
+  });
+
+  it("keeps every question-support noun anchor source-verified against WiktionaryDE (v244)", () => {
+    const lines = readFileSync("reports/lexical-review-packet/source-verification-question-support-nouns-2026-10-19.csv", "utf8").trimEnd().split("\n");
+    expect(lines[0]).toBe('"anchorId","lessonId","lemma","gender","nominative","plural","sourceResult","sourceNote","source","checkedOn"');
+    const rows = new Map(lines.slice(1).map((line) => {
+      const cells = line.slice(1, -1).split('","');
+      return [cells[0]!, cells] as const;
+    }));
+    expect(rows.size).toBe(questionSupportNounEntries.length);
+    for (const entry of questionSupportNounEntries) {
+      const cells = rows.get(entry.id);
+      expect(cells, entry.id).toBeDefined();
+      // Any edit to gender, article or plural must be re-verified, not silently drift from the evidence.
+      expect([cells![2], cells![3], cells![4], cells![5]], entry.id).toEqual([entry.lemma, entry.gender, entry.caseForms.nominative, entry.plural.form ?? ""]);
+      expect(cells![6], entry.id).toMatch(/^confirmed-wiktionary(-compound-head|-manual)?$/);
     }
   });
 

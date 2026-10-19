@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v243 · 2026-10-19 · دعم الكلمات التي تحتاجها أسئلة القراءة (ADR-135، البند 402): قيس كل لفظ من النص يحتاجه سؤال أو جوابه المفتاح ولم يشرحه أي سطح سابق ولا المسرد، وكان 151 لفظًا في 75 درسًا (مثل statt و Sahne و Vertrag). صار 0 في المستويات الأربعة بـ105 مراسي أسماء تظهر في مرحلة المفردات قبل النص، و42 مدخل مسرد، و4 أسماء علم، وسقفه في تدقيق الجودة 0. نزل وسيط حمل القراءة إلى 20.3% والأثقل إلى 38.6%، دون حشو قائمة التوقف أو تعديل النصوص. للمراسي الجديدة ورقة مراجعة مستقلة غير موقعة، ونطاق P0-98 الأصلي باقٍ 1,297.
+Sync batch: v244 · 2026-10-19 · تحقق مصدري من مراسي أسماء دعم الأسئلة وإثبات متصفح للوحة عبارات المحادثة (ADR-136): قوبلت المراسي الـ105 التي أضافها ADR-135 بـWiktionary في الجنس والنصب والجر والجمع، فتطابقت كلها (82 مباشرة، 21 عبر الكلمة الأساسية للمركّب، 2 بمراجعة يدوية) دون أي تصحيح، واختبار يربط الملف بالسجل. وأضيف اختبار متصفح يثبت أن لوحة «عبارات للمحاولة التالية» لا تظهر قبل حفظ محاولة مستقلة، وأن فتحها يُسجَّل مساعدة بعد المحاولة. هذا تحقق الوكيل لا مراجعة بشرية، والمعاني العربية لم تُفحص.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1848,3 +1848,17 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 
 - Noun anchors 1,297 → 1,402; covered candidates 1,385 → 1,503; `pendingHuman` unchanged at 89. Search entries 3,750 → 3,792. Curriculum gzip about +3 KB, ceiling unchanged.
 - IDEA_BACKLOG 402 closed. See `docs/adr/ADR-135-question-critical-reading-support.md`.
+
+## ADR-136 — Source verification of the ADR-135 noun anchors and an E2E proof for the speaking after-attempt phrases
+
+- Status: accepted, 2026-10-19 (v244)
+- Evidence tier: `source-verified-agent` (ADR-116) for the 105 anchors; not an independent German review.
+
+## Decision
+
+1. The 105 question-support noun anchors were compared with WiktionaryDE (`german_nouns` 1.2.5, CC BY-SA 4.0) on gender, accusative, dative and plural: 82 direct, 21 through the compound head, 2 checked by hand on de.wiktionary (Spanisch, Befragte), 0 mismatches. Evidence: `reports/lexical-review-packet/source-verification-question-support-nouns-2026-10-19.csv`; scripts `scripts/export-question-support-nouns.ts` and `scripts/verify-question-support-nouns.py`. A unit test ties the CSV to `questionSupportNounEntries`.
+2. A browser test on `independent-a1-10` proves the ADR-133 rule: the phrase panel is absent before a saved independent attempt, opens closed, shows the speaking-scenario set, and records one after-commit `hint` event. E2E 66 → 67 per project.
+
+## Consequences
+
+- Arabic meanings, the 42 glossary entries and the 4 proper names are outside this check. Reviewer cells stay empty. No audit item changes state. See `docs/adr/ADR-136-question-support-source-verification-and-speaking-phrases-e2e.md`.

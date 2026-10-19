@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v243 · 2026-10-19 · دعم الكلمات التي تحتاجها أسئلة القراءة (ADR-135، البند 402): قيس كل لفظ من النص يحتاجه سؤال أو جوابه المفتاح ولم يشرحه أي سطح سابق ولا المسرد، وكان 151 لفظًا في 75 درسًا (مثل statt و Sahne و Vertrag). صار 0 في المستويات الأربعة بـ105 مراسي أسماء تظهر في مرحلة المفردات قبل النص، و42 مدخل مسرد، و4 أسماء علم، وسقفه في تدقيق الجودة 0. نزل وسيط حمل القراءة إلى 20.3% والأثقل إلى 38.6%، دون حشو قائمة التوقف أو تعديل النصوص. للمراسي الجديدة ورقة مراجعة مستقلة غير موقعة، ونطاق P0-98 الأصلي باقٍ 1,297.
+Sync batch: v244 · 2026-10-19 · تحقق مصدري من مراسي أسماء دعم الأسئلة وإثبات متصفح للوحة عبارات المحادثة (ADR-136): قوبلت المراسي الـ105 التي أضافها ADR-135 بـWiktionary في الجنس والنصب والجر والجمع، فتطابقت كلها (82 مباشرة، 21 عبر الكلمة الأساسية للمركّب، 2 بمراجعة يدوية) دون أي تصحيح، واختبار يربط الملف بالسجل. وأضيف اختبار متصفح يثبت أن لوحة «عبارات للمحاولة التالية» لا تظهر قبل حفظ محاولة مستقلة، وأن فتحها يُسجَّل مساعدة بعد المحاولة. هذا تحقق الوكيل لا مراجعة بشرية، والمعاني العربية لم تُفحص.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

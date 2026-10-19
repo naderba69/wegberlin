@@ -803,7 +803,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | الملف | الصفوف (من دون الرأس) | الغرض |
 |---|---:|---|
 | \`noun-anchors.csv\` | ${nounRows.length} | ورقة عمل P0-98 للنطاق الأصلي: سجلات الاسم المؤلفة الـ1,297؛ راجع أداة التعريف/الجنس، التصريف، الجمع، والسياق الظاهر. |
-| \`question-support-noun-anchors.csv\` | ${questionSupportNounRows.length} | أسماء أضافها ADR-135 لأن سؤال قراءة أو جوابه يعتمد عليها ولم يشرحها سطح سابق ولا المسرد. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. |
+| \`question-support-noun-anchors.csv\` | ${questionSupportNounRows.length} | أسماء أضافها ADR-135 لأن سؤال قراءة أو جوابه يعتمد عليها ولم يشرحها سطح سابق ولا المسرد. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل كلها بـWiktionary في \`source-verification-question-support-nouns-2026-10-19.csv\` (v244)، وهذا تحقق مصدري لا مراجعة بشرية. |
 | \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |

@@ -52,6 +52,31 @@ test("model comparison stays locked before a draft and new independent writing k
   await expect.poll(async()=> (await stored(page)).supportUsageEvents.filter(e=>e.contentId==="independent-a1-1-writing:writing-model"&&e.afterCommit).length).toBe(1);
 });
 
+test("speaking phrases for the next attempt stay hidden until a saved independent attempt and match the spoken scenario",async({page})=>{
+  test.setTimeout(90_000);
+  await page.addInitScript(()=>{
+    const fakeStream={getTracks:()=>[{stop(){}}]};
+    Object.defineProperty(navigator,"mediaDevices",{configurable:true,value:{getUserMedia:async()=>fakeStream}});
+    class FakeMediaRecorder {state="inactive";mimeType="audio/webm";stream=fakeStream;ondataavailable:((event:{data:Blob})=>void)|null=null;onstop:(()=>void)|null=null;start(){this.state="recording"}stop(){this.state="inactive";this.ondataavailable?.({data:new Blob(["after-attempt-phrases-audio"],{type:this.mimeType})});this.onstop?.()}}
+    Object.defineProperty(window,"MediaRecorder",{configurable:true,value:FakeMediaRecorder});
+  });
+  // ADR-133: task 10 of A1 is a phone registration (spelling + two repetition requests), not the written message of its source lesson a1-03.
+  await seed(page,learner);await page.goto("/speaking?task=independent-a1-10");await expect(page.getByText("Buchstabieren Sie Ihren Nachnamen",{exact:false})).toBeVisible();
+  const phrases=page.locator('[data-after-attempt-phrases="independent-a1-10"]');await expect(phrases).toHaveCount(0);
+  await page.getByRole("button",{name:/تدرّبت، انتقل إلى التسجيل/}).click();await expect(page.locator(".recording-support-choice input")).not.toBeChecked();
+  await page.getByRole("button",{name:/ابدأ تسجيلًا قصيرًا/}).click();await expect(page.locator(".recording-visible-support")).toHaveCount(0);await expect(phrases).toHaveCount(0);
+  await page.getByRole("button",{name:/أنهِ التسجيل/}).click();const playback=page.getByLabel("تشغيل محاولة المحادثة");await expect(playback).toBeVisible();
+  await playback.evaluate(audio=>audio.dispatchEvent(new Event("ended")));await expect(page.getByText(/اكتمل الاستماع الذاتي/)).toBeVisible();await expect(phrases).toHaveCount(0);
+  await page.getByPlaceholder(/توقفت قبل السؤال/).fill("سأبطئ عند تهجئة اسم العائلة في المرة القادمة.");await page.getByRole("button",{name:/احفظ المحاولة بعد مراجعتها/}).click();
+  await expect.poll(async()=> (await stored(page)).speakingAttempts.filter(a=>a.taskId==="independent-a1-10-speaking").length).toBe(1);
+  expect((await stored(page)).speakingAttempts[0].selfReview).toMatchObject({listenedBack:true,supportVisibleDuringRecording:false});
+  await expect(phrases).toHaveCount(1);await expect(phrases).not.toHaveAttribute("open",/.*/);
+  expect((await stored(page)).supportUsageEvents.filter(e=>e.contentId==="independent-a1-10-speaking:after-attempt-phrases")).toHaveLength(0);
+  await phrases.locator("summary").click();await expect(phrases.locator("li")).toHaveCount(5);
+  await expect(phrases).toContainText("Noch einmal die Kursnummer, bitte.");await expect(phrases).toContainText("Ich möchte mich für den Kurs anmelden.");await expect(phrases).not.toContainText("Wie bitte? Welcher Raum?");
+  await expect.poll(async()=> (await stored(page)).supportUsageEvents.filter(e=>e.contentId==="independent-a1-10-speaking:after-attempt-phrases"&&e.afterCommit&&e.kind==="hint").length).toBe(1);
+});
+
 test("longer inputs start explicitly, keep listening text delayed, and finish without a silent loop",async({page})=>{
   await page.addInitScript(()=>{
     class FakeUtterance {text:string;lang="de-DE";rate=1;pitch=1;voice:unknown;onstart:(()=>void)|null=null;onend:(()=>void)|null=null;onerror:(()=>void)|null=null;constructor(text:string){this.text=text;}}

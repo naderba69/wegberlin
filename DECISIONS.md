@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v248 · 2026-10-19 · كلمات قائمة Goethe A1 الناقصة صارت تُدرَّس داخل دروس A1 (ADR-139): بموافقة المالك «نعم» رُفع سقف أمان المنهج من 1,275,000 إلى 1,309,000 (الحد الصلب 1,540,000، وسقف JS 2,125,000 بلا تغيير)، وأُضيفت 235 عبارة مفردات و245 بطاقة مراجعة و23 تمرين مطابقة و144 مرسى اسم تحققت كلها من WiktionaryDE. صار ظهور كلمات قائمة A1 في دروس A1 ‏98.8% بعد 67.2%، والمشروح صراحةً 82.8% بعد 51.5%، والناقص 8 كلمات بعد 220. المحتوى من كتابة الوكيل، لا مراجعة بشرية.
+Sync batch: v249 · 2026-10-19 · الصفحات لا تنكسر حين يفتحها المتعلم في يوم أو منطقة زمنية غير يوم البناء (ADR-140): ثلاث صفحات (/exams و/errors و/settings) كانت تحسب نصًا من ساعة الجهاز أو منطقته في أول رسم، فيختلف عن HTML المبني ويرمي React الخطأ #418 ويعيد بناء الصفحة كلها. أُصلحت الثلاث، وصار مرور الهاتف في فحص المتصفح يفتح كل الصفحات الـ321 بساعة بعد 400 يوم وبمنطقة UTC+14، فأي عودة تُسقط البوابة. لا تغيير في المحتوى.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1919,3 +1919,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Curriculum gzip is 1,287,127 of 1,309,000.
 - Still open under IDEA 407: the missing A2, B1 and B2 themes and the A1/A2/B1 mock exams. Another ceiling raise needs a new owner decision.
 - Details: `docs/adr/ADR-139-goethe-a1-core-vocabulary.md`.
+
+## ADR-140 — Audit every page as a learner far from the build day and zone
+
+- Status: accepted, 2026-10-19 (v249). Agent batch under the owner delegation «نفّذ ما يفيد المتعلم والصحيح».
+- Context: the static pages are built once and opened later in other zones. `/exams` (freshness status), `/errors` (weekly trend labels) and `/settings` (quiet-hours zone, quiet-active flag, AI capability rows) computed visible text from the device clock or zone during the first render. React then threw #418 and rebuilt the whole tree on the client. The 642-check browser audit missed it because it ran on the build day in the build zone.
+- Decision: the device values now arrive after hydration via `useDeviceDay` / `useDeviceMinute` / `useDeviceValue`. The mobile pass of `a11y:browser` runs with the clock +400 days and the `Pacific/Kiritimati` zone, so any recurrence fails `npm run check`. Pinned by `tests/unit/off-build-hydration.test.ts`.
+- Result: off-build probe over 321 routes, 3 → 0 failing. JS +493 B gzip. No content change. Pack generation v249.
+- Details: `docs/adr/ADR-140-off-build-hydration-audit.md`.

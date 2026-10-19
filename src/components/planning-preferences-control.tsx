@@ -1,6 +1,6 @@
 "use client";
-import {useMemo,useState}from"react";
-import {useDeviceValue} from "./device-value";
+import {useState}from"react";
+import {useDeviceMinute, useDeviceValue} from "./device-value";
 import{CalendarRange,Clock3,Gauge,Save,ShieldCheck}from"lucide-react";
 import{createLearningContract,isQuietHoursActive,latestLearningContract,QUIET_HOURS_POLICY}from"@/core/coach/learning-agreement";
 import type{LearnerGoal,LearningContract,PlanningIntensityPreset}from"@/types/learning";
@@ -11,7 +11,7 @@ const intensityPresets:Array<{value:PlanningIntensityPreset;label:string;de:stri
 const today=()=>{const d=new Date();return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`};
 export function PlanningPreferencesControl(){const{state,update}=useLearning();const latest=latestLearningContract(state.learningContracts);const[startsOn,setStartsOn]=useState("");
   const deviceToday=useDeviceValue(today,"");
-  const effectiveStartsOn=latest?.startsOn??(startsOn||deviceToday);const[goal,setGoal]=useState<LearnerGoal>(latest?.goal??state.profile?.goals?.[0]??"exam");const[minutes,setMinutes]=useState<LearningContract["dailyMinutes"]>(latest?.dailyMinutes??state.profile?.dailyMinutes??45);const[weekdays,setWeekdays]=useState<LearningContract["studyWeekdays"]>(latest?.studyWeekdays??[1,2,3,4,5,6]);const[message,setMessage]=useState("");const presetPlan=planningPresetMinutes(state);const timeZone=useMemo(()=>Intl.DateTimeFormat().resolvedOptions().timeZone||"UTC",[]);const quietActive=isQuietHoursActive(state.quietHours,new Date());
+  const effectiveStartsOn=latest?.startsOn??(startsOn||deviceToday);const[goal,setGoal]=useState<LearnerGoal>(latest?.goal??state.profile?.goals?.[0]??"exam");const[minutes,setMinutes]=useState<LearningContract["dailyMinutes"]>(latest?.dailyMinutes??state.profile?.dailyMinutes??45);const[weekdays,setWeekdays]=useState<LearningContract["studyWeekdays"]>(latest?.studyWeekdays??[1,2,3,4,5,6]);const[message,setMessage]=useState("");const presetPlan=planningPresetMinutes(state);const timeZone=useDeviceValue(()=>Intl.DateTimeFormat().resolvedOptions().timeZone||"UTC","UTC");const deviceMinute=useDeviceMinute();const quietActive=deviceMinute>0&&isQuietHoursActive(state.quietHours,new Date(deviceMinute*60_000));
   // تاريخ اليوم قيمة جهاز: تُملأ بعد الترطيب لا فيه، فلا يختلف أول رسم للعميل عن HTML الخادم.
 function toggleDay(day:1|2|3|4|5|6|7){setWeekdays(current=>current.includes(day)?current.filter(value=>value!==day):[...current,day].sort() as LearningContract["studyWeekdays"])}
 function saveContract(){try{const contract=createLearningContract({startsOn:effectiveStartsOn,goal,dailyMinutes:minutes,studyWeekdays:weekdays},latest,new Date());update(current=>({...current,learningContracts:[...current.learningContracts,contract]}));setMessage(`حُفظت المراجعة ${contract.revision}: من ${contract.startsOn} إلى ${contract.endsOn}. لم تتغير أدلة التعلم.`)}catch(error){setMessage(error instanceof Error?error.message:"تعذر حفظ العقد.")}}

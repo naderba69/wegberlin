@@ -3,11 +3,11 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `ef2915cc20b2cd61b69973844cfd7f8a43428e4bb39b3ebf19a86447422443d7`
+Content SHA-256: `7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc8f`
 
 ## Result
 
-`PASS` — 217 TSX files and 8334 opening JSX tags were scanned.
+`PASS` — 217 TSX files and 8335 opening JSX tags were scanned.
 
 | Contract | Count |
 |---|---:|
@@ -56,7 +56,7 @@ Content SHA-256: `ef2915cc20b2cd61b69973844cfd7f8a43428e4bb39b3ebf19a86447422443
 | src/app/review/page.tsx:83 | مراجعة SM-2 | Arabic host + plaintext boundary |
 | src/app/review/page.tsx:85 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
-| src/components/ai-provider-capability-matrix.tsx:57 | حد 0 USD | Arabic host + plaintext boundary |
+| src/components/ai-provider-capability-matrix.tsx:62 | حد 0 USD | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:44 | من A1 إلى B2 | Arabic host + plaintext boundary |
 | src/components/bilingual-search-view.tsx:77 | يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة. | Arabic host + plaintext boundary |
@@ -100,9 +100,9 @@ Content SHA-256: `ef2915cc20b2cd61b69973844cfd7f8a43428e4bb39b3ebf19a86447422443
 | src/components/error-notebook.tsx:118 | تظهر مرة واحدة بعد تأكيد العلاج المؤجل، ولا تضيف mastery عند مراجعتها. | Arabic host + plaintext boundary |
 | src/components/error-notebook.tsx:119 | يبقى داخل التطبيق وملف DWNB؛ الإخفاء يخص الطباعة فقط. | Arabic host + plaintext boundary |
 | src/components/evidence-achievements.tsx:8 | لا تُفتح بزيارة صفحة أو تكرار نقرة، ولا تضيف mastery أو شهادة. | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:68 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:123 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
-| src/components/exam-hub.tsx:169 | بوابة B2 الداخلية | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:72 | ملفا Goethe وtelc منفصلان في البنية والتوقيت والنقاط وقاعدة النجاح. كل تدريب مرتبط بمصدر رسمي وإصدار تحقق. | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:127 | بيان الصوت يدقق كل مهمة وكل مقطع؛ غير المغطى يعمل عبر Browser TTS. المحاكاة موجهة ومحفوظة محليًا، وليست جلسة م | Arabic host + plaintext boundary |
+| src/components/exam-hub.tsx:173 | بوابة B2 الداخلية | Arabic host + plaintext boundary |
 | src/components/exam-print-tools.tsx:1 | ورقة تدريب محلية غير رسمية · Goethe وtelc لا يختلطان. | Arabic host + plaintext boundary |
 | src/components/grammar-progression-map.tsx:8 | 24 قاعدة محورية مرتبة بعلاقات تدريس فعلية. الأسهم تعني «تعلم هذا أولًا»، لا حكم CEFR رسميًا ولا إتقانًا بالتصف | Arabic host + plaintext boundary |
 | src/components/hybrid-writing-review.tsx:33 | ليس تقييم مدرس رسميًا ولا حكم CEFR. | Arabic host + plaintext boundary |

@@ -48,16 +48,28 @@ function pageRoutes() {
     .sort();
 }
 
+// The pages are prerendered once and opened days or weeks later in other time zones. Any text a
+// client component computes from the device clock during its first render then differs from the
+// built HTML, and React throws #418 and rebuilds the whole tree on the client. Real-clock runs
+// never see it, because the build and the audit happen on the same day in the same zone
+// (2026-10-19: /errors, /exams and /settings all failed this way and the audit stayed green).
+// So the mobile pass opens every page as a learner far from the build: device clock 400 days
+// ahead and the UTC+14 zone. The desktop pass keeps the real clock and zone.
+const OFF_BUILD_DEVICE = { timezoneId: "Pacific/Kiritimati", clockOffsetDays: 400 };
+const OFF_BUILD_VIEWPORTS = new Set(["mobile"]);
+
 async function auditPage(browser, route, viewportName) {
-  const context = await browser.newContext({ viewport: VIEWPORTS[viewportName], locale: "ar-TN", reducedMotion: "reduce" });
+  const offBuild = OFF_BUILD_VIEWPORTS.has(viewportName);
+  const context = await browser.newContext({ viewport: VIEWPORTS[viewportName], locale: "ar-TN", reducedMotion: "reduce", ...(offBuild ? { timezoneId: OFF_BUILD_DEVICE.timezoneId } : {}) });
   const page = await context.newPage();
+  if (offBuild) await page.clock.setFixedTime(new Date(Date.now() + OFF_BUILD_DEVICE.clockOffsetDays * 86_400_000));
   const consoleErrors = [];
   const pageErrors = [];
   page.on("console", (message) => {
     if (message.type() === "error" && !IGNORED_CONSOLE.some((pattern) => pattern.test(message.text()))) consoleErrors.push(message.text().slice(0, 200));
   });
   page.on("pageerror", (error) => pageErrors.push(String(error.message).slice(0, 200)));
-  const record = { route, viewport: viewportName, status: null, loadError: null, consoleErrors, pageErrors, violations: [], contrast: [] };
+  const record = { route, viewport: viewportName, device: offBuild ? `off-build (${OFF_BUILD_DEVICE.timezoneId}, +${OFF_BUILD_DEVICE.clockOffsetDays} d)` : "build-day", status: null, loadError: null, consoleErrors, pageErrors, violations: [], contrast: [] };
   try {
     const response = await page.goto(BASE + route, { waitUntil: "networkidle", timeout: 90_000 });
     record.status = response ? response.status() : null;
@@ -149,6 +161,7 @@ async function runAudit() {
     version: "browser-accessibility-audit-v1",
     base: "production build served locally",
     viewports: requested,
+    offBuildDevice: { viewports: [...OFF_BUILD_VIEWPORTS].filter((v) => requested.includes(v)), ...OFF_BUILD_DEVICE },
     pages: routes.length,
     checks: jobs.length,
     failingChecks: failing.length,
@@ -156,7 +169,7 @@ async function runAudit() {
     consoleErrorChecks: records.filter((r) => r.consoleErrors.length).length,
     pageErrorChecks: records.filter((r) => r.pageErrors.length).length,
     violationsByRule: byRule,
-    failing: failing.map((r) => ({ route: r.route, viewport: r.viewport, status: r.status, loadError: r.loadError, consoleErrors: r.consoleErrors, pageErrors: r.pageErrors, serious: r.violations.filter((v) => v.impact === "serious" || v.impact === "critical") })),
+    failing: failing.map((r) => ({ route: r.route, viewport: r.viewport, device: r.device, status: r.status, loadError: r.loadError, consoleErrors: r.consoleErrors, pageErrors: r.pageErrors, serious: r.violations.filter((v) => v.impact === "serious" || v.impact === "critical") })),
     minorOrModerateViolations: records.reduce((n, r) => n + r.violations.filter((v) => v.impact !== "serious" && v.impact !== "critical").length, 0),
     contrastFailures: records.flatMap((r) => r.contrast.map((c) => ({ route: r.route, viewport: r.viewport, ...c }))).sort((a, b) => (a.ratio ?? 0) - (b.ratio ?? 0)).slice(0, 200),
   };

@@ -6,6 +6,13 @@
     "desktop",
     "mobile"
   ],
+  "offBuildDevice": {
+    "viewports": [
+      "mobile"
+    ],
+    "timezoneId": "Pacific/Kiritimati",
+    "clockOffsetDays": 400
+  },
   "pages": 321,
   "checks": 642,
   "failingChecks": 0,

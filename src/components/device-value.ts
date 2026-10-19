@@ -37,3 +37,26 @@ const MOUNT_EPOCH = typeof window === "undefined" ? 0 : Date.now();
 export function useDeviceEpoch(fallback = 0): number {
   return useSyncExternalStore(subscribe, () => MOUNT_EPOCH, () => fallback);
 }
+
+/** اليوم المحلي للجهاز بصيغة YYYY-MM-DD. */
+function readDeviceDay(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+/**
+ * اليوم المحلي بعد الترطيب، و"" على الخادم وفي أول رسم.
+ *
+ * لماذا: الصفحات تُبنى مرة واحدة ثم تُفتح بعد أيام أو أسابيع وفي مناطق زمنية أخرى. أي نص يُحسب
+ * من `new Date()` أثناء الرسم (أسابيع منحنى الأخطاء، حالة صلاحية ملف الامتحان) يختلف عندها بين
+ * HTML المبني وأول رسم للعميل ⇒ React #418 ويُعاد بناء الشجرة كلها على العميل (2026-10-19).
+ * القيمة نص ثابت طوال اليوم، فلا تُعيد `useSyncExternalStore` الرسم بلا توقف كما فعلت `Date.now()`.
+ */
+export function useDeviceDay(): string {
+  return useSyncExternalStore(subscribe, readDeviceDay, () => "");
+}
+
+/** الدقيقة الحالية للجهاز (رقم ثابت خلال الدقيقة) بعد الترطيب، و0 على الخادم وفي أول رسم. */
+export function useDeviceMinute(): number {
+  return useSyncExternalStore(subscribe, () => Math.floor(Date.now() / 60_000), () => 0);
+}

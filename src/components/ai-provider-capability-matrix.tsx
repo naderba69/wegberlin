@@ -3,6 +3,7 @@
 import { Bot, CheckCircle2, CircleSlash2, Gauge, ShieldCheck, TriangleAlert } from "lucide-react";
 import { AI_PROVIDER_CAPABILITY_POLICY, getAIProviderCapabilityMatrix, type AIFeatureCapability, type AIProviderFeatureId } from "@/core/ai/provider-capabilities";
 import type { AIProvider } from "@/types/learning";
+import { useDeviceDay } from "./device-value";
 
 const featureLabel: Record<AIProviderFeatureId, string> = {
   tutor: "Tutor · سؤال المرشد",
@@ -28,7 +29,10 @@ export function AIProviderCapabilityMatrix({ provider, model, hasSessionCredenti
   model: string;
   hasSessionCredential: boolean;
 }) {
-  const rows = getAIProviderCapabilityMatrix({ selectedProvider: provider, selectedModel: model, hasSessionCredential });
+  // الحظر والإتاحة يتبعان حداثة المصدر بتاريخ الجهاز، فتُبنى الصفوف بعد الترطيب فقط
+  // (البناء الثابت بتاريخ آخر كان يولّد React #418 حين تتقادم المصادر).
+  const deviceDay = useDeviceDay();
+  const rows = deviceDay ? getAIProviderCapabilityMatrix({ selectedProvider: provider, selectedModel: model, hasSessionCredential }) : [];
   return <section className="settings-card ai-capability-card" data-capability-policy={AI_PROVIDER_CAPABILITY_POLICY}>
     <div className="settings-title"><span><Gauge size={20} /></span><div><h2>قدرات المزودات وحدودها</h2><p>لوحة موحدة للميزة، الخصوصية، المصدر، والحصة المتاحة معلوماتيًا — دون اختلاق عداد لحظي.</p></div></div>
     <div className="ai-capability-legend">
@@ -36,6 +40,7 @@ export function AIProviderCapabilityMatrix({ provider, model, hasSessionCredenti
       <span><TriangleAlert size={14} /> محدود أو يحتاج إعدادًا</span>
       <span><CircleSlash2 size={14} /> غير موصول</span>
     </div>
+    {!deviceDay && <p className="ai-capability-pending" role="status">نفحص حداثة المصادر بتاريخ جهازك…</p>}
     <div className="ai-capability-grid">
       {rows.map((row) => <article key={row.id} data-provider-capability={row.id} className={row.selected ? "selected" : ""}>
         <header>

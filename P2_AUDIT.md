@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v248 · 2026-10-19 · كلمات قائمة Goethe A1 الناقصة صارت تُدرَّس داخل دروس A1 (ADR-139): بموافقة المالك «نعم» رُفع سقف أمان المنهج من 1,275,000 إلى 1,309,000 (الحد الصلب 1,540,000، وسقف JS 2,125,000 بلا تغيير)، وأُضيفت 235 عبارة مفردات و245 بطاقة مراجعة و23 تمرين مطابقة و144 مرسى اسم تحققت كلها من WiktionaryDE. صار ظهور كلمات قائمة A1 في دروس A1 ‏98.8% بعد 67.2%، والمشروح صراحةً 82.8% بعد 51.5%، والناقص 8 كلمات بعد 220. المحتوى من كتابة الوكيل، لا مراجعة بشرية.
+Sync batch: v249 · 2026-10-19 · الصفحات لا تنكسر حين يفتحها المتعلم في يوم أو منطقة زمنية غير يوم البناء (ADR-140): ثلاث صفحات (/exams و/errors و/settings) كانت تحسب نصًا من ساعة الجهاز أو منطقته في أول رسم، فيختلف عن HTML المبني ويرمي React الخطأ #418 ويعيد بناء الصفحة كلها. أُصلحت الثلاث، وصار مرور الهاتف في فحص المتصفح يفتح كل الصفحات الـ321 بساعة بعد 400 يوم وبمنطقة UTC+14، فأي عودة تُسقط البوابة. لا تغيير في المحتوى.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

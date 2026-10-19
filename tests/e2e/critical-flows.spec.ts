@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v242";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v243";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -149,8 +149,11 @@ test("library and exam hubs render their completed content contracts", async ({ 
   for(let step=0;step<2;step+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
   const roomNounPanel = page.locator(".lexical-grammar-panel");
   // ADR-127: anchors the reading text uses are shown openly before the reading; only the rest stays collapsed.
-  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("ستقابلها في نص القراءة · 9");
-  await expect(roomNounPanel.locator(".reading-noun-list > li")).toHaveCount(9);
+  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("ستقابلها في نص القراءة · 11");
+  await expect(roomNounPanel.locator(".reading-noun-list > li")).toHaveCount(11);
+  // ADR-135: the reading question keys "Eine Tasche" and "Unter einem Buch", so both nouns are shown before the text.
+  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("die Tasche");
+  await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("das Buch");
   await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("das Bett");
   await expect(roomNounPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 2");
   await expect(roomNounPanel).toContainText("Plural Dativ: den Stühlen");
@@ -169,7 +172,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   const a1GapFramePanel = page.locator(".lexical-grammar-panel");
   await expect(a1GapFramePanel.locator(".verb-frame-card")).toHaveCount(2);
   await expect(a1GapFramePanel).toContainText("mit der Karte bezahlen");
-  await expect(a1GapFramePanel).toContainText("15 مراسي اسم و2 إطار فعل");
+  await expect(a1GapFramePanel).toContainText("16 مراسي اسم و2 إطار فعل");
 
   await page.goto("/lernen/a1-04");
   await waitForLearningReady(page);
@@ -220,7 +223,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(a2LexicalPanel).toContainText("die Hausordnung");
   await expect(a2LexicalPanel).toContainText("sich an die Hausordnung halten");
   await expect(a2LexicalPanel).toContainText("auf andere Rücksicht nehmen");
-  await expect(a2LexicalPanel).toContainText("14 مراسي اسم و2 إطار فعل");
+  await expect(a2LexicalPanel).toContainText("15 مراسي اسم و2 إطار فعل");
   const a2Extras = a2LexicalPanel.locator(".additional-noun-anchors");
   await expect(a2Extras).toContainText("أسماء هدف إضافية موثقة · 2");
   await expect(a2LexicalPanel.locator(".reading-noun-anchors")).toContainText("das Treppenhaus");
@@ -237,7 +240,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(b1LexicalPanel).toContainText("die Entscheidung");
   await expect(b1LexicalPanel).toContainText("sich für eine Möglichkeit entscheiden");
   await expect(b1LexicalPanel).toContainText("sich gegen eine Möglichkeit entscheiden");
-  await expect(b1LexicalPanel).toContainText("7 مراسي اسم و2 إطار فعل");
+  await expect(b1LexicalPanel).toContainText("9 مراسي اسم و2 إطار فعل");
 
   await page.goto("/lernen/b1-01");
   await waitForLearningReady(page);
@@ -289,7 +292,7 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   test.setTimeout(90_000);
   await page.goto("/search");
   await expect(page.getByRole("heading", { name: /ابحث عن العبارة/ })).toBeVisible();
-  await expect(page.getByText(/3[.,]?750/)).toBeVisible();
+  await expect(page.getByText(/3[.,]?792/)).toBeVisible();
   const grammarGlossary=page.locator('[data-grammar-glossary-policy="bilingual-grammar-glossary-v1"]');
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();

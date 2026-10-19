@@ -11,7 +11,7 @@ import {
   summarizeP099ExclusionEvidenceReferences,
   protectedLexicalReviewFields,
 } from "../src/core/content-validation/lexical-review-packet";
-import { nounGrammarEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
+import { originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
 import { reviewCsvOverwriteBlocker } from "../src/core/content-validation/review-packet-safety";
 
@@ -28,7 +28,7 @@ if (!answer.ok) throw new Error(`Answer integrity audit failed:\n${answer.issues
 if (!coverage.ok) throw new Error(`Objective coverage audit failed:\n${coverage.issues.slice(0, 100).join("\n")}`);
 if (lexical.issues.length) throw new Error(`Lexical target decision audit failed:\n${lexical.issues.join("\n")}`);
 assertOriginalP098NounReviewScope(
-  nounGrammarEntries,
+  originalP098NounEntries,
   lexical.nounRows.filter((row) => row.status === "pending-human").length,
 );
 assertOriginalP099QualityTargetDistribution(verbPrepositionFrames);
@@ -74,7 +74,8 @@ try {
 }
 const lexicalReviewPacketArtifacts = buildLexicalReviewPacketArtifacts({
   audit: lexical,
-  nounEntries: nounGrammarEntries,
+  nounEntries: originalP098NounEntries,
+  questionSupportNounEntries,
   verbFrames: verbPrepositionFrames,
   contentHash,
   stageOneNamedReferenceCount,

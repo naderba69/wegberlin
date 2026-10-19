@@ -7,13 +7,13 @@ const articleByGender = { masculine: "der", feminine: "die", neuter: "das", "plu
 const accusativeArticleByGender = { masculine: "den", feminine: "die", neuter: "das", "plural-only": "die" } as const;
 const dativeArticleByGender = { masculine: "dem", feminine: "der", neuter: "dem", "plural-only": "den" } as const;
 
-function nounEntries(lessonId: string, seeds: readonly NounSeed[]): NounGrammarEntry[] {
+function nounEntries(lessonId: string, seeds: readonly NounSeed[], firstIndex = 0): NounGrammarEntry[] {
   return seeds.map(([lemma, gender, plural, meaningAr, obliqueSingular, dativeForm, pluralDativeForm], index) => {
     const article = articleByGender[gender];
     const oblique = obliqueSingular ?? lemma;
     const dative = dativeForm ?? oblique;
     return {
-      id: `${lessonId}-noun-${index + 1}`,
+      id: `${lessonId}-noun-${firstIndex + index + 1}`,
       lessonId,
       lemma,
       article,
@@ -120,7 +120,32 @@ const additionalFrameSeeds: Partial<Record<string, readonly FrameSeed[]>> = {
   "a1-11": [{ infinitive: "bezahlen", preposition: "mit", governedCase: "dative", chunkDe: "mit der Karte bezahlen", meaningAr: "يدفع بالبطاقة", exampleDe: "An der Kasse bezahle ich mit der Karte.", contrastAr: "وسيلة الدفع تأتي بعد mit + Dativ: mit der Karte، لا mit die Karte." }],
 };
 
-export const a1NounGrammarEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, [...seeds, ...(additionalNounSeeds[lessonId] ?? [])]));
+const coreA1NounEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, [...seeds, ...(additionalNounSeeds[lessonId] ?? [])]));
+
+/**
+ * ADR-135: nouns a reading question or its keyed answer depends on, which no earlier surface and no
+ * glossary had explained. Numbered after every existing entry of the lesson, so no stored ID moves.
+ * They sit outside the original P0-98 review scope and carry their own review rows.
+ */
+const questionSupportNounSeeds: Partial<Record<string, readonly NounSeed[]>> = {
+  "a1-02": [["Spanisch", "neuter", null, "اللغة الإسبانية"]],
+  "a1-05": [["Nummer", "feminine", "Nummern", "الرقم"]],
+  "a1-07": [["Zug", "masculine", "Züge", "القطار"]],
+  "a1-09": [["Wortkarte", "feminine", "Wortkarten", "بطاقة الكلمات"]],
+  "a1-10": [["Tomate", "feminine", "Tomaten", "الطماطم"]],
+  "a1-11": [["Person", "feminine", "Personen", "الشخص"]],
+  "a1-12": [["Tomatensuppe", "feminine", "Tomatensuppen", "حساء الطماطم"], ["Gemüsesuppe", "feminine", "Gemüsesuppen", "حساء الخضار"], ["Glas", "neuter", "Gläser", "الكأس"], ["Sahne", "feminine", null, "القشدة"]],
+  "a1-14": [["Tasche", "feminine", "Taschen", "الحقيبة"], ["Buch", "neuter", "Bücher", "الكتاب"]],
+  "a1-16": [["Wanderung", "feminine", "Wanderungen", "نزهة المشي"]],
+  "a1-17": [["Stadtpark", "masculine", "Stadtparks", "حديقة المدينة العامة"]],
+  "a1-18": [["Freitagabend", "masculine", "Freitagabende", "مساء الجمعة"]],
+  "a1-20": [["Süden", "masculine", null, "الجنوب"], ["Sprachschule", "feminine", "Sprachschulen", "مدرسة اللغات"]],
+  "a1-22": [["Fieber", "neuter", null, "الحمّى"]],
+  "a1-24": [["Lernnotiz", "feminine", "Lernnotizen", "ملاحظة التعلّم"]],
+};
+
+export const a1QuestionSupportNounEntries = Object.entries(questionSupportNounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, seeds ?? [], coreA1NounEntries.filter((entry) => entry.lessonId === lessonId).length));
+export const a1NounGrammarEntries = [...coreA1NounEntries, ...a1QuestionSupportNounEntries];
 export const a1VerbPrepositionFrames: VerbPrepositionFrame[] = Object.entries(frameSeeds).flatMap(([lessonId, frame]) =>
   [frame, ...(additionalFrameSeeds[lessonId] ?? [])].map((item, index) => ({
     id: `${lessonId}-verb-frame-${index + 1}`,

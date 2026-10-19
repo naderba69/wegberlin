@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "6d27e4987c381e85a313d711d3a9b021dfcf4ca8a1b37faca3f27090e5dc2035",
+  "contentSha256": "90dd0709e10ce946c0f03fc768d10a9ce273a0c7d5bd98302b89e0298486ff1b",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -16,9 +16,10 @@
     "duplicateExplanationsInLessonMax": 0,
     "maxRepeatedFinalSentence": 24,
     "wordOrderingTilesMin": 3,
-    "readingLemmatizedMedianPctMax": 22,
+    "readingLemmatizedMedianPctMax": 21,
     "readingLemmatizedOver45Max": 0,
-    "readingLemmatizedMaxPctMax": 42,
+    "readingLemmatizedMaxPctMax": 39,
+    "readingQuestionCriticalUnsupportedMax": 0,
     "longInputUnknownPctMax": 32
   },
   "multipleChoice": {
@@ -120,12 +121,12 @@
   },
   "reading": {
     "definition": "prior-sequence-support-v3 · current phrases but no future lessons/current glossary · not learner mastery",
-    "legacyCumulativeMedianUnknownWordPct": 22.5,
-    "medianUnknownWordPct": 38.8,
+    "legacyCumulativeMedianUnknownWordPct": 22.1,
+    "medianUnknownWordPct": 38.6,
     "medianByLevel": {
       "A1": 42.2,
-      "A2": 35.3,
-      "B1": 39.8,
+      "A2": 33.8,
+      "B1": 38.8,
       "B2": 37.9
     },
     "lessonsOver45Pct": 23,
@@ -143,45 +144,39 @@
       },
       "properNamePolicy": "curriculum-proper-names-v1",
       "unit": "distinct content-word types per text",
-      "medianUnknownWordPct": 22,
+      "medianUnknownWordPct": 20,
       "medianByLevel": {
-        "A1": 27.5,
-        "A2": 19.6,
-        "B1": 20.8,
-        "B2": 23.1
+        "A1": 23.4,
+        "A2": 17.9,
+        "B1": 17.7,
+        "B2": 21.2
       },
       "lessonsOver45Pct": 0,
-      "maxUnknownWordPct": 41.3,
-      "properNamesExcluded": 136,
+      "maxUnknownWordPct": 38.6,
+      "properNamesExcluded": 140,
       "ratchet": {
-        "medianPctMax": 22,
+        "medianPctMax": 21,
         "over45Max": 0,
-        "maxPctMax": 42,
+        "maxPctMax": 39,
         "pedagogicalTargetMedianPct": 25,
         "targetMet": true
       },
+      "questionCritical": {
+        "definition": "Words of the reading that also occur in a question prompt or its keyed answer and that no earlier lesson, no current phrase, card or vocabulary-stage anchor, and no entry of the reading's own glossary ever explained (ADR-135).",
+        "unsupported": 0,
+        "byLevel": {
+          "A1": 0,
+          "A2": 0,
+          "B1": 0,
+          "B2": 0
+        },
+        "max": 0,
+        "rows": []
+      },
       "worstLessons": [
         {
-          "id": "a2-16",
-          "pct": 41.3,
-          "unknown": [
-            "bauarbeiten",
-            "hafenstrasse",
-            "gesperrt",
-            "buslinien",
-            "hauptbahnhof",
-            "route",
-            "entfallen",
-            "voruebergehend",
-            "empfiehlt",
-            "strassenbahnlinie",
-            "einzuplanen",
-            "busverkehr"
-          ]
-        },
-        {
           "id": "a1-02",
-          "pct": 40.9,
+          "pct": 38.6,
           "unknown": [
             "sitzen",
             "zusammen",
@@ -189,17 +184,17 @@
             "faehrt",
             "jeden",
             "zum",
-            "spanisch",
             "japan",
             "arbeitet",
             "drei",
             "lernen",
-            "weil"
+            "weil",
+            "leben"
           ]
         },
         {
           "id": "b2-07",
-          "pct": 37.1,
+          "pct": 35,
           "unknown": [
             "bezirk",
             "leerstehenden",
@@ -216,39 +211,21 @@
           ]
         },
         {
-          "id": "a1-05",
-          "pct": 36.8,
+          "id": "a2-16",
+          "pct": 34.9,
           "unknown": [
-            "fuellt",
-            "kontaktkarten",
-            "zwoelften",
-            "oktober",
-            "private",
-            "nummer",
-            "offene",
-            "trainer",
-            "kontrolliert",
-            "nein",
-            "ihrer",
-            "steht"
-          ]
-        },
-        {
-          "id": "b1-09",
-          "pct": 34.5,
-          "unknown": [
-            "mittelgrosse",
-            "befahrenen",
-            "anwohnerinnen",
-            "sicherere",
-            "uebergaenge",
-            "geschaeftsleute",
-            "befuerchten",
-            "verwaltung",
-            "viermonatigen",
-            "pilotversuch",
-            "umgebaut",
-            "lieferzonen"
+            "bauarbeiten",
+            "hafenstrasse",
+            "gesperrt",
+            "hauptbahnhof",
+            "entfallen",
+            "voruebergehend",
+            "empfiehlt",
+            "strassenbahnlinie",
+            "einzuplanen",
+            "busverkehr",
+            "staedtischen",
+            "webseite"
           ]
         },
         {
@@ -287,60 +264,6 @@
           ]
         },
         {
-          "id": "b1-02",
-          "pct": 34.2,
-          "unknown": [
-            "bekam",
-            "jungen",
-            "technikfirma",
-            "interessantere",
-            "zunaechst",
-            "befristet",
-            "bisherige",
-            "kaum",
-            "weiterbildung",
-            "entwicklung",
-            "finanzielle",
-            "sicherheit"
-          ]
-        },
-        {
-          "id": "a1-12",
-          "pct": 34,
-          "unknown": [
-            "cafe",
-            "linden",
-            "bietet",
-            "gibt",
-            "tomatensuppe",
-            "gemuesesuppe",
-            "beide",
-            "ihn",
-            "haehnchen",
-            "kartoffeln",
-            "bekommt",
-            "glas"
-          ]
-        },
-        {
-          "id": "b2-01",
-          "pct": 34,
-          "unknown": [
-            "diskussion",
-            "smartphones",
-            "unterricht",
-            "extreme",
-            "positionen",
-            "fordert",
-            "unterbrechen",
-            "betrachtet",
-            "grundsaetzlich",
-            "moderne",
-            "lernwerkzeuge",
-            "beide"
-          ]
-        },
-        {
           "id": "a2-08",
           "pct": 33.3,
           "unknown": [
@@ -359,26 +282,62 @@
           ]
         },
         {
-          "id": "b2-02",
-          "pct": 33,
+          "id": "a2-17",
+          "pct": 32.4,
           "unknown": [
-            "aufeinander",
-            "befuerworter",
-            "arbeitswochen",
-            "motivation",
-            "produktivitaet",
-            "kritiker",
-            "dieselbe",
-            "arbeitsmenge",
-            "moeglicherweise",
-            "verdichtet",
-            "dieselben",
-            "erledigen"
+            "digitale",
+            "gemerkt",
+            "konkreten",
+            "grund",
+            "oeffnet",
+            "deaktiviert",
+            "unwichtige",
+            "konzentrieren",
+            "soziale",
+            "apps",
+            "startbildschirm",
+            "abgebildeten"
+          ]
+        },
+        {
+          "id": "a1-05",
+          "pct": 31.6,
+          "unknown": [
+            "fuellt",
+            "kontaktkarten",
+            "zwoelften",
+            "oktober",
+            "private",
+            "offene",
+            "trainer",
+            "kontrolliert",
+            "nein",
+            "ihrer",
+            "statt",
+            "sofort"
+          ]
+        },
+        {
+          "id": "b2-01",
+          "pct": 31.1,
+          "unknown": [
+            "diskussion",
+            "smartphones",
+            "unterricht",
+            "extreme",
+            "positionen",
+            "fordert",
+            "unterbrechen",
+            "betrachtet",
+            "grundsaetzlich",
+            "moderne",
+            "lernwerkzeuge",
+            "beide"
           ]
         },
         {
           "id": "a2-02",
-          "pct": 32.7,
+          "pct": 30.8,
           "unknown": [
             "wagen",
             "voll",
@@ -391,7 +350,58 @@
             "kamera",
             "gleichzeitig",
             "ihren",
-            "gefunden"
+            "informationsschalter"
+          ]
+        },
+        {
+          "id": "a1-01",
+          "pct": 30.6,
+          "unknown": [
+            "beginnt",
+            "deutschkurs",
+            "wartet",
+            "kommt",
+            "antwortet",
+            "hoeflich",
+            "willkommen",
+            "schreiben",
+            "sitzt",
+            "neben",
+            "kennen"
+          ]
+        },
+        {
+          "id": "a1-13",
+          "pct": 30.3,
+          "unknown": [
+            "sucht",
+            "neue",
+            "besichtigt",
+            "erste",
+            "liegt",
+            "strasse",
+            "laut",
+            "deshalb",
+            "trotzdem",
+            "nachdenken"
+          ]
+        },
+        {
+          "id": "b1-02",
+          "pct": 30.3,
+          "unknown": [
+            "bekam",
+            "jungen",
+            "technikfirma",
+            "interessantere",
+            "zunaechst",
+            "befristet",
+            "bisherige",
+            "kaum",
+            "weiterbildung",
+            "entwicklung",
+            "finanzielle",
+            "sicherheit"
           ]
         }
       ],
@@ -404,16 +414,12 @@
         "pct": 76
       },
       {
-        "id": "a1-05",
-        "pct": 58.1
-      },
-      {
         "id": "a1-04",
         "pct": 55.8
       },
       {
-        "id": "b2-06",
-        "pct": 51.9
+        "id": "a1-05",
+        "pct": 55.8
       },
       {
         "id": "b1-01",
@@ -421,6 +427,10 @@
       },
       {
         "id": "a1-03",
+        "pct": 51.1
+      },
+      {
+        "id": "b2-06",
         "pct": 51.1
       },
       {
@@ -473,29 +483,6 @@
         ]
       },
       {
-        "lessonId": "a1-05",
-        "level": "A1",
-        "pct": 58.1,
-        "unknown": [
-          "sportverein",
-          "fuellt",
-          "mariam",
-          "kontaktkarten",
-          "uebungsdaten",
-          "paul",
-          "zwoelften",
-          "oktober",
-          "seine",
-          "gruppen",
-          "aylin",
-          "moechte",
-          "private",
-          "nummer",
-          "offene",
-          "liste"
-        ]
-      },
-      {
         "lessonId": "a1-04",
         "level": "A1",
         "pct": 55.8,
@@ -519,26 +506,26 @@
         ]
       },
       {
-        "lessonId": "b2-06",
-        "level": "B2",
-        "pct": 51.9,
+        "lessonId": "a1-05",
+        "level": "A1",
+        "pct": 55.8,
         "unknown": [
-          "hochschule",
-          "beschattete",
-          "unbeschattete",
-          "strassenoberflaechen",
-          "erwaermen",
-          "interne",
-          "bericht",
-          "thermischer",
-          "oberflaechenunterschiede",
-          "erfolgte",
-          "mittels",
-          "mobiler",
-          "sensorik",
-          "satellitengestuetzter",
-          "fernerkundung",
-          "veranstaltung"
+          "sportverein",
+          "fuellt",
+          "mariam",
+          "kontaktkarten",
+          "uebungsdaten",
+          "paul",
+          "zwoelften",
+          "oktober",
+          "seine",
+          "gruppen",
+          "aylin",
+          "moechte",
+          "private",
+          "nummer",
+          "offene",
+          "liste"
         ]
       },
       {
@@ -585,6 +572,29 @@
           "leerzeichen",
           "buchstabiert",
           "seine"
+        ]
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
+        "pct": 51.1,
+        "unknown": [
+          "hochschule",
+          "beschattete",
+          "unbeschattete",
+          "strassenoberflaechen",
+          "erwaermen",
+          "interne",
+          "bericht",
+          "thermischer",
+          "oberflaechenunterschiede",
+          "erfolgte",
+          "mittels",
+          "mobiler",
+          "sensorik",
+          "satellitengestuetzter",
+          "fernerkundung",
+          "veranstaltung"
         ]
       },
       {
@@ -910,29 +920,6 @@
         ]
       },
       {
-        "lessonId": "b1-12",
-        "level": "B1",
-        "pct": 46.3,
-        "unknown": [
-          "nachbarschaftsinitiative",
-          "verhindern",
-          "erhaltene",
-          "tauschmarkt",
-          "dinge",
-          "weiterzugeben",
-          "veranstaltung",
-          "kategorien",
-          "annahmeregeln",
-          "datenschutz",
-          "festgelegt",
-          "freiwillige",
-          "uebernahmen",
-          "definierte",
-          "schichten",
-          "programm"
-        ]
-      },
-      {
         "lessonId": "a1-11",
         "level": "A1",
         "pct": 45.8,
@@ -976,6 +963,29 @@
           "termin",
           "beim",
           "zahnarzt"
+        ]
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "pct": 45.1,
+        "unknown": [
+          "nachbarschaftsinitiative",
+          "verhindern",
+          "erhaltene",
+          "tauschmarkt",
+          "dinge",
+          "weiterzugeben",
+          "veranstaltung",
+          "kategorien",
+          "annahmeregeln",
+          "datenschutz",
+          "festgelegt",
+          "freiwillige",
+          "uebernahmen",
+          "definierte",
+          "schichten",
+          "programm"
         ]
       },
       {
@@ -1025,29 +1035,6 @@
         ]
       },
       {
-        "lessonId": "a2-03",
-        "level": "A2",
-        "pct": 44.4,
-        "unknown": [
-          "mariam",
-          "ihren",
-          "vortrag",
-          "gehalten",
-          "wochen",
-          "lang",
-          "geuebt",
-          "trotzdem",
-          "wichtige",
-          "vortrags",
-          "schule",
-          "gestanden",
-          "haende",
-          "begonnen",
-          "notizen",
-          "geschaut"
-        ]
-      },
-      {
         "lessonId": "b1-08",
         "level": "B1",
         "pct": 44,
@@ -1071,49 +1058,26 @@
         ]
       },
       {
-        "lessonId": "b1-03",
-        "level": "B1",
-        "pct": 43.4,
+        "lessonId": "a2-03",
+        "level": "A2",
+        "pct": 42.9,
         "unknown": [
-          "rania",
-          "kam",
-          "arbeitete",
-          "zunaechst",
-          "teilzeit",
-          "caf",
-          "grafikdesign",
-          "arbeitsmarkt",
-          "einige",
-          "entwuerfe",
-          "praesentierte",
-          "besitzerin",
-          "begeistert",
-          "empfahl",
-          "befreundeten",
-          "bekam"
-        ]
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
-        "pct": 43.1,
-        "unknown": [
-          "lernzentrum",
-          "interne",
-          "anbieterneutrale",
-          "bildete",
-          "goethe",
-          "telc",
-          "gemeinsame",
-          "kompetenzen",
-          "komplexe",
-          "argumentieren",
-          "verlaengerte",
-          "bibliothekszeiten",
-          "aufgezeichnetes",
-          "gespraech",
-          "zugangskosten",
-          "begruendete"
+          "mariam",
+          "ihren",
+          "vortrag",
+          "gehalten",
+          "wochen",
+          "lang",
+          "geuebt",
+          "trotzdem",
+          "wichtige",
+          "vortrags",
+          "schule",
+          "gestanden",
+          "haende",
+          "begonnen",
+          "notizen",
+          "geschaut"
         ]
       },
       {
@@ -1186,6 +1150,29 @@
         ]
       },
       {
+        "lessonId": "b2-12",
+        "level": "B2",
+        "pct": 42.5,
+        "unknown": [
+          "lernzentrum",
+          "interne",
+          "anbieterneutrale",
+          "bildete",
+          "goethe",
+          "telc",
+          "gemeinsame",
+          "kompetenzen",
+          "komplexe",
+          "argumentieren",
+          "verlaengerte",
+          "bibliothekszeiten",
+          "aufgezeichnetes",
+          "gespraech",
+          "zugangskosten",
+          "begruendete"
+        ]
+      },
+      {
         "lessonId": "a1-22",
         "level": "A1",
         "pct": 42.2,
@@ -1206,6 +1193,29 @@
           "fieber",
           "bewegen",
           "arztpraxis"
+        ]
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
+        "pct": 42.1,
+        "unknown": [
+          "rania",
+          "kam",
+          "arbeitete",
+          "teilzeit",
+          "caf",
+          "grafikdesign",
+          "arbeitsmarkt",
+          "einige",
+          "entwuerfe",
+          "praesentierte",
+          "besitzerin",
+          "begeistert",
+          "empfahl",
+          "befreundeten",
+          "bekam",
+          "weitere"
         ]
       },
       {
@@ -1232,29 +1242,6 @@
         ]
       },
       {
-        "lessonId": "b2-02",
-        "level": "B2",
-        "pct": 41.7,
-        "unknown": [
-          "berechtigte",
-          "anliegen",
-          "aufeinander",
-          "befuerworter",
-          "kuerzere",
-          "arbeitswochen",
-          "motivation",
-          "gesundheit",
-          "bindung",
-          "pilotprojekte",
-          "produktivitaet",
-          "kritiker",
-          "dieselbe",
-          "arbeitsmenge",
-          "moeglicherweise",
-          "verdichtet"
-        ]
-      },
-      {
         "lessonId": "a1-24",
         "level": "A1",
         "pct": 41.2,
@@ -1275,29 +1262,6 @@
           "passnummer",
           "lernnotizen",
           "ganz"
-        ]
-      },
-      {
-        "lessonId": "b1-05",
-        "level": "B1",
-        "pct": 41.2,
-        "unknown": [
-          "terminaenderungen",
-          "zunaechst",
-          "informierst",
-          "rechtzeitig",
-          "klang",
-          "vorwurf",
-          "ben",
-          "erklaerte",
-          "gruppenchat",
-          "gepostet",
-          "beide",
-          "dieselben",
-          "ereignisse",
-          "bewerteten",
-          "voellig",
-          "kollegin"
         ]
       },
       {
@@ -1370,6 +1334,29 @@
         ]
       },
       {
+        "lessonId": "b2-02",
+        "level": "B2",
+        "pct": 40.8,
+        "unknown": [
+          "berechtigte",
+          "anliegen",
+          "aufeinander",
+          "befuerworter",
+          "kuerzere",
+          "arbeitswochen",
+          "motivation",
+          "gesundheit",
+          "bindung",
+          "pilotprojekte",
+          "produktivitaet",
+          "kritiker",
+          "dieselbe",
+          "arbeitsmenge",
+          "moeglicherweise",
+          "verdichtet"
+        ]
+      },
+      {
         "lessonId": "b2-08",
         "level": "B2",
         "pct": 40.8,
@@ -1439,6 +1426,29 @@
         ]
       },
       {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "pct": 40,
+        "unknown": [
+          "terminaenderungen",
+          "informierst",
+          "rechtzeitig",
+          "klang",
+          "vorwurf",
+          "ben",
+          "erklaerte",
+          "gruppenchat",
+          "gepostet",
+          "beide",
+          "dieselben",
+          "ereignisse",
+          "bewerteten",
+          "voellig",
+          "kollegin",
+          "schlug"
+        ]
+      },
+      {
         "lessonId": "b2-10",
         "level": "B2",
         "pct": 40,
@@ -1462,29 +1472,6 @@
         ]
       },
       {
-        "lessonId": "b1-04",
-        "level": "B1",
-        "pct": 39.8,
-        "unknown": [
-          "informationsveranstaltung",
-          "motiviert",
-          "allgemein",
-          "verteilt",
-          "fuehlten",
-          "zeitplan",
-          "aktualisiert",
-          "stellte",
-          "wichtige",
-          "fehlten",
-          "raum",
-          "einzelne",
-          "beschuldigen",
-          "analysierte",
-          "ablauf",
-          "nun"
-        ]
-      },
-      {
         "lessonId": "a2-04",
         "level": "A2",
         "pct": 39.7,
@@ -1505,29 +1492,6 @@
           "abgeholt",
           "hausflur",
           "aufgehaengt"
-        ]
-      },
-      {
-        "lessonId": "b2-04",
-        "level": "B2",
-        "pct": 39.5,
-        "unknown": [
-          "agentur",
-          "urspruenglich",
-          "geplante",
-          "lieferung",
-          "bereitzustellen",
-          "projektteam",
-          "abzulehnen",
-          "verkuerzten",
-          "vollstaendige",
-          "unveraenderter",
-          "qualitaet",
-          "reihenfolge",
-          "formulierte",
-          "option",
-          "sah",
-          "restlichen"
         ]
       },
       {
@@ -1597,6 +1561,52 @@
           "wortkarten",
           "falls",
           "jemand"
+        ]
+      },
+      {
+        "lessonId": "b1-04",
+        "level": "B1",
+        "pct": 38.6,
+        "unknown": [
+          "informationsveranstaltung",
+          "motiviert",
+          "allgemein",
+          "verteilt",
+          "fuehlten",
+          "zeitplan",
+          "aktualisiert",
+          "stellte",
+          "wichtige",
+          "fehlten",
+          "raum",
+          "einzelne",
+          "beschuldigen",
+          "analysierte",
+          "ablauf",
+          "nun"
+        ]
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "pct": 38.4,
+        "unknown": [
+          "agentur",
+          "urspruenglich",
+          "geplante",
+          "lieferung",
+          "bereitzustellen",
+          "projektteam",
+          "abzulehnen",
+          "verkuerzten",
+          "vollstaendige",
+          "unveraenderter",
+          "qualitaet",
+          "reihenfolge",
+          "formulierte",
+          "option",
+          "sah",
+          "restlichen"
         ]
       },
       {
@@ -1715,29 +1725,6 @@
         ]
       },
       {
-        "lessonId": "b2-18",
-        "level": "B2",
-        "pct": 37.3,
-        "unknown": [
-          "sprechstunde",
-          "las",
-          "ben",
-          "derselben",
-          "genommen",
-          "lehnen",
-          "beiden",
-          "saetzen",
-          "hoeflichkeit",
-          "etappe",
-          "registriert",
-          "worden",
-          "behoerde",
-          "schroff",
-          "kessler",
-          "verneinte"
-        ]
-      },
-      {
         "lessonId": "b2-03",
         "level": "B2",
         "pct": 37.2,
@@ -1758,52 +1745,6 @@
           "analyse",
           "verwaltung",
           "weitgehend"
-        ]
-      },
-      {
-        "lessonId": "b1-13",
-        "level": "B1",
-        "pct": 36.5,
-        "unknown": [
-          "amals",
-          "einige",
-          "umwege",
-          "begann",
-          "grammatikregeln",
-          "wortlisten",
-          "erkannte",
-          "strukturen",
-          "doch",
-          "konnte",
-          "dachte",
-          "zunaechst",
-          "talent",
-          "gespraeche",
-          "aufgenommen",
-          "aufnahmen"
-        ]
-      },
-      {
-        "lessonId": "b1-16",
-        "level": "B1",
-        "pct": 36.3,
-        "unknown": [
-          "lina",
-          "glaubte",
-          "taegliche",
-          "unproblematisch",
-          "protokollierte",
-          "zeitpunkt",
-          "inhalt",
-          "dabei",
-          "oeffnete",
-          "gesamte",
-          "doch",
-          "sah",
-          "videos",
-          "weiterliefen",
-          "eigentlich",
-          "blieben"
         ]
       },
       {
@@ -1876,26 +1817,49 @@
         ]
       },
       {
-        "lessonId": "a2-19",
-        "level": "A2",
+        "lessonId": "b1-13",
+        "level": "B1",
         "pct": 35.3,
         "unknown": [
-          "selbstversuch",
-          "amir",
-          "deutsche",
-          "arabische",
-          "uebersetzung",
-          "fuenfmal",
-          "erkennt",
-          "fast",
-          "nennen",
-          "veraendert",
-          "methode",
-          "verdeckt",
-          "antworten",
-          "falsche",
-          "legt",
-          "stapel"
+          "amals",
+          "einige",
+          "umwege",
+          "begann",
+          "grammatikregeln",
+          "wortlisten",
+          "erkannte",
+          "strukturen",
+          "doch",
+          "konnte",
+          "dachte",
+          "talent",
+          "gespraeche",
+          "aufgenommen",
+          "aufnahmen",
+          "hoerte"
+        ]
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "pct": 35,
+        "unknown": [
+          "lina",
+          "glaubte",
+          "taegliche",
+          "unproblematisch",
+          "protokollierte",
+          "zeitpunkt",
+          "inhalt",
+          "dabei",
+          "oeffnete",
+          "gesamte",
+          "doch",
+          "sah",
+          "videos",
+          "weiterliefen",
+          "eigentlich",
+          "blieben"
         ]
       },
       {
@@ -1922,6 +1886,29 @@
         ]
       },
       {
+        "lessonId": "b2-18",
+        "level": "B2",
+        "pct": 34.5,
+        "unknown": [
+          "sprechstunde",
+          "las",
+          "ben",
+          "derselben",
+          "genommen",
+          "lehnen",
+          "saetzen",
+          "hoeflichkeit",
+          "etappe",
+          "registriert",
+          "worden",
+          "behoerde",
+          "schroff",
+          "kessler",
+          "verneinte",
+          "praezise"
+        ]
+      },
+      {
         "lessonId": "a2-05",
         "level": "A2",
         "pct": 33.8,
@@ -1942,6 +1929,29 @@
           "einlaedt",
           "nachbarn",
           "reparaturen"
+        ]
+      },
+      {
+        "lessonId": "a2-19",
+        "level": "A2",
+        "pct": 33.8,
+        "unknown": [
+          "selbstversuch",
+          "amir",
+          "deutsche",
+          "arabische",
+          "uebersetzung",
+          "fuenfmal",
+          "erkennt",
+          "nennen",
+          "veraendert",
+          "methode",
+          "verdeckt",
+          "antworten",
+          "falsche",
+          "legt",
+          "stapel",
+          "erneut"
         ]
       },
       {
@@ -2014,29 +2024,6 @@
         ]
       },
       {
-        "lessonId": "b2-13",
-        "level": "B2",
-        "pct": 33.3,
-        "unknown": [
-          "pilotprojekts",
-          "beiden",
-          "kursen",
-          "ging",
-          "privater",
-          "arbeitsphasen",
-          "lernerfolge",
-          "entwickelten",
-          "stieg",
-          "trefferquote",
-          "hoerverstehen",
-          "projektleitung",
-          "allgemeinen",
-          "verwies",
-          "unterschieden",
-          "beginn"
-        ]
-      },
-      {
         "lessonId": "a2-24",
         "level": "A2",
         "pct": 32.9,
@@ -2106,6 +2093,29 @@
         ]
       },
       {
+        "lessonId": "b2-13",
+        "level": "B2",
+        "pct": 32.4,
+        "unknown": [
+          "pilotprojekts",
+          "kursen",
+          "ging",
+          "privater",
+          "arbeitsphasen",
+          "lernerfolge",
+          "entwickelten",
+          "stieg",
+          "trefferquote",
+          "hoerverstehen",
+          "projektleitung",
+          "allgemeinen",
+          "verwies",
+          "unterschieden",
+          "beginn",
+          "ausgangsniveau"
+        ]
+      },
+      {
         "lessonId": "a2-01",
         "level": "A2",
         "pct": 32.2,
@@ -2149,29 +2159,6 @@
           "mara",
           "weitergeleitet",
           "arztbesuch"
-        ]
-      },
-      {
-        "lessonId": "b2-20",
-        "level": "B2",
-        "pct": 31.6,
-        "unknown": [
-          "studienrates",
-          "dieselbe",
-          "enthielt",
-          "einzigen",
-          "endet",
-          "studierende",
-          "schichtarbeit",
-          "kommission",
-          "erstberatung",
-          "angebote",
-          "kostenfrei",
-          "datenschutz",
-          "raumfrage",
-          "ungeklaert",
-          "geblieben",
-          "anmerkung"
         ]
       },
       {
@@ -2311,6 +2298,29 @@
         ]
       },
       {
+        "lessonId": "b2-20",
+        "level": "B2",
+        "pct": 29.9,
+        "unknown": [
+          "studienrates",
+          "enthielt",
+          "einzigen",
+          "endet",
+          "studierende",
+          "schichtarbeit",
+          "kommission",
+          "erstberatung",
+          "angebote",
+          "kostenfrei",
+          "datenschutz",
+          "raumfrage",
+          "ungeklaert",
+          "geblieben",
+          "anmerkung",
+          "reihenfolge"
+        ]
+      },
+      {
         "lessonId": "a1-15",
         "level": "A1",
         "pct": 29.5,
@@ -2443,52 +2453,6 @@
         ]
       },
       {
-        "lessonId": "b2-19",
-        "level": "B2",
-        "pct": 27.8,
-        "unknown": [
-          "forum",
-          "studienberatung",
-          "ben",
-          "mitarbeiter",
-          "antwortete",
-          "spam",
-          "gelandet",
-          "diesmal",
-          "april",
-          "unbeantwortet",
-          "erteilt",
-          "beiden",
-          "saetzen",
-          "neuer",
-          "inhalt",
-          "zugleich"
-        ]
-      },
-      {
-        "lessonId": "a2-10",
-        "level": "A2",
-        "pct": 27.6,
-        "unknown": [
-          "mila",
-          "karim",
-          "moeglichkeiten",
-          "knapp",
-          "spaeterer",
-          "fast",
-          "fernbus",
-          "jedoch",
-          "niedriger",
-          "preis",
-          "sparen",
-          "lang",
-          "spaeteren",
-          "direktzug",
-          "deutlich",
-          "sitzplaetze"
-        ]
-      },
-      {
         "lessonId": "b1-22",
         "level": "B1",
         "pct": 26.7,
@@ -2535,49 +2499,48 @@
         ]
       },
       {
-        "lessonId": "a2-13",
+        "lessonId": "a2-10",
         "level": "A2",
-        "pct": 26,
+        "pct": 25.9,
         "unknown": [
-          "leila",
-          "gewohnheit",
-          "gesuender",
-          "plaene",
-          "aufgehoert",
-          "kleineren",
-          "legt",
-          "abenden",
-          "entspannt",
-          "ausserdem",
-          "wochen",
-          "durchschnittlich",
-          "stunde",
-          "laenger",
-          "regelmaessiger",
-          "perfekt"
+          "mila",
+          "karim",
+          "moeglichkeiten",
+          "knapp",
+          "spaeterer",
+          "fernbus",
+          "jedoch",
+          "niedriger",
+          "preis",
+          "sparen",
+          "lang",
+          "spaeteren",
+          "direktzug",
+          "deutlich",
+          "sitzplaetze"
         ]
       },
       {
-        "lessonId": "b2-15",
+        "lessonId": "b2-19",
         "level": "B2",
-        "pct": 26,
+        "pct": 25.8,
         "unknown": [
-          "kaempft",
-          "grammatik",
-          "abschnitte",
-          "geschrieben",
-          "ueberfliegt",
-          "dient",
-          "notiz",
-          "rand",
-          "rechtschreibung",
-          "dasselbe",
-          "verb",
-          "derselben",
-          "falschform",
-          "nachlaessigkeit",
-          "fluechtigkeitsfehler",
-          "bedauern"
+          "forum",
+          "studienberatung",
+          "ben",
+          "mitarbeiter",
+          "antwortete",
+          "spam",
+          "gelandet",
+          "diesmal",
+          "april",
+          "unbeantwortet",
+          "erteilt",
+          "saetzen",
+          "neuer",
+          "inhalt",
+          "zugleich",
+          "diejenige"
         ]
       },
       {
@@ -2602,6 +2565,29 @@
           "fand",
           "kette"
         ]
+      },
+      {
+        "lessonId": "b2-15",
+        "level": "B2",
+        "pct": 25.2,
+        "unknown": [
+          "kaempft",
+          "grammatik",
+          "abschnitte",
+          "geschrieben",
+          "ueberfliegt",
+          "dient",
+          "notiz",
+          "rand",
+          "rechtschreibung",
+          "dasselbe",
+          "verb",
+          "derselben",
+          "falschform",
+          "nachlaessigkeit",
+          "fluechtigkeitsfehler",
+          "bedauern"
+        ]
       }
     ]
   },
@@ -2609,8 +2595,8 @@
     "policy": "lemmatized-lexical-load-v2",
     "support": "every lesson at or below the input's level (phrases, cards, reading glossary) plus the glossary shown beside the input",
     "tasks": 16,
-    "medianUnknownWordPct": 19.1,
-    "maxUnknownWordPct": 31.7,
+    "medianUnknownWordPct": 18.7,
+    "maxUnknownWordPct": 31,
     "ceilingPct": 32,
     "rows": [
       {
@@ -2633,13 +2619,12 @@
         "level": "A1",
         "contentTypes": 54,
         "properNames": 1,
-        "pct": 14.8,
+        "pct": 13,
         "unknownSample": [
           "denn",
           "oeffnet",
           "durch",
           "post",
-          "person",
           "jacke",
           "siebzehn",
           "hole"
@@ -2669,10 +2654,9 @@
         "level": "A2",
         "contentTypes": 113,
         "properNames": 0,
-        "pct": 15.9,
+        "pct": 14.2,
         "unknownSample": [
           "unserem",
-          "garten",
           "gepflanzt",
           "umgezogen",
           "kaum",
@@ -2680,7 +2664,8 @@
           "pflanzen",
           "blumen",
           "ausserdem",
-          "fenster"
+          "fenster",
+          "werkzeug"
         ]
       },
       {
@@ -2688,18 +2673,18 @@
         "level": "B1",
         "contentTypes": 160,
         "properNames": 0,
-        "pct": 16.9,
+        "pct": 15.6,
         "unknownSample": [
           "stadtbibliothek",
           "verleihen",
           "zusammenbringen",
           "werkstatt",
-          "dinge",
           "moebel",
           "bibliothek",
           "tipps",
           "arbeitsschritte",
-          "deren"
+          "deren",
+          "gefaehrlich"
         ]
       },
       {
@@ -2707,10 +2692,9 @@
         "level": "B1",
         "contentTypes": 162,
         "properNames": 1,
-        "pct": 17.9,
+        "pct": 16.7,
         "unknownSample": [
           "betrieb",
-          "monat",
           "gebaeude",
           "fluss",
           "hauptstrasse",
@@ -2718,7 +2702,8 @@
           "beleuchtung",
           "dunklen",
           "wintermonate",
-          "ausprobiert"
+          "ausprobiert",
+          "angenehm"
         ]
       },
       {
@@ -2726,18 +2711,18 @@
         "level": "B2",
         "contentTypes": 236,
         "properNames": 0,
-        "pct": 21.6,
+        "pct": 19.1,
         "unknownSample": [
           "bibliothek",
           "verfuegt",
           "leseraum",
           "lerngruppen",
-          "monaten",
           "zugaenglichen",
-          "ort",
           "zusammenarbeit",
           "erwaegt",
-          "stillen"
+          "kommunikativen",
+          "aufzuteilen",
+          "lokalen"
         ]
       },
       {
@@ -2745,7 +2730,7 @@
         "level": "B2",
         "contentTypes": 241,
         "properNames": 0,
-        "pct": 19.1,
+        "pct": 18.7,
         "unknownSample": [
           "nachbarschaftszentrum",
           "bisher",
@@ -2802,18 +2787,18 @@
         "level": "B1",
         "contentTypes": 133,
         "properNames": 2,
-        "pct": 27.8,
+        "pct": 24.8,
         "unknownSample": [
           "stadtteil",
-          "parkplatz",
           "verschwinden",
           "stadtverwaltung",
           "zugezogen",
           "fuerchten",
-          "kuenftig",
           "buergerversammlung",
           "beider",
-          "vorgetragen"
+          "vorgetragen",
+          "stimmung",
+          "bisher"
         ]
       },
       {
@@ -2821,18 +2806,18 @@
         "level": "B2",
         "contentTypes": 181,
         "properNames": 0,
-        "pct": 23.8,
+        "pct": 20.4,
         "unknownSample": [
-          "sueden",
-          "kuenftig",
           "smartphones",
           "unterricht",
           "geregelt",
           "bisher",
           "schulleitung",
-          "lehrkraefte",
           "recherche",
-          "umfragen"
+          "umfragen",
+          "intensiven",
+          "diskussionen",
+          "kollegium"
         ]
       },
       {
@@ -2840,7 +2825,7 @@
         "level": "A1",
         "contentTypes": 66,
         "properNames": 0,
-        "pct": 24.2,
+        "pct": 22.7,
         "unknownSample": [
           "offen",
           "vierzehn",
@@ -2850,8 +2835,8 @@
           "besuchen",
           "frischen",
           "paprika",
-          "tasche",
-          "geld"
+          "geld",
+          "jacke"
         ]
       },
       {
@@ -2859,10 +2844,9 @@
         "level": "A2",
         "contentTypes": 112,
         "properNames": 0,
-        "pct": 23.2,
+        "pct": 22.3,
         "unknownSample": [
           "fahrradkurs",
-          "stadtpark",
           "rad",
           "verkehr",
           "achtzehn",
@@ -2870,7 +2854,8 @@
           "ueberweisen",
           "rads",
           "trainer",
-          "eingestellt"
+          "eingestellt",
+          "mut"
         ]
       },
       {
@@ -2878,7 +2863,7 @@
         "level": "B1",
         "contentTypes": 142,
         "properNames": 1,
-        "pct": 31.7,
+        "pct": 31,
         "unknownSample": [
           "grundschule",
           "fruehjahr",
@@ -2889,7 +2874,7 @@
           "schulleitung",
           "bereiche",
           "schaffen",
-          "idee"
+          "stammt"
         ]
       },
       {
@@ -2897,18 +2882,18 @@
         "level": "B2",
         "contentTypes": 185,
         "properNames": 1,
-        "pct": 21.6,
+        "pct": 20,
         "unknownSample": [
           "stadtrat",
           "theatergruppen",
           "bisher",
           "anbot",
           "zuschauer",
-          "kuenftig",
           "auffuehrungen",
           "besucherzahlen",
           "jugendlichen",
-          "kritiker"
+          "problematisch",
+          "ensembles"
         ]
       }
     ],

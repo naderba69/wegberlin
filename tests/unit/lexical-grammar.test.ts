@@ -10,36 +10,36 @@ describe("A1 structured noun and verb-preposition anchors", () => {
   it("keeps four baseline nouns in all 24 A1 lessons and expands nouns plus one target frame", () => {
     const a1LessonIds = academicLessonList.filter((lesson) => lesson.level === "A1").map((lesson) => lesson.id);
     expect(a1LessonIds).toHaveLength(24);
-    expect(a1NounGrammarEntries).toHaveLength(280);
+    expect(a1NounGrammarEntries).toHaveLength(299);
     expect(a1VerbPrepositionFrames).toHaveLength(25);
     for (const lessonId of a1LessonIds) {
       expect(a1NounsByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(4);
       expect(a1VerbFramesByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(1);
     }
     expect(a1NounsByLesson["a1-01"]).toHaveLength(5);
-    expect(a1NounsByLesson["a1-02"]).toHaveLength(16);
+    expect(a1NounsByLesson["a1-02"]).toHaveLength(17);
     expect(a1NounsByLesson["a1-03"]).toHaveLength(10);
     expect(a1NounsByLesson["a1-04"]).toHaveLength(12);
-    expect(a1NounsByLesson["a1-05"]).toHaveLength(11);
+    expect(a1NounsByLesson["a1-05"]).toHaveLength(12);
     expect(a1NounsByLesson["a1-06"]).toHaveLength(17);
-    expect(a1NounsByLesson["a1-07"]).toHaveLength(9);
+    expect(a1NounsByLesson["a1-07"]).toHaveLength(10);
     expect(a1NounsByLesson["a1-08"]).toHaveLength(5);
-    expect(a1NounsByLesson["a1-09"]).toHaveLength(6);
-    expect(a1NounsByLesson["a1-10"]).toHaveLength(17);
-    expect(a1NounsByLesson["a1-11"]).toHaveLength(15);
-    expect(a1NounsByLesson["a1-12"]).toHaveLength(12);
+    expect(a1NounsByLesson["a1-09"]).toHaveLength(7);
+    expect(a1NounsByLesson["a1-10"]).toHaveLength(18);
+    expect(a1NounsByLesson["a1-11"]).toHaveLength(16);
+    expect(a1NounsByLesson["a1-12"]).toHaveLength(16);
     expect(a1NounsByLesson["a1-13"]).toHaveLength(13);
-    expect(a1NounsByLesson["a1-14"]).toHaveLength(15);
+    expect(a1NounsByLesson["a1-14"]).toHaveLength(17);
     expect(a1NounsByLesson["a1-15"]).toHaveLength(12);
-    expect(a1NounsByLesson["a1-16"]).toHaveLength(8);
-    expect(a1NounsByLesson["a1-17"]).toHaveLength(8);
-    expect(a1NounsByLesson["a1-18"]).toHaveLength(8);
+    expect(a1NounsByLesson["a1-16"]).toHaveLength(9);
+    expect(a1NounsByLesson["a1-17"]).toHaveLength(9);
+    expect(a1NounsByLesson["a1-18"]).toHaveLength(9);
     expect(a1NounsByLesson["a1-19"]).toHaveLength(13);
-    expect(a1NounsByLesson["a1-20"]).toHaveLength(14);
+    expect(a1NounsByLesson["a1-20"]).toHaveLength(16);
     expect(a1NounsByLesson["a1-21"]).toHaveLength(11);
-    expect(a1NounsByLesson["a1-22"]).toHaveLength(16);
+    expect(a1NounsByLesson["a1-22"]).toHaveLength(17);
     expect(a1NounsByLesson["a1-23"]).toHaveLength(10);
-    expect(a1NounsByLesson["a1-24"]).toHaveLength(17);
+    expect(a1NounsByLesson["a1-24"]).toHaveLength(18);
     expect(a1VerbFramesByLesson["a1-11"]).toHaveLength(2);
   });
 
@@ -120,7 +120,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
     unmount();
     const paymentFrame = render(createElement(LexicalGrammarPanel, { lessonId: "a1-11" }));
     expect(screen.getByText("mit der Karte bezahlen")).toBeTruthy();
-    expect(screen.getByText(/15 مراسي اسم و2 إطار فعل/)).toBeTruthy();
+    expect(screen.getByText(/16 مراسي اسم و2 إطار فعل/)).toBeTruthy();
     paymentFrame.unmount();
     const familyNouns = render(createElement(LexicalGrammarPanel, { lessonId: "a1-04" }));
     const familyExtras = screen.getByText("Weitere Zielnomen").closest("details")!;
@@ -131,7 +131,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
     familyNouns.unmount();
     const foodNouns = render(createElement(LexicalGrammarPanel, { lessonId: "a1-10" }));
     const foodExtras = screen.getByText("Weitere Zielnomen").closest("details")!;
-    expect(foodExtras.textContent).toContain("أسماء هدف إضافية موثقة · 13");
+    expect(foodExtras.textContent).toContain("أسماء هدف إضافية موثقة · 14");
     fireEvent.click(screen.getByText("Weitere Zielnomen"));
     expect(screen.getAllByText("der Apfel").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("das Wasser").length).toBeGreaterThanOrEqual(1);
@@ -139,7 +139,7 @@ describe("A1 structured noun and verb-preposition anchors", () => {
     const roomNouns = render(createElement(LexicalGrammarPanel, { lessonId: "a1-14" }));
     expect(screen.getByText("Plural Dativ: den Stühlen")).toBeTruthy();
     const roomExtras = screen.getByText("Weitere Zielnomen").closest("details")!;
-    expect(roomExtras.textContent).toContain("أسماء هدف إضافية موثقة · 11");
+    expect(roomExtras.textContent).toContain("أسماء هدف إضافية موثقة · 13");
     roomNouns.unmount();
     const { container } = render(createElement(LexicalGrammarPanel, { lessonId: "c1-01" }));
     expect(container.childElementCount).toBe(0);

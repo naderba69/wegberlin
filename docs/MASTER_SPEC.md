@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v242 · 2026-10-18 · التحقق المصدري من الكتابة الصوتية وادعاءات النطق (ADR-134، P1-380): قورنت 601 كتابة صوتية في الدروس وأزواج التمييز وجرد النطق بقاموس مشتق من de.wiktionary مثبّت بالـcommit، فصُحّحت 11 كتابة خاطئة (منها notiere و jedoch و Komma و allerdings) و6 مواءمات رمزية، ووُثّق كل ادعاء من ادعاءات صعوبات النطق الثمانية عشر لدى المتعلمين العرب بمصادر منشورة؛ وأُعيدت صياغة صفّين نقلًا إيجابيًا لأن العربية فيها الهاء والهمزة وطول الحركات. يبقى P1-380 جزئيًا: مراجع فونيتي بشري ومعايرة على تسجيلات حقيقية والصفوف الموجَّهة الثلاثة.
+Sync batch: v243 · 2026-10-19 · دعم الكلمات التي تحتاجها أسئلة القراءة (ADR-135، البند 402): قيس كل لفظ من النص يحتاجه سؤال أو جوابه المفتاح ولم يشرحه أي سطح سابق ولا المسرد، وكان 151 لفظًا في 75 درسًا (مثل statt و Sahne و Vertrag). صار 0 في المستويات الأربعة بـ105 مراسي أسماء تظهر في مرحلة المفردات قبل النص، و42 مدخل مسرد، و4 أسماء علم، وسقفه في تدقيق الجودة 0. نزل وسيط حمل القراءة إلى 20.3% والأثقل إلى 38.6%، دون حشو قائمة التوقف أو تعديل النصوص. للمراسي الجديدة ورقة مراجعة مستقلة غير موقعة، ونطاق P0-98 الأصلي باقٍ 1,297.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

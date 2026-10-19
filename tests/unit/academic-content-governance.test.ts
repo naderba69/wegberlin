@@ -27,13 +27,13 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
       examProfiles: 2,
       examSources: 5,
       reviewCards: 2304,
-      nounGrammarEntries: 1297,
+      nounGrammarEntries: 1402,
       verbPrepositionFrames: 134,
       tunisianSupportNotes: 17,
       dictationItems: 16,
       branchingConversationScenarios: 8,
       collocationNetworks: 16,
-      totalRootObjects: 4345,
+      totalRootObjects: 4450,
     });
   });
 
@@ -112,7 +112,7 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(lexicalReport).toContain(machine.contentSha256);
     expect(machine.answerIntegrity.rows).toHaveLength(2805);
     expect(machine.objectiveCoverage.rows).toHaveLength(389);
-    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1385);
+    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1503);
     expect(machine.lexicalTargetGaps.nounSummary.pendingHuman).toBe(89);
     expect(machine.lexicalTargetGaps.verbFrameSummary.covered).toBe(134);
     expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).toBe(1);

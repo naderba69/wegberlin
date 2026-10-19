@@ -13,7 +13,7 @@ describe("lexical target-gap inventory", () => {
   it("inventories all lessons and preserves the authored anchor baseline", () => {
     expect(audit.version).toBe(LEXICAL_TARGET_AUDIT_VERSION);
     expect(audit.lessonCount).toBe(96);
-    expect(audit.nounAnchorCount).toBe(1297);
+    expect(audit.nounAnchorCount).toBe(1402);
     expect(audit.verbFrameAnchorCount).toBe(134);
 
     const representedNounAnchors = new Set(audit.nounRows.flatMap((row) => row.anchorIds));
@@ -24,13 +24,14 @@ describe("lexical target-gap inventory", () => {
 
   // v231: the 54 rewritten Mini-Test items add contextual (non-target) candidates only; covered and pendingHuman are unchanged.
   // v236: six simplified A1 reading texts (ADR-128) drop 10 contextual noun and 3 contextual verb candidates; targets are unchanged.
+  // v243: ADR-135 adds 105 lesson-scoped noun anchors for question-critical reading words; 118 candidates become covered, pendingHuman is unchanged.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4924,
-      covered: 1385,
+      totalCandidates: 4965,
+      covered: 1503,
       pendingHuman: 89,
-      contextualNotTarget: 3450,
-      authoredTargets: 1474,
+      contextualNotTarget: 3373,
+      authoredTargets: 1592,
     });
     expect(audit.verbFrameSummary).toMatchObject({
       totalCandidates: 1288,

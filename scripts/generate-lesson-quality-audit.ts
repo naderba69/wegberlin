@@ -6,7 +6,7 @@ import { evaluateExercise } from "../src/core/lesson/evaluate";
 import type { PracticeExercise } from "../src/types/lesson-content";
 import { ACCEPTED_ANSWER_HYGIENE_VERSION, NO_OP_VARIANT_POLICY, distinctAcceptedForms, noOpAcceptedVariants } from "../src/core/content-validation/accepted-answer-hygiene";
 import { FEEDBACK_DISCLOSURE_MARKER, feedbackBoilerplateTail } from "../src/core/lesson/teaching-contract";
-import { LEXICAL_LOAD_POLICY, createLexicalLoadContext, measureLongInputLoad, measureReadingLoad, medianOf } from "../src/core/content-validation/lexical-load";
+import { LEXICAL_LOAD_POLICY, createLexicalLoadContext, measureLongInputLoad, measureQuestionCriticalSupport, measureReadingLoad, medianOf } from "../src/core/content-validation/lexical-load";
 import { CURRICULUM_STOP_WORDS, curriculumStem } from "../src/core/german/curriculum-lexical-context";
 import { VOCABULARY_STAGE_POLICY, vocabularyStageVisibleTexts } from "../src/core/lesson/vocabulary-stage";
 import { nounsByLesson, verbFramesByLesson } from "../src/data/lexical-grammar-registry";
@@ -38,10 +38,14 @@ const thresholds = {
   wordOrderingTilesMin: 3,
   // ADR-126 ratchet, tightened by ADR-127 (median 22.6%, 4 texts above 45%) and again by ADR-128
   // (2026-10-18, six simplified A1 readings): measured median 22.0%, no text above 45%, highest 41.3%.
+  // Tightened again by ADR-135 (2026-10-19, question-critical support): median 20.3%, highest 38.6%.
   // These ceilings forbid regression from the measured state.
-  readingLemmatizedMedianPctMax: 22,
+  readingLemmatizedMedianPctMax: 21,
   readingLemmatizedOver45Max: 0,
-  readingLemmatizedMaxPctMax: 42,
+  readingLemmatizedMaxPctMax: 39,
+  // ADR-135 (2026-10-19): no reading question or keyed answer may depend on a word that no earlier
+  // surface, no vocabulary-stage card and no glossary entry ever explained. Measured 151 before, 0 after.
+  readingQuestionCriticalUnsupportedMax: 0,
   longInputUnknownPctMax: 32,
 };
 
@@ -202,6 +206,8 @@ const lemmatizedReading = measureReadingLoad(lessons, lexicalContext, vocabulary
 const lemmatizedPcts = lemmatizedReading.map((row) => row.pct);
 const lemmatizedMedian = medianOf(lemmatizedPcts);
 const lemmatizedOver45 = lemmatizedPcts.filter((pct) => pct > 45).length;
+const questionCritical = measureQuestionCriticalSupport(lessons, lexicalContext, vocabularyStage);
+const questionCriticalUnsupported = questionCritical.reduce((sum, row) => sum + row.words.length, 0);
 const longInputRows = measureLongInputLoad(extendedComprehensionTasks.map((task) => ({ id: task.id, level: task.level, text: extendedTaskText(task), glossary: task.glossary.map((entry) => entry.de) })), lessons, lexicalContext, vocabularyStage);
 const longInputMax = Math.max(...longInputRows.map((row) => row.pct));
 
@@ -209,6 +215,7 @@ const shares = positions.map((count) => (100 * count) / Math.max(1, itemTotal));
 const issues: string[] = [];
 if (lemmatizedMedian > thresholds.readingLemmatizedMedianPctMax) issues.push(`lemmatized reading load median ${lemmatizedMedian}% (ratchet ${thresholds.readingLemmatizedMedianPctMax}%)`);
 if (Math.max(...lemmatizedPcts) > thresholds.readingLemmatizedMaxPctMax) issues.push(`heaviest reading text at ${Math.max(...lemmatizedPcts)}% lemmatized unknown types (ratchet ${thresholds.readingLemmatizedMaxPctMax}%)`);
+if (questionCriticalUnsupported > thresholds.readingQuestionCriticalUnsupportedMax) issues.push(`reading questions depending on a never-explained word: ${questionCriticalUnsupported} (max ${thresholds.readingQuestionCriticalUnsupportedMax}) — ${questionCritical.filter((row) => row.words.length).slice(0, 6).map((row) => `${row.id}: ${row.words.join("/")}`).join(", ")}`);
 if (lemmatizedOver45 > thresholds.readingLemmatizedOver45Max) issues.push(`reading texts above 45% lemmatized unknown types: ${lemmatizedOver45} (ratchet ${thresholds.readingLemmatizedOver45Max})`);
 if (longInputMax > thresholds.longInputUnknownPctMax) issues.push(`long input above ${thresholds.longInputUnknownPctMax}% unknown types: ${longInputRows.filter((row) => row.pct > thresholds.longInputUnknownPctMax).map((row) => `${row.id} ${row.pct}%`).join(", ")}`);
 if (writingViolations.length > thresholds.writingModelRangeViolations) issues.push(`writing model answers outside their own stated range: ${writingViolations.length} (allowed ${thresholds.writingModelRangeViolations})`);
@@ -287,6 +294,13 @@ const report = {
       maxUnknownWordPct: Math.max(...lemmatizedPcts),
       properNamesExcluded: lemmatizedReading.reduce((sum, row) => sum + row.properNames, 0),
       ratchet: { medianPctMax: thresholds.readingLemmatizedMedianPctMax, over45Max: thresholds.readingLemmatizedOver45Max, maxPctMax: thresholds.readingLemmatizedMaxPctMax, pedagogicalTargetMedianPct: 25, targetMet: lemmatizedMedian <= 25 },
+      questionCritical: {
+        definition: "Words of the reading that also occur in a question prompt or its keyed answer and that no earlier lesson, no current phrase, card or vocabulary-stage anchor, and no entry of the reading's own glossary ever explained (ADR-135).",
+        unsupported: questionCriticalUnsupported,
+        byLevel: Object.fromEntries(LEVEL_ORDER.map((lvl) => [lvl, questionCritical.filter((row) => row.level === lvl).reduce((sum, row) => sum + row.words.length, 0)])),
+        max: thresholds.readingQuestionCriticalUnsupportedMax,
+        rows: questionCritical.filter((row) => row.words.length),
+      },
       worstLessons: [...lemmatizedReading].sort((a, b) => b.pct - a.pct).slice(0, 13).map((row) => ({ id: row.id, pct: row.pct, unknown: row.unknown.slice(0, 12) })),
       note: "Lemma candidates come from rules plus an explicit irregular dictionary (strong and mixed verbs, sein/haben/werden, modals, umlaut and Latin plurals, irregular comparison, registry plurals). It is not a full morphological analyser: a miss counts as unknown, so the figure still errs high. v2 (ADR-127): irregular forms of stop-listed verbs count as function words through the dictionary only, and support includes what the vocabulary stage shows openly (the first four noun anchors, the anchors the lesson's own reading text uses, and every verb-preposition frame); anchors in the closed «Weitere Zielnomen» disclosure and case forms are not counted.",
     },

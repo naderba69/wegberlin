@@ -242,6 +242,7 @@ function levelFromLessonId(lessonId: string) {
 export const ORIGINAL_P098_NOUN_TARGET_COUNT = 1297;
 export const ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT = 89;
 const ORIGINAL_P098_NOUN_SCOPE = "P0-98-original-1297-noun-target";
+export const QUESTION_SUPPORT_NOUN_SCOPE = "ADR-135-question-support-noun-anchor";
 
 export function assertOriginalP098NounReviewScope(nounEntries: readonly NounGrammarEntry[], pendingCandidateCount: number) {
   if (nounEntries.length !== ORIGINAL_P098_NOUN_TARGET_COUNT || pendingCandidateCount !== ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT) {
@@ -653,6 +654,8 @@ export function buildP099ExclusionReviewDossier(input: {
 export function buildLexicalReviewPacketArtifacts(input: {
   audit: LexicalTargetAudit;
   nounEntries: readonly NounGrammarEntry[];
+  /** ADR-135 anchors for question-critical reading words; reviewed in their own worksheet, outside P0-98. */
+  questionSupportNounEntries?: readonly NounGrammarEntry[];
   verbFrames: readonly VerbPrepositionFrame[];
   contentHash: string;
   /** عدد أسماء أدلة الاستبعادات المسجَّلة فعلًا في الورقة المحفوظة؛ 0 افتراضيًا. لا يمنح مراجعة. */
@@ -664,10 +667,10 @@ export function buildLexicalReviewPacketArtifacts(input: {
     "reviewScope", "anchorId", "level", "lessonId", "lemma", "article", "gender", "nominative", "accusative", "dative", "genitive",
     "plural", "dativePlural", "sourceVersion", "targetOrRegistryReferences", "contextReferences", ...REVIEW_COLUMNS,
   ];
-  const nounRows = nounEntries.map((entry) => {
+  const nounRow = (scope: string) => (entry: NounGrammarEntry) => {
     const sources = sourcesForAnchor(audit.nounRows, entry.id);
     return appendBlankReviewColumns([
-      ORIGINAL_P098_NOUN_SCOPE,
+      scope,
       entry.id,
       levelFromLessonId(entry.lessonId),
       entry.lessonId,
@@ -684,7 +687,9 @@ export function buildLexicalReviewPacketArtifacts(input: {
       reviewEvidence(sources, ["target", "registry"], 6),
       reviewEvidence(sources, ["context"], 3),
     ]);
-  });
+  };
+  const nounRows = nounEntries.map(nounRow(ORIGINAL_P098_NOUN_SCOPE));
+  const questionSupportNounRows = (input.questionSupportNounEntries ?? []).map(nounRow(QUESTION_SUPPORT_NOUN_SCOPE));
 
   const frameHeaders = [
     "anchorId", "level", "lessonId", "infinitive", "preposition", "authoredGovernedCase", "chunkDe", "exampleDe",
@@ -798,6 +803,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 | الملف | الصفوف (من دون الرأس) | الغرض |
 |---|---:|---|
 | \`noun-anchors.csv\` | ${nounRows.length} | ورقة عمل P0-98 للنطاق الأصلي: سجلات الاسم المؤلفة الـ1,297؛ راجع أداة التعريف/الجنس، التصريف، الجمع، والسياق الظاهر. |
+| \`question-support-noun-anchors.csv\` | ${questionSupportNounRows.length} | أسماء أضافها ADR-135 لأن سؤال قراءة أو جوابه يعتمد عليها ولم يشرحها سطح سابق ولا المسرد. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. |
 | \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |
@@ -834,6 +840,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
     { path: P099_EXCLUSION_REVIEW_DOSSIER_PATH, content: dossier },
     { path: P099_QUALITY_TARGET_WORKLIST_PATH, content: qualityWorklist },
     { path: "reports/lexical-review-packet/noun-anchors.csv", content: serializeCsv(nounHeaders, nounRows) },
+    { path: "reports/lexical-review-packet/question-support-noun-anchors.csv", content: serializeCsv(nounHeaders, questionSupportNounRows) },
     { path: "reports/lexical-review-packet/verb-frames.csv", content: serializeCsv(frameHeaders, frameRows) },
     { path: "reports/lexical-review-packet/frame-quality-targets.csv", content: serializeCsv(qualityFrameHeaders, qualityFrameRows) },
     { path: "reports/lexical-review-packet/unresolved-candidates.csv", content: serializeCsv(candidateHeaders, [...nounCandidates, ...frameCandidates]) },

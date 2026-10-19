@@ -93,6 +93,29 @@ export function measureReadingLoad(lessons: readonly FullLesson[], context: Lexi
   });
 }
 
+export type QuestionCriticalRow = { id: string; level: CEFRLevel; words: string[] };
+
+/**
+ * Question-critical support (ADR-135). A reading word is question-critical when it also occurs in
+ * a question prompt or in the keyed answer. It is unsupported when nothing in the sequence ever
+ * showed it: not an earlier lesson, not the current phrases, cards or vocabulary stage (the same
+ * prior-sequence support as `measureReadingLoad`), and not the reading's own glossary. Such a word
+ * forces the learner to answer from a form that no surface of the course ever explained.
+ */
+export function measureQuestionCriticalSupport(lessons: readonly FullLesson[], context: LexicalLoadContext, vocabularyStage: (lessonId: string) => readonly string[] = () => []): QuestionCriticalRow[] {
+  const loads = measureReadingLoad(lessons, context, vocabularyStage);
+  return lessons.map((lesson, index) => {
+    const glossary = new Set<string>();
+    for (const entry of lesson.reading.glossary) {
+      addSupport(glossary, entry.surfaceForm, context);
+      addSupport(glossary, entry.lemma, context);
+    }
+    const unsupported = new Set(loads[index]!.unknown.filter((word) => !lemmaKeys(word, context.dictionary, context.stem).some((key) => glossary.has(key))));
+    const questionWords = new Set(lesson.reading.questions.flatMap((question) => contentWordTypes(`${question.promptDe} ${question.options[question.correctIndex] ?? ""}`, context)));
+    return { id: lesson.id, level: lesson.level, words: [...unsupported].filter((word) => questionWords.has(word)) };
+  });
+}
+
 /** Long inputs: every lesson up to and including the input's level, plus the input's own glossary shown beside it. */
 export function measureLongInputLoad(tasks: readonly { id: string; level: CEFRLevel; text: string; glossary: readonly string[] }[], lessons: readonly FullLesson[], context: LexicalLoadContext, vocabularyStage: (lessonId: string) => readonly string[] = () => []): LexicalLoadRow[] {
   return tasks.map((task) => {

@@ -363,6 +363,7 @@ export const b2Module4Lessons: FullLesson[] = [
  { lemma: "kennzeichnen", surfaceForm: "kennzeichnete", ar: "يعلّم/يوضح" },
  { lemma: "beeinträchtigen", surfaceForm: "beeinträchtigen", ar: "يؤثر سلبًا" },
  { lemma: "Reichweite", surfaceForm: "Reichweite", ar: "مجال صلاحية الادعاء" },
+ { lemma: "derselbe", surfaceForm: "dieselbe", ar: "نفسها" },
  ],
  questions: [
  { id: "b2-08-rq1", promptDe: "Warum waren die Meldungen keine unabhängigen Bestätigungen?", promptAr: "لماذا لم تكن الأخبار تأكيدات مستقلة؟", options: ["Weil die Redaktionen keine eigenen Zahlen ergänzt, nur abgeschrieben hatten.", "Weil sie alle auf dieselbe Unternehmensmitteilung zurückgingen.", "Weil niemand in der Redaktion die Studie selbst gelesen hatte.", "Weil keine überregionale Zeitung darüber berichtet hatte."], correctIndex: 1, explanationAr: "تعدد الناشرين لم يغير المصدر الأولي الواحد. ارجع إلى «Eine Prüfung der Belegkette ergab jedoch, dass alle Texte auf dieselbe Pressemitteilung eines Unternehmens zurückgingen, das eine Konzentrations-App verkauft.»." },

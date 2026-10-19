@@ -14,13 +14,13 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2304,
-      "nounGrammarEntries": 1297,
+      "nounGrammarEntries": 1402,
       "verbPrepositionFrames": 134,
       "tunisianSupportNotes": 17,
       "dictationItems": 16,
       "branchingConversationScenarios": 8,
       "collocationNetworks": 16,
-      "totalRootObjects": 4345
+      "totalRootObjects": 4450
     },
     "schemaFamilies": 16,
     "issues": []
@@ -44235,38 +44235,38 @@
   "lexicalTargetGaps": {
     "version": "lexical-target-gap-v1",
     "lessonCount": 96,
-    "nounAnchorCount": 1297,
+    "nounAnchorCount": 1402,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4924,
-      "covered": 1385,
+      "totalCandidates": 4965,
+      "covered": 1503,
       "pendingHuman": 89,
-      "contextualNotTarget": 3450,
-      "authoredTargets": 1474,
+      "contextualNotTarget": 3373,
+      "authoredTargets": 1592,
       "byLevel": {
         "A1": {
-          "totalCandidates": 562,
-          "covered": 298,
+          "totalCandidates": 570,
+          "covered": 319,
           "pendingHuman": 0,
-          "contextualNotTarget": 264
+          "contextualNotTarget": 251
         },
         "A2": {
-          "totalCandidates": 898,
-          "covered": 292,
+          "totalCandidates": 904,
+          "covered": 310,
           "pendingHuman": 0,
-          "contextualNotTarget": 606
+          "contextualNotTarget": 594
         },
         "B1": {
-          "totalCandidates": 1246,
-          "covered": 339,
+          "totalCandidates": 1260,
+          "covered": 372,
           "pendingHuman": 0,
-          "contextualNotTarget": 907
+          "contextualNotTarget": 888
         },
         "B2": {
-          "totalCandidates": 2218,
-          "covered": 456,
+          "totalCandidates": 2231,
+          "covered": 502,
           "pendingHuman": 89,
-          "contextualNotTarget": 1673
+          "contextualNotTarget": 1640
         }
       }
     },
@@ -44940,6 +44940,26 @@
           }
         ],
         "id": "lex-n-a1-02-141f4f0e"
+      },
+      {
+        "lessonId": "a1-02",
+        "level": "A1",
+        "lemmaCandidate": "Spanisch",
+        "normalizedLemma": "spanisch",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-02-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-02-noun-17",
+            "stage": "vocabulary",
+            "surface": "das Spanisch",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-02-abff06af"
       },
       {
         "lessonId": "a1-02",
@@ -46962,10 +46982,18 @@
         "level": "A1",
         "lemmaCandidate": "Nummer",
         "normalizedLemma": "nummer",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-05-noun-12"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-05-noun-12",
+            "stage": "vocabulary",
+            "surface": "die Nummer",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
@@ -48430,9 +48458,11 @@
         "level": "A1",
         "lemmaCandidate": "Zug",
         "normalizedLemma": "zug",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-07-noun-10"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[2].de",
@@ -48440,6 +48470,12 @@
             "text": "Wann fährt der Zug nach Potsdam?",
             "surface": "Wann fährt der Zug nach Potsdam?",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a1-07-noun-10",
+            "stage": "vocabulary",
+            "surface": "der Zug",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[2].promptDe",
@@ -49292,6 +49328,26 @@
           }
         ],
         "id": "lex-n-a1-09-95849788"
+      },
+      {
+        "lessonId": "a1-09",
+        "level": "A1",
+        "lemmaCandidate": "Wortkarte",
+        "normalizedLemma": "wortkarte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-09-noun-7"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-09-noun-7",
+            "stage": "vocabulary",
+            "surface": "die Wortkarte",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-09-23db9348"
       },
       {
         "lessonId": "a1-09",
@@ -50335,10 +50391,18 @@
         "level": "A1",
         "lemmaCandidate": "Tomate",
         "normalizedLemma": "tomate",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-10-noun-18"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-10-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Tomate",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -51152,6 +51216,26 @@
       {
         "lessonId": "a1-11",
         "level": "A1",
+        "lemmaCandidate": "Person",
+        "normalizedLemma": "person",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-11-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-11-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Person",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-11-0cd5c8ad"
+      },
+      {
+        "lessonId": "a1-11",
+        "level": "A1",
         "lemmaCandidate": "Preis",
         "normalizedLemma": "preis",
         "role": "anchor",
@@ -51540,9 +51624,11 @@
         "level": "A1",
         "lemmaCandidate": "Gemüsesuppe",
         "normalizedLemma": "gemüsesuppe",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-12-noun-14"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[1].de",
@@ -51550,6 +51636,12 @@
             "text": "Für mich bitte die Gemüsesuppe und einen Salat ohne Zwiebeln.",
             "surface": "Für mich bitte die Gemüsesuppe und einen Salat ohne Zwiebeln.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a1-12-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Gemüsesuppe",
+            "strength": "registry"
           },
           {
             "path": "reading.textDe",
@@ -51626,10 +51718,18 @@
         "level": "A1",
         "lemmaCandidate": "Glas",
         "normalizedLemma": "glas",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-12-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-12-noun-15",
+            "stage": "vocabulary",
+            "surface": "das Glas",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -51936,6 +52036,26 @@
       {
         "lessonId": "a1-12",
         "level": "A1",
+        "lemmaCandidate": "Sahne",
+        "normalizedLemma": "sahne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-12-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-12-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Sahne",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-12-2027e268"
+      },
+      {
+        "lessonId": "a1-12",
+        "level": "A1",
         "lemmaCandidate": "Salat",
         "normalizedLemma": "salat",
         "role": "anchor",
@@ -52220,10 +52340,18 @@
         "level": "A1",
         "lemmaCandidate": "Tomatensuppe",
         "normalizedLemma": "tomatensuppe",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-12-noun-13"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-12-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Tomatensuppe",
+            "strength": "registry"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -53456,9 +53584,11 @@
         "level": "A1",
         "lemmaCandidate": "Buch",
         "normalizedLemma": "buch",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-14-noun-17"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[4].de",
@@ -53466,6 +53596,12 @@
             "text": "Ah, er liegt zwischen dem Buch und der Tasse.",
             "surface": "Ah, er liegt zwischen dem Buch und der Tasse.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a1-14-noun-17",
+            "stage": "vocabulary",
+            "surface": "das Buch",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[2].options[0]",
@@ -54417,10 +54553,18 @@
         "level": "A1",
         "lemmaCandidate": "Tasche",
         "normalizedLemma": "tasche",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-14-noun-16"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-14-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Tasche",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -56220,10 +56364,18 @@
         "level": "A1",
         "lemmaCandidate": "Wanderung",
         "normalizedLemma": "wanderung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-16-noun-9"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-16-noun-9",
+            "stage": "vocabulary",
+            "surface": "die Wanderung",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -56825,11 +56977,33 @@
       {
         "lessonId": "a1-17",
         "level": "A1",
+        "lemmaCandidate": "Stadtpark",
+        "normalizedLemma": "stadtpark",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-17-noun-9"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-17-noun-9",
+            "stage": "vocabulary",
+            "surface": "der Stadtpark",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-17-ee174ab0"
+      },
+      {
+        "lessonId": "a1-17",
+        "level": "A1",
         "lemmaCandidate": "Stadtparks",
         "normalizedLemma": "stadtparks",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-17-noun-9"
+        ],
         "sources": [
           {
             "path": "reading.textDe",
@@ -56975,6 +57149,26 @@
           }
         ],
         "id": "lex-n-a1-18-44ec6fd8"
+      },
+      {
+        "lessonId": "a1-18",
+        "level": "A1",
+        "lemmaCandidate": "Freitagabend",
+        "normalizedLemma": "freitagabend",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-18-noun-9"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-18-noun-9",
+            "stage": "vocabulary",
+            "surface": "der Freitagabend",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-18-0e3cc843"
       },
       {
         "lessonId": "a1-18",
@@ -59347,10 +59541,18 @@
         "level": "A1",
         "lemmaCandidate": "Sprachschule",
         "normalizedLemma": "sprachschule",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-20-noun-16"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-20-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Sprachschule",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -59443,6 +59645,32 @@
           }
         ],
         "id": "lex-n-a1-20-f86addde"
+      },
+      {
+        "lessonId": "a1-20",
+        "level": "A1",
+        "lemmaCandidate": "Süden",
+        "normalizedLemma": "süden",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-20-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-20-noun-15",
+            "stage": "vocabulary",
+            "surface": "der Süden",
+            "strength": "registry"
+          },
+          {
+            "path": "reading.glossary[13].lemma",
+            "stage": "reading",
+            "surface": "Süden",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-a1-20-92d5f3b6"
       },
       {
         "lessonId": "a1-20",
@@ -60485,10 +60713,18 @@
         "level": "A1",
         "lemmaCandidate": "Fieber",
         "normalizedLemma": "fieber",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-22-noun-17"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a1-22-noun-17",
+            "stage": "vocabulary",
+            "surface": "das Fieber",
+            "strength": "registry"
+          },
           {
             "path": "mediation.sourceDe",
             "stage": "mediation",
@@ -62763,11 +62999,33 @@
       {
         "lessonId": "a1-24",
         "level": "A1",
+        "lemmaCandidate": "Lernnotiz",
+        "normalizedLemma": "lernnotiz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-24-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a1-24-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Lernnotiz",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a1-24-f6c2edf7"
+      },
+      {
+        "lessonId": "a1-24",
+        "level": "A1",
         "lemmaCandidate": "Lernnotizen",
         "normalizedLemma": "lernnotizen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a1-24-noun-18"
+        ],
         "sources": [
           {
             "path": "reading.questions[1].promptDe",
@@ -63543,10 +63801,18 @@
         "level": "A2",
         "lemmaCandidate": "Mittagspause",
         "normalizedLemma": "mittagspause",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-01-noun-9"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-01-noun-9",
+            "stage": "vocabulary",
+            "surface": "die Mittagspause",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -67050,9 +67316,11 @@
         "level": "A2",
         "lemmaCandidate": "Garten",
         "normalizedLemma": "garten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-05-noun-15"
+        ],
         "sources": [
           {
             "path": "flashcards[3].exampleDe",
@@ -67060,6 +67328,12 @@
             "text": "Man darf den Garten benutzen.",
             "surface": "Man darf den Garten benutzen.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a2-05-noun-15",
+            "stage": "vocabulary",
+            "surface": "der Garten",
+            "strength": "registry"
           },
           {
             "path": "miniTest[3].options[1]",
@@ -68328,9 +68602,11 @@
         "level": "A2",
         "lemmaCandidate": "Person",
         "normalizedLemma": "person",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-06-noun-12"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[3].de",
@@ -68338,6 +68614,12 @@
             "text": "Wenn jemand spät kommt, kann die Person am nächsten Morgen aufräumen.",
             "surface": "Wenn jemand spät kommt, kann die Person am nächsten Morgen aufräumen.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a2-06-noun-12",
+            "stage": "vocabulary",
+            "surface": "die Person",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[1].promptDe",
@@ -73733,10 +74015,18 @@
         "level": "A2",
         "lemmaCandidate": "Parkplatz",
         "normalizedLemma": "parkplatz",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-11-noun-14"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-11-noun-14",
+            "stage": "vocabulary",
+            "surface": "der Parkplatz",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -74771,10 +75061,18 @@
         "level": "A2",
         "lemmaCandidate": "Familienzimmer",
         "normalizedLemma": "familienzimmer",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-12-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-12-noun-15",
+            "stage": "vocabulary",
+            "surface": "das Familienzimmer",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -77829,10 +78127,18 @@
         "level": "A2",
         "lemmaCandidate": "Lehrkraft",
         "normalizedLemma": "lehrkraft",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-15-noun-13"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-15-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Lehrkraft",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -78302,10 +78608,18 @@
         "level": "A2",
         "lemmaCandidate": "Sprachlernen",
         "normalizedLemma": "sprachlernen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-15-noun-14"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-15-noun-14",
+            "stage": "vocabulary",
+            "surface": "das Sprachlernen",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -78726,11 +79040,33 @@
       {
         "lessonId": "a2-16",
         "level": "A2",
+        "lemmaCandidate": "Buslinie",
+        "normalizedLemma": "buslinie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-16-noun-10"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-16-noun-10",
+            "stage": "vocabulary",
+            "surface": "die Buslinie",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-16-75b0ac81"
+      },
+      {
+        "lessonId": "a2-16",
+        "level": "A2",
         "lemmaCandidate": "Buslinien",
         "normalizedLemma": "buslinien",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-16-noun-10"
+        ],
         "sources": [
           {
             "path": "reading.questions[0].promptDe",
@@ -79373,9 +79709,11 @@
         "level": "A2",
         "lemmaCandidate": "Projekt",
         "normalizedLemma": "projekt",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-16-noun-12"
+        ],
         "sources": [
           {
             "path": "exercises[3].sentence",
@@ -79383,6 +79721,12 @@
             "text": "Die Stadt eröffnet einen Park. Das ist sicher das beste Projekt. (تلخيص محايد)",
             "surface": "Die Stadt eröffnet einen Park. Das ist sicher das beste Projekt. (تلخيص محايد)",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.a2-16-noun-12",
+            "stage": "vocabulary",
+            "surface": "das Projekt",
+            "strength": "registry"
           },
           {
             "path": "reading.textDe",
@@ -79473,10 +79817,18 @@
         "level": "A2",
         "lemmaCandidate": "Route",
         "normalizedLemma": "route",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-16-noun-11"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-16-noun-11",
+            "stage": "vocabulary",
+            "surface": "die Route",
+            "strength": "registry"
+          },
           {
             "path": "mediation.sourceDe",
             "stage": "mediation",
@@ -79526,6 +79878,26 @@
           }
         ],
         "id": "lex-n-a2-16-f39ab838"
+      },
+      {
+        "lessonId": "a2-16",
+        "level": "A2",
+        "lemmaCandidate": "September",
+        "normalizedLemma": "september",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-16-noun-13"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-16-noun-13",
+            "stage": "vocabulary",
+            "surface": "der September",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-16-1052aa81"
       },
       {
         "lessonId": "a2-16",
@@ -81475,10 +81847,18 @@
         "level": "A2",
         "lemmaCandidate": "Aussprache",
         "normalizedLemma": "aussprache",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-18-noun-7"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-18-noun-7",
+            "stage": "vocabulary",
+            "surface": "die Aussprache",
+            "strength": "registry"
+          },
           {
             "path": "writing.modelDe",
             "stage": "writing",
@@ -81681,6 +82061,26 @@
           }
         ],
         "id": "lex-n-a2-18-c2e10f6c"
+      },
+      {
+        "lessonId": "a2-18",
+        "level": "A2",
+        "lemmaCandidate": "Lernaufgabe",
+        "normalizedLemma": "lernaufgabe",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-18-noun-8"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-18-noun-8",
+            "stage": "vocabulary",
+            "surface": "die Lernaufgabe",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-18-783e7154"
       },
       {
         "lessonId": "a2-18",
@@ -83037,10 +83437,18 @@
         "level": "A2",
         "lemmaCandidate": "Übersetzung",
         "normalizedLemma": "übersetzung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-19-noun-13"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.a2-19-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Übersetzung",
+            "strength": "registry"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -85100,6 +85508,26 @@
           }
         ],
         "id": "lex-n-a2-21-d6da3554"
+      },
+      {
+        "lessonId": "a2-21",
+        "level": "A2",
+        "lemmaCandidate": "Grammatik",
+        "normalizedLemma": "grammatik",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-21-noun-10"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-21-noun-10",
+            "stage": "vocabulary",
+            "surface": "die Grammatik",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-21-5a9b9d8b"
       },
       {
         "lessonId": "a2-21",
@@ -87665,6 +88093,26 @@
       {
         "lessonId": "a2-23",
         "level": "A2",
+        "lemmaCandidate": "Sprachlehrer",
+        "normalizedLemma": "sprachlehrer",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-23-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-23-noun-16",
+            "stage": "vocabulary",
+            "surface": "der Sprachlehrer",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-23-14e270e9"
+      },
+      {
+        "lessonId": "a2-23",
+        "level": "A2",
         "lemmaCandidate": "Stadt",
         "normalizedLemma": "stadt",
         "role": "context-only",
@@ -87824,6 +88272,26 @@
           }
         ],
         "id": "lex-n-a2-23-04cf2ea7"
+      },
+      {
+        "lessonId": "a2-23",
+        "level": "A2",
+        "lemmaCandidate": "Themenkarte",
+        "normalizedLemma": "themenkarte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-23-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.a2-23-noun-17",
+            "stage": "vocabulary",
+            "surface": "die Themenkarte",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-a2-23-d3aaf11c"
       },
       {
         "lessonId": "a2-23",
@@ -91290,6 +91758,26 @@
       {
         "lessonId": "b1-02",
         "level": "B1",
+        "lemmaCandidate": "Monat",
+        "normalizedLemma": "monat",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-02-noun-9"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-02-noun-9",
+            "stage": "vocabulary",
+            "surface": "der Monat",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-02-831712c2"
+      },
+      {
+        "lessonId": "b1-02",
+        "level": "B1",
         "lemmaCandidate": "Nähe",
         "normalizedLemma": "nähe",
         "role": "context-only",
@@ -91706,10 +92194,18 @@
         "level": "B1",
         "lemmaCandidate": "Vertrag",
         "normalizedLemma": "vertrag",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-02-noun-8"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-02-noun-8",
+            "stage": "vocabulary",
+            "surface": "der Vertrag",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
@@ -92307,6 +92803,26 @@
       {
         "lessonId": "b1-03",
         "level": "B1",
+        "lemmaCandidate": "Feedback",
+        "normalizedLemma": "feedback",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-03-noun-12"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-03-noun-12",
+            "stage": "vocabulary",
+            "surface": "das Feedback",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-03-cffe6e2d"
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
         "lemmaCandidate": "Freund",
         "normalizedLemma": "freund",
         "role": "context-only",
@@ -92376,6 +92892,26 @@
           }
         ],
         "id": "lex-n-b1-03-940dc6f4"
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
+        "lemmaCandidate": "Grafikdesign",
+        "normalizedLemma": "grafikdesign",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-03-noun-11"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-03-noun-11",
+            "stage": "vocabulary",
+            "surface": "das Grafikdesign",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-03-f0ce15b6"
       },
       {
         "lessonId": "b1-03",
@@ -93315,9 +93851,11 @@
         "level": "B1",
         "lemmaCandidate": "Design",
         "normalizedLemma": "design",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-04-noun-12"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[4].de",
@@ -93332,6 +93870,12 @@
             "text": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
             "surface": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b1-04-noun-12",
+            "stage": "vocabulary",
+            "surface": "das Design",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[2].promptDe",
@@ -94606,10 +95150,18 @@
         "level": "B1",
         "lemmaCandidate": "Chat",
         "normalizedLemma": "chat",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-13"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-05-noun-13",
+            "stage": "vocabulary",
+            "surface": "der Chat",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -97011,10 +97563,18 @@
         "level": "B1",
         "lemmaCandidate": "Trainerin",
         "normalizedLemma": "trainerin",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-06-noun-12"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-06-noun-12",
+            "stage": "vocabulary",
+            "surface": "die Trainerin",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -97360,10 +97920,18 @@
         "level": "B1",
         "lemmaCandidate": "Dorf",
         "normalizedLemma": "dorf",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-07-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-07-noun-15",
+            "stage": "vocabulary",
+            "surface": "das Dorf",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -98190,10 +98758,18 @@
         "level": "B1",
         "lemmaCandidate": "Natur",
         "normalizedLemma": "natur",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-07-noun-16"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-07-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Natur",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -99092,6 +99668,26 @@
           }
         ],
         "id": "lex-n-b1-08-c882dd19"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Beratung",
+        "normalizedLemma": "beratung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-08-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Beratung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-08-c4103bc1"
       },
       {
         "lessonId": "b1-08",
@@ -101036,6 +101632,26 @@
       {
         "lessonId": "b1-09",
         "level": "B1",
+        "lemmaCandidate": "Lieferung",
+        "normalizedLemma": "lieferung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-09-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-09-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Lieferung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-09-ccbf2181"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
         "lemmaCandidate": "Lösung",
         "normalizedLemma": "lösung",
         "role": "context-only",
@@ -101248,9 +101864,11 @@
         "level": "B1",
         "lemmaCandidate": "Pilotversuch",
         "normalizedLemma": "pilotversuch",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-09-noun-17"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[3].de",
@@ -101258,6 +101876,12 @@
             "text": "Wir schlagen einen dreimonatigen Pilotversuch mit Lieferzeiten vor.",
             "surface": "Wir schlagen einen dreimonatigen Pilotversuch mit Lieferzeiten vor.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b1-09-noun-17",
+            "stage": "vocabulary",
+            "surface": "der Pilotversuch",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[0].promptDe",
@@ -101983,6 +102607,26 @@
           }
         ],
         "id": "lex-n-b1-09-9086ce25"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
+        "lemmaCandidate": "Wirkung",
+        "normalizedLemma": "wirkung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-09-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-09-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Wirkung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-09-9f3c65bd"
       },
       {
         "lessonId": "b1-09",
@@ -102921,10 +103565,18 @@
         "level": "B1",
         "lemmaCandidate": "Modell",
         "normalizedLemma": "modell",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-16"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-10-noun-16",
+            "stage": "vocabulary",
+            "surface": "das Modell",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -103270,10 +103922,18 @@
         "level": "B1",
         "lemmaCandidate": "Strom",
         "normalizedLemma": "strom",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-17"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-10-noun-17",
+            "stage": "vocabulary",
+            "surface": "der Strom",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
@@ -103464,6 +104124,26 @@
           }
         ],
         "id": "lex-n-b1-10-cc9e674a"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Abstellplatz",
+        "normalizedLemma": "abstellplatz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-11-noun-15",
+            "stage": "vocabulary",
+            "surface": "der Abstellplatz",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-11-4679e7d3"
       },
       {
         "lessonId": "b1-11",
@@ -103805,10 +104485,18 @@
         "level": "B1",
         "lemmaCandidate": "Fahrradnutzung",
         "normalizedLemma": "fahrradnutzung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-14"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-11-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Fahrradnutzung",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -104948,11 +105636,33 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Ding",
+        "normalizedLemma": "ding",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-12-noun-17",
+            "stage": "vocabulary",
+            "surface": "das Ding",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-12-9960fa9c"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Dinge",
         "normalizedLemma": "dinge",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-17"
+        ],
         "sources": [
           {
             "path": "discovery.examples[3]",
@@ -108173,6 +108883,26 @@
       {
         "lessonId": "b1-14",
         "level": "B1",
+        "lemmaCandidate": "Projekterfahrung",
+        "normalizedLemma": "projekterfahrung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-14-noun-14"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-14-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Projekterfahrung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-14-cc536a7d"
+      },
+      {
+        "lessonId": "b1-14",
+        "level": "B1",
         "lemmaCandidate": "Qualifikation",
         "normalizedLemma": "qualifikation",
         "role": "anchor",
@@ -110121,10 +110851,18 @@
         "level": "B1",
         "lemmaCandidate": "Version",
         "normalizedLemma": "version",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-15-noun-13"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-15-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Version",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -112028,10 +112766,18 @@
         "level": "B1",
         "lemmaCandidate": "Beziehung",
         "normalizedLemma": "beziehung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-17-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Beziehung",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
@@ -116367,6 +117113,26 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Energie",
+        "normalizedLemma": "energie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-10"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-20-noun-10",
+            "stage": "vocabulary",
+            "surface": "die Energie",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-20-b8decc2a"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Entscheidung",
         "normalizedLemma": "entscheidung",
         "role": "context-only",
@@ -116850,6 +117616,26 @@
           }
         ],
         "id": "lex-n-b1-20-3f42f9b4"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Lernergebnis",
+        "normalizedLemma": "lernergebnis",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-11"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-20-noun-11",
+            "stage": "vocabulary",
+            "surface": "das Lernergebnis",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-20-1a703463"
       },
       {
         "lessonId": "b1-20",
@@ -118340,10 +119126,18 @@
         "level": "B1",
         "lemmaCandidate": "Idee",
         "normalizedLemma": "idee",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-21-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Idee",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -120148,10 +120942,18 @@
         "level": "B1",
         "lemmaCandidate": "Prüfungserfolg",
         "normalizedLemma": "prüfungserfolg",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-22-noun-19"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-22-noun-19",
+            "stage": "vocabulary",
+            "surface": "der Prüfungserfolg",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -120855,9 +121657,11 @@
         "level": "B1",
         "lemmaCandidate": "App",
         "normalizedLemma": "app",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-18"
+        ],
         "sources": [
           {
             "path": "exercises[1].template",
@@ -120872,6 +121676,12 @@
             "text": "Wofür nutzen wir die App? Dafür …",
             "surface": "Wofür nutzen wir die App? Dafür …",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-18",
+            "stage": "vocabulary",
+            "surface": "die App",
+            "strength": "registry"
           },
           {
             "path": "mistakes[1].correct",
@@ -121148,6 +121958,26 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Datenspeicherung",
+        "normalizedLemma": "datenspeicherung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-23-noun-23",
+            "stage": "vocabulary",
+            "surface": "die Datenspeicherung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-23-33619fc9"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Eigenschaften",
         "normalizedLemma": "eigenschaften",
         "role": "context-only",
@@ -121229,10 +122059,18 @@
         "level": "B1",
         "lemmaCandidate": "Export",
         "normalizedLemma": "export",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-20"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-23-noun-20",
+            "stage": "vocabulary",
+            "surface": "der Export",
+            "strength": "registry"
+          },
           {
             "path": "miniTest[2].options[3]",
             "stage": "test",
@@ -121310,10 +122148,18 @@
         "level": "B1",
         "lemmaCandidate": "Format",
         "normalizedLemma": "format",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-22"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-23-noun-22",
+            "stage": "vocabulary",
+            "surface": "das Format",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -121610,6 +122456,26 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Papierliste",
+        "normalizedLemma": "papierliste",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-23-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Papierliste",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-23-538eafea"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Passwort",
         "normalizedLemma": "passwort",
         "role": "context-only",
@@ -121625,6 +122491,26 @@
           }
         ],
         "id": "lex-n-b1-23-baa75095"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "PDF",
+        "normalizedLemma": "pdf",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-23-noun-21",
+            "stage": "vocabulary",
+            "surface": "das PDF",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-23-11408d6a"
       },
       {
         "lessonId": "b1-23",
@@ -123081,10 +123967,18 @@
         "level": "B1",
         "lemmaCandidate": "Suchzeit",
         "normalizedLemma": "suchzeit",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-14"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b1-24-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Suchzeit",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -123411,10 +124305,18 @@
         "level": "B2",
         "lemmaCandidate": "Audioaufgabe",
         "normalizedLemma": "audioaufgabe",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-01-noun-10"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-01-noun-10",
+            "stage": "vocabulary",
+            "surface": "die Audioaufgabe",
+            "strength": "registry"
+          },
           {
             "path": "theory[0].examples[2].de",
             "stage": "rule",
@@ -125150,6 +126052,26 @@
       {
         "lessonId": "b2-02",
         "level": "B2",
+        "lemmaCandidate": "Belastungsanalyse",
+        "normalizedLemma": "belastungsanalyse",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-02-noun-14"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-02-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Belastungsanalyse",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-02-470d6abb"
+      },
+      {
+        "lessonId": "b2-02",
+        "level": "B2",
         "lemmaCandidate": "Belastungsmaß",
         "normalizedLemma": "belastungsmaß",
         "role": "context-only",
@@ -125628,10 +126550,18 @@
         "level": "B2",
         "lemmaCandidate": "Kritiker",
         "normalizedLemma": "kritiker",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-02-noun-12"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-02-noun-12",
+            "stage": "vocabulary",
+            "surface": "der Kritiker",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -125904,9 +126834,11 @@
         "level": "B2",
         "lemmaCandidate": "Produktivität",
         "normalizedLemma": "produktivität",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-02-noun-11"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[3].de",
@@ -125921,6 +126853,12 @@
             "text": "___ wenn die Produktivität steigt, müssen Überstunden geprüft werden.",
             "surface": "___ wenn die Produktivität steigt, müssen Überstunden geprüft werden.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-02-noun-11",
+            "stage": "vocabulary",
+            "surface": "die Produktivität",
+            "strength": "registry"
           },
           {
             "path": "reading.textDe",
@@ -126164,6 +127102,26 @@
           }
         ],
         "id": "lex-n-b2-02-edd7f385"
+      },
+      {
+        "lessonId": "b2-02",
+        "level": "B2",
+        "lemmaCandidate": "Überstunde",
+        "normalizedLemma": "überstunde",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-02-noun-13"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-02-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Überstunde",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-02-4996f7fc"
       },
       {
         "lessonId": "b2-02",
@@ -127223,6 +128181,26 @@
           }
         ],
         "id": "lex-n-b2-03-08f34503"
+      },
+      {
+        "lessonId": "b2-03",
+        "level": "B2",
+        "lemmaCandidate": "Präsenzteam",
+        "normalizedLemma": "präsenzteam",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-03-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-03-noun-18",
+            "stage": "vocabulary",
+            "surface": "das Präsenzteam",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-03-893ee2d2"
       },
       {
         "lessonId": "b2-03",
@@ -128759,9 +129737,11 @@
         "level": "B2",
         "lemmaCandidate": "Lieferung",
         "normalizedLemma": "lieferung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-04-noun-19"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[0].de",
@@ -128776,6 +129756,12 @@
             "text": "Angesichts der Frist die Lieferung des Kernumfangs am Montag.",
             "surface": "Angesichts der Frist die Lieferung des Kernumfangs am Montag.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-04-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Lieferung",
+            "strength": "registry"
           },
           {
             "path": "reading.textDe",
@@ -129040,9 +130026,11 @@
         "level": "B2",
         "lemmaCandidate": "Qualität",
         "normalizedLemma": "qualität",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-04-noun-20"
+        ],
         "sources": [
           {
             "path": "discovery.examples[3]",
@@ -129064,6 +130052,12 @@
             "text": "Im Hinblick auf die Qualität …",
             "surface": "Im Hinblick auf die Qualität …",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-04-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Qualität",
+            "strength": "registry"
           },
           {
             "path": "miniTest[2].options[2]",
@@ -130125,10 +131119,18 @@
         "level": "B2",
         "lemmaCandidate": "Fünftel",
         "normalizedLemma": "fünftel",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-05-noun-18"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-05-noun-18",
+            "stage": "vocabulary",
+            "surface": "das Fünftel",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
@@ -130656,10 +131658,18 @@
         "level": "B2",
         "lemmaCandidate": "Schlagzeile",
         "normalizedLemma": "schlagzeile",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-05-noun-17"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-05-noun-17",
+            "stage": "vocabulary",
+            "surface": "die Schlagzeile",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -131873,9 +132883,11 @@
         "level": "B2",
         "lemmaCandidate": "Entfernung",
         "normalizedLemma": "entfernung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-06-noun-26"
+        ],
         "sources": [
           {
             "path": "discovery.examples[0]",
@@ -131897,6 +132909,12 @@
             "text": "Unter Fernerkundung versteht man Messungen aus der Entfernung.",
             "surface": "Unter Fernerkundung versteht man Messungen aus der Entfernung.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-06-noun-26",
+            "stage": "vocabulary",
+            "surface": "die Entfernung",
+            "strength": "registry"
           },
           {
             "path": "reading.questions[0].options[1]",
@@ -132457,6 +133475,26 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
+        "lemmaCandidate": "Material",
+        "normalizedLemma": "material",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-06-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-06-noun-29",
+            "stage": "vocabulary",
+            "surface": "das Material",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-06-880b28e7"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
         "lemmaCandidate": "Menschen",
         "normalizedLemma": "menschen",
         "role": "context-only",
@@ -132818,11 +133856,33 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
+        "lemmaCandidate": "Ort",
+        "normalizedLemma": "ort",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-06-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-06-noun-27",
+            "stage": "vocabulary",
+            "surface": "der Ort",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-06-f8fe6121"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
         "lemmaCandidate": "Orte",
         "normalizedLemma": "orte",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-06-noun-27"
+        ],
         "sources": [
           {
             "path": "reading.textDe",
@@ -133000,10 +134060,18 @@
         "level": "B2",
         "lemmaCandidate": "Schatten",
         "normalizedLemma": "schatten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-06-noun-28"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-06-noun-28",
+            "stage": "vocabulary",
+            "surface": "der Schatten",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -134562,6 +135630,26 @@
       {
         "lessonId": "b2-07",
         "level": "B2",
+        "lemmaCandidate": "Lebenslage",
+        "normalizedLemma": "lebenslage",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-07-noun-12"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-07-noun-12",
+            "stage": "vocabulary",
+            "surface": "die Lebenslage",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-07-1bf63d9d"
+      },
+      {
+        "lessonId": "b2-07",
+        "level": "B2",
         "lemmaCandidate": "Leitung",
         "normalizedLemma": "leitung",
         "role": "context-only",
@@ -136106,11 +137194,33 @@
       {
         "lessonId": "b2-08",
         "level": "B2",
+        "lemmaCandidate": "Befragte",
+        "normalizedLemma": "befragte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-08-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-08-noun-22",
+            "stage": "vocabulary",
+            "surface": "der Befragte",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-08-cdd69e32"
+      },
+      {
+        "lessonId": "b2-08",
+        "level": "B2",
         "lemmaCandidate": "Befragten",
         "normalizedLemma": "befragten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-08-noun-22"
+        ],
         "sources": [
           {
             "path": "reading.questions[1].options[0]",
@@ -136134,10 +137244,18 @@
         "level": "B2",
         "lemmaCandidate": "Befragung",
         "normalizedLemma": "befragung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-08-noun-23"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-08-noun-23",
+            "stage": "vocabulary",
+            "surface": "die Befragung",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -139507,6 +140625,26 @@
       {
         "lessonId": "b2-09",
         "level": "B2",
+        "lemmaCandidate": "Deutung",
+        "normalizedLemma": "deutung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-09-noun-44"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-09-noun-44",
+            "stage": "vocabulary",
+            "surface": "die Deutung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-09-8dd00fb1"
+      },
+      {
+        "lessonId": "b2-09",
+        "level": "B2",
         "lemmaCandidate": "Diskussion",
         "normalizedLemma": "diskussion",
         "role": "context-only",
@@ -142509,6 +143647,26 @@
       {
         "lessonId": "b2-10",
         "level": "B2",
+        "lemmaCandidate": "Erläuterung",
+        "normalizedLemma": "erläuterung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-10-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-10-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Erläuterung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-10-aae478ae"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
         "lemmaCandidate": "Erstattung",
         "normalizedLemma": "erstattung",
         "role": "anchor",
@@ -143765,10 +144923,18 @@
         "level": "B2",
         "lemmaCandidate": "Vermittlerin",
         "normalizedLemma": "vermittlerin",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-10-noun-18"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-10-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Vermittlerin",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -144520,6 +145686,26 @@
       {
         "lessonId": "b2-11",
         "level": "B2",
+        "lemmaCandidate": "Buchungsregel",
+        "normalizedLemma": "buchungsregel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-11-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-11-noun-22",
+            "stage": "vocabulary",
+            "surface": "die Buchungsregel",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-11-5651f4ec"
+      },
+      {
+        "lessonId": "b2-11",
+        "level": "B2",
         "lemmaCandidate": "Budgetlimit",
         "normalizedLemma": "budgetlimit",
         "role": "context-only",
@@ -145191,10 +146377,18 @@
         "level": "B2",
         "lemmaCandidate": "Matrix",
         "normalizedLemma": "matrix",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-11-noun-23"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-11-noun-23",
+            "stage": "vocabulary",
+            "surface": "die Matrix",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
@@ -145336,6 +146530,26 @@
           }
         ],
         "id": "lex-n-b2-11-f2c0dd2e"
+      },
+      {
+        "lessonId": "b2-11",
+        "level": "B2",
+        "lemmaCandidate": "Operator",
+        "normalizedLemma": "operator",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-11-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-11-noun-21",
+            "stage": "vocabulary",
+            "surface": "der Operator",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-11-eb88e5b6"
       },
       {
         "lessonId": "b2-11",
@@ -147819,6 +149033,26 @@
       {
         "lessonId": "b2-12",
         "level": "B2",
+        "lemmaCandidate": "Kompetenz",
+        "normalizedLemma": "kompetenz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-12-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-12-noun-21",
+            "stage": "vocabulary",
+            "surface": "die Kompetenz",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-12-a18f870a"
+      },
+      {
+        "lessonId": "b2-12",
+        "level": "B2",
         "lemmaCandidate": "Kurzvortrag",
         "normalizedLemma": "kurzvortrag",
         "role": "context-only",
@@ -148147,9 +149381,11 @@
         "level": "B2",
         "lemmaCandidate": "Operator",
         "normalizedLemma": "operator",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-12-noun-22"
+        ],
         "sources": [
           {
             "path": "exercises[0].options[0]",
@@ -148157,6 +149393,12 @@
             "text": "Den Begriff verständlich umschreiben, markieren und den fehlenden Operator sichern",
             "surface": "Den Begriff verständlich umschreiben, markieren und den fehlenden Operator sichern",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-12-noun-22",
+            "stage": "vocabulary",
+            "surface": "der Operator",
+            "strength": "registry"
           }
         ],
         "id": "lex-n-b2-12-3e25fded"
@@ -148166,9 +149408,11 @@
         "level": "B2",
         "lemmaCandidate": "Operatoren",
         "normalizedLemma": "operatoren",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-12-noun-22"
+        ],
         "sources": [
           {
             "path": "exercises[0].options[1]",
@@ -149525,11 +150769,33 @@
       {
         "lessonId": "b2-13",
         "level": "B2",
+        "lemmaCandidate": "Arbeitsphase",
+        "normalizedLemma": "arbeitsphase",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-13-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b2-13-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Arbeitsphase",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b2-13-c00e2cbf"
+      },
+      {
+        "lessonId": "b2-13",
+        "level": "B2",
         "lemmaCandidate": "Arbeitsphasen",
         "normalizedLemma": "arbeitsphasen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-13-noun-20"
+        ],
         "sources": [
           {
             "path": "reading.textDe",
@@ -149624,10 +150890,18 @@
         "level": "B2",
         "lemmaCandidate": "Ausgangsniveau",
         "normalizedLemma": "ausgangsniveau",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-13-noun-21"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-13-noun-21",
+            "stage": "vocabulary",
+            "surface": "das Ausgangsniveau",
+            "strength": "registry"
+          },
           {
             "path": "writing.modelDe",
             "stage": "writing",
@@ -149643,9 +150917,11 @@
         "level": "B2",
         "lemmaCandidate": "Ausgangsniveaus",
         "normalizedLemma": "ausgangsniveaus",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-13-noun-21"
+        ],
         "sources": [
           {
             "path": "reading.questions[0].options[1]",
@@ -151263,9 +152539,11 @@
         "level": "B2",
         "lemmaCandidate": "Regelung",
         "normalizedLemma": "regelung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-13-noun-22"
+        ],
         "sources": [
           {
             "path": "discovery.examples[4]",
@@ -151273,6 +152551,12 @@
             "text": "Kriterium: Bleibt der Unterschied aus, entfällt die Regelung.",
             "surface": "Kriterium: Bleibt der Unterschied aus, entfällt die Regelung.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-13-noun-22",
+            "stage": "vocabulary",
+            "surface": "die Regelung",
+            "strength": "registry"
           },
           {
             "path": "listening.transcriptDe",
@@ -153063,10 +154347,18 @@
         "level": "B2",
         "lemmaCandidate": "Fürwort",
         "normalizedLemma": "fürwort",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-14-noun-15"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-14-noun-15",
+            "stage": "vocabulary",
+            "surface": "das Fürwort",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -153628,10 +154920,18 @@
         "level": "B2",
         "lemmaCandidate": "Nomen",
         "normalizedLemma": "nomen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-14-noun-16"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-14-noun-16",
+            "stage": "vocabulary",
+            "surface": "das Nomen",
+            "strength": "registry"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -156865,10 +158165,18 @@
         "level": "B2",
         "lemmaCandidate": "Verb",
         "normalizedLemma": "verb",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-15-noun-22"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-15-noun-22",
+            "stage": "vocabulary",
+            "surface": "das Verb",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].promptDe",
             "stage": "reading",
@@ -156884,9 +158192,11 @@
         "level": "B2",
         "lemmaCandidate": "Verben",
         "normalizedLemma": "verben",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-15-noun-22"
+        ],
         "sources": [
           {
             "path": "exercises[5].template",
@@ -158832,10 +160142,18 @@
         "level": "B2",
         "lemmaCandidate": "Konsequenz",
         "normalizedLemma": "konsequenz",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-16-noun-20"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-16-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Konsequenz",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[2].promptDe",
             "stage": "reading",
@@ -161236,10 +162554,18 @@
         "level": "B2",
         "lemmaCandidate": "Befehlsliste",
         "normalizedLemma": "befehlsliste",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-17-noun-27"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-17-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Befehlsliste",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[0].promptDe",
             "stage": "reading",
@@ -165251,9 +166577,11 @@
         "level": "B2",
         "lemmaCandidate": "Fügung",
         "normalizedLemma": "fügung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-18-noun-21"
+        ],
         "sources": [
           {
             "path": "entry.dialogue[3].de",
@@ -165268,6 +166596,12 @@
             "text": "Also nehme ich die Fügung, wenn der Vorgang Stufen hat oder das Ergebnis zählbar bleiben muss.",
             "surface": "Also nehme ich die Fügung, wenn der Vorgang Stufen hat oder das Ergebnis zählbar bleiben muss.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-18-noun-21",
+            "stage": "vocabulary",
+            "surface": "die Fügung",
+            "strength": "registry"
           },
           {
             "path": "listening.transcriptDe",
@@ -165319,9 +166653,11 @@
         "level": "B2",
         "lemmaCandidate": "Fügungen",
         "normalizedLemma": "fügungen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-18-noun-21"
+        ],
         "sources": [
           {
             "path": "reading.questions[2].options[2]",
@@ -166627,10 +167963,18 @@
         "level": "B2",
         "lemmaCandidate": "Versehen",
         "normalizedLemma": "versehen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-18-noun-20"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-18-noun-20",
+            "stage": "vocabulary",
+            "surface": "das Versehen",
+            "strength": "registry"
+          },
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
@@ -168751,9 +170095,11 @@
         "level": "B2",
         "lemmaCandidate": "Partikel",
         "normalizedLemma": "partikel",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-19-noun-15"
+        ],
         "sources": [
           {
             "path": "flashcards[11].exampleDe",
@@ -168775,6 +170121,12 @@
             "text": "Im Widerspruch genügt eine Partikel pro Satz.",
             "surface": "Im Widerspruch genügt eine Partikel pro Satz.",
             "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b2-19-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Partikel",
+            "strength": "registry"
           },
           {
             "path": "listening.transcriptDe",
@@ -168819,9 +170171,11 @@
         "level": "B2",
         "lemmaCandidate": "Partikeln",
         "normalizedLemma": "partikeln",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-19-noun-15"
+        ],
         "sources": [
           {
             "path": "reading.questions[0].options[0]",
@@ -174582,10 +175936,18 @@
         "level": "B2",
         "lemmaCandidate": "Kandidat",
         "normalizedLemma": "kandidat",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-21-noun-7"
+        ],
         "sources": [
+          {
+            "path": "lexicalRegistry.b2-21-noun-7",
+            "stage": "vocabulary",
+            "surface": "der Kandidat",
+            "strength": "registry"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -174615,9 +175977,11 @@
         "level": "B2",
         "lemmaCandidate": "Kandidaten",
         "normalizedLemma": "kandidaten",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b2-21-noun-7"
+        ],
         "sources": [
           {
             "path": "listening.questions[1].options[1]",
@@ -215969,5 +217333,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "1cf73073b87ea3cf387dfc6b41fa9186a6548fb24bef848c6a839532b3377869"
+  "contentSha256": "cecc6e6508bfc3e73f87a939c9b14fe8c872249f26e00a57e99f6a2eef1ddf42"
 }

@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v242" || stagingCacheName !== "dwnb-full-pack-staging-v241") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v243" || stagingCacheName !== "dwnb-full-pack-staging-v242") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -619,8 +619,8 @@ requireText(zeroCost, "Hard mandatory budget: **0 USD**", "ZERO_COST.md");
 requireText(sourceWorkflow, "node scripts/audit-source-freshness.mjs --fail-on=due --probe", "monthly source workflow");
 
 if (academicAudit.version !== "academic-governance-v1") fail("academic audit version drifted");
-if (academicAudit.schema?.counts?.totalRootObjects !== 4345 || academicAudit.schema?.schemaFamilies !== 16 || academicAudit.schema?.counts?.tunisianSupportNotes !== 17) fail("academic Zod counters drifted");
-if (academicAudit.schema?.counts?.nounGrammarEntries !== 1297 || academicAudit.schema?.counts?.verbPrepositionFrames !== 134) fail("A1–B2 lexical anchor counters drifted");
+if (academicAudit.schema?.counts?.totalRootObjects !== 4450 || academicAudit.schema?.schemaFamilies !== 16 || academicAudit.schema?.counts?.tunisianSupportNotes !== 17) fail("academic Zod counters drifted");
+if (academicAudit.schema?.counts?.nounGrammarEntries !== 1402 || academicAudit.schema?.counts?.verbPrepositionFrames !== 134) fail("A1–B2 lexical anchor counters drifted");
 if (academicAudit.answerIntegrity?.closedAnswerItems !== 2805 || academicAudit.answerIntegrity?.productiveTasks !== 384 || academicAudit.answerIntegrity?.failures !== 0 || academicAudit.answerIntegrity?.exemptions !== 2) fail("answer integrity counters drifted");
 if (academicAudit.objectiveCoverage?.objectives !== 389 || academicAudit.objectiveCoverage?.gaps !== 0 || academicAudit.objectiveCoverage?.gapLedger?.length !== 0 || academicAudit.objectiveCoverage?.unalignedSurfaces?.length !== 62 || academicAudit.objectiveCoverage?.rows?.some((row) => row.mappingBasis !== "authored-item-alignment")) fail("objective coverage counters drifted");
 if (similarityReviewAudit.format !== "dwnb-content-similarity-review-audit" || similarityReviewAudit.version !== "content-similarity-review-audit-v1" || !/^[a-f0-9]{64}$/.test(similarityReviewAudit.contentSha256)) fail("content similarity/review audit identity drifted");
@@ -736,8 +736,8 @@ for(const text of["never increases by default","at most twenty minutes","one val
 for(const text of["P2-57","Light","Balanced","Intensive","never activate automatically","check-in"] )requireText(intensityPresetsAdr,text,"planning intensity ADR");
 if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planning intensity state drifted");
 const lexicalGaps = academicAudit.lexicalTargetGaps;
-if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1297 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
-if (lexicalGaps?.nounSummary?.totalCandidates !== 4924 || lexicalGaps?.nounSummary?.covered !== 1385 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3450) fail("noun target-gap counters drifted");
+if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1402 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
+if (lexicalGaps?.nounSummary?.totalCandidates !== 4965 || lexicalGaps?.nounSummary?.covered !== 1503 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3373) fail("noun target-gap counters drifted");
 if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1288 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1153 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
 const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v242"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v243"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -967,7 +967,8 @@ for (const text of ["reading-anchored-noun-visibility-v1", "splitNounAnchors", "
 for (const text of ["splitNounAnchors", "reading-noun-anchors", "Weitere Zielnomen"]) requireText(read("src/components/lexical-grammar-panel.tsx"), text, "ADR-127 panel");
 for (const text of ["ADR-127", "22.6", "each effect separately", "not a human review"]) requireText(read("docs/adr/ADR-127-reading-anchored-vocabulary-stage.md"), text, "ADR-127");
 // ADR-128 (v236): the first A1 readings are simplified around their evidence sentences; nothing above 45%, heaviest ratcheted.
-if (lessonQualityAudit.thresholds?.readingLemmatizedMedianPctMax !== 22 || lessonQualityAudit.thresholds?.readingLemmatizedOver45Max !== 0 || lessonQualityAudit.thresholds?.readingLemmatizedMaxPctMax !== 42 || !(lessonQualityAudit.reading?.lemmatized?.maxUnknownWordPct <= 42)) fail("simplified A1 readings or heaviest-text ratchet drifted (ADR-128)");
+// ADR-135 (v243) tightened the same ratchet again to 21 / 39 after question-critical support.
+if (lessonQualityAudit.thresholds?.readingLemmatizedMedianPctMax !== 21 || lessonQualityAudit.thresholds?.readingLemmatizedOver45Max !== 0 || lessonQualityAudit.thresholds?.readingLemmatizedMaxPctMax !== 39 || !(lessonQualityAudit.reading?.lemmatized?.maxUnknownWordPct <= 39) || !(lessonQualityAudit.reading?.lemmatized?.medianUnknownWordPct <= 21)) fail("simplified A1 readings or heaviest-text ratchet drifted (ADR-128/ADR-135)");
 for (const text of ["ADR-128", "evidence sentences", "22.0", "not a human review"]) requireText(read("docs/adr/ADR-128-simplified-first-a1-readings.md"), text, "ADR-128");
 // ADR-129 (v237): [pf] lessons get a lip-closure profile with [p]–[b]; [ʃp]/[ʃt] lessons get a cluster profile; 15/18 interactive rows.
 for (const text of ["\"lipClosure\"", "\"clusters\"", "pb-packen-backen", "cluster-stein-schein", "cluster-platte-palette", "ts-ziege-siege"]) requireText(pronunciationArticulationCore, text, "ADR-129 articulation profiles");
@@ -1004,6 +1005,13 @@ for (const text of ["arabic-learner-pronunciation-source-check-v1", "SCHULTE_BUN
 requireText(read("tests/unit/ipa-source-verification.test.ts"), "covers every transcription currently shown to learners", "ADR-134 guard test");
 if (!read("reports/pronunciation-source-verification/IPA_SOURCE_VERIFICATION_2026-10-18.csv").startsWith("source,de,ipa,status,dictionary_ipa,decision,note_ar")) fail("ADR-134 evidence CSV header drifted");
 for (const text of ["ADR-134", "source-verified-agent", "not an independent phonetician"]) requireText(read("docs/adr/ADR-134-ipa-and-pronunciation-claim-source-verification.md"), text, "ADR-134");
+// ADR-135 (v243): no reading question may depend on a word that nothing in the course ever explained.
+requireText(read("src/core/content-validation/lexical-load.ts"), "export function measureQuestionCriticalSupport", "ADR-135 measurement");
+requireText(read("scripts/generate-lesson-quality-audit.ts"), "readingQuestionCriticalUnsupportedMax: 0", "ADR-135 ceiling");
+if (JSON.parse(read("reports/lesson-quality-audit.json")).reading?.lemmatized?.questionCritical?.unsupported !== 0) fail("ADR-135 question-critical unsupported words returned");
+if (read("reports/lexical-review-packet/question-support-noun-anchors.csv").trimEnd().split(/\r?\n/u).length !== 106) fail("ADR-135 question-support noun worksheet drifted");
+requireText(read("tests/unit/question-critical-support.test.ts"), "leaves no reading question or keyed answer depending on a never-explained word", "ADR-135 guard test");
+for (const text of ["ADR-135", "question-critical", "authored-review-pending"]) requireText(read("docs/adr/ADR-135-question-critical-reading-support.md"), text, "ADR-135");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");

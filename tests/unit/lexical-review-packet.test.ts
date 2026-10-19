@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { nounGrammarEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { nounGrammarEntries, originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { serializeCsv } from "@/core/content-validation/safe-csv";
 import {
   assertOriginalP098NounReviewScope,
@@ -64,7 +64,8 @@ function parseCsv(content: string): CsvRow[] {
 const audit = buildLexicalTargetGapAudit();
 const artifacts = buildLexicalReviewPacketArtifacts({
   audit,
-  nounEntries: nounGrammarEntries,
+  nounEntries: originalP098NounEntries,
+  questionSupportNounEntries,
   verbFrames: verbPrepositionFrames,
   contentHash: "test-content-sha256",
 });
@@ -91,16 +92,23 @@ describe("unsigned independent German lexical review packet", () => {
     expect(frameRows).toHaveLength(135);
     expect(nounRows[0][0]).toBe("reviewScope");
     expect(new Set(nounRows.slice(1).map((row) => row[0]))).toEqual(new Set(["P0-98-original-1297-noun-target"]));
-    expect(new Set(nounRows.slice(1).map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
+    expect(new Set(nounRows.slice(1).map((row) => row[nounAnchorIndex]))).toEqual(new Set(originalP098NounEntries.map((entry) => entry.id)));
+    // ADR-135: anchors added for question-critical reading words get their own worksheet, outside P0-98.
+    const supportRows = parseCsv(byPath.get("reports/lexical-review-packet/question-support-noun-anchors.csv")!);
+    expect(supportRows).toHaveLength(106);
+    expect(new Set(supportRows.slice(1).map((row) => row[0]))).toEqual(new Set(["ADR-135-question-support-noun-anchor"]));
+    expect(new Set([...nounRows.slice(1), ...supportRows.slice(1)].map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
+    assertBlankSignatures(supportRows);
     expect(new Set(frameRows.slice(1).map((row) => row[0]))).toEqual(new Set(verbPrepositionFrames.map((entry) => entry.id)));
     expect(nounRows[0]).toContain("targetOrRegistryReferences");
     expect(frameRows[0]).toContain("machineObservedCaseSignalsNotValidation");
     expect(nounRows.slice(1).every((row) => row[targetReferenceIndex].length > 0)).toBe(true);
     expect(ORIGINAL_P098_NOUN_TARGET_COUNT).toBe(1297);
     expect(ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT).toBe(89);
-    expect(assertOriginalP098NounReviewScope(nounGrammarEntries, 89)).toBeUndefined();
-    expect(() => assertOriginalP098NounReviewScope(nounGrammarEntries.slice(1), 89)).toThrow("Original P0-98 noun scope drifted");
-    expect(() => assertOriginalP098NounReviewScope(nounGrammarEntries, 88)).toThrow("Original P0-98 noun scope drifted");
+    expect(assertOriginalP098NounReviewScope(originalP098NounEntries, 89)).toBeUndefined();
+    expect(() => assertOriginalP098NounReviewScope(nounGrammarEntries, 89)).toThrow("Original P0-98 noun scope drifted");
+    expect(() => assertOriginalP098NounReviewScope(originalP098NounEntries.slice(1), 89)).toThrow("Original P0-98 noun scope drifted");
+    expect(() => assertOriginalP098NounReviewScope(originalP098NounEntries, 88)).toThrow("Original P0-98 noun scope drifted");
     assertBlankSignatures(nounRows);
     assertBlankSignatures(frameRows);
   });

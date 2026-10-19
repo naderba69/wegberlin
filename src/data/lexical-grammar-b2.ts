@@ -7,12 +7,12 @@ const articleByGender = { masculine: "der", feminine: "die", neuter: "das", "plu
 const accusativeArticleByGender = { masculine: "den", feminine: "die", neuter: "das", "plural-only": "die" } as const;
 const dativeArticleByGender = { masculine: "dem", feminine: "der", neuter: "dem", "plural-only": "den" } as const;
 
-function nounEntries(lessonId: string, seeds: readonly NounSeed[]): NounGrammarEntry[] {
+function nounEntries(lessonId: string, seeds: readonly NounSeed[], firstIndex = 0): NounGrammarEntry[] {
   return seeds.map(([lemma, gender, plural, meaningAr, obliqueSingular], index) => {
     const article = articleByGender[gender];
     const oblique = obliqueSingular ?? lemma;
     return {
-      id: `${lessonId}-noun-${index + 1}`,
+      id: `${lessonId}-noun-${firstIndex + index + 1}`,
       lessonId,
       lemma,
       article,
@@ -172,7 +172,38 @@ const additionalFrameSeeds: Partial<Record<string, readonly FrameSeed[]>> = {
   "b2-24": [{ infinitive: "sich anschließen", preposition: "an", governedCase: "accusative", chunkDe: "sich an das Zitat anschließen", meaningAr: "يأتي مباشرة بعد الاقتباس فيشرحه ولا يتركه بلا مرجع", exampleDe: "An das Zitat schließt sich ein Satz mit Datum und Aktenzeichen an.", contrastAr: "«sich anschließen an» يطلب an + Akkusativ: an das Zitat؛ والبادئة an تنفصل إلى آخر الجملة: … schließt sich … an. أما «schließen aus» + Dativ فتعني الاستنتاج من شيء." }],
 };
 
-export const b2NounGrammarEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, [...seeds, ...(additionalNounSeeds[lessonId] ?? [])]));
+const coreB2NounEntries = Object.entries(nounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, [...seeds, ...(additionalNounSeeds[lessonId] ?? [])]));
+
+/**
+ * ADR-135: nouns a reading question or its keyed answer depends on, which no earlier surface and no
+ * glossary had explained. Numbered after every existing entry of the lesson, so no stored ID moves.
+ * They sit outside the original P0-98 review scope and carry their own review rows.
+ */
+const questionSupportNounSeeds: Partial<Record<string, readonly NounSeed[]>> = {
+  "b2-01": [["Audioaufgabe", "feminine", "Audioaufgaben", "المهمة الصوتية"]],
+  "b2-02": [["Produktivität", "feminine", null, "الإنتاجية"], ["Kritiker", "masculine", "Kritiker", "الناقد"], ["Überstunde", "feminine", "Überstunden", "ساعة العمل الإضافية"], ["Belastungsanalyse", "feminine", "Belastungsanalysen", "تحليل عبء العمل"]],
+  "b2-03": [["Präsenzteam", "neuter", "Präsenzteams", "فريق العمل الحضوري"]],
+  "b2-04": [["Lieferung", "feminine", "Lieferungen", "التسليم"], ["Qualität", "feminine", "Qualitäten", "الجودة"]],
+  "b2-05": [["Schlagzeile", "feminine", "Schlagzeilen", "العنوان الصحفي البارز"], ["Fünftel", "neuter", "Fünftel", "الخُمس"]],
+  "b2-06": [["Entfernung", "feminine", "Entfernungen", "المسافة / البعد"], ["Ort", "masculine", "Orte", "المكان"], ["Schatten", "masculine", "Schatten", "الظل"], ["Material", "neuter", "Materialien", "المادة"]],
+  "b2-07": [["Lebenslage", "feminine", "Lebenslagen", "الوضع المعيشي"]],
+  "b2-08": [["Befragte", "masculine", "Befragten", "الشخص المستطلَع رأيه", "Befragten"], ["Befragung", "feminine", "Befragungen", "الاستطلاع"]],
+  "b2-09": [["Deutung", "feminine", "Deutungen", "التأويل"]],
+  "b2-10": [["Vermittlerin", "feminine", "Vermittlerinnen", "الوسيطة"], ["Erläuterung", "feminine", "Erläuterungen", "التوضيح"]],
+  "b2-11": [["Operator", "masculine", "Operatoren", "فعل التكليف في نص المهمة"], ["Buchungsregel", "feminine", "Buchungsregeln", "قاعدة الحجز"], ["Matrix", "feminine", "Matrizen", "جدول التقاطع"]],
+  "b2-12": [["Kompetenz", "feminine", "Kompetenzen", "الكفاءة"], ["Operator", "masculine", "Operatoren", "فعل التكليف في نص المهمة"]],
+  "b2-13": [["Arbeitsphase", "feminine", "Arbeitsphasen", "مرحلة العمل"], ["Ausgangsniveau", "neuter", "Ausgangsniveaus", "المستوى الأولي"], ["Regelung", "feminine", "Regelungen", "القاعدة التنظيمية"]],
+  "b2-14": [["Fürwort", "neuter", "Fürwörter", "الضمير"], ["Nomen", "neuter", "Nomen", "الاسم"]],
+  "b2-15": [["Verb", "neuter", "Verben", "الفعل"]],
+  "b2-16": [["Konsequenz", "feminine", "Konsequenzen", "العاقبة"]],
+  "b2-17": [["Befehlsliste", "feminine", "Befehlslisten", "قائمة الأوامر"]],
+  "b2-18": [["Versehen", "neuter", "Versehen", "السهو"], ["Fügung", "feminine", "Fügungen", "التركيب اللغوي"]],
+  "b2-19": [["Partikel", "feminine", "Partikeln", "الأداة اللغوية"]],
+  "b2-21": [["Kandidat", "masculine", "Kandidaten", "المرشّح", "Kandidaten"]],
+};
+
+export const b2QuestionSupportNounEntries = Object.entries(questionSupportNounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, seeds ?? [], coreB2NounEntries.filter((entry) => entry.lessonId === lessonId).length));
+export const b2NounGrammarEntries = [...coreB2NounEntries, ...b2QuestionSupportNounEntries];
 export const b2VerbPrepositionFrames: VerbPrepositionFrame[] = Object.entries(frameSeeds).flatMap(([lessonId, frame]) =>
   [frame, ...(additionalFrameSeeds[lessonId] ?? [])].map((item, index) => ({
     id: `${lessonId}-verb-frame-${index + 1}`,

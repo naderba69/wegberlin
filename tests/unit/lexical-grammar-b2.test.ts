@@ -10,11 +10,11 @@ import { nounGrammarEntrySchema, verbPrepositionFrameSchema } from "@/core/conte
 describe("B2 structured noun and verb-preposition anchors", () => {
   it("keeps the all-lesson baseline and expands structured frame coverage", () => {
     expect(academicLessonList).toHaveLength(96);
-    expect(b2NounGrammarEntries).toHaveLength(427);
+    expect(b2NounGrammarEntries).toHaveLength(464);
     expect(b2VerbPrepositionFrames).toHaveLength(48);
-    expect(nounGrammarEntries).toHaveLength(1297);
+    expect(nounGrammarEntries).toHaveLength(1402);
     expect(verbPrepositionFrames).toHaveLength(134);
-    expect(lexicalGrammarCoverage.B2).toEqual({ lessons: 24, nounEntries: 427, verbFrames: 48 });
+    expect(lexicalGrammarCoverage.B2).toEqual({ lessons: 24, nounEntries: 464, verbFrames: 48 });
     for (const lesson of academicLessonList) {
       expect(nounsByLesson[lesson.id]?.length, lesson.id).toBeGreaterThanOrEqual(4);
       expect(verbFramesByLesson[lesson.id]?.length, lesson.id).toBeGreaterThanOrEqual(1);

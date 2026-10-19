@@ -25,7 +25,8 @@ export async function auditJavaScriptBudgets({ projectRoot = process.cwd() } = {
   rows.sort((a, b) => b.gzipBytes - a.gzipBytes);
   const total = rows.reduce((sum, row) => sum + row.gzipBytes, 0);
   const max = rows[0]?.gzipBytes ?? 0;
-  const budgets = {totalChunkGzipBytes:2500000,maxSingleChunkGzipBytes:750000};
+  // ADR-141 / v250: owner-approved +80,000 B on the total safety ceiling (2,125,000 -> 2,205,000); the 15% reserve and the single-chunk limit are unchanged.
+  const budgets = {totalChunkGzipBytes:2594118,maxSingleChunkGzipBytes:750000};
   const safetyMarginPercent=15;
   const safetyFactor = 1 - safetyMarginPercent / 100;
   const safetyCeilings = {

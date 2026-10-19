@@ -1,5 +1,6 @@
 """ADR-135 / v244: compare every question-support noun anchor with WiktionaryDE.
 ADR-139 / v248: the same check runs on the Goethe A1 core-vocabulary anchors (export with `goethe-core`).
+ADR-141 / v250: and on the Goethe A2 core-vocabulary anchors (export with `goethe-a2-core`).
 
 Source: the `german_nouns` 1.2.5 package on PyPI (WiktionaryDE extract, CC BY-SA 4.0).
 Usage:

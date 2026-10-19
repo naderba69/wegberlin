@@ -4,16 +4,16 @@
   "generatedAt": "2026-09-10",
   "safetyMarginPercent": 15,
   "budgets": {
-    "totalChunkGzipBytes": 2500000,
+    "totalChunkGzipBytes": 2594118,
     "maxSingleChunkGzipBytes": 750000
   },
   "safetyCeilings": {
-    "totalChunkGzipBytes": 2125000,
+    "totalChunkGzipBytes": 2205000,
     "maxSingleChunkGzipBytes": 637500
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2121564,
+    "totalChunkGzipBytes": 2135587,
     "maxSingleChunkGzipBytes": 269020
   },
   "issues": [],
@@ -24,14 +24,14 @@
       "gzipBytes": 269020
     },
     {
+      "path": ".next/static/chunks/curriculum-a2-01599e724246327b.js",
+      "rawBytes": 662536,
+      "gzipBytes": 182722
+    },
+    {
       "path": ".next/static/chunks/curriculum-b1-17709aa7ec7285df.js",
       "rawBytes": 660779,
       "gzipBytes": 182284
-    },
-    {
-      "path": ".next/static/chunks/curriculum-a2-3627cf65f6692d9e.js",
-      "rawBytes": 624263,
-      "gzipBytes": 171747
     },
     {
       "path": ".next/static/chunks/1269-b6b28928787723f5.js",
@@ -59,12 +59,12 @@
       "gzipBytes": 63160
     },
     {
-      "path": ".next/static/chunks/app/lernen/[lessonId]/page-9677b8afa16b5733.js",
+      "path": ".next/static/chunks/app/lernen/[lessonId]/page-e0269a6d9d37f315.js",
       "rawBytes": 213545,
       "gzipBytes": 63086
     },
     {
-      "path": ".next/static/chunks/app/settings/page-7ac2a7b234db3a98.js",
+      "path": ".next/static/chunks/app/settings/page-297787dafb6649d9.js",
       "rawBytes": 219475,
       "gzipBytes": 61569
     },
@@ -84,9 +84,9 @@
       "gzipBytes": 39520
     },
     {
-      "path": ".next/static/chunks/8836-cf9b3321395a4636.js",
-      "rawBytes": 148606,
-      "gzipBytes": 35986
+      "path": ".next/static/chunks/8836-b31a9540905b8b8b.js",
+      "rawBytes": 156977,
+      "gzipBytes": 39029
     },
     {
       "path": ".next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",
@@ -94,7 +94,7 @@
       "gzipBytes": 29095
     },
     {
-      "path": ".next/static/chunks/app/today/page-38f3c6fcb9db6955.js",
+      "path": ".next/static/chunks/app/today/page-5df9f43a10af3881.js",
       "rawBytes": 93499,
       "gzipBytes": 28040
     },
@@ -104,12 +104,12 @@
       "gzipBytes": 27556
     },
     {
-      "path": ".next/static/chunks/app/speaking/page-af3808948512165f.js",
+      "path": ".next/static/chunks/app/speaking/page-440c18d18d6a51b4.js",
       "rawBytes": 88071,
       "gzipBytes": 26899
     },
     {
-      "path": ".next/static/chunks/app/progress/page-9638d66813716c69.js",
+      "path": ".next/static/chunks/app/progress/page-748fd0190472cdcc.js",
       "rawBytes": 88132,
       "gzipBytes": 26711
     },

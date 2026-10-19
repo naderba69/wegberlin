@@ -5,9 +5,9 @@
  "boundary": "ratio-and-task-presence-audit-no-quality-judgement-no-cefr-claim",
  "ok": true,
  "lessons": 96,
- "closed": 1369,
+ "closed": 1392,
  "constructed": 387,
- "constructedSharePct": 22,
+ "constructedSharePct": 21.8,
  "productionBlocks": 288,
  "lessonsWithFullWritingTask": 96,
  "lessonsWithMediation": 96,
@@ -20,9 +20,9 @@
   },
   "A2": {
    "lessons": 24,
-   "closed": 336,
+   "closed": 359,
    "constructed": 96,
-   "constructedSharePct": 22.2
+   "constructedSharePct": 21.1
   },
   "B1": {
    "lessons": 24,
@@ -329,7 +329,7 @@
   {
    "lessonId": "a2-01",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -341,7 +341,7 @@
   {
    "lessonId": "a2-02",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -353,7 +353,7 @@
   {
    "lessonId": "a2-03",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -365,7 +365,7 @@
   {
    "lessonId": "a2-04",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -377,7 +377,7 @@
   {
    "lessonId": "a2-05",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -389,7 +389,7 @@
   {
    "lessonId": "a2-06",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -401,7 +401,7 @@
   {
    "lessonId": "a2-07",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -413,7 +413,7 @@
   {
    "lessonId": "a2-08",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -425,7 +425,7 @@
   {
    "lessonId": "a2-09",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -437,7 +437,7 @@
   {
    "lessonId": "a2-10",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -449,7 +449,7 @@
   {
    "lessonId": "a2-11",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -461,7 +461,7 @@
   {
    "lessonId": "a2-12",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -473,7 +473,7 @@
   {
    "lessonId": "a2-13",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -485,7 +485,7 @@
   {
    "lessonId": "a2-14",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -497,7 +497,7 @@
   {
    "lessonId": "a2-15",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -509,7 +509,7 @@
   {
    "lessonId": "a2-16",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -521,7 +521,7 @@
   {
    "lessonId": "a2-17",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -533,7 +533,7 @@
   {
    "lessonId": "a2-18",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -545,7 +545,7 @@
   {
    "lessonId": "a2-19",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -569,7 +569,7 @@
   {
    "lessonId": "a2-21",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -581,7 +581,7 @@
   {
    "lessonId": "a2-22",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -593,7 +593,7 @@
   {
    "lessonId": "a2-23",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -605,7 +605,7 @@
   {
    "lessonId": "a2-24",
    "level": "A2",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,

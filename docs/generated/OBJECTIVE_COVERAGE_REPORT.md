@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `e69283a8c0f4b1fd724649c8421e70f897c586ec54b1cbe04ea33c0323df60e0`
+Content SHA-256: `1fcf03482526fd97c46fbc8f83f5da228ee1fd6b95b5b5c10d17717c3108071a`
 
 ## Result
 
@@ -128,100 +128,100 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-24-objective-2` | Ich kann um Hilfe und Erklärung bitten. | أطلب المساعدة والتفسير. | 1 · `a1-24:entry` | 4 | 1 · `a1-24-m4` | covered |
 | `a1-24-objective-3` | Ich kann formelle Serviceanweisungen verstehen. | أفهم تعليمات خدمة رسمية. | 2 · `a1-24:entry`, `a1-24-t2` | 5 | 1 · `a1-24-m3` | covered |
 | `a1-24-objective-4` | Ich kann sensible Daten in Übungen schützen. | أحمي بياناتي الحساسة أثناء التدريب. | 1 · `a1-24-t1` | 1 | 1 · `a1-24-m5` | covered |
-| `a2-01-objective-1` | Ich kann über abgeschlossene Ereignisse sprechen. | أتحدث عن أحداث مكتملة في الماضي. | 3 · `a2-01:entry`, `a2-01:vocabulary` | 8 | 1 · `a2-01-m5` | covered |
+| `a2-01-objective-1` | Ich kann über abgeschlossene Ereignisse sprechen. | أتحدث عن أحداث مكتملة في الماضي. | 3 · `a2-01:entry`, `a2-01:vocabulary` | 9 | 1 · `a2-01-m5` | covered |
 | `a2-01-objective-2` | Ich kann haben und sein im Perfekt unterscheiden. | أختار haben أو sein في Perfekt. | 3 · `a2-01:entry`, `a2-01:vocabulary` | 7 | 2 · `a2-01-m1`, `a2-01-m2` | covered |
 | `a2-01-objective-3` | Ich kann regelmäßige Partizipien bilden. | أبني Partizip II للأفعال المنتظمة. | 1 · `a2-01-t3` | 2 | 1 · `a2-01-m3` | covered |
-| `a2-01-objective-4` | Ich kann einen vergangenen Tag chronologisch beschreiben. | أصف يومًا ماضيًا بترتيب زمني. | 1 · `a2-01:vocabulary` | 4 | 1 · `a2-01-m4` | covered |
-| `a2-02-objective-1` | Ich kann eine kurze Geschichte strukturieren. | أبني قصة قصيرة منظمة. | 3 · `a2-02:entry`, `a2-02:vocabulary` | 5 | 1 · `a2-02-m5` | covered |
+| `a2-01-objective-4` | Ich kann einen vergangenen Tag chronologisch beschreiben. | أصف يومًا ماضيًا بترتيب زمني. | 1 · `a2-01:vocabulary` | 5 | 1 · `a2-01-m4` | covered |
+| `a2-02-objective-1` | Ich kann eine kurze Geschichte strukturieren. | أبني قصة قصيرة منظمة. | 3 · `a2-02:entry`, `a2-02:vocabulary` | 6 | 1 · `a2-02-m5` | covered |
 | `a2-02-objective-2` | Ich kann Ereignisse mit Konnektoren verbinden. | أربط الأحداث بروابط زمنية. | 2 · `a2-02:vocabulary`, `a2-02-t1` | 4 | 2 · `a2-02-m3`, `a2-02-m5` | covered |
 | `a2-02-objective-3` | Ich kann trennbare Verben im Perfekt bilden. | أبني ماضي الأفعال المنفصلة. | 1 · `a2-02-t2` | 3 | 2 · `a2-02-m1`, `a2-02-m4` | covered |
 | `a2-02-objective-4` | Ich kann war und hatte für Hintergrundinformationen benutzen. | أستعمل war و hatte لوصف الخلفية. | 1 · `a2-02-t3` | 5 | 1 · `a2-02-m2` | covered |
-| `a2-03-objective-1` | Ich kann über einen besonderen Moment erzählen. | أروي لحظة مميزة. | 2 · `a2-03:entry`, `a2-03:vocabulary` | 4 | 1 · `a2-03-m5` | covered |
+| `a2-03-objective-1` | Ich kann über einen besonderen Moment erzählen. | أروي لحظة مميزة. | 2 · `a2-03:entry`, `a2-03:vocabulary` | 5 | 1 · `a2-03-m5` | covered |
 | `a2-03-objective-2` | Ich kann als für eine einmalige Vergangenheitssituation benutzen. | أستعمل als لموقف ماضٍ فريد. | 3 · `a2-03:entry`, `a2-03:vocabulary` | 4 | 1 · `a2-03-m1` | covered |
-| `a2-03-objective-3` | Ich kann Gefühle und Gründe ausdrücken. | أصف المشاعر والأسباب. | 4 · `a2-03:entry`, `a2-03:vocabulary` | 7 | 2 · `a2-03-m2`, `a2-03-m3` | covered |
+| `a2-03-objective-3` | Ich kann Gefühle und Gründe ausdrücken. | أصف المشاعر والأسباب. | 4 · `a2-03:entry`, `a2-03:vocabulary` | 8 | 2 · `a2-03-m2`, `a2-03-m3` | covered |
 | `a2-03-objective-4` | Ich kann eine Erfahrung zusammenfassen und reflektieren. | ألخص تجربة وأذكر أثرها. | 1 · `a2-03-t3` | 5 | 1 · `a2-03-m4` | covered |
-| `a2-04-objective-1` | Ich kann mich neuen Nachbarn vorstellen. | أقدم نفسي لجيران جدد. | 2 · `a2-04:entry`, `a2-04:vocabulary` | 2 | 1 · `a2-04-m1` | covered |
+| `a2-04-objective-1` | Ich kann mich neuen Nachbarn vorstellen. | أقدم نفسي لجيران جدد. | 2 · `a2-04:entry`, `a2-04:vocabulary` | 3 | 1 · `a2-04-m1` | covered |
 | `a2-04-objective-2` | Ich kann Hilfe anbieten und darum bitten. | أعرض المساعدة وأطلبها. | 4 · `a2-04:entry`, `a2-04:vocabulary` | 8 | 1 · `a2-04-m5` | covered |
 | `a2-04-objective-3` | Ich kann Dativpronomen mit helfen benutzen. | أستعمل ضمائر Dativ مع helfen. | 2 · `a2-04-t1`, `a2-04-t2` | 6 | 3 · `a2-04-m2`, `a2-04-m3` | covered |
 | `a2-04-objective-4` | Ich kann eine kurze Nachbarschaftsnachricht schreiben. | أكتب رسالة قصيرة للجيران. | 1 · `a2-04-t3` | 4 | 1 · `a2-04-m4` | covered |
-| `a2-05-objective-1` | Ich kann eine Hausordnung verstehen. | أفهم نظام مبنى بسيطًا. | 1 · `a2-05:vocabulary` | 7 | 1 · `a2-05-m2` | covered |
+| `a2-05-objective-1` | Ich kann eine Hausordnung verstehen. | أفهم نظام مبنى بسيطًا. | 1 · `a2-05:vocabulary` | 8 | 1 · `a2-05-m2` | covered |
 | `a2-05-objective-2` | Ich kann Pflicht, Erlaubnis und Verbot ausdrücken. | أعبر عن الواجب والسماح والمنع. | 3 · `a2-05:entry`, `a2-05:vocabulary` | 5 | 2 · `a2-05-m1`, `a2-05-m4` | covered |
 | `a2-05-objective-3` | Ich kann man mit Modalverben benutzen. | أستعمل man مع الأفعال الناقصة. | 2 · `a2-05:vocabulary`, `a2-05-t2` | 3 | 2 · `a2-05-m1`, `a2-05-m3` | covered |
 | `a2-05-objective-4` | Ich kann höflich auf eine Regel hinweisen. | أنبه إلى قاعدة بلباقة. | 2 · `a2-05:entry`, `a2-05-t3` | 3 | 1 · `a2-05-m5` | covered |
-| `a2-06-objective-1` | Ich kann ein Wohnproblem sachlich beschreiben. | أصف مشكلة سكنية بموضوعية. | 2 · `a2-06:entry`, `a2-06:vocabulary` | 4 | 1 · `a2-06-m3` | covered |
+| `a2-06-objective-1` | Ich kann ein Wohnproblem sachlich beschreiben. | أصف مشكلة سكنية بموضوعية. | 2 · `a2-06:entry`, `a2-06:vocabulary` | 5 | 1 · `a2-06-m3` | covered |
 | `a2-06-objective-2` | Ich kann mit könnten höflich bitten. | أصوغ طلبًا مهذبًا باستعمال könnten. | 3 · `a2-06:entry`, `a2-06:vocabulary` | 5 | 1 · `a2-06-m1` | covered |
 | `a2-06-objective-3` | Ich kann Bedingungen für Lösungen formulieren. | أضع شروطًا بسيطة للحلول. | 1 · `a2-06-t2` | 6 | 1 · `a2-06-m2` | covered |
 | `a2-06-objective-4` | Ich kann einen Kompromiss aushandeln. | أتفاوض على حل وسط. | 2 · `a2-06:entry`, `a2-06:vocabulary` | 6 | 2 · `a2-06-m4`, `a2-06-m5` | covered |
-| `a2-07-objective-1` | Ich kann meinen Arbeitsplatz beschreiben. | أصف مكان عملي. | 2 · `a2-07:entry`, `a2-07:vocabulary` | 2 | 1 · `a2-07-m2` | covered |
+| `a2-07-objective-1` | Ich kann meinen Arbeitsplatz beschreiben. | أصف مكان عملي. | 2 · `a2-07:entry`, `a2-07:vocabulary` | 3 | 1 · `a2-07-m2` | covered |
 | `a2-07-objective-2` | Ich kann Aufgaben und Zuständigkeiten nennen. | أذكر المهام والمسؤوليات. | 4 · `a2-07:entry`, `a2-07:vocabulary` | 9 | 2 · `a2-07-m4`, `a2-07-m5` | covered |
 | `a2-07-objective-3` | Ich kann zuständig für und sich kümmern um benutzen. | أستعمل تعبيري المسؤولية والعناية. | 4 · `a2-07:entry`, `a2-07:vocabulary` | 5 | 2 · `a2-07-m1`, `a2-07-m4` | covered |
 | `a2-07-objective-4` | Ich kann Arbeitsabläufe mit wenn erklären. | أشرح إجراءات متكررة باستعمال wenn. | 1 · `a2-07-t3` | 4 | 1 · `a2-07-m3` | covered |
-| `a2-08-objective-1` | Ich kann wichtige Informationen in einer Stellenanzeige finden. | أستخرج معلومات مهمة من إعلان وظيفة. | 3 · `a2-08:entry`, `a2-08:vocabulary` | 5 | 1 · `a2-08-m5` | covered |
-| `a2-08-objective-2` | Ich kann meine Erfahrung passend beschreiben. | أصف خبرتي بما يناسب الوظيفة. | 2 · `a2-08:vocabulary`, `a2-08-t1` | 6 | 1 · `a2-08-m3` | covered |
+| `a2-08-objective-1` | Ich kann wichtige Informationen in einer Stellenanzeige finden. | أستخرج معلومات مهمة من إعلان وظيفة. | 3 · `a2-08:entry`, `a2-08:vocabulary` | 6 | 1 · `a2-08-m5` | covered |
+| `a2-08-objective-2` | Ich kann meine Erfahrung passend beschreiben. | أصف خبرتي بما يناسب الوظيفة. | 2 · `a2-08:vocabulary`, `a2-08-t1` | 7 | 1 · `a2-08-m3` | covered |
 | `a2-08-objective-3` | Ich kann dass-Sätze bilden. | أبني جمل dass. | 1 · `a2-08-t2` | 3 | 1 · `a2-08-m1` | covered |
 | `a2-08-objective-4` | Ich kann eine kurze formelle Bewerbung schreiben. | أكتب طلب عمل رسميًا قصيرًا. | 1 · `a2-08-t3` | 4 | 3 · `a2-08-m2`, `a2-08-m4` | covered |
-| `a2-09-objective-1` | Ich kann ein berufliches Telefonat strukturieren. | أنظم مكالمة مهنية. | 3 · `a2-09:entry`, `a2-09:vocabulary` | 5 | 2 · `a2-09-m2`, `a2-09-m5` | covered |
+| `a2-09-objective-1` | Ich kann ein berufliches Telefonat strukturieren. | أنظم مكالمة مهنية. | 3 · `a2-09:entry`, `a2-09:vocabulary` | 6 | 2 · `a2-09-m2`, `a2-09-m5` | covered |
 | `a2-09-objective-2` | Ich kann verbinden, zurückrufen und hinterlassen benutzen. | أستعمل عبارات التحويل والاتصال الراجع والرسالة. | 3 · `a2-09:entry`, `a2-09:vocabulary` | 4 | 1 · `a2-09-m3` | covered |
 | `a2-09-objective-3` | Ich kann indirekte Fragen mit ob bilden. | أبني سؤالًا غير مباشر ب ob. | 1 · `a2-09-t2` | 5 | 1 · `a2-09-m1` | covered |
 | `a2-09-objective-4` | Ich kann eine telefonische Nachricht notieren und weitergeben. | أدون رسالة هاتفية وأنقلها. | 1 · `a2-09-t3` | 6 | 1 · `a2-09-m4` | covered |
-| `a2-10-objective-1` | Ich kann Reiseoptionen vergleichen. | أقارن خيارات السفر. | 3 · `a2-10:entry`, `a2-10:vocabulary` | 7 | 1 · `a2-10-m4` | covered |
+| `a2-10-objective-1` | Ich kann Reiseoptionen vergleichen. | أقارن خيارات السفر. | 3 · `a2-10:entry`, `a2-10:vocabulary` | 8 | 1 · `a2-10-m4` | covered |
 | `a2-10-objective-2` | Ich kann den Komparativ mit als benutzen. | أستعمل صيغة المقارنة مع als. | 3 · `a2-10:entry`, `a2-10:vocabulary` | 3 | 2 · `a2-10-m1`, `a2-10-m3` | covered |
 | `a2-10-objective-3` | Ich kann Gleichheit mit so … wie ausdrücken. | أعبر عن التساوي ب so … wie. | 2 · `a2-10:vocabulary`, `a2-10-t2` | 2 | 1 · `a2-10-m2` | covered |
 | `a2-10-objective-4` | Ich kann eine Reiseentscheidung begründen. | أبرر قرار سفر. | 1 · `a2-10-t3` | 6 | 1 · `a2-10-m5` | covered |
-| `a2-11-objective-1` | Ich kann Unterkunftsangebote verstehen. | أفهم عروض الإقامة. | 2 · `a2-11:vocabulary`, `a2-11-t2` | 9 | 1 · `a2-11-m4` | covered |
-| `a2-11-objective-2` | Ich kann nach Ausstattung und Bedingungen fragen. | أسأل عن التجهيزات والشروط. | 3 · `a2-11:entry`, `a2-11-t1` | 3 | 2 · `a2-11-m3`, `a2-11-m5` | covered |
+| `a2-11-objective-1` | Ich kann Unterkunftsangebote verstehen. | أفهم عروض الإقامة. | 2 · `a2-11:vocabulary`, `a2-11-t2` | 10 | 1 · `a2-11-m4` | covered |
+| `a2-11-objective-2` | Ich kann nach Ausstattung und Bedingungen fragen. | أسأل عن التجهيزات والشروط. | 3 · `a2-11:entry`, `a2-11-t1` | 4 | 2 · `a2-11-m3`, `a2-11-m5` | covered |
 | `a2-11-objective-3` | Ich kann mit würde gern höflich buchen. | أحجز بلباقة باستعمال würde gern. | 3 · `a2-11:entry`, `a2-11:vocabulary` | 4 | 1 · `a2-11-m1` | covered |
 | `a2-11-objective-4` | Ich kann eine Buchung vollständig bestätigen. | أؤكد الحجز كاملًا. | 1 · `a2-11-t2` | 4 | 1 · `a2-11-m2` | covered |
-| `a2-12-objective-1` | Ich kann ein Reiseproblem genau beschreiben. | أصف مشكلة سفر بدقة. | 4 · `a2-12:entry`, `a2-12:vocabulary` | 8 | 2 · `a2-12-m1`, `a2-12-m2` | covered |
-| `a2-12-objective-2` | Ich kann höflich reklamieren und Belege nennen. | أقدم شكوى بلباقة وأذكر الأدلة. | 3 · `a2-12:entry`, `a2-12:vocabulary` | 6 | 2 · `a2-12-m1`, `a2-12-m5` | covered |
+| `a2-12-objective-1` | Ich kann ein Reiseproblem genau beschreiben. | أصف مشكلة سفر بدقة. | 4 · `a2-12:entry`, `a2-12:vocabulary` | 9 | 2 · `a2-12-m1`, `a2-12-m2` | covered |
+| `a2-12-objective-2` | Ich kann höflich reklamieren und Belege nennen. | أقدم شكوى بلباقة وأذكر الأدلة. | 3 · `a2-12:entry`, `a2-12:vocabulary` | 7 | 2 · `a2-12-m1`, `a2-12-m5` | covered |
 | `a2-12-objective-3` | Ich kann eine konkrete Lösung verlangen. | أطلب حلًا محددًا. | 1 · `a2-12-t3` | 6 | 1 · `a2-12-m4` | covered |
 | `a2-12-objective-4` | Ich kann Bedingungen und Alternativen verstehen. | أفهم الشروط والبدائل. | 1 · `a2-12-t3` | 4 | 1 · `a2-12-m3` | covered |
-| `a2-13-objective-1` | Ich kann über Gesundheitsgewohnheiten sprechen. | أتحدث عن العادات الصحية. | 4 · `a2-13:entry`, `a2-13:vocabulary` | 3 | 1 · `a2-13-m3` | covered |
+| `a2-13-objective-1` | Ich kann über Gesundheitsgewohnheiten sprechen. | أتحدث عن العادات الصحية. | 4 · `a2-13:entry`, `a2-13:vocabulary` | 4 | 1 · `a2-13-m3` | covered |
 | `a2-13-objective-2` | Ich kann mit sollte allgemeine Ratschläge geben. | أقدم نصيحة عامة ب sollte. | 1 · `a2-13-t1` | 4 | 1 · `a2-13-m1` | covered |
 | `a2-13-objective-3` | Ich kann reflexive Verben im Alltag benutzen. | أستعمل أفعالًا انعكاسية في الروتين. | 2 · `a2-13:vocabulary`, `a2-13-t2` | 3 | 2 · `a2-13-m2`, `a2-13-m3` | covered |
-| `a2-13-objective-4` | Ich kann realistische Veränderungen planen. | أخطط لتغيير واقعي. | 1 · `a2-13-t3` | 11 | 2 · `a2-13-m4`, `a2-13-m5` | covered |
-| `a2-14-objective-1` | Ich kann mich telefonisch und schriftlich krankmelden. | أبلغ عن المرض هاتفيًا وكتابيًا. | 3 · `a2-14:entry`, `a2-14:vocabulary` | 4 | 1 · `a2-14-m1` | covered |
+| `a2-13-objective-4` | Ich kann realistische Veränderungen planen. | أخطط لتغيير واقعي. | 1 · `a2-13-t3` | 12 | 2 · `a2-13-m4`, `a2-13-m5` | covered |
+| `a2-14-objective-1` | Ich kann mich telefonisch und schriftlich krankmelden. | أبلغ عن المرض هاتفيًا وكتابيًا. | 3 · `a2-14:entry`, `a2-14:vocabulary` | 5 | 1 · `a2-14-m1` | covered |
 | `a2-14-objective-2` | Ich kann Dauer und Erreichbarkeit nennen. | أذكر المدة وإمكانية التواصل. | 3 · `a2-14:entry`, `a2-14:vocabulary` | 7 | 1 · `a2-14-m4` | covered |
 | `a2-14-objective-3` | Ich kann dass-Sätze in einer Meldung benutzen. | أستعمل dass في البلاغ. | 1 · `a2-14-t2` | 3 | 2 · `a2-14-m2`, `a2-14-m3` | covered |
 | `a2-14-objective-4` | Ich kann eine Übergabe kurz organisieren. | أنظم تسليم المهام باختصار. | 1 · `a2-14-t3` | 5 | 1 · `a2-14-m5` | covered |
 | `a2-15-objective-1` | Ich kann in einer Apotheke Beschwerden beschreiben. | أصف أعراضًا في الصيدلية. | 2 · `a2-15:entry`, `a2-15:vocabulary` | 2 | 1 · `a2-15-m3` | covered |
-| `a2-15-objective-2` | Ich kann Einnahmehinweise verstehen und bestätigen. | أفهم تعليمات الاستعمال وأعيدها. | 4 · `a2-15:entry`, `a2-15:vocabulary` | 9 | 2 · `a2-15-m1`, `a2-15-m2` | covered |
+| `a2-15-objective-2` | Ich kann Einnahmehinweise verstehen und bestätigen. | أفهم تعليمات الاستعمال وأعيدها. | 4 · `a2-15:entry`, `a2-15:vocabulary` | 10 | 2 · `a2-15-m1`, `a2-15-m2` | covered |
 | `a2-15-objective-3` | Ich kann nach Risiken und Einschränkungen fragen. | أسأل عن التحذيرات والقيود. | 1 · `a2-15-t3` | 7 | 1 · `a2-15-m5` | covered |
-| `a2-15-objective-4` | Ich kann bei Unklarheit fachlichen Rat verlangen. | أطلب رأيًا مختصًا عند الغموض. | 2 · `a2-15-t2`, `a2-15-t3` | 1 | 1 · `a2-15-m4` | covered |
-| `a2-16-objective-1` | Ich kann die Hauptinformationen einer kurzen Nachricht finden. | أستخرج المعلومات الرئيسية من خبر قصير. | 3 · `a2-16:entry`, `a2-16:vocabulary` | 6 | 1 · `a2-16-m5` | covered |
+| `a2-15-objective-4` | Ich kann bei Unklarheit fachlichen Rat verlangen. | أطلب رأيًا مختصًا عند الغموض. | 2 · `a2-15-t2`, `a2-15-t3` | 2 | 1 · `a2-15-m4` | covered |
+| `a2-16-objective-1` | Ich kann die Hauptinformationen einer kurzen Nachricht finden. | أستخرج المعلومات الرئيسية من خبر قصير. | 3 · `a2-16:entry`, `a2-16:vocabulary` | 7 | 1 · `a2-16-m5` | covered |
 | `a2-16-objective-2` | Ich kann Tatsache und Meinung unterscheiden. | أفرق بين الحقيقة والرأي. | 1 · `a2-16-t2` | 5 | 2 · `a2-16-m1`, `a2-16-m2` | covered |
 | `a2-16-objective-3` | Ich kann eine Nachricht mit W-Fragen zusammenfassen. | ألخص خبرًا بأسئلة W. | 3 · `a2-16:vocabulary`, `a2-16-t1` | 6 | 2 · `a2-16-m4`, `a2-16-m5` | covered |
 | `a2-16-objective-4` | Ich kann Quellen und fehlende Informationen benennen. | أذكر المصدر والمعلومات الناقصة. | 3 · `a2-16:entry`, `a2-16:vocabulary` | 6 | 1 · `a2-16-m3` | covered |
-| `a2-17-objective-1` | Ich kann meine digitalen Gewohnheiten beschreiben. | أصف عاداتي الرقمية. | 1 · `a2-17:vocabulary` | 5 | 1 · `a2-17-m3` | covered |
+| `a2-17-objective-1` | Ich kann meine digitalen Gewohnheiten beschreiben. | أصف عاداتي الرقمية. | 1 · `a2-17:vocabulary` | 6 | 1 · `a2-17-m3` | covered |
 | `a2-17-objective-2` | Ich kann einen Zweck mit um … zu ausdrücken. | أعبر عن الهدف ب um … zu. | 2 · `a2-17:entry`, `a2-17-t1` | 6 | 1 · `a2-17-m1` | covered |
 | `a2-17-objective-3` | Ich kann damit bei verschiedenen Personen benutzen. | أستعمل damit عندما يختلف الفاعل. | 1 · `a2-17-t2` | 3 | 2 · `a2-17-m2`, `a2-17-m5` | covered |
 | `a2-17-objective-4` | Ich kann einfache Datenschutzregeln erklären. | أشرح قواعد خصوصية بسيطة. | 3 · `a2-17:entry`, `a2-17:vocabulary` | 9 | 1 · `a2-17-m4` | covered |
-| `a2-18-objective-1` | Ich kann eine Meinung klar formulieren. | أصوغ رأيًا واضحًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 4 | 1 · `a2-18-m1` | covered |
-| `a2-18-objective-2` | Ich kann Grund und Beispiel geben. | أقدم سببًا ومثالًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 5 | 1 · `a2-18-m2` | covered |
+| `a2-18-objective-1` | Ich kann eine Meinung klar formulieren. | أصوغ رأيًا واضحًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 5 | 1 · `a2-18-m1` | covered |
+| `a2-18-objective-2` | Ich kann Grund und Beispiel geben. | أقدم سببًا ومثالًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 6 | 1 · `a2-18-m2` | covered |
 | `a2-18-objective-3` | Ich kann höflich zustimmen und widersprechen. | أوافق وأعترض بلباقة. | 1 · `a2-18-t2` | 5 | 2 · `a2-18-m3`, `a2-18-m5` | covered |
 | `a2-18-objective-4` | Ich kann einen Vorteil und einen Nachteil abwägen. | أوازن بين ميزة وعيب. | 2 · `a2-18:vocabulary`, `a2-18-t3` | 8 | 1 · `a2-18-m4` | covered |
 | `a2-19-objective-1` | Ich kann meine Lerngewohnheiten beschreiben. | أصف عاداتي في التعلم. | 2 · `a2-19:entry`, `a2-19:vocabulary` | 2 | 1 · `a2-19-m3` | covered |
-| `a2-19-objective-2` | Ich kann wirksame Strategien auswählen. | أختار استراتيجيات مناسبة. | 3 · `a2-19:entry`, `a2-19:vocabulary` | 6 | 2 · `a2-19-m1`, `a2-19-m5` | covered |
+| `a2-19-objective-2` | Ich kann wirksame Strategien auswählen. | أختار استراتيجيات مناسبة. | 3 · `a2-19:entry`, `a2-19:vocabulary` | 7 | 2 · `a2-19-m1`, `a2-19-m5` | covered |
 | `a2-19-objective-3` | Ich kann Bedingungen mit wenn formulieren. | أصوغ شروط التعلم ب wenn. | 1 · `a2-19-t2` | 2 | 1 · `a2-19-m2` | covered |
 | `a2-19-objective-4` | Ich kann einen Lernversuch planen und auswerten. | أخطط لتجربة تعلم وأقيمها. | 1 · `a2-19-t3` | 7 | 1 · `a2-19-m4` | covered |
 | `a2-20-objective-1` | Ich kann Kursangebote vergleichen. | أقارن عروض دورات. | 3 · `a2-20:entry`, `a2-20:vocabulary` | 4 | 1 · `a2-20-m2` | covered |
 | `a2-20-objective-2` | Ich kann Prüfungsinformationen gezielt erfragen. | أطلب معلومات اختبار محددة. | 1 · `a2-20-t3` | 8 | 2 · `a2-20-m3`, `a2-20-m5` | covered |
 | `a2-20-objective-3` | Ich kann bevor-Sätze bilden. | أبني جمل bevor. | 1 · `a2-20-t2` | 3 | 1 · `a2-20-m1` | covered |
 | `a2-20-objective-4` | Ich kann eine Anmeldung Schritt für Schritt planen. | أخطط للتسجيل خطوة بخطوة. | 1 · `a2-20-t2` | 7 | 1 · `a2-20-m4` | covered |
-| `a2-21-objective-1` | Ich kann Zukunftspläne ausdrücken. | أعبر عن خطط مستقبلية. | 3 · `a2-21:entry`, `a2-21:vocabulary` | 4 | 1 · `a2-21-m4` | covered |
+| `a2-21-objective-1` | Ich kann Zukunftspläne ausdrücken. | أعبر عن خطط مستقبلية. | 3 · `a2-21:entry`, `a2-21:vocabulary` | 5 | 1 · `a2-21-m4` | covered |
 | `a2-21-objective-2` | Ich kann vorhaben + zu benutzen. | أستعمل vorhaben + zu. | 3 · `a2-21:entry`, `a2-21:vocabulary` | 2 | 2 · `a2-21-m1`, `a2-21-m2` | covered |
 | `a2-21-objective-3` | Ich kann Futur I für Prognose oder Betonung bilden. | أبني Futur I للتوقع أو التأكيد. | 2 · `a2-21:vocabulary`, `a2-21-t2` | 2 | 1 · `a2-21-m3` | covered |
 | `a2-21-objective-4` | Ich kann ein Ziel in überprüfbare Schritte teilen. | أقسم الهدف إلى خطوات قابلة للقياس. | 2 · `a2-21:vocabulary`, `a2-21-t3` | 10 | 1 · `a2-21-m5` | covered |
 | `a2-22-objective-1` | Ich kann zu einem Fest einladen und antworten. | أدعو إلى مناسبة وأجيب. | 3 · `a2-22:entry`, `a2-22:vocabulary` | 7 | 2 · `a2-22-m3`, `a2-22-m4` | covered |
 | `a2-22-objective-2` | Ich kann wiederholte und einmalige Situationen unterscheiden. | أفرق بين الموقف المتكرر والفريد. | 1 · `a2-22-t1` | 2 | 1 · `a2-22-m2` | covered |
 | `a2-22-objective-3` | Ich kann Bräuche vorsichtig beschreiben. | أصف عادات دون تعميم. | 1 · `a2-22-t3` | 1 | 1 · `a2-22-m5` | covered |
-| `a2-22-objective-4` | Ich kann Ablauf und Bedürfnisse einer Feier organisieren. | أنظم برنامج المناسبة واحتياجاتها. | 2 · `a2-22:entry`, `a2-22-t2` | 8 | 1 · `a2-22-m1` | covered |
-| `a2-23-objective-1` | Ich kann über freiwilliges Engagement sprechen. | أتحدث عن المشاركة التطوعية. | 2 · `a2-23:entry`, `a2-23:vocabulary` | 2 | 1 · `a2-23-m2` | covered |
-| `a2-23-objective-2` | Ich kann Motivation und Aufgaben beschreiben. | أصف الدافع والمهام. | 1 · `a2-23-t2` | 6 | 1 · `a2-23-m3` | covered |
+| `a2-22-objective-4` | Ich kann Ablauf und Bedürfnisse einer Feier organisieren. | أنظم برنامج المناسبة واحتياجاتها. | 2 · `a2-22:entry`, `a2-22-t2` | 9 | 1 · `a2-22-m1` | covered |
+| `a2-23-objective-1` | Ich kann über freiwilliges Engagement sprechen. | أتحدث عن المشاركة التطوعية. | 2 · `a2-23:entry`, `a2-23:vocabulary` | 3 | 1 · `a2-23-m2` | covered |
+| `a2-23-objective-2` | Ich kann Motivation und Aufgaben beschreiben. | أصف الدافع والمهام. | 1 · `a2-23-t2` | 7 | 1 · `a2-23-m3` | covered |
 | `a2-23-objective-3` | Ich kann einfache Relativsätze im Nominativ bilden. | أبني جملًا موصولة بسيطة في Nominativ. | 2 · `a2-23:entry`, `a2-23-t1` | 6 | 2 · `a2-23-m1`, `a2-23-m4` | covered |
 | `a2-23-objective-4` | Ich kann ein kleines Projekt realistisch planen. | أخطط لمشروع صغير بواقعية. | 1 · `a2-23-t3` | 4 | 1 · `a2-23-m5` | covered |
-| `a2-24-objective-1` | Ich kann Kriterien und Optionen sammeln. | أجمع المعايير والخيارات. | 1 · `a2-24:vocabulary` | 4 | 1 · `a2-24-m3` | covered |
-| `a2-24-objective-2` | Ich kann Alternativen mit entweder … oder ausdrücken. | أعبر عن بديلين ب entweder … oder. | 3 · `a2-24:entry`, `a2-24:vocabulary` | 3 | 1 · `a2-24-m1` | covered |
+| `a2-24-objective-1` | Ich kann Kriterien und Optionen sammeln. | أجمع المعايير والخيارات. | 1 · `a2-24:vocabulary` | 5 | 1 · `a2-24-m3` | covered |
+| `a2-24-objective-2` | Ich kann Alternativen mit entweder … oder ausdrücken. | أعبر عن بديلين ب entweder … oder. | 3 · `a2-24:entry`, `a2-24:vocabulary` | 4 | 1 · `a2-24-m1` | covered |
 | `a2-24-objective-3` | Ich kann Ausschlüsse mit weder … noch formulieren. | أنفي خيارين ب weder … noch. | 3 · `a2-24:entry`, `a2-24:vocabulary` | 7 | 2 · `a2-24-m2`, `a2-24-m4` | covered |
 | `a2-24-objective-4` | Ich kann einen Gruppenentscheid dokumentieren. | أوثق قرار المجموعة. | 1 · `a2-24-t3` | 7 | 1 · `a2-24-m5` | covered |
 | `b1-01-objective-1` | Ich kann eine Biografie strukturiert erzählen. | أروي سيرة بصورة منظمة. | 4 · `b1-01:entry`, `b1-01:vocabulary` | 7 | 1 · `b1-01-m3` | covered |

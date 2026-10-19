@@ -4,8 +4,8 @@
   "generatedAt": "2026-09-07",
   "similarity": {
     "policyVersion": "content-near-duplicate-v1",
-    "entryCount": 3300,
-    "comparedPairCount": 5443350,
+    "entryCount": 3323,
+    "comparedPairCount": 5519503,
     "suspiciousPairCount": 10,
     "exemptSameContextCount": 10,
     "exemptReviewedCount": 0,
@@ -127,26 +127,26 @@
   },
   "reviewState": {
     "policyVersion": "content-review-state-v1",
-    "rowCount": 3300,
+    "rowCount": 3323,
     "reviewCounts": {
       "german": {
-        "total": 3300,
-        "automatedPassHumanPending": 3300,
+        "total": 3323,
+        "automatedPassHumanPending": 3323,
         "independentlyReviewed": 0
       },
       "arabic": {
-        "total": 3300,
-        "automatedPassHumanPending": 3300,
+        "total": 3323,
+        "automatedPassHumanPending": 3323,
         "independentlyReviewed": 0
       },
       "cefr": {
-        "total": 3300,
-        "automatedPassHumanPending": 3300,
+        "total": 3323,
+        "automatedPassHumanPending": 3323,
         "independentlyReviewed": 0
       },
       "copyright": {
-        "total": 3300,
-        "automatedPassHumanPending": 3300,
+        "total": 3323,
+        "automatedPassHumanPending": 3323,
         "independentlyReviewed": 0
       }
     },
@@ -16172,6 +16172,36 @@
         }
       },
       {
+        "contentId": "a2-01-e8",
+        "contextId": "a2-01",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-01-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-01-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-01-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-01-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-01-lq1",
         "contextId": "a2-01",
         "scope": "lesson-listening",
@@ -16796,6 +16826,36 @@
         },
         "copyright": {
           "contentId": "a2-02-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-02-e8",
+        "contextId": "a2-02",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-02-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-02-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-02-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-02-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -17432,6 +17492,36 @@
         }
       },
       {
+        "contentId": "a2-03-e8",
+        "contextId": "a2-03",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-03-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-03-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-03-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-03-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-03-lq1",
         "contextId": "a2-03",
         "scope": "lesson-listening",
@@ -18056,6 +18146,36 @@
         },
         "copyright": {
           "contentId": "a2-04-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-04-e8",
+        "contextId": "a2-04",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-04-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-04-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-04-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-04-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -18692,6 +18812,36 @@
         }
       },
       {
+        "contentId": "a2-05-e8",
+        "contextId": "a2-05",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-05-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-05-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-05-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-05-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-05-lq1",
         "contextId": "a2-05",
         "scope": "lesson-listening",
@@ -19316,6 +19466,36 @@
         },
         "copyright": {
           "contentId": "a2-06-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-06-e8",
+        "contextId": "a2-06",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-06-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-06-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-06-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-06-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -19952,6 +20132,36 @@
         }
       },
       {
+        "contentId": "a2-07-e8",
+        "contextId": "a2-07",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-07-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-07-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-07-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-07-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-07-lq1",
         "contextId": "a2-07",
         "scope": "lesson-listening",
@@ -20576,6 +20786,36 @@
         },
         "copyright": {
           "contentId": "a2-08-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-08-e8",
+        "contextId": "a2-08",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-08-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-08-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-08-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-08-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -21212,6 +21452,36 @@
         }
       },
       {
+        "contentId": "a2-09-e8",
+        "contextId": "a2-09",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-09-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-09-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-09-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-09-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-09-lq1",
         "contextId": "a2-09",
         "scope": "lesson-listening",
@@ -21836,6 +22106,36 @@
         },
         "copyright": {
           "contentId": "a2-10-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-10-e8",
+        "contextId": "a2-10",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-10-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-10-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-10-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-10-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -22472,6 +22772,36 @@
         }
       },
       {
+        "contentId": "a2-11-e8",
+        "contextId": "a2-11",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-11-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-11-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-11-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-11-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-11-lq1",
         "contextId": "a2-11",
         "scope": "lesson-listening",
@@ -23096,6 +23426,36 @@
         },
         "copyright": {
           "contentId": "a2-12-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-12-e8",
+        "contextId": "a2-12",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-12-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-12-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-12-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-12-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -23732,6 +24092,36 @@
         }
       },
       {
+        "contentId": "a2-13-e8",
+        "contextId": "a2-13",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-13-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-13-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-13-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-13-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-13-lq1",
         "contextId": "a2-13",
         "scope": "lesson-listening",
@@ -24356,6 +24746,36 @@
         },
         "copyright": {
           "contentId": "a2-14-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-14-e8",
+        "contextId": "a2-14",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-14-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-14-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-14-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-14-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -24992,6 +25412,36 @@
         }
       },
       {
+        "contentId": "a2-15-e8",
+        "contextId": "a2-15",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-15-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-15-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-15-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-15-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-15-lq1",
         "contextId": "a2-15",
         "scope": "lesson-listening",
@@ -25616,6 +26066,36 @@
         },
         "copyright": {
           "contentId": "a2-16-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-16-e8",
+        "contextId": "a2-16",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-16-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-16-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-16-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-16-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -26252,6 +26732,36 @@
         }
       },
       {
+        "contentId": "a2-17-e8",
+        "contextId": "a2-17",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-17-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-17-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-17-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-17-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-17-lq1",
         "contextId": "a2-17",
         "scope": "lesson-listening",
@@ -26882,6 +27392,36 @@
         }
       },
       {
+        "contentId": "a2-18-e8",
+        "contextId": "a2-18",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-18-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-18-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-18-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-18-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-18-lq1",
         "contextId": "a2-18",
         "scope": "lesson-listening",
@@ -27506,6 +28046,36 @@
         },
         "copyright": {
           "contentId": "a2-19-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-19-e8",
+        "contextId": "a2-19",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-19-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-19-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-19-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-19-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -28772,6 +29342,36 @@
         }
       },
       {
+        "contentId": "a2-21-e8",
+        "contextId": "a2-21",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-21-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-21-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-21-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-21-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-21-lq1",
         "contextId": "a2-21",
         "scope": "lesson-listening",
@@ -29396,6 +29996,36 @@
         },
         "copyright": {
           "contentId": "a2-22-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-22-e8",
+        "contextId": "a2-22",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-22-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-22-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-22-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-22-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -30032,6 +30662,36 @@
         }
       },
       {
+        "contentId": "a2-23-e8",
+        "contextId": "a2-23",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-23-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-23-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-23-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-23-e8",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
         "contentId": "a2-23-lq1",
         "contextId": "a2-23",
         "scope": "lesson-listening",
@@ -30656,6 +31316,36 @@
         },
         "copyright": {
           "contentId": "a2-24-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "a2-24-e8",
+        "contextId": "a2-24",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "a2-24-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "a2-24-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "a2-24-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "a2-24-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -99161,5 +99851,5 @@
     "295": "implemented"
   },
   "boundary": "P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 is implemented by the external-reference-comparison-v1 tool and its recorded run on lawful public Menschen samples (0 matches, ADR-119); that covers sample pages only and is not copyright clearance, which stays pending a full-book comparison and an independent rights review.",
-  "contentSha256": "76e4c17134375718f29891d07bad9927a0c3245d9a2cfe599e75cad4875a1923"
+  "contentSha256": "80f60dff5a3d6c20c74035718045f76809504f0ba107ec35549416ffdc70718e"
 }

@@ -14,6 +14,8 @@ The service worker keeps an isolated staging cache and a versioned checkpoint co
 
 `js-budget-v1` runs after every production build. It records deterministic Gzip bytes for emitted JavaScript chunks and fails above 2,500,000 total bytes or 750,000 bytes for the largest chunk.
 
+> **Amended by ADR-141 (v250, owner decision):** the total hard limit is now 2,594,118 bytes, so the total safety ceiling under the unchanged 15% reserve moves from 2,125,000 to **2,205,000**. The 750,000-byte single-chunk limit is unchanged.
+
 ## Boundaries
 
 - Selective JSON is for review or transfer, not restore.

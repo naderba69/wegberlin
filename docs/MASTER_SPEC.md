@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v249 · 2026-10-19 · الصفحات لا تنكسر حين يفتحها المتعلم في يوم أو منطقة زمنية غير يوم البناء (ADR-140): ثلاث صفحات (/exams و/errors و/settings) كانت تحسب نصًا من ساعة الجهاز أو منطقته في أول رسم، فيختلف عن HTML المبني ويرمي React الخطأ #418 ويعيد بناء الصفحة كلها. أُصلحت الثلاث، وصار مرور الهاتف في فحص المتصفح يفتح كل الصفحات الـ321 بساعة بعد 400 يوم وبمنطقة UTC+14، فأي عودة تُسقط البوابة. لا تغيير في المحتوى.
+Sync batch: v250 · 2026-10-19 · كلمات قائمة Goethe A2 الناقصة صارت داخل دروس A2 (ADR-141): 240 جملة جديدة و144 اسمًا بأداته وجمعه و23 تمرينًا في الدروس الـ24، منها محورا البيئة والملابس. دروس A2 تُظهر الآن 1130 من 1136 كلمة (99.5%) وتشرح 955 على الأقل صراحة (84%) بعد 889 و715. رُفع سقف JS بـ80 KB (2,125,000 ⇐ 2,205,000) بموافقة المالك، والمستعمل منه 2,135,587.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

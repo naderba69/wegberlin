@@ -13,7 +13,7 @@ describe("lexical target-gap inventory", () => {
   it("inventories all lessons and preserves the authored anchor baseline", () => {
     expect(audit.version).toBe(LEXICAL_TARGET_AUDIT_VERSION);
     expect(audit.lessonCount).toBe(96);
-    expect(audit.nounAnchorCount).toBe(1546);
+    expect(audit.nounAnchorCount).toBe(1690);
     expect(audit.verbFrameAnchorCount).toBe(134);
 
     const representedNounAnchors = new Set(audit.nounRows.flatMap((row) => row.anchorIds));
@@ -28,19 +28,20 @@ describe("lexical target-gap inventory", () => {
   // v245: ADR-137 rewrites 229 options in 211 reading/listening items (17 keys shortened, the rest distractors lengthened); new words are contextual candidates only (+19 nouns, +15 verb pairs); covered and pendingHuman are unchanged.
   // v246: ADR-138 rewrites the distractors of 143 mini-test/exercise items (five keys shortened); +4 noun and +5 verb-pair contextual candidates; covered and pendingHuman are unchanged.
   // v248: ADR-139 adds 144 lesson-scoped noun anchors for the Goethe-Zertifikat A1 core vocabulary taught on the new A1 phrases and cards; every new authored target is covered (A1 pendingHuman stays 0), new example and explanation words add +13 noun and +6 verb-pair contextual candidates.
+  // v250: ADR-141 adds 144 lesson-scoped noun anchors for the Goethe-Zertifikat A2 words taught on the new A2 phrases and cards; covered +148, +24 noun and +12 verb-pair contextual candidates from the new examples; pendingHuman is unchanged (A2 stays 0).
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5150,
-      covered: 1652,
+      totalCandidates: 5322,
+      covered: 1800,
       pendingHuman: 89,
-      contextualNotTarget: 3409,
-      authoredTargets: 1741,
+      contextualNotTarget: 3433,
+      authoredTargets: 1889,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1314,
+      totalCandidates: 1326,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1179,
+      contextualNotTarget: 1191,
       authoredTargets: 135,
     });
   });

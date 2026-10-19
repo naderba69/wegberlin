@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v249 · 2026-10-19 · الصفحات لا تنكسر حين يفتحها المتعلم في يوم أو منطقة زمنية غير يوم البناء (ADR-140): ثلاث صفحات (/exams و/errors و/settings) كانت تحسب نصًا من ساعة الجهاز أو منطقته في أول رسم، فيختلف عن HTML المبني ويرمي React الخطأ #418 ويعيد بناء الصفحة كلها. أُصلحت الثلاث، وصار مرور الهاتف في فحص المتصفح يفتح كل الصفحات الـ321 بساعة بعد 400 يوم وبمنطقة UTC+14، فأي عودة تُسقط البوابة. لا تغيير في المحتوى.
+Sync batch: v250 · 2026-10-19 · كلمات قائمة Goethe A2 الناقصة صارت داخل دروس A2 (ADR-141): 240 جملة جديدة و144 اسمًا بأداته وجمعه و23 تمرينًا في الدروس الـ24، منها محورا البيئة والملابس. دروس A2 تُظهر الآن 1130 من 1136 كلمة (99.5%) وتشرح 955 على الأقل صراحة (84%) بعد 889 و715. رُفع سقف JS بـ80 KB (2,125,000 ⇐ 2,205,000) بموافقة المالك، والمستعمل منه 2,135,587.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1927,3 +1927,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: the device values now arrive after hydration via `useDeviceDay` / `useDeviceMinute` / `useDeviceValue`. The mobile pass of `a11y:browser` runs with the clock +400 days and the `Pacific/Kiritimati` zone, so any recurrence fails `npm run check`. Pinned by `tests/unit/off-build-hydration.test.ts`.
 - Result: off-build probe over 321 routes, 3 → 0 failing. JS +493 B gzip. No content change. Pack generation v249.
 - Details: `docs/adr/ADR-140-off-build-hydration-audit.md`.
+
+## ADR-141 — Teach the missing Goethe-Zertifikat A2 vocabulary inside the A2 lessons, with an owner-approved JS ceiling
+
+- Status: accepted, 2026-10-19 (v250). Owner chose «ارفعه 80 KB» for the JavaScript ceiling; content under the delegation «نفّذ ما يفيد المتعلم والصحيح».
+- Context: the A2 lessons used 889 of 1,136 Goethe A2 headwords (78.3%) and taught 715 (62.9%). The environment and clothing themes were missing. The content fitted the curriculum ceiling, but the client JS had only 3,436 B left under 2,125,000.
+- Decision: JS total hard limit 2,500,000 → 2,594,118, so the 15%-reserve ceiling is 2,205,000 (+80,000); other limits unchanged (ADR-049 amendment note). 240 words added to the existing 24 A2 lessons: a vocabulary phrase and a review card each, 23 `a2-NN-e8` matching exercises, and 144 lesson-scoped noun anchors (`a2GoetheCoreNounEntries`, scope `ADR-141-goethe-a2-core-noun-anchor`), all 144 confirmed against WiktionaryDE via `german_nouns` 1.2.5.
+- Result: A2 headwords appearing 1,130 (99.5%), taught ≥ 955 (84.1%), missing 247 → 6. JS 2,135,587 B, curriculum 1,301,956 B. Pack generation v250. Pinned by `tests/unit/goethe-a2-core-vocabulary.test.ts`.
+- Details: `docs/adr/ADR-141-goethe-a2-core-vocabulary-and-js-ceiling.md`.

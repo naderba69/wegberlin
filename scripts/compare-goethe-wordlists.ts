@@ -4,6 +4,7 @@
  * Usage:
  *   /tmp/pdfv/bin/python scripts/parse-goethe-wortliste.py --dir /tmp/goethe-src A1 A2 B1
  *   npx tsx scripts/compare-goethe-wordlists.ts --entries /tmp/goethe-src [--write]
+ *   npx tsx scripts/compare-goethe-wordlists.ts --from-report [--write]   (ADR-141 / v250, see below)
  *
  * The entries directory must live OUTSIDE the repository: the Goethe lists are copyrighted
  * (section 52a notice in each PDF). The report stores only counts, our own lesson IDs and the
@@ -17,6 +18,13 @@
  *   the same clause ("Der Zug fährt um acht ab").
  * - "taught explicitly" uses only phrases, flashcards, reading glossary and the noun/verb
  *   registry; "appears" uses every German string of the lesson.
+ *
+ * --from-report (ADR-141 / v250): when the PDFs are not at hand, re-checks only the headwords the
+ * committed report lists as missing (absentFromAllLessonsList + firstAppearsLaterList) against the
+ * current lessons, with the same matcher. Newly present words are added to the committed counts;
+ * "taught explicitly" then grows only by missing words that are now taught, so it is a lower bound.
+ * Headword totals, anywhereInAppAnyLevelPct and wortgruppenCoveredPct are carried over from the last
+ * full run and say so in `incremental`. A later full run with the PDFs replaces every number.
  */
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -28,8 +36,9 @@ import type { FullLesson } from "../src/types/lesson-content";
 
 const args = process.argv.slice(2);
 const option = (name: string) => { const index = args.indexOf(name); return index >= 0 ? args[index + 1] : undefined; };
-const entriesDir = option("--entries");
-if (!entriesDir) throw new Error("Usage: --entries <dir outside repo> [--write]");
+const fromReport = args.includes("--from-report");
+const entriesDir = option("--entries") ?? (fromReport ? "/nonexistent-goethe-entries" : undefined);
+if (!entriesDir) throw new Error("Usage: --entries <dir outside repo> [--write] | --from-report [--write]");
 const repoRoot = path.resolve(process.cwd());
 const entriesRoot = path.resolve(entriesDir);
 if (entriesRoot === repoRoot || entriesRoot.startsWith(repoRoot + path.sep)) throw new Error("The Goethe lists are copyrighted: --entries must live outside the repository.");
@@ -125,7 +134,16 @@ for (const file of readdirSync(path.join(repoRoot, "src/data"), { recursive: tru
 }
 
 const levels: Record<string, unknown> = {};
-for (const level of WORDLIST_LEVELS) {
+const reportPath = path.join(repoRoot, "reports/goethe-reference-alignment.json");
+type LevelReport = Record<string, unknown> & { headwords: number; appearsInLessonsUpToLevel: number; taughtExplicitlyUpToLevel: number; absentFromAllLessonsList: string[]; firstAppearsLaterList: string[] };
+const committed = fromReport ? JSON.parse(readFileSync(reportPath, "utf8")) as { levels: Record<string, LevelReport>; incremental?: unknown } : null;
+const entryFromLabel = (label: string): Entry => {
+  const tokens = label.split(" ");
+  const noun = tokens.length > 1 && ["der", "die", "das"].includes(tokens[0]!);
+  const rest = noun ? tokens.slice(1).join(" ") : label;
+  return { raw: label, page: 0, lemma: rest.split("/")[0]!, alts: rest.split("/"), noun, sub: false, regional: false };
+};
+for (const level of committed ? [] : WORDLIST_LEVELS) {
   const raw = JSON.parse(readFileSync(path.join(entriesRoot, `${level}.entries.json`), "utf8")) as Entry[];
   const seen = new Set<string>(); const entries: Entry[] = [];
   for (const entry of raw) {
@@ -161,12 +179,44 @@ for (const level of WORDLIST_LEVELS) {
   };
 }
 
+if (committed) {
+  for (const level of WORDLIST_LEVELS) {
+    const previous = committed.levels[level]!;
+    const entries = [...previous.absentFromAllLessonsList, ...previous.firstAppearsLaterList.map((item) => item.split(" → ")[0]!)].map(entryFromLabel);
+    const rows = entries.map((entry) => ({ entry, explicit: present(entry, explicitByLevel[level]), any: present(entry, allByLevel[level]) }));
+    const missing = rows.filter((row) => !row.any).map((row) => row.entry);
+    const later = missing.map((entry) => ({ entry, at: firstLevel(entry) })).filter((item): item is { entry: Entry; at: number } => item.at !== null && item.at > rank(level));
+    const never = missing.filter((entry) => firstLevel(entry) === null && !present(entry, allByLevel.B2));
+    const pct = (part: number, whole: number) => +(100 * part / whole).toFixed(1);
+    const appears = previous.appearsInLessonsUpToLevel + rows.filter((row) => row.any).length;
+    const taught = previous.taughtExplicitlyUpToLevel + rows.filter((row) => row.explicit).length;
+    levels[level] = {
+      ...previous,
+      appearsInLessonsUpToLevel: appears,
+      appearsPct: pct(appears, previous.headwords),
+      taughtExplicitlyUpToLevel: taught,
+      taughtExplicitlyPct: pct(taught, previous.headwords),
+      // The labels fold a few duplicate headwords together, so the counts subtract instead of recounting.
+      missingAtLevel: (previous.missingAtLevel as number) - rows.filter((row) => row.any).length,
+      missingNouns: (previous.missingNouns as number) - rows.filter((row) => row.any && row.entry.noun).length,
+      firstAppearsLater: Object.fromEntries(LEVELS.map((name, index) => [name, later.filter((item) => item.at === index).length]).filter(([, count]) => count)),
+      absentFromAllLessons: (previous.absentFromAllLessons as number) - (previous.absentFromAllLessonsList.length - never.length),
+      absentFromAllLessonsList: never.map((entry) => entry.raw),
+      firstAppearsLaterList: later.map((item) => `${item.entry.raw} → ${LEVELS[item.at]}`),
+    };
+  }
+}
+
 const report = {
   generatedBy: "scripts/compare-goethe-wordlists.ts",
   method: "strict-lemma-candidates-v1",
   note: "Counts and missing lemmas only (section 44b UrhG). The Goethe PDFs are not in the repository; editions are pinned by SHA-256 in docs/GOETHE_REFERENCE_ALIGNMENT_AR.md.",
   lessons: Object.fromEntries(LEVELS.map((level) => [level, lessons.filter((lesson) => lesson.level === level).length])),
   levels,
+  ...(committed ? { incremental: {
+    mode: "from-report",
+    note: "Only the previously missing headwords were re-checked with the same matcher; taughtExplicitly is a lower bound. headwords, anywhereInAppAnyLevelPct and wortgruppenCoveredPct are carried over from the last full PDF run.",
+  } } : {}),
 };
 for (const level of WORDLIST_LEVELS) {
   const summary = Object.fromEntries(Object.entries(levels[level] as Record<string, unknown>).filter(([key]) => !key.endsWith("List")));

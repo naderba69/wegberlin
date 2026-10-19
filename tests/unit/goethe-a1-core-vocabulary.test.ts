@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { academicLessonList } from "@/data/academic-lessons";
-import { goetheCoreNounEntries, nounGrammarEntries } from "@/data/lexical-grammar-registry";
+import { goetheCoreNounEntries as allGoetheCoreNounEntries, nounGrammarEntries } from "@/data/lexical-grammar-registry";
+
+// ADR-141 / v250 appends the A2 anchors to the shared list; this suite guards the A1 package only.
+const goetheCoreNounEntries = allGoetheCoreNounEntries.filter((entry) => entry.lessonId.startsWith("a1-"));
 
 // ADR-139 / v248: the Goethe-Zertifikat A1 core vocabulary that the A1 lessons had missed is now taught
 // on the vocabulary stage (phrases), practised in the review deck (cards) and in one matching exercise per lesson.

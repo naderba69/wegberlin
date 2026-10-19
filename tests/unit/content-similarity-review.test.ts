@@ -39,15 +39,15 @@ describe("internal near-duplicate and independent review-state governance",()=>{
 
   it("scans the complete live closed/productive corpus with no unexempt pair",()=>{
     const audit=liveAudit;
-    expect(audit.similarity).toMatchObject({policyVersion:"content-near-duplicate-v1",entryCount:3300,comparedPairCount:5443350,suspiciousPairCount:10,exemptSameContextCount:10,exemptReviewedCount:0,issueCount:0});
+    expect(audit.similarity).toMatchObject({policyVersion:"content-near-duplicate-v1",entryCount:3323,comparedPairCount:5519503,suspiciousPairCount:10,exemptSameContextCount:10,exemptReviewedCount:0,issueCount:0});
     expect(audit.p1Status).toEqual({"92":"implemented","293":"implemented","295":"implemented"});
   });
 
   it("keeps German, Arabic, CEFR, and copyright states separate on every object",()=>{
     const audit=liveAudit;
-    expect(audit.reviewState).toMatchObject({policyVersion:"content-review-state-v1",rowCount:3300});
+    expect(audit.reviewState).toMatchObject({policyVersion:"content-review-state-v1",rowCount:3323});
     for(const dimension of ["german","arabic","cefr","copyright"] as const){
-      expect(audit.reviewState.reviewCounts[dimension]).toEqual({total:3300,automatedPassHumanPending:3300,independentlyReviewed:0});
+      expect(audit.reviewState.reviewCounts[dimension]).toEqual({total:3323,automatedPassHumanPending:3323,independentlyReviewed:0});
       expect(audit.reviewState.rows.every((row)=>row[dimension].status==="automated-pass-human-pending")).toBe(true);
     }
     expect(audit.externalReferenceCorpusCount).toBe(1);
@@ -58,7 +58,7 @@ describe("internal near-duplicate and independent review-state governance",()=>{
     const machine=JSON.parse(readFileSync("reports/content-similarity-review-audit.json","utf8"));
     const markdown=readFileSync("docs/generated/CONTENT_SIMILARITY_REVIEW_REPORT.md","utf8");
     expect(markdown).toContain(machine.contentSha256);
-    expect(markdown).toContain("5,443,350 deterministic pairs");
+    expect(markdown).toContain("5,519,503 deterministic pairs");
     expect(markdown).toContain("External reference corpora compared (lawful basis recorded, ADR-119): 1");
     expect(markdown).toContain("not embedding equivalence, plagiarism detection, copyright clearance");
   });

@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v245 · 2026-10-19 · أسئلة فهم لا يُعرف جوابها من طول الخيار (ADR-137): في 211 سؤال قراءة واستماع كان الجواب الصحيح أطول من كل الخيارات بفارق ظاهر، فيمكن اختياره دون قراءة النص. أُعيدت كتابة 229 خيارًا: أُطيلت خيارات خاطئة بفخاخ من النص نفسه، واختُصرت 17 إجابة كانت تقول أكثر مما يسأل عنه السؤال. صار العدد 0 في القراءة والاستماع، ونزلت نسبة «الأطول هو الصحيح» من 38.0% إلى 27.6%، مع حارس يمنع العودة. أسئلة الاختبار القصير (88) والتمارين (55) مقيّدة بسقف عند عددها الحالي، لأن إصلاحها يحتاج مساحة في ميزانية المنهج لم تعد متاحة. الخيارات الجديدة من كتابة الوكيل، لا مراجعة بشرية.
+Sync batch: v246 · 2026-10-19 · أسئلة الاختبار القصير والتمارين لا يُعرف جوابها من طول الخيار (ADR-138): في 143 بندًا (اختبار قصير 88 وتمارين 55) كانت الإجابة الجملة الكاملة الوحيدة بين شظايا مكسورة قصيرة، فيمكن اختيارها دون معرفة القاعدة. أُعيد بناء خياراتها بخيار خاطئ قريب الطول يعيد كلمات الإجابة نفسها مع خطأ واحد في الترتيب أو الصرف، أو جملة سليمة تؤدي وظيفة خاطئة (بلا موعد، لوم، تعميم)، واختُصرت 5 إجابات. صار التلميح الظاهر 0 في الأنواع الأربعة، ونزلت نسبة «الأطول هو الصحيح» من 27.6% إلى 20.8%، مع حارس يمنع العودة، داخل سقف المنهج دون رفعه (صارت النسخة المولّدة من الاختبار القصير سطرًا لكل سؤال، فعاد هامش 2,678 بايتًا). الخيارات الجديدة من كتابة الوكيل، لا مراجعة بشرية.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1878,4 +1878,20 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 ## Consequences
 
 - Mini-test and exercise items stay ratcheted at the measured count: their short ill-formed distractors need a rewrite that the curriculum budget (628 B left of 1,275,000) cannot carry, or an owner decision on the ceiling. Noun/verb candidates +19/+15 contextual only; covered and pendingHuman unchanged. IDEA_BACKLOG 399 and 404 closed. See `docs/adr/ADR-137-comprehension-mcq-length-cue-review.md`.
+
+## ADR-138 — No mini-test or exercise key is recognisable by length alone
+
+- Status: accepted, 2026-10-19 (v246)
+- Evidence tier: agent content edit checked by measured gates; not an independent German review.
+
+## Decision
+
+1. The 143 mini-test (88) and exercise (55) items that ADR-137 had ratcheted were rebuilt with near-miss distractors of about the key's length that reuse the key's words. Grammar items get the same sentence with one word-order or morphology slip; function items get a well-formed sentence doing the wrong job (no deadline, blame, overgeneralisation, ambiguous reference). Five over-specified keys were shortened, with their quotes updated.
+2. Distractors quoted in `explanationAr` were only lengthened by appending, so quotes stay verbatim; quote exceptions unchanged at 70.
+3. Result: visible cue 0 in all four kinds; unique-longest key 27.6% → 20.8% (audit metric 27.5% → 20.8%); unique-shortest unchanged at 63; positions unchanged.
+4. `visibleLengthCueByKindMax` is 0 / 0 / 0 / 0; `longestOptionCuePctMax` 28 → 21; a unit test forbids the cue in any mini-test or exercise item.
+
+## Consequences
+
+- The generated Mini-Test mirror (`src/data/local-test-templates`) doubled the cost of every Mini-Test edit and pushed the curriculum 310 B over the unchanged 1,275,000 B ceiling. Its generator now writes one question per line instead of 2-space pretty-printing (identical data, still drift-checked), which brings the curriculum to 1,272,322 B. Noun/verb candidates +4/+5 contextual only; covered and pendingHuman unchanged. IDEA_BACKLOG 397 closed. See `docs/adr/ADR-138-mini-test-exercise-length-cue-review.md`.
 

@@ -5933,7 +5933,7 @@
         "prompt": "Höfliche Bitte اختر التعبير المطابق ل «Höfliche Bitte»:",
         "answer": "Könntest du bitte aufräumen?",
         "evidenceRef": "a2-06:miniTest:a2-06-m1:explanationAr",
-        "evidenceExcerpt": "الطلبُ المهذّب يبدأ ب «Könntest du bitte aufräumen?» فيبقى الفعلُ في النهاية. وأمّا «Räum sofort auf!» فأمرٌ جافّ، و «Können du räumt?» و «Du aufräumen jetzt.» فجملتان مكسورتان. فحص ذاتي: هل بقي طلبُك مؤدّبًا؟",
+        "evidenceExcerpt": "الطلبُ المهذّب يبدأ ب «Könntest du bitte aufräumen?» فيبقى الفعلُ في النهاية. وأمّا «Räum sofort auf!» فأمرٌ جافّ، و «Können du bitte aufräumen?» و «Du aufräumen jetzt.» فجملتان مكسورتان. فحص ذاتي: هل بقي طلبُك مؤدّبًا؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9607,7 +9607,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي فقرة سيرة أفضل؟",
-        "answer": "Er wurde 1995 geboren. Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
+        "answer": "Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
         "evidenceRef": "b1-01:controlled:b1-01-e6:explanationAr",
         "evidenceExcerpt": "فقرة سيرة جيدة تربط الحدث بمرحلته وبسببه: «Nach der Schule studierte er Informatik, weil ihn Technik interessierte». قائمة سنوات بلا روابط تجعل النص جدولًا، و «dann alles» لا تُعلّم شيئًا ولا تُراجَع.",
         "visibilityPolicy": "authorized-option-bank",
@@ -10201,9 +10201,9 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " اختر ملاحظة بناءة:",
-        "answer": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
+        "answer": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere früher.",
         "evidenceRef": "b1-04:controlled:b1-04-e6:explanationAr",
-        "evidenceExcerpt": "الملاحظة البناءة تصف سلوكًا وتبيّن أثره وتقترح خطوة: «Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher». الأحكام على الشخص لا تعطي ما يُنفَّذ.",
+        "evidenceExcerpt": "الملاحظة البناءة تصف سلوكًا وتبيّن أثره وتقترح خطوة: «Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere früher». الأحكام على الشخص لا تعطي ما يُنفَّذ.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -13171,9 +13171,9 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي سؤال تحقق أفضل؟",
-        "answer": "Wenn ich dich richtig verstehe, soll die Datei spätestens Donnerstagabend fertig sein, richtig?",
+        "answer": "Wenn ich dich richtig verstehe, soll die Datei Donnerstagabend fertig sein, richtig?",
         "evidenceRef": "b1-19:controlled:b1-19-e6:explanationAr",
-        "evidenceExcerpt": "سؤال التحقق يُلخّص التفاصيل ثم يطلب تأكيدًا: «Wenn ich dich richtig verstehe, soll die Datei spätestens Donnerstagabend fertig sein, richtig?». «Alles klar?» لا يُلخّص شيئًا، و «Freitag ja?» يُبقي اليوم غامضًا.",
+        "evidenceExcerpt": "سؤال التحقق يُلخّص التفاصيل ثم يطلب تأكيدًا: «Wenn ich dich richtig verstehe, soll die Datei Donnerstagabend fertig sein, richtig?». «Alles klar?» لا يُلخّص شيئًا، و «Freitag ja?» يُبقي اليوم غامضًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -14953,7 +14953,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي تصعيد موضوعي؟",
-        "answer": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
+        "answer": "Falls bis Dienstag keine Einigung möglich ist, erhält die Leitung beide Optionen mit Kosten und Risiken.",
         "evidenceRef": "b2-04:controlled:b2-04-e6:explanationAr",
         "evidenceExcerpt": "التصعيد الموضوعي يذكر شرطًا زمنيًا محدّدًا والبدائل مع كلفتها ومخاطرها، فلا شتيمة ولا تهديد مبهم: Falls يربط المهلة بالخطوة التالية.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15294,7 +15294,7 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي شرح للمصطلح أفضل لجمهور عام؟",
-        "answer": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
+        "answer": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
         "evidenceRef": "b2-06:controlled:b2-06-e1:explanationAr",
         "evidenceExcerpt": "الشرح لجمهور عام يسمّي الفعل والوسيلة ومثالًا واحدًا: Informationen aus der Entfernung sammeln مع مثال الأقمار الصناعية؛ تكرار المصطلح أو إبقاؤه بالإنجليزية لا يشرح شيئًا.",
         "visibilityPolicy": "authorized-option-bank",
@@ -44238,23 +44238,23 @@
     "nounAnchorCount": 1402,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4984,
+      "totalCandidates": 4988,
       "covered": 1503,
       "pendingHuman": 89,
-      "contextualNotTarget": 3392,
+      "contextualNotTarget": 3396,
       "authoredTargets": 1592,
       "byLevel": {
         "A1": {
-          "totalCandidates": 572,
+          "totalCandidates": 571,
           "covered": 319,
           "pendingHuman": 0,
-          "contextualNotTarget": 253
+          "contextualNotTarget": 252
         },
         "A2": {
-          "totalCandidates": 911,
+          "totalCandidates": 914,
           "covered": 311,
           "pendingHuman": 0,
-          "contextualNotTarget": 600
+          "contextualNotTarget": 603
         },
         "B1": {
           "totalCandidates": 1270,
@@ -44263,18 +44263,18 @@
           "contextualNotTarget": 898
         },
         "B2": {
-          "totalCandidates": 2231,
+          "totalCandidates": 2233,
           "covered": 501,
           "pendingHuman": 89,
-          "contextualNotTarget": 1641
+          "contextualNotTarget": 1643
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1303,
+      "totalCandidates": 1308,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1168,
+      "contextualNotTarget": 1173,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44284,22 +44284,22 @@
           "contextualNotTarget": 80
         },
         "A2": {
-          "totalCandidates": 227,
+          "totalCandidates": 228,
           "covered": 30,
           "pendingHuman": 0,
-          "contextualNotTarget": 197
+          "contextualNotTarget": 198
         },
         "B1": {
-          "totalCandidates": 331,
+          "totalCandidates": 333,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 300
+          "contextualNotTarget": 302
         },
         "B2": {
-          "totalCandidates": 640,
+          "totalCandidates": 642,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 591
+          "contextualNotTarget": 593
         }
       }
     },
@@ -47481,6 +47481,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Ich wohne bei einer Familie.",
+            "surface": "Ich wohne bei einer Familie.",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[2].options[2]",
             "stage": "reading",
@@ -50952,6 +50959,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Ja, bitte, noch ein Kilo Reis.",
+            "surface": "Ja, bitte, noch ein Kilo Reis.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[0].exampleDe",
             "stage": "vocabulary",
             "text": "Ich möchte ein Kilo Tomaten.",
@@ -50983,6 +50997,13 @@
             "stage": "test",
             "text": "Ich möchte ein Kilo Tomaten.",
             "surface": "Ich möchte ein Kilo Tomaten.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Ich möchten ein Kilo Tomaten.",
+            "surface": "Ich möchten ein Kilo Tomaten.",
             "strength": "context"
           },
           {
@@ -55216,6 +55237,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "surface": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Ich rufe wegen der Wohnung in der Gartenstraße an.",
@@ -55740,6 +55768,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "surface": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Ich rufe wegen der Wohnung in der Gartenstraße an.",
@@ -55785,6 +55820,13 @@
             "stage": "test",
             "text": "Wie groß ist die Wohnung?",
             "surface": "Wie groß ist die Wohnung?",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Wann ich kann die Wohnung besichtigen?",
+            "surface": "Wann ich kann die Wohnung besichtigen?",
             "strength": "context"
           },
           {
@@ -56830,6 +56872,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Also Samstag irgendwann vor dem Kino.",
+            "surface": "Also Samstag irgendwann vor dem Kino.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[4].options[3]",
             "stage": "test",
             "text": "Also Samstag um acht vor dem Kino.",
@@ -57144,25 +57193,6 @@
           }
         ],
         "id": "lex-n-a1-17-392f48f8"
-      },
-      {
-        "lessonId": "a1-17",
-        "level": "A1",
-        "lemmaCandidate": "Zeit",
-        "normalizedLemma": "zeit",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[5].options[3]",
-            "stage": "controlled",
-            "text": "Ich keine Zeit fünf.",
-            "surface": "Ich keine Zeit fünf.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-17-69724bde"
       },
       {
         "lessonId": "a1-18",
@@ -62704,6 +62734,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[2].options[1]",
+            "stage": "test",
+            "text": "Füllen Sie aus das Formular.",
+            "surface": "Füllen Sie aus das Formular.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[2].options[2]",
             "stage": "test",
             "text": "Füllen Sie das Formular aus.",
@@ -63246,13 +63283,6 @@
             "stage": "entry",
             "text": "Das ist die Stadt, in der Sie geboren sind.",
             "surface": "Das ist die Stadt, in der Sie geboren sind.",
-            "strength": "context"
-          },
-          {
-            "path": "miniTest[2].options[1]",
-            "stage": "test",
-            "text": "Füllen aus das Sie.",
-            "surface": "Füllen aus das Sie.",
             "strength": "context"
           }
         ],
@@ -67806,6 +67836,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Könnten Sie machen die Musik bitte leiser?",
+            "surface": "Könnten Sie machen die Musik bitte leiser?",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[4].options[2]",
             "stage": "test",
             "text": "Könnten Sie die Musik bitte leiser machen?",
@@ -69993,6 +70030,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[2].options[2]",
+            "stage": "test",
+            "text": "Wenn ein Kunde anruft, ich notiere den Namen.",
+            "surface": "Wenn ein Kunde anruft, ich notiere den Namen.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[2].options[3]",
             "stage": "test",
             "text": "Wenn ein Kunde anruft, notiere ich den Namen.",
@@ -70141,6 +70185,13 @@
             "stage": "controlled",
             "text": "den Namen",
             "surface": "den Namen",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[2].options[2]",
+            "stage": "test",
+            "text": "Wenn ein Kunde anruft, ich notiere den Namen.",
+            "surface": "Wenn ein Kunde anruft, ich notiere den Namen.",
             "strength": "context"
           },
           {
@@ -74559,6 +74610,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[0].options[0]",
+            "stage": "controlled",
+            "text": "Ich will sofort ein Zimmer buchen.",
+            "surface": "Ich will sofort ein Zimmer buchen.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[0].options[3]",
             "stage": "controlled",
             "text": "Ich würde gern ein Zimmer buchen.",
@@ -74591,6 +74649,13 @@
             "stage": "listening",
             "text": "Gast: Guten Tag. Ich würde gern ein Einzelzimmer vom 3. bis 6. August buchen. — Rezeption: Wir haben noch ein Zimmer für 72 Euro pro Nacht. — Gast: Ist Frühstück inklusive? — Rezeption: Nein, das kostet neun Euro pro Tag extra. — Gast: Können Sie mir sagen, ob das Zimmer ein eigenes Bad hat? — Rezeption: Ja. WLAN ist auch inklusive. — Gast: Wie sind die Stornobedingungen? — Rezeption: Bis fünf Tage vorher kostenlos, danach kostet es eine Nacht. — Gast: Gut. Bitte reservieren Sie das Zimmer und schicken Sie mir eine Bestätigung.",
             "surface": "Gast: Guten Tag. Ich würde gern ein Einzelzimmer vom 3. bis 6. August buchen. — Rezeption: Wir haben noch ein Zimmer für 72 Euro pro Nacht. — Gast: Ist Frühstück inklusive? — Rezeption: Nein, das kostet neun Euro pro Tag extra. — Gast: Können Sie mir sagen, ob das Zimmer ein eigenes Bad hat? — Rezeption: Ja. WLAN ist auch inklusive. — Gast: Wie sind die Stornobedingungen? — Rezeption: Bis fünf Tage vorher kostenlos, danach kostet es eine Nacht. — Gast: Gut. Bitte reservieren Sie das Zimmer und schicken Sie mir eine Bestätigung.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[0].options[1]",
+            "stage": "test",
+            "text": "Buchen du mir ein Zimmer.",
+            "surface": "Buchen du mir ein Zimmer.",
             "strength": "context"
           },
           {
@@ -75105,6 +75170,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Wenn ist kein Zimmer frei, möchte ich eine Erstattung.",
+            "surface": "Wenn ist kein Zimmer frei, möchte ich eine Erstattung.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
             "text": "Ich möchte eine Erstattung.",
@@ -75290,6 +75362,25 @@
           }
         ],
         "id": "lex-n-a2-12-4f9fea1d"
+      },
+      {
+        "lessonId": "a2-12",
+        "level": "A2",
+        "lemmaCandidate": "Geld",
+        "normalizedLemma": "geld",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Geben Sie mir sofort mein Geld für das Zimmer!",
+            "surface": "Geben Sie mir sofort mein Geld für das Zimmer!",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-12-9924d476"
       },
       {
         "lessonId": "a2-12",
@@ -75916,6 +76007,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Geben Sie mir sofort mein Geld für das Zimmer!",
+            "surface": "Geben Sie mir sofort mein Geld für das Zimmer!",
+            "strength": "context"
+          },
+          {
             "path": "exercises[1].template",
             "stage": "controlled",
             "text": "Die Heizung ist kaputt. ___ brauche ich ein anderes Zimmer.",
@@ -75960,8 +76058,8 @@
           {
             "path": "exercises[5].options[1]",
             "stage": "controlled",
-            "text": "Wenn ist kein Zimmer, ich Erstattung.",
-            "surface": "Wenn ist kein Zimmer, ich Erstattung.",
+            "text": "Wenn ist kein Zimmer frei, möchte ich eine Erstattung.",
+            "surface": "Wenn ist kein Zimmer frei, möchte ich eine Erstattung.",
             "strength": "context"
           },
           {
@@ -76013,6 +76111,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[0].options[1]",
+            "stage": "test",
+            "text": "Sie machen immer Fehler mit meinem Zimmer!",
+            "surface": "Sie machen immer Fehler mit meinem Zimmer!",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[0].options[3]",
             "stage": "test",
             "text": "Es gibt ein Problem mit meinem Zimmer.",
@@ -76034,10 +76139,24 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[1].options[3]",
+            "stage": "test",
+            "text": "Obwohl ich reserviert habe, kein Zimmer ist frei.",
+            "surface": "Obwohl ich reserviert habe, kein Zimmer ist frei.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[3].options[1]",
             "stage": "test",
             "text": "Könnten Sie mir ein anderes Zimmer geben?",
             "surface": "Könnten Sie mir ein anderes Zimmer geben?",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Können Sie mir geben ein anderes Zimmer?",
+            "surface": "Können Sie mir geben ein anderes Zimmer?",
             "strength": "context"
           },
           {
@@ -78586,6 +78705,13 @@
             "stage": "listening",
             "text": "Kunde: Guten Tag. Ich habe seit drei Tagen starken Husten. Ich nehme bereits ein Medikament gegen hohen Blutdruck. — Apothekerin: Dann muss ich prüfen, welches Hustenmittel passt. Wissen Sie den Namen Ihres Medikaments? — Kunde: Ja, hier ist ein Foto der Packung. — Apothekerin: Danke. Haben Sie Fieber oder Atemprobleme? — Kunde: Kein Fieber, aber nachts ist der Husten stärker. — Apothekerin: Ich erkläre Ihnen die Möglichkeiten, aber bei starken oder länger werdenden Beschwerden sollten Sie ärztlichen Rat holen. Nehmen Sie nichts zusätzlich, bevor wir die Kombination geprüft haben. — Kunde: Gut. Können Sie mir die Hinweise bitte langsam erklären?",
             "surface": "Kunde: Guten Tag. Ich habe seit drei Tagen starken Husten. Ich nehme bereits ein Medikament gegen hohen Blutdruck. — Apothekerin: Dann muss ich prüfen, welches Hustenmittel passt. Wissen Sie den Namen Ihres Medikaments? — Kunde: Ja, hier ist ein Foto der Packung. — Apothekerin: Danke. Haben Sie Fieber oder Atemprobleme? — Kunde: Kein Fieber, aber nachts ist der Husten stärker. — Apothekerin: Ich erkläre Ihnen die Möglichkeiten, aber bei starken oder länger werdenden Beschwerden sollten Sie ärztlichen Rat holen. Nehmen Sie nichts zusätzlich, bevor wir die Kombination geprüft haben. — Kunde: Gut. Können Sie mir die Hinweise bitte langsam erklären?",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Die Übersetzung auf der Packung reicht immer.",
+            "surface": "Die Übersetzung auf der Packung reicht immer.",
             "strength": "context"
           },
           {
@@ -81662,6 +81788,25 @@
       {
         "lessonId": "a2-17",
         "level": "A2",
+        "lemmaCandidate": "Sichtbarkeit",
+        "normalizedLemma": "sichtbarkeit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Zuerst posten und danach die Sichtbarkeit prüfen.",
+            "surface": "Zuerst posten und danach die Sichtbarkeit prüfen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-17-d573ddf8"
+      },
+      {
+        "lessonId": "a2-17",
+        "level": "A2",
         "lemmaCandidate": "Standort",
         "normalizedLemma": "standort",
         "role": "context-only",
@@ -82360,6 +82505,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Ich verstehe deinen Punkt nicht, also ist das falsch.",
+            "surface": "Ich verstehe deinen Punkt nicht, also ist das falsch.",
+            "strength": "context"
+          },
           {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
@@ -84141,6 +84293,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[0].options[1]",
+            "stage": "controlled",
+            "text": "Bevor ich melde mich an, lese ich die Bedingungen.",
+            "surface": "Bevor ich melde mich an, lese ich die Bedingungen.",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Sehr geehrte Damen und Herren, ich interessiere mich für Ihren A2-Abendkurs, weil ich neben der Arbeit Deutsch lerne. Bevor ich mich anmelde, möchte ich einige Informationen prüfen. Wie viele Unterrichtsstunden und wie viel Selbststudium gibt es pro Woche? Können Sie mir sagen, ob vor dem Kurs ein Einstufungstest nötig ist? Außerdem möchte ich wissen, ob der Abschlusstest intern ist oder zu einem offiziellen Zertifikat führt. Wie hoch ist die gesamte Kursgebühr? Kann ich zuerst eine Probestunde besuchen? Danach kann ich besser entscheiden, ob der Kurs zu meinem Zeitplan passt. Der Kurs sollte abends zwischen 18 und 20 Uhr stattfinden, damit ich den Weg schaffe. Bitte schicken Sie mir auch die Bedingungen für einen Rücktritt vor Kursbeginn. Mit freundlichen Grüßen",
@@ -84848,6 +85007,13 @@
             "stage": "controlled",
             "text": "eine Prüfung",
             "surface": "eine Prüfung",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Wie ist die Prüfung so und wo finde ich irgendwas dazu?",
+            "surface": "Wie ist die Prüfung so und wo finde ich irgendwas dazu?",
             "strength": "context"
           },
           {
@@ -85810,6 +85976,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Nächste Woche ich beginne den Kurs.",
+            "surface": "Nächste Woche ich beginne den Kurs.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[3].options[3]",
             "stage": "test",
             "text": "Nächste Woche beginne ich den Kurs.",
@@ -85889,6 +86062,25 @@
           }
         ],
         "id": "lex-n-a2-21-11d15dc6"
+      },
+      {
+        "lessonId": "a2-21",
+        "level": "A2",
+        "lemmaCandidate": "Motivation",
+        "normalizedLemma": "motivation",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Viermal pro Woche, wenn die Motivation da ist.",
+            "surface": "Viermal pro Woche, wenn die Motivation da ist.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-21-ebc476f8"
       },
       {
         "lessonId": "a2-21",
@@ -89368,6 +89560,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Mara bucht irgendwann den Raum; wenn er voll ist, sehen wir weiter.",
+            "surface": "Mara bucht irgendwann den Raum; wenn er voll ist, sehen wir weiter.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[6].template",
             "stage": "controlled",
             "text": "Wir halten fest, ___ Mara den Raum bucht.",
@@ -90754,8 +90953,8 @@
           {
             "path": "exercises[5].options[1]",
             "stage": "controlled",
-            "text": "Er wurde 1995 geboren. Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
-            "surface": "Er wurde 1995 geboren. Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
+            "text": "Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
+            "surface": "Nach der Schule studierte er Informatik, weil ihn Technik interessierte.",
             "strength": "context"
           },
           {
@@ -91905,6 +92104,13 @@
             "stage": "controlled",
             "text": "Einerseits der Kurs teuer, andererseits intensiv er.",
             "surface": "Einerseits der Kurs teuer, andererseits intensiv er.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Einerseits ist der Kurs teuer, andererseits er ist intensiv.",
+            "surface": "Einerseits ist der Kurs teuer, andererseits er ist intensiv.",
             "strength": "context"
           },
           {
@@ -93359,6 +93565,20 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Seitdem denke ich öfter an meinen Plan.",
+            "surface": "Seitdem denke ich öfter an meinen Plan.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[2]",
+            "stage": "test",
+            "text": "Seitdem ich prüfe wöchentlich meinen Plan.",
+            "surface": "Seitdem ich prüfe wöchentlich meinen Plan.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[3].options[3]",
             "stage": "test",
             "text": "Seitdem prüfe ich wöchentlich meinen Plan.",
@@ -93790,6 +94010,13 @@
             "strength": "registry"
           },
           {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Alle Ereignisse im Plusquamperfekt, auch der Wendepunkt",
+            "surface": "Alle Ereignisse im Plusquamperfekt, auch der Wendepunkt",
+            "strength": "context"
+          },
+          {
             "path": "phrases[0].de",
             "stage": "vocabulary",
             "text": "ein Wendepunkt",
@@ -94143,8 +94370,8 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
-            "surface": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere nächstes Mal früher.",
+            "text": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere früher.",
+            "surface": "Die Datei kam zweimal spät; dadurch konnte das Design nicht starten. Bitte informiere früher.",
             "strength": "context"
           },
           {
@@ -94514,6 +94741,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[3].options[1]",
+            "stage": "test",
+            "text": "Jemand testet das Mikrofon irgendwann.",
+            "surface": "Jemand testet das Mikrofon irgendwann.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[3].options[3]",
             "stage": "test",
             "text": "Ben testet das Mikrofon bis Donnerstag.",
@@ -94774,6 +95008,13 @@
             "stage": "vocabulary",
             "surface": "das Team",
             "strength": "registry"
+          },
+          {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Die Datei war spät; dadurch wartete das Team. Du bist schlecht.",
+            "surface": "Die Datei war spät; dadurch wartete das Team. Du bist schlecht.",
+            "strength": "context"
           },
           {
             "path": "miniTest[4].options[2]",
@@ -97280,6 +97521,25 @@
       {
         "lessonId": "b1-06",
         "level": "B1",
+        "lemmaCandidate": "Lieferanten",
+        "normalizedLemma": "lieferanten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[2].options[0]",
+            "stage": "test",
+            "text": "Der Termin war wegen des Lieferanten in Gefahr.",
+            "surface": "Der Termin war wegen des Lieferanten in Gefahr.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-06-02c80a42"
+      },
+      {
+        "lessonId": "b1-06",
+        "level": "B1",
         "lemmaCandidate": "Monaten",
         "normalizedLemma": "monaten",
         "role": "context-only",
@@ -97291,6 +97551,13 @@
             "stage": "controlled",
             "text": "Woran wird Erfolg in den ersten sechs Monaten gemessen?",
             "surface": "Woran wird Erfolg in den ersten sechs Monaten gemessen?",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Wird Erfolg in den ersten sechs Monaten leicht sein?",
+            "surface": "Wird Erfolg in den ersten sechs Monaten leicht sein?",
             "strength": "context"
           },
           {
@@ -100351,6 +100618,13 @@
         ],
         "sources": [
           {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Bitte prüfen Sie irgendwann die Heizung und melden Sie sich, wenn Sie Zeit haben.",
+            "surface": "Bitte prüfen Sie irgendwann die Heizung und melden Sie sich, wenn Sie Zeit haben.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Bitte lassen Sie die Heizung prüfen und teilen Sie mir bis Freitag einen Termin mit.",
@@ -100421,6 +100695,25 @@
           }
         ],
         "id": "lex-n-b1-08-7484716f"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Katastrophe",
+        "normalizedLemma": "katastrophe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "seit Montag sehr kalt, eine Katastrophe",
+            "surface": "seit Montag sehr kalt, eine Katastrophe",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-001cb7e9"
       },
       {
         "lessonId": "b1-08",
@@ -101058,6 +101351,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Bitte teilen Sie mir irgendwann einen Termin mit.",
+            "surface": "Bitte teilen Sie mir irgendwann einen Termin mit.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[4].options[3]",
             "stage": "test",
             "text": "Bitte teilen Sie mir bis Freitag einen Termin mit.",
@@ -101435,6 +101735,13 @@
             "stage": "vocabulary",
             "surface": "die Barrierefreiheit",
             "strength": "registry"
+          },
+          {
+            "path": "miniTest[4].options[3]",
+            "stage": "test",
+            "text": "Anwohner und Geschäfte, aber nicht die Barrierefreiheit",
+            "surface": "Anwohner und Geschäfte, aber nicht die Barrierefreiheit",
+            "strength": "context"
           },
           {
             "path": "phrases[5].de",
@@ -102320,6 +102627,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Wir erhöhen die Sicherheit, indem schützen wir den Radweg.",
+            "surface": "Wir erhöhen die Sicherheit, indem schützen wir den Radweg.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-09-noun-14",
             "stage": "vocabulary",
             "surface": "der Radweg",
@@ -102529,6 +102843,13 @@
             "stage": "controlled",
             "text": "Wir erhöhen die Sicherheit, indem wir den Radweg schützen.",
             "surface": "Wir erhöhen die Sicherheit, indem wir den Radweg schützen.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Wir erhöhen die Sicherheit, indem schützen wir den Radweg.",
+            "surface": "Wir erhöhen die Sicherheit, indem schützen wir den Radweg.",
             "strength": "context"
           },
           {
@@ -103420,6 +103741,13 @@
             "stage": "controlled",
             "text": "Statt neu zu kaufen, repariert sie das Gerät.",
             "surface": "Statt neu zu kaufen, repariert sie das Gerät.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Statt neu kaufen, repariert sie das Gerät.",
+            "surface": "Statt neu kaufen, repariert sie das Gerät.",
             "strength": "context"
           },
           {
@@ -107391,6 +107719,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Das liegt sicher nur an der App, nicht an der Übung.",
+            "surface": "Das liegt sicher nur an der App, nicht an der Übung.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
             "text": "Das könnte an der App und der häufigeren Übung liegen.",
@@ -107623,25 +107958,6 @@
           }
         ],
         "id": "lex-n-b1-13-8d059880"
-      },
-      {
-        "lessonId": "b1-13",
-        "level": "B1",
-        "lemmaCandidate": "Grund",
-        "normalizedLemma": "grund",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[5].options[0]",
-            "stage": "controlled",
-            "text": "Die App ist mit Sicherheit der einzige Grund.",
-            "surface": "Die App ist mit Sicherheit der einzige Grund.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-13-dd9338ed"
       },
       {
         "lessonId": "b1-13",
@@ -108176,6 +108492,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[5].options[0]",
+            "stage": "controlled",
+            "text": "Das liegt sicher nur an der App, nicht an der Übung.",
+            "surface": "Das liegt sicher nur an der App, nicht an der Übung.",
+            "strength": "context"
+          },
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
@@ -113621,6 +113944,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Wer ruhige Dramen nicht mag, versteht den Film einfach nicht.",
+            "surface": "Wer ruhige Dramen nicht mag, versteht den Film einfach nicht.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-17-noun-1",
             "stage": "vocabulary",
             "surface": "der Film",
@@ -114738,6 +115068,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Wie oft wurde der Beitrag mit welcher Überschrift geteilt?",
+            "surface": "Wie oft wurde der Beitrag mit welcher Überschrift geteilt?",
+            "strength": "context"
+          },
+          {
             "path": "listening.questions[0].promptDe",
             "stage": "listening",
             "text": "Welche Quelle nennt der Beitrag hauptsächlich?",
@@ -115844,10 +116181,17 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Richtig, aber nur weil der Titel es sagt.",
+            "surface": "Richtig, aber nur weil der Titel es sagt.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[4].options[0]",
             "stage": "test",
-            "text": "Ist der Titel schön?",
-            "surface": "Ist der Titel schön?",
+            "text": "Wie lange war der Titel online zu sehen?",
+            "surface": "Wie lange war der Titel online zu sehen?",
             "strength": "context"
           }
         ],
@@ -116449,8 +116793,15 @@
           {
             "path": "exercises[5].options[0]",
             "stage": "controlled",
-            "text": "Wenn ich dich richtig verstehe, soll die Datei spätestens Donnerstagabend fertig sein, richtig?",
-            "surface": "Wenn ich dich richtig verstehe, soll die Datei spätestens Donnerstagabend fertig sein, richtig?",
+            "text": "Wenn ich dich richtig verstehe, soll die Datei Donnerstagabend fertig sein, richtig?",
+            "surface": "Wenn ich dich richtig verstehe, soll die Datei Donnerstagabend fertig sein, richtig?",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Wenn ich dich richtig verstehe, ist die Datei irgendwann diese Woche fertig?",
+            "surface": "Wenn ich dich richtig verstehe, ist die Datei irgendwann diese Woche fertig?",
             "strength": "context"
           },
           {
@@ -119961,6 +120312,13 @@
             "strength": "registry"
           },
           {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Ergebnis und Hindernis, aber kein nächster Schritt",
+            "surface": "Ergebnis und Hindernis, aber kein nächster Schritt",
+            "strength": "context"
+          },
+          {
             "path": "phrases[5].de",
             "stage": "vocabulary",
             "text": "einen nächsten Schritt festlegen",
@@ -122495,25 +122853,6 @@
           }
         ],
         "id": "lex-n-b1-23-33619fc9"
-      },
-      {
-        "lessonId": "b1-23",
-        "level": "B1",
-        "lemmaCandidate": "Eigenschaften",
-        "normalizedLemma": "eigenschaften",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[4].options[3]",
-            "stage": "test",
-            "text": "Nur die Eigenschaften",
-            "surface": "Nur die Eigenschaften",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-23-0da08328"
       },
       {
         "lessonId": "b1-23",
@@ -128532,25 +128871,6 @@
       {
         "lessonId": "b2-03",
         "level": "B2",
-        "lemmaCandidate": "Meinung",
-        "normalizedLemma": "meinung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[3]",
-            "stage": "test",
-            "text": "Nur die Meinung",
-            "surface": "Nur die Meinung",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-03-393185f2"
-      },
-      {
-        "lessonId": "b2-03",
-        "level": "B2",
         "lemmaCandidate": "Modell",
         "normalizedLemma": "modell",
         "role": "anchor",
@@ -129127,6 +129447,25 @@
       {
         "lessonId": "b2-03",
         "level": "B2",
+        "lemmaCandidate": "Wirkung",
+        "normalizedLemma": "wirkung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[2].options[2]",
+            "stage": "test",
+            "text": "Gleiche Regel hat für alle die gleiche Wirkung.",
+            "surface": "Gleiche Regel hat für alle die gleiche Wirkung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-03-1698549c"
+      },
+      {
+        "lessonId": "b2-03",
+        "level": "B2",
         "lemmaCandidate": "Woche",
         "normalizedLemma": "woche",
         "role": "context-only",
@@ -129255,8 +129594,8 @@
           {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
-            "text": "Wir bieten keine Alternativen an.",
-            "surface": "Wir bieten keine Alternativen an.",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
             "strength": "context"
           }
         ],
@@ -129416,8 +129755,15 @@
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
-            "text": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
-            "surface": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, erhält die Leitung beide Optionen mit Kosten und Risiken.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, erhält die Leitung beide Optionen mit Kosten und Risiken.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
             "strength": "context"
           },
           {
@@ -129760,6 +130106,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Angesichts der Frist wir liefern Montag den Kernumfang.",
+            "surface": "Angesichts der Frist wir liefern Montag den Kernumfang.",
+            "strength": "context"
+          },
+          {
             "path": "mistakes[0].correct",
             "stage": "errors",
             "text": "Angesichts der Frist",
@@ -130054,6 +130407,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[3].options[3]",
+            "stage": "test",
+            "text": "Angesichts der Frist wir liefern Montag den Kernumfang.",
+            "surface": "Angesichts der Frist wir liefern Montag den Kernumfang.",
+            "strength": "context"
+          },
+          {
             "path": "mistakes[1].correct",
             "stage": "errors",
             "text": "Hinsichtlich der Frist liefern wir am Montag den Kernumfang.",
@@ -130296,8 +130656,8 @@
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
-            "text": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
-            "surface": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, erhält die Leitung beide Optionen mit Kosten und Risiken.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, erhält die Leitung beide Optionen mit Kosten und Risiken.",
             "strength": "context"
           },
           {
@@ -130305,6 +130665,13 @@
             "stage": "vocabulary",
             "text": "Die nächste Eskalationsstufe ist die Leitung.",
             "surface": "Die nächste Eskalationsstufe ist die Leitung.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[4].options[2]",
+            "stage": "test",
+            "text": "Optionen ohne Risiken vorlegen und die Leitung nicht entscheiden lassen.",
+            "surface": "Optionen ohne Risiken vorlegen und die Leitung nicht entscheiden lassen.",
             "strength": "context"
           },
           {
@@ -133498,8 +133865,8 @@
           {
             "path": "exercises[0].options[2]",
             "stage": "controlled",
-            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
-            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
+            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
+            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
             "strength": "context"
           },
           {
@@ -133889,6 +134256,13 @@
             "stage": "controlled",
             "text": "Unter einer Stichprobe ___ man den untersuchten Teil einer größeren Gruppe.",
             "surface": "Unter einer Stichprobe ___ man den untersuchten Teil einer größeren Gruppe.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[0].options[0]",
+            "stage": "test",
+            "text": "Unter einer Stichprobe versteht man immer die gesamte größere Gruppe aller Personen.",
+            "surface": "Unter einer Stichprobe versteht man immer die gesamte größere Gruppe aller Personen.",
             "strength": "context"
           },
           {
@@ -134783,6 +135157,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Beschattete Oberflächen sind immer kühler, das gilt für jede Stadt und jeden Sommertag.",
+            "surface": "Beschattete Oberflächen sind immer kühler, das gilt für jede Stadt und jeden Sommertag.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Eine Hochschule untersuchte, wie stark sich beschattete und unbeschattete Straßenoberflächen an heißen Tagen erwärmen. Der interne Bericht begann mit dem Satz: „Die Erfassung thermischer Oberflächenunterschiede erfolgte mittels mobiler Sensorik und satellitengestützter Fernerkundung.“ Für eine öffentliche Veranstaltung formulierte das Kommunikationsteam verständlicher: Forschende maßen mit tragbaren Sensoren und Satellitenbildern, wie warm ausgewählte Straßenoberflächen waren. Fernerkundung bedeutet hier, Informationen aus der Entfernung zu gewinnen. An zwölf beschatteten und zwölf offenen Orten wurden an drei heißen Julitagen jeweils mittags Messungen durchgeführt. Die beschatteten Oberflächen waren im Mittel sechs Grad kühler. Das ist das zentrale Ergebnis, wobei drei Einschränkungen wichtig sind. Erstens wurde die Oberflächentemperatur gemessen, nicht die Lufttemperatur, die Menschen direkt umgibt. Zweitens unterschieden sich die Orte auch beim Bodenmaterial und beim Verkehr. Der beobachtete Unterschied kann deshalb nicht ausschließlich dem Schatten zugeschrieben werden. Drittens erfasste die Untersuchung nur drei Tage in einer Stadt. Das Ergebnis beweist also nicht, dass jede beschattete Straße immer genau sechs Grad kühler ist. Es zeigt vielmehr, dass Schatten bei den untersuchten Flächen mit niedrigeren Oberflächentemperaturen verbunden war. Für die Stadtplanung ist das nützlich: Die Daten helfen, Orte für genauere Messungen und mögliche Schattenmaßnahmen auszuwählen. Bevor größere Umbauten beschlossen werden, sollten jedoch Lufttemperatur, Nutzung, Material und längere Zeiträume zusätzlich untersucht werden. Die verständliche Fassung ist kürzer als der Fachbericht, bewahrt aber Methode, Ergebnis und Unsicherheit.",
@@ -134853,6 +135234,13 @@
             "stage": "vocabulary",
             "text": "Der Wert sank, wobei die Stichprobe klein war.",
             "surface": "Der Wert sank, wobei die Stichprobe klein war.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[0].options[0]",
+            "stage": "test",
+            "text": "Unter einer Stichprobe versteht man immer die gesamte größere Gruppe aller Personen.",
+            "surface": "Unter einer Stichprobe versteht man immer die gesamte größere Gruppe aller Personen.",
             "strength": "context"
           },
           {
@@ -135208,6 +135596,25 @@
           }
         ],
         "id": "lex-n-b2-06-9101ca5a"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
+        "lemmaCandidate": "Verfahren",
+        "normalizedLemma": "verfahren",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[0].options[3]",
+            "stage": "controlled",
+            "text": "Fernerkundung bedeutet ein kompliziertes wissenschaftliches Verfahren, ohne Beispiel.",
+            "surface": "Fernerkundung bedeutet ein kompliziertes wissenschaftliches Verfahren, ohne Beispiel.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-06-b05d4f77"
       },
       {
         "lessonId": "b2-06",
@@ -141936,6 +142343,13 @@
             "strength": "registry"
           },
           {
+            "path": "miniTest[0].options[0]",
+            "stage": "test",
+            "text": "Er sprach zweimal, weil er die Gruppe beleidigen wollte.",
+            "surface": "Er sprach zweimal, weil er die Gruppe beleidigen wollte.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[0].options[1]",
             "stage": "test",
             "text": "Er wollte die Gruppe beleidigen.",
@@ -142430,6 +142844,13 @@
             "text": "Alle Angehörigen eines Landes sind gleich.",
             "surface": "Alle Angehörigen eines Landes sind gleich.",
             "strength": "context"
+          },
+          {
+            "path": "miniTest[1].options[2]",
+            "stage": "test",
+            "text": "In allen Teams eines Landes wird Kritik direkt formuliert; Rolle und Situation sind egal.",
+            "surface": "In allen Teams eines Landes wird Kritik direkt formuliert; Rolle und Situation sind egal.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-09-2a54b340"
@@ -142561,6 +142982,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "In allen deutschen Teams wird direkte Kritik erwartet, weil die Nationalität das Verhalten bestimmt.",
+            "surface": "In allen deutschen Teams wird direkte Kritik erwartet, weil die Nationalität das Verhalten bestimmt.",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[1].options[1]",
             "stage": "listening",
@@ -142809,6 +143237,13 @@
             "stage": "vocabulary",
             "surface": "die Position",
             "strength": "registry"
+          },
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Deutungen ohne Beleg sammeln und die eigene Position als Maßstab nehmen",
+            "surface": "Deutungen ohne Beleg sammeln und die eigene Position als Maßstab nehmen",
+            "strength": "context"
           },
           {
             "path": "miniTest[4].options[1]",
@@ -143596,6 +144031,13 @@
             "stage": "controlled",
             "text": "In manchen Teams wird direkte Kritik erwartet, wobei Rolle und Situation das Verhalten mitprägen.",
             "surface": "In manchen Teams wird direkte Kritik erwartet, wobei Rolle und Situation das Verhalten mitprägen.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "In allen deutschen Teams wird direkte Kritik erwartet, weil die Nationalität das Verhalten bestimmt.",
+            "surface": "In allen deutschen Teams wird direkte Kritik erwartet, weil die Nationalität das Verhalten bestimmt.",
             "strength": "context"
           },
           {
@@ -144959,6 +145401,25 @@
       {
         "lessonId": "b2-10",
         "level": "B2",
+        "lemmaCandidate": "Meinung",
+        "normalizedLemma": "meinung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[3].options[1]",
+            "stage": "test",
+            "text": "Hintergrund, Frist und die Meinung des Vermittlers",
+            "surface": "Hintergrund, Frist und die Meinung des Vermittlers",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-f6d859c2"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
         "lemmaCandidate": "Mindestzahl",
         "normalizedLemma": "mindestzahl",
         "role": "context-only",
@@ -145623,6 +146084,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "miniTest[3].options[1]",
+            "stage": "test",
+            "text": "Hintergrund, Frist und die Meinung des Vermittlers",
+            "surface": "Hintergrund, Frist und die Meinung des Vermittlers",
+            "strength": "context"
+          },
           {
             "path": "miniTest[3].options[3]",
             "stage": "test",
@@ -154174,6 +154642,13 @@
             "strength": "context"
           },
           {
+            "path": "miniTest[0].options[2]",
+            "stage": "test",
+            "text": "…der Termin und der Antrag. Dieser war leider unvollständig.",
+            "surface": "…der Termin und der Antrag. Dieser war leider unvollständig.",
+            "strength": "context"
+          },
+          {
             "path": "mistakes[0].correct",
             "stage": "errors",
             "text": "Er stellte einen Antrag, und dieser wurde abgelehnt.",
@@ -156122,6 +156597,13 @@
             "stage": "test",
             "text": "…der Termin und der Antrag. Dieses war zu spät.",
             "surface": "…der Termin und der Antrag. Dieses war zu spät.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[0].options[2]",
+            "stage": "test",
+            "text": "…der Termin und der Antrag. Dieser war leider unvollständig.",
+            "surface": "…der Termin und der Antrag. Dieser war leider unvollständig.",
             "strength": "context"
           },
           {
@@ -159129,6 +159611,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "wenn derselbe Fehler einmal in der letzten Zeile steht",
+            "surface": "wenn derselbe Fehler einmal in der letzten Zeile steht",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[4].options[2]",
             "stage": "test",
             "text": "wenn er in der letzten Zeile steht",
@@ -160730,13 +161219,6 @@
             "strength": "context"
           },
           {
-            "path": "exercises[6].options[2]",
-            "stage": "controlled",
-            "text": "Ich habe die Frist versäumt, weil die Post schuld ist.",
-            "surface": "Ich habe die Frist versäumt, weil die Post schuld ist.",
-            "strength": "context"
-          },
-          {
             "path": "miniTest[3].options[3]",
             "stage": "test",
             "text": "Hätte ich die Frist geprüft, wäre die Gebühr entfallen.",
@@ -160783,6 +161265,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Hätte die Post besser gearbeitet, wäre die Gebühr entfallen.",
+            "surface": "Hätte die Post besser gearbeitet, wäre die Gebühr entfallen.",
+            "strength": "context"
+          },
           {
             "path": "miniTest[3].options[3]",
             "stage": "test",
@@ -161090,8 +161579,8 @@
           {
             "path": "miniTest[1].options[2]",
             "stage": "test",
-            "text": "… als ob er hat die Mahnung.",
-            "surface": "… als ob er hat die Mahnung.",
+            "text": "… als ob er hat die Mahnung bekommen.",
+            "surface": "… als ob er hat die Mahnung bekommen.",
             "strength": "context"
           },
           {
@@ -161533,8 +162022,8 @@
           {
             "path": "exercises[6].options[2]",
             "stage": "controlled",
-            "text": "Ich habe die Frist versäumt, weil die Post schuld ist.",
-            "surface": "Ich habe die Frist versäumt, weil die Post schuld ist.",
+            "text": "Das hätte die Post früher prüfen sollen; beim nächsten Durchgang ist sie schuld.",
+            "surface": "Das hätte die Post früher prüfen sollen; beim nächsten Durchgang ist sie schuld.",
             "strength": "context"
           },
           {
@@ -161542,6 +162031,13 @@
             "stage": "listening",
             "text": "Ben liest seine Notiz vor: «Ich habe die Aufgabenstellung überflogen. Das war dumm.» Herr Aziz legt den Stift hin und ändert kein Wort an den Tatsachen, nur die Formen. Aus dem Bericht wird eine Bedingung: Wenn Ben die Aufgabenstellung gelesen hätte, wäre ihm die zweite Aufgabe nicht entglitten. Dann die fremde Behauptung. Ben sagt, sein Kursleiter habe nur vom Pech geredet, und will antworten, der Mann wisse nichts davon. Herr Aziz lässt ihn die Vermutung als Vermutung stehen: Der Kursleiter sprach, als ob die Zeit das einzige Problem gewesen wäre. So bleibt der Satz prüfbar, weil niemand behauptet, die Zeit sei allein schuld gewesen. Beim dritten Schritt geht es um die Selbstkritik. Bens Rechtfertigung umfasst fünf Zeilen über den Drucker, die Post und die Aufsicht; sein Fehler steht in einem Nebensatz. Zusammengestrichen bleibt ein Satz übrig: Das hätte ich früher prüfen sollen; beim nächsten Durchgang markiere ich die Aufgabenstellung zweimal. Herr Aziz nennt das eine Nachlese mit Auftrag. Ben fragt, ob die Abschwächung nicht alles weicher mache, als wäre nichts gewesen. Nein, sagt Herr Aziz: Die Umkehrung bleibt, weil der Zweifel benannt wurde, und der Auftrag steht daneben. Eine Modalpartikel wie «doch» könne den Ton formen, die Verantwortung aber nicht ersetzen.",
             "surface": "Ben liest seine Notiz vor: «Ich habe die Aufgabenstellung überflogen. Das war dumm.» Herr Aziz legt den Stift hin und ändert kein Wort an den Tatsachen, nur die Formen. Aus dem Bericht wird eine Bedingung: Wenn Ben die Aufgabenstellung gelesen hätte, wäre ihm die zweite Aufgabe nicht entglitten. Dann die fremde Behauptung. Ben sagt, sein Kursleiter habe nur vom Pech geredet, und will antworten, der Mann wisse nichts davon. Herr Aziz lässt ihn die Vermutung als Vermutung stehen: Der Kursleiter sprach, als ob die Zeit das einzige Problem gewesen wäre. So bleibt der Satz prüfbar, weil niemand behauptet, die Zeit sei allein schuld gewesen. Beim dritten Schritt geht es um die Selbstkritik. Bens Rechtfertigung umfasst fünf Zeilen über den Drucker, die Post und die Aufsicht; sein Fehler steht in einem Nebensatz. Zusammengestrichen bleibt ein Satz übrig: Das hätte ich früher prüfen sollen; beim nächsten Durchgang markiere ich die Aufgabenstellung zweimal. Herr Aziz nennt das eine Nachlese mit Auftrag. Ben fragt, ob die Abschwächung nicht alles weicher mache, als wäre nichts gewesen. Nein, sagt Herr Aziz: Die Umkehrung bleibt, weil der Zweifel benannt wurde, und der Auftrag steht daneben. Eine Modalpartikel wie «doch» könne den Ton formen, die Verantwortung aber nicht ersetzen.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[3].options[0]",
+            "stage": "test",
+            "text": "Hätte die Post besser gearbeitet, wäre die Gebühr entfallen.",
+            "surface": "Hätte die Post besser gearbeitet, wäre die Gebühr entfallen.",
             "strength": "context"
           }
         ],
@@ -172094,6 +172590,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[6].options[3]",
+            "stage": "controlled",
+            "text": "Zwar war der Termin knapp, jedoch habt ihr das wieder vergessen; deshalb will ich bis Freitag eine Antwort!",
+            "surface": "Zwar war der Termin knapp, jedoch habt ihr das wieder vergessen; deshalb will ich bis Freitag eine Antwort!",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b2-20-noun-14",
             "stage": "vocabulary",
             "surface": "die Antwort",
@@ -175075,6 +175578,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[6].options[3]",
+            "stage": "controlled",
+            "text": "Zwar war der Termin knapp, jedoch habt ihr das wieder vergessen; deshalb will ich bis Freitag eine Antwort!",
+            "surface": "Zwar war der Termin knapp, jedoch habt ihr das wieder vergessen; deshalb will ich bis Freitag eine Antwort!",
+            "strength": "context"
+          },
+          {
             "path": "exercises[7].options[3]",
             "stage": "controlled",
             "text": "Weder die Halle noch die Gruppenstunde hat einen Termin.",
@@ -176004,6 +176514,13 @@
             "text": "Die Gruppe erklärte, der Beschlusstext sei unvollständig geblieben.",
             "surface": "Die Gruppe erklärte, der Beschlusstext sei unvollständig geblieben.",
             "strength": "context"
+          },
+          {
+            "path": "exercises[7].options[2]",
+            "stage": "controlled",
+            "text": "Die Gruppe jammerte, der Beschlusstext sei mal wieder unvollständig geblieben.",
+            "surface": "Die Gruppe jammerte, der Beschlusstext sei mal wieder unvollständig geblieben.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-21-a3c62f72"
@@ -176300,8 +176817,8 @@
           {
             "path": "miniTest[1].options[2]",
             "stage": "test",
-            "text": "Nie; die Form ist Pflicht.",
-            "surface": "Nie; die Form ist Pflicht.",
+            "text": "Wenn die Form mit dem Indikativ ungleich ist.",
+            "surface": "Wenn die Form mit dem Indikativ ungleich ist.",
             "strength": "context"
           },
           {
@@ -176328,6 +176845,13 @@
             "stage": "test",
             "text": "Der Antragsteller erklärte, das Formular sei unleserlich gestempelt worden.",
             "surface": "Der Antragsteller erklärte, das Formular sei unleserlich gestempelt worden.",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[2].options[3]",
+            "stage": "test",
+            "text": "Der Antragsteller behauptete übertrieben, das Formular sei angeblich unleserlich.",
+            "surface": "Der Antragsteller behauptete übertrieben, das Formular sei angeblich unleserlich.",
             "strength": "context"
           },
           {
@@ -176541,25 +177065,6 @@
       {
         "lessonId": "b2-21",
         "level": "B2",
-        "lemmaCandidate": "Gruppe",
-        "normalizedLemma": "gruppe",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[7].options[2]",
-            "stage": "controlled",
-            "text": "Wie immer jammerte die Gruppe über den Text.",
-            "surface": "Wie immer jammerte die Gruppe über den Text.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-21-6387fe40"
-      },
-      {
-        "lessonId": "b2-21",
-        "level": "B2",
         "lemmaCandidate": "Hörphase",
         "normalizedLemma": "hörphase",
         "role": "context-only",
@@ -176616,6 +177121,13 @@
             "stage": "discover",
             "text": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
             "surface": "„Sie kennen die Regel.“ → Er behauptete, sie kennten die Regel („kennen“ wäre formgleich mit dem Indikativ).",
+            "strength": "context"
+          },
+          {
+            "path": "miniTest[1].options[2]",
+            "stage": "test",
+            "text": "Wenn die Form mit dem Indikativ ungleich ist.",
+            "surface": "Wenn die Form mit dem Indikativ ungleich ist.",
             "strength": "context"
           },
           {
@@ -177451,13 +177963,6 @@
             "strength": "context"
           },
           {
-            "path": "exercises[7].options[2]",
-            "stage": "controlled",
-            "text": "Wie immer jammerte die Gruppe über den Text.",
-            "surface": "Wie immer jammerte die Gruppe über den Text.",
-            "strength": "context"
-          },
-          {
             "path": "phrases[16].de",
             "stage": "vocabulary",
             "text": "Vorbehaltlich der Prüfung bleibe der Text vorläufig.",
@@ -178010,6 +178515,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "Formal korrekt, und die Zuordnung ist damit bereits geprüft.",
+            "surface": "Formal korrekt, und die Zuordnung ist damit bereits geprüft.",
+            "strength": "context"
+          },
           {
             "path": "miniTest[4].options[2]",
             "stage": "test",
@@ -185123,6 +185635,25 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
+        "lemmaCandidate": "Nacht",
+        "normalizedLemma": "nacht",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[0].options[0]",
+            "stage": "test",
+            "text": "Er versuchte die ganze Nacht ruhig zu schlafen.",
+            "surface": "Er versuchte die ganze Nacht ruhig zu schlafen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-24-2334a0cc"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
         "lemmaCandidate": "Nebensatz",
         "normalizedLemma": "nebensatz",
         "role": "context-only",
@@ -186907,6 +187438,13 @@
             "strength": "context"
           },
           {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "surface": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "strength": "context"
+          },
+          {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
             "text": "Ich rufe wegen der Wohnung in der Gartenstraße an.",
@@ -186962,6 +187500,13 @@
             "stage": "entry",
             "text": "Guten Tag. Ich rufe wegen der Wohnung in der Gartenstraße an.",
             "surface": "Guten Tag. Ich rufe wegen der Wohnung in der Gartenstraße an.",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[2]",
+            "stage": "controlled",
+            "text": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
+            "surface": "Ich rufe wegen die Wohnung in der Gartenstraße an.",
             "strength": "context"
           },
           {
@@ -190728,6 +191273,29 @@
       {
         "lessonId": "a2-12",
         "level": "A2",
+        "infinitiveCandidate": "machen",
+        "normalizedVerb": "machen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[0].options[1]",
+            "stage": "test",
+            "text": "Sie machen immer Fehler mit meinem Zimmer!",
+            "surface": "Sie machen immer Fehler mit meinem Zimmer!",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-12-060838fe"
+      },
+      {
+        "lessonId": "a2-12",
+        "level": "A2",
         "infinitiveCandidate": "sich versprochen",
         "normalizedVerb": "versprochen",
         "preposition": "zu",
@@ -191457,6 +192025,13 @@
             "stage": "discover",
             "text": "nicht zusammen mit …",
             "surface": "nicht zusammen mit …",
+            "strength": "context"
+          },
+          {
+            "path": "exercises[5].options[1]",
+            "stage": "controlled",
+            "text": "Ich nehme beide einfach zusammen mit Wasser.",
+            "surface": "Ich nehme beide einfach zusammen mit Wasser.",
             "strength": "context"
           },
           {
@@ -195724,6 +196299,29 @@
           }
         ],
         "id": "lex-v-b1-06-ce77a716"
+      },
+      {
+        "lessonId": "b1-06",
+        "level": "B1",
+        "infinitiveCandidate": "wegen",
+        "normalizedVerb": "wegen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[2].options[0]",
+            "stage": "test",
+            "text": "Der Termin war wegen des Lieferanten in Gefahr.",
+            "surface": "Der Termin war wegen des Lieferanten in Gefahr.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-06-74364bb2"
       },
       {
         "lessonId": "b1-07",
@@ -201929,6 +202527,29 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "denselben",
+        "normalizedVerb": "denselben",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[1]",
+            "stage": "test",
+            "text": "Gleicher kleiner Test mit denselben ähnlichen Geräten",
+            "surface": "Gleicher kleiner Test mit denselben ähnlichen Geräten",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-373a53a5"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "dienten",
         "normalizedVerb": "dienten",
         "preposition": "nach",
@@ -204570,6 +205191,29 @@
       {
         "lessonId": "b2-04",
         "level": "B2",
+        "infinitiveCandidate": "beschweren",
+        "normalizedVerb": "beschweren",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "exercises[5].options[3]",
+            "stage": "controlled",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-04-058dee99"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
         "infinitiveCandidate": "bestehen",
         "normalizedVerb": "bestehen",
         "preposition": "in",
@@ -204620,8 +205264,8 @@
           {
             "path": "exercises[5].options[3]",
             "stage": "controlled",
-            "text": "Wir bieten keine Alternativen an.",
-            "surface": "Wir bieten keine Alternativen an.",
+            "text": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
+            "surface": "Falls bis Dienstag keine Einigung möglich ist, beschweren wir uns und bieten keine Alternativen an.",
             "strength": "context"
           },
           {
@@ -204834,18 +205478,10 @@
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "ambiguous",
           "unknown"
         ],
         "anchorIds": [],
         "sources": [
-          {
-            "path": "exercises[5].options[2]",
-            "stage": "controlled",
-            "text": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
-            "surface": "Falls bis Dienstag keine Einigung möglich ist, legen wir beide Optionen mit Kosten und Risiken der Leitung vor.",
-            "strength": "context"
-          },
           {
             "path": "writing.modelDe",
             "stage": "writing",
@@ -206149,8 +206785,8 @@
           {
             "path": "exercises[0].options[2]",
             "stage": "controlled",
-            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
-            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
+            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
+            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
             "strength": "context"
           }
         ],
@@ -206172,8 +206808,8 @@
           {
             "path": "exercises[0].options[2]",
             "stage": "controlled",
-            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
-            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, zum Beispiel mit Satellitenbildern.",
+            "text": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
+            "surface": "Fernerkundung bedeutet, Informationen aus der Entfernung zu sammeln, etwa mit Satellitenbildern.",
             "strength": "context"
           }
         ],
@@ -211367,6 +212003,29 @@
       {
         "lessonId": "b2-14",
         "level": "B2",
+        "infinitiveCandidate": "befragen",
+        "normalizedVerb": "befragen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "jedes Wort einzeln auf Rechtschreibung befragen",
+            "surface": "jedes Wort einzeln auf Rechtschreibung befragen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-14-7fe3cdc9"
+      },
+      {
+        "lessonId": "b2-14",
+        "level": "B2",
         "infinitiveCandidate": "beginnen",
         "normalizedVerb": "beginnen",
         "preposition": "nach",
@@ -211493,6 +212152,13 @@
         ],
         "anchorIds": [],
         "sources": [
+          {
+            "path": "miniTest[4].options[0]",
+            "stage": "test",
+            "text": "jedes Wort einzeln auf Rechtschreibung befragen",
+            "surface": "jedes Wort einzeln auf Rechtschreibung befragen",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -218389,5 +219055,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "cc04cbb13b27ff225e2698cfe27ef419077c8a2acbb0565ba4e7bb8f33bc222f"
+  "contentSha256": "99be76adefa54775300f99284c4c84a330d090ff018098dcde4151001984e632"
 }

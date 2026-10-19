@@ -26,19 +26,20 @@ describe("lexical target-gap inventory", () => {
   // v236: six simplified A1 reading texts (ADR-128) drop 10 contextual noun and 3 contextual verb candidates; targets are unchanged.
   // v243: ADR-135 adds 105 lesson-scoped noun anchors for question-critical reading words; 118 candidates become covered, pendingHuman is unchanged.
   // v245: ADR-137 rewrites 229 options in 211 reading/listening items (17 keys shortened, the rest distractors lengthened); new words are contextual candidates only (+19 nouns, +15 verb pairs); covered and pendingHuman are unchanged.
+  // v246: ADR-138 rewrites the distractors of 143 mini-test/exercise items (five keys shortened); +4 noun and +5 verb-pair contextual candidates; covered and pendingHuman are unchanged.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 4984,
+      totalCandidates: 4988,
       covered: 1503,
       pendingHuman: 89,
-      contextualNotTarget: 3392,
+      contextualNotTarget: 3396,
       authoredTargets: 1592,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1303,
+      totalCandidates: 1308,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1168,
+      contextualNotTarget: 1173,
       authoredTargets: 135,
     });
   });

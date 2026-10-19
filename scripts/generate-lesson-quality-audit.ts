@@ -29,12 +29,13 @@ const thresholds = {
   maxPositionSharePct: 40,
   minPositionSharePct: 15,
   // ADR-137 (2026-10-19): measured 38.0% before, 27.5% after the reading/listening distractor review.
-  longestOptionCuePctMax: 28,
+  // ADR-138 (2026-10-19): 20.8% after the mini-test/exercise distractor review.
+  longestOptionCuePctMax: 21,
   // ADR-137: a "visible" length cue is a key that is the unique longest option by at least 5 characters
   // AND at least 15% longer than the next option — a learner can pick it without reading the text.
-  // Reading 115 -> 0 and listening 96 -> 0; mini-test and exercise items are ratcheted at the measured
-  // count until their own review (their distractors are short ill-formed fragments; see ADR-137).
-  visibleLengthCueByKindMax: { reading: 0, listening: 0, mini: 88, exercise: 55 } as Record<string, number>,
+  // Reading 115 -> 0 and listening 96 -> 0 (ADR-137); mini-test 88 -> 0 and exercise 55 -> 0 (ADR-138,
+  // distractors rebuilt as same-length near-misses of the key instead of short ill-formed fragments).
+  visibleLengthCueByKindMax: { reading: 0, listening: 0, mini: 0, exercise: 0 } as Record<string, number>,
   singleVariantSharePctMax: 25,
   noOpAcceptedVariantsMax: 0,
   explanationMedianCharsMin: 60,

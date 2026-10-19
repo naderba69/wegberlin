@@ -7,7 +7,7 @@ type ScoredItem = { id: string; options: readonly string[]; correctIndex: number
 /**
  * Option-parallelism guard for the lessons whose multiple-choice items were parallelised in the
  * cue-cleanup arc (phase 3). `reports/lesson-quality-audit.json` measures one asymmetric property
- * globally — "the correct option is the unique longest" (27.6% after ADR-137, ratchet 28%; the
+ * globally — "the correct option is the unique longest" (20.8% after ADR-138, ratchet 21%; the
  * gate counts every lesson, this test only the converted ones). What it locks down is the *design rule*
  * applied to the lessons already converted, so a later edit cannot quietly reintroduce a cue:
  *
@@ -89,6 +89,32 @@ describe("comprehension questions carry no visible length cue (ADR-137)", () => 
         const next = Math.max(...lengths.filter((_, index) => index !== item.correctIndex));
         if (key - next >= 5 && key >= 1.15 * next) offenders.push(`${item.id} ${key}/${next}`);
         expect(new Set(item.options.map((option) => fold(String(option)))).size, `${item.id} has duplicate options`).toBe(item.options.length);
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+});
+
+// ADR-138 (v246): the same rule now covers mini-test and multiple-choice exercise items (88 and 55
+// visible cues before, 0 after). Distractors became same-length near-misses of the key — a word-order
+// or morphology slip of the same sentence, or a well-formed sentence that does the wrong job — so the
+// learner has to apply the rule instead of spotting the only complete sentence.
+describe("mini-test and exercise items carry no visible length cue (ADR-138)", () => {
+  it("keeps every mini-test and exercise key within 5 characters or 15% of the next option", () => {
+    const offenders: string[] = [];
+    for (const lesson of lessons) {
+      const scored = [
+        ...lesson.exercises.filter((exercise): exercise is Extract<PracticeExercise, { type: "multiple-choice" }> => exercise.type === "multiple-choice"),
+        ...lesson.miniTest,
+      ];
+      for (const item of scored) {
+        const lengths = item.options.map((option) => strip(String(option)).length);
+        const key = lengths[item.correctIndex];
+        const next = Math.max(...lengths.filter((_, index) => index !== item.correctIndex));
+        if (key - next >= 5 && key >= 1.15 * next) offenders.push(`${lesson.id}:${item.id} ${key}/${next}`);
+        expect(new Set(item.options.map((option) => fold(String(option)))).size, `${item.id} has duplicate options`).toBe(item.options.length);
+        const keyHasArabic = arabic.test(String(item.options[item.correctIndex]));
+        for (const option of item.options) expect(arabic.test(String(option)), `${item.id} mixes Arabic and German options: ${option}`).toBe(keyHasArabic);
       }
     }
     expect(offenders).toEqual([]);

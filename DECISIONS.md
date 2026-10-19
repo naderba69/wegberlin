@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v246 · 2026-10-19 · أسئلة الاختبار القصير والتمارين لا يُعرف جوابها من طول الخيار (ADR-138): في 143 بندًا (اختبار قصير 88 وتمارين 55) كانت الإجابة الجملة الكاملة الوحيدة بين شظايا مكسورة قصيرة، فيمكن اختيارها دون معرفة القاعدة. أُعيد بناء خياراتها بخيار خاطئ قريب الطول يعيد كلمات الإجابة نفسها مع خطأ واحد في الترتيب أو الصرف، أو جملة سليمة تؤدي وظيفة خاطئة (بلا موعد، لوم، تعميم)، واختُصرت 5 إجابات. صار التلميح الظاهر 0 في الأنواع الأربعة، ونزلت نسبة «الأطول هو الصحيح» من 27.6% إلى 20.8%، مع حارس يمنع العودة، داخل سقف المنهج دون رفعه (صارت النسخة المولّدة من الاختبار القصير سطرًا لكل سؤال، فعاد هامش 2,678 بايتًا). الخيارات الجديدة من كتابة الوكيل، لا مراجعة بشرية.
+Sync batch: v248 · 2026-10-19 · كلمات قائمة Goethe A1 الناقصة صارت تُدرَّس داخل دروس A1 (ADR-139): بموافقة المالك «نعم» رُفع سقف أمان المنهج من 1,275,000 إلى 1,309,000 (الحد الصلب 1,540,000، وسقف JS 2,125,000 بلا تغيير)، وأُضيفت 235 عبارة مفردات و245 بطاقة مراجعة و23 تمرين مطابقة و144 مرسى اسم تحققت كلها من WiktionaryDE. صار ظهور كلمات قائمة A1 في دروس A1 ‏98.8% بعد 67.2%، والمشروح صراحةً 82.8% بعد 51.5%، والناقص 8 كلمات بعد 220. المحتوى من كتابة الوكيل، لا مراجعة بشرية.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1895,3 +1895,27 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 
 - The generated Mini-Test mirror (`src/data/local-test-templates`) doubled the cost of every Mini-Test edit and pushed the curriculum 310 B over the unchanged 1,275,000 B ceiling. Its generator now writes one question per line instead of 2-space pretty-printing (identical data, still drift-checked), which brings the curriculum to 1,272,322 B. Noun/verb candidates +4/+5 contextual only; covered and pendingHuman unchanged. IDEA_BACKLOG 397 closed. See `docs/adr/ADR-138-mini-test-exercise-length-cue-review.md`.
 
+
+## ADR-139 — Teach the missing Goethe-Zertifikat A1 core vocabulary inside the A1 lessons
+
+- Status: accepted, 2026-10-19 (v248)
+- Owner decision: «نعم» to raising the curriculum ceiling for the A1 gaps. Content under the owner delegation «نفّذ ما يفيد المتعلم والصحيح».
+- Evidence tier: agent content edit checked by measured gates and a WiktionaryDE source check; not an independent German review.
+
+## Decision
+
+- Curriculum hard limit 1,500,000 → 1,540,000 B gzip. The 15% reserve is unchanged, so the safety ceiling is 1,275,000 → **1,309,000**. The JS, audio and pack limits are unchanged.
+- No new lessons. The missing A1 words go into the A1 lesson of their theme:
+  - 235 vocabulary phrases
+  - 245 review cards (appended)
+  - 23 matching exercises `a1-NN-e8`, each aligned or explicitly unaligned
+  - 144 lesson-scoped noun anchors in their own worksheet, outside P0-98. A1 pendingHuman stays 0.
+- All 144 anchors are confirmed against WiktionaryDE (`german_nouns` 1.2.5): 142 by gender and case forms, and 2 Pluraletantum.
+- Listening transcripts and audio are untouched. Months use MSA names only.
+
+## Consequences
+
+- A1 headwords appearing in A1 lessons: 67.2% → **98.8%**. Taught explicitly: 51.5% → **82.8%**. Missing at A1: 220 → 8, and only `tot` and `der Bogen` are genuinely absent.
+- Curriculum gzip is 1,287,127 of 1,309,000.
+- Still open under IDEA 407: the missing A2, B1 and B2 themes and the A1/A2/B1 mock exams. Another ceiling raise needs a new owner decision.
+- Details: `docs/adr/ADR-139-goethe-a1-core-vocabulary.md`.

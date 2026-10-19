@@ -59,11 +59,11 @@
  },
  "reviewPacketPresence": {
   "sheetCount": 17,
-  "rowCount": 3277,
+  "rowCount": 3300,
   "fullySignedRowCount": 0,
-  "unsignedRowCount": 3277,
+  "unsignedRowCount": 3300,
   "signedSignatureCells": 0,
-  "signatureCellsExpected": 13108,
+  "signatureCellsExpected": 13200,
   "sheets": [
    {
     "name": "review-sheet-01.csv",
@@ -163,9 +163,9 @@
    },
    {
     "name": "review-sheet-17.csv",
-    "rows": 77,
+    "rows": 100,
     "fullySignedRows": 0,
-    "unsignedRows": 77
+    "unsignedRows": 100
    }
   ],
   "evidenceContentsInspected": false,

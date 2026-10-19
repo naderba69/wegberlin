@@ -2,11 +2,11 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `99be76adefa54775300f99284c4c84a330d090ff018098dcde4151001984e632`
+Content SHA-256: `e69283a8c0f4b1fd724649c8421e70f897c586ec54b1cbe04ea33c0323df60e0`
 
 ## Result
 
-Alignment integrity: `PASS` — every lesson surface is linked to named objectives or explicitly marked unaligned (62 unaligned surfaces). **389/389 lesson objectives** have at least one authored teaching link, practice link and Mini-Test link; **0 objectives are reported gaps** (not taught: 0; not practised: 0; not assessed by the Mini-Test: 0).
+Alignment integrity: `PASS` — every lesson surface is linked to named objectives or explicitly marked unaligned (72 unaligned surfaces). **389/389 lesson objectives** have at least one authored teaching link, practice link and Mini-Test link; **0 objectives are reported gaps** (not taught: 0; not practised: 0; not assessed by the Mini-Test: 0).
 
 | Level | Objectives | Covered | Gaps |
 |---|---:|---:|---:|
@@ -36,23 +36,23 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-01-objective-2` | Ich kann meinen Namen sagen und danach fragen. | أستطيع تقديم اسمي والسؤال عن اسم الآخر. | 3 · `a1-01:entry`, `a1-01:vocabulary` | 9 | 2 · `a1-01-m1`, `a1-01-m3` | covered |
 | `a1-01-objective-3` | Ich kann nach dem Befinden fragen. | أستطيع السؤال عن الحال والرد بإجابة قصيرة. | 3 · `a1-01:entry`, `a1-01:vocabulary` | 3 | 1 · `a1-01-m2` | covered |
 | `a1-01-objective-4` | Ich erkenne die Verbposition in einfachen Fragen. | ألاحظ موقع الفعل في سؤال ألماني بسيط. | 1 · `a1-01-t2` | 2 | 2 · `a1-01-m1`, `a1-01-m5` | covered |
-| `a1-02-objective-1` | Ich kann Herkunft und Wohnort nennen. | أذكر بلدي ومكان سكني. | 3 · `a1-02:entry`, `a1-02:vocabulary` | 8 | 1 · `a1-02-m2` | covered |
+| `a1-02-objective-1` | Ich kann Herkunft und Wohnort nennen. | أذكر بلدي ومكان سكني. | 3 · `a1-02:entry`, `a1-02:vocabulary` | 9 | 1 · `a1-02-m2` | covered |
 | `a1-02-objective-2` | Ich kann nach Herkunft und Sprache fragen. | أسأل عن الأصل واللغة. | 3 · `a1-02:entry`, `a1-02:vocabulary` | 5 | 2 · `a1-02-m1`, `a1-02-m5` | covered |
 | `a1-02-objective-3` | Ich benutze aus und in mit Ländern und Städten. | أستعمل aus و in في تراكيب أساسية. | 1 · `a1-02-t1` | 2 | 1 · `a1-02-m2` | covered |
 | `a1-02-objective-4` | Ich konjugiere kommen und sprechen im Singular. | أصرف kommen و sprechen في المفرد. | 1 · `a1-02-t2` | 3 | 2 · `a1-02-m3`, `a1-02-m4` | covered |
 | `a1-03-objective-1` | Ich kann meinen Namen buchstabieren. | أتهجّى اسمي بالألمانية. | 3 · `a1-03:entry`, `a1-03:vocabulary` | 4 | 1 · `a1-03-m3` | covered |
-| `a1-03-objective-2` | Ich kann Telefonnummern verstehen und sagen. | أفهم رقم هاتف وأقوله. | 4 · `a1-03:entry`, `a1-03:vocabulary` | 7 | 2 · `a1-03-m1`, `a1-03-m4` | covered |
+| `a1-03-objective-2` | Ich kann Telefonnummern verstehen und sagen. | أفهم رقم هاتف وأقوله. | 4 · `a1-03:entry`, `a1-03:vocabulary` | 8 | 2 · `a1-03-m1`, `a1-03-m4` | covered |
 | `a1-03-objective-3` | Ich kann um Wiederholung bitten. | أطلب إعادة المعلومة بلباقة. | 3 · `a1-03:entry`, `a1-03:vocabulary` | 4 | 1 · `a1-03-m2` | covered |
 | `a1-03-objective-4` | Ich kann einfache persönliche Daten notieren. | أدوّن بيانات شخصية بسيطة. | 1 · `a1-03:vocabulary` | 5 | 1 · `a1-03-m5` | covered |
-| `a1-04-objective-1` | Ich kann Familienmitglieder nennen. | أستطيع تسمية أفراد العائلة. | 3 · `a1-04:entry`, `a1-04:vocabulary` | 6 | 2 · `a1-04-m1`, `a1-04-m4` | covered |
+| `a1-04-objective-1` | Ich kann Familienmitglieder nennen. | أستطيع تسمية أفراد العائلة. | 3 · `a1-04:entry`, `a1-04:vocabulary` | 7 | 2 · `a1-04-m1`, `a1-04-m4` | covered |
 | `a1-04-objective-2` | Ich kann Personen auf einem Foto vorstellen. | أستطيع تقديم أشخاص في صورة. | 2 · `a1-04:entry`, `a1-04-t2` | 5 | 2 · `a1-04-m2`, `a1-04-m5` | covered |
 | `a1-04-objective-3` | Ich kann mein und meine passend benutzen. | أختار mein أو meine بما يناسب الاسم. | 1 · `a1-04-t1` | 3 | 2 · `a1-04-m1`, `a1-04-m3` | covered |
 | `a1-04-objective-4` | Ich kann einfache Fragen zur Familie stellen. | أطرح أسئلة بسيطة عن العائلة. | 1 · `a1-04:entry` | 2 | 1 · `a1-04-m4` | covered |
 | `a1-05-objective-1` | Ich kann nach dem Alter fragen und antworten. | أسأل عن العمر وأجيب. | 3 · `a1-05:entry`, `a1-05:vocabulary` | 9 | 2 · `a1-05-m1`, `a1-05-m2` | covered |
-| `a1-05-objective-2` | Ich kann ein einfaches Geburtsdatum verstehen. | أفهم تاريخ ميلاد بسيطًا. | 3 · `a1-05:entry`, `a1-05:vocabulary` | 5 | 1 · `a1-05-m3` | covered |
+| `a1-05-objective-2` | Ich kann ein einfaches Geburtsdatum verstehen. | أفهم تاريخ ميلاد بسيطًا. | 3 · `a1-05:entry`, `a1-05:vocabulary` | 6 | 1 · `a1-05-m3` | covered |
 | `a1-05-objective-3` | Ich kann Kontaktangaben erfragen. | أطلب بيانات تواصل أساسية. | 1 · `a1-05:entry` | 7 | 2 · `a1-05-m4`, `a1-05-m5` | covered |
 | `a1-05-objective-4` | Ich benutze sein mit ich, du und er/sie. | أصرف sein مع ich و du و er/sie. | 1 · `a1-05-t1` | 4 | 2 · `a1-05-m1`, `a1-05-m2` | covered |
-| `a1-06-objective-1` | Ich kann Beruf und Arbeitsplatz nennen. | أذكر المهنة ومكان العمل. | 4 · `a1-06:entry`, `a1-06:vocabulary` | 10 | 2 · `a1-06-m3`, `a1-06-m5` | covered |
+| `a1-06-objective-1` | Ich kann Beruf und Arbeitsplatz nennen. | أذكر المهنة ومكان العمل. | 4 · `a1-06:entry`, `a1-06:vocabulary` | 11 | 2 · `a1-06-m3`, `a1-06-m5` | covered |
 | `a1-06-objective-2` | Ich kann nach beruflichen Aufgaben fragen. | أسأل عن مهام مهنية بسيطة. | 2 · `a1-06:entry`, `a1-06:vocabulary` | 3 | 1 · `a1-06-m2` | covered |
 | `a1-06-objective-3` | Ich benutze als, bei und in passend. | أفرق بين als و bei و in. | 3 · `a1-06:entry`, `a1-06:vocabulary` | 7 | 2 · `a1-06-m1`, `a1-06-m5` | covered |
 | `a1-06-objective-4` | Ich erkenne häufige feminine Berufsformen. | أتعرف إلى صيغ المهن المؤنثة الشائعة. | 1 · `a1-06-t2` | 5 | 1 · `a1-06-m4` | covered |
@@ -68,7 +68,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-09-objective-2` | Ich kann zustimmen oder höflich ablehnen. | أوافق أو أرفض بلباقة. | 3 · `a1-09:entry`, `a1-09:vocabulary` | 6 | 1 · `a1-09-m4` | covered |
 | `a1-09-objective-3` | Ich kann mit können über Verfügbarkeit sprechen. | أستعمل können للتحدث عن التوفر. | 3 · `a1-09:entry`, `a1-09:vocabulary` | 5 | 1 · `a1-09-m3` | covered |
 | `a1-09-objective-4` | Ich kann Tag und Uhrzeit kombinieren. | أجمع اليوم والساعة في عبارة صحيحة. | 2 · `a1-09:entry`, `a1-09-t2` | 7 | 2 · `a1-09-m1`, `a1-09-m2` | covered |
-| `a1-10-objective-1` | Ich kann wichtige Lebensmittel mit Artikel nennen. | أسمي مواد غذائية أساسية مع أداة الاسم. | 1 · `a1-10:vocabulary` | 2 | 1 · `a1-10-m4` | covered |
+| `a1-10-objective-1` | Ich kann wichtige Lebensmittel mit Artikel nennen. | أسمي مواد غذائية أساسية مع أداة الاسم. | 1 · `a1-10:vocabulary` | 3 | 1 · `a1-10-m4` | covered |
 | `a1-10-objective-2` | Ich kann sagen, was ich esse und trinke. | أقول ما آكله وما أشربه. | 1 · `a1-10:entry` | 7 | 1 · `a1-10-m3` | covered |
 | `a1-10-objective-3` | Ich kann einfache Akkusativformen benutzen. | أستعمل صيغ Akkusativ الأساسية. | 1 · `a1-10-t1` | 3 | 3 · `a1-10-m1`, `a1-10-m4` | covered |
 | `a1-10-objective-4` | Ich kann Vorlieben und Nichtvorhandensein ausdrücken. | أعبر عن التفضيل وعدم وجود شيء. | 2 · `a1-10:entry`, `a1-10-t2` | 7 | 3 · `a1-10-m2`, `a1-10-m3` | covered |
@@ -76,23 +76,23 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-11-objective-2` | Ich kann nach dem Preis fragen. | أسأل عن السعر. | 2 · `a1-11:vocabulary`, `a1-11-t2` | 8 | 2 · `a1-11-m2`, `a1-11-m3` | covered |
 | `a1-11-objective-3` | Ich kann mit möchte höflich bestellen. | أطلب بلباقة باستعمال möchte. | 3 · `a1-11:entry`, `a1-11:vocabulary` | 2 | 1 · `a1-11-m4` | covered |
 | `a1-11-objective-4` | Ich kann einen einfachen Einkaufsdialog führen. | أجري حوار تسوق بسيطًا. | 1 · `a1-11:entry` | 3 | 1 · `a1-11-m5` | covered |
-| `a1-12-objective-1` | Ich kann eine einfache Speisekarte verstehen. | أفهم قائمة طعام بسيطة. | 1 · `a1-12:vocabulary` | 3 | 1 · `a1-12-m5` | covered |
+| `a1-12-objective-1` | Ich kann eine einfache Speisekarte verstehen. | أفهم قائمة طعام بسيطة. | 1 · `a1-12:vocabulary` | 4 | 1 · `a1-12-m5` | covered |
 | `a1-12-objective-2` | Ich kann höflich Essen und Getränke bestellen. | أطلب الطعام والشراب بلباقة. | 3 · `a1-12:entry`, `a1-12:vocabulary` | 8 | 1 · `a1-12-m1` | covered |
 | `a1-12-objective-3` | Ich kann Wünsche mit und ohne ausdrücken. | أحدد الطلب مع مكوّن أو دونه. | 2 · `a1-12:entry`, `a1-12-t2` | 3 | 1 · `a1-12-m2` | covered |
 | `a1-12-objective-4` | Ich kann um die Rechnung bitten und ein Problem nennen. | أطلب الحساب وأشرح مشكلة بسيطة. | 1 · `a1-12-t2` | 6 | 2 · `a1-12-m3`, `a1-12-m4` | covered |
 | `a1-13-objective-1` | Ich kann Zimmer und Wohnräume nennen. | أسمي الغرف وأجزاء المسكن. | 2 · `a1-13:entry`, `a1-13:vocabulary` | 6 | 1 · `a1-13-m3` | covered |
-| `a1-13-objective-2` | Ich kann eine Wohnung einfach beschreiben. | أصف مسكنًا بجمل بسيطة. | 2 · `a1-13:entry`, `a1-13-t2` | 7 | 1 · `a1-13-m4` | covered |
+| `a1-13-objective-2` | Ich kann eine Wohnung einfach beschreiben. | أصف مسكنًا بجمل بسيطة. | 2 · `a1-13:entry`, `a1-13-t2` | 8 | 1 · `a1-13-m4` | covered |
 | `a1-13-objective-3` | Ich kann es gibt mit Akkusativ benutzen. | أستعمل es gibt مع Akkusativ. | 1 · `a1-13-t1` | 5 | 4 · `a1-13-m1`, `a1-13-m2` | covered |
 | `a1-13-objective-4` | Ich kann Größe und Eigenschaften nennen. | أذكر المساحة وصفات أساسية. | 1 · `a1-13-t2` | 6 | 1 · `a1-13-m4` | covered |
 | `a1-14-objective-1` | Ich kann wichtige Möbel nennen. | أسمي قطع أثاث أساسية. | 2 · `a1-14:entry`, `a1-14:vocabulary` | 2 | 1 · `a1-14-m1` | covered |
 | `a1-14-objective-2` | Ich kann nach dem Ort fragen. | أسأل عن مكان شيء. | 2 · `a1-14:entry`, `a1-14:vocabulary` | 1 | 1 · `a1-14-m3` | covered |
 | `a1-14-objective-3` | Ich kann lokale Präpositionen mit Dativ benutzen. | أستعمل حروف مكان ساكنة مع Dativ. | 3 · `a1-14:entry`, `a1-14:vocabulary` | 13 | 2 · `a1-14-m2`, `a1-14-m5` | covered |
 | `a1-14-objective-4` | Ich kann stehen, liegen und hängen unterscheiden. | أفرق بين الوقوف والاستلقاء والتعليق. | 1 · `a1-14-t2` | 6 | 1 · `a1-14-m4` | covered |
-| `a1-15-objective-1` | Ich kann einfache Wohnungsanzeigen lesen. | أفهم إعلانات سكن بسيطة. | 2 · `a1-15:vocabulary`, `a1-15-t1` | 7 | 1 · `a1-15-m3` | covered |
+| `a1-15-objective-1` | Ich kann einfache Wohnungsanzeigen lesen. | أفهم إعلانات سكن بسيطة. | 2 · `a1-15:vocabulary`, `a1-15-t1` | 8 | 1 · `a1-15-m3` | covered |
 | `a1-15-objective-2` | Ich kann nach Miete, Größe und Ausstattung fragen. | أسأل عن الإيجار والمساحة والتجهيزات. | 3 · `a1-15:entry`, `a1-15:vocabulary` | 6 | 2 · `a1-15-m1`, `a1-15-m2` | covered |
 | `a1-15-objective-3` | Ich kann einen Besichtigungstermin vereinbaren. | أنسق موعد معاينة. | 2 · `a1-15:entry`, `a1-15-t2` | 5 | 1 · `a1-15-m4` | covered |
 | `a1-15-objective-4` | Ich kann Vor- und Nachteile einfach nennen. | أذكر مزايا وعيوبًا بسيطة. | 1 · `a1-15-t1` | 1 | 1 · `a1-15-m5` | covered |
-| `a1-16-objective-1` | Ich kann über Freizeitaktivitäten sprechen. | أتحدث عن أنشطة وقت الفراغ. | 2 · `a1-16:entry`, `a1-16:vocabulary` | 4 | 2 · `a1-16-m3`, `a1-16-m5` | covered |
+| `a1-16-objective-1` | Ich kann über Freizeitaktivitäten sprechen. | أتحدث عن أنشطة وقت الفراغ. | 2 · `a1-16:entry`, `a1-16:vocabulary` | 5 | 2 · `a1-16-m3`, `a1-16-m5` | covered |
 | `a1-16-objective-2` | Ich kann gern, lieber und am liebsten unterscheiden. | أفرق بين درجات التفضيل. | 2 · `a1-16:entry`, `a1-16-t1` | 8 | 3 · `a1-16-m1`, `a1-16-m4` | covered |
 | `a1-16-objective-3` | Ich kann mit können über Fähigkeiten sprechen. | أعبر عن القدرة باستعمال können. | 2 · `a1-16:entry`, `a1-16-t2` | 7 | 2 · `a1-16-m2`, `a1-16-m3` | covered |
 | `a1-16-objective-4` | Ich kann nach Interessen und Häufigkeit fragen. | أسأل عن الاهتمام والتكرار. | 3 · `a1-16:entry`, `a1-16:vocabulary` | 4 | 1 · `a1-16-m2` | covered |
@@ -100,11 +100,11 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-17-objective-2` | Ich kann mit wollen über Pläne sprechen. | أتحدث عن الخطط باستعمال wollen. | 3 · `a1-17:entry`, `a1-17:vocabulary` | 5 | 2 · `a1-17-m1`, `a1-17-m2` | covered |
 | `a1-17-objective-3` | Ich kann Alternativen vorschlagen. | أقترح بدائل. | 1 · `a1-17-t2` | 7 | 1 · `a1-17-m4` | covered |
 | `a1-17-objective-4` | Ich kann eine Verabredung vollständig bestätigen. | أؤكد موعدًا باليوم والوقت والمكان. | 2 · `a1-17:entry`, `a1-17-t2` | 7 | 1 · `a1-17-m5` | covered |
-| `a1-18-objective-1` | Ich kann einfach über das Wetter sprechen. | أتحدث ببساطة عن الطقس. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 6 | 4 · `a1-18-m1`, `a1-18-m2` | covered |
+| `a1-18-objective-1` | Ich kann einfach über das Wetter sprechen. | أتحدث ببساطة عن الطقس. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 7 | 4 · `a1-18-m1`, `a1-18-m2` | covered |
 | `a1-18-objective-2` | Ich kann Wetterinformationen verstehen. | أفهم معلومات جوية أساسية. | 2 · `a1-18:vocabulary`, `a1-18-t1` | 5 | 1 · `a1-18-m2` | covered |
 | `a1-18-objective-3` | Ich kann Aktivitäten zum Wetter passend planen. | أخطط نشاطًا مناسبًا للطقس. | 3 · `a1-18:entry`, `a1-18:vocabulary` | 7 | 1 · `a1-18-m3` | covered |
 | `a1-18-objective-4` | Ich kann einen Grund mit deshalb ausdrücken. | أعبر عن نتيجة باستعمال deshalb. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 3 | 1 · `a1-18-m3` | covered |
-| `a1-19-objective-1` | Ich kann Verkehrsmittel nennen. | أسمي وسائل النقل. | 3 · `a1-19:entry`, `a1-19:vocabulary` | 2 | 1 · `a1-19-m5` | covered |
+| `a1-19-objective-1` | Ich kann Verkehrsmittel nennen. | أسمي وسائل النقل. | 3 · `a1-19:entry`, `a1-19:vocabulary` | 3 | 1 · `a1-19-m5` | covered |
 | `a1-19-objective-2` | Ich kann sagen, wie ich fahre. | أقول كيف أتنقل. | 3 · `a1-19:entry`, `a1-19:vocabulary` | 6 | 2 · `a1-19-m3`, `a1-19-m5` | covered |
 | `a1-19-objective-3` | Ich benutze mit dem Dativ. | أستعمل mit مع Dativ. | 3 · `a1-19:vocabulary`, `a1-19:discover` | 5 | 2 · `a1-19-m1`, `a1-19-m2` | covered |
 | `a1-19-objective-4` | Ich kann einfache Fahrkarteninformationen verstehen. | أفهم معلومات تذكرة بسيطة. | 1 · `a1-19:vocabulary` | 4 | 1 · `a1-19-m4` | covered |
@@ -116,7 +116,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-21-objective-2` | Ich kann Abfahrt, Ankunft und Gleis verstehen. | أفهم الانطلاق والوصول والرصيف. | 2 · `a1-21:entry`, `a1-21:vocabulary` | 9 | 1 · `a1-21-m5` | covered |
 | `a1-21-objective-3` | Ich kann von … nach für Reisen benutzen. | أستعمل von … nach في الرحلات. | 3 · `a1-21:entry`, `a1-21:vocabulary` | 3 | 1 · `a1-21-m1` | covered |
 | `a1-21-objective-4` | Ich kann mit müssen eine Notwendigkeit ausdrücken. | أعبر عن الضرورة باستعمال müssen. | 1 · `a1-21-t2` | 4 | 2 · `a1-21-m2`, `a1-21-m3` | covered |
-| `a1-22-objective-1` | Ich kann wichtige Körperteile nennen. | أسمي أجزاء الجسم الأساسية. | 1 · `a1-22:vocabulary` | 2 | 1 · `a1-22-m3` | covered |
+| `a1-22-objective-1` | Ich kann wichtige Körperteile nennen. | أسمي أجزاء الجسم الأساسية. | 1 · `a1-22:vocabulary` | 3 | 1 · `a1-22-m3` | covered |
 | `a1-22-objective-2` | Ich kann sagen, wo ich Schmerzen habe. | أحدد مكان الألم. | 3 · `a1-22:entry`, `a1-22-t1` | 4 | 1 · `a1-22-m1` | covered |
 | `a1-22-objective-3` | Ich kann tut weh und tun weh unterscheiden. | أفرق بين المفرد والجمع في التعبير عن الألم. | 2 · `a1-22:entry`, `a1-22-t1` | 4 | 2 · `a1-22-m1`, `a1-22-m2` | covered |
 | `a1-22-objective-4` | Ich kann einfache Symptome beschreiben. | أصف أعراضًا بسيطة. | 2 · `a1-22:entry`, `a1-22-t2` | 9 | 3 · `a1-22-m3`, `a1-22-m4` | covered |

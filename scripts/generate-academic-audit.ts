@@ -11,7 +11,7 @@ import {
   summarizeP099ExclusionEvidenceReferences,
   protectedLexicalReviewFields,
 } from "../src/core/content-validation/lexical-review-packet";
-import { originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
+import { goetheCoreNounEntries, originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "../src/data/lexical-grammar-registry";
 import { assertAcademicContentValid } from "../src/core/content-validation/validate-academic-content";
 import { reviewCsvOverwriteBlocker } from "../src/core/content-validation/review-packet-safety";
 
@@ -76,6 +76,7 @@ const lexicalReviewPacketArtifacts = buildLexicalReviewPacketArtifacts({
   audit: lexical,
   nounEntries: originalP098NounEntries,
   questionSupportNounEntries,
+  goetheCoreNounEntries,
   verbFrames: verbPrepositionFrames,
   contentHash,
   stageOneNamedReferenceCount,

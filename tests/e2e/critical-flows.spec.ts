@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v246";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v248";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -155,7 +155,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("die Tasche");
   await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("das Buch");
   await expect(roomNounPanel.locator(".reading-noun-anchors")).toContainText("das Bett");
-  await expect(roomNounPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 2");
+  await expect(roomNounPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 4");
   await expect(roomNounPanel).toContainText("Plural Dativ: den Stühlen");
   for(let step=0;step<2;step+=1)await page.getByRole("button",{name:/أكملت هذه الخطوة/}).click();
   const casePanel=page.locator('.meaning-first-case-panel[data-case-policy="meaning-first-case-v1"]');
@@ -172,7 +172,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   const a1GapFramePanel = page.locator(".lexical-grammar-panel");
   await expect(a1GapFramePanel.locator(".verb-frame-card")).toHaveCount(2);
   await expect(a1GapFramePanel).toContainText("mit der Karte bezahlen");
-  await expect(a1GapFramePanel).toContainText("16 مراسي اسم و2 إطار فعل");
+  await expect(a1GapFramePanel).toContainText("22 مراسي اسم و2 إطار فعل");
 
   await page.goto("/lernen/a1-04");
   await waitForLearningReady(page);
@@ -180,7 +180,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const pluralOnlyPanel = page.locator(".lexical-grammar-panel");
   const familyExtras = pluralOnlyPanel.locator(".additional-noun-anchors");
-  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 1");
+  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 13");
   const familyReading = pluralOnlyPanel.locator(".reading-noun-anchors");
   await expect(familyReading).toContainText("ستقابلها في نص القراءة · 7");
   await expect(familyReading).toContainText("die Eltern");
@@ -196,7 +196,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const foodNounPanel = page.locator(".lexical-grammar-panel");
   const foodExtras = foodNounPanel.locator(".additional-noun-anchors");
-  await expect(foodExtras).toContainText("أسماء هدف إضافية موثقة · 3");
+  await expect(foodExtras).toContainText("أسماء هدف إضافية موثقة · 9");
   await expect(foodNounPanel.locator(".reading-noun-anchors")).toContainText("das Wasser");
   await foodExtras.getByText("Weitere Zielnomen").click();
   await expect(foodExtras).toContainText("der Apfel");
@@ -207,7 +207,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const bodyNounPanel = page.locator(".lexical-grammar-panel");
   const bodyExtras = bodyNounPanel.locator(".additional-noun-anchors");
-  await expect(bodyExtras).toContainText("أسماء هدف إضافية موثقة · 7");
+  await expect(bodyExtras).toContainText("أسماء هدف إضافية موثقة · 10");
   await bodyExtras.getByText("Weitere Zielnomen").click();
   await expect(bodyExtras).toContainText("das Auge");
   await expect(bodyExtras).toContainText("die Augen");
@@ -292,7 +292,7 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   test.setTimeout(90_000);
   await page.goto("/search");
   await expect(page.getByRole("heading", { name: /ابحث عن العبارة/ })).toBeVisible();
-  await expect(page.getByText(/3[.,]?792/)).toBeVisible();
+  await expect(page.getByText(/4[.,]?027/)).toBeVisible();
   const grammarGlossary=page.locator('[data-grammar-glossary-policy="bilingual-grammar-glossary-v1"]');
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();
@@ -1688,11 +1688,13 @@ test("a complete lesson run traverses all 14 stages and persists completion", as
       await expect(lexicalPanel).toContainText("der Name");
       await expect(lexicalPanel).toContainText("die Namen");
       await expect(lexicalPanel).toContainText("nach dem Namen fragen");
-      // ADR-127: the reading uses its only extra anchor, so it is shown openly and no closed disclosure remains.
+      // ADR-127: the reading uses one extra anchor, shown openly. ADR-139 adds 11 Goethe A1 anchors
+      // (vocabulary stage, not used by the reading) behind the closed "further anchors" disclosure.
       const readingNouns = lexicalPanel.locator(".reading-noun-anchors");
       await expect(readingNouns.locator(".reading-noun-list > li")).toHaveCount(1);
       await expect(readingNouns).toContainText("die Karte");
-      await expect(lexicalPanel.locator(".additional-noun-anchors")).toHaveCount(0);
+      await expect(lexicalPanel.locator(".additional-noun-anchors")).toHaveCount(1);
+      await expect(lexicalPanel.locator(".additional-noun-anchors")).toContainText("أسماء هدف إضافية موثقة · 11");
       await lexicalPanel.locator("details").first().getByText(/Kasusformen ansehen/).click();
       await expect(lexicalPanel.locator("details").first()).toContainText("den Namen");
     }
@@ -2005,7 +2007,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
-  await expect(governance).toContainText("3277");
+  await expect(governance).toContainText("3300");
   const officialSources = governance.locator("details.context-official-sources");
   await officialSources.locator("summary").click();
   await expect(officialSources.locator("li[data-claim-id]")).toHaveCount(12);

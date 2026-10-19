@@ -1,4 +1,4 @@
-import { a1NounGrammarEntries, a1QuestionSupportNounEntries, a1VerbPrepositionFrames } from "./lexical-grammar-a1";
+import { a1GoetheCoreNounEntries, a1NounGrammarEntries, a1QuestionSupportNounEntries, a1VerbPrepositionFrames } from "./lexical-grammar-a1";
 import { a2NounGrammarEntries, a2QuestionSupportNounEntries, a2VerbPrepositionFrames } from "./lexical-grammar-a2";
 import { b1NounGrammarEntries, b1QuestionSupportNounEntries, b1VerbPrepositionFrames } from "./lexical-grammar-b1";
 import { b2NounGrammarEntries, b2QuestionSupportNounEntries, b2VerbPrepositionFrames } from "./lexical-grammar-b2";
@@ -15,8 +15,11 @@ export const verbPrepositionFrames = [...a1VerbPrepositionFrames, ...a2VerbPrepo
 /** ADR-135 anchors added for question-critical reading words; outside the original P0-98 review scope. */
 export const questionSupportNounEntries = [...a1QuestionSupportNounEntries, ...a2QuestionSupportNounEntries, ...b1QuestionSupportNounEntries, ...b2QuestionSupportNounEntries];
 const questionSupportNounIds = new Set(questionSupportNounEntries.map((entry) => entry.id));
+/** ADR-139 anchors for the Goethe-Zertifikat A1 core vocabulary added to A1 lessons; outside the original P0-98 review scope. */
+export const goetheCoreNounEntries = [...a1GoetheCoreNounEntries];
+const goetheCoreNounIds = new Set(goetheCoreNounEntries.map((entry) => entry.id));
 /** The 1,297 noun anchors of the original P0-98 review scope. */
-export const originalP098NounEntries = nounGrammarEntries.filter((entry) => !questionSupportNounIds.has(entry.id));
+export const originalP098NounEntries = nounGrammarEntries.filter((entry) => !questionSupportNounIds.has(entry.id) && !goetheCoreNounIds.has(entry.id));
 export const nounsByLesson = groupByLesson(nounGrammarEntries);
 export const verbFramesByLesson = groupByLesson(verbPrepositionFrames);
 

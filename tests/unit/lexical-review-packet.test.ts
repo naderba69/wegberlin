@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { nounGrammarEntries, originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
+import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries, questionSupportNounEntries, verbPrepositionFrames } from "@/data/lexical-grammar-registry";
 import { serializeCsv } from "@/core/content-validation/safe-csv";
 import {
   assertOriginalP098NounReviewScope,
@@ -66,6 +66,7 @@ const artifacts = buildLexicalReviewPacketArtifacts({
   audit,
   nounEntries: originalP098NounEntries,
   questionSupportNounEntries,
+  goetheCoreNounEntries,
   verbFrames: verbPrepositionFrames,
   contentHash: "test-content-sha256",
 });
@@ -97,8 +98,14 @@ describe("unsigned independent German lexical review packet", () => {
     const supportRows = parseCsv(byPath.get("reports/lexical-review-packet/question-support-noun-anchors.csv")!);
     expect(supportRows).toHaveLength(106);
     expect(new Set(supportRows.slice(1).map((row) => row[0]))).toEqual(new Set(["ADR-135-question-support-noun-anchor"]));
-    expect(new Set([...nounRows.slice(1), ...supportRows.slice(1)].map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
+    // ADR-139: Goethe-Zertifikat A1 core-vocabulary anchors get their own worksheet, outside P0-98.
+    const goetheRows = parseCsv(byPath.get("reports/lexical-review-packet/goethe-core-noun-anchors.csv")!);
+    expect(goetheRows).toHaveLength(goetheCoreNounEntries.length + 1);
+    expect(goetheCoreNounEntries.length).toBeGreaterThan(140);
+    expect(new Set(goetheRows.slice(1).map((row) => row[0]))).toEqual(new Set(["ADR-139-goethe-a1-core-noun-anchor"]));
+    expect(new Set([...nounRows.slice(1), ...supportRows.slice(1), ...goetheRows.slice(1)].map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
     assertBlankSignatures(supportRows);
+    assertBlankSignatures(goetheRows);
     expect(new Set(frameRows.slice(1).map((row) => row[0]))).toEqual(new Set(verbPrepositionFrames.map((entry) => entry.id)));
     expect(nounRows[0]).toContain("targetOrRegistryReferences");
     expect(frameRows[0]).toContain("machineObservedCaseSignalsNotValidation");

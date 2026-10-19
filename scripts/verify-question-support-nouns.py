@@ -1,4 +1,5 @@
 """ADR-135 / v244: compare every question-support noun anchor with WiktionaryDE.
+ADR-139 / v248: the same check runs on the Goethe A1 core-vocabulary anchors (export with `goethe-core`).
 
 Source: the `german_nouns` 1.2.5 package on PyPI (WiktionaryDE extract, CC BY-SA 4.0).
 Usage:
@@ -34,7 +35,15 @@ for r in rows:
             c = entries(tail)
             if c: base, cands = tail, c; break
     res, note = "unresolved", ""
-    for e in cands:
+    if r["gender"] == "plural-only":
+        # ADR-139 / v248: a Pluraletantum has no genus in WiktionaryDE; compare the plural paradigm instead.
+        for e in cands:
+            f = e.get("flexion", {})
+            if any(k.startswith("nominativ singular") for k in f): continue
+            if r["nom"].split()[-1] == f.get("nominativ plural") and r["acc"].split()[-1] == f.get("akkusativ plural") and r["dat"].split()[-1] == f.get("dativ plural"):
+                res, note = "confirmed-wiktionary-plural-only", "Pluraletantum: Nominativ, Akkusativ und Dativ Plural stimmen mit dem Wiktionary-Lemma ohne Singular überein."
+                break
+    for e in ([] if res != "unresolved" else cands):
         g = {G.get(x) for x in (e.get("genus"), e.get("genus 1"), e.get("genus 2")) if x}
         if r["gender"] not in g: continue
         pref = lemma[: len(lemma) - len(base)] if base else ""

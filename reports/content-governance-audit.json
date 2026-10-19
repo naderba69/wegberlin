@@ -3,7 +3,7 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "e10c4d822c5f66bcccc0d856147f92b3dec60ac2361984f358caa4162f03eba3",
+  "contentSha256": "bff1a6d3c230dbd1ac0d54bbdc9c24225be08f13bcb04125dde56a173d447916",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
@@ -11,7 +11,7 @@
     "independent": true
   },
   "counts": {
-    "contentRecords": 3277,
+    "contentRecords": 3300,
     "contentFamilies": 16,
     "publishedFamilies": 16,
     "sources": 19,
@@ -27,7 +27,7 @@
     "exam": 720,
     "exam-speaking": 72,
     "exam-writing": 24,
-    "lesson-controlled": 677,
+    "lesson-controlled": 700,
     "lesson-listening": 288,
     "lesson-mediation": 96,
     "lesson-mini-test": 480,
@@ -97,6 +97,15 @@
     },
     {
       "contentId": "a1-01-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-01-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -294,6 +303,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-02-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-02-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -475,6 +493,15 @@
     },
     {
       "contentId": "a1-03-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-03-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -672,6 +699,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-04-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-04-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -853,6 +889,15 @@
     },
     {
       "contentId": "a1-05-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-05-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -1050,6 +1095,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-06-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-06-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -1231,6 +1285,15 @@
     },
     {
       "contentId": "a1-07-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-07-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -1428,6 +1491,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-08-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-08-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -1609,6 +1681,15 @@
     },
     {
       "contentId": "a1-09-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-09-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -1806,6 +1887,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-10-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-10-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -1987,6 +2077,15 @@
     },
     {
       "contentId": "a1-11-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-11-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -2184,6 +2283,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-12-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-12-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -2365,6 +2473,15 @@
     },
     {
       "contentId": "a1-13-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-13-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -2562,6 +2679,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-14-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-14-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -2743,6 +2869,15 @@
     },
     {
       "contentId": "a1-15-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-15-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -2940,6 +3075,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-16-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-16-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -3121,6 +3265,15 @@
     },
     {
       "contentId": "a1-17-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-17-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -3318,6 +3471,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-18-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-18-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -3499,6 +3661,15 @@
     },
     {
       "contentId": "a1-19-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-19-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -3696,6 +3867,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-20-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-20-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -3885,6 +4065,15 @@
       "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
     },
     {
+      "contentId": "a1-21-e8",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
       "contentId": "a1-21-lq1",
       "scope": "lesson-listening",
       "ownerId": "curriculum-content-owner",
@@ -4066,6 +4255,15 @@
     },
     {
       "contentId": "a1-22-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-22-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",
@@ -4444,6 +4642,15 @@
     },
     {
       "contentId": "a1-24-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "a1-24-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",

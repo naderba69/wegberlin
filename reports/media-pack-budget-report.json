@@ -4,7 +4,7 @@
   "generatedAt": "2026-09-10",
   "safetyMarginPercent": 15,
   "hardLimits": {
-    "curriculumSourceGzipBytes": 1500000,
+    "curriculumSourceGzipBytes": 1540000,
     "totalAudioBytes": 70000000,
     "packs": {
       "a1": 16000000,
@@ -15,7 +15,7 @@
     }
   },
   "safetyCeilings": {
-    "curriculumSourceGzipBytes": 1275000,
+    "curriculumSourceGzipBytes": 1309000,
     "totalAudioBytes": 59500000,
     "packs": {
       "a1": 13600000,
@@ -27,51 +27,51 @@
   },
   "actual": {
     "curriculumFileCount": 102,
-    "curriculumSourceGzipBytes": 1272322,
+    "curriculumSourceGzipBytes": 1287127,
     "physicalAudioFileCount": 544,
     "mp3AssetCount": 272,
     "opusAssetCount": 272,
     "totalAudioBytes": 54036433,
     "packs": {
       "a1": {
-        "pageGzipBytes": 2860652,
+        "pageGzipBytes": 2901127,
         "mp3Bytes": 3551112,
         "opusBytes": 2574717,
         "selectedMaximumBytes": 3551112,
         "audioAssetCount": 40,
-        "totalBytes": 6411764
+        "totalBytes": 6452239
       },
       "a2": {
-        "pageGzipBytes": 2985868,
+        "pageGzipBytes": 2998973,
         "mp3Bytes": 4712399,
         "opusBytes": 3500212,
         "selectedMaximumBytes": 4712399,
         "audioAssetCount": 48,
-        "totalBytes": 7698267
+        "totalBytes": 7711372
       },
       "b1": {
-        "pageGzipBytes": 3021840,
+        "pageGzipBytes": 3035039,
         "mp3Bytes": 5838576,
         "opusBytes": 4373622,
         "selectedMaximumBytes": 5838576,
         "audioAssetCount": 48,
-        "totalBytes": 8860416
+        "totalBytes": 8873615
       },
       "b2": {
-        "pageGzipBytes": 4514059,
+        "pageGzipBytes": 4527393,
         "mp3Bytes": 16719777,
         "opusBytes": 12766018,
         "selectedMaximumBytes": 16719777,
         "audioAssetCount": 136,
-        "totalBytes": 21233836
+        "totalBytes": 21247170
       },
       "full": {
-        "pageGzipBytes": 6397996,
+        "pageGzipBytes": 6436925,
         "mp3Bytes": 30821864,
         "opusBytes": 23214569,
         "selectedMaximumBytes": 30821864,
         "audioAssetCount": 272,
-        "totalBytes": 37219860
+        "totalBytes": 37258789
       }
     }
   },

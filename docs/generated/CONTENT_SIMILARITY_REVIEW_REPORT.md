@@ -2,11 +2,11 @@
 
 Generated: 2026-09-07  
 Version: `content-similarity-review-audit-v1`  
-Content SHA-256: `df55126755ba9ed59ded11264e57e91376ca2ca4c3323bd02b56b9ad8017e5d1`
+Content SHA-256: `76e4c17134375718f29891d07bad9927a0c3245d9a2cfe599e75cad4875a1923`
 
 ## Result
 
-`PASS` — 3277 closed/productive content objects were compared across 5,367,726 deterministic pairs. Unexempt internal near-duplicates: **0**.
+`PASS` — 3300 closed/productive content objects were compared across 5,443,350 deterministic pairs. Unexempt internal near-duplicates: **0**.
 
 - Suspicious pairs above threshold: 10
 - Same-context teach→practice→assessment exemptions: 10
@@ -18,10 +18,10 @@ Content SHA-256: `df55126755ba9ed59ded11264e57e91376ca2ca4c3323bd02b56b9ad8017e5
 
 | Dimension | Objects | Automated pass / human pending | Independently reviewed |
 |---|---:|---:|---:|
-| german | 3277 | 3277 | 0 |
-| arabic | 3277 | 3277 | 0 |
-| cefr | 3277 | 3277 | 0 |
-| copyright | 3277 | 3277 | 0 |
+| german | 3300 | 3300 | 0 |
+| arabic | 3300 | 3300 | 0 |
+| cefr | 3300 | 3300 | 0 |
+| copyright | 3300 | 3300 | 0 |
 
 Every object has separate `german`, `arabic`, `cefr`, and `copyright` state objects in the machine report. An automated structural pass is never rendered as independent review.
 

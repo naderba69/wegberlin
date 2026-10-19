@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v244 · 2026-10-19 · تحقق مصدري من مراسي أسماء دعم الأسئلة وإثبات متصفح للوحة عبارات المحادثة (ADR-136): قوبلت المراسي الـ105 التي أضافها ADR-135 بـWiktionary في الجنس والنصب والجر والجمع، فتطابقت كلها (82 مباشرة، 21 عبر الكلمة الأساسية للمركّب، 2 بمراجعة يدوية) دون أي تصحيح، واختبار يربط الملف بالسجل. وأضيف اختبار متصفح يثبت أن لوحة «عبارات للمحاولة التالية» لا تظهر قبل حفظ محاولة مستقلة، وأن فتحها يُسجَّل مساعدة بعد المحاولة. هذا تحقق الوكيل لا مراجعة بشرية، والمعاني العربية لم تُفحص.
+Sync batch: v245 · 2026-10-19 · أسئلة فهم لا يُعرف جوابها من طول الخيار (ADR-137): في 211 سؤال قراءة واستماع كان الجواب الصحيح أطول من كل الخيارات بفارق ظاهر، فيمكن اختياره دون قراءة النص. أُعيدت كتابة 229 خيارًا: أُطيلت خيارات خاطئة بفخاخ من النص نفسه، واختُصرت 17 إجابة كانت تقول أكثر مما يسأل عنه السؤال. صار العدد 0 في القراءة والاستماع، ونزلت نسبة «الأطول هو الصحيح» من 38.0% إلى 27.6%، مع حارس يمنع العودة. أسئلة الاختبار القصير (88) والتمارين (55) مقيّدة بسقف عند عددها الحالي، لأن إصلاحها يحتاج مساحة في ميزانية المنهج لم تعد متاحة. الخيارات الجديدة من كتابة الوكيل، لا مراجعة بشرية.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1862,3 +1862,20 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 ## Consequences
 
 - Arabic meanings, the 42 glossary entries and the 4 proper names are outside this check. Reviewer cells stay empty. No audit item changes state. See `docs/adr/ADR-136-question-support-source-verification-and-speaking-phrases-e2e.md`.
+
+## ADR-137 — No reading or listening key is recognisable by length alone
+
+- Status: accepted, 2026-10-19 (v245)
+- Evidence tier: agent content edit checked by measured gates; not an independent German review.
+
+## Decision
+
+1. A "visible" length cue is a key that is the unique longest option by at least 5 characters and at least 15%. Before v245: reading 115, listening 96, mini-test 88, exercises 55 (354 of 1,250).
+2. All 211 reading/listening items were rewritten (229 options): mostly one distractor lengthened with a trap from the text that stays false, 17 over-specified keys shortened. Distractors named in `explanationAr` were kept or lengthened compatibly.
+3. Result: reading 0, listening 0; unique-longest key 38.0% → 27.6%; unique-shortest key unchanged at 63; positions unchanged; 0 misquotes.
+4. `generate-lesson-quality-audit.ts` reports `multipleChoice.visibleLengthCue` and ratchets it per kind (0 / 0 / 88 / 55); `longestOptionCuePctMax` 40 → 28; a unit test forbids the cue in any reading or listening question.
+
+## Consequences
+
+- Mini-test and exercise items stay ratcheted at the measured count: their short ill-formed distractors need a rewrite that the curriculum budget (628 B left of 1,275,000) cannot carry, or an owner decision on the ceiling. Noun/verb candidates +19/+15 contextual only; covered and pendingHuman unchanged. IDEA_BACKLOG 399 and 404 closed. See `docs/adr/ADR-137-comprehension-mcq-length-cue-review.md`.
+

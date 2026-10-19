@@ -7108,7 +7108,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Unter welcher Bedingung akzeptiert er das Zimmer? بأي شرط يقبل الغرفة؟",
-        "answer": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
+        "answer": "Er wechselt morgen zurück, wenn die Heizung repariert ist.",
         "evidenceRef": "a2-12:listening.transcriptDe",
         "evidenceExcerpt": "Wenn die Heizung morgen repariert ist, möchte ich zurückwechseln.",
         "visibilityPolicy": "authorized-option-bank",
@@ -12203,7 +12203,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was erfuhr Nadia über die Anerkennung? ماذا عرفت عن الاعتراف؟",
-        "answer": "Das Zertifikat ist nicht für jede öffentliche Bewerbung automatisch anerkannt.",
+        "answer": "Es ist nicht für jede öffentliche Bewerbung automatisch anerkannt.",
         "evidenceRef": "b1-14:reading.textDe",
         "evidenceExcerpt": "Dort erfuhr sie, dass das Zertifikat zwar von einem Branchenverband ausgestellt wurde, aber nicht automatisch für jede öffentliche Bewerbung anerkannt war.",
         "visibilityPolicy": "authorized-option-bank",
@@ -13611,7 +13611,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Welche Regel wurde ergänzt? ما القاعدة المضافة؟",
-        "answer": "Dringende oder fachliche Fragen werden innerhalb eines Tages weitergeleitet.",
+        "answer": "Dringende oder fachliche Fragen gehen innerhalb eines Tages weiter.",
         "evidenceRef": "b1-21:reading.textDe",
         "evidenceExcerpt": "Das Team ergänzte deshalb eine Eskalationsregel: Dringende oder fachliche Fragen müssen innerhalb eines Tages an die zuständige Person gehen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -14777,9 +14777,9 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum war der stabile Durchschnitt unvollständig? لماذا كان المتوسط غير كافٍ؟",
-        "answer": "Weil Rollen unterschiedlich profitieren und Präsenzteams Zusatzarbeit übernahmen.",
+        "answer": "Weil Rollen ungleich profitierten und Präsenzteams Zusatzarbeit hatten.",
         "evidenceRef": "b2-03:reading.textDe",
-        "evidenceExcerpt": "Zudem übernahmen manche Präsenzteams mehr spontane Aufgaben, ohne dass dies in der Leistungsstatistik sichtbar wurde.",
+        "evidenceExcerpt": "Einige Eltern profitierten von flexibleren Zeiten, während Personen in kleinen oder geteilten Wohnungen häufiger über Konzentrationsprobleme berichteten.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15371,7 +15371,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Wie wurde der Fachbegriff erklärt? كيف شُرح المصطلح؟",
-        "answer": "Er blieb erhalten und wurde als Informationsgewinn aus der Entfernung definiert.",
+        "answer": "Er blieb und wurde als Informationsgewinn aus der Entfernung erklärt.",
         "evidenceRef": "b2-06:reading.textDe",
         "evidenceExcerpt": "Fernerkundung bedeutet hier, Informationen aus der Entfernung zu gewinnen.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15965,7 +15965,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Wodurch unterschieden sich die drei Lesarten? بم اختلفت القراءات الثلاث؟",
-        "answer": "Durch Familienerfahrung, Migrationserfahrung und kuratorische Aufmerksamkeit für Abwesende",
+        "answer": "Durch Familie, Migration und den Blick der Kuratorin auf Abwesende",
         "evidenceRef": "b2-09:reading.textDe",
         "evidenceExcerpt": "Bei einer öffentlichen Diskussion entstanden drei unterschiedliche Lesarten.",
         "visibilityPolicy": "authorized-option-bank",
@@ -15987,7 +15987,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Wie blieb das zweite Gespräch trotz Offenheit begründet? كيف بقي النقاش منضبطًا رغم تعدد المنظورات؟",
-        "answer": "Interpretationen mussten an beobachtbaren Elementen des Werks begründet werden.",
+        "answer": "Deutungen mussten an beobachtbaren Elementen des Werks begründet werden.",
         "evidenceRef": "b2-09:reading.textDe",
         "evidenceExcerpt": "Aussagen mussten weiterhin am Werk begründet werden.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16009,9 +16009,9 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Welche situativen Faktoren wurden sichtbar? ما العوامل الموقفية التي ظهرت؟",
-        "answer": "Zeitdruck, Risikoverantwortung, neue Projektzugehörigkeit und unbekannte Arbeitsweise",
+        "answer": "Zeitdruck, Risikoverantwortung, Neuheit im Projekt, fremde Arbeitsweise",
         "evidenceRef": "b2-09:listening.transcriptDe",
-        "evidenceExcerpt": "Die Kollegin stand unter Zeitdruck und trug die Verantwortung für das Risiko.",
+        "evidenceExcerpt": "Der Kollege war neu im Projekt und kannte ihre Arbeitsweise nicht.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16163,7 +16163,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Welche Bedeutungsfehler enthielt die erste Zusammenfassung? ما أخطاء المعنى في الخلاصة الأولى؟",
-        "answer": "Sie machte aus Möglichkeit, Ausnahme und begrenzter Nachfrist allgemeine Zusagen.",
+        "answer": "Sie machte aus Möglichkeit, Ausnahme und enger Nachfrist allgemeine Zusagen.",
         "evidenceRef": "b2-10:reading.textDe",
         "evidenceExcerpt": "Die erste Zusammenfassung hatte somit eine Möglichkeit in eine Garantie, eine Ausnahme in eine allgemeine Regel und eine enge Nachfrist in eine offene Frist verwandelt.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16196,7 +16196,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Warum wird die Gebäudegeschichte weggelassen? لماذا حُذف تاريخ المبنى؟",
-        "answer": "Weil sie für die unmittelbare Handlungsabsicht der Nachricht nicht nötig ist.",
+        "answer": "Weil sie für den Zweck der Nachricht nicht nötig ist.",
         "evidenceRef": "b2-10:listening.transcriptDe",
         "evidenceExcerpt": "Die Geschichte des Gebäudes ist für diese Nachricht nicht nötig.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16207,7 +16207,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Wie wird die mögliche Sperrung vermittelt? كيف نُقل احتمال الإغلاق؟",
-        "answer": "Als Ausnahme, die nur bei einer kurzfristigen Entscheidung eintritt",
+        "answer": "Als mögliche Ausnahme bei kurzfristiger Sperrung",
         "evidenceRef": "b2-10:listening.transcriptDe",
         "evidenceExcerpt": "— Vermittler: Dann formuliere ich die Sperrung als mögliche Ausnahme, nicht als wahrscheinliche Absage.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16218,7 +16218,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Welche Information wird besonders geprüft? أي معلومة تُراجع خصوصًا؟",
-        "answer": "Die Telefonnummer durch Ziffernübernahme und Zweitprüfung",
+        "answer": "Die Telefonnummer, Ziffer für Ziffer, mit Zweitprüfung",
         "evidenceRef": "b2-10:listening.transcriptDe",
         "evidenceExcerpt": "— Projektleiterin: Es muss wissen, wann und wo wir starten, welche Sicherheitsregel verbindlich ist und wer bei Verspätung informiert wird.",
         "visibilityPolicy": "authorized-option-bank",
@@ -16977,7 +16977,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Welcher Prüfschritt wird empfohlen? ما خطوة الفحص المقترحة؟",
-        "answer": "Jeden Konnektor und jedes Fürwort einzeln befragen und Nominalcluster verbal umformulieren",
+        "answer": "Konnektoren und Fürwörter einzeln befragen, Nominalcluster verbal umformulieren",
         "evidenceRef": "b2-14:reading.textDe",
         "evidenceExcerpt": "Ein praktischer Prüfschritt am Ende des Schreibens: Jeden Konnektor einzeln fragen, welche Relation er nennt; jedes Fürwort einzeln fragen, auf welches Wort es zeigt; und jeden Nominalcluster in einen Verbalsatz zurückü…",
         "visibilityPolicy": "authorized-option-bank",
@@ -17747,7 +17747,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Was ist der Unterschied zwischen den beiden Antworten? ما الفارق بين الجوابين؟",
-        "answer": "Die eine nennt ein registriertes Eingehen, die andere einen abgeschlossenen Akt.",
+        "answer": "Die eine nennt nur eine Registrierung, die andere einen abgeschlossenen Akt.",
         "evidenceRef": "b2-18:reading.textDe",
         "evidenceExcerpt": "Die erste lautete: „Ihr Antrag wurde zur Kenntnis genommen; eine Entscheidung wird nicht getroffen.“ Die zweite: „Wir haben Ihren Antrag geprüft und lehnen ihn ab.“ Zwischen beiden Sätzen liegt keine Höflichkeit, sonder…",
         "visibilityPolicy": "authorized-option-bank",
@@ -17758,7 +17758,7 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum gilt „bleiben außer Acht“ als präzise und nicht als schroff? لماذا تُقرأ «bleiben außer Acht» دقة لا جفاءً؟",
-        "answer": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
+        "answer": "Weil es bewusstes Übergehen markiert; „nicht beachtet“ ließe ein Versehen offen.",
         "evidenceRef": "b2-18:reading.textDe",
         "evidenceExcerpt": "Die Behörde schrieb außerdem: „Termine, die nicht im Plan stehen, bleiben außer Acht.“ Ben fragte, ob das nicht schroff sei.",
         "visibilityPolicy": "authorized-option-bank",
@@ -17769,9 +17769,9 @@
         "scope": "lesson-reading",
         "kind": "multiple-choice",
         "prompt": "Warum streicht Frau Kessler die dritte Wiederholung der Fügung? لماذا شطبت كايسلر التكرار الثالث للتركيب؟",
-        "answer": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
+        "answer": "Weil zwei Nennungen amtlich wirken, die dritte aber nur Füllstoff ohne neue Etappe ist.",
         "evidenceRef": "b2-18:reading.textDe",
-        "evidenceExcerpt": "Beim zweiten Text fragte Frau Kessler, warum er klarer sei.",
+        "evidenceExcerpt": "In dem Protokoll, das Ben selbst entworfen hatte, stand „eine Entscheidung treffen“ dreimal hintereinander; sie strich die dritte Nennung: zweimal sei die Fügung amtlich, dreimal werde sie Füllstoff.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18187,7 +18187,7 @@
         "scope": "lesson-listening",
         "kind": "multiple-choice",
         "prompt": "Was fehlt Ben in der zweiten Bindung? ما الناقص في رابطة بن الثانية؟",
-        "answer": "Ein konkretes Beispiel mit eigenem Verb nach „sondern auch“.",
+        "answer": "Etwas Konkretes mit eigenem Verb nach „sondern auch“.",
         "evidenceRef": "b2-20:listening.transcriptDe",
         "evidenceExcerpt": "Nach sondern auch steht die neue Information, deshalb braucht sie ein eigenes Verb und etwas Konkretes.",
         "visibilityPolicy": "authorized-option-bank",
@@ -44238,43 +44238,43 @@
     "nounAnchorCount": 1402,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 4965,
+      "totalCandidates": 4984,
       "covered": 1503,
       "pendingHuman": 89,
-      "contextualNotTarget": 3373,
+      "contextualNotTarget": 3392,
       "authoredTargets": 1592,
       "byLevel": {
         "A1": {
-          "totalCandidates": 570,
+          "totalCandidates": 572,
           "covered": 319,
           "pendingHuman": 0,
-          "contextualNotTarget": 251
+          "contextualNotTarget": 253
         },
         "A2": {
-          "totalCandidates": 904,
-          "covered": 310,
+          "totalCandidates": 911,
+          "covered": 311,
           "pendingHuman": 0,
-          "contextualNotTarget": 594
+          "contextualNotTarget": 600
         },
         "B1": {
-          "totalCandidates": 1260,
+          "totalCandidates": 1270,
           "covered": 372,
           "pendingHuman": 0,
-          "contextualNotTarget": 888
+          "contextualNotTarget": 898
         },
         "B2": {
           "totalCandidates": 2231,
-          "covered": 502,
+          "covered": 501,
           "pendingHuman": 89,
-          "contextualNotTarget": 1640
+          "contextualNotTarget": 1641
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1288,
+      "totalCandidates": 1303,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1153,
+      "contextualNotTarget": 1168,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44284,22 +44284,22 @@
           "contextualNotTarget": 80
         },
         "A2": {
-          "totalCandidates": 222,
+          "totalCandidates": 227,
           "covered": 30,
           "pendingHuman": 0,
-          "contextualNotTarget": 192
+          "contextualNotTarget": 197
         },
         "B1": {
-          "totalCandidates": 326,
+          "totalCandidates": 331,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 295
+          "contextualNotTarget": 300
         },
         "B2": {
-          "totalCandidates": 635,
+          "totalCandidates": 640,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 586
+          "contextualNotTarget": 591
         }
       }
     },
@@ -44458,6 +44458,13 @@
             "strength": "target"
           },
           {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Er kennt den Namen der Lehrerin schon.",
+            "surface": "Er kennt den Namen der Lehrerin schon.",
+            "strength": "context"
+          },
+          {
             "path": "reading.questions[2].options[2]",
             "stage": "reading",
             "text": "Er spricht höflich mit der Lehrerin.",
@@ -44508,8 +44515,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Er kennt ihren Namen.",
-            "surface": "Er kennt ihren Namen.",
+            "text": "Er kennt den Namen der Lehrerin schon.",
+            "surface": "Er kennt den Namen der Lehrerin schon.",
             "strength": "context"
           },
           {
@@ -45016,25 +45023,6 @@
       {
         "lessonId": "a1-02",
         "level": "A1",
-        "lemmaCandidate": "Test",
-        "normalizedLemma": "test",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[2].options[1]",
-            "stage": "reading",
-            "text": "Mit einem Test",
-            "surface": "Mit einem Test",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-02-967f1738"
-      },
-      {
-        "lessonId": "a1-02",
-        "level": "A1",
         "lemmaCandidate": "Wohnort",
         "normalizedLemma": "wohnort",
         "role": "anchor",
@@ -45112,6 +45100,25 @@
           }
         ],
         "id": "lex-n-a1-02-3bd9e590"
+      },
+      {
+        "lessonId": "a1-02",
+        "level": "A1",
+        "lemmaCandidate": "Wörterbuch",
+        "normalizedLemma": "wörterbuch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Mit einem Wörterbuch im Handy",
+            "surface": "Mit einem Wörterbuch im Handy",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a1-02-7b5635b2"
       },
       {
         "lessonId": "a1-03",
@@ -45477,6 +45484,25 @@
           }
         ],
         "id": "lex-n-a1-03-a7591398"
+      },
+      {
+        "lessonId": "a1-03",
+        "level": "A1",
+        "lemmaCandidate": "Stadt",
+        "normalizedLemma": "stadt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[0]",
+            "stage": "reading",
+            "text": "Den Namen der Stadt",
+            "surface": "Den Namen der Stadt",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a1-03-36cbe149"
       },
       {
         "lessonId": "a1-03",
@@ -55818,6 +55844,13 @@
             "strength": "target"
           },
           {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Sie ist die billigste Wohnung.",
+            "surface": "Sie ist die billigste Wohnung.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Sara sucht eine Wohnung in Leipzig. Anzeige A bietet ein Zimmer mit 32 Quadratmetern für 520 Euro warm. Die Wohnung ist möbliert und zentral, aber es gibt keinen Balkon. Anzeige B hat zwei Zimmer und 58 Quadratmeter. Die Warmmiete beträgt 760 Euro. Es gibt einen Balkon und einen Keller, aber die Wohnung liegt weit außerhalb. Anzeige C ist 45 Quadratmeter groß und kostet 680 Euro warm. Sie liegt nahe an Saras Arbeit und ist ruhig zum Hof. Einen Aufzug gibt es nicht. Sara braucht kein großes Wohnzimmer, aber der Weg zur Arbeit soll kurz sein. Deshalb ruft sie zuerst bei Anzeige C an.",
@@ -58982,13 +59015,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "reading.questions[1].options[2]",
-            "stage": "reading",
-            "text": "Vor dem Bahnhof",
-            "surface": "Vor dem Bahnhof",
-            "strength": "context"
-          },
-          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Die Sprachschule liegt nicht weit vom Hauptbahnhof. Verlassen Sie den Bahnhof am Ausgang Süd. Gehen Sie geradeaus bis zur großen Ampel. Überqueren Sie dort die Straße und biegen Sie rechts in die Lindenstraße ab. Gehen Sie an einem Hotel und einer Bäckerei vorbei. Nach etwa 300 Metern sehen Sie links eine Apotheke. Die Sprachschule ist direkt gegenüber der Apotheke, neben einem kleinen Café. Der Eingang liegt im Hof. Wenn das Tor geschlossen ist, klingeln Sie bei „Sprachzentrum“. Zu Fuß dauert der Weg ungefähr acht Minuten.",
@@ -59011,6 +59037,25 @@
           }
         ],
         "id": "lex-n-a1-20-4a61bf9c"
+      },
+      {
+        "lessonId": "a1-20",
+        "level": "A1",
+        "lemmaCandidate": "Bahnhofstraße",
+        "normalizedLemma": "bahnhofstraße",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Am Ausgang Süd in die Bahnhofstraße",
+            "surface": "Am Ausgang Süd in die Bahnhofstraße",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a1-20-00b7c852"
       },
       {
         "lessonId": "a1-20",
@@ -59329,8 +59374,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Hinter dem Hotel",
-            "surface": "Hinter dem Hotel",
+            "text": "Direkt hinter dem Hotel",
+            "surface": "Direkt hinter dem Hotel",
             "strength": "context"
           },
           {
@@ -61367,6 +61412,25 @@
       {
         "lessonId": "a1-22",
         "level": "A1",
+        "lemmaCandidate": "Training",
+        "normalizedLemma": "training",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[2]",
+            "stage": "listening",
+            "text": "Seit dem Training gestern Abend",
+            "surface": "Seit dem Training gestern Abend",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a1-22-f0238c70"
+      },
+      {
+        "lessonId": "a1-22",
+        "level": "A1",
         "lemmaCandidate": "Umzug",
         "normalizedLemma": "umzug",
         "role": "anchor",
@@ -61415,25 +61479,6 @@
           }
         ],
         "id": "lex-n-a1-22-32d30b71"
-      },
-      {
-        "lessonId": "a1-22",
-        "level": "A1",
-        "lemmaCandidate": "Woche",
-        "normalizedLemma": "woche",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[1].options[2]",
-            "stage": "listening",
-            "text": "Seit einer Woche",
-            "surface": "Seit einer Woche",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a1-22-8b08ab9a"
       },
       {
         "lessonId": "a1-23",
@@ -63847,6 +63892,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Sie hat ihre Mutter angerufen.",
+            "surface": "Sie hat ihre Mutter angerufen.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Mila: Was hast du gestern nach dem Kurs gemacht? — Nora: Zuerst bin ich zum Supermarkt gegangen und habe eingekauft. Danach habe ich meine Mutter angerufen. — Mila: Hast du am Abend noch gelernt? — Nora: Ja, ich habe eine Stunde Deutsch gelernt und die Hausaufgaben gemacht. Dann ist eine Freundin gekommen. Wir haben zusammen gekocht und lange gesprochen. — Mila: Wann ist sie gegangen? — Nora: Gegen elf. Danach bin ich sofort ins Bett gegangen.",
@@ -64315,8 +64367,8 @@
       {
         "lessonId": "a2-02",
         "level": "A2",
-        "lemmaCandidate": "Jacke",
-        "normalizedLemma": "jacke",
+        "lemmaCandidate": "Jackentasche",
+        "normalizedLemma": "jackentasche",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
@@ -64324,12 +64376,12 @@
           {
             "path": "listening.questions[2].options[3]",
             "stage": "listening",
-            "text": "In der Jacke",
-            "surface": "In der Jacke",
+            "text": "In seiner Jackentasche",
+            "surface": "In seiner Jackentasche",
             "strength": "context"
           }
         ],
-        "id": "lex-n-a2-02-d948d8c9"
+        "id": "lex-n-a2-02-1caac7d3"
       },
       {
         "lessonId": "a2-02",
@@ -64382,6 +64434,25 @@
           }
         ],
         "id": "lex-n-a2-02-d7419acb"
+      },
+      {
+        "lessonId": "a2-02",
+        "level": "A2",
+        "lemmaCandidate": "Küche",
+        "normalizedLemma": "küche",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[2]",
+            "stage": "listening",
+            "text": "Bei seiner Schwester in der Küche",
+            "surface": "Bei seiner Schwester in der Küche",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-02-8ee6a320"
       },
       {
         "lessonId": "a2-02",
@@ -64774,8 +64845,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Bei seiner Schwester",
-            "surface": "Bei seiner Schwester",
+            "text": "Bei seiner Schwester in der Küche",
+            "surface": "Bei seiner Schwester in der Küche",
             "strength": "context"
           },
           {
@@ -65558,8 +65629,8 @@
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
-            "text": "Sie hatte keine Notizen.",
-            "surface": "Sie hatte keine Notizen.",
+            "text": "Sie hatte vorher keine Notizen gemacht.",
+            "surface": "Sie hatte vorher keine Notizen gemacht.",
             "strength": "context"
           },
           {
@@ -65814,6 +65885,13 @@
             "stage": "reading",
             "text": "Es war ihr erster Vortrag auf Deutsch.",
             "surface": "Es war ihr erster Vortrag auf Deutsch.",
+            "strength": "context"
+          },
+          {
+            "path": "reading.questions[1].options[0]",
+            "stage": "reading",
+            "text": "Zwei Wochen vor dem Vortrag",
+            "surface": "Zwei Wochen vor dem Vortrag",
             "strength": "context"
           },
           {
@@ -66262,8 +66340,8 @@
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
-            "text": "Er hat ihr einen Kuchen gebacken.",
-            "surface": "Er hat ihr einen Kuchen gebacken.",
+            "text": "Er hat ihr einen Kuchen und Kaffee gebracht.",
+            "surface": "Er hat ihr einen Kuchen und Kaffee gebracht.",
             "strength": "context"
           },
           {
@@ -67844,6 +67922,25 @@
       {
         "lessonId": "a2-05",
         "level": "A2",
+        "lemmaCandidate": "Platz",
+        "normalizedLemma": "platz",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Die Nachbarn brauchen den Platz.",
+            "surface": "Die Nachbarn brauchen den Platz.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-05-e7d9dc9f"
+      },
+      {
+        "lessonId": "a2-05",
+        "level": "A2",
         "lemmaCandidate": "Regel",
         "normalizedLemma": "regel",
         "role": "anchor",
@@ -68363,6 +68460,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "Lea wollte über die Küche nicht sprechen.",
+            "surface": "Lea wollte über die Küche nicht sprechen.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In einer Wohngemeinschaft leben Lea, Samir und Jonas. In den letzten Wochen hat es oft Streit über die Küche gegeben. Obwohl es einen alten Putzplan gab, hat sich niemand regelmäßig daran gehalten. Lea hat deshalb ein ruhiges Gespräch vorgeschlagen. Beim Treffen hat jede Person zuerst erklärt, was sie stört. Samir arbeitet abends und kann nicht immer direkt nach dem Kochen aufräumen. Jonas vergisst häufig, den Müll rauszubringen. Gemeinsam haben sie einen neuen Plan entwickelt: Wenn jemand abends spät arbeitet, räumt die Person am nächsten Morgen auf. Den Müll bringen sie abwechselnd raus. Jeden Sonntag prüfen sie den Plan fünf Minuten lang. Nach zwei Wochen ist die Küche sauberer, und es gibt weniger Konflikte.",
@@ -68787,6 +68891,25 @@
           }
         ],
         "id": "lex-n-a2-06-06b6972f"
+      },
+      {
+        "lessonId": "a2-06",
+        "level": "A2",
+        "lemmaCandidate": "Putzen",
+        "normalizedLemma": "putzen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[1]",
+            "stage": "reading",
+            "text": "Sie bezahlt jemanden für das Putzen.",
+            "surface": "Sie bezahlt jemanden für das Putzen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-06-b698f47f"
       },
       {
         "lessonId": "a2-06",
@@ -70949,6 +71072,25 @@
       {
         "lessonId": "a2-08",
         "level": "A2",
+        "lemmaCandidate": "Foto",
+        "normalizedLemma": "foto",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[0]",
+            "stage": "reading",
+            "text": "Nur Zeugnisse und ein Foto",
+            "surface": "Nur Zeugnisse und ein Foto",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-08-5e1ea851"
+      },
+      {
+        "lessonId": "a2-08",
+        "level": "A2",
         "lemmaCandidate": "Gespräch",
         "normalizedLemma": "gespräch",
         "role": "context-only",
@@ -71677,25 +71819,6 @@
       {
         "lessonId": "a2-09",
         "level": "A2",
-        "lemmaCandidate": "Arzttermin",
-        "normalizedLemma": "arzttermin",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[2]",
-            "stage": "reading",
-            "text": "Er braucht einen Arzttermin.",
-            "surface": "Er braucht einen Arzttermin.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a2-09-4e73ab66"
-      },
-      {
-        "lessonId": "a2-09",
-        "level": "A2",
         "lemmaCandidate": "Besprechung",
         "normalizedLemma": "besprechung",
         "role": "context-only",
@@ -72317,8 +72440,8 @@
           {
             "path": "listening.questions[1].options[2]",
             "stage": "listening",
-            "text": "Ob die Rechnung bezahlt ist",
-            "surface": "Ob die Rechnung bezahlt ist",
+            "text": "Ob die Rechnung für Donnerstag bezahlt ist",
+            "surface": "Ob die Rechnung für Donnerstag bezahlt ist",
             "strength": "context"
           }
         ],
@@ -72390,6 +72513,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[0].options[2]",
+            "stage": "reading",
+            "text": "Er braucht einen neuen Termin beim Arzt.",
+            "surface": "Er braucht einen neuen Termin beim Arzt.",
+            "strength": "context"
+          },
           {
             "path": "theory[1].examples[2].de",
             "stage": "rule",
@@ -73200,8 +73330,8 @@
           {
             "path": "reading.questions[2].options[2]",
             "stage": "reading",
-            "text": "Er fährt direkt in einer Stunde.",
-            "surface": "Er fährt direkt in einer Stunde.",
+            "text": "Er fährt direkt und braucht nur eine Stunde.",
+            "surface": "Er fährt direkt und braucht nur eine Stunde.",
             "strength": "context"
           },
           {
@@ -73860,6 +73990,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Sie ist für Nora und ihre Freundin allein am billigsten.",
+            "surface": "Sie ist für Nora und ihre Freundin allein am billigsten.",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -74644,8 +74781,8 @@
           {
             "path": "listening.questions[2].options[3]",
             "stage": "listening",
-            "text": "Das Zimmer hat einen Balkon.",
-            "surface": "Das Zimmer hat einen Balkon.",
+            "text": "Das neue Zimmer hat einen Balkon wie seine Buchung.",
+            "surface": "Das neue Zimmer hat einen Balkon wie seine Buchung.",
             "strength": "context"
           },
           {
@@ -74782,6 +74919,13 @@
             "stage": "vocabulary",
             "surface": "die Buchung",
             "strength": "registry"
+          },
+          {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Das neue Zimmer hat einen Balkon wie seine Buchung.",
+            "surface": "Das neue Zimmer hat einen Balkon wie seine Buchung.",
+            "strength": "context"
           },
           {
             "path": "listening.transcriptDe",
@@ -75206,8 +75350,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
-            "surface": "Er kann morgen zurückwechseln, wenn die Heizung repariert ist.",
+            "text": "Er wechselt morgen zurück, wenn die Heizung repariert ist.",
+            "surface": "Er wechselt morgen zurück, wenn die Heizung repariert ist.",
             "strength": "context"
           },
           {
@@ -76005,6 +76149,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "listening.questions[0].options[2]",
+            "stage": "listening",
+            "text": "Er trinkt bei der Arbeit zu viel Kaffee.",
+            "surface": "Er trinkt bei der Arbeit zu viel Kaffee.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Coach: Was möchtest du ändern? — Amir: Ich sitze bei der Arbeit viel und bewege mich zu wenig. — Coach: Du solltest mit einem kleinen Ziel anfangen. Was ist realistisch? — Amir: Ich kann montags und donnerstags nach der Arbeit dreißig Minuten gehen. Am Samstag fahre ich gern Fahrrad. — Coach: Gut. Und was hilft dir beim Erinnern? — Amir: Ich trage die Termine in den Kalender ein und lege meine Schuhe morgens bereit. — Coach: Beobachte vier Wochen lang, wie oft es klappt. Wenn du krank bist oder Schmerzen hast, passt du den Plan an und holst fachlichen Rat.",
@@ -76033,6 +76184,25 @@
           }
         ],
         "id": "lex-n-a2-13-3c6d2cd1"
+      },
+      {
+        "lessonId": "a2-13",
+        "level": "A2",
+        "lemmaCandidate": "Erinnerung",
+        "normalizedLemma": "erinnerung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Er bittet einen Kollegen um eine Erinnerung.",
+            "surface": "Er bittet einen Kollegen um eine Erinnerung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-13-d65b855c"
       },
       {
         "lessonId": "a2-13",
@@ -76270,8 +76440,8 @@
           {
             "path": "listening.questions[2].options[0]",
             "stage": "listening",
-            "text": "Er bittet einen Kollegen.",
-            "surface": "Er bittet einen Kollegen.",
+            "text": "Er bittet einen Kollegen um eine Erinnerung.",
+            "surface": "Er bittet einen Kollegen um eine Erinnerung.",
             "strength": "context"
           }
         ],
@@ -79863,6 +80033,25 @@
       {
         "lessonId": "a2-16",
         "level": "A2",
+        "lemmaCandidate": "Samstag",
+        "normalizedLemma": "samstag",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[0]",
+            "stage": "listening",
+            "text": "Das Fest wird auf den nächsten Samstag verlegt.",
+            "surface": "Das Fest wird auf den nächsten Samstag verlegt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-16-f496fe6a"
+      },
+      {
+        "lessonId": "a2-16",
+        "level": "A2",
         "lemmaCandidate": "Schule",
         "normalizedLemma": "schule",
         "role": "context-only",
@@ -80631,8 +80820,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Sie enthält kein Deutsch.",
-            "surface": "Sie enthält kein Deutsch.",
+            "text": "Sie enthält kein Deutsch und viele Rechtschreibfehler.",
+            "surface": "Sie enthält kein Deutsch und viele Rechtschreibfehler.",
             "strength": "context"
           }
         ],
@@ -80797,8 +80986,8 @@
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
-            "text": "Um das Handy zu verkaufen.",
-            "surface": "Um das Handy zu verkaufen.",
+            "text": "Um das alte Handy zu verkaufen.",
+            "surface": "Um das alte Handy zu verkaufen.",
             "strength": "context"
           },
           {
@@ -82250,6 +82439,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Nur private Nachrichten sind während der ganzen Stunde erlaubt.",
+            "surface": "Nur private Nachrichten sind während der ganzen Stunde erlaubt.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In einem Deutschkurs diskutiert die Gruppe über Handys im Unterricht. Einige Lernende finden, dass Smartphones sehr hilfreich sind. Man kann schnell ein Wort nachschlagen, Audio aufnehmen und Übungen öffnen. Zum Beispiel nutzt Rania ein digitales Wörterbuch, um neue Wörter mit Aussprache zu hören. Andere sagen, dass Nachrichten und soziale Medien stark ablenken. Ben hat beobachtet, dass er während einer Stunde mehrmals ohne Grund auf den Bildschirm schaut. Die Lehrerin möchte Handys nicht komplett verbieten. Sie schlägt eine Regel vor: Bei Lernaufgaben darf man sie benutzen, private Nachrichten bleiben jedoch bis zur Pause geschlossen. Der Vorschlag ist zwar nicht perfekt, aber die meisten halten ihn für praktisch. Nach zwei Wochen will die Gruppe prüfen, ob die Regel funktioniert.",
@@ -82327,6 +82523,25 @@
       {
         "lessonId": "a2-18",
         "level": "A2",
+        "lemmaCandidate": "Woche",
+        "normalizedLemma": "woche",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[1]",
+            "stage": "listening",
+            "text": "Homeoffice soll an allen Tagen der Woche sein.",
+            "surface": "Homeoffice soll an allen Tagen der Woche sein.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-18-7a60d5f8"
+      },
+      {
+        "lessonId": "a2-18",
+        "level": "A2",
         "lemmaCandidate": "Wohnung",
         "normalizedLemma": "wohnung",
         "role": "context-only",
@@ -82381,8 +82596,8 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Er kann keine Wörter suchen.",
-            "surface": "Er kann keine Wörter suchen.",
+            "text": "Er kann im Unterricht keine Wörter nachschlagen.",
+            "surface": "Er kann im Unterricht keine Wörter nachschlagen.",
             "strength": "context"
           }
         ],
@@ -83479,6 +83694,27 @@
           }
         ],
         "id": "lex-n-a2-19-1d76ef8a"
+      },
+      {
+        "lessonId": "a2-19",
+        "level": "A2",
+        "lemmaCandidate": "Übersetzungen",
+        "normalizedLemma": "übersetzungen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "a2-19-noun-13"
+        ],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Er liest nur noch die arabischen Übersetzungen.",
+            "surface": "Er liest nur noch die arabischen Übersetzungen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-19-33fe71a9"
       },
       {
         "lessonId": "a2-19",
@@ -85815,6 +86051,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Sie meldet sich trotzdem sofort für die Prüfung an.",
+            "surface": "Sie meldet sich trotzdem sofort für die Prüfung an.",
+            "strength": "context"
+          },
+          {
             "path": "theory[0].examples[2].de",
             "stage": "rule",
             "text": "Sie hat vor, die Prüfung zu machen.",
@@ -86833,13 +87076,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "listening.questions[2].options[2]",
-            "stage": "listening",
-            "text": "Ob die Musik laut ist",
-            "surface": "Ob die Musik laut ist",
-            "strength": "context"
-          },
           {
             "path": "writing.modelDe",
             "stage": "writing",
@@ -88758,6 +88994,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Es kostet für die Gruppe gar nichts.",
+            "surface": "Es kostet für die Gruppe gar nichts.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Eine Kursgruppe möchte ein Abschlussprojekt planen. Zuerst gibt es drei Ideen: ein Picknick, einen Museumsbesuch oder ein Fest im Stadtteilzentrum. Statt sofort abzustimmen, sammelt die Gruppe Kriterien. Der Termin muss für mindestens zwölf Personen passen, die Kosten dürfen zehn Euro pro Person nicht überschreiten, und der Ort soll barrierefrei sein. Das Picknick ist zwar günstig, aber vom Wetter abhängig. Das Museum ist interessant, jedoch weder am gewünschten Termin frei noch für alle günstig. Das Stadtteilzentrum ist sowohl zentral als auch barrierefrei. Deshalb entscheidet sich die Gruppe dafür. Im Protokoll steht: Mara reserviert den Raum bis Dienstag, Ben erstellt die Einkaufsliste und Sara fragt nach Essenswünschen. Wenn der Raum nicht verfügbar ist, findet das Treffen online statt.",
@@ -89922,8 +90165,8 @@
           {
             "path": "listening.questions[0].options[0]",
             "stage": "listening",
-            "text": "Er mochte das Essen nicht.",
-            "surface": "Er mochte das Essen nicht.",
+            "text": "Er mochte das Essen im Restaurant nicht.",
+            "surface": "Er mochte das Essen im Restaurant nicht.",
             "strength": "context"
           }
         ],
@@ -90890,8 +91133,8 @@
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
-            "text": "Nur der Umzug",
-            "surface": "Nur der Umzug",
+            "text": "Nur der Umzug nach Deutschland mit 30",
+            "surface": "Nur der Umzug nach Deutschland mit 30",
             "strength": "context"
           }
         ],
@@ -92047,8 +92290,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Um die alte Stelle zurückzubekommen.",
-            "surface": "Um die alte Stelle zurückzubekommen.",
+            "text": "Um nach drei Monaten die alte Stelle zurückzubekommen.",
+            "surface": "Um nach drei Monaten die alte Stelle zurückzubekommen.",
             "strength": "context"
           },
           {
@@ -92209,8 +92452,8 @@
           {
             "path": "reading.questions[1].options[1]",
             "stage": "reading",
-            "text": "Er ignorierte den Vertrag.",
-            "surface": "Er ignorierte den Vertrag.",
+            "text": "Er ignorierte den befristeten Vertrag und sagte sofort zu.",
+            "surface": "Er ignorierte den befristeten Vertrag und sagte sofort zu.",
             "strength": "context"
           },
           {
@@ -93192,8 +93435,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Sie versteckt ihr Portfolio.",
-            "surface": "Sie versteckt ihr Portfolio.",
+            "text": "Sie versteckt ihr Portfolio vor neuen Kunden.",
+            "surface": "Sie versteckt ihr Portfolio vor neuen Kunden.",
             "strength": "context"
           },
           {
@@ -93299,6 +93542,25 @@
       {
         "lessonId": "b1-03",
         "level": "B1",
+        "lemmaCandidate": "Projekts",
+        "normalizedLemma": "projekts",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Er kontrolliert den Stand nur noch am Ende des Projekts.",
+            "surface": "Er kontrolliert den Stand nur noch am Ende des Projekts.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-03-f887f354"
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
         "lemmaCandidate": "Restaurant",
         "normalizedLemma": "restaurant",
         "role": "context-only",
@@ -93350,6 +93612,20 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Das Team hatte jede Woche den Stand geprüft.",
+            "surface": "Das Team hatte jede Woche den Stand geprüft.",
+            "strength": "context"
+          },
+          {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Er kontrolliert den Stand nur noch am Ende des Projekts.",
+            "surface": "Er kontrolliert den Stand nur noch am Ende des Projekts.",
+            "strength": "context"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -94624,6 +94900,13 @@
             "stage": "discover",
             "text": "Das Team prüft die Texte.",
             "surface": "Das Team prüft die Texte.",
+            "strength": "context"
+          },
+          {
+            "path": "reading.questions[1].options[0]",
+            "stage": "reading",
+            "text": "Es beschuldigte einzelne Personen für die fehlenden Texte.",
+            "surface": "Es beschuldigte einzelne Personen für die fehlenden Texte.",
             "strength": "context"
           },
           {
@@ -97435,6 +97718,13 @@
             "text": "Rollen vor dem Start dokumentieren",
             "surface": "Rollen vor dem Start dokumentieren",
             "strength": "context"
+          },
+          {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Aufgaben erst nach dem Start verteilen",
+            "surface": "Aufgaben erst nach dem Start verteilen",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b1-06-f4f4c4f1"
@@ -97574,6 +97864,13 @@
             "stage": "vocabulary",
             "surface": "die Trainerin",
             "strength": "registry"
+          },
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Sie stellte der Trainerin zu viele Fragen.",
+            "surface": "Sie stellte der Trainerin zu viele Fragen.",
+            "strength": "context"
           },
           {
             "path": "reading.questions[2].promptDe",
@@ -100352,8 +100649,8 @@
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
-            "text": "Ein Video der Nachbarn",
-            "surface": "Ein Video der Nachbarn",
+            "text": "Ein Video und Aussagen der Nachbarn",
+            "surface": "Ein Video und Aussagen der Nachbarn",
             "strength": "context"
           },
           {
@@ -101757,6 +102054,25 @@
       {
         "lessonId": "b1-09",
         "level": "B1",
+        "lemmaCandidate": "Monaten",
+        "normalizedLemma": "monaten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Nach den ersten zwei Monaten des Versuchs",
+            "surface": "Nach den ersten zwei Monaten des Versuchs",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-09-bf168c14"
+      },
+      {
+        "lessonId": "b1-09",
+        "level": "B1",
         "lemmaCandidate": "Nebenwirkung",
         "normalizedLemma": "nebenwirkung",
         "role": "anchor",
@@ -102054,8 +102370,8 @@
           {
             "path": "reading.questions[0].options[2]",
             "stage": "reading",
-            "text": "Weil der Radweg schon dauerhaft ist.",
-            "surface": "Weil der Radweg schon dauerhaft ist.",
+            "text": "Weil der Stadtrat den Radweg schon dauerhaft beschlossen hat.",
+            "surface": "Weil der Stadtrat den Radweg schon dauerhaft beschlossen hat.",
             "strength": "context"
           },
           {
@@ -102328,6 +102644,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[0].options[2]",
+            "stage": "reading",
+            "text": "Weil der Stadtrat den Radweg schon dauerhaft beschlossen hat.",
+            "surface": "Weil der Stadtrat den Radweg schon dauerhaft beschlossen hat.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Eine mittelgroße Stadt plant einen geschützten Radweg auf einer stark befahrenen Straße. Anwohnerinnen wünschen weniger Lärm und sicherere Übergänge, während Geschäftsleute befürchten, dass Lieferflächen verloren gehen. Die Verwaltung entscheidet sich deshalb für einen viermonatigen Pilotversuch. Eine Fahrspur wird vorübergehend umgebaut, und Lieferzonen dürfen morgens bis zehn Uhr genutzt werden. Vor dem Start werden Verkehrszahlen, Lärmwerte, Busverspätungen und Kundenfrequenz erfasst. Während des Versuchs finden zwei öffentliche Gespräche statt. Nach zwei Monaten zeigt sich: Es fahren mehr Menschen mit dem Rad, und die Zahl gefährlicher Situationen sinkt. Gleichzeitig brauchen einige Lieferungen länger. Die Stadt passt daraufhin zwei Lieferzonen an. Am Ende werden alle Daten veröffentlicht. Erst danach entscheidet der Stadtrat, ob der Radweg dauerhaft bleibt. Der Versuch gilt nicht automatisch als Erfolg; er soll sichtbar machen, welche Wirkungen und Nebenwirkungen entstehen.",
@@ -102539,6 +102862,13 @@
             "stage": "test",
             "text": "Eine endgültige Entscheidung im Namen eines Versuchs",
             "surface": "Eine endgültige Entscheidung im Namen eines Versuchs",
+            "strength": "context"
+          },
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Nach den ersten zwei Monaten des Versuchs",
+            "surface": "Nach den ersten zwei Monaten des Versuchs",
             "strength": "context"
           },
           {
@@ -103453,8 +103783,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Sie wirft den Laptop weg.",
-            "surface": "Sie wirft den Laptop weg.",
+            "text": "Sie wirft den alten Laptop weg und kauft neu.",
+            "surface": "Sie wirft den alten Laptop weg und kauft neu.",
             "strength": "context"
           },
           {
@@ -104083,6 +104413,25 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Wartungskosten",
+        "normalizedLemma": "wartungskosten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[0]",
+            "stage": "reading",
+            "text": "Ein niedrigerer Kaufpreis und keine Wartungskosten",
+            "surface": "Ein niedrigerer Kaufpreis und keine Wartungskosten",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-756ed1bf"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Werbeaussage",
         "normalizedLemma": "werbeaussage",
         "role": "anchor",
@@ -104647,6 +104996,25 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Gelände",
+        "normalizedLemma": "gelände",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Durch ein Verbot aller Autos auf dem Gelände",
+            "surface": "Durch ein Verbot aller Autos auf dem Gelände",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-935640bc"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Grenze",
         "normalizedLemma": "grenze",
         "role": "context-only",
@@ -105091,6 +105459,25 @@
           }
         ],
         "id": "lex-n-b1-11-b0b603f9"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Verbot",
+        "normalizedLemma": "verbot",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Durch ein Verbot aller Autos auf dem Gelände",
+            "surface": "Durch ein Verbot aller Autos auf dem Gelände",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-000af8d1"
       },
       {
         "lessonId": "b1-11",
@@ -107111,25 +107498,6 @@
       {
         "lessonId": "b1-13",
         "level": "B1",
-        "lemmaCandidate": "Dauer",
-        "normalizedLemma": "dauer",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[1].options[2]",
-            "stage": "listening",
-            "text": "Nur die Dauer des Podcasts",
-            "surface": "Nur die Dauer des Podcasts",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-13-2776e7b6"
-      },
-      {
-        "lessonId": "b1-13",
-        "level": "B1",
         "lemmaCandidate": "Einfluss",
         "normalizedLemma": "einfluss",
         "role": "context-only",
@@ -107211,8 +107579,8 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Es gab keinen Fortschritt.",
-            "surface": "Es gab keinen Fortschritt.",
+            "text": "Es gab nach drei Monaten keinen messbaren Fortschritt.",
+            "surface": "Es gab nach drei Monaten keinen messbaren Fortschritt.",
             "strength": "context"
           }
         ],
@@ -107249,8 +107617,8 @@
           {
             "path": "reading.questions[0].options[1]",
             "stage": "reading",
-            "text": "Sie verstand keine Grammatik.",
-            "surface": "Sie verstand keine Grammatik.",
+            "text": "Sie verstand die Grammatik beim Lesen überhaupt nicht.",
+            "surface": "Sie verstand die Grammatik beim Lesen überhaupt nicht.",
             "strength": "context"
           }
         ],
@@ -107294,6 +107662,25 @@
           }
         ],
         "id": "lex-n-b1-13-a90b5ec3"
+      },
+      {
+        "lessonId": "b1-13",
+        "level": "B1",
+        "lemmaCandidate": "Hördauer",
+        "normalizedLemma": "hördauer",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[2]",
+            "stage": "listening",
+            "text": "Nur die tägliche Hördauer und die Zahl der Podcasts",
+            "surface": "Nur die tägliche Hördauer und die Zahl der Podcasts",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-13-37ddb4bc"
       },
       {
         "lessonId": "b1-13",
@@ -107649,8 +108036,8 @@
           {
             "path": "listening.questions[1].options[2]",
             "stage": "listening",
-            "text": "Nur die Dauer des Podcasts",
-            "surface": "Nur die Dauer des Podcasts",
+            "text": "Nur die tägliche Hördauer und die Zahl der Podcasts",
+            "surface": "Nur die tägliche Hördauer und die Zahl der Podcasts",
             "strength": "context"
           }
         ],
@@ -107976,6 +108363,25 @@
         "id": "lex-n-b1-13-abbad277"
       },
       {
+        "lessonId": "b1-13",
+        "level": "B1",
+        "lemmaCandidate": "Zahl",
+        "normalizedLemma": "zahl",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[2]",
+            "stage": "listening",
+            "text": "Nur die tägliche Hördauer und die Zahl der Podcasts",
+            "surface": "Nur die tägliche Hördauer und die Zahl der Podcasts",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-13-78205b84"
+      },
+      {
         "lessonId": "b1-14",
         "level": "B1",
         "lemmaCandidate": "Abschluss",
@@ -108178,6 +108584,13 @@
             "stage": "reading",
             "text": "Was erfuhr Nadia über die Anerkennung?",
             "surface": "Was erfuhr Nadia über die Anerkennung?",
+            "strength": "context"
+          },
+          {
+            "path": "reading.questions[2].options[0]",
+            "stage": "reading",
+            "text": "Wegen einer allgemeinen Garantie für die Anerkennung",
+            "surface": "Wegen einer allgemeinen Garantie für die Anerkennung",
             "strength": "context"
           }
         ],
@@ -108506,8 +108919,8 @@
           {
             "path": "reading.questions[2].options[0]",
             "stage": "reading",
-            "text": "Wegen einer allgemeinen Garantie",
-            "surface": "Wegen einer allgemeinen Garantie",
+            "text": "Wegen einer allgemeinen Garantie für die Anerkennung",
+            "surface": "Wegen einer allgemeinen Garantie für die Anerkennung",
             "strength": "context"
           }
         ],
@@ -108669,6 +109082,25 @@
           }
         ],
         "id": "lex-n-b1-14-5f0767e9"
+      },
+      {
+        "lessonId": "b1-14",
+        "level": "B1",
+        "lemmaCandidate": "Kursgebühr",
+        "normalizedLemma": "kursgebühr",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[1]",
+            "stage": "listening",
+            "text": "Nur die Kursgebühr von 700 Euro",
+            "surface": "Nur die Kursgebühr von 700 Euro",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-14-86836ccd"
       },
       {
         "lessonId": "b1-14",
@@ -113147,6 +113579,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Für Zuschauer mit großem Interesse an den Figuren",
+            "surface": "Für Zuschauer mit großem Interesse an den Figuren",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Der Film „Der letzte Bus“ handelt von drei Personen, die wegen eines Unwetters eine Nacht an einem kleinen Bahnhof verbringen müssen. Im Mittelpunkt steht keine große äußere Handlung, sondern die langsam entstehende Beziehung zwischen den Figuren. Besonders überzeugend ist die ruhig erzählte Geschichte. Die Kamera zeigt lange Einstellungen, in denen kleine Gesten wichtiger werden als direkte Erklärungen. Die Hauptfigur wird von einer jungen Schauspielerin glaubwürdig gespielt; ihre Unsicherheit ist sowohl in Gesprächen als auch in stillen Szenen erkennbar. Der Film ist stellenweise sehr langsam, was nicht allen gefallen dürfte. Dieses Tempo unterstützt jedoch die wartende, angespannte Atmosphäre. Ohne das Ende zu verraten, lässt sich sagen, dass keine einfache Lösung angeboten wird. Empfehlenswert ist der Film für Menschen, die charakterorientierte Dramen und offene Fragen mögen. Wer schnelle Handlung erwartet, könnte ungeduldig werden.",
@@ -114570,6 +115009,25 @@
       {
         "lessonId": "b1-18",
         "level": "B1",
+        "lemmaCandidate": "Getränks",
+        "normalizedLemma": "getränks",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Jede Wirkung des Getränks ist wissenschaftlich ausgeschlossen.",
+            "surface": "Jede Wirkung des Getränks ist wissenschaftlich ausgeschlossen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-18-ad2a64b0"
+      },
+      {
+        "lessonId": "b1-18",
+        "level": "B1",
         "lemmaCandidate": "Gruppe",
         "normalizedLemma": "gruppe",
         "role": "context-only",
@@ -115308,6 +115766,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Die genaue Zahl der Teilnehmenden",
+            "surface": "Die genaue Zahl der Teilnehmenden",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "In einem häufig geteilten Beitrag heißt es, ruhige Musik solle den Lernerfolg verdoppeln. Der Beitrag verlinkt jedoch nur auf einen Blog. Die ursprüngliche Studie untersuchte 28 Studierende bei einer Wortschatzaufgabe. Eine Gruppe lernte mit leiser Musik, die andere ohne Musik. Direkt nach dem Lernen erzielte die Musikgruppe durchschnittlich zwölf Prozent mehr richtige Antworten. Gemessen wurde also weder ein doppelter Erfolg noch langfristiges Behalten. Nach einer Woche fand kein weiterer Test statt, und andere Fertigkeiten wurden nicht untersucht. Die Behauptung ist deshalb teilweise richtig, aber deutlich übertrieben. Richtig ist nur, dass eine kleine Gruppe in einem Soforttest etwas besser abschnitt. Ob die Wirkung langfristig oder allgemein gilt, bleibt offen. Das Fehlen dieser Belege beweist allerdings nicht, dass Musik niemals helfen kann. Ich habe zusätzlich nach der Originalstudie gesucht und sie über die Universitätsbibliothek gefunden, damit ich nicht nur die Zusammenfassung lese. In der Methodik steht, dass die Teilnehmenden ihre Musik selbst wählen durften, was die Gruppen nicht vollständig vergleichbar macht. Der Blog-Autor erwähnt weder die Gruppengröße noch das Messinstrument, obwohl beides für die Bewertung entscheidend ist. Deshalb empfehle ich, die Behauptung nur mit dem Zusatz „bei 28 Personen und Soforttest“ zu teilen und die Studie zu verlinken.",
@@ -115539,6 +116004,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Ein doppelter Lernerfolg auch noch nach einer Woche",
+            "surface": "Ein doppelter Lernerfolg auch noch nach einer Woche",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
@@ -116327,6 +116799,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[2].options[3]",
+            "stage": "reading",
+            "text": "Es plant die Präsentation immer erst am letzten Tag.",
+            "surface": "Es plant die Präsentation immer erst am letzten Tag.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In einem Projekt bat die Teamleiterin drei Personen, eine Präsentation „kurz“ vorzubereiten. Sara erstellte fünf Folien für zehn Minuten. Ben verstand unter „kurz“ nur zwei Minuten und bereitete eine mündliche Zusammenfassung ohne Folien vor. Mara dachte, dass lediglich die Einleitung kurz sein sollte, während der gesamte Vortrag 20 Minuten dauern durfte. Erst am Tag vor dem Termin bemerkte das Team die unterschiedlichen Erwartungen. Statt darüber zu streiten, wer falsch verstanden hatte, klärten sie die Bedeutung im konkreten Kontext. Die Teamleiterin erklärte, dass der gesamte Vortrag acht Minuten dauern und maximal vier Folien enthalten sollte. Ben fasste anschließend zusammen: „Wenn ich dich richtig verstehe, brauchen wir vier Folien für insgesamt acht Minuten, und jede Person spricht ungefähr gleich lang.“ Nach der Bestätigung passten alle ihre Teile an. Künftig schreibt das Team bei Wörtern wie kurz oder bald immer eine Zahl und einen Termin dazu.",
@@ -116453,6 +116932,13 @@
             "stage": "listening",
             "text": "An der großen Uhr neben dem Taxistand",
             "surface": "An der großen Uhr neben dem Taxistand",
+            "strength": "context"
+          },
+          {
+            "path": "listening.questions[1].options[1]",
+            "stage": "listening",
+            "text": "Neben dem Taxistand im Bahnhofsgebäude",
+            "surface": "Neben dem Taxistand im Bahnhofsgebäude",
             "strength": "context"
           },
           {
@@ -116602,6 +117088,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Die Präsentation fiel aus, und der Termin wurde verschoben.",
+            "surface": "Die Präsentation fiel aus, und der Termin wurde verschoben.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In einem Projekt bat die Teamleiterin drei Personen, eine Präsentation „kurz“ vorzubereiten. Sara erstellte fünf Folien für zehn Minuten. Ben verstand unter „kurz“ nur zwei Minuten und bereitete eine mündliche Zusammenfassung ohne Folien vor. Mara dachte, dass lediglich die Einleitung kurz sein sollte, während der gesamte Vortrag 20 Minuten dauern durfte. Erst am Tag vor dem Termin bemerkte das Team die unterschiedlichen Erwartungen. Statt darüber zu streiten, wer falsch verstanden hatte, klärten sie die Bedeutung im konkreten Kontext. Die Teamleiterin erklärte, dass der gesamte Vortrag acht Minuten dauern und maximal vier Folien enthalten sollte. Ben fasste anschließend zusammen: „Wenn ich dich richtig verstehe, brauchen wir vier Folien für insgesamt acht Minuten, und jede Person spricht ungefähr gleich lang.“ Nach der Bestätigung passten alle ihre Teile an. Künftig schreibt das Team bei Wörtern wie kurz oder bald immer eine Zahl und einen Termin dazu.",
@@ -116679,6 +117172,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[1].options[2]",
+            "stage": "listening",
+            "text": "Am Eingang der U-Bahn-Station",
+            "surface": "Am Eingang der U-Bahn-Station",
+            "strength": "context"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -118867,25 +119367,6 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
-        "lemmaCandidate": "Einladung",
-        "normalizedLemma": "einladung",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[1].options[0]",
-            "stage": "listening",
-            "text": "Von der Einladung",
-            "surface": "Von der Einladung",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b1-21-ac10d925"
-      },
-      {
-        "lessonId": "b1-21",
-        "level": "B1",
         "lemmaCandidate": "Eskalation",
         "normalizedLemma": "eskalation",
         "role": "anchor",
@@ -119011,6 +119492,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[1].options[0]",
+            "stage": "listening",
+            "text": "Von der Freigabe der Leitung",
+            "surface": "Von der Freigabe der Leitung",
+            "strength": "context"
+          },
           {
             "path": "theory[2].examples[4].de",
             "stage": "rule",
@@ -119249,6 +119737,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "listening.questions[1].options[0]",
+            "stage": "listening",
+            "text": "Von der Freigabe der Leitung",
+            "surface": "Von der Freigabe der Leitung",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Mara: Was ist seit Dienstag fertig? — Ben: Die Einladung ist geschrieben und von der Leitung freigegeben. Der Link funktioniert. — Mara: Gibt es Hindernisse? — Ben: Die Teilnehmerliste fehlt noch. Ohne sie kann Sara die Namenskarten nicht erstellen. — Sara: Wer die Liste bekommt, soll sie bitte sofort im Teamordner speichern. — Mara: Ich frage heute bei der Verwaltung nach. Falls die Liste bis morgen nicht da ist, verwenden wir eine leere Vorlage und tragen Namen vor Ort ein. — Ben: Gut. Was wir heute entscheiden, dokumentiere ich im Status. Nächster Check ist morgen um 15 Uhr.",
@@ -119355,8 +119850,8 @@
           {
             "path": "reading.questions[0].options[1]",
             "stage": "reading",
-            "text": "Es gab keine neuen Personen.",
-            "surface": "Es gab keine neuen Personen.",
+            "text": "Es gab in der ersten Woche keine neuen Personen.",
+            "surface": "Es gab in der ersten Woche keine neuen Personen.",
             "strength": "context"
           }
         ],
@@ -119535,8 +120030,8 @@
           {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
-            "text": "Dringende oder fachliche Fragen werden innerhalb eines Tages weitergeleitet.",
-            "surface": "Dringende oder fachliche Fragen werden innerhalb eines Tages weitergeleitet.",
+            "text": "Dringende oder fachliche Fragen gehen innerhalb eines Tages weiter.",
+            "surface": "Dringende oder fachliche Fragen gehen innerhalb eines Tages weiter.",
             "strength": "context"
           },
           {
@@ -119906,6 +120401,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "Es gab in der ersten Woche keine neuen Personen.",
+            "surface": "Es gab in der ersten Woche keine neuen Personen.",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -121597,6 +122099,25 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Anmeldung",
+        "normalizedLemma": "anmeldung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Für die Anmeldung mit persönlichem Konto",
+            "surface": "Für die Anmeldung mit persönlichem Konto",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-9b1335a7"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Anwendung",
         "normalizedLemma": "anwendung",
         "role": "anchor",
@@ -122812,6 +123333,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Zu wenige Funktionen in der alten Tabelle",
+            "surface": "Zu wenige Funktionen in der alten Tabelle",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Ein Verein wollte seine Anwesenheitslisten digitalisieren. Ein Anbieter präsentierte eine App mit vielen Funktionen. Bevor der Verein einen Jahresvertrag abschloss, definierte das Team das konkrete Problem: Die Papierlisten mussten später doppelt übertragen werden. In diesem Praxistest testeten zehn Personen die App zwei Wochen lang mit erfundenen Daten. Bewertet wurden Zeit, Fehler, Barrierefreiheit, Offline-Funktion und Export. Die Eingabe war deutlich schneller, und es gab weniger Übertragungsfehler. Zwei ältere Geräte konnten die App jedoch nicht zuverlässig öffnen. Außerdem funktionierte der Export nur als PDF, obwohl der Verein ein bearbeitbares Format brauchte. Ohne Internet wurden Daten zwar lokal gespeichert, aber die Synchronisation war unklar dokumentiert. Der Verein entschied sich deshalb noch nicht für den Vertrag. Er fragte nach Geräteunterstützung, offenem Export und genauer Datenspeicherung. Falls diese Punkte nicht gelöst werden, bleibt die bisherige lokale Tabelle als Rückfalllösung.",
@@ -123450,6 +123978,44 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Gruppe",
+        "normalizedLemma": "gruppe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Durch weniger Teilnehmende und eine kleinere Gruppe",
+            "surface": "Durch weniger Teilnehmende und eine kleinere Gruppe",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-2eb54d08"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Höhe",
+        "normalizedLemma": "höhe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[1]",
+            "stage": "listening",
+            "text": "Auf die Höhe der Kursgebühr für neue Personen",
+            "surface": "Auf die Höhe der Kursgebühr für neue Personen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-d7c3e57e"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Informationsseite",
         "normalizedLemma": "informationsseite",
         "role": "context-only",
@@ -123516,8 +124082,8 @@
           {
             "path": "listening.questions[0].options[1]",
             "stage": "listening",
-            "text": "Auf die Kursgebühr",
-            "surface": "Auf die Kursgebühr",
+            "text": "Auf die Höhe der Kursgebühr für neue Personen",
+            "surface": "Auf die Höhe der Kursgebühr für neue Personen",
             "strength": "context"
           }
         ],
@@ -128161,8 +128727,8 @@
           {
             "path": "reading.questions[0].options[2]",
             "stage": "reading",
-            "text": "Weil der Pilot nur eine Woche dauerte.",
-            "surface": "Weil der Pilot nur eine Woche dauerte.",
+            "text": "Weil der Pilot nur eine Woche dauerte und wenige Teams teilnahmen.",
+            "surface": "Weil der Pilot nur eine Woche dauerte und wenige Teams teilnahmen.",
             "strength": "context"
           },
           {
@@ -128570,8 +129136,8 @@
           {
             "path": "reading.questions[0].options[2]",
             "stage": "reading",
-            "text": "Weil der Pilot nur eine Woche dauerte.",
-            "surface": "Weil der Pilot nur eine Woche dauerte.",
+            "text": "Weil der Pilot nur eine Woche dauerte und wenige Teams teilnahmen.",
+            "surface": "Weil der Pilot nur eine Woche dauerte und wenige Teams teilnahmen.",
             "strength": "context"
           }
         ],
@@ -129269,6 +129835,25 @@
       {
         "lessonId": "b2-04",
         "level": "B2",
+        "lemmaCandidate": "Funktion",
+        "normalizedLemma": "funktion",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Die Kundin wollte am Montag nur eine einzige Funktion haben.",
+            "surface": "Die Kundin wollte am Montag nur eine einzige Funktion haben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-04-8679dcf8"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
         "lemmaCandidate": "Funktionen",
         "normalizedLemma": "funktionen",
         "role": "context-only",
@@ -129582,6 +130167,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Eine mündliche Zustimmung der Kundin ohne festgelegte Details",
+            "surface": "Eine mündliche Zustimmung der Kundin ohne festgelegte Details",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Eine Kundin bat eine Agentur, eine ursprünglich für Donnerstag geplante Lieferung bereits am Montag vollständig bereitzustellen. Das Projektteam prüfte die Anfrage, statt sofort zuzusagen oder sie pauschal abzulehnen. Angesichts der verkürzten Frist war der vollständige Umfang bei unveränderter Qualität nicht realistisch. Hinsichtlich der Prioritäten fehlte außerdem eine klare Reihenfolge. Die Agentur formulierte deshalb zwei Optionen. Option A sah vor, den Kernumfang am Montag und die restlichen Funktionen am Donnerstag zu liefern. Option B ermöglichte eine vollständige Lieferung am Montag, allerdings nur mit reduziertem Funktionsumfang und höheren Test-Risiken. Unter Berücksichtigung der Qualitätsanforderungen empfahl das Team Option A. Es stellte Kosten, Risiken und Abhängigkeiten in einer Tabelle gegenüber und bat die Kundin um eine Entscheidung bis Dienstagmittag. Falls keine Einigung möglich wäre, sollte die Frage gemeinsam mit beiden Projektleitungen geklärt werden. Die Kundin priorisierte schließlich drei zentrale Funktionen und akzeptierte die gestaffelte Lieferung. Die Entscheidung wurde schriftlich festgehalten, einschließlich Umfang, Terminen und Prüfkriterien.",
@@ -129762,6 +130354,13 @@
             "stage": "vocabulary",
             "surface": "die Lieferung",
             "strength": "registry"
+          },
+          {
+            "path": "reading.questions[1].options[1]",
+            "stage": "reading",
+            "text": "Eine Option ohne Lieferung, die andere mit Lieferung am Dienstag",
+            "surface": "Eine Option ohne Lieferung, die andere mit Lieferung am Dienstag",
+            "strength": "context"
           },
           {
             "path": "reading.textDe",
@@ -132696,8 +133295,8 @@
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
-            "text": "Weil Satelliten keine Bilder lieferten.",
-            "surface": "Weil Satelliten keine Bilder lieferten.",
+            "text": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "surface": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
             "strength": "context"
           }
         ],
@@ -132919,8 +133518,8 @@
           {
             "path": "reading.questions[0].options[1]",
             "stage": "reading",
-            "text": "Er blieb erhalten und wurde als Informationsgewinn aus der Entfernung definiert.",
-            "surface": "Er blieb erhalten und wurde als Informationsgewinn aus der Entfernung definiert.",
+            "text": "Er blieb und wurde als Informationsgewinn aus der Entfernung erklärt.",
+            "surface": "Er blieb und wurde als Informationsgewinn aus der Entfernung erklärt.",
             "strength": "context"
           },
           {
@@ -133401,6 +134000,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Als Abgase aus dem Verkehr in der Luft",
+            "surface": "Als Abgase aus dem Verkehr in der Luft",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[0].options[3]",
             "stage": "listening",
@@ -134013,6 +134619,25 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
+        "lemmaCandidate": "Satelliten",
+        "normalizedLemma": "satelliten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "surface": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-06-bb24325f"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
         "lemmaCandidate": "Satellitenbild",
         "normalizedLemma": "satellitenbild",
         "role": "anchor",
@@ -134289,6 +134914,25 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
+        "lemmaCandidate": "Tagen",
+        "normalizedLemma": "tagen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "surface": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-06-cf7b28e9"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
         "lemmaCandidate": "Team",
         "normalizedLemma": "team",
         "role": "context-only",
@@ -134549,6 +135193,13 @@
             "strength": "target"
           },
           {
+            "path": "reading.questions[0].options[2]",
+            "stage": "reading",
+            "text": "Er wurde für die Veranstaltung ohne Erklärung ins Englische übersetzt.",
+            "surface": "Er wurde für die Veranstaltung ohne Erklärung ins Englische übersetzt.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Eine Hochschule untersuchte, wie stark sich beschattete und unbeschattete Straßenoberflächen an heißen Tagen erwärmen. Der interne Bericht begann mit dem Satz: „Die Erfassung thermischer Oberflächenunterschiede erfolgte mittels mobiler Sensorik und satellitengestützter Fernerkundung.“ Für eine öffentliche Veranstaltung formulierte das Kommunikationsteam verständlicher: Forschende maßen mit tragbaren Sensoren und Satellitenbildern, wie warm ausgewählte Straßenoberflächen waren. Fernerkundung bedeutet hier, Informationen aus der Entfernung zu gewinnen. An zwölf beschatteten und zwölf offenen Orten wurden an drei heißen Julitagen jeweils mittags Messungen durchgeführt. Die beschatteten Oberflächen waren im Mittel sechs Grad kühler. Das ist das zentrale Ergebnis, wobei drei Einschränkungen wichtig sind. Erstens wurde die Oberflächentemperatur gemessen, nicht die Lufttemperatur, die Menschen direkt umgibt. Zweitens unterschieden sich die Orte auch beim Bodenmaterial und beim Verkehr. Der beobachtete Unterschied kann deshalb nicht ausschließlich dem Schatten zugeschrieben werden. Drittens erfasste die Untersuchung nur drei Tage in einer Stadt. Das Ergebnis beweist also nicht, dass jede beschattete Straße immer genau sechs Grad kühler ist. Es zeigt vielmehr, dass Schatten bei den untersuchten Flächen mit niedrigeren Oberflächentemperaturen verbunden war. Für die Stadtplanung ist das nützlich: Die Daten helfen, Orte für genauere Messungen und mögliche Schattenmaßnahmen auszuwählen. Bevor größere Umbauten beschlossen werden, sollten jedoch Lufttemperatur, Nutzung, Material und längere Zeiträume zusätzlich untersucht werden. Die verständliche Fassung ist kürzer als der Fachbericht, bewahrt aber Methode, Ergebnis und Unsicherheit.",
@@ -134593,6 +135244,13 @@
             "stage": "vocabulary",
             "surface": "der Verkehr",
             "strength": "registry"
+          },
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Als Abgase aus dem Verkehr in der Luft",
+            "surface": "Als Abgase aus dem Verkehr in der Luft",
+            "strength": "context"
           },
           {
             "path": "listening.transcriptDe",
@@ -140568,6 +141226,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Durch Familie, Migration und den Blick der Kuratorin auf Abwesende",
+            "surface": "Durch Familie, Migration und den Blick der Kuratorin auf Abwesende",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Die Installation zeigt gepackte Koffer, mehrsprachige Stimmen und eine leere Bank. Diese Elemente sind zunächst beobachtbar; ihre Bedeutung ist nicht eindeutig festgelegt. Eine in Berlin aufgewachsene Besucherin verbindet die Koffer mit den häufigen Umzügen ihrer Familie. Aus ihrer Perspektive steht das Werk für Mobilität und wechselnde städtische Lebensorte. Ein vor kurzem zugewanderter Student deutet dieselben Koffer dagegen als Zeichen von Unsicherheit und Orientierungssuche. Seine Lesart ist von einer anderen aktuellen Erfahrung geprägt. Die beteiligte Kuratorin lenkt den Blick auf die leere Bank und damit auf Menschen, deren Geschichten im Museum fehlen. Die als Gegensatz dargestellten Perspektiven schließen einander nicht aus. Mobilität kann zugleich Freiheit, Verlust und erzwungene Abwesenheit bedeuten. Problematisch wäre die Behauptung, Einheimische sähen immer Freiheit und Zugewanderte immer Verlust. Sie macht aus einzelnen Stimmen homogene Gruppen und ignoriert Familiengeschichte, Alter, soziale Lage, Aufenthaltsdauer und Rolle. Eine reflektierte Synthese hält deshalb zweierlei fest: Interpretationen müssen an Elementen des Werks begründet werden, werden aber auch durch Erfahrungen und Positionen mitgeprägt. Neben der biografischen Lesart kommen praktische Faktoren in Betracht: Die Installation war im Winter ausgestellt, und der Eingang war nur über eine Treppe erreichbar, was ältere Besuchende fernhielt. Beide Deutungen greifen auf dasselbe Material zurück und lassen sich deshalb nicht allein am Werk entscheiden. Eine kulturpauschale Erklärung, wonach eine bestimmte Gruppe Objekte grundsätzlich anders betrachte, lässt sich an den Daten nicht festmachen; zulässig wäre sie nur, wenn Befragungen sie stützten. Der Perspektivwechsel liefert keine beliebige Antwort; er erweitert die prüfbaren Fragen und macht sichtbar, welche Stimmen bisher fehlen.",
@@ -141701,10 +142366,17 @@
             "strength": "target"
           },
           {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Durch Familie, Migration und den Blick der Kuratorin auf Abwesende",
+            "surface": "Durch Familie, Migration und den Blick der Kuratorin auf Abwesende",
+            "strength": "context"
+          },
+          {
             "path": "reading.questions[1].options[3]",
             "stage": "reading",
-            "text": "Er zitierte die Kuratorin vollständig.",
-            "surface": "Er zitierte die Kuratorin vollständig.",
+            "text": "Er zitierte die Kuratorin vollständig und ohne jede Kürzung.",
+            "surface": "Er zitierte die Kuratorin vollständig und ohne jede Kürzung.",
             "strength": "context"
           },
           {
@@ -141894,6 +142566,13 @@
             "stage": "listening",
             "text": "Nur die Nationalität",
             "surface": "Nur die Nationalität",
+            "strength": "context"
+          },
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Verhalten sofort der Nationalität zuschreiben und dann Regeln festlegen",
+            "surface": "Verhalten sofort der Nationalität zuschreiben und dann Regeln festlegen",
             "strength": "context"
           },
           {
@@ -142189,25 +142868,6 @@
       {
         "lessonId": "b2-09",
         "level": "B2",
-        "lemmaCandidate": "Raumgröße",
-        "normalizedLemma": "raumgröße",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[1].options[3]",
-            "stage": "listening",
-            "text": "Ausschließlich die Raumgröße",
-            "surface": "Ausschließlich die Raumgröße",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-09-686173fb"
-      },
-      {
-        "lessonId": "b2-09",
-        "level": "B2",
         "lemmaCandidate": "Reaktion",
         "normalizedLemma": "reaktion",
         "role": "anchor",
@@ -142437,6 +143097,13 @@
             "stage": "discover",
             "text": "Beobachtung: In der Sitzung sprach Amir zweimal und schwieg danach.",
             "surface": "Beobachtung: In der Sitzung sprach Amir zweimal und schwieg danach.",
+            "strength": "context"
+          },
+          {
+            "path": "listening.questions[0].options[2]",
+            "stage": "listening",
+            "text": "Die Kollegin sprach in der Sitzung schneller als sonst.",
+            "surface": "Die Kollegin sprach in der Sitzung schneller als sonst.",
             "strength": "context"
           },
           {
@@ -143038,8 +143705,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Interpretationen mussten an beobachtbaren Elementen des Werks begründet werden.",
-            "surface": "Interpretationen mussten an beobachtbaren Elementen des Werks begründet werden.",
+            "text": "Deutungen mussten an beobachtbaren Elementen des Werks begründet werden.",
+            "surface": "Deutungen mussten an beobachtbaren Elementen des Werks begründet werden.",
             "strength": "context"
           },
           {
@@ -143546,6 +144213,13 @@
             "stage": "reading",
             "surface": "Einzelfallprüfung",
             "strength": "target"
+          },
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Sie erklärte die Einzelfallprüfung zu vorsichtig als sichere Ablehnung.",
+            "surface": "Sie erklärte die Einzelfallprüfung zu vorsichtig als sichere Ablehnung.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-10-e71b6d63"
@@ -143586,13 +144260,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "listening.questions[1].options[0]",
-            "stage": "listening",
-            "text": "Als Ausnahme, die nur bei einer kurzfristigen Entscheidung eintritt",
-            "surface": "Als Ausnahme, die nur bei einer kurzfristigen Entscheidung eintritt",
-            "strength": "context"
-          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -143847,6 +144514,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "listening.questions[0].options[1]",
+            "stage": "listening",
+            "text": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
+            "surface": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Projektleiterin: Bitte erklären Sie unserem Gastteam die morgige Besichtigung. — Vermittler: Was muss das Team danach tun können? — Projektleiterin: Es muss wissen, wann und wo wir starten, welche Sicherheitsregel verbindlich ist und wer bei Verspätung informiert wird. Die Geschichte des Gebäudes ist für diese Nachricht nicht nötig. — Vermittler: Dann sage ich: Treffpunkt ist um acht Uhr am Nordtor. Geschlossene Schuhe müssen getragen werden. Fotos dürfen nur in markierten Bereichen gemacht werden. Wer sich verspätet, ruft die Koordination an. — Projektleiterin: Ergänzen Sie bitte: Die Besichtigung findet statt, es sei denn, die technische Leitung sperrt den Bereich kurzfristig. — Vermittler: Gibt es schon eine Entscheidung dazu? — Projektleiterin: Nein, derzeit nicht. — Vermittler: Dann formuliere ich die Sperrung als mögliche Ausnahme, nicht als wahrscheinliche Absage. Die Telefonnummer übernehme ich Ziffer für Ziffer und lasse sie von einer zweiten Person prüfen.",
@@ -143855,25 +144529,6 @@
           }
         ],
         "id": "lex-n-b2-10-4a4786dd"
-      },
-      {
-        "lessonId": "b2-10",
-        "level": "B2",
-        "lemmaCandidate": "Gebäude",
-        "normalizedLemma": "gebäude",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[1]",
-            "stage": "listening",
-            "text": "Weil niemand das Gebäude kennt.",
-            "surface": "Weil niemand das Gebäude kennt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-10-90a9022f"
       },
       {
         "lessonId": "b2-10",
@@ -143903,6 +144558,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "listening.questions[0].options[1]",
+            "stage": "listening",
+            "text": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
+            "surface": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[2].options[0]",
             "stage": "listening",
@@ -143987,10 +144649,10 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "listening.questions[2].options[3]",
+            "path": "listening.questions[0].options[1]",
             "stage": "listening",
-            "text": "Die Länge der Geschichte",
-            "surface": "Die Länge der Geschichte",
+            "text": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
+            "surface": "Weil das Gastteam die Geschichte des Gebäudes schon kennt.",
             "strength": "context"
           }
         ],
@@ -144090,13 +144752,6 @@
             "stage": "vocabulary",
             "surface": "die Handlungsabsicht",
             "strength": "registry"
-          },
-          {
-            "path": "listening.questions[0].options[2]",
-            "stage": "listening",
-            "text": "Weil sie für die unmittelbare Handlungsabsicht der Nachricht nicht nötig ist.",
-            "surface": "Weil sie für die unmittelbare Handlungsabsicht der Nachricht nicht nötig ist.",
-            "strength": "context"
           },
           {
             "path": "phrases[4].de",
@@ -144426,8 +145081,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Weil sie für die unmittelbare Handlungsabsicht der Nachricht nicht nötig ist.",
-            "surface": "Weil sie für die unmittelbare Handlungsabsicht der Nachricht nicht nötig ist.",
+            "text": "Weil sie für den Zweck der Nachricht nicht nötig ist.",
+            "surface": "Weil sie für den Zweck der Nachricht nicht nötig ist.",
             "strength": "context"
           }
         ],
@@ -144765,6 +145420,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Wenn die Teilnehmenden jede Fahrt und jede Übernachtung selbst bezahlen",
+            "surface": "Wenn die Teilnehmenden jede Fahrt und jede Übernachtung selbst bezahlen",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Ein Kulturzentrum veröffentlichte eine deutschsprachige Ausschreibung für eine dreitägige Medienwerkstatt. Ein arabischsprachiges Team bat zwei Personen um eine kurze Vermittlung. Die erste Zusammenfassung lautete: „Die Werkstatt ist kostenlos und alle Reise- und Übernachtungskosten werden bezahlt. Bewerbungen sind auch nach Montag möglich.“ Der Ausgangstext sagte jedoch etwas anderes. Interessierte mussten bis Montag ein Formular und ein Arbeitsbeispiel einreichen. Die Teilnahmegebühr entfiel, sofern eine verbindliche Zusage innerhalb von drei Tagen bestätigt wurde. Fahrtkosten konnten in begründeten Fällen bis zu einer festgelegten Grenze übernommen werden; über eine Erstattung entschied das Zentrum nach Prüfung. Übernachtungen mussten die Teilnehmenden grundsätzlich selbst organisieren, es sei denn, sie waren Teil einer eingeladenen Partnergruppe. Verspätete Unterlagen wurden nur berücksichtigt, wenn nach Abschluss der ersten Auswahl noch Plätze frei waren. Die erste Zusammenfassung hatte somit eine Möglichkeit in eine Garantie, eine Ausnahme in eine allgemeine Regel und eine enge Nachfrist in eine offene Frist verwandelt. Die zweite Vermittlung ordnete die Informationen nach dem Handlungsziel: „Reicht Formular und Arbeitsbeispiel spätestens Montag ein. Wenn ihr eine Zusage bekommt, müsst ihr sie innerhalb von drei Tagen bestätigen; dann fällt keine Teilnahmegebühr an. Eine begrenzte Fahrtkostenerstattung ist nach Einzelfallprüfung möglich. Die Unterkunft zahlt ihr normalerweise selbst. Nur eingeladene Partnergruppen bilden eine Ausnahme. Fragt das Zentrum vor der Bewerbung, falls ihr auf Kostenübernahme angewiesen seid.“ Zusätzlich erklärte die Vermittlerin, dass „Einzelfallprüfung“ keine automatische Ablehnung bedeute, kennzeichnete dies aber ausdrücklich als sprachliche Erläuterung und nicht als Zusage des Zentrums. Die zweite Fassung war nicht wörtlich, bewahrte jedoch Handlung, Fristen, Bedingungen, Ausnahmen und Unsicherheit.",
@@ -145072,6 +145734,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Als neue verbindliche Teilnahmebedingung des Zentrums",
+            "surface": "Als neue verbindliche Teilnahmebedingung des Zentrums",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Ein Kulturzentrum veröffentlichte eine deutschsprachige Ausschreibung für eine dreitägige Medienwerkstatt. Ein arabischsprachiges Team bat zwei Personen um eine kurze Vermittlung. Die erste Zusammenfassung lautete: „Die Werkstatt ist kostenlos und alle Reise- und Übernachtungskosten werden bezahlt. Bewerbungen sind auch nach Montag möglich.“ Der Ausgangstext sagte jedoch etwas anderes. Interessierte mussten bis Montag ein Formular und ein Arbeitsbeispiel einreichen. Die Teilnahmegebühr entfiel, sofern eine verbindliche Zusage innerhalb von drei Tagen bestätigt wurde. Fahrtkosten konnten in begründeten Fällen bis zu einer festgelegten Grenze übernommen werden; über eine Erstattung entschied das Zentrum nach Prüfung. Übernachtungen mussten die Teilnehmenden grundsätzlich selbst organisieren, es sei denn, sie waren Teil einer eingeladenen Partnergruppe. Verspätete Unterlagen wurden nur berücksichtigt, wenn nach Abschluss der ersten Auswahl noch Plätze frei waren. Die erste Zusammenfassung hatte somit eine Möglichkeit in eine Garantie, eine Ausnahme in eine allgemeine Regel und eine enge Nachfrist in eine offene Frist verwandelt. Die zweite Vermittlung ordnete die Informationen nach dem Handlungsziel: „Reicht Formular und Arbeitsbeispiel spätestens Montag ein. Wenn ihr eine Zusage bekommt, müsst ihr sie innerhalb von drei Tagen bestätigen; dann fällt keine Teilnahmegebühr an. Eine begrenzte Fahrtkostenerstattung ist nach Einzelfallprüfung möglich. Die Unterkunft zahlt ihr normalerweise selbst. Nur eingeladene Partnergruppen bilden eine Ausnahme. Fragt das Zentrum vor der Bewerbung, falls ihr auf Kostenübernahme angewiesen seid.“ Zusätzlich erklärte die Vermittlerin, dass „Einzelfallprüfung“ keine automatische Ablehnung bedeute, kennzeichnete dies aber ausdrücklich als sprachliche Erläuterung und nicht als Zusage des Zentrums. Die zweite Fassung war nicht wörtlich, bewahrte jedoch Handlung, Fristen, Bedingungen, Ausnahmen und Unsicherheit.",
@@ -145201,6 +145870,25 @@
           }
         ],
         "id": "lex-n-b2-10-9b6a1c8c"
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "lemmaCandidate": "Zweck",
+        "normalizedLemma": "zweck",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[2]",
+            "stage": "listening",
+            "text": "Weil sie für den Zweck der Nachricht nicht nötig ist.",
+            "surface": "Weil sie für den Zweck der Nachricht nicht nötig ist.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-10-ddebd54d"
       },
       {
         "lessonId": "b2-11",
@@ -154510,6 +155198,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "An der einzelnen Grammatikstunde",
+            "surface": "An der einzelnen Grammatikstunde",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "In Behördenbriefen, Berichten und Fachtexten entscheidet selten die einzelne Grammatikstunde über die Verständlichkeit, sondern die Kohäsion: die Art, wie Sätze aneinander andocken. Drei Werkzeuge tragen die Last. Erstens die Verweiskette: Ein Fürwort oder Demonstrativum muss auf genau ein Bezugswort zeigen; ist dieses mehrdeutig, wiederholt man das Nomen oder ersetzt es durch einen Oberbegriff wie «der Vorgang». Zweitens die Konnektoren, die die Relation ausdrücklich markieren — Grund, Folge, Gegensatz, Einschränkung, Bedingung. Wer «während» für einen Gegensatz wählt statt für einen Zeitverlauf, sagt mehr als mit drei lose aneinandergereihten Hauptsätzen. Drittens die Nominalisierung, die Information verdichtet; sie ist in Berichten üblich, wird aber zum Hindernis, wenn eine Genitivkette sich über drei Stufen türmt und kein Verb mehr bleibt. Lesbarkeit entsteht also durch Abwägung: sichtbar verweisen, logisch verbinden, dicht zusammenziehen — und dort wieder auflösen, wo der Text zu atmen aufhört. Ein praktischer Prüfschritt am Ende des Schreibens: Jeden Konnektor einzeln fragen, welche Relation er nennt; jedes Fürwort einzeln fragen, auf welches Wort es zeigt; und jeden Nominalcluster in einen Verbalsatz zurückübersetzen. Was dabei holpert, ist die Stelle, die ein fremder Leser nicht versteht.",
@@ -154931,6 +155626,13 @@
             "stage": "vocabulary",
             "surface": "das Nomen",
             "strength": "registry"
+          },
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Jeder Satz braucht drei Konnektoren, jedes Fürwort wird durch ein Nomen ersetzt, und Nominalcluster sind erwünscht.",
+            "surface": "Jeder Satz braucht drei Konnektoren, jedes Fürwort wird durch ein Nomen ersetzt, und Nominalcluster sind erwünscht.",
+            "strength": "context"
           },
           {
             "path": "reading.textDe",
@@ -155807,25 +156509,6 @@
       {
         "lessonId": "b2-14",
         "level": "B2",
-        "lemmaCandidate": "Wortliste",
-        "normalizedLemma": "wortliste",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[1]",
-            "stage": "reading",
-            "text": "An der Wortliste",
-            "surface": "An der Wortliste",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-14-b17aeb26"
-      },
-      {
-        "lessonId": "b2-14",
-        "level": "B2",
         "lemmaCandidate": "Zahlungsnachweis",
         "normalizedLemma": "zahlungsnachweis",
         "role": "context-only",
@@ -156013,6 +156696,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Weil ein fehlender Absatz in der Bewertung weniger Punkte kostet",
+            "surface": "Weil ein fehlender Absatz in der Bewertung weniger Punkte kostet",
+            "strength": "context"
+          },
+          {
             "path": "listening.questions[2].promptDe",
             "stage": "listening",
             "text": "Warum verschiebt Herr Aziz lieber einen Absatz, als die Kontrolle zu halbieren?",
@@ -156095,8 +156785,8 @@
           {
             "path": "listening.questions[0].options[1]",
             "stage": "listening",
-            "text": "Um die Anmeldung zur Prüfung",
-            "surface": "Um die Anmeldung zur Prüfung",
+            "text": "Um die Anmeldung zur schriftlichen Prüfung",
+            "surface": "Um die Anmeldung zur schriftlichen Prüfung",
             "strength": "context"
           }
         ],
@@ -156490,6 +157180,25 @@
           }
         ],
         "id": "lex-n-b2-15-0f10279e"
+      },
+      {
+        "lessonId": "b2-15",
+        "level": "B2",
+        "lemmaCandidate": "Bewertung",
+        "normalizedLemma": "bewertung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Weil ein fehlender Absatz in der Bewertung weniger Punkte kostet",
+            "surface": "Weil ein fehlender Absatz in der Bewertung weniger Punkte kostet",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-15-28528f23"
       },
       {
         "lessonId": "b2-15",
@@ -158894,8 +159603,8 @@
           {
             "path": "reading.questions[2].options[2]",
             "stage": "reading",
-            "text": "Weil die Abschwächung sonst zu lang würde",
-            "surface": "Weil die Abschwächung sonst zu lang würde",
+            "text": "Weil die Abschwächung sonst länger als der Fehler würde",
+            "surface": "Weil die Abschwächung sonst länger als der Fehler würde",
             "strength": "context"
           }
         ],
@@ -158910,6 +159619,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "Durch die Absicht der schreibenden Person",
+            "surface": "Durch die Absicht der schreibenden Person",
+            "strength": "context"
+          },
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
@@ -159750,6 +160466,25 @@
       {
         "lessonId": "b2-16",
         "level": "B2",
+        "lemmaCandidate": "Entschuldigung",
+        "normalizedLemma": "entschuldigung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "surface": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-16-1c07c1b9"
+      },
+      {
+        "lessonId": "b2-16",
+        "level": "B2",
         "lemmaCandidate": "Ergebnis",
         "normalizedLemma": "ergebnis",
         "role": "anchor",
@@ -159837,6 +160572,13 @@
             "text": "auf einen Fehler hinweisen",
             "surface": "auf einen Fehler hinweisen",
             "strength": "target"
+          },
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Weil die Abschwächung sonst länger als der Fehler würde",
+            "surface": "Weil die Abschwächung sonst länger als der Fehler würde",
+            "strength": "context"
           },
           {
             "path": "writing.modelDe",
@@ -160200,6 +160942,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "surface": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Ben liest seine Notiz vor: «Ich habe die Aufgabenstellung überflogen. Das war dumm.» Herr Aziz legt den Stift hin und ändert kein Wort an den Tatsachen, nur die Formen. Aus dem Bericht wird eine Bedingung: Wenn Ben die Aufgabenstellung gelesen hätte, wäre ihm die zweite Aufgabe nicht entglitten. Dann die fremde Behauptung. Ben sagt, sein Kursleiter habe nur vom Pech geredet, und will antworten, der Mann wisse nichts davon. Herr Aziz lässt ihn die Vermutung als Vermutung stehen: Der Kursleiter sprach, als ob die Zeit das einzige Problem gewesen wäre. So bleibt der Satz prüfbar, weil niemand behauptet, die Zeit sei allein schuld gewesen. Beim dritten Schritt geht es um die Selbstkritik. Bens Rechtfertigung umfasst fünf Zeilen über den Drucker, die Post und die Aufsicht; sein Fehler steht in einem Nebensatz. Zusammengestrichen bleibt ein Satz übrig: Das hätte ich früher prüfen sollen; beim nächsten Durchgang markiere ich die Aufgabenstellung zweimal. Herr Aziz nennt das eine Nachlese mit Auftrag. Ben fragt, ob die Abschwächung nicht alles weicher mache, als wäre nichts gewesen. Nein, sagt Herr Aziz: Die Umkehrung bleibt, weil der Zweifel benannt wurde, und der Auftrag steht daneben. Eine Modalpartikel wie «doch» könne den Ton formen, die Verantwortung aber nicht ersetzen.",
@@ -160215,25 +160964,6 @@
           }
         ],
         "id": "lex-n-b2-16-84f0363b"
-      },
-      {
-        "lessonId": "b2-16",
-        "level": "B2",
-        "lemmaCandidate": "Länge",
-        "normalizedLemma": "länge",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[1]",
-            "stage": "reading",
-            "text": "Durch die Länge des Satzes",
-            "surface": "Durch die Länge des Satzes",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-16-74ebc569"
       },
       {
         "lessonId": "b2-16",
@@ -160471,13 +161201,6 @@
             "strength": "context"
           },
           {
-            "path": "listening.questions[0].options[3]",
-            "stage": "listening",
-            "text": "Um die Schriftgröße der Mappe",
-            "surface": "Um die Schriftgröße der Mappe",
-            "strength": "context"
-          },
-          {
             "path": "theory[1].examples[4].de",
             "stage": "rule",
             "text": "Vergleich real: Als ich die Mappe öffnete, fehlte Blatt drei.",
@@ -160500,6 +161223,25 @@
           }
         ],
         "id": "lex-n-b2-16-35b931e6"
+      },
+      {
+        "lessonId": "b2-16",
+        "level": "B2",
+        "lemmaCandidate": "Meinung",
+        "normalizedLemma": "meinung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "surface": "Um eine Entschuldigung für den Kursleiter und seine Meinung",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-16-a7c3e26c"
       },
       {
         "lessonId": "b2-16",
@@ -160740,6 +161482,25 @@
           }
         ],
         "id": "lex-n-b2-16-3dc0a1ce"
+      },
+      {
+        "lessonId": "b2-16",
+        "level": "B2",
+        "lemmaCandidate": "Person",
+        "normalizedLemma": "person",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "Durch die Absicht der schreibenden Person",
+            "surface": "Durch die Absicht der schreibenden Person",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-16-9340d0e4"
       },
       {
         "lessonId": "b2-16",
@@ -161048,44 +161809,6 @@
           }
         ],
         "id": "lex-n-b2-16-746b127b"
-      },
-      {
-        "lessonId": "b2-16",
-        "level": "B2",
-        "lemmaCandidate": "Satzes",
-        "normalizedLemma": "satzes",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[1]",
-            "stage": "reading",
-            "text": "Durch die Länge des Satzes",
-            "surface": "Durch die Länge des Satzes",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-16-6dc8d1eb"
-      },
-      {
-        "lessonId": "b2-16",
-        "level": "B2",
-        "lemmaCandidate": "Schriftgröße",
-        "normalizedLemma": "schriftgröße",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[3]",
-            "stage": "listening",
-            "text": "Um die Schriftgröße der Mappe",
-            "surface": "Um die Schriftgröße der Mappe",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-16-ef291ccf"
       },
       {
         "lessonId": "b2-16",
@@ -161738,8 +162461,8 @@
           {
             "path": "reading.questions[1].options[3]",
             "stage": "reading",
-            "text": "Sie schwächt den Vorwurf ab.",
-            "surface": "Sie schwächt den Vorwurf ab.",
+            "text": "Sie schwächt den Vorwurf ab und bleibt prüfbar.",
+            "surface": "Sie schwächt den Vorwurf ab und bleibt prüfbar.",
             "strength": "context"
           }
         ],
@@ -165569,8 +166292,8 @@
           {
             "path": "listening.questions[2].options[0]",
             "stage": "listening",
-            "text": "Er ist unhöflich, weil er den Adressaten ausschließt.",
-            "surface": "Er ist unhöflich, weil er den Adressaten ausschließt.",
+            "text": "Er ist unhöflich, weil er den Adressaten ausschließt und kein Datum nennt.",
+            "surface": "Er ist unhöflich, weil er den Adressaten ausschließt und kein Datum nennt.",
             "strength": "context"
           }
         ],
@@ -165588,8 +166311,8 @@
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
-            "text": "Die eine nennt ein registriertes Eingehen, die andere einen abgeschlossenen Akt.",
-            "surface": "Die eine nennt ein registriertes Eingehen, die andere einen abgeschlossenen Akt.",
+            "text": "Die eine nennt nur eine Registrierung, die andere einen abgeschlossenen Akt.",
+            "surface": "Die eine nennt nur eine Registrierung, die andere einen abgeschlossenen Akt.",
             "strength": "context"
           },
           {
@@ -165912,8 +166635,8 @@
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
-            "text": "Weil die Behörde verpflichtet ist, höflich zu schreiben.",
-            "surface": "Weil die Behörde verpflichtet ist, höflich zu schreiben.",
+            "text": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
+            "surface": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
             "strength": "context"
           },
           {
@@ -166085,6 +166808,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Er ist unhöflich, weil er den Adressaten ausschließt und kein Datum nennt.",
+            "surface": "Er ist unhöflich, weil er den Adressaten ausschließt und kein Datum nennt.",
+            "strength": "context"
+          },
+          {
             "path": "listening.questions[2].options[1]",
             "stage": "listening",
             "text": "Der Satz bleibt höflich, weil er ohne Handelnden auskommt und kein Datum verspricht.",
@@ -166194,25 +166924,6 @@
       {
         "lessonId": "b2-18",
         "level": "B2",
-        "lemmaCandidate": "Eingehen",
-        "normalizedLemma": "eingehen",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[0]",
-            "stage": "reading",
-            "text": "Die eine nennt ein registriertes Eingehen, die andere einen abgeschlossenen Akt.",
-            "surface": "Die eine nennt ein registriertes Eingehen, die andere einen abgeschlossenen Akt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-18-be5988a8"
-      },
-      {
-        "lessonId": "b2-18",
-        "level": "B2",
         "lemmaCandidate": "Entscheidung",
         "normalizedLemma": "entscheidung",
         "role": "anchor",
@@ -166310,13 +167021,6 @@
             "text": "eine Entscheidung treffen",
             "surface": "eine Entscheidung treffen",
             "strength": "target"
-          },
-          {
-            "path": "reading.questions[1].options[2]",
-            "stage": "reading",
-            "text": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
-            "surface": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
-            "strength": "context"
           },
           {
             "path": "reading.textDe",
@@ -166424,13 +167128,6 @@
             "stage": "vocabulary",
             "surface": "die Etappe",
             "strength": "registry"
-          },
-          {
-            "path": "reading.questions[2].options[0]",
-            "stage": "reading",
-            "text": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "surface": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "strength": "context"
           },
           {
             "path": "reading.textDe",
@@ -166651,27 +167348,6 @@
       {
         "lessonId": "b2-18",
         "level": "B2",
-        "lemmaCandidate": "Fügungen",
-        "normalizedLemma": "fügungen",
-        "role": "anchor",
-        "status": "covered",
-        "anchorIds": [
-          "b2-18-noun-21"
-        ],
-        "sources": [
-          {
-            "path": "reading.questions[2].options[2]",
-            "stage": "reading",
-            "text": "Weil Studierende keine Fügungen benutzen dürfen.",
-            "surface": "Weil Studierende keine Fügungen benutzen dürfen.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-18-df7c25b5"
-      },
-      {
-        "lessonId": "b2-18",
-        "level": "B2",
         "lemmaCandidate": "Füllstoff",
         "normalizedLemma": "füllstoff",
         "role": "anchor",
@@ -166692,6 +167368,13 @@
             "stage": "vocabulary",
             "surface": "der Füllstoff",
             "strength": "registry"
+          },
+          {
+            "path": "reading.questions[2].options[0]",
+            "stage": "reading",
+            "text": "Weil zwei Nennungen amtlich wirken, die dritte aber nur Füllstoff ohne neue Etappe ist.",
+            "surface": "Weil zwei Nennungen amtlich wirken, die dritte aber nur Füllstoff ohne neue Etappe ist.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-18-57fb14bf"
@@ -166738,6 +167421,13 @@
             "stage": "vocabulary",
             "surface": "das Funktionsverbgefüge",
             "strength": "registry"
+          },
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "surface": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-18-9739d867"
@@ -166862,8 +167552,8 @@
           {
             "path": "listening.questions[0].options[2]",
             "stage": "listening",
-            "text": "Um die Höflichkeit von Behördenschreiben allgemein.",
-            "surface": "Um die Höflichkeit von Behördenschreiben allgemein.",
+            "text": "Um die Höflichkeit von Behördenschreiben gegenüber Bürgern im Allgemeinen.",
+            "surface": "Um die Höflichkeit von Behördenschreiben gegenüber Bürgern im Allgemeinen.",
             "strength": "context"
           },
           {
@@ -167079,13 +167769,6 @@
             "text": "Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antrag bleibe dadurch ein Ding, das man nummerieren könne; ohne das Nomen wisse niemand, wie viele Anträge im System liegen. Frau Kessler stimmt zu, streicht aber zwei andere Sätze: „Wir nehmen eine Prüfung der Fristen vor“ und „Wir treffen eine Entscheidung über den Widerspruch.“ Beide sagen, so Ben, genau das, was „wir prüfen die Fristen“ und „wir entscheiden über den Widerspruch“ in der Hälfte der Wörter sagen. Dann markieren sie gemeinsam drei Stellen, an denen die Fügung eine Stufe sichtbar macht: Die Unterlagen werden zur Verfügung gestellt, der Hinweis wird zur Kenntnis genommen, und das Verfahren wird bis Freitag zum Abschluss gebracht. Ben notiert sich eine Regel: zwei Fügungen pro Absatz, nie drei. Und weil er beim Lesen merkt, dass „Berücksichtigung finden“ ohne Handelnden auskommt, schreibt er dazu: „Ihr Hinweis findet Berücksichtigung“ — höflich, aber ohne Versprechen, wer wann arbeitet. Frau Kessler lobt genau diesen Satz, weil er kein Datum verspricht, wo noch keines feststeht.",
             "surface": "Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antrag bleibe dadurch ein Ding, das man nummerieren könne; ohne das Nomen wisse niemand, wie viele Anträge im System liegen. Frau Kessler stimmt zu, streicht aber zwei andere Sätze: „Wir nehmen eine Prüfung der Fristen vor“ und „Wir treffen eine Entscheidung über den Widerspruch.“ Beide sagen, so Ben, genau das, was „wir prüfen die Fristen“ und „wir entscheiden über den Widerspruch“ in der Hälfte der Wörter sagen. Dann markieren sie gemeinsam drei Stellen, an denen die Fügung eine Stufe sichtbar macht: Die Unterlagen werden zur Verfügung gestellt, der Hinweis wird zur Kenntnis genommen, und das Verfahren wird bis Freitag zum Abschluss gebracht. Ben notiert sich eine Regel: zwei Fügungen pro Absatz, nie drei. Und weil er beim Lesen merkt, dass „Berücksichtigung finden“ ohne Handelnden auskommt, schreibt er dazu: „Ihr Hinweis findet Berücksichtigung“ — höflich, aber ohne Versprechen, wer wann arbeitet. Frau Kessler lobt genau diesen Satz, weil er kein Datum verspricht, wo noch keines feststeht.",
             "strength": "context"
-          },
-          {
-            "path": "reading.questions[1].options[2]",
-            "stage": "reading",
-            "text": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
-            "surface": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
-            "strength": "context"
           }
         ],
         "id": "lex-n-b2-18-528c0f2c"
@@ -167177,6 +167860,13 @@
             "stage": "vocabulary",
             "surface": "das Protokoll",
             "strength": "registry"
+          },
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "surface": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "strength": "context"
           },
           {
             "path": "reading.textDe",
@@ -167288,6 +167978,25 @@
           }
         ],
         "id": "lex-n-b2-18-13114b1a"
+      },
+      {
+        "lessonId": "b2-18",
+        "level": "B2",
+        "lemmaCandidate": "Registrierung",
+        "normalizedLemma": "registrierung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Die eine nennt nur eine Registrierung, die andere einen abgeschlossenen Akt.",
+            "surface": "Die eine nennt nur eine Registrierung, die andere einen abgeschlossenen Akt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-18-ac15e135"
       },
       {
         "lessonId": "b2-18",
@@ -167660,25 +168369,6 @@
       {
         "lessonId": "b2-18",
         "level": "B2",
-        "lemmaCandidate": "Text",
-        "normalizedLemma": "text",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[2].options[0]",
-            "stage": "reading",
-            "text": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "surface": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-18-a9eafd28"
-      },
-      {
-        "lessonId": "b2-18",
-        "level": "B2",
         "lemmaCandidate": "Themas",
         "normalizedLemma": "themas",
         "role": "context-only",
@@ -167978,8 +168668,8 @@
           {
             "path": "reading.questions[1].options[2]",
             "stage": "reading",
-            "text": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
-            "surface": "Weil das Nomen eine wissentliche Entscheidung markiert, während „nicht beachtet“ auch ein Versehen zulässt.",
+            "text": "Weil es bewusstes Übergehen markiert; „nicht beachtet“ ließe ein Versehen offen.",
+            "surface": "Weil es bewusstes Übergehen markiert; „nicht beachtet“ ließe ein Versehen offen.",
             "strength": "context"
           },
           {
@@ -172979,6 +173669,13 @@
             "strength": "registry"
           },
           {
+            "path": "listening.questions[2].options[1]",
+            "stage": "listening",
+            "text": "Steht nach „desto“ zuerst der Komparativ und dann das Verb?",
+            "surface": "Steht nach „desto“ zuerst der Komparativ und dann das Verb?",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Kurz vor der Prüfungssimulation. Herr Aziz: Ben, lies deine Folie vor. Ich höre zu. Ben liest: Je früher die Anmeldung öffnet, desto kürzer ist die Schlange vor der Beratungsstelle. Nicht nur die Zeit fehlt, sondern auch die Übersicht, welche Unterlagen gebraucht werden. Herr Aziz: Halte inne. Deine erste Bindung ist sauber: nach desto folgt der Komparativ, dann das Verb. An welcher Stelle wackelt es? Ben: Vermutlich bei der zweiten. Ich habe zwei Punkte genannt, aber der zweite fühlt sich schwächer an. Herr Aziz: Genau. Nach sondern auch steht die neue Information, deshalb braucht sie ein eigenes Verb und etwas Konkretes. Nenne ein Beispiel, keine Kategorie. Ben: Also: Nicht nur die Zeit fehlt, sondern auch die Checkliste mit den sechs Dokumenten. Herr Aziz: Gut. Und jetzt die Frage des Plurals. Ben: Sowohl die Erstberatung als auch die Nachlese sind kostenfrei, weil zwei Glieder zusammen das Subjekt bilden. Herr Aziz: Richtig. Ein letzter Punkt für den offiziellen Brief. Ben: Ich streiche die Partikeln, weil sie den Ton weicher machen als die Frist. Herr Aziz: Ja. Und du verwendest nicht in jedem Satz dieselbe Klammer. Zwei Bindungen in einer Folie zeigen die Relation, sechs zeigen die Übung. Prüfe deinen Text mit einer einzigen Frage: Trägt diese Klammer Information, oder wiederholt sie nur die Konjunktion?",
@@ -174047,8 +174744,8 @@
           {
             "path": "listening.questions[1].options[3]",
             "stage": "listening",
-            "text": "Weil „als auch“ den Singular verbietet.",
-            "surface": "Weil „als auch“ den Singular verbietet.",
+            "text": "Weil „als auch“ grundsätzlich den Singular verbietet.",
+            "surface": "Weil „als auch“ grundsätzlich den Singular verbietet.",
             "strength": "context"
           }
         ],
@@ -174333,8 +175030,8 @@
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
-            "text": "Weil der zweite Teil mit dem Verb beginnt.",
-            "surface": "Weil der zweite Teil mit dem Verb beginnt.",
+            "text": "Weil der zweite Teil nach „desto“ direkt mit dem Verb beginnt.",
+            "surface": "Weil der zweite Teil nach „desto“ direkt mit dem Verb beginnt.",
             "strength": "context"
           }
         ],
@@ -174652,8 +175349,8 @@
           {
             "path": "listening.questions[0].options[0]",
             "stage": "listening",
-            "text": "Ein Komparativ vor dem Verb.",
-            "surface": "Ein Komparativ vor dem Verb.",
+            "text": "Ein Komparativ direkt nach „desto“ vor dem Verb.",
+            "surface": "Ein Komparativ direkt nach „desto“ vor dem Verb.",
             "strength": "context"
           },
           {
@@ -174666,8 +175363,8 @@
           {
             "path": "listening.questions[2].options[1]",
             "stage": "listening",
-            "text": "Steht das Verb an zweiter Stelle?",
-            "surface": "Steht das Verb an zweiter Stelle?",
+            "text": "Steht nach „desto“ zuerst der Komparativ und dann das Verb?",
+            "surface": "Steht nach „desto“ zuerst der Komparativ und dann das Verb?",
             "strength": "context"
           },
           {
@@ -174680,8 +175377,8 @@
           {
             "path": "reading.questions[1].options[0]",
             "stage": "reading",
-            "text": "Weil der zweite Teil mit dem Verb beginnt.",
-            "surface": "Weil der zweite Teil mit dem Verb beginnt.",
+            "text": "Weil der zweite Teil nach „desto“ direkt mit dem Verb beginnt.",
+            "surface": "Weil der zweite Teil nach „desto“ direkt mit dem Verb beginnt.",
             "strength": "context"
           },
           {
@@ -176341,6 +177038,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Der Kandidat wollte die Wiederholung der Prüfung nicht.",
+            "surface": "Der Kandidat wollte die Wiederholung der Prüfung nicht.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Zwei Mitarbeitende des Prüfungsbüros besprechen eine Rückmeldung, die per E-Mail eingegangen ist. Frau Kessler sagt, ein Kandidat habe beanstandet, er sei während des Hörverstehens durch ein Geräusch hinter der Tür abgelenkt worden. Herr Brand lacht nicht, sondern fragt, ob dazu ein Vermerk existiere. Sie bejaht knapp. Der Vermerk, den die Aufsicht geschrieben habe, nenne zwar den Vorfall, nicht aber die Uhrzeit; deshalb sei die Aussage kaum zu überprüfen. Der Ausschuss habe entschieden, die Aufnahme prüfen zu lassen, bevor über den Antrag entschieden werde. Frau Kessler hält das für richtig, betont aber, die Prüfung sei nur zulässig, wenn die betroffene Person sie beantrage. Außerdem dürfe im Protokoll keine Wertung stehen, die niemand ausgesprochen habe. Herr Brand notiert den Satz wörtlich und kündigt an, er werde die Vorlage bis Freitag überarbeiten, damit die Form der berichteten Rede im ganzen Haus gleich sei. Am Ende merken beide an, die Presse habe von einem manipulierten Ergebnis gesprochen; keiner von beiden habe das so gehört. Genau das sei das Problem, sagt Kessler: Die Form habe gestimmt, die Quelle nicht.",
@@ -177211,8 +177915,8 @@
           {
             "path": "listening.questions[2].options[2]",
             "stage": "listening",
-            "text": "Der Kandidat wollte die Wiederholung nicht.",
-            "surface": "Der Kandidat wollte die Wiederholung nicht.",
+            "text": "Der Kandidat wollte die Wiederholung der Prüfung nicht.",
+            "surface": "Der Kandidat wollte die Wiederholung der Prüfung nicht.",
             "strength": "context"
           },
           {
@@ -178989,8 +179693,8 @@
           {
             "path": "reading.questions[0].options[0]",
             "stage": "reading",
-            "text": "Weil das Prüfungsamt falsche Formen benutzt hatte.",
-            "surface": "Weil das Prüfungsamt falsche Formen benutzt hatte.",
+            "text": "Weil das Prüfungsamt grammatisch falsche Formen benutzt hatte.",
+            "surface": "Weil das Prüfungsamt grammatisch falsche Formen benutzt hatte.",
             "strength": "context"
           }
         ],
@@ -179171,13 +179875,6 @@
             "stage": "reading",
             "text": "Warum verstand niemand den ersten Satz?",
             "surface": "Warum verstand niemand den ersten Satz?",
-            "strength": "context"
-          },
-          {
-            "path": "reading.questions[2].options[3]",
-            "stage": "reading",
-            "text": "Bescheide dürfen nur einen Satz haben.",
-            "surface": "Bescheide dürfen nur einen Satz haben.",
             "strength": "context"
           },
           {
@@ -181123,25 +181820,6 @@
       {
         "lessonId": "b2-23",
         "level": "B2",
-        "lemmaCandidate": "Geburt",
-        "normalizedLemma": "geburt",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "listening.questions[0].options[0]",
-            "stage": "listening",
-            "text": "Kontonummer und Datum der Geburt.",
-            "surface": "Kontonummer und Datum der Geburt.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-23-3353ce26"
-      },
-      {
-        "lessonId": "b2-23",
-        "level": "B2",
         "lemmaCandidate": "Genehmigung",
         "normalizedLemma": "genehmigung",
         "role": "context-only",
@@ -182511,6 +183189,25 @@
       {
         "lessonId": "b2-23",
         "level": "B2",
+        "lemmaCandidate": "Überweisung",
+        "normalizedLemma": "überweisung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[0]",
+            "stage": "listening",
+            "text": "Kontonummer und Datum der Überweisung.",
+            "surface": "Kontonummer und Datum der Überweisung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-23-89df92c8"
+      },
+      {
+        "lessonId": "b2-23",
+        "level": "B2",
         "lemmaCandidate": "Verhältnis",
         "normalizedLemma": "verhältnis",
         "role": "authored-target",
@@ -183471,6 +184168,13 @@
             "text": "Aus einer Bitte wurde ein Befehl.",
             "surface": "Aus einer Bitte wurde ein Befehl.",
             "strength": "context"
+          },
+          {
+            "path": "reading.questions[0].options[3]",
+            "stage": "reading",
+            "text": "Aus der Bitte um Verlängerung wurde eine Nachforderung.",
+            "surface": "Aus der Bitte um Verlängerung wurde eine Nachforderung.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-24-9af0199e"
@@ -183713,13 +184417,6 @@
             "stage": "pronunciation",
             "text": "…, dass die Frist endet.",
             "surface": "…, dass die Frist endet.",
-            "strength": "context"
-          },
-          {
-            "path": "reading.questions[0].options[3]",
-            "stage": "reading",
-            "text": "Aus der Frist wurde eine Nachforderung.",
-            "surface": "Aus der Frist wurde eine Nachforderung.",
             "strength": "context"
           },
           {
@@ -184179,6 +184876,13 @@
             "strength": "context"
           },
           {
+            "path": "listening.questions[1].options[3]",
+            "stage": "listening",
+            "text": "Es macht das Komma nur empfohlen.",
+            "surface": "Es macht das Komma nur empfohlen.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Die Referentin diktiert ihrer Kollegin eine Korrektur des Briefs. Sie spricht langsam und nennt jedes Satzzeichen: Komma, Punkt und Semikolon. Frau Brandt schreibt mit und fragt nach, ob vor „und“ ein Komma gehöre. Die Referentin verneint für zwei Hauptsätze, bejaht es aber, weil zwischen den beiden ein Nebensatz stehe, und dieser Nebensatz müsse mit der zweiten Klammer geschlossen werden. Dann geht es an die Infinitivgruppe: „Wir bitten darum, die Nachforderung zu erlassen.“ Sie betont das Wort „darum“ und erklärt, ohne dieses Hinweiswort sei das Komma empfohlen, aber nicht erzwungen — im Haus werde es dennoch durchgehend gesetzt, damit die Briefe einheitlich wirken. Als Nächstes steht der lange Satz mit zwei Nebensätzen an; hier, sagt die Referentin, sei das Semikolon die bessere Wahl, weil die beiden Hälften gleich wichtig seien. Zum Schluss liest sie die drei Prüffragen für jede Ausgangspost vor: Wie viele Klammern sind offen? Trennt ein Komma Subjekt und Prädikat? Steht vor einem erweiterten Infinitiv mit um, ohne oder statt ein Komma? Frau Brandt geht jede Frage am Text durch und fügt hinzu, dass der Text nach der Korrektur nicht schöner, aber eindeutig sei.",
@@ -184395,8 +185099,8 @@
           {
             "path": "reading.questions[0].options[3]",
             "stage": "reading",
-            "text": "Aus der Frist wurde eine Nachforderung.",
-            "surface": "Aus der Frist wurde eine Nachforderung.",
+            "text": "Aus der Bitte um Verlängerung wurde eine Nachforderung.",
+            "surface": "Aus der Bitte um Verlängerung wurde eine Nachforderung.",
             "strength": "context"
           },
           {
@@ -184629,13 +185333,6 @@
             "stage": "vocabulary",
             "text": "Ohne rechte Klammer wird der Satz missverstanden.",
             "surface": "Ohne rechte Klammer wird der Satz missverstanden.",
-            "strength": "context"
-          },
-          {
-            "path": "listening.questions[1].options[3]",
-            "stage": "listening",
-            "text": "Es kürzt den Satz.",
-            "surface": "Es kürzt den Satz.",
             "strength": "context"
           },
           {
@@ -187912,6 +188609,29 @@
       {
         "lessonId": "a2-03",
         "level": "A2",
+        "infinitiveCandidate": "arbeiten",
+        "normalizedVerb": "arbeiten",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[1]",
+            "stage": "listening",
+            "text": "Sie arbeiten zusammen in Wien.",
+            "surface": "Sie arbeiten zusammen in Wien.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-03-8254af63"
+      },
+      {
+        "lessonId": "a2-03",
+        "level": "A2",
         "infinitiveCandidate": "begonnen",
         "normalizedVerb": "begonnen",
         "preposition": "auf",
@@ -188055,6 +188775,29 @@
           }
         ],
         "id": "lex-v-a2-03-b4df0cd2"
+      },
+      {
+        "lessonId": "a2-03",
+        "level": "A2",
+        "infinitiveCandidate": "zusammen",
+        "normalizedVerb": "zusammen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[1]",
+            "stage": "listening",
+            "text": "Sie arbeiten zusammen in Wien.",
+            "surface": "Sie arbeiten zusammen in Wien.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-03-04c97b53"
       },
       {
         "lessonId": "a2-04",
@@ -188710,6 +189453,29 @@
       {
         "lessonId": "a2-06",
         "level": "A2",
+        "infinitiveCandidate": "jemanden",
+        "normalizedVerb": "jemanden",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[1]",
+            "stage": "reading",
+            "text": "Sie bezahlt jemanden für das Putzen.",
+            "surface": "Sie bezahlt jemanden für das Putzen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-06-e4cfc267"
+      },
+      {
+        "lessonId": "a2-06",
+        "level": "A2",
         "infinitiveCandidate": "kommen",
         "normalizedVerb": "kommen",
         "preposition": "zu",
@@ -188817,6 +189583,13 @@
             "stage": "vocabulary",
             "text": "Könnten wir kurz über die Küche sprechen?",
             "surface": "Könnten wir kurz über die Küche sprechen?",
+            "strength": "context"
+          },
+          {
+            "path": "reading.questions[0].options[1]",
+            "stage": "reading",
+            "text": "Lea wollte über die Küche nicht sprechen.",
+            "surface": "Lea wollte über die Küche nicht sprechen.",
             "strength": "context"
           }
         ],
@@ -189719,6 +190492,29 @@
           }
         ],
         "id": "lex-v-a2-10-ed3564ed"
+      },
+      {
+        "lessonId": "a2-11",
+        "level": "A2",
+        "infinitiveCandidate": "billigsten",
+        "normalizedVerb": "billigsten",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[1]",
+            "stage": "reading",
+            "text": "Sie ist für Nora und ihre Freundin allein am billigsten.",
+            "surface": "Sie ist für Nora und ihre Freundin allein am billigsten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-11-94884958"
       },
       {
         "lessonId": "a2-11",
@@ -192370,6 +193166,13 @@
             "strength": "context"
           },
           {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Alle Gäste bringen dieses Mal Essen mit.",
+            "surface": "Alle Gäste bringen dieses Mal Essen mit.",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Leila plant eine kleine Geburtstagsfeier für zwölf Personen. In der Einladung nennt sie Datum, Uhrzeit, Adresse und bittet bis Mittwoch um eine Antwort. Sie fragt außerdem nach Wünschen beim Essen. Zwei Gäste essen vegetarisch, eine Person hat eine Nussallergie, und mehrere Gäste möchten alkoholfreie Getränke. Leila erstellt deshalb eine Liste, ohne persönliche Gesundheitsdaten öffentlich zu teilen. Wenn in ihrer Familie gefeiert wird, bringen viele Gäste etwas Kleines mit. Trotzdem schreibt sie, dass niemand etwas mitbringen muss. Als Leila im letzten Jahr spontan gefeiert hat, war zu wenig Essen da. Dieses Mal plant sie Mengen und Sitzplätze genauer. Am Abend beginnt die Feier pünktlich, und die Gäste fühlen sich willkommen, weil ihre Bedürfnisse berücksichtigt wurden.",
@@ -192525,6 +193328,29 @@
           }
         ],
         "id": "lex-v-a2-22-ae8435bb"
+      },
+      {
+        "lessonId": "a2-22",
+        "level": "A2",
+        "infinitiveCandidate": "kommen",
+        "normalizedVerb": "kommen",
+        "preposition": "um",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Ob er um 18:30 Uhr kommen kann",
+            "surface": "Ob er um 18:30 Uhr kommen kann",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-a2-22-afa24c62"
       },
       {
         "lessonId": "a2-22",
@@ -193563,6 +194389,29 @@
           }
         ],
         "id": "lex-v-b1-02-b3a215fd"
+      },
+      {
+        "lessonId": "b1-02",
+        "level": "B1",
+        "infinitiveCandidate": "zurückzubekommen",
+        "normalizedVerb": "zurückzubekommen",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[3]",
+            "stage": "reading",
+            "text": "Um nach drei Monaten die alte Stelle zurückzubekommen.",
+            "surface": "Um nach drei Monaten die alte Stelle zurückzubekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-02-2ad8fca5"
       },
       {
         "lessonId": "b1-02",
@@ -194805,6 +195654,29 @@
           }
         ],
         "id": "lex-v-b1-06-5138f4f0"
+      },
+      {
+        "lessonId": "b1-06",
+        "level": "B1",
+        "infinitiveCandidate": "verteilen",
+        "normalizedVerb": "verteilen",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Aufgaben erst nach dem Start verteilen",
+            "surface": "Aufgaben erst nach dem Start verteilen",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-06-6c76d055"
       },
       {
         "lessonId": "b1-06",
@@ -196240,6 +197112,29 @@
           }
         ],
         "id": "lex-v-b1-10-a71472f1"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "infinitiveCandidate": "zweiten",
+        "normalizedVerb": "zweiten",
+        "preposition": "um",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Der Kaufpreis war um 80 Euro höher als beim zweiten.",
+            "surface": "Der Kaufpreis war um 80 Euro höher als beim zweiten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-10-6da42070"
       },
       {
         "lessonId": "b1-11",
@@ -199330,6 +200225,29 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "infinitiveCandidate": "verschoben",
+        "normalizedVerb": "verschoben",
+        "preposition": "aus",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Die Präsentation fiel aus, und der Termin wurde verschoben.",
+            "surface": "Die Präsentation fiel aus, und der Termin wurde verschoben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-19-28f5b5bb"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "infinitiveCandidate": "verstanden",
         "normalizedVerb": "verstanden",
         "preposition": "zu",
@@ -200183,6 +201101,29 @@
           }
         ],
         "id": "lex-v-b1-21-1d799a58"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "infinitiveCandidate": "schreiben",
+        "normalizedVerb": "schreiben",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[2]",
+            "stage": "listening",
+            "text": "Eine neue Einladung mit Link schreiben",
+            "surface": "Eine neue Einladung mit Link schreiben",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-c8a5d47b"
       },
       {
         "lessonId": "b1-21",
@@ -203765,6 +204706,29 @@
       {
         "lessonId": "b2-04",
         "level": "B2",
+        "infinitiveCandidate": "enthalten",
+        "normalizedVerb": "enthalten",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[1].options[3]",
+            "stage": "listening",
+            "text": "Die drei Kennzahlen mit Priorität enthalten",
+            "surface": "Die drei Kennzahlen mit Priorität enthalten",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-04-ef87d9a3"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
         "infinitiveCandidate": "garantieren",
         "normalizedVerb": "garantieren",
         "preposition": "bei",
@@ -204037,6 +205001,29 @@
           }
         ],
         "id": "lex-v-b2-04-3d06750e"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "infinitiveCandidate": "verschoben",
+        "normalizedVerb": "verschoben",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[3]",
+            "stage": "listening",
+            "text": "Der ganze Bericht wird auf Dienstag verschoben.",
+            "surface": "Der ganze Bericht wird auf Dienstag verschoben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-04-75d5fd7f"
       },
       {
         "lessonId": "b2-04",
@@ -204918,29 +205905,6 @@
       {
         "lessonId": "b2-06",
         "level": "B2",
-        "infinitiveCandidate": "erhalten",
-        "normalizedVerb": "erhalten",
-        "preposition": "aus",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "ambiguous"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[0].options[1]",
-            "stage": "reading",
-            "text": "Er blieb erhalten und wurde als Informationsgewinn aus der Entfernung definiert.",
-            "surface": "Er blieb erhalten und wurde als Informationsgewinn aus der Entfernung definiert.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-06-9e68a82a"
-      },
-      {
-        "lessonId": "b2-06",
-        "level": "B2",
         "infinitiveCandidate": "sich erwärmen",
         "normalizedVerb": "erwärmen",
         "preposition": "mit",
@@ -205076,6 +206040,29 @@
           }
         ],
         "id": "lex-v-b2-06-17676b26"
+      },
+      {
+        "lessonId": "b2-06",
+        "level": "B2",
+        "infinitiveCandidate": "lieferten",
+        "normalizedVerb": "lieferten",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "surface": "Weil die Satelliten an den heißen Tagen keine Bilder lieferten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-06-65ff94b3"
       },
       {
         "lessonId": "b2-06",
@@ -207250,8 +208237,8 @@
           {
             "path": "reading.questions[2].options[1]",
             "stage": "reading",
-            "text": "Interpretationen mussten an beobachtbaren Elementen des Werks begründet werden.",
-            "surface": "Interpretationen mussten an beobachtbaren Elementen des Werks begründet werden.",
+            "text": "Deutungen mussten an beobachtbaren Elementen des Werks begründet werden.",
+            "surface": "Deutungen mussten an beobachtbaren Elementen des Werks begründet werden.",
             "strength": "context"
           }
         ],
@@ -211883,6 +212870,29 @@
         "id": "lex-v-b2-16-d061ac3c"
       },
       {
+        "lessonId": "b2-16",
+        "level": "B2",
+        "infinitiveCandidate": "wirken",
+        "normalizedVerb": "wirken",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[2].options[0]",
+            "stage": "listening",
+            "text": "Weil Partikeln in amtlichen Texten umgangssprachlich wirken",
+            "surface": "Weil Partikeln in amtlichen Texten umgangssprachlich wirken",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-16-cd8a3a58"
+      },
+      {
         "lessonId": "b2-17",
         "level": "B2",
         "infinitiveCandidate": "sich auftauchen",
@@ -212863,6 +213873,29 @@
       {
         "lessonId": "b2-18",
         "level": "B2",
+        "infinitiveCandidate": "benutzen",
+        "normalizedVerb": "benutzen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[2].options[2]",
+            "stage": "reading",
+            "text": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "surface": "Weil Studierende in einem Protokoll grundsätzlich keine Funktionsverbgefüge benutzen dürfen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-18-5142ca59"
+      },
+      {
+        "lessonId": "b2-18",
+        "level": "B2",
         "infinitiveCandidate": "bereitstellen",
         "normalizedVerb": "bereitstellen",
         "preposition": "über",
@@ -212882,29 +213915,6 @@
           }
         ],
         "id": "lex-v-b2-18-36acf194"
-      },
-      {
-        "lessonId": "b2-18",
-        "level": "B2",
-        "infinitiveCandidate": "bringen",
-        "normalizedVerb": "bringen",
-        "preposition": "mit",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[2].options[0]",
-            "stage": "reading",
-            "text": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "surface": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-18-2e637f74"
       },
       {
         "lessonId": "b2-18",
@@ -213783,6 +214793,29 @@
       {
         "lessonId": "b2-18",
         "level": "B2",
+        "infinitiveCandidate": "schreiben",
+        "normalizedVerb": "schreiben",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[1].options[0]",
+            "stage": "reading",
+            "text": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
+            "surface": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-18-779d4d8d"
+      },
+      {
+        "lessonId": "b2-18",
+        "level": "B2",
         "infinitiveCandidate": "stellen",
         "normalizedVerb": "stellen",
         "preposition": "auf",
@@ -214033,29 +215066,6 @@
           }
         ],
         "id": "lex-v-b2-18-eb8bc441"
-      },
-      {
-        "lessonId": "b2-18",
-        "level": "B2",
-        "infinitiveCandidate": "wirken",
-        "normalizedVerb": "wirken",
-        "preposition": "mit",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "accusative"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[2].options[0]",
-            "stage": "reading",
-            "text": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "surface": "Weil zwei Nennungen amtlich wirken und die dritte den Text mit Wörtern bezahlt, die keine Etappe bringen.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-18-a0f09d65"
       },
       {
         "lessonId": "b2-18",
@@ -217180,6 +218190,52 @@
       {
         "lessonId": "b2-24",
         "level": "B2",
+        "infinitiveCandidate": "weggelassen",
+        "normalizedVerb": "weggelassen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Weil es vor „und“ in Briefen nie weggelassen werden darf.",
+            "surface": "Weil es vor „und“ in Briefen nie weggelassen werden darf.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-24-55cac170"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
+        "infinitiveCandidate": "weggelassen",
+        "normalizedVerb": "weggelassen",
+        "preposition": "vor",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "listening.questions[0].options[3]",
+            "stage": "listening",
+            "text": "Weil es vor „und“ in Briefen nie weggelassen werden darf.",
+            "surface": "Weil es vor „und“ in Briefen nie weggelassen werden darf.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-24-beb4a616"
+      },
+      {
+        "lessonId": "b2-24",
+        "level": "B2",
         "infinitiveCandidate": "zurückzustellen",
         "normalizedVerb": "zurückzustellen",
         "preposition": "zu",
@@ -217333,5 +218389,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "cecc6e6508bfc3e73f87a939c9b14fe8c872249f26e00a57e99f6a2eef1ddf42"
+  "contentSha256": "cc04cbb13b27ff225e2698cfe27ef419077c8a2acbb0565ba4e7bb8f33bc222f"
 }

@@ -567,7 +567,7 @@ if (!/^[0-9a-f]{12}$/.test(offlineFp)) fail("offline size manifest carries no 12
   }
 }
 
-if (cacheName !== "dwnb-full-pack-v244" || stagingCacheName !== "dwnb-full-pack-staging-v243") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
+if (cacheName !== "dwnb-full-pack-v245" || stagingCacheName !== "dwnb-full-pack-staging-v244") fail(`unexpected current caches ${cacheName} / ${stagingCacheName}`);
 // عقد الكاش في e2e: يقبل الاسم الحرفيَّ أو القراءةَ من sw.js. النسخةُ الحرفيَّةُ تخلَّفت فعليًّا
 // عند v155 بعد ترقية الخدمة إلى v156، ففتح الاختبارُ كاشًا فارغًا وفشل بلا سبب حقيقي (2026-09-22).
 // القراءةُ من المصدر أقوى: لا يمكن أن تتخلَّف أصلًا.
@@ -737,8 +737,8 @@ for(const text of["P2-57","Light","Balanced","Intensive","never activate automat
 if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planning intensity state drifted");
 const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 1402 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
-if (lexicalGaps?.nounSummary?.totalCandidates !== 4965 || lexicalGaps?.nounSummary?.covered !== 1503 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3373) fail("noun target-gap counters drifted");
-if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1288 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1153 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
+if (lexicalGaps?.nounSummary?.totalCandidates !== 4984 || lexicalGaps?.nounSummary?.covered !== 1503 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3392) fail("noun target-gap counters drifted");
+if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1303 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1168 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
 const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");
 const lexicalFrameQualityWorklistLines = lexicalFrameQualityWorklist.trimEnd().split(/\r?\n/u);
@@ -784,7 +784,7 @@ for (const text of ["لا يناسبني الآن","data-load-offer-policy","ن�
 for (const text of ["today-session-offline-readiness-v1","buildTodayOfflineRequirements","serviceWorker.controller","DWNB_TODAY_READINESS_CHECK"]) requireText(todayOfflineReadiness,text,"Today Offline requirement and controlling-worker contract");
 for (const text of ["data-offline-readiness-policy","لن ندّعي الجاهزية","افتح تنزيل الحزم يدويًا","لا تنزيل تلقائي"]) requireText(todayOfflineReadinessView,text,"Today Offline readiness UI");
 for (const text of ["DWNB_TODAY_READINESS_CHECK","checkTodayReadiness","caches.open(SHELL_CACHE)","caches.open(PACK_CACHE)"]) requireText(worker,text,"Today Offline cache verification worker");
-for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v244"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
+for (const text of ["exact lesson audio","never auto-downloads","dwnb-full-pack-v245"]) requireText(todayOfflineReadinessTest,text,"Today Offline readiness tests");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","today-session-offline-readiness-v1","P1-17, P1-41, P1-43, P1-44"]) requireText(guidedMissionAdr,text,"guided entry/load/offline ADR");
 for (const text of ["prior-experience-context-v1","equivalent-mission-alternative-v1","automatic-load-reduction-offer-v1","learner-controlled-planning-offer-no-penalty-mastery-or-deletion"]) requireText(portabilitySchema,text,"strict guided-session portability schema");
 for (const text of ["substitutes a declined mission","offers one learner-controlled reduction","active-time overrun"]) requireText(sessionSignalsTest,text,"guided session signal acceptance tests");
@@ -1021,6 +1021,15 @@ requireText(read("tests/unit/question-critical-support.test.ts"), "keeps every q
 requireText(read("tests/e2e/learning-integrity.spec.ts"), "speaking phrases for the next attempt stay hidden until a saved independent attempt and match the spoken scenario", "ADR-136 speaking phrases E2E");
 for (const text of ["ADR-136", "source-verified-agent", "not an independent German review", "The Arabic meanings of the 105 anchors are not verified here"]) requireText(read("docs/adr/ADR-136-question-support-source-verification-and-speaking-phrases-e2e.md"), text, "ADR-136");
 for (const text of ["ليس مراجعة بشرية ألمانية مستقلة", "المعاني العربية لم يُتحقق منها هنا"]) requireText(read("reports/lexical-review-packet/SOURCE_VERIFICATION_2026-10-19.md"), text, "ADR-136 Arabic summary");
+// ADR-137 (v245): no reading or listening key is recognisable by length alone; mini/exercise are ratcheted.
+requireText(read("scripts/generate-lesson-quality-audit.ts"), "visibleLengthCueByKindMax: { reading: 0, listening: 0, mini: 88, exercise: 55 }", "ADR-137 per-kind ratchet");
+requireText(read("scripts/generate-lesson-quality-audit.ts"), "longestOptionCuePctMax: 28,", "ADR-137 global cue ratchet");
+{
+  const cue = JSON.parse(read("reports/lesson-quality-audit.json")).multipleChoice?.visibleLengthCue?.byKind;
+  if (!cue || cue.reading !== 0 || cue.listening !== 0 || cue.mini > 88 || cue.exercise > 55) fail("ADR-137 visible length cue returned or report missing");
+}
+requireText(read("tests/unit/mcq-option-parallelism.test.ts"), "keeps every reading and listening key within 5 characters or 15% of the next option", "ADR-137 guard test");
+for (const text of ["ADR-137", "Not an independent German review", "Mini-test (88) and exercise (55) items"]) requireText(read("docs/adr/ADR-137-comprehension-mcq-length-cue-review.md"), text, "ADR-137");
 for (const text of ["contractCount:19", "theoryReferenceCount:23", "controlledReferenceCount:57", "assessmentReferenceCount:36"]) requireText(caseTest, text, "meaning-first case tests");
 for (const text of ["independent linguistic review deferred", "19 lessons", "57 controlled exercises", "36 Mini-Test items", "ADR-122"]) requireText(caseAdr, text, "meaning-first case ADR");
 if (!packageJson.scripts.prebuild.includes("case:audit")) fail("meaning-first case audit must remain in prebuild");

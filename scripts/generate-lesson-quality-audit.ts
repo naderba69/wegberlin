@@ -28,7 +28,13 @@ const thresholds = {
   writingModelRangeViolations: 0,
   maxPositionSharePct: 40,
   minPositionSharePct: 15,
-  longestOptionCuePctMax: 40,
+  // ADR-137 (2026-10-19): measured 38.0% before, 27.5% after the reading/listening distractor review.
+  longestOptionCuePctMax: 28,
+  // ADR-137: a "visible" length cue is a key that is the unique longest option by at least 5 characters
+  // AND at least 15% longer than the next option — a learner can pick it without reading the text.
+  // Reading 115 -> 0 and listening 96 -> 0; mini-test and exercise items are ratcheted at the measured
+  // count until their own review (their distractors are short ill-formed fragments; see ADR-137).
+  visibleLengthCueByKindMax: { reading: 0, listening: 0, mini: 88, exercise: 55 } as Record<string, number>,
   singleVariantSharePctMax: 25,
   noOpAcceptedVariantsMax: 0,
   explanationMedianCharsMin: 60,
@@ -72,6 +78,15 @@ const mcqOf = (lesson: (typeof lessons)[number]): ScoredItem[] => [
 ].map((item) => ({ id: item.id, options: item.options, correctIndex: item.correctIndex, explanationAr: item.explanationAr }));
 
 const positions = [0, 0, 0, 0]; let itemTotal = 0, longestCue = 0;
+const optionLength = (option: string) => String(option).trim().replace(/[.!?]$/, "").length;
+/** ADR-137: key is the unique longest by >=5 chars and >=15% — answerable by length alone. */
+const hasVisibleLengthCue = (options: readonly string[], correctIndex: number) => {
+  const lengths = options.map(optionLength);
+  const key = lengths[correctIndex];
+  const next = Math.max(...lengths.filter((_, index) => index !== correctIndex));
+  return key - next >= 5 && key >= 1.15 * next;
+};
+const visibleLengthCue: Record<string, string[]> = { reading: [], listening: [], mini: [], exercise: [] };
 const allFeedbackLengths: number[] = [];
 /** ع2/ع4 من تدقيق 2026-10-03: لا ذيل عامًّا مكرَّرًا، ولا فقرة تُقرأ مرتين في الدرس نفسه. */
 let boilerplateTailItems = 0;
@@ -146,6 +161,11 @@ const unchangedCorrectionAccepted:string[]=[];
 
 for (const lesson of lessons) {
   const items = mcqOf(lesson);
+  const byKind: Array<[string, ReadonlyArray<{ id: string; options: string[]; correctIndex: number }>]> = [
+    ["exercise", lesson.exercises.filter((exercise): exercise is Extract<PracticeExercise, { type: "multiple-choice" }> => exercise.type === "multiple-choice")],
+    ["reading", lesson.reading.questions], ["listening", lesson.listening.questions], ["mini", lesson.miniTest],
+  ];
+  for (const [kind, kindItems] of byKind) for (const item of kindItems) if (hasVisibleLengthCue(item.options, item.correctIndex)) visibleLengthCue[kind].push(`${lesson.id}:${item.id}`);
   if (!items.some((item) => item.correctIndex === 3)) lessonsWithoutD.push(lesson.id);
   for (const item of items) {
     itemTotal++; positions[item.correctIndex]++;
@@ -225,6 +245,7 @@ if (overPosition >= 0) issues.push(`answer position ${"ABCD"[overPosition]} carr
 if (underPosition >= 0) issues.push(`answer position ${"ABCD"[underPosition]} carries ${shares[underPosition].toFixed(1)}% (min ${thresholds.minPositionSharePct}%)`);
 const cuePct = (100 * longestCue) / Math.max(1, itemTotal);
 if (cuePct > thresholds.longestOptionCuePctMax) issues.push(`longest option is the key in ${cuePct.toFixed(1)}% of items (max ${thresholds.longestOptionCuePctMax}%)`);
+for (const [kind, max] of Object.entries(thresholds.visibleLengthCueByKindMax)) if (visibleLengthCue[kind].length > max) issues.push(`${kind} items answerable by option length alone: ${visibleLengthCue[kind].length} (ratchet ${max}) — ${visibleLengthCue[kind].slice(0, 6).join(", ")}`);
 const singleShare = (100 * singleVariant.length) / Math.max(1, productiveTotal);
 // ADR-100: constrained fill/order/correction items are not open production.
 // Keep the historical <=25% ceiling visible as legacy data; do not fabricate alternatives.
@@ -243,7 +264,7 @@ const contentSha256=createHash("sha256").update(JSON.stringify(lessons)).digest(
 const report = {
   format: "dwnb-lesson-quality-audit", version: "lesson-quality-v2", generatedAt: "2026-10-02", contentSha256,
   lessons: lessons.length, thresholds,
-  multipleChoice: { items: itemTotal, positions: { A: positions[0], B: positions[1], C: positions[2], D: positions[3] }, sharePct: shares.map((share) => Number(share.toFixed(2))), lessonsWithoutPositionD: lessonsWithoutD.length, longestOptionIsKeyPct: Number(cuePct.toFixed(2)) },
+  multipleChoice: { items: itemTotal, positions: { A: positions[0], B: positions[1], C: positions[2], D: positions[3] }, sharePct: shares.map((share) => Number(share.toFixed(2))), lessonsWithoutPositionD: lessonsWithoutD.length, longestOptionIsKeyPct: Number(cuePct.toFixed(2)), visibleLengthCue: { definition: "Key is the unique longest option by at least 5 characters and at least 15% (ADR-137).", byKind: Object.fromEntries(Object.entries(visibleLengthCue).map(([kind, ids]) => [kind, ids.length])), items: visibleLengthCue } },
   writing: { statedRangeTasks: lessons.filter((lesson) => /(\d{2,3})\s*(?:bis|-|–)\s*(\d{2,3})\s*Wörter/i.test(String(lesson.writing.promptDe))).length, violations: writingViolations.length, violationList: writingViolations },
   productive: {
     total: productiveTotal,

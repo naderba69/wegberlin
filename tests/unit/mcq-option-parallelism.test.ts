@@ -7,8 +7,8 @@ type ScoredItem = { id: string; options: readonly string[]; correctIndex: number
 /**
  * Option-parallelism guard for the lessons whose multiple-choice items were parallelised in the
  * cue-cleanup arc (phase 3). `reports/lesson-quality-audit.json` measures one asymmetric property
- * globally — "the correct option is the unique longest" — and that figure is still above its 40%
- * ceiling, so this test does NOT claim the gate is green. What it locks down is the *design rule*
+ * globally — "the correct option is the unique longest" (27.6% after ADR-137, ratchet 28%; the
+ * gate counts every lesson, this test only the converted ones). What it locks down is the *design rule*
  * applied to the lessons already converted, so a later edit cannot quietly reintroduce a cue:
  *
  *  1. the key must never be the unique longest option (the measured cue);
@@ -69,6 +69,26 @@ describe("parallelised option sets stay cue-free", () => {
         for (const option of item.options) {
           if (stray.test(String(option))) offenders.push(`${lesson.id}:${item.id}`);
         }
+      }
+    }
+    expect(offenders).toEqual([]);
+  });
+});
+
+// ADR-137 (v245): reading and listening questions test comprehension of a text, so no key may be
+// recognisable by length alone — unique longest by >=5 characters AND >=15%. Measured 115 reading and
+// 96 listening items before the review, 0 after. Mini-test/exercise items are ratcheted in the
+// lesson-quality audit until their own review.
+describe("comprehension questions carry no visible length cue (ADR-137)", () => {
+  it("keeps every reading and listening key within 5 characters or 15% of the next option", () => {
+    const offenders: string[] = [];
+    for (const lesson of lessons) {
+      for (const item of [...lesson.reading.questions, ...lesson.listening.questions]) {
+        const lengths = item.options.map((option) => strip(String(option)).length);
+        const key = lengths[item.correctIndex];
+        const next = Math.max(...lengths.filter((_, index) => index !== item.correctIndex));
+        if (key - next >= 5 && key >= 1.15 * next) offenders.push(`${item.id} ${key}/${next}`);
+        expect(new Set(item.options.map((option) => fold(String(option)))).size, `${item.id} has duplicate options`).toBe(item.options.length);
       }
     }
     expect(offenders).toEqual([]);

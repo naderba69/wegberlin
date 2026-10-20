@@ -32,10 +32,10 @@ describe("lexical target-gap inventory", () => {
   // v251: ADR-142 adds 43 lesson-scoped noun anchors for the Goethe-Zertifikat B1 food and perception words on the new B1 phrases and cards; covered +45, +27 noun and +9 verb-pair contextual candidates; pendingHuman is unchanged ("achten" is taught without a frame target so no new verb-frame item waits for review).
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5394,
+      totalCandidates: 5393,
       covered: 1845,
       pendingHuman: 89,
-      contextualNotTarget: 3460,
+      contextualNotTarget: 3459,
       authoredTargets: 1934,
     });
     expect(audit.verbFrameSummary).toMatchObject({

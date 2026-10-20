@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v251 · 2026-10-20 · محورا الطعام والإدراك في B1 (ADR-142): دروس B1 لم يكن فيها طعام ولا حواس وحركة، وهما من محاور غوته الأربعة عشر. أُضيفت 72 كلمة ناقصة إلى خمسة دروس B1 موجودة (الاستهلاك، والمبادرة، والنصائح، ومشكلات الإيجار، والتقنية) مع 43 اسمًا بأداته وجمعه و5 تمارين مطابقة. دروس B1 تُظهر الآن 1931 كلمة من 2830 (68.2%) بعد 1857. لم يُرفع أي سقف؛ المتبقي من سقف المنهج 2,238 بايت.
+Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1943,3 +1943,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: 72 words added to b1-08, b1-10, b1-12, b1-20 and b1-23 (phrase + card each, five `b1-NN-e8` matching exercises), 43 lesson-scoped noun anchors (`b1GoetheCoreNounEntries`, scope `ADR-142-goethe-b1-core-noun-anchor`), all 43 confirmed against WiktionaryDE. «achten» is taught without a frame target so no new review item waits.
 - Result: B1 headwords appearing 1,857 → 1,931 (68.2%), taught ≥ 1,461 (51.6%), absent 813 → 740. JS 2,140,111 B, curriculum 1,306,762 B (2,238 B left). Pack generation v251. Pinned by `tests/unit/goethe-b1-core-vocabulary.test.ts`.
 - Details: `docs/adr/ADR-142-goethe-b1-food-and-perception-vocabulary.md`.
+
+## ADR-143 — Audit every Goethe vocabulary addition and guard it with a permanent test
+
+- Status: accepted, 2026-10-20 (v252). Owner: «كل اضافة قم بمعالجتها و التدقيق فيها اريد عمل خالي من الاخطاء و الهوفوات — العمل مخطط و مرتب و موثوق». No ceiling raised.
+- Context: the v248/v250/v251 gates checked structure, not the accuracy of Arabic meanings, the naturalness of German examples or the consistency of a word across surfaces.
+- Decision: automatic checks plus a full manual reading of the 556 added cards, their meanings and the 51 matching explanations. 8 real errors were fixed (a duplicate a1-08 card replaced in place so no card ID moves, a misleading «nirgends» gloss, two unnatural examples, missing punctuation, wording). 72 older phrase/card meanings in the same lessons were aligned to the more accurate one (including «zu früh/zu spät» wrongly glossed «جدًا»). New permanent guard `tests/unit/goethe-additions-quality-guard.test.ts` over the 53 lessons that received words.
+- Result: 0 open errors in the additions. Noun contextual candidates 5,394/3,460 → 5,393/3,459. JS 2,139,956 B, curriculum 1,306,607 B (2,393 B left). Pack generation v252.
+- Details: `docs/adr/ADR-143-audit-of-goethe-vocabulary-additions.md`.

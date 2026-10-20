@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v251 · 2026-10-20 · محورا الطعام والإدراك في B1 (ADR-142): دروس B1 لم يكن فيها طعام ولا حواس وحركة، وهما من محاور غوته الأربعة عشر. أُضيفت 72 كلمة ناقصة إلى خمسة دروس B1 موجودة (الاستهلاك، والمبادرة، والنصائح، ومشكلات الإيجار، والتقنية) مع 43 اسمًا بأداته وجمعه و5 تمارين مطابقة. دروس B1 تُظهر الآن 1931 كلمة من 2830 (68.2%) بعد 1857. لم يُرفع أي سقف؛ المتبقي من سقف المنهج 2,238 بايت.
+Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

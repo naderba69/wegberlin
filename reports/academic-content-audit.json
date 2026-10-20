@@ -2424,7 +2424,7 @@
         "prompt": "طابق كلمة المطعم بمعناها:",
         "answer": "die Pommes → البطاطا المقلية | die Toilette → دورة المياه | wunderbar → رائع | besser → أفضل | am besten → الأفضل",
         "evidenceRef": "a1-12:controlled:a1-12-e8:explanationAr",
-        "evidenceExcerpt": "besser للمقارنة بين شيئين، وam besten للأفضل بين الجميع. وفي المطعم يكفي أن تسأل بأدب: Wo ist die Toilette, bitte. ويمكنك رفض المشروب بجملة Ich trinke kein Bier.",
+        "evidenceExcerpt": "besser للمقارنة بين شيئين، وam besten للأفضل بين الجميع. وفي المطعم يكفي أن تسأل بأدب: Wo ist die Toilette, bitte? ويمكنك رفض المشروب بجملة Ich trinke kein Bier.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -4514,7 +4514,7 @@
         "prompt": "طابق الكلمة بمعناها:",
         "answer": "das Haar → الشعر | der Mund → الفم | krank → مريض | das Gewicht → الوزن",
         "evidenceRef": "a1-22:controlled:a1-22-e8:explanationAr",
-        "evidenceExcerpt": "نقول Ich bin krank للمرض، ومع الألم نستعمل weh tun: Mein Mund tut weh. وdie Haare بالجمع أكثر استعمالًا لشعر الرأس.",
+        "evidenceExcerpt": "نقول Ich bin krank للمرض، ومع الألم نستعمل wehtun: Mein Mund tut weh. وdie Haare بالجمع أكثر استعمالًا لشعر الرأس.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -5337,7 +5337,7 @@
         "scope": "lesson-controlled",
         "kind": "matching",
         "prompt": "طابق كلمة القصة بمعناها:",
-        "answer": "die Geldbörse → المحفظة | nirgends → في أي مكان (مع النفي) | die Lüge → الكذبة | weinen → يبكي | der Unfall → الحادث",
+        "answer": "die Geldbörse → المحفظة | nirgends → لا في أي مكان | die Lüge → الكذبة | weinen → يبكي | der Unfall → الحادث",
         "evidenceRef": "a2-02:controlled:a2-02-e8:explanationAr",
         "evidenceExcerpt": "nirgends تعني «لا في أي مكان»، فلا نضيف معها nicht. والماضي من lügen غير منتظم: Er hat gelogen.",
         "visibilityPolicy": "authorized-pair-bank",
@@ -6802,7 +6802,7 @@
         "prompt": "طابق كلمة الهاتف بمعناها:",
         "answer": "am Apparat sein → يكون على الخط | das Mobiltelefon → الهاتف المحمول | die Mailbox → البريد الصوتي | chatten → يدردش كتابةً | leihen → يُعير / يستعير",
         "evidenceRef": "a2-09:controlled:a2-09-e8:explanationAr",
-        "evidenceExcerpt": "في الهاتف نقول Hier ist … am Apparat لنعرّف بأنفسنا. ومع leihen نذكر الشخص ثم الشيء: Kannst du mir dein Handy leihen?",
+        "evidenceExcerpt": "في الهاتف نسأل Wer ist am Apparat? أي من المتكلم، ونعرّف بأنفسنا بـ Hier spricht ثم الاسم. ومع leihen نذكر الشخص ثم الشيء: Kannst du mir dein Handy leihen?",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -9510,7 +9510,7 @@
         "prompt": "طابق قطعة اللباس بمعناها:",
         "answer": "der Anzug → البدلة | das Hemd → القميص | der Rock → التنورة | der Mantel → المعطف | die Mütze → القبعة الصوفية",
         "evidenceRef": "a2-22:controlled:a2-22-e8:explanationAr",
-        "evidenceExcerpt": "نقول etwas anziehen أو etwas tragen للباس: Er trägt einen Anzug. وein Paar Schuhe تعني حذاءين معًا.",
+        "evidenceExcerpt": "نقول etwas anziehen أو etwas tragen للباس: Er trägt einen Anzug. وein Paar Schuhe تعني زوجًا واحدًا من الأحذية، أي فردتين.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -9719,7 +9719,7 @@
         "prompt": "طابق كلمة النشاط بمعناها:",
         "answer": "die Mannschaft → الفريق | der Sportplatz → الملعب | das Pferd → الحصان | das Instrument → الآلة الموسيقية | die Natur → الطبيعة",
         "evidenceRef": "a2-23:controlled:a2-23-e8:explanationAr",
-        "evidenceExcerpt": "مع الرياضة والآلات نستعمل spielen دون أداة: Ich spiele Tennis، Ich spiele Klavier. وnach austragen تأتي الأشياء التي توزّعها.",
+        "evidenceExcerpt": "مع الرياضة والآلات نستعمل spielen دون أداة: Ich spiele Tennis، Ich spiele Klavier. ومع austragen نذكر ما نوزّعه: Ich trage Zeitungen aus.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -44900,10 +44900,10 @@
     "nounAnchorCount": 1733,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5394,
+      "totalCandidates": 5393,
       "covered": 1845,
       "pendingHuman": 89,
-      "contextualNotTarget": 3460,
+      "contextualNotTarget": 3459,
       "authoredTargets": 1934,
       "byLevel": {
         "A1": {
@@ -44913,10 +44913,10 @@
           "contextualNotTarget": 265
         },
         "A2": {
-          "totalCandidates": 1086,
+          "totalCandidates": 1085,
           "covered": 459,
           "pendingHuman": 0,
-          "contextualNotTarget": 627
+          "contextualNotTarget": 626
         },
         "B1": {
           "totalCandidates": 1342,
@@ -95240,25 +95240,6 @@
           }
         ],
         "id": "lex-n-a2-19-edc5dd47"
-      },
-      {
-        "lessonId": "a2-19",
-        "level": "A2",
-        "lemmaCandidate": "Lernzeit",
-        "normalizedLemma": "lernzeit",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "flashcards[16].exampleDe",
-            "stage": "vocabulary",
-            "text": "Ich rechne meine Lernzeit pro Woche.",
-            "surface": "Ich rechne meine Lernzeit pro Woche.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-a2-19-4b6e4aa6"
       },
       {
         "lessonId": "a2-19",
@@ -235524,5 +235505,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "23d87582a2dec6f5fc740944649bd5716907759fc9582736d939a34f673ba0a1"
+  "contentSha256": "4117e784722dc8e0dab1cc9550444b783a3cf73e3ee49981496770c56bac8444"
 }

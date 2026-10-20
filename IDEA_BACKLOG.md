@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v251 · 2026-10-20 · محورا الطعام والإدراك في B1 (ADR-142): دروس B1 لم يكن فيها طعام ولا حواس وحركة، وهما من محاور غوته الأربعة عشر. أُضيفت 72 كلمة ناقصة إلى خمسة دروس B1 موجودة (الاستهلاك، والمبادرة، والنصائح، ومشكلات الإيجار، والتقنية) مع 43 اسمًا بأداته وجمعه و5 تمارين مطابقة. دروس B1 تُظهر الآن 1931 كلمة من 2830 (68.2%) بعد 1857. لم يُرفع أي سقف؛ المتبقي من سقف المنهج 2,238 بايت.
+Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -562,3 +562,6 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
     و5 تمارين. دروس B1 تُظهر 1931 من 2830 كلمة (68.2%) وتُدرِّس 1461 على الأقل (51.6%). الباقي: نحو 900 كلمة B1
     (الخدمات والسفر والصحة والعمل)، والخدمات والحواس في A2، ومحاور B2، والامتحانات التجريبية. سقف المنهج بقي منه
     2,238 بايت فقط، فكل ذلك يحتاج قرار المالك برفعه.
+    **v252 / ADR-143: دُقّقت كل الإضافات** (556 بطاقة من v248 وv250 وv251): صُحّحت 8 أخطاء، ووُحّد 72 معنى قديمًا
+    بين صفحة المفردات والبطاقة، وحارس دائم `goethe-additions-quality-guard` يفحص كل إضافة قادمة. سقف المنهج بقي منه
+    2,393 بايت.

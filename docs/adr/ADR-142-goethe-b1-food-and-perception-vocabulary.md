@@ -36,6 +36,8 @@ After v250 the curriculum budget had 7,044 B left under its 1,309,000 B ceiling,
 | Governed content records | 3,323 | 3,328 |
 | Client JS total (gzip, ceiling 2,205,000) | 2,135,587 | **2,140,111** (+4,524) |
 | Curriculum gzip (ceiling 1,309,000) | 1,301,956 | **1,306,762** (+4,806) |
+| Unit tests | 1,685 in 244 files | **1,689 in 245 files** |
+| Browser audit / E2E | 642/0 · 67/67 ×2 | **642/0 · 67/67 ×2** |
 
 Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound.
 

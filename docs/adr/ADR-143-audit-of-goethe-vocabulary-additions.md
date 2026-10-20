@@ -70,11 +70,20 @@ v248, v250 and v251 added 556 review cards (A1 244, A2 240, B1 72), with the sam
 |---|---|---|
 | Real errors in the 556 additions | 8 found | **0 open** |
 | Older meanings aligned in the same lessons | — | **72** |
-| Unit tests | 1,689 in 245 files | __UNIT__ |
+| Unit tests | 1,689 in 245 files | **1,695 in 246 files** |
 | Noun target-gap candidates (contextual) | 5,394 / 3,460 | **5,393 / 3,459** («Lernzeit» left the a2-19 example) |
-| Curriculum gzip (ceiling 1,309,000) | 1,306,762 | __CURRICULUM__ |
-| Client JS total (ceiling 2,205,000) | 2,140,111 | __JS__ |
-| Browser audit / E2E | 642/0 · 67/67 ×2 | __E2E__ |
+| Curriculum gzip (ceiling 1,309,000) | 1,306,762 | **1,306,607** (−155; 2,393 B left) |
+| Client JS total (ceiling 2,205,000) | 2,140,111 | **2,139,956** (−155) |
+| Browser audit / E2E | 642/0 · 67/67 ×2 | **642/0 · 67/67 ×2** |
+
+## Gates
+
+| Gate | Result |
+|---|---|
+| `npm run check` | lint, typecheck, unit 1,695/1,695 in 246 files, secret/source/workflow/handoff/deps audits, build, JS/media budgets, contrast: pass. The first run was killed from outside; the second exposed a missed cache-name pin in `offline-curriculum-rollback.test.ts`, which was fixed. In the third, `a11y:browser` could not find Chromium in the environment, so it was run alone with the local Chromium. |
+| Browser accessibility | 321 pages × desktop+mobile = 642 checks, 0 failing, 0 console errors |
+| E2E | desktop 67/67 (6.1 min), mobile 67/67 (5.7 min), 0 #418 |
+| Offline fingerprint | `5c61b4bd6fa4` (full 6,481,109 gzip) |
 
 ## Consequences
 

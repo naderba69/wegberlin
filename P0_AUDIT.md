@@ -1,6 +1,6 @@
 # P0 Implementation Audit
 
-Sync batch: v253 · 2026-10-20 · تدقيق دروس B1 وB2 الباقية (ADR-144): قُرئت بطاقات الدروس الـ43 التي لم تُدقَّق بعد (451 بطاقة)، فوُحّد 59 معنى كان مختلفًا بين صفحة المفردات والبطاقة، وتُرجمت جمل درس b2-19 الـ18 بعد أن كانت تصف النبرة فقط، وأُكمل أو صُحّح 46 مثالًا (منها 19 مثالًا ناقصًا ينتهي بـ«…» ومثال لا علاقة له بكلمته). الحارس الدائم يغطي الآن الدروس الـ96 كلها. لم يُرفع أي سقف.
+Sync batch: v254 · 2026-10-20 · تدقيق التمارين والاختبارات القصيرة (ADR-145): قُرئت الأسئلة الـ1,208 في الدروس الـ96 (728 تمرينًا و480 سؤال اختبار قصير)، فأُعيد ترتيب كلمات 44 تمرين ترتيب كانت تظهر بالترتيب الصحيح فتكشف الجواب، وصُحّح شرح أو خيار 77 سؤالًا (منها أخطاء ألمانية فعلية: zehn Uhr zwanzig بدل dreißig، ووصلة -s- خاطئة في Studienberatung، وsodann في غير موضعها). حارس دائم جديد يمنع عودة هذه الأخطاء. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes the same-origin reference and learner recording in browser memory (≤60 seconds / ≤4 MB each), with separate peak normalization and no alignment, score, upload, or learner-state mutation. At v182, v181 was retained for rollback; the current active/staging caches are v183 with v182 retained. The last full item-by-item P0 audit remains 2026-09-20; this sync checked impact only, not human-review closure.
 

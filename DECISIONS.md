@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v253 · 2026-10-20 · تدقيق دروس B1 وB2 الباقية (ADR-144): قُرئت بطاقات الدروس الـ43 التي لم تُدقَّق بعد (451 بطاقة)، فوُحّد 59 معنى كان مختلفًا بين صفحة المفردات والبطاقة، وتُرجمت جمل درس b2-19 الـ18 بعد أن كانت تصف النبرة فقط، وأُكمل أو صُحّح 46 مثالًا (منها 19 مثالًا ناقصًا ينتهي بـ«…» ومثال لا علاقة له بكلمته). الحارس الدائم يغطي الآن الدروس الـ96 كلها. لم يُرفع أي سقف.
+Sync batch: v254 · 2026-10-20 · تدقيق التمارين والاختبارات القصيرة (ADR-145): قُرئت الأسئلة الـ1,208 في الدروس الـ96 (728 تمرينًا و480 سؤال اختبار قصير)، فأُعيد ترتيب كلمات 44 تمرين ترتيب كانت تظهر بالترتيب الصحيح فتكشف الجواب، وصُحّح شرح أو خيار 77 سؤالًا (منها أخطاء ألمانية فعلية: zehn Uhr zwanzig بدل dreißig، ووصلة -s- خاطئة في Studienberatung، وsodann في غير موضعها). حارس دائم جديد يمنع عودة هذه الأخطاء. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1959,3 +1959,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: 59 phrase/card meanings aligned (including «eine Frist vereinbaren» → مهلة, «offenlegen» → يكشف); the 18 b2-19 phrases translated, with the tone note kept in brackets; 46 card examples completed or corrected (one unrelated example, 19 ending in «…», examples missing their own word, guillemets → „…“). No card added, removed or reordered. Guard widened to all 96 lessons with two new rules (no example ending in «…», no «» in German examples).
 - Result: 0 guard problems in 96 lessons. Contextual candidates: nouns 5,401/3,467, verb pairs 1,338/1,203 (pending 89 + 1 unchanged). JS 2,140,456 B, curriculum 1,307,086 B (1,914 B left). Pack generation v253.
 - Details: `docs/adr/ADR-144-audit-of-all-b1-b2-vocabulary.md`.
+
+## ADR-145 — Audit all exercises and mini-tests and guard them
+
+- Status: accepted, 2026-10-20 (v254). Owner «واصل» under the instruction to audit every addition; no ceiling raised.
+- Context: ADR-143/144 audited the vocabulary cards; the 728 exercises and 480 mini-test items had not been read against their options.
+- Decision: 44 word-ordering tasks whose chips (shown unshuffled) already read as an accepted answer were reordered, a1-03-e3 became a four-word phrase from the lesson; 77 items had an explanation, option or prompt corrected (including «zehn Uhr zwanzig» → «dreißig» for 10:30, a false Fugen-s in «Studienberatung», «sodann» listed as a result connector, explanations that described other options, typos). No item added, removed or reordered. New guard `tests/unit/exercise-explanation-guard.test.ts` with planted errors.
+- Result: guard clean over 728 + 480 items. Contextual candidates: nouns 5,401/3,467 unchanged, verb pairs 1,334/1,199 (pending 89 + 1 unchanged). JS 2,140,647 B, curriculum 1,307,170 B (1,830 B left). Pack generation v254.
+- Details: `docs/adr/ADR-145-audit-of-all-exercises-and-mini-tests.md`.

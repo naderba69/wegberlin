@@ -32,6 +32,7 @@ describe("lexical target-gap inventory", () => {
   // v251: ADR-142 adds 43 lesson-scoped noun anchors for the Goethe-Zertifikat B1 food and perception words on the new B1 phrases and cards; covered +45, +27 noun and +9 verb-pair contextual candidates; pendingHuman is unchanged ("achten" is taught without a frame target so no new verb-frame item waits for review).
   // v252: ADR-143 rewrote the a2-19 rechnen example ("Lernzeit" left), −1 contextual noun candidate.
   // v253: ADR-144 completed 46 card examples in B1/B2 (and a few A1/A2); +8 contextual noun and +3 verb-pair candidates, nothing new pending.
+  // v254: ADR-145 corrected 77 exercise items (for example the wrong «sodann» connector block in b2-14); −4 contextual verb-pair candidates, nouns and pending unchanged.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
       totalCandidates: 5401,
@@ -41,10 +42,10 @@ describe("lexical target-gap inventory", () => {
       authoredTargets: 1934,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1338,
+      totalCandidates: 1334,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1203,
+      contextualNotTarget: 1199,
       authoredTargets: 135,
     });
   });

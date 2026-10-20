@@ -486,9 +486,9 @@
         "scope": "lesson-controlled",
         "kind": "word-ordering",
         "prompt": "كوّن طلبًا مهذبًا:",
-        "answer": "Langsamer bitte | Bitte langsamer",
+        "answer": "Bitte noch einmal, langsamer. | Noch einmal, langsamer, bitte.",
         "evidenceRef": "a1-03:controlled:a1-03-e3:explanationAr",
-        "evidenceExcerpt": "Langsamer, bitte عبارة عملية عند الإملاء. عند تهجئة اسم أو بريد، انطق الحروف منفصلة وبإيقاع ثابت. ويُقبل أيضًا: «Bitte langsamer».",
+        "evidenceExcerpt": "«Bitte noch einmal, langsamer.» عبارة عملية عند الإملاء: bitte ثم noch einmal ثم langsamer. عند تهجئة اسم أو بريد، انطق الحروف منفصلة وبإيقاع ثابت. ويُقبل أيضًا: «Noch einmal, langsamer, bitte.»",
         "visibilityPolicy": "authorized-token-bank",
         "status": "pass"
       },
@@ -1291,7 +1291,7 @@
         "prompt": "Arbeitsort اختر ما يحدد المكان:",
         "answer": "in Berlin",
         "evidenceRef": "a1-06:miniTest:a1-06-m5:explanationAr",
-        "evidenceExcerpt": "in Berlin يحدد المكان. نستعمل als قبل الدور أو المهنة: Ich arbeite als Koch.",
+        "evidenceExcerpt": "in Berlin يحدد المكان. أما bei einer Firma فجهة العمل، و als Koch المهنة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1456,7 +1456,7 @@
         "prompt": "10:30 اختر الوقت اليومي:",
         "answer": "halb elf",
         "evidenceRef": "a1-07:miniTest:a1-07-m1:explanationAr",
-        "evidenceExcerpt": "10:30 = halb elf. في الصيغة الرسمية نقرأ الساعة ثم Uhr ثم الدقائق: zehn Uhr zwanzig.",
+        "evidenceExcerpt": "10:30 = halb elf. في الصيغة الرسمية نقرأ الساعة ثم Uhr ثم الدقائق: zehn Uhr dreißig.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1478,7 +1478,7 @@
         "prompt": "09:45 أي خيار يحقّق «09:45» في هذا السياق؟",
         "answer": "Viertel vor zehn",
         "evidenceRef": "a1-07:miniTest:a1-07-m3:explanationAr",
-        "evidenceExcerpt": "ربع قبل العاشرة. في الصيغة الرسمية نقرأ الساعة ثم Uhr ثم الدقائق: zehn Uhr zwanzig.",
+        "evidenceExcerpt": "ربع قبل العاشرة. وفي الصيغة الرسمية: neun Uhr fünfundvierzig.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1566,7 +1566,7 @@
         "prompt": " ما معنى selten؟",
         "answer": "نادرًا",
         "evidenceRef": "a1-08:controlled:a1-08-e6:explanationAr",
-        "evidenceExcerpt": "selten تعني نادرًا. مقياس التردد: nie، selten، manchmal، oft، immer — ووضعها قبل الفعل.",
+        "evidenceExcerpt": "selten تعني نادرًا. مقياس التردد: nie، selten، manchmal، oft، immer — وموضعها بعد الفعل المصرَّف.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1698,7 +1698,7 @@
         "prompt": "selten ما المعنى؟",
         "answer": "نادرًا",
         "evidenceRef": "a1-08:miniTest:a1-08-m4:explanationAr",
-        "evidenceExcerpt": "selten = نادرًا. نقيضها oft؛ وضعها في الجملة قبل الفعل: Ich gehe selten ins Kino.",
+        "evidenceExcerpt": "selten = نادرًا. نقيضها oft؛ وموضعها بعد الفعل المصرَّف: Ich gehe selten ins Kino.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -1775,7 +1775,7 @@
         "prompt": " رفض لبق مع بديل:",
         "answer": "Leider kann ich am Dienstag nicht. Vielleicht am Mittwoch?",
         "evidenceRef": "a1-09:controlled:a1-09-e6:explanationAr",
-        "evidenceExcerpt": "يحتوي على leider وسبب التوفر وبديل. نستعمل am مع أيام الأسبوع: am Montag، am Mittwoch.",
+        "evidenceExcerpt": "فيه leider ورفض واضح وبديل. نستعمل am مع أيام الأسبوع: am Montag، am Mittwoch.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -2193,7 +2193,7 @@
         "prompt": " كيف تنهي الطلب؟",
         "answer": "Nein, danke. Das ist alles.",
         "evidenceRef": "a1-11:controlled:a1-11-e6:explanationAr",
-        "evidenceExcerpt": "عبارة طبيعية لإنهاء التسوق: Nein, danke. Das ist alles. الأولى ترفض المزيد بأدب والثانية تُغلق الطلب، ويمكن اختصارها إلى Das ist alles, danke.",
+        "evidenceExcerpt": "عبارة طبيعية لإنهاء التسوق: Nein, danke. Das ist alles. Nein, danke ترفض المزيد بأدب و Das ist alles تُغلق الطلب، ويمكن اختصارها إلى Das ist alles, danke.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -3029,7 +3029,7 @@
         "prompt": " كيف تبدأ الاتصال؟",
         "answer": "Ich rufe wegen der Wohnung in der Gartenstraße an.",
         "evidenceRef": "a1-15:controlled:a1-15-e6:explanationAr",
-        "evidenceExcerpt": "تذكر سبب الاتصال والعنوان بوضوح. للسؤال نقول Wie groß ist die Wohnung? و Wie hoch ist die Miete? وللتجهيزات نستعمل Gibt es …? أما الموعد فنستعمل können: Wann kann ich die Wohnung besichtigen? في الاتصال اذكر الإعلان أو …",
+        "evidenceExcerpt": "تذكر سبب الاتصال والعنوان بوضوح. وبعد wegen نقول: wegen der Wohnung، لا wegen die Wohnung.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -4393,7 +4393,7 @@
         "prompt": "Ich ___ umsteigen. اختر:",
         "answer": "muss",
         "evidenceRef": "a1-21:miniTest:a1-21-m2:explanationAr",
-        "evidenceExcerpt": "نفي muss هو muss nicht، ويعني انتفاء الضرورة لا المنع: Ich muss heute nicht arbeiten. أما المنع فبـ dürfen منفيًا: Hier darfst du nicht parken.",
+        "evidenceExcerpt": "مع ich يكون muss بلا نهاية، كما في ich kann: Ich muss umsteigen. و musst لـ du، و müssen لـ wir/sie/Sie، و «müsse du» صيغة لا تُستعمل هنا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -4415,7 +4415,7 @@
         "prompt": "Hin- und Rückfahrt اختر الصيغة الصحيحة لحالة «Hin- und Rückfahrt»:",
         "answer": "hin und zurück",
         "evidenceRef": "a1-21:miniTest:a1-21-m4:explanationAr",
-        "evidenceExcerpt": "ذهاب وعودة. للذهاب وحده تقول hin؛ والعبارة كاملة على التذكرة: eine Fahrkarte hin und zurück.",
+        "evidenceExcerpt": "ذهاب وعودة. وللذهاب وحده تقول einfach؛ والعبارة كاملة على التذكرة: eine Fahrkarte hin und zurück.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -4998,7 +4998,7 @@
         "prompt": "Familienname أي حقل؟",
         "answer": "Nachname",
         "evidenceRef": "a1-24:miniTest:a1-24-m1:explanationAr",
-        "evidenceExcerpt": "حقول النماذج أسماء مركبة تُقرأ من الآخر إلى الأول: Geburtsdatum تاريخُ الميلاد و Geburtsort مكانُه، فلا تخلط بينهما. وفي الاستمارة يُكتب اللقب أولًا عادةً: Nachname, Vorname.",
+        "evidenceExcerpt": "Familienname هو Nachname. وحقول النماذج أسماء مركبة تُقرأ من الآخر إلى الأول: Geburtsdatum تاريخُ الميلاد و Geburtsort مكانُه، فلا تخلط بينهما. وفي الاستمارة يُكتب اللقب أولًا عادةً: Nachname, Vorname.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5108,7 +5108,7 @@
         "prompt": " اختر الجملة الصحيحة:",
         "answer": "Ich habe lange telefoniert.",
         "evidenceRef": "a2-01:controlled:a2-01-e6:explanationAr",
-        "evidenceExcerpt": "الأفعال المنتهية بـ -ieren تأخذ مصدرًا بلا ge وتستعمل haben: «Ich habe lange telefoniert.» «getelefoniert» تُضيف بادئةً لا تُضاف هنا، و «bin telefoniert» تُسنِد فعلًا لا حركةً إلى sein. فحص ذاتي: هل ترى ge زائدة؟",
+        "evidenceExcerpt": "الأفعال المنتهية بـ -ieren تأخذ Partizip II بلا ge وتستعمل haben: «Ich habe lange telefoniert.» «getelefoniert» تُضيف بادئةً لا تُضاف هنا، و «bin telefoniert» تُسنِد فعلًا لا حركةً إلى sein. فحص ذاتي: هل ترى ge زائدة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6076,7 +6076,7 @@
         "prompt": "Erlaubnis اختر الصيغة الصحيحة لحالة «Erlaubnis»:",
         "answer": "Man darf den Garten benutzen.",
         "evidenceRef": "a2-05:miniTest:a2-05-m4:explanationAr",
-        "evidenceExcerpt": "الإباحةُ بـ dürfen: «Man darf den Garten benutzen» حتى الواحدة والعشرين مساءً. أمّا muss فتُلزم، و «Man dürfen Garten» يخالف تصريفَ المفرد. فحص ذاتي: هل أبحتَ أم ألزمتَ؟",
+        "evidenceExcerpt": "الإباحةُ بـ dürfen: «Man darf den Garten benutzen»، والشواء فيه حتى 21 Uhr. أمّا muss فتُلزم، و «Man dürfen Garten» يخالف تصريفَ المفرد. فحص ذاتي: هل أبحتَ أم ألزمتَ؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6670,7 +6670,7 @@
         "prompt": "dass أي خيار يحقّق «dass» في سياق درس «طلب عمل»؟",
         "answer": "dass die Stelle gut passt",
         "evidenceRef": "a2-08:miniTest:a2-08-m1:explanationAr",
-        "evidenceExcerpt": "بعد «dass» يبقى الفعلُ في النهاية: «dass die Stelle gut passt». ف «dass gut die Stelle passt sie» خطأ، و «dass die Stelle passen» فقدت «sie»، و «passt sie» فعلانِ متجاوران. فحص ذاتي: أين فعلُ الجملة الفرعية؟",
+        "evidenceExcerpt": "بعد «dass» يبقى الفعلُ في النهاية: «dass die Stelle gut passt». ف «dass gut die Stelle passt sie» تُخلّ بالترتيب وتزيد ضميرًا، و «dass die Stelle passen» تجمع الفعل مع فاعل مفرد. فحص ذاتي: أين فعلُ الجملة الفرعية؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6934,7 +6934,7 @@
         "prompt": " اختر المقارنة الصحيحة:",
         "answer": "Der Zug ist schneller als der Bus.",
         "evidenceRef": "a2-10:controlled:a2-10-e1:explanationAr",
-        "evidenceExcerpt": "المقارنة بين شيئين تحتاج als: «Der Zug ist schneller als der Bus». wie للتساوي، و بلا أداة يبقى ما بعدها معلّقًا، و الصيغة العليا am schnellsten تُخرج Bus من المقارنة أصلًا.",
+        "evidenceExcerpt": "المقارنة بين شيئين تحتاج als: «Der Zug ist schneller als der Bus». wie للتساوي، و «so schneller als» تخلط التساوي بالتفضيل، و «schnellsten» صيغة عليا بلا am تُخرج Bus من المقارنة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -6945,7 +6945,7 @@
         "prompt": "Der frühe Zug ist so günstig ___ der Bus. أكمل التساوي:",
         "answer": "wie",
         "evidenceRef": "a2-10:controlled:a2-10-e2:explanationAr",
-        "evidenceExcerpt": "التساوي في الصفة يُصاغ بـ so ثم الصفة ثم wie: Der frühe Zug ist so günstig wie der Bus. als تُستعمل عند الاختلاف، و حذف wie يترك التشبيه بلا طرف ثانٍ. فحص ذاتي: بمَ تُقارَن الرحلة؟",
+        "evidenceExcerpt": "التساوي في الصفة يُصاغ بـ so ثم الصفة ثم wie: Der frühe Zug ist so günstig wie der Bus. als تُستعمل عند الاختلاف، وحذف wie يترك التشبيه بلا طرف ثانٍ. فحص ذاتي: بمَ تُقارَن الرحلة؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7385,7 +7385,7 @@
         "prompt": "صحح obwohl: Obwohl ich habe reserviert, ist kein Zimmer frei.",
         "answer": "Obwohl ich reserviert habe, ist kein Zimmer frei",
         "evidenceRef": "a2-12:controlled:a2-12-e4:explanationAr",
-        "evidenceExcerpt": "رابط التناقض obwohl يحمل فعله إلى آخر التابعة: «Obwohl ich reserviert habe, ist kein Zimmer frei». تقديم habe يحوّل التناز إلى سؤال ويُبقي الفعل في غير مكانه. فحص ذاتي: هل أنهُتَ التابعة فعلَها؟",
+        "evidenceExcerpt": "رابط التناقض obwohl يحمل فعله إلى آخر التابعة: «Obwohl ich reserviert habe, ist kein Zimmer frei». تقديم habe يحوّل التنازل إلى سؤال ويُبقي الفعل في غير مكانه. فحص ذاتي: هل أنهيتَ التابعة فعلَها؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -7407,7 +7407,7 @@
         "prompt": " إذا لم يوجد بديل:",
         "answer": "Wenn kein Zimmer frei ist, möchte ich eine Erstattung.",
         "evidenceRef": "a2-12:controlled:a2-12-e6:explanationAr",
-        "evidenceExcerpt": "شرط wenn يبقى فعله في النهاية ثم تأتي النتيجة برغبة محدّدة: «Wenn kein Zimmer frei ist, möchte ich eine Erstattung». تقديم ist على الفاعل يكسر التابع، و بلا رابط يصير الطلب قائمة كلمات.",
+        "evidenceExcerpt": "شرط wenn يبقى فعله في النهاية ثم تأتي النتيجة برغبة محدّدة: «Wenn kein Zimmer frei ist, möchte ich eine Erstattung». تقديم ist على الفاعل يكسر التابع، وتكديس deshalb وobwohl بلا أفعال يصيّر الطلب قائمة كلمات.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -7517,7 +7517,7 @@
         "prompt": "obwohl أي خيار يحقّق «obwohl» في سياق درس «عندما تحدث مشكلة»؟",
         "answer": "Obwohl ich reserviert habe, ist kein Zimmer frei.",
         "evidenceRef": "a2-12:miniTest:a2-12-m2:explanationAr",
-        "evidenceExcerpt": "الفعل في نهاية الجملة الفرعية. تربط aber جملتين رئيسيتين دون تغيير خاص: Ich habe gebucht, aber das Zimmer ist nicht frei.",
+        "evidenceExcerpt": "الفعل في نهاية الجملة الفرعية. ثم يبدأ الشق الرئيسي بفعله: «ist kein Zimmer frei»، لا «kein Zimmer ist frei».",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -7715,7 +7715,7 @@
         "prompt": "Rat أي خيار يحقّق «Rat» في هذا السياق؟",
         "answer": "Du solltest mehr schlafen.",
         "evidenceRef": "a2-13:miniTest:a2-13-m1:explanationAr",
-        "evidenceExcerpt": "النصيحةُ ب «solltest» ثم الفعلُ في النهاية: «Du solltest mehr schlafen». ف «Du sollte» فقدت سَها، و «Du mehr schlafen soll» فعلٌ في الوسط، و «Du bist sollte Schlaf» ليس جملةً أصلًا. فحص ذاتي: أين يقعُ المصدر؟",
+        "evidenceExcerpt": "النصيحةُ ب «solltest» ثم الفعلُ في النهاية: «Du solltest mehr schlafen». ف «Du sollte» تفقد نهاية -st مع du، و «Du mehr schlafen soll» تؤخّر الفعل المصرَّف إلى الآخر، و «Du bist sollte Schlaf» ليس جملةً أصلًا. فحص ذاتي:…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -7759,7 +7759,7 @@
         "prompt": "Messbares Ziel اختر الصيغة الصحيحة لحالة «Messbares Ziel»:",
         "answer": "Montag und Donnerstag je 20 Minuten gehen.",
         "evidenceRef": "a2-13:miniTest:a2-13-m5:explanationAr",
-        "evidenceExcerpt": "الهدفُ الصحّي القابل للقياس يسمّي اليومَ والمدة معًا: «Montag und Donnerstag je 20 Minuten gehen.». أمّا «Immer gesund sein.» نتيجةٌ لا خطة. فحص ذاتي: هل يمكن التحقّق من هدفك؟",
+        "evidenceExcerpt": "الهدفُ الصحّي القابل للقياس يسمّي اليومَ والمدة معًا: «Montag und Donnerstag je 20 Minuten gehen.». أمّا «Immer gesund sein.» فنتيجةٌ لا خطة. فحص ذاتي: هل يمكن التحقّق من هدفك؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8399,7 +8399,7 @@
         "prompt": " فاعل واحد؛ اختر:",
         "answer": "Ich lerne online, um Deutsch zu üben.",
         "evidenceRef": "a2-17:controlled:a2-17-e1:explanationAr",
-        "evidenceExcerpt": "فاعل الغرض هو فاعل الجملة فيكفي um … zu: «Ich lerne online, um Deutsch zu üben». damit تحتاج فاعلًا مغايرًا لأنها تُبيّن غاية لغيرك، و تقديم um على المصدر يكسر ترتيب جزء الغرض.",
+        "evidenceExcerpt": "فاعل الغرض هو فاعل الجملة فيكفي um … zu: «Ich lerne online, um Deutsch zu üben». damit تحتاج فاعلًا مغايرًا لأنها تُبيّن غاية لغيرك، وتقديم um على المصدر يكسر ترتيب جزء الغرض.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8432,7 +8432,7 @@
         "prompt": "صحح جملة damit: Ich schicke das Foto privat, damit können alle entscheiden.",
         "answer": "Ich schicke das Foto privat, damit alle entscheiden können",
         "evidenceRef": "a2-17:controlled:a2-17-e4:explanationAr",
-        "evidenceExcerpt": "جملة damit تحمل فعلها المُصرَّف إلى آخرها: «damit alle entscheiden können». تقديم können يجعلها سؤالًا أو رئيسيةً داخل رابطة، فيضيع الغرضُ الذي أُرسِلت الصورة من أجله. فحص ذاتي: هل أنهُتَ التابعة فعلَها؟",
+        "evidenceExcerpt": "جملة damit تحمل فعلها المُصرَّف إلى آخرها: «damit alle entscheiden können». تقديم können يجعلها سؤالًا أو رئيسيةً داخل رابطة، فيضيع الغرضُ الذي أُرسِلت الصورة من أجله. فحص ذاتي: هل أنهيتَ التابعة فعلَها؟",
         "visibilityPolicy": "hidden-target",
         "status": "pass"
       },
@@ -8454,7 +8454,7 @@
         "prompt": " أفضل سلوك قبل نشر صورة جماعية:",
         "answer": "Zuerst Zustimmung fragen und Sichtbarkeit prüfen.",
         "evidenceRef": "a2-17:controlled:a2-17-e6:explanationAr",
-        "evidenceExcerpt": "قبل نشر صورة جماعية تُطلب الموافقة وتُراجع دائرة المشاهدين: «Zuerst Zustimmung fragen und Sichtbarkeit prüfen». النشر الفوري يسلب حق الاعتراض، والموقع معلومة زائدة. فحص ذاتي: هل بقي لأحد حق الرفض؟",
+        "evidenceExcerpt": "قبل نشر صورة جماعية تُطلب الموافقة وتُراجع دائرة المشاهدين: «Zuerst Zustimmung fragen und Sichtbarkeit prüfen». النشر الفوري أو المراجعة بعده يسلبان حق الاعتراض، وإضافة كل الأسماء تكشف الآخرين. فحص ذاتي: هل بقي لأحد حق …",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8586,7 +8586,7 @@
         "prompt": "Vor dem Posten الأفضل:",
         "answer": "Zustimmung und Publikum prüfen",
         "evidenceRef": "a2-17:miniTest:a2-17-m4:explanationAr",
-        "evidenceExcerpt": "قبل النشر يُقاس أمران: «Zustimmung und Publikum prüfen»، فلا يُنشر ما يخصّ غيرَك بلا إذن. وإضافةُ الموقع أو الصور تزيد المدى بلا ضرورة؛ فحص ذاتي: مَن سيرى المنشور وهل يوافق أصحابُه؟",
+        "evidenceExcerpt": "قبل النشر يُقاس أمران: «Zustimmung und Publikum prüfen»، فلا يُنشر ما يخصّ غيرَك بلا إذن. وإضافةُ الموقع أو إرسال كلمة المرور يكشفان ما لا يلزم، وتأجيل الموافقة يأتي متأخرًا؛ فحص ذاتي: مَن سيرى المنشور وهل يوافق أصحابُه؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8608,7 +8608,7 @@
         "prompt": " اختر رأيًا بجملة dass صحيحة:",
         "answer": "Ich finde, dass Handys nützlich sind.",
         "evidenceRef": "a2-18:controlled:a2-18-e1:explanationAr",
-        "evidenceExcerpt": "بعد dass يسبق الفاعلُ فعله ويُذهب بالمُصرَّف إلى النهاية: «Ich finde, dass Handys nützlich sind». «dass sind Handys nützlich» تجعل فعل الصلة تابعًا للجملة الرئيسية. فحص ذاتي: هل أنهيَتَ الجملة بفعلها؟",
+        "evidenceExcerpt": "بعد dass يسبق الفاعلُ فعله ويُذهب بالمُصرَّف إلى النهاية: «Ich finde, dass Handys nützlich sind». «dass sind Handys nützlich» ترتّب التابعة كأنها رئيسية. فحص ذاتي: هل أنهيتَ الجملة بفعلها؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8870,9 +8870,9 @@
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
         "prompt": " أي تجربة قابلة للقياس؟",
-        "answer": "عشر بطاقات لخمس أيام واختبار في اليوم السادس.",
+        "answer": "عشر بطاقات لخمسة أيام واختبار في اليوم السادس.",
         "evidenceRef": "a2-19:controlled:a2-19-e6:explanationAr",
-        "evidenceExcerpt": "التجربة القابلة للقياس تحدّد العدد والمدة والاختبار: «عشر بطاقات لخمس أيام واختبار في اليوم السادس». «سأتعلم أكثر» بلا عدّاد، و «سأفهم كل شيء» هدف لا خطة، وتغيير كل العادات دفعة واحدة لا يُنسب لأحد.",
+        "evidenceExcerpt": "التجربة القابلة للقياس تحدّد العدد والمدة والاختبار: «عشر بطاقات لخمسة أيام واختبار في اليوم السادس». «سأتعلم أكثر» بلا عدّاد، و «سأفهم كل شيء» هدف لا خطة، وتغيير كل العادات دفعة واحدة لا يُنسب لأحد.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8982,7 +8982,7 @@
         "prompt": "wenn أي خيار يحقّق «wenn» في هذا السياق؟",
         "answer": "Wenn ich müde bin, mache ich Pause.",
         "evidenceRef": "a2-19:miniTest:a2-19-m2:explanationAr",
-        "evidenceExcerpt": "جملةُ الشرط تنقل الفعلَ إلى نهايتها ثم تبدأ الجوابَ به: «Wenn ich müde bin, mache ich Pause». فالترتيبُ الألماني لا يقدّم الفاعلَ ولا يحذف الفعل، وصيغةُ الأمر لا تصلح جوابًا؛ فحص ذاتي: أين وقف الفعلُ في كل نصف؟",
+        "evidenceExcerpt": "جملةُ الشرط تنقل الفعلَ إلى نهايتها ثم تبدأ الجوابَ به: «Wenn ich müde bin, mache ich Pause». فالترتيبُ الألماني لا يقدّم الفاعلَ ولا يحذف الفعل؛ فحص ذاتي: أين وقف الفعلُ في كل نصف؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9191,7 +9191,7 @@
         "prompt": "Interner Test ماذا يعني؟",
         "answer": "تقييم داخل الدورة",
         "evidenceRef": "a2-20:miniTest:a2-20-m3:explanationAr",
-        "evidenceExcerpt": "«Interner Test» تقييمٌ داخل الدورة تُوَظِّفه المدرسةُ لنفسها، أما الشهادةُ الرسمية فتُصدرها جهةُ امتحانٍ خارجيّة. والنصّ لا يعدُضمانَ نجاحٍ ولا يربط اختبارَ المستوى بموعدِ Goethe. فحص ذاتي: من يُصدر الوثيقة؟",
+        "evidenceExcerpt": "«Interner Test» تقييمٌ داخل الدورة تُوَظِّفه المدرسةُ لنفسها، أما الشهادةُ الرسمية فتُصدرها جهةُ امتحانٍ خارجيّة. والنصّ لا يَعِد بنجاحٍ مضمون ولا يربط اختبارَ المستوى بموعدِ Goethe. فحص ذاتي: من يُصدر الوثيقة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9224,7 +9224,7 @@
         "prompt": " اختر vorhaben الصحيح:",
         "answer": "Ich habe vor, mehr zu lernen.",
         "evidenceRef": "a2-21:controlled:a2-21-e1:explanationAr",
-        "evidenceExcerpt": "الفعل vorhaben ينفصل: التقديم مع الفاعل والمصدر مع zu في النهاية: «Ich habe vor, mehr zu lernen». صيغة vorhabe ليست فعلًا مساعدًا، و zu vor يضيع معناها. فحص ذاتي: هل بقي جزء من الفعل مع الفاعل؟",
+        "evidenceExcerpt": "الفعل vorhaben ينفصل: التقديم مع الفاعل والمصدر مع zu في النهاية: «Ich habe vor, mehr zu lernen». و «Ich vorhabe» لا تفصل البادئة في الجملة الرئيسية، و zu vor يضيع معناها. فحص ذاتي: هل بقي جزء من الفعل مع الفاعل؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9279,7 +9279,7 @@
         "prompt": " أي هدف أدق؟",
         "answer": "Viermal pro Woche 45 Minuten und freitags eine Aufnahme.",
         "evidenceRef": "a2-21:controlled:a2-21-e6:explanationAr",
-        "evidenceExcerpt": "الهدف القابل للقياس يذكر التكرار والمدة ودليل التحقق: «Viermal pro Woche 45 Minuten und freitags eine Aufnahme.». «Mehr Deutsch.» لا يُعرَف إنجازاه، فيبقى الحافز بلا مقياس. فحص ذاتي: هل أستطيع عدّ ما فعلت؟",
+        "evidenceExcerpt": "الهدف القابل للقياس يذكر التكرار والمدة ودليل التحقق: «Viermal pro Woche 45 Minuten und freitags eine Aufnahme.». «Mehr Deutsch.» لا يُعرَف إنجازه، فيبقى الحافز بلا مقياس. فحص ذاتي: هل أستطيع عدّ ما فعلت؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9697,7 +9697,7 @@
         "prompt": " أي التزام أكثر واقعية؟",
         "answer": "أجرب ساعة كل سبت لأربعة أسابيع.",
         "evidenceRef": "a2-23:controlled:a2-23-e6:explanationAr",
-        "evidenceExcerpt": "الالتزام الواقعي يسمّي ساعة ومدة ويوم اختبار: «أجرب ساعة كل سبت لأربعة أسابيع». «سأفعل كل المهام دائمًا» يعمّم بلا حدّ، وجمع كل البيانات يسبق القدرة على الوفاء بها.",
+        "evidenceExcerpt": "الالتزام الواقعي يسمّي ساعة ومدة ويوم اختبار: «أجرب ساعة كل سبت لأربعة أسابيع». «سأفعل كل المهام دائمًا» يعمّم بلا حدّ، وجمع كل بيانات المستفيدين يتجاوز ما تحتاجه المهمة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10313,7 +10313,7 @@
         "prompt": " اختر موازنة صحيحة:",
         "answer": "Einerseits ist der Kurs teuer, andererseits ist er intensiv.",
         "evidenceRef": "b1-02:controlled:b1-02-e6:explanationAr",
-        "evidenceExcerpt": "موازنة einerseits … andererseits تحتاج فعلًا مُصرَّفًا في كل جزء: «Einerseits ist der Kurs teuer, andererseits ist er intensiv». جزء بلا فعل يبقى عنوانًا، والربط بـ aber يُضاعف الرابطين ويكسر التناظر.",
+        "evidenceExcerpt": "موازنة einerseits … andererseits تحتاج فعلًا مُصرَّفًا في كل جزء: «Einerseits ist der Kurs teuer, andererseits ist er intensiv». جزء بلا فعل يبقى عنوانًا، وبعد andererseits يسبق الفعلُ الفاعلَ: «ist er» لا «er ist».",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10852,7 +10852,7 @@
         "prompt": " اختر ملاحظة لا حكمًا:",
         "answer": "Die Datei kam am Freitag statt am Mittwoch.",
         "evidenceRef": "b1-05:controlled:b1-05-e1:explanationAr",
-        "evidenceExcerpt": "الملاحظة حدث محدّد قابل للتحقق: «kam am Freitag statt am Mittwoch». أوصاف الشخص وألفاظ التعميم مثل «immer» و «niemand» تحوّل الكلام إلى حكم، فينغلق النقاش ولا يبقى موعد يمكن ضبطه.",
+        "evidenceExcerpt": "الملاحظة حدث محدّد قابل للتحقق: «kam am Freitag statt am Mittwoch». أوصاف الشخص وألفاظ التعميم مثل «unprofessionell» و «typisch» تحوّل الكلام إلى حكم، فينغلق النقاش ولا يبقى موعد يمكن ضبطه.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -11446,7 +11446,7 @@
         "prompt": "Der Techniker, ___ morgen kommt … الضمير فاعل مذكر:",
         "answer": "der",
         "evidenceRef": "b1-08:controlled:b1-08-e1:explanationAr",
-        "evidenceExcerpt": "الضمير العائد على «der Techniker» فاعلًا في جملة الموصولة يكون der، أما den فيعود على من وقع عليه الفعل، و dem لمن تُوجَّه إليه الرسالة، و die للمؤنث والجمع. فحص ذاتي: من يقوم بفعل الجملة الموصولة؟",
+        "evidenceExcerpt": "الضمير العائد على «der Techniker» فاعلًا في الجملة الموصولة يكون der، أما den فيعود على من وقع عليه الفعل، و dem لمن تُوجَّه إليه الرسالة، و die للمؤنث والجمع. فحص ذاتي: من يقوم بفعل الجملة الموصولة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -11501,7 +11501,7 @@
         "prompt": " اختر طلبًا عمليًا:",
         "answer": "Bitte lassen Sie die Heizung prüfen und teilen Sie mir bis Freitag einen Termin mit.",
         "evidenceRef": "b1-08:controlled:b1-08-e6:explanationAr",
-        "evidenceExcerpt": "الطلب العملي يسمّي الإجراء وموعد الرد بلا ادعاء قانوني: «Bitte lassen Sie die Heizung prüfen und teilen Sie mir bis Freitag einen Termin mit». الإنذار الفوري والشتم والتوسع في معرفة القوانين تُبعد الحل.",
+        "evidenceExcerpt": "الطلب العملي يسمّي الإجراء وموعد الرد بلا ادعاء قانوني: «Bitte lassen Sie die Heizung prüfen und teilen Sie mir bis Freitag einen Termin mit». الإنذار الفوري والطلب بلا موعد وادعاء معرفة القوانين تُبعد الحل.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -11710,7 +11710,7 @@
         "prompt": " أي Pilot جيد؟",
         "answer": "ثلاثة أشهر مع بيانات قبل وبعد وشروط تعديل.",
         "evidenceRef": "b1-09:controlled:b1-09-e6:explanationAr",
-        "evidenceExcerpt": "التجربة الجيدة لها مدة وبيانات قبل وبعد وشروط تعديل معلنة، كخيار الثلاثة أشهر. بلا مدة لا قرار، وبلا قياس لا دليل، وباسماع طرف واحد يخفى أثر التغيير على الباقين. فحص ذاتي: هل يُعرف متى تُوقف التجربة؟",
+        "evidenceExcerpt": "التجربة الجيدة لها مدة وبيانات قبل وبعد وشروط تعديل معلنة، كخيار الثلاثة أشهر. بلا مدة لا قرار، وبلا قياس لا دليل، وبسماع طرف واحد يخفى أثر التغيير على الباقين. فحص ذاتي: هل يُعرف متى تُوقف التجربة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -11809,7 +11809,7 @@
         "prompt": "Ziel vs Indikator اختر المؤشر:",
         "answer": "weniger gezählte Unfälle",
         "evidenceRef": "b1-09:miniTest:b1-09-m2:explanationAr",
-        "evidenceExcerpt": "عدد الحوادث قابل للقياس: weniger gezählte Unfälle. الهدف العام مثل sicherer أو schöner لا يُقاس، أما العدد فيقبل الرصد والمقارنة قبل الإجراء وبعده.",
+        "evidenceExcerpt": "عدد الحوادث قابل للقياس: weniger gezählte Unfälle. mehr Sicherheit و bessere Stadt أهداف عامة، و gefühlte Unsicherheit شعور لا يُعدّ مباشرة، أما العدد فيقبل الرصد والمقارنة قبل الإجراء وبعده.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12062,7 +12062,7 @@
         "prompt": " اختر dadurch, dass الصحيح:",
         "answer": "Die Kosten sinken dadurch, dass die Firma Tickets bezahlt.",
         "evidenceRef": "b1-11:controlled:b1-11-e1:explanationAr",
-        "evidenceExcerpt": "dadurch مع فاصلة ثم dass، والفعل في النهاية: «dadurch, dass die Firma Tickets bezahlt». تقديم الفعل على الفاعل يعطي ترتيب جملة رئيسية، ودمج indem مع dass يضاعف الرابط. فحص ذاتي: أين الفعل في الجزء المسند؟",
+        "evidenceExcerpt": "dadurch مع فاصلة ثم dass، والفعل في النهاية: «dadurch, dass die Firma Tickets bezahlt». تقديم الفعل على الفاعل يعطي ترتيب جملة رئيسية، ودمج dadurch مع indem يضاعف الرابط. فحص ذاتي: أين الفعل في الجزء المسند؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12117,7 +12117,7 @@
         "prompt": " أي خطة أكثر شمولًا؟",
         "answer": "دراجة وتذكرة وعمل منزلي ومشاركة سيارة مع قياس الوصول.",
         "evidenceRef": "b1-11:controlled:b1-11-e6:explanationAr",
-        "evidenceExcerpt": "خطة شاملة تقدّم بدائل لحالات مختلفة مع قياس الوصول: دراجة وتذكرة وعمل من المنزل ومشاركة سيارة. تعميم الدراجة واستثناء من لا يستطيع يتركان النتيجة بلا بيانات، وعدّ الدراجات وحده لا يقيس وصولًا.",
+        "evidenceExcerpt": "خطة شاملة تقدّم بدائل لحالات مختلفة مع قياس الوصول: دراجة وتذكرة وعمل من المنزل ومشاركة سيارة. تعميم الدراجة واستثناء من لا يستطيع يتركان بعض الناس بلا بديل، وعدّ الدراجات وحده لا يقيس وصولًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -12469,7 +12469,7 @@
         "prompt": " اختر الكتابة الصحيحة:",
         "answer": "beim Lesen",
         "evidenceRef": "b1-13:controlled:b1-13-e1:explanationAr",
-        "evidenceExcerpt": "الفعل المستعمل اسمًا بعد beim يُكتب بحرف كبير ويكون اسمًا لا مصدرًا: «beim Lesen». كتابته صغيرة تترك حرف الجر بلا اسم، والإضافة zu إليه تُضاعف الأداة. فحص ذاتي: هل تصلح صفة قبل الكلمة؟",
+        "evidenceExcerpt": "الفعل المستعمل اسمًا بعد beim يُكتب بحرف كبير ويكون اسمًا لا مصدرًا: «beim Lesen». و «bei Lesen» تُسقط الأداة المدمجة في beim، و «beim zu Lesen» تُقحم zu المصدر على الاسم، و «beim gelesen» تضع Partizip مكانه. فحص ذاتي: …",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -13063,7 +13063,7 @@
         "prompt": " الفاعل نفسه:",
         "answer": "Statt sofort zu antworten, sammle ich Nachrichten",
         "evidenceRef": "b1-16:controlled:b1-16-e1:explanationAr",
-        "evidenceExcerpt": "فاعل واحد ومصدر مع zu يكفيان: «Statt sofort zu antworten, sammle ich Nachrichten». «Statt dass ich sofort zu antworten, sammle ich Notizen» يضاعف الرابط، و «Statt ich antworte» يبني جملة رئيسية بلا أن. فحص ذاتي: هل الفا…",
+        "evidenceExcerpt": "فاعل واحد ومصدر مع zu يكفيان: «Statt sofort zu antworten, sammle ich Nachrichten». «Statt dass ich sofort zu antworten, sammle ich Notizen» يضاعف الرابط، و «Statt ich antworte» يبني جملة رئيسية بلا dass. فحص ذاتي: هل ال…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -13657,7 +13657,7 @@
         "prompt": " تسأل عن نية الشخص:",
         "answer": "Was meinst du genau?",
         "evidenceRef": "b1-19:controlled:b1-19-e1:explanationAr",
-        "evidenceExcerpt": "لسؤال عن نيّة المتكلم نستعمل meinen مع الشخص: «Was meinst du genau?». معنى كلمة نطلبه بـ heißen oder bedeuten، أما «Welche Bedeutung meinst das» فيجمع فعلين. فحص ذاتي: هل الجواب يشرح قصدًا لا ترجمة؟",
+        "evidenceExcerpt": "لسؤال عن نيّة المتكلم نستعمل meinen مع الشخص: «Was meinst du genau?». معنى كلمة نطلبه بـ heißen أو bedeuten، أما «Welche Bedeutung meinst das» فيجمع فعلين. فحص ذاتي: هل الجواب يشرح قصدًا لا ترجمة؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -14457,7 +14457,7 @@
         "id": "b1-23-e1",
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
-        "prompt": " اختر زوج السؤال والجواب الصحيحين مع الحرف الجر für:",
+        "prompt": " اختر زوج السؤال والجواب الصحيحين مع حرف الجر für:",
         "answer": "Wofür? Dafür.",
         "evidenceRef": "b1-23:controlled:b1-23-e1:explanationAr",
         "evidenceExcerpt": "لِشيء نسأل بـ Wofür ونجيب بـ dafür، كما في الدرس: «Wofür ist die App? Dafür, Termine zu planen». وللأشخاص für wen، فـ «Für wen? Dafür Person.» يخلط سؤالًا عن شخص بجواب عن شيء. أما «Womit? Darüber.» و «Woran? Damit.» فحر…",
@@ -14724,7 +14724,7 @@
         "prompt": " أي نتيجة مشروع أدق؟",
         "answer": "انخفض المتوسط من 18 إلى 10 دقائق لدى 20 شخصًا خلال أربعة أسابيع.",
         "evidenceRef": "b1-24:controlled:b1-24-e6:explanationAr",
-        "evidenceExcerpt": "النتيجة الدقيقة تحمل رقمًا وعينة ومدى زمني: «انخفض المتوسط من 18 إلى 10 دقائق لدى 20 شخصًا في أربعة أسابيع». أما «نجح للجميع» و«أجمل» و«أفضل» فأحكام بلا قياس. فحص ذاتي: هل يمكن إعادة العدّ من البيانات نفسها؟",
+        "evidenceExcerpt": "النتيجة الدقيقة تحمل رقمًا وعينة ومدة زمنية: «انخفض المتوسط من 18 إلى 10 دقائق لدى 20 شخصًا خلال أربعة أسابيع». أما «نجح للجميع» و«أجمل» و«أفضل» فأحكام بلا قياس. فحص ذاتي: هل يمكن إعادة العدّ من البيانات نفسها؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15241,7 +15241,7 @@
         "prompt": "Konzession اختر الصيغة الصحيحة لحالة «Konzession»:",
         "answer": "Der Einwand ist berechtigt; allerdings fehlt ein Belastungsmaß.",
         "evidenceRef": "b2-02:miniTest:b2-02-m4:explanationAr",
-        "evidenceExcerpt": "اعتراف ثم فجوة: Der Einwand ist berechtigt; allerdings fehlt ein Belastungsmaß. تُقرّ بصحة الاعتراف ثم تحدّد النقص، فلا تتجاهل الطرف الآخر ولا تنكره.",
+        "evidenceExcerpt": "اعتراف ثم فجوة: Der Einwand ist berechtigt; allerdings fehlt ein Belastungsmaß. تُقرّ بصحة الاعتراض ثم تحدّد النقص، فلا تتجاهل الطرف الآخر ولا تنكره.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -15659,7 +15659,7 @@
         "prompt": " ارتفعت النسبة من 20% إلى 30%. ما الوصف الصحيح؟",
         "answer": "plus zehn Prozentpunkte und relativ plus fünfzig Prozent",
         "evidenceRef": "b2-05:controlled:b2-05-e1:explanationAr",
-        "evidenceExcerpt": "الفرق بين 20% و 30% عشر نقاط مئوية لا عشرة بالمائة: zehn Prozentpunkte، وهو نصف الأساس فيصير relativ plus fünfzig Prozent. الخلط بين النقط والنسبة يبدّل الرقم عشر مرات ويُنسَب إلى البيانات.",
+        "evidenceExcerpt": "الفرق بين 20% و 30% عشر نقاط مئوية لا عشرة بالمائة: zehn Prozentpunkte، وهو نصف الأساس فيصير relativ plus fünfzig Prozent. الخلط بين النقط والنسبة يُظهر زيادة 50% كأنها 10% ويُنسَب ذلك إلى البيانات.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16055,7 +16055,7 @@
         "prompt": " أي مثال يصف تأثيرًا لا حضورًا فقط؟",
         "answer": "Die Teilnehmenden stimmen über zwei finanzierbare Varianten ab.",
         "evidenceRef": "b2-07:controlled:b2-07-e1:explanationAr",
-        "evidenceExcerpt": "الحضور بلا اختيار لا يُنتج أثرًا: فتح الباب أو تعليق الدعوة يصفان إتاحة. العبارة التي تصنع فرقًا هي «Die Teilnehmenden stimmen über zwei finanzierbare Varianten ab»: بدائل حقيقية وحدّ للقرار.",
+        "evidenceExcerpt": "الحضور بلا اختيار لا يُنتج أثرًا: الترحيب والنشرة وملخص المحضر والصور تصف حضورًا وإعلامًا. العبارة التي تصنع فرقًا هي «Die Teilnehmenden stimmen über zwei finanzierbare Varianten ab»: بدائل حقيقية وحدّ للقرار.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16110,7 +16110,7 @@
         "prompt": " أي تصميم يعالج التمثيل بجدية؟",
         "answer": "Auswahl, Mandat, Rücksprache und Grenzen der Vertretung werden geklärt.",
         "evidenceRef": "b2-07:controlled:b2-07-e6:explanationAr",
-        "evidenceExcerpt": "التمثيل يُعالَج بتوضيح المسار: من اختار، وما التفويض، ومتى يُراجَع أصحاب الشأن، وما حدود النيابة. منفرد يتكلّم باسم الجميع، أو أعلى صوتٍ يُوثَّق، يترك البقية خارج القرار بلا تسجيل.",
+        "evidenceExcerpt": "التمثيل يُعالَج بتوضيح المسار: من اختار، وما التفويض، ومتى يُراجَع أصحاب الشأن، وما حدود النيابة. دعوة أكبر عدد، أو اختيار المدينة للمشاركين، أو نشر النتائج وحدها لا يوضح من يمثّل من.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16198,7 +16198,7 @@
         "prompt": "Tatsächliche Teilhabe ما الذي يجب تحليله؟",
         "answer": "Zugang, Stimme, Einfluss und Rückmeldung",
         "evidenceRef": "b2-07:miniTest:b2-07-m1:explanationAr",
-        "evidenceExcerpt": "هذه سلسلة المشاركة الفعلية. حلل المشاركة في ثلاث درجات: هل وصلت الدعوة؟",
+        "evidenceExcerpt": "هذه سلسلة المشاركة الفعلية. من وصول الدعوة إلى الصوت ثم الأثر ثم الرد.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16253,7 +16253,7 @@
         "prompt": " أي جملة تفرق القياس عن العنوان؟",
         "answer": "Erhoben wurde eine Selbsteinschätzung; eine objektive Leistungsmessung fehlt.",
         "evidenceRef": "b2-08:controlled:b2-08-e1:explanationAr",
-        "evidenceExcerpt": "الفرق بين القياس والعنوان: Selbsteinschätzung تقرير ذاتي لا يعادل قياس أداء موضوعي، وعدد البوابات الإخبارية لا يضيف أدلة مستقلة.",
+        "evidenceExcerpt": "الفرق بين القياس والعنوان: Selbsteinschätzung تقرير ذاتي لا يعادل قياس أداء موضوعي، فلا تثبت تحسنًا موضوعيًا، وغياب القياس لا يجعل كل قول بلا قيمة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16396,7 +16396,7 @@
         "prompt": "Belegkette ما الخطوة الأولى؟",
         "answer": "Zur ursprünglichen Quelle und Messung zurückgehen",
         "evidenceRef": "b2-08:miniTest:b2-08-m1:explanationAr",
-        "evidenceExcerpt": "الأصل يبين ما المادة الداعمة فعلًا: Zur ursprünglichen Quelle und Messung zurückgehen. نقلاً عن نقلك لا يضيف دليلًا، والسؤال الأصلي يكشف هل المادة داعمة أصلًا.",
+        "evidenceExcerpt": "الأصل يبين ما المادة الداعمة فعلًا: Zur ursprünglichen Quelle und Messung zurückgehen. والنقل عن وسيلة أخرى لا يضيف دليلًا، والسؤال الأصلي يكشف هل المادة داعمة أصلًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16407,7 +16407,7 @@
         "prompt": "Konjunktiv I أي خيار يحقّق «Konjunktiv I» في هذا السياق؟",
         "answer": "Er sagt, die Studie sei unabhängig.",
         "evidenceRef": "b2-08:miniTest:b2-08-m2:explanationAr",
-        "evidenceExcerpt": "sei علامة نقل غير مباشر واضحة. ينقل Konjunktiv I كلام المصدر دون أن يتبناه الكاتب: Sie sagt, die Daten zeigten/zeigen? الصيغ الواضحة: er sei, er habe, er werde؛ مع الجمع قد تتطابق صيغة Konjunktiv I مع الحاضر، فيستعمل Ko…",
+        "evidenceExcerpt": "sei علامة نقل غير مباشر واضحة. ينقل Konjunktiv I كلام المصدر دون أن يتبناه الكاتب: Er sagt, die Studie sei unabhängig. والصيغ الواضحة: er sei, er habe, er werde؛ مع الجمع قد تتطابق صيغة Konjunktiv I مع الحاضر، فيستعمل K…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -16506,7 +16506,7 @@
         "prompt": " أي مقارنة ثقافية أدق؟",
         "answer": "In manchen Teams wird direkte Kritik erwartet, wobei Rolle und Situation das Verhalten mitprägen.",
         "evidenceRef": "b2-09:controlled:b2-09-e6:explanationAr",
-        "evidenceExcerpt": "المقارنة الدقيقة تُقيّد بوحدة السياق لا بالجنسية: in manchen Teams مع تذكير بالدور والموقف؛ أما «كل الألمانمباشرة» أو «العرب يتجنبون دائمًا» فتعميم لا يُدَّعَم.",
+        "evidenceExcerpt": "المقارنة الدقيقة تُقيّد بوحدة السياق لا بالجنسية: in manchen Teams مع تذكير بالدور والموقف؛ أما «كل الألمان مباشرون» أو «العرب يتجنبون دائمًا» فتعميم لا يُدَّعَم.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17298,7 +17298,7 @@
         "prompt": " أي بديل تفسيري ذكره سليم؟",
         "answer": "Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen.",
         "evidenceRef": "b2-13:controlled:b2-13-e6:explanationAr",
-        "evidenceExcerpt": "غياب مجموعة ضبط يبقي السببية مفتوحة: «Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen». أما «Die zweite Gruppe bestätigt den Effekt» و «Der Effekt ist bewiesen» وإسناد الرجوع إلى القاعدة د…",
+        "evidenceExcerpt": "غياب مجموعة ضبط يبقي السببية مفتوحة: «Ein Vergleich mit einer zweiten Gruppe fehlt, deshalb bleibt die Ursache offen». أما «Die zweite Gruppe bestätigt den Effekt» و «Der Effekt ist bewiesen» وإسناد الانخفاض إلى القاعدة…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17430,7 +17430,7 @@
         "prompt": "Belegstatus نتيجة لا تُعاد:",
         "answer": "ist ein Hinweis.",
         "evidenceRef": "b2-13:miniTest:b2-13-m5:explanationAr",
-        "evidenceExcerpt": "قرينة تحتاج بيانات: ist ein Hinweis يعني مؤشرًا مبدئيًا يستدعي قياسًا إضافيًا، ولا يصبح beleg أو Regel قبل أن تُضاف البيانات الداعمة.",
+        "evidenceExcerpt": "قرينة تحتاج بيانات: ist ein Hinweis يعني مؤشرًا مبدئيًا يستدعي قياسًا إضافيًا، ولا يصبح Beleg أو Regel قبل أن تُضاف البيانات الداعمة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17441,7 +17441,7 @@
         "prompt": " أي جملة فيها الإحالة قاطعة؟",
         "answer": "Er stellte einen Antrag, und dieser Antrag wurde abgelehnt.",
         "evidenceRef": "b2-14:controlled:b2-14-e1:explanationAr",
-        "evidenceExcerpt": "الإحالة بـ dieser Antrag تكرّر الاسم وتُظهر الجنس والإعراب فلا تحتمل مرجعًا آخر، أما es فتعود على الجملة لا على المفرد وتُربك القارئ.",
+        "evidenceExcerpt": "الإحالة بـ dieser Antrag تكرّر الاسم وتُظهر الجنس والإعراب فلا تحتمل مرجعًا آخر، أما dieses و es فمحايدتان لا تطابقان Antrag المذكر، فتعودان على الجملة وتُربكان القارئ.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17584,7 +17584,7 @@
         "prompt": "Eindeutiger Verweis أي إحالة أوضح؟",
         "answer": "…der Termin und der Antrag. Dieser Antrag war unvollständig.",
         "evidenceRef": "b2-14:miniTest:b2-14-m1:explanationAr",
-        "evidenceExcerpt": "اسم مكرر يقطع الشك. كل الضمائر والأسماء الإشارةية (dieser, jener, es, man, derselbe) تحتاج مرجعًا واحدًا لا يحتمل الشك.",
+        "evidenceExcerpt": "اسم مكرر يقطع الشك. كل الضمائر وأسماء الإشارة (dieser, jener, es, man, derselbe) تحتاج مرجعًا واحدًا لا يحتمل الشك.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17595,7 +17595,7 @@
         "prompt": "Relation للتقابل بين حلّين نختار:",
         "answer": "während",
         "evidenceRef": "b2-14:miniTest:b2-14-m2:explanationAr",
-        "evidenceExcerpt": "während للمقابلة. Ein Konnektor trägt Bedeutung nur, wenn er die Relation nennt: Grund (weil, da), Folge (sodann, folglich, dadurch, dass … folgt), Gegensatz (während, hingegen, wohingegen), Einschränkung (allerdings, f…",
+        "evidenceExcerpt": "während للمقابلة؛ أما deshalb فللنتيجة، و außerdem للإضافة، و sobald للزمن.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17606,7 +17606,7 @@
         "prompt": "Wortstellung بعد «Anschließend»:",
         "answer": "wurde der Termin bestätigt.",
         "evidenceRef": "b2-14:miniTest:b2-14-m3:explanationAr",
-        "evidenceExcerpt": "الفعل مباشرة بعد الموضع الأول. Ein Konnektor trägt Bedeutung nur, wenn er die Relation nennt: Grund (weil, da), Folge (sodann, folglich, dadurch, dass … folgt), Gegensatz (während, hingegen, wohingegen), Einschränkung (…",
+        "evidenceExcerpt": "الفعل مباشرة بعد الموضع الأول: Anschließend wurde der Termin bestätigt، ثم الفاعل.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17705,7 +17705,7 @@
         "prompt": " أي ربط زمني صحيح؟",
         "answer": "Nachdem der Durchgang beendet war, folgte die Zwischenbilanz.",
         "evidenceRef": "b2-15:controlled:b2-15-e7:explanationAr",
-        "evidenceExcerpt": "السبق بعد اكتمال حدث يعبَّر عنه بـ nachdem مع ماضي سابق ثم الحدث التالي: «Nachdem der Durchgang beendet war, folgte die Zwischenbilanz». während تصف تزامنًا، و bevor تُنقلب بها العلاقة.",
+        "evidenceExcerpt": "السبق بعد اكتمال حدث يعبَّر عنه بـ nachdem مع حدث مكتمل ثم الحدث التالي: «Nachdem der Durchgang beendet war, folgte die Zwischenbilanz». während تصف تزامنًا، و bevor تُنقلب بها العلاقة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18079,7 +18079,7 @@
         "prompt": "طابق الغرض بالصيغة:",
         "answer": "إلزام بلا ذكر الملزَم → Die Belege sind nachzureichen. | إمكانية تنفيذ → Das lässt sich online erledigen. | تقييم القبول → Die Bedingung ist unzumutbar. | تسمية الجهة صراحة → Wir bitten die Stelle, den Bescheid zu prüfen.",
         "evidenceRef": "b2-17:controlled:b2-17-e5:explanationAr",
-        "evidenceExcerpt": "لكل غرض صيغة لا تُغني عنها أخرى: إلزام بلا ذكر مُلزِم يفيده sein … zu مع المصدر، و إمكانية التنفيذ يفيدها sich lassen. في الشكوى تُستعمل الصيغة التي تحمل sein، لأنها تُبقي الطلب بلا اسم يتنصّل منه.",
+        "evidenceExcerpt": "لكل غرض صيغة لا تُغني عنها أخرى: إلزام بلا ذكر مُلزِم يفيده sein … zu مع المصدر، وإمكانية التنفيذ يفيدها sich lassen. في الشكوى تُستعمل الصيغة التي تحمل sein، لأنها تُبقي الطلب بلا اسم يتنصّل منه.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -18101,7 +18101,7 @@
         "prompt": " أي فقرة تصلح لختام طلب رسمي؟",
         "answer": "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin lässt sich kurzfristig vereinbaren, falls die Prüfung Fragen aufwirft.",
         "evidenceRef": "b2-17:controlled:b2-17-e7:explanationAr",
-        "evidenceExcerpt": "الخيار الثاني يوزّع الإلزام والإمكان والرجاء؛ والأول تراكم أوامر، والثالث حيرة، والرابع قائمة بلا بناء.",
+        "evidenceExcerpt": "الخيار الثاني يجمع الرجاء والإمكان المشروط؛ والأول يعد بإلغاء الرسوم بلا أساس، والثالث يرفض الموعد بسبب غير منطقي، والرابع يختم بأمر بالدفع.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18299,7 +18299,7 @@
         "prompt": " أي صياغة تبقى رسمية بلا تضخيم؟",
         "answer": "Wir entscheiden über Ihren Antrag und prüfen Ihre Unterlagen.",
         "evidenceRef": "b2-18:controlled:b2-18-e7:explanationAr",
-        "evidenceExcerpt": "فعلان مباشران يقولان المطلوب في ست كلمات؛ الخيارات الأخرى تحوّل كل فعل إلى اسم مع فعل خفيف فتصير ثلاث مراحل نفخ متتالية.",
+        "evidenceExcerpt": "فعلان مباشران يقولان المطلوب في تسع كلمات؛ الخيارات الأخرى تحوّل كل فعل إلى اسم مع فعل خفيف فتصير ثلاث مراحل نفخ متتالية.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18497,7 +18497,7 @@
         "prompt": " أيّ جملة تصلح لشكوى مكتوبة إلى جهة؟",
         "answer": "Der Bescheid ist am 4. April abgelaufen; ich bitte Sie, die Prüfung bis zum 12. nachzuholen.",
         "evidenceRef": "b2-19:controlled:b2-19-e7:explanationAr",
-        "evidenceExcerpt": "الأولى وقائع وأجلٌ بصيغة طلب؛ الثلاث الباقية أدوات محادثة تُقرأ في المكتوب استعجالًا أو لومًا.",
+        "evidenceExcerpt": "الأولى وقائع وأجلٌ بصيغة طلب؛ الثانية تطالب بلا مهلة، والثالثة تخلط التاريخ وترفض بنفسها، والرابعة لا تطلب شيئًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18695,7 +18695,7 @@
         "prompt": " أي فقرة تصلح لاعتراض مُهذّب في نص رسمي؟",
         "answer": "Zwar war der Termin knapp, jedoch ist die Antwort dokumentiert; deshalb bitte ich um eine Bestätigung bis Freitag.",
         "evidenceRef": "b2-20:controlled:b2-20-e7:explanationAr",
-        "evidenceExcerpt": "الاعتراض المُهذَّب في نص رسمي يعترف ثم يطلب موعدًا: «Zwar war der Termin knapp, jedoch ist die Antwort dokumentiert; deshalb bitte ich um eine Bestätigung bis Freitag». سخرية الجمع تُفسد العلاقة وحدها.",
+        "evidenceExcerpt": "الاعتراض المُهذَّب في نص رسمي يعترف ثم يطلب موعدًا: «Zwar war der Termin knapp, jedoch ist die Antwort dokumentiert; deshalb bitte ich um eine Bestätigung bis Freitag». أما السخرية واللوم بـ ihr فلا يليقان بنص رسمي.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18783,7 +18783,7 @@
         "prompt": "je … desto أي صيغة صحيحة؟",
         "answer": "Je mehr Personen helfen, desto schneller ist es fertig.",
         "evidenceRef": "b2-20:miniTest:b2-20-m1:explanationAr",
-        "evidenceExcerpt": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة تابعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto voller») ثم الفعل مباشرة.",
+        "evidenceExcerpt": "القياس في مستهل الجزء الثاني ثم الفعل. جملة «je» جملة تابعة فيلتصق فعلها بآخرها، والجزء الثاني يبدأ بالقياس («desto schneller») ثم الفعل مباشرة.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18835,10 +18835,10 @@
         "id": "b2-21-e1",
         "scope": "lesson-controlled",
         "kind": "multiple-choice",
-        "prompt": "„Wir haben den Vermerk erhalten.“ أي صيغة تحفظ درجة الزمن بلا حكم إضافي؟ — „Wir haben den Vermerk erhalten.“",
+        "prompt": "„Wir haben den Vermerk erhalten.“ أي صيغة تحفظ درجة الزمن بلا حكم إضافي؟",
         "answer": "Sie sagten, sie hätten den Vermerk erhalten.",
         "evidenceRef": "b2-21:controlled:b2-21-e1:explanationAr",
-        "evidenceExcerpt": "الماضي المنقول يُحفظ بمساعد واحد مُصرَّفًا: «Sie sagten, sie hätten den Vermerk erhalten». إضافة haben ثانية تُضاعف الزمن، ومع zu erhalten تصير الجملة واجبًا لا خبرًا منقولًا. فحص ذاتي: كم مساندًا؟",
+        "evidenceExcerpt": "الماضي المنقول يُحفظ بمساعد واحد مُصرَّفًا: «Sie sagten, sie hätten den Vermerk erhalten». إضافة haben ثانية تُضاعف الزمن، ومع zu erhalten تصير الجملة واجبًا لا خبرًا منقولًا. فحص ذاتي: كم فعلًا مساعدًا؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19267,7 +19267,7 @@
         "prompt": " أي كتابة صحيحة إملائيًا؟",
         "answer": "die Nachforderung",
         "evidenceRef": "b2-23:controlled:b2-23-e2:explanationAr",
-        "evidenceExcerpt": "المركّب الألماني اسم واحد فيُكتب متّصلًا: die Nachforderung. الفصل أو الشرطة استثناء مقيّد بحالات معلومة، و كتابة nach صغيرة داخله يُنزل رأس المركّب وتُربك من يقرأ مرة واحدة.",
+        "evidenceExcerpt": "المركّب الألماني اسم واحد فيُكتب متّصلًا: die Nachforderung. الفصل أو الشرطة استثناء مقيّد بحالات معلومة، وكتابة Nach منفصلة بحرف كبير تقسم الاسم الواحد كلمتين وتُربك القارئ.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19421,7 +19421,7 @@
         "prompt": "Was ist die Fuge in „Prüfungsamt“? ما الوصلة في „Prüfungsamt“؟",
         "answer": "-s-",
         "evidenceRef": "b2-23:miniTest:b2-23-m2:explanationAr",
-        "evidenceExcerpt": "وصلة المفرد الشائعة -s-. وصلة -s- شائعة قبل المؤنث: Studien + s + Beratung، وليست قاعدة لكل المركّبات.",
+        "evidenceExcerpt": "وصلة المفرد الشائعة -s-. وتكثر -s- بعد عنصر ينتهي بـ -ung: Prüfung + s + Amt، وليست قاعدة لكل المركّبات.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19443,7 +19443,7 @@
         "prompt": "Womit löst du „die Überprüfung der Zahlungen des Mieters“ auf? كيف تُزيل اللبس عن هذه السلسلة؟",
         "answer": "Der Vermieter prüfte die Zahlungen des Mieters.",
         "evidenceRef": "b2-23:miniTest:b2-23-m4:explanationAr",
-        "evidenceExcerpt": "فاعل وفعل يقطعان الغموض. لكل حلقة وظيفتان محتملتان: فاعلية (die Prüfung des Kandidaten = هو يُمتحَن/يفحص) ومفعولية (هو مَن يُفتَش).",
+        "evidenceExcerpt": "فاعل وفعل يقطعان الغموض. والمضاف إليه بعد اسم من فعل يحتمل قراءتين: die Kontrolle des Mieters = er kontrolliert أو man kontrolliert ihn.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19465,7 +19465,7 @@
         "prompt": " أي جملة تحتاج فاصلة إلزامًا؟",
         "answer": "Wir bitten darum, den Bescheid zu prüfen.",
         "evidenceRef": "b2-24:controlled:b2-24-e1:explanationAr",
-        "evidenceExcerpt": "كلمة الإشارة تُوجب الفاصلة: «Wir bitten darum, den Bescheid zu prüfen» تُعلِم القارئ بمجموعة مصدر قادمة. بلا darum لا مسوِّغ للفاصلة، و بلا فاصلة يلتصق المصدر بالطلب فيُقرأ صفة له.",
+        "evidenceExcerpt": "كلمة الإشارة تُوجب الفاصلة: «Wir bitten darum, den Bescheid zu prüfen» تُعلِم القارئ بمجموعة مصدر قادمة. بلا darum لا مسوِّغ للفاصلة، وبلا فاصلة يلتصق المصدر بالطلب فيُقرأ صفة له.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -44933,10 +44933,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1338,
+      "totalCandidates": 1334,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1203,
+      "contextualNotTarget": 1199,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44958,10 +44958,10 @@
           "contextualNotTarget": 312
         },
         "B2": {
-          "totalCandidates": 644,
+          "totalCandidates": 640,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 595
+          "contextualNotTarget": 591
         }
       }
     },
@@ -78350,7 +78350,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
             "text": "Wenn ein Kunde",
             "surface": "Wenn ein Kunde",
@@ -78563,7 +78563,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[3]",
+            "path": "exercises[2].words[2]",
             "stage": "controlled",
             "text": "den Namen",
             "surface": "den Namen",
@@ -101969,7 +101969,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "das Treffen",
             "surface": "das Treffen",
@@ -104788,7 +104788,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
             "text": "Während des Studiums",
             "surface": "Während des Studiums",
@@ -106436,7 +106436,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[3]",
+            "path": "exercises[2].words[2]",
             "stage": "controlled",
             "text": "ein Angebot",
             "surface": "ein Angebot",
@@ -107043,7 +107043,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
             "text": "Nachdem sie den Kurs",
             "surface": "Nachdem sie den Kurs",
@@ -113350,7 +113350,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "die Verbindung",
             "surface": "die Verbindung",
@@ -117869,7 +117869,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "das Gerät",
             "surface": "das Gerät",
@@ -121975,7 +121975,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[2]",
             "stage": "controlled",
             "text": "Falls der Raum",
             "surface": "Falls der Raum",
@@ -122331,7 +122331,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[3]",
+            "path": "exercises[2].words[1]",
             "stage": "controlled",
             "text": "den Termin",
             "surface": "den Termin",
@@ -131097,7 +131097,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[0]",
+            "path": "exercises[2].words[1]",
             "stage": "controlled",
             "text": "Laut der Studie",
             "surface": "Laut der Studie",
@@ -131873,7 +131873,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[3]",
+            "path": "exercises[2].words[2]",
             "stage": "controlled",
             "text": "die Datei Donnerstag",
             "surface": "die Datei Donnerstag",
@@ -143934,8 +143934,8 @@
       {
         "lessonId": "b2-02",
         "level": "B2",
-        "lemmaCandidate": "Stimme",
-        "normalizedLemma": "stimme",
+        "lemmaCandidate": "Stimmen",
+        "normalizedLemma": "stimmen",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
@@ -143943,12 +143943,12 @@
           {
             "path": "miniTest[4].options[1]",
             "stage": "test",
-            "text": "Mit der meisten Stimme gewinnen",
-            "surface": "Mit der meisten Stimme gewinnen",
+            "text": "Mit den meisten Stimmen gewinnen",
+            "surface": "Mit den meisten Stimmen gewinnen",
             "strength": "context"
           }
         ],
-        "id": "lex-n-b2-02-26e69929"
+        "id": "lex-n-b2-02-84034ac5"
       },
       {
         "lessonId": "b2-02",
@@ -150533,7 +150533,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
             "text": "die Messdaten",
             "surface": "die Messdaten",
@@ -164976,8 +164976,8 @@
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
-            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
-            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
+            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
+            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
             "strength": "context"
           }
         ],
@@ -165350,8 +165350,8 @@
           {
             "path": "miniTest[1].options[1]",
             "stage": "test",
-            "text": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
-            "surface": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
+            "text": "Die eigene These voranstellen und die Herkunft der Belege nicht nennen",
+            "surface": "Die eigene These voranstellen und die Herkunft der Belege nicht nennen",
             "strength": "context"
           }
         ],
@@ -166159,8 +166159,8 @@
           {
             "path": "miniTest[1].options[1]",
             "stage": "test",
-            "text": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
-            "surface": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
+            "text": "Die eigene These voranstellen und die Herkunft der Belege nicht nennen",
+            "surface": "Die eigene These voranstellen und die Herkunft der Belege nicht nennen",
             "strength": "context"
           }
         ],
@@ -166655,7 +166655,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "auf die Personalkosten hingewiesen",
             "surface": "auf die Personalkosten hingewiesen",
@@ -166918,8 +166918,8 @@
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
-            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
-            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
+            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
+            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
             "strength": "context"
           }
         ],
@@ -172597,7 +172597,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[3]",
             "stage": "controlled",
             "text": "der Termin",
             "surface": "der Termin",
@@ -189675,7 +189675,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[3]",
+            "path": "exercises[2].words[1]",
             "stage": "controlled",
             "text": "die Frist ist dokumentiert.",
             "surface": "die Frist ist dokumentiert.",
@@ -191119,7 +191119,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "die Rückmeldung der Studienberatung,",
             "surface": "die Rückmeldung der Studienberatung,",
@@ -191426,7 +191426,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[1]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "die Rückmeldung der Studienberatung,",
             "surface": "die Rückmeldung der Studienberatung,",
@@ -192272,7 +192272,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[3].words[4]",
+            "path": "exercises[3].words[1]",
             "stage": "controlled",
             "text": "über den Antrag",
             "surface": "über den Antrag",
@@ -194993,7 +194993,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[3].words[1]",
+            "path": "exercises[3].words[0]",
             "stage": "controlled",
             "text": "von der Behörde",
             "surface": "von der Behörde",
@@ -197725,7 +197725,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[3].words[5]",
+            "path": "exercises[3].words[0]",
             "stage": "controlled",
             "text": "seitens der Einrichtung.",
             "surface": "seitens der Einrichtung.",
@@ -198876,7 +198876,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[3].words[2]",
+            "path": "exercises[3].words[1]",
             "stage": "controlled",
             "text": "der Nachforderung",
             "surface": "der Nachforderung",
@@ -200550,7 +200550,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[4].words[1]",
+            "path": "exercises[4].words[0]",
             "stage": "controlled",
             "text": "den die Behörde erlassen hatte,",
             "surface": "den die Behörde erlassen hatte,",
@@ -221239,7 +221239,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "arbeiten wir vor Ort",
             "surface": "arbeiten wir vor Ort",
@@ -221980,7 +221980,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "bieten wir zwei Optionen an",
             "surface": "bieten wir zwei Optionen an",
@@ -227610,7 +227610,7 @@
             "strength": "context"
           },
           {
-            "path": "exercises[2].words[2]",
+            "path": "exercises[2].words[0]",
             "stage": "controlled",
             "text": "auf die Personalkosten hingewiesen",
             "surface": "auf die Personalkosten hingewiesen",
@@ -227798,29 +227798,6 @@
       {
         "lessonId": "b2-12",
         "level": "B2",
-        "infinitiveCandidate": "stattdessen",
-        "normalizedVerb": "stattdessen",
-        "preposition": "zu",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[2]",
-            "stage": "test",
-            "text": "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Probeprüfungen zu lösen",
-            "surface": "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Probeprüfungen zu lösen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-12-05bff19c"
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
         "infinitiveCandidate": "stecken",
         "normalizedVerb": "stecken",
         "preposition": "in",
@@ -227880,35 +227857,12 @@
           {
             "path": "exercises[5].options[2]",
             "stage": "controlled",
-            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
-            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
+            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
+            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz erwähnen",
             "strength": "context"
           }
         ],
         "id": "lex-v-b2-12-0a5cafe5"
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
-        "infinitiveCandidate": "stellen",
-        "normalizedVerb": "stellen",
-        "preposition": "zu",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "exercises[5].options[2]",
-            "stage": "controlled",
-            "text": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
-            "surface": "Die eigene Empfehlung an den Anfang stellen und die Quellen nur kurz zu erwähnen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-12-1f40fa77"
       },
       {
         "lessonId": "b2-12",
@@ -228028,29 +227982,6 @@
       {
         "lessonId": "b2-12",
         "level": "B2",
-        "infinitiveCandidate": "voranstellen",
-        "normalizedVerb": "voranstellen",
-        "preposition": "zu",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[1].options[1]",
-            "stage": "test",
-            "text": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
-            "surface": "Die eigene These voranstellen und die Herkunft der Belege nicht zu nennen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-12-1c067c45"
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
         "infinitiveCandidate": "sich vorbereiten",
         "normalizedVerb": "vorbereiten",
         "preposition": "auf",
@@ -228071,29 +228002,6 @@
           }
         ],
         "id": "lex-v-b2-12-46e8164a"
-      },
-      {
-        "lessonId": "b2-12",
-        "level": "B2",
-        "infinitiveCandidate": "weglassen",
-        "normalizedVerb": "weglassen",
-        "preposition": "zu",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "miniTest[3].options[2]",
-            "stage": "test",
-            "text": "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Probeprüfungen zu lösen",
-            "surface": "Die interne Kompetenzübung weglassen und stattdessen nur offizielle Probeprüfungen zu lösen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b2-12-7063fdc5"
       },
       {
         "lessonId": "b2-12",
@@ -235803,5 +235711,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "5ebbd3fb0ba728894ae17ca34d53990f40880bb292e6f1591f8cacd053fb3cc0"
+  "contentSha256": "02ca14f0ef208b71868cfa3113afee9232eab78d2d7e976aee25c52af74d8a59"
 }

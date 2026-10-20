@@ -67,7 +67,7 @@ describe("complete runtime content audit", () => {
       expect(serialized).not.toContain(marker);
     }
     const exercises = academicLessonList.flatMap((lesson) => lesson.exercises);
-    expect(exercises).toHaveLength(723);
+    expect(exercises).toHaveLength(728);
     for (const exercise of exercises) expect(exerciseInstructionsDe[exercise.type].trim().length, exercise.id).toBeGreaterThan(0);
     expect(allPublishedExamTasks).toHaveLength(150);
     expect(fullExamSimulations).toHaveLength(12);

@@ -13,7 +13,7 @@ describe("lexical target-gap inventory", () => {
   it("inventories all lessons and preserves the authored anchor baseline", () => {
     expect(audit.version).toBe(LEXICAL_TARGET_AUDIT_VERSION);
     expect(audit.lessonCount).toBe(96);
-    expect(audit.nounAnchorCount).toBe(1690);
+    expect(audit.nounAnchorCount).toBe(1733);
     expect(audit.verbFrameAnchorCount).toBe(134);
 
     const representedNounAnchors = new Set(audit.nounRows.flatMap((row) => row.anchorIds));
@@ -29,19 +29,20 @@ describe("lexical target-gap inventory", () => {
   // v246: ADR-138 rewrites the distractors of 143 mini-test/exercise items (five keys shortened); +4 noun and +5 verb-pair contextual candidates; covered and pendingHuman are unchanged.
   // v248: ADR-139 adds 144 lesson-scoped noun anchors for the Goethe-Zertifikat A1 core vocabulary taught on the new A1 phrases and cards; every new authored target is covered (A1 pendingHuman stays 0), new example and explanation words add +13 noun and +6 verb-pair contextual candidates.
   // v250: ADR-141 adds 144 lesson-scoped noun anchors for the Goethe-Zertifikat A2 words taught on the new A2 phrases and cards; covered +148, +24 noun and +12 verb-pair contextual candidates from the new examples; pendingHuman is unchanged (A2 stays 0).
+  // v251: ADR-142 adds 43 lesson-scoped noun anchors for the Goethe-Zertifikat B1 food and perception words on the new B1 phrases and cards; covered +45, +27 noun and +9 verb-pair contextual candidates; pendingHuman is unchanged ("achten" is taught without a frame target so no new verb-frame item waits for review).
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5322,
-      covered: 1800,
+      totalCandidates: 5394,
+      covered: 1845,
       pendingHuman: 89,
-      contextualNotTarget: 3433,
-      authoredTargets: 1889,
+      contextualNotTarget: 3460,
+      authoredTargets: 1934,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1326,
+      totalCandidates: 1335,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1191,
+      contextualNotTarget: 1200,
       authoredTargets: 135,
     });
   });

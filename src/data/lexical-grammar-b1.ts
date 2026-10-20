@@ -161,7 +161,21 @@ const questionSupportNounSeeds: Partial<Record<string, readonly NounSeed[]>> = {
 };
 
 export const b1QuestionSupportNounEntries = Object.entries(questionSupportNounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, seeds ?? [], coreB1NounEntries.filter((entry) => entry.lessonId === lessonId).length));
-export const b1NounGrammarEntries = [...coreB1NounEntries, ...b1QuestionSupportNounEntries];
+/**
+ * ADR-142: Goethe-Zertifikat B1 food (Verpflegung) and perception/movement (Wahrnehmung/Motorik) words
+ * that the B1 lessons had missed, now taught on the vocabulary phrases and cards. Numbered after every core
+ * and question-support entry of the lesson, so no stored ID moves. Outside the original P0-98 review scope.
+ */
+const goetheCoreNounSeeds: Partial<Record<string, readonly NounSeed[]>> = {
+  "b1-08": [["Kälte", "feminine", null, "البرد"], ["Hitze", "feminine", null, "الحرّ الشديد"], ["Fleck", "masculine", "Flecken", "البقعة"], ["Staub", "masculine", null, "الغبار"], ["Schmutz", "masculine", null, "الوسخ"], ["Steckdose", "feminine", "Steckdosen", "المقبس الكهربائي"]],
+  "b1-10": [["Nahrungsmittel", "neuter", "Nahrungsmittel", "المادة الغذائية"], ["Tüte", "feminine", "Tüten", "الكيس"], ["Schachtel", "feminine", "Schachteln", "العلبة الكرتونية"], ["Sonderangebot", "neuter", "Sonderangebote", "العرض الخاص"], ["Mehl", "neuter", null, "الطحين"], ["Honig", "masculine", null, "العسل"], ["Marmelade", "feminine", "Marmeladen", "المربّى"], ["Sahne", "feminine", null, "القشدة"], ["Essig", "masculine", null, "الخلّ"], ["Gewürz", "neuter", "Gewürze", "التابل"], ["Karotte", "feminine", "Karotten", "الجزرة"], ["Aprikose", "feminine", "Aprikosen", "المشمش"], ["Pflaume", "feminine", "Pflaumen", "البرقوق"], ["Pilz", "masculine", "Pilze", "الفطر"], ["Müsli", "neuter", "Müslis", "الموسلي"]],
+  "b1-12": [["Mahlzeit", "feminine", "Mahlzeiten", "الوجبة"], ["Buffet", "neuter", "Buffets", "البوفيه"], ["Nachspeise", "feminine", "Nachspeisen", "التحلية بعد الأكل"], ["Dessert", "neuter", "Desserts", "الحلوى بعد الأكل"], ["Geschmack", "masculine", null, "الطعم"], ["Schüssel", "feminine", "Schüsseln", "الوعاء العميق"], ["Kanne", "feminine", "Kannen", "الإبريق"], ["Imbiss", "masculine", "Imbisse", "الوجبة الخفيفة"]],
+  "b1-20": [["Ernährung", "feminine", null, "التغذية"], ["Diät", "feminine", "Diäten", "الحمية الغذائية"], ["Vitamin", "neuter", "Vitamine", "الفيتامين"], ["Gymnastik", "feminine", null, "التمارين البدنية الخفيفة"], ["Muskel", "masculine", "Muskeln", "العضلة"], ["Knie", "neuter", "Knie", "الركبة"], ["Schulter", "feminine", "Schultern", "الكتف"]],
+  "b1-23": [["Taste", "feminine", "Tasten", "الزرّ"], ["Tastatur", "feminine", "Tastaturen", "لوحة المفاتيح"], ["Lautsprecher", "masculine", "Lautsprecher", "مكبّر الصوت"], ["Fernbedienung", "feminine", "Fernbedienungen", "جهاز التحكم عن بعد"], ["Bedienungsanleitung", "feminine", "Bedienungsanleitungen", "دليل الاستعمال"], ["Kabel", "neuter", "Kabel", "السلك"], ["Batterie", "feminine", "Batterien", "البطارية"]],
+};
+const entriesBefore = (lessonId: string) => [...coreB1NounEntries, ...b1QuestionSupportNounEntries].filter((entry) => entry.lessonId === lessonId).length;
+export const b1GoetheCoreNounEntries = Object.entries(goetheCoreNounSeeds).flatMap(([lessonId, seeds]) => nounEntries(lessonId, seeds ?? [], entriesBefore(lessonId)));
+export const b1NounGrammarEntries = [...coreB1NounEntries, ...b1QuestionSupportNounEntries, ...b1GoetheCoreNounEntries];
 export const b1VerbPrepositionFrames: VerbPrepositionFrame[] = Object.entries(frameSeeds).flatMap(([lessonId, frame]) =>
   [frame, ...(additionalFrameSeeds[lessonId] ?? [])].map((item, index) => ({
     id: `${lessonId}-verb-frame-${index + 1}`,

@@ -1,6 +1,6 @@
 # حزمة المراجعة البشرية المستقلة — Der Weg nach Berlin
 
-تاريخ التوليد: 2026-10-19 · مولّدها: `scripts/generate-human-review-packet.ts` (`npm run review:packet`)
+تاريخ التوليد: 2026-10-20 · مولّدها: `scripts/generate-human-review-packet.ts` (`npm run review:packet`)
 
 - عدد السجلات المحكومة: **3,277** موزّعة على `17` أوراق CSV بـ200 سطرًا (آخر ورقة أقصر).
 - حالة كل سجل اليوم: `automated-validated-independent-review-pending` — أي أن البوابات الآلية تحققت من البنية، ولم يوقّع إنسان على الوصف/المستوى/الحقوق.
@@ -13,7 +13,7 @@
 
 | النطاق | العدد |
 |---|---:|
-| `lesson-controlled` | 723 |
+| `lesson-controlled` | 728 |
 | `lesson-listening` | 288 |
 | `lesson-mini-test` | 480 |
 | `lesson-mediation` | 96 |
@@ -37,7 +37,7 @@
 
 ## مؤشرات مساعدة
 
-- صفوف وُسمت بانحراف جودة مقيس: **297** (من 3323) — لا تعني رفضًا، بل أولوية مراجعة أعلى.
+- صفوف وُسمت بانحراف جودة مقيس: **286** (من 3328) — لا تعني رفضًا، بل أولوية مراجعة أعلى.
 - صفوف لم يُحلّ نصّها آليًا (معرّفها لا يظهر كنصّ حرفي في src/data لأنها تُولَّد برمجية): **1104** — التوزيع حسب النطاق: `lesson-mediation` 96 · `lesson-speaking` 96 · `lesson-writing` 96 · `practice-branching` 8 · `practice-collocation` 64 · `diagnostic` 32 · `practice-dictation` 16 · `exam` 600 · `exam-speaking` 72 · `exam-writing` 24؛ يقرؤها المراجع من صفحة الدرس/الامتحان أو من عمود sourceFile.
 - عائلات المعجم في سجل الاستراتيجية: 32 (مرشّحات الاسم/الإطار المعلّقة تُراجَع في ملف مستقل).
 

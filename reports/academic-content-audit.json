@@ -14,26 +14,26 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2304,
-      "nounGrammarEntries": 1690,
+      "nounGrammarEntries": 1733,
       "verbPrepositionFrames": 134,
       "tunisianSupportNotes": 17,
       "dictationItems": 16,
       "branchingConversationScenarios": 8,
       "collocationNetworks": 16,
-      "totalRootObjects": 4738
+      "totalRootObjects": 4781
     },
     "schemaFamilies": 16,
     "issues": []
   },
   "answerIntegrity": {
-    "closedAnswerItems": 2851,
+    "closedAnswerItems": 2856,
     "productiveTasks": 384,
     "failures": 0,
     "exemptions": 2,
     "byScope": {
       "diagnostic": 32,
       "exam": 720,
-      "lesson-controlled": 723,
+      "lesson-controlled": 728,
       "lesson-listening": 288,
       "lesson-mini-test": 480,
       "lesson-reading": 288,
@@ -11517,6 +11517,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-08-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة وصف المشكلة في البيت بمعناها:",
+        "answer": "stinken → تفوح منه رائحة كريهة | feucht → رطب | die Kälte → البرد | der Fleck → البقعة | klopfen → يطرق / يدقّ",
+        "evidenceRef": "b1-08:controlled:b1-08-e8:explanationAr",
+        "evidenceExcerpt": "stinken تصف رائحة كريهة، وfeucht تصف شيئًا فيه ماء قليل. وجمع der Fleck هو die Flecken.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-08-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -11913,6 +11924,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-10-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة التسوّق الغذائي بمعناها:",
+        "answer": "das Nahrungsmittel → المادة الغذائية | haltbar → يبقى صالحًا مدة طويلة | die Tüte → الكيس | das Sonderangebot → العرض الخاص (تخفيض) | das Mehl → الطحين",
+        "evidenceRef": "b1-10:controlled:b1-10-e8:explanationAr",
+        "evidenceExcerpt": "haltbar تعني أن الطعام يبقى صالحًا مدة طويلة. والأداة جزء من الاسم: die Tüte وdas Mehl وdas Sonderangebot.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-10-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -12306,6 +12328,17 @@
         "evidenceRef": "b1-12:controlled:b1-12-e7:explanationAr",
         "evidenceExcerpt": "في المبني للمجهول يأتي Partizip II في النهاية مع werden المصروف: «werden die Ergebnisse ausgewertet». المصدر يترك البنية بلا تصريف مفعولي، و werden يوافق الجمع. فحص ذاتي: هل المُقيِّم مجهول أو غير مهم؟ ويُقبل أيضًا: «an…",
         "visibilityPolicy": "hidden-target",
+        "status": "pass"
+      },
+      {
+        "id": "b1-12-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة الطعام المشترك بمعناها:",
+        "answer": "die Mahlzeit → الوجبة | etwas zubereiten → يحضّر طعامًا | der Geschmack → الطعم / الذوق | lecker → لذيذ | roh → نيء",
+        "evidenceRef": "b1-12:controlled:b1-12-e8:explanationAr",
+        "evidenceExcerpt": "zubereiten فعل منفصل: Wir bereiten das Essen zu. وlecker للطعام اللذيذ، وroh لطعام لم يُطبخ.",
+        "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
       {
@@ -13893,6 +13926,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-20-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة الجسم والأكل بمعناها:",
+        "answer": "satt → شبعان | hungrig → جائع | abnehmen → ينقص وزنه (هنا) | zunehmen → يزيد وزنه (هنا) | das Knie → الركبة",
+        "evidenceRef": "b1-20:controlled:b1-20-e8:explanationAr",
+        "evidenceExcerpt": "satt عكس hungrig، وabnehmen عكس zunehmen في الوزن. وجمع das Knie هو die Knie بلا تغيير.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-20-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -14484,6 +14528,17 @@
         "evidenceRef": "b1-23:controlled:b1-23-e7:explanationAr",
         "evidenceExcerpt": "السؤال عن موضوع مع über يدمج wo و über: «Worüber sprecht ihr?» والجواب darüber. عن أشخاص نقول über wen، ولا تُستعمل Was وحدها مع حرف جر. فحص ذاتي: هل يبدأ ردّك بـ über؟",
         "visibilityPolicy": "hidden-target",
+        "status": "pass"
+      },
+      {
+        "id": "b1-23-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة استعمال الجهاز بمعناها:",
+        "answer": "blind → كفيف | taub → أصمّ | die Taste → الزرّ | die Tastatur → لوحة المفاتيح | etwas einschalten → يشغّل شيئًا",
+        "evidenceRef": "b1-23:controlled:b1-23-e8:explanationAr",
+        "evidenceExcerpt": "einschalten فعل منفصل: Ich schalte das Gerät ein. وdie Taste زرّ واحد، أما die Tastatur فهي لوحة المفاتيح كلها.",
+        "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
       {
@@ -40420,6 +40475,7 @@
         ],
         "practicedIn": [
           "b1-08-e5",
+          "b1-08-e8",
           "b1-08-rq1",
           "b1-08-rq2",
           "b1-08-lq1",
@@ -40633,6 +40689,7 @@
         "practicedIn": [
           "b1-10-e5",
           "b1-10-e6",
+          "b1-10-e8",
           "b1-10-rq1",
           "b1-10-rq2",
           "b1-10-rq3",
@@ -40845,6 +40902,7 @@
           "b1-12-e4",
           "b1-12-e6",
           "b1-12-e7",
+          "b1-12-e8",
           "b1-12-rq2",
           "b1-12-rq3",
           "b1-12:writing",
@@ -41687,6 +41745,7 @@
         "practicedIn": [
           "b1-20-e1",
           "b1-20-e5",
+          "b1-20-e8",
           "b1-20-rq1",
           "b1-20-lq1",
           "b1-20:writing",
@@ -42005,6 +42064,7 @@
           "b1-23-t3"
         ],
         "practicedIn": [
+          "b1-23-e8",
           "b1-23-rq1",
           "b1-23-rq2",
           "b1-23-lq1",
@@ -44837,14 +44897,14 @@
   "lexicalTargetGaps": {
     "version": "lexical-target-gap-v1",
     "lessonCount": 96,
-    "nounAnchorCount": 1690,
+    "nounAnchorCount": 1733,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5322,
-      "covered": 1800,
+      "totalCandidates": 5394,
+      "covered": 1845,
       "pendingHuman": 89,
-      "contextualNotTarget": 3433,
-      "authoredTargets": 1889,
+      "contextualNotTarget": 3460,
+      "authoredTargets": 1934,
       "byLevel": {
         "A1": {
           "totalCandidates": 733,
@@ -44859,10 +44919,10 @@
           "contextualNotTarget": 627
         },
         "B1": {
-          "totalCandidates": 1270,
-          "covered": 372,
+          "totalCandidates": 1342,
+          "covered": 417,
           "pendingHuman": 0,
-          "contextualNotTarget": 898
+          "contextualNotTarget": 925
         },
         "B2": {
           "totalCandidates": 2233,
@@ -44873,10 +44933,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1326,
+      "totalCandidates": 1335,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1191,
+      "contextualNotTarget": 1200,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44892,10 +44952,10 @@
           "contextualNotTarget": 210
         },
         "B1": {
-          "totalCandidates": 333,
+          "totalCandidates": 342,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 302
+          "contextualNotTarget": 311
         },
         "B2": {
           "totalCandidates": 642,
@@ -113755,6 +113815,25 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Bauarbeiten",
+        "normalizedLemma": "bauarbeiten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach den Bauarbeiten liegt überall Staub.",
+            "surface": "Nach den Bauarbeiten liegt überall Staub.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-47477d0b"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Beratung",
         "normalizedLemma": "beratung",
         "role": "anchor",
@@ -113771,6 +113850,44 @@
           }
         ],
         "id": "lex-n-b1-08-c4103bc1"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Dach",
+        "normalizedLemma": "dach",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Sommer ist die Hitze unter dem Dach kaum auszuhalten.",
+            "surface": "Im Sommer ist die Hitze unter dem Dach kaum auszuhalten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-7eed59fd"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Decke",
+        "normalizedLemma": "decke",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "An der Decke ist ein dunkler Fleck, der immer größer wird.",
+            "surface": "An der Decke ist ein dunkler Fleck, der immer größer wird.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-73be873f"
       },
       {
         "lessonId": "b1-08",
@@ -113985,6 +114102,54 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Fleck",
+        "normalizedLemma": "fleck",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "der Fleck",
+            "surface": "der Fleck",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "An der Decke ist ein dunkler Fleck, der immer größer wird.",
+            "surface": "An der Decke ist ein dunkler Fleck, der immer größer wird.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "der Fleck",
+            "surface": "der Fleck",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-21",
+            "stage": "vocabulary",
+            "surface": "der Fleck",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "der Fleck",
+            "surface": "der Fleck",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-aa25dcdc"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Forderung",
         "normalizedLemma": "forderung",
         "role": "anchor",
@@ -114077,6 +114242,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Aus der Leitung kommt ein merkwürdiges Geräusch.",
+            "surface": "Aus der Leitung kommt ein merkwürdiges Geräusch.",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[0].promptDe",
             "stage": "listening",
@@ -114218,6 +114390,95 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Hitze",
+        "normalizedLemma": "hitze",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Sommer ist die Hitze unter dem Dach kaum auszuhalten.",
+            "surface": "Im Sommer ist die Hitze unter dem Dach kaum auszuhalten.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "die Hitze",
+            "surface": "die Hitze",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Hitze",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "die Hitze",
+            "surface": "die Hitze",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-0d599cd7"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Kälte",
+        "normalizedLemma": "kälte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "die Kälte",
+            "surface": "die Kälte",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wegen der Kälte schlafen die Kinder schlecht.",
+            "surface": "Wegen der Kälte schlafen die Kinder schlecht.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Kälte",
+            "surface": "die Kälte",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Kälte",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Kälte",
+            "surface": "die Kälte",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-e0a7f08d"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Katastrophe",
         "normalizedLemma": "katastrophe",
         "role": "context-only",
@@ -114271,6 +114532,63 @@
           }
         ],
         "id": "lex-n-b1-08-244bc23b"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Kinder",
+        "normalizedLemma": "kinder",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wegen der Kälte schlafen die Kinder schlecht.",
+            "surface": "Wegen der Kälte schlafen die Kinder schlecht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-046ed118"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Küche",
+        "normalizedLemma": "küche",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Steckdose in der Küche funktioniert nicht.",
+            "surface": "Die Steckdose in der Küche funktioniert nicht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-bcf64954"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Leitung",
+        "normalizedLemma": "leitung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Aus der Leitung kommt ein merkwürdiges Geräusch.",
+            "surface": "Aus der Leitung kommt ein merkwürdiges Geräusch.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-b065a0f5"
       },
       {
         "lessonId": "b1-08",
@@ -114696,6 +115014,108 @@
           }
         ],
         "id": "lex-n-b1-08-86af74d7"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Schmutz",
+        "normalizedLemma": "schmutz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "der Schmutz",
+            "surface": "der Schmutz",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-23",
+            "stage": "vocabulary",
+            "surface": "der Schmutz",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "der Schmutz",
+            "surface": "der Schmutz",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-f95eb525"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Staub",
+        "normalizedLemma": "staub",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "der Staub",
+            "surface": "der Staub",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-22",
+            "stage": "vocabulary",
+            "surface": "der Staub",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "der Staub",
+            "surface": "der Staub",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-7b09efca"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Steckdose",
+        "normalizedLemma": "steckdose",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "die Steckdose",
+            "surface": "die Steckdose",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Steckdose",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "die Steckdose",
+            "surface": "die Steckdose",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-c40ee776"
       },
       {
         "lessonId": "b1-08",
@@ -115129,6 +115549,25 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Wand",
+        "normalizedLemma": "wand",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nachts klopft jemand an die Wand.",
+            "surface": "Nachts klopft jemand an die Wand.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-28500cb7"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Wasserrohr",
         "normalizedLemma": "wasserrohr",
         "role": "anchor",
@@ -115195,6 +115634,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich heize, aber die Wohnung bleibt kalt.",
+            "surface": "Ich heize, aber die Wohnung bleibt kalt.",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -116945,6 +117391,40 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Aprikose",
+        "normalizedLemma": "aprikose",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "die Aprikose",
+            "surface": "die Aprikose",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-29",
+            "stage": "vocabulary",
+            "surface": "die Aprikose",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[31].de",
+            "stage": "vocabulary",
+            "text": "die Aprikose",
+            "surface": "die Aprikose",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-f0a1d1f4"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Austausch",
         "normalizedLemma": "austausch",
         "role": "context-only",
@@ -117061,6 +117541,25 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Brot",
+        "normalizedLemma": "brot",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Brot brauche ich ein Kilo Mehl.",
+            "surface": "Für das Brot brauche ich ein Kilo Mehl.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-9a3b5455"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Büro",
         "normalizedLemma": "büro",
         "role": "context-only",
@@ -117155,6 +117654,59 @@
           }
         ],
         "id": "lex-n-b1-10-661126c9"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Essig",
+        "normalizedLemma": "essig",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "der Essig",
+            "surface": "der Essig",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-26",
+            "stage": "vocabulary",
+            "surface": "der Essig",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "der Essig",
+            "surface": "der Essig",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-64910123"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Euro",
+        "normalizedLemma": "euro",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein Kilo Karotten kostet heute nur einen Euro.",
+            "surface": "Ein Kilo Karotten kostet heute nur einen Euro.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-ccbd4923"
       },
       {
         "lessonId": "b1-10",
@@ -117444,6 +117996,40 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Gewürz",
+        "normalizedLemma": "gewürz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "das Gewürz",
+            "surface": "das Gewürz",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-27",
+            "stage": "vocabulary",
+            "surface": "das Gewürz",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "das Gewürz",
+            "surface": "das Gewürz",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-89cb3025"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Handy",
         "normalizedLemma": "handy",
         "role": "context-only",
@@ -117459,6 +118045,74 @@
           }
         ],
         "id": "lex-n-b1-10-be38f762"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Honig",
+        "normalizedLemma": "honig",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "der Honig",
+            "surface": "der Honig",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-23",
+            "stage": "vocabulary",
+            "surface": "der Honig",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "der Honig",
+            "surface": "der Honig",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-bf5499df"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Karotte",
+        "normalizedLemma": "karotte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "die Karotte",
+            "surface": "die Karotte",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Karotte",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "die Karotte",
+            "surface": "die Karotte",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-9d230bd4"
       },
       {
         "lessonId": "b1-10",
@@ -117530,6 +118184,25 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Kilo",
+        "normalizedLemma": "kilo",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Brot brauche ich ein Kilo Mehl.",
+            "surface": "Für das Brot brauche ich ein Kilo Mehl.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-65b7166b"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Konsum",
         "normalizedLemma": "konsum",
         "role": "anchor",
@@ -117591,6 +118264,25 @@
           }
         ],
         "id": "lex-n-b1-10-ea4a72b6"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Kuchen",
+        "normalizedLemma": "kuchen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für den Kuchen kaufe ich noch Sahne.",
+            "surface": "Für den Kuchen kaufe ich noch Sahne.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-bd9dd716"
       },
       {
         "lessonId": "b1-10",
@@ -117740,6 +118432,81 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Marmelade",
+        "normalizedLemma": "marmelade",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].frontDe",
+            "stage": "vocabulary",
+            "text": "die Marmelade",
+            "surface": "die Marmelade",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Marmelade",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[26].de",
+            "stage": "vocabulary",
+            "text": "die Marmelade",
+            "surface": "die Marmelade",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-e5d7f8bc"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Mehl",
+        "normalizedLemma": "mehl",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[4].left",
+            "stage": "controlled",
+            "text": "das Mehl",
+            "surface": "das Mehl",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "das Mehl",
+            "surface": "das Mehl",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-22",
+            "stage": "vocabulary",
+            "surface": "das Mehl",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "das Mehl",
+            "surface": "das Mehl",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-c6fd7d3c"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Modell",
         "normalizedLemma": "modell",
         "role": "anchor",
@@ -117781,6 +118548,40 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Müsli",
+        "normalizedLemma": "müsli",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-32"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[26].frontDe",
+            "stage": "vocabulary",
+            "text": "das Müsli",
+            "surface": "das Müsli",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-32",
+            "stage": "vocabulary",
+            "surface": "das Müsli",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[34].de",
+            "stage": "vocabulary",
+            "text": "das Müsli",
+            "surface": "das Müsli",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-bd52608f"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Nacht",
         "normalizedLemma": "nacht",
         "role": "context-only",
@@ -117796,6 +118597,47 @@
           }
         ],
         "id": "lex-n-b1-10-a69ef358"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Nahrungsmittel",
+        "normalizedLemma": "nahrungsmittel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "das Nahrungsmittel",
+            "surface": "das Nahrungsmittel",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "das Nahrungsmittel",
+            "surface": "das Nahrungsmittel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-18",
+            "stage": "vocabulary",
+            "surface": "das Nahrungsmittel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "das Nahrungsmittel",
+            "surface": "das Nahrungsmittel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-93424cdf"
       },
       {
         "lessonId": "b1-10",
@@ -117873,12 +118715,87 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Pflaume",
+        "normalizedLemma": "pflaume",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "die Pflaume",
+            "surface": "die Pflaume",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Pflaume",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "die Pflaume",
+            "surface": "die Pflaume",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-7265b50c"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Pilz",
+        "normalizedLemma": "pilz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-31"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[25].frontDe",
+            "stage": "vocabulary",
+            "text": "der Pilz",
+            "surface": "der Pilz",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-31",
+            "stage": "vocabulary",
+            "surface": "der Pilz",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[33].de",
+            "stage": "vocabulary",
+            "text": "der Pilz",
+            "surface": "der Pilz",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-e63fef03"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Preis",
         "normalizedLemma": "preis",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich kaufe kein Sonderangebot, ohne den Preis zu vergleichen.",
+            "surface": "Ich kaufe kein Sonderangebot, ohne den Preis zu vergleichen.",
+            "strength": "context"
+          },
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
@@ -118037,6 +118954,25 @@
       {
         "lessonId": "b1-10",
         "level": "B1",
+        "lemmaCandidate": "Region",
+        "normalizedLemma": "region",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Honig vom Markt kommt aus der Region.",
+            "surface": "Der Honig vom Markt kommt aus der Region.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-32563336"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
         "lemmaCandidate": "Reparatur",
         "normalizedLemma": "reparatur",
         "role": "context-only",
@@ -118093,6 +119029,141 @@
           }
         ],
         "id": "lex-n-b1-10-52ba6ec6"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Sahne",
+        "normalizedLemma": "sahne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "die Sahne",
+            "surface": "die Sahne",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-25",
+            "stage": "vocabulary",
+            "surface": "die Sahne",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "die Sahne",
+            "surface": "die Sahne",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-14aa2923"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Salat",
+        "normalizedLemma": "salat",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für den Salat fehlen noch Essig und Öl.",
+            "surface": "Für den Salat fehlen noch Essig und Öl.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-10-50bcbae3"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Schachtel",
+        "normalizedLemma": "schachtel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "die Schachtel",
+            "surface": "die Schachtel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Schachtel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "die Schachtel",
+            "surface": "die Schachtel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-1d61799d"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Sonderangebot",
+        "normalizedLemma": "sonderangebot",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "das Sonderangebot",
+            "surface": "das Sonderangebot",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich kaufe kein Sonderangebot, ohne den Preis zu vergleichen.",
+            "surface": "Ich kaufe kein Sonderangebot, ohne den Preis zu vergleichen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "das Sonderangebot",
+            "surface": "das Sonderangebot",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-21",
+            "stage": "vocabulary",
+            "surface": "das Sonderangebot",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "das Sonderangebot",
+            "surface": "das Sonderangebot",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-077be967"
       },
       {
         "lessonId": "b1-10",
@@ -118184,6 +119255,54 @@
           }
         ],
         "id": "lex-n-b1-10-4cfa3fe0"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "lemmaCandidate": "Tüte",
+        "normalizedLemma": "tüte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-10-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "die Tüte",
+            "surface": "die Tüte",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich nehme meine eigene Tüte mit, statt eine neue zu kaufen.",
+            "surface": "Ich nehme meine eigene Tüte mit, statt eine neue zu kaufen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Tüte",
+            "surface": "die Tüte",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-10-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Tüte",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Tüte",
+            "surface": "die Tüte",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-10-3ca1a6d5"
       },
       {
         "lessonId": "b1-10",
@@ -119439,6 +120558,25 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Abend",
+        "normalizedLemma": "abend",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir haben den Abend zusammen genossen.",
+            "surface": "Wir haben den Abend zusammen genossen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-12-70b74520"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Abtransport",
         "normalizedLemma": "abtransport",
         "role": "anchor",
@@ -119632,6 +120770,25 @@
           }
         ],
         "id": "lex-n-b1-12-3548cf9b"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Aufräumen",
+        "normalizedLemma": "aufräumen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Aufräumen gibt es einen kleinen Imbiss.",
+            "surface": "Nach dem Aufräumen gibt es einen kleinen Imbiss.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-12-80fb42f3"
       },
       {
         "lessonId": "b1-12",
@@ -119832,6 +120989,40 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Buffet",
+        "normalizedLemma": "buffet",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "das Buffet",
+            "surface": "das Buffet",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-19",
+            "stage": "vocabulary",
+            "surface": "das Buffet",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "das Buffet",
+            "surface": "das Buffet",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-f079c2d8"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Daten",
         "normalizedLemma": "daten",
         "role": "context-only",
@@ -119866,6 +121057,40 @@
           }
         ],
         "id": "lex-n-b1-12-b1d5ebb5"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Dessert",
+        "normalizedLemma": "dessert",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "das Dessert",
+            "surface": "das Dessert",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-21",
+            "stage": "vocabulary",
+            "surface": "das Dessert",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "das Dessert",
+            "surface": "das Dessert",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-53afea9a"
       },
       {
         "lessonId": "b1-12",
@@ -120026,6 +121251,73 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Gericht",
+        "normalizedLemma": "gericht",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[11].exampleDe",
+            "stage": "vocabulary",
+            "text": "Jedes Team bereitet ein Gericht zu.",
+            "surface": "Jedes Team bereitet ein Gericht zu.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-12-11637c86"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Geschmack",
+        "normalizedLemma": "geschmack",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "der Geschmack",
+            "surface": "der Geschmack",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Jedes Gericht hat einen anderen Geschmack.",
+            "surface": "Jedes Gericht hat einen anderen Geschmack.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "der Geschmack",
+            "surface": "der Geschmack",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-22",
+            "stage": "vocabulary",
+            "surface": "der Geschmack",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "der Geschmack",
+            "surface": "der Geschmack",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-2825192a"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Grenze",
         "normalizedLemma": "grenze",
         "role": "anchor",
@@ -120067,6 +121359,47 @@
           }
         ],
         "id": "lex-n-b1-12-53ce36c8"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Imbiss",
+        "normalizedLemma": "imbiss",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Aufräumen gibt es einen kleinen Imbiss.",
+            "surface": "Nach dem Aufräumen gibt es einen kleinen Imbiss.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "der Imbiss",
+            "surface": "der Imbiss",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-25",
+            "stage": "vocabulary",
+            "surface": "der Imbiss",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "der Imbiss",
+            "surface": "der Imbiss",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-7c5543c1"
       },
       {
         "lessonId": "b1-12",
@@ -120180,6 +121513,47 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Kanne",
+        "normalizedLemma": "kanne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der Kanne ist noch heißer Tee.",
+            "surface": "In der Kanne ist noch heißer Tee.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "die Kanne",
+            "surface": "die Kanne",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Kanne",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "die Kanne",
+            "surface": "die Kanne",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-b4c9e3cb"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Lieferung",
         "normalizedLemma": "lieferung",
         "role": "context-only",
@@ -120214,6 +121588,54 @@
           }
         ],
         "id": "lex-n-b1-12-9874ad87"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Mahlzeit",
+        "normalizedLemma": "mahlzeit",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Mahlzeit",
+            "surface": "die Mahlzeit",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Falls viele Leute kommen, gibt es eine warme Mahlzeit.",
+            "surface": "Falls viele Leute kommen, gibt es eine warme Mahlzeit.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "die Mahlzeit",
+            "surface": "die Mahlzeit",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Mahlzeit",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "die Mahlzeit",
+            "surface": "die Mahlzeit",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-073767de"
       },
       {
         "lessonId": "b1-12",
@@ -120292,6 +121714,40 @@
           }
         ],
         "id": "lex-n-b1-12-1c1b7d69"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Nachspeise",
+        "normalizedLemma": "nachspeise",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Nachspeise",
+            "surface": "die Nachspeise",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Nachspeise",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Nachspeise",
+            "surface": "die Nachspeise",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-e2b5b6e3"
       },
       {
         "lessonId": "b1-12",
@@ -120572,6 +122028,25 @@
       {
         "lessonId": "b1-12",
         "level": "B1",
+        "lemmaCandidate": "Salat",
+        "normalizedLemma": "salat",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Bitte bringt eine große Schüssel für den Salat mit.",
+            "surface": "Bitte bringt eine große Schüssel für den Salat mit.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-12-957d3d19"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
         "lemmaCandidate": "Samstag",
         "normalizedLemma": "samstag",
         "role": "context-only",
@@ -120632,6 +122107,47 @@
           }
         ],
         "id": "lex-n-b1-12-a27161a9"
+      },
+      {
+        "lessonId": "b1-12",
+        "level": "B1",
+        "lemmaCandidate": "Schüssel",
+        "normalizedLemma": "schüssel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-12-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Bitte bringt eine große Schüssel für den Salat mit.",
+            "surface": "Bitte bringt eine große Schüssel für den Salat mit.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[18].frontDe",
+            "stage": "vocabulary",
+            "text": "die Schüssel",
+            "surface": "die Schüssel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-12-noun-23",
+            "stage": "vocabulary",
+            "surface": "die Schüssel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[26].de",
+            "stage": "vocabulary",
+            "text": "die Schüssel",
+            "surface": "die Schüssel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-12-b54340d1"
       },
       {
         "lessonId": "b1-12",
@@ -131463,6 +132979,66 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Bus",
+        "normalizedLemma": "bus",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich musste rennen, um den Bus zu bekommen.",
+            "surface": "Ich musste rennen, um den Bus zu bekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-cf0366af"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Diät",
+        "normalizedLemma": "diät",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-13"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Vor einer strengen Diät solltest du ärztlichen Rat holen.",
+            "surface": "Vor einer strengen Diät solltest du ärztlichen Rat holen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "die Diät",
+            "surface": "die Diät",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-13",
+            "stage": "vocabulary",
+            "surface": "die Diät",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "die Diät",
+            "surface": "die Diät",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-5492c950"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Empfehlung",
         "normalizedLemma": "empfehlung",
         "role": "anchor",
@@ -131588,6 +133164,40 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Ernährung",
+        "normalizedLemma": "ernährung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-12"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "die Ernährung",
+            "surface": "die Ernährung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-12",
+            "stage": "vocabulary",
+            "surface": "die Ernährung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "die Ernährung",
+            "surface": "die Ernährung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-68c857bc"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Fachberater",
         "normalizedLemma": "fachberater",
         "role": "context-only",
@@ -131648,6 +133258,25 @@
           }
         ],
         "id": "lex-n-b1-20-dd4d12fd"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Frühstück",
+        "normalizedLemma": "frühstück",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Frühstück bin ich lange satt.",
+            "surface": "Nach dem Frühstück bin ich lange satt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-936795b2"
       },
       {
         "lessonId": "b1-20",
@@ -131728,6 +133357,59 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Gymnastik",
+        "normalizedLemma": "gymnastik",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "die Gymnastik",
+            "surface": "die Gymnastik",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Gymnastik",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "die Gymnastik",
+            "surface": "die Gymnastik",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-5b2f2238"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Halle",
+        "normalizedLemma": "halle",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende gehen wir in der Halle klettern.",
+            "surface": "Am Wochenende gehen wir in der Halle klettern.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-edaca993"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Hilfe",
         "normalizedLemma": "hilfe",
         "role": "context-only",
@@ -131762,6 +133444,47 @@
           }
         ],
         "id": "lex-n-b1-20-f6285aae"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Knie",
+        "normalizedLemma": "knie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[4].left",
+            "stage": "controlled",
+            "text": "das Knie",
+            "surface": "das Knie",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "das Knie",
+            "surface": "das Knie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-17",
+            "stage": "vocabulary",
+            "surface": "das Knie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "das Knie",
+            "surface": "das Knie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-2278d6e8"
       },
       {
         "lessonId": "b1-20",
@@ -132092,6 +133815,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wenn du abnehmen willst, wäre mehr Bewegung eine Möglichkeit.",
+            "surface": "Wenn du abnehmen willst, wäre mehr Bewegung eine Möglichkeit.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-20-noun-3",
             "stage": "vocabulary",
             "surface": "die Möglichkeit",
@@ -132099,6 +133829,61 @@
           }
         ],
         "id": "lex-n-b1-20-8cdba878"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Muskel",
+        "normalizedLemma": "muskel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "der Muskel",
+            "surface": "der Muskel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-16",
+            "stage": "vocabulary",
+            "surface": "der Muskel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "der Muskel",
+            "surface": "der Muskel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-1df3ab26"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Muskeln",
+        "normalizedLemma": "muskeln",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Training tun mir die Muskeln weh.",
+            "surface": "Nach dem Training tun mir die Muskeln weh.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-6e96a258"
       },
       {
         "lessonId": "b1-20",
@@ -132381,6 +134166,80 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Schlaf",
+        "normalizedLemma": "schlaf",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "surface": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-116cafc2"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Schulter",
+        "normalizedLemma": "schulter",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "die Schulter",
+            "surface": "die Schulter",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Schulter",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "die Schulter",
+            "surface": "die Schulter",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-8202aa79"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Schultern",
+        "normalizedLemma": "schultern",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Du könntest die Schultern öfter bewegen.",
+            "surface": "Du könntest die Schultern öfter bewegen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-c131c235"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Semester",
         "normalizedLemma": "semester",
         "role": "context-only",
@@ -132519,6 +134378,13 @@
             "text": "An deiner Stelle würde ich …",
             "surface": "An deiner Stelle würde ich …",
             "strength": "target"
+          },
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "surface": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "strength": "context"
           },
           {
             "path": "lexicalRegistry.b1-20-noun-9",
@@ -132716,6 +134582,44 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Training",
+        "normalizedLemma": "training",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Training tun mir die Muskeln weh.",
+            "surface": "Nach dem Training tun mir die Muskeln weh.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-2eb572c1"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Treppe",
+        "normalizedLemma": "treppe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auf der Treppe schwitze ich stark.",
+            "surface": "Auf der Treppe schwitze ich stark.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-00f28d13"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Vertrag",
         "normalizedLemma": "vertrag",
         "role": "context-only",
@@ -132738,6 +134642,40 @@
           }
         ],
         "id": "lex-n-b1-20-200ebeda"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Vitamin",
+        "normalizedLemma": "vitamin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-14"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "das Vitamin",
+            "surface": "das Vitamin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-14",
+            "stage": "vocabulary",
+            "surface": "das Vitamin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "das Vitamin",
+            "surface": "das Vitamin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-f1eb4e77"
       },
       {
         "lessonId": "b1-20",
@@ -136069,6 +138007,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für blinde Menschen kann die App Texte vorlesen.",
+            "surface": "Für blinde Menschen kann die App Texte vorlesen.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
             "text": "Wofür nutzen wir die App? Dafür …",
@@ -136170,6 +138115,81 @@
           }
         ],
         "id": "lex-n-b1-23-5c5f96aa"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Batterie",
+        "normalizedLemma": "batterie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "die Batterie",
+            "surface": "die Batterie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Batterie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "die Batterie",
+            "surface": "die Batterie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-451b7e5c"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Bedienungsanleitung",
+        "normalizedLemma": "bedienungsanleitung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Darüber steht nichts in der Bedienungsanleitung.",
+            "surface": "Darüber steht nichts in der Bedienungsanleitung.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "die Bedienungsanleitung",
+            "surface": "die Bedienungsanleitung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Bedienungsanleitung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "die Bedienungsanleitung",
+            "surface": "die Bedienungsanleitung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-ef54d687"
       },
       {
         "lessonId": "b1-23",
@@ -136525,6 +138545,66 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Fernbedienung",
+        "normalizedLemma": "fernbedienung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wo ist die Fernbedienung für den Fernseher?",
+            "surface": "Wo ist die Fernbedienung für den Fernseher?",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "die Fernbedienung",
+            "surface": "die Fernbedienung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Fernbedienung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "die Fernbedienung",
+            "surface": "die Fernbedienung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-0ccbaa64"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Fernseher",
+        "normalizedLemma": "fernseher",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wo ist die Fernbedienung für den Fernseher?",
+            "surface": "Wo ist die Fernbedienung für den Fernseher?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-8bd3bdd4"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Format",
         "normalizedLemma": "format",
         "role": "anchor",
@@ -136599,6 +138679,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Schalte zuerst das Gerät ein.",
+            "surface": "Schalte zuerst das Gerät ein.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-23-noun-1",
             "stage": "vocabulary",
             "surface": "das Gerät",
@@ -136657,6 +138744,25 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Handy",
+        "normalizedLemma": "handy",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich lade das Handy über Nacht auf.",
+            "surface": "Ich lade das Handy über Nacht auf.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-6ea8a874"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Jahresvertrag",
         "normalizedLemma": "jahresvertrag",
         "role": "context-only",
@@ -136672,6 +138778,47 @@
           }
         ],
         "id": "lex-n-b1-23-4af6f84e"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Kabel",
+        "normalizedLemma": "kabel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Dafür braucht man kein Kabel.",
+            "surface": "Dafür braucht man kein Kabel.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "das Kabel",
+            "surface": "das Kabel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-29",
+            "stage": "vocabulary",
+            "surface": "das Kabel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "das Kabel",
+            "surface": "das Kabel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-fd53474b"
       },
       {
         "lessonId": "b1-23",
@@ -136717,6 +138864,40 @@
           }
         ],
         "id": "lex-n-b1-23-6601c801"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Lautsprecher",
+        "normalizedLemma": "lautsprecher",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "der Lautsprecher",
+            "surface": "der Lautsprecher",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-26",
+            "stage": "vocabulary",
+            "surface": "der Lautsprecher",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "der Lautsprecher",
+            "surface": "der Lautsprecher",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-ce1e058c"
       },
       {
         "lessonId": "b1-23",
@@ -137066,6 +139247,32 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Regler",
+        "normalizedLemma": "regler",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Dreh den Regler nach rechts.",
+            "surface": "Dreh den Regler nach rechts.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Schieb den Regler nach oben.",
+            "surface": "Schieb den Regler nach oben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-f2707de9"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Rezeption",
         "normalizedLemma": "rezeption",
         "role": "context-only",
@@ -137251,6 +139458,121 @@
           }
         ],
         "id": "lex-n-b1-23-2adaf0f5"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Tag",
+        "normalizedLemma": "tag",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Batterie hält nur einen Tag.",
+            "surface": "Die Batterie hält nur einen Tag.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-4ff01a6c"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Tastatur",
+        "normalizedLemma": "tastatur",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "die Tastatur",
+            "surface": "die Tastatur",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die App lässt sich auch mit der Tastatur bedienen.",
+            "surface": "Die App lässt sich auch mit der Tastatur bedienen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Tastatur",
+            "surface": "die Tastatur",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-25",
+            "stage": "vocabulary",
+            "surface": "die Tastatur",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Tastatur",
+            "surface": "die Tastatur",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-ba694da2"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "lemmaCandidate": "Taste",
+        "normalizedLemma": "taste",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-23-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "die Taste",
+            "surface": "die Taste",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Damit drückt man nur eine Taste.",
+            "surface": "Damit drückt man nur eine Taste.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "die Taste",
+            "surface": "die Taste",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-23-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Taste",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "die Taste",
+            "surface": "die Taste",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-23-fa4dd96b"
       },
       {
         "lessonId": "b1-23",
@@ -211291,6 +213613,29 @@
         "level": "B1",
         "infinitiveCandidate": "kaufen",
         "normalizedVerb": "kaufen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich nehme meine eigene Tüte mit, statt eine neue zu kaufen.",
+            "surface": "Ich nehme meine eigene Tüte mit, statt eine neue zu kaufen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-10-a05d8700"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "infinitiveCandidate": "kaufen",
+        "normalizedVerb": "kaufen",
         "preposition": "zu",
         "role": "context-only",
         "status": "not-target",
@@ -211322,6 +213667,29 @@
           }
         ],
         "id": "lex-v-b1-10-184438cf"
+      },
+      {
+        "lessonId": "b1-10",
+        "level": "B1",
+        "infinitiveCandidate": "kommen",
+        "normalizedVerb": "kommen",
+        "preposition": "aus",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Aprikosen kommen dieses Mal aus Spanien.",
+            "surface": "Die Aprikosen kommen dieses Mal aus Spanien.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-10-a97038b2"
       },
       {
         "lessonId": "b1-10",
@@ -214855,6 +217223,29 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "infinitiveCandidate": "achten",
+        "normalizedVerb": "achten",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "surface": "An deiner Stelle würde ich mehr auf den Schlaf achten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-ee436d10"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "infinitiveCandidate": "bearbeiten",
         "normalizedVerb": "bearbeiten",
         "preposition": "für",
@@ -215016,6 +217407,52 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "infinitiveCandidate": "gehen",
+        "normalizedVerb": "gehen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende gehen wir in der Halle klettern.",
+            "surface": "Am Wochenende gehen wir in der Halle klettern.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-87ade055"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "infinitiveCandidate": "klettern",
+        "normalizedVerb": "klettern",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende gehen wir in der Halle klettern.",
+            "surface": "Am Wochenende gehen wir in der Halle klettern.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-6b197519"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "infinitiveCandidate": "nennen",
         "normalizedVerb": "nennen",
         "preposition": "bei",
@@ -215082,6 +217519,52 @@
           }
         ],
         "id": "lex-v-b1-20-a757e0d6"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "infinitiveCandidate": "rennen",
+        "normalizedVerb": "rennen",
+        "preposition": "um",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich musste rennen, um den Bus zu bekommen.",
+            "surface": "Ich musste rennen, um den Bus zu bekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-67e66e51"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "infinitiveCandidate": "rennen",
+        "normalizedVerb": "rennen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich musste rennen, um den Bus zu bekommen.",
+            "surface": "Ich musste rennen, um den Bus zu bekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-70025166"
       },
       {
         "lessonId": "b1-20",
@@ -216030,6 +218513,29 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "infinitiveCandidate": "sich bedienen",
+        "normalizedVerb": "bedienen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die App lässt sich auch mit der Tastatur bedienen.",
+            "surface": "Die App lässt sich auch mit der Tastatur bedienen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-23-735d3870"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "infinitiveCandidate": "brauchen",
         "normalizedVerb": "brauchen",
         "preposition": "für",
@@ -216272,6 +218778,29 @@
           }
         ],
         "id": "lex-v-b1-23-f937a1c6"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
+        "infinitiveCandidate": "oben",
+        "normalizedVerb": "oben",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Schieb den Regler nach oben.",
+            "surface": "Schieb den Regler nach oben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-23-690f52c0"
       },
       {
         "lessonId": "b1-23",
@@ -232995,5 +235524,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "1fcf03482526fd97c46fbc8f83f5da228ee1fd6b95b5b5c10d17717c3108071a"
+  "contentSha256": "23d87582a2dec6f5fc740944649bd5716907759fc9582736d939a34f673ba0a1"
 }

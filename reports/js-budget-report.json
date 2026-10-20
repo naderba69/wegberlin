@@ -13,7 +13,7 @@
   },
   "actual": {
     "chunkCount": 131,
-    "totalChunkGzipBytes": 2135587,
+    "totalChunkGzipBytes": 2140111,
     "maxSingleChunkGzipBytes": 269020
   },
   "issues": [],
@@ -24,14 +24,14 @@
       "gzipBytes": 269020
     },
     {
+      "path": ".next/static/chunks/curriculum-b1-07c9aeef0e9faedc.js",
+      "rawBytes": 672470,
+      "gzipBytes": 185931
+    },
+    {
       "path": ".next/static/chunks/curriculum-a2-01599e724246327b.js",
       "rawBytes": 662536,
       "gzipBytes": 182722
-    },
-    {
-      "path": ".next/static/chunks/curriculum-b1-17709aa7ec7285df.js",
-      "rawBytes": 660779,
-      "gzipBytes": 182284
     },
     {
       "path": ".next/static/chunks/1269-b6b28928787723f5.js",
@@ -64,7 +64,7 @@
       "gzipBytes": 63086
     },
     {
-      "path": ".next/static/chunks/app/settings/page-297787dafb6649d9.js",
+      "path": ".next/static/chunks/app/settings/page-ba748c3ec249c45e.js",
       "rawBytes": 219475,
       "gzipBytes": 61569
     },
@@ -79,14 +79,14 @@
       "gzipBytes": 40677
     },
     {
+      "path": ".next/static/chunks/8836-81a254ede7b61368.js",
+      "rawBytes": 159495,
+      "gzipBytes": 39906
+    },
+    {
       "path": ".next/static/chunks/polyfills-42372ed130431b0a.js",
       "rawBytes": 112594,
       "gzipBytes": 39520
-    },
-    {
-      "path": ".next/static/chunks/8836-b31a9540905b8b8b.js",
-      "rawBytes": 156977,
-      "gzipBytes": 39029
     },
     {
       "path": ".next/static/chunks/app/practice/endurance/page-056a14534ab2eb88.js",

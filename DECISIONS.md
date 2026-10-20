@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v250 · 2026-10-19 · كلمات قائمة Goethe A2 الناقصة صارت داخل دروس A2 (ADR-141): 240 جملة جديدة و144 اسمًا بأداته وجمعه و23 تمرينًا في الدروس الـ24، منها محورا البيئة والملابس. دروس A2 تُظهر الآن 1130 من 1136 كلمة (99.5%) وتشرح 955 على الأقل صراحة (84%) بعد 889 و715. رُفع سقف JS بـ80 KB (2,125,000 ⇐ 2,205,000) بموافقة المالك، والمستعمل منه 2,135,587.
+Sync batch: v251 · 2026-10-20 · محورا الطعام والإدراك في B1 (ADR-142): دروس B1 لم يكن فيها طعام ولا حواس وحركة، وهما من محاور غوته الأربعة عشر. أُضيفت 72 كلمة ناقصة إلى خمسة دروس B1 موجودة (الاستهلاك، والمبادرة، والنصائح، ومشكلات الإيجار، والتقنية) مع 43 اسمًا بأداته وجمعه و5 تمارين مطابقة. دروس B1 تُظهر الآن 1931 كلمة من 2830 (68.2%) بعد 1857. لم يُرفع أي سقف؛ المتبقي من سقف المنهج 2,238 بايت.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1935,3 +1935,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: JS total hard limit 2,500,000 → 2,594,118, so the 15%-reserve ceiling is 2,205,000 (+80,000); other limits unchanged (ADR-049 amendment note). 240 words added to the existing 24 A2 lessons: a vocabulary phrase and a review card each, 23 `a2-NN-e8` matching exercises, and 144 lesson-scoped noun anchors (`a2GoetheCoreNounEntries`, scope `ADR-141-goethe-a2-core-noun-anchor`), all 144 confirmed against WiktionaryDE via `german_nouns` 1.2.5.
 - Result: A2 headwords appearing 1,130 (99.5%), taught ≥ 955 (84.1%), missing 247 → 6. JS 2,135,587 B, curriculum 1,301,956 B. Pack generation v250. Pinned by `tests/unit/goethe-a2-core-vocabulary.test.ts`.
 - Details: `docs/adr/ADR-141-goethe-a2-core-vocabulary-and-js-ceiling.md`.
+
+## ADR-142 — Teach the missing Goethe-Zertifikat B1 food and perception vocabulary inside existing B1 lessons
+
+- Status: accepted, 2026-10-20 (v251). Owner «واصل» under the delegation «نفّذ ما يفيد المتعلم والصحيح»; no ceiling raised.
+- Context: the official B1 themes food (Verpflegung) and perception/movement (Wahrnehmung/Motorik) had no lesson; their headwords were absent from every lesson. Only 7,044 B were left under the 1,309,000 B curriculum ceiling.
+- Decision: 72 words added to b1-08, b1-10, b1-12, b1-20 and b1-23 (phrase + card each, five `b1-NN-e8` matching exercises), 43 lesson-scoped noun anchors (`b1GoetheCoreNounEntries`, scope `ADR-142-goethe-b1-core-noun-anchor`), all 43 confirmed against WiktionaryDE. «achten» is taught without a frame target so no new review item waits.
+- Result: B1 headwords appearing 1,857 → 1,931 (68.2%), taught ≥ 1,461 (51.6%), absent 813 → 740. JS 2,140,111 B, curriculum 1,306,762 B (2,238 B left). Pack generation v251. Pinned by `tests/unit/goethe-b1-core-vocabulary.test.ts`.
+- Details: `docs/adr/ADR-142-goethe-b1-food-and-perception-vocabulary.md`.

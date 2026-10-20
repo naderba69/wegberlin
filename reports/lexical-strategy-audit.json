@@ -2939,7 +2939,7 @@
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
         "a1-16",
-        "a2-19",
+        "a2-21",
         "a2-18"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -2973,8 +2973,8 @@
       "recycledPercent": 30,
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
-        "a1-16",
-        "a2-21",
+        "a1-17",
+        "a2-22",
         "a2-20"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3009,6 +3009,7 @@
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
         "a1-17",
+        "a2-23",
         "a2-22"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3042,7 +3043,8 @@
       "recycledPercent": 30,
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
-        "a1-17",
+        "a1-18",
+        "b1-02",
         "a2-24"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3077,7 +3079,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a1-18",
-        "b1-02",
+        "b1-05",
         "a2-08",
         "b1-20"
       ],
@@ -3112,8 +3114,8 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-18",
-        "b1-05",
+        "a1-19",
+        "b1-08",
         "a2-09",
         "b1-23"
       ],
@@ -3148,8 +3150,8 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-19",
-        "b1-08",
+        "a1-20",
+        "b1-10",
         "a2-11",
         "b2-03"
       ],
@@ -3184,8 +3186,8 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-20",
-        "b1-11",
+        "a1-21",
+        "b1-12",
         "a2-12",
         "b2-06"
       ],
@@ -3256,8 +3258,8 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-21",
-        "b1-17",
+        "a1-22",
+        "b1-18",
         "a2-15",
         "b2-13"
       ],
@@ -3281,5 +3283,5 @@
       ]
     }
   ],
-  "contentSha256": "9c95f1a5500b866f19e5a1d30c60aa3ba6e2cfb132b3cd4042858e2777192742"
+  "contentSha256": "a3ddec0fc236793b162ddfaa261561fa3973e8b4c0d7032ff64919e2d399a72b"
 }

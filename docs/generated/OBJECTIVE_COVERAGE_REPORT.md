@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `1fcf03482526fd97c46fbc8f83f5da228ee1fd6b95b5b5c10d17717c3108071a`
+Content SHA-256: `23d87582a2dec6f5fc740944649bd5716907759fc9582736d939a34f673ba0a1`
 
 ## Result
 
@@ -252,7 +252,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-07-objective-2` | Ich kann während als Kontrastkonnektor benutzen. | أستعمل während للمقابلة. | 2 · `b1-07:entry`, `b1-07-t1` | 2 | 1 · `b1-07-m1` | covered |
 | `b1-07-objective-3` | Ich kann je … desto bilden. | أبني علاقة je … desto. | 2 · `b1-07:entry`, `b1-07-t2` | 4 | 1 · `b1-07-m2` | covered |
 | `b1-07-objective-4` | Ich kann eine bedingte Wohnpräferenz begründen. | أبرر تفضيل سكن بحسب الشروط. | 1 · `b1-07-t3` | 5 | 1 · `b1-07-m5` | covered |
-| `b1-08-objective-1` | Ich kann einen Mangel genau dokumentieren. | أوثق عيبًا بدقة. | 3 · `b1-08:entry`, `b1-08:vocabulary` | 7 | 1 · `b1-08-m4` | covered |
+| `b1-08-objective-1` | Ich kann einen Mangel genau dokumentieren. | أوثق عيبًا بدقة. | 3 · `b1-08:entry`, `b1-08:vocabulary` | 8 | 1 · `b1-08-m4` | covered |
 | `b1-08-objective-2` | Ich kann eine formelle Reparaturanfrage schreiben. | أكتب طلب إصلاح رسميًا. | 1 · `b1-08-t3` | 3 | 1 · `b1-08-m5` | covered |
 | `b1-08-objective-3` | Ich kann Relativpronomen im Akkusativ und Dativ benutzen. | أستعمل ضمائر الوصل في Akkusativ و Dativ. | 2 · `b1-08:entry`, `b1-08-t1` | 5 | 2 · `b1-08-m2`, `b1-08-m3` | covered |
 | `b1-08-objective-4` | Ich kann Fakten, Folgen und gewünschte Lösung trennen. | أفرق بين الوقائع والأثر والحل. | 2 · `b1-08-t2`, `b1-08-t3` | 4 | 1 · `b1-08-m1` | covered |
@@ -260,7 +260,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-09-objective-2` | Ich kann eine Methode mit indem ausdrücken. | أعبر عن طريقة الحل ب indem. | 2 · `b1-09:entry`, `b1-09-t1` | 6 | 1 · `b1-09-m1` | covered |
 | `b1-09-objective-3` | Ich kann Ziele und messbare Kriterien formulieren. | أصوغ أهدافًا ومؤشرات قابلة للقياس. | 1 · `b1-09-t2` | 5 | 1 · `b1-09-m2` | covered |
 | `b1-09-objective-4` | Ich kann einen Pilotversuch vorschlagen und bewerten. | أقترح تجربة محدودة وأقيمها. | 1 · `b1-09-t3` | 8 | 2 · `b1-09-m3`, `b1-09-m4` | covered |
-| `b1-10-objective-1` | Ich kann Konsumentscheidungen anhand von Kriterien bewerten. | أقيّم قرارات الشراء وفق معايير. | 3 · `b1-10:entry`, `b1-10:vocabulary` | 9 | 2 · `b1-10-m4`, `b1-10-m5` | covered |
+| `b1-10-objective-1` | Ich kann Konsumentscheidungen anhand von Kriterien bewerten. | أقيّم قرارات الشراء وفق معايير. | 3 · `b1-10:entry`, `b1-10:vocabulary` | 10 | 2 · `b1-10-m4`, `b1-10-m5` | covered |
 | `b1-10-objective-2` | Ich kann Alternativen mit statt … zu formulieren. | أصوغ بدائل ب statt … zu. | 1 · `b1-10-t1` | 3 | 2 · `b1-10-m1`, `b1-10-m3` | covered |
 | `b1-10-objective-3` | Ich kann fehlende Begleithandlungen mit ohne … zu beschreiben. | أصف فعلًا دون إجراء مرافق ب ohne … zu. | 1 · `b1-10-t2` | 2 | 1 · `b1-10-m2` | covered |
 | `b1-10-objective-4` | Ich kann Werbung und Bedarf unterscheiden. | أفرق بين الإعلان والحاجة. | 3 · `b1-10:entry`, `b1-10:vocabulary` | 3 | 1 · `b1-10-m5` | covered |
@@ -268,7 +268,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-11-objective-2` | Ich kann Wirkung mit dadurch, dass ausdrücken. | أشرح الأثر ب dadurch, dass. | 3 · `b1-11:entry`, `b1-11-t1` | 5 | 3 · `b1-11-m1`, `b1-11-m2` | covered |
 | `b1-11-objective-3` | Ich kann individuelle und strukturelle Faktoren trennen. | أفرق بين الفردي والبنيوي. | 2 · `b1-11:entry`, `b1-11-t3` | 5 | 1 · `b1-11-m5` | covered |
 | `b1-11-objective-4` | Ich kann einen Mobilitätsversuch messen. | أقيس تجربة تنقل. | 2 · `b1-11:vocabulary`, `b1-11-t3` | 8 | 1 · `b1-11-m4` | covered |
-| `b1-12-objective-1` | Ich kann eine Initiative logisch planen. | أخطط مبادرة منطقيًا. | 4 · `b1-12:entry`, `b1-12:vocabulary` | 7 | 1 · `b1-12-m4` | covered |
+| `b1-12-objective-1` | Ich kann eine Initiative logisch planen. | أخطط مبادرة منطقيًا. | 4 · `b1-12:entry`, `b1-12:vocabulary` | 8 | 1 · `b1-12-m4` | covered |
 | `b1-12-objective-2` | Ich kann Zielgruppe, Wirkung und Aktivitäten trennen. | أفرق بين الفئة والأثر والأنشطة. | 3 · `b1-12:entry`, `b1-12:vocabulary` | 8 | 2 · `b1-12-m1`, `b1-12-m2` | covered |
 | `b1-12-objective-3` | Ich kann falls für mögliche Bedingungen benutzen. | أستعمل falls لشرط محتمل. | 1 · `b1-12-t2` | 4 | 2 · `b1-12-m3`, `b1-12-m4` | covered |
 | `b1-12-objective-4` | Ich kann einen kurzen Projektantrag präsentieren. | أقدم مقترح مشروع قصيرًا. | 1 · `b1-12-t1` | 2 | 1 · `b1-12-m5` | covered |
@@ -300,7 +300,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-19-objective-2` | Ich kann Gehörtes neutral paraphrasieren. | أعيد صياغة ما سمعت بحياد. | 2 · `b1-19:vocabulary`, `b1-19-t2` | 6 | 1 · `b1-19-m4` | covered |
 | `b1-19-objective-3` | Ich kann meinen und bedeuten unterscheiden. | أفرق بين يقصد ويعني. | 2 · `b1-19:vocabulary`, `b1-19-t1` | 2 | 2 · `b1-19-m1`, `b1-19-m2` | covered |
 | `b1-19-objective-4` | Ich kann eine Klärung mit dass und ob strukturieren. | أنظم التوضيح ب dass و ob. | 1 · `b1-19-t3` | 4 | 1 · `b1-19-m3` | covered |
-| `b1-20-objective-1` | Ich kann vor einem Rat gezielt nachfragen. | أستفسر قبل النصيحة. | 3 · `b1-20:entry`, `b1-20:vocabulary` | 6 | 1 · `b1-20-m3` | covered |
+| `b1-20-objective-1` | Ich kann vor einem Rat gezielt nachfragen. | أستفسر قبل النصيحة. | 3 · `b1-20:entry`, `b1-20:vocabulary` | 7 | 1 · `b1-20-m3` | covered |
 | `b1-20-objective-2` | Ich kann Ratschläge im Konjunktiv II formulieren. | أصوغ نصائح ب Konjunktiv II. | 2 · `b1-20:vocabulary`, `b1-20-t2` | 8 | 2 · `b1-20-m1`, `b1-20-m2` | covered |
 | `b1-20-objective-3` | Ich kann Rat, Information und Entscheidung trennen. | أفرق بين النصيحة والمعلومة والقرار. | 1 · `b1-20-t3` | 6 | 1 · `b1-20-m5` | covered |
 | `b1-20-objective-4` | Ich kann Risiken und Unsicherheit transparent nennen. | أذكر المخاطر وعدم اليقين. | 1 · `b1-20-t3` | 3 | 1 · `b1-20-m4` | covered |
@@ -312,7 +312,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-22-objective-2` | Ich kann ohne … zu und ohne dass unterscheiden. | أفرق بين ohne … zu و ohne dass. | 1 · `b1-22-t1` | 4 | 2 · `b1-22-m1`, `b1-22-m2` | covered |
 | `b1-22-objective-3` | Ich kann Frühindikatoren und Ergebnisindikatoren formulieren. | أصوغ مؤشرات مبكرة ونهائية. | 3 · `b1-22:entry`, `b1-22:vocabulary` | 5 | 1 · `b1-22-m3` | covered |
 | `b1-22-objective-4` | Ich kann Anpassungsregeln vorab festlegen. | أحدد قواعد التعديل مسبقًا. | 1 · `b1-22-t3` | 6 | 1 · `b1-22-m5` | covered |
-| `b1-23-objective-1` | Ich kann technische Lösungen kriterienbasiert bewerten. | أقيّم حلًا تقنيًا وفق معايير. | 3 · `b1-23:entry`, `b1-23:vocabulary` | 6 | 1 · `b1-23-m3` | covered |
+| `b1-23-objective-1` | Ich kann technische Lösungen kriterienbasiert bewerten. | أقيّم حلًا تقنيًا وفق معايير. | 3 · `b1-23:entry`, `b1-23:vocabulary` | 7 | 1 · `b1-23-m3` | covered |
 | `b1-23-objective-2` | Ich kann Pronominaladverbien korrekt benutzen. | أستعمل الضمائر الظرفية. | 3 · `b1-23:entry`, `b1-23-t1` | 7 | 3 · `b1-23-m1`, `b1-23-m2` | covered |
 | `b1-23-objective-3` | Ich kann Datenfluss und Offline-Alternative erklären. | أشرح مسار البيانات والبديل دون اتصال. | 2 · `b1-23:vocabulary`, `b1-23-t3` | 4 | 1 · `b1-23-m5` | covered |
 | `b1-23-objective-4` | Ich kann eine begrenzte Testentscheidung treffen. | أتخذ قرار تجربة محدودًا. | 2 · `b1-23:vocabulary`, `b1-23-t3` | 4 | 1 · `b1-23-m5` | covered |

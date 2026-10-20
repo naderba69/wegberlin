@@ -1,6 +1,7 @@
 """ADR-135 / v244: compare every question-support noun anchor with WiktionaryDE.
 ADR-139 / v248: the same check runs on the Goethe A1 core-vocabulary anchors (export with `goethe-core`).
 ADR-141 / v250: and on the Goethe A2 core-vocabulary anchors (export with `goethe-a2-core`).
+ADR-142 / v251: and on the Goethe B1 food and perception anchors (export with `goethe-b1-core`).
 
 Source: the `german_nouns` 1.2.5 package on PyPI (WiktionaryDE extract, CC BY-SA 4.0).
 Usage:
@@ -20,6 +21,8 @@ from german_nouns.lookup import Nouns
 N = Nouns()
 G = {"m": "masculine", "f": "feminine", "n": "neuter"}
 rows = json.load(open(sys.argv[1]))
+# ADR-142 / v251: optional third argument records the check date (earlier evidence files used 2026-10-19).
+CHECKED_ON = sys.argv[3] if len(sys.argv) > 3 else "2026-10-19"
 def entries(word):
     try: return [e for e in N[word] if "Substantiv" in " ".join(e.get("pos", [])) or e.get("genus")]
     except Exception: return []
@@ -66,7 +69,7 @@ for r in rows:
         res = "gender-mismatch"
     if r["id"] in MANUAL: res, note = MANUAL[r["id"]]
     source = "de.wiktionary.org, manuell geprüft" if r["id"] in MANUAL else "WiktionaryDE via german_nouns 1.2.5 (PyPI, CC BY-SA 4.0)"
-    out.append([r["id"], r["lessonId"], lemma, r["gender"], r["nom"], r["plural"] or "", res, note, source, "2026-10-19"])
+    out.append([r["id"], r["lessonId"], lemma, r["gender"], r["nom"], r["plural"] or "", res, note, source, CHECKED_ON])
 from collections import Counter
 print(dict(Counter(o[6] for o in out)))
 for o in out:

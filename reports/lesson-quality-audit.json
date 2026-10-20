@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "806d2bf0ece65590d83ce1b33887af6cf3494569ec7b210dc3e433e24b07286b",
+  "contentSha256": "e2de40e059b02e81818e08f41f61fbf012a320ae0a5096c45d6ffefe671ec291",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,7 +92,7 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1779,
+    "allItems": 1784,
     "allMedianChars": 165,
     "allUnder60Chars": 0,
     "allMissing": 0,
@@ -102,7 +102,7 @@
   },
   "objectives": {
     "total": 389,
-    "lexicalReviewPrompts": 27,
+    "lexicalReviewPrompts": 26,
     "reviewPromptList": [
       "a1-03#3 Ich kann einfache persönliche Daten notieren.",
       "a1-04#0 Ich kann Familienmitglieder nennen.",
@@ -127,7 +127,6 @@
       "a2-20#1 Ich kann Prüfungsinformationen gezielt erfragen.",
       "a2-21#0 Ich kann Zukunftspläne ausdrücken.",
       "a2-24#3 Ich kann einen Gruppenentscheid dokumentieren.",
-      "b1-10#2 Ich kann fehlende Begleithandlungen mit ohne … zu beschreiben.",
       "b1-11#0 Ich kann Mobilitätsoptionen systematisch vergleichen.",
       "b1-23#3 Ich kann eine begrenzte Testentscheidung treffen.",
       "b2-22#4 Ich vermeide Verschachtelung, die den Lesefaden abbricht."
@@ -1608,29 +1607,6 @@
         ]
       },
       {
-        "lessonId": "b2-10",
-        "level": "B2",
-        "pct": 37.9,
-        "unknown": [
-          "kulturzentrum",
-          "deutschsprachige",
-          "ausschreibung",
-          "dreitaegige",
-          "medienwerkstatt",
-          "arabischsprachiges",
-          "vermittlung",
-          "uebernachtungskosten",
-          "bezahlt",
-          "ausgangstext",
-          "interessierte",
-          "mussten",
-          "arbeitsbeispiel",
-          "teilnahmegebuehr",
-          "entfiel",
-          "verbindliche"
-        ]
-      },
-      {
         "lessonId": "b1-24",
         "level": "B1",
         "pct": 37.4,
@@ -1674,6 +1650,29 @@
           "sah",
           "restlichen",
           "funktionen"
+        ]
+      },
+      {
+        "lessonId": "b2-10",
+        "level": "B2",
+        "pct": 37.1,
+        "unknown": [
+          "kulturzentrum",
+          "deutschsprachige",
+          "ausschreibung",
+          "dreitaegige",
+          "medienwerkstatt",
+          "arabischsprachiges",
+          "vermittlung",
+          "uebernachtungskosten",
+          "bezahlt",
+          "ausgangstext",
+          "interessierte",
+          "mussten",
+          "arbeitsbeispiel",
+          "teilnahmegebuehr",
+          "entfiel",
+          "verbindliche"
         ]
       },
       {
@@ -2826,7 +2825,7 @@
     "note": "Measures whether the long inputs ask for vocabulary the curriculum has exposed; it says nothing about voice, pacing or rights, which remain human review items of P2-401."
   },
   "pronunciation": {
-    "medianCoveragePct": 33.3
+    "medianCoveragePct": 26.1
   },
   "policyNotes": [
     "Exact-match grading with explicit orthographic variants only is a tested policy (tests/unit/content-integrity.test.ts:77-78); the remedy is more acceptedAnswers in data plus ADR-078, not comparator folding.",

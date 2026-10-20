@@ -6,7 +6,7 @@ import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 describe("local bilingual search", () => {
   it("builds a unique A1-B2 index with every lesson and exam task", () => {
     expect(new Set(bilingualSearchEntries.map((entry) => entry.id)).size).toBe(bilingualSearchEntries.length);
-    expect(bilingualSearchEntries.length).toBe(4_267);
+    expect(bilingualSearchEntries.length).toBe(4_339);
     expect(new Set(bilingualSearchEntries.map((entry) => entry.level))).toEqual(new Set(["A1", "A2", "B1", "B2"]));
     for (const lesson of curriculum.filter((item) => item.status === "published")) {
       expect(bilingualSearchEntries.some((entry) => entry.id === `lesson:${lesson.id}`)).toBe(true);

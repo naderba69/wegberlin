@@ -1,6 +1,6 @@
 # حالة إنتاج صوت الامتحان
 
-Sync batch: v250 · 2026-10-19 · كلمات قائمة Goethe A2 الناقصة صارت داخل دروس A2 (ADR-141): 240 جملة جديدة و144 اسمًا بأداته وجمعه و23 تمرينًا في الدروس الـ24، منها محورا البيئة والملابس. دروس A2 تُظهر الآن 1130 من 1136 كلمة (99.5%) وتشرح 955 على الأقل صراحة (84%) بعد 889 و715. رُفع سقف JS بـ80 KB (2,125,000 ⇐ 2,205,000) بموافقة المالك، والمستعمل منه 2,135,587.
+Sync batch: v251 · 2026-10-20 · محورا الطعام والإدراك في B1 (ADR-142): دروس B1 لم يكن فيها طعام ولا حواس وحركة، وهما من محاور غوته الأربعة عشر. أُضيفت 72 كلمة ناقصة إلى خمسة دروس B1 موجودة (الاستهلاك، والمبادرة، والنصائح، ومشكلات الإيجار، والتقنية) مع 43 اسمًا بأداته وجمعه و5 تمارين مطابقة. دروس B1 تُظهر الآن 1931 كلمة من 2830 (68.2%) بعد 1857. لم يُرفع أي سقف؛ المتبقي من سقف المنهج 2,238 بايت.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

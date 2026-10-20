@@ -12,7 +12,7 @@ describe("B2 structured noun and verb-preposition anchors", () => {
     expect(academicLessonList).toHaveLength(96);
     expect(b2NounGrammarEntries).toHaveLength(464);
     expect(b2VerbPrepositionFrames).toHaveLength(48);
-    expect(nounGrammarEntries).toHaveLength(1690);
+    expect(nounGrammarEntries).toHaveLength(1733);
     expect(verbPrepositionFrames).toHaveLength(134);
     expect(lexicalGrammarCoverage.B2).toEqual({ lessons: 24, nounEntries: 464, verbFrames: 48 });
     for (const lesson of academicLessonList) {

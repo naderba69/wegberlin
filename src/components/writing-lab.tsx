@@ -3,7 +3,7 @@
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, BookOpenCheck, Check, FilePenLine, Lightbulb, RotateCcw, Save, Sparkles } from "lucide-react";
-import { analyzeWriting, type WritingAnalysis } from "@/core/writing/analyze";
+import { analyzeWriting, writingTaskNeedsGreeting, type WritingAnalysis } from "@/core/writing/analyze";
 import { behavioralPraise } from "@/core/coach/behavioral-praise";
 import { appendSupportUsageEvent, createSupportUsageEvent } from "@/core/evidence/support-usage";
 import { scheduleDelayedTransferTasksForState } from "@/core/evidence/delayed-transfer-task";
@@ -50,7 +50,7 @@ export function WritingLab({lessonId,independentTaskId}:{lessonId?:string;indepe
   const singleMatch=task.promptDe.match(/(\d{2,3})\s+Wörter/i);
   const fallbackMinimum=level==="A1"?30:level==="A2"?70:level==="B1"?100:140;
   const minWords=rangeMatch?Number(rangeMatch[1]):singleMatch?Number(singleMatch[1]):fallbackMinimum;
-  const requireGreeting=/Nachricht|E-Mail|Brief|Mail/iu.test(task.promptDe);
+  const requireGreeting=writingTaskNeedsGreeting(task.promptDe);
   const submissions=state.writingSubmissions.filter((submission)=>submission.taskId===taskId);
   const latest=submissions.at(-1);
   const roundStartedAt=useRef(latest?.status==="draft"?latest.evidenceContext?.draftStartedAt??latest.createdAt:new Date().toISOString());

@@ -41,22 +41,34 @@ function replaceMappedVerb(sentence:string,pronounPattern:string,forms:Record<st
 }
 function capitalizeFirstLetter(sentence:string){return sentence.replace(/\p{Ll}/u,(letter)=>letter.toLocaleUpperCase("de-DE"));}
 function correctWeilCopula(sentence:string){return sentence.replace(/\bweil\s+(ich|du|er|sie|es|wir|ihr|Sie)\s+(bin|bist|ist|sind|seid)\s+([^,.!?]{1,80})/iu,(_match,subject:string,verb:string,rest:string)=>`weil ${subject} ${rest.trim()} ${verb}`);}
-function correctMovementPerfect(sentence:string){const auxiliaries:Record<string,string>={ich:"bin",du:"bist",er:"ist",sie:"ist",es:"ist",wir:"sind",ihr:"seid"};return sentence.replace(/\b(ich|du|er|sie|es|wir|ihr)\s+(habe|hast|hat|haben|habt)(?=\s+[^.!?]{0,70}\b(?:gegangen|gefahren|gekommen)\b)/iu,(_match,subject:string)=>`${subject} ${auxiliaries[subject.toLocaleLowerCase("de-DE")]}`);}
+function correctMovementPerfect(sentence:string){const auxiliaries:Record<string,string>={ich:"bin",du:"bist",er:"ist",sie:"ist",es:"ist",wir:"sind",ihr:"seid"};return sentence.replace(/\b(ich|du|er|sie|es|wir|ihr)\s+(habe|hast|hat|haben|habt)(?=\s+[^.!?,;:]{0,70}\b(?:gegangen|gefahren|gekommen)\b)/iu,(_match,subject:string)=>`${subject} ${auxiliaries[subject.toLocaleLowerCase("de-DE")]}`);}
 
 const detectors:Detector[]=[
   {patternId:"bin-heissen",detect:/\b(?:ich\s+bin\s+heißen|ich\s+bin\s+heisse?n)\b/iu,correct:(sentence)=>sentence.replace(/\bich\s+bin\s+heißen\b/iu,"Ich heiße").replace(/\bich\s+bin\s+heisse?n\b/iu,"Ich heiße"),explanationAr:"heißen فعل مستقل؛ مع ich نستعمل heiße دون bin."},
   {patternId:"weil-copula-order",detect:/\bweil\s+(?:ich|du|er|sie|es|wir|ihr|Sie)\s+(?:bin|bist|ist|sind|seid)\s+[^,.!?]{1,80}/iu,correct:correctWeilCopula,explanationAr:"بعد weil ينتقل الفعل المصرف إلى نهاية الجملة التابعة."},
-  {patternId:"movement-perfect-auxiliary",detect:/\b(?:ich|du|er|sie|es|wir|ihr)\s+(?:habe|hast|hat|haben|habt)\s+[^.!?]{0,70}\b(?:gegangen|gefahren|gekommen)\b/iu,correct:correctMovementPerfect,explanationAr:"أفعال الحركة الشائعة مثل gehen وfahren وkommen تبني Perfekt هنا مع sein."},
-  {patternId:"ich-infinitive",detect:/\bich\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b/iu,correct:(sentence)=>replaceMappedVerb(sentence,"ich",ichForms),explanationAr:"بعد ich نحتاج صيغة الفعل المصرفة، لا المصدر."},
-  {patternId:"du-infinitive",detect:/\bdu\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b/iu,correct:(sentence)=>replaceMappedVerb(sentence,"du",duForms),explanationAr:"بعد du نحتاج صيغة المخاطب المصرفة."},
-  {patternId:"third-person-infinitive",detect:/\b(?:er|sie|es)\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b/iu,correct:(sentence)=>replaceMappedVerb(sentence,"er|sie|es",thirdForms),explanationAr:"مع er/sie/es يجب تصريف الفعل، ولا يبقى في صيغة المصدر."},
+  {patternId:"movement-perfect-auxiliary",detect:/\b(?:ich|du|er|sie|es|wir|ihr)\s+(?:habe|hast|hat|haben|habt)\s+[^.!?,;:]{0,70}\b(?:gegangen|gefahren|gekommen)\b/iu,correct:correctMovementPerfect,explanationAr:"أفعال الحركة الشائعة مثل gehen وfahren وkommen تبني Perfekt هنا مع sein."},
+  {patternId:"ich-infinitive",detect:/\bich\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b(?!\s+(?:kann|kannst|könnte|muss|musst|müsste|will|willst|soll|sollst|sollte|darf|möchte|möchtest|werde|wirst|würde|konnte|musste|wollte|durfte)\b)/iu,correct:(sentence)=>replaceMappedVerb(sentence,"ich",ichForms),explanationAr:"بعد ich نحتاج صيغة الفعل المصرفة، لا المصدر."},
+  {patternId:"du-infinitive",detect:/\bdu\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b(?!\s+(?:kann|kannst|könnte|muss|musst|müsste|will|willst|soll|sollst|sollte|darf|möchte|möchtest|werde|wirst|würde|konnte|musste|wollte|durfte)\b)/iu,correct:(sentence)=>replaceMappedVerb(sentence,"du",duForms),explanationAr:"بعد du نحتاج صيغة المخاطب المصرفة."},
+  {patternId:"third-person-infinitive",detect:/\ber\s+(?:kommen|wohnen|lernen|arbeiten|sprechen|machen|gehen|haben|sein)\b(?!\s+(?:kann|könnte|muss|müsste|will|soll|sollte|darf|möchte|wird|würde|konnte|musste|wollte|durfte)\b)/iu,correct:(sentence)=>replaceMappedVerb(sentence,"er",thirdForms),explanationAr:"مع er/sie/es يجب تصريف الفعل، ولا يبقى في صيغة المصدر."},
   {patternId:"sentence-capitalization",detect:/^[\s„“"'(\[]*\p{Ll}/u,correct:capitalizeFirstLetter,explanationAr:"تبدأ الجملة الألمانية المكتوبة بحرف كبير."},
 ];
 
-function sentenceExcerpts(text:string){
+// v257 / ADR-148: a period after a day number ("am 12. Mai", "vom 12. bis 15. Juli"), inside an e-mail
+// address or after a common abbreviation ("z. B.", "Nr.") does not end a German sentence. Splitting there made
+// the capitalisation pattern report false errors in correct learner texts and in the lesson models.
+const ordinalFollower=/^(?:\p{Ll}|(?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember|Stock|Klasse|Etage|Jahrhundert|Mal|Platz)\b)/u;
+const abbreviationEnd=/(?:^|\s)(?:[zduv]|z\.\s?[BT]|d\.\s?h|u\.\s?a|v\.\s?a|Nr|ca|bzw|usw|vgl|ggf|evtl|inkl|bspw|Dr|Str|Az|Tel|Abs|Hr|Fr|etc)\.$/u;
+export function splitGermanSentences(text:string):string[]{
   const compact=text.normalize("NFC").replace(/[\u202A-\u202E\u2066-\u2069]/gu,"").replace(/\s+/gu," ").trim();
-  return compact.match(/[^.!?]+[.!?]?/gu)?.map((sentence)=>sentence.trim()).filter(Boolean)??[];
+  const sentences:string[]=[];
+  for(const part of compact.split(/(?<=[.!?])\s+/u).filter(Boolean)){
+    const previous=sentences.at(-1);
+    if(previous&&((/\d\.$/u.test(previous)&&ordinalFollower.test(part))||abbreviationEnd.test(previous)))sentences[sentences.length-1]=`${previous} ${part}`;
+    else sentences.push(part);
+  }
+  return sentences;
 }
+function sentenceExcerpts(text:string){return splitGermanSentences(text);}
 
 export function detectWritingErrorPatterns(text:string,maxPatterns=3):WritingErrorPatternMatch[]{
   const matches:WritingErrorPatternMatch[]=[];

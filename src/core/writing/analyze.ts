@@ -1,5 +1,5 @@
 import type { WritingDimensionEvidence } from "@/types/learning";
-import { detectWritingErrorPatterns, type WritingErrorPatternMatch } from "./error-practice";
+import { detectWritingErrorPatterns, splitGermanSentences, type WritingErrorPatternMatch } from "./error-practice";
 
 export type WritingAnalysis = {
   wordCount:number;
@@ -12,17 +12,21 @@ export type WritingAnalysis = {
 
 function quote(value:string){const compact=value.replace(/\s+/gu," ").trim();return compact.length>110?`${compact.slice(0,107)}…`:compact}
 
+// v257 / ADR-148: a task asks for greeting and closing when it is a message, e-mail or letter; revising one
+// paragraph of a letter ("Briefabsatz") or a rule "für künftige Briefe" is not a whole letter and must not demand both.
+export function writingTaskNeedsGreeting(promptDe:string):boolean{return /Nachricht|E-Mail|\bBrief\b|Mail/iu.test(promptDe);}
+
 export function analyzeWriting(text:string,options:{minWords?:number;requireGreeting?:boolean;taskPointsCompleted?:number;taskPointsTotal?:number}={}):WritingAnalysis{
   const minWords=options.minWords??30;
   const cleaned=text.trim();
   const words=cleaned?cleaned.split(/\s+/u):[];
-  const sentences=cleaned.split(/(?<=[.!?])\s+/u).map((sentence)=>sentence.trim()).filter(Boolean);
+  const sentences=splitGermanSentences(cleaned);
   const sentenceCount=sentences.length;
   const firstQuote=quote(sentences[0]??cleaned);
   const hasGreeting=/\b(hallo|guten tag|liebe|lieber|sehr geehrte)/iu.test(cleaned);
   const hasClosing=/\b(viele grüße|freundliche grüße|mit freundlichen grüßen|liebe grüße|bis bald)/iu.test(cleaned);
   const hasVerb=/\b(bin|bist|ist|sind|war|waren|habe|hat|haben|hatte|heiße|komme|wohne|möchte|kann|will|muss|soll|gehe|lerne|arbeite|suche|brauche|würde|könnte|werde|wird|wurden|finde|denke|glaube|schlage|bitte)\b/iu.test(cleaned);
-  const hasConnector=/\b(und|aber|weil|deshalb|daher|obwohl|allerdings|außerdem|zuerst|danach|einerseits|andererseits|hingegen|wenn|falls)\b/iu.test(cleaned);
+  const hasConnector=/\b(und|aber|oder|denn|dann|sondern|weil|deshalb|deswegen|darum|daher|trotzdem|obwohl|allerdings|außerdem|zuerst|danach|einerseits|andererseits|hingegen|wenn|falls)\b/iu.test(cleaned);
   const capitalSentences=sentences.filter((sentence)=>/^[A-ZÄÖÜ]/u.test(sentence)).length;
   const hasCapitalStart=/^[A-ZÄÖÜ]/u.test(cleaned);
   const uniqueWords=new Set(words.map((word)=>word.toLocaleLowerCase("de-DE").replace(/[^\p{L}ßäöü]/gu,"")).filter((word)=>word.length>=3));

@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
+Sync batch: v253 · 2026-10-20 · تدقيق دروس B1 وB2 الباقية (ADR-144): قُرئت بطاقات الدروس الـ43 التي لم تُدقَّق بعد (451 بطاقة)، فوُحّد 59 معنى كان مختلفًا بين صفحة المفردات والبطاقة، وتُرجمت جمل درس b2-19 الـ18 بعد أن كانت تصف النبرة فقط، وأُكمل أو صُحّح 46 مثالًا (منها 19 مثالًا ناقصًا ينتهي بـ«…» ومثال لا علاقة له بكلمته). الحارس الدائم يغطي الآن الدروس الـ96 كلها. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -565,3 +565,5 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
     **v252 / ADR-143: دُقّقت كل الإضافات** (556 بطاقة من v248 وv250 وv251): صُحّحت 8 أخطاء، ووُحّد 72 معنى قديمًا
     بين صفحة المفردات والبطاقة، وحارس دائم `goethe-additions-quality-guard` يفحص كل إضافة قادمة. سقف المنهج بقي منه
     2,393 بايت.
+    **v253 / ADR-144: دُقّقت دروس B1 وB2 الباقية** (451 بطاقة): 59 معنى موحّدًا، وترجمة جمل b2-19، و46 مثالًا مصحّحًا.
+    الحارس يغطي الدروس الـ96 كلها. سقف المنهج بقي منه 1,914 بايت.

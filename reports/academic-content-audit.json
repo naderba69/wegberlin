@@ -44900,10 +44900,10 @@
     "nounAnchorCount": 1733,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5393,
+      "totalCandidates": 5401,
       "covered": 1845,
       "pendingHuman": 89,
-      "contextualNotTarget": 3459,
+      "contextualNotTarget": 3467,
       "authoredTargets": 1934,
       "byLevel": {
         "A1": {
@@ -44913,30 +44913,30 @@
           "contextualNotTarget": 265
         },
         "A2": {
-          "totalCandidates": 1085,
+          "totalCandidates": 1086,
           "covered": 459,
           "pendingHuman": 0,
-          "contextualNotTarget": 626
+          "contextualNotTarget": 627
         },
         "B1": {
-          "totalCandidates": 1342,
+          "totalCandidates": 1346,
           "covered": 417,
           "pendingHuman": 0,
-          "contextualNotTarget": 925
+          "contextualNotTarget": 929
         },
         "B2": {
-          "totalCandidates": 2233,
+          "totalCandidates": 2236,
           "covered": 501,
           "pendingHuman": 89,
-          "contextualNotTarget": 1643
+          "contextualNotTarget": 1646
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1335,
+      "totalCandidates": 1338,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1200,
+      "contextualNotTarget": 1203,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44952,16 +44952,16 @@
           "contextualNotTarget": 210
         },
         "B1": {
-          "totalCandidates": 342,
+          "totalCandidates": 343,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 311
+          "contextualNotTarget": 312
         },
         "B2": {
-          "totalCandidates": 642,
+          "totalCandidates": 644,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 593
+          "contextualNotTarget": 595
         }
       }
     },
@@ -77087,8 +77087,8 @@
           {
             "path": "flashcards[3].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich verstehe deinen Punkt, aber …",
-            "surface": "Ich verstehe deinen Punkt, aber …",
+            "text": "Ich verstehe deinen Punkt, aber ich sehe das anders.",
+            "surface": "Ich verstehe deinen Punkt, aber ich sehe das anders.",
             "strength": "context"
           },
           {
@@ -93829,8 +93829,8 @@
           {
             "path": "flashcards[9].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich verstehe dein Argument, trotzdem …",
-            "surface": "Ich verstehe dein Argument, trotzdem …",
+            "text": "Ich verstehe dein Argument, trotzdem bleibe ich bei meiner Meinung.",
+            "surface": "Ich verstehe dein Argument, trotzdem bleibe ich bei meiner Meinung.",
             "strength": "context"
           },
           {
@@ -94127,6 +94127,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[9].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich verstehe dein Argument, trotzdem bleibe ich bei meiner Meinung.",
+            "surface": "Ich verstehe dein Argument, trotzdem bleibe ich bei meiner Meinung.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.a2-18-noun-1",
             "stage": "vocabulary",
             "surface": "die Meinung",
@@ -94194,6 +94201,25 @@
           }
         ],
         "id": "lex-n-a2-18-42bc8772"
+      },
+      {
+        "lessonId": "a2-18",
+        "level": "A2",
+        "lemmaCandidate": "Preis",
+        "normalizedLemma": "preis",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Da hast du recht, aber der Preis ist hoch.",
+            "surface": "Da hast du recht, aber der Preis ist hoch.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-a2-18-3fe7a779"
       },
       {
         "lessonId": "a2-18",
@@ -106526,6 +106552,25 @@
       {
         "lessonId": "b1-03",
         "level": "B1",
+        "lemmaCandidate": "Aufgabe",
+        "normalizedLemma": "aufgabe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[4].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er hatte die Aufgabe schon gemacht.",
+            "surface": "Er hatte die Aufgabe schon gemacht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-03-2567b627"
+      },
+      {
+        "lessonId": "b1-03",
+        "level": "B1",
         "lemmaCandidate": "Auftrag",
         "normalizedLemma": "auftrag",
         "role": "anchor",
@@ -107669,6 +107714,13 @@
           "b1-04-noun-5"
         ],
         "sources": [
+          {
+            "path": "flashcards[3].exampleDe",
+            "stage": "vocabulary",
+            "text": "Es gibt eine Abhängigkeit: Das Design hängt vom Text ab.",
+            "surface": "Es gibt eine Abhängigkeit: Das Design hängt vom Text ab.",
+            "strength": "context"
+          },
           {
             "path": "flashcards[3].frontDe",
             "stage": "vocabulary",
@@ -112005,8 +112057,8 @@
           {
             "path": "flashcards[8].exampleDe",
             "stage": "vocabulary",
-            "text": "Unter der Bedingung, dass Züge fahren …",
-            "surface": "Unter der Bedingung, dass Züge fahren …",
+            "text": "Ich ziehe aufs Land, unter der Bedingung, dass die Züge regelmäßig fahren.",
+            "surface": "Ich ziehe aufs Land, unter der Bedingung, dass die Züge regelmäßig fahren.",
             "strength": "context"
           },
           {
@@ -113686,6 +113738,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[8].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich ziehe aufs Land, unter der Bedingung, dass die Züge regelmäßig fahren.",
+            "surface": "Ich ziehe aufs Land, unter der Bedingung, dass die Züge regelmäßig fahren.",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[1].options[3]",
             "stage": "listening",
@@ -126136,6 +126195,13 @@
             "strength": "context"
           },
           {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Zusammenfassend lässt sich sagen, dass die Gruppe Fortschritte gemacht hat.",
+            "surface": "Zusammenfassend lässt sich sagen, dass die Gruppe Fortschritte gemacht hat.",
+            "strength": "context"
+          },
+          {
             "path": "miniTest[2].options[1]",
             "stage": "test",
             "text": "Eine Einschränkung ist die kleine Gruppe.",
@@ -126972,8 +127038,8 @@
           {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
-            "text": "Während der Arbeit deaktiviere ich sie.",
-            "surface": "Während der Arbeit deaktiviere ich sie.",
+            "text": "Während der Arbeit deaktiviere ich alle Benachrichtigungen.",
+            "surface": "Während der Arbeit deaktiviere ich alle Benachrichtigungen.",
             "strength": "context"
           },
           {
@@ -127624,8 +127690,8 @@
           {
             "path": "flashcards[8].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich protokolliere die Nutzung sieben Tage.",
-            "surface": "Ich protokolliere die Nutzung sieben Tage.",
+            "text": "Ich protokolliere meine Nutzung eine Woche lang.",
+            "surface": "Ich protokolliere meine Nutzung eine Woche lang.",
             "strength": "context"
           }
         ],
@@ -128072,8 +128138,8 @@
           {
             "path": "flashcards[9].exampleDe",
             "stage": "vocabulary",
-            "text": "Gleichzeitigkeit beweist keine Ursache.",
-            "surface": "Gleichzeitigkeit beweist keine Ursache.",
+            "text": "Eine Korrelation beweist noch keine Ursache.",
+            "surface": "Eine Korrelation beweist noch keine Ursache.",
             "strength": "context"
           },
           {
@@ -128240,6 +128306,13 @@
           "b1-16-noun-14"
         ],
         "sources": [
+          {
+            "path": "flashcards[8].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich protokolliere meine Nutzung eine Woche lang.",
+            "surface": "Ich protokolliere meine Nutzung eine Woche lang.",
+            "strength": "context"
+          },
           {
             "path": "flashcards[8].frontDe",
             "stage": "vocabulary",
@@ -136233,8 +136306,8 @@
           {
             "path": "flashcards[6].exampleDe",
             "stage": "vocabulary",
-            "text": "Ich plane einen freien Abend ein.",
-            "surface": "Ich plane einen freien Abend ein.",
+            "text": "Ich plane einen freien Abend als Puffer ein.",
+            "surface": "Ich plane einen freien Abend als Puffer ein.",
             "strength": "context"
           },
           {
@@ -137997,8 +138070,8 @@
           {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
-            "text": "Wofür nutzen wir die App? Dafür …",
-            "surface": "Wofür nutzen wir die App? Dafür …",
+            "text": "Wofür nutzen wir die App? Dafür, dass alle die Texte hören können.",
+            "surface": "Wofür nutzen wir die App? Dafür, dass alle die Texte hören können.",
             "strength": "context"
           },
           {
@@ -138386,8 +138459,8 @@
           {
             "path": "flashcards[4].exampleDe",
             "stage": "vocabulary",
-            "text": "Woran hängt die Entscheidung? Daran …",
-            "surface": "Woran hängt die Entscheidung? Daran …",
+            "text": "Woran hängt die Entscheidung? Daran, wie viel das Gerät kostet.",
+            "surface": "Woran hängt die Entscheidung? Daran, wie viel das Gerät kostet.",
             "strength": "context"
           }
         ],
@@ -138664,6 +138737,13 @@
             "stage": "vocabulary",
             "text": "Schalte zuerst das Gerät ein.",
             "surface": "Schalte zuerst das Gerät ein.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[4].exampleDe",
+            "stage": "vocabulary",
+            "text": "Woran hängt die Entscheidung? Daran, wie viel das Gerät kostet.",
+            "surface": "Woran hängt die Entscheidung? Daran, wie viel das Gerät kostet.",
             "strength": "context"
           },
           {
@@ -139615,6 +139695,25 @@
       {
         "lessonId": "b1-23",
         "level": "B1",
+        "lemmaCandidate": "Texte",
+        "normalizedLemma": "texte",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[2].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wofür nutzen wir die App? Dafür, dass alle die Texte hören können.",
+            "surface": "Wofür nutzen wir die App? Dafür, dass alle die Texte hören können.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-23-644d1a62"
+      },
+      {
+        "lessonId": "b1-23",
+        "level": "B1",
         "lemmaCandidate": "Tür",
         "normalizedLemma": "tür",
         "role": "context-only",
@@ -140071,6 +140170,25 @@
           }
         ],
         "id": "lex-n-b1-24-06f6c8aa"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Formulare",
+        "normalizedLemma": "formulare",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[3].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wodurch sank die Zeit? Dadurch, dass wir die Formulare vereinfacht haben.",
+            "surface": "Wodurch sank die Zeit? Dadurch, dass wir die Formulare vereinfacht haben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-12e5a82a"
       },
       {
         "lessonId": "b1-24",
@@ -140861,6 +140979,25 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Wartezeit",
+        "normalizedLemma": "wartezeit",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[1].exampleDe",
+            "stage": "vocabulary",
+            "text": "Worauf konzentrieren wir uns? Darauf, die Wartezeit zu senken.",
+            "surface": "Worauf konzentrieren wir uns? Darauf, die Wartezeit zu senken.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-5085a808"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Zeit",
         "normalizedLemma": "zeit",
         "role": "context-only",
@@ -140870,8 +141007,8 @@
           {
             "path": "flashcards[3].exampleDe",
             "stage": "vocabulary",
-            "text": "Wodurch sank die Zeit? Dadurch …",
-            "surface": "Wodurch sank die Zeit? Dadurch …",
+            "text": "Wodurch sank die Zeit? Dadurch, dass wir die Formulare vereinfacht haben.",
+            "surface": "Wodurch sank die Zeit? Dadurch, dass wir die Formulare vereinfacht haben.",
             "strength": "context"
           },
           {
@@ -141101,6 +141238,13 @@
             "stage": "controlled",
             "text": "Unter der ___, dass die Aufgaben klar sind, kann die Regel funktionieren.",
             "surface": "Unter der ___, dass die Aufgaben klar sind, kann die Regel funktionieren.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Modell funktioniert unter der Voraussetzung, dass die Aufgaben klar sind.",
+            "surface": "Das Modell funktioniert unter der Voraussetzung, dass die Aufgaben klar sind.",
             "strength": "context"
           }
         ],
@@ -141421,6 +141565,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[5].exampleDe",
+            "stage": "vocabulary",
+            "text": "Dem lässt sich entgegenhalten, dass nicht alle Schüler ein eigenes Gerät haben.",
+            "surface": "Dem lässt sich entgegenhalten, dass nicht alle Schüler ein eigenes Gerät haben.",
+            "strength": "context"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -142255,6 +142406,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[1].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich formuliere eine begrenzte These.",
+            "surface": "Ich formuliere eine begrenzte These.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[1].frontDe",
             "stage": "vocabulary",
             "text": "eine These formulieren",
@@ -142430,8 +142588,8 @@
           {
             "path": "flashcards[7].exampleDe",
             "stage": "vocabulary",
-            "text": "Unter der Voraussetzung, dass Aufgaben klar sind …",
-            "surface": "Unter der Voraussetzung, dass Aufgaben klar sind …",
+            "text": "Das Modell funktioniert unter der Voraussetzung, dass die Aufgaben klar sind.",
+            "surface": "Das Modell funktioniert unter der Voraussetzung, dass die Aufgaben klar sind.",
             "strength": "context"
           },
           {
@@ -143637,8 +143795,8 @@
           {
             "path": "flashcards[7].exampleDe",
             "stage": "vocabulary",
-            "text": "Bitte notieren Sie den Punkt; darauf gehe ich ein.",
-            "surface": "Bitte notieren Sie den Punkt; darauf gehe ich ein.",
+            "text": "Bitte notieren Sie den Punkt; darauf gehe ich gleich ein.",
+            "surface": "Bitte notieren Sie den Punkt; darauf gehe ich gleich ein.",
             "strength": "context"
           },
           {
@@ -145216,6 +145374,25 @@
       {
         "lessonId": "b2-03",
         "level": "B2",
+        "lemmaCandidate": "Verteilungseffekte",
+        "normalizedLemma": "verteilungseffekte",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir messen die Verteilungseffekte nach Gruppen.",
+            "surface": "Wir messen die Verteilungseffekte nach Gruppen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-03-313c17bd"
+      },
+      {
+        "lessonId": "b2-03",
+        "level": "B2",
         "lemmaCandidate": "Voraussetzung",
         "normalizedLemma": "voraussetzung",
         "role": "anchor",
@@ -146304,8 +146481,8 @@
           {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
-            "text": "Unter Berücksichtigung der Kosten …",
-            "surface": "Unter Berücksichtigung der Kosten …",
+            "text": "Unter Berücksichtigung der Kosten verschieben wir den Start.",
+            "surface": "Unter Berücksichtigung der Kosten verschieben wir den Start.",
             "strength": "context"
           },
           {
@@ -146837,8 +147014,8 @@
           {
             "path": "flashcards[3].exampleDe",
             "stage": "vocabulary",
-            "text": "Im Hinblick auf die Qualität …",
-            "surface": "Im Hinblick auf die Qualität …",
+            "text": "Im Hinblick auf die Qualität brauchen wir mehr Zeit.",
+            "surface": "Im Hinblick auf die Qualität brauchen wir mehr Zeit.",
             "strength": "context"
           },
           {
@@ -147044,6 +147221,25 @@
           }
         ],
         "id": "lex-n-b2-04-ae52f81a"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "lemmaCandidate": "Start",
+        "normalizedLemma": "start",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[2].exampleDe",
+            "stage": "vocabulary",
+            "text": "Unter Berücksichtigung der Kosten verschieben wir den Start.",
+            "surface": "Unter Berücksichtigung der Kosten verschieben wir den Start.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-04-78cb98c4"
       },
       {
         "lessonId": "b2-04",
@@ -162278,6 +162474,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[0].exampleDe",
+            "stage": "vocabulary",
+            "text": "Entschlüsseln Sie zuerst den Arbeitsauftrag.",
+            "surface": "Entschlüsseln Sie zuerst den Arbeitsauftrag.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[0].frontDe",
             "stage": "vocabulary",
             "text": "den Arbeitsauftrag entschlüsseln",
@@ -162842,8 +163045,8 @@
           {
             "path": "flashcards[5].exampleDe",
             "stage": "vocabulary",
-            "text": "Klare Absätze entwickeln einen roten Faden.",
-            "surface": "Klare Absätze entwickeln einen roten Faden.",
+            "text": "Mit klaren Absätzen entwickle ich einen roten Faden.",
+            "surface": "Mit klaren Absätzen entwickle ich einen roten Faden.",
             "strength": "context"
           },
           {
@@ -169051,8 +169254,8 @@
           {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
-            "text": "Als Kriterium gilt die zweite Messung.",
-            "surface": "Als Kriterium gilt die zweite Messung.",
+            "text": "Als Falsifikationskriterium gilt die zweite Messung.",
+            "surface": "Als Falsifikationskriterium gilt die zweite Messung.",
             "strength": "context"
           },
           {
@@ -171670,8 +171873,8 @@
           {
             "path": "flashcards[4].exampleDe",
             "stage": "vocabulary",
-            "text": "«Anschließend» ist ein Konjunktionaladverb auf Position eins.",
-            "surface": "«Anschließend» ist ein Konjunktionaladverb auf Position eins.",
+            "text": "„Anschließend“ ist ein Konjunktionaladverb auf Position eins.",
+            "surface": "„Anschließend“ ist ein Konjunktionaladverb auf Position eins.",
             "strength": "context"
           },
           {
@@ -172073,8 +172276,8 @@
           {
             "path": "flashcards[3].exampleDe",
             "stage": "vocabulary",
-            "text": "Stattdessen ein Oberbegriff wie «der Vorgang».",
-            "surface": "Stattdessen ein Oberbegriff wie «der Vorgang».",
+            "text": "Statt „das“ hilft ein Oberbegriff wie „der Vorgang“.",
+            "surface": "Statt „das“ hilft ein Oberbegriff wie „der Vorgang“.",
             "strength": "context"
           },
           {
@@ -172756,8 +172959,8 @@
           {
             "path": "flashcards[3].exampleDe",
             "stage": "vocabulary",
-            "text": "Stattdessen ein Oberbegriff wie «der Vorgang».",
-            "surface": "Stattdessen ein Oberbegriff wie «der Vorgang».",
+            "text": "Statt „das“ hilft ein Oberbegriff wie „der Vorgang“.",
+            "surface": "Statt „das“ hilft ein Oberbegriff wie „der Vorgang“.",
             "strength": "context"
           },
           {
@@ -173877,6 +174080,25 @@
       {
         "lessonId": "b2-15",
         "level": "B2",
+        "lemmaCandidate": "Inhalt",
+        "normalizedLemma": "inhalt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Priorität ist der Inhalt, nicht die Rechtschreibung.",
+            "surface": "Die Priorität ist der Inhalt, nicht die Rechtschreibung.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-15-17f227a2"
+      },
+      {
+        "lessonId": "b2-15",
+        "level": "B2",
         "lemmaCandidate": "Kette",
         "normalizedLemma": "kette",
         "role": "context-only",
@@ -173940,8 +174162,8 @@
           {
             "path": "flashcards[2].exampleDe",
             "stage": "vocabulary",
-            "text": "Der Puffer gehört der Kontrolle.",
-            "surface": "Der Puffer gehört der Kontrolle.",
+            "text": "Den Puffer nutze ich für die Kontrolle.",
+            "surface": "Den Puffer nutze ich für die Kontrolle.",
             "strength": "context"
           },
           {
@@ -174220,13 +174442,6 @@
         ],
         "sources": [
           {
-            "path": "flashcards[9].exampleDe",
-            "stage": "vocabulary",
-            "text": "Den Vorlauf nutze ich für eine Markierung.",
-            "surface": "Den Vorlauf nutze ich für eine Markierung.",
-            "strength": "context"
-          },
-          {
             "path": "lexicalRegistry.b2-15-noun-9",
             "stage": "vocabulary",
             "surface": "die Markierung",
@@ -174348,8 +174563,8 @@
           {
             "path": "flashcards[8].exampleDe",
             "stage": "vocabulary",
-            "text": "Die Ablenkung bekommt eine Notiz.",
-            "surface": "Die Ablenkung bekommt eine Notiz.",
+            "text": "Für jede Ablenkung schreibe ich kurz eine Notiz.",
+            "surface": "Für jede Ablenkung schreibe ich kurz eine Notiz.",
             "strength": "context"
           },
           {
@@ -174793,6 +175008,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "flashcards[7].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Priorität ist der Inhalt, nicht die Rechtschreibung.",
+            "surface": "Die Priorität ist der Inhalt, nicht die Rechtschreibung.",
+            "strength": "context"
+          },
+          {
             "path": "reading.questions[2].options[3]",
             "stage": "reading",
             "text": "Damit zuerst die Rechtschreibung korrigiert wird.",
@@ -174949,6 +175171,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[0].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Zeitrahmen steht vor dem Schreiben fest.",
+            "surface": "Der Zeitrahmen steht vor dem Schreiben fest.",
+            "strength": "context"
+          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -175123,13 +175352,6 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
-          {
-            "path": "flashcards[0].exampleDe",
-            "stage": "vocabulary",
-            "text": "Der Zeitrahmen steht vor dem Text.",
-            "surface": "Der Zeitrahmen steht vor dem Text.",
-            "strength": "context"
-          },
           {
             "path": "listening.transcriptDe",
             "stage": "listening",
@@ -219191,6 +219413,29 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "konzentrieren",
+        "normalizedVerb": "konzentrieren",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[1].exampleDe",
+            "stage": "vocabulary",
+            "text": "Worauf konzentrieren wir uns? Darauf, die Wartezeit zu senken.",
+            "surface": "Worauf konzentrieren wir uns? Darauf, die Wartezeit zu senken.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-8b69b4c4"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "nannten",
         "normalizedVerb": "nannten",
         "preposition": "für",
@@ -220394,6 +220639,29 @@
       {
         "lessonId": "b2-02",
         "level": "B2",
+        "infinitiveCandidate": "fehlen",
+        "normalizedVerb": "fehlen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[4].exampleDe",
+            "stage": "vocabulary",
+            "text": "Dem stimme ich teilweise zu; allerdings fehlen noch Daten.",
+            "surface": "Dem stimme ich teilweise zu; allerdings fehlen noch Daten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-02-ee4af2f1"
+      },
+      {
+        "lessonId": "b2-02",
+        "level": "B2",
         "infinitiveCandidate": "funktionieren",
         "normalizedVerb": "funktionieren",
         "preposition": "in",
@@ -221383,6 +221651,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "flashcards[6].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir messen die Verteilungseffekte nach Gruppen.",
+            "surface": "Wir messen die Verteilungseffekte nach Gruppen.",
+            "strength": "context"
+          },
+          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Ein hybrides Arbeitsmodell kann Wege verkürzen und konzentriertes Arbeiten erleichtern. Eine einheitliche Regel von zwei Homeoffice-Tagen wäre jedoch nicht zwangsläufig gerecht, weil sie sehr unterschiedliche Ausgangslagen gleich behandelt. Beschäftigte in Verwaltung können viele Aufgaben ortsunabhängig erledigen, wohingegen Kundenservice, Technik und Laborarbeit häufiger vor Ort gebraucht werden. Außerdem profitieren Personen je nach Wohnsituation, Betreuungsverpflichtung und Arbeitsplatzgröße sehr unterschiedlich: Wer beengt wohnt, verliert zu Hause möglicherweise mehr Konzentration, als er durch den Weg spart. Nutzen und Risiko hängen deshalb an der Aufgabe, nicht am Ort. Ein zweites Risiko ist die Anwesenheitskultur selbst, denn wer seltener erscheint, wird bei Beförderungen und informellen Absprachen leichter übersehen. Das Modell sollte deshalb nur gelten, sofern Aufgaben, Erreichbarkeit, Datenschutz und Personalabdeckung schriftlich geklärt sind. Je nachdem, welche Rolle jemand hat, kämen Homeoffice, flexible Startzeiten oder ruhige Arbeitsplätze im Büro in Betracht. Je nachdem, wie die Teams ausgelastet sind, wären auch fixe Präsenztage sinnvoll, sofern sie vorab mit allen abgestimmt werden. Ein dreimonatiger Pilot sollte Leistung, Zufriedenheit, Überstunden, spontane Zusatzaufgaben und Zugang getrennt nach Gruppen messen und nicht nur Durchschnittswerte berichten. Verlängert wird das Modell, wenn die Belastung in keinem Team steigt und die Termineinhaltung gleich bleibt. Angepasst wird es, wenn einzelne Gruppen nachweisbare Nachteile zeigen. Beendet wird es, wenn Absprachen über Erreichbarkeit dauerhaft nicht eingehalten werden. Erst eine verteilte Auswertung erlaubt eine faire Entscheidung, und erst danach lässt sich eine dauerhafte Regel begründen statt einer Regel für alle.",
@@ -221727,6 +222002,29 @@
           }
         ],
         "id": "lex-v-b2-04-e50e5bc2"
+      },
+      {
+        "lessonId": "b2-04",
+        "level": "B2",
+        "infinitiveCandidate": "brauchen",
+        "normalizedVerb": "brauchen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[3].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Hinblick auf die Qualität brauchen wir mehr Zeit.",
+            "surface": "Im Hinblick auf die Qualität brauchen wir mehr Zeit.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-04-4b55458e"
       },
       {
         "lessonId": "b2-04",
@@ -235505,5 +235803,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "4117e784722dc8e0dab1cc9550444b783a3cf73e3ee49981496770c56bac8444"
+  "contentSha256": "5ebbd3fb0ba728894ae17ca34d53990f40880bb292e6f1591f8cacd053fb3cc0"
 }

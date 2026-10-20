@@ -324,7 +324,7 @@ export const b2Module5Lessons: FullLesson[] = [
  { de: "in begründeten Fällen", ar: "في حالات مبررة" },
  { de: "keinen Anspruch begründen", ar: "لا ينشئ استحقاقًا" },
  { de: "eine Ergänzung kennzeichnen", ar: "يعلّم إضافة" },
- { de: "eine Unklarheit offenlassen", ar: "يبقي الغموض معلنًا" },
+ { de: "eine Unklarheit offenlassen", ar: "يُبقي نقطة الغموض مفتوحة ويصرّح بها" },
  { de: "Rückfrage halten", ar: "يطلب توضيحًا" },
  ],
  discovery: {

@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
+Sync batch: v253 · 2026-10-20 · تدقيق دروس B1 وB2 الباقية (ADR-144): قُرئت بطاقات الدروس الـ43 التي لم تُدقَّق بعد (451 بطاقة)، فوُحّد 59 معنى كان مختلفًا بين صفحة المفردات والبطاقة، وتُرجمت جمل درس b2-19 الـ18 بعد أن كانت تصف النبرة فقط، وأُكمل أو صُحّح 46 مثالًا (منها 19 مثالًا ناقصًا ينتهي بـ«…» ومثال لا علاقة له بكلمته). الحارس الدائم يغطي الآن الدروس الـ96 كلها. لم يُرفع أي سقف.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

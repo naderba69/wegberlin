@@ -5,9 +5,10 @@ import { academicLessonList } from "@/data/academic-lessons";
 // (ADR-139 A1, ADR-141 A2, ADR-142 B1). The owner asked that every addition is processed and audited;
 // these checks turn the mechanical part of that audit into a gate, so a future addition that breaks
 // one of them fails `npm run check` instead of reaching the learner.
-// All 24 A1 and 24 A2 lessons received words; in B1 only the five lessons of ADR-142 did.
-const b1Packaged = ["b1-08", "b1-10", "b1-12", "b1-20", "b1-23"];
-const packaged = academicLessonList.filter((lesson) => lesson.level === "A1" || lesson.level === "A2" || b1Packaged.includes(lesson.id));
+// ADR-144 / v253: the guard first covered the 53 lessons that received words (every A1 and A2 lesson plus
+// b1-08/10/12/20/23); it now covers all 96 lessons, after the remaining 19 B1 and 24 B2 lessons were audited.
+// It also forbids unfinished card examples ending in "…" and French/Swiss guillemets in German examples.
+const packaged = academicLessonList;
 const arabic = /[\u0600-\u06FF]/u;
 const latin = /[A-Za-zÄÖÜäöüß]/u;
 // Glosses are split on " / " (two meanings or a feminine form) and on a trailing note in parentheses.
@@ -18,9 +19,9 @@ const stripArticle = (word: string) => word.replace(/^(der|die|das|ein|eine) /u,
 const problems: string[] = [];
 const flag = (ok: boolean, message: string) => { if (!ok) problems.push(message); };
 
-describe("Quality guard for the Goethe vocabulary additions (ADR-143)", () => {
-  it("covers all 53 lessons that received words, 51 of them with a matching e8", () => {
-    expect(packaged.length).toBe(53);
+describe("Vocabulary quality guard for every lesson (ADR-143, widened by ADR-144)", () => {
+  it("covers all 96 lessons, 51 of them with a Goethe matching e8", () => {
+    expect(packaged.length).toBe(96);
     expect(packaged.filter((lesson) => lesson.exercises.some((exercise) => exercise.id === `${lesson.id}-e8` && exercise.type === "matching")).length).toBe(51);
   });
 
@@ -32,7 +33,8 @@ describe("Quality guard for the Goethe vocabulary additions (ADR-143)", () => {
         // A letter closing ("Mit freundlichen Grüßen, Sami") correctly has no final punctuation.
         if (/^Mit freundlichen Grüßen, \p{Lu}\p{Ll}+$/u.test(example)) continue;
         flag(/^[\p{Lu}\d„"]/u.test(example), `${card.id}: example starts like a sentence: ${example}`);
-        flag(/[.!?…]["“]?$/u.test(example), `${card.id}: example ends like a sentence: ${example}`);
+        flag(/[.!?]["“]?$/u.test(example), `${card.id}: example ends like a full sentence, not with "…": ${example}`);
+        flag(!/[«»]/u.test(example), `${card.id}: German quotation marks „…“, not «…»: ${example}`);
         flag(!fronts.has(card.frontDe), `${card.id}: duplicate front ${card.frontDe}`);
         fronts.add(card.frontDe);
       }

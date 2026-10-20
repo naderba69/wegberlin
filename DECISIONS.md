@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v252 · 2026-10-20 · تدقيق كل الإضافات (ADR-143): قُرئت الكلمات الـ556 المضافة في v248 وv250 وv251 كلها جملةً جملةً، وصُحّحت 8 أخطاء حقيقية (بطاقة مكررة، ومعنى مضلل لـ nirgends، وجملتان غير طبيعيتين، وعلامات ناقصة)، ووُحّد 72 معنى قديمًا كان مختلفًا بين صفحة المفردات والبطاقة (منها zu früh/zu spät المترجمتان خطأً بـ«جدًا»). اختبار حارس دائم يفحص الآن كل إضافة قادمة. لم يُرفع أي سقف.
+Sync batch: v253 · 2026-10-20 · تدقيق دروس B1 وB2 الباقية (ADR-144): قُرئت بطاقات الدروس الـ43 التي لم تُدقَّق بعد (451 بطاقة)، فوُحّد 59 معنى كان مختلفًا بين صفحة المفردات والبطاقة، وتُرجمت جمل درس b2-19 الـ18 بعد أن كانت تصف النبرة فقط، وأُكمل أو صُحّح 46 مثالًا (منها 19 مثالًا ناقصًا ينتهي بـ«…» ومثال لا علاقة له بكلمته). الحارس الدائم يغطي الآن الدروس الـ96 كلها. لم يُرفع أي سقف.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1951,3 +1951,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: automatic checks plus a full manual reading of the 556 added cards, their meanings and the 51 matching explanations. 8 real errors were fixed (a duplicate a1-08 card replaced in place so no card ID moves, a misleading «nirgends» gloss, two unnatural examples, missing punctuation, wording). 72 older phrase/card meanings in the same lessons were aligned to the more accurate one (including «zu früh/zu spät» wrongly glossed «جدًا»). New permanent guard `tests/unit/goethe-additions-quality-guard.test.ts` over the 53 lessons that received words.
 - Result: 0 open errors in the additions. Noun contextual candidates 5,394/3,460 → 5,393/3,459. JS 2,139,956 B, curriculum 1,306,607 B (2,393 B left). Pack generation v252.
 - Details: `docs/adr/ADR-143-audit-of-goethe-vocabulary-additions.md`.
+
+## ADR-144 — Audit the remaining B1 and B2 vocabulary and guard all 96 lessons
+
+- Status: accepted, 2026-10-20 (v253). Owner «واصل» under the instruction to audit every addition; no ceiling raised.
+- Context: the ADR-143 guard covered 53 lessons; run over the other 43 (19 B1, 24 B2) it reported 65 problems, and a manual reading of their 451 cards found more weak examples.
+- Decision: 59 phrase/card meanings aligned (including «eine Frist vereinbaren» → مهلة, «offenlegen» → يكشف); the 18 b2-19 phrases translated, with the tone note kept in brackets; 46 card examples completed or corrected (one unrelated example, 19 ending in «…», examples missing their own word, guillemets → „…“). No card added, removed or reordered. Guard widened to all 96 lessons with two new rules (no example ending in «…», no «» in German examples).
+- Result: 0 guard problems in 96 lessons. Contextual candidates: nouns 5,401/3,467, verb pairs 1,338/1,203 (pending 89 + 1 unchanged). JS 2,140,456 B, curriculum 1,307,086 B (1,914 B left). Pack generation v253.
+- Details: `docs/adr/ADR-144-audit-of-all-b1-b2-vocabulary.md`.

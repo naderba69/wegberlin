@@ -45,7 +45,7 @@
     "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "7c047350bd8f",
+  "contentSha256": "ffb23f23917a",
   "counts": {
     "lessons": 96,
     "questions": 8,
@@ -92,7 +92,7 @@
       "answers": {
         "goal": {
           "ok": true,
-          "valueAr": "4 أهداف؛ أقصرها 37 حرفًا، والوصف 100 حرفًا"
+          "valueAr": "4 أهداف؛ أقصرها 23 حرفًا، والوصف 100 حرفًا"
         },
         "prerequisites": {
           "ok": true,
@@ -3872,7 +3872,7 @@
       "answers": {
         "goal": {
           "ok": true,
-          "valueAr": "4 أهداف؛ أقصرها 28 حرفًا، والوصف 140 حرفًا"
+          "valueAr": "4 أهداف؛ أقصرها 32 حرفًا، والوصف 140 حرفًا"
         },
         "prerequisites": {
           "ok": true,
@@ -4007,7 +4007,7 @@
       "answers": {
         "goal": {
           "ok": true,
-          "valueAr": "4 أهداف؛ أقصرها 34 حرفًا، والوصف 105 حرفًا"
+          "valueAr": "4 أهداف؛ أقصرها 37 حرفًا، والوصف 105 حرفًا"
         },
         "prerequisites": {
           "ok": true,

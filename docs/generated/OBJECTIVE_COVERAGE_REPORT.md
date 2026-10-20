@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `eac2ed9d6873ff0749d7bfeb8b74426779e1f486d95b22048a52350651dc1b69`
+Content SHA-256: `b900bbe7bb214d5d2fffaffc138d26ce04265c3670c6e2656eaaa0b64b724d3e`
 
 ## Result
 
@@ -34,7 +34,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 |---|---|---|---|---:|---|---|
 | `a1-01-objective-1` | Ich kann formell und informell grüßen. | أستطيع اختيار تحية رسمية أو غير رسمية. | 2 · `a1-01:entry`, `a1-01:vocabulary` | 6 | 2 · `a1-01-m3`, `a1-01-m4` | covered |
 | `a1-01-objective-2` | Ich kann meinen Namen sagen und danach fragen. | أستطيع تقديم اسمي والسؤال عن اسم الآخر. | 3 · `a1-01:entry`, `a1-01:vocabulary` | 9 | 2 · `a1-01-m1`, `a1-01-m3` | covered |
-| `a1-01-objective-3` | Ich kann nach dem Befinden fragen. | أستطيع السؤال عن الحال والرد بإجابة قصيرة. | 3 · `a1-01:entry`, `a1-01:vocabulary` | 3 | 1 · `a1-01-m2` | covered |
+| `a1-01-objective-3` | Ich kann nach dem Befinden fragen. | أستطيع السؤال عن الحال. | 3 · `a1-01:entry`, `a1-01:vocabulary` | 3 | 1 · `a1-01-m2` | covered |
 | `a1-01-objective-4` | Ich erkenne die Verbposition in einfachen Fragen. | ألاحظ موقع الفعل في سؤال ألماني بسيط. | 1 · `a1-01-t2` | 2 | 2 · `a1-01-m1`, `a1-01-m5` | covered |
 | `a1-02-objective-1` | Ich kann Herkunft und Wohnort nennen. | أذكر بلدي ومكان سكني. | 3 · `a1-02:entry`, `a1-02:vocabulary` | 9 | 1 · `a1-02-m2` | covered |
 | `a1-02-objective-2` | Ich kann nach Herkunft und Sprache fragen. | أسأل عن الأصل واللغة. | 3 · `a1-02:entry`, `a1-02:vocabulary` | 5 | 2 · `a1-02-m1`, `a1-02-m5` | covered |
@@ -103,7 +103,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a1-18-objective-1` | Ich kann einfach über das Wetter sprechen. | أتحدث ببساطة عن الطقس. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 7 | 4 · `a1-18-m1`, `a1-18-m2` | covered |
 | `a1-18-objective-2` | Ich kann Wetterinformationen verstehen. | أفهم معلومات جوية أساسية. | 2 · `a1-18:vocabulary`, `a1-18-t1` | 5 | 1 · `a1-18-m2` | covered |
 | `a1-18-objective-3` | Ich kann Aktivitäten zum Wetter passend planen. | أخطط نشاطًا مناسبًا للطقس. | 3 · `a1-18:entry`, `a1-18:vocabulary` | 7 | 1 · `a1-18-m3` | covered |
-| `a1-18-objective-4` | Ich kann einen Grund mit deshalb ausdrücken. | أعبر عن نتيجة باستعمال deshalb. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 3 | 1 · `a1-18-m3` | covered |
+| `a1-18-objective-4` | Ich kann mit deshalb eine Folge ausdrücken. | أعبر عن نتيجة باستعمال deshalb. | 4 · `a1-18:entry`, `a1-18:vocabulary` | 3 | 1 · `a1-18-m3` | covered |
 | `a1-19-objective-1` | Ich kann Verkehrsmittel nennen. | أسمي وسائل النقل. | 3 · `a1-19:entry`, `a1-19:vocabulary` | 3 | 1 · `a1-19-m5` | covered |
 | `a1-19-objective-2` | Ich kann sagen, wie ich fahre. | أقول كيف أتنقل. | 3 · `a1-19:entry`, `a1-19:vocabulary` | 6 | 2 · `a1-19-m3`, `a1-19-m5` | covered |
 | `a1-19-objective-3` | Ich benutze mit dem Dativ. | أستعمل mit مع Dativ. | 3 · `a1-19:vocabulary`, `a1-19:discover` | 5 | 2 · `a1-19-m1`, `a1-19-m2` | covered |
@@ -194,7 +194,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a2-16-objective-4` | Ich kann Quellen und fehlende Informationen benennen. | أذكر المصدر والمعلومات الناقصة. | 3 · `a2-16:entry`, `a2-16:vocabulary` | 6 | 1 · `a2-16-m3` | covered |
 | `a2-17-objective-1` | Ich kann meine digitalen Gewohnheiten beschreiben. | أصف عاداتي الرقمية. | 1 · `a2-17:vocabulary` | 6 | 1 · `a2-17-m3` | covered |
 | `a2-17-objective-2` | Ich kann einen Zweck mit um … zu ausdrücken. | أعبر عن الهدف ب um … zu. | 2 · `a2-17:entry`, `a2-17-t1` | 6 | 1 · `a2-17-m1` | covered |
-| `a2-17-objective-3` | Ich kann damit bei verschiedenen Personen benutzen. | أستعمل damit عندما يختلف الفاعل. | 1 · `a2-17-t2` | 3 | 2 · `a2-17-m2`, `a2-17-m5` | covered |
+| `a2-17-objective-3` | Ich kann damit benutzen, wenn die Subjekte verschieden sind. | أستعمل damit عندما يختلف الفاعل. | 1 · `a2-17-t2` | 3 | 2 · `a2-17-m2`, `a2-17-m5` | covered |
 | `a2-17-objective-4` | Ich kann einfache Datenschutzregeln erklären. | أشرح قواعد خصوصية بسيطة. | 3 · `a2-17:entry`, `a2-17:vocabulary` | 9 | 1 · `a2-17-m4` | covered |
 | `a2-18-objective-1` | Ich kann eine Meinung klar formulieren. | أصوغ رأيًا واضحًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 5 | 1 · `a2-18-m1` | covered |
 | `a2-18-objective-2` | Ich kann Grund und Beispiel geben. | أقدم سببًا ومثالًا. | 3 · `a2-18:entry`, `a2-18:vocabulary` | 6 | 1 · `a2-18-m2` | covered |
@@ -230,7 +230,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-01-objective-4` | Ich kann Fakten und persönliche Bedeutung trennen. | أفرق بين الوقائع ودلالتها الشخصية. | 2 · `b1-01:vocabulary`, `b1-01-t3` | 6 | 1 · `b1-01-m5` | covered |
 | `b1-02-objective-1` | Ich kann eine Entscheidung nachvollziehbar begründen. | أبرر قرارًا بطريقة قابلة للمتابعة. | 1 · `b1-02:vocabulary` | 6 | 1 · `b1-02-m5` | covered |
 | `b1-02-objective-2` | Ich kann Vor- und Nachteile abwägen. | أوازن المزايا والعيوب. | 3 · `b1-02:entry`, `b1-02:vocabulary` | 7 | 1 · `b1-02-m2` | covered |
-| `b1-02-objective-3` | Ich kann sich entscheiden für/gegen korrekt benutzen. | أستعمل entscheiden für/gegen. | 2 · `b1-02:vocabulary`, `b1-02-t1` | 3 | 2 · `b1-02-m1`, `b1-02-m4` | covered |
+| `b1-02-objective-3` | Ich kann sich entscheiden für/gegen korrekt benutzen. | أستعمل sich entscheiden für/gegen. | 2 · `b1-02:vocabulary`, `b1-02-t1` | 3 | 2 · `b1-02-m1`, `b1-02-m4` | covered |
 | `b1-02-objective-4` | Ich kann hypothetische Alternativen mit würde formulieren. | أصوغ بدائل افتراضية ب würde. | 1 · `b1-02-t3` | 5 | 1 · `b1-02-m3` | covered |
 | `b1-03-objective-1` | Ich kann einen Wendepunkt ausführlich beschreiben. | أصف نقطة تحول بتفصيل. | 2 · `b1-03:entry`, `b1-03:vocabulary` | 4 | 1 · `b1-03-m5` | covered |
 | `b1-03-objective-2` | Ich kann Vorzeitigkeit mit nachdem ausdrücken. | أعبر عن حدث سبق آخر ب nachdem. | 3 · `b1-03:entry`, `b1-03:vocabulary` | 4 | 1 · `b1-03-m3` | covered |
@@ -355,7 +355,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b2-09-objective-1` | Ich kann Beobachtung, Interpretation und Bewertung trennen. | أفصل الملاحظة والتفسير والتقييم. | 3 · `b2-09:entry`, `b2-09:vocabulary` | 7 | 1 · `b2-09-m1` | covered |
 | `b2-09-objective-2` | Ich kann Perspektiven kontextbezogen vergleichen. | أقارن المنظورات وفق السياق. | 2 · `b2-09:vocabulary`, `b2-09-t2` | 4 | 1 · `b2-09-m5` | covered |
 | `b2-09-objective-3` | Ich kann pauschale kulturelle Zuschreibungen präzisieren. | أدقق التعميمات الثقافية المطلقة. | 2 · `b2-09:entry`, `b2-09-t2` | 5 | 1 · `b2-09-m2` | covered |
-| `b2-09-objective-4` | Ich kann Partizipialattribute verstehen und gezielt verwenden. | أفهم الصفات المبنية بالمشاركة وأستعملها بوعي. | 1 · `b2-09-t3` | 3 | 2 · `b2-09-m3`, `b2-09-m4` | covered |
+| `b2-09-objective-4` | Ich kann Partizipialattribute verstehen und gezielt verwenden. | أفهم الصفات المبنية من اسم الفاعل واسم المفعول (Partizipialattribute) و… | 1 · `b2-09-t3` | 3 | 2 · `b2-09-m3`, `b2-09-m4` | covered |
 | `b2-10-objective-1` | Ich kann Informationen nach Zweck und Adressat auswählen. | أختار المعلومات وفق الغرض والجمهور. | 2 · `b2-10:vocabulary`, `b2-10-t1` | 5 | 1 · `b2-10-m4` | covered |
 | `b2-10-objective-2` | Ich kann Muss-, Soll- und Kann-Aussagen präzise vermitteln. | أنقل درجات الإلزام بدقة. | 2 · `b2-10:entry`, `b2-10-t2` | 7 | 1 · `b2-10-m1` | covered |
 | `b2-10-objective-3` | Ich kann Bedingungen und Ausnahmen mit sofern und es sei denn bewahren. | أحفظ الشروط والاستثناءات ب sofern و es sei denn. | 2 · `b2-10:entry`, `b2-10-t3` | 8 | 2 · `b2-10-m2`, `b2-10-m3` | covered |
@@ -370,8 +370,8 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b2-12-objective-4` | Ich kann Leistung anhand konkreter Evidenz auswerten. | أقيّم الأداء بأدلة محددة. | 1 · `b2-12-t3` | 3 | 1 · `b2-12-m3` | covered |
 | `b2-13-objective-1` | Ich kann meine These nach Maßgabe der Belege begrenzen. | أقيّد أطروحتي بقدر ما يحمله الدليل. | 3 · `b2-13:entry`, `b2-13:vocabulary` | 5 | 2 · `b2-13-m1`, `b2-13-m5` | covered |
 | `b2-13-objective-2` | Ich kann Alternativerklärungen benennen. | أذكر التفسيرات البديلة المحتملة. | 2 · `b2-13:vocabulary`, `b2-13-t2` | 4 | 1 · `b2-13-m3` | covered |
-| `b2-13-objective-3` | Ich kann eine begründete Revision formulieren. | أصيغ تراجعًا مُعلَّلًا عن جزء من موقفي. | 2 · `b2-13:entry`, `b2-13-t3` | 8 | 1 · `b2-13-m4` | covered |
-| `b2-13-objective-4` | Ich kann ein Falsifikationskriterium nennen. | أذكر معيارًا يثبت خطأ موقفي. | 1 · `b2-13-t3` | 5 | 1 · `b2-13-m2` | covered |
+| `b2-13-objective-3` | Ich kann eine begründete Revision formulieren. | أصوغ تراجعًا مُعلَّلًا عن جزء من موقفي. | 2 · `b2-13:entry`, `b2-13-t3` | 8 | 1 · `b2-13-m4` | covered |
+| `b2-13-objective-4` | Ich kann ein Falsifikationskriterium nennen. | أذكر معيارًا لو تحقّق لأثبت خطأ موقفي. | 1 · `b2-13-t3` | 5 | 1 · `b2-13-m2` | covered |
 | `b2-14-objective-1` | Ich kann einen Textabschnitt mit klaren Verweisketten zusammenhalten. | أُحكم سلاسل الإحالة داخل الفقرة. | 4 · `b2-14:entry`, `b2-14:vocabulary` | 4 | 1 · `b2-14-m1` | covered |
 | `b2-14-objective-2` | Ich kann Konnektoren nach ihrer logischen Funktion wählen. | أختار الروابط بحسب وظيفتها المنطقية. | 3 · `b2-14:vocabulary`, `b2-14:discover` | 8 | 2 · `b2-14-m2`, `b2-14-m3` | covered |
 | `b2-14-objective-3` | Ich kann Nominalisierung gezielt einsetzen. | أستعمل الأسلوب الاسمي في موضعه. | 3 · `b2-14:vocabulary`, `b2-14:discover` | 3 | 1 · `b2-14-m4` | covered |
@@ -381,9 +381,9 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b2-15-objective-3` | Ich kann Zweck- und Zeitsätze mit um … zu, damit, bevor und nachdem kor… | أبني جمل الغرض والزمان بالصيغة الصحيحة. | 2 · `b2-15-t1`, `b2-15-t2` | 4 | 2 · `b2-15-m1`, `b2-15-m2` | covered |
 | `b2-15-objective-4` | Ich kann jeden Fehler einer Quelle zuordnen und die Quelle bearbeiten. | أنسب كل خطأ إلى مصدره وأعالج المصدر نفسه. | 3 · `b2-15:vocabulary`, `b2-15:discover` | 3 | 1 · `b2-15-m5` | covered |
 | `b2-16-objective-1` | Ich kann ein vergangenes Versäumnis als Bedingung im Konjunktiv II form… | أصوغ تقصيرًا ماضيًا كشرط بأسلوب الشرط الثاني الماضي. | 3 · `b2-16:entry`, `b2-16:vocabulary` | 7 | 2 · `b2-16-m1`, `b2-16-m4` | covered |
-| `b2-16-objective-2` | Ich kann einen Eindruck mit «als ob» äußern, ohne ihn zu behaupten. | أبدي الانطباع ب «als ob» دون أن أزعمه حقيقة. | 2 · `b2-16:vocabulary`, `b2-16-t2` | 3 | 1 · `b2-16-m2` | covered |
+| `b2-16-objective-2` | Ich kann einen Eindruck mit „als ob“ äußern, ohne ihn zu behaupten. | أبدي الانطباع ب «als ob» دون أن أزعمه حقيقة. | 2 · `b2-16:vocabulary`, `b2-16-t2` | 3 | 1 · `b2-16-m2` | covered |
 | `b2-16-objective-3` | Ich kann einen Vorwurf so abschwächen, dass eine Erklärung möglich blei… | أخفّف الاتهام بحيث يبقى الشرح ممكنًا. | 2 · `b2-16:vocabulary`, `b2-16-t3` | 7 | 1 · `b2-16-m3` | covered |
-| `b2-16-objective-4` | Ich kann meine Einschätzung von einer Unterstellung klar trennen. | أفرّق بين تقديري والنسبة بلا دليل. | 2 · `b2-16:entry`, `b2-16:vocabulary` | 3 | 1 · `b2-16-m5` | covered |
+| `b2-16-objective-4` | Ich kann meine Einschätzung von einer Unterstellung klar trennen. | أفرّق بوضوح بين تقديري وبين اتهام لا دليل عليه. | 2 · `b2-16:entry`, `b2-16:vocabulary` | 3 | 1 · `b2-16-m5` | covered |
 | `b2-17-objective-1` | Ich kann mit „sein + zu + Infinitiv“ eine verbindliche Anforderung form… | أصوغ مطلبًا ملزمًا بتركيب sein + zu + مصدر. | 3 · `b2-17:vocabulary`, `b2-17-t1` | 5 | 2 · `b2-17-m1`, `b2-17-m2` | covered |
 | `b2-17-objective-2` | Ich kann mit „sich lassen“ Machbarkeit ausdrücken und klar verneinen. | أعبّر عن الإمكانية ب sich lassen وأنفيها بوضوح. | 2 · `b2-17-t2`, `b2-17-t4` | 7 | 1 · `b2-17-m3` | covered |
 | `b2-17-objective-3` | Ich kann Adjektive auf -bar und -lich als Bewertung von Möglichkeiten n… | أستعمل الصفات المنتهية ب bar أو lich لتقييم الإمكان. | 2 · `b2-17-t3`, `b2-17-t4` | 1 | 1 · `b2-17-m4` | covered |

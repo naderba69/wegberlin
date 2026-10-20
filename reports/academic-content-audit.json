@@ -34630,7 +34630,7 @@
         "level": "A1",
         "module": 1,
         "canDoDe": "Ich kann nach dem Befinden fragen.",
-        "canDoAr": "أستطيع السؤال عن الحال والرد بإجابة قصيرة.",
+        "canDoAr": "أستطيع السؤال عن الحال.",
         "taughtIn": [
           "a1-01:entry",
           "a1-01:vocabulary",
@@ -36496,7 +36496,7 @@
         "lessonId": "a1-18",
         "level": "A1",
         "module": 6,
-        "canDoDe": "Ich kann einen Grund mit deshalb ausdrücken.",
+        "canDoDe": "Ich kann mit deshalb eine Folge ausdrücken.",
         "canDoAr": "أعبر عن نتيجة باستعمال deshalb.",
         "taughtIn": [
           "a1-18:entry",
@@ -38920,7 +38920,7 @@
         "lessonId": "a2-17",
         "level": "A2",
         "module": 6,
-        "canDoDe": "Ich kann damit bei verschiedenen Personen benutzen.",
+        "canDoDe": "Ich kann damit benutzen, wenn die Subjekte verschieden sind.",
         "canDoAr": "أستعمل damit عندما يختلف الفاعل.",
         "taughtIn": [
           "a2-17-t2"
@@ -39880,7 +39880,7 @@
         "level": "B1",
         "module": 1,
         "canDoDe": "Ich kann sich entscheiden für/gegen korrekt benutzen.",
-        "canDoAr": "أستعمل entscheiden für/gegen.",
+        "canDoAr": "أستعمل sich entscheiden für/gegen.",
         "taughtIn": [
           "b1-02:vocabulary",
           "b1-02-t1"
@@ -43197,7 +43197,7 @@
         "level": "B2",
         "module": 3,
         "canDoDe": "Ich kann Partizipialattribute verstehen und gezielt verwenden.",
-        "canDoAr": "أفهم الصفات المبنية بالمشاركة وأستعملها بوعي.",
+        "canDoAr": "أفهم الصفات المبنية من اسم الفاعل واسم المفعول (Partizipialattribute) وأستعملها بوعي.",
         "taughtIn": [
           "b2-09-t3"
         ],
@@ -43582,7 +43582,7 @@
         "level": "B2",
         "module": 4,
         "canDoDe": "Ich kann eine begründete Revision formulieren.",
-        "canDoAr": "أصيغ تراجعًا مُعلَّلًا عن جزء من موقفي.",
+        "canDoAr": "أصوغ تراجعًا مُعلَّلًا عن جزء من موقفي.",
         "taughtIn": [
           "b2-13:entry",
           "b2-13-t3"
@@ -43611,7 +43611,7 @@
         "level": "B2",
         "module": 4,
         "canDoDe": "Ich kann ein Falsifikationskriterium nennen.",
-        "canDoAr": "أذكر معيارًا يثبت خطأ موقفي.",
+        "canDoAr": "أذكر معيارًا لو تحقّق لأثبت خطأ موقفي.",
         "taughtIn": [
           "b2-13-t3"
         ],
@@ -43880,7 +43880,7 @@
         "lessonId": "b2-16",
         "level": "B2",
         "module": 4,
-        "canDoDe": "Ich kann einen Eindruck mit «als ob» äußern, ohne ihn zu behaupten.",
+        "canDoDe": "Ich kann einen Eindruck mit „als ob“ äußern, ohne ihn zu behaupten.",
         "canDoAr": "أبدي الانطباع ب «als ob» دون أن أزعمه حقيقة.",
         "taughtIn": [
           "b2-16:vocabulary",
@@ -43933,7 +43933,7 @@
         "level": "B2",
         "module": 4,
         "canDoDe": "Ich kann meine Einschätzung von einer Unterstellung klar trennen.",
-        "canDoAr": "أفرّق بين تقديري والنسبة بلا دليل.",
+        "canDoAr": "أفرّق بوضوح بين تقديري وبين اتهام لا دليل عليه.",
         "taughtIn": [
           "b2-16:entry",
           "b2-16:vocabulary"
@@ -52503,8 +52503,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Dann kauf bitte einen Apfel und eine Banane.",
-            "surface": "Dann kauf bitte einen Apfel und eine Banane.",
+            "text": "Dann kauf bitte Käse, Milch und einen Apfel.",
+            "surface": "Dann kauf bitte Käse, Milch und einen Apfel.",
             "strength": "context"
           },
           {
@@ -52595,13 +52595,6 @@
             "stage": "discover",
             "text": "die Banane → Ich esse eine Banane.",
             "surface": "die Banane → Ich esse eine Banane.",
-            "strength": "context"
-          },
-          {
-            "path": "entry.dialogue[4].de",
-            "stage": "entry",
-            "text": "Dann kauf bitte einen Apfel und eine Banane.",
-            "surface": "Dann kauf bitte einen Apfel und eine Banane.",
             "strength": "context"
           },
           {
@@ -170553,8 +170546,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
-            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
+            "text": "„…Antrag gestellt. Dieses wurde abgelehnt.“ → unklar: „dieses“ passt weder zu „der Antrag“ noch zu „die Frist“; besser: „Dieser Antrag wurde abgelehnt.“",
+            "surface": "„…Antrag gestellt. Dieses wurde abgelehnt.“ → unklar: „dieses“ passt weder zu „der Antrag“ noch zu „die Frist“; besser: „Dieser Antrag wurde abgelehnt.“",
             "strength": "context"
           },
           {
@@ -170819,8 +170812,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)",
-            "surface": "«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)",
+            "text": "„…die Bearbeitungszeit. Diese beträgt …“ → „diese Bearbeitungszeit“ (die Kette bleibt erhalten)",
+            "surface": "„…die Bearbeitungszeit. Diese beträgt …“ → „diese Bearbeitungszeit“ (die Kette bleibt erhalten)",
             "strength": "context"
           }
         ],
@@ -171301,8 +171294,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
-            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
+            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt „während“ — für einen Grund „weil“, für eine Folge „folglich“ oder „dadurch“.",
+            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt „während“ — für einen Grund „weil“, für eine Folge „folglich“ oder „dadurch“.",
             "strength": "context"
           }
         ],
@@ -171339,8 +171332,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
-            "surface": "«…Antrag gestellt. Dieses wurde abgelehnt.» → unklar: «dieses» passt weder zu «der Antrag» noch zu «die Frist»; besser: «Dieser Antrag wurde abgelehnt.»",
+            "text": "„…Antrag gestellt. Dieses wurde abgelehnt.“ → unklar: „dieses“ passt weder zu „der Antrag“ noch zu „die Frist“; besser: „Dieser Antrag wurde abgelehnt.“",
+            "surface": "„…Antrag gestellt. Dieses wurde abgelehnt.“ → unklar: „dieses“ passt weder zu „der Antrag“ noch zu „die Frist“; besser: „Dieser Antrag wurde abgelehnt.“",
             "strength": "context"
           },
           {
@@ -171607,8 +171600,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied",
-            "surface": "«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied",
+            "text": "„wegen der Verschiebung, weshalb …“ → doppelt gemoppelt: Ursache und Folge in einem Glied",
+            "surface": "„wegen der Verschiebung, weshalb …“ → doppelt gemoppelt: Ursache und Folge in einem Glied",
             "strength": "context"
           }
         ],
@@ -171652,8 +171645,8 @@
           {
             "path": "entry.dialogue[4].de",
             "stage": "entry",
-            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
-            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt «während» — für einen Grund «weil», für eine Folge «folglich» oder «dadurch».",
+            "text": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt „während“ — für einen Grund „weil“, für eine Folge „folglich“ oder „dadurch“.",
+            "surface": "Genau. Und wenn du zwei Maßnahmen vergleichst, passt „während“ — für einen Grund „weil“, für eine Folge „folglich“ oder „dadurch“.",
             "strength": "context"
           }
         ],
@@ -171709,8 +171702,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)",
-            "surface": "«…die Bearbeitungszeit. Diese beträgt …» → «diese Bearbeitungszeit» (die Kette bleibt erhalten)",
+            "text": "„…die Bearbeitungszeit. Diese beträgt …“ → „diese Bearbeitungszeit“ (die Kette bleibt erhalten)",
+            "surface": "„…die Bearbeitungszeit. Diese beträgt …“ → „diese Bearbeitungszeit“ (die Kette bleibt erhalten)",
             "strength": "context"
           },
           {
@@ -172799,8 +172792,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied",
-            "surface": "«wegen der Verschiebung, weshalb …» → doppelt gemoppelt: Ursache und Folge in einem Glied",
+            "text": "„wegen der Verschiebung, weshalb …“ → doppelt gemoppelt: Ursache und Folge in einem Glied",
+            "surface": "„wegen der Verschiebung, weshalb …“ → doppelt gemoppelt: Ursache und Folge in einem Glied",
             "strength": "context"
           }
         ],
@@ -173272,8 +173265,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
-            "surface": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "text": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "surface": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
             "strength": "context"
           },
           {
@@ -173574,8 +173567,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Danach war ich schneller.» → keine Zwischenbilanz, also kein Beleg",
-            "surface": "«Danach war ich schneller.» → keine Zwischenbilanz, also kein Beleg",
+            "text": "„Danach war ich schneller.“ → keine Zwischenbilanz, also kein Beleg",
+            "surface": "„Danach war ich schneller.“ → keine Zwischenbilanz, also kein Beleg",
             "strength": "context"
           },
           {
@@ -174257,8 +174250,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
-            "surface": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "text": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "surface": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
             "strength": "context"
           },
           {
@@ -174316,8 +174309,8 @@
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "«dreimal dasselbe Verb in derselben Falschform» → keine Nachlässigkeit, sondern eine Lücke",
-            "surface": "«dreimal dasselbe Verb in derselben Falschform» → keine Nachlässigkeit, sondern eine Lücke",
+            "text": "„dreimal dasselbe Verb in derselben Falschform“ → keine Nachlässigkeit, sondern eine Lücke",
+            "surface": "„dreimal dasselbe Verb in derselben Falschform“ → keine Nachlässigkeit, sondern eine Lücke",
             "strength": "context"
           }
         ],
@@ -174430,8 +174423,8 @@
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "«dreimal dasselbe Verb in derselben Falschform» → keine Nachlässigkeit, sondern eine Lücke",
-            "surface": "«dreimal dasselbe Verb in derselben Falschform» → keine Nachlässigkeit, sondern eine Lücke",
+            "text": "„dreimal dasselbe Verb in derselben Falschform“ → keine Nachlässigkeit, sondern eine Lücke",
+            "surface": "„dreimal dasselbe Verb in derselben Falschform“ → keine Nachlässigkeit, sondern eine Lücke",
             "strength": "context"
           },
           {
@@ -175468,8 +175461,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
-            "surface": "«Ich fange sofort mit Aufgabe 1 an.» → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "text": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
+            "surface": "„Ich fange sofort mit Aufgabe 1 an.“ → kein Lesen der Aufgabenstellung, kein Vorlauf",
             "strength": "context"
           },
           {
@@ -175884,8 +175877,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Danach war ich schneller.» → keine Zwischenbilanz, also kein Beleg",
-            "surface": "«Danach war ich schneller.» → keine Zwischenbilanz, also kein Beleg",
+            "text": "„Danach war ich schneller.“ → keine Zwischenbilanz, also kein Beleg",
+            "surface": "„Danach war ich schneller.“ → keine Zwischenbilanz, also kein Beleg",
             "strength": "context"
           },
           {
@@ -176205,8 +176198,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Ich habe die Aufgabenstellung überflogen.» → «Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.»",
-            "surface": "«Ich habe die Aufgabenstellung überflogen.» → «Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.»",
+            "text": "„Ich habe die Aufgabenstellung überflogen.“ → „Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.“",
+            "surface": "„Ich habe die Aufgabenstellung überflogen.“ → „Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.“",
             "strength": "context"
           },
           {
@@ -176280,8 +176273,8 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Ich habe die Aufgabenstellung überflogen.» → «Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.»",
-            "surface": "«Ich habe die Aufgabenstellung überflogen.» → «Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.»",
+            "text": "„Ich habe die Aufgabenstellung überflogen.“ → „Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.“",
+            "surface": "„Ich habe die Aufgabenstellung überflogen.“ → „Wenn ich sie gelesen hätte, wäre mir die zweite Aufgabe nicht entglitten.“",
             "strength": "context"
           },
           {
@@ -176395,8 +176388,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
-            "surface": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
+            "text": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
+            "surface": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
             "strength": "context"
           },
           {
@@ -177874,8 +177867,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
-            "surface": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
+            "text": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
+            "surface": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
             "strength": "context"
           },
           {
@@ -178646,8 +178639,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«Er sagt, ich hätte nur Pech gehabt.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
-            "surface": "«Er sagt, ich hätte nur Pech gehabt.» → Vermutung: «Er sprach, als ob das die einzige Ursache gewesen wäre.»",
+            "text": "„Er sagt, ich hätte nur Pech gehabt.“ → Vermutung: „Er sprach, als ob das die einzige Ursache gewesen wäre.“",
+            "surface": "„Er sagt, ich hätte nur Pech gehabt.“ → Vermutung: „Er sprach, als ob das die einzige Ursache gewesen wäre.“",
             "strength": "context"
           }
         ],
@@ -180817,8 +180810,8 @@
           {
             "path": "discovery.examples[1]",
             "stage": "discover",
-            "text": "«Der Nachweis muss von der Kasse beigebracht werden.» → Pflicht mit Träger",
-            "surface": "«Der Nachweis muss von der Kasse beigebracht werden.» → Pflicht mit Träger",
+            "text": "„Der Nachweis muss von der Kasse beigebracht werden.“ → Pflicht mit Träger",
+            "surface": "„Der Nachweis muss von der Kasse beigebracht werden.“ → Pflicht mit Träger",
             "strength": "context"
           }
         ],
@@ -181283,8 +181276,8 @@
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "«Das lässt sich binnen einer Woche erledigen.» → Machbarkeit, keine Pflicht",
-            "surface": "«Das lässt sich binnen einer Woche erledigen.» → Machbarkeit, keine Pflicht",
+            "text": "„Das lässt sich binnen einer Woche erledigen.“ → Machbarkeit, keine Pflicht",
+            "surface": "„Das lässt sich binnen einer Woche erledigen.“ → Machbarkeit, keine Pflicht",
             "strength": "context"
           },
           {
@@ -182397,22 +182390,22 @@
           {
             "path": "discovery.examples[0]",
             "stage": "discover",
-            "text": "«Der Nachweis ist binnen einer Woche beizubringen.» → Pflicht, ohne Handelnden",
-            "surface": "«Der Nachweis ist binnen einer Woche beizubringen.» → Pflicht, ohne Handelnden",
+            "text": "„Der Nachweis ist binnen einer Woche beizubringen.“ → Pflicht, ohne Handelnden",
+            "surface": "„Der Nachweis ist binnen einer Woche beizubringen.“ → Pflicht, ohne Handelnden",
             "strength": "context"
           },
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "«Das lässt sich binnen einer Woche erledigen.» → Machbarkeit, keine Pflicht",
-            "surface": "«Das lässt sich binnen einer Woche erledigen.» → Machbarkeit, keine Pflicht",
+            "text": "„Das lässt sich binnen einer Woche erledigen.“ → Machbarkeit, keine Pflicht",
+            "surface": "„Das lässt sich binnen einer Woche erledigen.“ → Machbarkeit, keine Pflicht",
             "strength": "context"
           },
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Der Nachweis ist innerhalb einer Woche erbringbar.» → Bewertung, ungewöhnlich steif",
-            "surface": "«Der Nachweis ist innerhalb einer Woche erbringbar.» → Bewertung, ungewöhnlich steif",
+            "text": "„Der Nachweis ist innerhalb einer Woche erbringbar.“ → Bewertung, ungewöhnlich steif",
+            "surface": "„Der Nachweis ist innerhalb einer Woche erbringbar.“ → Bewertung, ungewöhnlich steif",
             "strength": "context"
           },
           {
@@ -228834,8 +228827,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
-            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
+            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
+            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
             "strength": "context"
           }
         ],
@@ -228857,8 +228850,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
-            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
+            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
+            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
             "strength": "context"
           }
         ],
@@ -228880,8 +228873,8 @@
           {
             "path": "entry.dialogue[0].de",
             "stage": "entry",
-            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
-            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit «dieses» gemeint ist.",
+            "text": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
+            "surface": "Dein Antrag ist sprachlich korrekt. Trotzdem muss ich zweimal lesen, um zu verstehen, was mit „dieses“ gemeint ist.",
             "strength": "context"
           }
         ],
@@ -229778,8 +229771,8 @@
           {
             "path": "discovery.examples[3]",
             "stage": "discover",
-            "text": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
-            "surface": "«Die Aufsicht hat mich gestört.» → Prüfung: «Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.»",
+            "text": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
+            "surface": "„Die Aufsicht hat mich gestört.“ → Prüfung: „Ob die Aufsicht gestört hat, lässt sich nur mit einer Notiz belegen.“",
             "strength": "context"
           }
         ],
@@ -230039,8 +230032,8 @@
           {
             "path": "discovery.examples[2]",
             "stage": "discover",
-            "text": "«Das war dumm von mir.» → Abschwächung: «Das hätte ich früher prüfen sollen.»",
-            "surface": "«Das war dumm von mir.» → Abschwächung: «Das hätte ich früher prüfen sollen.»",
+            "text": "„Das war dumm von mir.“ → Abschwächung: „Das hätte ich früher prüfen sollen.“",
+            "surface": "„Das war dumm von mir.“ → Abschwächung: „Das hätte ich früher prüfen sollen.“",
             "strength": "context"
           }
         ],
@@ -235605,5 +235598,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "eac2ed9d6873ff0749d7bfeb8b74426779e1f486d95b22048a52350651dc1b69"
+  "contentSha256": "b900bbe7bb214d5d2fffaffc138d26ce04265c3670c6e2656eaaa0b64b724d3e"
 }

@@ -36,7 +36,7 @@ A planted-error test proves each rule fails on the removed defects and passes on
 | Corrections | — | **50** in 33 lessons (+2 Arabic translations for one term) |
 | Mistake fields shown with the wrong language | 129 (+ the back of every mistake card) | **0** |
 | Unit tests | 1,700 in 248 files | **1,707 in 249 files** (0 failed) |
-| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | **PENDING_A11Y** · **PENDING_E2E** |
+| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | **642/0 · 67/67 desktop · 67/67 mobile** |
 | Curriculum gzip (ceiling 1,309,000) | 1,307,248 | **1,307,311** (+63; 1,689 B left) |
 | Client JS total (ceiling 2,205,000) | 2,140,719 | **2,141,691** (+972: the classifier in four more routes) |
 | Contextual candidates (nouns · verb pairs) | 5,400 / 3,466 · 1,335 / 1,200 | **5,399 / 3,465 · 1,334 / 1,199** (pending 89 + 1 unchanged) |

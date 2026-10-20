@@ -33,7 +33,8 @@ A planted-error test proves each rule fails on a bad item and passes on a good o
 |---|---|---|
 | Word-ordering tasks whose chips showed the answer | 44 | **0** |
 | Explanations, options or prompts corrected after reading | — | **77 items** |
-| Unit tests | 1,695 in 246 files | __UNIT__ |
+| Unit tests | 1,695 in 246 files | **1,697 in 247 files** (0 failed) |
+| Browser audit / E2E | 642/0 · 67/67 desktop, 66/67 + 1/1 mobile | **642/0** · **67/67** desktop · **67/67** mobile · 0 #418 |
 | Curriculum gzip (ceiling 1,309,000) | 1,307,086 | **1,307,170** (+84; 1,830 B left) |
 | Client JS total (ceiling 2,205,000) | 2,140,456 | **2,140,647** (+191) |
 | Contextual verb-pair candidates | 1,338 / 1,203 | **1,334 / 1,199** (nouns unchanged 5,401 / 3,467; pending 89 + 1 unchanged) |

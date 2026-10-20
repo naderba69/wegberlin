@@ -223,9 +223,9 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(a2LexicalPanel).toContainText("die Hausordnung");
   await expect(a2LexicalPanel).toContainText("sich an die Hausordnung halten");
   await expect(a2LexicalPanel).toContainText("auf andere Rücksicht nehmen");
-  await expect(a2LexicalPanel).toContainText("15 مراسي اسم و2 إطار فعل");
+  await expect(a2LexicalPanel).toContainText("21 مراسي اسم و2 إطار فعل");
   const a2Extras = a2LexicalPanel.locator(".additional-noun-anchors");
-  await expect(a2Extras).toContainText("أسماء هدف إضافية موثقة · 2");
+  await expect(a2Extras).toContainText("أسماء هدف إضافية موثقة · 8");
   await expect(a2LexicalPanel.locator(".reading-noun-anchors")).toContainText("das Treppenhaus");
   await a2Extras.getByText("Weitere Zielnomen").click();
   await expect(a2Extras).toContainText("die Haustür");
@@ -292,7 +292,7 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   test.setTimeout(90_000);
   await page.goto("/search");
   await expect(page.getByRole("heading", { name: /ابحث عن العبارة/ })).toBeVisible();
-  await expect(page.getByText(/4[.,]?027/)).toBeVisible();
+  await expect(page.getByText(/4[.,]?267/)).toBeVisible();
   const grammarGlossary=page.locator('[data-grammar-glossary-policy="bilingual-grammar-glossary-v1"]');
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();
@@ -2007,7 +2007,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
-  await expect(governance).toContainText("3300");
+  await expect(governance).toContainText("3323");
   const officialSources = governance.locator("details.context-official-sources");
   await officialSources.locator("summary").click();
   await expect(officialSources.locator("li[data-claim-id]")).toHaveCount(12);

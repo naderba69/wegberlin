@@ -315,7 +315,7 @@ export const b2Module4Lessons: FullLesson[] = [
  examples: [
  { de: "Der Sprecher sagt, die Untersuchung sei unabhängig.", ar: "يقول إن الدراسة مستقلة." },
  { de: "Er erklärt, man habe alle Daten veröffentlicht.", ar: "يقول إنهم نشروا البيانات." },
- { de: "Die Befragten hätten weniger Konzentration gemeldet.", ar: "ذُكر أنهم أبلغوا تركيزًا أقل." },
+ { de: "Die Befragten hätten weniger Konzentration gemeldet.", ar: "ذُكر أنهم أبلغوا عن تركيز أقل." },
  { de: "Laut der Mitteilung nahmen 400 Personen teil.", ar: "وفق البيان شارك 400." },
  { de: "Der Mitteilung zufolge fehlt eine Vergleichsgruppe.", ar: "بحسب البيان لا توجد مقارنة." },
  { de: "Nach eigenen Angaben finanzierte das Unternehmen die Befragung.", ar: "وفق إفادته موّلها." },

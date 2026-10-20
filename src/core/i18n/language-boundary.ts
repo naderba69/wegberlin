@@ -24,3 +24,11 @@ export function fragmentLanguageAttributes(text:string):{
   if(language==="mixed")return{dir:"auto","data-bidi-scope":"mixed"};
   return{dir:"ltr","data-bidi-scope":"technical"};
 }
+
+// Some strategy mistakes are written in Arabic. In a one-line "wrong → correct" summary the arrow must point
+// from the wrong form to the correct one in the line's reading direction, which follows its first strong
+// character (the same rule dir="auto" applies).
+const firstStrongIsArabic=/^[^A-Za-zÄÖÜäöüß\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]*[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]/u;
+export function mistakeLine(wrong:string,correct:string):string{
+  return `${wrong} ${firstStrongIsArabic.test(wrong)?"←":"→"} ${correct}`;
+}

@@ -10,6 +10,8 @@ const requiredAdaptiveConsumers=[
   "src/components/exercise-card.tsx","src/components/diagnostic-view.tsx","src/components/library-view.tsx","src/components/module-review.tsx",
   "src/components/level-assessment.tsx",
   "src/components/targeted-choice-simulation.tsx","src/components/targeted-listening-simulation.tsx",
+  // v256 (ADR-147): common-mistake fields and the cards/search entries built from them can be Arabic strategy notes.
+  "src/components/lesson-runner.tsx","src/components/phrase-recall-deck.tsx","src/components/bilingual-search-view.tsx","src/app/review/page.tsx",
 ];
 
 async function walk(directory){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const absolute=path.join(directory,entry.name);if(entry.isDirectory())files.push(...await walk(absolute));else if(entry.isFile()&&absolute.endsWith(".tsx"))files.push(absolute)}return files}

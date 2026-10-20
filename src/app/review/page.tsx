@@ -18,6 +18,7 @@ import { resolveReviewShortcut, REVIEW_SHORTCUT_POLICY } from "@/core/review/sho
 import { academicLessons } from "@/data/academic-lessons";
 import { applySpeechPreferences } from "@/core/audio/speech-preferences";
 import { PhrasePronunciationCheck } from "@/components/phrase-pronunciation-check";
+import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 
 function reviewContextLabel(tags:string[]){const lesson=academicLessons[tags[1]];if(lesson)return lesson.titleAr;if(tags.includes("personal-error"))return"علاج شخصي";return"مراجعة المنهج"}
 
@@ -102,7 +103,7 @@ export default function ReviewPage() {
           {flipped && chunkPrompt.evidenceAr && <small className="chunk-evidence" data-chunk-prompt={CHUNK_PROMPT_POLICY}>{chunkPrompt.evidenceAr}</small>}
           <small>{flipped ? `الجواب: ${chunkPrompt.answerDe} · قيّم الاسترجاع بصدق` : "أكمل الفراغ بالكلمة المستهدفة ثم انقر للكشف"}</small>
         </> : <>
-          <h2 lang={flipped ? "ar" : "de"} dir={flipped ? "rtl" : "ltr"}>{flipped ? card.back : card.front}</h2>
+          <h2 {...fragmentLanguageAttributes(flipped ? card.back : card.front)}>{flipped ? card.back : card.front}</h2>
           <p>{flipped ? card.hint : "قل المعنى والاستعمال قبل النقر"}</p>
           <small>{flipped ? "قيّم الاسترجاع بصدق" : "انقر لكشف الجواب"}</small>
         </>}

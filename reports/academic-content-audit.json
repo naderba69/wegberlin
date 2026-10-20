@@ -44900,10 +44900,10 @@
     "nounAnchorCount": 1733,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5400,
+      "totalCandidates": 5399,
       "covered": 1845,
       "pendingHuman": 89,
-      "contextualNotTarget": 3466,
+      "contextualNotTarget": 3465,
       "authoredTargets": 1934,
       "byLevel": {
         "A1": {
@@ -44925,18 +44925,18 @@
           "contextualNotTarget": 929
         },
         "B2": {
-          "totalCandidates": 2235,
+          "totalCandidates": 2234,
           "covered": 501,
           "pendingHuman": 89,
-          "contextualNotTarget": 1645
+          "contextualNotTarget": 1644
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1335,
+      "totalCandidates": 1334,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1200,
+      "contextualNotTarget": 1199,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44952,10 +44952,10 @@
           "contextualNotTarget": 210
         },
         "B1": {
-          "totalCandidates": 343,
+          "totalCandidates": 342,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 312
+          "contextualNotTarget": 311
         },
         "B2": {
           "totalCandidates": 641,
@@ -84894,8 +84894,8 @@
           {
             "path": "theory[1].examples[5].de",
             "stage": "rule",
-            "text": "Der Flug ist spät. Deshalb verpasse ich den Bus.",
-            "surface": "Der Flug ist spät. Deshalb verpasse ich den Bus.",
+            "text": "Der Flug hat Verspätung. Deshalb verpasse ich den Bus.",
+            "surface": "Der Flug hat Verspätung. Deshalb verpasse ich den Bus.",
             "strength": "context"
           }
         ],
@@ -89001,8 +89001,8 @@
           {
             "path": "mistakes[2].correct",
             "stage": "errors",
-            "text": "zweimal täglich nach dem Essen",
-            "surface": "zweimal täglich nach dem Essen",
+            "text": "zweimal pro Tag nach dem Essen",
+            "surface": "zweimal pro Tag nach dem Essen",
             "strength": "context"
           },
           {
@@ -117897,6 +117897,20 @@
             "strength": "context"
           },
           {
+            "path": "mistakes[2].correct",
+            "stage": "errors",
+            "text": "statt das Gerät wegzuwerfen",
+            "surface": "statt das Gerät wegzuwerfen",
+            "strength": "context"
+          },
+          {
+            "path": "mistakes[2].wrong",
+            "stage": "errors",
+            "text": "statt das Gerät zu wegwerfen",
+            "surface": "statt das Gerät zu wegwerfen",
+            "strength": "context"
+          },
+          {
             "path": "pronunciation.items[2].de",
             "stage": "pronunciation",
             "text": "statt das Gerät WEGZUWERFEN",
@@ -130892,8 +130906,8 @@
       {
         "lessonId": "b1-18",
         "level": "B1",
-        "lemmaCandidate": "Prüfung",
-        "normalizedLemma": "prüfung",
+        "lemmaCandidate": "Prüfungserfolg",
+        "normalizedLemma": "prüfungserfolg",
         "role": "context-only",
         "status": "not-target",
         "anchorIds": [],
@@ -130901,12 +130915,12 @@
           {
             "path": "theory[0].examples[3].de",
             "stage": "rule",
-            "text": "Der Kurs soll die Prüfung garantieren.",
-            "surface": "Der Kurs soll die Prüfung garantieren.",
+            "text": "Der Kurs soll den Prüfungserfolg garantieren.",
+            "surface": "Der Kurs soll den Prüfungserfolg garantieren.",
             "strength": "context"
           }
         ],
-        "id": "lex-n-b1-18-5c604732"
+        "id": "lex-n-b1-18-f2a08b32"
       },
       {
         "lessonId": "b1-18",
@@ -170680,8 +170694,8 @@
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
-            "text": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
-            "surface": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
+            "text": "Falsch wäre: „Er war unvollständig.“ Es ist unklar, ob „er“ den Termin oder den Antrag meint.",
+            "surface": "Falsch wäre: „Er war unvollständig.“ Es ist unklar, ob „er“ den Termin oder den Antrag meint.",
             "strength": "context"
           },
           {
@@ -170846,13 +170860,6 @@
             "strength": "context"
           },
           {
-            "path": "theory[0].examples[0].de",
-            "stage": "rule",
-            "text": "die Bearbeitungszeit. Diese Frist gilt ab Zugang des Bescheids.",
-            "surface": "die Bearbeitungszeit. Diese Frist gilt ab Zugang des Bescheids.",
-            "strength": "context"
-          },
-          {
             "path": "writing.modelDe",
             "stage": "writing",
             "text": "Die Verlängerung der Antragsfrist wurde abgelehnt, weil die Gebühr nicht fristgerecht eingegangen war. Diese Gebühr war nicht versehentlich verspätet, sondern resultierte aus einem Überweisungsfehler, den die Bank am selben Tag meldete. Dadurch, dass die Meldung spät bearbeitet wurde, verstrich die Frist, obwohl die Unterlagen vollständig vorlagen. Wir beantragen deshalb eine einmalige Nachfrist von einer Woche; anschließend reichen wir den Zahlungsnachweis nach. Während der erste Bescheid auf die Einhaltung der Frist abstellt, prüft der zweite Antrag, ob ein Härtefall vorliegt — das ist der Grund, warum beide Entscheidungen nebeneinander bestehen können. Unsere Bitte richtet sich nicht gegen die Regelung, sondern gegen ihre Anwendung in diesem einzelnen Fall, weil der Fehler nachweislich außerhalb unseres Einflussbereichs lag. Wir prüfen derzeit, ob die Bearbeitungszeit des zweiten Antrags verkürzt werden kann, und teilen das Ergebnis bis Freitag mit. Zwei Änderungen gegenüber der ersten Fassung halten wir für wesentlich: Die Demonstrativpronomen wurden durch wiederholte Nomina ersetzt, damit jede Verweisung nur ein Bezugswort hat; und die Kette «Durchführung der Überprüfung der Einhaltung» wurde in einen verbalen Satz aufgelöst, damit der Absatz in einem Zug lesbar bleibt.",
@@ -170950,8 +170957,8 @@
           {
             "path": "theory[0].examples[0].de",
             "stage": "rule",
-            "text": "die Bearbeitungszeit. Diese Frist gilt ab Zugang des Bescheids.",
-            "surface": "die Bearbeitungszeit. Diese Frist gilt ab Zugang des Bescheids.",
+            "text": "Die Bearbeitungszeit beträgt vier Wochen. Diese Frist gilt ab Zugang des Bescheids.",
+            "surface": "Die Bearbeitungszeit beträgt vier Wochen. Diese Frist gilt ab Zugang des Bescheids.",
             "strength": "context"
           }
         ],
@@ -171531,8 +171538,8 @@
           {
             "path": "theory[0].examples[5].de",
             "stage": "rule",
-            "text": "Notfalls: «die zweite Möglichkeit» statt eines bloßen Fürworts.",
-            "surface": "Notfalls: «die zweite Möglichkeit» statt eines bloßen Fürworts.",
+            "text": "Notfalls: „die zweite Möglichkeit“ statt eines bloßen Fürworts.",
+            "surface": "Notfalls: „die zweite Möglichkeit“ statt eines bloßen Fürworts.",
             "strength": "context"
           }
         ],
@@ -172046,8 +172053,8 @@
           {
             "path": "theory[0].examples[5].de",
             "stage": "rule",
-            "text": "Notfalls: «die zweite Möglichkeit» statt eines bloßen Fürworts.",
-            "surface": "Notfalls: «die zweite Möglichkeit» statt eines bloßen Fürworts.",
+            "text": "Notfalls: „die zweite Möglichkeit“ statt eines bloßen Fürworts.",
+            "surface": "Notfalls: „die zweite Möglichkeit“ statt eines bloßen Fürworts.",
             "strength": "context"
           }
         ],
@@ -172624,8 +172631,8 @@
           {
             "path": "theory[0].examples[4].de",
             "stage": "rule",
-            "text": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
-            "surface": "Falsch wäre: «Er war unvollständig.» Es ist unklar, ob «er» den Termin oder den Antrag meint.",
+            "text": "Falsch wäre: „Er war unvollständig.“ Es ist unklar, ob „er“ den Termin oder den Antrag meint.",
+            "surface": "Falsch wäre: „Er war unvollständig.“ Es ist unklar, ob „er“ den Termin oder den Antrag meint.",
             "strength": "context"
           },
           {
@@ -183166,13 +183173,6 @@
             "text": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
             "surface": "Weil die Behörde verpflichtet ist, in jedem Bescheid besonders höflich zu schreiben.",
             "strength": "context"
-          },
-          {
-            "path": "theory[1].examples[2].de",
-            "stage": "rule",
-            "text": "Den Antrag haben wir selbst zurückgezogen, nicht die Behörde.",
-            "surface": "Den Antrag haben wir selbst zurückgezogen, nicht die Behörde.",
-            "strength": "context"
           }
         ],
         "id": "lex-n-b2-18-dd7880a5"
@@ -185025,6 +185025,13 @@
             "stage": "listening",
             "text": "Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antrag bleibe dadurch ein Ding, das man nummerieren könne; ohne das Nomen wisse niemand, wie viele Anträge im System liegen. Frau Kessler stimmt zu, streicht aber zwei andere Sätze: „Wir nehmen eine Prüfung der Fristen vor“ und „Wir treffen eine Entscheidung über den Widerspruch.“ Beide sagen, so Ben, genau das, was „wir prüfen die Fristen“ und „wir entscheiden über den Widerspruch“ in der Hälfte der Wörter sagen. Dann markieren sie gemeinsam drei Stellen, an denen die Fügung eine Stufe sichtbar macht: Die Unterlagen werden zur Verfügung gestellt, der Hinweis wird zur Kenntnis genommen, und das Verfahren wird bis Freitag zum Abschluss gebracht. Ben notiert sich eine Regel: zwei Fügungen pro Absatz, nie drei. Und weil er beim Lesen merkt, dass „Berücksichtigung finden“ ohne Handelnden auskommt, schreibt er dazu: „Ihr Hinweis findet Berücksichtigung“ — höflich, aber ohne Versprechen, wer wann arbeitet. Frau Kessler lobt genau diesen Satz, weil er kein Datum verspricht, wo noch keines feststeht.",
             "surface": "Ben liest seine neue Fassung vor, und Frau Kessler unterbricht ihn erst am Ende: „Wir stellen einen Antrag auf Verlängerung und ziehen zwei Termine in Betracht.“ Sie fragt, was die Fügung hier leiste. Ben sagt, der Antrag bleibe dadurch ein Ding, das man nummerieren könne; ohne das Nomen wisse niemand, wie viele Anträge im System liegen. Frau Kessler stimmt zu, streicht aber zwei andere Sätze: „Wir nehmen eine Prüfung der Fristen vor“ und „Wir treffen eine Entscheidung über den Widerspruch.“ Beide sagen, so Ben, genau das, was „wir prüfen die Fristen“ und „wir entscheiden über den Widerspruch“ in der Hälfte der Wörter sagen. Dann markieren sie gemeinsam drei Stellen, an denen die Fügung eine Stufe sichtbar macht: Die Unterlagen werden zur Verfügung gestellt, der Hinweis wird zur Kenntnis genommen, und das Verfahren wird bis Freitag zum Abschluss gebracht. Ben notiert sich eine Regel: zwei Fügungen pro Absatz, nie drei. Und weil er beim Lesen merkt, dass „Berücksichtigung finden“ ohne Handelnden auskommt, schreibt er dazu: „Ihr Hinweis findet Berücksichtigung“ — höflich, aber ohne Versprechen, wer wann arbeitet. Frau Kessler lobt genau diesen Satz, weil er kein Datum verspricht, wo noch keines feststeht.",
+            "strength": "context"
+          },
+          {
+            "path": "theory[1].examples[2].de",
+            "stage": "rule",
+            "text": "Wir bringen das Verfahren bis Ende Mai zum Abschluss.",
+            "surface": "Wir bringen das Verfahren bis Ende Mai zum Abschluss.",
             "strength": "context"
           },
           {
@@ -196508,32 +196515,6 @@
           }
         ],
         "id": "lex-n-b2-22-decb633a"
-      },
-      {
-        "lessonId": "b2-22",
-        "level": "B2",
-        "lemmaCandidate": "Studie",
-        "normalizedLemma": "studie",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "mistakes[2].correct",
-            "stage": "errors",
-            "text": "die veröffentlichte Studie lag vor.",
-            "surface": "die veröffentlichte Studie lag vor.",
-            "strength": "context"
-          },
-          {
-            "path": "mistakes[2].wrong",
-            "stage": "errors",
-            "text": "die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
-            "surface": "die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-22-70327e00"
       },
       {
         "lessonId": "b2-22",
@@ -214163,29 +214144,6 @@
           }
         ],
         "id": "lex-v-b1-10-863f5475"
-      },
-      {
-        "lessonId": "b1-10",
-        "level": "B1",
-        "infinitiveCandidate": "wegzuwerfen",
-        "normalizedVerb": "wegzuwerfen",
-        "preposition": "zu",
-        "role": "context-only",
-        "status": "not-target",
-        "observedCases": [
-          "unknown"
-        ],
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "mistakes[2].wrong",
-            "stage": "errors",
-            "text": "wegzuwerfen = zu wegwerfen",
-            "surface": "wegzuwerfen = zu wegwerfen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-v-b1-10-3b3924da"
       },
       {
         "lessonId": "b1-10",
@@ -234512,8 +234470,8 @@
           {
             "path": "mistakes[2].wrong",
             "stage": "errors",
-            "text": "die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
-            "surface": "die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
+            "text": "Die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
+            "surface": "Die zu veröffentlichende Studie wurde bereits veröffentlicht worden.",
             "strength": "context"
           }
         ],
@@ -235722,5 +235680,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "da77291a62eb5694c9e86d898a2d82bd20c4146ddfb188b4ff522cc5d626add6"
+  "contentSha256": "65f5a7d31cc8d5721e1841cda818ab339f94fe3e36f0007b6c725a0756722ba4"
 }

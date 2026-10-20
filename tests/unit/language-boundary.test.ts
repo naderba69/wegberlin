@@ -1,7 +1,7 @@
 // @vitest-environment node
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { detectFragmentLanguage, fragmentLanguageAttributes, LANGUAGE_BOUNDARY_VERSION } from "@/core/i18n/language-boundary";
+import { detectFragmentLanguage, fragmentLanguageAttributes, LANGUAGE_BOUNDARY_VERSION, mistakeLine } from "@/core/i18n/language-boundary";
 import report from "../../reports/language-boundary-audit.json";
 
 describe("P0 exhaustive language and Bidi boundaries",()=>{
@@ -21,13 +21,29 @@ describe("P0 exhaustive language and Bidi boundaries",()=>{
   });
 
   it("audits every TSX opening tag with zero pairing or control-character issues",()=>{
-    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:217,openingTagCount:8335,germanTagCount:458,arabicTagCount:11,technicalScopeCount:60,adaptiveConsumerCount:7,mixedStaticCount:207,issues:[]}); // refreshed from the tracked TSX tree and committed audit artifacts
+    expect(report).toMatchObject({format:"dwnb-language-boundary-audit",version:"language-boundary-audit-v1",ok:true,tsxFiles:217,openingTagCount:8335,germanTagCount:454,arabicTagCount:11,technicalScopeCount:60,adaptiveConsumerCount:11,mixedStaticCount:207,issues:[]}); // refreshed from the tracked TSX tree and committed audit artifacts
     expect(report.ltrTagCount).toBeGreaterThanOrEqual(report.germanTagCount);
   });
 
   it("keeps all generic answer-bank renderers on adaptive language attributes",()=>{
     const files=["exercise-card","diagnostic-view","library-view","module-review","level-assessment","targeted-choice-simulation","targeted-listening-simulation"];
     for(const file of files)expect(readFileSync(`src/components/${file}.tsx`,"utf8"),file).toContain("fragmentLanguageAttributes");
+  });
+
+  it("tags common-mistake text by its real language wherever it is shown (v256, ADR-147)",()=>{
+    // 129 wrong/correct fields are Arabic strategy notes; a fixed lang="de" dir="ltr" sent them to a German voice in LTR.
+    for(const file of ["src/components/lesson-runner.tsx","src/components/phrase-recall-deck.tsx","src/components/bilingual-search-view.tsx","src/app/review/page.tsx"])expect(readFileSync(file,"utf8"),file).toContain("fragmentLanguageAttributes");
+    const runner=readFileSync("src/components/lesson-runner.tsx","utf8");
+    expect(runner).not.toContain('<del lang="de" dir="ltr">{item.wrong}</del>');
+    expect(readFileSync("src/app/review/page.tsx","utf8")).not.toContain('lang={flipped ? "ar" : "de"}');
+  });
+
+  it("points the wrong → correct arrow along the reading direction of the line",()=>{
+    expect(mistakeLine("meine Vater","mein Vater")).toBe("meine Vater → mein Vater");
+    expect(mistakeLine("أختار لأنه أفضل فقط","أحدد المعيار.")).toBe("أختار لأنه أفضل فقط ← أحدد المعيار.");
+    expect(mistakeLine("ثم… ثم…","zunächst / später")).toBe("ثم… ثم… ← zunächst / später");
+    expect(mistakeLine("Man muss hier nicht rauchen. (ممنوع)","Man darf hier nicht rauchen.")).toBe("Man muss hier nicht rauchen. (ممنوع) → Man darf hier nicht rauchen.");
+    expect(fragmentLanguageAttributes(mistakeLine("أختار لأنه أفضل فقط","أحدد المعيار."))).toEqual({lang:"ar",dir:"rtl"});
   });
 
   it("enforces Arabic plaintext containment and explicit fragment isolation in CSS",()=>{

@@ -5,15 +5,15 @@
   "ok": true,
   "tsxFiles": 217,
   "openingTagCount": 8335,
-  "germanTagCount": 458,
+  "germanTagCount": 454,
   "arabicTagCount": 11,
-  "ltrTagCount": 512,
+  "ltrTagCount": 508,
   "rtlTagCount": 11,
   "autoDirCount": 12,
   "technicalScopeCount": 60,
-  "dynamicPairCount": 4,
+  "dynamicPairCount": 3,
   "bdiCount": 23,
-  "adaptiveConsumerCount": 7,
+  "adaptiveConsumerCount": 11,
   "mixedStaticCount": 207,
   "mixedStatic": [
     {
@@ -98,12 +98,12 @@
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 83,
+      "line": 84,
       "text": "مراجعة SM-2"
     },
     {
       "path": "src/app/review/page.tsx",
-      "line": 85,
+      "line": 86,
       "text": "كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخطأ الشخصية علاج فقط وmasteryDelta فيها صفر دائمًا."
     },
     {
@@ -118,17 +118,17 @@
     },
     {
       "path": "src/components/bilingual-search-view.tsx",
-      "line": 42,
+      "line": 43,
       "text": "يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أي خادم."
     },
     {
       "path": "src/components/bilingual-search-view.tsx",
-      "line": 44,
+      "line": 45,
       "text": "من A1 إلى B2"
     },
     {
       "path": "src/components/bilingual-search-view.tsx",
-      "line": 77,
+      "line": 78,
       "text": "يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة."
     },
     {
@@ -688,12 +688,12 @@
     },
     {
       "path": "src/components/phrase-recall-deck.tsx",
-      "line": 45,
+      "line": 46,
       "text": "Deutsch → العربية"
     },
     {
       "path": "src/components/phrase-recall-deck.tsx",
-      "line": 45,
+      "line": 46,
       "text": "العربية → Deutsch"
     },
     {
@@ -1054,5 +1054,5 @@
   ],
   "issues": [],
   "boundary": "Static source and production DOM checks prove explicit lang/dir pairing, adaptive answer-bank classification, and bidi containment policy. They do not replace physical browser/screen-reader review of spoken order.",
-  "contentSha256": "7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc8f"
+  "contentSha256": "ef47b207f85fa939ad71fedd4114266a74fa8b6d40201bfd735bd1cd790e3582"
 }

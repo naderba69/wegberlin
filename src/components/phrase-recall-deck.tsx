@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Check, Eye, Lightbulb, RotateCcw, Volume2, X } from "lucide-react";
 import type { FullLesson } from "@/types/lesson-content";
+import { fragmentLanguageAttributes, mistakeLine } from "@/core/i18n/language-boundary";
 
 type RecallDirection = "de-ar" | "ar-de";
 
@@ -70,7 +71,7 @@ export function PhraseRecallDeck({
       <div>
         {lesson.theory.map((block) => <article key={block.id}><span>قاعدة</span><strong>{block.titleAr}</strong><p>{block.trickAr}</p></article>)}
         <article><span>نطق</span><strong>{lesson.pronunciation.titleAr}</strong><p>{lesson.pronunciation.trickAr}</p></article>
-        {lesson.mistakes.slice(0, 2).map((mistake) => <article key={mistake.wrong}><span>منع خطأ</span><strong lang="de" dir="ltr">{mistake.wrong} → {mistake.correct}</strong><p>{mistake.trickAr}</p></article>)}
+        {lesson.mistakes.slice(0, 2).map((mistake) => { const line = mistakeLine(mistake.wrong, mistake.correct); return <article key={mistake.wrong}><span>منع خطأ</span><strong {...fragmentLanguageAttributes(line)}>{line}</strong><p>{mistake.trickAr}</p></article>; })}
       </div>
     </details>
   </>;

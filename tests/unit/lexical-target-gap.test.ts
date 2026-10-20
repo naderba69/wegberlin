@@ -34,19 +34,20 @@ describe("lexical target-gap inventory", () => {
   // v253: ADR-144 completed 46 card examples in B1/B2 (and a few A1/A2); +8 contextual noun and +3 verb-pair candidates, nothing new pending.
   // v254: ADR-145 corrected 77 exercise items (for example the wrong «sodann» connector block in b2-14); −4 contextual verb-pair candidates, nouns and pending unchanged.
   // v255: ADR-146 audited all 576 reading/listening questions and replaced off-topic b2-08-rq2 / duplicate b2-17-rq1 options; −1 contextual noun and +1 verb-pair candidate, nothing new pending.
+  // v256: ADR-147 audited all 272 theory blocks and 392 common mistakes; b1-18 «die Prüfung» → «den Prüfungserfolg» (noun swap), b2-22-mk3 now starts with a capital «Die» (the article scan skips sentence starts), and the b1-10 mistake no longer pairs «wegzuwerfen = zu wegwerfen»; −1 contextual noun and −1 verb-pair candidate, nothing new pending.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5400,
+      totalCandidates: 5399,
       covered: 1845,
       pendingHuman: 89,
-      contextualNotTarget: 3466,
+      contextualNotTarget: 3465,
       authoredTargets: 1934,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1335,
+      totalCandidates: 1334,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1200,
+      contextualNotTarget: 1199,
       authoredTargets: 135,
     });
   });

@@ -2,6 +2,7 @@ import { academicLessons } from "@/data/academic-lessons";
 import { allPublishedExamTasks } from "@/data/exam-simulation-registry";
 import { listeningLibrary, readingLibrary } from "@/data/library-registry";
 import type { CEFRLevel } from "@/types/learning";
+import { mistakeLine } from "@/core/i18n/language-boundary";
 
 export type SearchSource = "lesson" | "library" | "exam";
 export type SearchSubtype = "lesson" | "phrase" | "grammar" | "glossary" | "error" | "reading" | "listening" | "exam-task";
@@ -109,7 +110,7 @@ function buildEntries(): BilingualSearchEntry[] {
       source: "lesson",
       subtype: "error",
       level: lesson.level,
-      titleDe: `${mistake.wrong} → ${mistake.correct}`,
+      titleDe: mistakeLine(mistake.wrong, mistake.correct),
       titleAr: mistake.whyAr,
       contextDe: lesson.titleDe,
       contextAr: `تريك: ${mistake.trickAr}`,

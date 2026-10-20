@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, BookOpenText, GraduationCap, Languages, LibraryBig, Search, ShieldCheck } from "lucide-react";
 import { bilingualSearchEntries, searchBilingual, type SearchSource } from "@/core/search/bilingual-search";
 import type { CEFRLevel } from "@/types/learning";
+import { fragmentLanguageAttributes } from "@/core/i18n/language-boundary";
 import { LexicalStrategyExplorer } from "./lexical-strategy-explorer";
 import { PracticalContextExplorer } from "./practical-context-explorer";
 import { GrammarGlossary } from "./grammar-glossary";
@@ -86,7 +87,7 @@ export function BilingualSearchView() {
             <span className="search-result-icon"><Icon size={18} /></span>
             <div>
               <header><span>{subtypeAr[entry.subtype]} · {entry.level}</span>{entry.provider && <small>{entry.provider === "goethe-b2" ? "Goethe B2" : "telc Deutsch B2"}</small>}</header>
-              <h2 lang="de" dir="ltr">{entry.titleDe}</h2>
+              <h2 {...fragmentLanguageAttributes(entry.titleDe)}>{entry.titleDe}</h2>
               <h3>{entry.titleAr}</h3>
               <p lang="de" dir="ltr">{entry.contextDe}</p>
               <small>{entry.contextAr}</small>

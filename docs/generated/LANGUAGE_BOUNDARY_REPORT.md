@@ -3,7 +3,7 @@
 Generated: 2026-09-07  
 Version: `language-boundary-audit-v1`  
 Policy: `language-boundary-v1`  
-Content SHA-256: `7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc8f`
+Content SHA-256: `ef47b207f85fa939ad71fedd4114266a74fa8b6d40201bfd735bd1cd790e3582`
 
 ## Result
 
@@ -11,15 +11,15 @@ Content SHA-256: `7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc
 
 | Contract | Count |
 |---|---:|
-| Explicit German fragments (lang=de + dir=ltr) | 458 |
+| Explicit German fragments (lang=de + dir=ltr) | 454 |
 | Explicit Arabic fragments (lang=ar + dir=rtl) | 11 |
-| LTR tags audited | 512 |
+| LTR tags audited | 508 |
 | RTL tags audited | 11 |
 | Auto-direction adaptive fragments | 12 |
 | Technical/numeric/secret bidi scopes | 60 |
-| Paired dynamic lang/dir expressions | 4 |
+| Paired dynamic lang/dir expressions | 3 |
 | bdi elements | 23 |
-| Adaptive answer-bank consumers | 7 |
+| Adaptive answer-bank consumers | 11 |
 | Static Arabic + Latin text nodes under plaintext host policy | 207 |
 | **Issues** | **0** |
 
@@ -53,13 +53,13 @@ Content SHA-256: `7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc
 | src/app/progress/page.tsx:96 | لا نسجل ضغطات المفاتيح أو النص الوسيط أو حركة المؤشر. الزمن يستبعد مدة إخفاء الصفحة ويُحد عند 30 دقيقة، ولا يص | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:98 | الاحتفاظ لا يُثبت من كشف البطاقة لأول مرة؛ نحتاج نجاحًا بعد حلول موعد مؤجل، وأربع بطاقات مؤجلة ناجحة قبل وصف ا | Arabic host + plaintext boundary |
 | src/app/progress/page.tsx:103 | تدريجيًا بعد 30/90/180 يومًا. لا تحذف المحاولة ولا تغيّر الدرجة الخام أو mastery. | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:83 | مراجعة SM-2 | Arabic host + plaintext boundary |
-| src/app/review/page.tsx:85 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:84 | مراجعة SM-2 | Arabic host + plaintext boundary |
+| src/app/review/page.tsx:86 | كشف البطاقة أول مرة لا يرفع إتقان الدرس. الزيادة لا تحدث إلا عند نجاح بطاقة درس بعد أن يحين موعدها؛ بطاقة الخط | Arabic host + plaintext boundary |
 | src/components/accessibility-preferences-control.tsx:105 | Live-Vorschau · معاينة مباشرة | Arabic host + plaintext boundary |
 | src/components/ai-provider-capability-matrix.tsx:62 | حد 0 USD | Arabic host + plaintext boundary |
-| src/components/bilingual-search-view.tsx:42 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |
-| src/components/bilingual-search-view.tsx:44 | من A1 إلى B2 | Arabic host + plaintext boundary |
-| src/components/bilingual-search-view.tsx:77 | يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة. | Arabic host + plaintext boundary |
+| src/components/bilingual-search-view.tsx:43 | يفتش في الدروس والعبارات والقواعد وعيادات الأخطاء والمكتبة ومهام الامتحان. يعمل دون AI ولا يرسل ما تكتبه إلى أ | Arabic host + plaintext boundary |
+| src/components/bilingual-search-view.tsx:45 | من A1 إلى B2 | Arabic host + plaintext boundary |
+| src/components/bilingual-search-view.tsx:78 | يمكنك الكتابة بالألمانية أو العربية، ولا يلزم استعمال الحركات أو كتابة Umlaut بدقة. | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:101 | محادثة متفرعة دون AI | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:105 | لا شخص حقيقي ولا AI يتظاهر بفهم كلامك | Arabic host + plaintext boundary |
 | src/components/branching-conversation-lab.tsx:125 | الاختيار المنظم تدريب تواصلي، لا درجة كلام أو CEFR. | Arabic host + plaintext boundary |
@@ -171,8 +171,8 @@ Content SHA-256: `7db834125c30f944d28f0dde6b3d9b864d72775b80f2e4305dc411fbaafabc
 | src/components/personal-vocabulary-import.tsx:20 | TSV محلي Preview-first؛ منفصل عن المنهج وSRS والإتقان. | Arabic host + plaintext boundary |
 | src/components/personal-vocabulary-import.tsx:22 | اختر ملف TSV للفحص | Arabic host + plaintext boundary |
 | src/components/personal-vocabulary-import.tsx:26 | لا تصبح المفردة دليلًا أو بطاقة SRS أو جزءًا من المحتوى المنشور بمجرد الاستيراد. | Arabic host + plaintext boundary |
-| src/components/phrase-recall-deck.tsx:45 | Deutsch → العربية | Arabic host + plaintext boundary |
-| src/components/phrase-recall-deck.tsx:45 | العربية → Deutsch | Arabic host + plaintext boundary |
+| src/components/phrase-recall-deck.tsx:46 | Deutsch → العربية | Arabic host + plaintext boundary |
+| src/components/phrase-recall-deck.tsx:46 | العربية → Deutsch | Arabic host + plaintext boundary |
 | src/components/plan-change-timeline.tsx:1 | لا نص إجابة أو ملاحظة Reflection · لا mastery · لا عقوبة · مشتق من سجلات التخطيط القابلة للحذف مع حالتها الأصل | Arabic host + plaintext boundary |
 | src/components/planning-preferences-control.tsx:20 | لا رفع تلقائي: «مكثفة» لا تطبق إلا بعد اختيارك. Check-in والطاقة و«لدي وقت أقل» تستطيع دائمًا خفضها. | Arabic host + plaintext boundary |
 | src/components/planning-preferences-control.tsx:20 | إشعار الموعد الامتحاني النشط يبقى Safety exception لأن ساعته لا تتوقف. | Arabic host + plaintext boundary |

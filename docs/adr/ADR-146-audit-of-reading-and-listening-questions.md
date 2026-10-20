@@ -32,8 +32,8 @@ A planted-error test proves each rule fails on a bad explanation and passes on t
 | Reading/listening questions read against their text | — | **576 of 576** |
 | Questions corrected | — | **24** (22 explanations, 2 with new options) |
 | Explanations naming a shuffled option by position | 15 | **0** |
-| Unit tests | 1,697 in 247 files | **__UNIT__** (0 failed) |
-| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | **__E2E__** |
+| Unit tests | 1,697 in 247 files | **1,700 in 248 files** (0 failed) |
+| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | **642/0** · **67/67** desktop · **67/67** mobile · 0 #418 |
 | Curriculum gzip (ceiling 1,309,000) | 1,307,170 | **1,307,248** (+78; 1,752 B left) |
 | Client JS total (ceiling 2,205,000) | 2,140,647 | **2,140,719** (+72) |
 | Contextual candidates (nouns · verb pairs) | 5,401 / 3,467 · 1,334 / 1,199 | **5,400 / 3,466 · 1,335 / 1,200** (pending 89 + 1 unchanged) |

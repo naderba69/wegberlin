@@ -40,8 +40,8 @@ No card was added, removed or reordered, so every stored card ID and review hist
 | Noun target-gap candidates (contextual) | 5,393 / 3,459 | **5,401 / 3,467** nouns, verb pairs 1,335 / 1,200 → **1,338 / 1,203** (completed sentences carry new context words; pending stays 89 + 1) |
 | Curriculum gzip (ceiling 1,309,000) | 1,306,607 | **1,307,086** (+479; 1,914 B left) |
 | Client JS total (ceiling 2,205,000) | 2,139,956 | **2,140,456** (+500) |
-| Unit tests | 1,695 in 246 files | __UNIT__ |
-| Browser audit / E2E | 642/0 · 67/67 ×2 | __E2E__ |
+| Unit tests | 1,695 in 246 files | **1,695 in 246 files** (0 failed) |
+| Browser audit / E2E | 642/0 · 67/67 ×2 | **642/0** · **67/67** desktop; mobile 66/67 (the browser closed itself before one test started; that test alone then passed 1/1) · 0 #418 |
 
 ## Consequences
 

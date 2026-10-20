@@ -75,7 +75,7 @@ describe("Goethe A2 core vocabulary package (ADR-141)", () => {
     expect(script).toContain("safetyMarginPercent=15");
     expect(Math.floor(2594118 * 0.85)).toBe(2205000);
     const media = readFileSync("scripts/audit-media-pack-budgets.mjs", "utf8");
-    expect(media).toContain("curriculumSourceGzipBytes:1_540_000");
+    expect(media).toContain("curriculumSourceGzipBytes:1_560_000"); // curriculum limit raised separately by ADR-149
     const decision = readFileSync("docs/adr/ADR-141-goethe-a2-core-vocabulary-and-js-ceiling.md", "utf8");
     expect(decision).toContain("2,205,000");
     expect(decision).toContain("ارفعه 80 KB");

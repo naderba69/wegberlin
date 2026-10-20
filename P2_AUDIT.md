@@ -1,6 +1,6 @@
 # P2 Implementation Audit
 
-Sync batch: v255 · 2026-10-20 · تدقيق أسئلة القراءة والاستماع (ADR-146): قُرئت الأسئلة الـ576 في الدروس الـ96 (288 قراءة و288 استماعًا) مع نصها أو تسجيلها، فصُحّح 24 سؤالًا كان شرحها يخالف النص أو فيها خيار خارج النص أو مكرر للجواب. ولأن الخيارات تُعرض مخلوطة، صار 15 شرحًا يسمّي الخيار بمحتواه لا بمكانه («الخيار الثاني»). حارس دائم جديد يمنع ذلك. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
+Sync batch: v256 · 2026-10-20 · تدقيق القواعد والأخطاء الشائعة (ADR-147): قُرئت كتل القواعد الـ272 والأخطاء الشائعة الـ392 في الدروس الـ96، فصُحّح 50 موضعًا في 33 درسًا (ألمانية غير دقيقة مثل «Der Flug ist spät»، وأخطاء لا تُظهر الخطأ، وشروح عربية تكرر الجملة الألمانية فقط، وأخطاء نحو وصياغة عربية، وعلامات تنصيص). وكانت 129 خانة خطأ مكتوبة بالعربية تُعرض كأنها ألمانية من اليسار إلى اليمين، فصارت تُعرض بلغتها الحقيقية في الدرس والبحث وبطاقات المراجعة. حارس دائم جديد. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
 
 Historical v182 batch: `neutral-self-waveform-comparison-v1` creates 48 independently peak-normalized amplitude bins from the same-origin model clip and in-memory learner recording (≤60 seconds / ≤4 MB each), shows separate durations, and makes no time alignment, similarity score, upload, persistence, or learner-state mutation. v182 is now the previous complete pack retained for rollback under current cache v183. P2-355's authored mini-test generator remains in all five Offline packs.
 

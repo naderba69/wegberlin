@@ -40,8 +40,9 @@ describe("theory blocks and common mistakes (ADR-147)", () => {
     const problems: string[] = [];
     for (const block of theory) {
       for (const field of ["titleAr", "explanationAr", "contrastAr", "trickAr", "formula"] as const) {
-        if (markdownEmphasis.test(block[field])) problems.push(`${block.id}.${field}: markdown emphasis`);
-        if (germanQuoteAroundArabic.test(block[field])) problems.push(`${block.id}.${field}: „…“ around Arabic`);
+        const text = block[field] ?? "";
+        if (markdownEmphasis.test(text)) problems.push(`${block.id}.${field}: markdown emphasis`);
+        if (germanQuoteAroundArabic.test(text)) problems.push(`${block.id}.${field}: „…“ around Arabic`);
       }
     }
     for (const mistake of mistakes) {

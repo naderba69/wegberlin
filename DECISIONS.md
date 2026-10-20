@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v255 · 2026-10-20 · تدقيق أسئلة القراءة والاستماع (ADR-146): قُرئت الأسئلة الـ576 في الدروس الـ96 (288 قراءة و288 استماعًا) مع نصها أو تسجيلها، فصُحّح 24 سؤالًا كان شرحها يخالف النص أو فيها خيار خارج النص أو مكرر للجواب. ولأن الخيارات تُعرض مخلوطة، صار 15 شرحًا يسمّي الخيار بمحتواه لا بمكانه («الخيار الثاني»). حارس دائم جديد يمنع ذلك. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
+Sync batch: v256 · 2026-10-20 · تدقيق القواعد والأخطاء الشائعة (ADR-147): قُرئت كتل القواعد الـ272 والأخطاء الشائعة الـ392 في الدروس الـ96، فصُحّح 50 موضعًا في 33 درسًا (ألمانية غير دقيقة مثل «Der Flug ist spät»، وأخطاء لا تُظهر الخطأ، وشروح عربية تكرر الجملة الألمانية فقط، وأخطاء نحو وصياغة عربية، وعلامات تنصيص). وكانت 129 خانة خطأ مكتوبة بالعربية تُعرض كأنها ألمانية من اليسار إلى اليمين، فصارت تُعرض بلغتها الحقيقية في الدرس والبحث وبطاقات المراجعة. حارس دائم جديد. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1975,3 +1975,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: 24 questions corrected (22 explanations that contradicted or overstated the text, for example «inbegriffen» for a breakfast that is «nicht dabei», the arm for stomach pain, a cancelled appointment that was moved; three off-text distractors in b2-08-rq2 and one distractor equal to the key in b2-17-rq1 replaced). 15 explanations now name options by content instead of «الخيار الثاني / الجملة الأخيرة». No `transcriptDe` changed, no item added, removed or reordered. New guard `tests/unit/option-position-reference-guard.test.ts` with planted errors.
 - Result: 576/576 questions read, 0 positional references to shuffled options. Contextual candidates: nouns 5,400/3,466, verb pairs 1,335/1,200 (pending 89 + 1 unchanged). JS 2,140,719 B, curriculum 1,307,248 B (1,752 B left). Pack generation v255.
 - Details: `docs/adr/ADR-146-audit-of-reading-and-listening-questions.md`.
+
+## ADR-147 — Audit all theory blocks and common mistakes; show mistake text in its real language
+
+- Status: accepted, 2026-10-20 (v256). Owner «واصل» under the instruction to audit every addition; no ceiling raised.
+- Context: ADR-146 audited reading and listening questions; the 272 theory blocks and 392 common mistakes had not been read item by item. 129 wrong/correct fields are Arabic strategy notes, but every renderer marked them German and left-to-right, and review cards marked the German back of every mistake card as Arabic.
+- Decision: 50 corrections in 33 lessons (unclear German such as «Der Flug ist spät», mistakes whose correct line changed more than the error, Arabic glosses that only repeated the German, Arabic grammar and wording, «…»/„…“ and a markdown asterisk pair). The lesson mistakes section, memory map, search results and review cards now use `fragmentLanguageAttributes`, and `mistakeLine` points the arrow along the reading direction. Nothing added, removed or reordered; no `transcriptDe` changed. New guard `tests/unit/theory-mistake-guard.test.ts` with planted errors; the language/Bidi audit requires the classifier in the four renderers.
+- Result: 272/272 blocks and 392/392 mistakes read; 0 mistake fields shown in the wrong language. Contextual candidates: nouns 5,399/3,465, verb pairs 1,334/1,199 (pending 89 + 1 unchanged). JS 2,141,691 B, curriculum 1,307,311 B (1,689 B left). Pack generation v256.
+- Details: `docs/adr/ADR-147-audit-of-theory-and-common-mistakes.md`.

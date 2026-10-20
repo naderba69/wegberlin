@@ -1,6 +1,6 @@
 # Der Weg nach Berlin — Idea Backlog (405 بنودًا: 401 مصنَّفة بالأولوية و4 مؤجَّلة موثَّقة)
 
-Sync batch: v254 · 2026-10-20 · تدقيق التمارين والاختبارات القصيرة (ADR-145): قُرئت الأسئلة الـ1,208 في الدروس الـ96 (728 تمرينًا و480 سؤال اختبار قصير)، فأُعيد ترتيب كلمات 44 تمرين ترتيب كانت تظهر بالترتيب الصحيح فتكشف الجواب، وصُحّح شرح أو خيار 77 سؤالًا (منها أخطاء ألمانية فعلية: zehn Uhr zwanzig بدل dreißig، ووصلة -s- خاطئة في Studienberatung، وsodann في غير موضعها). حارس دائم جديد يمنع عودة هذه الأخطاء. لم يُرفع أي سقف.
+Sync batch: v255 · 2026-10-20 · تدقيق أسئلة القراءة والاستماع (ADR-146): قُرئت الأسئلة الـ576 في الدروس الـ96 (288 قراءة و288 استماعًا) مع نصها أو تسجيلها، فصُحّح 24 سؤالًا كان شرحها يخالف النص أو فيها خيار خارج النص أو مكرر للجواب. ولأن الخيارات تُعرض مخلوطة، صار 15 شرحًا يسمّي الخيار بمحتواه لا بمكانه («الخيار الثاني»). حارس دائم جديد يمنع ذلك. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -569,3 +569,5 @@ Current contract: ADR-100 (2026-10-02) supersedes earlier completion/readiness/t
     الحارس يغطي الدروس الـ96 كلها. سقف المنهج بقي منه 1,914 بايت.
     **v254 / ADR-145: دُقّقت كل التمارين والاختبارات القصيرة** (1,208 سؤالًا): 44 تمرين ترتيب أُعيد ترتيبه، و77 شرحًا أو خيارًا صُحّح،
     وحارس دائم `exercise-explanation-guard`. سقف المنهج بقي منه 1,830 بايت.
+    **v255 / ADR-146: دُقّقت كل أسئلة القراءة والاستماع** (576 سؤالًا): 24 سؤالًا صُحّح، و15 شرحًا لا يسمّي الخيار المخلوط بمكانه،
+    وحارس دائم `option-position-reference-guard`. سقف المنهج بقي منه 1,752 بايت.

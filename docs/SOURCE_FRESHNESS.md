@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v254 · 2026-10-20 · تدقيق التمارين والاختبارات القصيرة (ADR-145): قُرئت الأسئلة الـ1,208 في الدروس الـ96 (728 تمرينًا و480 سؤال اختبار قصير)، فأُعيد ترتيب كلمات 44 تمرين ترتيب كانت تظهر بالترتيب الصحيح فتكشف الجواب، وصُحّح شرح أو خيار 77 سؤالًا (منها أخطاء ألمانية فعلية: zehn Uhr zwanzig بدل dreißig، ووصلة -s- خاطئة في Studienberatung، وsodann في غير موضعها). حارس دائم جديد يمنع عودة هذه الأخطاء. لم يُرفع أي سقف.
+Sync batch: v255 · 2026-10-20 · تدقيق أسئلة القراءة والاستماع (ADR-146): قُرئت الأسئلة الـ576 في الدروس الـ96 (288 قراءة و288 استماعًا) مع نصها أو تسجيلها، فصُحّح 24 سؤالًا كان شرحها يخالف النص أو فيها خيار خارج النص أو مكرر للجواب. ولأن الخيارات تُعرض مخلوطة، صار 15 شرحًا يسمّي الخيار بمحتواه لا بمكانه («الخيار الثاني»). حارس دائم جديد يمنع ذلك. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

@@ -33,19 +33,20 @@ describe("lexical target-gap inventory", () => {
   // v252: ADR-143 rewrote the a2-19 rechnen example ("Lernzeit" left), −1 contextual noun candidate.
   // v253: ADR-144 completed 46 card examples in B1/B2 (and a few A1/A2); +8 contextual noun and +3 verb-pair candidates, nothing new pending.
   // v254: ADR-145 corrected 77 exercise items (for example the wrong «sodann» connector block in b2-14); −4 contextual verb-pair candidates, nouns and pending unchanged.
+  // v255: ADR-146 audited all 576 reading/listening questions and replaced off-topic b2-08-rq2 / duplicate b2-17-rq1 options; −1 contextual noun and +1 verb-pair candidate, nothing new pending.
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5401,
+      totalCandidates: 5400,
       covered: 1845,
       pendingHuman: 89,
-      contextualNotTarget: 3467,
+      contextualNotTarget: 3466,
       authoredTargets: 1934,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1334,
+      totalCandidates: 1335,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1199,
+      contextualNotTarget: 1200,
       authoredTargets: 135,
     });
   });

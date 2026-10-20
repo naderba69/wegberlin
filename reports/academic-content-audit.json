@@ -3172,7 +3172,7 @@
         "prompt": "Die Wohnung ist zentral gelegen, aber die Miete ist hoch. ما الميزة وما العيب في هذه الجملة؟",
         "answer": "الميزة: الموقع، والعيب: الإيجار",
         "evidenceRef": "a1-15:miniTest:a1-15-m5:explanationAr",
-        "evidenceExcerpt": "الكلمة aber تفصل بين الميزة والعيب: «zentral gelegen» ميزة الموقع، و «die Miete ist hoch» عيب الإيجار. الخيار الثاني يقلبهما، والمساحة والمطبخ غير مذكورين، والجملة فيها ميزة وعيب معًا. فحص ذاتي: ماذا جاء قبل aber وماذا …",
+        "evidenceExcerpt": "الكلمة aber تفصل بين الميزة والعيب: «zentral gelegen» ميزة الموقع، و «die Miete ist hoch» عيب الإيجار. وعكسُهما خطأ، والمساحة والمطبخ غير مذكورين، والجملة فيها ميزة وعيب معًا. فحص ذاتي: ماذا جاء قبل aber وماذا جاء بعدها؟",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -5240,7 +5240,7 @@
         "prompt": "Gestern أي جملة تصف يوم أمس بترتيب زمني منطقي؟",
         "answer": "Zuerst bin ich aufgestanden, danach habe ich gearbeitet.",
         "evidenceRef": "a2-01:miniTest:a2-01-m4:explanationAr",
-        "evidenceExcerpt": "الترتيب الزمني يبدأ ب zuerst ثم danach: «Zuerst bin ich aufgestanden, danach habe ich gearbeitet». أما الجملة الثانية فتقلب الكلمتين، والاستيقاظ أو الفطور في المساء يكسر منطق اليوم. فحص ذاتي: هل يسير يومك من الصباح إلى …",
+        "evidenceExcerpt": "الترتيب الزمني يبدأ ب zuerst ثم danach: «Zuerst bin ich aufgestanden, danach habe ich gearbeitet». أما البدء ب Danach فيقلب الكلمتين، والاستيقاظ أو الفطور في المساء يكسر منطق اليوم. فحص ذاتي: هل يسير يومك من الصباح إلى …",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -8993,7 +8993,7 @@
         "prompt": "Lerngewohnheit أي جملة تصف عادتك في التعلم؟",
         "answer": "Ich wiederhole jeden Abend zwanzig Minuten meine Karten.",
         "evidenceRef": "a2-19:miniTest:a2-19-m3:explanationAr",
-        "evidenceExcerpt": "عادة التعلم شيء تفعله بانتظام مع وقت ومدة: «Ich wiederhole jeden Abend zwanzig Minuten meine Karten». أما «Lernen ist wichtig für alle» فرأي عام، وتجربة الأسبوع القادم خطة لا عادة، والجملة الأخيرة حكم على اللغة. فحص ذات…",
+        "evidenceExcerpt": "عادة التعلم شيء تفعله بانتظام مع وقت ومدة: «Ich wiederhole jeden Abend zwanzig Minuten meine Karten». أما «Lernen ist wichtig für alle» فرأي عام، وتجربة الأسبوع القادم خطة لا عادة، و «Deutsch ist eine schwere Sprache» ح…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9807,7 +9807,7 @@
         "prompt": "Engagement أي جملة تتحدث عن مشاركة تطوعية؟",
         "answer": "Ich helfe freiwillig zweimal im Monat im Sprachcafé.",
         "evidenceRef": "a2-23:miniTest:a2-23-m2:explanationAr",
-        "evidenceExcerpt": "المشاركة التطوعية عمل بلا أجر يُختار بحرية: «Ich helfe freiwillig zweimal im Monat im Sprachcafé». أما العمل في السوبرماركت فوظيفة مدفوعة، وشراء الطعام ليس تطوعًا، والجملة الثانية تعريف. فحص ذاتي: هل ذكرت كلمة freiwilli…",
+        "evidenceExcerpt": "المشاركة التطوعية عمل بلا أجر يُختار بحرية: «Ich helfe freiwillig zweimal im Monat im Sprachcafé». أما العمل في السوبرماركت فوظيفة مدفوعة، وشراء الطعام ليس تطوعًا، و «Ein Projekt ist ein Plan» تعريف. فحص ذاتي: هل ذكرت ك…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -9818,7 +9818,7 @@
         "prompt": "Motivation und Aufgabe أي جملة تذكر الدافع والمهمة معًا؟",
         "answer": "Ich begleite ältere Menschen, weil ich gern zuhöre.",
         "evidenceRef": "a2-23:miniTest:a2-23-m3:explanationAr",
-        "evidenceExcerpt": "الجملة الصحيحة تذكر المهمة (ältere Menschen begleiten) والدافع بعد weil: «Ich begleite ältere Menschen, weil ich gern zuhöre». الأولى مهمة بلا دافع، والثانية دافع بلا مهمة، والثالثة وصف عام للحي. فحص ذاتي: ماذا تفعل، ول…",
+        "evidenceExcerpt": "الجملة الصحيحة تذكر المهمة (ältere Menschen begleiten) والدافع بعد weil: «Ich begleite ältere Menschen, weil ich gern zuhöre». و «Ich begleite ältere Menschen.» وحدها مهمة بلا دافع، و «Weil ich gern zuhöre.» دافع بلا مه…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -10027,7 +10027,7 @@
         "prompt": "Wir suchen einen Ort für das Kursfest. أي ملاحظة تجمع المعايير والخيارات قبل القرار؟",
         "answer": "Kriterien: günstig, zentral. Optionen: Park, Café, Kursraum.",
         "evidenceRef": "a2-24:miniTest:a2-24-m3:explanationAr",
-        "evidenceExcerpt": "جمع المعايير والخيارات يأتي قبل القرار: Kriterien هي ما نريده (günstig, zentral)، و Optionen هي البدائل (Park, Café, Kursraum). أما «Wir nehmen das Café» فقرار جاهز، و «Ich mag Parks» ذوق شخصي، والجملة الأخيرة موعد. فحص…",
+        "evidenceExcerpt": "جمع المعايير والخيارات يأتي قبل القرار: Kriterien هي ما نريده (günstig, zentral)، و Optionen هي البدائل (Park, Café, Kursraum). أما «Wir nehmen das Café» فقرار جاهز، و «Ich mag Parks» ذوق شخصي، وجملة حفل الجمعة موعد. فح…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -17991,7 +17991,7 @@
         "prompt": "als ob أي صيغة تناسب «als ob» في الماضي؟",
         "answer": "… als ob er die Mahnung bekommen hätte.",
         "evidenceRef": "b2-16:miniTest:b2-16-m2:explanationAr",
-        "evidenceExcerpt": "مع als ob في الماضي يأتي التصريف الثاني ثم hätte في آخر الجملة: «als ob er die Mahnung bekommen hätte». أما bekommt فمضارع يقرّر واقعة، ووضع hat مباشرة بعد er يكسر ترتيب الجملة الجانبية، والخيار الأخير لا يحمل معنى.",
+        "evidenceExcerpt": "مع als ob في الماضي يأتي التصريف الثاني ثم hätte في آخر الجملة: «als ob er die Mahnung bekommen hätte». أما bekommt فمضارع يقرّر واقعة، ووضع hat مباشرة بعد er يكسر ترتيب الجملة الجانبية، و «die Mahnung ihm ist» لا تحمل …",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18101,7 +18101,7 @@
         "prompt": " أي فقرة تصلح لختام طلب رسمي؟",
         "answer": "Wir bitten Sie, die Anlagen bis zum 5. zu prüfen; ein Termin lässt sich kurzfristig vereinbaren, falls die Prüfung Fragen aufwirft.",
         "evidenceRef": "b2-17:controlled:b2-17-e7:explanationAr",
-        "evidenceExcerpt": "الخيار الثاني يجمع الرجاء والإمكان المشروط؛ والأول يعد بإلغاء الرسوم بلا أساس، والثالث يرفض الموعد بسبب غير منطقي، والرابع يختم بأمر بالدفع.",
+        "evidenceExcerpt": "«falls die Prüfung Fragen aufwirft» يجمع الرجاء والإمكان المشروط؛ و «die Gebühr entfällt damit» يعد بإلغاء الرسوم بلا أساس، و «nicht vereinbaren, weil» يرفض الموعد بسبب غير منطقي، و «die Gebühr ist zu entrichten» يختم ب…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18497,7 +18497,7 @@
         "prompt": " أيّ جملة تصلح لشكوى مكتوبة إلى جهة؟",
         "answer": "Der Bescheid ist am 4. April abgelaufen; ich bitte Sie, die Prüfung bis zum 12. nachzuholen.",
         "evidenceRef": "b2-19:controlled:b2-19-e7:explanationAr",
-        "evidenceExcerpt": "الأولى وقائع وأجلٌ بصيغة طلب؛ الثانية تطالب بلا مهلة، والثالثة تخلط التاريخ وترفض بنفسها، والرابعة لا تطلب شيئًا.",
+        "evidenceExcerpt": "الصحيحة وقائع وأجلٌ بصيغة طلب («ich bitte Sie»)؛ و «ich verlange» تطالب بلا مهلة، و «am 12. April abgelaufen» تخلط التاريخ وترفض بنفسها، و «nur mitteilen» لا تطلب شيئًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18607,7 +18607,7 @@
         "prompt": "Register in der Beschwerde أيّ جملة تصلح لشكوى مكتوبة؟",
         "answer": "Ihr Bescheid vom 2. April nennt die Frist nicht; ich bitte um eine Berichtigung bis zum 15.",
         "evidenceRef": "b2-19:miniTest:b2-19-m4:explanationAr",
-        "evidenceExcerpt": "الأولى تذكر الواقعة والتاريخ وتطلب بأدب مع مهلة؛ الثانية تطالب بلا مهلة، والثالثة تتهم، والرابعة لا تطلب شيئًا.",
+        "evidenceExcerpt": "الصحيحة تذكر الواقعة والتاريخ وتطلب بأدب مع مهلة («bis zum 15.»)؛ و «ich verlange hiermit» تطالب بلا مهلة، و «absichtlich weggelassen» تتهم، وجملة الشكر لا تطلب شيئًا.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -18618,7 +18618,7 @@
         "prompt": "betont oder unbetont متى تكون «doch» بمعنى «jedoch»؟",
         "answer": "Es ist ein Hinweis, doch kein Beleg.",
         "evidenceRef": "b2-19:miniTest:b2-19-m5:explanationAr",
-        "evidenceExcerpt": "في الأولى تربط doch بين جزأين متقابلين بمعنى jedoch. في الثانية أداة غير مشدّدة تعترض على ظنّ، وفي الثالثة جواب إثبات بعد سؤال منفي، وفي الرابعة أداة تليّن الطلب.",
+        "evidenceExcerpt": "في «Hinweis, doch kein Beleg» تربط doch بين جزأين متقابلين بمعنى jedoch. وفي «Das ist doch kein Beleg» أداة غير مشدّدة تعترض على ظنّ، وفي «Doch, das ist» جواب إثبات بعد سؤال منفي، وفي «Schick mir doch» أداة تليّن الطلب.",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19223,7 +19223,7 @@
         "prompt": "„die von der Behörde am Montag geprüfte Beschwerde“ أي جملة موصولة تحلّ هذا النعت المضغوط دون تغيير المعنى؟",
         "answer": "die Beschwerde, die die Behörde am Montag geprüft hat",
         "evidenceRef": "b2-22:miniTest:b2-22-m3:explanationAr",
-        "evidenceExcerpt": "النعت «geprüfte» يدل على فعل مكتمل، فيصير في الجملة الموصولة «die Beschwerde, die die Behörde am Montag geprüft hat». أما «noch prüfen muss» فيغير المعنى إلى المستقبل، والخيار الثالث ينقصه الفعل المساعد، والرابع يجعل Be…",
+        "evidenceExcerpt": "النعت «geprüfte» يدل على فعل مكتمل، فيصير في الجملة الموصولة «die Beschwerde, die die Behörde am Montag geprüft hat». أما «noch prüfen muss» فيغير المعنى إلى المستقبل، و «am Montag die Behörde geprüft» ينقصه الفعل المسا…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -19652,7 +19652,7 @@
         "prompt": "Komma zwischen Subjekt und Prädikat? أي جملة خالية من فاصلة تفصل المسند إليه عن المسند؟",
         "answer": "Die am Montag eingegangene Stellungnahme wurde geprüft.",
         "evidenceRef": "b2-24:miniTest:b2-24-m4:explanationAr",
-        "evidenceExcerpt": "المسند إليه «Die am Montag eingegangene Stellungnahme» كتلة واحدة، فلا تأتي فاصلة بينها وبين الفعل wurde. الفاصلة قبل wurde تقطع الجملة في الخيارين الأول والثاني، والفاصلة بعد Montag تقطع النعت الموسّع. فحص ذاتي: أين ين…",
+        "evidenceExcerpt": "المسند إليه «Die am Montag eingegangene Stellungnahme» كتلة واحدة، فلا تأتي فاصلة بينها وبين الفعل wurde. الفاصلة قبل wurde تقطع الجملة في «Stellungnahme, wurde»، والفاصلة بعد Montag تقطع النعت الموسّع. فحص ذاتي: أين ين…",
         "visibilityPolicy": "authorized-option-bank",
         "status": "pass"
       },
@@ -44900,10 +44900,10 @@
     "nounAnchorCount": 1733,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5401,
+      "totalCandidates": 5400,
       "covered": 1845,
       "pendingHuman": 89,
-      "contextualNotTarget": 3467,
+      "contextualNotTarget": 3466,
       "authoredTargets": 1934,
       "byLevel": {
         "A1": {
@@ -44925,18 +44925,18 @@
           "contextualNotTarget": 929
         },
         "B2": {
-          "totalCandidates": 2236,
+          "totalCandidates": 2235,
           "covered": 501,
           "pendingHuman": 89,
-          "contextualNotTarget": 1646
+          "contextualNotTarget": 1645
         }
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1334,
+      "totalCandidates": 1335,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1199,
+      "contextualNotTarget": 1200,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -44958,10 +44958,10 @@
           "contextualNotTarget": 312
         },
         "B2": {
-          "totalCandidates": 640,
+          "totalCandidates": 641,
           "covered": 48,
           "pendingHuman": 1,
-          "contextualNotTarget": 591
+          "contextualNotTarget": 592
         }
       }
     },
@@ -154153,6 +154153,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[1].options[1]",
+            "stage": "reading",
+            "text": "Dass kurze Videos die Aufmerksamkeit objektiv messbar zerstören",
+            "surface": "Dass kurze Videos die Aufmerksamkeit objektiv messbar zerstören",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Innerhalb eines Tages veröffentlichten mehrere Portale ähnliche Überschriften: „Neue Studie zeigt: Kurze Videos zerstören unsere Aufmerksamkeit.“ Auf den ersten Blick wirkten die Meldungen wie unabhängige Bestätigungen. Eine Prüfung der Belegkette ergab jedoch, dass alle Texte auf dieselbe Pressemitteilung eines Unternehmens zurückgingen, das eine Konzentrations-App verkauft. Die Mitteilung berichtete von einer Onlinebefragung unter 400 freiwilligen Nutzerinnen und Nutzern. Nach eigenen Angaben hätten 62 Prozent erklärt, sie könnten sich nach dem Konsum kurzer Videos schlechter konzentrieren. Gemessen wurde also eine subjektive Einschätzung zu einem bestimmten Zeitpunkt. Es gab weder einen Leistungstest noch eine Vergleichsgruppe oder eine Messung vor und nach der Nutzung. Die Primärquelle stützt deshalb die Aussage, dass ein Teil der Befragten eine Verschlechterung wahrnahm. Sie belegt nicht, dass kurze Videos die Aufmerksamkeit „zerstören“ oder den Effekt allein verursachen. Hinzu kommt ein möglicher Interessenkonflikt: Das Unternehmen profitiert davon, Konzentrationsprobleme hervorzuheben. Das macht die Befragung nicht automatisch falsch, verlangt aber transparente Methoden und eine unabhängige Prüfung. Zwei Portale nannten die Finanzierung, drei ließen sie weg. Nur eines verlinkte die vollständige Mitteilung. Ein weiteres Portal änderte später „zerstören“ in „könnten beeinträchtigen“, kennzeichnete die Korrektur jedoch nicht. Medienkritik bedeutet hier nicht, jedes Ergebnis abzulehnen. Eine angemessene Fassung würde Quelle, Methode und Reichweite sichtbar machen: Laut einer nicht repräsentativen Unternehmensbefragung berichteten 62 Prozent der 400 freiwillig Befragten von geringerer Konzentration nach kurzen Videos. Ob ein objektiver Effekt besteht und wodurch er verursacht wird, bleibt offen. Weitere unabhängige Untersuchungen wären nötig.",
@@ -154750,6 +154757,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "reading.questions[1].options[2]",
+            "stage": "reading",
+            "text": "Dass kurze Videos den Effekt allein und direkt verursacht haben",
+            "surface": "Dass kurze Videos den Effekt allein und direkt verursacht haben",
+            "strength": "context"
+          },
+          {
             "path": "reading.textDe",
             "stage": "reading",
             "text": "Innerhalb eines Tages veröffentlichten mehrere Portale ähnliche Überschriften: „Neue Studie zeigt: Kurze Videos zerstören unsere Aufmerksamkeit.“ Auf den ersten Blick wirkten die Meldungen wie unabhängige Bestätigungen. Eine Prüfung der Belegkette ergab jedoch, dass alle Texte auf dieselbe Pressemitteilung eines Unternehmens zurückgingen, das eine Konzentrations-App verkauft. Die Mitteilung berichtete von einer Onlinebefragung unter 400 freiwilligen Nutzerinnen und Nutzern. Nach eigenen Angaben hätten 62 Prozent erklärt, sie könnten sich nach dem Konsum kurzer Videos schlechter konzentrieren. Gemessen wurde also eine subjektive Einschätzung zu einem bestimmten Zeitpunkt. Es gab weder einen Leistungstest noch eine Vergleichsgruppe oder eine Messung vor und nach der Nutzung. Die Primärquelle stützt deshalb die Aussage, dass ein Teil der Befragten eine Verschlechterung wahrnahm. Sie belegt nicht, dass kurze Videos die Aufmerksamkeit „zerstören“ oder den Effekt allein verursachen. Hinzu kommt ein möglicher Interessenkonflikt: Das Unternehmen profitiert davon, Konzentrationsprobleme hervorzuheben. Das macht die Befragung nicht automatisch falsch, verlangt aber transparente Methoden und eine unabhängige Prüfung. Zwei Portale nannten die Finanzierung, drei ließen sie weg. Nur eines verlinkte die vollständige Mitteilung. Ein weiteres Portal änderte später „zerstören“ in „könnten beeinträchtigen“, kennzeichnete die Korrektur jedoch nicht. Medienkritik bedeutet hier nicht, jedes Ergebnis abzulehnen. Eine angemessene Fassung würde Quelle, Methode und Reichweite sichtbar machen: Laut einer nicht repräsentativen Unternehmensbefragung berichteten 62 Prozent der 400 freiwillig Befragten von geringerer Konzentration nach kurzen Videos. Ob ein objektiver Effekt besteht und wodurch er verursacht wird, bleibt offen. Weitere unabhängige Untersuchungen wären nötig.",
@@ -154858,6 +154872,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "reading.questions[1].options[3]",
+            "stage": "reading",
+            "text": "Dass das Ergebnis für alle Nutzerinnen und Nutzer gilt",
+            "surface": "Dass das Ergebnis für alle Nutzerinnen und Nutzer gilt",
+            "strength": "context"
+          },
           {
             "path": "theory[2].examples[4].de",
             "stage": "rule",
@@ -155281,13 +155302,6 @@
             "text": "Die Befragung zeigt, dass alle Teilnehmenden ihre Kompetenz inzwischen als sehr hoch einschätzen.",
             "surface": "Die Befragung zeigt, dass alle Teilnehmenden ihre Kompetenz inzwischen als sehr hoch einschätzen.",
             "strength": "context"
-          },
-          {
-            "path": "reading.questions[1].options[1]",
-            "stage": "reading",
-            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
-            "strength": "context"
           }
         ],
         "id": "lex-n-b2-08-577d9421"
@@ -155306,13 +155320,6 @@
             "stage": "controlled",
             "text": "Die Studie beweist damit eine objektive Verbesserung der Kompetenzwerte im gesamten Programm.",
             "surface": "Die Studie beweist damit eine objektive Verbesserung der Kompetenzwerte im gesamten Programm.",
-            "strength": "context"
-          },
-          {
-            "path": "reading.questions[1].options[3]",
-            "stage": "reading",
-            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
-            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
             "strength": "context"
           }
         ],
@@ -155983,25 +155990,6 @@
       {
         "lessonId": "b2-08",
         "level": "B2",
-        "lemmaCandidate": "Programm",
-        "normalizedLemma": "programm",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[1].options[2]",
-            "stage": "reading",
-            "text": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat",
-            "surface": "Dass das Programm bei allen Geförderten gleich stark gewirkt hat",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-08-1c8b1aa7"
-      },
-      {
-        "lessonId": "b2-08",
-        "level": "B2",
         "lemmaCandidate": "Prüfung",
         "normalizedLemma": "prüfung",
         "role": "context-only",
@@ -156458,32 +156446,6 @@
           }
         ],
         "id": "lex-n-b2-08-1f10645a"
-      },
-      {
-        "lessonId": "b2-08",
-        "level": "B2",
-        "lemmaCandidate": "Teilnehmenden",
-        "normalizedLemma": "teilnehmenden",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
-        "sources": [
-          {
-            "path": "reading.questions[1].options[1]",
-            "stage": "reading",
-            "text": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
-            "surface": "Dass die Teilnehmenden ihre Kompetenz objektiv deutlich verbessert haben",
-            "strength": "context"
-          },
-          {
-            "path": "reading.questions[1].options[3]",
-            "stage": "reading",
-            "text": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
-            "surface": "Dass die Kompetenzwerte der Teilnehmenden messbar stiegen",
-            "strength": "context"
-          }
-        ],
-        "id": "lex-n-b2-08-d83f90e6"
       },
       {
         "lessonId": "b2-08",
@@ -181490,6 +181452,13 @@
             "text": "Ben liest seinen Absatz vor, und Herr Aziz hört erst einmal zu: Die Anlage ist nachzureichen, die Frist ist einzuhalten, die Gebühr ist zu entrichten. Dann sagt er: Drei Pflichten, kein Mensch, keine Antwortmöglichkeit. Er diktiert die Änderung Satz für Satz. Für den Kern bleibe die Pflichtform, aber mit Frist und Zuständigkeit: Die Prüfung der Anlagen ist bis zum 5. Mai vorzunehmen. Für Bens Vorschlag nehme er die Möglichkeitsform, denn sie sei ein Angebot, keine Forderung: Ein Termin ließe sich kurzfristig vereinbaren. Die Bewertung bekomme eine Adjektivbildung auf -bar, weil Ben hier urteile, nicht beschreibe: Eine mündliche Auskunft ohne Aktenzeichen ist nicht nachvollziehbar. Ben wendet ein, so klinge alles weicher, und die Behörde könne die Frist einfach übersehen. Herr Aziz verneint: Weich sei der Text nicht, nur verteilt; die Pflicht stehe in einem einzigen Satz und sei dadurch auffälliger, weil sie nicht mehr im Lärm der anderen Pflichten untergehe. Außerdem sei der Wechsel lernbar: Wer drei gleiche Strukturen hintereinander schreibe, habe keinen Stil, sondern eine Gewohnheit. Zuletzt die häufigste Verwechslung: Wer statt der Pflicht die Möglichkeit setze, erflehe etwas, das er fordern wolle; und wer statt der Bewertung die Pflicht setze, behaupte eine Verbindlichkeit, die er nicht belegen könne.",
             "surface": "Ben liest seinen Absatz vor, und Herr Aziz hört erst einmal zu: Die Anlage ist nachzureichen, die Frist ist einzuhalten, die Gebühr ist zu entrichten. Dann sagt er: Drei Pflichten, kein Mensch, keine Antwortmöglichkeit. Er diktiert die Änderung Satz für Satz. Für den Kern bleibe die Pflichtform, aber mit Frist und Zuständigkeit: Die Prüfung der Anlagen ist bis zum 5. Mai vorzunehmen. Für Bens Vorschlag nehme er die Möglichkeitsform, denn sie sei ein Angebot, keine Forderung: Ein Termin ließe sich kurzfristig vereinbaren. Die Bewertung bekomme eine Adjektivbildung auf -bar, weil Ben hier urteile, nicht beschreibe: Eine mündliche Auskunft ohne Aktenzeichen ist nicht nachvollziehbar. Ben wendet ein, so klinge alles weicher, und die Behörde könne die Frist einfach übersehen. Herr Aziz verneint: Weich sei der Text nicht, nur verteilt; die Pflicht stehe in einem einzigen Satz und sei dadurch auffälliger, weil sie nicht mehr im Lärm der anderen Pflichten untergehe. Außerdem sei der Wechsel lernbar: Wer drei gleiche Strukturen hintereinander schreibe, habe keinen Stil, sondern eine Gewohnheit. Zuletzt die häufigste Verwechslung: Wer statt der Pflicht die Möglichkeit setze, erflehe etwas, das er fordern wolle; und wer statt der Bewertung die Pflicht setze, behaupte eine Verbindlichkeit, die er nicht belegen könne.",
             "strength": "context"
+          },
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "surface": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b2-17-6a92ce2c"
@@ -181722,6 +181691,25 @@
           }
         ],
         "id": "lex-n-b2-17-ccbcbc92"
+      },
+      {
+        "lessonId": "b2-17",
+        "level": "B2",
+        "lemmaCandidate": "Sätze",
+        "normalizedLemma": "sätze",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "surface": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b2-17-54fe8b9c"
       },
       {
         "lessonId": "b2-17",
@@ -230493,6 +230481,29 @@
       {
         "lessonId": "b2-17",
         "level": "B2",
+        "infinitiveCandidate": "enthielten",
+        "normalizedVerb": "enthielten",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "reading.questions[0].options[0]",
+            "stage": "reading",
+            "text": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "surface": "Weil die Sätze Fehler in der Pflichtform enthielten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b2-17-4e43c9b5"
+      },
+      {
+        "lessonId": "b2-17",
+        "level": "B2",
         "infinitiveCandidate": "erfolgen",
         "normalizedVerb": "erfolgen",
         "preposition": "auf",
@@ -235711,5 +235722,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "02ca14f0ef208b71868cfa3113afee9232eab78d2d7e976aee25c52af74d8a59"
+  "contentSha256": "da77291a62eb5694c9e86d898a2d82bd20c4146ddfb188b4ff522cc5d626add6"
 }

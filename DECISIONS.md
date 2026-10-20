@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v254 · 2026-10-20 · تدقيق التمارين والاختبارات القصيرة (ADR-145): قُرئت الأسئلة الـ1,208 في الدروس الـ96 (728 تمرينًا و480 سؤال اختبار قصير)، فأُعيد ترتيب كلمات 44 تمرين ترتيب كانت تظهر بالترتيب الصحيح فتكشف الجواب، وصُحّح شرح أو خيار 77 سؤالًا (منها أخطاء ألمانية فعلية: zehn Uhr zwanzig بدل dreißig، ووصلة -s- خاطئة في Studienberatung، وsodann في غير موضعها). حارس دائم جديد يمنع عودة هذه الأخطاء. لم يُرفع أي سقف.
+Sync batch: v255 · 2026-10-20 · تدقيق أسئلة القراءة والاستماع (ADR-146): قُرئت الأسئلة الـ576 في الدروس الـ96 (288 قراءة و288 استماعًا) مع نصها أو تسجيلها، فصُحّح 24 سؤالًا كان شرحها يخالف النص أو فيها خيار خارج النص أو مكرر للجواب. ولأن الخيارات تُعرض مخلوطة، صار 15 شرحًا يسمّي الخيار بمحتواه لا بمكانه («الخيار الثاني»). حارس دائم جديد يمنع ذلك. لم يُرفع أي سقف، ولم يتغير أي نص مسجّل.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -1967,3 +1967,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: 44 word-ordering tasks whose chips (shown unshuffled) already read as an accepted answer were reordered, a1-03-e3 became a four-word phrase from the lesson; 77 items had an explanation, option or prompt corrected (including «zehn Uhr zwanzig» → «dreißig» for 10:30, a false Fugen-s in «Studienberatung», «sodann» listed as a result connector, explanations that described other options, typos). No item added, removed or reordered. New guard `tests/unit/exercise-explanation-guard.test.ts` with planted errors.
 - Result: guard clean over 728 + 480 items. Contextual candidates: nouns 5,401/3,467 unchanged, verb pairs 1,334/1,199 (pending 89 + 1 unchanged). JS 2,140,647 B, curriculum 1,307,170 B (1,830 B left). Pack generation v254.
 - Details: `docs/adr/ADR-145-audit-of-all-exercises-and-mini-tests.md`.
+
+## ADR-146 — Audit all reading and listening questions; no option named by position
+
+- Status: accepted, 2026-10-20 (v255). Owner «واصل» under the instruction to audit every addition; no ceiling raised.
+- Context: ADR-145 audited exercises and mini-tests; the 288 reading and 288 listening questions had not been read against their texts and transcripts. Options of these questions, mini-tests and multiple-choice exercises are shown shuffled, yet some explanations named options by position.
+- Decision: 24 questions corrected (22 explanations that contradicted or overstated the text, for example «inbegriffen» for a breakfast that is «nicht dabei», the arm for stomach pain, a cancelled appointment that was moved; three off-text distractors in b2-08-rq2 and one distractor equal to the key in b2-17-rq1 replaced). 15 explanations now name options by content instead of «الخيار الثاني / الجملة الأخيرة». No `transcriptDe` changed, no item added, removed or reordered. New guard `tests/unit/option-position-reference-guard.test.ts` with planted errors.
+- Result: 576/576 questions read, 0 positional references to shuffled options. Contextual candidates: nouns 5,400/3,466, verb pairs 1,335/1,200 (pending 89 + 1 unchanged). JS 2,140,719 B, curriculum 1,307,248 B (1,752 B left). Pack generation v255.
+- Details: `docs/adr/ADR-146-audit-of-reading-and-listening-questions.md`.

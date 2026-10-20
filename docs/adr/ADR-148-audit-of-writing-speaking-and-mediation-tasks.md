@@ -62,7 +62,7 @@ Planted-error tests prove that the rules catch the removed defects and accept th
 | Writing prompts without a word range | 4 | **0** |
 | Models failing the app's own analyser | 9 | **0** |
 | Unit tests | 1,707 in 249 files | **1,724 in 250 files** (0 failed) |
-| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | gates pending |
+| Browser audit / E2E | 642/0 · 67/67 desktop · 67/67 mobile | **642/0 · 67/67 desktop · 67/67 mobile** (the known flaky `webgpu-runtime-resolution:24` failed once on desktop and passed alone) |
 | Curriculum gzip (ceiling 1,309,000) | 1,307,311 | **1,307,930** (+619; 1,070 B left) |
 | Client JS total (ceiling 2,205,000) | 2,141,691 | **2,143,425** (+1,734: the shared sentence splitter) |
 | Contextual candidates (nouns · verb pairs) | 5,399 / 3,465 · 1,334 / 1,199 | **5,389 / 3,455 · 1,339 / 1,204** (covered 1,845 + 134, pending 89 + 1 unchanged) |

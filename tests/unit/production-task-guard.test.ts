@@ -17,6 +17,25 @@ const wrongGermanQuotes = /[«»]|(?<![\p{L}])'[^'\n]+'(?![\p{L}])/u;
 const arabicLetter = /[\u0600-\u06FF]/u;
 const words = (text: string) => text.trim().split(/\s+/u).filter((word) => /[\p{L}\d]/u.test(word));
 
+export function modelShapeProblems(id: string, model: string): string[] {
+  const problems: string[] = [];
+  const closing = model.match(closings);
+  if (closing && closing.index !== undefined) {
+    const tail = model.slice(closing.index + closing[0].length);
+    if (/^\./u.test(tail)) problems.push(`${id}: closing formula ends with a period`);
+    else if (!/^[,!]?\s*(?:\p{Lu}\p{L}+(?:\s\p{Lu}\p{L}+)?)?\s*$/u.test(tail)) problems.push(`${id}: text continues after "${closing[0]}"`);
+  }
+  const seen = new Set<string>();
+  for (const sentence of splitGermanSentences(model)) {
+    const key = sentence.toLocaleLowerCase("de-DE").replace(/[^\p{L}\d]+/gu, " ").trim();
+    if (key.split(" ").length >= 4 && seen.has(key)) problems.push(`${id}: repeated sentence "${sentence.slice(0, 60)}"`);
+    seen.add(key);
+  }
+  return problems;
+}
+
+export const usesWrongGermanQuotes = (text: string) => wrongGermanQuotes.test(text);
+
 describe("writing, speaking and mediation tasks (ADR-148)", () => {
   it("covers the audited inventory", () => {
     expect(academicLessonList).toHaveLength(96);
@@ -50,23 +69,7 @@ describe("writing, speaking and mediation tasks (ADR-148)", () => {
   });
 
   it("ends letters with their closing and repeats no sentence", () => {
-    const problems: string[] = [];
-    for (const lesson of academicLessonList) {
-      const model = lesson.writing.modelDe;
-      const closing = model.match(closings);
-      if (closing && closing.index !== undefined) {
-        const tail = model.slice(closing.index + closing[0].length);
-        if (!/^[,!]?\s*(?:\p{Lu}\p{L}+(?:\s\p{Lu}\p{L}+)?)?\s*$/u.test(tail)) problems.push(`${lesson.id}: text continues after "${closing[0]}"`);
-        if (/^\./u.test(tail)) problems.push(`${lesson.id}: closing formula ends with a period`);
-      }
-      const seen = new Set<string>();
-      for (const sentence of splitGermanSentences(model)) {
-        const key = sentence.toLocaleLowerCase("de-DE").replace(/[^\p{L}\d]+/gu, " ").trim();
-        if (key.split(" ").length >= 4 && seen.has(key)) problems.push(`${lesson.id}: repeated sentence "${sentence.slice(0, 60)}"`);
-        seen.add(key);
-      }
-    }
-    expect(problems).toEqual([]);
+    expect(academicLessonList.flatMap((lesson) => modelShapeProblems(lesson.id, lesson.writing.modelDe))).toEqual([]);
   });
 
   it("uses German quotation marks in German production text and keeps Arabic support Arabic", () => {
@@ -79,12 +82,28 @@ describe("writing, speaking and mediation tasks (ADR-148)", () => {
         ["mediation.sourceDe", lesson.mediation.sourceDe],
         ...lesson.speaking.usefulPhrases.map((phrase, index): [string, string] => [`speaking.usefulPhrases[${index}]`, phrase]),
       ];
-      for (const [field, text] of german) if (wrongGermanQuotes.test(text)) problems.push(`${lesson.id}.${field}: «…» or '…' instead of „…“`);
+      for (const [field, text] of german) if (usesWrongGermanQuotes(text)) problems.push(`${lesson.id}.${field}: «…» or '…' instead of „…“`);
       for (const [field, text] of [["writing.promptAr", lesson.writing.promptAr], ["speaking.promptAr", lesson.speaking.promptAr], ["mediation.taskAr", lesson.mediation.taskAr], ["mediation.suggestedAr", lesson.mediation.suggestedAr]] as const) {
         if (!arabicLetter.test(text)) problems.push(`${lesson.id}.${field}: no Arabic text`);
       }
     }
     expect(problems).toEqual([]);
+  });
+});
+
+describe("the production guard catches the removed defects (planted errors)", () => {
+  it("flags padding after the closing, a period after it, and a repeated sentence", () => {
+    expect(modelShapeProblems("x", "Hallo Karim, ich komme am Montag. Viele Grüße Ich freue mich schon sehr.")).toEqual(['x: text continues after "Viele Grüße"']);
+    expect(modelShapeProblems("x", "Sehr geehrte Damen und Herren, ich bitte um Erlass. Mit freundlichen Grüßen.")).toEqual(["x: closing formula ends with a period"]);
+    expect(modelShapeProblems("x", "Ich prüfe die Frist genau. Dann schreibe ich. Ich prüfe die Frist genau.")).toHaveLength(1);
+    expect(modelShapeProblems("x", "Hallo Karim, bis Montag. Viele Grüße, Sami Mansour")).toEqual([]);
+  });
+
+  it("flags «…» and straight single quotes in German but keeps „…“ and apostrophes", () => {
+    expect(usesWrongGermanQuotes("Satz 'Es gibt Nachteile'")).toBe(true);
+    expect(usesWrongGermanQuotes("die Verbform nach «damit»")).toBe(true);
+    expect(usesWrongGermanQuotes("die Verbform nach „damit“")).toBe(false);
+    expect(usesWrongGermanQuotes("Wie geht's dir? Gibt's das?")).toBe(false);
   });
 });
 

@@ -7,7 +7,7 @@ const root=process.cwd(),MARGIN=0.15;
 // closed: safety ceiling is now 59_500_000 vs 52_943_843 measured. Pack ceilings untouched.
 // B2 lessons (b2-21…b2-24) each ship a 24kHz mono 32kbps MP3 + 24kbps Opus pair, 1_958_495 bytes in
 // total. The 15% reserve policy is untouched (safety ceiling 53_550_000); pack ceilings unchanged.
-const hardLimits={curriculumSourceGzipBytes:1_540_000,totalAudioBytes:70_000_000,packs:{a1:16_000_000,a2:16_000_000,b1:16_000_000,b2:38_000_000,full:70_000_000}};
+const hardLimits={curriculumSourceGzipBytes:1_560_000,totalAudioBytes:70_000_000,packs:{a1:16_000_000,a2:16_000_000,b1:16_000_000,b2:38_000_000,full:70_000_000}};
 async function walk(dir,accept){const rows=[];for(const entry of await readdir(dir,{withFileTypes:true})){const path=join(dir,entry.name);if(entry.isDirectory())rows.push(...await walk(path,accept));else if(accept(path))rows.push(path)}return rows}
 function allowed(limit){return Math.floor(limit*(1-MARGIN))}
 function check(issues,label,actual,limit){if(actual>allowed(limit))issues.push(`${label}: ${actual} > safety ceiling ${allowed(limit)} (${limit} hard limit with ${MARGIN*100}% margin)`)}

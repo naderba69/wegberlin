@@ -108,7 +108,7 @@
         "stage": "speaking",
         "ref": "a1-01:speaking",
         "promptDe": "Sagen Sie in 5–10 Sekunden Hallo und Ihren Namen. Fragen Sie kurz nach dem Namen oder Befinden.",
-        "promptAr": "قل مرحبًا واسمك، ثم اسأل سؤالًا قصيرًا عن الاسم أو الحال. ستبقى العبارات أمامك في المحاولة الأولى."
+        "promptAr": "قل خلال 5–10 ثوانٍ مرحبًا واسمك، ثم اسأل سؤالًا قصيرًا عن الاسم أو الحال. ستبقى العبارات أمامك في المحاولة الأولى."
       },
       "progression": {
         "introducedAr": "ابدأ بجملة قصيرة فيها فاعل وفعل مصرف ظاهر.",
@@ -219,7 +219,7 @@
         "stage": "speaking",
         "ref": "a1-08:speaking",
         "promptDe": "Beschreiben Sie einen Tag in 45–60 Sekunden. Verbinden Sie die Aktivitäten mit zuerst, dann und danach.",
-        "promptAr": "صف يومًا في 45–60 ثانية واربط الأنشطة بأولًا ثم وبعد ذلك."
+        "promptAr": "صف يومًا في 45–60 ثانية واربط الأنشطة بالروابط zuerst، dann، danach."
       },
       "progression": {
         "introducedAr": "ضع الجزء المصرف في V2 والبادئة في نهاية الجملة الرئيسية.",
@@ -9051,5 +9051,5 @@
       "evidenceBoundary": "question-function-label-no-score-mastery-or-cefr"
     }
   ],
-  "contentSha256": "f68b25095bbc3216f20c0c53282e23c524eda4d2a2e3f1748e6170ee10392452"
+  "contentSha256": "20722d8feb7c40a20c56e42a0a0de7db69a9e3dc06877eeee27e75cceafedf73"
 }

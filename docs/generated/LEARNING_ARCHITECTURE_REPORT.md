@@ -2,7 +2,7 @@
 
 Generated: 2026-09-08  
 Version: `learning-architecture-audit-v1`  
-Content SHA-256: `f68b25095bbc3216f20c0c53282e23c524eda4d2a2e3f1748e6170ee10392452`
+Content SHA-256: `20722d8feb7c40a20c56e42a0a0de7db69a9e3dc06877eeee27e75cceafedf73`
 
 ## Result
 

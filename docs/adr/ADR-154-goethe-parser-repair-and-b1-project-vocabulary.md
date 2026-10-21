@@ -99,7 +99,7 @@ No new pending review item: the lexical inventory diff before and after the batc
 | JavaScript (gzip) | 2,171,803 | **2,173,601** (31,399 B left under 2,205,000) |
 | Unit tests | 1,751 in 257 files | **1,757 in 258 files** |
 
-Gates: __GATES__ Offline fingerprint `a3745bf54b40`, full pack 6,572,429 B gzip. Pack generation v263.
+Gates: `npm run check` EXIT=0 (lint, typecheck, unit, handoff, dependency audit, build, browser accessibility 642/0, contrast 323 pages / 0 below minimum) and E2E 134/134 (67 desktop + 67 mobile) in the first run. Offline fingerprint `a3745bf54b40`, full pack 6,572,429 B gzip. Pack generation v263.
 
 ## Consequences
 

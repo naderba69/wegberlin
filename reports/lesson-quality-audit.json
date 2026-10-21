@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "9fb7510a1cb9cbf2f04133ab33b24fc2090c38df349e27b6a86b7e550c097399",
+  "contentSha256": "229cc418016a44bb229d0ab65629dec4f93cec052e38e0d0a060960e96d1c0a0",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,7 +92,7 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1794,
+    "allItems": 1798,
     "allMedianChars": 166,
     "allUnder60Chars": 0,
     "allMissing": 0,
@@ -1240,29 +1240,6 @@
         ]
       },
       {
-        "lessonId": "b2-05",
-        "level": "B2",
-        "pct": 40.3,
-        "unknown": [
-          "weiterbildungszentrum",
-          "testete",
-          "freiwillige",
-          "lernbegleitung",
-          "eingeladenen",
-          "nahmen",
-          "nutzten",
-          "stieg",
-          "testergebnis",
-          "vergleichsgruppe",
-          "schlagzeile",
-          "verdreifacht",
-          "lernfortschritt",
-          "rechnerisch",
-          "anstieg",
-          "betrug"
-        ]
-      },
-      {
         "lessonId": "b2-08",
         "level": "B2",
         "pct": 40.1,
@@ -1398,6 +1375,29 @@
           "ersetzt",
           "verbrauchte",
           "strom"
+        ]
+      },
+      {
+        "lessonId": "b2-05",
+        "level": "B2",
+        "pct": 39.5,
+        "unknown": [
+          "weiterbildungszentrum",
+          "testete",
+          "freiwillige",
+          "lernbegleitung",
+          "eingeladenen",
+          "nahmen",
+          "nutzten",
+          "stieg",
+          "testergebnis",
+          "vergleichsgruppe",
+          "schlagzeile",
+          "verdreifacht",
+          "lernfortschritt",
+          "rechnerisch",
+          "anstieg",
+          "betrug"
         ]
       },
       {
@@ -2638,7 +2638,7 @@
         "level": "B2",
         "contentTypes": 236,
         "properNames": 0,
-        "pct": 18.2,
+        "pct": 17.8,
         "unknownSample": [
           "bibliothek",
           "verfuegt",

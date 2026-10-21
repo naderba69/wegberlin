@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `82faadede3c7d610c2c24c6020aed4436de5d17229d1151b9bd6a9d7b5525910`
+Content SHA-256: `069361e7c440494a08f5da605980fa0c9537cf66dac8a29c9b0e4a6fa831436a`
 
 ## Result
 
@@ -256,7 +256,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-08-objective-2` | Ich kann eine formelle Reparaturanfrage schreiben. | أكتب طلب إصلاح رسميًا. | 1 · `b1-08-t3` | 3 | 1 · `b1-08-m5` | covered |
 | `b1-08-objective-3` | Ich kann Relativpronomen im Akkusativ und Dativ benutzen. | أستعمل ضمائر الوصل في Akkusativ و Dativ. | 2 · `b1-08:entry`, `b1-08-t1` | 5 | 2 · `b1-08-m2`, `b1-08-m3` | covered |
 | `b1-08-objective-4` | Ich kann Fakten, Folgen und gewünschte Lösung trennen. | أفرق بين الوقائع والأثر والحل. | 2 · `b1-08-t2`, `b1-08-t3` | 4 | 1 · `b1-08-m1` | covered |
-| `b1-09-objective-1` | Ich kann ein städtisches Problem aus mehreren Perspektiven beschreiben. | أصف مشكلة حضرية من عدة زوايا. | 3 · `b1-09:entry`, `b1-09:vocabulary` | 5 | 1 · `b1-09-m5` | covered |
+| `b1-09-objective-1` | Ich kann ein städtisches Problem aus mehreren Perspektiven beschreiben. | أصف مشكلة حضرية من عدة زوايا. | 3 · `b1-09:entry`, `b1-09:vocabulary` | 6 | 1 · `b1-09-m5` | covered |
 | `b1-09-objective-2` | Ich kann eine Methode mit indem ausdrücken. | أعبر عن طريقة الحل ب indem. | 2 · `b1-09:entry`, `b1-09-t1` | 6 | 1 · `b1-09-m1` | covered |
 | `b1-09-objective-3` | Ich kann Ziele und messbare Kriterien formulieren. | أصوغ أهدافًا ومؤشرات قابلة للقياس. | 1 · `b1-09-t2` | 5 | 1 · `b1-09-m2` | covered |
 | `b1-09-objective-4` | Ich kann einen Pilotversuch vorschlagen und bewerten. | أقترح تجربة محدودة وأقيمها. | 1 · `b1-09-t3` | 8 | 2 · `b1-09-m3`, `b1-09-m4` | covered |
@@ -272,7 +272,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-12-objective-2` | Ich kann Zielgruppe, Wirkung und Aktivitäten trennen. | أفرق بين الفئة والأثر والأنشطة. | 3 · `b1-12:entry`, `b1-12:vocabulary` | 8 | 2 · `b1-12-m1`, `b1-12-m2` | covered |
 | `b1-12-objective-3` | Ich kann falls für mögliche Bedingungen benutzen. | أستعمل falls لشرط محتمل. | 1 · `b1-12-t2` | 4 | 2 · `b1-12-m3`, `b1-12-m4` | covered |
 | `b1-12-objective-4` | Ich kann einen kurzen Projektantrag präsentieren. | أقدم مقترح مشروع قصيرًا. | 1 · `b1-12-t1` | 2 | 1 · `b1-12-m5` | covered |
-| `b1-13-objective-1` | Ich kann meinen Lernweg reflektiert beschreiben. | أصف مسار تعلمي بتأمل. | 2 · `b1-13:entry`, `b1-13:vocabulary` | 3 | 1 · `b1-13-m4` | covered |
+| `b1-13-objective-1` | Ich kann meinen Lernweg reflektiert beschreiben. | أصف مسار تعلمي بتأمل. | 2 · `b1-13:entry`, `b1-13:vocabulary` | 4 | 1 · `b1-13-m4` | covered |
 | `b1-13-objective-2` | Ich kann beim + nominalisiertes Verb benutzen. | أستعمل beim مع الفعل المحول إلى اسم. | 3 · `b1-13:entry`, `b1-13:vocabulary` | 3 | 1 · `b1-13-m1` | covered |
 | `b1-13-objective-3` | Ich kann Mittel mit durch ausdrücken. | أعبر عن الوسيلة ب durch. | 3 · `b1-13:entry`, `b1-13:vocabulary` | 1 | 1 · `b1-13-m2` | covered |
 | `b1-13-objective-4` | Ich kann Lernfortschritt mit Belegen bewerten. | أقيّم التقدم بالأدلة. | 2 · `b1-13:vocabulary`, `b1-13-t3` | 11 | 2 · `b1-13-m3`, `b1-13-m5` | covered |
@@ -293,7 +293,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-17-objective-3` | Ich kann Partizipien als Adjektive verstehen und benutzen. | أستعمل اسم المفعول والفاعل كصفات. | 2 · `b1-17-t1`, `b1-17-t2` | 4 | 2 · `b1-17-m1`, `b1-17-m2` | covered |
 | `b1-17-objective-4` | Ich kann eine Empfehlung für eine Zielgruppe formulieren. | أصوغ توصية لفئة محددة. | 1 · `b1-17-t3` | 6 | 1 · `b1-17-m5` | covered |
 | `b1-18-objective-1` | Ich kann Behauptung, Quelle und Beleg unterscheiden. | أفرق بين الادعاء والمصدر والدليل. | 4 · `b1-18:entry`, `b1-18:vocabulary` | 7 | 1 · `b1-18-m5` | covered |
-| `b1-18-objective-2` | Ich kann unbestätigte Aussagen mit sollen und angeblich markieren. | أميز الادعاء غير المؤكد ب sollen و angeblich. | 3 · `b1-18:entry`, `b1-18-t1` | 2 | 2 · `b1-18-m1`, `b1-18-m2` | covered |
+| `b1-18-objective-2` | Ich kann unbestätigte Aussagen mit sollen und angeblich markieren. | أميز الادعاء غير المؤكد ب sollen و angeblich. | 3 · `b1-18:entry`, `b1-18-t1` | 3 | 2 · `b1-18-m1`, `b1-18-m2` | covered |
 | `b1-18-objective-3` | Ich kann Primär- und Sekundärquellen unterscheiden. | أفرق بين المصدر الأولي والثانوي. | 1 · `b1-18:vocabulary` | 3 | 1 · `b1-18-m3` | covered |
 | `b1-18-objective-4` | Ich kann ein begrenztes Prüfergebnis formulieren. | أصوغ نتيجة تحقق محدودة. | 1 · `b1-18-t3` | 9 | 2 · `b1-18-m4`, `b1-18-m5` | covered |
 | `b1-19-objective-1` | Ich kann Missverständnisse früh erkennen. | أكتشف سوء الفهم مبكرًا. | 2 · `b1-19:entry`, `b1-19:vocabulary` | 6 | 1 · `b1-19-m5` | covered |
@@ -308,7 +308,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-21-objective-2` | Ich kann allgemeine Relativsätze mit wer/was bilden. | أبني جملًا موصولة عامة ب wer/was. | 3 · `b1-21:entry`, `b1-21-t1` | 6 | 3 · `b1-21-m1`, `b1-21-m2` | covered |
 | `b1-21-objective-3` | Ich kann Verantwortung und Unterstützung verbinden. | أربط المسؤولية بالدعم. | 3 · `b1-21:entry`, `b1-21:vocabulary` | 4 | 2 · `b1-21-m1`, `b1-21-m2` | covered |
 | `b1-21-objective-4` | Ich kann Fortschritt und Hindernisse transparent berichten. | أبلغ التقدم والعوائق بشفافية. | 1 · `b1-21-t3` | 7 | 2 · `b1-21-m4`, `b1-21-m5` | covered |
-| `b1-22-objective-1` | Ich kann ein komplexes Ziel operationalisieren. | أحوّل هدفًا معقدًا إلى خطوات قابلة للتنفيذ. | 2 · `b1-22:entry`, `b1-22:vocabulary` | 4 | 1 · `b1-22-m4` | covered |
+| `b1-22-objective-1` | Ich kann ein komplexes Ziel operationalisieren. | أحوّل هدفًا معقدًا إلى خطوات قابلة للتنفيذ. | 2 · `b1-22:entry`, `b1-22:vocabulary` | 5 | 1 · `b1-22-m4` | covered |
 | `b1-22-objective-2` | Ich kann ohne … zu und ohne dass unterscheiden. | أفرق بين ohne … zu و ohne dass. | 1 · `b1-22-t1` | 4 | 2 · `b1-22-m1`, `b1-22-m2` | covered |
 | `b1-22-objective-3` | Ich kann Frühindikatoren und Ergebnisindikatoren formulieren. | أصوغ مؤشرات مبكرة ونهائية. | 3 · `b1-22:entry`, `b1-22:vocabulary` | 5 | 1 · `b1-22-m3` | covered |
 | `b1-22-objective-4` | Ich kann Anpassungsregeln vorab festlegen. | أحدد قواعد التعديل مسبقًا. | 1 · `b1-22-t3` | 6 | 1 · `b1-22-m5` | covered |

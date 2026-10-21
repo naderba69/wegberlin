@@ -23,7 +23,7 @@ import { aiSourceIds, dueSoonAt, earliestDueDay, freshAt, oldestVerificationDay,
 
 // اسم كاش الحزمة يُقرأ من public/sw.js نفسه، لا يُكتب يدويًا: نسخة v155 مثبّتة هنا بقيت بعد ترقية
 // الخدمة إلى v156 فصار الاختبار يفتح كاشًا فارغًا ويفشل بلا سبب حقيقي (2026-09-22).
-const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v260";
+const PACK_CACHE_NAME = (await readFile("public/sw.js", "utf8")).match(/const PACK_CACHE = "([^"]+)"/)?.[1] ?? "dwnb-full-pack-v261";
 
 // الأحد يوم الراحة المخطَّط افتراضيًا حين لا يوجد عقد تعلّم (`isPlannedRestDay` في src/core/coach/study-calendar.ts)، فلا تعرض
 // صفحة «اليوم» مهمّة ولا `.mission-row`. اختبارٌ يقرأ ساعة الآلة الحقيقية ينجح ستة أيام ويسقط يوم الأحد (سقط في CI يوم الأحد
@@ -293,7 +293,7 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   test.setTimeout(90_000);
   await page.goto("/search");
   await expect(page.getByRole("heading", { name: /ابحث عن العبارة/ })).toBeVisible();
-  await expect(page.getByText(/4[.,]?543/)).toBeVisible();
+  await expect(page.getByText(/4[.,]?623/)).toBeVisible();
   const grammarGlossary=page.locator('[data-grammar-glossary-policy="bilingual-grammar-glossary-v1"]');
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();
@@ -2008,7 +2008,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
-  await expect(governance).toContainText("3338");
+  await expect(governance).toContainText("3342");
   const officialSources = governance.locator("details.context-official-sources");
   await officialSources.locator("summary").click();
   await expect(officialSources.locator("li[data-claim-id]")).toHaveCount(12);

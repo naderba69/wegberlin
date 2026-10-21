@@ -2,11 +2,11 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `82faadede3c7d610c2c24c6020aed4436de5d17229d1151b9bd6a9d7b5525910`
+Content SHA-256: `069361e7c440494a08f5da605980fa0c9537cf66dac8a29c9b0e4a6fa831436a`
 
 ## Result
 
-`PASS` — 4962 top-level runtime academic objects passed 16 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, conditional Tunisian-support note, adaptive dictation, branching conversation, and collocation network.
+`PASS` — 5033 top-level runtime academic objects passed 16 strict Zod schema families, including every nested lesson stage, question, exercise, library item, diagnostic item, exam task, profile, source, dashboard, derived review card, lexical grammar record, conditional Tunisian-support note, adaptive dictation, branching conversation, and collocation network.
 
 | Root collection | Objects | Validation |
 |---|---:|---|
@@ -20,13 +20,13 @@ Content SHA-256: `82faadede3c7d610c2c24c6020aed4436de5d17229d1151b9bd6a9d7b55259
 | examProfiles | 2 | Zod strict + nested objects |
 | examSources | 5 | Zod strict + nested objects |
 | reviewCards | 2304 | Zod strict + nested objects |
-| nounGrammarEntries | 1914 | Zod strict + nested objects |
+| nounGrammarEntries | 1985 | Zod strict + nested objects |
 | verbPrepositionFrames | 134 | Zod strict + nested objects |
 | tunisianSupportNotes | 17 | Zod strict + nested objects |
 | dictationItems | 16 | Zod strict + nested objects |
 | branchingConversationScenarios | 8 | Zod strict + nested objects |
 | collocationNetworks | 16 | Zod strict + nested objects |
-| **Total top-level objects** | **4962** | **0 schema failures** |
+| **Total top-level objects** | **5033** | **0 schema failures** |
 
 ## Cross-reference gates
 

@@ -104,8 +104,9 @@ for (const lesson of lessons) {
 
 /**
  * Bound headwords (ADR-150 / v259). The lists print a few headwords as bound forms with a trailing hyphen
- * (all-, jed-, Lieblings-, Geburts-, Einzel-, dar-); the parser strips the hyphen, and none of the six is a
- * standalone German word, so a whole-word match can never find them. They count as present when a token shows
+ * (all-, jed-, Lieblings-, Geburts-, Einzel-, dar-; in B1 also Haupt-, Doppel-, Schwieger-, Speise-, irgend-); the
+ * parser strips the hyphen, and none of these is used as a standalone word at this level, so a whole-word match can
+ * never find them (the B1 labels carry no article, unlike every noun headword). They count as present when a token shows
  * the bound form in use: an inflected determiner (alle, jeder), a compound (Lieblingsessen, Geburtsdatum,
  * Einzelzimmer, einzeln) or a da(r)- adverb (darauf, daran, darin, darum, darüber). Folded spelling, so ü = ue.
  */
@@ -116,6 +117,12 @@ const BOUND_FORMS: Record<string, RegExp> = {
   geburts: /^geburts[a-z]{3,}$/,
   einzel: /^einzel(?:n|ne|nen|ner|nes|nem|[a-z]{4,})$/,
   dar: /^dar(?:an|auf|aus|in|ueber|um|unter)$/,
+  // B1 list labels without an article (prefix headwords): Haupt-, Doppel-, Schwieger-, Speise-, irgend-.
+  haupt: /^haupt[a-z]{3,}$/,
+  doppel: /^doppel(?!t)[a-z]{3,}$/,
+  schwieger: /^schwieger[a-z]{3,}$/,
+  speise: /^(?:speise[a-z]{3,}|[a-z]{3,}speisen?)$/,
+  irgend: /^irgend(?:wo|wann|wie|was|wer|wohin|woher|ein|eine|einer|einen|einem|eines|etwas|welche|welcher|welches|welchen|welchem)$/,
 };
 function present(entry: Entry, bag: Bag): boolean {
   for (const alternative of entry.alts) {

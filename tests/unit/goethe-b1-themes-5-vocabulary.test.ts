@@ -7,7 +7,8 @@ import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries } fr
 // project-work words of the Goethe-Zertifikat B1 list that no lesson used (research, ideas, preparation, the state of
 // things, reach, evaluation) and brings back the four words that the v257 rewrites had removed from every lesson
 // (übrigens, ärgerlich, beruhigen, der Einfluss). Every word is a vocabulary phrase and a review card with an example
-// sentence from the lesson's own book-swap project (appended, so no stored ID moves), practised in one matching e8.
+// sentence, most of them set in the book swap of the lesson's free-production task (appended, so no stored ID moves),
+// practised in one matching e8.
 const lesson = academicLessonList.find((item) => item.id === "b1-24")!;
 const anchors = goetheCoreNounEntries.filter((entry) => entry.lessonId === "b1-24");
 const vocabularyText = [...lesson.phrases.map((phrase) => phrase.de), ...lesson.flashcards.map((card) => card.frontDe)].join(" \n ");

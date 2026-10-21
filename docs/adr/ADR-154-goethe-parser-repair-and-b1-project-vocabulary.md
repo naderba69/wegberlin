@@ -10,12 +10,12 @@
 
 1. After ADR-153 the full recount listed 327 B1 headwords as absent from every lesson. Before filling them, every absent word was checked against its line in the PDF.
 2. 21 of the 327 were not real gaps but faults of `scripts/parse-goethe-wortliste.py`, which groups the words of a PDF column into lines by their vertical position. The same faults hid real headwords, four of which are absent for real (duzen, tippen, treiben, anhaben):
-   - **Two headwords on one printed line.** „die Dusche, -n duzen, duzt, duzte, hat“ + „geduzt“ became one entry „die Dusche“ and one fake headword „geduzt“. The verb duzen was not in the list at all. The same happened to baden, fließen, lachen, leben, legen, nähen, singen, sollen, sparen, tippen and treiben (12 fake participles in the absent list), and to finden, landen, lernen, liefern, prüfen, sterben, fahren, sitzen, parken, senden and gewöhnen, whose participles happened to count as present.
+   - **Two headwords on one printed line.** „die Dusche, -n duzen, duzt, duzte, hat“ + „geduzt“ became one entry „die Dusche“ and one fake headword „geduzt“. The verb duzen was not in the list at all. The same happened to baden, fließen, lachen, leben, legen, nähen, singen, sollen, sparen, tippen and treiben (12 fake participles in the absent list), and to finden, landen, lernen, liefern, prüfen, sterben, fahren, sitzen, parken, senden and gewöhnen, whose participles counted as present or, for „gelandet“ and „gesendet/gesandt“, as first taught in B2.
    - **A complete verb entry after another headword.** „das Haar, -e haben, hat, hatte, hat gehabt“ was one entry, so haben was missing; likewise sein (after die Seife), tun (after das Tuch), anhaben (after ängstlich) and vorhaben (after vorgestern).
    - **Breaks and glue.** „Portemonnaie/Port-“ + „monee“ (a fake headword „monee“), „die Rezeption/Reception, -“ + „en“, „der Zeitpunkt, -“ + „e“, „sicherkälten,“ (sich erkälten), „dieWissenschaftlerin“, „der Pensionist, -en / die“ + „Pensionistin, -nen (A)“.
    - **Regional marks on the feminine line.** der Abwart, der Coiffeur and der Fleischhauer are Swiss or Austrian words, but the mark (CH) or (A) stands on the next line, at the feminine form, so the masculine entry counted as a standard word.
    - **Word-formation headwords.** „Kriminal-“, „Not-“, „un-“, „Elektro-“, „ober-“ … end in a hyphen. A whole-word match can never find them.
-3. b1-24 (the closing B1 project) was the last B1 lesson without a vocabulary e8. Its topic, a public book swap planned and evaluated as a project, fits a group of absent words about project work.
+3. b1-24 (the closing B1 project: research question, data, result, limits, next steps) was the last B1 lesson without a vocabulary e8. Its topic, and the public book swap that learners plan in its free-production task, fit a group of absent words about project work.
 4. ADR-153 found five words that the v257 rewrites had removed from every lesson: beruhigen, gelegt, ärgerlich, übrigens and der Einfluss. With the parser repaired, „gelegt“ is the verb legen again, and legen occurs in the lessons („legt“, 14 times).
 
 ## Decision
@@ -52,7 +52,7 @@ Deliberately not changed:
 
 ### 2. Project-work vocabulary in b1-24 (content)
 
-24 words, each a vocabulary-stage phrase and a review card with a full German example sentence from the lesson's own book-swap project. Both are appended, so no stored card ID moves.
+24 words, each a vocabulary-stage phrase and a review card with a full German example sentence, most of them set in the book swap of the lesson's free-production task. Both are appended, so no stored card ID moves.
 - Research and ideas: die Recherche, der Einfall, einfallen, die Anleitung.
 - Preparation: ankündigen, auffordern, die Aufforderung, besorgen, anschaffen, vergrößern.
 - State of things: der Zustand, ordentlich, durcheinander.

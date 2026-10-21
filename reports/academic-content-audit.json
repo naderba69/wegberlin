@@ -14,26 +14,26 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2304,
-      "nounGrammarEntries": 1850,
+      "nounGrammarEntries": 1914,
       "verbPrepositionFrames": 134,
       "tunisianSupportNotes": 17,
       "dictationItems": 16,
       "branchingConversationScenarios": 8,
       "collocationNetworks": 16,
-      "totalRootObjects": 4898
+      "totalRootObjects": 4962
     },
     "schemaFamilies": 16,
     "issues": []
   },
   "answerIntegrity": {
-    "closedAnswerItems": 2862,
+    "closedAnswerItems": 2866,
     "productiveTasks": 384,
     "failures": 0,
     "exemptions": 2,
     "byScope": {
       "diagnostic": 32,
       "exam": 720,
-      "lesson-controlled": 734,
+      "lesson-controlled": 738,
       "lesson-listening": 288,
       "lesson-mini-test": 480,
       "lesson-reading": 288,
@@ -10945,6 +10945,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-05-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة المشاعر والتعامل بمعناها:",
+        "answer": "peinlich → محرِج | wütend → غاضب جدًا | verzeihen → يسامح | die Geduld → الصبر | sich weigern → يرفض (أن يفعل شيئًا)",
+        "evidenceRef": "b1-05:controlled:b1-05-e8:explanationAr",
+        "evidenceExcerpt": "peinlich تصف موقفًا يُشعرك بالحرج، وwütend تصف غضبًا شديدًا. ومع verzeihen يأتي الشخص بصيغة mir أو dir، كما في المثال Kannst du mir verzeihen. أما sich weigern فيتبعه zu مع المصدر.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-05-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -13189,6 +13200,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-16-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة الصحافة والحاسوب بمعناها:",
+        "answer": "der Sender → القناة / محطة البث | die Ausgabe → العدد (من صحيفة أو مجلة) | abonnieren → يشترك في (صحيفة أو خدمة) | die Festplatte → القرص الصلب | virtuell → افتراضي (عبر الإنترنت)",
+        "evidenceRef": "b1-16:controlled:b1-16-e8:explanationAr",
+        "evidenceExcerpt": "die Ausgabe هنا عدد من صحيفة أو مجلة، ولها معنى آخر هو المصروف. وabonnieren يعني أن تشترك في شيء يصلك بانتظام، والاسم منه das Abonnement. أما virtuell فيعني عبر الإنترنت لا في المكان نفسه.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-16-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -13384,6 +13406,17 @@
         "evidenceRef": "b1-17:controlled:b1-17-e7:explanationAr",
         "evidenceExcerpt": "العبارة المحفوظة للتقديم الوصفي: «Im Mittelpunkt steht eine junge Familie» أي أنها محور القصة. كلمة Rand أو Ende تعكس الدلالة. والفعل steht في الموضع الثاني بعد العبارة المكانية، ثم يأتي الفاعل eine junge Familie. ويُقب…",
         "visibilityPolicy": "hidden-target",
+        "status": "pass"
+      },
+      {
+        "id": "b1-17-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة المسرح والأدب بمعناها:",
+        "answer": "die Bühne → خشبة المسرح | der Auftritt → الظهور أمام الجمهور / العرض | das Gedicht → القصيدة | das Märchen → الحكاية الخرافية | gespannt → متشوّق لمعرفة ما سيحدث",
+        "evidenceRef": "b1-17:controlled:b1-17-e8:explanationAr",
+        "evidenceExcerpt": "der Auftritt هو ظهور الفنان أمام الجمهور، أما die Bühne فهي المكان الذي يقف عليه. وgespannt تعني أنك تنتظر بفضول ما سيحدث، كنهاية قصة. وجمع das Gedicht هو die Gedichte، وdas Märchen لا يتغير في الجمع.",
+        "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
       {
@@ -14198,6 +14231,17 @@
         "evidenceRef": "b1-21:controlled:b1-21-e7:explanationAr",
         "evidenceExcerpt": "جملة موصولة بـ Was تحمل الناقص ثم يأتي الخبر مع ist: «Was noch fehlt, ist eine klare Frist». فعل آخر يترك الجملة بلا رابط اسمي، وحذف الفاصلة يدمج الجزءين. فحص ذاتي: أعد صياغتها «Eine klare Frist fehlt» وقارن.",
         "visibilityPolicy": "hidden-target",
+        "status": "pass"
+      },
+      {
+        "id": "b1-21-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة البيئة والمجتمع بمعناها:",
+        "answer": "die Umwelt → البيئة | entsorgen → يتخلّص من (النفايات بطريقة نظامية) | die Müllabfuhr → خدمة جمع النفايات | die Versammlung → الاجتماع العام | gleichberechtigt → متساوٍ في الحقوق",
+        "evidenceRef": "b1-21:controlled:b1-21-e8:explanationAr",
+        "evidenceExcerpt": "entsorgen يعني التخلص من شيء بالطريقة الصحيحة، كالبطاريات القديمة، وdie Müllabfuhr هي الخدمة التي تجمع النفايات من البيوت. وdie Versammlung اجتماع يحضره كثيرون ليقرّروا معًا. وgleichberechtigt تعني أن للجميع الحقوق نفسه…",
+        "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
       {
@@ -40253,6 +40297,7 @@
         ],
         "practicedIn": [
           "b1-05-e5",
+          "b1-05-e8",
           "b1-05-rq1",
           "b1-05-lq1",
           "b1-05:writing",
@@ -41395,6 +41440,7 @@
           "b1-16-t2"
         ],
         "practicedIn": [
+          "b1-16-e8",
           "b1-16-rq3",
           "b1-16-lq1",
           "b1-16-lq2",
@@ -41499,6 +41545,7 @@
         ],
         "practicedIn": [
           "b1-17-e7",
+          "b1-17-e8",
           "b1-17-rq1",
           "b1-17:writing",
           "b1-17:speaking",
@@ -41922,6 +41969,7 @@
           "b1-21:vocabulary"
         ],
         "practicedIn": [
+          "b1-21-e8",
           "b1-21-rq1",
           "b1-21-lq3",
           "b1-21:writing",
@@ -44969,14 +45017,14 @@
   "lexicalTargetGaps": {
     "version": "lexical-target-gap-v1",
     "lessonCount": 96,
-    "nounAnchorCount": 1850,
+    "nounAnchorCount": 1914,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5561,
-      "covered": 1963,
+      "totalCandidates": 5667,
+      "covered": 2028,
       "pendingHuman": 89,
-      "contextualNotTarget": 3509,
-      "authoredTargets": 2052,
+      "contextualNotTarget": 3550,
+      "authoredTargets": 2117,
       "byLevel": {
         "A1": {
           "totalCandidates": 735,
@@ -44991,10 +45039,10 @@
           "contextualNotTarget": 626
         },
         "B1": {
-          "totalCandidates": 1515,
-          "covered": 535,
+          "totalCandidates": 1621,
+          "covered": 600,
           "pendingHuman": 0,
-          "contextualNotTarget": 980
+          "contextualNotTarget": 1021
         },
         "B2": {
           "totalCandidates": 2226,
@@ -45005,10 +45053,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1351,
+      "totalCandidates": 1360,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1216,
+      "contextualNotTarget": 1225,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -45024,10 +45072,10 @@
           "contextualNotTarget": 215
         },
         "B1": {
-          "totalCandidates": 354,
+          "totalCandidates": 363,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 323
+          "contextualNotTarget": 332
         },
         "B2": {
           "totalCandidates": 642,
@@ -111286,6 +111334,25 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Aufgabe",
+        "normalizedLemma": "aufgabe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er weigerte sich, die Aufgabe allein zu machen.",
+            "surface": "Er weigerte sich, die Aufgabe allein zu machen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-05-2d400581"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Beobachtung",
         "normalizedLemma": "beobachtung",
         "role": "anchor",
@@ -111430,6 +111497,40 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Enttäuschung",
+        "normalizedLemma": "enttäuschung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-14"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "die Enttäuschung",
+            "surface": "die Enttäuschung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-05-noun-14",
+            "stage": "vocabulary",
+            "surface": "die Enttäuschung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Enttäuschung",
+            "surface": "die Enttäuschung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-05-8722d1fa"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Frist",
         "normalizedLemma": "frist",
         "role": "context-only",
@@ -111478,6 +111579,47 @@
           }
         ],
         "id": "lex-n-b1-05-a23c9d5f"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "lemmaCandidate": "Geduld",
+        "normalizedLemma": "geduld",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "die Geduld",
+            "surface": "die Geduld",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "die Geduld",
+            "surface": "die Geduld",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-05-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Geduld",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "die Geduld",
+            "surface": "die Geduld",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-05-f8a6e56b"
       },
       {
         "lessonId": "b1-05",
@@ -111695,6 +111837,25 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Lehrerin",
+        "normalizedLemma": "lehrerin",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Antwort war frech, trotzdem blieb die Lehrerin freundlich.",
+            "surface": "Die Antwort war frech, trotzdem blieb die Lehrerin freundlich.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-05-b3719145"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Lösung",
         "normalizedLemma": "lösung",
         "role": "anchor",
@@ -111722,6 +111883,13 @@
             "stage": "controlled",
             "text": "eine Lösung",
             "surface": "eine Lösung",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit etwas mehr Geduld würden wir eine Lösung finden.",
+            "surface": "Mit etwas mehr Geduld würden wir eine Lösung finden.",
             "strength": "context"
           },
           {
@@ -111866,6 +112034,47 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Mühe",
+        "normalizedLemma": "mühe",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Danke für deine Mühe!",
+            "surface": "Danke für deine Mühe!",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "die Mühe",
+            "surface": "die Mühe",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-05-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Mühe",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "die Mühe",
+            "surface": "die Mühe",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-05-3a28db82"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Nachricht",
         "normalizedLemma": "nachricht",
         "role": "context-only",
@@ -111914,6 +112123,44 @@
           }
         ],
         "id": "lex-n-b1-05-da512d5f"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "lemmaCandidate": "Namen",
+        "normalizedLemma": "namen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[11].exampleDe",
+            "stage": "vocabulary",
+            "text": "Es war mir peinlich, dass ich ihren Namen vergessen hatte.",
+            "surface": "Es war mir peinlich, dass ich ihren Namen vergessen hatte.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-05-9f127e8f"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "lemmaCandidate": "Pause",
+        "normalizedLemma": "pause",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Es wäre vernünftig, erst einmal eine Pause zu machen.",
+            "surface": "Es wäre vernünftig, erst einmal eine Pause zu machen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-05-ca55f95a"
       },
       {
         "lessonId": "b1-05",
@@ -112127,6 +112374,40 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Respekt",
+        "normalizedLemma": "respekt",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].frontDe",
+            "stage": "vocabulary",
+            "text": "der Respekt",
+            "surface": "der Respekt",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-05-noun-17",
+            "stage": "vocabulary",
+            "surface": "der Respekt",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "der Respekt",
+            "surface": "der Respekt",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-05-a5d1e5ea"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Situation",
         "normalizedLemma": "situation",
         "role": "anchor",
@@ -112174,6 +112455,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "In unserem Team sind alle sehr tolerant.",
+            "surface": "In unserem Team sind alle sehr tolerant.",
+            "strength": "context"
+          },
           {
             "path": "listening.questions[0].options[0]",
             "stage": "listening",
@@ -112286,6 +112574,25 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Tür",
+        "normalizedLemma": "tür",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[27].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich bin erschrocken, als die Tür plötzlich zuschlug.",
+            "surface": "Ich bin erschrocken, als die Tür plötzlich zuschlug.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-05-02ecc26e"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Vereinbarung",
         "normalizedLemma": "vereinbarung",
         "role": "anchor",
@@ -112334,6 +112641,26 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "lemmaCandidate": "Verzeihung",
+        "normalizedLemma": "verzeihung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "lexicalRegistry.b1-05-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Verzeihung",
+            "strength": "registry"
+          }
+        ],
+        "id": "lex-n-b1-05-d3347ddb"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "lemmaCandidate": "Vorwurf",
         "normalizedLemma": "vorwurf",
         "role": "anchor",
@@ -112370,6 +112697,47 @@
           }
         ],
         "id": "lex-n-b1-05-b86243b3"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "lemmaCandidate": "Wahrheit",
+        "normalizedLemma": "wahrheit",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-05-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Sag mir bitte die Wahrheit.",
+            "surface": "Sag mir bitte die Wahrheit.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[30].frontDe",
+            "stage": "vocabulary",
+            "text": "die Wahrheit",
+            "surface": "die Wahrheit",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-05-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Wahrheit",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[37].de",
+            "stage": "vocabulary",
+            "text": "die Wahrheit",
+            "surface": "die Wahrheit",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-05-2a1829d4"
       },
       {
         "lessonId": "b1-05",
@@ -131823,6 +132191,59 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Abend",
+        "normalizedLemma": "abend",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "surface": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-cfe693c4"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Abonnement",
+        "normalizedLemma": "abonnement",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "das Abonnement",
+            "surface": "das Abonnement",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-25",
+            "stage": "vocabulary",
+            "surface": "das Abonnement",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "das Abonnement",
+            "surface": "das Abonnement",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-d5423767"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Analyse",
         "normalizedLemma": "analyse",
         "role": "context-only",
@@ -131838,6 +132259,47 @@
           }
         ],
         "id": "lex-n-b1-16-5e37df15"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Annonce",
+        "normalizedLemma": "annonce",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er hat seine alte Waschmaschine über eine Annonce verkauft.",
+            "surface": "Er hat seine alte Waschmaschine über eine Annonce verkauft.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "die Annonce",
+            "surface": "die Annonce",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Annonce",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "die Annonce",
+            "surface": "die Annonce",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-73ec8022"
       },
       {
         "lessonId": "b1-16",
@@ -132023,6 +132485,25 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Artikel",
+        "normalizedLemma": "artikel",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "surface": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-a7e06510"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Aufgabe",
         "normalizedLemma": "aufgabe",
         "role": "context-only",
@@ -132052,6 +132533,73 @@
           }
         ],
         "id": "lex-n-b1-16-c304b755"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Augen",
+        "normalizedLemma": "augen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Monitor steht zu nah vor meinen Augen.",
+            "surface": "Der Monitor steht zu nah vor meinen Augen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-3ec667cc"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Ausgabe",
+        "normalizedLemma": "ausgabe",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[1].left",
+            "stage": "controlled",
+            "text": "die Ausgabe",
+            "surface": "die Ausgabe",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "surface": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "die Ausgabe",
+            "surface": "die Ausgabe",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Ausgabe",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "die Ausgabe",
+            "surface": "die Ausgabe",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-17fe3672"
       },
       {
         "lessonId": "b1-16",
@@ -132098,6 +132646,25 @@
           }
         ],
         "id": "lex-n-b1-16-a0579e2c"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Bibliothek",
+        "normalizedLemma": "bibliothek",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Netzwerk in der Bibliothek ist heute sehr langsam.",
+            "surface": "Das Netzwerk in der Bibliothek ist heute sehr langsam.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-19f06fbb"
       },
       {
         "lessonId": "b1-16",
@@ -132158,6 +132725,130 @@
           }
         ],
         "id": "lex-n-b1-16-a0cbb215"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Familie",
+        "normalizedLemma": "familie",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "surface": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-a8c2b20b"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Festplatte",
+        "normalizedLemma": "festplatte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-31"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "die Festplatte",
+            "surface": "die Festplatte",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich speichere die Fotos zusätzlich auf einer externen Festplatte.",
+            "surface": "Ich speichere die Fotos zusätzlich auf einer externen Festplatte.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[25].frontDe",
+            "stage": "vocabulary",
+            "text": "die Festplatte",
+            "surface": "die Festplatte",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-31",
+            "stage": "vocabulary",
+            "surface": "die Festplatte",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[33].de",
+            "stage": "vocabulary",
+            "text": "die Festplatte",
+            "surface": "die Festplatte",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-45cdb5f4"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Film",
+        "normalizedLemma": "film",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wollen wir heute Abend einen Film gucken?",
+            "surface": "Wollen wir heute Abend einen Film gucken?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-cda7591a"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Folge",
+        "normalizedLemma": "folge",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "surface": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-36dbe0c9"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Fotos",
+        "normalizedLemma": "fotos",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich speichere die Fotos zusätzlich auf einer externen Festplatte.",
+            "surface": "Ich speichere die Fotos zusätzlich auf einer externen Festplatte.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-c2315c1f"
       },
       {
         "lessonId": "b1-16",
@@ -132336,6 +133027,74 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Journalist",
+        "normalizedLemma": "journalist",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "der Journalist / die Journalistin",
+            "surface": "der Journalist / die Journalistin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-18",
+            "stage": "vocabulary",
+            "surface": "der Journalist",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "der Journalist / die Journalistin",
+            "surface": "der Journalist / die Journalistin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-c3830579"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Journalistin",
+        "normalizedLemma": "journalistin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "der Journalist / die Journalistin",
+            "surface": "der Journalist / die Journalistin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Journalistin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "der Journalist / die Journalistin",
+            "surface": "der Journalist / die Journalistin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-3946fbfa"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Kollegen",
         "normalizedLemma": "kollegen",
         "role": "context-only",
@@ -132399,6 +133158,25 @@
           }
         ],
         "id": "lex-n-b1-16-5ad4e828"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Kurs",
+        "normalizedLemma": "kurs",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "surface": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-15feb6e7"
       },
       {
         "lessonId": "b1-16",
@@ -132475,6 +133253,59 @@
           }
         ],
         "id": "lex-n-b1-16-0644897b"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Magazin",
+        "normalizedLemma": "magazin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "das Magazin",
+            "surface": "das Magazin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-22",
+            "stage": "vocabulary",
+            "surface": "das Magazin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "das Magazin",
+            "surface": "das Magazin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-90719363"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Markt",
+        "normalizedLemma": "markt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[11].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Reporterin sprach mit Menschen auf dem Markt.",
+            "surface": "Die Reporterin sprach mit Menschen auf dem Markt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-ba6c6cbb"
       },
       {
         "lessonId": "b1-16",
@@ -132559,6 +133390,40 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Monitor",
+        "normalizedLemma": "monitor",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "der Monitor",
+            "surface": "der Monitor",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-29",
+            "stage": "vocabulary",
+            "surface": "der Monitor",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[31].de",
+            "stage": "vocabulary",
+            "text": "der Monitor",
+            "surface": "der Monitor",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-642def0a"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Nachrichten",
         "normalizedLemma": "nachrichten",
         "role": "context-only",
@@ -132570,6 +133435,13 @@
             "stage": "controlled",
             "text": "Statt zu die Nachrichten sofort antworten und notieren",
             "surface": "Statt zu die Nachrichten sofort antworten und notieren",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Sender zeigt die Nachrichten jeden Abend um acht Uhr.",
+            "surface": "Der Sender zeigt die Nachrichten jeden Abend um acht Uhr.",
             "strength": "context"
           }
         ],
@@ -132593,6 +133465,100 @@
           }
         ],
         "id": "lex-n-b1-16-a66eafe6"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Netzwerk",
+        "normalizedLemma": "netzwerk",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-32"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[26].frontDe",
+            "stage": "vocabulary",
+            "text": "das Netzwerk",
+            "surface": "das Netzwerk",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-32",
+            "stage": "vocabulary",
+            "surface": "das Netzwerk",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[34].de",
+            "stage": "vocabulary",
+            "text": "das Netzwerk",
+            "surface": "das Netzwerk",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-2387786c"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Neuigkeit",
+        "normalizedLemma": "neuigkeit",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Hast du schon die Neuigkeit gehört?",
+            "surface": "Hast du schon die Neuigkeit gehört?",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "die Neuigkeit",
+            "surface": "die Neuigkeit",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-26",
+            "stage": "vocabulary",
+            "surface": "die Neuigkeit",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "die Neuigkeit",
+            "surface": "die Neuigkeit",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-354e1089"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Newsletter",
+        "normalizedLemma": "newsletter",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich habe den Newsletter abonniert, aber ich lese ihn selten.",
+            "surface": "Ich habe den Newsletter abonniert, aber ich lese ihn selten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-ce534007"
       },
       {
         "lessonId": "b1-16",
@@ -132803,6 +133769,61 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Quellen",
+        "normalizedLemma": "quellen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-3"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein Journalist muss seine Quellen prüfen.",
+            "surface": "Ein Journalist muss seine Quellen prüfen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-836075e6"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Rechner",
+        "normalizedLemma": "rechner",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "der Rechner",
+            "surface": "der Rechner",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-30",
+            "stage": "vocabulary",
+            "surface": "der Rechner",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "der Rechner",
+            "surface": "der Rechner",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-141bf747"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Regel",
         "normalizedLemma": "regel",
         "role": "anchor",
@@ -132858,6 +133879,149 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Reklame",
+        "normalizedLemma": "reklame",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "die Reklame",
+            "surface": "die Reklame",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Reklame",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "die Reklame",
+            "surface": "die Reklame",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-e9adb0db"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Reportage",
+        "normalizedLemma": "reportage",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "surface": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "die Reportage",
+            "surface": "die Reportage",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Reportage",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "die Reportage",
+            "surface": "die Reportage",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-1c11bb89"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Reporter",
+        "normalizedLemma": "reporter",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "der Reporter / die Reporterin",
+            "surface": "der Reporter / die Reporterin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-16",
+            "stage": "vocabulary",
+            "surface": "der Reporter",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "der Reporter / die Reporterin",
+            "surface": "der Reporter / die Reporterin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-55fe5d81"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Reporterin",
+        "normalizedLemma": "reporterin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "der Reporter / die Reporterin",
+            "surface": "der Reporter / die Reporterin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-17",
+            "stage": "vocabulary",
+            "surface": "die Reporterin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "der Reporter / die Reporterin",
+            "surface": "der Reporter / die Reporterin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-c7e54362"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Schlaf",
         "normalizedLemma": "schlaf",
         "role": "anchor",
@@ -132900,6 +134064,141 @@
           }
         ],
         "id": "lex-n-b1-16-e1d2ea4e"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Sender",
+        "normalizedLemma": "sender",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "der Sender",
+            "surface": "der Sender",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "der Sender",
+            "surface": "der Sender",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-20",
+            "stage": "vocabulary",
+            "surface": "der Sender",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "der Sender",
+            "surface": "der Sender",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-8268bb3d"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Serie",
+        "normalizedLemma": "serie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "surface": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "die Serie",
+            "surface": "die Serie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-21",
+            "stage": "vocabulary",
+            "surface": "die Serie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "die Serie",
+            "surface": "die Serie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-3235e798"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Statistik",
+        "normalizedLemma": "statistik",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-33"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "die Statistik",
+            "surface": "die Statistik",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-33",
+            "stage": "vocabulary",
+            "surface": "die Statistik",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "die Statistik",
+            "surface": "die Statistik",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-8343d076"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Tag",
+        "normalizedLemma": "tag",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "surface": "Statt nur Zahlen zu zeigen, begleitet die Reportage eine Familie einen Tag lang.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-17c6b53c"
       },
       {
         "lessonId": "b1-16",
@@ -133103,6 +134402,40 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "lemmaCandidate": "Verlag",
+        "normalizedLemma": "verlag",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-16-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "der Verlag",
+            "surface": "der Verlag",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-16-noun-23",
+            "stage": "vocabulary",
+            "surface": "der Verlag",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "der Verlag",
+            "surface": "der Verlag",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-16-4343b92f"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "lemmaCandidate": "Videos",
         "normalizedLemma": "videos",
         "role": "context-only",
@@ -133118,6 +134451,25 @@
           }
         ],
         "id": "lex-n-b1-16-33902db4"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Waschmaschine",
+        "normalizedLemma": "waschmaschine",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er hat seine alte Waschmaschine über eine Annonce verkauft.",
+            "surface": "Er hat seine alte Waschmaschine über eine Annonce verkauft.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-9265f9e4"
       },
       {
         "lessonId": "b1-16",
@@ -133331,6 +134683,25 @@
         "id": "lex-n-b1-16-97bcd858"
       },
       {
+        "lessonId": "b1-16",
+        "level": "B1",
+        "lemmaCandidate": "Zeitung",
+        "normalizedLemma": "zeitung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "surface": "In der neuen Ausgabe der Zeitung steht ein Artikel über unseren Kurs.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-16-4a9ea7d4"
+      },
+      {
         "lessonId": "b1-17",
         "level": "B1",
         "lemmaCandidate": "Abend",
@@ -133433,6 +134804,47 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Auftritt",
+        "normalizedLemma": "auftritt",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[1].left",
+            "stage": "controlled",
+            "text": "der Auftritt",
+            "surface": "der Auftritt",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "der Auftritt",
+            "surface": "der Auftritt",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-17",
+            "stage": "vocabulary",
+            "surface": "der Auftritt",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "der Auftritt",
+            "surface": "der Auftritt",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-a40ba7b8"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Bahnhof",
         "normalizedLemma": "bahnhof",
         "role": "context-only",
@@ -133493,6 +134905,40 @@
           }
         ],
         "id": "lex-n-b1-17-2e512986"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Ballett",
+        "normalizedLemma": "ballett",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "das Ballett",
+            "surface": "das Ballett",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-20",
+            "stage": "vocabulary",
+            "surface": "das Ballett",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "das Ballett",
+            "surface": "das Ballett",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-bb1ce82b"
       },
       {
         "lessonId": "b1-17",
@@ -133565,6 +135011,25 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Bilder",
+        "normalizedLemma": "bilder",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Künstlerin zeigt ihre neuen Bilder in einer kleinen Galerie.",
+            "surface": "Die Künstlerin zeigt ihre neuen Bilder in einer kleinen Galerie.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-b890f95b"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Bruder",
         "normalizedLemma": "bruder",
         "role": "context-only",
@@ -133617,6 +135082,54 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Bühne",
+        "normalizedLemma": "bühne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Bühne",
+            "surface": "die Bühne",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "surface": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "die Bühne",
+            "surface": "die Bühne",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Bühne",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "die Bühne",
+            "surface": "die Bühne",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-1a311498"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Darstellung",
         "normalizedLemma": "darstellung",
         "role": "anchor",
@@ -133659,6 +135172,25 @@
           }
         ],
         "id": "lex-n-b1-17-6cd878cc"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Dorf",
+        "normalizedLemma": "dorf",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Erzählung spielt in einem kleinen Dorf am Meer.",
+            "surface": "Die Erzählung spielt in einem kleinen Dorf am Meer.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-50aca3e4"
       },
       {
         "lessonId": "b1-17",
@@ -133827,6 +135359,40 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Erzählung",
+        "normalizedLemma": "erzählung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-33"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "die Erzählung",
+            "surface": "die Erzählung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-33",
+            "stage": "vocabulary",
+            "surface": "die Erzählung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "die Erzählung",
+            "surface": "die Erzählung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-b196cc70"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Familie",
         "normalizedLemma": "familie",
         "role": "context-only",
@@ -133849,6 +135415,40 @@
           }
         ],
         "id": "lex-n-b1-17-f96a699c"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Fantasie",
+        "normalizedLemma": "fantasie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-38"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[27].frontDe",
+            "stage": "vocabulary",
+            "text": "die Fantasie",
+            "surface": "die Fantasie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-38",
+            "stage": "vocabulary",
+            "surface": "die Fantasie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[35].de",
+            "stage": "vocabulary",
+            "text": "die Fantasie",
+            "surface": "die Fantasie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-4fd74e98"
       },
       {
         "lessonId": "b1-17",
@@ -134016,6 +135616,25 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Films",
+        "normalizedLemma": "films",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Held des Films ist kein perfekter Mensch.",
+            "surface": "Der Held des Films ist kein perfekter Mensch.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-986d0750"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Fragen",
         "normalizedLemma": "fragen",
         "role": "context-only",
@@ -134031,6 +135650,95 @@
           }
         ],
         "id": "lex-n-b1-17-267348e2"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Galerie",
+        "normalizedLemma": "galerie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Künstlerin zeigt ihre neuen Bilder in einer kleinen Galerie.",
+            "surface": "Die Künstlerin zeigt ihre neuen Bilder in einer kleinen Galerie.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[21].frontDe",
+            "stage": "vocabulary",
+            "text": "die Galerie",
+            "surface": "die Galerie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Galerie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[29].de",
+            "stage": "vocabulary",
+            "text": "die Galerie",
+            "surface": "die Galerie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-79f26e6a"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Gedicht",
+        "normalizedLemma": "gedicht",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-31"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "das Gedicht",
+            "surface": "das Gedicht",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Unterricht haben wir ein kurzes Gedicht auswendig gelernt.",
+            "surface": "Im Unterricht haben wir ein kurzes Gedicht auswendig gelernt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "das Gedicht",
+            "surface": "das Gedicht",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-31",
+            "stage": "vocabulary",
+            "surface": "das Gedicht",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "das Gedicht",
+            "surface": "das Gedicht",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-146aba9f"
       },
       {
         "lessonId": "b1-17",
@@ -134093,6 +135801,20 @@
             "stage": "controlled",
             "text": "die Geschichte erzählt ist",
             "surface": "die Geschichte erzählt ist",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Film erzählt eine traurige Geschichte mit viel Humor.",
+            "surface": "Der Film erzählt eine traurige Geschichte mit viel Humor.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich bin gespannt, wie die Geschichte endet.",
+            "surface": "Ich bin gespannt, wie die Geschichte endet.",
             "strength": "context"
           },
           {
@@ -134324,6 +136046,176 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Held",
+        "normalizedLemma": "held",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-36"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[26].frontDe",
+            "stage": "vocabulary",
+            "text": "der Held / die Heldin",
+            "surface": "der Held / die Heldin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-36",
+            "stage": "vocabulary",
+            "surface": "der Held",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[34].de",
+            "stage": "vocabulary",
+            "text": "der Held / die Heldin",
+            "surface": "der Held / die Heldin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-c7286896"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Heldin",
+        "normalizedLemma": "heldin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-37"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[26].frontDe",
+            "stage": "vocabulary",
+            "text": "der Held / die Heldin",
+            "surface": "der Held / die Heldin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-37",
+            "stage": "vocabulary",
+            "surface": "die Heldin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[34].de",
+            "stage": "vocabulary",
+            "text": "der Held / die Heldin",
+            "surface": "der Held / die Heldin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-3399efb9"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Humor",
+        "normalizedLemma": "humor",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-39"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "der Humor",
+            "surface": "der Humor",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-39",
+            "stage": "vocabulary",
+            "surface": "der Humor",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "der Humor",
+            "surface": "der Humor",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-e3057b50"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Künstler",
+        "normalizedLemma": "künstler",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].frontDe",
+            "stage": "vocabulary",
+            "text": "der Künstler / die Künstlerin",
+            "surface": "der Künstler / die Künstlerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-25",
+            "stage": "vocabulary",
+            "surface": "der Künstler",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[26].de",
+            "stage": "vocabulary",
+            "text": "der Künstler / die Künstlerin",
+            "surface": "der Künstler / die Künstlerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-a3a5caf6"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Künstlerin",
+        "normalizedLemma": "künstlerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[18].frontDe",
+            "stage": "vocabulary",
+            "text": "der Künstler / die Künstlerin",
+            "surface": "der Künstler / die Künstlerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-26",
+            "stage": "vocabulary",
+            "surface": "die Künstlerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[26].de",
+            "stage": "vocabulary",
+            "text": "der Künstler / die Künstlerin",
+            "surface": "der Künstler / die Künstlerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-26cd9f19"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Leere",
         "normalizedLemma": "leere",
         "role": "context-only",
@@ -134339,6 +136231,25 @@
           }
         ],
         "id": "lex-n-b1-17-b819d9c0"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Lied",
+        "normalizedLemma": "lied",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Sänger hat das Lied selbst geschrieben.",
+            "surface": "Der Sänger hat das Lied selbst geschrieben.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-6541bd1f"
       },
       {
         "lessonId": "b1-17",
@@ -134369,6 +136280,115 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Maler",
+        "normalizedLemma": "maler",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "der Maler / die Malerin",
+            "surface": "der Maler / die Malerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-27",
+            "stage": "vocabulary",
+            "surface": "der Maler",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "der Maler / die Malerin",
+            "surface": "der Maler / die Malerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-344aa10e"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Malerin",
+        "normalizedLemma": "malerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "der Maler / die Malerin",
+            "surface": "der Maler / die Malerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Malerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "der Maler / die Malerin",
+            "surface": "der Maler / die Malerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-b6558511"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Märchen",
+        "normalizedLemma": "märchen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-32"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "das Märchen",
+            "surface": "das Märchen",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "das Märchen",
+            "surface": "das Märchen",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-32",
+            "stage": "vocabulary",
+            "surface": "das Märchen",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[31].de",
+            "stage": "vocabulary",
+            "text": "das Märchen",
+            "surface": "das Märchen",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-769a026e"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Meinung",
         "normalizedLemma": "meinung",
         "role": "context-only",
@@ -134384,6 +136404,44 @@
           }
         ],
         "id": "lex-n-b1-17-24a3d3e0"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Melodie",
+        "normalizedLemma": "melodie",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Orchester spielte die bekannte Melodie besonders langsam.",
+            "surface": "Das Orchester spielte die bekannte Melodie besonders langsam.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-57b53bcc"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Mensch",
+        "normalizedLemma": "mensch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Held des Films ist kein perfekter Mensch.",
+            "surface": "Der Held des Films ist kein perfekter Mensch.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-f95dd923"
       },
       {
         "lessonId": "b1-17",
@@ -134474,6 +136532,81 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Oper",
+        "normalizedLemma": "oper",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir haben Karten für die Oper am Samstagabend.",
+            "surface": "Wir haben Karten für die Oper am Samstagabend.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Oper",
+            "surface": "die Oper",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Oper",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Oper",
+            "surface": "die Oper",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-6b8ac7a5"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Orchester",
+        "normalizedLemma": "orchester",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[14].frontDe",
+            "stage": "vocabulary",
+            "text": "das Orchester",
+            "surface": "das Orchester",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-19",
+            "stage": "vocabulary",
+            "surface": "das Orchester",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[22].de",
+            "stage": "vocabulary",
+            "text": "das Orchester",
+            "surface": "das Orchester",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-bc2c4212"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Reise",
         "normalizedLemma": "reise",
         "role": "context-only",
@@ -134542,6 +136675,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Schriftstellerin liest heute Abend aus ihrem neuen Roman.",
+            "surface": "Die Schriftstellerin liest heute Abend aus ihrem neuen Roman.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-17-noun-2",
             "stage": "vocabulary",
             "surface": "der Roman",
@@ -134560,12 +136700,136 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Sänger",
+        "normalizedLemma": "sänger",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "der Sänger / die Sängerin",
+            "surface": "der Sänger / die Sängerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-23",
+            "stage": "vocabulary",
+            "surface": "der Sänger",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "der Sänger / die Sängerin",
+            "surface": "der Sänger / die Sängerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-6e0d440a"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Sängerin",
+        "normalizedLemma": "sängerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "der Sänger / die Sängerin",
+            "surface": "der Sänger / die Sängerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Sängerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "der Sänger / die Sängerin",
+            "surface": "der Sänger / die Sängerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-8ece0515"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Schauspieler",
+        "normalizedLemma": "schauspieler",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "der Schauspieler / die Schauspielerin",
+            "surface": "der Schauspieler / die Schauspielerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-21",
+            "stage": "vocabulary",
+            "surface": "der Schauspieler",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "der Schauspieler / die Schauspielerin",
+            "surface": "der Schauspieler / die Schauspielerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-094446b9"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Schauspielerin",
         "normalizedLemma": "schauspielerin",
-        "role": "context-only",
-        "status": "not-target",
-        "anchorIds": [],
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-22"
+        ],
         "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "der Schauspieler / die Schauspielerin",
+            "surface": "der Schauspieler / die Schauspielerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-22",
+            "stage": "vocabulary",
+            "surface": "die Schauspielerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "der Schauspieler / die Schauspielerin",
+            "surface": "der Schauspieler / die Schauspielerin",
+            "strength": "target"
+          },
           {
             "path": "reading.textDe",
             "stage": "reading",
@@ -134575,6 +136839,74 @@
           }
         ],
         "id": "lex-n-b1-17-725faa3a"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Schriftsteller",
+        "normalizedLemma": "schriftsteller",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-34"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[25].frontDe",
+            "stage": "vocabulary",
+            "text": "der Schriftsteller / die Schriftstellerin",
+            "surface": "der Schriftsteller / die Schriftstellerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-34",
+            "stage": "vocabulary",
+            "surface": "der Schriftsteller",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[33].de",
+            "stage": "vocabulary",
+            "text": "der Schriftsteller / die Schriftstellerin",
+            "surface": "der Schriftsteller / die Schriftstellerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-d3989907"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Schriftstellerin",
+        "normalizedLemma": "schriftstellerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-35"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[25].frontDe",
+            "stage": "vocabulary",
+            "text": "der Schriftsteller / die Schriftstellerin",
+            "surface": "der Schriftsteller / die Schriftstellerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-35",
+            "stage": "vocabulary",
+            "surface": "die Schriftstellerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[33].de",
+            "stage": "vocabulary",
+            "text": "der Schriftsteller / die Schriftstellerin",
+            "surface": "der Schriftsteller / die Schriftstellerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-2391830c"
       },
       {
         "lessonId": "b1-17",
@@ -134598,6 +136930,25 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Stadt",
+        "normalizedLemma": "stadt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Maler malte die Stadt immer im Herbst.",
+            "surface": "Der Maler malte die Stadt immer im Herbst.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-2ce93e31"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Stelle",
         "normalizedLemma": "stelle",
         "role": "context-only",
@@ -134613,6 +136964,25 @@
           }
         ],
         "id": "lex-n-b1-17-851bcbd8"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Stück",
+        "normalizedLemma": "stück",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Theatergruppe führt das Stück im Mai im Gemeindesaal auf.",
+            "surface": "Die Theatergruppe führt das Stück im Mai im Gemeindesaal auf.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-ac35a5d8"
       },
       {
         "lessonId": "b1-17",
@@ -134916,6 +137286,25 @@
       {
         "lessonId": "b1-17",
         "level": "B1",
+        "lemmaCandidate": "Vorstellung",
+        "normalizedLemma": "vorstellung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "surface": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-17-c7f40bfe"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
         "lemmaCandidate": "Wartens",
         "normalizedLemma": "wartens",
         "role": "context-only",
@@ -134969,6 +137358,40 @@
           }
         ],
         "id": "lex-n-b1-17-4aac3586"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "lemmaCandidate": "Zeichnung",
+        "normalizedLemma": "zeichnung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-17-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "die Zeichnung",
+            "surface": "die Zeichnung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-17-noun-29",
+            "stage": "vocabulary",
+            "surface": "die Zeichnung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "die Zeichnung",
+            "surface": "die Zeichnung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-17-788f14ca"
       },
       {
         "lessonId": "b1-18",
@@ -140682,6 +143105,40 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Abfalleimer",
+        "normalizedLemma": "abfalleimer",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "der Abfalleimer",
+            "surface": "der Abfalleimer",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-20",
+            "stage": "vocabulary",
+            "surface": "der Abfalleimer",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "der Abfalleimer",
+            "surface": "der Abfalleimer",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-9d46d736"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Abhängigkeit",
         "normalizedLemma": "abhängigkeit",
         "role": "anchor",
@@ -140962,6 +143419,59 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Bevölkerung",
+        "normalizedLemma": "bevölkerung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "die Bevölkerung",
+            "surface": "die Bevölkerung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-25",
+            "stage": "vocabulary",
+            "surface": "die Bevölkerung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[31].de",
+            "stage": "vocabulary",
+            "text": "die Bevölkerung",
+            "surface": "die Bevölkerung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-c522028f"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Bürger",
+        "normalizedLemma": "bürger",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "surface": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-33a90b18"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Datei",
         "normalizedLemma": "datei",
         "role": "context-only",
@@ -141192,6 +143702,104 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Gemeinschaft",
+        "normalizedLemma": "gemeinschaft",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Was wir gemeinsam schaffen, stärkt die Gemeinschaft.",
+            "surface": "Was wir gemeinsam schaffen, stärkt die Gemeinschaft.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[19].frontDe",
+            "stage": "vocabulary",
+            "text": "die Gemeinschaft",
+            "surface": "die Gemeinschaft",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-22",
+            "stage": "vocabulary",
+            "surface": "die Gemeinschaft",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[27].de",
+            "stage": "vocabulary",
+            "text": "die Gemeinschaft",
+            "surface": "die Gemeinschaft",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-a432e338"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Gericht",
+        "normalizedLemma": "gericht",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[27].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim interkulturellen Fest kochte jede Familie ein Gericht aus ihrer Heimat.",
+            "surface": "Beim interkulturellen Fest kochte jede Familie ein Gericht aus ihrer Heimat.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-7a348424"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Gespräch",
+        "normalizedLemma": "gespräch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "surface": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-80c5165c"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Gruppe",
+        "normalizedLemma": "gruppe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "In unserer Gruppe sind alle gleichberechtigt.",
+            "surface": "In unserer Gruppe sind alle gleichberechtigt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-d4986fbd"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Handlungsplan",
         "normalizedLemma": "handlungsplan",
         "role": "context-only",
@@ -141207,6 +143815,25 @@
           }
         ],
         "id": "lex-n-b1-21-7ab738f7"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Heimat",
+        "normalizedLemma": "heimat",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[27].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim interkulturellen Fest kochte jede Familie ein Gericht aus ihrer Heimat.",
+            "surface": "Beim interkulturellen Fest kochte jede Familie ein Gericht aus ihrer Heimat.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-408dd3fe"
       },
       {
         "lessonId": "b1-21",
@@ -141282,6 +143909,47 @@
           }
         ],
         "id": "lex-n-b1-21-09fc1b35"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Integration",
+        "normalizedLemma": "integration",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Sprachkurse helfen bei der Integration.",
+            "surface": "Sprachkurse helfen bei der Integration.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[26].frontDe",
+            "stage": "vocabulary",
+            "text": "die Integration",
+            "surface": "die Integration",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Integration",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[34].de",
+            "stage": "vocabulary",
+            "text": "die Integration",
+            "surface": "die Integration",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-dc859400"
       },
       {
         "lessonId": "b1-21",
@@ -141436,6 +144104,104 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Mieter",
+        "normalizedLemma": "mieter",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "surface": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-255ce9ca"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Müllabfuhr",
+        "normalizedLemma": "müllabfuhr",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "die Müllabfuhr",
+            "surface": "die Müllabfuhr",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[15].frontDe",
+            "stage": "vocabulary",
+            "text": "die Müllabfuhr",
+            "surface": "die Müllabfuhr",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Müllabfuhr",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[23].de",
+            "stage": "vocabulary",
+            "text": "die Müllabfuhr",
+            "surface": "die Müllabfuhr",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-8137da47"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Nachbarn",
+        "normalizedLemma": "nachbarn",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Umweltverschmutzung am Fluss hat die Nachbarn alarmiert.",
+            "surface": "Die Umweltverschmutzung am Fluss hat die Nachbarn alarmiert.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-d41fc169"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Nachbarschaftsgruppe",
+        "normalizedLemma": "nachbarschaftsgruppe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir sind kein politischer Verein, sondern eine Nachbarschaftsgruppe.",
+            "surface": "Wir sind kein politischer Verein, sondern eine Nachbarschaftsgruppe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-a6f02e68"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Namenskarten",
         "normalizedLemma": "namenskarten",
         "role": "context-only",
@@ -141509,6 +144275,13 @@
         ],
         "sources": [
           {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "surface": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "strength": "context"
+          },
+          {
             "path": "flashcards[9].exampleDe",
             "stage": "vocabulary",
             "text": "Bei Problemen steuern wir den Plan nach.",
@@ -141537,6 +144310,142 @@
           }
         ],
         "id": "lex-n-b1-21-b8626b85"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Plastik",
+        "normalizedLemma": "plastik",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[17].frontDe",
+            "stage": "vocabulary",
+            "text": "das Plastik",
+            "surface": "das Plastik",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-21",
+            "stage": "vocabulary",
+            "surface": "das Plastik",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[25].de",
+            "stage": "vocabulary",
+            "text": "das Plastik",
+            "surface": "das Plastik",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-1318bdaa"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Politiker",
+        "normalizedLemma": "politiker",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "der Politiker / die Politikerin",
+            "surface": "der Politiker / die Politikerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-26",
+            "stage": "vocabulary",
+            "surface": "der Politiker",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "der Politiker / die Politikerin",
+            "surface": "der Politiker / die Politikerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-a17ef29b"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Politikerin",
+        "normalizedLemma": "politikerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "der Politiker / die Politikerin",
+            "surface": "der Politiker / die Politikerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Politikerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "der Politiker / die Politikerin",
+            "surface": "der Politiker / die Politikerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-30bc6548"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Protest",
+        "normalizedLemma": "protest",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "der Protest",
+            "surface": "der Protest",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-24",
+            "stage": "vocabulary",
+            "surface": "der Protest",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "der Protest",
+            "surface": "der Protest",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-0fdf5b05"
       },
       {
         "lessonId": "b1-21",
@@ -141579,6 +144488,44 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Rathaus",
+        "normalizedLemma": "rathaus",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Protest vor dem Rathaus war friedlich.",
+            "surface": "Der Protest vor dem Rathaus war friedlich.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-53a06f76"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Schließung",
+        "normalizedLemma": "schließung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "surface": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-17471535"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Schritt",
         "normalizedLemma": "schritt",
         "role": "anchor",
@@ -141616,6 +144563,112 @@
           }
         ],
         "id": "lex-n-b1-21-af4cd279"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Sozialarbeiter",
+        "normalizedLemma": "sozialarbeiter",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "der Sozialarbeiter / die Sozialarbeiterin",
+            "surface": "der Sozialarbeiter / die Sozialarbeiterin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-29",
+            "stage": "vocabulary",
+            "surface": "der Sozialarbeiter",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "der Sozialarbeiter / die Sozialarbeiterin",
+            "surface": "der Sozialarbeiter / die Sozialarbeiterin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-6128820c"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Sozialarbeiterin",
+        "normalizedLemma": "sozialarbeiterin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "der Sozialarbeiter / die Sozialarbeiterin",
+            "surface": "der Sozialarbeiter / die Sozialarbeiterin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Sozialarbeiterin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "der Sozialarbeiter / die Sozialarbeiterin",
+            "surface": "der Sozialarbeiter / die Sozialarbeiterin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-bc8af043"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Spielplatzes",
+        "normalizedLemma": "spielplatzes",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "surface": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-8a34e9c2"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Stadt",
+        "normalizedLemma": "stadt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Bevölkerung der Stadt wächst jedes Jahr.",
+            "surface": "Die Bevölkerung der Stadt wächst jedes Jahr.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-c8db39b0"
       },
       {
         "lessonId": "b1-21",
@@ -141664,6 +144717,25 @@
           }
         ],
         "id": "lex-n-b1-21-c4161540"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Strand",
+        "normalizedLemma": "strand",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Plastikmüll verschmutzt den Strand.",
+            "surface": "Plastikmüll verschmutzt den Strand.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-859cb43a"
       },
       {
         "lessonId": "b1-21",
@@ -141847,6 +144919,122 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "lemmaCandidate": "Umwelt",
+        "normalizedLemma": "umwelt",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Umwelt",
+            "surface": "die Umwelt",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wer die Umwelt schützen will, der fängt am besten im Alltag an.",
+            "surface": "Wer die Umwelt schützen will, der fängt am besten im Alltag an.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "die Umwelt",
+            "surface": "die Umwelt",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-16",
+            "stage": "vocabulary",
+            "surface": "die Umwelt",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "die Umwelt",
+            "surface": "die Umwelt",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-3ae9e4b4"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Umweltschutz",
+        "normalizedLemma": "umweltschutz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "der Umweltschutz",
+            "surface": "der Umweltschutz",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-17",
+            "stage": "vocabulary",
+            "surface": "der Umweltschutz",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "der Umweltschutz",
+            "surface": "der Umweltschutz",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-330be72f"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Umweltverschmutzung",
+        "normalizedLemma": "umweltverschmutzung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[12].frontDe",
+            "stage": "vocabulary",
+            "text": "die Umweltverschmutzung",
+            "surface": "die Umweltverschmutzung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Umweltverschmutzung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[20].de",
+            "stage": "vocabulary",
+            "text": "die Umweltverschmutzung",
+            "surface": "die Umweltverschmutzung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-167305eb"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "lemmaCandidate": "Verantwortung",
         "normalizedLemma": "verantwortung",
         "role": "context-only",
@@ -141869,6 +145057,25 @@
           }
         ],
         "id": "lex-n-b1-21-c10c9f74"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Verein",
+        "normalizedLemma": "verein",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir sind kein politischer Verein, sondern eine Nachbarschaftsgruppe.",
+            "surface": "Wir sind kein politischer Verein, sondern eine Nachbarschaftsgruppe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-21-f0b70c61"
       },
       {
         "lessonId": "b1-21",
@@ -141909,6 +145116,54 @@
           }
         ],
         "id": "lex-n-b1-21-107a8e9e"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "lemmaCandidate": "Versammlung",
+        "normalizedLemma": "versammlung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-21-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[3].left",
+            "stage": "controlled",
+            "text": "die Versammlung",
+            "surface": "die Versammlung",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "surface": "Auf der Versammlung haben die Mieter einen Plan beschlossen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "die Versammlung",
+            "surface": "die Versammlung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-21-noun-23",
+            "stage": "vocabulary",
+            "surface": "die Versammlung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "die Versammlung",
+            "surface": "die Versammlung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-21-414f685d"
       },
       {
         "lessonId": "b1-21",
@@ -218032,6 +221287,29 @@
       {
         "lessonId": "b1-05",
         "level": "B1",
+        "infinitiveCandidate": "sollten",
+        "normalizedVerb": "sollten",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auch im Streit sollten wir mit Respekt sprechen.",
+            "surface": "Auch im Streit sollten wir mit Respekt sprechen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-05-d9f9187b"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
         "infinitiveCandidate": "sprachen",
         "normalizedVerb": "sprachen",
         "preposition": "über",
@@ -218074,6 +221352,29 @@
           }
         ],
         "id": "lex-v-b1-05-881674da"
+      },
+      {
+        "lessonId": "b1-05",
+        "level": "B1",
+        "infinitiveCandidate": "sprechen",
+        "normalizedVerb": "sprechen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auch im Streit sollten wir mit Respekt sprechen.",
+            "surface": "Auch im Streit sollten wir mit Respekt sprechen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-05-4d3eb32c"
       },
       {
         "lessonId": "b1-05",
@@ -222388,6 +225689,29 @@
       {
         "lessonId": "b1-16",
         "level": "B1",
+        "infinitiveCandidate": "sehen",
+        "normalizedVerb": "sehen",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "surface": "Statt die ganze Serie an einem Abend zu sehen, schaue ich nur eine Folge.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-16-d8f869f6"
+      },
+      {
+        "lessonId": "b1-16",
+        "level": "B1",
         "infinitiveCandidate": "stören",
         "normalizedVerb": "stören",
         "preposition": "aus",
@@ -222622,6 +225946,29 @@
           }
         ],
         "id": "lex-v-b1-17-772af96a"
+      },
+      {
+        "lessonId": "b1-17",
+        "level": "B1",
+        "infinitiveCandidate": "kamen",
+        "normalizedVerb": "kamen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "surface": "Nach der Vorstellung kamen alle Schauspieler noch einmal auf die Bühne.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-17-20e2b163"
       },
       {
         "lessonId": "b1-17",
@@ -224083,6 +227430,52 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "infinitiveCandidate": "besten",
+        "normalizedVerb": "besten",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wer die Umwelt schützen will, der fängt am besten im Alltag an.",
+            "surface": "Wer die Umwelt schützen will, der fängt am besten im Alltag an.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-1d224a32"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "infinitiveCandidate": "eingeladen",
+        "normalizedVerb": "eingeladen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "surface": "Die Politikerin hat die Bürger zu einem Gespräch eingeladen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-3092bbf9"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "infinitiveCandidate": "entscheiden",
         "normalizedVerb": "entscheiden",
         "preposition": "auf",
@@ -224152,6 +227545,29 @@
       {
         "lessonId": "b1-21",
         "level": "B1",
+        "infinitiveCandidate": "helfen",
+        "normalizedVerb": "helfen",
+        "preposition": "bei",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[26].exampleDe",
+            "stage": "vocabulary",
+            "text": "Sprachkurse helfen bei der Integration.",
+            "surface": "Sprachkurse helfen bei der Integration.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-0dff212c"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
         "infinitiveCandidate": "morgen",
         "normalizedVerb": "morgen",
         "preposition": "nach",
@@ -224194,6 +227610,29 @@
           }
         ],
         "id": "lex-v-b1-21-8c3e5f28"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "infinitiveCandidate": "protestierten",
+        "normalizedVerb": "protestierten",
+        "preposition": "gegen",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "surface": "Viele Eltern protestierten gegen die Schließung des Spielplatzes.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-2a803d8c"
       },
       {
         "lessonId": "b1-21",
@@ -224402,6 +227841,29 @@
           }
         ],
         "id": "lex-v-b1-21-2f39446c"
+      },
+      {
+        "lessonId": "b1-21",
+        "level": "B1",
+        "infinitiveCandidate": "versuchen",
+        "normalizedVerb": "versuchen",
+        "preposition": "zu",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir versuchen, weniger Plastik zu kaufen.",
+            "surface": "Wir versuchen, weniger Plastik zu kaufen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-21-8071bb68"
       },
       {
         "lessonId": "b1-21",
@@ -241643,5 +245105,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "8f31deb1ca00b91425bcc00ea7c9411aaff5993a7050d7be660b39e043f9ccfa"
+  "contentSha256": "69c76d8878698fbe62a697de025419f22d9e7879ae425ee3f74b9dfb75b5d12a"
 }

@@ -94,8 +94,8 @@ describe("review packet decision presence", () => {
     ];
     const report = auditGeneratedArtifactSignatures(files);
     expect(report.artifactCount).toBe(22);
-    expect(report.rowCount).toBe(4992);
-    expect(report.expectedCellCount).toBe(21637);
+    expect(report.rowCount).toBe(4996);
+    expect(report.expectedCellCount).toBe(21653);
     expect(report.filledCellCount).toBe(0);
     expect(report.artifacts.every((artifact) => artifact.filledCells === 0 && artifact.filledRowIds.length === 0)).toBe(true);
     expect(report.humanReviewClosureAsserted).toBe(false);
@@ -115,17 +115,17 @@ describe("review packet decision presence", () => {
     expect(errors(() => auditGeneratedArtifactSignatures([]))).toContain("at least one artifact");
   });
 
-  it("reads the committed packet as 3,334 unsigned rows across 17 sheets", () => {
+  it("reads the committed packet as 3,338 unsigned rows across 17 sheets", () => {
     const names = Array.from({ length: 17 }, (_, index) => `review-sheet-${String(index + 1).padStart(2, "0")}.csv`);
     const presence = auditReviewPacketDecisionPresence(
       names.map((name) => ({ name, content: readFileSync(`reports/review-packet/${name}`, "utf8") })),
-      { expectedRowCount: 3334 },
+      { expectedRowCount: 3338 },
     );
     expect(presence.sheetCount).toBe(17);
-    expect(presence.rowCount).toBe(3334);
+    expect(presence.rowCount).toBe(3338);
     expect(presence.fullySignedRowCount).toBe(0);
     expect(presence.signedSignatureCells).toBe(0);
-    expect(presence.signatureCellsExpected).toBe(13336);
+    expect(presence.signatureCellsExpected).toBe(13352);
     expect(presence.humanReviewClosureAsserted).toBe(false);
     const audit = JSON.parse(readFileSync("reports/human-review-audit.json", "utf8")) as { reviewPacketPresence: { rowCount: number; fullySignedRowCount: number } };
     expect(audit.reviewPacketPresence.rowCount).toBe(presence.rowCount);

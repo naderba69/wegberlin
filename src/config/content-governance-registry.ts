@@ -1,5 +1,5 @@
 export const CONTENT_GOVERNANCE_POLICY = "content-accountability-lifecycle-v1" as const;
-export const GOVERNED_CONTENT_RECORD_COUNT = 3_334 as const;
+export const GOVERNED_CONTENT_RECORD_COUNT = 3_338 as const;
 export const GOVERNED_SOURCE_COUNT = 19 as const;
 
 export type ContentLifecycleStage="draft"|"validated"|"published";

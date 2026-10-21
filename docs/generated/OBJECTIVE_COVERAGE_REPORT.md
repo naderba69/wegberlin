@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `8f31deb1ca00b91425bcc00ea7c9411aaff5993a7050d7be660b39e043f9ccfa`
+Content SHA-256: `69c76d8878698fbe62a697de025419f22d9e7879ae425ee3f74b9dfb75b5d12a`
 
 ## Result
 
@@ -241,7 +241,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-04-objective-3` | Ich kann Abhängigkeiten und Fristen erklären. | أشرح الاعتماديات والمواعيد. | 2 · `b1-04:vocabulary`, `b1-04-t2` | 7 | 1 · `b1-04-m4` | covered |
 | `b1-04-objective-4` | Ich kann konstruktives Feedback geben. | أقدم ملاحظات بناءة. | 1 · `b1-04-t3` | 4 | 1 · `b1-04-m5` | covered |
 | `b1-05-objective-1` | Ich kann einen Konflikt sachlich darstellen. | أعرض خلافًا بموضوعية. | 3 · `b1-05:entry`, `b1-05:vocabulary` | 6 | 1 · `b1-05-m1` | covered |
-| `b1-05-objective-2` | Ich kann Ich-Botschaften formulieren. | أصوغ رسائل تبدأ بتجربتي. | 3 · `b1-05:entry`, `b1-05:vocabulary` | 5 | 1 · `b1-05-m3` | covered |
+| `b1-05-objective-2` | Ich kann Ich-Botschaften formulieren. | أصوغ رسائل تبدأ بتجربتي. | 3 · `b1-05:entry`, `b1-05:vocabulary` | 6 | 1 · `b1-05-m3` | covered |
 | `b1-05-objective-3` | Ich kann obwohl und trotzdem unterscheiden. | أفرق بين obwohl و trotzdem. | 1 · `b1-05-t2` | 3 | 1 · `b1-05-m2` | covered |
 | `b1-05-objective-4` | Ich kann Lösungen mit Konjunktiv II vorschlagen. | أقترح حلولًا ب Konjunktiv II. | 1 · `b1-05-t3` | 8 | 2 · `b1-05-m4`, `b1-05-m5` | covered |
 | `b1-06-objective-1` | Ich kann meine Erfahrung strukturiert darstellen. | أعرض خبرتي بصورة منظمة. | 3 · `b1-06:entry`, `b1-06:vocabulary` | 2 | 1 · `b1-06-m2` | covered |
@@ -284,11 +284,11 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-15-objective-2` | Ich kann Inhalte mit Signalen verbinden. | أربط المحتوى بإشارات لفظية. | 2 · `b1-15:vocabulary`, `b1-15-t2` | 8 | 1 · `b1-15-m2` | covered |
 | `b1-15-objective-3` | Ich kann Folien als Unterstützung nutzen. | أستعمل الشرائح دعمًا لا نصًا. | 2 · `b1-15:entry`, `b1-15-t3` | 2 | 1 · `b1-15-m5` | covered |
 | `b1-15-objective-4` | Ich kann Fragen aufnehmen und begrenzt beantworten. | أتعامل مع الأسئلة ضمن حدود معرفتي. | 1 · `b1-15-t3` | 3 | 1 · `b1-15-m4` | covered |
-| `b1-16-objective-1` | Ich kann meine Mediennutzung differenziert analysieren. | أحلل استعمالي للإعلام بتفصيل. | 3 · `b1-16:entry`, `b1-16:vocabulary` | 6 | 1 · `b1-16-m5` | covered |
+| `b1-16-objective-1` | Ich kann meine Mediennutzung differenziert analysieren. | أحلل استعمالي للإعلام بتفصيل. | 3 · `b1-16:entry`, `b1-16:vocabulary` | 7 | 1 · `b1-16-m5` | covered |
 | `b1-16-objective-2` | Ich kann statt dass bei verschiedenen Subjekten benutzen. | أستعمل statt dass عند اختلاف الفاعل. | 1 · `b1-16-t1` | 3 | 2 · `b1-16-m1`, `b1-16-m2` | covered |
 | `b1-16-objective-3` | Ich kann Nutzung und Wirkung unterscheiden. | أفرق بين الاستعمال والأثر. | 2 · `b1-16:entry`, `b1-16-t2` | 6 | 1 · `b1-16-m3` | covered |
 | `b1-16-objective-4` | Ich kann einen realistischen Medienversuch planen. | أخطط لتجربة إعلامية واقعية. | 1 · `b1-16-t3` | 5 | 1 · `b1-16-m4` | covered |
-| `b1-17-objective-1` | Ich kann ein Werk spoilerarm zusammenfassen. | ألخص عملًا دون حرق كبير. | 2 · `b1-17:vocabulary`, `b1-17-t3` | 5 | 1 · `b1-17-m3` | covered |
+| `b1-17-objective-1` | Ich kann ein Werk spoilerarm zusammenfassen. | ألخص عملًا دون حرق كبير. | 2 · `b1-17:vocabulary`, `b1-17-t3` | 6 | 1 · `b1-17-m3` | covered |
 | `b1-17-objective-2` | Ich kann Bewertung und Beleg verbinden. | أربط التقييم بالدليل. | 2 · `b1-17:entry`, `b1-17-t3` | 6 | 1 · `b1-17-m4` | covered |
 | `b1-17-objective-3` | Ich kann Partizipien als Adjektive verstehen und benutzen. | أستعمل اسم المفعول والفاعل كصفات. | 2 · `b1-17-t1`, `b1-17-t2` | 4 | 2 · `b1-17-m1`, `b1-17-m2` | covered |
 | `b1-17-objective-4` | Ich kann eine Empfehlung für eine Zielgruppe formulieren. | أصوغ توصية لفئة محددة. | 1 · `b1-17-t3` | 6 | 1 · `b1-17-m5` | covered |
@@ -304,7 +304,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-20-objective-2` | Ich kann Ratschläge im Konjunktiv II formulieren. | أصوغ نصائح ب Konjunktiv II. | 2 · `b1-20:vocabulary`, `b1-20-t2` | 8 | 2 · `b1-20-m1`, `b1-20-m2` | covered |
 | `b1-20-objective-3` | Ich kann Rat, Information und Entscheidung trennen. | أفرق بين النصيحة والمعلومة والقرار. | 1 · `b1-20-t3` | 6 | 1 · `b1-20-m5` | covered |
 | `b1-20-objective-4` | Ich kann Risiken und Unsicherheit transparent nennen. | أذكر المخاطر وعدم اليقين. | 1 · `b1-20-t3` | 3 | 1 · `b1-20-m4` | covered |
-| `b1-21-objective-1` | Ich kann einen gemeinsamen Handlungsplan erstellen. | أنشئ خطة عمل مشتركة. | 2 · `b1-21:entry`, `b1-21:vocabulary` | 4 | 1 · `b1-21-m5` | covered |
+| `b1-21-objective-1` | Ich kann einen gemeinsamen Handlungsplan erstellen. | أنشئ خطة عمل مشتركة. | 2 · `b1-21:entry`, `b1-21:vocabulary` | 5 | 1 · `b1-21-m5` | covered |
 | `b1-21-objective-2` | Ich kann allgemeine Relativsätze mit wer/was bilden. | أبني جملًا موصولة عامة ب wer/was. | 3 · `b1-21:entry`, `b1-21-t1` | 6 | 3 · `b1-21-m1`, `b1-21-m2` | covered |
 | `b1-21-objective-3` | Ich kann Verantwortung und Unterstützung verbinden. | أربط المسؤولية بالدعم. | 3 · `b1-21:entry`, `b1-21:vocabulary` | 4 | 2 · `b1-21-m1`, `b1-21-m2` | covered |
 | `b1-21-objective-4` | Ich kann Fortschritt und Hindernisse transparent berichten. | أبلغ التقدم والعوائق بشفافية. | 1 · `b1-21-t3` | 7 | 2 · `b1-21-m4`, `b1-21-m5` | covered |

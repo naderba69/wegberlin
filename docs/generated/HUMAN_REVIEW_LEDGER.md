@@ -1,6 +1,6 @@
 # Human Review Ledger Audit
 
-Policy `human-review-ledger-v1`. Content SHA-256: `c07351cdddea15ab334e244b20b957555301b71e1862cefaedbb21f3180cf98e`
+Policy `human-review-ledger-v1`. Content SHA-256: `a1cd533bb46e58e26f1f0585b28510aee50a6542c0c17fdbf03a8907c38316e7`
 
 Boundary: reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer
 
@@ -25,10 +25,10 @@ Policy `reviewer-recorded-ledger-the-app-cannot-authenticate-a-reviewer`. Counts
 | Metric | Value |
 | --- | --- |
 | Sheets | 17 |
-| Governed rows | 3334 |
+| Governed rows | 3338 |
 | Fully signed rows | 0 |
-| Unsigned rows | 3334 |
-| Signature cells filled | 0/13336 |
+| Unsigned rows | 3338 |
+| Signature cells filled | 0/13352 |
 | Evidence contents inspected | no |
 | Review decision contents interpreted | no |
 | Human review closure asserted | no |

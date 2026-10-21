@@ -3,7 +3,7 @@
 Version: `content-governance-audit-v1`  
 Policy: `content-accountability-lifecycle-v1`  
 Curriculum: `dwnb-a1-b2-2026.10-v2` (app `0.1.0`)
-Content SHA-256: `db6b458d731a9ca4702c39cbc46c8f284417f1dd8490af1ed64f3794f4bd9d13`
+Content SHA-256: `9f92806e965003e83a103a05301969af55fa28d06e7841163795e0f41ae92a24`
 
 ## Result
 
@@ -11,7 +11,7 @@ PASS
 
 | Contract | Count |
 |---|---:|
-| Content records with owner + reviewer + lifecycle | 3334 |
+| Content records with owner + reviewer + lifecycle | 3338 |
 | Content families Draft → Validated → Published | 16 |
 | Published families | 16 |
 | External source records with owner + reviewer | 19 |
@@ -28,7 +28,7 @@ PASS
 - `exam`: 720 published records; automated validation passed, independent review pending.
 - `exam-speaking`: 72 published records; automated validation passed, independent review pending.
 - `exam-writing`: 24 published records; automated validation passed, independent review pending.
-- `lesson-controlled`: 734 published records; automated validation passed, independent review pending.
+- `lesson-controlled`: 738 published records; automated validation passed, independent review pending.
 - `lesson-listening`: 288 published records; automated validation passed, independent review pending.
 - `lesson-mediation`: 96 published records; automated validation passed, independent review pending.
 - `lesson-mini-test`: 480 published records; automated validation passed, independent review pending.

@@ -2,25 +2,25 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `lexical-target-gap-v1`  
-Content SHA-256: `b900bbe7bb214d5d2fffaffc138d26ce04265c3670c6e2656eaaa0b64b724d3e`
+Content SHA-256: `8f31deb1ca00b91425bcc00ea7c9411aaff5993a7050d7be660b39e043f9ccfa`
 
 ## Honest result
 
-`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1733 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **1 unclassified verb-frame candidates**. It also records **11 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
+`REVIEW REQUIRED` — this first machine inventory compares explicit authored lexical-target signals with the current **1850 noun anchors** and **134 verb-preposition-case frames** across **96/84 lessons**. It found **89 noun candidates** and **1 unclassified verb-frame candidates**. It also records **11 explicit structural frame exclusions**, all still pending independent German confirmation before P0-99 can close.
 
 The audit does **not** create grammatical facts. A pending noun row must receive a verified record or independent exclusion. A structural frame exclusion can remove a false-positive detector row from the unclassified queue, but its `authored-review-pending` state remains visible until final review.
 
 | Level | Noun signals | Covered | Pending human | Context only | Verb signals | Covered | Pending human | Context only |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| A1 | 734 | 468 | 0 | 266 | 110 | 25 | 0 | 85 |
+| A1 | 735 | 468 | 0 | 267 | 110 | 25 | 0 | 85 |
 | A2 | 1085 | 459 | 0 | 626 | 245 | 30 | 0 | 215 |
-| B1 | 1344 | 417 | 0 | 927 | 342 | 31 | 0 | 311 |
+| B1 | 1515 | 535 | 0 | 980 | 354 | 31 | 0 | 323 |
 | B2 | 2226 | 501 | 89 | 1636 | 642 | 48 | 1 | 593 |
-| **Total** | **5389** | **1845** | **89** | **3455** | **1339** | **134** | **1** | **1204** |
+| **Total** | **5561** | **1963** | **89** | **3509** | **1351** | **134** | **1** | **1216** |
 
 ## Classification contract
 
-- **covered:** an exact lesson-scoped anchor alias exists. Registry rows are always included, so all 1733 noun records and 134 frame records are auditable.
+- **covered:** an exact lesson-scoped anchor alias exists. Registry rows are always included, so all 1850 noun records and 134 frame records are auditable.
 - **pending-human:** an uncovered candidate appears on a vocabulary phrase, flashcard front, or uppercase reading-glossary lemma.
 - **not-target:** either a signal appears only in contextual teaching/assessment surfaces, or a versioned explicit exclusion identifies a false-positive frame detector row. Exclusions retain their reason and pending-independent-review state.
 - German sentence-initial capitalization alone is never treated as noun evidence.

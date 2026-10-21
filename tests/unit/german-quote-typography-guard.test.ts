@@ -3,7 +3,6 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { academicLessonList } from "@/data/academic-lessons";
-import { nursingLayerUnits } from "@/data/nursing-layer-registry";
 
 // ADR-150 / v259: German text uses German quotation marks „…“, never the Arabic/Swiss «…».
 // ADR-149 fixed this for lesson entry, discovery and pronunciation. v259 closes the remaining German fields:
@@ -47,17 +46,23 @@ describe("German quotation marks (ADR-150)", () => {
     expect(problems).toEqual([]);
   });
 
-  it("the built lesson and nursing data carry no «…» in German strings (runtime view of the same rule)", () => {
+  // The nursing layer allows only declared importers, so it is covered by the source scan above, not imported here.
+  it("the built lesson data carry no «…» in German strings (runtime view of the same rule)", () => {
     const lessonGerman = germanStrings(academicLessonList);
-    const nursingGerman = germanStrings(nursingLayerUnits);
     expect(lessonGerman.length).toBeGreaterThan(5000);
-    expect(nursingGerman.length).toBeGreaterThan(100);
-    const bad = [...lessonGerman, ...nursingGerman].filter(([, text]) => wrongQuotes.test(text));
+    const bad = lessonGerman.filter(([, text]) => wrongQuotes.test(text));
     expect(bad).toEqual([]);
     // The fixed listening/reading texts now quote with „…“.
     const b214 = academicLessonList.find((lesson) => lesson.id === "b2-14");
     expect(b214?.listening.transcriptDe).toContain("In Satz zwei steht „dieses“");
     expect(b214?.listening.questions[0].promptDe).toBe("Warum wird „dieses“ ersetzt?");
+  });
+
+  it("reading evidence quotes copy the German text verbatim, so they use „…“ too", () => {
+    const source = readFileSync("src/data/reading-evidence-locators.ts", "utf8");
+    const quoted = [...source.matchAll(/quotes: \[([^\]]*)\]/gu)].map((match) => match[1]);
+    expect(quoted.length).toBeGreaterThan(200);
+    expect(quoted.filter((text) => wrongQuotes.test(text))).toEqual([]);
   });
 
   it("catches planted errors and leaves Arabic fields alone", () => {

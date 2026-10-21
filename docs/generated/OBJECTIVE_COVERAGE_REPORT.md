@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `b900bbe7bb214d5d2fffaffc138d26ce04265c3670c6e2656eaaa0b64b724d3e`
+Content SHA-256: `8f31deb1ca00b91425bcc00ea7c9411aaff5993a7050d7be660b39e043f9ccfa`
 
 ## Result
 
@@ -226,13 +226,13 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `a2-24-objective-4` | Ich kann einen Gruppenentscheid dokumentieren. | أوثق قرار المجموعة. | 1 · `a2-24-t3` | 7 | 1 · `a2-24-m5` | covered |
 | `b1-01-objective-1` | Ich kann eine Biografie strukturiert erzählen. | أروي سيرة بصورة منظمة. | 4 · `b1-01:entry`, `b1-01:vocabulary` | 7 | 1 · `b1-01-m3` | covered |
 | `b1-01-objective-2` | Ich kann häufige Präteritumformen benutzen. | أستعمل صيغ الماضي البسيط الشائعة. | 3 · `b1-01:entry`, `b1-01-t1` | 4 | 2 · `b1-01-m1`, `b1-01-m2` | covered |
-| `b1-01-objective-3` | Ich kann Lebensphasen zeitlich verbinden. | أربط مراحل الحياة زمنيًا. | 3 · `b1-01:entry`, `b1-01:vocabulary` | 6 | 1 · `b1-01-m4` | covered |
+| `b1-01-objective-3` | Ich kann Lebensphasen zeitlich verbinden. | أربط مراحل الحياة زمنيًا. | 3 · `b1-01:entry`, `b1-01:vocabulary` | 7 | 1 · `b1-01-m4` | covered |
 | `b1-01-objective-4` | Ich kann Fakten und persönliche Bedeutung trennen. | أفرق بين الوقائع ودلالتها الشخصية. | 2 · `b1-01:vocabulary`, `b1-01-t3` | 6 | 1 · `b1-01-m5` | covered |
 | `b1-02-objective-1` | Ich kann eine Entscheidung nachvollziehbar begründen. | أبرر قرارًا بطريقة قابلة للمتابعة. | 1 · `b1-02:vocabulary` | 6 | 1 · `b1-02-m5` | covered |
 | `b1-02-objective-2` | Ich kann Vor- und Nachteile abwägen. | أوازن المزايا والعيوب. | 3 · `b1-02:entry`, `b1-02:vocabulary` | 7 | 1 · `b1-02-m2` | covered |
 | `b1-02-objective-3` | Ich kann sich entscheiden für/gegen korrekt benutzen. | أستعمل sich entscheiden für/gegen. | 2 · `b1-02:vocabulary`, `b1-02-t1` | 3 | 2 · `b1-02-m1`, `b1-02-m4` | covered |
 | `b1-02-objective-4` | Ich kann hypothetische Alternativen mit würde formulieren. | أصوغ بدائل افتراضية ب würde. | 1 · `b1-02-t3` | 5 | 1 · `b1-02-m3` | covered |
-| `b1-03-objective-1` | Ich kann einen Wendepunkt ausführlich beschreiben. | أصف نقطة تحول بتفصيل. | 2 · `b1-03:entry`, `b1-03:vocabulary` | 4 | 1 · `b1-03-m5` | covered |
+| `b1-03-objective-1` | Ich kann einen Wendepunkt ausführlich beschreiben. | أصف نقطة تحول بتفصيل. | 2 · `b1-03:entry`, `b1-03:vocabulary` | 5 | 1 · `b1-03-m5` | covered |
 | `b1-03-objective-2` | Ich kann Vorzeitigkeit mit nachdem ausdrücken. | أعبر عن حدث سبق آخر ب nachdem. | 3 · `b1-03:entry`, `b1-03:vocabulary` | 4 | 1 · `b1-03-m3` | covered |
 | `b1-03-objective-3` | Ich kann das Plusquamperfekt bilden. | أبني Plusquamperfekt. | 3 · `b1-03:entry`, `b1-03:vocabulary` | 8 | 3 · `b1-03-m1`, `b1-03-m2` | covered |
 | `b1-03-objective-4` | Ich kann langfristige Folgen mit seitdem erklären. | أشرح أثرًا مستمرًا ب seitdem. | 2 · `b1-03:vocabulary`, `b1-03-t3` | 6 | 1 · `b1-03-m4` | covered |
@@ -244,11 +244,11 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-05-objective-2` | Ich kann Ich-Botschaften formulieren. | أصوغ رسائل تبدأ بتجربتي. | 3 · `b1-05:entry`, `b1-05:vocabulary` | 5 | 1 · `b1-05-m3` | covered |
 | `b1-05-objective-3` | Ich kann obwohl und trotzdem unterscheiden. | أفرق بين obwohl و trotzdem. | 1 · `b1-05-t2` | 3 | 1 · `b1-05-m2` | covered |
 | `b1-05-objective-4` | Ich kann Lösungen mit Konjunktiv II vorschlagen. | أقترح حلولًا ب Konjunktiv II. | 1 · `b1-05-t3` | 8 | 2 · `b1-05-m4`, `b1-05-m5` | covered |
-| `b1-06-objective-1` | Ich kann meine Erfahrung strukturiert darstellen. | أعرض خبرتي بصورة منظمة. | 3 · `b1-06:entry`, `b1-06:vocabulary` | 1 | 1 · `b1-06-m2` | covered |
+| `b1-06-objective-1` | Ich kann meine Erfahrung strukturiert darstellen. | أعرض خبرتي بصورة منظمة. | 3 · `b1-06:entry`, `b1-06:vocabulary` | 2 | 1 · `b1-06-m2` | covered |
 | `b1-06-objective-2` | Ich kann Beispiele nach dem STAR-Prinzip geben. | أقدم أمثلة وفق STAR. | 3 · `b1-06:entry`, `b1-06:vocabulary` | 11 | 2 · `b1-06-m1`, `b1-06-m3` | covered |
 | `b1-06-objective-3` | Ich kann Stärken mit Belegen erklären. | أشرح نقاط القوة بأدلة. | 1 · `b1-06-t2` | 5 | 2 · `b1-06-m2`, `b1-06-m4` | covered |
 | `b1-06-objective-4` | Ich kann Rückfragen zu Stelle und Team stellen. | أطرح أسئلة عن الوظيفة والفريق. | 1 · `b1-06-t3` | 3 | 1 · `b1-06-m5` | covered |
-| `b1-07-objective-1` | Ich kann Stadt- und Landleben differenziert vergleichen. | أقارن المدينة والريف بتفصيل. | 3 · `b1-07:entry`, `b1-07:vocabulary` | 9 | 2 · `b1-07-m3`, `b1-07-m4` | covered |
+| `b1-07-objective-1` | Ich kann Stadt- und Landleben differenziert vergleichen. | أقارن المدينة والريف بتفصيل. | 3 · `b1-07:entry`, `b1-07:vocabulary` | 10 | 2 · `b1-07-m3`, `b1-07-m4` | covered |
 | `b1-07-objective-2` | Ich kann während als Kontrastkonnektor benutzen. | أستعمل während للمقابلة. | 2 · `b1-07:entry`, `b1-07-t1` | 2 | 1 · `b1-07-m1` | covered |
 | `b1-07-objective-3` | Ich kann je … desto bilden. | أبني علاقة je … desto. | 2 · `b1-07:entry`, `b1-07-t2` | 4 | 1 · `b1-07-m2` | covered |
 | `b1-07-objective-4` | Ich kann eine bedingte Wohnpräferenz begründen. | أبرر تفضيل سكن بحسب الشروط. | 1 · `b1-07-t3` | 5 | 1 · `b1-07-m5` | covered |
@@ -264,7 +264,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-10-objective-2` | Ich kann Alternativen mit statt … zu formulieren. | أصوغ بدائل ب statt … zu. | 1 · `b1-10-t1` | 3 | 2 · `b1-10-m1`, `b1-10-m3` | covered |
 | `b1-10-objective-3` | Ich kann fehlende Begleithandlungen mit ohne … zu beschreiben. | أصف فعلًا دون إجراء مرافق ب ohne … zu. | 1 · `b1-10-t2` | 2 | 1 · `b1-10-m2` | covered |
 | `b1-10-objective-4` | Ich kann Werbung und Bedarf unterscheiden. | أفرق بين الإعلان والحاجة. | 3 · `b1-10:entry`, `b1-10:vocabulary` | 3 | 1 · `b1-10-m5` | covered |
-| `b1-11-objective-1` | Ich kann Mobilitätsoptionen systematisch vergleichen. | أقارن خيارات التنقل بنظام. | 2 · `b1-11:vocabulary`, `b1-11-t3` | 2 | 1 · `b1-11-m5` | covered |
+| `b1-11-objective-1` | Ich kann Mobilitätsoptionen systematisch vergleichen. | أقارن خيارات التنقل بنظام. | 2 · `b1-11:vocabulary`, `b1-11-t3` | 3 | 1 · `b1-11-m5` | covered |
 | `b1-11-objective-2` | Ich kann Wirkung mit dadurch, dass ausdrücken. | أشرح الأثر ب dadurch, dass. | 3 · `b1-11:entry`, `b1-11-t1` | 5 | 3 · `b1-11-m1`, `b1-11-m2` | covered |
 | `b1-11-objective-3` | Ich kann individuelle und strukturelle Faktoren trennen. | أفرق بين الفردي والبنيوي. | 2 · `b1-11:entry`, `b1-11-t3` | 5 | 1 · `b1-11-m5` | covered |
 | `b1-11-objective-4` | Ich kann einen Mobilitätsversuch messen. | أقيس تجربة تنقل. | 2 · `b1-11:vocabulary`, `b1-11-t3` | 8 | 1 · `b1-11-m4` | covered |
@@ -298,7 +298,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-18-objective-4` | Ich kann ein begrenztes Prüfergebnis formulieren. | أصوغ نتيجة تحقق محدودة. | 1 · `b1-18-t3` | 9 | 2 · `b1-18-m4`, `b1-18-m5` | covered |
 | `b1-19-objective-1` | Ich kann Missverständnisse früh erkennen. | أكتشف سوء الفهم مبكرًا. | 2 · `b1-19:entry`, `b1-19:vocabulary` | 6 | 1 · `b1-19-m5` | covered |
 | `b1-19-objective-2` | Ich kann Gehörtes neutral paraphrasieren. | أعيد صياغة ما سمعت بحياد. | 2 · `b1-19:vocabulary`, `b1-19-t2` | 6 | 1 · `b1-19-m4` | covered |
-| `b1-19-objective-3` | Ich kann meinen und bedeuten unterscheiden. | أفرق بين يقصد ويعني. | 2 · `b1-19:vocabulary`, `b1-19-t1` | 2 | 2 · `b1-19-m1`, `b1-19-m2` | covered |
+| `b1-19-objective-3` | Ich kann meinen und bedeuten unterscheiden. | أفرق بين يقصد ويعني. | 2 · `b1-19:vocabulary`, `b1-19-t1` | 3 | 2 · `b1-19-m1`, `b1-19-m2` | covered |
 | `b1-19-objective-4` | Ich kann eine Klärung mit dass und ob strukturieren. | أنظم التوضيح ب dass و ob. | 1 · `b1-19-t3` | 4 | 1 · `b1-19-m3` | covered |
 | `b1-20-objective-1` | Ich kann vor einem Rat gezielt nachfragen. | أستفسر قبل النصيحة. | 3 · `b1-20:entry`, `b1-20:vocabulary` | 7 | 1 · `b1-20-m3` | covered |
 | `b1-20-objective-2` | Ich kann Ratschläge im Konjunktiv II formulieren. | أصوغ نصائح ب Konjunktiv II. | 2 · `b1-20:vocabulary`, `b1-20-t2` | 8 | 2 · `b1-20-m1`, `b1-20-m2` | covered |

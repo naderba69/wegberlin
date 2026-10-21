@@ -5,9 +5,9 @@
  "boundary": "ratio-and-task-presence-audit-no-quality-judgement-no-cefr-claim",
  "ok": true,
  "lessons": 96,
- "closed": 1397,
+ "closed": 1403,
  "constructed": 387,
- "constructedSharePct": 21.7,
+ "constructedSharePct": 21.6,
  "productionBlocks": 288,
  "lessonsWithFullWritingTask": 96,
  "lessonsWithMediation": 96,
@@ -26,9 +26,9 @@
   },
   "B1": {
    "lessons": 24,
-   "closed": 341,
+   "closed": 347,
    "constructed": 96,
-   "constructedSharePct": 22
+   "constructedSharePct": 21.7
   },
   "B2": {
    "lessons": 24,
@@ -617,7 +617,7 @@
   {
    "lessonId": "b1-01",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -641,7 +641,7 @@
   {
    "lessonId": "b1-03",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -677,7 +677,7 @@
   {
    "lessonId": "b1-06",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -689,7 +689,7 @@
   {
    "lessonId": "b1-07",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -737,7 +737,7 @@
   {
    "lessonId": "b1-11",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -833,7 +833,7 @@
   {
    "lessonId": "b1-19",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,

@@ -27,13 +27,13 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
       examProfiles: 2,
       examSources: 5,
       reviewCards: 2304,
-      nounGrammarEntries: 1733,
+      nounGrammarEntries: 1850,
       verbPrepositionFrames: 134,
       tunisianSupportNotes: 17,
       dictationItems: 16,
       branchingConversationScenarios: 8,
       collocationNetworks: 16,
-      totalRootObjects: 4781,
+      totalRootObjects: 4898,
     });
   });
 
@@ -55,7 +55,7 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
 
   it("links every closed answer to evidence with zero unapproved prompt leaks", () => {
     expect(answers.ok, answers.issues.join("\n")).toBe(true);
-    expect(answers.rows).toHaveLength(2856);
+    expect(answers.rows).toHaveLength(2862);
     expect(answers.failures).toHaveLength(0);
     expect(answers.exemptions.map((row) => row.id)).toEqual(["a2-16-e4", "diag-a-a1-vocabulary"]);
     expect(answers.rows.every((row) => row.answer.trim() && row.evidenceRef.trim() && row.evidenceExcerpt.trim())).toBe(true);
@@ -66,7 +66,7 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(answers.byScope).toEqual({
       diagnostic: 32,
       exam: 720,
-      "lesson-controlled": 728,
+      "lesson-controlled": 734,
       "lesson-listening": 288,
       "lesson-mini-test": 480,
       "lesson-reading": 288,
@@ -110,9 +110,9 @@ describe("P0 academic schemas, answer integrity, and objective coverage", () => 
     expect(answerReport).toContain(machine.contentSha256);
     expect(coverageReport).toContain(machine.contentSha256);
     expect(lexicalReport).toContain(machine.contentSha256);
-    expect(machine.answerIntegrity.rows).toHaveLength(2856);
+    expect(machine.answerIntegrity.rows).toHaveLength(2862);
     expect(machine.objectiveCoverage.rows).toHaveLength(389);
-    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1845);
+    expect(machine.lexicalTargetGaps.nounSummary.covered).toBe(1963);
     expect(machine.lexicalTargetGaps.nounSummary.pendingHuman).toBe(89);
     expect(machine.lexicalTargetGaps.verbFrameSummary.covered).toBe(134);
     expect(machine.lexicalTargetGaps.verbFrameSummary.pendingHuman).toBe(1);

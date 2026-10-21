@@ -11,15 +11,15 @@ describe("B1 structured noun and verb-preposition anchors", () => {
   it("covers all 24 B1 lessons and adds seven governed target frames", () => {
     const lessonIds = academicLessonList.filter((lesson) => lesson.level === "B1").map((lesson) => lesson.id);
     expect(lessonIds).toHaveLength(24);
-    expect(b1NounGrammarEntries).toHaveLength(396);
+    expect(b1NounGrammarEntries).toHaveLength(513);
     expect(b1VerbPrepositionFrames).toHaveLength(31);
-    expect(lexicalGrammarCoverage.B1).toEqual({ lessons: 24, nounEntries: 396, verbFrames: 31 });
+    expect(lexicalGrammarCoverage.B1).toEqual({ lessons: 24, nounEntries: 513, verbFrames: 31 });
     for (const lessonId of lessonIds) {
       expect(nounsByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(4);
       expect(verbFramesByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(1);
     }
     for (const lessonId of ["b1-02", "b1-03", "b1-06", "b1-08", "b1-11", "b1-15", "b1-20"]) expect(verbFramesByLesson[lessonId], lessonId).toHaveLength(2);
-    expect(nounsByLesson["b1-01"]).toHaveLength(25);
+    expect(nounsByLesson["b1-01"]).toHaveLength(46);
     expect(nounsByLesson["b1-05"]).toHaveLength(13);
   });
 

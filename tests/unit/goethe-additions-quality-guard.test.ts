@@ -20,9 +20,9 @@ const problems: string[] = [];
 const flag = (ok: boolean, message: string) => { if (!ok) problems.push(message); };
 
 describe("Vocabulary quality guard for every lesson (ADR-143, widened by ADR-144)", () => {
-  it("covers all 96 lessons, 51 of them with a Goethe matching e8", () => {
+  it("covers all 96 lessons, 57 of them with a Goethe matching e8", () => {
     expect(packaged.length).toBe(96);
-    expect(packaged.filter((lesson) => lesson.exercises.some((exercise) => exercise.id === `${lesson.id}-e8` && exercise.type === "matching")).length).toBe(51);
+    expect(packaged.filter((lesson) => lesson.exercises.some((exercise) => exercise.id === `${lesson.id}-e8` && exercise.type === "matching")).length).toBe(57);
   });
 
   it("gives every card a full example sentence and no repeated front inside a lesson", () => {

@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "b3697eee32118e1bee7bc6c375eb3bab2d7830754f65676e4a9e3048f68eb0fe",
+  "contentSha256": "c42c82701ffbf70757df8521a34fe3de6168967daabe5bbc84a5ea49c70a71e0",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,7 +92,7 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1784,
+    "allItems": 1790,
     "allMedianChars": 166,
     "allUnder60Chars": 0,
     "allMissing": 0,
@@ -149,7 +149,7 @@
       "B1": 38.6,
       "B2": 36.4
     },
-    "lessonsOver45Pct": 20,
+    "lessonsOver45Pct": 19,
     "maxUnknownWordPct": 76,
     "measurementNote": "Unknown here means not supported by prior lessons and the current pre-reading phrase/card scaffold. Future lessons and the current glossary are excluded; this is curricular exposure, never a claim that the learner knows a word. The fields at this level are the legacy suffix-stemmer figures, kept for comparability: that stemmer cannot unify strong-verb changes (spricht/sprechen) or plural umlauts (Satz/Sätze), counts proper names as unknown and uses an unfolded stop list. Since ADR-126 the thresholded figure is `lemmatized` below.",
     "lemmatized": {
@@ -159,7 +159,7 @@
       "dictionary": {
         "verbs": 111,
         "otherVerbForms": 50,
-        "irregularPlurals": 88,
+        "irregularPlurals": 89,
         "irregularComparison": 32
       },
       "properNamePolicy": "curriculum-proper-names-v1",
@@ -172,7 +172,7 @@
         "B2": 19.5
       },
       "lessonsOver45Pct": 0,
-      "maxUnknownWordPct": 38.6,
+      "maxUnknownWordPct": 39,
       "properNamesExcluded": 140,
       "ratchet": {
         "medianPctMax": 21,
@@ -195,6 +195,24 @@
       },
       "worstLessons": [
         {
+          "id": "a1-03",
+          "pct": 39,
+          "unknown": [
+            "meldet",
+            "sich",
+            "mitarbeiterin",
+            "gibt",
+            "bogen",
+            "fuellen",
+            "stehen",
+            "zuerst",
+            "dazwischen",
+            "punkt",
+            "wiederholt",
+            "hoert"
+          ]
+        },
+        {
           "id": "a1-02",
           "pct": 38.6,
           "unknown": [
@@ -214,7 +232,7 @@
         },
         {
           "id": "a1-04",
-          "pct": 34.4,
+          "pct": 37.1,
           "unknown": [
             "zeigt",
             "foto",
@@ -226,25 +244,8 @@
             "telefonieren",
             "jeden",
             "grossmutter",
-            "ganz"
-          ]
-        },
-        {
-          "id": "a1-03",
-          "pct": 34.2,
-          "unknown": [
-            "meldet",
-            "sich",
-            "stehen",
-            "mitarbeiterin",
-            "zuerst",
-            "dazwischen",
-            "punkt",
-            "wiederholt",
-            "hoert",
-            "sondern",
-            "alles",
-            "richtig"
+            "ganz",
+            "leider"
           ]
         },
         {
@@ -435,7 +436,7 @@
       },
       {
         "id": "a1-04",
-        "pct": 55.8
+        "pct": 56.5
       },
       {
         "id": "a1-05",
@@ -443,7 +444,7 @@
       },
       {
         "id": "a1-03",
-        "pct": 51.1
+        "pct": 54.2
       },
       {
         "id": "a1-16",
@@ -505,7 +506,7 @@
       {
         "lessonId": "a1-04",
         "level": "A1",
-        "pct": 55.8,
+        "pct": 56.5,
         "unknown": [
           "leila",
           "zeigt",
@@ -551,24 +552,24 @@
       {
         "lessonId": "a1-03",
         "level": "A1",
-        "pct": 51.1,
+        "pct": 54.2,
         "unknown": [
           "sami",
           "meldet",
           "sich",
           "fuer",
+          "mitarbeiterin",
+          "gibt",
+          "bogen",
+          "fuellen",
           "formular",
           "stehen",
           "ben",
           "salem",
-          "mitarbeiterin",
           "zuerst",
           "bensalem",
           "sind",
-          "dazwischen",
-          "leerzeichen",
-          "buchstabiert",
-          "seine"
+          "dazwischen"
         ]
       },
       {
@@ -825,29 +826,6 @@
         ]
       },
       {
-        "lessonId": "b1-11",
-        "level": "B1",
-        "pct": 46.1,
-        "unknown": [
-          "vierwoechigen",
-          "mobilitaetsversuch",
-          "beschaeftigten",
-          "dasselbe",
-          "verkehrsmittel",
-          "nutzen",
-          "passende",
-          "eingerichtet",
-          "laengeren",
-          "erhielten",
-          "konnten",
-          "zusaetzlichen",
-          "beschaeftigte",
-          "nachtschichten",
-          "bekamen",
-          "informationen"
-        ]
-      },
-      {
         "lessonId": "a1-11",
         "level": "A1",
         "pct": 45.8,
@@ -960,6 +938,29 @@
           "umgebaut",
           "lieferzonen",
           "genutzt"
+        ]
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "pct": 44.7,
+        "unknown": [
+          "vierwoechigen",
+          "mobilitaetsversuch",
+          "beschaeftigten",
+          "dasselbe",
+          "verkehrsmittel",
+          "nutzen",
+          "passende",
+          "eingerichtet",
+          "laengeren",
+          "erhielten",
+          "konnten",
+          "zusaetzlichen",
+          "nachtschichten",
+          "bekamen",
+          "informationen",
+          "fahrgemeinschaften"
         ]
       },
       {
@@ -2455,7 +2456,7 @@
       {
         "lessonId": "a1-19",
         "level": "A1",
-        "pct": 26.7,
+        "pct": 27.1,
         "unknown": [
           "mila",
           "omar",
@@ -2463,6 +2464,7 @@
           "besuchen",
           "denselben",
           "unterschiedlich",
+          "meisten",
           "kilometer",
           "entfernt",
           "alexanderplatz",
@@ -2807,7 +2809,7 @@
         "level": "B2",
         "contentTypes": 185,
         "properNames": 1,
-        "pct": 18.4,
+        "pct": 17.8,
         "unknownSample": [
           "stadtrat",
           "theatergruppen",
@@ -2825,7 +2827,7 @@
     "note": "Measures whether the long inputs ask for vocabulary the curriculum has exposed; it says nothing about voice, pacing or rights, which remain human review items of P2-401."
   },
   "pronunciation": {
-    "medianCoveragePct": 26.1
+    "medianCoveragePct": 25
   },
   "policyNotes": [
     "Exact-match grading with explicit orthographic variants only is a tested policy (tests/unit/content-integrity.test.ts:77-78); the remedy is more acceptedAnswers in data plus ADR-078, not comparator folding.",

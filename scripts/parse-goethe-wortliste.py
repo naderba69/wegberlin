@@ -17,7 +17,12 @@ sub-entries (B1) and Austrian/Swiss-only variants.
 
 ADR-154 / v263 repairs (`repair()` and the end of `parse()`), found by checking every absent B1 word:
 - two headwords on one line: "die Bäckerei, -en baden, badet, badete, hat" + "gebadet" made "baden" vanish and
-  "gebadet" a fake headword; the line is split and the participle joined to its verb (12 verbs in B1);
+  "gebadet" a fake headword; the line is split and the participle joined to its verb (23 verbs in B1, also with
+  "ist/hat", a slashed participle "gesendet/gesandt", a two-word participle "zu gewesen" or a regional note);
+- a headword printed on the same line as a complete verb entry ("das Haar, -e haben, hat, hatte, hat gehabt") is
+  split (haben, sein, tun, anhaben, vorhaben), except a phrasal headword whose head word recurs in its forms
+  ("bekannt geben, gibt bekannt"); "sich" never counts as a head;
+- a glued article ("dieWissenschaftlerin") gets its space back;
 - a wrapped plural ending ("die Rezeption/Reception, -" + "en") and a hyphen break after a variant
   ("Portemonnaie/Port-" + "monee, -s") are joined;
 - a dangling feminine article ("der Pensionist, -en / die" + "Pensionistin, -nen (A)") is joined;
@@ -57,7 +62,9 @@ def lemma_of(raw):
     w = w.strip("()")
     return w or None
 
-GLUED_VERB = re.compile(r"^(?P<head>.+?)\s+(?P<verb>(?:\(sich\)\s|sich\s)?[a-zäöüß]+,\s\S+(?:\ssich)?,\s\S+(?:\ssich)?,\s(?:hat|ist))$")
+GLUED_VERB = re.compile(r"^(?P<head>.+?)\s+(?P<verb>(?:\(sich\)\s|sich\s)?[a-zäöüß]+,\s\S+(?:\ssich)?,\s\S+(?:\ssich)?,\s(?:hat|ist)(?:/(?:hat|ist))?)$")
+
+SPLIT_LINE = re.compile(r"^(?!sich\s)(?P<head>(?:der|die|das) [A-ZÄÖÜ][^,\s]*(?:, \S+)?|[a-zäöüß]+)\s+(?P<verb>[a-zäöüß]+(?: [a-zäöüß]+)?, [^,]+, [^,]+, (?:hat|ist)(?:/(?:hat|ist))? .+)$")
 
 PLURAL_TAILS = {"e", "en", "n", "er", "s", "se", "ne", "nen"}
 
@@ -66,7 +73,7 @@ def repair(out):
     for e in out:
         raw = e["raw"]
         prev = fixed[-1] if fixed else None
-        if prev and re.fullmatch(r"[a-zäöüß]+(\s+\(.*\))?", raw) and re.search(r"\s(hat|ist)$", prev["raw"]):
+        if prev and re.fullmatch(r"(?:[a-zäöüß]+ )?ge[a-zäöüß]+(/[a-zäöüß ]+)?(\s+\(.*)?", raw) and re.search(r"\s(hat|ist)(/(hat|ist))?$", prev["raw"]):
             m = GLUED_VERB.match(prev["raw"])
             if m and m.group("head"):
                 prev["raw"] = m.group("head")
@@ -83,11 +90,21 @@ def repair(out):
         if prev and prev["raw"].endswith("/ die"):
             prev["raw"] += " " + raw
             continue
+        raw = re.sub(r"^(der|die|das)(?=[A-ZÄÖÜ])", r"\1 ", raw)
         if re.match(r"^sich[a-zäöü]+,\S*sich", raw):
             raw = "sich " + raw[4:]
         e["raw"] = raw
         fixed.append(e)
-    return fixed
+    # a headword printed on the same line as a complete verb entry („das Haar, -e haben, hat, hatte, hat gehabt“)
+    split = []
+    for e in fixed:
+        m = SPLIT_LINE.match(e["raw"])
+        if m and m.group("head").split()[-1].rstrip(",") not in m.group("verb").split(",", 1)[1]:
+            split.append({**e, "raw": m.group("head")})
+            split.append({**e, "raw": m.group("verb")})
+        else:
+            split.append(e)
+    return split
 
 def parse(level):
     cfg = CFG[level]

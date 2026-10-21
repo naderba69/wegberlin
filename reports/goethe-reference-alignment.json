@@ -45,17 +45,17 @@
       "firstAppearsLaterList": []
     },
     "B1": {
-      "headwords": 2820,
-      "indentedSubEntries": 633,
-      "appearsInLessonsUpToLevel": 2362,
+      "headwords": 2823,
+      "indentedSubEntries": 634,
+      "appearsInLessonsUpToLevel": 2366,
       "appearsPct": 83.8,
-      "taughtExplicitlyUpToLevel": 1901,
-      "taughtExplicitlyPct": 67.4,
+      "taughtExplicitlyUpToLevel": 1907,
+      "taughtExplicitlyPct": 67.6,
       "anywhereInAppAnyLevelPct": 90.9,
-      "missingAtLevel": 458,
+      "missingAtLevel": 457,
       "missingNouns": 256,
       "firstAppearsLater": {
-        "B2": 146
+        "B2": 145
       },
       "absentFromAllLessons": 310,
       "wortgruppenTokens": 650,
@@ -67,6 +67,7 @@
         "der Alarm",
         "das Altersheim",
         "amüsieren",
+        "anhaben",
         "die Anleitung",
         "anschaffen",
         "der Angestellte",
@@ -357,7 +358,6 @@
         "der Wirt",
         "die Wirtin",
         "die Wirtschaft",
-        "dieWissenschaftlerin",
         "der Wohnsitz",
         "zahlreich",
         "die Zahncreme/pasta",
@@ -475,7 +475,6 @@
         "die Schulden → B2",
         "schuldig → B2",
         "schweigen → B2",
-        "gesendet/gesandt → B2",
         "der Sinn → B2",
         "solange → B2",
         "der Standpunkt → B2",

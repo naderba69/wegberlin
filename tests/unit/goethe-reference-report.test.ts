@@ -43,13 +43,14 @@ describe("Goethe reference report counting (ADR-153)", () => {
   });
 
   it("pins the full B1 recount", () => {
-    expect(report.levels.B1).toMatchObject({ headwords: 2820, appearsInLessonsUpToLevel: 2362, taughtExplicitlyUpToLevel: 1901, missingAtLevel: 458, absentFromAllLessons: 310, firstAppearsLater: { B2: 146 } });
+    expect(report.levels.B1).toMatchObject({ headwords: 2823, appearsInLessonsUpToLevel: 2366, taughtExplicitlyUpToLevel: 1907, missingAtLevel: 457, absentFromAllLessons: 310, firstAppearsLater: { B2: 145 } });
     expect(report.levels.A1).toMatchObject({ headwords: 670, appearsInLessonsUpToLevel: 669, taughtExplicitlyUpToLevel: 559 });
   });
 });
 
 // ADR-154 / v263: the PDF parser glued two headwords that share a printed line („die Dusche, -n duzen, duzt, duzte,
-// hat“ + „geduzt“), so 18 verbs were counted as their participle and 12 of them showed up as „absent“ words while the
+// hat“ + „geduzt“), so 23 verbs were counted as their participle (and haben, sein, tun, anhaben and vorhaben
+// as the noun or adverb printed before them) and 12 of them showed up as „absent“ words while the
 // real verb was not in the list at all. Hyphen breaks („Port-/monee“), a glued reflexive („sicherkälten“), wrapped
 // plural endings and regional markers on the feminine line were repaired too, and word-formation headwords
 // („Kriminal-“, „Not-“, „un-“) are matched through the forms that show them in use.
@@ -59,11 +60,11 @@ describe("Goethe B1 parser repair (ADR-154)", () => {
   const parser = readFileSync("scripts/parse-goethe-wortliste.py", "utf8");
 
   it("lists no parser artifact as a missing word", () => {
-    for (const artifact of ["gebadet", "geduzt", "geflossen", "gelacht", "gelebt", "gelegt", "genäht", "gesollt", "gespart", "gesungen", "getippt", "getrieben", "gelandet", "monee", "sicherkälten", "en", "e"]) {
+    for (const artifact of ["gebadet", "geduzt", "geflossen", "gelacht", "gelebt", "gelegt", "genäht", "gesollt", "gespart", "gesungen", "getippt", "getrieben", "gelandet", "gefahren", "gesessen", "geparkt", "gesendet/gesandt", "gewöhnt/ist", "monee", "sicherkälten", "dieWissenschaftlerin", "en", "e"]) {
       expect(listed, artifact).not.toContain(artifact);
     }
     // the verbs that were hidden behind their participle are real headwords again; these three are absent for real
-    for (const verb of ["duzen", "tippen", "treiben"]) expect(b1.absentFromAllLessonsList).toContain(verb);
+    for (const verb of ["duzen", "tippen", "treiben", "anhaben"]) expect(b1.absentFromAllLessonsList).toContain(verb);
     for (const regional of ["der Abwart", "der Coiffeur", "der Fleischhauer", "der Pensionist"]) expect(listed, regional).not.toContain(regional);
     expect(parser).toContain("def repair(out):");
   });

@@ -102,11 +102,28 @@ for (const lesson of lessons) {
   for (const candidate of all.cands) if (!firstSeen.has(candidate) || firstSeen.get(candidate)! > lessonRank) firstSeen.set(candidate, lessonRank);
 }
 
+/**
+ * Bound headwords (ADR-150 / v259). The lists print a few headwords as bound forms with a trailing hyphen
+ * (all-, jed-, Lieblings-, Geburts-, Einzel-, dar-); the parser strips the hyphen, and none of the six is a
+ * standalone German word, so a whole-word match can never find them. They count as present when a token shows
+ * the bound form in use: an inflected determiner (alle, jeder), a compound (Lieblingsessen, Geburtsdatum,
+ * Einzelzimmer, einzeln) or a da(r)- adverb (darauf, daran, darin, darum, darüber). Folded spelling, so ü = ue.
+ */
+const BOUND_FORMS: Record<string, RegExp> = {
+  all: /^all(?:e|er|es|en|em)$/,
+  jed: /^jed(?:e|er|es|en|em)$/,
+  lieblings: /^lieblings[a-z]{3,}$/,
+  geburts: /^geburts[a-z]{3,}$/,
+  einzel: /^einzel(?:n|ne|nen|ner|nes|nem|[a-z]{4,})$/,
+  dar: /^dar(?:an|auf|aus|in|ueber|um|unter)$/,
+};
 function present(entry: Entry, bag: Bag): boolean {
   for (const alternative of entry.alts) {
     const folded = foldGerman(alternative).trim();
     if (!folded) continue;
     if (bag.cands.has(folded) || bag.tokens.has(folded)) return true;
+    const bound = BOUND_FORMS[folded];
+    if (bound) { for (const token of bag.tokens) if (bound.test(token)) return true; continue; }
     if (folded.includes(" ")) continue;
     if (/n$/.test(folded)) {
       for (const particle of SEPARABLE) {

@@ -144,7 +144,7 @@ Gäste Gast · Räume Raum · Bäume Baum · Träume Traum · Stühle Stuhl · N
 Pläne Plan · Anträge Antrag · Verträge Vertrag · Beiträge Beitrag · Vorschläge Vorschlag · Aufträge Auftrag
 Unterkünfte Unterkunft · Zugänge Zugang · Abschlüsse Abschluss · Anschlüsse Anschluss · Ausflüge Ausflug · Flüge Flug
 Kosten Kosten · Gespräche Gespräch · Geschäfte Geschäft · Getränke Getränk · Geräte Gerät · Töne Ton · Böden Boden
-Wünsche Wunsch · Märkte Markt · Kämme Kamm · Schränke Schrank · Bänke Bank · Würste Wurst · Füße Fuß · Köpfe Kopf
+Wünsche Wunsch · Märkte Markt · Kämme Kamm · Schränke Schrank · Bänke Bank · Würste Wurst · Füße Fuß · Grüße Gruß · Köpfe Kopf
 Hüte Hut · Stöcke Stock · Dörfer Dorf · Völker Volk · Gläser Glas · Räder Rad · Bäder Bad · Fächer Fach · Ämter Amt
 Vorträge Vortrag · Eindrücke Eindruck · Ausdrücke Ausdruck · Rückgänge Rückgang · Vorgänge Vorgang · Übergänge Übergang
 Umzüge Umzug · Anzüge Anzug · Auszüge Auszug · Bezüge Bezug · Verluste Verlust · Zuschüsse Zuschuss · Ausschüsse Ausschuss

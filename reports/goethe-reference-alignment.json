@@ -12,74 +12,51 @@
     "A1": {
       "headwords": 670,
       "indentedSubEntries": 0,
-      "appearsInLessonsUpToLevel": 662,
-      "appearsPct": 98.8,
-      "taughtExplicitlyUpToLevel": 555,
-      "taughtExplicitlyPct": 82.8,
+      "appearsInLessonsUpToLevel": 669,
+      "appearsPct": 99.9,
+      "taughtExplicitlyUpToLevel": 559,
+      "taughtExplicitlyPct": 83.4,
       "anywhereInAppAnyLevelPct": 99.4,
-      "missingAtLevel": 8,
-      "missingNouns": 2,
-      "firstAppearsLater": {
-        "A2": 2,
-        "B2": 1
-      },
-      "absentFromAllLessons": 4,
+      "missingAtLevel": 1,
+      "missingNouns": 0,
+      "firstAppearsLater": {},
+      "absentFromAllLessons": 0,
       "wortgruppenTokens": 171,
       "wortgruppenCoveredPct": 72.5,
-      "absentFromAllLessonsList": [
-        "all",
-        "jed",
-        "Lieblings",
-        "tot"
-      ],
-      "firstAppearsLaterList": [
-        "der Bogen → B2",
-        "der Gruß → A2",
-        "meist → A2"
-      ]
+      "absentFromAllLessonsList": [],
+      "firstAppearsLaterList": []
     },
     "A2": {
       "headwords": 1136,
       "indentedSubEntries": 0,
-      "appearsInLessonsUpToLevel": 1130,
-      "appearsPct": 99.5,
-      "taughtExplicitlyUpToLevel": 955,
-      "taughtExplicitlyPct": 84.1,
+      "appearsInLessonsUpToLevel": 1136,
+      "appearsPct": 100,
+      "taughtExplicitlyUpToLevel": 960,
+      "taughtExplicitlyPct": 84.5,
       "anywhereInAppAnyLevelPct": 89.6,
-      "missingAtLevel": 6,
+      "missingAtLevel": 0,
       "missingNouns": 0,
-      "firstAppearsLater": {
-        "B1": 1,
-        "B2": 1
-      },
-      "absentFromAllLessons": 4,
+      "firstAppearsLater": {},
+      "absentFromAllLessons": 0,
       "wortgruppenTokens": 315,
       "wortgruppenCoveredPct": 60.6,
-      "absentFromAllLessonsList": [
-        "all",
-        "Geburts",
-        "Lieblings",
-        "tot"
-      ],
-      "firstAppearsLaterList": [
-        "dar → B2",
-        "einzel → B1"
-      ]
+      "absentFromAllLessonsList": [],
+      "firstAppearsLaterList": []
     },
     "B1": {
       "headwords": 2830,
       "indentedSubEntries": 629,
-      "appearsInLessonsUpToLevel": 1931,
-      "appearsPct": 68.2,
-      "taughtExplicitlyUpToLevel": 1461,
-      "taughtExplicitlyPct": 51.6,
+      "appearsInLessonsUpToLevel": 1935,
+      "appearsPct": 68.4,
+      "taughtExplicitlyUpToLevel": 1467,
+      "taughtExplicitlyPct": 51.8,
       "anywhereInAppAnyLevelPct": 74.3,
-      "missingAtLevel": 899,
-      "missingNouns": 568,
+      "missingAtLevel": 895,
+      "missingNouns": 567,
       "firstAppearsLater": {
-        "B2": 157
+        "B2": 154
       },
-      "absentFromAllLessons": 740,
+      "absentFromAllLessons": 739,
       "wortgruppenTokens": 650,
       "wortgruppenCoveredPct": 45.4,
       "absentFromAllLessonsList": [
@@ -95,7 +72,6 @@
         "abwärts",
         "abwaschen",
         "der Alarm",
-        "all",
         "das Alphabet",
         "das Altenheim",
         "das Altersheim",
@@ -451,7 +427,6 @@
         "die Lehrstelle",
         "der Lehrling",
         "das Lexikon",
-        "Lieblings",
         "der Lift",
         "die Limonade",
         "die Lippe",
@@ -708,7 +683,6 @@
         "der Tod",
         "tödlich",
         "tolerant",
-        "tot",
         "der Tote",
         "der Tourismus",
         "die Tradition",
@@ -822,7 +796,9 @@
         "die Zuschauerin",
         "der Zuschlag",
         "der Zustand",
-        "zweifeln"
+        "zweifeln",
+        "die Trennung",
+        "die Wärme"
       ],
       "firstAppearsLaterList": [
         "Abgase → B2",
@@ -850,7 +826,6 @@
         "die Betreuung → B2",
         "der Betriebsrat → B2",
         "bloß → B2",
-        "der Bogen → B2",
         "der Bürger → B2",
         "die Bürgerin → B2",
         "der Gedanke → B2",
@@ -946,7 +921,6 @@
         "stumm → B2",
         "die Tat → B2",
         "die Tätigkeit → B2",
-        "die Trennung → B2",
         "treu → B2",
         "trotz → B2",
         "die Übernachtung → B2",
@@ -971,7 +945,6 @@
         "verzichten → B2",
         "voraus → B2",
         "vorläufig → B2",
-        "die Wärme → B2",
         "wenden → B2",
         "das Werkzeug → B2",
         "weshalb → B2",

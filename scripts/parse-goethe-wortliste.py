@@ -14,6 +14,17 @@ Method: pdfplumber word boxes; keep only the headword column of the alphabetical
 group words into lines by their top coordinate, merge continuation lines (principal parts of
 verbs, hyphenated breaks, regional notes), take the lemma after an article, flag indented
 sub-entries (B1) and Austrian/Swiss-only variants.
+
+ADR-154 / v263 repairs (`repair()` and the end of `parse()`), found by checking every absent B1 word:
+- two headwords on one line: "die Bäckerei, -en baden, badet, badete, hat" + "gebadet" made "baden" vanish and
+  "gebadet" a fake headword; the line is split and the participle joined to its verb (12 verbs in B1);
+- a wrapped plural ending ("die Rezeption/Reception, -" + "en") and a hyphen break after a variant
+  ("Portemonnaie/Port-" + "monee, -s") are joined;
+- a dangling feminine article ("der Pensionist, -en / die" + "Pensionistin, -nen (A)") is joined;
+- a glued reflexive ("sicherkälten,") gets its space back;
+- a masculine entry directly followed by its regional feminine line ("der Abwart, -e" + "die Abwartin, -nen (CH)")
+  shares the regional mark;
+- word-formation entries ending in "-" ("Elektro-", "un-", "ober-") are marked `prefix`.
 """
 import argparse
 import os
@@ -45,6 +56,38 @@ def lemma_of(raw):
     w = re.sub(r"\d+\.?$", "", w)  # superscript / numbering glued
     w = w.strip("()")
     return w or None
+
+GLUED_VERB = re.compile(r"^(?P<head>.+?)\s+(?P<verb>(?:\(sich\)\s|sich\s)?[a-zäöüß]+,\s\S+(?:\ssich)?,\s\S+(?:\ssich)?,\s(?:hat|ist))$")
+
+PLURAL_TAILS = {"e", "en", "n", "er", "s", "se", "ne", "nen"}
+
+def repair(out):
+    fixed = []
+    for e in out:
+        raw = e["raw"]
+        prev = fixed[-1] if fixed else None
+        if prev and re.fullmatch(r"[a-zäöüß]+(\s+\(.*\))?", raw) and re.search(r"\s(hat|ist)$", prev["raw"]):
+            m = GLUED_VERB.match(prev["raw"])
+            if m and m.group("head"):
+                prev["raw"] = m.group("head")
+                fixed.append({**prev, "raw": f"{m.group('verb')} {raw}"})
+            else:
+                prev["raw"] += " " + raw
+            continue
+        if prev and raw in PLURAL_TAILS and re.search(r",\s-$", prev["raw"]):
+            prev["raw"] += raw
+            continue
+        if prev and re.search(r"/[A-ZÄÖÜ][a-zäöü]*-$", prev["raw"]) and re.match(r"[a-zäöü]+[,;]", raw):
+            prev["raw"] = prev["raw"][:-1] + raw
+            continue
+        if prev and prev["raw"].endswith("/ die"):
+            prev["raw"] += " " + raw
+            continue
+        if re.match(r"^sich[a-zäöü]+,\S*sich", raw):
+            raw = "sich " + raw[4:]
+        e["raw"] = raw
+        fixed.append(e)
+    return fixed
 
 def parse(level):
     cfg = CFG[level]
@@ -117,12 +160,17 @@ def parse(level):
                     out.append({"raw": text, "page": p + 1, "indent": round(indent, 1), "bold": "Bold" in lw[0]["fontname"]})
                     prev_text = text
                     prev_top = top
+    out = repair(out)
     for e in out:
         e["lemma"] = lemma_of(e["raw"])
         e["noun"] = e["raw"].split()[0] in ART or e["raw"].split()[0] in {"der/die"}
         e["sub"] = e["indent"] > 12
         e["regional"] = bool(re.search(r"\((A|CH|A, CH|CH, A)\)", e["raw"].split("→")[0]))
         e["alts"] = [a.strip("-") for a in (e["lemma"] or "").split("/") if a.strip("-")]
+        e["prefix"] = not e["noun"] and bool(re.match(r"^[^\s,]+-(\s|$)", e["raw"]))
+    for e, nxt in zip(out, out[1:]):
+        if e["raw"].startswith("der ") and not e["regional"] and "→" not in e["raw"] and nxt["regional"] and nxt["raw"].startswith("die ") and e["alts"] and nxt["alts"] and e["alts"][0][:5] == nxt["alts"][0][:5]:
+            e["regional"] = True
     JUNK = re.compile(r"^(INVeNTAre|WORTLISTE|Goethe-Institut|Dachauer|80637|Ihre|ALPHABETISCHER|Alphabetischer|\d)")
     out = [e for e in out if e["lemma"] and re.match(r"^[A-Za-zÄÖÜäöüß]", e["lemma"]) and not JUNK.match(e["raw"]) and not e["raw"].startswith("2 ")]
     return out

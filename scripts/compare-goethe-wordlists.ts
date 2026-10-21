@@ -135,6 +135,25 @@ const BOUND_FORMS: Record<string, RegExp> = {
   speise: /^(?:speise[a-z]{3,}|[a-z]{3,}speisen?)$/,
   irgend: /^irgend(?:wo|wann|wie|was|wer|wohin|woher|ein|eine|einer|einen|einem|eines|etwas|welche|welcher|welches|welchen|welchem)$/,
 };
+/**
+ * ADR-154 / v263: the remaining word-formation headwords of the B1 list („Elektro-“, „un-“, „ober-“ …) that no
+ * whole-word match can find. Like BOUND_FORMS, each pattern names the forms that show the prefix in use and excludes
+ * words that are headwords of their own or a different word
+ * (elektronisch, Spezialist, Kriminalität, mittlerweile, ökonomisch, unter, unser, und).
+ * They apply only to article-less entries, so a noun with the same letters is never matched through them.
+ */
+const PREFIX_FORMS: Record<string, RegExp> = {
+  elektro: /^elektro(?!n)[a-z]{3,}$/,
+  inner: /^inner(?:e|er|es|en|em)$/,
+  ober: /^ober(?:e|er|es|en|em)$/,
+  vorder: /^vorder(?:e|er|es|en|em)$/,
+  mittler: /^mittler(?:e|er|es|en|em)$/,
+  kriminal: /^kriminal(?!itaet)[a-z]{3,}$/,
+  spezial: /^spezial(?!ist|isier)[a-z]{3,}$/,
+  not: /^not(?:ausgang|ausgaenge|arzt|aerztin|aerzte|ruf|fall|faelle|dienst|aufnahme|nummer|bremse|landung)$/,
+  oeko: /^oeko(?!nom)[a-z]{3,}$/, // Öko- means ökologisch, never ökonomisch
+  rauf: /^rauf[a-z]{3,}$/,
+};
 function present(entry: Entry, bag: Bag): boolean {
   for (const alternative of entry.alts) {
     const folded = foldGerman(alternative).trim();
@@ -142,6 +161,13 @@ function present(entry: Entry, bag: Bag): boolean {
     if (bag.cands.has(folded) || bag.tokens.has(folded)) return true;
     const bound = BOUND_FORMS[folded];
     if (bound) { for (const token of bag.tokens) if (bound.test(token)) return true; continue; }
+    const prefixForm = entry.noun ? undefined : PREFIX_FORMS[folded];
+    if (prefixForm) { for (const token of bag.tokens) if (prefixForm.test(token)) return true; continue; }
+    // „un-“: a token un + a word that itself occurs (unbekannt / bekannt), never unter-, unser-, und, uns
+    if (!entry.noun && folded === "un") {
+      for (const token of bag.tokens) if (/^un(?!ter|ser|d$|s$)[a-z]{4,}$/.test(token) && (bag.tokens.has(token.slice(2)) || bag.cands.has(token.slice(2)))) return true;
+      continue;
+    }
     if (folded.includes(" ")) continue;
     if (/n$/.test(folded)) {
       for (const particle of SEPARABLE) {

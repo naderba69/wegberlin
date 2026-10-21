@@ -21,7 +21,7 @@ const reviewPacketSheets = (await readdir(REVIEW_PACKET_DIR))
   .sort((left, right) => Number(left.match(/(\d+)/u)![1]) - Number(right.match(/(\d+)/u)![1]));
 const reviewPacketPresence = auditReviewPacketDecisionPresence(
   await Promise.all(reviewPacketSheets.map(async (name) => ({ name, content: await readFile(`${REVIEW_PACKET_DIR}/${name}`, "utf8") }))),
-  { expectedRowCount: 3346 },
+  { expectedRowCount: 3347 },
 );
 const payload = {
   format: "dwnb-human-review-audit",

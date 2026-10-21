@@ -11,9 +11,9 @@ describe("B1 structured noun and verb-preposition anchors", () => {
   it("covers all 24 B1 lessons and adds seven governed target frames", () => {
     const lessonIds = academicLessonList.filter((lesson) => lesson.level === "B1").map((lesson) => lesson.id);
     expect(lessonIds).toHaveLength(24);
-    expect(b1NounGrammarEntries).toHaveLength(707);
+    expect(b1NounGrammarEntries).toHaveLength(714);
     expect(b1VerbPrepositionFrames).toHaveLength(31);
-    expect(lexicalGrammarCoverage.B1).toEqual({ lessons: 24, nounEntries: 707, verbFrames: 31 });
+    expect(lexicalGrammarCoverage.B1).toEqual({ lessons: 24, nounEntries: 714, verbFrames: 31 });
     for (const lessonId of lessonIds) {
       expect(nounsByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(4);
       expect(verbFramesByLesson[lessonId]?.length, lessonId).toBeGreaterThanOrEqual(1);

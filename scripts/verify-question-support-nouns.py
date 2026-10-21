@@ -6,6 +6,7 @@ ADR-150 / v259: and on the anchors of the six further B1 themes (export with `go
 ADR-151 / v260: and on the anchors of four more B1 themes (export with `goethe-b1-themes-2`).
 ADR-152 / v261: and on the anchors of the next four B1 themes (export with `goethe-b1-themes-3`).
 ADR-153 / v262: and on the anchors of four more B1 themes (export with `goethe-b1-themes-4`).
+ADR-154 / v263: and on the anchors of the project-work words in b1-24 (export with `goethe-b1-themes-5`).
 
 Source: the `german_nouns` 1.2.5 package on PyPI (WiktionaryDE extract, CC BY-SA 4.0).
 Usage:

@@ -43,7 +43,7 @@ describe("Goethe reference report counting (ADR-153)", () => {
   });
 
   it("pins the full B1 recount", () => {
-    expect(report.levels.B1).toMatchObject({ headwords: 2823, appearsInLessonsUpToLevel: 2366, taughtExplicitlyUpToLevel: 1907, missingAtLevel: 457, absentFromAllLessons: 310, firstAppearsLater: { B2: 145 } });
+    expect(report.levels.B1).toMatchObject({ headwords: 2823, appearsInLessonsUpToLevel: 2390, taughtExplicitlyUpToLevel: 1931, missingAtLevel: 433, absentFromAllLessons: 289, firstAppearsLater: { B2: 144 } });
     expect(report.levels.A1).toMatchObject({ headwords: 670, appearsInLessonsUpToLevel: 669, taughtExplicitlyUpToLevel: 559 });
   });
 });

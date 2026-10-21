@@ -65,9 +65,9 @@
 | Lesson exercises | 738 | **742** |
 | Governed content records | 3,338 | **3,342** |
 | Search entries | 4,543 | **4,623** |
-| Curriculum (gzip) | 1,324,754 | CURRICULUM_PENDING |
-| JavaScript (gzip) | 2,160,450 | JS_PENDING |
-| Unit tests | 1,739 in 254 files | UNIT_PENDING |
+| Curriculum (gzip) | 1,324,754 (ceiling 1,326,000) | **1,330,848** (12,152 B left under 1,343,000) |
+| JavaScript (gzip) | 2,160,450 | **2,166,322** (38,678 B left under 2,205,000) |
+| Unit tests | 1,739 in 254 files | **1,743 in 255 files** |
 
 The B1 count rises by 93 for 80 phrases because each «der X / die Xin» phrase covers two Goethe headwords. Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v261.
 

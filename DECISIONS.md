@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v260 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-151): أُضيفت 80 كلمة إلى أربعة دروس موجودة: المشاعر والخلاف (b1-05)، والصحافة والحاسوب (b1-16)، والمسرح والفن والأدب (b1-17)، والبيئة والمجتمع (b1-21). لكل كلمة عبارة وبطاقة بجملة مثال، و64 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2170/2830 (76.7%). صحّح التدقيق قبل الحفظ ترجمتين تبالغان في المعنى (Reportage وErzählung) وثلاثة شروح (مصطلح حالة نحوية بلا عقد، واقتباس غير حرفي، ومبالغة في Versammlung). لم يُرفع أي سقف، لكن المتبقي من سقف المنهج صار 1,246 بايت فقط.
+Sync batch: v261 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-152): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الشرطة والمحاكم (b1-18)، ومباني المدينة وخدماتها (b1-09)، والدراسة والتعلّم (b1-13)، والرياضة والطموح (b1-22). لكل كلمة عبارة وبطاقة بجملة مثال، و71 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2263/2830 (80.0%). رُفع سقف المنهج خطوة صغيرة إلى 1,343,000 (كما في v258، بناءً على قول المالك إن السقف لا يهمه)، والمتبقي منه الآن 12,152 بايت. صحّح التدقيق قبل الحفظ صيغة الاسمين الضعيفين (Polizist وZeuge) وجمع der Bau.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -2016,3 +2016,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: 80 words as phrase + card with example, one matching e8 per lesson; 64 noun anchors appended with scope `ADR-151-goethe-b1-themes-2-noun-anchor`, 64/64 WiktionaryDE. The pre-commit audit fixed two glosses that overclaimed (Reportage, Erzählung), a case term without a case contract, a non-verbatim quote and an overclaim in an explanation.
 - Result: B1 2,170/2,830 (76.7%), taught ≥ 1,702, absent 508. Noun anchors 1,914; pending stays 89 (row-by-row diff). Exercises 738, governed records 3,338. JS 2,160,450 B, curriculum 1,324,754 B (1,246 B left). Pack generation v260.
 - Details: `docs/adr/ADR-151-goethe-b1-feelings-media-arts-environment-vocabulary.md`.
+
+## ADR-152 — Goethe B1 vocabulary for police and courts, city buildings, study and sport, with one moderate curriculum-ceiling step
+
+- Status: accepted, 2026-10-21 (v261). Owner «واصل» after the v260 report announced a small ceiling step; authority: «لا يهم السقف ساستعمله اونلاين دائما» (ADR-149).
+- Context: after ADR-151, 508 B1 headwords were absent from every lesson, and the curriculum had 1,246 B left under 1,326,000.
+- Decision: curriculum hard limit 1,560,000 → 1,580,000 (safety 1,343,000, 15% reserve kept; JS ceiling untouched). 80 words as phrase + card with example in b1-18 (police and courts), b1-09 (city buildings and services), b1-13 (study), b1-22 (sport), one matching e8 per lesson; 71 noun anchors appended with scope `ADR-152-goethe-b1-themes-3-noun-anchor`, 71/71 WiktionaryDE. The pre-commit audit fixed a doubled article in the weak-noun forms and a plural taken from the wrong sense (der Bau).
+- Result: B1 2,263/2,830 (80.0%), taught ≥ 1,797, absent 416. Noun anchors 1,985; pending stays 89 (row-by-row diff). Exercises 742, governed records 3,342. JS 2,166,322 B, curriculum 1,330,848 B (12,152 B left under 1,343,000). Pack generation v261.
+- Details: `docs/adr/ADR-152-goethe-b1-police-city-study-sport-vocabulary-and-ceiling-step.md`.

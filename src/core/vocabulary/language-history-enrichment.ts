@@ -74,7 +74,7 @@ export type LanguageHistorySource = {
 export const languageHistorySources: readonly LanguageHistorySource[] = [
   { key: "dwds", labelAr: "DWDS — القاموس الرقمي للغة الألمانية (مادة الكلمة)", labelDe: "DWDS — Digitales Wörterbuch der deutschen Sprache", kind: "online-dictionary", url: "https://www.dwds.de/wb/" },
   { key: "dw-arabic-roots", labelAr: "DW (دويتشه ڤيله) — «من الكحول إلى السكر: كلمات بجذور عربية»", labelDe: "Deutsche Welle — From alcohol to sugar: Words with Arabic roots", kind: "press-feature", url: "https://amp.dw.com/en/from-alcohol-to-sugar-words-with-arabic-roots/a-43680397" },
-  { key: "dpa-alcohol", labelAr: "تدقيق dpa: «كلمة Alkohol تعود إلى منتج تجميلي» (ودحض أصل «الروح آكلة الجسد»)", labelDe: "dpa-Faktencheck: Das Wort «Alkohol» geht auf ein Kosmetikprodukt zurück", kind: "fact-check", url: "https://dpa-factchecking.com/germany/230605-99-948521/" },
+  { key: "dpa-alcohol", labelAr: "تدقيق dpa: «كلمة Alkohol تعود إلى منتج تجميلي» (ودحض أصل «الروح آكلة الجسد»)", labelDe: "dpa-Faktencheck: Das Wort „Alkohol“ geht auf ein Kosmetikprodukt zurück", kind: "fact-check", url: "https://dpa-factchecking.com/germany/230605-99-948521/" },
   { key: "unger-arabic-words", labelAr: "أندرياس أونغر، «من الجبر إلى السكر — كلمات عربية في الألمانية» (كتاب مرجعي)", labelDe: "Andreas Unger, Von Algebra bis Zucker — Arabische Wörter im Deutschen", kind: "print-reference" },
   { key: "kluge", labelAr: "«كلوغه» — القاموس الاشتقاقي للألمانية (مرجع مطبوع معياري)", labelDe: "Kluge, Etymologisches Wörterbuch der deutschen Sprache", kind: "print-reference" },
 ];

@@ -38,10 +38,10 @@ describe("lexical target-gap inventory", () => {
   // v257: ADR-148 audited all 96 writing/speaking/mediation tasks (padding after the closing removed, models reordered and corrected); −10 contextual noun and +5 verb-pair candidates; covered, pendingHuman and authoredTargets unchanged (the a2-15 plural «die Tabletten» stays in the model).
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 6006,
+      totalCandidates: 6007,
       covered: 2234,
       pendingHuman: 89,
-      contextualNotTarget: 3683,
+      contextualNotTarget: 3684,
       authoredTargets: 2323,
     });
     expect(audit.verbFrameSummary).toMatchObject({

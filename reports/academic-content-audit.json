@@ -12249,7 +12249,7 @@
         "prompt": "طابق كلمة السفر والنقل بمعناها:",
         "answer": "das Visum → التأشيرة | die Landung → الهبوط | der Zuschlag → الرسوم الإضافية | zelten → يخيّم | die Rundfahrt → الجولة",
         "evidenceRef": "b1-11:controlled:b1-11-e9:explanationAr",
-        "evidenceExcerpt": "der Zuschlag مبلغ يُدفع فوق السعر العادي: Für den schnellen Zug muss man einen Zuschlag bezahlen. وzelten من das Zelt، أي نبيت في خيمة. أما die Landung فهي نهاية الرحلة الجوية.",
+        "evidenceExcerpt": "der Zuschlag مبلغ يُدفع فوق السعر العادي: Nachts verlangen manche Taxis einen Zuschlag. وzelten من das Zelt، أي نبيت في خيمة. أما die Landung فهي نهاية الرحلة الجوية.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -45176,10 +45176,10 @@
     "nounAnchorCount": 2117,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 6006,
+      "totalCandidates": 6007,
       "covered": 2234,
       "pendingHuman": 89,
-      "contextualNotTarget": 3683,
+      "contextualNotTarget": 3684,
       "authoredTargets": 2323,
       "byLevel": {
         "A1": {
@@ -45195,10 +45195,10 @@
           "contextualNotTarget": 626
         },
         "B1": {
-          "totalCandidates": 1960,
+          "totalCandidates": 1961,
           "covered": 806,
           "pendingHuman": 0,
-          "contextualNotTarget": 1154
+          "contextualNotTarget": 1155
         },
         "B2": {
           "totalCandidates": 2226,
@@ -130374,13 +130374,6 @@
         "anchorIds": [],
         "sources": [
           {
-            "path": "flashcards[53].exampleDe",
-            "stage": "vocabulary",
-            "text": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
-            "surface": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
-            "strength": "context"
-          },
-          {
             "path": "flashcards[54].exampleDe",
             "stage": "vocabulary",
             "text": "Wir sind in Eile, unser Zug fährt in zehn Minuten.",
@@ -130411,8 +130404,8 @@
           {
             "path": "flashcards[53].exampleDe",
             "stage": "vocabulary",
-            "text": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
-            "surface": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
+            "text": "Nachts verlangen manche Taxis einen Zuschlag.",
+            "surface": "Nachts verlangen manche Taxis einen Zuschlag.",
             "strength": "context"
           },
           {
@@ -150060,6 +150053,25 @@
           }
         ],
         "id": "lex-n-b1-20-68c857bc"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Essen",
+        "normalizedLemma": "essen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Diese Pillen nimmt man am besten nach dem Essen.",
+            "surface": "Diese Pillen nimmt man am besten nach dem Essen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-ddf4339f"
       },
       {
         "lessonId": "b1-20",
@@ -238236,23 +238248,23 @@
         "level": "B1",
         "infinitiveCandidate": "besten",
         "normalizedVerb": "besten",
-        "preposition": "mit",
+        "preposition": "nach",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
-          "unknown"
+          "dative"
         ],
         "anchorIds": [],
         "sources": [
           {
             "path": "flashcards[33].exampleDe",
             "stage": "vocabulary",
-            "text": "Die Pille nimmt man am besten mit viel Wasser.",
-            "surface": "Die Pille nimmt man am besten mit viel Wasser.",
+            "text": "Diese Pillen nimmt man am besten nach dem Essen.",
+            "surface": "Diese Pillen nimmt man am besten nach dem Essen.",
             "strength": "context"
           }
         ],
-        "id": "lex-v-b1-20-bc0f5f3c"
+        "id": "lex-v-b1-20-d71e6478"
       },
       {
         "lessonId": "b1-20",
@@ -256835,5 +256847,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "73f61cacdb62ffce403c8a1acfe00d30f9062d84f81ece3192a2e83b5614844e"
+  "contentSha256": "a0bb7ba3187c1bf1139a18b09a4eadf6800d788e07f828a3e8569288be6c3694"
 }

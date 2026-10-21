@@ -69,9 +69,9 @@ Ordered by benefit to the learner and by how verifiable the target is:
 
 ## Measured results
 
-- Curriculum source gzip 1,346,092 B (+8,120; 81,908 B left under 1,428,000). JavaScript 131 chunks, 2,182,712 B (+9,111; 112,288 B left under 2,295,000). About 80 B and 89 B per word.
-- Offline manifest `168f8195931d`: full 6,595,564 gzip (a1 2,959,110 · a2 3,082,010 · b1 3,171,424 · b2 4,584,778). Pack generation v264.
+- Curriculum source gzip 1,346,098 B (+8,126; 81,902 B left under 1,428,000). JavaScript 131 chunks, 2,182,712 B (+9,111; 112,288 B left under 2,295,000). About 80 B and 89 B per word.
+- Offline manifest `f083941dd7ba`: full 6,595,227 gzip (a1 2,959,060 · a2 3,081,942 · b1 3,171,363 · b2 4,584,557). Pack generation v264.
 - Unit tests 1771/1771 in 259 files; build EXIT=0, contrast 323 pages / 0 failures.
-- Exercises 747 → 751, governed records 3,347 → 3,351, noun anchors 2,051 → 2,117, search entries 4,727 → 4,829, similarity pairs 5,612,925, human-review rows 5,009. Lexical inventory: nouns 6,006 (covered 2,234, context 3,683), verbs 1,402 (context 1,267), pending stays 89.
-- Caught by the audit before saving: the gloss „يخاطب بـdu“ glued an Arabic letter to a Latin word and became „يخاطب بصيغة du“ (phrase, card, e9); the ADR-142 and ADR-150 tests would have counted the new anchors as theirs and now exclude the ADR-155 keys.
+- Exercises 747 → 751, governed records 3,347 → 3,351, noun anchors 2,051 → 2,117, search entries 4,727 → 4,829, similarity pairs 5,612,925, human-review rows 5,009. Lexical inventory: nouns 6,007 (covered 2,234, context 3,684), verbs 1,402 (context 1,267), pending stays 89.
+- Caught by the audit before saving: the gloss „يخاطب بـdu“ glued an Arabic letter to a Latin word and became „يخاطب بصيغة du“ (phrase, card, e9); the ADR-142 and ADR-150 tests would have counted the new anchors as theirs and now exclude the ADR-155 keys. A re-read of all 102 examples after the first build replaced „Für den schnellen Zug muss man einen Zuschlag bezahlen.“ (no longer true for German trains) by „Nachts verlangen manche Taxis einen Zuschlag.“ in the card and the e9 explanation, and „Die Pille nimmt man am besten mit viel Wasser.“ (readable as the contraceptive pill) by „Diese Pillen nimmt man am besten nach dem Essen.“; the gates were re-run on the corrected content.
 - Gates: GATES_PENDING

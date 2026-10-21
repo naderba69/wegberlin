@@ -737,7 +737,7 @@ for(const text of["P2-57","Light","Balanced","Intensive","never activate automat
 if(!p2Rows.some(row=>row.id===57&&row.status==="implemented"))fail("P2-57 planning intensity state drifted");
 const lexicalGaps = academicAudit.lexicalTargetGaps;
 if (lexicalGaps?.version !== "lexical-target-gap-v1" || lexicalGaps?.lessonCount !== 96 || lexicalGaps?.nounAnchorCount !== 2117 || lexicalGaps?.verbFrameAnchorCount !== 134) fail("lexical target-gap baseline drifted");
-if (lexicalGaps?.nounSummary?.totalCandidates !== 6006 || lexicalGaps?.nounSummary?.covered !== 2234 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3683) fail("noun target-gap counters drifted");
+if (lexicalGaps?.nounSummary?.totalCandidates !== 6007 || lexicalGaps?.nounSummary?.covered !== 2234 || lexicalGaps?.nounSummary?.pendingHuman !== 89 || lexicalGaps?.nounSummary?.contextualNotTarget !== 3684) fail("noun target-gap counters drifted");
 if (lexicalGaps?.verbFrameSummary?.totalCandidates !== 1402 || lexicalGaps?.verbFrameSummary?.covered !== 134 || lexicalGaps?.verbFrameSummary?.pendingHuman !== 1 || lexicalGaps?.verbFrameSummary?.contextualNotTarget !== 1267 || lexicalGaps?.exclusionDecisionCount !== 11 || lexicalGaps?.pendingIndependentExclusionReview !== 11 || lexicalGaps?.issues?.length !== 0) fail("verb target-gap counters drifted");
 const lexicalNounReviewWorklistLines = lexicalNounReviewWorklist.trimEnd().split(/\r?\n/u);
 if (lexicalNounReviewWorklistLines.length !== 1298 || !lexicalNounReviewWorklistLines[0].includes("reviewScope") || !lexicalNounReviewWorklistLines.some((line) => line.includes("P0-98-original-1297-noun-target"))) fail("P0-98 original 1297-noun review worklist drifted");

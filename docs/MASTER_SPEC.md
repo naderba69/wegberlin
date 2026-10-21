@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v263 · 2026-10-21 · إصلاح أداة قراءة قائمة غوته وكلمات مشروع B1 (ADR-154): وُجد أن 21 «كلمة غائبة» في B1 كانت أخطاء في قراءة ملف PDF (مثل فعلين على سطر واحد، فضاع الفعل duzen وظهر مكانه „geduzt“)، فأُصلحت الأداة وأُعيد العدّ كاملًا. ثم أُضيفت 24 كلمة لدرس المشروع b1-24 مع تمرين مطابقة، منها الكلمات الأربع التي حذفتها v257، فصارت B1 ‏2390/2823 (84.7%) والغائبة 289. لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 5,028 بايت.
+Sync batch: v264 · 2026-10-21 · خطة «مستويات متكاملة» وأول دفعة كلمات B1 (ADR-155): بطلب المالك «لا يوجد هنالك حدود اريد مستويات متكاملة» رُفع سقف المنهج وسقف JS مرة واحدة لكل الخطة مع بقاء الفحص (المنهج 1,428,000، وسقف JS ‏2,295,000). ثم أُضيفت 102 كلمة B1 غائبة إلى أربعة دروس (البيت، والسفر، والمشاعر، والصحة) مع تمرين مطابقة ثانٍ e9 لكل درس، و66 اسمًا موثّقًا 66/66، فصارت B1 ‏2497/2823 (88.5%) والغائبة 182.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

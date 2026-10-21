@@ -1,6 +1,6 @@
 # Official-Source and Free-Tier Freshness Policy
 
-Sync batch: v263 · 2026-10-21 · إصلاح أداة قراءة قائمة غوته وكلمات مشروع B1 (ADR-154): وُجد أن 21 «كلمة غائبة» في B1 كانت أخطاء في قراءة ملف PDF (مثل فعلين على سطر واحد، فضاع الفعل duzen وظهر مكانه „geduzt“)، فأُصلحت الأداة وأُعيد العدّ كاملًا. ثم أُضيفت 24 كلمة لدرس المشروع b1-24 مع تمرين مطابقة، منها الكلمات الأربع التي حذفتها v257، فصارت B1 ‏2390/2823 (84.7%) والغائبة 289. لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 5,028 بايت.
+Sync batch: v264 · 2026-10-21 · خطة «مستويات متكاملة» وأول دفعة كلمات B1 (ADR-155): بطلب المالك «لا يوجد هنالك حدود اريد مستويات متكاملة» رُفع سقف المنهج وسقف JS مرة واحدة لكل الخطة مع بقاء الفحص (المنهج 1,428,000، وسقف JS ‏2,295,000). ثم أُضيفت 102 كلمة B1 غائبة إلى أربعة دروس (البيت، والسفر، والمشاعر، والصحة) مع تمرين مطابقة ثانٍ e9 لكل درس، و66 اسمًا موثّقًا 66/66، فصارت B1 ‏2497/2823 (88.5%) والغائبة 182.
 
 Historical v182 follow-up: `/shadowing` uses a same-origin model asset and the learner recording in browser memory (≤60 seconds / ≤4 MB each), with no upload or persisted result. At that time active/staging were v182 and previous complete was v181; current caches are v183/rollback v182. No source-freshness record changed.
 

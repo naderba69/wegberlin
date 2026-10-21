@@ -3,7 +3,7 @@ import { academicLessonList } from "@/data/academic-lessons";
 import { compareAccepted, evaluateExercise, normalizeGermanText } from "@/core/lesson/evaluate";
 import type { PracticeExercise } from "@/types/lesson-content";
 
-// ADR-145 / v254: guard for the audit of all 728 exercises and 480 mini-test items (734 since ADR-150 / v259 added six matching e8, 738 since ADR-151 / v260 added four, 742 since ADR-152 / v261 added four more, 746 since ADR-153 / v262 added four more, 747 since ADR-154 / v263 added the b1-24 e8).
+// ADR-145 / v254: guard for the audit of all 728 exercises and 480 mini-test items (734 since ADR-150 / v259 added six matching e8, 738 since ADR-151 / v260 added four, 742 since ADR-152 / v261 added four more, 746 since ADR-153 / v262 added four more, 747 since ADR-154 / v263 added the b1-24 e8, 751 since ADR-155 / v264 added four e9).
 // - Word-ordering chips are rendered in data order (exercise-card does not shuffle them), so chips that
 //   already read as the accepted answer give the task away. 42 such items were found and reordered.
 // - The chips must still build the answer, and must be unique because the card keys each chip by its word.
@@ -40,7 +40,7 @@ describe("Exercise and mini-test guard (ADR-145)", () => {
     expect(wawProblems("x-m1", "الأولى صحيحة، وبلا فاصلة يتغير المعنى، و Tschüs للوداع.")).toEqual([]);
   });
 
-  it("keeps all 747 exercises and 480 mini-test items clean", () => {
+  it("keeps all 751 exercises and 480 mini-test items clean", () => {
     const problems: string[] = [];
     let exercises = 0;
     let mini = 0;
@@ -56,7 +56,7 @@ describe("Exercise and mini-test guard (ADR-145)", () => {
         problems.push(...wawProblems(item.id, item.promptAr), ...wawProblems(item.id, item.explanationAr));
       }
     }
-    expect({ exercises, mini }).toEqual({ exercises: 747, mini: 480 });
+    expect({ exercises, mini }).toEqual({ exercises: 751, mini: 480 });
     expect(problems).toEqual([]);
   });
 });

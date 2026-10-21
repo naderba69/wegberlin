@@ -13930,7 +13930,7 @@
         "scope": "lesson-controlled",
         "kind": "matching",
         "prompt": "طابق كلمة المشاعر والعلاقات بمعناها:",
-        "answer": "einsam → وحيد | vermissen → يفتقد / يشتاق إلى | dankbar → ممتنّ | duzen → يخاطب بـdu | begegnen → يصادف / يلتقي",
+        "answer": "einsam → وحيد | vermissen → يفتقد / يشتاق إلى | dankbar → ممتنّ | duzen → يخاطب بصيغة du | begegnen → يصادف / يلتقي",
         "evidenceRef": "b1-19:controlled:b1-19-e9:explanationAr",
         "evidenceExcerpt": "duzen يعني أن نقول du بدل Sie: Im Team duzen sich alle, auch die Chefin. وvermissen يأتي مع الشخص أو الشيء الذي نشتاق إليه مباشرة: Ich vermisse meine Familie in Tunis. أما einsam فشعور من يبقى وحده.",
         "visibilityPolicy": "authorized-pair-bank",
@@ -256835,5 +256835,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "a597e0ffa9257d6469c374636d38b8bef71b8dbbab74277c749d48bd68639c75"
+  "contentSha256": "73f61cacdb62ffce403c8a1acfe00d30f9062d84f81ece3192a2e83b5614844e"
 }

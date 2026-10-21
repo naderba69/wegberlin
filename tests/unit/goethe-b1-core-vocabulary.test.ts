@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { academicLessonList } from "@/data/academic-lessons";
 import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries } from "@/data/lexical-grammar-registry";
+import { isGoetheB1Themes6Entry } from "@/core/content-validation/lexical-review-packet";
 
 // ADR-142 / v251: the Goethe-Zertifikat B1 food (Verpflegung) and perception/movement (Wahrnehmung/Motorik)
 // words that the B1 lessons had missed are taught on the vocabulary stage (phrases), practised in the review
@@ -9,7 +10,8 @@ import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries } fr
 const b1 = academicLessonList.filter((lesson) => lesson.level === "B1");
 // ADR-150 / v259 added further B1 anchors in other lessons; this package keeps to its own five lessons.
 const ADR142_LESSONS = new Set(["b1-08", "b1-10", "b1-12", "b1-20", "b1-23"]);
-const b1Anchors = goetheCoreNounEntries.filter((entry) => ADR142_LESSONS.has(entry.lessonId));
+// ADR-155 / v264 appended further anchors to b1-08 and b1-20 under its own scope; they are not part of this package.
+const b1Anchors = goetheCoreNounEntries.filter((entry) => ADR142_LESSONS.has(entry.lessonId) && !isGoetheB1Themes6Entry(entry));
 const vocabularyText = (lessonId: string) => {
   const lesson = b1.find((item) => item.id === lessonId)!;
   return [...lesson.phrases.map((phrase) => phrase.de), ...lesson.flashcards.map((card) => card.frontDe)].join(" \n ");

@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { academicLessonList } from "@/data/academic-lessons";
 import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries } from "@/data/lexical-grammar-registry";
+import { isGoetheB1Themes6Entry } from "@/core/content-validation/lexical-review-packet";
 
 // ADR-150 / v259: six further Goethe-Zertifikat B1 themes that the B1 lessons had missed, taught inside the existing
 // lesson whose topic fits: family and life stages (b1-01), accident and emergency (b1-03), work (b1-06), nature and
@@ -9,7 +10,8 @@ import { goetheCoreNounEntries, nounGrammarEntries, originalP098NounEntries } fr
 // review card with an example sentence (appended, so no stored ID moves); each lesson gets one matching exercise e8.
 const THEME_LESSONS = ["b1-01", "b1-03", "b1-06", "b1-07", "b1-11", "b1-19"] as const;
 const lessons = academicLessonList.filter((lesson) => (THEME_LESSONS as readonly string[]).includes(lesson.id));
-const anchors = goetheCoreNounEntries.filter((entry) => (THEME_LESSONS as readonly string[]).includes(entry.lessonId));
+// ADR-155 / v264 appended further anchors to b1-11 and b1-19 under its own scope; they are not part of this package.
+const anchors = goetheCoreNounEntries.filter((entry) => (THEME_LESSONS as readonly string[]).includes(entry.lessonId) && !isGoetheB1Themes6Entry(entry));
 const vocabularyText = (lessonId: string) => {
   const lesson = lessons.find((item) => item.id === lessonId)!;
   return [...lesson.phrases.map((phrase) => phrase.de), ...lesson.flashcards.map((card) => card.frontDe)].join(" \n ");
@@ -37,7 +39,8 @@ describe("Goethe B1 theme vocabulary package (ADR-150)", () => {
       // the original 18 phrases stay first, the new words follow
       added += lesson.phrases.length - 18;
     }
-    expect(added).toBe(124);
+    // 124 from this package, plus the 27 (b1-11) and 25 (b1-19) words that ADR-155 appended after them
+    expect(added).toBe(124 + 27 + 25);
   });
 
   it("anchors every article-marked new noun, including the feminine forms, outside the original P0-98 scope", () => {

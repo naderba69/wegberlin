@@ -43,7 +43,7 @@ describe("Goethe reference report counting (ADR-153)", () => {
   });
 
   it("pins the full B1 recount", () => {
-    expect(report.levels.B1).toMatchObject({ headwords: 2823, appearsInLessonsUpToLevel: 2390, taughtExplicitlyUpToLevel: 1931, missingAtLevel: 433, absentFromAllLessons: 289, firstAppearsLater: { B2: 144 } });
+    expect(report.levels.B1).toMatchObject({ headwords: 2823, appearsInLessonsUpToLevel: 2497, taughtExplicitlyUpToLevel: 2038, missingAtLevel: 326, absentFromAllLessons: 182, firstAppearsLater: { B2: 144 } });
     expect(report.levels.A1).toMatchObject({ headwords: 670, appearsInLessonsUpToLevel: 669, taughtExplicitlyUpToLevel: 559 });
   });
 });
@@ -63,8 +63,10 @@ describe("Goethe B1 parser repair (ADR-154)", () => {
     for (const artifact of ["gebadet", "geduzt", "geflossen", "gelacht", "gelebt", "gelegt", "genäht", "gesollt", "gespart", "gesungen", "getippt", "getrieben", "gelandet", "gefahren", "gesessen", "geparkt", "gesendet/gesandt", "gewöhnt/ist", "monee", "sicherkälten", "dieWissenschaftlerin", "en", "e"]) {
       expect(listed, artifact).not.toContain(artifact);
     }
-    // the verbs that were hidden behind their participle are real headwords again; these three are absent for real
-    for (const verb of ["duzen", "tippen", "treiben", "anhaben"]) expect(b1.absentFromAllLessonsList).toContain(verb);
+    // the verbs that were hidden behind their participle are real headwords again; these were absent for real.
+    // ADR-155 / v264 teaches duzen (b1-19), so it has left the absent list; the other three are still open.
+    for (const verb of ["tippen", "treiben", "anhaben"]) expect(b1.absentFromAllLessonsList).toContain(verb);
+    expect(b1.absentFromAllLessonsList).not.toContain("duzen");
     for (const regional of ["der Abwart", "der Coiffeur", "der Fleischhauer", "der Pensionist"]) expect(listed, regional).not.toContain(regional);
     expect(parser).toContain("def repair(out):");
   });

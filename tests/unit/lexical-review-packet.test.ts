@@ -102,7 +102,7 @@ describe("unsigned independent German lexical review packet", () => {
     const goetheRows = parseCsv(byPath.get("reports/lexical-review-packet/goethe-core-noun-anchors.csv")!);
     expect(goetheRows).toHaveLength(goetheCoreNounEntries.length + 1);
     expect(goetheCoreNounEntries.length).toBeGreaterThan(140);
-    expect(new Set(goetheRows.slice(1).map((row) => row[0]))).toEqual(new Set(["ADR-139-goethe-a1-core-noun-anchor", "ADR-141-goethe-a2-core-noun-anchor", "ADR-142-goethe-b1-core-noun-anchor", "ADR-150-goethe-b1-themes-noun-anchor", "ADR-151-goethe-b1-themes-2-noun-anchor", "ADR-152-goethe-b1-themes-3-noun-anchor", "ADR-153-goethe-b1-themes-4-noun-anchor", "ADR-154-goethe-b1-themes-5-noun-anchor"]));
+    expect(new Set(goetheRows.slice(1).map((row) => row[0]))).toEqual(new Set(["ADR-139-goethe-a1-core-noun-anchor", "ADR-141-goethe-a2-core-noun-anchor", "ADR-142-goethe-b1-core-noun-anchor", "ADR-150-goethe-b1-themes-noun-anchor", "ADR-151-goethe-b1-themes-2-noun-anchor", "ADR-152-goethe-b1-themes-3-noun-anchor", "ADR-153-goethe-b1-themes-4-noun-anchor", "ADR-154-goethe-b1-themes-5-noun-anchor", "ADR-155-goethe-b1-themes-6-noun-anchor"]));
     expect(new Set([...nounRows.slice(1), ...supportRows.slice(1), ...goetheRows.slice(1)].map((row) => row[nounAnchorIndex]))).toEqual(new Set(nounGrammarEntries.map((entry) => entry.id)));
     assertBlankSignatures(supportRows);
     assertBlankSignatures(goetheRows);

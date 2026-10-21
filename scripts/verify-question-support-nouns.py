@@ -4,6 +4,7 @@ ADR-141 / v250: and on the Goethe A2 core-vocabulary anchors (export with `goeth
 ADR-142 / v251: and on the Goethe B1 food and perception anchors (export with `goethe-b1-core`).
 ADR-150 / v259: and on the anchors of the six further B1 themes (export with `goethe-b1-themes`).
 ADR-151 / v260: and on the anchors of four more B1 themes (export with `goethe-b1-themes-2`).
+ADR-152 / v261: and on the anchors of the next four B1 themes (export with `goethe-b1-themes-3`).
 
 Source: the `german_nouns` 1.2.5 package on PyPI (WiktionaryDE extract, CC BY-SA 4.0).
 Usage:

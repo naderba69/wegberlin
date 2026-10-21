@@ -72,15 +72,19 @@ describe("Goethe A1 core vocabulary package (ADR-139)", () => {
 
   it("raises only the curriculum hard limit, by owner decision, and keeps the 15% reserve", () => {
     const script = readFileSync("scripts/audit-media-pack-budgets.mjs", "utf8");
-    // ADR-139 raised the hard limit to 1,540,000 («نعم»); ADR-149 raised it again to 1,560,000 after the owner's answer.
-    expect(script).toContain("curriculumSourceGzipBytes:1_560_000");
+    // ADR-139 raised the hard limit to 1,540,000 («نعم»); ADR-149 raised it again to 1,560,000 after the owner's answer;
+    // ADR-152 raised it to 1,580,000 in the same moderate step, under the same answer, when 1,246 B were left.
+    expect(script).toContain("curriculumSourceGzipBytes:1_580_000");
     expect(script).toContain("MARGIN=0.15");
-    expect(Math.floor(1_560_000 * 0.85)).toBe(1_326_000);
+    expect(Math.floor(1_580_000 * 0.85)).toBe(1_343_000);
     const decision = readFileSync("docs/adr/ADR-139-goethe-a1-core-vocabulary.md", "utf8");
     expect(decision).toContain("1,309,000");
     expect(decision).toContain("«نعم»");
     const raise = readFileSync("docs/adr/ADR-149-audit-of-lesson-entry-discovery-and-pronunciation.md", "utf8");
     expect(raise).toContain("1,326,000");
     expect(raise).toContain("«لا يهم السقف ساستعمله اونلاين دائما»");
+    const next = readFileSync("docs/adr/ADR-152-goethe-b1-police-city-study-sport-vocabulary-and-ceiling-step.md", "utf8");
+    expect(next).toContain("1,343,000");
+    expect(next).toContain("«لا يهم السقف ساستعمله اونلاين دائما»");
   });
 });

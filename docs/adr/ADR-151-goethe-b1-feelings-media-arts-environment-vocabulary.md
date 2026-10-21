@@ -81,6 +81,8 @@
 | JavaScript (gzip) | 2,154,585 | **2,160,450** (44,550 B left under 2,205,000) |
 | Unit tests | 1,735 in 253 files | **1,739 in 254 files** |
 
+Gates: `npm run check` EXIT=0 (lint, typecheck, unit, handoff, dependency audit, build, browser accessibility 642/0, contrast 323 pages / 0 below minimum) and E2E 134/134 (67 desktop + 67 mobile). Offline fingerprint `92f908132e1d`, full pack 6,535,217 B gzip.
+
 Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v260.
 
 ## Consequences

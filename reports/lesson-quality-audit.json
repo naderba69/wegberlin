@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "229cc418016a44bb229d0ab65629dec4f93cec052e38e0d0a060960e96d1c0a0",
+  "contentSha256": "c7acf9c28bbc6b850df12325b655855cb4d472bc47f0ae1dd358c06a577d6702",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,7 +92,7 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1798,
+    "allItems": 1802,
     "allMedianChars": 166,
     "allUnder60Chars": 0,
     "allMissing": 0,
@@ -451,15 +451,15 @@
         "pct": 50.9
       },
       {
-        "id": "b2-01",
-        "pct": 50.9
-      },
-      {
         "id": "b2-06",
         "pct": 50.4
       },
       {
         "id": "a1-14",
+        "pct": 50
+      },
+      {
+        "id": "b2-01",
         "pct": 50
       },
       {
@@ -472,7 +472,7 @@
       },
       {
         "id": "b2-07",
-        "pct": 48.3
+        "pct": 47.7
       },
       {
         "id": "a1-01",
@@ -596,29 +596,6 @@
         ]
       },
       {
-        "lessonId": "b2-01",
-        "level": "B2",
-        "pct": 50.9,
-        "unknown": [
-          "diskussion",
-          "smartphones",
-          "unterricht",
-          "extreme",
-          "positionen",
-          "fordert",
-          "vollstaendiges",
-          "verbot",
-          "unterbrechen",
-          "betrachtet",
-          "geraete",
-          "grundsaetzlich",
-          "moderne",
-          "lernwerkzeuge",
-          "beide",
-          "greifen"
-        ]
-      },
-      {
         "lessonId": "b2-06",
         "level": "B2",
         "pct": 50.4,
@@ -662,6 +639,29 @@
           "normalerweise",
           "schale",
           "findet"
+        ]
+      },
+      {
+        "lessonId": "b2-01",
+        "level": "B2",
+        "pct": 50,
+        "unknown": [
+          "diskussion",
+          "smartphones",
+          "unterricht",
+          "extreme",
+          "positionen",
+          "fordert",
+          "vollstaendiges",
+          "verbot",
+          "unterbrechen",
+          "betrachtet",
+          "geraete",
+          "grundsaetzlich",
+          "moderne",
+          "lernwerkzeuge",
+          "beide",
+          "greifen"
         ]
       },
       {
@@ -713,7 +713,7 @@
       {
         "lessonId": "b2-07",
         "level": "B2",
-        "pct": 48.3,
+        "pct": 47.7,
         "unknown": [
           "bezirk",
           "leerstehenden",
@@ -725,12 +725,12 @@
           "abendveranstaltung",
           "ueberwiegend",
           "fuenfzig",
-          "direkten",
           "schichtarbeit",
           "entfernten",
           "wohnblocks",
           "bezeichnete",
-          "bericht"
+          "bericht",
+          "repraesentative"
         ]
       },
       {
@@ -2524,7 +2524,7 @@
     "policy": "lemmatized-lexical-load-v2",
     "support": "every lesson at or below the input's level (phrases, cards, reading glossary) plus the glossary shown beside the input",
     "tasks": 16,
-    "medianUnknownWordPct": 17.3,
+    "medianUnknownWordPct": 17.2,
     "maxUnknownWordPct": 25.4,
     "ceilingPct": 32,
     "rows": [
@@ -2809,7 +2809,7 @@
         "level": "B2",
         "contentTypes": 185,
         "properNames": 1,
-        "pct": 17.3,
+        "pct": 16.8,
         "unknownSample": [
           "stadtrat",
           "theatergruppen",
@@ -2827,7 +2827,7 @@
     "note": "Measures whether the long inputs ask for vocabulary the curriculum has exposed; it says nothing about voice, pacing or rights, which remain human review items of P2-401."
   },
   "pronunciation": {
-    "medianCoveragePct": 24
+    "medianCoveragePct": 22.2
   },
   "policyNotes": [
     "Exact-match grading with explicit orthographic variants only is a tested policy (tests/unit/content-integrity.test.ts:77-78); the remedy is more acceptedAnswers in data plus ADR-078, not comparator folding.",

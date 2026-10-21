@@ -5,7 +5,7 @@
  "boundary": "ratio-and-task-presence-audit-no-quality-judgement-no-cefr-claim",
  "ok": true,
  "lessons": 96,
- "closed": 1411,
+ "closed": 1415,
  "constructed": 387,
  "constructedSharePct": 21.5,
  "productionBlocks": 288,
@@ -26,9 +26,9 @@
   },
   "B1": {
    "lessons": 24,
-   "closed": 355,
+   "closed": 359,
    "constructed": 96,
-   "constructedSharePct": 21.3
+   "constructedSharePct": 21.1
   },
   "B2": {
    "lessons": 24,
@@ -629,7 +629,7 @@
   {
    "lessonId": "b1-02",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -653,7 +653,7 @@
   {
    "lessonId": "b1-04",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -773,7 +773,7 @@
   {
    "lessonId": "b1-14",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,
@@ -785,7 +785,7 @@
   {
    "lessonId": "b1-15",
    "level": "B1",
-   "closed": 14,
+   "closed": 15,
    "constructed": 4,
    "writing": true,
    "writingHasChecklist": true,

@@ -1,7 +1,7 @@
 const SHELL_CACHE = "dwnb-shell-v4";
-const PACK_CACHE = "dwnb-full-pack-v261";
-const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v260";
-const PACK_PREVIOUS_CACHE = "dwnb-full-pack-previous-v260";
+const PACK_CACHE = "dwnb-full-pack-v262";
+const PACK_STAGING_CACHE = "dwnb-full-pack-staging-v261";
+const PACK_PREVIOUS_CACHE = "dwnb-full-pack-previous-v261";
 const PACK_META_PATH = "/__dwnb_offline_pack_meta__";
 // GENERATED from src/config/curriculum-version.json — do not edit this line manually.
 const CURRICULUM_VERSION = "dwnb-a1-b2-2026.10-v2";

@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `069361e7c440494a08f5da605980fa0c9537cf66dac8a29c9b0e4a6fa831436a`
+Content SHA-256: `67721ce04eaa2bfcbe0f4d36496bb57ebfc1b5a2c5cef3cd958f860eaf70adaf`
 
 ## Result
 
@@ -229,14 +229,14 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-01-objective-3` | Ich kann Lebensphasen zeitlich verbinden. | أربط مراحل الحياة زمنيًا. | 3 · `b1-01:entry`, `b1-01:vocabulary` | 7 | 1 · `b1-01-m4` | covered |
 | `b1-01-objective-4` | Ich kann Fakten und persönliche Bedeutung trennen. | أفرق بين الوقائع ودلالتها الشخصية. | 2 · `b1-01:vocabulary`, `b1-01-t3` | 6 | 1 · `b1-01-m5` | covered |
 | `b1-02-objective-1` | Ich kann eine Entscheidung nachvollziehbar begründen. | أبرر قرارًا بطريقة قابلة للمتابعة. | 1 · `b1-02:vocabulary` | 6 | 1 · `b1-02-m5` | covered |
-| `b1-02-objective-2` | Ich kann Vor- und Nachteile abwägen. | أوازن المزايا والعيوب. | 3 · `b1-02:entry`, `b1-02:vocabulary` | 7 | 1 · `b1-02-m2` | covered |
+| `b1-02-objective-2` | Ich kann Vor- und Nachteile abwägen. | أوازن المزايا والعيوب. | 3 · `b1-02:entry`, `b1-02:vocabulary` | 8 | 1 · `b1-02-m2` | covered |
 | `b1-02-objective-3` | Ich kann sich entscheiden für/gegen korrekt benutzen. | أستعمل sich entscheiden für/gegen. | 2 · `b1-02:vocabulary`, `b1-02-t1` | 3 | 2 · `b1-02-m1`, `b1-02-m4` | covered |
 | `b1-02-objective-4` | Ich kann hypothetische Alternativen mit würde formulieren. | أصوغ بدائل افتراضية ب würde. | 1 · `b1-02-t3` | 5 | 1 · `b1-02-m3` | covered |
 | `b1-03-objective-1` | Ich kann einen Wendepunkt ausführlich beschreiben. | أصف نقطة تحول بتفصيل. | 2 · `b1-03:entry`, `b1-03:vocabulary` | 5 | 1 · `b1-03-m5` | covered |
 | `b1-03-objective-2` | Ich kann Vorzeitigkeit mit nachdem ausdrücken. | أعبر عن حدث سبق آخر ب nachdem. | 3 · `b1-03:entry`, `b1-03:vocabulary` | 4 | 1 · `b1-03-m3` | covered |
 | `b1-03-objective-3` | Ich kann das Plusquamperfekt bilden. | أبني Plusquamperfekt. | 3 · `b1-03:entry`, `b1-03:vocabulary` | 8 | 3 · `b1-03-m1`, `b1-03-m2` | covered |
 | `b1-03-objective-4` | Ich kann langfristige Folgen mit seitdem erklären. | أشرح أثرًا مستمرًا ب seitdem. | 2 · `b1-03:vocabulary`, `b1-03-t3` | 6 | 1 · `b1-03-m4` | covered |
-| `b1-04-objective-1` | Ich kann Aufgaben und Rollen transparent verteilen. | أوزع المهام والأدوار بوضوح. | 3 · `b1-04:entry`, `b1-04:vocabulary` | 7 | 1 · `b1-04-m4` | covered |
+| `b1-04-objective-1` | Ich kann Aufgaben und Rollen transparent verteilen. | أوزع المهام والأدوار بوضوح. | 3 · `b1-04:entry`, `b1-04:vocabulary` | 8 | 1 · `b1-04-m4` | covered |
 | `b1-04-objective-2` | Ich kann Abläufe im Passiv beschreiben. | أصف الإجراءات بالمبني للمجهول. | 1 · `b1-04-t1` | 6 | 3 · `b1-04-m1`, `b1-04-m2` | covered |
 | `b1-04-objective-3` | Ich kann Abhängigkeiten und Fristen erklären. | أشرح الاعتماديات والمواعيد. | 2 · `b1-04:vocabulary`, `b1-04-t2` | 7 | 1 · `b1-04-m4` | covered |
 | `b1-04-objective-4` | Ich kann konstruktives Feedback geben. | أقدم ملاحظات بناءة. | 1 · `b1-04-t3` | 4 | 1 · `b1-04-m5` | covered |
@@ -276,13 +276,13 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-13-objective-2` | Ich kann beim + nominalisiertes Verb benutzen. | أستعمل beim مع الفعل المحول إلى اسم. | 3 · `b1-13:entry`, `b1-13:vocabulary` | 3 | 1 · `b1-13-m1` | covered |
 | `b1-13-objective-3` | Ich kann Mittel mit durch ausdrücken. | أعبر عن الوسيلة ب durch. | 3 · `b1-13:entry`, `b1-13:vocabulary` | 1 | 1 · `b1-13-m2` | covered |
 | `b1-13-objective-4` | Ich kann Lernfortschritt mit Belegen bewerten. | أقيّم التقدم بالأدلة. | 2 · `b1-13:vocabulary`, `b1-13-t3` | 11 | 2 · `b1-13-m3`, `b1-13-m5` | covered |
-| `b1-14-objective-1` | Ich kann Weiterbildungsangebote kritisch vergleichen. | أقارن عروض التكوين نقديًا. | 3 · `b1-14:entry`, `b1-14:vocabulary` | 6 | 1 · `b1-14-m5` | covered |
+| `b1-14-objective-1` | Ich kann Weiterbildungsangebote kritisch vergleichen. | أقارن عروض التكوين نقديًا. | 3 · `b1-14:entry`, `b1-14:vocabulary` | 7 | 1 · `b1-14-m5` | covered |
 | `b1-14-objective-2` | Ich kann lassen-Konstruktionen benutzen. | أستعمل تراكيب lassen. | 3 · `b1-14:vocabulary`, `b1-14:discover` | 6 | 2 · `b1-14-m1`, `b1-14-m3` | covered |
 | `b1-14-objective-3` | Ich kann Anerkennung und Nachweis unterscheiden. | أفرق بين الاعتراف والإثبات. | 3 · `b1-14:entry`, `b1-14:vocabulary` | 7 | 1 · `b1-14-m4` | covered |
 | `b1-14-objective-4` | Ich kann eine Beratungsanfrage schreiben. | أكتب طلب استشارة. | 2 · `b1-14:vocabulary`, `b1-14-t2` | 1 | 1 · `b1-14-m2` | covered |
 | `b1-15-objective-1` | Ich kann eine Präsentation klar strukturieren. | أنظم عرضًا بوضوح. | 3 · `b1-15:entry`, `b1-15:vocabulary` | 6 | 2 · `b1-15-m1`, `b1-15-m3` | covered |
 | `b1-15-objective-2` | Ich kann Inhalte mit Signalen verbinden. | أربط المحتوى بإشارات لفظية. | 2 · `b1-15:vocabulary`, `b1-15-t2` | 8 | 1 · `b1-15-m2` | covered |
-| `b1-15-objective-3` | Ich kann Folien als Unterstützung nutzen. | أستعمل الشرائح دعمًا لا نصًا. | 2 · `b1-15:entry`, `b1-15-t3` | 2 | 1 · `b1-15-m5` | covered |
+| `b1-15-objective-3` | Ich kann Folien als Unterstützung nutzen. | أستعمل الشرائح دعمًا لا نصًا. | 2 · `b1-15:entry`, `b1-15-t3` | 3 | 1 · `b1-15-m5` | covered |
 | `b1-15-objective-4` | Ich kann Fragen aufnehmen und begrenzt beantworten. | أتعامل مع الأسئلة ضمن حدود معرفتي. | 1 · `b1-15-t3` | 3 | 1 · `b1-15-m4` | covered |
 | `b1-16-objective-1` | Ich kann meine Mediennutzung differenziert analysieren. | أحلل استعمالي للإعلام بتفصيل. | 3 · `b1-16:entry`, `b1-16:vocabulary` | 7 | 1 · `b1-16-m5` | covered |
 | `b1-16-objective-2` | Ich kann statt dass bei verschiedenen Subjekten benutzen. | أستعمل statt dass عند اختلاف الفاعل. | 1 · `b1-16-t1` | 3 | 2 · `b1-16-m1`, `b1-16-m2` | covered |

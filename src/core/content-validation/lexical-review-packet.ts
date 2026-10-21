@@ -257,6 +257,9 @@ const GOETHE_B1_THEMES_2_LESSONS = new Set(["b1-05", "b1-16", "b1-17", "b1-21"])
 /** ADR-152 / v261: four more Goethe-Zertifikat B1 themes (police and courts, city buildings, study, sport), same worksheet, own scope label. */
 export const GOETHE_B1_THEMES_3_NOUN_SCOPE = "ADR-152-goethe-b1-themes-3-noun-anchor";
 const GOETHE_B1_THEMES_3_LESSONS = new Set(["b1-09", "b1-13", "b1-18", "b1-22"]);
+/** ADR-153 / v262: four more Goethe-Zertifikat B1 themes (opinions and decisions, work in the company, trades and qualifications, charts in presentations), same worksheet, own scope label. */
+export const GOETHE_B1_THEMES_4_NOUN_SCOPE = "ADR-153-goethe-b1-themes-4-noun-anchor";
+const GOETHE_B1_THEMES_4_LESSONS = new Set(["b1-02", "b1-04", "b1-14", "b1-15"]);
 
 export function assertOriginalP098NounReviewScope(nounEntries: readonly NounGrammarEntry[], pendingCandidateCount: number) {
   if (nounEntries.length !== ORIGINAL_P098_NOUN_TARGET_COUNT || pendingCandidateCount !== ORIGINAL_P098_PENDING_NOUN_CANDIDATE_COUNT) {
@@ -706,7 +709,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
   };
   const nounRows = nounEntries.map(nounRow(ORIGINAL_P098_NOUN_SCOPE));
   const questionSupportNounRows = (input.questionSupportNounEntries ?? []).map(nounRow(QUESTION_SUPPORT_NOUN_SCOPE));
-  const goetheCoreNounRows = (input.goetheCoreNounEntries ?? []).map((entry) => nounRow(GOETHE_B1_THEMES_3_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_3_NOUN_SCOPE : GOETHE_B1_THEMES_2_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_2_NOUN_SCOPE : GOETHE_B1_THEMES_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_NOUN_SCOPE : entry.lessonId.startsWith("b1-") ? GOETHE_B1_CORE_NOUN_SCOPE : entry.lessonId.startsWith("a2-") ? GOETHE_A2_CORE_NOUN_SCOPE : GOETHE_CORE_NOUN_SCOPE)(entry));
+  const goetheCoreNounRows = (input.goetheCoreNounEntries ?? []).map((entry) => nounRow(GOETHE_B1_THEMES_4_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_4_NOUN_SCOPE : GOETHE_B1_THEMES_3_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_3_NOUN_SCOPE : GOETHE_B1_THEMES_2_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_2_NOUN_SCOPE : GOETHE_B1_THEMES_LESSONS.has(entry.lessonId) ? GOETHE_B1_THEMES_NOUN_SCOPE : entry.lessonId.startsWith("b1-") ? GOETHE_B1_CORE_NOUN_SCOPE : entry.lessonId.startsWith("a2-") ? GOETHE_A2_CORE_NOUN_SCOPE : GOETHE_CORE_NOUN_SCOPE)(entry));
 
   const frameHeaders = [
     "anchorId", "level", "lessonId", "infinitive", "preposition", "authoredGovernedCase", "chunkDe", "exampleDe",
@@ -821,7 +824,7 @@ export function buildLexicalReviewPacketArtifacts(input: {
 |---|---:|---|
 | \`noun-anchors.csv\` | ${nounRows.length} | ورقة عمل P0-98 للنطاق الأصلي: سجلات الاسم المؤلفة الـ1,297؛ راجع أداة التعريف/الجنس، التصريف، الجمع، والسياق الظاهر. |
 | \`question-support-noun-anchors.csv\` | ${questionSupportNounRows.length} | أسماء أضافها ADR-135 لأن سؤال قراءة أو جوابه يعتمد عليها ولم يشرحها سطح سابق ولا المسرد. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل كلها بـWiktionary في \`source-verification-question-support-nouns-2026-10-19.csv\` (v244)، وهذا تحقق مصدري لا مراجعة بشرية. |
-| \`goethe-core-noun-anchors.csv\` | ${goetheCoreNounRows.length} | أسماء أضافها ADR-139 (A1) وADR-141 (A2) وADR-142 وADR-150 وADR-151 وADR-152 (B1) من قوائم كلمات Goethe-Zertifikat الرسمية إلى عبارات الدروس وبطاقاتها، ولكل مستوى وسم نطاق خاص. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل بـWiktionary في \`source-verification-goethe-core-nouns-2026-10-19.csv\` (A1) و\`source-verification-goethe-a2-core-nouns-2026-10-19.csv\` (A2) و\`source-verification-goethe-b1-core-nouns-2026-10-20.csv\` (B1، ADR-142) و\`source-verification-goethe-b1-themes-nouns-2026-10-21.csv\` (B1، ADR-150) و\`source-verification-goethe-b1-themes-2-nouns-2026-10-21.csv\` (B1، ADR-151)، وهذا تحقق مصدري لا مراجعة بشرية. |
+| \`goethe-core-noun-anchors.csv\` | ${goetheCoreNounRows.length} | أسماء أضافها ADR-139 (A1) وADR-141 (A2) وADR-142 وADR-150 وADR-151 وADR-152 وADR-153 (B1) من قوائم كلمات Goethe-Zertifikat الرسمية إلى عبارات الدروس وبطاقاتها، ولكل مستوى وسم نطاق خاص. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل بـWiktionary في \`source-verification-goethe-core-nouns-2026-10-19.csv\` (A1) و\`source-verification-goethe-a2-core-nouns-2026-10-19.csv\` (A2) و\`source-verification-goethe-b1-core-nouns-2026-10-20.csv\` (B1، ADR-142) و\`source-verification-goethe-b1-themes-nouns-2026-10-21.csv\` (B1، ADR-150) و\`source-verification-goethe-b1-themes-2-nouns-2026-10-21.csv\` (B1، ADR-151) و\`source-verification-goethe-b1-themes-3-nouns-2026-10-21.csv\` (B1، ADR-152) و\`source-verification-goethe-b1-themes-4-nouns-2026-10-21.csv\` (B1، ADR-153)، وهذا تحقق مصدري لا مراجعة بشرية. |
 | \`verb-frames.csv\` | ${frameRows.length} | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | \`frame-quality-targets.csv\` | ${qualityFrameRows.length} | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = ${originalQualityTargetDistribution}، والتوزيع الموجود في هذه الورقة = ${qualityTargetDistribution}. |
 | \`unresolved-candidates.csv\` | ${nounCandidates.length + frameCandidates.length} (${nounCandidates.length} اسم + ${frameCandidates.length} إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |

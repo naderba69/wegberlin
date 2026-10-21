@@ -1,6 +1,6 @@
 # حزمة تجهيز المراجعة الألمانية المستقلة — P0-98 / P0-99
 
-هذه حزمة مُولَّدة من السجلات المؤلفة الحالية لتسهيل مراجعة بشرية ألمانية مستقلة. **ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد.** بصمة المحتوى التي بُنيت عليها: `069361e7c440494a08f5da605980fa0c9537cf66dac8a29c9b0e4a6fa831436a`.
+هذه حزمة مُولَّدة من السجلات المؤلفة الحالية لتسهيل مراجعة بشرية ألمانية مستقلة. **ليست مراجعة، ولا توقيعًا، ولا دليل اعتماد.** بصمة المحتوى التي بُنيت عليها: `67721ce04eaa2bfcbe0f4d36496bb57ebfc1b5a2c5cef3cd958f860eaf70adaf`.
 
 ## نطاق الصفوف
 
@@ -8,7 +8,7 @@
 |---|---:|---|
 | `noun-anchors.csv` | 1297 | ورقة عمل P0-98 للنطاق الأصلي: سجلات الاسم المؤلفة الـ1,297؛ راجع أداة التعريف/الجنس، التصريف، الجمع، والسياق الظاهر. |
 | `question-support-noun-anchors.csv` | 105 | أسماء أضافها ADR-135 لأن سؤال قراءة أو جوابه يعتمد عليها ولم يشرحها سطح سابق ولا المسرد. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل كلها بـWiktionary في `source-verification-question-support-nouns-2026-10-19.csv` (v244)، وهذا تحقق مصدري لا مراجعة بشرية. |
-| `goethe-core-noun-anchors.csv` | 583 | أسماء أضافها ADR-139 (A1) وADR-141 (A2) وADR-142 وADR-150 وADR-151 وADR-152 (B1) من قوائم كلمات Goethe-Zertifikat الرسمية إلى عبارات الدروس وبطاقاتها، ولكل مستوى وسم نطاق خاص. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل بـWiktionary في `source-verification-goethe-core-nouns-2026-10-19.csv` (A1) و`source-verification-goethe-a2-core-nouns-2026-10-19.csv` (A2) و`source-verification-goethe-b1-core-nouns-2026-10-20.csv` (B1، ADR-142) و`source-verification-goethe-b1-themes-nouns-2026-10-21.csv` (B1، ADR-150) و`source-verification-goethe-b1-themes-2-nouns-2026-10-21.csv` (B1، ADR-151)، وهذا تحقق مصدري لا مراجعة بشرية. |
+| `goethe-core-noun-anchors.csv` | 642 | أسماء أضافها ADR-139 (A1) وADR-141 (A2) وADR-142 وADR-150 وADR-151 وADR-152 وADR-153 (B1) من قوائم كلمات Goethe-Zertifikat الرسمية إلى عبارات الدروس وبطاقاتها، ولكل مستوى وسم نطاق خاص. خارج نطاق P0-98 الأصلي، ومؤلفة بانتظار المراجعة بالحقول نفسها. قابلها الوكيل بـWiktionary في `source-verification-goethe-core-nouns-2026-10-19.csv` (A1) و`source-verification-goethe-a2-core-nouns-2026-10-19.csv` (A2) و`source-verification-goethe-b1-core-nouns-2026-10-20.csv` (B1، ADR-142) و`source-verification-goethe-b1-themes-nouns-2026-10-21.csv` (B1، ADR-150) و`source-verification-goethe-b1-themes-2-nouns-2026-10-21.csv` (B1، ADR-151) و`source-verification-goethe-b1-themes-3-nouns-2026-10-21.csv` (B1، ADR-152) و`source-verification-goethe-b1-themes-4-nouns-2026-10-21.csv` (B1، ADR-153)، وهذا تحقق مصدري لا مراجعة بشرية. |
 | `verb-frames.csv` | 134 | جرد مرجعي كامل للإطارات المؤلفة الحالية؛ لا يعني أن كل صف هدف مراجعة أو أنه روجع. |
 | `frame-quality-targets.csv` | 126 | ورقة العمل الحصرية لنطاق P0-99 الأصلي: التوزيع المتوقع A1/A2/B1/B2 = 25/30/31/40، والتوزيع الموجود في هذه الورقة = 25/30/31/40. |
 | `unresolved-candidates.csv` | 90 (89 اسم + 1 إطار) | فرز المرشحات آليًا كإشارات غير محسومة؛ أسماء P0-98 الـ89 منفصلة عن سجلات النطاق الـ1,297، ولا تمثل حالة القرار الآلي نتيجة بشرية. |

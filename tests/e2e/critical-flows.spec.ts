@@ -241,7 +241,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await expect(b1LexicalPanel).toContainText("die Entscheidung");
   await expect(b1LexicalPanel).toContainText("sich für eine Möglichkeit entscheiden");
   await expect(b1LexicalPanel).toContainText("sich gegen eine Möglichkeit entscheiden");
-  await expect(b1LexicalPanel).toContainText("9 مراسي اسم و2 إطار فعل");
+  await expect(b1LexicalPanel).toContainText("14 مراسي اسم و2 إطار فعل");
 
   await page.goto("/lernen/b1-01");
   await waitForLearningReady(page);

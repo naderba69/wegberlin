@@ -89,12 +89,12 @@ The published figures of v250–v261 stay in their documents as they were. They 
 | JavaScript (gzip) | 2,166,322 | **2,171,803** (33,197 B left under 2,205,000) |
 | Unit tests | 1,743 in 255 files | **1,751 in 257 files** |
 
-The batch made 94 B1 headwords appear: 93 that were absent from every lesson, and die Zeile, which had first appeared in B2. The full recount also removes the five words lost in v257 and the repeated counts, so the two columns are not a plain difference. Das Zeug is still counted falsely (ADR-152), so the real B1 figure is at most **2,351**. Pack generation v262.
+The batch made 94 B1 headwords appear: 93 that were absent from every lesson, and die Zeile, which had first appeared in B2. The full recount also removes the five words lost in v257 and the repeated counts, so the two columns are not a plain difference: 2,263 published − 5 words lost in v257 + 94 new = 2,352. Das Zeug is still counted falsely (ADR-152), so the real B1 figure is at most **2,351**. Pack generation v262.
 
-Gates: __GATES__ Offline fingerprint `76996068cb18`, full pack 6,567,788 B gzip.
+Gates: `npm run check` EXIT=0 (lint, typecheck, unit, handoff, dependency audit, build, browser accessibility 642/0, contrast 323 pages / 0 below minimum) and E2E 134/134 (67 desktop + 67 mobile; 132 in the full run, plus the b1-02 noun-panel test rerun on both projects after its pin moved from 9 to 14 anchors). Offline fingerprint `76996068cb18`, full pack 6,567,788 B gzip.
 
 ## Consequences
 
 - The four lessons have 38 vocabulary phrases instead of 18. 69 of the 96 lessons now have a Goethe matching e8; among the B1 lessons only b1-24 has none.
-- The remaining B1 gaps are 327 headwords absent from every lesson (including the five lost in v257), plus 149 taught first in B2.
+- The remaining B1 gaps are 327 headwords absent from every lesson (including beruhigen, gelegt, ärgerlich and übrigens, lost in v257), plus 149 taught first in B2 (including der Einfluss, also lost from the B1 lessons in v257).
 - The curriculum ceiling leaves room for about one more batch of this size. After that, the next step needs the same recorded decision.

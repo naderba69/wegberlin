@@ -10951,7 +10951,7 @@
         "prompt": "طابق كلمة المشاعر والتعامل بمعناها:",
         "answer": "peinlich → محرِج | wütend → غاضب جدًا | verzeihen → يسامح | die Geduld → الصبر | sich weigern → يرفض (أن يفعل شيئًا)",
         "evidenceRef": "b1-05:controlled:b1-05-e8:explanationAr",
-        "evidenceExcerpt": "peinlich تصف موقفًا يُشعرك بالحرج، وwütend تصف غضبًا شديدًا. ومع verzeihen يأتي الشخص بصيغة mir أو dir، كما في المثال Kannst du mir verzeihen. أما sich weigern فيتبعه zu مع المصدر.",
+        "evidenceExcerpt": "peinlich تصف موقفًا يُشعرك بالحرج، وwütend تصف غضبًا شديدًا. ومع verzeihen يأتي الشخص بصيغة mir أو dir، كما في المثال „Kannst du mir verzeihen, dass ich so spät komme?“ أما sich weigern فيتبعه zu مع المصدر.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -14240,7 +14240,7 @@
         "prompt": "طابق كلمة البيئة والمجتمع بمعناها:",
         "answer": "die Umwelt → البيئة | entsorgen → يتخلّص من (النفايات بطريقة نظامية) | die Müllabfuhr → خدمة جمع النفايات | die Versammlung → الاجتماع العام | gleichberechtigt → متساوٍ في الحقوق",
         "evidenceRef": "b1-21:controlled:b1-21-e8:explanationAr",
-        "evidenceExcerpt": "entsorgen يعني التخلص من شيء بالطريقة الصحيحة، كالبطاريات القديمة، وdie Müllabfuhr هي الخدمة التي تجمع النفايات من البيوت. وdie Versammlung اجتماع يحضره كثيرون ليقرّروا معًا. وgleichberechtigt تعني أن للجميع الحقوق نفسه…",
+        "evidenceExcerpt": "entsorgen يعني التخلص من شيء بالطريقة الصحيحة، كالبطاريات القديمة، وdie Müllabfuhr هي الخدمة التي تجمع النفايات من البيوت. وdie Versammlung اجتماع يحضره كثيرون، مثل اجتماع سكان الحي أو أعضاء جمعية. وgleichberechtigt تعن…",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -245105,5 +245105,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "69c76d8878698fbe62a697de025419f22d9e7879ae425ee3f74b9dfb75b5d12a"
+  "contentSha256": "82faadede3c7d610c2c24c6020aed4436de5d17229d1151b9bd6a9d7b5525910"
 }

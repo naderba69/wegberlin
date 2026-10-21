@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v259 · 2026-10-21 · علامات التنصيص الألمانية وإكمال قوائم غوته (ADR-150): صارت „…“ بدل «…» في 35 خانة ألمانية (نصوص b2-14/16/17 وطبقة التمريض)، ومعها الشرحان ومحدِّدا الدليل اللذان يقتبسانها حرفيًا. A1 صارت 669/670 وA2 ‏1136/1136: أغلب الكلمات «الناقصة» كانت خطأ في القياس (all-/jed-/Lieblings-/Geburts-/Einzel-/dar- وGruß)، والثلاث الحقيقية (Bogen وtot وdie meisten) صارت في نصوص القراءة. وأُضيفت 124 كلمة B1 إلى ستة دروس (العائلة، والطوارئ، والعمل، والطبيعة، والمرور، والبنك والبريد)، لكل كلمة عبارة وبطاقة بمثال، و117 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2076/2830 (73.4%). لم يُرفع أي سقف، والمتبقي من سقف المنهج 7,065 بايت.
+Sync batch: v260 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-151): أُضيفت 80 كلمة إلى أربعة دروس موجودة: المشاعر والخلاف (b1-05)، والصحافة والحاسوب (b1-16)، والمسرح والفن والأدب (b1-17)، والبيئة والمجتمع (b1-21). لكل كلمة عبارة وبطاقة بجملة مثال، و64 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2170/2830 (76.7%). صحّح التدقيق قبل الحفظ ترجمتين تبالغان في المعنى (Reportage وErzählung) وثلاثة شروح (مصطلح حالة نحوية بلا عقد، واقتباس غير حرفي، ومبالغة في Versammlung). لم يُرفع أي سقف، لكن المتبقي من سقف المنهج صار 1,246 بايت فقط.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -2008,3 +2008,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Result: A1 669/670, A2 1136/1136, B1 2,076/2,830 (73.4%), taught ≥ 1,606. Noun anchors 1,850; pending stays 89 (row-by-row diff). Exercises 734, governed records 3,334. JS 2,154,585 B, curriculum 1,318,935 B (7,065 B left). Pack generation v259.
 - Gates: three new vite/launch-editor dev-server advisories (fix available) were fixed with `overrides` vite ^8.3.5, not accepted. Offline fingerprint `9afd336bdc9c`.
 - Details: `docs/adr/ADR-150-german-quotes-goethe-a1-a2-closure-and-b1-theme-vocabulary.md`.
+
+## ADR-151 — Goethe B1 vocabulary for feelings, media, arts and literature, and environment and community
+
+- Status: accepted, 2026-10-21 (v260). Owner «واصل» after the v259 report, under the instruction to audit every addition. No ceiling raised.
+- Context: after ADR-150, 600 B1 headwords were absent from every lesson; four B1 lessons (b1-05 feelings, b1-16 media, b1-17 stage and literature, b1-21 environment and community) lacked their everyday headwords.
+- Decision: 80 words as phrase + card with example, one matching e8 per lesson; 64 noun anchors appended with scope `ADR-151-goethe-b1-themes-2-noun-anchor`, 64/64 WiktionaryDE. The pre-commit audit fixed two glosses that overclaimed (Reportage, Erzählung), a case term without a case contract, a non-verbatim quote and an overclaim in an explanation.
+- Result: B1 2,170/2,830 (76.7%), taught ≥ 1,702, absent 508. Noun anchors 1,914; pending stays 89 (row-by-row diff). Exercises 738, governed records 3,338. JS 2,160,450 B, curriculum 1,324,754 B (1,246 B left). Pack generation v260.
+- Details: `docs/adr/ADR-151-goethe-b1-feelings-media-arts-environment-vocabulary.md`.

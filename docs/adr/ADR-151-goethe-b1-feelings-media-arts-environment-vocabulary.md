@@ -77,8 +77,8 @@
 | Lesson exercises | 734 | **738** |
 | Governed content records | 3,334 | **3,338** |
 | Search entries | 4,463 | **4,543** |
-| Curriculum (gzip) | 1,318,935 | **1,324,734** (1,266 B left under 1,326,000) |
-| JavaScript (gzip) | 2,154,585 | **2,160,428** (44,572 B left under 2,205,000) |
+| Curriculum (gzip) | 1,318,935 | **1,324,754** (1,246 B left under 1,326,000) |
+| JavaScript (gzip) | 2,154,585 | **2,160,450** (44,550 B left under 2,205,000) |
 | Unit tests | 1,735 in 253 files | **1,739 in 254 files** |
 
 Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v260.
@@ -86,7 +86,7 @@ Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), 
 ## Consequences
 
 - The four lessons have 38 vocabulary phrases instead of 18; the other B1 lessons are unchanged.
-- **The curriculum ceiling is now practically full (1,266 B left).** The remaining B1 gaps need another owner decision on the curriculum ceiling. The owner said on 2026-10-20 that the ceiling does not matter because the app is always used online, but the agent keeps the gate and raises it only in recorded steps. The remaining gaps are:
+- **The curriculum ceiling is now practically full (1,246 B left).** The remaining B1 gaps need another owner decision on the curriculum ceiling. The owner said on 2026-10-20 that the ceiling does not matter because the app is always used online, but the agent keeps the gate and raises it only in recorded steps. The remaining gaps are:
   - about 508 headwords absent from every lesson, 150 of them taught first in B2;
   - the bound forms Elektro-, Kriminal-, Spezial-, Öko-, inner-, ober-, vorder- and mittler-.
 

@@ -69,9 +69,15 @@
 | JavaScript (gzip) | 2,160,450 | **2,166,322** (38,678 B left under 2,205,000) |
 | Unit tests | 1,739 in 254 files | **1,743 in 255 files** |
 
-The B1 count rises by 93 for 80 phrases because each «der X / die Xin» phrase covers two Goethe headwords. Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v261.
+The B1 count rises by 93 for 80 phrases. A comparison with the v260 report gives the exact breakdown:
+- 89 headwords taught by the new phrases (each «der X / die Xin» phrase covers two);
+- die Zeugin, which had been counted as first taught in B2;
+- schießen, via „schoss das Tor“, and entschließen, via entschlossen, both met in example sentences;
+- **das Zeug, which is a false match.** The matcher accepts Zeuge/Zeugen as forms of „Zeug“ (its rare plural is „Zeuge“), although the lesson means the witness. This is an inherent ambiguity of matching by lemma candidates, so it is recorded here rather than special-cased in the script.
 
-GATES_PENDING
+The real B1 figure is therefore at most **2,262**. Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v261.
+
+Gates: `npm run check` EXIT=0 (lint, typecheck, unit, handoff, dependency audit, build, browser accessibility 642/0, contrast 323 pages / 0 below minimum) and E2E 134/134 (67 desktop + 67 mobile). Offline fingerprint `b2eef3ca5ffc`, full pack 6,551,637 B gzip.
 
 ## Consequences
 

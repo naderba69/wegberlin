@@ -95,11 +95,11 @@ No new pending review item: the lexical inventory diff before and after the batc
 | Lesson exercises | 746 | **747** |
 | Governed content records | 3,346 | **3,347** |
 | Search entries | 4,703 | **4,727** |
-| Curriculum (gzip) | 1,336,274 | **__CURR__** (__CURRLEFT__ B left under 1,343,000) |
-| JavaScript (gzip) | 2,171,803 | **__JS__** (__JSLEFT__ B left under 2,205,000) |
-| Unit tests | 1,751 in 257 files | **__UNIT__** |
+| Curriculum (gzip) | 1,336,274 | **1,337,972** (5,028 B left under 1,343,000) |
+| JavaScript (gzip) | 2,171,803 | **2,173,601** (31,399 B left under 2,205,000) |
+| Unit tests | 1,751 in 257 files | **1,757 in 258 files** |
 
-Gates: __GATES__ Offline fingerprint __FP__, full pack __FULL__ B gzip. Pack generation v263.
+Gates: __GATES__ Offline fingerprint `a3745bf54b40`, full pack 6,572,429 B gzip. Pack generation v263.
 
 ## Consequences
 

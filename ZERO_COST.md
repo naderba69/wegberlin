@@ -1,6 +1,6 @@
 # Zero-Cost Contract
 
-Sync batch: v262 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-153): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الرأي والشك والموقف (b1-02)، والناس والأماكن في العمل (b1-04)، والمهن والمؤهلات (b1-14)، والأشكال والرسوم في العرض (b1-15). لكل كلمة عبارة وبطاقة بجملة مثال، و59 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2352/2830 (83.1%) بعد إعادة عدّ كاملة من ملف غوته الأصلي (طريقة العدّ المختصرة كانت تزيد الرقم قليلًا، فصُحّحت). لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 6,726 بايت. صحّح التدقيق قبل الحفظ ترجمة mittlerweile وجملتي مثال وشرحًا واحدًا، وأضاف إلى وصف حزمة المراجعة اسم ملف التحقق الخاص بدفعة v261 الذي كان ناقصًا.
+Sync batch: v263 · 2026-10-21 · إصلاح أداة قراءة قائمة غوته وكلمات مشروع B1 (ADR-154): وُجد أن 21 «كلمة غائبة» في B1 كانت أخطاء في قراءة ملف PDF (مثل فعلين على سطر واحد، فضاع الفعل duzen وظهر مكانه „geduzt“)، فأُصلحت الأداة وأُعيد العدّ كاملًا. ثم أُضيفت 24 كلمة لدرس المشروع b1-24 مع تمرين مطابقة، منها الكلمات الأربع التي حذفتها v257، فصارت B1 ‏2390/2823 (84.7%) والغائبة 289. لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 5,028 بايت.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 

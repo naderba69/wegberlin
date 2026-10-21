@@ -3,7 +3,7 @@
   "version": "content-governance-audit-v1",
   "policyVersion": "content-accountability-lifecycle-v1",
   "ok": true,
-  "contentSha256": "0b79e958bbb20d5e9e67f5a1aad7aadd220ba9c1a7a6a0fa2a0ace54c51e6add",
+  "contentSha256": "af95f9392108650e9c661288e721ab7c3c8d19034d8e06b9723de58687858ac6",
   "curriculum": {
     "policyVersion": "independent-curriculum-version-v1",
     "appVersion": "0.1.0",
@@ -11,7 +11,7 @@
     "independent": true
   },
   "counts": {
-    "contentRecords": 3346,
+    "contentRecords": 3347,
     "contentFamilies": 16,
     "publishedFamilies": 16,
     "sources": 19,
@@ -27,7 +27,7 @@
     "exam": 720,
     "exam-speaking": 72,
     "exam-writing": 24,
-    "lesson-controlled": 746,
+    "lesson-controlled": 747,
     "lesson-listening": 288,
     "lesson-mediation": 96,
     "lesson-mini-test": 480,
@@ -14137,6 +14137,15 @@
     },
     {
       "contentId": "b1-24-e7",
+      "scope": "lesson-controlled",
+      "ownerId": "curriculum-content-owner",
+      "reviewerId": "german-item-reviewer-role",
+      "lifecycleStage": "published",
+      "reviewStatus": "automated-validated-independent-review-pending",
+      "evidenceBoundary": "publication-state-does-not-claim-independent-language-cefr-or-rights-review"
+    },
+    {
+      "contentId": "b1-24-e8",
       "scope": "lesson-controlled",
       "ownerId": "curriculum-content-owner",
       "reviewerId": "german-item-reviewer-role",

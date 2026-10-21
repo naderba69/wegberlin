@@ -2,7 +2,7 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `f7a56dbc73b3eb170bf1d62bf19e8722e4670dcba681dae2ad6e799765b4e399`
+Content SHA-256: `60454358168acdcb76e21d4e465f222972233176056471ddc79d9600275fce91`
 
 ## Result
 
@@ -316,7 +316,7 @@ Stable report IDs are derived as `lessonId-objective-N`. Teaching links come fro
 | `b1-23-objective-2` | Ich kann Pronominaladverbien korrekt benutzen. | أستعمل الضمائر الظرفية. | 3 · `b1-23:entry`, `b1-23-t1` | 7 | 3 · `b1-23-m1`, `b1-23-m2` | covered |
 | `b1-23-objective-3` | Ich kann Datenfluss und Offline-Alternative erklären. | أشرح مسار البيانات والبديل دون اتصال. | 2 · `b1-23:vocabulary`, `b1-23-t3` | 4 | 1 · `b1-23-m5` | covered |
 | `b1-23-objective-4` | Ich kann eine begrenzte Testentscheidung treffen. | أتخذ قرار تجربة محدودًا. | 2 · `b1-23:vocabulary`, `b1-23-t3` | 4 | 1 · `b1-23-m5` | covered |
-| `b1-24-objective-1` | Ich kann ein mehrstufiges Projekt selbstständig bearbeiten. | أنجز مشروعًا متعدد المراحل باستقلال. | 3 · `b1-24:entry`, `b1-24:vocabulary` | 5 | 1 · `b1-24-m1` | covered |
+| `b1-24-objective-1` | Ich kann ein mehrstufiges Projekt selbstständig bearbeiten. | أنجز مشروعًا متعدد المراحل باستقلال. | 3 · `b1-24:entry`, `b1-24:vocabulary` | 6 | 1 · `b1-24-m1` | covered |
 | `b1-24-objective-2` | Ich kann Quellen und Perspektiven integrieren. | أدمج مصادر ووجهات نظر. | 2 · `b1-24:vocabulary`, `b1-24-t3` | 1 | 1 · `b1-24-m2` | covered |
 | `b1-24-objective-3` | Ich kann weitere Pronominaladverbien benutzen. | أستعمل ضمائر ظرفية إضافية. | 3 · `b1-24:entry`, `b1-24:vocabulary` | 5 | 1 · `b1-24-m3` | covered |
 | `b1-24-objective-4` | Ich kann Ergebnis, Grenze und nächste Schritte präsentieren. | أقدم النتيجة والحدود والخطوات. | 1 · `b1-24-t3` | 6 | 2 · `b1-24-m4`, `b1-24-m5` | covered |

@@ -4,8 +4,8 @@
   "generatedAt": "2026-09-07",
   "similarity": {
     "policyVersion": "content-near-duplicate-v1",
-    "entryCount": 3346,
-    "comparedPairCount": 5596185,
+    "entryCount": 3347,
+    "comparedPairCount": 5599531,
     "suspiciousPairCount": 10,
     "exemptSameContextCount": 10,
     "exemptReviewedCount": 0,
@@ -127,26 +127,26 @@
   },
   "reviewState": {
     "policyVersion": "content-review-state-v1",
-    "rowCount": 3346,
+    "rowCount": 3347,
     "reviewCounts": {
       "german": {
-        "total": 3346,
-        "automatedPassHumanPending": 3346,
+        "total": 3347,
+        "automatedPassHumanPending": 3347,
         "independentlyReviewed": 0
       },
       "arabic": {
-        "total": 3346,
-        "automatedPassHumanPending": 3346,
+        "total": 3347,
+        "automatedPassHumanPending": 3347,
         "independentlyReviewed": 0
       },
       "cefr": {
-        "total": 3346,
-        "automatedPassHumanPending": 3346,
+        "total": 3347,
+        "automatedPassHumanPending": 3347,
         "independentlyReviewed": 0
       },
       "copyright": {
-        "total": 3346,
-        "automatedPassHumanPending": 3346,
+        "total": 3347,
+        "automatedPassHumanPending": 3347,
         "independentlyReviewed": 0
       }
     },
@@ -47156,6 +47156,36 @@
         },
         "copyright": {
           "contentId": "b1-24-e7",
+          "dimension": "copyright",
+          "status": "automated-pass-human-pending",
+          "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
+        }
+      },
+      {
+        "contentId": "b1-24-e8",
+        "contextId": "b1-24",
+        "scope": "lesson-controlled",
+        "kind": "closed-question",
+        "german": {
+          "contentId": "b1-24-e8",
+          "dimension": "german",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/language-boundary structural pass; independent German review pending"
+        },
+        "arabic": {
+          "contentId": "b1-24-e8",
+          "dimension": "arabic",
+          "status": "automated-pass-human-pending",
+          "evidence": "schema/Bidi structural pass; independent Arabic review pending"
+        },
+        "cefr": {
+          "contentId": "b1-24-e8",
+          "dimension": "cefr",
+          "status": "automated-pass-human-pending",
+          "evidence": "authored level tag and objective map present; independent CEFR review pending"
+        },
+        "copyright": {
+          "contentId": "b1-24-e8",
           "dimension": "copyright",
           "status": "automated-pass-human-pending",
           "evidence": "originalContent author claim + internal near-duplicate scan + external comparison with Menschen public samples (0 matches, ADR-119); full-book comparison and independent rights review pending"
@@ -100541,5 +100571,5 @@
     "295": "implemented"
   },
   "boundary": "P1-293 closes only when the complete internal corpus has zero unexempt near-duplicate issues. P1-295 tracks four independent states per content object even when human review is pending. P1-92 is implemented by the external-reference-comparison-v1 tool and its recorded run on lawful public Menschen samples (0 matches, ADR-119); that covers sample pages only and is not copyright clearance, which stays pending a full-book comparison and an independent rights review.",
-  "contentSha256": "8eb5f7e2da82bca9b2edb40011696b100f7ebdb54eee4e22f0577304a819a977"
+  "contentSha256": "174c4236d76b55845adf977184cf0e4c18b7bf74e5c078d3c9b303997e24dce8"
 }

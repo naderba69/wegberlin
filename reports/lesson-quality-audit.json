@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "63288480cf9377c897481d5f3c4ab160a115aee7bac85bc3e9f462d200e3f000",
+  "contentSha256": "abd86dead1c93077d68294890d4b2246800869f15deca5bf827b9d747ab58e81",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,7 +92,7 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1802,
+    "allItems": 1803,
     "allMedianChars": 166,
     "allUnder60Chars": 0,
     "allMissing": 0,
@@ -2714,7 +2714,7 @@
         "level": "B1",
         "contentTypes": 133,
         "properNames": 2,
-        "pct": 22.6,
+        "pct": 21.8,
         "unknownSample": [
           "stadtteil",
           "verschwinden",
@@ -2733,18 +2733,18 @@
         "level": "B2",
         "contentTypes": 181,
         "properNames": 0,
-        "pct": 18.2,
+        "pct": 17.7,
         "unknownSample": [
           "smartphones",
           "unterricht",
           "geregelt",
           "bisher",
           "schulleitung",
-          "recherche",
           "umfragen",
           "intensiven",
           "diskussionen",
-          "kollegium"
+          "kollegium",
+          "pilotphase"
         ]
       },
       {

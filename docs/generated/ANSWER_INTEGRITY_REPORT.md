@@ -2,11 +2,11 @@
 
 Definition date: 2026-09-05 (audit spec, not the run date; the content fingerprint below is authoritative)  
 Version: `academic-governance-v1`  
-Content SHA-256: `f7a56dbc73b3eb170bf1d62bf19e8722e4670dcba681dae2ad6e799765b4e399`
+Content SHA-256: `60454358168acdcb76e21d4e465f222972233176056471ddc79d9600275fce91`
 
 ## Result
 
-`PASS` — every one of **2874 closed-answer items** is linked to its answer and evidence reference. **384 productive tasks** are separately recorded as no-single-answer or model-after-commit contracts.
+`PASS` — every one of **2875 closed-answer items** is linked to its answer and evidence reference. **384 productive tasks** are separately recorded as no-single-answer or model-after-commit contracts.
 
 ```text
 Unapproved direct prompt leaks: 0
@@ -19,13 +19,13 @@ Duplicate audit IDs: 0
 |---|---:|
 | diagnostic | 32 |
 | exam | 720 |
-| lesson-controlled | 746 |
+| lesson-controlled | 747 |
 | lesson-listening | 288 |
 | lesson-mini-test | 480 |
 | lesson-reading | 288 |
 | library-listening | 160 |
 | library-reading | 160 |
-| **Total** | **2874** |
+| **Total** | **2875** |
 
 ## Visibility policies
 

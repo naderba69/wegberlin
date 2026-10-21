@@ -14,26 +14,26 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2304,
-      "nounGrammarEntries": 2044,
+      "nounGrammarEntries": 2051,
       "verbPrepositionFrames": 134,
       "tunisianSupportNotes": 17,
       "dictationItems": 16,
       "branchingConversationScenarios": 8,
       "collocationNetworks": 16,
-      "totalRootObjects": 5092
+      "totalRootObjects": 5099
     },
     "schemaFamilies": 16,
     "issues": []
   },
   "answerIntegrity": {
-    "closedAnswerItems": 2874,
+    "closedAnswerItems": 2875,
     "productiveTasks": 384,
     "failures": 0,
     "exemptions": 2,
     "byScope": {
       "diagnostic": 32,
       "exam": 720,
-      "lesson-controlled": 746,
+      "lesson-controlled": 747,
       "lesson-listening": 288,
       "lesson-mini-test": 480,
       "lesson-reading": 288,
@@ -14935,6 +14935,17 @@
         "evidenceRef": "b1-24:controlled:b1-24-e7:explanationAr",
         "evidenceExcerpt": "النقص في الزمن سببه تحديث الروابط، فتأتي النتيجة قبل السبب مع dadurch dass وينتقل الفعل إلى النهاية. حذف dadurch يترك الرقم بلا تفسير، وجمع weil مع dass يكرّر الرابط نفسه.",
         "visibilityPolicy": "hidden-target",
+        "status": "pass"
+      },
+      {
+        "id": "b1-24-e8",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة العمل في المشروع بمعناها:",
+        "answer": "die Recherche → البحث (جمع المعلومات) | einfallen → يخطر على البال | der Zustand → الحالة | übrigens → بالمناسبة | ärgerlich → مزعج",
+        "evidenceRef": "b1-24:controlled:b1-24-e8:explanationAr",
+        "evidenceExcerpt": "في einfallen الفكرة هي التي تخطر، والشخص يأتي بصيغة mir أو dir، وفي الماضي نستعمل ist: Mir ist eine bessere Lösung eingefallen. وübrigens تضيف معلومة جانبية في الكلام. أما der Zustand فحالة الشيء، مثل: in einem guten Zu…",
+        "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
       {
@@ -42390,6 +42401,7 @@
           "b1-24-t2"
         ],
         "practicedIn": [
+          "b1-24-e8",
           "b1-24-rq1",
           "b1-24-rq2",
           "b1-24-lq1",
@@ -45113,14 +45125,14 @@
   "lexicalTargetGaps": {
     "version": "lexical-target-gap-v1",
     "lessonCount": 96,
-    "nounAnchorCount": 2044,
+    "nounAnchorCount": 2051,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5867,
-      "covered": 2159,
+      "totalCandidates": 5888,
+      "covered": 2166,
       "pendingHuman": 89,
-      "contextualNotTarget": 3619,
-      "authoredTargets": 2248,
+      "contextualNotTarget": 3633,
+      "authoredTargets": 2255,
       "byLevel": {
         "A1": {
           "totalCandidates": 735,
@@ -45135,10 +45147,10 @@
           "contextualNotTarget": 626
         },
         "B1": {
-          "totalCandidates": 1821,
-          "covered": 731,
+          "totalCandidates": 1842,
+          "covered": 738,
           "pendingHuman": 0,
-          "contextualNotTarget": 1090
+          "contextualNotTarget": 1104
         },
         "B2": {
           "totalCandidates": 2226,
@@ -45149,10 +45161,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1378,
+      "totalCandidates": 1385,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1243,
+      "contextualNotTarget": 1250,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -45168,10 +45180,10 @@
           "contextualNotTarget": 215
         },
         "B1": {
-          "totalCandidates": 381,
+          "totalCandidates": 388,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 350
+          "contextualNotTarget": 357
         },
         "B2": {
           "totalCandidates": 642,
@@ -155388,6 +155400,40 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Anleitung",
+        "normalizedLemma": "anleitung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-17"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[13].frontDe",
+            "stage": "vocabulary",
+            "text": "die Anleitung",
+            "surface": "die Anleitung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-17",
+            "stage": "vocabulary",
+            "surface": "die Anleitung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[21].de",
+            "stage": "vocabulary",
+            "text": "die Anleitung",
+            "surface": "die Anleitung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-1290643e"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Antwortzeit",
         "normalizedLemma": "antwortzeit",
         "role": "context-only",
@@ -155424,6 +155470,59 @@
           }
         ],
         "id": "lex-n-b1-24-f70f1338"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Aufforderung",
+        "normalizedLemma": "aufforderung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-18"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[16].frontDe",
+            "stage": "vocabulary",
+            "text": "die Aufforderung",
+            "surface": "die Aufforderung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-18",
+            "stage": "vocabulary",
+            "surface": "die Aufforderung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[24].de",
+            "stage": "vocabulary",
+            "text": "die Aufforderung",
+            "surface": "die Aufforderung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-62c87391"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Aufgabe",
+        "normalizedLemma": "aufgabe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "surface": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-cc049430"
       },
       {
         "lessonId": "b1-24",
@@ -155514,6 +155613,25 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Beamer",
+        "normalizedLemma": "beamer",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Projekt mussten wir keinen neuen Beamer anschaffen.",
+            "surface": "Für das Projekt mussten wir keinen neuen Beamer anschaffen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-50177dc3"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Bericht",
         "normalizedLemma": "bericht",
         "role": "anchor",
@@ -155537,6 +155655,63 @@
           }
         ],
         "id": "lex-n-b1-24-9bed3d54"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Besucher",
+        "normalizedLemma": "besucher",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "surface": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-dd43b3b2"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Bibliothek",
+        "normalizedLemma": "bibliothek",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kürzlich hat uns die Bibliothek einen Raum angeboten.",
+            "surface": "Kürzlich hat uns die Bibliothek einen Raum angeboten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-db359fbc"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Bild",
+        "normalizedLemma": "bild",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[13].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Anleitung erklärt jeden Schritt mit einem Bild.",
+            "surface": "Die Anleitung erklärt jeden Schritt mit einem Bild.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-4cd8c86e"
       },
       {
         "lessonId": "b1-24",
@@ -155577,6 +155752,81 @@
           }
         ],
         "id": "lex-n-b1-24-ac97eb43"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Einfall",
+        "normalizedLemma": "einfall",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-16"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[11].frontDe",
+            "stage": "vocabulary",
+            "text": "der Einfall",
+            "surface": "der Einfall",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-16",
+            "stage": "vocabulary",
+            "surface": "der Einfall",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[19].de",
+            "stage": "vocabulary",
+            "text": "der Einfall",
+            "surface": "der Einfall",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-2ee94e30"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Einfluss",
+        "normalizedLemma": "einfluss",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "surface": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[33].frontDe",
+            "stage": "vocabulary",
+            "text": "der Einfluss",
+            "surface": "der Einfluss",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-21",
+            "stage": "vocabulary",
+            "surface": "der Einfluss",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[41].de",
+            "stage": "vocabulary",
+            "text": "der Einfluss",
+            "surface": "der Einfluss",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-2dbbfccc"
       },
       {
         "lessonId": "b1-24",
@@ -155732,6 +155982,25 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Fotos",
+        "normalizedLemma": "fotos",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "surface": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-f62b0a36"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Frage",
         "normalizedLemma": "frage",
         "role": "context-only",
@@ -155792,6 +156061,44 @@
           }
         ],
         "id": "lex-n-b1-24-9ca8b8cc"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Getränke",
+        "normalizedLemma": "getränke",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wer besorgt die Getränke für die Präsentation?",
+            "surface": "Wer besorgt die Getränke für die Präsentation?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-d12dea83"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Grafik",
+        "normalizedLemma": "grafik",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[19].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kannst du die Grafik etwas vergrößern?",
+            "surface": "Kannst du die Grafik etwas vergrößern?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-dd245785"
       },
       {
         "lessonId": "b1-24",
@@ -155984,6 +156291,13 @@
         "anchorIds": [],
         "sources": [
           {
+            "path": "flashcards[12].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mir ist eine bessere Lösung eingefallen.",
+            "surface": "Mir ist eine bessere Lösung eingefallen.",
+            "strength": "context"
+          },
+          {
             "path": "listening.transcriptDe",
             "stage": "listening",
             "text": "Prüferin: Worauf hat sich Ihr Projekt konzentriert? — Lernender: Darauf, wie schnell neue Personen Kursinformationen finden. — Prüferin: Wovon hing die Verbesserung ab? — Lernender: Vor allem davon, ob Links aktuell waren und Fragen an die richtige Person gingen. — Prüferin: Wodurch ist die Zeit gesunken? — Lernender: Dadurch, dass wir eine Startseite erstellt und Verantwortliche genannt haben. — Prüferin: Können Sie sagen, dass die Lösung für alle funktioniert? — Lernender: Nein. Wir hatten nur 20 Personen mit ähnlichen Geräten. Deshalb empfehle ich einen längeren Test mit unterschiedlichen Geräten und einem Barrierefreiheitscheck.",
@@ -156162,6 +156476,27 @@
         ],
         "sources": [
           {
+            "path": "flashcards[14].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir haben die Präsentation zwei Wochen vorher angekündigt.",
+            "surface": "Wir haben die Präsentation zwei Wochen vorher angekündigt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[17].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wer besorgt die Getränke für die Präsentation?",
+            "surface": "Wer besorgt die Getränke für die Präsentation?",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "surface": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-24-noun-4",
             "stage": "vocabulary",
             "surface": "die Präsentation",
@@ -156181,6 +156516,20 @@
           "b1-24-noun-1"
         ],
         "sources": [
+          {
+            "path": "flashcards[18].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Projekt mussten wir keinen neuen Beamer anschaffen.",
+            "surface": "Für das Projekt mussten wir keinen neuen Beamer anschaffen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[25].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die regionale Zeitung hat über unser Projekt berichtet.",
+            "surface": "Die regionale Zeitung hat über unser Projekt berichtet.",
+            "strength": "context"
+          },
           {
             "path": "lexicalRegistry.b1-24-noun-1",
             "stage": "vocabulary",
@@ -156222,6 +156571,106 @@
           }
         ],
         "id": "lex-n-b1-24-84133491"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Quellen",
+        "normalizedLemma": "quellen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Kursleiterin forderte uns auf, die Quellen zu nennen.",
+            "surface": "Die Kursleiterin forderte uns auf, die Quellen zu nennen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "surface": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-546d2ca7"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Raum",
+        "normalizedLemma": "raum",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kürzlich hat uns die Bibliothek einen Raum angeboten.",
+            "surface": "Kürzlich hat uns die Bibliothek einen Raum angeboten.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[31].exampleDe",
+            "stage": "vocabulary",
+            "text": "Es war ärgerlich, dass der Raum am Samstag geschlossen war.",
+            "surface": "Es war ärgerlich, dass der Raum am Samstag geschlossen war.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-d98e9524"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Recherche",
+        "normalizedLemma": "recherche",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-15"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Recherche",
+            "surface": "die Recherche",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für die Recherche haben wir drei Wochen eingeplant.",
+            "surface": "Für die Recherche haben wir drei Wochen eingeplant.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[10].frontDe",
+            "stage": "vocabulary",
+            "text": "die Recherche",
+            "surface": "die Recherche",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-15",
+            "stage": "vocabulary",
+            "surface": "die Recherche",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[18].de",
+            "stage": "vocabulary",
+            "text": "die Recherche",
+            "surface": "die Recherche",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-295a3b8c"
       },
       {
         "lessonId": "b1-24",
@@ -156364,6 +156813,25 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Tausch",
+        "normalizedLemma": "tausch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Tausch war alles durcheinander.",
+            "surface": "Nach dem Tausch war alles durcheinander.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-efa4c6d3"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Test",
         "normalizedLemma": "test",
         "role": "context-only",
@@ -156435,6 +156903,47 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Tradition",
+        "normalizedLemma": "tradition",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[27].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Bücher-Tausch soll eine Tradition werden.",
+            "surface": "Der Bücher-Tausch soll eine Tradition werden.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[27].frontDe",
+            "stage": "vocabulary",
+            "text": "die Tradition",
+            "surface": "die Tradition",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-20",
+            "stage": "vocabulary",
+            "surface": "die Tradition",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[35].de",
+            "stage": "vocabulary",
+            "text": "die Tradition",
+            "surface": "die Tradition",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-b2c7cf95"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Umbau",
         "normalizedLemma": "umbau",
         "role": "context-only",
@@ -156460,6 +156969,13 @@
         "status": "not-target",
         "anchorIds": [],
         "sources": [
+          {
+            "path": "flashcards[11].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Einfall, eine Umfrage zu machen, kam von Lina.",
+            "surface": "Der Einfall, eine Umfrage zu machen, kam von Lina.",
+            "strength": "context"
+          },
           {
             "path": "miniTest[1].options[0]",
             "stage": "test",
@@ -156518,6 +157034,63 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "lemmaCandidate": "Website",
+        "normalizedLemma": "website",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "surface": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-13fa38b8"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Zahl",
+        "normalizedLemma": "zahl",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "surface": "Das Wetter hatte einen großen Einfluss auf die Zahl der Besucher.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-09e222f2"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Zahlen",
+        "normalizedLemma": "zahlen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "surface": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-24-a76a61c1"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "lemmaCandidate": "Zeit",
         "normalizedLemma": "zeit",
         "role": "context-only",
@@ -156547,6 +157120,54 @@
           }
         ],
         "id": "lex-n-b1-24-c4bd8e4f"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "lemmaCandidate": "Zustand",
+        "normalizedLemma": "zustand",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-24-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "exercises[7].pairs[2].left",
+            "stage": "controlled",
+            "text": "der Zustand",
+            "surface": "der Zustand",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Bücher waren noch in einem guten Zustand.",
+            "surface": "Viele Bücher waren noch in einem guten Zustand.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[20].frontDe",
+            "stage": "vocabulary",
+            "text": "der Zustand",
+            "surface": "der Zustand",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-24-noun-19",
+            "stage": "vocabulary",
+            "surface": "der Zustand",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[28].de",
+            "stage": "vocabulary",
+            "text": "der Zustand",
+            "surface": "der Zustand",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-24-8e3a6336"
       },
       {
         "lessonId": "b1-24",
@@ -235413,6 +236034,29 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "anzugeben",
+        "normalizedVerb": "anzugeben",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[16].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "surface": "Die Aufforderung, die Quellen anzugeben, stand schon in der Aufgabe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-e41c900d"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "berichten",
         "normalizedVerb": "berichten",
         "preposition": "über",
@@ -235711,6 +236355,29 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "machen",
+        "normalizedVerb": "machen",
+        "preposition": "von",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[11].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Einfall, eine Umfrage zu machen, kam von Lina.",
+            "surface": "Der Einfall, eine Umfrage zu machen, kam von Lina.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-7bfa31ee"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "nannten",
         "normalizedVerb": "nannten",
         "preposition": "für",
@@ -235734,6 +236401,52 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "nennen",
+        "normalizedVerb": "nennen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[15].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Kursleiterin forderte uns auf, die Quellen zu nennen.",
+            "surface": "Die Kursleiterin forderte uns auf, die Quellen zu nennen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-ddccd8f1"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "infinitiveCandidate": "prüfen",
+        "normalizedVerb": "prüfen",
+        "preposition": "vor",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "surface": "Wir prüfen die Zahlen nochmals vor der Präsentation.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-72af9d4f"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "sagen",
         "normalizedVerb": "sagen",
         "preposition": "für",
@@ -235753,6 +236466,29 @@
           }
         ],
         "id": "lex-v-b1-24-2b70d08b"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "infinitiveCandidate": "sehen",
+        "normalizedVerb": "sehen",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "surface": "Übrigens kann man die Fotos auf unserer Website sehen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-b511a22e"
       },
       {
         "lessonId": "b1-24",
@@ -235803,6 +236539,29 @@
       {
         "lessonId": "b1-24",
         "level": "B1",
+        "infinitiveCandidate": "standen",
+        "normalizedVerb": "standen",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[21].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Bücher standen ordentlich nach Themen sortiert im Regal.",
+            "surface": "Die Bücher standen ordentlich nach Themen sortiert im Regal.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-ba6aa2e4"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
         "infinitiveCandidate": "testeten",
         "normalizedVerb": "testeten",
         "preposition": "auf",
@@ -235845,6 +236604,29 @@
           }
         ],
         "id": "lex-v-b1-24-d635af5b"
+      },
+      {
+        "lessonId": "b1-24",
+        "level": "B1",
+        "infinitiveCandidate": "waren",
+        "normalizedVerb": "waren",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[20].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Bücher waren noch in einem guten Zustand.",
+            "surface": "Viele Bücher waren noch in einem guten Zustand.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-24-d62227a3"
       },
       {
         "lessonId": "b1-24",
@@ -252048,5 +252830,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "f7a56dbc73b3eb170bf1d62bf19e8722e4670dcba681dae2ad6e799765b4e399"
+  "contentSha256": "60454358168acdcb76e21d4e465f222972233176056471ddc79d9600275fce91"
 }

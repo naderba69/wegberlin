@@ -45,7 +45,7 @@
     "englishTermLeaksInLearnerArabic": 0,
     "cardsMissingFromReviewPool": 0
   },
-  "contentSha256": "4756b2a9746d",
+  "contentSha256": "bed4b00fb075",
   "counts": {
     "lessons": 96,
     "questions": 8,
@@ -3299,7 +3299,7 @@
         },
         "graded-practice": {
           "ok": true,
-          "valueAr": "7 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
+          "valueAr": "8 تمرينًا بـ5 أنواع (ترتيب كلمات 1، تصحيح خطأ 1) + 5 سؤال اختبار قصير"
         },
         "transfer": {
           "ok": true,
@@ -3307,7 +3307,7 @@
         },
         "feedback": {
           "ok": true,
-          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (18) لها تبرير"
+          "valueAr": "4 أسطر خطأ: 0 شرحًا دون 20 حرفًا و0 تريك دون 15؛ وكل البنود المصحَّحة (19) لها تبرير"
         },
         "evidence-split": {
           "ok": true,

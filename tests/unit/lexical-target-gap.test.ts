@@ -13,7 +13,7 @@ describe("lexical target-gap inventory", () => {
   it("inventories all lessons and preserves the authored anchor baseline", () => {
     expect(audit.version).toBe(LEXICAL_TARGET_AUDIT_VERSION);
     expect(audit.lessonCount).toBe(96);
-    expect(audit.nounAnchorCount).toBe(2044);
+    expect(audit.nounAnchorCount).toBe(2051);
     expect(audit.verbFrameAnchorCount).toBe(134);
 
     const representedNounAnchors = new Set(audit.nounRows.flatMap((row) => row.anchorIds));
@@ -38,17 +38,17 @@ describe("lexical target-gap inventory", () => {
   // v257: ADR-148 audited all 96 writing/speaking/mediation tasks (padding after the closing removed, models reordered and corrected); −10 contextual noun and +5 verb-pair candidates; covered, pendingHuman and authoredTargets unchanged (the a2-15 plural «die Tabletten» stays in the model).
   it("commits deterministic v1 candidate and gap counters", () => {
     expect(audit.nounSummary).toMatchObject({
-      totalCandidates: 5867,
-      covered: 2159,
+      totalCandidates: 5888,
+      covered: 2166,
       pendingHuman: 89,
-      contextualNotTarget: 3619,
-      authoredTargets: 2248,
+      contextualNotTarget: 3633,
+      authoredTargets: 2255,
     });
     expect(audit.verbFrameSummary).toMatchObject({
-      totalCandidates: 1378,
+      totalCandidates: 1385,
       covered: 134,
       pendingHuman: 1,
-      contextualNotTarget: 1243,
+      contextualNotTarget: 1250,
       authoredTargets: 135,
     });
   });

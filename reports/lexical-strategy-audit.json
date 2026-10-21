@@ -3079,7 +3079,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a1-22",
-        "b1-10",
+        "b1-11",
         "a2-08",
         "b1-20"
       ],
@@ -3151,7 +3151,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a1-24",
-        "b1-13",
+        "b1-14",
         "a2-11",
         "b2-03"
       ],
@@ -3187,7 +3187,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a2-01",
-        "b1-14",
+        "b1-15",
         "a2-12",
         "b2-06"
       ],
@@ -3222,7 +3222,7 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a2-01",
+        "a2-02",
         "b1-16",
         "a2-14",
         "b2-10"
@@ -3259,7 +3259,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a2-02",
-        "b1-17",
+        "b1-18",
         "a2-15",
         "b2-13"
       ],
@@ -3283,5 +3283,5 @@
       ]
     }
   ],
-  "contentSha256": "7641aefa067e639593c8dd99cdf85c9535b3a349ca7940b3cde5f45322948a92"
+  "contentSha256": "98e2d400ce63d0aa09d0fea481a21ec20e9f7736a58a014f9d547402ae6b41d9"
 }

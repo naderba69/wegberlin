@@ -147,7 +147,7 @@ describe("postbuild Offline measurement after a Vercel Next adapter", () => {
     const local = await fixture(); const packaged = await fixture("adapter");
     const a = await auditJavaScriptBudgets({ projectRoot: local.root }); const b = await auditJavaScriptBudgets({ projectRoot: packaged.root });
     expect(b.actual).toEqual(a.actual); expect(b.safetyMarginPercent).toBe(15);
-    expect(b.safetyCeilings).toEqual({ totalChunkGzipBytes: 2205000, maxSingleChunkGzipBytes: 637500 });
+    expect(b.safetyCeilings).toEqual({ totalChunkGzipBytes: 2295000, maxSingleChunkGzipBytes: 637500 });
     expect(b.largest[0].path).toContain(".next/output/static/_next/static/chunks/");
   });
   it("fails rather than calling an empty deployed JS directory a passing zero-byte budget", async () => {

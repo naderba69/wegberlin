@@ -70,14 +70,18 @@ describe("Goethe A2 core vocabulary package (ADR-141)", () => {
 
   it("raises only the total JavaScript ceiling, by owner decision, and keeps the 15% reserve", () => {
     const script = readFileSync("scripts/audit-js-budgets.mjs", "utf8");
-    expect(script).toContain("totalChunkGzipBytes:2594118");
+    // ADR-155 / v264 raised the hard total to 2,700,000 under «لا يوجد هنالك حدود اريد مستويات متكاملة»; ADR-141's 2,205,000 step stays recorded.
+    expect(script).toContain("totalChunkGzipBytes:2700000");
     expect(script).toContain("maxSingleChunkGzipBytes:750000");
     expect(script).toContain("safetyMarginPercent=15");
-    expect(Math.floor(2594118 * 0.85)).toBe(2205000);
+    expect(Math.floor(2700000 * 0.85)).toBe(2295000);
     const media = readFileSync("scripts/audit-media-pack-budgets.mjs", "utf8");
-    expect(media).toContain("curriculumSourceGzipBytes:1_580_000"); // curriculum limit raised separately by ADR-149 and ADR-152
+    expect(media).toContain("curriculumSourceGzipBytes:1_680_000"); // curriculum limit raised separately by ADR-149, ADR-152 and ADR-155
     const decision = readFileSync("docs/adr/ADR-141-goethe-a2-core-vocabulary-and-js-ceiling.md", "utf8");
     expect(decision).toContain("2,205,000");
+    const roadmap = readFileSync("docs/adr/ADR-155-complete-levels-roadmap-and-first-b1-batch.md", "utf8");
+    expect(roadmap).toContain("2,295,000");
+    expect(roadmap).toContain("«لا يوجد هنالك حدود اريد مستويات متكاملة»");
     expect(decision).toContain("ارفعه 80 KB");
   });
 });

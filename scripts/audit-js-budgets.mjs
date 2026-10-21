@@ -26,7 +26,9 @@ export async function auditJavaScriptBudgets({ projectRoot = process.cwd() } = {
   const total = rows.reduce((sum, row) => sum + row.gzipBytes, 0);
   const max = rows[0]?.gzipBytes ?? 0;
   // ADR-141 / v250: owner-approved +80,000 B on the total safety ceiling (2,125,000 -> 2,205,000); the 15% reserve and the single-chunk limit are unchanged.
-  const budgets = {totalChunkGzipBytes:2594118,maxSingleChunkGzipBytes:750000};
+  // ADR-155 / v264: the owner lifted the limits for complete levels («لا يوجد هنالك حدود اريد مستويات متكاملة»); the hard total rises to 2,700,000 so the
+  // safety ceiling becomes 2,295,000 for the whole roadmap (B1 words, B2 themes, A1/A2/B1 mock exams). The gate, the 15% reserve and the single-chunk limit stay.
+  const budgets = {totalChunkGzipBytes:2700000,maxSingleChunkGzipBytes:750000};
   const safetyMarginPercent=15;
   const safetyFactor = 1 - safetyMarginPercent / 100;
   const safetyCeilings = {

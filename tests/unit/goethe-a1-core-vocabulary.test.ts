@@ -73,10 +73,11 @@ describe("Goethe A1 core vocabulary package (ADR-139)", () => {
   it("raises only the curriculum hard limit, by owner decision, and keeps the 15% reserve", () => {
     const script = readFileSync("scripts/audit-media-pack-budgets.mjs", "utf8");
     // ADR-139 raised the hard limit to 1,540,000 («نعم»); ADR-149 raised it again to 1,560,000 after the owner's answer;
-    // ADR-152 raised it to 1,580,000 in the same moderate step, under the same answer, when 1,246 B were left.
-    expect(script).toContain("curriculumSourceGzipBytes:1_580_000");
+    // ADR-152 raised it to 1,580,000 in the same moderate step, under the same answer, when 1,246 B were left;
+    // ADR-155 raised it to 1,680,000 for the whole complete-levels roadmap after «لا يوجد هنالك حدود اريد مستويات متكاملة».
+    expect(script).toContain("curriculumSourceGzipBytes:1_680_000");
     expect(script).toContain("MARGIN=0.15");
-    expect(Math.floor(1_580_000 * 0.85)).toBe(1_343_000);
+    expect(Math.floor(1_680_000 * 0.85)).toBe(1_428_000);
     const decision = readFileSync("docs/adr/ADR-139-goethe-a1-core-vocabulary.md", "utf8");
     expect(decision).toContain("1,309,000");
     expect(decision).toContain("«نعم»");
@@ -86,5 +87,8 @@ describe("Goethe A1 core vocabulary package (ADR-139)", () => {
     const next = readFileSync("docs/adr/ADR-152-goethe-b1-police-city-study-sport-vocabulary-and-ceiling-step.md", "utf8");
     expect(next).toContain("1,343,000");
     expect(next).toContain("«لا يهم السقف ساستعمله اونلاين دائما»");
+    const roadmap = readFileSync("docs/adr/ADR-155-complete-levels-roadmap-and-first-b1-batch.md", "utf8");
+    expect(roadmap).toContain("1,428,000");
+    expect(roadmap).toContain("«لا يوجد هنالك حدود اريد مستويات متكاملة»");
   });
 });

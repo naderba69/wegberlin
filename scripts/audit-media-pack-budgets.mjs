@@ -7,7 +7,9 @@ const root=process.cwd(),MARGIN=0.15;
 // closed: safety ceiling is now 59_500_000 vs 52_943_843 measured. Pack ceilings untouched.
 // B2 lessons (b2-21…b2-24) each ship a 24kHz mono 32kbps MP3 + 24kbps Opus pair, 1_958_495 bytes in
 // total. The 15% reserve policy is untouched (safety ceiling 53_550_000); pack ceilings unchanged.
-const hardLimits={curriculumSourceGzipBytes:1_580_000,totalAudioBytes:70_000_000,packs:{a1:16_000_000,a2:16_000_000,b1:16_000_000,b2:38_000_000,full:70_000_000}};
+// ADR-155 / v264: curriculum hard limit 1_580_000 -> 1_680_000 (safety ceiling 1_343_000 -> 1_428_000) after the owner lifted the limits for complete
+// levels («لا يوجد هنالك حدود اريد مستويات متكاملة»); sized for the whole roadmap, gate and 15% reserve kept. Audio and pack limits unchanged.
+const hardLimits={curriculumSourceGzipBytes:1_680_000,totalAudioBytes:70_000_000,packs:{a1:16_000_000,a2:16_000_000,b1:16_000_000,b2:38_000_000,full:70_000_000}};
 async function walk(dir,accept){const rows=[];for(const entry of await readdir(dir,{withFileTypes:true})){const path=join(dir,entry.name);if(entry.isDirectory())rows.push(...await walk(path,accept));else if(accept(path))rows.push(path)}return rows}
 function allowed(limit){return Math.floor(limit*(1-MARGIN))}
 function check(issues,label,actual,limit){if(actual>allowed(limit))issues.push(`${label}: ${actual} > safety ceiling ${allowed(limit)} (${limit} hard limit with ${MARGIN*100}% margin)`)}

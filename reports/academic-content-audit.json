@@ -14,26 +14,26 @@
       "examProfiles": 2,
       "examSources": 5,
       "reviewCards": 2304,
-      "nounGrammarEntries": 2051,
+      "nounGrammarEntries": 2117,
       "verbPrepositionFrames": 134,
       "tunisianSupportNotes": 17,
       "dictationItems": 16,
       "branchingConversationScenarios": 8,
       "collocationNetworks": 16,
-      "totalRootObjects": 5099
+      "totalRootObjects": 5165
     },
     "schemaFamilies": 16,
     "issues": []
   },
   "answerIntegrity": {
-    "closedAnswerItems": 2875,
+    "closedAnswerItems": 2879,
     "productiveTasks": 384,
     "failures": 0,
     "exemptions": 2,
     "byScope": {
       "diagnostic": 32,
       "exam": 720,
-      "lesson-controlled": 747,
+      "lesson-controlled": 751,
       "lesson-listening": 288,
       "lesson-mini-test": 480,
       "lesson-reading": 288,
@@ -11605,6 +11605,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-08-e9",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة البيت والإصلاحات بمعناها:",
+        "answer": "die Badewanne → حوض الاستحمام | der Spiegel → المرآة | schief → مائل | der Hammer → المطرقة | gießen → يسقي (النباتات) / يصبّ",
+        "evidenceRef": "b1-08:controlled:b1-08-e9:explanationAr",
+        "evidenceExcerpt": "schief عكس gerade: Das Bild hängt schief, kannst du es gerade machen? وgießen نستعملها للنباتات: Kannst du im Urlaub meine Blumen gießen? أما der Hammer فنحتاجه مع der Nagel لتعليق الأشياء.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-08-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -12228,6 +12239,17 @@
         "answer": "der Stau → الازدحام المروري | tanken → يملأ خزّان الوقود | die Vorfahrt → أولوية المرور | überholen → يتجاوز سيارة أخرى | der Strafzettel → ورقة المخالفة المرورية",
         "evidenceRef": "b1-11:controlled:b1-11-e8:explanationAr",
         "evidenceExcerpt": "die Vorfahrt تعني حق المرور أولًا عند التقاطع، أما überholen فهو تجاوز سيارة تسير أمامك. وder Stau ازدحام تتوقف فيه السيارات، وجمعه die Staus.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
+        "id": "b1-11-e9",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة السفر والنقل بمعناها:",
+        "answer": "das Visum → التأشيرة | die Landung → الهبوط | der Zuschlag → الرسوم الإضافية | zelten → يخيّم | die Rundfahrt → الجولة",
+        "evidenceRef": "b1-11:controlled:b1-11-e9:explanationAr",
+        "evidenceExcerpt": "der Zuschlag مبلغ يُدفع فوق السعر العادي: Für den schnellen Zug muss man einen Zuschlag bezahlen. وzelten من das Zelt، أي نبيت في خيمة. أما die Landung فهي نهاية الرحلة الجوية.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -13904,6 +13926,17 @@
         "status": "pass"
       },
       {
+        "id": "b1-19-e9",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة المشاعر والعلاقات بمعناها:",
+        "answer": "einsam → وحيد | vermissen → يفتقد / يشتاق إلى | dankbar → ممتنّ | duzen → يخاطب بـdu | begegnen → يصادف / يلتقي",
+        "evidenceRef": "b1-19:controlled:b1-19-e9:explanationAr",
+        "evidenceExcerpt": "duzen يعني أن نقول du بدل Sie: Im Team duzen sich alle, auch die Chefin. وvermissen يأتي مع الشخص أو الشيء الذي نشتاق إليه مباشرة: Ich vermisse meine Familie in Tunis. أما einsam فشعور من يبقى وحده.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
         "id": "b1-19-rq1",
         "scope": "lesson-reading",
         "kind": "multiple-choice",
@@ -14109,6 +14142,17 @@
         "answer": "satt → شبعان | hungrig → جائع | abnehmen → ينقص وزنه (هنا) | zunehmen → يزيد وزنه (هنا) | das Knie → الركبة",
         "evidenceRef": "b1-20:controlled:b1-20-e8:explanationAr",
         "evidenceExcerpt": "satt عكس hungrig، وabnehmen عكس zunehmen في الوزن. وجمع das Knie هو die Knie بلا تغيير.",
+        "visibilityPolicy": "authorized-pair-bank",
+        "status": "pass"
+      },
+      {
+        "id": "b1-20-e9",
+        "scope": "lesson-controlled",
+        "kind": "matching",
+        "prompt": "طابق كلمة الجسم والصحة بمعناها:",
+        "answer": "die Nase → الأنف | blass → شاحب | stechen → يلسع / يوخز | der Nerv → العصب | die Pille → الحبّة (دواء)",
+        "evidenceRef": "b1-20:controlled:b1-20-e9:explanationAr",
+        "evidenceExcerpt": "stechen نستعملها للحشرات والإبر: Im Sommer hat mich eine Biene gestochen. وder Nerv يأتي كثيرًا في الجمع في التعبير: Der ständige Lärm geht mir auf die Nerven. أما blass فلون الوجه عند التعب أو المرض.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -40692,6 +40736,7 @@
         "practicedIn": [
           "b1-08-e5",
           "b1-08-e8",
+          "b1-08-e9",
           "b1-08-rq1",
           "b1-08-rq2",
           "b1-08-lq1",
@@ -41009,6 +41054,7 @@
         "practicedIn": [
           "b1-11-e6",
           "b1-11-e8",
+          "b1-11-e9",
           "b1-11:writing"
         ],
         "assessedIn": [
@@ -41920,7 +41966,8 @@
         "practicedIn": [
           "b1-19-e1",
           "b1-19-e2",
-          "b1-19-e8"
+          "b1-19-e8",
+          "b1-19-e9"
         ],
         "assessedIn": [
           "b1-19-m1",
@@ -41971,6 +42018,7 @@
           "b1-20-e1",
           "b1-20-e5",
           "b1-20-e8",
+          "b1-20-e9",
           "b1-20-rq1",
           "b1-20-lq1",
           "b1-20:writing",
@@ -45125,14 +45173,14 @@
   "lexicalTargetGaps": {
     "version": "lexical-target-gap-v1",
     "lessonCount": 96,
-    "nounAnchorCount": 2051,
+    "nounAnchorCount": 2117,
     "verbFrameAnchorCount": 134,
     "nounSummary": {
-      "totalCandidates": 5888,
-      "covered": 2166,
+      "totalCandidates": 6006,
+      "covered": 2234,
       "pendingHuman": 89,
-      "contextualNotTarget": 3633,
-      "authoredTargets": 2255,
+      "contextualNotTarget": 3683,
+      "authoredTargets": 2323,
       "byLevel": {
         "A1": {
           "totalCandidates": 735,
@@ -45147,10 +45195,10 @@
           "contextualNotTarget": 626
         },
         "B1": {
-          "totalCandidates": 1842,
-          "covered": 738,
+          "totalCandidates": 1960,
+          "covered": 806,
           "pendingHuman": 0,
-          "contextualNotTarget": 1104
+          "contextualNotTarget": 1154
         },
         "B2": {
           "totalCandidates": 2226,
@@ -45161,10 +45209,10 @@
       }
     },
     "verbFrameSummary": {
-      "totalCandidates": 1385,
+      "totalCandidates": 1402,
       "covered": 134,
       "pendingHuman": 1,
-      "contextualNotTarget": 1250,
+      "contextualNotTarget": 1267,
       "authoredTargets": 135,
       "byLevel": {
         "A1": {
@@ -45180,10 +45228,10 @@
           "contextualNotTarget": 215
         },
         "B1": {
-          "totalCandidates": 388,
+          "totalCandidates": 405,
           "covered": 31,
           "pendingHuman": 0,
-          "contextualNotTarget": 357
+          "contextualNotTarget": 374
         },
         "B2": {
           "totalCandidates": 642,
@@ -119676,6 +119724,47 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Badewanne",
+        "normalizedLemma": "badewanne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Badewanne",
+            "surface": "die Badewanne",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[22].frontDe",
+            "stage": "vocabulary",
+            "text": "die Badewanne",
+            "surface": "die Badewanne",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-25",
+            "stage": "vocabulary",
+            "surface": "die Badewanne",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[30].de",
+            "stage": "vocabulary",
+            "text": "die Badewanne",
+            "surface": "die Badewanne",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-5da08292"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Bauarbeiten",
         "normalizedLemma": "bauarbeiten",
         "role": "context-only",
@@ -119715,6 +119804,157 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Bild",
+        "normalizedLemma": "bild",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[31].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Nagel hält das schwere Bild nicht.",
+            "surface": "Der Nagel hält das schwere Bild nicht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-bbb3c4fc"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Blumen",
+        "normalizedLemma": "blumen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[45].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kannst du im Urlaub meine Blumen gießen?",
+            "surface": "Kannst du im Urlaub meine Blumen gießen?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-55d812d2"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Boden",
+        "normalizedLemma": "boden",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Badewanne ist undicht, das Wasser läuft auf den Boden.",
+            "surface": "Die Badewanne ist undicht, das Wasser läuft auf den Boden.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-1c771485"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Briefkasten",
+        "normalizedLemma": "briefkasten",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "surface": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-944196d3"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Bürste",
+        "normalizedLemma": "bürste",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit einer harten Bürste geht der Schmutz leichter weg.",
+            "surface": "Mit einer harten Bürste geht der Schmutz leichter weg.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "die Bürste",
+            "surface": "die Bürste",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Bürste",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "die Bürste",
+            "surface": "die Bürste",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-b31a20fb"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Couch",
+        "normalizedLemma": "couch",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-31"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[29].frontDe",
+            "stage": "vocabulary",
+            "text": "die Couch",
+            "surface": "die Couch",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-31",
+            "stage": "vocabulary",
+            "surface": "die Couch",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[37].de",
+            "stage": "vocabulary",
+            "text": "die Couch",
+            "surface": "die Couch",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-202c2c3d"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Dach",
         "normalizedLemma": "dach",
         "role": "context-only",
@@ -119749,6 +119989,40 @@
           }
         ],
         "id": "lex-n-b1-08-73be873f"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Dreck",
+        "normalizedLemma": "dreck",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-38"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[41].frontDe",
+            "stage": "vocabulary",
+            "text": "der Dreck",
+            "surface": "der Dreck",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-38",
+            "stage": "vocabulary",
+            "surface": "der Dreck",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[49].de",
+            "stage": "vocabulary",
+            "text": "der Dreck",
+            "surface": "der Dreck",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-bf752a10"
       },
       {
         "lessonId": "b1-08",
@@ -119893,6 +120167,13 @@
             "stage": "entry",
             "text": "Hast du die Firma angerufen?",
             "surface": "Hast du die Firma angerufen?",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Vermietung der Wohnungen übernimmt eine Firma.",
+            "surface": "Die Vermietung der Wohnungen übernimmt eine Firma.",
             "strength": "context"
           },
           {
@@ -120097,6 +120378,47 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Garderobe",
+        "normalizedLemma": "garderobe",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-41"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[44].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Jacken hängen an der Garderobe im Flur.",
+            "surface": "Die Jacken hängen an der Garderobe im Flur.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[44].frontDe",
+            "stage": "vocabulary",
+            "text": "die Garderobe",
+            "surface": "die Garderobe",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-41",
+            "stage": "vocabulary",
+            "surface": "die Garderobe",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[52].de",
+            "stage": "vocabulary",
+            "text": "die Garderobe",
+            "surface": "die Garderobe",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-00056620"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Geräusch",
         "normalizedLemma": "geräusch",
         "role": "context-only",
@@ -120138,6 +120460,107 @@
           }
         ],
         "id": "lex-n-b1-08-59244e47"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Hammer",
+        "normalizedLemma": "hammer",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-32"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[3].left",
+            "stage": "controlled",
+            "text": "der Hammer",
+            "surface": "der Hammer",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Regal brauche ich einen Hammer.",
+            "surface": "Für das Regal brauche ich einen Hammer.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[30].frontDe",
+            "stage": "vocabulary",
+            "text": "der Hammer",
+            "surface": "der Hammer",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-32",
+            "stage": "vocabulary",
+            "surface": "der Hammer",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[38].de",
+            "stage": "vocabulary",
+            "text": "der Hammer",
+            "surface": "der Hammer",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-ff32dcbf"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Haus",
+        "normalizedLemma": "haus",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Hausmeisterin repariert kleine Schäden im Haus.",
+            "surface": "Die Hausmeisterin repariert kleine Schäden im Haus.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-70d8046a"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Hausmeisterin",
+        "normalizedLemma": "hausmeisterin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-39"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[42].frontDe",
+            "stage": "vocabulary",
+            "text": "die Hausmeisterin",
+            "surface": "die Hausmeisterin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-39",
+            "stage": "vocabulary",
+            "surface": "die Hausmeisterin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[50].de",
+            "stage": "vocabulary",
+            "text": "die Hausmeisterin",
+            "surface": "die Hausmeisterin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-8ba5feb0"
       },
       {
         "lessonId": "b1-08",
@@ -120340,6 +120763,47 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Kasten",
+        "normalizedLemma": "kasten",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-36"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die leeren Flaschen stellen wir zurück in den Kasten.",
+            "surface": "Die leeren Flaschen stellen wir zurück in den Kasten.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[35].frontDe",
+            "stage": "vocabulary",
+            "text": "der Kasten",
+            "surface": "der Kasten",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-36",
+            "stage": "vocabulary",
+            "surface": "der Kasten",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[43].de",
+            "stage": "vocabulary",
+            "text": "der Kasten",
+            "surface": "der Kasten",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-e91ddccd"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Katastrophe",
         "normalizedLemma": "katastrophe",
         "role": "context-only",
@@ -120378,6 +120842,40 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Kerze",
+        "normalizedLemma": "kerze",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[24].frontDe",
+            "stage": "vocabulary",
+            "text": "die Kerze",
+            "surface": "die Kerze",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Kerze",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[32].de",
+            "stage": "vocabulary",
+            "text": "die Kerze",
+            "surface": "die Kerze",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-5154db78"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Kind",
         "normalizedLemma": "kind",
         "role": "context-only",
@@ -120412,6 +120910,47 @@
           }
         ],
         "id": "lex-n-b1-08-046ed118"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Kissen",
+        "normalizedLemma": "kissen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "surface": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[23].frontDe",
+            "stage": "vocabulary",
+            "text": "das Kissen",
+            "surface": "das Kissen",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-26",
+            "stage": "vocabulary",
+            "surface": "das Kissen",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[31].de",
+            "stage": "vocabulary",
+            "text": "das Kissen",
+            "surface": "das Kissen",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-09451780"
       },
       {
         "lessonId": "b1-08",
@@ -120469,6 +121008,61 @@
           }
         ],
         "id": "lex-n-b1-08-130546e4"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Loch",
+        "normalizedLemma": "loch",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-35"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[33].frontDe",
+            "stage": "vocabulary",
+            "text": "das Loch",
+            "surface": "das Loch",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-35",
+            "stage": "vocabulary",
+            "surface": "das Loch",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[41].de",
+            "stage": "vocabulary",
+            "text": "das Loch",
+            "surface": "das Loch",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-4308b3c7"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Löcher",
+        "normalizedLemma": "löcher",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-35"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "surface": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-077bc903"
       },
       {
         "lessonId": "b1-08",
@@ -120683,6 +121277,66 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Nagel",
+        "normalizedLemma": "nagel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-33"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[31].frontDe",
+            "stage": "vocabulary",
+            "text": "der Nagel",
+            "surface": "der Nagel",
+            "strength": "target"
+          },
+          {
+            "path": "flashcards[32].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit der Zange kann man den alten Nagel herausziehen.",
+            "surface": "Mit der Zange kann man den alten Nagel herausziehen.",
+            "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-33",
+            "stage": "vocabulary",
+            "surface": "der Nagel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[39].de",
+            "stage": "vocabulary",
+            "text": "der Nagel",
+            "surface": "der Nagel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-9021b70c"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Namen",
+        "normalizedLemma": "namen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "surface": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-525c3fa0"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Protokoll",
         "normalizedLemma": "protokoll",
         "role": "context-only",
@@ -120755,6 +121409,25 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Regal",
+        "normalizedLemma": "regal",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Regal brauche ich einen Hammer.",
+            "surface": "Für das Regal brauche ich einen Hammer.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-57c43518"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Relativsatz",
         "normalizedLemma": "relativsatz",
         "role": "context-only",
@@ -120770,6 +121443,25 @@
           }
         ],
         "id": "lex-n-b1-08-5320f9a4"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Renovierung",
+        "normalizedLemma": "renovierung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[41].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Renovierung lag überall Dreck.",
+            "surface": "Nach der Renovierung lag überall Dreck.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-305070bb"
       },
       {
         "lessonId": "b1-08",
@@ -120895,6 +121587,13 @@
             "strength": "target"
           },
           {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit einer harten Bürste geht der Schmutz leichter weg.",
+            "surface": "Mit einer harten Bürste geht der Schmutz leichter weg.",
+            "strength": "context"
+          },
+          {
             "path": "lexicalRegistry.b1-08-noun-23",
             "stage": "vocabulary",
             "surface": "der Schmutz",
@@ -120909,6 +121608,66 @@
           }
         ],
         "id": "lex-n-b1-08-f95eb525"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Sofa",
+        "normalizedLemma": "sofa",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "surface": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-0e0bdcfe"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Spiegel",
+        "normalizedLemma": "spiegel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[1].left",
+            "stage": "controlled",
+            "text": "der Spiegel",
+            "surface": "der Spiegel",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[25].frontDe",
+            "stage": "vocabulary",
+            "text": "der Spiegel",
+            "surface": "der Spiegel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-28",
+            "stage": "vocabulary",
+            "surface": "der Spiegel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[33].de",
+            "stage": "vocabulary",
+            "text": "der Spiegel",
+            "surface": "der Spiegel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-490696b4"
       },
       {
         "lessonId": "b1-08",
@@ -120977,6 +121736,25 @@
           }
         ],
         "id": "lex-n-b1-08-c40ee776"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Strom",
+        "normalizedLemma": "strom",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[24].exampleDe",
+            "stage": "vocabulary",
+            "text": "Als der Strom weg war, haben wir Kerzen angezündet.",
+            "surface": "Als der Strom weg war, haben wir Kerzen angezündet.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-f5ddff98"
       },
       {
         "lessonId": "b1-08",
@@ -121284,6 +122062,25 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Umzug",
+        "normalizedLemma": "umzug",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[46].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
+            "surface": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-7a7e90db"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Ventil",
         "normalizedLemma": "ventil",
         "role": "anchor",
@@ -121410,6 +122207,59 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Vermietung",
+        "normalizedLemma": "vermietung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-40"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[43].frontDe",
+            "stage": "vocabulary",
+            "text": "die Vermietung",
+            "surface": "die Vermietung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-40",
+            "stage": "vocabulary",
+            "surface": "die Vermietung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[51].de",
+            "stage": "vocabulary",
+            "text": "die Vermietung",
+            "surface": "die Vermietung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-2f271a97"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Vormieter",
+        "normalizedLemma": "vormieter",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die alte Couch haben die Vormieter in der Wohnung gelassen.",
+            "surface": "Die alte Couch haben die Vormieter in der Wohnung gelassen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-bde64ae0"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Wand",
         "normalizedLemma": "wand",
         "role": "context-only",
@@ -121422,9 +122272,88 @@
             "text": "Nachts klopft jemand an die Wand.",
             "surface": "Nachts klopft jemand an die Wand.",
             "strength": "context"
+          },
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "surface": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b1-08-28500cb7"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Waschmaschine",
+        "normalizedLemma": "waschmaschine",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[37].exampleDe",
+            "stage": "vocabulary",
+            "text": "Das Waschmittel steht im Keller neben der Waschmaschine.",
+            "surface": "Das Waschmittel steht im Keller neben der Waschmaschine.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-edf1d133"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Waschmittel",
+        "normalizedLemma": "waschmittel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-37"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[37].frontDe",
+            "stage": "vocabulary",
+            "text": "das Waschmittel",
+            "surface": "das Waschmittel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-37",
+            "stage": "vocabulary",
+            "surface": "das Waschmittel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[45].de",
+            "stage": "vocabulary",
+            "text": "das Waschmittel",
+            "surface": "das Waschmittel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-67dcced6"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Wasser",
+        "normalizedLemma": "wasser",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[22].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Badewanne ist undicht, das Wasser läuft auf den Boden.",
+            "surface": "Die Badewanne ist undicht, das Wasser läuft auf den Boden.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-1c081c18"
       },
       {
         "lessonId": "b1-08",
@@ -121489,6 +122418,40 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Wohnsitz",
+        "normalizedLemma": "wohnsitz",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-43"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[47].frontDe",
+            "stage": "vocabulary",
+            "text": "der Wohnsitz",
+            "surface": "der Wohnsitz",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-43",
+            "stage": "vocabulary",
+            "surface": "der Wohnsitz",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[55].de",
+            "stage": "vocabulary",
+            "text": "der Wohnsitz",
+            "surface": "der Wohnsitz",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-2294c857"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Wohnung",
         "normalizedLemma": "wohnung",
         "role": "context-only",
@@ -121500,6 +122463,20 @@
             "stage": "vocabulary",
             "text": "Ich heize, aber die Wohnung bleibt kalt.",
             "surface": "Ich heize, aber die Wohnung bleibt kalt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die alte Couch haben die Vormieter in der Wohnung gelassen.",
+            "surface": "Die alte Couch haben die Vormieter in der Wohnung gelassen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[46].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
+            "surface": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
             "strength": "context"
           },
           {
@@ -121522,6 +122499,100 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "lemmaCandidate": "Wohnungen",
+        "normalizedLemma": "wohnungen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Vermietung der Wohnungen übernimmt eine Firma.",
+            "surface": "Die Vermietung der Wohnungen übernimmt eine Firma.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-08-b05889c0"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Zahnbürste",
+        "normalizedLemma": "zahnbürste",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[27].frontDe",
+            "stage": "vocabulary",
+            "text": "die Zahnbürste",
+            "surface": "die Zahnbürste",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-29",
+            "stage": "vocabulary",
+            "surface": "die Zahnbürste",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[35].de",
+            "stage": "vocabulary",
+            "text": "die Zahnbürste",
+            "surface": "die Zahnbürste",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-87ec3c7c"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Zange",
+        "normalizedLemma": "zange",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-34"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[32].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit der Zange kann man den alten Nagel herausziehen.",
+            "surface": "Mit der Zange kann man den alten Nagel herausziehen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[32].frontDe",
+            "stage": "vocabulary",
+            "text": "die Zange",
+            "surface": "die Zange",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-34",
+            "stage": "vocabulary",
+            "surface": "die Zange",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[40].de",
+            "stage": "vocabulary",
+            "text": "die Zange",
+            "surface": "die Zange",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-f5d3a192"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "lemmaCandidate": "Zeitraum",
         "normalizedLemma": "zeitraum",
         "role": "context-only",
@@ -121537,6 +122608,47 @@
           }
         ],
         "id": "lex-n-b1-08-b977213a"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "lemmaCandidate": "Zuhause",
+        "normalizedLemma": "zuhause",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-08-noun-42"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[46].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
+            "surface": "Nach dem Umzug ist die neue Wohnung schnell unser Zuhause geworden.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[46].frontDe",
+            "stage": "vocabulary",
+            "text": "das Zuhause",
+            "surface": "das Zuhause",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-08-noun-42",
+            "stage": "vocabulary",
+            "surface": "das Zuhause",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[54].de",
+            "stage": "vocabulary",
+            "text": "das Zuhause",
+            "surface": "das Zuhause",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-08-23e4a73a"
       },
       {
         "lessonId": "b1-09",
@@ -126233,6 +127345,25 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Altstadt",
+        "normalizedLemma": "altstadt",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[39].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "surface": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-018b3e78"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Ampel",
         "normalizedLemma": "ampel",
         "role": "context-only",
@@ -126251,6 +127382,13 @@
             "stage": "vocabulary",
             "text": "Hinter uns hupte ein Autofahrer, weil die Ampel schon grün war.",
             "surface": "Hinter uns hupte ein Autofahrer, weil die Ampel schon grün war.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[47].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er hat eine rote Ampel überfahren.",
+            "surface": "Er hat eine rote Ampel überfahren.",
             "strength": "context"
           }
         ],
@@ -126308,6 +127446,40 @@
           }
         ],
         "id": "lex-n-b1-11-b357ec49"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Aufenthalt",
+        "normalizedLemma": "aufenthalt",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-39"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[36].frontDe",
+            "stage": "vocabulary",
+            "text": "der Aufenthalt",
+            "surface": "der Aufenthalt",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-39",
+            "stage": "vocabulary",
+            "surface": "der Aufenthalt",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[44].de",
+            "stage": "vocabulary",
+            "text": "der Aufenthalt",
+            "surface": "der Aufenthalt",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-9536541d"
       },
       {
         "lessonId": "b1-11",
@@ -126455,6 +127627,13 @@
             "text": "In der Fußgängerzone dürfen keine Autos fahren.",
             "surface": "In der Fußgängerzone dürfen keine Autos fahren.",
             "strength": "context"
+          },
+          {
+            "path": "flashcards[45].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein Zeuge hat sich das Kennzeichen des Autos gemerkt.",
+            "surface": "Ein Zeuge hat sich das Kennzeichen des Autos gemerkt.",
+            "strength": "context"
           }
         ],
         "id": "lex-n-b1-11-836e3b89"
@@ -126503,6 +127682,25 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Bergen",
+        "normalizedLemma": "bergen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[52].exampleDe",
+            "stage": "vocabulary",
+            "text": "In den Bergen übernachten wir in einer Hütte.",
+            "surface": "In den Bergen übernachten wir in einer Hütte.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-e843a722"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Beschäftigte",
         "normalizedLemma": "beschäftigte",
         "role": "anchor",
@@ -126525,6 +127723,66 @@
           }
         ],
         "id": "lex-n-b1-11-6d238b29"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Besuch",
+        "normalizedLemma": "besuch",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "surface": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-6a516fa9"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Boot",
+        "normalizedLemma": "boot",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-47"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "surface": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[43].frontDe",
+            "stage": "vocabulary",
+            "text": "das Boot",
+            "surface": "das Boot",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-47",
+            "stage": "vocabulary",
+            "surface": "das Boot",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[51].de",
+            "stage": "vocabulary",
+            "text": "das Boot",
+            "surface": "das Boot",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-957bbd47"
       },
       {
         "lessonId": "b1-11",
@@ -126581,6 +127839,13 @@
             "stage": "vocabulary",
             "text": "An dieser Kreuzung hat der Bus Vorfahrt.",
             "surface": "An dieser Kreuzung hat der Bus Vorfahrt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[39].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "surface": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
             "strength": "context"
           }
         ],
@@ -126676,6 +127941,40 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Eile",
+        "normalizedLemma": "eile",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-56"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[54].frontDe",
+            "stage": "vocabulary",
+            "text": "die Eile",
+            "surface": "die Eile",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-56",
+            "stage": "vocabulary",
+            "surface": "die Eile",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[62].de",
+            "stage": "vocabulary",
+            "text": "die Eile",
+            "surface": "die Eile",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-9c8224ce"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Einbahnstraße",
         "normalizedLemma": "einbahnstraße",
         "role": "anchor",
@@ -126754,6 +128053,47 @@
           }
         ],
         "id": "lex-n-b1-11-c72adb66"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Eisenbahn",
+        "normalizedLemma": "eisenbahn",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-46"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit der Eisenbahn ist die Reise langsamer, aber bequemer.",
+            "surface": "Mit der Eisenbahn ist die Reise langsamer, aber bequemer.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[42].frontDe",
+            "stage": "vocabulary",
+            "text": "die Eisenbahn",
+            "surface": "die Eisenbahn",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-46",
+            "stage": "vocabulary",
+            "surface": "die Eisenbahn",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[50].de",
+            "stage": "vocabulary",
+            "text": "die Eisenbahn",
+            "surface": "die Eisenbahn",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-bb6e818e"
       },
       {
         "lessonId": "b1-11",
@@ -127058,6 +128398,25 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Fenster",
+        "normalizedLemma": "fenster",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[37].exampleDe",
+            "stage": "vocabulary",
+            "text": "Unsere Kabine auf dem Schiff hat ein kleines Fenster.",
+            "surface": "Unsere Kabine auf dem Schiff hat ein kleines Fenster.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-e85d2f34"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Firma",
         "normalizedLemma": "firma",
         "role": "context-only",
@@ -127335,6 +128694,47 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Hütte",
+        "normalizedLemma": "hütte",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-54"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[52].exampleDe",
+            "stage": "vocabulary",
+            "text": "In den Bergen übernachten wir in einer Hütte.",
+            "surface": "In den Bergen übernachten wir in einer Hütte.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[52].frontDe",
+            "stage": "vocabulary",
+            "text": "die Hütte",
+            "surface": "die Hütte",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-54",
+            "stage": "vocabulary",
+            "surface": "die Hütte",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[60].de",
+            "stage": "vocabulary",
+            "text": "die Hütte",
+            "surface": "die Hütte",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-51b079de"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Jobticket",
         "normalizedLemma": "jobticket",
         "role": "anchor",
@@ -127386,6 +128786,149 @@
           }
         ],
         "id": "lex-n-b1-11-d1ee6606"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Kabine",
+        "normalizedLemma": "kabine",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-40"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[37].frontDe",
+            "stage": "vocabulary",
+            "text": "die Kabine",
+            "surface": "die Kabine",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-40",
+            "stage": "vocabulary",
+            "surface": "die Kabine",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[45].de",
+            "stage": "vocabulary",
+            "text": "die Kabine",
+            "surface": "die Kabine",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-7189cfff"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Kennzeichen",
+        "normalizedLemma": "kennzeichen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-49"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[45].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein Zeuge hat sich das Kennzeichen des Autos gemerkt.",
+            "surface": "Ein Zeuge hat sich das Kennzeichen des Autos gemerkt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[45].frontDe",
+            "stage": "vocabulary",
+            "text": "das Kennzeichen",
+            "surface": "das Kennzeichen",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-49",
+            "stage": "vocabulary",
+            "surface": "das Kennzeichen",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[53].de",
+            "stage": "vocabulary",
+            "text": "das Kennzeichen",
+            "surface": "das Kennzeichen",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-bf3a2f45"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Konsulat",
+        "normalizedLemma": "konsulat",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-38"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[35].frontDe",
+            "stage": "vocabulary",
+            "text": "das Konsulat",
+            "surface": "das Konsulat",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-38",
+            "stage": "vocabulary",
+            "surface": "das Konsulat",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[43].de",
+            "stage": "vocabulary",
+            "text": "das Konsulat",
+            "surface": "das Konsulat",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-43986472"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Kraftfahrzeug",
+        "normalizedLemma": "kraftfahrzeug",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-48"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[44].frontDe",
+            "stage": "vocabulary",
+            "text": "das Kraftfahrzeug",
+            "surface": "das Kraftfahrzeug",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-48",
+            "stage": "vocabulary",
+            "surface": "das Kraftfahrzeug",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[52].de",
+            "stage": "vocabulary",
+            "text": "das Kraftfahrzeug",
+            "surface": "das Kraftfahrzeug",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-bf3d7229"
       },
       {
         "lessonId": "b1-11",
@@ -127446,6 +128989,148 @@
           }
         ],
         "id": "lex-n-b1-11-76ed58a2"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Landung",
+        "normalizedLemma": "landung",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-36"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[1].left",
+            "stage": "controlled",
+            "text": "die Landung",
+            "surface": "die Landung",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Landung dürfen Sie Ihr Handy wieder benutzen.",
+            "surface": "Nach der Landung dürfen Sie Ihr Handy wieder benutzen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[33].frontDe",
+            "stage": "vocabulary",
+            "text": "die Landung",
+            "surface": "die Landung",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-36",
+            "stage": "vocabulary",
+            "surface": "die Landung",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[41].de",
+            "stage": "vocabulary",
+            "text": "die Landung",
+            "surface": "die Landung",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-b4a41416"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Laster",
+        "normalizedLemma": "laster",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-50"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[46].frontDe",
+            "stage": "vocabulary",
+            "text": "der Laster",
+            "surface": "der Laster",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-50",
+            "stage": "vocabulary",
+            "surface": "der Laster",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[54].de",
+            "stage": "vocabulary",
+            "text": "der Laster",
+            "surface": "der Laster",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-2817b8c8"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Metropole",
+        "normalizedLemma": "metropole",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-57"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[58].exampleDe",
+            "stage": "vocabulary",
+            "text": "Berlin ist eine Metropole mit fast vier Millionen Einwohnern.",
+            "surface": "Berlin ist eine Metropole mit fast vier Millionen Einwohnern.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[58].frontDe",
+            "stage": "vocabulary",
+            "text": "die Metropole",
+            "surface": "die Metropole",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-57",
+            "stage": "vocabulary",
+            "surface": "die Metropole",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[66].de",
+            "stage": "vocabulary",
+            "text": "die Metropole",
+            "surface": "die Metropole",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-7a2b672e"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Möbel",
+        "normalizedLemma": "möbel",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[49].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Transport der Möbel kostet extra.",
+            "surface": "Der Transport der Möbel kostet extra.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-ae377db3"
       },
       {
         "lessonId": "b1-11",
@@ -127575,6 +129260,127 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Passagier",
+        "normalizedLemma": "passagier",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-34"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[32].frontDe",
+            "stage": "vocabulary",
+            "text": "der Passagier / die Passagierin",
+            "surface": "der Passagier / die Passagierin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-34",
+            "stage": "vocabulary",
+            "surface": "der Passagier",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[40].de",
+            "stage": "vocabulary",
+            "text": "der Passagier / die Passagierin",
+            "surface": "der Passagier / die Passagierin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-c0cb4026"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Passagierin",
+        "normalizedLemma": "passagierin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-35"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[32].frontDe",
+            "stage": "vocabulary",
+            "text": "der Passagier / die Passagierin",
+            "surface": "der Passagier / die Passagierin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-35",
+            "stage": "vocabulary",
+            "surface": "die Passagierin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[40].de",
+            "stage": "vocabulary",
+            "text": "der Passagier / die Passagierin",
+            "surface": "der Passagier / die Passagierin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-00a0c449"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Radfahrerin",
+        "normalizedLemma": "radfahrerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-51"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[48].frontDe",
+            "stage": "vocabulary",
+            "text": "die Radfahrerin",
+            "surface": "die Radfahrerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-51",
+            "stage": "vocabulary",
+            "surface": "die Radfahrerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[56].de",
+            "stage": "vocabulary",
+            "text": "die Radfahrerin",
+            "surface": "die Radfahrerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-b4acab05"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Radweg",
+        "normalizedLemma": "radweg",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[48].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Radfahrerin fährt auf dem Radweg.",
+            "surface": "Die Radfahrerin fährt auf dem Radweg.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-5d925487"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Regel",
         "normalizedLemma": "regel",
         "role": "context-only",
@@ -127590,6 +129396,179 @@
           }
         ],
         "id": "lex-n-b1-11-0f7386ee"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Reise",
+        "normalizedLemma": "reise",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mit der Eisenbahn ist die Reise langsamer, aber bequemer.",
+            "surface": "Mit der Eisenbahn ist die Reise langsamer, aber bequemer.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-d61baca1"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Rundfahrt",
+        "normalizedLemma": "rundfahrt",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-42"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[4].left",
+            "stage": "controlled",
+            "text": "die Rundfahrt",
+            "surface": "die Rundfahrt",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[39].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "surface": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[39].frontDe",
+            "stage": "vocabulary",
+            "text": "die Rundfahrt",
+            "surface": "die Rundfahrt",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-42",
+            "stage": "vocabulary",
+            "surface": "die Rundfahrt",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[47].de",
+            "stage": "vocabulary",
+            "text": "die Rundfahrt",
+            "surface": "die Rundfahrt",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-8b76188d"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Schiff",
+        "normalizedLemma": "schiff",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[37].exampleDe",
+            "stage": "vocabulary",
+            "text": "Unsere Kabine auf dem Schiff hat ein kleines Fenster.",
+            "surface": "Unsere Kabine auf dem Schiff hat ein kleines Fenster.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-92a78892"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "See",
+        "normalizedLemma": "see",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "surface": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-08051c46"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Souvenir",
+        "normalizedLemma": "souvenir",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-43"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[40].frontDe",
+            "stage": "vocabulary",
+            "text": "das Souvenir",
+            "surface": "das Souvenir",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-43",
+            "stage": "vocabulary",
+            "surface": "das Souvenir",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[48].de",
+            "stage": "vocabulary",
+            "text": "das Souvenir",
+            "surface": "das Souvenir",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-4fa3c94e"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Speisewagen",
+        "normalizedLemma": "speisewagen",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-41"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[38].frontDe",
+            "stage": "vocabulary",
+            "text": "der Speisewagen",
+            "surface": "der Speisewagen",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-41",
+            "stage": "vocabulary",
+            "surface": "der Speisewagen",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[46].de",
+            "stage": "vocabulary",
+            "text": "der Speisewagen",
+            "surface": "der Speisewagen",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-5e2b1da0"
       },
       {
         "lessonId": "b1-11",
@@ -127654,6 +129633,74 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Steward",
+        "normalizedLemma": "steward",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-44"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[41].frontDe",
+            "stage": "vocabulary",
+            "text": "der Steward / die Stewardess",
+            "surface": "der Steward / die Stewardess",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-44",
+            "stage": "vocabulary",
+            "surface": "der Steward",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[49].de",
+            "stage": "vocabulary",
+            "text": "der Steward / die Stewardess",
+            "surface": "der Steward / die Stewardess",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-4cae8641"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Stewardess",
+        "normalizedLemma": "stewardess",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-45"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[41].frontDe",
+            "stage": "vocabulary",
+            "text": "der Steward / die Stewardess",
+            "surface": "der Steward / die Stewardess",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-45",
+            "stage": "vocabulary",
+            "surface": "die Stewardess",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[49].de",
+            "stage": "vocabulary",
+            "text": "der Steward / die Stewardess",
+            "surface": "der Steward / die Stewardess",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-bec38d5a"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Strafzettel",
         "normalizedLemma": "strafzettel",
         "role": "anchor",
@@ -127713,6 +129760,13 @@
             "stage": "vocabulary",
             "text": "Dadurch, dass die Ampel länger grün ist, kommen Fußgänger sicherer über die Straße.",
             "surface": "Dadurch, dass die Ampel länger grün ist, kommen Fußgänger sicherer über die Straße.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[46].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ein Laster blockiert die Straße.",
+            "surface": "Ein Laster blockiert die Straße.",
             "strength": "context"
           }
         ],
@@ -127813,6 +129867,25 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Tasse",
+        "normalizedLemma": "tasse",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[40].exampleDe",
+            "stage": "vocabulary",
+            "text": "Als Souvenir habe ich eine kleine Tasse gekauft.",
+            "surface": "Als Souvenir habe ich eine kleine Tasse gekauft.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-eb833be5"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Teilnehmenden",
         "normalizedLemma": "teilnehmenden",
         "role": "context-only",
@@ -127835,6 +129908,25 @@
           }
         ],
         "id": "lex-n-b1-11-c782859b"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Termin",
+        "normalizedLemma": "termin",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Visum hatte ich einen Termin im Konsulat.",
+            "surface": "Für das Visum hatte ich einen Termin im Konsulat.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-53cbe37a"
       },
       {
         "lessonId": "b1-11",
@@ -127900,6 +129992,74 @@
           }
         ],
         "id": "lex-n-b1-11-244ab551"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Tourismus",
+        "normalizedLemma": "tourismus",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-53"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[50].frontDe",
+            "stage": "vocabulary",
+            "text": "der Tourismus",
+            "surface": "der Tourismus",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-53",
+            "stage": "vocabulary",
+            "surface": "der Tourismus",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[58].de",
+            "stage": "vocabulary",
+            "text": "der Tourismus",
+            "surface": "der Tourismus",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-fed18770"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Transport",
+        "normalizedLemma": "transport",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-52"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[49].frontDe",
+            "stage": "vocabulary",
+            "text": "der Transport",
+            "surface": "der Transport",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-52",
+            "stage": "vocabulary",
+            "surface": "der Transport",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[57].de",
+            "stage": "vocabulary",
+            "text": "der Transport",
+            "surface": "der Transport",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-eeab5b40"
       },
       {
         "lessonId": "b1-11",
@@ -128092,6 +130252,61 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "lemmaCandidate": "Visum",
+        "normalizedLemma": "visum",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-37"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[0].left",
+            "stage": "controlled",
+            "text": "das Visum",
+            "surface": "das Visum",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "surface": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[34].frontDe",
+            "stage": "vocabulary",
+            "text": "das Visum",
+            "surface": "das Visum",
+            "strength": "target"
+          },
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für das Visum hatte ich einen Termin im Konsulat.",
+            "surface": "Für das Visum hatte ich einen Termin im Konsulat.",
+            "strength": "context"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-37",
+            "stage": "vocabulary",
+            "surface": "das Visum",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[42].de",
+            "stage": "vocabulary",
+            "text": "das Visum",
+            "surface": "das Visum",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-72718535"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "lemmaCandidate": "Vorfahrt",
         "normalizedLemma": "vorfahrt",
         "role": "anchor",
@@ -128148,6 +130363,80 @@
           }
         ],
         "id": "lex-n-b1-11-a90529bb"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Zug",
+        "normalizedLemma": "zug",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[53].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
+            "surface": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[54].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir sind in Eile, unser Zug fährt in zehn Minuten.",
+            "surface": "Wir sind in Eile, unser Zug fährt in zehn Minuten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-11-2b88dcef"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "lemmaCandidate": "Zuschlag",
+        "normalizedLemma": "zuschlag",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-11-noun-55"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[2].left",
+            "stage": "controlled",
+            "text": "der Zuschlag",
+            "surface": "der Zuschlag",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[53].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
+            "surface": "Für den schnellen Zug muss man einen Zuschlag bezahlen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[53].frontDe",
+            "stage": "vocabulary",
+            "text": "der Zuschlag",
+            "surface": "der Zuschlag",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-11-noun-55",
+            "stage": "vocabulary",
+            "surface": "der Zuschlag",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[61].de",
+            "stage": "vocabulary",
+            "text": "der Zuschlag",
+            "surface": "der Zuschlag",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-11-2eedadb0"
       },
       {
         "lessonId": "b1-11",
@@ -144916,6 +147205,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Augen",
+        "normalizedLemma": "augen",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim Abschied hatte sie Tränen in den Augen.",
+            "surface": "Beim Abschied hatte sie Tränen in den Augen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-5163d8f9"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Bahnhof",
         "normalizedLemma": "bahnhof",
         "role": "context-only",
@@ -145339,6 +147647,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Bruder",
+        "normalizedLemma": "bruder",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[50].exampleDe",
+            "stage": "vocabulary",
+            "text": "Neulich habe ich deinen Bruder im Supermarkt getroffen.",
+            "surface": "Neulich habe ich deinen Bruder im Supermarkt getroffen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-e21914c5"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Café",
         "normalizedLemma": "café",
         "role": "context-only",
@@ -145354,6 +147681,25 @@
           }
         ],
         "id": "lex-n-b1-19-552425a2"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Chefin",
+        "normalizedLemma": "chefin",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[41].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Team duzen sich alle, auch die Chefin.",
+            "surface": "Im Team duzen sich alle, auch die Chefin.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-94561c70"
       },
       {
         "lessonId": "b1-19",
@@ -145596,6 +147942,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Familie",
+        "normalizedLemma": "familie",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[32].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich vermisse meine Familie in Tunis.",
+            "surface": "Ich vermisse meine Familie in Tunis.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-359207d2"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Foto",
         "normalizedLemma": "foto",
         "role": "context-only",
@@ -145682,6 +148047,59 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Geschenk",
+        "normalizedLemma": "geschenk",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich habe mich wahnsinnig über dein Geschenk gefreut.",
+            "surface": "Ich habe mich wahnsinnig über dein Geschenk gefreut.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-0b4f22e5"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Geschlecht",
+        "normalizedLemma": "geschlecht",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-19-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[53].frontDe",
+            "stage": "vocabulary",
+            "text": "das Geschlecht",
+            "surface": "das Geschlecht",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-19-noun-29",
+            "stage": "vocabulary",
+            "surface": "das Geschlecht",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[61].de",
+            "stage": "vocabulary",
+            "text": "das Geschlecht",
+            "surface": "das Geschlecht",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-19-ada62bf5"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Girokonto",
         "normalizedLemma": "girokonto",
         "role": "anchor",
@@ -145738,6 +148156,25 @@
           }
         ],
         "id": "lex-n-b1-19-f683e5e2"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Hilfe",
+        "normalizedLemma": "hilfe",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[31].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich bin dir sehr dankbar für deine Hilfe.",
+            "surface": "Ich bin dir sehr dankbar für deine Hilfe.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-95a77b11"
       },
       {
         "lessonId": "b1-19",
@@ -145847,6 +148284,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Kopf",
+        "normalizedLemma": "kopf",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[39].exampleDe",
+            "stage": "vocabulary",
+            "text": "Er schüttelte den Kopf, weil er nichts verstanden hatte.",
+            "surface": "Er schüttelte den Kopf, weil er nichts verstanden hatte.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-7454c44b"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Kreditkarte",
         "normalizedLemma": "kreditkarte",
         "role": "anchor",
@@ -145888,6 +148344,85 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Kuss",
+        "normalizedLemma": "kuss",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-19-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Zum Abschied gab sie ihrer Mutter einen Kuss.",
+            "surface": "Zum Abschied gab sie ihrer Mutter einen Kuss.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[35].frontDe",
+            "stage": "vocabulary",
+            "text": "der Kuss",
+            "surface": "der Kuss",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-19-noun-28",
+            "stage": "vocabulary",
+            "surface": "der Kuss",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[43].de",
+            "stage": "vocabulary",
+            "text": "der Kuss",
+            "surface": "der Kuss",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-19-e4fc813d"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Lärm",
+        "normalizedLemma": "lärm",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Mieter klagen über den Lärm.",
+            "surface": "Viele Mieter klagen über den Lärm.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-d305b6a2"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Lehrerin",
+        "normalizedLemma": "lehrerin",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[40].exampleDe",
+            "stage": "vocabulary",
+            "text": "Gestern bin ich zufällig meiner alten Lehrerin begegnet.",
+            "surface": "Gestern bin ich zufällig meiner alten Lehrerin begegnet.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-4c271372"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Lesarten",
         "normalizedLemma": "lesarten",
         "role": "context-only",
@@ -145922,6 +148457,25 @@
           }
         ],
         "id": "lex-n-b1-19-424f138c"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Miete",
+        "normalizedLemma": "miete",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[47].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Vermieter ist uns bei der Miete entgegengekommen.",
+            "surface": "Der Vermieter ist uns bei der Miete entgegengekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-5092f70f"
       },
       {
         "lessonId": "b1-19",
@@ -146052,6 +148606,25 @@
           }
         ],
         "id": "lex-n-b1-19-b3b7ec1d"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Mutter",
+        "normalizedLemma": "mutter",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Zum Abschied gab sie ihrer Mutter einen Kuss.",
+            "surface": "Zum Abschied gab sie ihrer Mutter einen Kuss.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-137e84de"
       },
       {
         "lessonId": "b1-19",
@@ -146310,6 +148883,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Situation",
+        "normalizedLemma": "situation",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[48].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kommst du mit der neuen Situation zurecht?",
+            "surface": "Kommst du mit der neuen Situation zurecht?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-eb5f6b15"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Standort",
         "normalizedLemma": "standort",
         "role": "context-only",
@@ -146555,6 +149147,40 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Träne",
+        "normalizedLemma": "träne",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-19-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[33].frontDe",
+            "stage": "vocabulary",
+            "text": "die Träne",
+            "surface": "die Träne",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-19-noun-27",
+            "stage": "vocabulary",
+            "surface": "die Träne",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[41].de",
+            "stage": "vocabulary",
+            "text": "die Träne",
+            "surface": "die Träne",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-19-1b93d716"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "U-Bahn",
         "normalizedLemma": "u-bahn",
         "role": "context-only",
@@ -146633,6 +149259,25 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "lemmaCandidate": "Umzug",
+        "normalizedLemma": "umzug",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach dem Umzug habe ich mich am Anfang sehr einsam gefühlt.",
+            "surface": "Nach dem Umzug habe ich mich am Anfang sehr einsam gefühlt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-f9295545"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "lemmaCandidate": "Version",
         "normalizedLemma": "version",
         "role": "context-only",
@@ -146705,6 +149350,25 @@
           }
         ],
         "id": "lex-n-b1-19-a3d588d0"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "lemmaCandidate": "Wange",
+        "normalizedLemma": "wange",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "In manchen Ländern küsst man sich zur Begrüßung auf die Wange.",
+            "surface": "In manchen Ländern küsst man sich zur Begrüßung auf die Wange.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-19-37397123"
       },
       {
         "lessonId": "b1-19",
@@ -146840,6 +149504,25 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Alkohol",
+        "normalizedLemma": "alkohol",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der Schwangerschaft sollte man keinen Alkohol trinken.",
+            "surface": "In der Schwangerschaft sollte man keinen Alkohol trinken.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-544035bf"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Angebot",
         "normalizedLemma": "angebot",
         "role": "context-only",
@@ -146944,6 +149627,47 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Bart",
+        "normalizedLemma": "bart",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-32"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[44].exampleDe",
+            "stage": "vocabulary",
+            "text": "Mein Bruder lässt sich einen Bart wachsen.",
+            "surface": "Mein Bruder lässt sich einen Bart wachsen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[44].frontDe",
+            "stage": "vocabulary",
+            "text": "der Bart",
+            "surface": "der Bart",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-32",
+            "stage": "vocabulary",
+            "surface": "der Bart",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[52].de",
+            "stage": "vocabulary",
+            "text": "der Bart",
+            "surface": "der Bart",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-295de7ac"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Bedingungen",
         "normalizedLemma": "bedingungen",
         "role": "context-only",
@@ -147008,6 +149732,66 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Biene",
+        "normalizedLemma": "biene",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[46].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Sommer hat mich eine Biene gestochen.",
+            "surface": "Im Sommer hat mich eine Biene gestochen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-047ff054"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Brust",
+        "normalizedLemma": "brust",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-22"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[31].exampleDe",
+            "stage": "vocabulary",
+            "text": "Bei starken Schmerzen in der Brust sollte man sofort die 112 anrufen.",
+            "surface": "Bei starken Schmerzen in der Brust sollte man sofort die 112 anrufen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[31].frontDe",
+            "stage": "vocabulary",
+            "text": "die Brust",
+            "surface": "die Brust",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-22",
+            "stage": "vocabulary",
+            "surface": "die Brust",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[39].de",
+            "stage": "vocabulary",
+            "text": "die Brust",
+            "surface": "die Brust",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-720078b9"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Bus",
         "normalizedLemma": "bus",
         "role": "context-only",
@@ -147023,6 +149807,25 @@
           }
         ],
         "id": "lex-n-b1-20-cf0366af"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Creme",
+        "normalizedLemma": "creme",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[30].exampleDe",
+            "stage": "vocabulary",
+            "text": "Im Winter hilft eine Creme gegen trockene Lippen.",
+            "surface": "Im Winter hilft eine Creme gegen trockene Lippen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-e11c6887"
       },
       {
         "lessonId": "b1-20",
@@ -147064,6 +149867,40 @@
           }
         ],
         "id": "lex-n-b1-20-5492c950"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Droge",
+        "normalizedLemma": "droge",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-33"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[48].frontDe",
+            "stage": "vocabulary",
+            "text": "die Droge",
+            "surface": "die Droge",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-33",
+            "stage": "vocabulary",
+            "surface": "die Droge",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[56].de",
+            "stage": "vocabulary",
+            "text": "die Droge",
+            "surface": "die Droge",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-f1c1aa0e"
       },
       {
         "lessonId": "b1-20",
@@ -147265,6 +150102,66 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Fieber",
+        "normalizedLemma": "fieber",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[37].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Krankenschwester misst jeden Morgen das Fieber.",
+            "surface": "Die Krankenschwester misst jeden Morgen das Fieber.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-5b94ebda"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Finger",
+        "normalizedLemma": "finger",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-20"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[29].exampleDe",
+            "stage": "vocabulary",
+            "text": "Ich habe mir beim Kochen in den Finger geschnitten.",
+            "surface": "Ich habe mir beim Kochen in den Finger geschnitten.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[29].frontDe",
+            "stage": "vocabulary",
+            "text": "der Finger",
+            "surface": "der Finger",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-20",
+            "stage": "vocabulary",
+            "surface": "der Finger",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[37].de",
+            "stage": "vocabulary",
+            "text": "der Finger",
+            "surface": "der Finger",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-6939613e"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Fortschritt",
         "normalizedLemma": "fortschritt",
         "role": "context-only",
@@ -147287,6 +150184,40 @@
           }
         ],
         "id": "lex-n-b1-20-dd4d12fd"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Frisur",
+        "normalizedLemma": "frisur",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-31"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[43].frontDe",
+            "stage": "vocabulary",
+            "text": "die Frisur",
+            "surface": "die Frisur",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-31",
+            "stage": "vocabulary",
+            "surface": "die Frisur",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[51].de",
+            "stage": "vocabulary",
+            "text": "die Frisur",
+            "surface": "die Frisur",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-35cd4ae4"
       },
       {
         "lessonId": "b1-20",
@@ -147458,6 +150389,25 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Hund",
+        "normalizedLemma": "hund",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[45].exampleDe",
+            "stage": "vocabulary",
+            "text": "Keine Angst, der Hund beißt nicht.",
+            "surface": "Keine Angst, der Hund beißt nicht.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-d0d91c3a"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Jobangebot",
         "normalizedLemma": "jobangebot",
         "role": "context-only",
@@ -147514,6 +150464,74 @@
           }
         ],
         "id": "lex-n-b1-20-2278d6e8"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Kranke",
+        "normalizedLemma": "kranke",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-27"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[36].frontDe",
+            "stage": "vocabulary",
+            "text": "der Kranke",
+            "surface": "der Kranke",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-27",
+            "stage": "vocabulary",
+            "surface": "der Kranke",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[44].de",
+            "stage": "vocabulary",
+            "text": "der Kranke",
+            "surface": "der Kranke",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-17114985"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Krankenschwester",
+        "normalizedLemma": "krankenschwester",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-28"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[37].frontDe",
+            "stage": "vocabulary",
+            "text": "die Krankenschwester",
+            "surface": "die Krankenschwester",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-28",
+            "stage": "vocabulary",
+            "surface": "die Krankenschwester",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[45].de",
+            "stage": "vocabulary",
+            "text": "die Krankenschwester",
+            "surface": "die Krankenschwester",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-a74be4e9"
       },
       {
         "lessonId": "b1-20",
@@ -147762,6 +150780,40 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Lippe",
+        "normalizedLemma": "lippe",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-21"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[30].frontDe",
+            "stage": "vocabulary",
+            "text": "die Lippe",
+            "surface": "die Lippe",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-21",
+            "stage": "vocabulary",
+            "surface": "die Lippe",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[38].de",
+            "stage": "vocabulary",
+            "text": "die Lippe",
+            "surface": "die Lippe",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-974cd14f"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Lösung",
         "normalizedLemma": "lösung",
         "role": "context-only",
@@ -147917,6 +150969,184 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Nase",
+        "normalizedLemma": "nase",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-19"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[0].left",
+            "stage": "controlled",
+            "text": "die Nase",
+            "surface": "die Nase",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[28].exampleDe",
+            "stage": "vocabulary",
+            "text": "Bei Schnupfen ist die Nase oft tagelang zu.",
+            "surface": "Bei Schnupfen ist die Nase oft tagelang zu.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[28].frontDe",
+            "stage": "vocabulary",
+            "text": "die Nase",
+            "surface": "die Nase",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-19",
+            "stage": "vocabulary",
+            "surface": "die Nase",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[36].de",
+            "stage": "vocabulary",
+            "text": "die Nase",
+            "surface": "die Nase",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-591488ae"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Nerv",
+        "normalizedLemma": "nerv",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[3].left",
+            "stage": "controlled",
+            "text": "der Nerv",
+            "surface": "der Nerv",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[32].frontDe",
+            "stage": "vocabulary",
+            "text": "der Nerv",
+            "surface": "der Nerv",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-23",
+            "stage": "vocabulary",
+            "surface": "der Nerv",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[40].de",
+            "stage": "vocabulary",
+            "text": "der Nerv",
+            "surface": "der Nerv",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-ea99f172"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Nerven",
+        "normalizedLemma": "nerven",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-23"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[32].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der ständige Lärm geht mir auf die Nerven.",
+            "surface": "Der ständige Lärm geht mir auf die Nerven.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-08371441"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Nichtraucher",
+        "normalizedLemma": "nichtraucher",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-37"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[51].frontDe",
+            "stage": "vocabulary",
+            "text": "der Nichtraucher / die Nichtraucherin",
+            "surface": "der Nichtraucher / die Nichtraucherin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-37",
+            "stage": "vocabulary",
+            "surface": "der Nichtraucher",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[59].de",
+            "stage": "vocabulary",
+            "text": "der Nichtraucher / die Nichtraucherin",
+            "surface": "der Nichtraucher / die Nichtraucherin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-ff7f55ed"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Nichtraucherin",
+        "normalizedLemma": "nichtraucherin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-38"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[51].frontDe",
+            "stage": "vocabulary",
+            "text": "der Nichtraucher / die Nichtraucherin",
+            "surface": "der Nichtraucher / die Nichtraucherin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-38",
+            "stage": "vocabulary",
+            "surface": "die Nichtraucherin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[59].de",
+            "stage": "vocabulary",
+            "text": "der Nichtraucher / die Nichtraucherin",
+            "surface": "der Nichtraucher / die Nichtraucherin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-9302b906"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Noten",
         "normalizedLemma": "noten",
         "role": "context-only",
@@ -147932,6 +151162,25 @@
           }
         ],
         "id": "lex-n-b1-20-8fcc7563"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Operation",
+        "normalizedLemma": "operation",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Operation beginnt eine Therapie von sechs Wochen.",
+            "surface": "Nach der Operation beginnt eine Therapie von sechs Wochen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-7174b9ac"
       },
       {
         "lessonId": "b1-20",
@@ -147972,6 +151221,115 @@
           }
         ],
         "id": "lex-n-b1-20-776a67fa"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Pfleger",
+        "normalizedLemma": "pfleger",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-29"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[38].frontDe",
+            "stage": "vocabulary",
+            "text": "der Pfleger / die Pflegerin",
+            "surface": "der Pfleger / die Pflegerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-29",
+            "stage": "vocabulary",
+            "surface": "der Pfleger",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[46].de",
+            "stage": "vocabulary",
+            "text": "der Pfleger / die Pflegerin",
+            "surface": "der Pfleger / die Pflegerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-3b6fd430"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Pflegerin",
+        "normalizedLemma": "pflegerin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-30"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[38].frontDe",
+            "stage": "vocabulary",
+            "text": "der Pfleger / die Pflegerin",
+            "surface": "der Pfleger / die Pflegerin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-30",
+            "stage": "vocabulary",
+            "surface": "die Pflegerin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[46].de",
+            "stage": "vocabulary",
+            "text": "der Pfleger / die Pflegerin",
+            "surface": "der Pfleger / die Pflegerin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-e4c3102f"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Pille",
+        "normalizedLemma": "pille",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-24"
+        ],
+        "sources": [
+          {
+            "path": "exercises[8].pairs[4].left",
+            "stage": "controlled",
+            "text": "die Pille",
+            "surface": "die Pille",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[33].frontDe",
+            "stage": "vocabulary",
+            "text": "die Pille",
+            "surface": "die Pille",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-24",
+            "stage": "vocabulary",
+            "surface": "die Pille",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[41].de",
+            "stage": "vocabulary",
+            "text": "die Pille",
+            "surface": "die Pille",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-16b09753"
       },
       {
         "lessonId": "b1-20",
@@ -148138,6 +151496,74 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Raucher",
+        "normalizedLemma": "raucher",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-35"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[50].frontDe",
+            "stage": "vocabulary",
+            "text": "der Raucher / die Raucherin",
+            "surface": "der Raucher / die Raucherin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-35",
+            "stage": "vocabulary",
+            "surface": "der Raucher",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[58].de",
+            "stage": "vocabulary",
+            "text": "der Raucher / die Raucherin",
+            "surface": "der Raucher / die Raucherin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-afa74859"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Raucherin",
+        "normalizedLemma": "raucherin",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-36"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[50].frontDe",
+            "stage": "vocabulary",
+            "text": "der Raucher / die Raucherin",
+            "surface": "der Raucher / die Raucherin",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-36",
+            "stage": "vocabulary",
+            "surface": "die Raucherin",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[58].de",
+            "stage": "vocabulary",
+            "text": "der Raucher / die Raucherin",
+            "surface": "der Raucher / die Raucherin",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-e26428da"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Regelung",
         "normalizedLemma": "regelung",
         "role": "context-only",
@@ -148191,6 +151617,25 @@
           }
         ],
         "id": "lex-n-b1-20-50914c18"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Risiko",
+        "normalizedLemma": "risiko",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[50].exampleDe",
+            "stage": "vocabulary",
+            "text": "Raucher haben ein höheres Risiko für Herzkrankheiten.",
+            "surface": "Raucher haben ein höheres Risiko für Herzkrankheiten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-bccf7c58"
       },
       {
         "lessonId": "b1-20",
@@ -148265,6 +151710,47 @@
           }
         ],
         "id": "lex-n-b1-20-c131c235"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Schwangerschaft",
+        "normalizedLemma": "schwangerschaft",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-26"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "In der Schwangerschaft sollte man keinen Alkohol trinken.",
+            "surface": "In der Schwangerschaft sollte man keinen Alkohol trinken.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[35].frontDe",
+            "stage": "vocabulary",
+            "text": "die Schwangerschaft",
+            "surface": "die Schwangerschaft",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-26",
+            "stage": "vocabulary",
+            "surface": "die Schwangerschaft",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[43].de",
+            "stage": "vocabulary",
+            "text": "die Schwangerschaft",
+            "surface": "die Schwangerschaft",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-07d126e0"
       },
       {
         "lessonId": "b1-20",
@@ -148535,6 +152021,47 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Suchtmittel",
+        "normalizedLemma": "suchtmittel",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-34"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[49].exampleDe",
+            "stage": "vocabulary",
+            "text": "Auch Alkohol ist ein Suchtmittel.",
+            "surface": "Auch Alkohol ist ein Suchtmittel.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[49].frontDe",
+            "stage": "vocabulary",
+            "text": "das Suchtmittel",
+            "surface": "das Suchtmittel",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-34",
+            "stage": "vocabulary",
+            "surface": "das Suchtmittel",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[57].de",
+            "stage": "vocabulary",
+            "text": "das Suchtmittel",
+            "surface": "das Suchtmittel",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-13cba49f"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Teilnehmenden",
         "normalizedLemma": "teilnehmenden",
         "role": "context-only",
@@ -148611,6 +152138,47 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "lemmaCandidate": "Therapie",
+        "normalizedLemma": "therapie",
+        "role": "anchor",
+        "status": "covered",
+        "anchorIds": [
+          "b1-20-noun-25"
+        ],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Nach der Operation beginnt eine Therapie von sechs Wochen.",
+            "surface": "Nach der Operation beginnt eine Therapie von sechs Wochen.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[34].frontDe",
+            "stage": "vocabulary",
+            "text": "die Therapie",
+            "surface": "die Therapie",
+            "strength": "target"
+          },
+          {
+            "path": "lexicalRegistry.b1-20-noun-25",
+            "stage": "vocabulary",
+            "surface": "die Therapie",
+            "strength": "registry"
+          },
+          {
+            "path": "phrases[42].de",
+            "stage": "vocabulary",
+            "text": "die Therapie",
+            "surface": "die Therapie",
+            "strength": "target"
+          }
+        ],
+        "id": "lex-n-b1-20-a7352867"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "lemmaCandidate": "Training",
         "normalizedLemma": "training",
         "role": "context-only",
@@ -148645,6 +152213,25 @@
           }
         ],
         "id": "lex-n-b1-20-00f28d13"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Vater",
+        "normalizedLemma": "vater",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[38].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Pfleger hilft meinem Vater beim Aufstehen.",
+            "surface": "Der Pfleger hilft meinem Vater beim Aufstehen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-16f604d9"
       },
       {
         "lessonId": "b1-20",
@@ -148705,6 +152292,25 @@
           }
         ],
         "id": "lex-n-b1-20-f1eb4e77"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "lemmaCandidate": "Vorstellung",
+        "normalizedLemma": "vorstellung",
+        "role": "context-only",
+        "status": "not-target",
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Vor der Vorstellung werden alle Schauspieler geschminkt.",
+            "surface": "Vor der Vorstellung werden alle Schauspieler geschminkt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-n-b1-20-65fba77c"
       },
       {
         "lessonId": "b1-20",
@@ -229612,6 +233218,98 @@
       {
         "lessonId": "b1-08",
         "level": "B1",
+        "infinitiveCandidate": "geben",
+        "normalizedVerb": "geben",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "accusative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[23].exampleDe",
+            "stage": "vocabulary",
+            "text": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "surface": "Kannst du mir noch ein Kissen für das Sofa geben?",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-9980c022"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "infinitiveCandidate": "hängen",
+        "normalizedVerb": "hängen",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[44].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Jacken hängen an der Garderobe im Flur.",
+            "surface": "Die Jacken hängen an der Garderobe im Flur.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-c365c538"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "infinitiveCandidate": "kleben",
+        "normalizedVerb": "kleben",
+        "preposition": "an",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "surface": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-4e4fce8d"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "infinitiveCandidate": "kleben",
+        "normalizedVerb": "kleben",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "surface": "Den Zettel mit unserem Namen kleben wir an den Briefkasten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-79b84930"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
         "infinitiveCandidate": "schicken",
         "normalizedVerb": "schicken",
         "preposition": "mit",
@@ -229631,6 +233329,52 @@
           }
         ],
         "id": "lex-v-b1-08-45e069ff"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "infinitiveCandidate": "schließen",
+        "normalizedVerb": "schließen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "surface": "Beim Auszug sollen wir die Löcher in der Wand wieder schließen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-d88108f0"
+      },
+      {
+        "lessonId": "b1-08",
+        "level": "B1",
+        "infinitiveCandidate": "stellen",
+        "normalizedVerb": "stellen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[35].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die leeren Flaschen stellen wir zurück in den Kasten.",
+            "surface": "Die leeren Flaschen stellen wir zurück in den Kasten.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-08-97066495"
       },
       {
         "lessonId": "b1-08",
@@ -230698,6 +234442,29 @@
       {
         "lessonId": "b1-11",
         "level": "B1",
+        "infinitiveCandidate": "brauchen",
+        "normalizedVerb": "brauchen",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[34].exampleDe",
+            "stage": "vocabulary",
+            "text": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "surface": "Für einen Besuch in Deutschland brauchen viele Tunesier ein Visum.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-0cbe49c4"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
         "infinitiveCandidate": "definieren",
         "normalizedVerb": "definieren",
         "preposition": "für",
@@ -230885,10 +234652,34 @@
         "level": "B1",
         "infinitiveCandidate": "fahren",
         "normalizedVerb": "fahren",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "surface": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-9dd4c829"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "infinitiveCandidate": "fahren",
+        "normalizedVerb": "fahren",
         "preposition": "über",
         "role": "context-only",
         "status": "not-target",
         "observedCases": [
+          "ambiguous",
           "unknown"
         ],
         "anchorIds": [],
@@ -230898,6 +234689,13 @@
             "stage": "vocabulary",
             "text": "Fahrzeuge über 3,5 Tonnen dürfen hier nicht fahren.",
             "surface": "Fahrzeuge über 3,5 Tonnen dürfen hier nicht fahren.",
+            "strength": "context"
+          },
+          {
+            "path": "flashcards[43].exampleDe",
+            "stage": "vocabulary",
+            "text": "Am Wochenende fahren wir mit dem Boot über den See.",
+            "surface": "Am Wochenende fahren wir mit dem Boot über den See.",
             "strength": "context"
           }
         ],
@@ -230994,6 +234792,52 @@
           }
         ],
         "id": "lex-v-b1-11-23d0fde7"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "infinitiveCandidate": "leben",
+        "normalizedVerb": "leben",
+        "preposition": "auf",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[50].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Menschen auf Djerba leben vom Tourismus.",
+            "surface": "Viele Menschen auf Djerba leben vom Tourismus.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-e6e946c5"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "infinitiveCandidate": "machen",
+        "normalizedVerb": "machen",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[39].exampleDe",
+            "stage": "vocabulary",
+            "text": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "surface": "Wir machen eine Rundfahrt mit dem Bus durch die Altstadt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-683a4b73"
       },
       {
         "lessonId": "b1-11",
@@ -231125,6 +234969,29 @@
           }
         ],
         "id": "lex-v-b1-11-c6fb9db7"
+      },
+      {
+        "lessonId": "b1-11",
+        "level": "B1",
+        "infinitiveCandidate": "übernachten",
+        "normalizedVerb": "übernachten",
+        "preposition": "in",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "dative"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[52].exampleDe",
+            "stage": "vocabulary",
+            "text": "In den Bergen übernachten wir in einer Hütte.",
+            "surface": "In den Bergen übernachten wir in einer Hütte.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-11-4a3a713a"
       },
       {
         "lessonId": "b1-11",
@@ -233768,6 +237635,29 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "infinitiveCandidate": "angerufen",
+        "normalizedVerb": "angerufen",
+        "preposition": "für",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[51].exampleDe",
+            "stage": "vocabulary",
+            "text": "Vorhin hat jemand für dich angerufen.",
+            "surface": "Vorhin hat jemand für dich angerufen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-19-a2545046"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "infinitiveCandidate": "bedeuten",
         "normalizedVerb": "bedeuten",
         "preposition": "in",
@@ -233833,6 +237723,52 @@
           }
         ],
         "id": "lex-v-b1-19-3c7bb8c9"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "infinitiveCandidate": "entgegengekommen",
+        "normalizedVerb": "entgegengekommen",
+        "preposition": "bei",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[47].exampleDe",
+            "stage": "vocabulary",
+            "text": "Der Vermieter ist uns bei der Miete entgegengekommen.",
+            "surface": "Der Vermieter ist uns bei der Miete entgegengekommen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-19-409a2fe9"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
+        "infinitiveCandidate": "klagen",
+        "normalizedVerb": "klagen",
+        "preposition": "über",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "ambiguous"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[42].exampleDe",
+            "stage": "vocabulary",
+            "text": "Viele Mieter klagen über den Lärm.",
+            "surface": "Viele Mieter klagen über den Lärm.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-19-5ec14be0"
       },
       {
         "lessonId": "b1-19",
@@ -234137,6 +238073,29 @@
       {
         "lessonId": "b1-19",
         "level": "B1",
+        "infinitiveCandidate": "wiedersahen",
+        "normalizedVerb": "wiedersahen",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[36].exampleDe",
+            "stage": "vocabulary",
+            "text": "Als wir uns nach Jahren wiedersahen, haben wir uns umarmt.",
+            "surface": "Als wir uns nach Jahren wiedersahen, haben wir uns umarmt.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-19-254a9b46"
+      },
+      {
+        "lessonId": "b1-19",
+        "level": "B1",
         "infinitiveCandidate": "wissen",
         "normalizedVerb": "wissen",
         "preposition": "zu",
@@ -234275,6 +238234,29 @@
       {
         "lessonId": "b1-20",
         "level": "B1",
+        "infinitiveCandidate": "besten",
+        "normalizedVerb": "besten",
+        "preposition": "mit",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[33].exampleDe",
+            "stage": "vocabulary",
+            "text": "Die Pille nimmt man am besten mit viel Wasser.",
+            "surface": "Die Pille nimmt man am besten mit viel Wasser.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-bc0f5f3c"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
         "infinitiveCandidate": "bitten",
         "normalizedVerb": "bitten",
         "preposition": "um",
@@ -234409,6 +238391,29 @@
           }
         ],
         "id": "lex-v-b1-20-456cb7de"
+      },
+      {
+        "lessonId": "b1-20",
+        "level": "B1",
+        "infinitiveCandidate": "machen",
+        "normalizedVerb": "machen",
+        "preposition": "nach",
+        "role": "context-only",
+        "status": "not-target",
+        "observedCases": [
+          "unknown"
+        ],
+        "anchorIds": [],
+        "sources": [
+          {
+            "path": "flashcards[48].exampleDe",
+            "stage": "vocabulary",
+            "text": "Drogen können schon nach kurzer Zeit abhängig machen.",
+            "surface": "Drogen können schon nach kurzer Zeit abhängig machen.",
+            "strength": "context"
+          }
+        ],
+        "id": "lex-v-b1-20-10b4f1c1"
       },
       {
         "lessonId": "b1-20",
@@ -252830,5 +256835,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "60454358168acdcb76e21d4e465f222972233176056471ddc79d9600275fce91"
+  "contentSha256": "a597e0ffa9257d6469c374636d38b8bef71b8dbbab74277c749d48bd68639c75"
 }

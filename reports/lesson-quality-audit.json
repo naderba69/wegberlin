@@ -2,7 +2,7 @@
   "format": "dwnb-lesson-quality-audit",
   "version": "lesson-quality-v2",
   "generatedAt": "2026-10-02",
-  "contentSha256": "abd86dead1c93077d68294890d4b2246800869f15deca5bf827b9d747ab58e81",
+  "contentSha256": "d47036d16cc88e8f7ba74cfd56a33e444b1bd82c3651cbd639f571c80fbfcad9",
   "lessons": 96,
   "thresholds": {
     "writingModelRangeViolations": 0,
@@ -92,8 +92,8 @@
     "fewTileOrderingItems": 0,
     "fewTileOrderingCeiling": 0,
     "fewTileOrderingExamples": [],
-    "allItems": 1803,
-    "allMedianChars": 166,
+    "allItems": 1807,
+    "allMedianChars": 167,
     "allUnder60Chars": 0,
     "allMissing": 0,
     "explanationMedianChars": 161,
@@ -1838,29 +1838,6 @@
         ]
       },
       {
-        "lessonId": "b2-14",
-        "level": "B2",
-        "pct": 34.5,
-        "unknown": [
-          "behoerdenbriefen",
-          "berichten",
-          "fachtexten",
-          "grammatikstunde",
-          "verstaendlichkeit",
-          "kohaesion",
-          "art",
-          "aneinander",
-          "andocken",
-          "werkzeuge",
-          "last",
-          "fuerwort",
-          "demonstrativum",
-          "nomen",
-          "konnektoren",
-          "zeitverlauf"
-        ]
-      },
-      {
         "lessonId": "a1-20",
         "level": "A1",
         "pct": 34,
@@ -1904,6 +1881,29 @@
           "fachliche",
           "lehrkraft",
           "gefragt"
+        ]
+      },
+      {
+        "lessonId": "b2-14",
+        "level": "B2",
+        "pct": 33.6,
+        "unknown": [
+          "behoerdenbriefen",
+          "berichten",
+          "fachtexten",
+          "grammatikstunde",
+          "verstaendlichkeit",
+          "kohaesion",
+          "art",
+          "aneinander",
+          "andocken",
+          "werkzeuge",
+          "fuerwort",
+          "demonstrativum",
+          "nomen",
+          "konnektoren",
+          "zeitverlauf",
+          "lose"
         ]
       },
       {
@@ -2525,7 +2525,7 @@
     "support": "every lesson at or below the input's level (phrases, cards, reading glossary) plus the glossary shown beside the input",
     "tasks": 16,
     "medianUnknownWordPct": 17.2,
-    "maxUnknownWordPct": 25.4,
+    "maxUnknownWordPct": 24.6,
     "ceilingPct": 32,
     "rows": [
       {
@@ -2657,7 +2657,7 @@
         "level": "B2",
         "contentTypes": 241,
         "properNames": 0,
-        "pct": 17.8,
+        "pct": 17.4,
         "unknownSample": [
           "nachbarschaftszentrum",
           "bisher",
@@ -2790,7 +2790,7 @@
         "level": "B1",
         "contentTypes": 142,
         "properNames": 1,
-        "pct": 25.4,
+        "pct": 24.6,
         "unknownSample": [
           "grundschule",
           "fruehjahr",

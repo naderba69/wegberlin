@@ -2939,7 +2939,7 @@
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
         "a1-18",
-        "b1-01",
+        "b1-02",
         "a2-18"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -2974,7 +2974,7 @@
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
         "a1-19",
-        "b1-04",
+        "b1-05",
         "a2-20"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3008,8 +3008,8 @@
       "recycledPercent": 30,
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
-        "a1-20",
-        "b1-06",
+        "a1-21",
+        "b1-07",
         "a2-22"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3043,8 +3043,8 @@
       "recycledPercent": 30,
       "expectedRecycledPercent": 30,
       "sourceLessonIds": [
-        "a1-21",
-        "b1-08",
+        "a1-22",
+        "b1-10",
         "a2-24"
       ],
       "policyVersion": "module-recycling-ratio-v1",
@@ -3078,7 +3078,7 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-22",
+        "a1-24",
         "b1-11",
         "a2-08",
         "b1-20"
@@ -3114,8 +3114,8 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-23",
-        "b1-12",
+        "a1-24",
+        "b1-13",
         "a2-09",
         "b1-23"
       ],
@@ -3150,7 +3150,7 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a1-24",
+        "a2-01",
         "b1-14",
         "a2-11",
         "b2-03"
@@ -3186,7 +3186,7 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a2-01",
+        "a2-02",
         "b1-15",
         "a2-12",
         "b2-06"
@@ -3223,7 +3223,7 @@
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
         "a2-02",
-        "b1-16",
+        "b1-17",
         "a2-14",
         "b2-10"
       ],
@@ -3258,7 +3258,7 @@
       "recycledPercent": 40,
       "expectedRecycledPercent": 40,
       "sourceLessonIds": [
-        "a2-02",
+        "a2-03",
         "b1-18",
         "a2-15",
         "b2-13"
@@ -3283,5 +3283,5 @@
       ]
     }
   ],
-  "contentSha256": "98e2d400ce63d0aa09d0fea481a21ec20e9f7736a58a014f9d547402ae6b41d9"
+  "contentSha256": "bab58d57c594bc2f39ab5813e4712bc8a71283aec208ca889bd8722bb18d0791"
 }

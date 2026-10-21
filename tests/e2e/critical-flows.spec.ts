@@ -180,9 +180,10 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const pluralOnlyPanel = page.locator(".lexical-grammar-panel");
   const familyExtras = pluralOnlyPanel.locator(".additional-noun-anchors");
-  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 13");
+  await expect(familyExtras).toContainText("أسماء هدف إضافية موثقة · 12");
   const familyReading = pluralOnlyPanel.locator(".reading-noun-anchors");
-  await expect(familyReading).toContainText("ستقابلها في نص القراءة · 7");
+  await expect(familyReading).toContainText("ستقابلها في نص القراءة · 8");
+  await expect(familyReading).toContainText("der Großvater");
   await expect(familyReading).toContainText("die Eltern");
   await expect(familyReading).toContainText("nur Plural");
   await familyReading.locator("details").filter({ hasText:"die Eltern" }).locator("summary").click();
@@ -248,7 +249,7 @@ test("library and exam hubs render their completed content contracts", async ({ 
   await page.getByRole("button", { name: /أكملت هذه الخطوة/ }).click();
   const biographyNouns = page.locator(".lexical-grammar-panel");
   const biographyExtras = biographyNouns.locator(".additional-noun-anchors");
-  await expect(biographyExtras).toContainText("أسماء هدف إضافية موثقة · 4");
+  await expect(biographyExtras).toContainText("أسماء هدف إضافية موثقة · 25");
   await biographyExtras.getByText("Weitere Zielnomen").click();
   await biographyExtras.locator("details").filter({hasText:"das Studium"}).getByText(/Kasusformen ansehen/).click();
   await expect(biographyExtras).toContainText("des Studiums");
@@ -292,7 +293,7 @@ test("bilingual local search ranks German and Arabic results and returns to cont
   test.setTimeout(90_000);
   await page.goto("/search");
   await expect(page.getByRole("heading", { name: /ابحث عن العبارة/ })).toBeVisible();
-  await expect(page.getByText(/4[.,]?339/)).toBeVisible();
+  await expect(page.getByText(/4[.,]?463/)).toBeVisible();
   const grammarGlossary=page.locator('[data-grammar-glossary-policy="bilingual-grammar-glossary-v1"]');
   await expect(grammarGlossary).toContainText("قاموس مصطلحات القواعد");
   await grammarGlossary.locator("summary").click();
@@ -2007,7 +2008,7 @@ test("settings exports an encrypted DWNB archive and imports it as an isolated p
   await expect(page.locator('[data-dwnb-deprecation-policy="dwnb-deprecation-policy-v1"]')).toContainText("v1 قديم ومدعوم للاستيراد حتى 2027-03-31");
   const governance=page.locator('[data-content-governance-policy="content-accountability-lifecycle-v1"]');
   await expect(governance).toContainText(CURRENT_CURRICULUM_VERSION);
-  await expect(governance).toContainText("3328");
+  await expect(governance).toContainText("3334");
   const officialSources = governance.locator("details.context-official-sources");
   await officialSources.locator("summary").click();
   await expect(officialSources.locator("li[data-claim-id]")).toHaveCount(12);

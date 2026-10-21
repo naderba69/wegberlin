@@ -36,6 +36,11 @@
 - The ADR-150 anchors were at first labelled with the ADR-142 scope in the review worksheet; they now carry their own scope, and the worksheet README names all four Goethe verification files (the B1 file of ADR-142 had been missing from it).
 - Converting the b2-14/b2-17 quotes broke two explanation quotes and two reading-evidence locators (the quote-exception count rose from 69 to 71 and two locators fell back to the lexical selector); all four were updated, and the guard now covers the locators.
 
+## Gates found during this batch
+
+- **Development dependency advisory.** Three high advisories in `launch-editor` inside vite 8.2.0–8.2.3 (GHSA-698v-4r3x-3vcv, GHSA-r825-w8mm-5pxw, GHSA-587h-7wmj-h5pm) were published after v258 and failed `npm run check`. They concern opening files in an editor from the development server on Windows and do not reach the deployed app. A fixed version exists, so they were not added to the accepted set of `scripts/audit-dependencies.mjs` (which is reserved for findings without a fix); vite is raised to 8.3.5 through `overrides` in `package.json`. Because `package.json` and the lockfile are inputs of the content build ID, the route HTML sizes changed by a few bytes per page and the Offline fingerprint moved to `9afd336bdc9c`; JavaScript and curriculum sizes did not change.
+- **Browser tests that pin counts** were updated after checking each cause: search entries 4,339 → 4,463 (+124 words), governed records 3328 → 3334, b1-01 additional target nouns 4 → 25 (the 21 new anchors), and a1-04 reading nouns 7 → 8 / additional 13 → 12 because der Großvater now occurs in the reading (the test now also checks that it is shown there).
+
 ## Results
 
 | Measure | Before (v258) | After |

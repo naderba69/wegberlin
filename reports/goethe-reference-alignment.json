@@ -16,7 +16,7 @@
       "appearsPct": 99.9,
       "taughtExplicitlyUpToLevel": 559,
       "taughtExplicitlyPct": 83.4,
-      "anywhereInAppAnyLevelPct": 99.4,
+      "anywhereInAppAnyLevelPct": 100,
       "missingAtLevel": 1,
       "missingNouns": 0,
       "firstAppearsLater": {},
@@ -24,7 +24,8 @@
       "wortgruppenTokens": 171,
       "wortgruppenCoveredPct": 72.5,
       "absentFromAllLessonsList": [],
-      "firstAppearsLaterList": []
+      "firstAppearsLaterList": [],
+      "explicitWhileAbsentList": []
     },
     "A2": {
       "headwords": 1136,
@@ -46,19 +47,19 @@
     "B1": {
       "headwords": 2830,
       "indentedSubEntries": 629,
-      "appearsInLessonsUpToLevel": 2357,
-      "appearsPct": 83.3,
-      "taughtExplicitlyUpToLevel": 1891,
+      "appearsInLessonsUpToLevel": 2352,
+      "appearsPct": 83.1,
+      "taughtExplicitlyUpToLevel": 1890,
       "taughtExplicitlyPct": 66.8,
-      "anywhereInAppAnyLevelPct": 74.3,
-      "missingAtLevel": 473,
-      "missingNouns": 259,
+      "anywhereInAppAnyLevelPct": 90.6,
+      "missingAtLevel": 478,
+      "missingNouns": 260,
       "firstAppearsLater": {
-        "B2": 148
+        "B2": 149
       },
-      "absentFromAllLessons": 323,
+      "absentFromAllLessons": 327,
       "wortgruppenTokens": 650,
-      "wortgruppenCoveredPct": 45.4,
+      "wortgruppenCoveredPct": 49.8,
       "absentFromAllLessonsList": [
         "das Abenteuer",
         "abwärts",
@@ -69,6 +70,7 @@
         "die Anleitung",
         "anschaffen",
         "der Angestellte",
+        "ärgerlich",
         "das Asyl",
         "der Aufenthalt",
         "die Aufforderung",
@@ -85,6 +87,7 @@
         "behindern",
         "behindert",
         "beißen",
+        "beruhigen",
         "besorgen",
         "bestrafen",
         "die Betriebsrätin",
@@ -216,6 +219,7 @@
         "das Laufwerk",
         "gelebt",
         "das Leder",
+        "gelegt",
         "die Limonade",
         "die Lippe",
         "das Loch",
@@ -337,6 +341,7 @@
         "trocknen",
         "das Tuch",
         "überfahren",
+        "übrigens",
         "umarmen",
         "un",
         "das Unglück",
@@ -360,6 +365,7 @@
         "vorder",
         "vorhin",
         "wahnsinnig",
+        "die Wärme",
         "das Waschmittel",
         "weltweit",
         "wild",
@@ -381,8 +387,7 @@
         "zurechtkommen",
         "die Zuschauerin",
         "der Zuschlag",
-        "der Zustand",
-        "die Wärme"
+        "der Zustand"
       ],
       "firstAppearsLaterList": [
         "Abgase → B2",
@@ -415,6 +420,7 @@
         "der Dienst → B2",
         "die Diskussion → B2",
         "ebenso → B2",
+        "der Einfluss → B2",
         "beeinflussen → B2",
         "einfügen → B2",
         "einheitlich → B2",
@@ -533,11 +539,22 @@
         "zerstören → B2",
         "der Zufall → B2",
         "zugänglich → B2"
+      ],
+      "explicitWhileAbsentList": [
+        "leiden",
+        "das Trinkgeld",
+        "verzichten"
       ]
     }
   },
-  "incremental": {
-    "mode": "from-report",
-    "note": "Only the previously missing headwords were re-checked with the same matcher; taughtExplicitly is a lower bound. headwords, anywhereInAppAnyLevelPct and wortgruppenCoveredPct are carried over from the last full PDF run."
+  "partialFullRun": {
+    "recountedLevels": [
+      "A1",
+      "B1"
+    ],
+    "carriedOverLevels": [
+      "A2"
+    ],
+    "note": "Only the recounted levels come from the PDFs in this run (editions pinned by SHA-256). The carried-over levels are copied unchanged from the previous committed report."
   }
 }

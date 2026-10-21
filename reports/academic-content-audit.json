@@ -13063,7 +13063,7 @@
         "prompt": "طابق كلمة الأشكال والرسوم في العرض بمعناها:",
         "answer": "die Abbildung → الشكل التوضيحي | senkrecht → عمودي | waagerecht → أفقي | folgend → التالي | die Störung → العطل / الإزعاج",
         "evidenceRef": "b1-15:controlled:b1-15-e8:explanationAr",
-        "evidenceExcerpt": "senkrecht عكس waagerecht: في الرسم البياني محور senkrecht ومحور waagerecht. وfolgend تأتي صفة قبل الاسم: auf der folgenden Folie. أما die Störung فعطل قصير، مثل انقطاع الصوت أو الصورة.",
+        "evidenceExcerpt": "senkrecht عكس waagerecht: في الرسم البياني محور senkrecht ومحور waagerecht. وfolgend تأتي صفة قبل الاسم: auf der folgenden Folie. أما die Störung فعطل أو انقطاع، مثل انقطاع الصوت أو الصورة أثناء العرض.",
         "visibilityPolicy": "authorized-pair-bank",
         "status": "pass"
       },
@@ -107853,13 +107853,6 @@
         ],
         "sources": [
           {
-            "path": "flashcards[14].exampleDe",
-            "stage": "vocabulary",
-            "text": "In der Wirklichkeit sieht das oft anders aus.",
-            "surface": "In der Wirklichkeit sieht das oft anders aus.",
-            "strength": "context"
-          },
-          {
             "path": "flashcards[14].frontDe",
             "stage": "vocabulary",
             "text": "die Wirklichkeit",
@@ -132337,8 +132330,8 @@
           {
             "path": "flashcards[17].exampleDe",
             "stage": "vocabulary",
-            "text": "Als Ingenieur muss er seinen Abschluss anerkennen lassen.",
-            "surface": "Als Ingenieur muss er seinen Abschluss anerkennen lassen.",
+            "text": "Als Ingenieur möchte er seinen Abschluss anerkennen lassen.",
+            "surface": "Als Ingenieur möchte er seinen Abschluss anerkennen lassen.",
             "strength": "context"
           },
           {
@@ -252055,5 +252048,5 @@
     "issues": [],
     "boundary": "Target means an existing anchor, an uppercase reading-glossary lemma, or an article-marked noun / infinitive-preposition pair on an authored vocabulary phrase or flashcard front. Theory, texts, mistakes, and task surfaces are scanned as context-only signals. Sentence-initial capitalization alone is never used. Uncovered targets remain pending-human unless an explicit versioned structural exclusion identifies a locative/condition adjunct, separable particle, or purpose clause. Exclusions remain authored-review-pending and do not replace independent German review; the audit never invents gender, plural, governed case, or a lexical record."
   },
-  "contentSha256": "67721ce04eaa2bfcbe0f4d36496bb57ebfc1b5a2c5cef3cd958f860eaf70adaf"
+  "contentSha256": "f7a56dbc73b3eb170bf1d62bf19e8722e4670dcba681dae2ad6e799765b4e399"
 }

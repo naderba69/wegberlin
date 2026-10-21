@@ -25,6 +25,14 @@
  * "taught explicitly" then grows only by missing words that are now taught, so it is a lower bound.
  * Headword totals, anywhereInAppAnyLevelPct and wortgruppenCoveredPct are carried over from the last
  * full run and say so in `incremental`. A later full run with the PDFs replaces every number.
+ *
+ * ADR-153 / v262 (counting fix): a headword can be "taught explicitly" (noun/verb registry, glossary) while it
+ * still does not appear in any lesson string, so it stays in the missing lists. The incremental mode used to add
+ * such a word to taughtExplicitly again on every run (das Trinkgeld, leiden and verzichten were added once per run
+ * since v250). The full run now records these words in `explicitWhileAbsentList`, and the incremental mode counts a
+ * row only when it appears now (`any`) and was not already counted by the full run.
+ * `--levels A1,B1` recounts only the listed levels from the PDFs and carries the other levels over unchanged from
+ * the committed report; the report says so in `partialFullRun`.
  */
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -48,6 +56,9 @@ type Bag = { cands: Set<string>; tokens: Set<string>; clauses: Array<{ last: str
 const LEVELS = ["A1", "A2", "B1", "B2"] as const;
 type Level = (typeof LEVELS)[number];
 const WORDLIST_LEVELS = ["A1", "A2", "B1"] as const;
+type WordlistLevel = (typeof WORDLIST_LEVELS)[number];
+const fullLevels = (option("--levels")?.split(",") ?? [...WORDLIST_LEVELS]) as WordlistLevel[];
+if (!fullLevels.length || fullLevels.some((level) => !(WORDLIST_LEVELS as readonly string[]).includes(level))) throw new Error(`unknown level in --levels ${fullLevels.join(",")}`);
 const rank = (level: string) => LEVELS.indexOf(level as Level);
 const SEPARABLE = ["zurueck", "zusammen", "vorbei", "weiter", "wieder", "heraus", "herein", "hinaus", "herunter", "hinunter", "nach", "fest", "frei", "hoch", "statt", "teil", "fern", "durch", "um", "los", "weg", "ein", "aus", "auf", "mit", "vor", "bei", "ab", "an", "zu", "her", "hin", "kennen", "kaputt", "spazieren", "leid", "sauber", "fort", "dabei", "dazu", "rauf", "raus", "rein", "runter"];
 
@@ -167,7 +178,7 @@ const entryFromLabel = (label: string): Entry => {
   const rest = noun ? tokens.slice(1).join(" ") : label;
   return { raw: label, page: 0, lemma: rest.split("/")[0]!, alts: rest.split("/"), noun, sub: false, regional: false };
 };
-for (const level of committed ? [] : WORDLIST_LEVELS) {
+for (const level of committed ? [] : fullLevels) {
   const raw = JSON.parse(readFileSync(path.join(entriesRoot, `${level}.entries.json`), "utf8")) as Entry[];
   const seen = new Set<string>(); const entries: Entry[] = [];
   for (const entry of raw) {
@@ -200,8 +211,13 @@ for (const level of committed ? [] : WORDLIST_LEVELS) {
     wortgruppenCoveredPct: pct(groupCovered, groupTokens.length),
     absentFromAllLessonsList: never.map(label),
     firstAppearsLaterList: later.map((item) => `${label(item.entry)} → ${LEVELS[item.at]}`),
+    // counted in taughtExplicitly although no lesson string contains them yet; the incremental mode must not count them again
+    explicitWhileAbsentList: rows.filter((row) => row.explicit && !row.any).map((row) => label(row.entry)),
   };
 }
+const carriedOver = committed ? [] : WORDLIST_LEVELS.filter((level) => !fullLevels.includes(level));
+const previousReport = carriedOver.length ? JSON.parse(readFileSync(reportPath, "utf8")) as { levels: Record<string, LevelReport>; partialFullRun?: unknown } : null;
+for (const level of carriedOver) levels[level] = previousReport!.levels[level];
 
 if (committed) {
   for (const level of WORDLIST_LEVELS) {
@@ -213,7 +229,8 @@ if (committed) {
     const never = missing.filter((entry) => firstLevel(entry) === null && !present(entry, allByLevel.B2));
     const pct = (part: number, whole: number) => +(100 * part / whole).toFixed(1);
     const appears = previous.appearsInLessonsUpToLevel + rows.filter((row) => row.any).length;
-    const taught = previous.taughtExplicitlyUpToLevel + rows.filter((row) => row.explicit).length;
+    const countedByFullRun = new Set((previous.explicitWhileAbsentList as string[] | undefined) ?? []);
+    const taught = previous.taughtExplicitlyUpToLevel + rows.filter((row) => row.explicit && row.any && !countedByFullRun.has(row.entry.raw)).length;
     levels[level] = {
       ...previous,
       appearsInLessonsUpToLevel: appears,
@@ -236,7 +253,12 @@ const report = {
   method: "strict-lemma-candidates-v1",
   note: "Counts and missing lemmas only (section 44b UrhG). The Goethe PDFs are not in the repository; editions are pinned by SHA-256 in docs/GOETHE_REFERENCE_ALIGNMENT_AR.md.",
   lessons: Object.fromEntries(LEVELS.map((level) => [level, lessons.filter((lesson) => lesson.level === level).length])),
-  levels,
+  levels: Object.fromEntries(WORDLIST_LEVELS.map((level) => [level, levels[level]])),
+  ...(carriedOver.length ? { partialFullRun: {
+    recountedLevels: fullLevels,
+    carriedOverLevels: carriedOver,
+    note: "Only the recounted levels come from the PDFs in this run (editions pinned by SHA-256). The carried-over levels are copied unchanged from the previous committed report.",
+  } } : committed && (committed as { partialFullRun?: unknown }).partialFullRun ? { partialFullRun: (committed as { partialFullRun?: unknown }).partialFullRun } : {}),
   ...(committed ? { incremental: {
     mode: "from-report",
     note: "Only the previously missing headwords were re-checked with the same matcher; taughtExplicitly is a lower bound. headwords, anywhereInAppAnyLevelPct and wortgruppenCoveredPct are carried over from the last full PDF run.",

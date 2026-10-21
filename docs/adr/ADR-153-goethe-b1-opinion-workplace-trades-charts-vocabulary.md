@@ -65,14 +65,14 @@
 | Noun anchors | 1,985 | **2,044** |
 | Lesson exercises | 742 | **746** |
 | Governed content records | 3,342 | **3,346** |
-| Search entries | 4,623 | **__SEARCH__** |
-| Curriculum (gzip) | 1,330,848 | **__CURR__** (__CURRLEFT__ B left under 1,343,000) |
-| JavaScript (gzip) | 2,166,322 | **__JS__** (__JSLEFT__ B left under 2,205,000) |
-| Unit tests | 1,743 in 255 files | **__UNIT__** |
+| Search entries | 4,623 | **4,703** |
+| Curriculum (gzip) | 1,330,848 | **1,336,273** (6,727 B left under 1,343,000) |
+| JavaScript (gzip) | 2,166,322 | **2,171,801** (33,199 B left under 2,205,000) |
+| Unit tests | 1,743 in 255 files | **1,747 in 256 files** |
 
 The B1 count rises by 94 for 80 phrases: 93 headwords left the absent list, and die Zeile moved down from B2. Das Zeug is still counted falsely (ADR-152), so the real B1 figure is at most **2,356**. Counts come from `scripts/compare-goethe-wordlists.ts --from-report` (ADR-141), so "taught explicitly" is a lower bound. Pack generation v262.
 
-Gates: __GATES__ Offline fingerprint __FP__, full pack __FULL__ B gzip.
+Gates: __GATES__ Offline fingerprint `36116c956e3b`, full pack 6,567,656 B gzip.
 
 ## Consequences
 

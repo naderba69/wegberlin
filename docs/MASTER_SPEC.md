@@ -1,6 +1,6 @@
 # DER WEG NACH BERLIN — GUIDANCE-FIRST ZERO-COST PRODUCTION MASTER PROMPT v4.0
 
-Sync batch: v261 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-152): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الشرطة والمحاكم (b1-18)، ومباني المدينة وخدماتها (b1-09)، والدراسة والتعلّم (b1-13)، والرياضة والطموح (b1-22). لكل كلمة عبارة وبطاقة بجملة مثال، و71 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2263/2830 (80.0%). رُفع سقف المنهج خطوة صغيرة إلى 1,343,000 (كما في v258، بناءً على قول المالك إن السقف لا يهمه)، والمتبقي منه الآن 12,152 بايت. صحّح التدقيق قبل الحفظ صيغة الاسمين الضعيفين (Polizist وZeuge) وجمع der Bau.
+Sync batch: v262 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-153): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الرأي والشك والموقف (b1-02)، والناس والأماكن في العمل (b1-04)، والمهن والمؤهلات (b1-14)، والأشكال والرسوم في العرض (b1-15). لكل كلمة عبارة وبطاقة بجملة مثال، و59 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2357/2830 (83.3%). لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 6,727 بايت. صحّح التدقيق قبل الحفظ ترجمة mittlerweile، وأضاف إلى وصف حزمة المراجعة اسم ملف التحقق الخاص بدفعة v261 الذي كان ناقصًا.
 
 Historical v182 follow-up: maximum 60 seconds and 4,000,000 compressed bytes per clip; no PCM or waveform persistence. At that release, active/staging were v182 and v181 was retained for rollback. Current caches are v183 with v182 retained; the existing 320-route manifest and learner-state schema remain unchanged. P2-355's authored generator remains included in every pack.
 

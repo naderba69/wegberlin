@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Sync batch: v261 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-152): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الشرطة والمحاكم (b1-18)، ومباني المدينة وخدماتها (b1-09)، والدراسة والتعلّم (b1-13)، والرياضة والطموح (b1-22). لكل كلمة عبارة وبطاقة بجملة مثال، و71 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2263/2830 (80.0%). رُفع سقف المنهج خطوة صغيرة إلى 1,343,000 (كما في v258، بناءً على قول المالك إن السقف لا يهمه)، والمتبقي منه الآن 12,152 بايت. صحّح التدقيق قبل الحفظ صيغة الاسمين الضعيفين (Polizist وZeuge) وجمع der Bau.
+Sync batch: v262 · 2026-10-21 · كلمات غوته B1 لأربعة محاور أخرى (ADR-153): أُضيفت 80 كلمة إلى أربعة دروس موجودة: الرأي والشك والموقف (b1-02)، والناس والأماكن في العمل (b1-04)، والمهن والمؤهلات (b1-14)، والأشكال والرسوم في العرض (b1-15). لكل كلمة عبارة وبطاقة بجملة مثال، و59 اسمًا موثّقًا كلها بـWiktionary، وتمرين مطابقة لكل درس، فصارت B1 ‏2357/2830 (83.3%). لم يُرفع أي سقف، والمتبقي من سقف المنهج الآن 6,727 بايت. صحّح التدقيق قبل الحفظ ترجمة mittlerweile، وأضاف إلى وصف حزمة المراجعة اسم ملف التحقق الخاص بدفعة v261 الذي كان ناقصًا.
 
 Historical v182 follow-up: `neutral-self-waveform-comparison-v1` processes same-origin model audio and the learner Blob in memory only (≤60 seconds / ≤4,000,000 compressed bytes each); active/staging were v182 with v181 retained then. Current active/staging caches are v183, with v182 retained for rollback. Route list and learner-state schema are unchanged; P2-355's authored mini-test generator remains available in every Offline pack.
 
@@ -2024,3 +2024,11 @@ The curriculum source gzip rises by about 4 KB and stays under the 1,275,000 saf
 - Decision: curriculum hard limit 1,560,000 → 1,580,000 (safety 1,343,000, 15% reserve kept; JS ceiling untouched). 80 words as phrase + card with example in b1-18 (police and courts), b1-09 (city buildings and services), b1-13 (study), b1-22 (sport), one matching e8 per lesson; 71 noun anchors appended with scope `ADR-152-goethe-b1-themes-3-noun-anchor`, 71/71 WiktionaryDE. The pre-commit audit fixed a doubled article in the weak-noun forms and a plural taken from the wrong sense (der Bau).
 - Result: B1 2,263/2,830 (80.0%), taught ≥ 1,797, absent 416. Noun anchors 1,985; pending stays 89 (row-by-row diff). Exercises 742, governed records 3,342. JS 2,166,322 B, curriculum 1,330,848 B (12,152 B left under 1,343,000). Pack generation v261.
 - Details: `docs/adr/ADR-152-goethe-b1-police-city-study-sport-vocabulary-and-ceiling-step.md`.
+
+## ADR-153 — Goethe B1 vocabulary for opinions, people and places at work, trades and qualifications, and shapes and charts
+
+- Status: accepted, 2026-10-21 (v262). Owner «واصل» after the v261 report.
+- Context: after ADR-152, 416 B1 headwords were absent from every lesson; b1-02, b1-04, b1-14, b1-15 and b1-24 had no vocabulary e8.
+- Decision: no ceiling change. 80 words as phrase + card with example in b1-02 (opinions, doubt and attitude), b1-04 (people and places at work), b1-14 (trades, experts and qualifications), b1-15 (shapes and charts on slides), one matching e8 per lesson; 59 noun anchors appended with scope `ADR-153-goethe-b1-themes-4-noun-anchor`, 59/59 WiktionaryDE. The pre-commit audit fixed the gloss of mittlerweile, added the missing ADR-152 evidence file to the review-packet description, and checked all 93 newly matched headwords for false matches (none).
+- Result: B1 2,357/2,830 (83.3%; at most 2,356 real because das Zeug stays a false match), taught ≥ 1,891, absent 323. Noun anchors 2,044; pending stays 89 (row-by-row diff). Exercises 746, governed records 3,346. JS 2,171,801 B, curriculum 1,336,273 B (6,727 B left under 1,343,000). Pack generation v262.
+- Details: `docs/adr/ADR-153-goethe-b1-opinion-workplace-trades-charts-vocabulary.md`.
